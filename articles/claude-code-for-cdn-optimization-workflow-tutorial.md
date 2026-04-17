@@ -15,7 +15,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 Claude Code for CDN Optimization Workflow Tutorial
 
 Content Delivery Networks (CDNs) are critical infrastructure for modern web applications, but optimizing them effectively requires understanding caching behaviors, asset patterns, and performance metrics. This tutorial shows you how to use Claude Code to automate CDN optimization tasks, from configuring cache policies to analyzing hit rates and reducing latency.
@@ -424,25 +423,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding CDN Optimization with Claude Code?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Claude Code assists CDN optimization through four key capabilities: Configuration Analysis (reviewing and improving CDN configs), Asset Audit (identifying optimization opportunities in static assets), Cache Policy Design (creating effective caching strategies for Cloudflare, CloudFront, or Fastly), and Performance Monitoring (analyzing metrics like cache hit rates and TTFB). Claude Code generates provider-specific configurations including Cloudflare Workers scripts, CloudFront behaviors, and Fastly VCL from plain-language descriptions.
 
 ### What is Setting Up Your CDN Optimization Project?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Setting up involves creating a dedicated project directory with `config/`, `analysis/`, and `recommendations/` subdirectories using `mkdir -p`. This structure organizes your CDN configuration files, analysis outputs, and optimization recommendations separately. The project structure supports iterative optimization workflows where Claude Code analyzes current configurations, identifies bottlenecks, and generates improved cache rules that you deploy incrementally.
 
 ### What is Creating a Claude.md Context File?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The CLAUDE.md file provides Claude Code with your CDN infrastructure context, including your primary CDN provider (e.g., Cloudflare, CloudFront), domain configuration for main and static asset domains, current cache settings (e.g., static assets at 7 days, HTML at 1 hour, API at no-cache), and known issues like high cache miss rates or unversioned JavaScript bundles. This context enables Claude Code to generate accurate, provider-specific optimization recommendations without repeated prompting.
 
 ### What are the practical optimization workflows?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The three core workflows are: Analyzing Cache Hit Rates (identifying paths below 80% hit rate and diagnosing causes like missing version hashes), Implementing Cache Rules (generating Cloudflare Workers or Page Rules with correct `Cache-Control` headers for each asset type), and Asset Optimization Pipeline (configuring image compression to WebP/AVIF formats, responsive sizing at 320/768/1024/1920px breakpoints, and JavaScript bundle splitting with dynamic imports).
 
 ### What is Workflow 1: Analyzing Cache Hit Rates?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Cache hit rate analysis involves providing Claude Code with CDN logs or metrics to identify patterns where hit rates fall below 80%. Claude examines file-type-specific performance, finding issues like JavaScript bundles at 45% hit rate due to missing content hashes, or personalized API routes at 52% hit rate needing `Vary: Cookie` headers. Geographic region analysis reveals degraded performance in specific PoPs, enabling targeted origin shield configuration.

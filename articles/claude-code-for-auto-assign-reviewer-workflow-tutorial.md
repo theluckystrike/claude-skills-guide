@@ -15,7 +15,6 @@ render_with_liquid: false
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 {% raw %}
 Manual PR reviewer assignment is time-consuming and often inconsistent. Teams waste valuable developer hours playing the assignment game, and new team members have no visibility into who should review what. This tutorial shows you how to build an automated reviewer assignment system using Claude Code that scales with your team and enforces consistent review policies.
 
@@ -594,32 +593,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Auto-Assign Reviewer Problem?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Comparing Manual vs Automated Assignment?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Your Claude Code Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Building the Reviewer Selection Logic?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Fetching Live Review Load from GitHub?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

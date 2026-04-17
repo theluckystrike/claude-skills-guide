@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Why Does Claude Code Sometimes Ignore My Instructions?"
+title: "Why Does Claude Code Sometimes Ignore My — Developer Guide"
 description: "Debug why Claude Code ignores your instructions. Learn how token limits, system prompts, skill configurations, and instruction clarity affect Claude's."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,8 +12,6 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 Why Does Claude Code Sometimes Ignore My Instructions?
 
 You've been there: you type a clear instruction, and Claude Code does something completely different. Maybe it skips the error handling you requested, uses a different coding style than you specified, or ignores a specific file you wanted modified. Understanding why this happens helps you write better prompts and get more predictable results.
@@ -172,32 +169,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Core Issue: Interpretation Versus Execution?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Factor 1: Token Limits and Context Management?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Factor 2: System Prompts Override User Instructions?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Factor 3: Implicit Reasoning About Intent?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Factor 4: The claude.md Priority?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code Consultant Codebase Context Switching Workflow"
+title: "Claude Code Consultant Codebase — Complete Developer Guide"
 description: "Master the art of efficient codebase context switching as a Claude Code consultant. Learn workflows, skills, and techniques for smooth transitions."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,8 +12,6 @@ score: 7
 tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 As a freelance consultant or agency developer, you'll often juggle multiple client projects, each with distinct tech stacks, coding conventions, and architectural patterns. Claude Code excels at helping you switch contexts efficiently, but without a structured workflow, you risk contamination between projects or wasted time re-establishing context. This guide walks you through a battle-tested codebase context switching workflow that maximizes productivity across client engagements.
 
 ## Understanding the Context Switching Challenge
@@ -263,32 +260,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Context Switching Challenge?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Establishing Project-Specific Claude.md Files?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Handoff Protocol for Client Transitions?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Exit Checklist?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Entry Protocol?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -14,7 +14,6 @@ score: 7
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Getting Claude to generate efficient SQL requires understanding how to communicate performance requirements effectively. This guide shows you concrete patterns for prompting Claude to write queries that scale.
 
 ## The Foundation: Express Performance Intent
@@ -236,32 +235,3 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-
----
-
-## Frequently Asked Questions
-
-### What is Foundation: Express Performance Intent?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Indexing Strategies That Claude Understands?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Avoiding the N+1 Query Problem?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Bad prompt: "Get all users and their posts"?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Optimizing Aggregate Queries?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

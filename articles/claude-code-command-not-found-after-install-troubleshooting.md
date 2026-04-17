@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Command Not Found After Install."
-description: "Fix the 'claude: command not found' error after installing Claude Code. Practical solutions for PATH issues, shell configuration, and installation."
+title: "Claude Command Not Found After Install — Fix"
+description: "Fix zsh/bash 'claude: command not found' after install. Step-by-step PATH fix with copy-paste commands. Works in 2 minutes."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Command Not Found After Install: Troubleshooting Guide
 
-<!-- answer-capsule -->
 Installing Claude Code should give you immediate access to the `claude` CLI tool. Instead, you're staring at `zsh: command not found: claude`. This happens more often than you'd think, and the fix is usually straightforward.
 
 This guide walks through the most common causes and their solutions, so you can get back to coding with Claude's AI assistance.
@@ -431,32 +430,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Problem?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### Why PATH Errors Happen?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Quick Diagnostic Checklist?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Solution 1: Verify the Installation Location?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Solution 2: Check Your PATH Configuration?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

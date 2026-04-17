@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Spawn Unknown Error Node Skill Fix"
-description: "Troubleshoot and fix spawn unknown error in Claude Code Node.js skills. Practical solutions for child_process spawn failures, path issues, and."
+title: "Claude Code Unknown Skill Error: Fix Spawn Issues"
+description: "Fix error unknown skill in Claude Code. Resolve spawn failures, child_process path issues, and Node.js skill configuration problems quickly."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [troubleshooting]
@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Spawn Unknown Error Node Skill Fix
 
-<!-- answer-capsule -->
 When you're building Claude Code skills that interact with Node.js scripts, you might encounter the frustrating "spawn unknown error" message. This error typically occurs when Claude Code's `bash` tool attempts to run a Node.js process but fails due to misconfiguration, missing dependencies, or path issues. I'll walk you through the common causes and practical fixes for this error.
 
 ## Understanding the Spawn Error
@@ -327,32 +326,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Spawn Error?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the common causes and solutions?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Cause 1: Node.js Not in PATH?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Cause 2: Missing Package Dependencies?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Cause 3: Working Directory Issues?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

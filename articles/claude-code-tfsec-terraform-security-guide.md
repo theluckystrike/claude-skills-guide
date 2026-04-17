@@ -14,7 +14,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 Claude Code Tfsec Terraform Security Guide
 
 Infrastructure-as-code has transformed how teams deploy and manage cloud resources. Terraform leads this space, but writing secure Terraform configurations requires vigilance. tfsec, an open-source security scanner for Terraform, catches common misconfigurations before they reach production. Integrating tfsec into your Claude Code workflow automates security checks and keeps your infrastructure code safe.
@@ -242,25 +241,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What tfsec Brings to Your Workflow?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+tfsec is an open-source static security scanner for Terraform that detects misconfigurations like exposed secrets, insecure S3 buckets, unencrypted RDS instances, overly permissive IAM policies, and wide security group port ranges. It supports AWS, Azure, Google Cloud, and Kubernetes resources, working directly on `.tf` files without requiring cloud credentials. Each finding includes severity level, description, and remediation guidance. Running tfsec early in development catches problems when they are cheapest to fix.
 
 ### What is Setting Up tfsec in Your Project?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Install tfsec via Homebrew (`brew install tfsec` on macOS), the official Linux install script, Chocolatey (`choco install tfsec` on Windows), or Docker (`docker run --rm -v $(pwd):/src aquasec/tfsec /src`). Verify with `tfsec --version`. For containerized CI/CD workflows, the Docker image eliminates installation dependencies. The tool parses HCL syntax, understands provider-specific resource attributes, and applies hundreds of built-in security checks across all major cloud providers out of the box.
 
 ### What is Running tfsec With Claude Code?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Claude Code runs tfsec via its bash tool and parses results for iterative fixes. Basic commands include `tfsec .` for a current-directory scan, `tfsec ./modules/networking` for targeted scans, `tfsec . --format json --out tfsec-results.json` for programmatic output, and `tfsec . --minimum-severity HIGH` to filter by severity. After editing Terraform files, run `tfsec . --include-with-passed --no-colour` to show both passed and failed checks, confirming the scan ran completely against all resources.
 
 ### What is Automating Security Scans With Custom Scripts?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Automation uses a shell script (`tfsec-scan.sh`) that accepts a Terraform directory argument, checks tfsec is installed, runs the scan with JSON output to a timestamped report file, and filters by minimum MEDIUM severity. Make the script executable with `chmod +x` and invoke it from Claude Code. For CI/CD, use the `aquasecurity/tfsec-action@v1.0.0` GitHub Action with `soft_fail: true` to report findings without blocking merges on warnings, adjustable based on your team's security posture.
 
 ### What is Using Claude Code to Interpret tfsec Results?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Claude Code translates tfsec JSON output into actionable guidance by parsing results with jq (`jq '.results[] | select(.severity == "HIGH")'`) and generating corrected Terraform configurations. Feed findings to Claude Code with a prompt like "The scan found 3 HIGH severity issues in main.tf. Explain each finding and provide corrected Terraform code." Claude Code maps tfsec rule IDs (e.g., AWS001 for unversioned S3, AWS017 for unencrypted RDS) to specific resource attribute fixes like `versioning { enabled = true }` or `storage_encrypted = true`.

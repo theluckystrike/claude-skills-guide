@@ -15,7 +15,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 If you've been working with Claude Code, you've probably seen it, those familiar `// TODO: implement error handling` or `// TODO: add validation` comments scattered throughout generated code. While well-intentioned, these placeholder comments can accumulate quickly and become technical debt if not addressed properly. why Claude Code generates these comments and how you can control this behavior effectively.
 
 ## Why Claude Code Generates TODO Comments
@@ -324,32 +323,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
 
-
----
-
-## Frequently Asked Questions
-
-### Why Claude Code Generates TODO Comments?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Real-World Example: What TODO Pollution Looks Like?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical solutions?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Finding and Fixing Existing TODO Comments?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Comparison: Vague vs. Specific Prompts?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

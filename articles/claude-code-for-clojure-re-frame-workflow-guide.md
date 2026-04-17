@@ -15,7 +15,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 Claude Code for Clojure re-frame Workflow Guide
 
 Clojure developers working with re-frame have discovered a powerful ally in Claude Code. This guide demonstrates how to use Claude Code effectively for re-frame projects, from initial setup to advanced state management patterns.
@@ -232,32 +231,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding re-frame Architecture?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Claude Code for Clojure Projects?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Generating re-frame Components?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Handling Event Handlers?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Debugging re-frame Applications?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

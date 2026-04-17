@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Next.js Authentication NextAuth Guide"
-description: "Build secure Next.js authentication with NextAuth using Claude Code CLI. Practical examples for integrating providers, protecting routes, and managing."
+title: "Next-Auth getServerSession: Claude Code Guide"
+description: "Implement getServerSession with authOptions in Next-Auth using Claude Code. Provider integration, route protection, and session management guide."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -14,7 +14,6 @@ score: 7
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Building secure authentication into Next.js applications becomes significantly easier when you combine the power of NextAuth.js with Claude Code's CLI capabilities. This guide walks you through setting up authentication, configuring providers, and protecting routes in your Next.js projects using Claude Code as your development assistant. Whether you're adding auth to an existing app or starting from scratch, the patterns here give you a production-ready foundation.
 
 ## Setting Up NextAuth in Your Next.js Project
@@ -516,32 +515,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up NextAuth in Your Next.js Project?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Configuring NextAuth Providers?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Adding Multiple Providers?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Provider Comparison?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Protecting Routes with Middleware?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

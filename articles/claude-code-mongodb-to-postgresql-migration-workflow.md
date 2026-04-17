@@ -19,7 +19,6 @@ geo_optimized: true
 
 ## Understanding the Migration Challenge
 
-<!-- answer-capsule -->
 MongoDB's document-oriented model and PostgreSQL's relational structure serve different use cases. [When your application outgrows MongoDB's flexibility or when you need stronger ACID guarantees](/claude-tdd-skill-test-driven-development-workflow/), foreign key constraints, or complex reporting capabilities, PostgreSQL becomes the natural choice. The migration involves more than just moving data, it requires rethinking schema design, query patterns, and application logic.
 
 Claude Code accelerates this process by generating migration scripts, validating data transformations, and helping you refactor application code to work with the new database model.
@@ -215,32 +214,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Migration Challenge?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Schema Analysis and Design?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Data Migration Script Generation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Validating Data Integrity?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Application Code Refactoring?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

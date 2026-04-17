@@ -15,7 +15,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 Claude Code for Wazuh SIEM Workflow Tutorial
 
 Security Information and Event Management (SIEM) systems like Wazuh are essential for modern security operations, but managing alerts, analyzing logs, and responding to threats manually can overwhelm even experienced security teams. This tutorial shows you how to use Claude Code to automate Wazuh SIEM workflows, from alert triage to incident response and reporting.
@@ -352,32 +351,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Claude Code with Wazuh?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Configuring Wazuh API Access?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Creating a Wazuh Skill for Claude?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Automated Alert Triage Workflow?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 1: Fetch and Categorize Alerts?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

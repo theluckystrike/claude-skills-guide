@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Skills for Travel Booking Platforms
 
-<!-- answer-capsule -->
 Travel booking platforms require complex integrations with multiple APIs, real-time data processing, and dynamic pricing logic. Claude Code skills provide an elegant way to encapsulate domain knowledge and automate repetitive workflows in travel applications. This guide walks through practical skill designs for common travel booking scenarios. Explore more domain-specific patterns in the [use cases hub](/use-cases-hub/).
 
 ## Core Architecture for Travel Skills
@@ -220,25 +219,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Core Architecture for Travel Skills?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The core architecture for travel booking skills structures around three phases: initialization (loading API credentials and user preferences), execution (processing booking logic), and cleanup (releasing resources and updating caches). Skills orchestrate API calls using `Bash` for executing scripts, `Read` for accessing configuration, and `Write` for generating outputs. Clear boundaries separate what Claude controls (data formatting, orchestration, user communication) from what external systems handle (actual booking APIs, payment processing, availability checks).
 
 ### What is Flight Search Integration?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Flight search integration uses a Python script that accepts origin IATA code, destination IATA code, and departure date in YYYY-MM-DD format as arguments, queries flight APIs, and returns normalized JSON results containing airline, flight number, departure/arrival times, price, and currency. The Claude skill extracts search parameters from natural language requests and executes the script via bash. The skill definition specifies the parameter extraction rules and the script invocation pattern for consistent, repeatable flight searches.
 
 ### What is Hotel Aggregation Patterns?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Hotel aggregation patterns query multiple provider APIs concurrently using background processes, then merge results by property into a standard schema containing hotel_name, location, price_per_night, rating (0-5), and amenities array. The skill accepts location (city or airport code), check-in/check-out dates, and guest count, sorts results by price ascending, and presents the top 10 options with key differentiators highlighted. When a provider API fails, the skill continues with available data rather than failing the entire request, logging errors for debugging.
 
 ### What is Price Tracking and Alerts?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Price tracking uses a persistent JSON file (`.travel_prices.json`) to store historical lowest prices and last-checked timestamps for each route. When a current price check finds a fare below the stored lowest price, the system generates an alert with the previous low, new low, and savings amount. The supermemory skill provides ready-made persistent context patterns for storing user preferences and tracked routes. This pattern extends to car rentals, vacation packages, and cruise bookings for comprehensive price monitoring.
 
 ### What is Itinerary Management?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Itinerary management stores active bookings (flights, hotels, activities), trip timelines with dates and locations, document references (confirmation numbers, voucher codes), and weather alerts for destination dates. The skill displays upcoming trips sorted by departure date and accepts natural language commands to add, modify, or cancel bookings. Calendar API integration detects scheduling conflicts automatically, warning users about overlaps when adding new flights. The supermemory skill maintains this structured data persistently across Claude sessions.

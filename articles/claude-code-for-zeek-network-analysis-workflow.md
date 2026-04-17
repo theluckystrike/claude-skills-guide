@@ -14,7 +14,6 @@ score: 7
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Network security monitoring is essential for modern infrastructure, and Zeek (formerly Bro) remains one of the most powerful open-source network security analyzers available. However, the sheer volume of logs Zeek generates can overwhelm even experienced analysts. This guide shows how Claude Code transforms your Zeek analysis workflow through intelligent automation, contextual understanding, and rapid investigation capabilities.
 
 ## Understanding the Zeek Analysis Challenge
@@ -688,25 +687,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding the Zeek Analysis Challenge?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The Zeek analysis challenge is the difficulty of extracting meaningful security insights from the massive volume of logs Zeek generates across conn.log, http.log, dns.log, ssl.log, files.log, and more. A busy network produces gigabytes of logs daily. Traditional approaches require manual parsing and custom scripting for each task. Claude Code addresses this by acting as an intelligent assistant that automates log processing and understands analysis patterns.
 
 ### What is Zeek Log Types at a Glance?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Zeek produces eight primary log types, each serving specific investigation needs. conn.log tracks all network connections (IPs, ports, bytes, duration) for detecting lateral movement and C2 beaconing. http.log captures HTTP requests for web-based attack analysis. dns.log records DNS queries for DGA and tunneling detection. ssl.log covers TLS sessions and certificate anomalies. files.log tracks transferred files, notice.log holds Zeek-generated alerts, weird.log captures unusual protocol behaviors, and x509.log stores certificate details.
 
 ### What is Setting Up Claude Code for Zeek Workflows?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Setting up Claude Code for Zeek workflows involves creating a dedicated skill file at `.claude/skills/zeek-analyst.md` that documents your log storage paths, typical daily volume (2-5GB), retention periods, internal CIDRs (e.g., 10.0.0.0/8), known-good DNS resolvers, authorized hosts, and business hours. You also initialize a structured directory layout with current, archived, reports, and indicators subdirectories, plus a known-bad IP library sourced from threat feeds like Abuse.ch and AlienVault OTX.
 
 ### What is Automated Log Parsing and Filtering?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Automated log parsing and filtering uses Claude Code to build Python pipelines that read Zeek's TSV-formatted logs, skip comment lines starting with `#`, split fields by tab, and apply filters such as high-traffic thresholds, destination IP matching, or protocol filtering. The parsed records become structured dictionaries keyed by standard Zeek field names. Claude Code transforms raw log data into actionable insights by generating reusable parsing scripts that can be invoked across investigations.
 
 ### What is Parsing Connection Logs?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Parsing connection logs (conn.log) involves reading Zeek's 21-field TSV records covering timestamp, UID, source/destination IPs and ports, protocol, service, duration, bytes transferred, and connection state. A Python parser maps each tab-separated field to named keys, converts dashes to None, and applies optional filters. The parsed data feeds into detection functions like `detect_beaconing()`, which groups connections by src-dst-port tuples and calculates interval jitter ratios to identify C2 beaconing patterns.

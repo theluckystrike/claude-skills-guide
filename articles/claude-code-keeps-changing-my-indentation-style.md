@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Keeps Changing My Indentation Style"
-description: "Learn how to control indentation preferences in Claude Code, configure your preferred style, and prevent unwanted formatting changes when Claude edits."
+title: "Claude Keeps Timing Out and Changing Style: Fix"
+description: "Fix Claude keeps timing out and changing indentation style. Configure your preferred formatting and prevent unwanted code style changes."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -14,7 +14,6 @@ score: 7
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 If you've ever noticed Claude Code rewriting your carefully formatted code with different indentation, switching tabs to spaces, adding extra indentation to nested blocks, or reformatting your entire file, you're not alone. This is one of the most common friction points developers encounter when working with AI coding assistants. The good news is that Claude Code offers several ways to control this behavior and keep your code looking exactly how you want it.
 
 ## Why Claude Changes Indentation
@@ -173,32 +172,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### Why Claude Changes Indentation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Controlling Indentation with .claude/settings.json?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Project-Specific Configuration with EditorConfig?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Using Skills to Enforce Indentation Rules?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Explicit Instructions in Conversations?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

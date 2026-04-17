@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Chrome Extension Block Distracting Sites: A Developer Guide"
+title: "Block Distracting Sites Chrome Extension Guide (2026)"
 description: "Learn how to build a chrome extension to block distracting sites using Manifest V3, custom blocklists, and programmatic controls."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -13,9 +12,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
-
-
-<!-- answer-capsule -->
 Building a chrome extension to block distracting sites gives you granular control over your browsing environment. Unlike generic blockers, a custom solution lets you define exact blocking rules, integrate with your workflow, and extend functionality as needs change. This guide walks through the implementation using Chrome's declarative NetRequest API for Manifest V3 compliance.
 
 ## Understanding the Blocking Mechanism
@@ -395,32 +391,3 @@ Users bypassing the blocker by using incognito: The extension only runs in incog
 
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Blocking Mechanism?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Project Structure?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Defining Blocking Rules?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Dynamic Rule Management?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is User Interface with Popup?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

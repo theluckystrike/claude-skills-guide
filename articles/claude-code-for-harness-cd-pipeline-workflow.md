@@ -14,7 +14,6 @@ score: 7
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Continuous Deployment (CD) pipelines are the backbone of modern software delivery, but managing complex deployments, handling failures, and optimizing pipeline configurations can be time-consuming. Integrating Claude Code into your Harness CD pipeline workflow brings intelligent automation to every stage, from pipeline creation to deployment verification and rollback decisions.
 
 This guide shows you how to use Claude Code to enhance your Harness CD pipelines with AI-powered insights, automated troubleshooting, and intelligent deployment strategies.
@@ -572,32 +571,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Integration Architecture?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Architecture Decision Matrix?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Claude Code for Harness?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Permission Scoping?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Storing Credentials Securely?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

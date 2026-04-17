@@ -14,7 +14,6 @@ score: 7
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 > Note: This article addresses Claude Code *generating* deprecated third-party library methods in the code it writes for you (urllib, numpy, old JavaScript patterns, etc.). If you are looking to fix deprecated Anthropic API calls in your own integration code. such as migrating from `/v1/completions` to `/v1/messages`. see [Fixing Claude Code Deprecated API Methods](/claude-code-uses-deprecated-api-methods-fix/) instead.
 
 One of the most common frustrations developers encounter when working with Claude Code is that it consistently generates code using deprecated API methods. Whether it's an outdated JavaScript method, a legacy Python function, or an old library version, Claude Code sometimes gravitates toward patterns it's seen more frequently in its training data, often older ones. This guide explains why this happens and provides concrete strategies to get Claude Code to use modern, non-deprecated APIs.
@@ -241,32 +240,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```
 
 
-
----
-
-## Frequently Asked Questions
-
-### Why Claude Code Defaults to Deprecated Methods?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Solution 1: Specify Your Dependency Versions Explicitly?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Solution 2: Define a Deprecated Methods Rejection List?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Solution 3: Use Correction Prompts With Modern Alternatives?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is API Modernizer Review?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

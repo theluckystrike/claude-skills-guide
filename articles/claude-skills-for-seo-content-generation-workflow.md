@@ -17,7 +17,6 @@ geo_optimized: true
 
 [Creating SEO-optimized content at scale requires a systematic approach](/best-claude-code-skills-to-install-first-2026/) Developers and power users can use Claude skills to automate research, generate outlines, optimize content, and track performance. This guide walks through a practical workflow using Claude Code skills for each stage of the content generation pipeline, from raw keyword data to published, tracked articles.
 
-<!-- answer-capsule -->
 Claude skills are Markdown files stored in `~/.claude/skills/` and invoked with `/skill-name` inside a Claude Code session. Each skill loads a set of instructions into Claude's context, turning a general-purpose AI into a specialized tool tuned for a specific task.
 
 ## Why Skills Beat Plain Prompts for SEO Work
@@ -346,25 +345,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### Why Skills Beat Plain Prompts for SEO Work?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Claude skills are Markdown files stored in ~/.claude/skills/ that load instructions fresh each session, ensuring every article is evaluated against the same checklist, criteria, and formatting rules. Plain prompts get one response with no reusability. Skills provide high consistency (loaded automatically), one-word invocation, and single-file editing for iteration. For SEO operations producing multiple articles per week, skills guarantee every brief follows the same structure and every keyword cluster uses identical classification logic.
 
 ### What is SEO Content Pipeline?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The SEO content pipeline is a nine-stage workflow: raw keyword export processed with /xlsx for intent clustering, /xlsx again for opportunity scoring and gap analysis, /pdf for extracting stats and citations from research documents, /docx for structured content brief creation, a custom /seo-writer skill for article generation, /seo-audit for quality checking, /xlsx for content calendar updates, and /supermemory for logging performance data into a queryable knowledge base.
 
 ### What is Keyword Research with Spreadsheet Automation?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The /xlsx skill transforms keyword research by processing CSV exports from tools like Ahrefs with columns for keyword, search_volume, difficulty, and CPC. It generates pandas code to classify keywords by search intent (informational, transactional, navigational) using keyword pattern matching, sorts by search volume, calculates content opportunity scores by dividing volume by difficulty, and performs competitor keyword gap analysis to identify high-priority topics you have not covered.
 
 ### What is Content Brief Generation?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The /docx skill generates structured content briefs as formatted Word documents. A complete brief includes target keyword with monthly search volume and difficulty score, secondary keywords, target word count derived from top three SERP results, required H2 headings mapped to search intent sub-questions, internal link targets, external authority sources, meta title and description drafts within character limits, and featured snippet opportunities with the exact question to answer in 40-50 words.
 
 ### What is Document Processing for Research?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+The /pdf skill processes industry reports, whitepapers, competitor content, and academic papers in bulk by extracting statistics, data points, and quotes relevant to your topic. Practical SEO uses include extracting citable statistics from analyst reports to earn backlinks, analyzing competitor content structure and claims, summarizing academic papers for primary research references, and parsing product documentation for accurate technical how-to guides. It saves hours of manual reading per article when topics require multiple source documents.

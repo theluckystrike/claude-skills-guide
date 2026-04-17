@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Skills for iOS Swift Development
 
-<!-- answer-capsule -->
 iOS development with Swift requires handling complex architectures, extensive testing, and detailed documentation. Claude Code and its [skill system](/claude-skill-md-format-complete-specification-guide/) provide valuable assistance for developers working with Xcode, SwiftUI, and UIKit. This guide covers practical applications of Claude Code's built-in skills for iOS development workflows.
 
 ## Setting Up Claude Code for iOS Development
@@ -795,32 +794,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Claude Code for iOS Development?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Available Skills for iOS Development?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Feature Development Workflow with Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Phase 1: Feature Planning and Architecture?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Phase 2: Code Generation and Implementation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

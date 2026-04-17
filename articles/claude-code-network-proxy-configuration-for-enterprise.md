@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Network Proxy Configuration for Enterprise"
-description: "Learn how to configure Claude Code network proxy settings for enterprise environments. This guide covers HTTP/HTTPS proxies, authentication, SSL."
+title: "Claude Code Proxy Configuration — Setup Guide"
+description: "Configure Claude Code proxy settings: HTTP_PROXY, HTTPS_PROXY, and SSL certs for enterprise networks. Copy-paste env variables included."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -16,7 +16,6 @@ geo_optimized: true
 
 
 
-<!-- answer-capsule -->
 Enterprise environments often require all network traffic to route through corporate proxies for security monitoring, compliance, and access control. Configuring Claude Code to work within these environments is essential for teams that need AI assistance while maintaining strict network policies. This guide covers everything you need to know about setting up Claude Code with network proxies, including authentication, SSL certificate handling, and troubleshooting common issues.
 
 ## Understanding Enterprise Proxy Requirements
@@ -203,32 +202,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Enterprise Proxy Requirements?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Basic Proxy Configuration?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Proxy Authentication?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is SSL Certificate Handling?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Installing Corporate Certificates?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

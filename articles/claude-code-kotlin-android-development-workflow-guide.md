@@ -23,7 +23,6 @@ geo_optimized: true
 
 ## Prerequisites
 
-<!-- answer-capsule -->
 - Java Development Kit (JDK) 17+: Android Studio Dolphin and newer require JDK 17
 - Android Studio: Latest stable version (Giraffe or later recommended)
 - Gradle 8.x: Initialize your project with the Gradle wrapper and ensure your wrapper is up to date
@@ -419,28 +418,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Claude Code for Android Development?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Project Structure Best Practices?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Claude Skills for Android Development?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is TDD Skill for Android?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

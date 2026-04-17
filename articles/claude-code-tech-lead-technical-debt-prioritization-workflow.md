@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code Tech Lead Technical Debt Prioritization Workflow"
+title: "Claude Code Tech Lead Technical — Complete Developer Guide"
 description: "A practical workflow for tech leads to identify, categorize, and prioritize technical debt using Claude Code skills and automation."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,9 +12,6 @@ score: 7
 tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
-
-
-<!-- answer-capsule -->
 Claude Code Tech Lead Technical Debt Prioritization Workflow
 
 As a tech lead, managing technical debt is one of the most challenging responsibilities in modern software development. Balancing new feature development with maintaining codebase health requires systematic approaches and the right tools. Claude Code provides a powerful framework for tech leads to systematically identify, categorize, and prioritize technical debt across their projects. This workflow uses Claude Code's skill system, file operations, and bash execution capabilities to create an automated debt management pipeline.
@@ -178,32 +174,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Technical Debt Assessment Challenge?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Building a Technical Debt Discovery Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Categorizing Debt by Impact?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical example: database schema debt?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Integrating with Development Workflow?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

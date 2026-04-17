@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "WireGuard PostUp/PostDown Scripts: Advanced Routing"
-description: "Learn how to use WireGuard's PostUp and PostDown directives to automate routing, firewall rules, and network configuration when your VPN tunnel connects."
+title: "WireGuard PostUp PostDown Scripts: Routing Guide"
+description: "WireGuard postup postdown scripts for advanced routing and firewall automation. Copy-paste examples for split tunneling and network config."
 date: 2026-03-17
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -14,7 +14,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 WireGuard's `PostUp` and `PostDown` directives are powerful features that allow you to execute shell commands automatically when your VPN tunnel is established or torn down. These scripts enable advanced routing configurations, automated firewall rule management, and dynamic network setup that responds to your VPN connection state.
 
 ## Understanding PostUp and PostDown
@@ -458,32 +457,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding PostUp and PostDown?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### How wg-quick Processes These Directives?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is PostUp vs PreUp and PostDown vs PreDown?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Basic Firewall Configuration?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Allowing Forward Traffic?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

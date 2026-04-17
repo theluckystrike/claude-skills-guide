@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Slow Response: How to Fix Latency Issues"
-description: "Practical solutions for fixing slow Claude Code responses. Optimize your AI assistant with skill management, context trimming, and performance tuning."
+title: "Claude Code Slow Response — How to Fix Latency"
+description: "Fix slow Claude Code response times. Trim context, optimize skills, and tune performance settings. Tested speed improvements."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [troubleshooting]
@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Slow Response: How to Fix Latency Issues
 
-<!-- answer-capsule -->
 When Claude Code responds slowly, it disrupts your development workflow and kills productivity. This guide covers practical solutions for diagnosing and fixing latency issues in Claude Code, from skill configuration to context management. For related optimization strategies at the skill file level, see [Claude MD too long: context window optimization](/claude-md-too-long-context-window-optimization/).
 
 ## Common Causes of Slow Responses
@@ -259,32 +258,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What are the common causes of slow responses?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Quick Diagnosis Checklist?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Optimizing Your Skill Configuration?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Context Management Strategies?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Understanding Context Growth?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for MongoDB Atlas Search Workflow"
-description: "Learn how to integrate Claude Code with MongoDB Atlas Search to build powerful search workflows for your applications."
+title: "MongoDB Atlas Search Index Setup — Guide"
+description: "Create Atlas Search indexes with Claude Code. Step-by-step workflow for search index creation, configuration, and query building."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -15,7 +15,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 Claude Code for MongoDB Atlas Search Workflow
 
 Integrating Claude Code with MongoDB Atlas Search unlocks powerful capabilities for building intelligent search experiences. This guide walks you through creating a complete workflow that uses Claude's AI capabilities alongside MongoDB's full-text search features. By the end, you will have a working pipeline that accepts natural language input, translates it into Atlas Search aggregation pipelines, and returns ranked, faceted results your application can consume directly.
@@ -675,32 +674,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Architecture?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Component Responsibility Table?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Your MongoDB Atlas Search Index?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Choosing the Right Analyzer?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Deploying the Index via Atlas CLI?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -14,7 +14,6 @@ tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Infrastructure as code has become essential for managing cloud resources at scale. Terraform remains the industry standard for defining infrastructure, and when combined with Claude Code's AI capabilities, you can dramatically accelerate your AWS provisioning workflows. This guide shows you how to use Claude skills to write, review, and manage Terraform configurations more effectively.
 
 This article focuses specifically on AWS provider patterns: `assume_role` configuration, provider aliases for multi-account deployments, multi-region setups, and AWS-specific authentication strategies. If you are looking for a broader survey of Claude skills across general Terraform workflows. including multi-workspace scripting, terraform-docs integration, and Infracost. see the companion article [Claude Code Skills for Infrastructure as Code with Terraform](/claude-code-skills-for-infrastructure-as-code-terraform/).
@@ -219,32 +218,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Claude for Terraform Development?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Creating Terraform Modules with Claude Assistance?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is AWS Provider Configuration and Best Practices?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is State Management and Remote Execution?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Testing Infrastructure with Terratest Patterns?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -16,7 +16,6 @@ geo_optimized: true
 
 # How to Build a Chrome Extension for Watermarking Images
 
-<!-- answer-capsule -->
 Building a Chrome extension for watermarking images is a practical project that combines web development skills with real utility. Whether you need to protect your photography, add branding to screenshots, or automate batch processing, a custom extension gives you full control without relying on third-party services.
 
 This guide walks through creating a functional image watermarking extension from scratch. You'll learn the core APIs, understand the extension architecture, and have working code you can extend for your specific needs.
@@ -336,28 +335,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up the Manifest?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Popup Interface?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Core Watermarking Logic?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Connecting Popup to Content Script?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "How to Make Claude Code Use My Preferred Test Framework"
+title: "How To Make Claude Code Use My — Complete Developer Guide"
 description: "Learn how to configure Claude Code to use your preferred testing framework with practical examples and custom skill configurations."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,8 +12,6 @@ score: 7
 permalink: /how-to-make-claude-code-use-my-preferred-test-framework/
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 One of the most common questions developers have when working with Claude Code is: "How can I make Claude use my preferred test framework instead of the default?" Whether you're team Jest, pytest, RSpec, or any other testing framework, Claude Code is flexible enough to adapt to your workflow. This guide walks you through multiple methods to configure Claude Code to use your preferred test framework, covering everything from one-off inline instructions to persistent global skills that apply across every project you work on.
 
 ## Understanding How Claude Code Selects Test Frameworks
@@ -448,32 +445,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding How Claude Code Selects Test Frameworks?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Method 1: Using Custom Skills to Set Your Preferred Framework?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Stacking Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Method 2: Project-Specific Configuration with CLAUDE.md?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Method 3: Inline Instructions for One-Off Testing?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Skill Timeout Error: How to Increase the Limit"
-description: "A practical guide for developers and power users on resolving timeout errors in Claude Code skills and increasing execution limits."
+title: "Claude Timeout Fix: Increase Skill Time Limits"
+description: "Fix claude timeout errors in Claude Code skills. Step-by-step guide to increase execution limits and prevent timeouts in long-running tasks."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Skill Timeout Error: How to Increase the Limit
 
-<!-- answer-capsule -->
 When working with Claude Code skills like `frontend-design`, `pdf`, `tdd`, or `supermemory`, you may encounter timeout errors that interrupt your workflow. This guide explains what causes them and how to work around them.
 
 ## Understanding Timeout Errors in Claude Code Skills
@@ -273,25 +272,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding Timeout Errors in Claude Code Skills?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Timeout errors in Claude Code skills occur when a request exceeds the Anthropic API's response time limits. They happen when processing large files with the /pdf skill, generating comprehensive test suites with /tdd, creating presentations with /pptx, or querying large knowledge stores with /supermemory. There is no configurable --timeout flag, no skillDefaults setting, and no CLAUDE_SKILL_TIMEOUT environment variable. The limits are governed entirely by the Anthropic API.
 
 ### What Actually Causes a Timeout?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Timeouts trace back to five specific bottlenecks: large file reads that push the token budget past the API window, slow MCP server responses from cold starts or downstream network calls, network latency and connection instability on remote resources, output length proportional to input complexity where generative skills like /tdd or /pptx produce thousands of lines, and concurrent skill invocations that share API rate limits. The root cause is always elapsed wall-clock time exceeding the API limit.
 
 ### What is Diagnosing Which Step Is Timing Out?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Diagnosing timeouts involves checking the error timing and using the --verbose flag. Run Claude Code with `claude --verbose` to print tool call activity to stdout, revealing which tools hang or appear right before the timeout. You can also test MCP server health directly with `curl -s http://localhost:3100/health`. Timeouts within seconds indicate an MCP or tool layer issue, while partial output followed by a cutoff indicates the model ran out of time mid-generation.
 
 ### What is Timeout immediately on invocation?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+A timeout immediately on invocation means the problem is in the MCP server or external tool call layer, not in model generation. The skill triggered a tool action that never returned. To diagnose, check which MCP tools are configured in your settings.json, try the same skill with minimal input to see if it still times out instantly, and verify the MCP server process is running and healthy if it is self-hosted.
 
 ### What is Timeout mid-generation?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+A timeout mid-generation occurs when you see partial output followed by a cutoff. The model started generating but ran out of time before finishing the response. This is a pure output-length problem caused by requesting too much content in a single API call. The fix is always scoping the request down by breaking the task into smaller pieces, working module-by-module, or using /supermemory to cache results rather than regenerating them.

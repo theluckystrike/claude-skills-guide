@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix MCP Tools Using Too Much Context"
+title: "Fix Claude Code MCP Tools Excessive Context — Quick Guide"
 description: "Reduce MCP server context overhead in Claude Code by deferring tool definitions, disabling unused servers, and preferring CLI tools."
 date: 2026-04-15
 permalink: /claude-code-mcp-tools-excessive-context-fix/
@@ -9,12 +9,10 @@ tags: [mcp, context-window, tokens, optimization, tool-search]
 last_modified_at: 2026-04-17
 geo_optimized: true
 ---
-
 # Fix MCP Tools Using Too Much Context
 
 ## The Error
 
-<!-- answer-capsule -->
 Your Claude Code sessions consume unexpectedly high tokens. Running `/context` reveals that MCP tool definitions are taking a significant portion of the context window, even when you are not using those tools.
 
 ## Quick Fix
@@ -165,32 +163,3 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Anthropic SDK MCP Empty Arguments Bug](/anthropic-sdk-mcp-empty-arguments-bug/)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Error?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Quick Fix?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is What's Happening?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step-by-Step Fix?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Prevention?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

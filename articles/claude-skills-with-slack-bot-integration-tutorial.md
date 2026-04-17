@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Skills with Slack Bot Integration Tutorial"
-description: "Build a Slack bot that invokes Claude skills on demand for code review, document processing, and memory recall directly from Slack using Node.js."
+title: "Slack Chrome Extension + Claude Bot Integration"
+description: "Build a Slack bot with Claude skills integration. Code review, document processing, and memory recall from Slack using Node.js and Claude Code."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [tutorials]
@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Skills with Slack Bot Integration Tutorial
 
-<!-- answer-capsule -->
 A Slack bot backed by Claude skills gives your team an AI assistant that lives inside their daily workspace. Team members can trigger code reviews with the [`tdd` skill](/best-claude-skills-for-developers-2026/), process documents via `pdf`, recall project context through `supermemory`, or get UI feedback from `frontend-design`. all without leaving Slack. This tutorial covers the full Claude skills with Slack bot integration from app creation to skill invocation.
 
 ## Architecture Overview
@@ -294,24 +293,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Step 1: Create the Slack App?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 2: Set Up the Node.js Project?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 3: Create the Bot Server?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

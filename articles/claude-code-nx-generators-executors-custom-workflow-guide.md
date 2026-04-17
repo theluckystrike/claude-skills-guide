@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code Nx Generators Executors Custom Workflow Guide"
+title: "Claude Code Nx Generators — Complete Developer Guide"
 description: "A comprehensive guide to building custom workflows with Nx generators and executors using Claude Code. Learn how to automate your development workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,9 +12,6 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
-
-
-<!-- answer-capsule -->
 Claude Code Nx Generators Executors Custom Workflow Guide
 
 Nx is a powerful build system and monorepo management tool that has become essential for modern JavaScript and TypeScript development. When combined with Claude Code, Nx's generators and executors become even more powerful, enabling you to create sophisticated custom workflows that automate repetitive tasks and enforce best practices across your projects.
@@ -390,32 +386,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Nx Generators and Executors?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Your Nx Project with Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Initialize Your Workspace?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### How do you install required dependencies?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Creating Custom Generators?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

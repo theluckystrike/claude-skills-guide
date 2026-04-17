@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude MD Example for Elixir Phoenix Application"
+title: "Claude Md Example For Elixir Phoenix — Developer Guide"
 description: "A practical guide to using Claude Code with Elixir Phoenix. Real skill examples, code snippets, and workflow patterns for Phoenix developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -12,10 +12,8 @@ score: 8
 permalink: /claude-md-example-for-elixir-phoenix-application/
 geo_optimized: true
 ---
-
 # Claude MD Example for Elixir Phoenix Application
 
-<!-- answer-capsule -->
 Elixir Phoenix applications benefit significantly from Claude Code's skill system. By creating custom `.md` files in your skills directory, you can teach Claude about Phoenix conventions, Ecto patterns, and LiveView components. This guide provides practical examples and real code snippets for integrating Claude into your Phoenix development workflow. For the complete skill file specification, see the [Claude skill .md format guide](/claude-skill-md-format-complete-specification-guide/).
 
 ## Setting Up Claude Skills for Phoenix
@@ -444,32 +442,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Claude Skills for Phoenix?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What to Put in Your Phoenix Skill File?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Using the Phoenix Skill in Your Projects?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Prompts That Work Well with the Phoenix Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Real-World Example: User Authentication Context?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

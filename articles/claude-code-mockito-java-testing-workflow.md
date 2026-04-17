@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Mockito Java Testing Workflow
 
-<!-- answer-capsule -->
 Java developers working with Mockito often spend significant time writing test doubles, configuring stubs, and verifying interactions. Claude Code accelerates this workflow by generating boilerplate, suggesting edge cases, and helping structure tests that follow best practices. This guide shows practical approaches for combining Claude Code with your Mockito-based testing, from project setup through advanced mocking techniques and CI integration.
 
 ## Setting Up Mockito with Claude Code
@@ -542,32 +541,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Mockito with Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Generating Test Classes with Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Working with Argument Matchers?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Testing Private Methods and Legacy Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Stubbing Exceptions and Complex Return Sequences?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

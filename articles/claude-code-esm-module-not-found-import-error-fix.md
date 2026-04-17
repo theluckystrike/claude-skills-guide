@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code ESM Module Not Found Import Error Fix"
+title: "Fix Claude Code Esm Module Not Found Import — Quick Guide"
 description: "Learn how to resolve ESM module not found and import errors in Claude Code. Practical solutions for CommonJS vs ESM conflicts, package.json."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,8 +12,6 @@ score: 7
 permalink: /claude-code-esm-module-not-found-import-error-fix/
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 If you're working with Claude Code and encounter the dreaded "Module not found" or "Cannot find module" error, you're not alone. This is one of the most common issues developers face when building skills that interact with JavaScript or TypeScript projects. this guide covers the root causes of these errors and provide practical solutions to fix them.
 
 ## Understanding ESM and CommonJS in Claude Code
@@ -543,32 +540,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding ESM and CommonJS in Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is ESM vs CommonJS at a Glance?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Diagnosing the Error Before Fixing It?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the common causes of module not found errors?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Troubleshooting Claude Code Specifically?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

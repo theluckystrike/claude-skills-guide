@@ -16,7 +16,6 @@ geo_optimized: true
 
 
 
-<!-- answer-capsule -->
 Code smells are subtle indicators of deeper problems in your codebase that can lead to maintenance nightmares, bugs, and technical debt if left unchecked. While traditional static analysis tools can catch certain issues, Claude Code offers a powerful, context-aware approach to detecting and addressing code smells. This guide walks you through practical workflows for using Claude Code in your code smell detection process.
 
 ## Understanding Code Smells and Why They Matter
@@ -285,32 +284,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Code Smells and Why They Matter?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Your Code Smell Detection Workflow?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 1: Define Your Detection Rules?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Configuring Detection via CLAUDE.md?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 2: Create a Systematic Scanning Prompt?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

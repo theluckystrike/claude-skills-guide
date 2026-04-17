@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Make Claude Code Review Its Own Output"
-description: "A practical guide for developers and power users to set up self-review workflows in Claude Code using skills, prompts, and automation patterns."
+title: "Code Review Workflow with Claude Code"
+description: "Set up automated code review with Claude Code. Self-review workflows using skills, prompts, and automation patterns for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -15,7 +15,6 @@ geo_optimized: true
 
 # How to Make Claude Code Review Its Own Output
 
-<!-- answer-capsule -->
 Getting Claude Code to review its own output transforms your AI workflow from a one-way interaction into a continuous improvement cycle. This approach catches bugs, enforces coding standards, and helps you learn by seeing where your AI assistant identifies issues. Prompt-Based Review Chains
 
 The simplest approach involves asking Claude to review its own output before finishing a task. Add a review request to your prompt:
@@ -213,25 +212,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Method 2: Using Claude Skills for Automated Review?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Method 2 uses community Claude Code skills that include built-in review components. The tdd skill enforces test-driven development, creating a natural review cycle where tests validate implementation. The frontend-design skill checks generated UI code against web accessibility standards, flagging missing ARIA labels or improper heading hierarchy. The pdf skill reviews generated documents for formatting consistency. Install skills in `~/.claude/skills/` and invoke them during code generation for automatic quality checks.
 
 ### What is Method 3: Multi-Pass Generation Patterns?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Multi-pass generation runs Claude in a generate-review-revise sequence. The first pass produces the initial implementation, and the second pass reviews it for SQL injection vulnerabilities, connection leaks, missing error handling, and inefficient patterns. A bash script automates this loop by running `claude --print` for generation, then `claude --print` for review, iterating up to three times until the review finds no issues. This catches bugs before the code reaches your codebase.
 
 ### What is Method 4: Supermemory for Pattern Learning?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The supermemory skill enables Claude to recall past mistakes and corrections across sessions. When you provide feedback like "This approach won't scale" or "Good handling of nulls," supermemory stores that context for future reference. To use it effectively: load the skill when starting a project, provide specific feedback on each generation, and ask Claude to reference past issues before generating new code. Over time, Claude's output improves based on your project-specific preferences and patterns.
 
 ### What are the practical review checklist?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The review checklist covers five categories: Logic (algorithm correctness, off-by-one errors, incorrect conditionals), Security (input sanitization, authentication, secret handling), Dependencies (version compatibility, deprecated APIs, unnecessary imports), Testing (edge cases covered, appropriate mocking, meaningful assertions), and Documentation (comments explain "why" not "what," README updated). Apply this checklist using prompts or a custom `~/.claude/skills/review.md` skill file for consistent automated review.
 
 ### What is Built-in Review Tools?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Claude Code includes native review capabilities: the `/test` command generates tests alongside code, forcing implementations to be testable as a form of review. The `/edit` command enables targeted improvements to specific code sections. For linting integration, pipe Claude's output through ESLint or Pylint using `claude "Write a React component" | eslint --stdin` to catch style issues and common bugs automatically. These tools complement custom review skills for comprehensive quality assurance.

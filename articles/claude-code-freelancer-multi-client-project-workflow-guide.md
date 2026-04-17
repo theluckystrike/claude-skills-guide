@@ -15,7 +15,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 Claude Code Freelancer Multi-Client Project Workflow Guide
 
 Managing multiple client projects simultaneously is one of the biggest challenges freelance developers face. Each client has unique requirements, coding standards, tech stacks, and communication preferences. Claude Code, with its skills system and flexible configuration options, provides powerful tools to streamline this complexity. This guide explores practical strategies for maintaining productivity across multiple concurrent client engagements.
@@ -297,25 +296,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Multi-Client Challenge?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Freelancers typically juggle three to five active projects simultaneously, and context switching between clients wastes significant mental energy. Moving from Client A's React codebase to Client B's Python API requires mentally reorienting to different conventions, terminology, and expectations. Claude Code reduces this friction through directory-based configuration and the skill system. The core principle is context isolation: keeping each client's information completely separate while maintaining quick access when needed through per-directory CLAUDE.md files.
 
 ### What is Project Directory Structure?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The multi-client directory structure uses `~/freelance/clients/` with dedicated subdirectories for each client (e.g., `acme-corp/`, `techstartup-io/`, `localbusiness/`), each containing its own `CLAUDE.md`, source code, tests, and docs. A shared `~/freelance/skills/` directory holds reusable skills organized by function: `client-communication.md`, `code-standards.md`, and `invoice-generation.md`. This structure ensures Claude Code loads client-specific configurations automatically when you `cd` into a client directory.
 
 ### What is Client-Specific Configuration with CLAUDE.md?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Each client's `CLAUDE.md` file contains tailored instructions that activate when working within that directory. The file specifies the tech stack (e.g., React 18 with TypeScript, Next.js 14, PostgreSQL with Prisma ORM), code standards (functional components, Airbnb style guide, test requirements), client conventions (feature flags, commit message formats, API response casing, environment variable prefixes), and communication style preferences. When you start Claude Code from the client directory, it reads CLAUDE.md automatically and applies these conventions.
 
 ### What is Creating Reusable Skills for Client Work?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Reusable skills package common freelance workflows in a central `~/freelance/skills/` directory organized into categories: common skills (code-review, testing, documentation), client management skills (kickoff-meeting, progress-update, handover-notes), and invoicing skills (timesheet-summary, invoice-draft). The code-review skill, for example, instructs Claude to check security vulnerabilities first, verify test coverage against project standards, validate adherence to client coding standards from CLAUDE.md, check error handling, and verify naming conventions, then output findings in a structured format.
 
 ### What is Context Switching Strategies?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Three context switching strategies prevent information leakage between clients. Directory-based sessions: always start Claude Code from the specific client directory (`cd ~/freelance/clients/acme-corp && claude`) so CLAUDE.md loads automatically. Resume flag: use `claude --resume` for extended work on a single client to maintain conversation history. Explicit context notes: create a `CONTEXT.md` file in each project listing current sprint, today's focus, and blockers, then ask Claude to read it at session start. Each transition takes seconds as Claude Code adapts immediately.

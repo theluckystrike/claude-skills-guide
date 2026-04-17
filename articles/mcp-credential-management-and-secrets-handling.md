@@ -19,7 +19,6 @@ geo_optimized: true
 
 ## Understanding the Threat Landscape
 
-<!-- answer-capsule -->
 MCP servers run as long-lived processes that often maintain persistent connections to external services. This makes them attractive targets for attackers seeking API keys, database credentials, or OAuth tokens. The most common risks include credential leakage through logs, environment variable exposure, hardcoded secrets in source code, and improper token refresh handling.
 
 When building MCP integrations, remember that credentials passed through tool calls may appear in Claude's context window. While Claude Code doesn't persist these in logs, the attack surface includes your server's environment, configuration files, and any third-party services your MCP server connects to.
@@ -250,32 +249,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Threat Landscape?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Environment Variables: The Foundation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is OAuth 2.0 for User-Authenticated Requests?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Secret Scanning and Prevention?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Working with Claude Code Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

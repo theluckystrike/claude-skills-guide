@@ -16,7 +16,6 @@ geo_optimized: true
 
 
 
-<!-- answer-capsule -->
 Production profiling is essential for maintaining application performance, but it can be overwhelming without the right tools and workflows. This guide shows you how to integrate Claude Code into your profiling workflow to identify bottlenecks faster, analyze complex performance data, and implement effective optimizations.
 
 ## Understanding Production Profiling Challenges
@@ -224,25 +223,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding Production Profiling Challenges?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Production profiling challenges differ fundamentally from development profiling. You must monitor live systems without causing performance degradation, handle large volumes of profiling data, and correlate performance issues with real user traffic patterns. Traditional approaches require manual analysis of raw data, which is time-consuming and error-prone. Claude Code automates parts of this process by interpreting complex performance data, explaining patterns, and suggesting targeted optimizations, combining contextual understanding with appropriate profiling tools.
 
 ### What is Setting Up Your Profiling Environment?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Setting up a profiling environment for Node.js applications requires installing clinicjs, flamegraph, and 0x globally via npm, then configuring the application with `NODE_ENV=production` and `NODE_OPTIONS="--perf-prof"`. For Python applications, install py-spy and record profiles with `py-spy record -o profile.svg -- python app.py`. The goal is capturing profiling data without significantly impacting production workload. Use sampling-based profilers for CPU-intensive operations and instrumented profiling for detailed timing data.
 
 ### What is Integrating Claude Code into Profiling Workflows?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Claude Code assists at three stages of profiling workflows. Automated data analysis: feed captured profiling data to Claude for identifying top time-consuming functions. Pattern recognition: create a weekly workflow comparing production profiles against baselines for differential analysis, tracking performance trends and catching regressions. Optimization suggestions: describe bottlenecks with technology stack details (e.g., Node.js with PostgreSQL) and Claude provides targeted advice like batching queries, implementing caching, or restructuring data access patterns.
 
 ### What are the practical profiling workflows?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Three practical profiling workflows cover common production issues. High CPU usage: capture a 30-second profile with `perf record`, generate a flame graph with `stackcollapse-perf.pl | flamegraph.pl`, and feed it to Claude for interpretation. Memory leaks: use Node.js heap snapshots via `--inspect` flag or Python's `memory_profiler`, then describe symptoms to Claude for guidance on identifying ungarbage-collected objects. Slow database queries: enable PostgreSQL slow query logging (`log_min_duration_statement = 1000`), then provide both query logs and application code to Claude for combined analysis.
 
 ### What is Scenario 1: High CPU Usage?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+The High CPU Usage scenario follows a three-step workflow. First, capture an immediate profile using `perf record -F 99 -p $(pgrep -f your-app) -g -- sleep 30` to sample the process at 99Hz for 30 seconds. Second, generate a flame graph by piping `perf script` through `stackcollapse-perf.pl` and `flamegraph.pl` to produce a visual SVG. Third, provide the flame graph to Claude Code for plain-language interpretation, identifying exactly what functions cause the CPU load without requiring deep expertise in profiling tools.

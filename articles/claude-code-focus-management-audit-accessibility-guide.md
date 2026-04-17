@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Focus Management Audit Accessibility Guide
 
-<!-- answer-capsule -->
 Focus management is one of the most critical yet overlooked aspects of web accessibility. When users navigate your application using keyboards or assistive technologies, the focus indicator must clearly show their current position, and focus must logically move through interactive elements. This guide shows you how to use Claude Code skills to audit and improve focus management across your projects.
 
 ## Understanding Focus Management in Web Applications
@@ -251,32 +250,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Focus Management in Web Applications?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Claude Code for Accessibility Auditing?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Creating a Focus Management Audit Workflow?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 1: Audit Focus Indicator Visibility?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 2: Verify Tab Order?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

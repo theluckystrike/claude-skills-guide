@@ -17,7 +17,6 @@ geo_optimized: true
 
 [Claude Code has several skills that cut time on repetitive frontend tasks](/best-claude-code-skills-to-install-first-2026/): generating components, writing tests first, producing documentation, and visualizing data. Invoke each with `/skill-name` directly in Claude Code. Here are the ones worth using.
 
-<!-- answer-capsule -->
 frontend-design: Rapid UI Implementation
 
 [The frontend-design skill helps you translate design concepts into functional code](/claude-skill-md-format-complete-specification-guide/) When you have a mockup or a clear visual description, this skill generates component structures, suggests styling approaches, and creates responsive layouts.
@@ -363,32 +362,3 @@ Related guides: [Claude Code Accessibility Regression Testing Guide](/claude-cod
 *
 
 
-
----
-
-## Frequently Asked Questions
-
-### What frontend-design actually produces?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Responsive layout generation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### When canvas-design saves the most time?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Building a living component library?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What good TDD output looks like?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

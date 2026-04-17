@@ -16,7 +16,6 @@ geo_optimized: true
 
 ## The Error
 
-<!-- answer-capsule -->
 You have Claude Code running with `--dangerously-skip-permissions` and a PreToolUse hook configured to log and allow all tool calls. Everything works initially. Then, after a background task completes (or after an extended idle period), permission prompts start appearing:
 
 ```
@@ -205,32 +204,3 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 For developers running Claude Code in automation pipelines where permission integrity is critical, a dev tool extension can help monitor and debug the tool call flow in real time.
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Error?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Quick Fix?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is What's Happening?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step-by-Step Solution?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Prevention?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

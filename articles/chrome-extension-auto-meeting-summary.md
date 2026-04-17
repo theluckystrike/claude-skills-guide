@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Chrome Extension Auto Meeting Summary: A Developer Guide"
+title: "Auto Meeting Summary Chrome Extension Guide (2026)"
 description: "Build a Chrome extension that automatically captures and summarizes meeting transcripts. Complete implementation guide with code examples for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -13,8 +12,6 @@ reviewed: true
 score: 8
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 Chrome extensions have transformed how we capture and process information from web-based meeting platforms. Building an auto meeting summary extension requires understanding browser APIs, content scripts, and message passing between different extension components. This guide walks you through creating a functional Chrome extension that captures meeting transcripts and generates summaries automatically.
 
 ## Understanding the Architecture
@@ -340,28 +337,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Architecture?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up the Manifest?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Capturing Meeting Transcripts?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Background Service Worker?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

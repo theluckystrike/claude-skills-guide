@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code for CloudWatch RUM Workflow"
+title: "Claude Code For Cloudwatch Rum — Complete Developer Guide"
 description: "Learn how to use Claude Code to set up, configure, and manage AWS CloudWatch RUM (Real User Monitoring) for your web applications. Practical examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -13,9 +12,6 @@ reviewed: true
 score: 8
 geo_optimized: true
 ---
-
-
-<!-- answer-capsule -->
 Claude Code for CloudWatch RUM Workflow
 
 AWS CloudWatch RUM (Real User Monitoring) is a powerful service that helps you collect client-side performance metrics, user session data, and behavioral insights from your web applications. Integrating CloudWatch RUM into your workflow can feel overwhelming, but Claude Code makes it straightforward to set up, configure, and maintain. This guide walks you through using Claude Code to streamline your CloudWatch RUM implementation.
@@ -248,32 +244,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up CloudWatch RUM with Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 1: Create the RUM App Monitor?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 2: Add the RUM JavaScript to Your Application?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Configuring Custom Events and Page Views?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Tracking Custom Events?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

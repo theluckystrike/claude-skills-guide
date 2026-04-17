@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Best Way to Customize Claude Code Output Format Style"
-description: "Customize Claude Code output format for consistent, professional responses. Configure CLAUDE.md, skill metadata, and prompt patterns."
+title: "Claude Code Output Format — How to Customize"
+description: "Customize Claude Code verbose output and response style. Configure CLAUDE.md, skill metadata, and prompt patterns for clean output."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -15,7 +15,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 Best Way to Customize Claude Code Output Format Style
 
 Customizing Claude Code's output format and style allows you to get consistent, predictable responses that match your team's coding standards and preferences. Whether you need concise bullet points, detailed technical documentation, or specific code formatting, mastering output customization significantly improves your development workflow efficiency. This guide covers every layer of the customization stack: CLAUDE.md configuration, skill metadata, prompt engineering patterns, and machine-parseable output structures.
@@ -371,25 +370,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding Claude Code Output Customization?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Claude Code output customization works through four layers: CLAUDE.md project files that define coding standards for a repository, skill metadata and prompt templates that shape response structure for specialized workflows, explicit formatting instructions in individual prompts for one-off requests, and output parsing configurations for automated pipelines needing machine-readable data. The key is matching the customization layer to the scope of need -- project-wide preferences belong in CLAUDE.md, workflow-specific formats in skills, and single-request formatting in the prompt itself.
 
 ### What is Customization Layer Comparison?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The customization layer comparison shows five levels of output control. Root CLAUDE.md applies to the entire project with permanent persistence, ideal for team-wide coding standards. Subdirectory CLAUDE.md scopes to that directory tree for sub-package conventions. Skill metadata applies only during skill invocations for specialized document formats. Prompt instructions apply to a single request with no persistence. Output parsing config lives in configuration files and targets CI/CD integration for automated workflows.
 
 ### What is Configuring Output Style Through CLAUDE.md?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+CLAUDE.md in your project root is the primary customization point for Claude Code output style. Claude Code reads this file automatically at session start, so preferences require no repetition in individual prompts. Add sections covering response style (concise, bullet points, code examples), code formatting (TypeScript strict mode, functional components, error handling, JSDoc comments), and documentation standards (README sections, OpenAPI format, migration guides). Avoid bloating CLAUDE.md with rules that duplicate ESLint or Prettier enforcement.
 
 ### What is Setting Response Format Preferences?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Setting response format preferences involves adding a dedicated output preferences section to your CLAUDE.md file with explicit directives like "keep responses concise and actionable," "use bullet points for multi-step instructions," "provide code examples for all implementations," and "include inline comments for complex logic." These instructions tell Claude Code exactly how to structure every response within the project, eliminating the need to specify formatting in each individual prompt.
 
 ### What is Defining Code Style Rules?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Defining code style rules means specifying exact formatting rules in CLAUDE.md to ensure consistent code generation. For TypeScript, specify preferences like `interface` over `type` for public APIs, strict null checks, and `const` over `let`. For React, mandate functional components with hooks, proper key props, composition over inheritance, and maximum 200-line components. General rules include maximum line length (100 characters), meaningful variable names without single letters, and type annotations on all function parameters.

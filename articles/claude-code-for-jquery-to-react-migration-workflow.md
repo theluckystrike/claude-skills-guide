@@ -16,7 +16,6 @@ geo_optimized: true
 
 
 
-<!-- answer-capsule -->
 Migrating a legacy jQuery application to React is one of the most challenging modernization tasks a frontend developer can face. jQuery's imperative DOM manipulation patterns differ fundamentally from React's declarative component architecture. However, Claude Code transforms this daunting migration into a systematic, manageable workflow. This guide explores how to use Claude Code's skills and capabilities to migrate jQuery codebases efficiently while maintaining application functionality.
 
 ## Understanding the Migration Challenge
@@ -205,32 +204,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Migration Challenge?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Starting the Migration with Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Converting jQuery Selectors to React Patterns?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Handling jQuery Plugins and Dependencies?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is State Management Migration Patterns?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

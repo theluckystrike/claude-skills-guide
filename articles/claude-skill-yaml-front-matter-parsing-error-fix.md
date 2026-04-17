@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Skill YAML Front Matter Parsing Error Fix"
-description: "Fix YAML front matter parsing errors in Claude Code skill files. Covers indentation, special characters, missing closing delimiters, and validation tools."
+title: "Missing YAML Frontmatter Delimited by --- Fix"
+description: "Fix YAML frontmatter parsing errors in Claude Code skills. Missing --- delimiters, indentation, and special character issues solved."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [troubleshooting]
@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Skill YAML Front Matter Parsing Error Fix
 
-<!-- answer-capsule -->
 A malformed [YAML front matter](/claude-skill-md-format-complete-specification-guide/) block is one of the most common reasons a Claude Code skill silently fails to load. The skill file exists, permissions are correct, but Claude either ignores the invocation or loads the skill without its configured metadata. This guide covers every known cause of YAML front matter parsing errors and gives you the exact fix for each.
 
 ## What YAML Front Matter Does in a Skill File
@@ -370,32 +369,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What YAML Front Matter Does in a Skill File?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Error 1: Missing or Mismatched Closing Delimiter?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Error 2: Tabs Instead of Spaces?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Error 3: Unquoted Strings With Colons?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Error 4: Unquoted Special Characters?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Opus Orchestrator-Sonnet-Worker Architecture
 
-<!-- answer-capsule -->
 The [orchestrator-worker pattern](/claude-code-multi-agent-orchestration-patterns-guide/) ways to structure complex AI agent systems. By combining Claude Opus as the central orchestrator with specialized Sonnet workers handling discrete subtasks, developers can build systems that balance reasoning capability with cost efficiency and task specialization.
 
 ## Understanding the Architecture
@@ -161,32 +160,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Architecture?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### When to Use This Pattern?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Building the Orchestrator?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Defining Worker Specializations?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Implementing Worker Communication?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

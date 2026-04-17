@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Top 10 Free Claude Code Skills for GitHub Projects"
-description: "The best free Claude Code skills for GitHub workflows: PDF processing, TDD, frontend design, webapp testing, and more. How to invoke each one."
+title: "Claude Skills Directory GitHub: Top 10 Free Skills"
+description: "Best free Claude skills from the GitHub directory. PDF processing, TDD, frontend design, and webapp testing skills you can install today."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [best-of]
@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Top 10 Free Claude Code Skills for GitHub Projects
 
-<!-- answer-capsule -->
 Claude Code skills are `.md` files stored in `~/.claude/skills/`. You invoke them with a slash command inside a Claude Code session. This list covers ten skills that add genuine value to GitHub-based development workflows. each one free to use.
 
 ## How to Invoke Skills
@@ -324,32 +323,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### How to Invoke Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Combining Skills for Complex GitHub Workflows?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Installing and Managing Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Choosing Skills for Your Workflow?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Building Custom Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

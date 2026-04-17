@@ -21,7 +21,6 @@ geo_optimized: true
 
 ## Understanding the disallowedTools Mechanism
 
-<!-- answer-capsule -->
 The `disallowedTools` field works as a deny-list at the configuration level. When a tool is marked as disallowed, Claude Code will refuse to invoke it, even when the user explicitly requests the operation. This differs from simply omitting tools from a skill's allowed list, `disallowedTools` operates at a more fundamental level, blocking specific capabilities across all interactions unless explicitly overridden.
 
 The primary use cases for `disallowedTools` fall into three categories:
@@ -221,32 +220,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the disallowedTools Mechanism?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Configuring disallowedTools?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical security configurations?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Read-Only Analysis Environment?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Production Environment Isolation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

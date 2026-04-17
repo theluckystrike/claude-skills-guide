@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code for Fortran Scientific Code Modernization Guide"
+title: "Claude Code Fortran Scientific — Complete Developer Guide"
 description: "A comprehensive guide to using Claude Code for modernizing legacy Fortran scientific codebases, including refactoring patterns, testing strategies, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,8 +12,6 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 Legacy Fortran code forms the backbone of many scientific and engineering applications, from climate models to computational physics. However, maintaining these aging codebases presents significant challenges. This guide demonstrates how Claude Code can accelerate Fortran modernization while preserving correctness and improving maintainability.
 
 Modernizing Fortran is not merely a cosmetic exercise. It directly affects your team's ability to onboard new developers, integrate with modern toolchains, and take advantage of compiler optimizations that have improved dramatically over the past two decades. Claude Code shortens what can otherwise be a months-long manual effort into a systematic, verifiable process.
@@ -376,32 +373,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Claude Code for Fortran Development?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Quick Environment Check?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Analyzing Legacy Fortran Codebases?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Assessing Code Structure?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Modernization Patterns and Examples?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

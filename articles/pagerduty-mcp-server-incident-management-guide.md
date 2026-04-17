@@ -21,7 +21,6 @@ geo_optimized: true
 
 ## Prerequisites and Initial Setup
 
-<!-- answer-capsule -->
 Before configuring the PagerDuty MCP server, ensure you have a PagerDuty account with API access. You'll need to generate an API key with appropriate permissions for incident operations. The key should include read/write access to incidents, services, and escalation policies.
 
 Install the required packages in your project:
@@ -215,28 +214,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Retrieving and Managing Incidents?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Creating and Triggering Incidents Programmatically?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Incident Lifecycle Automation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Building Automated Response Workflows?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

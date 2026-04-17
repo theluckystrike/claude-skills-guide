@@ -15,7 +15,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 Claude Code for Knip Dead Code Finder Workflow
 
 Dead code accumulates in every growing codebase, unused exports, obsolete dependencies, abandoned files, and TypeScript declarations that no longer serve any purpose. Left unchecked, this technical debt slows down CI pipelines, bloats bundle sizes, and creates confusion for developers navigating the codebase. Knip, the dead code finder for JavaScript and TypeScript projects, detects these issues systematically. When combined with Claude Code's agentic capabilities, you get an automated workflow that not only finds dead code but helps you safely remove it.
@@ -232,32 +231,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What Knip Detects?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Knip in Your Project?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Creating a Claude Code Skill for Knip?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Integrating Knip Into Your Development Workflow?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Pre-Commit Checks?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -16,7 +16,6 @@ geo_optimized: true
 
 
 
-<!-- answer-capsule -->
 The Process Manager pattern (also known as Saga Coordinator or Workflow Orchestrator) is a powerful architectural pattern for coordinating complex multi-step business processes across distributed services. When implemented correctly, it enables reliable execution of long-running workflows while handling failures gracefully through compensation mechanisms. This guide shows you how to use Claude Code to implement solid Process Manager workflows efficiently.
 
 ## Understanding the Process Manager Pattern
@@ -297,32 +296,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Process Manager Pattern?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Your Project for Process Manager Development?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Implementing the Core Process Manager?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Defining Workflow Steps with Compensation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Handling Long-Running Workflows with Persistence?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

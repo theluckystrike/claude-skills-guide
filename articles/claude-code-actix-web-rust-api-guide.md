@@ -19,7 +19,6 @@ geo_optimized: true
 
 ## Why Actix Web for Rust APIs
 
-<!-- answer-capsule -->
 Before getting into code, it is worth understanding why teams choose Actix Web over alternatives. The Rust web framework landscape includes several capable options, Axum, Warp, Rocket, and Tide are all production-ready. Here is how they compare on the axes that matter most:
 
 | Framework | Performance | Async Model | Learning Curve | Ecosystem Maturity |
@@ -575,25 +574,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### Why Actix Web for Rust APIs?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Actix Web wins on benchmark throughput and ecosystem breadth compared to alternatives like Axum, Rocket, and Warp. It delivers excellent performance through an actor-based async model on Tokio, supports sustained 50k+ requests per second on modest hardware, and provides mature middleware, WebSocket support, and multipart handling. The tradeoff is that Actix's actor system adds conceptual overhead to the learning curve. Claude Code helps flatten that curve by generating idiomatic patterns developers can inspect and adapt.
 
 ### What is Setting Up Your Rust API Project?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Setting up an Actix Web project requires initializing with `cargo new` and adding dependencies: `actix-web = "4"`, `actix-rt = "2"`, `tokio` with full features, `serde` with derive, and `serde_json`. For production APIs, also add `env_logger`, `log`, `dotenvy` for environment configuration, and `uuid` with v4 and serde features. Configure all dependencies upfront in Cargo.toml to avoid refactoring later, particularly logging and connection pool libraries.
 
 ### What is Creating Your First Endpoint?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Creating your first Actix Web endpoint involves defining Serde-derived request and response structs (like `User` and `CreateUserRequest`), implementing async handler functions that return `impl Responder`, and wiring routes in `HttpServer::new` using `web::get().to()` and `web::post().to()`. The handler deserializes JSON request bodies via `web::Json<T>` extractor and returns responses with `HttpResponse::Ok().json()` or `HttpResponse::Created().json()`. Test with curl against `http://127.0.0.1:8080`.
 
 ### What is Structuring Routes with App State?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Structuring routes with app state uses Actix Web's `web::Data` wrapper to share database pools, configuration, and caches across handlers. Define an `AppState` struct with `Mutex`-wrapped fields, wrap it in `web::Data::new()`, and pass it via `.app_data(state.clone())` in the App configuration. Handlers extract state through `web::Data<AppState>` parameters. Claude Code generates this pattern correctly, including the `move` closure in `HttpServer::new` that trips up developers new to Rust's ownership rules.
 
 ### What is Using Claude Code with Your API?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Claude Code enhances Actix Web development through targeted skills: the `/tdd` skill generates unit tests covering validation logic, edge cases, and error responses; the `/pdf` skill generates API documentation from OpenAPI specs; and the `/supermemory` skill stores preferred API patterns like error response formats and pagination parameters across sessions. Claude Code is especially valuable for resolving Rust-specific issues like lifetime errors in handler functions, async trait bounds, and middleware ordering questions.

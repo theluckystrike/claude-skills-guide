@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Portuguese Documentation Generation Guide
 
-<!-- answer-capsule -->
 Generating documentation in Portuguese opens your projects to Brazilian and Portuguese-speaking development teams. Claude Code handles this efficiently when you configure the right workflow, whether you need API docs, README files, or inline code comments in Portuguese.
 
 This guide walks through setting up a Portuguese [documentation generation workflow](/automated-code-documentation-workflow-with-claude-skills/) using Claude skills, covering language configuration, skill selection, and practical examples you can apply immediately. If you need to handle multiple languages, see the [i18n localization workflow automation guide](/claude-skills-for-localization-i18n-workflow-automation/).
@@ -241,28 +240,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Configuring Portuguese as the Output Language?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Generating Inline Documentation in Portuguese?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Creating README Files in Portuguese?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Generating API Documentation in Portuguese?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

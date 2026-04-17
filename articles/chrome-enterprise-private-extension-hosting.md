@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Enterprise Private Extension Hosting"
-description: "Learn how to host and distribute private Chrome extensions within your organization using enterprise deployment methods."
+title: "Chrome Enterprise Private Extension Hosting Guide"
+description: "Host private Chrome extensions in your org. Enterprise deployment methods, self-hosting setup, and policy configuration explained."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -15,7 +15,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 Chrome Enterprise Private Extension Hosting
 
 Enterprise organizations often need to distribute custom Chrome extensions internally without publishing them to the public Chrome Web Store. Whether you're building internal tools, security extensions, or custom workflows, private extension hosting provides the control and security your organization requires.
@@ -197,25 +196,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding Private Extension Distribution?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Chrome extensions distribute through three channels: the Chrome Web Store (convenient but publicly visible even when unlisted), enterprise policy deployment via Chrome Browser Cloud Management or Group Policy (centralized control, automatic updates), and self-hosted CRX files (complete control but manual update management). The decision depends on whether the extension contains sensitive business logic, whether you need automatic updates, and whether you have enterprise policy infrastructure.
 
 ### What is Method One: Enterprise Policy Deployment?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Enterprise policy deployment uses Chrome Browser Cloud Management (CBCM) through the Google Admin console. Navigate to Devices > Chrome management > App management, select your extension, and configure force installation policy with the extension ID, installation_mode set to "force_installed," and the update_url. Force-installed extensions push automatically to all managed browsers -- users cannot disable or remove them, ensuring consistent security policies across your organization.
 
 ### What is Configuration Through Admin Console?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Configuration through the Admin console requires CBCM enabled on your organizational unit. Navigate to Devices > Chrome management > App management in Google Admin console, select your extension by its 32-character ID, and set the installation policy to force_installed with the appropriate update_url pointing to either Google's update service (clients2.google.com/service/update2/crx) or your self-hosted update manifest. The policy propagates to all enrolled browsers automatically.
 
 ### What is Managing Updates?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+When using policy deployment, extensions update automatically through Google's infrastructure. You must upload new versions to the Chrome Web Store (even as unlisted) or use the extension's own update_url mechanism. The policy-based approach does not bypass the normal update checking mechanism. For self-hosted extensions, update your XML manifest file with the new version number (must be higher than currently installed) and new CRX file URL with SHA-256 hash for integrity verification.
 
 ### What is Method Two: Self-Hosted Extension Hosting?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Self-hosted extension hosting serves CRX files from your own servers for complete infrastructure control. Configure your Manifest V3 manifest.json with an update_url pointing to your XML update manifest (e.g., https://extensions.yourcompany.com/updates.xml). Create a GUpdate XML file specifying the extension appid, codebase URL, version, and SHA-256 hash. Your web server must serve the CRX file with Content-Type: application/x-chrome-extension and support range requests.

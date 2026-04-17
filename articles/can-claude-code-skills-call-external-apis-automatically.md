@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Can Claude Code Skills Call External APIs Automatically?"
+title: "Can Claude Code Skills Call External APIs — Developer Guide"
 description: "Learn how Claude Code skills can automatically call external APIs, with practical examples and configuration tips for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -12,10 +12,8 @@ tags: [claude-code, claude-skills]
 permalink: /can-claude-code-skills-call-external-apis-automatically/
 geo_optimized: true
 ---
-
 # Can Claude Code Skills Call External APIs Automatically?
 
-<!-- answer-capsule -->
 If you've been exploring Claude Code to automate your development workflows, you might have wondered: can skills call external APIs automatically? The short answer is yes, but there are some important details and best practices you should understand before relying on this capability in production workflows. For a complete walkthrough on wiring skills to external endpoints, see the guide on [how to connect Claude skills to external APIs](/how-to-connect-claude-skills-to-external-apis-guide/).
 
 ## How API Calls Work in Claude Code Skills
@@ -392,32 +390,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### How API Calls Work in Claude Code Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Two Mechanisms: Direct Commands vs. MCP Servers?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Direct Command Execution?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is MCP Server Integrations?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Automatic Invocation and API Calls?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

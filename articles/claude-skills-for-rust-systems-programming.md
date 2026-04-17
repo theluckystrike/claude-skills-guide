@@ -19,7 +19,6 @@ geo_optimized: true
 
 ## Setting Up Rust-Focused Skills
 
-<!-- answer-capsule -->
 Claude skills are Markdown files that inject specialized instructions into your coding sessions. For Rust development, you can activate built-in skills or create custom ones targeting systems programming patterns.
 
 To check available skills in Claude Code, run `ls ~/.claude/skills/` in your terminal.
@@ -451,25 +450,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Setting Up Rust-Focused Skills?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Rust-focused skills are custom Markdown files placed in ~/.claude/skills/ with the .md extension that inject Rust-specific instructions into Claude Code sessions. Create a custom skill that instructs Claude to prefer Result over panics, minimize clone() calls, use &str slices over String where appropriate, audit unsafe blocks for SAFETY invariant documentation, recommend thiserror for library errors and anyhow for application errors, and suggest static analysis with clippy and miri.
 
 ### Why Rust-Specific Skills Matter?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Generic coding skills treat all languages similarly, but a Rust-specific skill shifts guidance from "how to fix this borrow error" to "the ownership design that avoids the error entirely." Without a Rust skill, Claude suggests String::from() everywhere; with one, it offers &str vs String tradeoff analysis. For shared state it recommends Arc<Mutex<T>> with deadlock notes instead of generic mutex examples. For unsafe blocks it documents SAFETY invariants inline rather than writing uncommented code.
 
 ### What is Working with Unsafe Code?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Working with unsafe Rust code in Claude Code means applying strict discipline to FFI bindings, manual memory management, and performance-critical sections. Claude verifies that all safety invariants are documented with `// SAFETY:` comments, raw pointers do not outlive their referents, dereferenced blocks contain no undefined behavior, and FFI boundaries use appropriate transmute patterns. Claude generates the wrapper pattern automatically: safe public API with bounds checking, minimal unsafe scope inside.
 
 ### What is Minimal Unsafe Surface Rule?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The minimal unsafe surface rule means isolating unsafe operations to the smallest possible scope and exposing a safe public API. Instead of marking an entire function unsafe, wrap only the one-liner read or write in an unsafe block surrounded by explicit bounds checking with assert!. The public function signature remains entirely safe. Claude generates this pattern automatically -- for example, a read_at<T: Copy> function with bounds assertion before a single unsafe ptr.read_unaligned() call.
 
 ### What is Memory Management Patterns?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Rust memory management patterns covered include Box<T> for single-owner heap allocation with zero overhead, Rc<T> for shared ownership on a single thread, Arc<T> for thread-safe shared ownership, RefCell<T> for single-thread interior mutability, Mutex<T>/RwLock<T> for multi-thread interior mutability, and Weak<T> for breaking reference cycles. Claude also guides use of std::mem::forget for FFI ownership transfers and generates criterion benchmarks with a counting allocator pattern to audit allocation sites in hot paths.

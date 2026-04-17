@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Starship Prompt Workflow"
-description: "Learn how to use Claude Code to streamline your Starship prompt configuration workflow. Get practical prompts, code examples, and actionable tips for."
+title: "Starship Prompt + Claude Code: Workflow Guide"
+description: "Configure Starship prompt with Claude Code for a powerful terminal workflow. Practical prompts, code examples, and customization tips."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -14,7 +14,6 @@ score: 8
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Starship is a blazingly fast, customizable prompt for any shell that works across bash, zsh, fish, and PowerShell. But crafting the perfect Starship configuration can be time-consuming, writing TOML, testing segments, and iterating on the visual design. This is where Claude Code becomes your secret weapon. By using Claude's code generation and editing capabilities, you can dramatically accelerate your Starship prompt workflow.
 
 Why Use Claude Code with Starship?
@@ -217,28 +216,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Generated Configuration?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Format Strings?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Module Configuration?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical examples for common use cases?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

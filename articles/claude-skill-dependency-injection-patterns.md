@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Skill Dependency Injection Patterns
 
-<!-- answer-capsule -->
 Dependency injection isn't just a software engineering concept. When you structure Claude skills to compose and chain together, you unlock modular AI workflows that scale. This guide shows you how to design skills that delegate to other skills, share common logic, and build composable automation pipelines. For foundational skill composition patterns, see [Claude skill inheritance and composition patterns](/claude-skill-inheritance-and-composition-patterns/).
 
 ## What Dependency Injection Means for Claude Skills
@@ -203,32 +202,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What Dependency Injection Means for Claude Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Delegation Pattern?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Chaining Pattern?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Configuration Pattern?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Shared Service Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

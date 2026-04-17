@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Skills for Infrastructure as Code with Terraform
 
-<!-- answer-capsule -->
 Infrastructure as code has become essential for managing cloud resources reproducibly. When combined with Claude Code skills, Terraform workflows become significantly more efficient. This guide covers the most useful Claude skills for infrastructure-as-code projects and shows how to apply them in real-world scenarios.
 
 This article covers Claude skills across general Terraform workflows: a survey of the core skills (`/tdd`, `/supermemory`, `/pdf`, `git-workflow`), multi-workspace scripting, terraform-docs integration, and Infracost cost estimation. It applies to any cloud provider. If you are working specifically with AWS and need detail on `assume_role`, provider aliases, multi-region configuration, or AWS-specific authentication patterns, see the companion article [Claude Code Terraform AWS Provider Guide](/claude-code-terraform-aws-provider-guide/).
@@ -349,28 +348,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Your Terraform Workflow?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Essential Skills for Infrastructure Work?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Claude Code for Terraform Commands?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical examples?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

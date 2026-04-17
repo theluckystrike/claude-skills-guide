@@ -21,7 +21,6 @@ geo_optimized: true
 
 [Your Claude Code setup includes several directories that benefit from version control](/claude-skill-md-format-complete-specification-guide/): skill definitions, custom prompts, configuration files, and agent instructions. When you work across multiple machines, a desktop at home and a laptop on the go, having these tracked in git eliminates the friction of manual replication.
 
-<!-- answer-capsule -->
 The standard Claude Code directories worth tracking include `~/.claude/skills/` for skill definitions, `~/.claude/agents/` for custom agent configurations, and `~/.claude/settings.json` for user preferences. Each of these can become part of a dotfiles repository with appropriate `.gitignore` rules.
 
 ## Setting Up Your Dotfiles Repository
@@ -214,32 +213,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### Why Track Claude Config in Dotfiles?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Your Dotfiles Repository?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Skill Organization Patterns?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Cross-Machine Sync Strategies?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Skill Sync Within Claude Sessions?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

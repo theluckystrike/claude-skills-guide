@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Skill Not Found in Skills Directory. How to F"
-description: "Encountering 'skill not found' in Claude Code? This guide covers the exact steps to diagnose and resolve skill directory issues with practical solutions."
+title: "Claude Skills Directory GitHub: Fix Skill Not Found"
+description: "Fix claude skills directory GitHub errors. Resolve skill not found with exact steps to configure your skills directory and file paths correctly."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [troubleshooting]
@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Skill Not Found in Skills Directory. How to Fix
 
-<!-- answer-capsule -->
 You've just installed a new Claude Code skill, the pdf skill for document processing, the tdd skill for test-driven development, or the frontend-design skill for UI prototyping. You type `/skill-name` expecting it to work, but instead you see an error message indicating the skill wasn't found in the [skills directory](/claude-skill-md-format-complete-specification-guide/). This happens more often than you'd think, and the fix is usually straightforward.
 
 ## Understanding the "Skill Not Found" Error
@@ -219,25 +218,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding the "Skill Not Found" Error?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The "Skill Not Found" error occurs when Claude Code cannot locate a skill file you have referenced. It is almost always a configuration or file placement issue, not a Claude Code bug. Skills are Markdown files that live in a specific directory, defaulting to `~/.claude/skills/`. Custom configurations via environment variables (`$CLAUDE_SKILLS_PATH`) or `settings.json` can point to a different location. Verify which directory Claude Code is using before troubleshooting further.
 
 ### What are the common causes and their solutions?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The six common causes of "skill not found" errors are: skill files placed in the wrong directory (move to `~/.claude/skills/`), incorrect filename or invocation name (invoke without `.md` extension, no spaces, case-sensitive on Linux), missing `.md` file extension (rename plain text files), empty or corrupted skill files (re-download from source), YAML front matter syntax errors (unquoted colons, tab indentation), and custom skills path configuration overriding the default location (check `$CLAUDE_SKILLS_PATH` and `settings.json`).
 
 ### What is Cause 1: Skills Installed in the Wrong Location?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Skills installed in the wrong location is the most frequent cause of "skill not found" errors. Claude Code expects skills as individual Markdown files with `.md` extension in `~/.claude/skills/`. Verify with `ls ~/.claude/skills/`, create the directory if missing with `mkdir -p ~/.claude/skills/`, and move misplaced files with `mv /path/to/your-skill.md ~/.claude/skills/your-skill.md`. Ensure the file is not nested in a subdirectory like `~/.claude/skills/xlsx/xlsx.md` -- it must be directly in the skills folder.
 
 ### What is Cause 2: Incorrect Filename or Invocation Name?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Skill invocation depends on the filename without the `.md` extension. A file named `my-custom-skill.md` is invoked as `/my-custom-skill`, not `/my custom skill` or `/my-custom-skill.md`. Common mistakes include adding spaces in the invocation command, including the `.md` extension when invoking, and using different letter casing than the filename (Linux filenames are case-sensitive). Correct examples: `/pdf extract tables`, `/tdd generate unit tests`, `/frontend-design create landing page`.
 
 ### What is Cause 3: Missing Skill File Extension?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Every Claude Code skill must be a Markdown file with the `.md` extension. If the file was saved as plain text without an extension, Claude Code will not recognize it. Verify with `ls -la ~/.claude/skills/*.md` to list all properly named skill files. If you find a file without the `.md` extension, rename it with `mv ~/.claude/skills/xlsx ~/.claude/skills/xlsx.md`. Files downloaded from some sources may lose their extension during transfer, especially on Windows systems.

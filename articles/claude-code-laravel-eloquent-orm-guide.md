@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code Laravel Eloquent ORM Guide"
+title: "Claude Code Laravel Eloquent Orm — Complete Developer Guide"
 description: "Master Laravel Eloquent ORM with Claude Code. Learn relationship handling, query scopes, eager loading, and performance optimization techniques."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,8 +12,6 @@ score: 7
 tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 Building solid Laravel applications requires mastering Eloquent ORM, and Claude Code can significantly accelerate your learning curve and development speed. This guide walks you through practical techniques for working with Eloquent, from basic model relationships to advanced query optimization.
 
 ## Setting Up Your Laravel Project with Claude Code
@@ -687,25 +684,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Setting Up Your Laravel Project with Claude Code?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Setting up involves creating a CLAUDE.md file in your project root specifying your Laravel version (10+), PHP version (8.2+), database type (MySQL/PostgreSQL), and authentication package (e.g., Laravel Sanctum). This context ensures Claude Code generates code following correct Laravel conventions and avoids deprecated APIs from older versions. Paste migration files or describe your table structure so Claude Code produces correct column names, indexes, and relationship definitions automatically.
 
 ### What is Defining Models and Relationships?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Eloquent relationships are defined as methods on Model classes that return relationship objects. Claude Code generates both sides of relationships simultaneously for consistency. The key relationship types are `hasMany`/`belongsTo` (one-to-many), `belongsToMany` with pivot tables (many-to-many), and `morphTo`/`morphMany` (polymorphic). Specify the relationship type and any custom foreign keys in your prompt to get correct relationship definitions with proper `$fillable` arrays and `$casts` configurations.
 
 ### What is One-to-Many Relationships?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+One-to-many relationships in Eloquent use `hasMany()` on the parent model and `belongsTo()` on the child model. For example, a Category model defines `return $this->hasMany(Product::class)` while Product defines `return $this->belongsTo(Category::class)` using `category_id` as the foreign key. Ask Claude Code to generate both sides simultaneously to keep models consistent. The `$casts` array on the child model handles type conversion for fields like `'price' => 'decimal:2'`.
 
 ### What is Many-to-Many Relationships?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Many-to-many relationships use `belongsToMany()` with an intermediate pivot table. For roles and permissions, the Role model defines `return $this->belongsToMany(Permission::class, 'role_permissions')->withTimestamps()`. For pivot tables storing additional data, use `withPivot(['assigned_by', 'assigned_at'])` and `using(UserRole::class)` with a custom Pivot model class. Claude Code generates both the relationship methods and the corresponding migration for the pivot table when prompted with "many-to-many" or "pivot table."
 
 ### What is Polymorphic Relationships?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Polymorphic relationships allow a model to belong to multiple parent types using `morphTo()` on the child and `morphMany()` on each parent. A Comment model uses `return $this->morphTo()` via the `commentable()` method, while Post and Video models each define `return $this->morphMany(Comment::class, 'commentable')`. The migration requires `commentable_id` and `commentable_type` columns. Ask Claude Code to "generate a migration for a polymorphic comments table" to get the correct column definitions and composite index.

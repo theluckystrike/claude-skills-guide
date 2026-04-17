@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Astro Static Site Generation Workflow Guide"
-description: "A practical guide to building static sites with Claude Code and Astro. Learn workflow patterns, skill integration, and automation for 2026."
+title: "Claude Code + Astro Workflow Guide"
+description: "Build static sites with Claude Code and Astro. Workflow patterns, skill integration, and automation recipes for 2026."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -14,7 +14,6 @@ render_with_liquid: false
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 {% raw %}
 [Building static sites with Claude Code and Astro creates a powerful combination](/best-claude-code-skills-to-install-first-2026/) for developers who want AI-assisted development without sacrificing performance. This guide covers practical workflows, skill integration, and automation patterns that work in 2026.
 
@@ -313,25 +312,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### Why Astro with Claude Code?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Astro's zero-JavaScript-by-default architecture makes it ideal for content-focused sites, blogs, and documentation. Paired with Claude Code, you get AI assistance throughout development using skills like /frontend-design for component creation, /tdd for test coverage, /supermemory for context retention across sessions, and /pdf for content export. Each skill adds capabilities without requiring additional infrastructure, and Astro's static output ensures excellent performance.
 
 ### What is Setting Up Your Astro Project with Claude?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Setting up involves running `npm create astro@latest my-static-site -- --template minimal` to scaffold the project, then starting Claude Code in that directory with the `claude` command. Claude Code automatically recognizes your Astro structure including components in src/components, pages in src/pages, and layouts in src/layouts. Activate the /frontend-design skill to generate accessible, well-structured components following modern best practices with proper accessibility attributes.
 
 ### What is Workflow Patterns for Static Site Development?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Workflow patterns for Astro with Claude Code include component-driven development where you build reusable pieces first then compose pages, testing with the /tdd skill for interactive components and client-side logic, using /supermemory for persistent memory of project structure and design decisions across sessions, and image optimization using Astro's built-in Image component. Define content collections with Zod schemas in src/content/config.ts for automatic validation.
 
 ### What is Component-Driven Development?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Component-driven development means building reusable UI pieces first, then composing them into pages. Claude Code excels here because it understands context -- if you have an existing button component, Claude generates new components following the same patterns and conventions. For documentation sites, structure your content collection with defineCollection and Zod schemas in src/content/config.ts to define required fields like title, description, pubDate, author, and tags.
 
 ### What is Testing with the TDD Skill?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+The /tdd skill integrates component testing into your Astro workflow. Invoke it with `/tdd` and describe your testing requirements, such as testing search component input handling, debounce behavior, and result rendering. The skill guides Claude to produce test files using your project's test framework -- Vitest, Playwright, or Astro's built-in testing utilities. Claude understands that static sites have unique testing requirements covering components, build processes, routing, and content generation pipelines.

@@ -14,7 +14,6 @@ score: 7
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Writing research methodology sections can feel like a chore. Whether you're documenting the technical approach for a software engineering paper, creating internal research documentation, or drafting academic submissions, these sections require precision, clarity, and thoroughness. Claude Code transforms this task through targeted skill combinations and structured prompts that help you articulate your research methods systematically.
 
 This guide covers practical techniques to write comprehensive methodology sections using Claude Code skills and workflows.
@@ -239,25 +238,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Setting Up Your Methodology Writing Context?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Setting up methodology writing context starts with the supermemory skill command `/supermemory load research-standards` to retrieve stored guidelines about methodology format, citation styles, terminology preferences, and formatting requirements specific to your domain or institution. This ensures consistency across your methodology section and aligns output with publication standards. For teams conducting multiple research projects, maintain separate memory entries for each project's methodology framework.
 
 ### What is Structuring Your Methodology Section?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+A well-organized methodology section follows a logical flow with five key components: Research Design Overview (qualitative, quantitative, or mixed methods approach), System Architecture and Tools (technical stack and frameworks), Data Collection Methods (logs, surveys, metrics, user feedback), Analysis Techniques (statistical, thematic, or comparative analysis), and Validation Approach (benchmarks, case studies, expert review). Claude Code generates tailored outlines when you specify your research type and domain.
 
 ### What is For Software Engineering Research?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+For software engineering research, Claude Code generates methodology outlines covering experimental setup, benchmark design, and statistical validation. Provide your study parameters -- such as "comparative study of React vs Vue performance" -- and receive a structured framework including research questions, independent and dependent variables, control conditions, measurement instruments, and reproducibility details. The generated outline serves as a skeleton you expand with your specific research details and findings.
 
 ### What is For Technical Documentation?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+For technical documentation methodology sections, Claude Code focuses on practical implementation details rather than academic conventions. Use the /doc command to generate methodology covering test environment setup, load testing tools, and performance metrics collected. Claude produces drafts incorporating your project's specific technical context -- API rate-limiting configurations, CI/CD pipeline parameters, or database benchmarking setups -- ensuring the methodology accurately reflects your implementation approach.
 
 ### What is Documenting Experimental Setup?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Documenting experimental setup involves providing Claude Code with specific configuration details like instance types (AWS c5.xlarge), benchmarking tools (wrk2), workload parameters (10,000 requests/second for 5 minutes), collected metrics (p50/p95/p99 latency, throughput, error rate), and experimental variables (cache sizes, eviction policies). Claude transforms these bullet points into professional prose suitable for academic or technical publication, with sufficient detail for reproducibility by other researchers.

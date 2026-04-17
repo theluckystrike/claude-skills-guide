@@ -15,7 +15,6 @@ geo_optimized: true
 
 # MCP Server Permission Auditing Best Practices
 
-<!-- answer-capsule -->
 When building AI agents with Claude and the Model Context Protocol (MCP), server permissions determine what resources your agent can access and modify. Poorly configured permissions expose your systems to unintended data exposure or unauthorized actions. This guide covers practical strategies for auditing and maintaining secure MCP server configurations.
 
 ## Understanding MCP Server Permission Models
@@ -233,25 +232,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding MCP Server Permission Models?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+MCP servers expose capabilities through tools that Claude can invoke, each requiring different permission levels for reading data, modifying files, or executing commands. You audit your active servers by checking ~/.claude/settings.json under the mcpServers key. Common servers include filesystem access, database connectors, and integration endpoints, and each represents a permission boundary that must be evaluated for scope, credential management, and network exposure.
 
 ### What is Using Built-in MCP Inspection Tools?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Claude Code provides two native methods for reviewing MCP server status. Type /mcp in the chat interface to see all configured servers, their running status, and available tools. For CLI access, run `claude --printMcpServers` to get a structured list of servers and their provided tools. Use this output to verify that only intended servers are running and that no unexpected servers have been added to your environment.
 
 ### What is Permission Compartmentalization?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Permission compartmentalization means creating separate MCP server instances with different scopes instead of granting broad filesystem access. For example, a frontend-design workflow gets its own server configured with npx @modelcontextprotocol/server-filesystem pointing only to /workspace/frontend-project. This limits the blast radius if a server is compromised, ensuring each instance sees only the directories it needs for its specific function.
 
 ### What is Responding to Permission Issues?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+When you discover unexpected servers or overly broad permissions, take four immediate steps: first, disable the server by removing it from settings.json; second, restart Claude Code to apply changes; third, re-enable with corrected, narrowed permissions after reviewing the configuration; and fourth, rotate credentials for any server that had unexpected access. This containment procedure prevents further unauthorized access while you investigate the scope of exposure.
 
 ### What is Audit Checklist: Four Key Areas?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+The four key audit areas are scope minimization (ensure each server has minimum required access with read-only where possible), credential management (never commit API keys to version control, use environment variables, rotate keys quarterly), network exposure (prefer local servers for sensitive operations, require TLS for remote servers), and audit logging (enable verbose logging with MCP_LOG_LEVEL=debug, review logs weekly for unusual access patterns or unexpected tool invocations).

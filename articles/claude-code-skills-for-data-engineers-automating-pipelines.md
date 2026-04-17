@@ -19,7 +19,6 @@ geo_optimized: true
 
 ## Core Skills for Pipeline Development
 
-<!-- answer-capsule -->
 Several Claude skills directly address data engineering challenges. The xlsx skill helps when you need to generate Excel reports or process spreadsheet data. The tdd skill enforces test-driven development practices, ensuring your pipeline code has adequate coverage before deployment. For documentation, the pdf skill generates pipeline documentation automatically.
 
 The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) maintains context across pipeline development sessions, remembering schema changes and business rules you've established. This is particularly useful when you're context-switching between multiple pipelines or returning to a pipeline after several days.
@@ -272,32 +271,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Core Skills for Pipeline Development?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up a Pipeline Project?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Automating ETL Script Generation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Testing Pipelines with the TDD Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Pipeline Monitoring and Observability?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Price Tracker Chrome Extension for Amazon: A Developer Guide"
-description: "Learn how to build a price tracker Chrome extension for Amazon. Technical implementation guide covering web scraping, price monitoring, and alert systems."
+title: "Amazon Price Tracker Chrome Extension — Guide"
+description: "Build or use a price tracker Chrome extension for Amazon. Web scraping, price monitoring, and alert system implementation explained."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -15,7 +15,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 Building a price tracker Chrome extension for Amazon gives you complete control over price monitoring. Rather than relying on third-party services, you can create a custom solution tailored to your shopping needs. This guide walks through the technical implementation for developers and power users.
 
 ## Understanding Amazon's Page Structure
@@ -434,25 +433,20 @@ Notification not firing even when price drops: `chrome.notifications` requires t
 
 ### What is Understanding Amazon's Page Structure?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Amazon product pages display prices in multiple DOM locations using selectors like `.a-price-whole`, `.a-text-price .a-offscreen`, and Subscribe & Save elements. The page uses dynamic JavaScript rendering, so a price tracker extension needs a waterfall of CSS selectors with fallback strategies. The ASIN identifier is extracted from the URL path after `/dp/` and uniquely identifies each product across Amazon's global marketplaces.
 
 ### What is Storing Price History?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Storing price history uses Chrome's `chrome.storage.local` API to persist per-product price records keyed by ASIN. Each record contains the product title, a timestamped prices array, and lowest/highest price bounds. The implementation maintains a rolling 90-day history by filtering entries older than the cutoff date on each write. For larger datasets, IndexedDB provides better performance than chrome.storage.
 
 ### What is Implementing Price Alerts?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Price alerts compare the current scraped price against user-defined target thresholds stored in `chrome.storage.local`. When the current price drops to or below the target, the extension fires a browser notification using `chrome.notifications.create()` with the product name, current price, and a direct Amazon link. Alerts can be configured as one-time (auto-removed after triggering) or recurring for ongoing monitoring.
 
 ### What is Building the Popup Interface?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The popup interface is an HTML page defined in `popup.html` that displays tracked products with their current prices, historical low/high ranges, and alert buttons. It uses `chrome.tabs.query` to detect whether the user is on an Amazon product page, enabling a "Track This Product" button. The popup script communicates with the content script via `chrome.tabs.sendMessage` to extract live price data from the active tab.
 
 ### What is Extension Manifest Configuration?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+The extension uses Manifest V3 with permissions for `activeTab`, `storage`, and `notifications`. Host permissions are set to `https://*.amazon.com/*` to restrict content script injection to Amazon domains. The content script matches the URL pattern `https://*.amazon.com/dp/*` to run only on product detail pages. A background service worker in `background.js` handles price storage, alert checking, and notification delivery.

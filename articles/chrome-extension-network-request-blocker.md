@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Network Request Blocker"
-description: "Learn how to block network requests in Chrome extensions using the declarativeNetRequest API. Practical examples for developers and power users."
+title: "Chrome Network Request Blocker Extension Guide"
+description: "Build a Chrome network request blocker extension using declarativeNetRequest API. Practical code examples for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -16,7 +16,6 @@ geo_optimized: true
 
 # Chrome Extension Network Request Blocker: A Developer's Guide
 
-<!-- answer-capsule -->
 Chrome extensions have powerful capabilities when it comes to modifying network behavior. Whether you're building a privacy-focused extension, debugging API calls, or creating developer tools, understanding how to block network requests at the extension level is essential knowledge.
 
 This guide covers the modern approach to blocking network requests in Chrome extensions using the `declarativeNetRequest` API, with practical examples developers can implement immediately. including dynamic user-configurable rules, header modification, and testing strategies.
@@ -393,25 +392,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding the declarativeNetRequest API?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The `declarativeNetRequest` API is Chrome's Manifest V3 replacement for the deprecated `webRequest` API. It operates declaratively through predefined JSON rules rather than real-time JavaScript interception, delivering faster native matching and better privacy since extension code never sees individual URLs. It requires `declarativeNetRequest` and `host_permissions` in the manifest. Chrome is phasing out MV2 extensions, making declarativeNetRequest the required approach for new Chrome Web Store submissions.
 
 ### What is Creating Blocking Rules?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Blocking rules are JSON objects defined in a rules file with fields for `id`, `priority`, `action` (block, allow, redirect, modifyHeaders), and `condition` (urlFilter or regexFilter plus resourceTypes). The `urlFilter` field supports plain string matching, while `regexFilter` handles regular expressions. Rules are loaded via the `declarative_net_request.rule_resources` manifest entry. Multiple rulesets can be enabled or disabled at runtime using `chrome.declarativeNetRequest.updateEnabledRulesets()`.
 
 ### What are the practical implementation example?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+A practical implementation ships a `rules.json` file targeting common tracking domains like `googlesyndication.com`, `google-analytics.com`, `facebook.com/tr/`, and `doubleclick.net`, blocking resource types including `script`, `image`, `sub_frame`, `ping`, and `xmlhttprequest`. An `allow` rule with higher priority whitelists your own analytics domain. Priority is an integer where higher values win; when priorities are equal, `allow` beats `block`. This pattern protects user privacy while preserving first-party analytics.
 
 ### What is Advanced: Modifying Requests Instead of Blocking?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Beyond blocking, the declarativeNetRequest API supports `redirect` (sends requests to a different URL or local extension file), `removeHeaders` (strips specific headers), and `modifyHeaders` (adds, sets, or removes request/response headers). Redirecting tracking pixels to a local placeholder image keeps pages functioning while eliminating tracking. Removing the `Referer` header from cross-origin requests reduces fingerprinting. Header addition enables injecting API keys or debug flags into requests to specific domains.
 
 ### What is Dynamic Rules for User Configuration?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Dynamic rules allow users to manage their own blocklist at runtime using `chrome.declarativeNetRequest.updateDynamicRules()`. The background script generates unique rule IDs by querying existing rules with `getDynamicRules()`, creates new block rules from user-supplied domains, and persists the domain-to-ID mapping in `chrome.storage.local`. Rules are restored on extension install or update via the `onInstalled` listener. Chrome limits dynamic rules to 5,000 per extension.

@@ -17,7 +17,6 @@ geo_optimized: true
 
 [Claude Code skills come in two categories: official skills maintained by Anthropic and community skills](/best-claude-code-skills-to-install-first-2026/) built by developers. Understanding the differences helps you choose reliably for your workflow.
 
-<!-- answer-capsule -->
 What Are Claude Skills?
 
 Claude skills are `.md` files that extend Claude Code's behavior for specific tasks. When you invoke a skill with `/skill-name`, Claude reads the skill file and gains specialized instructions, patterns, and tooling for that domain. Skills range from document processing (`/pdf`, `/xlsx`) to test-driven development (`/tdd`) to custom community integrations. If you're new to how skills activate, see [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/).
@@ -294,32 +293,3 @@ Related Reading
 *
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Official Skills: Built by Anthropic?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Characteristics of Official Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Popular Official Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Community Skills: Built by Developers?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Characteristics of Community Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

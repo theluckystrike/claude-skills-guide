@@ -16,7 +16,6 @@ geo_optimized: true
 
 ## The Error
 
-<!-- answer-capsule -->
 When using structured outputs (`output_config` with `json_schema`) combined with thinking and tool use, you hit one or both of these bugs:
 
 **Bug 1: Model returns only thinking + empty text, no tool_use blocks**
@@ -305,32 +304,3 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 For developers building multi-step AI agent pipelines, a dev tool extension can help debug the intermediate tool calls and responses, making it easier to identify where structured output generation breaks down.
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Error?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Quick Fix?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is What's Happening?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step-by-Step Solution?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Prevention?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

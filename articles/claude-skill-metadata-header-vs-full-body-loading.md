@@ -17,7 +17,6 @@ geo_optimized: true
 
 [invoke a Claude skill with `/skill-name`](/claude-skills-auto-invocation-how-it-works/), Claude reads the entire `.md` file from `~/.claude/skills/`. There is no separate metadata-only loading phase. the front matter and the skill body load together. This guide explains what belongs in each section and how to structure skills for clarity.
 
-<!-- answer-capsule -->
 What Is Skill Metadata?
 
 Skill metadata lives in the YAML front matter at the top of your skill file. [only recognized front matter fields](/claude-skill-yaml-front-matter-parsing-error-fix/):
@@ -277,32 +276,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### When the Skill Loads?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### Why the Distinction Matters?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Keeping Skills Focused?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Body Length and Performance?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Role of the H1 Heading?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

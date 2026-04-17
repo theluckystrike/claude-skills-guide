@@ -15,7 +15,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 How to Stop Claude Code from Using Snake Case in TypeScript
 
 If you have ever asked Claude Code to generate TypeScript code only to find it producing `user_name`, `get_data`, or `api_response` instead of the more idiomatic `userName`, `getData`, and `apiResponse`, you are not alone. This is one of the most common friction points developers encounter when working with Claude Code on TypeScript projects. The good news is that with the right configuration and prompting strategies, you can guide Claude Code to consistently use camelCase, the standard naming convention for JavaScript and TypeScript.
@@ -202,32 +201,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Why Claude Code Uses Snake Case?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Solution 1: Configure Your Project's TypeScript Compiler?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Solution 2: Set Up ESLint with camelCase Rules?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Solution 3: Configure Prettier for Consistent Formatting?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Solution 4: Claude Code Settings File?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

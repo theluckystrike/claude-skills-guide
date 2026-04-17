@@ -16,7 +16,6 @@ geo_optimized: true
 
 ## Overview
 
-<!-- answer-capsule -->
 Claude Code and Sourcegraph Cody both bring AI assistance to software development, but they come from different lineages. Claude Code is Anthropic's terminal-native agentic coding assistant. Cody is Sourcegraph's AI assistant built on top of their code search and intelligence platform. The key differentiator is context: Claude Code works with your local project, while Cody leverages Sourcegraph's deep understanding of your entire codebase including cross-repository dependencies.
 
 ## Context Engines
@@ -224,28 +223,3 @@ $99. Once. Everything I use to ship.
 - [Agentic AI Coding Tools Comparison 2026](/agentic-ai-coding-tools-comparison-2026/)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Context Engines?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Editing Capabilities?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Code Search and Understanding?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Workflow Comparison?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

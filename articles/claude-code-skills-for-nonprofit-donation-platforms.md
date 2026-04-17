@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Skills for Nonprofit Donation Platforms
 
-<!-- answer-capsule -->
 Building a nonprofit donation platform requires handling sensitive financial data, generating tax receipts, managing donor relationships, and ensuring PCI compliance. Claude Code skills accelerate these tasks by providing structured workflows for common nonprofit platform patterns. This guide covers the most useful skills for donation platform development. For more industry-specific automation patterns, see the [use cases hub](/use-cases-hub/).
 
 ## Understanding the Skill Model
@@ -645,28 +644,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Skill Model?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is One-Time vs. Recurring Donations: What Changes?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is IRS Requirements: What Must Be on a 501(c)(3) Receipt?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is PCI DSS Compliance: What Nonprofits Must Know?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

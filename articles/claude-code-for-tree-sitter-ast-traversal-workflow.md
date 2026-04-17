@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Tree-sitter AST Traversal Workflow"
-description: "Master AST traversal with Tree-sitter and Claude Code. Learn practical patterns for analyzing code structure, finding nodes, and building automated."
+title: "Tree-Sitter AST Traversal with Claude Code Guide"
+description: "Master tree-sitter JavaScript node types and AST traversal with Claude Code. Find import_statement nodes and analyze code structure automatically."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -15,7 +15,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 Claude Code for Tree-sitter AST Traversal Workflow
 
 When working with code analysis, refactoring, or automated transformations, understanding how to traverse Tree-sitter's Abstract Syntax Tree (AST) is essential. Combined with Claude Code's skill system, you can build powerful workflows that analyze code structure, identify patterns, and perform targeted modifications. This guide walks you through practical AST traversal patterns that integrate smoothly with Claude Code skills.
@@ -244,25 +243,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding the Tree-sitter AST Structure?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Tree-sitter represents source code as a hierarchical tree of nodes where each node corresponds to a syntactic construct such as `function_declaration`, `call_expression`, or `identifier`. Leaf nodes represent tokens (identifiers, literals, operators), while interior nodes represent language constructs (statements, expressions, declarations). Each node has a type, children nodes, and positional metadata including start and end positions. Parsing produces a `Tree` object with a root `Node` for traversal.
 
 ### What is Basic AST Traversal Patterns?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Basic AST traversal patterns in Tree-sitter include depth-first traversal using a `TreeCursor` and type-filtered node finding. The cursor approach visits every node exactly once by calling `gotoFirstChild()`, `gotoNextSibling()`, and `gotoParent()` in sequence. For targeted analysis, you filter nodes by type (e.g., `function_declaration`) to focus on relevant constructs. Tree-sitter queries using `ts_query` provide a declarative alternative for pattern matching specific tree structures.
 
 ### What is Using TreeCursor for Efficient Traversal?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+TreeCursor is Tree-sitter's most performant traversal method. Unlike recursive approaches that create new stack frames per node, cursors maintain state internally and iterate through millions of nodes efficiently. The pattern calls `cursor.gotoFirstChild()` to descend, `cursor.gotoNextSibling()` to move laterally, and `cursor.gotoParent()` to ascend, performing a complete depth-first traversal visiting every node exactly once. Access the current node's type and text via `cursor.currentNode()`.
 
 ### What is Finding Specific Node Types?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Finding specific node types involves traversing the AST and collecting nodes matching a target type string. A `findNodesByType(rootNode, targetType)` function walks the tree using a cursor, checks each node's `.type` property against the target (e.g., `function_declaration`), and pushes matches into a results array. For complex structural matching, Tree-sitter's query language with `@name` capture syntax provides a declarative approach that matches specific tree patterns like function calls with their arguments.
 
 ### What is Integrating AST Traversal with Claude Code Skills?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Integrating AST traversal with Claude Code skills means creating skill definitions (YAML front matter with name and description) that orchestrate code analysis and transformation workflows. The skill describes what to analyze (function definitions, complexity indicators, nested declarations), while the implementation handles Tree-sitter parsing and traversal logic. Practical applications include scope-aware variable renaming, code quality analysis detecting long functions and missing error handling, and documentation generation from AST metadata.

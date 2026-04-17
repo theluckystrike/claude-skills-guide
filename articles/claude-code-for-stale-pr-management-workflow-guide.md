@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code for Stale PR Management Workflow Guide"
+title: "Claude Code For Stale Pr — Complete Developer Guide"
 description: "Learn how to use Claude Code CLI to automate and streamline stale pull request management with practical examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -13,9 +12,6 @@ reviewed: true
 score: 8
 geo_optimized: true
 ---
-
-
-<!-- answer-capsule -->
 Introduction
 
 Stale pull requests are a common problem in software development. When PRs sit for days or weeks without activity, they become increasingly difficult to review, often accumulate merge conflicts, and can block dependent work. Manually tracking and following up on these stale PRs is time-consuming and error-prone.
@@ -236,32 +232,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Stale PRs and Their Impact?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Claude Code for PR Management?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Identifying Stale Pull Requests?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Using Claude to Analyze PR Status?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Creating a Stale PR Detection Script?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome Extension Miro Whiteboard: Complete Guide"
-description: "Discover how to use the Miro Chrome extension for smooth whiteboard collaboration, including setup, features, and advanced integration techniques."
+title: "Miro Chrome Extension — Setup and Features Guide"
+description: "Set up the Miro Chrome extension for whiteboard collaboration. Features, integration techniques, and team workflow tips included."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -14,7 +14,6 @@ render_with_liquid: false
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 {% raw %}
 The Miro whiteboard platform has become an essential tool for remote collaboration, design thinking, and visual project management. While the web-based version offers solid functionality, the Chrome extension brings additional capabilities that streamline your workflow directly from the browser. This guide explores how developers and power users can maximize their productivity with the Miro Chrome extension.
 
@@ -603,25 +602,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What are the key features for developers and power users?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Key features include quick board access with a recent boards list respecting workspace and team structure, embed integration for inserting interactive Miro frames into documentation and wikis using iframes with moveToViewport parameters, Chrome context menu integration for right-click capture of selected text, images, or links directly into boards as sticky notes, and the Miro Web SDK for programmatic board control including reading items, creating cards, and filtering by type.
 
 ### What is Quick Board Access?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Quick board access maintains a list of recently accessed boards in the extension popup, enabling instant switching between active projects without navigating Miro's full web interface. The board list respects your workspace and team structure, and if you work across multiple Miro teams (common for contractors and consultants), you can switch the active workspace from the extension popup. The extension launches in under 2 seconds compared to 4-8 seconds for the web app.
 
 ### What is Embed Integration?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Embed integration allows you to insert interactive Miro boards or specific frames into documentation, wikis, and internal tools using iframes. The src URL format is `https://miro.com/app/live-embed/{board-id}/` with an optional moveToViewport parameter specifying x, y, width, height coordinates to target a specific board region. For responsive embeds, wrap the iframe in a CSS container using aspect-ratio: 16/9 with position: absolute and inset: 0 on the iframe.
 
 ### What is Chrome Context Menu Integration?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Chrome context menu integration enables right-click functionality to quickly create Miro items from selected web content. Highlight text from a competitor's documentation, right-click, and add it directly to your active board as a sticky note without losing your place in the source page. This feature is especially useful during research sessions, competitive analysis, and design sprint Day 1 mapping activities where you need to capture information rapidly from multiple web sources.
 
 ### What is Miro Web SDK: Programmatic Board Control?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+The Miro Web SDK exposes a comprehensive JavaScript API for reading and writing board content programmatically. Use miro.board.get() to retrieve all board items, filter by type with miro.board.get({ type: 'sticky_note' }), and create new elements with miro.board.createCard() or miro.board.createStickyNote(). The Chrome extension handles OAuth authentication, so SDK calls from browser pages interact with the currently active board. This powers custom apps, sprint planning automations, and bug triage board generators.

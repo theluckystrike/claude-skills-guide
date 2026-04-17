@@ -15,7 +15,6 @@ render_with_liquid: false
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 {% raw %}
 Engineering wikis are the backbone of knowledge sharing in modern development teams. Whether you're using Confluence, Notion, GitHub Wiki, or a custom solution, maintaining accurate and up-to-date documentation is critical. However, the manual effort required to keep wikis current often leads to stale content and knowledge silos. This is where Claude Code transforms your documentation workflow.
 
@@ -309,32 +308,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
 
-
----
-
-## Frequently Asked Questions
-
-### Why Claude Code for Wiki Workflows?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Your Wiki Workflow?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Defining Project Context?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Creating a Wiki Documentation Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical examples?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

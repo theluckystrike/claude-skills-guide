@@ -13,7 +13,6 @@ score: 6
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Running Claude Code through AWS Bedrock lets you use Claude models within your AWS account, with IAM-based access control and no direct Anthropic API keys. This guide covers the environment configuration, IAM setup, and CLAUDE.md practices for Bedrock-backed Claude Code.
 
 ## The Problem
@@ -167,37 +166,3 @@ Related Reading
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
-
----
-
-## Frequently Asked Questions
-
-### What is The Problem?
-
-See the dedicated section above for a detailed explanation covering why enterprise teams need Bedrock instead of direct Anthropic API keys for compliance and access control.
-
-### What is Quick Solution?
-
-See the dedicated section above for a detailed explanation covering model access requests, AWS credential configuration, and environment variable setup for Bedrock integration.
-
-### What is How It Works?
-
-See the dedicated section above for a detailed explanation covering how Claude Code routes through Bedrock's InvokeModel endpoint, uses IAM auth, and keeps data within your VPC.
-
-### What is Common Issues?
-
-See the dedicated section above for a detailed explanation covering IAM permission errors, model ID format mismatches, and Bedrock latency with specific fixes.
-
-### What is Example CLAUDE.md Section?
-
-See the dedicated section above for a detailed explanation covering a Bedrock-specific CLAUDE.md with AWS account context, CDK conventions, and rate limit awareness.
-
-### What is Best Practices?
-
-See the dedicated section above for a detailed explanation covering IAM roles, quota management, region selection, CloudWatch monitoring, and model version pinning.
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

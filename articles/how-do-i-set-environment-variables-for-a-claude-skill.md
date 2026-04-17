@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Do I Set Environment Variables for a Claude Skill"
+title: "How Do I Set Environment Variables For A — Developer Guide"
 description: "A practical guide to configuring environment variables for Claude Code skills. Learn how to set up API keys, credentials, and custom configurations for ..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -12,11 +12,8 @@ tags: [claude-code, claude-skills]
 permalink: /how-do-i-set-environment-variables-for-a-claude-skill/
 geo_optimized: true
 ---
-
-
 [Claude Code skills are powerful extensions](/best-claude-code-skills-to-install-first-2026/) in your AI sessions. Whether you're using the pdf skill for document processing, the tdd skill for test-driven development, or the supermemory skill for knowledge management, understanding how to configure environment variables is essential for getting the most out of these tools.
 
-<!-- answer-capsule -->
 This guide walks you through every method of setting environment variables for Claude skills, from basic shell exports to project-scoped overrides. You'll find practical examples for the most commonly used skills, a comparison table of configuration approaches, and actionable security recommendations.
 
 ## How Claude Skills Access Environment Variables
@@ -489,32 +486,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
 
-
----
-
-## Frequently Asked Questions
-
-### How Claude Skills Access Environment Variables?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting System-Wide Environment Variables?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is For Bash Users?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is For Fish Shell Users?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Skill-Specific Configuration Files?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

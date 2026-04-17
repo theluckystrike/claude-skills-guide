@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code Keeps Adding Code I Did Not Ask For"
+title: "Claude Code Keeps Adding Code I Did Not — Developer Guide"
 description: "Why Claude Code sometimes generates extra code you didn't request, and how to prevent it with better prompting techniques and skill configurations."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,8 +12,6 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 If you've used Claude Code for any significant amount of coding, you've probably experienced this: you ask for a small change, and suddenly there are dozens of new lines you didn't expect. Maybe you asked to fix a bug, and Claude Code refactored the entire module. you wanted a simple function, and got a full file with error handling, logging, and tests. This behavior is one of the most common frustrations developers face when working with AI coding assistants. The good news is that understanding why it happens, and learning how to direct Claude Code more precisely, solves the problem in most cases.
 
 ## Why Claude Code Over-Generates Code
@@ -242,32 +239,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### Why Claude Code Over-Generates Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Techniques to Control Code Generation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Using Claude Code Skills to Constrain Behavior?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical examples?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Configuring Claude Code for Minimal Changes?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

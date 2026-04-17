@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "CLAUDE.md Not Being Read by Claude Code Fix"
+title: "Fix Claude Md Not Being Read By Claude Code — Quick Guide"
 description: "Troubleshoot and fix CLAUDE.md files not being read by Claude Code. Practical solutions for developers and power users dealing with ignored project."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,8 +12,6 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 Your CLAUDE.md file sits in your project root, packed with detailed instructions, coding conventions, and project-specific guidelines, yet Claude Code seems to ignore it completely. This is one of the most frustrating issues developers encounter when setting up their AI coding assistant. The good news: most causes have straightforward fixes.
 
 ## Why Claude Code Might Not Read Your CLAUDE.md
@@ -228,32 +225,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### Why Claude Code Might Not Read Your CLAUDE.md?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is File Location and Naming Issues?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is File Encoding and Format Problems?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Syntax Errors in Your CLAUDE.md?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Verifying CLAUDE.md Is Being Loaded?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

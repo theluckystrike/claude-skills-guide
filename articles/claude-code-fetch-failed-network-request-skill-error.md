@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Fetch Failed Network Request Skill Error"
-description: "Troubleshoot and fix network request failures in Claude Code skills. Learn how to handle API errors, timeout issues, and network connectivity problems."
+title: "Claude Code Request Timed Out — How to Fix"
+description: "Fix Claude Code fetch failed and request timed out errors. SSL, network, and API timeout solutions with copy-paste config."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -14,7 +14,6 @@ tags: [claude-code, claude-skills, error-fix, network, fetch, api, troubleshooti
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Network request failures can interrupt your Claude Code workflow when skills attempt to communicate with external APIs or fetch remote resources. Understanding how to diagnose and resolve these errors ensures your AI-assisted development remains productive. This guide covers common causes of fetch failures in Claude Code skills and provides practical solutions for each scenario.
 
 ## Understanding Network Request Errors in Claude Code Skills
@@ -190,32 +189,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Network Request Errors in Claude Code Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the common error messages and their meanings?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Diagnosing the Problem?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### How do you fix 1: verify network connectivity and firewall settings?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### How do you fix 2: handle authentication and api key issues?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

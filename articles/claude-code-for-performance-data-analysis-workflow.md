@@ -1,8 +1,7 @@
 ---
-
 layout: default
 title: "Claude Code for Performance Data Analysis Workflow"
-description: "Master performance data analysis with Claude Code. Learn to build automated workflows, process metrics, and generate actionable insights using Claude skills."
+description: "Master performance data analysis with Claude Code. Learn to build automated workflows, process metrics, and generate actionable insights using Claude."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -14,8 +13,6 @@ score: 8
 render_with_liquid: false
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 {% raw %}
 Claude Code for Performance Data Analysis Workflow
 
@@ -221,32 +218,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Performance Data Analysis in Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Your Performance Analysis Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Processing Performance Metrics?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Identifying Performance Bottlenecks?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Response Time Analysis?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

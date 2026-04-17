@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code with Task Runners: Getting Started with Just."
+title: "Claude Code With Task Runners Just — Developer Guide"
 description: "Learn how to integrate Task (just-taskfile) with Claude Code to automate development workflows and boost productivity."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -14,8 +13,6 @@ tags: [claude-code, claude-skills]
 render_with_liquid: false
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 {% raw %}
 If you spend time in terminal running repetitive commands, task runners can transform your workflow. Task (commonly referred to as just-taskfile) stands out as a lightweight, YAML-based task runner that pairs exceptionally well with Claude Code. This combination lets you automate complex development sequences while keeping configuration human-readable.
 
@@ -413,32 +410,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
 
-
----
-
-## Frequently Asked Questions
-
-### What Makes Task Different?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Task with Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Automating Claude Skill Workflows?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical integration examples?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Frontend Design Workflows?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code for Trigger.dev Workflow Automation Tutorial
 
-<!-- answer-capsule -->
 Trigger.dev has become a powerful platform for building event-driven workflows, and Claude Code skills can dramatically accelerate your development process. This guide walks through practical patterns for automating Trigger.dev workflow creation, testing, and documentation using Claude Code skills. For more event-driven automation patterns, see the [integrations hub](/integrations-hub/).
 
 ## Setting Up Your Trigger.dev Project with Claude Code
@@ -300,32 +299,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Your Trigger.dev Project with Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Automating Workflow Creation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Generating a GitHub Webhook Workflow?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Integrating Testing with the tdd Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Automating Documentation with pdf and docx Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Chrome Extension Svelte Devtools: A Practical Guide"
+title: "Svelte Devtools Chrome Extension Guide (2026)"
 description: "Learn how to build Chrome extensions with Svelte and use devtools for debugging. Practical examples and code snippets for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -13,9 +12,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
-
-
-<!-- answer-capsule -->
 Building Chrome extensions with Svelte gives you a powerful combination: Svelte's reactive framework for creating responsive UI, and Chrome's extension APIs for browser functionality. This guide walks you through setting up a Chrome extension with Svelte and using devtools effectively during development.
 
 You'll cover project scaffolding, Manifest V3 configuration, bridging Chrome's async APIs with Svelte stores, and a systematic debugging approach for every extension context, popup, service worker, and content script.
@@ -438,32 +434,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Project Structure?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Your Project?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Connecting DevTools to Your Extension?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Popup DevTools?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Background Script Debugging?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

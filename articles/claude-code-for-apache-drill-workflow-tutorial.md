@@ -14,7 +14,6 @@ score: 7
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Apache Drill is a schema-free SQL query engine that enables analysts and developers to explore data across multiple data sources, including HDFS, MongoDB, Amazon S3, and cloud storage, using familiar SQL syntax. When combined with Claude Code's automation capabilities, you can create powerful, reproducible workflows for data exploration, schema discovery, and complex query generation. This tutorial walks you through building Drill-powered workflows using Claude Code, from initial setup through production-ready automation patterns.
 
 Why Combine Apache Drill with Claude Code?
@@ -381,28 +380,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Connecting Claude Code to Apache Drill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Building Your First Drill Workflow?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 1: Discover Available Data Sources?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 2: Analyze Schema with DESCRIBE?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

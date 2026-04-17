@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code Next.js App Router Migration Guide"
+title: "Claude Code Next.js App Router — Complete Developer Guide"
 description: "A practical guide for developers migrating from Next.js Pages Router to App Router using Claude Code. Includes code examples, common pitfalls, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,8 +12,6 @@ score: 7
 tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 Migrating from Next.js Pages Router to App Router represents one of the most significant architectural shifts in the framework's history. This transition involves moving from a directory-based routing system to a file-system based approach with React Server Components, new data fetching patterns, and fundamentally different caching mechanisms. For developers working with Claude Code, this migration becomes considerably smoother when you use the right skills and workflows.
 
 This guide walks you through the practical aspects of migrating your Next.js application to the App Router while maximizing your productivity with Claude Code and related skills.
@@ -361,25 +358,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding the Key Differences?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The App Router introduces React Server Components by default, where components run on the server unless you explicitly add the `"use client"` directive. The Pages Router used `getStaticProps` and `getServerSideProps` for data fetching; the App Router replaces these with async component patterns and Server Actions for mutations. API routes change from handler functions to route modules with explicit HTTP method exports (GET, POST, PUT, DELETE). This represents the most significant architectural shift in Next.js history.
 
 ### What is Setting Up Claude Code for the Migration?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Setting up Claude Code for migration involves installing the frontend-design skill for App Router component patterns and the tdd skill for maintaining test coverage during transition. Create a CLAUDE.md file in the project root with migration-specific guidelines: use App Router conventions for all new files, prefer Server Components over Client Components, use Server Actions for form submissions, implement loading.tsx and error.tsx for each route segment, and migrate API routes to Route Handlers. This tells Claude Code exactly how to approach modifications.
 
 ### What is Migrating Pages to App Router?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Migrating pages involves moving each page from the `pages/` directory to the `app/` directory structure. The `pages/index.tsx` becomes `app/page.tsx`, `pages/about.tsx` becomes `app/about/page.tsx`, and dynamic routes like `pages/products/[id].tsx` become `app/products/[id]/page.tsx`. API routes like `pages/api/products/[id].js` move to `app/api/products/[id]/route.js`. Start with simple pages that have minimal data fetching requirements and migrate each page individually while maintaining functionality.
 
 ### What is Converting getStaticProps and getServerSideProps?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Converting `getStaticProps` and `getServerSideProps` is the most substantial migration change. Replace them with async component patterns: make the page component itself `async` and call data fetching functions directly. Use `fetch()` with `cache: 'no-store'` to replicate `getServerSideProps` behavior. Replace `getStaticPaths` with `generateStaticParams()` that returns an array of param objects. For ISR (Incremental Static Regeneration), export `const revalidate = 3600` to set the revalidation interval in seconds.
 
 ### What is Handling _app.tsx and _document.tsx?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+The App Router replaces both `_app.tsx` and `_document.tsx` with `layout.tsx` files. The root `app/layout.tsx` wraps all pages, exports a `Metadata` object for title and description (replacing Head components), and renders the `<html>` and `<body>` tags directly. Font optimization uses the `next/font` package, importing fonts like `Inter` from `next/font/google` and applying them via `className` on the body element. Layouts can be nested at any route level for segment-specific wrapping.

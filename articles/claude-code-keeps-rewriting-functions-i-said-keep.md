@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code Keeps Rewriting Functions I Said Keep"
+title: "Claude Code Keeps Rewriting Functions I — Developer Guide"
 description: "Understand why Claude Code rewrites functions you've asked to preserve, and learn practical strategies to prevent unwanted refactoring during your."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,8 +12,6 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills, debugging]
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 One of the most frustrating experiences when working with Claude Code is watching it silently rewrite functions you explicitly asked to preserve. You carefully craft a prompt saying "keep this function exactly as is" or "don't touch the legacy code," only to find that Claude Code has somehow decided to refactor everything anyway. This behavior isn't malicious, it's trying to be helpful, but it can derail your workflow, especially when working with code that has specific requirements, legacy systems, or carefully tuned implementations.
 
 This guide covers why it happens, how to prevent it with concrete prompt patterns and configuration, and what to do when a rewrite has already occurred.
@@ -311,32 +308,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### Why Claude Code Rewrites Functions?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Prompt Patterns That Fail vs. Patterns That Work?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical solutions?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### How do you use explicit preservation blocks?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### How do you use claude.md for persistent instructions?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

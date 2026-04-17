@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Dark Mode Implementation Guide"
-description: "A practical guide to implementing dark mode in web applications using Claude Code. Learn patterns for CSS variables, theme toggles, system preference."
+title: "Claude Code Dark Mode: Implementation Guide"
+description: "Implement dark mode in web apps using Claude Code. CSS variables, theme toggles, and system preference detection with practical code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -14,7 +14,6 @@ score: 7
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Dark mode has transformed from a nice-to-have feature into an expectation for modern web applications. Users appreciate the flexibility to switch between light and dark themes, whether for aesthetic preferences, reduced eye strain in low-light environments, or accessibility considerations. This guide walks you through implementing dark mode systematically using Claude Code, covering CSS custom properties, JavaScript toggles, system preference detection, persistence strategies, and React-based component patterns.
 
 ## Why Dark Mode Matters in 2026
@@ -405,32 +404,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### Why Dark Mode Matters in 2026?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Approach Comparison: Three Implementation Strategies?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is CSS Custom Properties as the Foundation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Implementing the Theme Toggle?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Preventing Flash of Wrong Theme?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

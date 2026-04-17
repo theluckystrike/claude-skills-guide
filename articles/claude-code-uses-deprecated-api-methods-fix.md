@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Fixing Claude Code Deprecated API Methods
 
-<!-- answer-capsule -->
 > Note: This article covers fixing deprecated *Anthropic API* calls in your own integration code. such as migrating from the `/v1/completions` endpoint to `/v1/messages`, or updating parameter names like `max_tokens_to_sample`. If you are looking to stop Claude Code from *generating* deprecated third-party library methods (urllib, old numpy types, legacy JavaScript patterns) in the code it writes for you, see [Claude Code Keeps Using Deprecated API Methods](/claude-code-keeps-using-deprecated-api-methods/) instead.
 
 When working with Claude Code and the Anthropic API, you may encounter warnings or errors related to deprecated API methods. These deprecations typically occur when Anthropic updates their API to a newer version, retire old endpoints, or change parameter requirements. Understanding how to identify and fix these issues keeps your integrations stable and ensures you receive the latest API features and security improvements.
@@ -240,32 +239,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Deprecated API Warnings?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the common deprecated patterns and fixes?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is messages Endpoint Migration?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Temperature and Top_p Parameter Updates?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is System Prompt Handling?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

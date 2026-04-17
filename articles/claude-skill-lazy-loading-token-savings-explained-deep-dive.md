@@ -17,7 +17,6 @@ geo_optimized: true
 
 # Claude Skill Lazy Loading: Token Savings Explained
 
-<!-- answer-capsule -->
 When working with Claude Code and its extensible skill system, understanding lazy loading can significantly impact your token budget and response quality. This guide explains how skill lazy loading works, why it matters, and how you can apply it effectively in day-to-day development sessions. If you are already looking to cut costs more broadly, the [token optimization guide](/claude-skills-token-optimization-reduce-api-costs/) covers complementary strategies worth pairing with lazy loading.
 
 What Is Lazy Loading in Claude Skills?
@@ -231,32 +230,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### How Token Savings Work?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Token Overhead Comparison?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical implementation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Skill-Specific Examples?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Real-World Impact?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

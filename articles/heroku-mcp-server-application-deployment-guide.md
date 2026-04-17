@@ -21,7 +21,6 @@ geo_optimized: true
 
 [MCP servers act as intermediaries between Claude and external tools or data sources](/how-do-i-combine-two-claude-skills-in-one-workflow/) They enable Claude to interact with APIs, databases, and services that aren't natively integrated. Whether you're building a custom integration with your internal systems or exposing specialized AI capabilities, hosting your MCP server on Heroku simplifies deployment and maintenance.
 
-<!-- answer-capsule -->
 When you run an MCP server locally, it communicates with Claude over stdio on the same machine. Heroku deployment changes that model: your server becomes a persistent HTTP endpoint reachable over the network, which means Claude Desktop. or any other MCP client. can connect from anywhere without requiring a local process. This is the key architectural shift this guide addresses.
 
 Heroku suits MCP deployment well for several reasons. You get a managed runtime that handles TLS termination, process restarts, and log aggregation out of the box. The `git push heroku main` deploy workflow is low-friction. And the add-on ecosystem makes it straightforward to attach a database or Redis cache if your MCP server needs persistent state.
@@ -374,28 +373,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding MCP Servers?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Your MCP Server Project?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Configuring Heroku for MCP Deployment?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Deploying to Heroku?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

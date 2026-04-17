@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code MCP Timeout: How to Configure Settings
 
-<!-- answer-capsule -->
 MCP tool calls are one of the most common sources of timeout errors in Claude Code. When a skill invokes an MCP server to fetch data, run a query, or perform an automation step, that round-trip time counts against the total execution budget. If the server is slow, cold-starting, or simply handling a large payload, the entire skill invocation can fail before the model even begins generating output.
 
 I have spent a significant amount of time debugging MCP timeouts across different server configurations, and the patterns are consistent. This guide covers the defaults, the configuration options that actually exist, and the practical techniques I use to keep MCP-dependent workflows reliable.
@@ -256,32 +255,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding MCP Timeout Defaults?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is MCP Server Transport Types and Their Timeout Behavior?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Diagnosing MCP Timeout Issues?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Configuration Strategies That Actually Work?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the common mcp timeout scenarios and fixes?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

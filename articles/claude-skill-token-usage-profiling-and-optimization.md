@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Skill Token Usage Profiling and Optimization
 
-<!-- answer-capsule -->
 Every token your Claude skill sends to the model costs money and affects response latency. As you build more complex skills, whether you're working with the `pdf` skill for document processing, the `tdd` skill for test-driven development, or custom skills for your workflow, understanding token usage becomes essential for keeping costs down and responses fast. For techniques on actually shrinking your skill bodies, see [Claude skill prompt compression techniques](/claude-skill-prompt-compression-techniques/).
 
 This guide covers practical methods for profiling token consumption in your skills and implementing optimization strategies that actually work.
@@ -246,32 +245,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Token Sources in Claude Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Profiling Your Skill's Token Usage?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Measuring Skill Body Tokens?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Tracking Real-World Usage?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Optimization Strategies That Work?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

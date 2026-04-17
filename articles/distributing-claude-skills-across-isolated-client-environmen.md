@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Distributing Claude Skills Across Isolated Client."
+title: "Distributing Claude Skills Across — Developer Guide"
 description: "Learn how to effectively distribute and manage Claude Code skills across multiple isolated client environments for consistent AI assistance."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -14,8 +13,6 @@ tags: [claude-code, claude-skills]
 render_with_liquid: false
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 {% raw %}
 Distributing Claude Skills Across Isolated Client Environments
 
@@ -433,25 +430,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding Claude Code Skills Architecture?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Claude Code skills live in named directories inside `~/.claude/skills/`, where Claude Code scans at startup, reads each skill's manifest, and makes matching skills available for invocation. Each skill contains a `skill.md` file with prompt instructions and a `manifest.json` with metadata including name, version, and loading conditions. The architecture follows a progressive disclosure model where skills are discovered at startup and invoked based on contextual relevance. Any mechanism that reliably places the correct directory tree in the right location serves as a distribution mechanism.
 
 ### What is Distribution Strategies for Claude Skills?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Three primary distribution strategies exist for Claude skills. Repository-based distribution uses `git clone` into `~/.claude/skills/your-org` with `stable` and `develop` branches for production and experimentation. Configuration management integration uses Ansible, Chef, or Puppet to automate skill deployment alongside other environment setup tasks. Private skill registries use a private GitHub repository with releases combined with a shell script that reads version from an environment variable, allowing CI systems to pin specific releases while developer machines default to stable.
 
 ### What is Handling Isolated and Air-Gapped Environments?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Isolated environments that cannot access public repositories require two approaches: offline skill bundling using tar archives transferred via secure media, and internal mirror repositories using GitLab, Gitea, or Bitbucket Server. For regulated environments, extend offline bundles with SHA-256 checksums and GPG signatures for verification before unpacking. For air-gapped networks with internal Git infrastructure, set up a boundary host that mirrors the external repository and sync via cron, giving internal clients an identical Git workflow with only the remote URL differing.
 
 ### What is Offline Skill Bundling?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Offline skill bundling packages all required skills into a distributable tar.gz archive excluding .git directories, which can be transferred via secure media to isolated environments. For regulated environments requiring supply chain integrity, the process adds SHA-256 checksums (`sha256sum`) and GPG detached signatures (`gpg --detach-sign --armor`). On the target machine, verify the GPG signature and checksum before unpacking. This chain ensures only authorized bundles are installed, satisfying most compliance requirements.
 
 ### What is Internal Mirror Repositories?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Internal mirror repositories provide the cleanest long-term solution for large teams in regulated sectors. Set up a mirror on a boundary host with limited external access using `git clone --mirror`, then schedule a daily cron job to fetch and prune updates. Inside the isolated network, clients clone from the internal Git server (GitLab, Gitea, or Bitbucket Server) instead of the external repository. The Git workflow is identical to the non-air-gapped case; only the remote URL differs, making adoption seamless for developers.

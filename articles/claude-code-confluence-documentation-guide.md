@@ -14,7 +14,6 @@ score: 7
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Confluence remains a cornerstone for team documentation in enterprise environments. Integrating Claude Code with your Confluence workspace transforms static wiki pages into dynamic, code-generated content that stays current with your codebase. This guide shows developers and power users how to build that integration from the ground up.
 
 ## Prerequisites
@@ -219,21 +218,16 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Setting Up the Confluence API Connection?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Setting up the Confluence API connection requires three credentials stored as environment variables: `CONFLUENCE_DOMAIN` (your-company.atlassian.net), `CONFLUENCE_EMAIL`, and `CONFLUENCE_API_TOKEN`. Never commit API tokens to version control. A user account with page creation permissions suffices; administrator access is not required. Store credentials in your shell environment or a `.env` file, then configure a Node.js client using axios with Basic Auth to communicate with Confluence's REST API at `/wiki/rest/api`.
 
 ### What is Using the MCP Protocol for Confluence Integration?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The MCP (Model Context Protocol) extends Claude Code capabilities through custom server integrations. While Atlassian does not provide an official MCP server for Confluence, you can build a custom integration using the `mcp-builder` skill or connect via HTTP-based tools. A practical approach uses a Node.js `ConfluenceClient` class wrapping the Atlassian REST API with methods for `createPage(space, title, content)` and `updatePage(pageId, content, version)`, handling authentication and Confluence storage format automatically.
 
 ### What is Generating Technical Documentation with Claude Skills?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Generating technical documentation uses the `pdf` skill for formatted PDF output and the `docx` skill for Word document exports that Confluence imports cleanly. Claude Code analyzes your `/src/api` directory to extract endpoint summaries, HTTP methods, request/response parameter tables, authentication requirements, and example cURL commands. The generated content can be formatted as Confluence-compatible HTML and pushed directly to your wiki via the API client.
 
 ### What is Automating the Documentation Pipeline?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Automating the documentation pipeline uses Git hooks or CI triggers to regenerate documentation when code changes. A post-commit hook runs `claude --print` to generate markdown API documentation, then a Node.js script pushes it to Confluence with the correct page title and space. The `supermemory` skill remembers documentation preferences across sessions. Version conflict handling fetches the current page version, increments it, and skips updates when content has not changed to prevent overwriting manual edits.

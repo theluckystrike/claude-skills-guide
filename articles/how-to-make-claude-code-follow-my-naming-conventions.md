@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Make Claude Code Follow My Naming Conventions"
+title: "How To Make Claude Code Follow — Complete Developer Guide"
 description: "Learn practical techniques to configure Claude Code to respect your naming conventions. Includes .claude.json settings, skill patterns, and examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -12,10 +12,6 @@ score: 8
 permalink: /how-to-make-claude-code-follow-my-naming-conventions/
 geo_optimized: true
 ---
-
-
-
-<!-- answer-capsule -->
 Getting Claude Code to consistently respect your naming conventions is essential for maintaining code quality across your projects. Whether you prefer camelCase, PascalCase, snake_case, or any other naming style, you can configure Claude Code to understand and apply your conventions automatically. This guide explores practical methods to ensure AI-generated code matches your project's naming standards from the first line written.
 
 ## Why Naming Conventions Matter
@@ -263,32 +259,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### Why Naming Conventions Matter?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Using .claude.json for Global Naming Preferences?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Creating a Naming Conventions Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Language-Specific Naming Patterns?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Python Conventions?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

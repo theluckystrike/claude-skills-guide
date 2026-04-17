@@ -14,7 +14,6 @@ tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Database schema design remains one of the most critical and time-consuming aspects of application development. A well-designed schema can save weeks of refactoring work, while a poor one can haunt your project for years. The good news: AI-assisted workflows now make schema design faster, more consistent, and less prone to common pitfalls.
 
 This guide shows you a practical workflow for designing database schemas using Claude Code and its ecosystem of skills. You'll learn how to use AI for initial design, validation, migration planning, and documentation, without sacrificing control over your data model.
@@ -215,25 +214,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Starting Your Schema Design?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Starting your schema design means defining your domain model with concrete entities, relationships, and expected query patterns before approaching AI. For an e-commerce platform, you would sketch core entities (Users, Products, Orders, Payments) and their relationships (Users have many Orders, Orders have many OrderItems, Products have many OrderItems, Payments belong to Orders). This minimal domain model gives Claude Code a clear foundation to generate accurate schema proposals.
 
 ### What is Using Claude Code Skills for Schema Design?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Claude Code skills for schema design include the `/tdd` skill for test-driven schema validation against your requirements, the `pdf` skill for generating professional schema documentation, and the `supermemory` skill for remembering design decisions across sessions. The `/tdd` skill analyzes PostgreSQL schemas for normalization issues, missing indexes, and constraint violations. The `pdf` skill produces formatted reference documents with table descriptions, column definitions, relationships, and index usage notes.
 
 ### What is TDD Skill for Schema Validation?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The TDD skill for schema validation lets you paste a PostgreSQL schema and have Claude analyze it for normalization issues, missing indexes on frequently queried columns, redundant data, and foreign key constraint violations. Invoke it with `/tdd` followed by your CREATE TABLE statements and validation focus areas. Claude identifies potential problems iteratively before they reach production, catching issues like missing indexes on foreign key columns or improper constraint definitions during the design phase.
 
 ### What is Generating Initial Schema Drafts?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Generating initial schema drafts involves prompting Claude Code with your domain model requirements (entities, relationships, multi-tenancy, soft deletes, timestamps) and receiving a complete PostgreSQL schema with appropriate constraints, indexes, and data types. Claude generates UUID primary keys with `gen_random_uuid()`, email normalization using generated columns, partial indexes with `WHERE deleted_at IS NULL`, composite primary keys for join tables, and proper `ON DELETE CASCADE` or `RESTRICT` clauses. Always review AI suggestions against your specific use case.
 
 ### What are the practical schema design example?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+The practical schema design example demonstrates a PostgreSQL multi-tenant SaaS schema using UUIDs for global uniqueness, generated columns for case-insensitive email lookup (`email_normalized`), soft deletes via `deleted_at TIMESTAMP WITH TIME ZONE`, composite primary keys for join tables like `organization_members(organization_id, user_id)`, and partial indexes (`WHERE deleted_at IS NULL`) for performance. The `frontend-design` skill generates matching TypeScript interfaces to keep frontend types synchronized with database columns.

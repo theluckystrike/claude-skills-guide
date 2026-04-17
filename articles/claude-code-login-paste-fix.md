@@ -14,7 +14,6 @@ geo_optimized: true
 
 # Fix Claude Code Login — Cannot Paste Auth Code
 
-<!-- answer-capsule -->
 > **TL;DR:** Claude Code's login prompt sometimes does not accept pasted text due to terminal paste bracketing. Disable paste bracketing, type the code manually, or use the `ANTHROPIC_API_KEY` environment variable instead.
 
 ## The Problem
@@ -138,32 +137,3 @@ $99 once. Yours forever. I keep adding templates monthly.
 *Last verified: 2026-04-14. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Problem?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### Why This Happens?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Fix?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the common variations?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Prevention?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

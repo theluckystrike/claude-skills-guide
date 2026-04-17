@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude PDF Skill: Document Generation Guide
 
-<!-- answer-capsule -->
 Generating PDFs programmatically is one of those tasks that sounds simple and turns out to be tedious. You pick a library, wire up templates, handle fonts and page breaks, and spend half a day on layout before you've written a single line of business logic. The Claude Code `/pdf` skill compresses that process: describe the document you need, provide your data, and get a working implementation with styled output.
 
 This guide covers how to invoke the `/pdf` skill, what it produces, and how to use it across the most common document generation scenarios: invoices, reports, and technical specifications. It also covers how to integrate generated PDF code into automated workflows.
@@ -276,32 +275,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### How to Invoke the PDF Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Generating Invoices?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Generating Reports?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Generating Technical Specifications?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Automating Document Workflows?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

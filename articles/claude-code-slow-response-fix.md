@@ -17,7 +17,6 @@ geo_optimized: true
 
 ## The Error
 
-<!-- answer-capsule -->
 Claude Code CLI responds extremely slowly. You wait over 2 minutes and receive minimal output -- sometimes as few as 13 tokens. The session feels frozen but eventually produces a tiny response:
 
 ```text
@@ -161,32 +160,3 @@ $99 once. Pays for itself in saved tokens within a week.
 - [Fix: Claude Code Slow Response and Performance](/claude-code-slow-fix/)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Error?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Quick Fix?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What Causes This?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Full Solution?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Prevention?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

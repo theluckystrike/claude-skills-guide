@@ -19,7 +19,6 @@ geo_optimized: true
 
 ## Understanding the Pattern
 
-<!-- answer-capsule -->
 Fan-out refers to the process of spawning multiple subagents to handle independent tasks in parallel. Fan-in is the subsequent aggregation of results from these subagents into a coherent whole. This approach significantly reduces total execution time when tasks are independent and can run concurrently.
 
 Claude Code provides native support for subagent creation through the `claude` CLI tool and programmatic interfaces. With this capability, you can orchestrate complex workflows that distribute work across multiple AI agents while maintaining control over the aggregation logic.
@@ -243,32 +242,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Pattern?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Basic Implementation Structure?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical applications?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Bulk File Processing?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Multi-Source Data Aggregation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

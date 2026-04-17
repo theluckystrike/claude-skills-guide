@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code Design System Tokens: A Frontend Developer Guide"
+title: "Claude Code Design System Tokens — Complete Developer Guide"
 description: "Learn how to use Claude Code's design system tokens for building consistent, professional user interfaces with the canvas-design skill."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,9 +12,6 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
-
-
-<!-- answer-capsule -->
 Claude Code Design System Tokens: A Frontend Developer Guide
 
 Design system tokens are the foundation of consistent, scalable user interfaces. When working with Claude Code's canvas-design skill, understanding how to use these tokens can dramatically improve your workflow and output quality. This guide walks you through practical patterns for integrating design system tokens into your frontend development process, from basic color usage through theming, component composition, and dark mode support.
@@ -570,32 +566,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Working with Color Tokens?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical color scale reference?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Accessible Color Combinations?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Typography Tokens for Consistent Text?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Building a Type Scale?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code ISO 27001 Evidence Collection Workflow"
+title: "Claude Code Iso27001 Evidence — Complete Developer Guide"
 description: "Learn how to build automated ISO 27001 evidence collection workflows using Claude Code skills. Streamline your compliance audits with practical."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -14,8 +13,6 @@ score: 7
 render_with_liquid: false
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 {% raw %}
 Claude Code ISO 27001 Evidence Collection Workflow
 
@@ -899,32 +896,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Evidence Collection Challenge?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Manual vs. Automated Evidence Collection?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Core Claude Code Skills for Evidence Collection?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Building the Evidence Collection Workflow?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 1: Define Your Control Mapping?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

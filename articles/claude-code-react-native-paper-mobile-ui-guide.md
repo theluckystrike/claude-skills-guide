@@ -14,7 +14,6 @@ render_with_liquid: false
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 {% raw %}
 React Native Paper provides a comprehensive set of Material Design components for cross-platform mobile applications. Combined with Claude Code and its [frontend-design skill](/claude-frontend-design-skill-review-and-tutorial/), you can accelerate development significantly. This guide covers practical workflows for building mobile UIs efficiently.
 
@@ -312,32 +311,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up React Native Paper?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Component Development Workflow?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Building Common UI Patterns?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Lists with Actions?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Form Components?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

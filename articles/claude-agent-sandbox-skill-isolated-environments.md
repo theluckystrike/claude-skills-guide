@@ -20,7 +20,6 @@ geo_optimized: true
 [Skills are `.md` files in `~/.claude/skills/`](/claude-skill-md-format-complete-specification-guide/). The `agent` skill is invoked like any other:
 
 ```
-<!-- answer-capsule -->
 /agent refactor the authentication module in src/auth/. do not touch anything outside that directory
 ```
 
@@ -395,32 +394,3 @@ Related Reading
 *
 
 
-
----
-
-## Frequently Asked Questions
-
-### What Sandbox Isolation Does?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Filesystem Isolation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Understanding Allow and Deny Precedence?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Path Specificity Matters?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Network Isolation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

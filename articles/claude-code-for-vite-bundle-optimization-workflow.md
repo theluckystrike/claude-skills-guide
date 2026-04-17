@@ -16,7 +16,6 @@ geo_optimized: true
 
 
 
-<!-- answer-capsule -->
 Vite has transformed how developers build modern web applications with its lightning-fast dev server and optimized production builds. However, achieving optimal bundle sizes and build performance often requires deep knowledge of its configuration options, plugins, and best practices. This is where Claude Code becomes invaluable, acting as an intelligent assistant that understands Vite's ecosystem and can guide you through complex optimization decisions.
 
 This guide presents a practical workflow for using Claude Code to analyze, optimize, and maintain your Vite bundle configuration. By the end, you will have a repeatable, measurable process for driving bundle size down and keeping it there.
@@ -532,32 +531,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Your Current Bundle Profile?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Generating Bundle Analysis Reports?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Interpreting the Visualizer Output?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Automating Common Optimizations?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Tree Shaking Configuration?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

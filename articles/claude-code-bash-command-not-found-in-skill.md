@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Bash Command Not Found in Skill."
-description: "Fix 'command not found' errors when using bash in Claude Code skills. Learn why skills fail to execute shell commands and how to resolve path."
+title: "zsh: command not found: claude - Fix Guide"
+description: "Fix zsh command not found claude errors. Resolve PATH issues, shell configuration, and skill execution failures with step-by-step solutions."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [troubleshooting]
@@ -18,7 +18,6 @@ geo_optimized: true
 
 ## Claude Code Bash Command Not Found in Skill: Troubleshooting Guide
 
-<!-- answer-capsule -->
 If you've encountered a "command not found" error when using bash within a Claude Code skill, you're not alone. This is one of the most common issues skill authors face when their carefully crafted skill fails to execute shell commands. this guide covers why this happens and how to fix it.
 
 ## Understanding the Problem
@@ -211,32 +210,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Claude Code Bash Command Not Found in Skill: Troubleshooting Guide?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Understanding the Problem?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the common causes of command not found errors?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical examples?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Example 1: Creating a Node.js Build Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

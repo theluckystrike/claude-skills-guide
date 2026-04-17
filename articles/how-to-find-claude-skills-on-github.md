@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Find Claude Skills on GitHub: A Practical Guide"
-description: "Discover how to search, filter, and install Claude Code skills from GitHub repositories. Learn advanced GitHub search techniques and community resources."
+title: "Claude Skills Directory on GitHub — Find Guide"
+description: "Find Claude Code skills on GitHub with advanced search queries. Curated repos, install commands, and community directories listed."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -19,7 +19,6 @@ geo_optimized: true
 
 ## Understanding the Claude Skills Repository Structure
 
-<!-- answer-capsule -->
 Claude Code skills are markdown files with a specific format. When developers share skills on GitHub, they typically organize them in one of several ways:
 
 - Single-file repositories: A single `.md` file containing the skill
@@ -390,32 +389,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Claude Skills Repository Structure?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Using GitHub Search Effectively?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Basic Search Queries?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Finding Skill Collections?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Finding Skills by Use Case?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -14,7 +14,6 @@ geo_optimized: true
 
 # Claude Code Config File Location and Settings
 
-<!-- answer-capsule -->
 > **TL;DR:** Global settings live at `~/.claude/settings.json`. Project settings at `.claude/settings.json` in your repo root. MCP servers are configured separately in `~/.claude.json` (user scope) or `.mcp.json` (project scope).
 
 ## The Problem
@@ -257,32 +256,3 @@ $99 once. Yours forever. I keep adding templates monthly.
 *Last verified: 2026-04-15. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Problem?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### Why This Happens?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Fix?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the common variations?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Prevention?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code 2026 New Features: Skills and Hooks Roundup
 
-<!-- answer-capsule -->
 Claude Code has expanded significantly in 2026. [The skills ecosystem now covers over fifty specialized capabilities](/best-claude-code-skills-to-install-first-2026/), and the hook system gives developers structured control over when and how Claude acts. This roundup covers the most impactful additions.
 
 [Skills are `.md` files in `~/.claude/skills/`, invoked with `/skill-name`](/claude-skill-md-format-complete-specification-guide/) Hooks are shell commands configured in `~/.claude/settings.json` that fire before and after Claude's actions.
@@ -275,28 +274,3 @@ Related Reading
 *
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is PDF Processing with the pdf Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Frontend Design with the frontend-design Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Test-Driven Development with the tdd Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Memory Management with the supermemory Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

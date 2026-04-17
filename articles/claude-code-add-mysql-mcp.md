@@ -13,7 +13,6 @@ score: 6
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Adding MySQL MCP to Claude Code connects it directly to your database for schema inspection, query execution, and migration generation. This guide walks through the setup using a MySQL-compatible MCP server so Claude Code can write accurate SQL against your actual tables.
 
 ## The Problem
@@ -168,37 +167,3 @@ Related Reading
 - [Claude Code for Postgres Full Text Search Workflow](/claude-code-for-postgres-full-text-search-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
-
----
-
-## Frequently Asked Questions
-
-### What is The Problem?
-
-See the dedicated section above for a detailed explanation covering why Claude Code generates incorrect SQL without direct MySQL schema access through MCP.
-
-### What is Quick Solution?
-
-See the dedicated section above for a detailed explanation covering the four-step setup from installation through your first schema query with real table definitions.
-
-### What is How It Works?
-
-See the dedicated section above for a detailed explanation covering the MCP server's persistent connection, INFORMATION_SCHEMA queries, and local-only data flow.
-
-### What is Common Issues?
-
-See the dedicated section above for a detailed explanation covering authentication errors, Docker networking, and slow schema queries with specific fixes.
-
-### What is Example CLAUDE.md Section?
-
-See the dedicated section above for a detailed explanation covering a MySQL-specific CLAUDE.md with Prisma integration, soft-delete rules, and naming conventions.
-
-### What is Best Practices?
-
-See the dedicated section above for a detailed explanation covering read-only users, environment isolation, ORM integration, and database scoping.
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

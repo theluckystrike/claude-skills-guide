@@ -14,7 +14,6 @@ score: 8
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Git filter-repo is a powerful tool for rewriting Git history, but it can be intimidating due to its complexity and the irreversible nature of history rewriting. This guide shows how Claude Code can help you safely navigate filter-repo workflows, generate correct commands, and avoid common pitfalls, whether you are removing accidentally committed secrets, carving out a subdirectory into its own repository, or reducing a bloated monorepo to something manageable.
 
 What is Git Filter-Repo?
@@ -340,32 +339,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Filter-Repo with Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Using Claude Code to Plan Your Filter-Repo Operation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Automating Common Filter-Repo Tasks?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Removing Sensitive Data?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Extracting a Subdirectory?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

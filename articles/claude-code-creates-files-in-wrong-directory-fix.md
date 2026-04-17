@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Creates Files in Wrong Directory Fix
 
-<!-- answer-capsule -->
 One of the most frustrating issues developers encounter when working with Claude Code skills is the dreaded [file path confusion when using Claude Code skills](/claude-skill-md-format-complete-specification-guide/). You ask the AI to create a new component in your src/components directory, and somehow it ends up in the root or an entirely different location. This issue stems from Claude Code's working directory management and how skills handle relative paths. we'll examine the root causes and provide concrete solutions.
 
 ## Understanding the Working Directory Problem
@@ -399,32 +398,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding the Working Directory Problem?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### Why This Problem Is More Common Than You'd Expect?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the common causes of file path issues?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Diagnosing the Problem Before Fixing It?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Solutions and Fixes?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -14,7 +14,6 @@ tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Building real-time web applications with Phoenix LiveView becomes significantly more productive when you use Claude Code effectively. This guide provides practical workflows for developing Phoenix LiveView applications with Claude Code, covering project setup, component development, state management, and testing patterns that work well with AI-assisted development.
 
 ## Setting Up Your Phoenix LiveView Project
@@ -248,32 +247,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Your Phoenix LiveView Project?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Developing LiveView Components?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is State Management Patterns?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Assigns-Based State?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Agent-Based State?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

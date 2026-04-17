@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Chrome Extension Coding Practice Problems
 
-<!-- answer-capsule -->
 Building Chrome extensions requires understanding browser-specific APIs, the extension lifecycle, and the nuances of Chrome's permission system. This guide provides practical coding problems that simulate real-world extension development scenarios, helping developers build production-ready extensions. Whether you are moving from Manifest V2 to V3, learning service worker constraints for the first time, or struggling with cross-context communication, the problems below offer focused, runnable examples you can adapt immediately.
 
 ## Setting Up Your Development Environment
@@ -543,32 +542,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Your Development Environment?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Manifest V2 vs. Manifest V3: What Changed?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Practice Problem 1: Message Passing Between Contexts?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is One-time vs. long-lived connections?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Practice Problem 2: Handling Asynchronous Operations?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

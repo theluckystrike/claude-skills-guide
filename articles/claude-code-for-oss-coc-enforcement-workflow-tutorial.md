@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code for OSS CoC Enforcement Workflow Tutorial"
+title: "Claude Code For Oss Coc — Complete Developer Guide"
 description: "Learn how to build automated Code of Conduct enforcement workflows using Claude Code skills. Practical examples for handling reports, notifications."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -13,9 +12,6 @@ reviewed: true
 score: 8
 geo_optimized: true
 ---
-
-
-<!-- answer-capsule -->
 Claude Code for OSS CoC Enforcement Workflow Tutorial
 
 Open source communities thrive when contributors feel safe and respected. A well-enforced Code of Conduct (CoC) is essential for healthy projects, but manually managing violations can be time-consuming and emotionally draining. This tutorial shows you how to build automated CoC enforcement workflows using Claude Code skills, helping maintainers handle reports consistently while reducing administrative burden.
@@ -253,25 +249,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding CoC Enforcement Challenges?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+CoC enforcement challenges center on establishing consistent, fair response sequences when violation reports arrive. Maintainers face questions about notification order, response timelines, and escalation thresholds. Without structured workflows, handling varies between cases, eroding community trust. The goal is creating repeatable processes that protect both reporters and the accused while documenting every step for accountability and transparency.
 
 ### What is Building Your CoC Enforcement Skill?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Building a CoC enforcement skill involves creating a Claude Code skill file with YAML front matter defining the skill name as `coc-enforcement` and its description. The skill guides maintainers through a structured six-stage workflow: Report Intake, Triage, Investigation, Decision, Action, and Follow-up. Tools are intentionally limited to document management and communication, following the principle of least privilege for sensitive enforcement operations.
 
 ### What is Skill Structure and Front Matter?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Skill structure begins with YAML front matter containing `name` and `description` fields that define the skill's scope. For CoC enforcement, the front matter restricts available tools to document management rather than system operations, since enforcement primarily requires file creation, template rendering, and communication tracking. This deliberate constraint prevents misuse and follows security best practices for handling sensitive community matters.
 
 ### What is Defining the Workflow Stages?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The workflow consists of six sequential stages: Report Intake (documenting the complaint in `.coc/cases/`), Triage (assessing severity from Critical to Low), Investigation (gathering information from all parties), Decision (determining appropriate response), Action (implementing consequences), and Follow-up (ensuring resolution). Critical and High severity cases require response within 24 hours, while Medium severity allows 72 hours.
 
 ### What is Creating Response Templates?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Response templates provide consistent, professional communication for CoC enforcement. The two primary templates are the Initial Acknowledgment (sent to the reporter with case number and timeline) and the Accused Party Notification (informing the individual of the report without prejudgment). Templates use bracketed placeholders for customizable fields like names, case IDs, and timeframes, ensuring fairness while reducing the emotional burden on maintainers.

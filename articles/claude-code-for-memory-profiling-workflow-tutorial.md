@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code for Memory Profiling Workflow Tutorial
 
-<!-- answer-capsule -->
 Memory profiling is one of the most challenging aspects of application performance optimization. Understanding how your application uses memory, identifying leaks, and optimizing allocation patterns requires both the right tools and a systematic approach. Claude Code can be an invaluable partner in this process, helping you set up profiling workflows, interpret results, and implement fixes. This tutorial shows you how to use Claude Code effectively for memory profiling tasks across Python, Node.js, and Go applications.
 
 ## Understanding Memory Profiling Fundamentals
@@ -570,25 +569,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding Memory Profiling Fundamentals?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Memory profiling fundamentals involve tracking how an application allocates, uses, and releases memory during execution. Key metrics include heap usage (where most memory problems live), allocation rate, garbage collection frequency, and object lifetime patterns. The distinction between stack memory (automatic, local variables), heap memory (dynamic allocation), RSS (total OS-allocated memory), and virtual memory is critical for interpreting profiling output accurately.
 
 ### What is Setting Up Your Profiling Environment?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Setting up your profiling environment means installing language-specific tools: `memory_profiler` and `tracemalloc` for Python, V8 heap snapshots with `--inspect` for Node.js, and built-in `pprof` for Go. Claude Code guides you through installation and configuration for each language. The setup step ensures you have the right profiling infrastructure before capturing baseline measurements, running representative workloads, and comparing memory snapshots.
 
 ### What is Python: memory_profiler and tracemalloc?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Python memory profiling uses two complementary tools. The `memory_profiler` package provides a `@profile` decorator that outputs line-by-line memory usage showing exact MB increments per line of code. The built-in `tracemalloc` module tracks memory allocations with `tracemalloc.start()`, captures snapshots, and reports current and peak memory usage in megabytes. Run profiled scripts with `python -m memory_profiler your_script.py` to see which specific lines cause the largest allocations.
 
 ### What is Node.js: V8 Heap Snapshots and --inspect?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Node.js memory profiling uses V8's built-in `v8.writeHeapSnapshot()` API to capture heap snapshots at specific points during execution. Running `node --inspect server.js` enables Chrome DevTools connection for interactive heap snapshot capture, allocation timelines, and allocation sampling. The `heapdump` npm package adds programmatic snapshot triggers via OS signals (SIGUSR2), enabling production-safe profiling by running `kill -USR2 <pid>` from another terminal.
 
 ### What is Go: pprof?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Go's built-in `pprof` tooling provides memory profiling with minimal setup by importing `_ "net/http/pprof"` and starting an HTTP server on localhost:6060. Capture heap profiles with `go tool pprof http://localhost:6060/debug/pprof/heap`, then use interactive commands like `top10` to see top allocators, `list MyFunction` for line-level detail, and `web` to open a call-graph visualization in your browser. Claude Code helps interpret pprof's call-graph output format.

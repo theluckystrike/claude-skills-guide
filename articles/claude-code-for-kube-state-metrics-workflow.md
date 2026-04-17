@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code for Kube State Metrics Workflow: A Complete."
+title: "Claude Code For Kube State — Complete Developer Guide"
 description: "Learn how to use Claude Code to streamline your Kube State Metrics workflow, from deployment configuration to custom metric creation and alerting."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -14,8 +13,6 @@ score: 7
 render_with_liquid: false
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 {% raw %}
 Claude Code for Kube State Metrics Workflow: A Complete Guide
 
@@ -288,32 +285,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Claude Code for KSM Workflows?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Creating a K8s Operations Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical examples: building your ksm workflow?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Example 1: Deploying and Configuring Kube State Metrics?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Example 2: Creating Custom Metrics with PromQL?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

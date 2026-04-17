@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Chinese Python Developers Guide (2026)"
-description: "A practical guide for Chinese Python developers using Claude Code in 2026. Setup, essential skills, and real-world workflows."
+title: "Claude Code for Python Developers: Guide (2026)"
+description: "Claude Code guide for Python developers in 2026. Setup, essential skills, and real-world workflows for productive AI-assisted Python coding."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [getting-started]
@@ -21,7 +21,6 @@ geo_optimized: true
 
 [Claude Code runs locally and integrates with your existing development environment](/claude-skill-md-format-complete-specification-guide/) First, install it via the official Anthropic channels, then configure it for Python development.
 
-<!-- answer-capsule -->
 The configuration lives in `~/.claude/settings.json`. For Python projects, a practical configuration looks like:
 
 ```json
@@ -432,25 +431,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Claude Code Setup for Python Projects?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Claude Code setup for Python projects involves installing Claude Code via official Anthropic channels, configuring `~/.claude/settings.json` with your project path and pytest as the test framework, and creating a CLAUDE.md file in your project root. The CLAUDE.md should specify your stack (e.g., FastAPI, SQLAlchemy), Python version (3.11 or 3.12), formatting tools (black), and language preferences. Keep CLAUDE.md under 500 characters for optimal context processing.
 
 ### What is Choosing the Right Python Version?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Choosing the right Python version matters because Claude Code generates syntax matching your specified version. Python 3.10 enables `match` statements and `X | Y` union types. Python 3.11 adds `ExceptionGroup`, `tomllib`, and fine-grained tracebacks. Python 3.12 introduces `@override`, improved f-strings, and `pathlib` enhancements. Always specify your version in CLAUDE.md; without it, Claude defaults to broadly compatible code that avoids newer, cleaner patterns.
 
 ### What is Virtual Environment Integration?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Virtual environment integration configures Claude Code to use your project's Python interpreter from `venv`. Create a virtual environment with `python -m venv .venv`, activate it, and document the path in CLAUDE.md by specifying `venv: .venv` and `interpreter: .venv/bin/python`. Claude Code then uses the correct interpreter when running test commands and generating import statements, ensuring generated code matches your project's installed packages and Python version.
 
 ### What is Essential Claude Skills for Python Developers?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Essential Claude skills for Python developers include the `/tdd` skill for test-driven development with pytest (generates tests first, then implementation), the `pdf` skill for extracting text from vendor API documentation PDFs and converting them into Python wrapper code, and the `/supermemory` skill for persisting project preferences across sessions. These skills integrate naturally into daily workflows: load them at session start, write tests with `/tdd`, and store conventions in supermemory.
 
 ### What is TDD Skill?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+The `/tdd` skill transforms Python development by enforcing a red-green-refactor cycle. When activated with `/tdd` followed by a description, Claude generates pytest test cases first, then implements the module to make those tests pass. The key difference from simply asking Claude to write code is that tests document the module's exact intended behavior and the implementation is specifically written to satisfy them. Generated tests also verify Chinese-language error messages when bilingual output is requested.

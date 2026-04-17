@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "AI Translation Chrome Extension: A Developer Guide"
-description: "Learn how to build AI-powered translation extensions for Chrome. Practical code examples, APIs, and implementation patterns for developers and power users."
+title: "AI Translation Chrome Extension: Developer Guide"
+description: "Build an AI translation Chrome extension with practical code examples. APIs, implementation patterns, and translation models for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -15,7 +15,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 AI Translation Chrome Extension: A Developer Guide
 
 Building an AI-powered translation extension for Chrome combines browser extension development with modern machine learning APIs. This guide covers the essential components, architectural decisions, and practical code patterns you need to create a functional translation tool.
@@ -369,25 +368,20 @@ Translation breaking on React/Vue pages: Single-page apps re-render the DOM afte
 
 ### What is Core Architecture?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+An AI translation Chrome extension operates through three interconnected components: a content script that captures selected text or scans page content using `document.createTreeWalker`, a background service worker that handles API communication with translation endpoints (OpenAI, Anthropic, or Google Cloud Translation) and manages state, and a popup interface for language selection and translation display. Chrome 138+ also supports the built-in `translation` API for on-device translation without external API calls.
 
 ### What is Manifest Configuration?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The Manifest V3 configuration requires `activeTab`, `scripting`, and `storage` permissions, plus `host_permissions` for your AI API endpoints (e.g., `https://api.openai.com/*`, `https://api.anthropic.com/*`). Without `host_permissions`, the extension cannot make cross-origin requests to external APIs. The manifest defines the popup HTML, default icon, and optionally a content script for automatic text selection detection. Use `contextMenus` permission to add right-click "Translate with AI" functionality.
 
 ### What is Capturing Text for Translation?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Text capture uses two approaches: selection-based translation detects highlighted text via a `mouseup` event listener that calls `window.getSelection().toString().trim()` and sends it to the background worker via `chrome.runtime.sendMessage`. Page-level translation uses `document.createTreeWalker` with `NodeFilter.SHOW_TEXT` to scan all text nodes, filtering out UI elements and nodes shorter than 20 characters. Batch translation reduces API calls from hundreds to a handful per page by grouping text nodes.
 
 ### What is Building the Translation Service?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The translation service runs in the background service worker (`background.js`), receiving text from content scripts via `chrome.runtime.onMessage`. It sends requests to AI APIs like OpenAI's `gpt-4o-mini` model with a system prompt specifying the target language and requesting only the translation without explanations. The service includes retry logic with exponential backoff for rate limits (HTTP 429 responses), waiting `2000 * (attempt + 1)` milliseconds between retries up to 3 maximum attempts.
 
 ### What is Managing API Keys Securely?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+API keys are stored in `chrome.storage.local` (or `chrome.storage.sync` for cross-device access), never embedded directly in extension code. An options page provides an input field where users enter their key, which is saved via `chrome.storage.local.set({ apiKey })`. The background service retrieves the key with `chrome.storage.local.get(['apiKey'])` and throws an error if unconfigured. This ensures the key exists only in the user's browser storage, not in the distributed extension package on the Chrome Web Store.

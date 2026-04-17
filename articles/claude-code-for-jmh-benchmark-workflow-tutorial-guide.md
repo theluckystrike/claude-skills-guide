@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for JMH Benchmark Workflow Tutorial Guide"
+title: "Claude Code For Jmh Benchmark — Complete Developer Guide"
 description: "Learn how to use Claude Code to streamline your JMH benchmark workflow, from project setup to writing effective benchmarks and analyzing results."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -12,9 +12,6 @@ score: 7
 reviewed: true
 geo_optimized: true
 ---
-
-
-<!-- answer-capsule -->
 Claude Code for JMH Benchmark Workflow Tutorial Guide
 
 Java Microbenchmark Harness (JMH) is the standard tool for benchmarking Java code, but setting up and running JMH benchmarks effectively can be challenging. Writing benchmarks that produce trustworthy results requires avoiding JIT pitfalls, warmup subtleties, and dead-code elimination. This guide shows you how to use Claude Code to streamline every phase of your JMH workflow, project setup, benchmark implementation, execution, result analysis, and continuous performance regression testing.
@@ -561,25 +558,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Setting Up Your JMH Project?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+JMH project setup involves configuring either Maven or Gradle with the `jmh-core` and `jmh-generator-annprocess` dependencies (version 1.37). The annotation processor dependency generates benchmark runner code during compilation and is frequently overlooked, causing mysterious failures. Ask Claude Code to scaffold a complete build configuration with the shade plugin (Maven) or jmh-gradle-plugin (Gradle) targeting your Java version. Configure JSON result output from the start to enable cross-run comparisons and regression tracking.
 
 ### What is Maven Setup?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Maven setup requires three components: the `jmh-core` and `jmh-generator-annprocess` dependencies (version 1.37), the `maven-shade-plugin` (version 3.5.1) to package everything into a single executable jar with `org.openjdk.jmh.Main` as the main class, and the `maven-compiler-plugin` (version 3.11.0) configured for Java 17 to ensure annotation processing runs correctly. Build with `mvn clean package -q`, then run benchmarks with `java -jar target/benchmark.jar`.
 
 ### What is Gradle Setup?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Gradle setup uses the `me.champeau.jmh` plugin version 0.7.2 with configuration for include patterns, fork count, warmup/measurement iterations, benchmark modes (`thrpt` and `avgt`), and JSON result output via `resultsFile` and `resultFormat` settings. Run benchmarks with `./gradlew jmh` or filter specific classes with `--include '.*StringBenchmark.*'`. The JSON output format is essential for parsing and comparing results across runs for performance regression tracking.
 
 ### What is Writing Effective Benchmarks?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Effective JMH benchmarks follow specific patterns to avoid measurement errors. Every benchmark method needs the `@Benchmark` annotation. Use `@BenchmarkMode` to select Throughput, AverageTime, or SampleTime measurement. Prevent dead code elimination by returning computed values or consuming them with `Blackhole.consume()`. Use `@Param` for testing with multiple input sizes. Apply `@State(Scope.Thread)` for thread-local state and `@Setup(Level.Trial)` for one-time initialization to avoid setup overhead contaminating measurements.
 
 ### What is Basic Benchmark Structure?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+The basic JMH benchmark structure is a Java class annotated with `@BenchmarkMode(Mode.Throughput)`, `@OutputTimeUnit(TimeUnit.MILLISECONDS)`, `@State(Scope.Thread)`, `@Warmup(iterations = 3, time = 1)`, `@Measurement(iterations = 5, time = 1)`, and `@Fork(2)`. State fields are initialized in a `@Setup(Level.Trial)` method. Each benchmark method carries the `@Benchmark` annotation and returns or consumes its result to prevent JIT dead code elimination. Multiple benchmark methods in one class enable direct comparison of implementations.

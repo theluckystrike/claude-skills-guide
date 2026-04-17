@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Helicone LLM Gateway Workflow Tutorial"
+title: "Claude Code For Helicone LLM — Complete Developer Guide"
 description: "Learn how to integrate Claude Code with Helicone's LLM gateway for enhanced observability, caching, and rate limiting in your AI applications."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -10,9 +10,6 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
-
-
-<!-- answer-capsule -->
 Claude Code for Helicone LLM Gateway Workflow Tutorial
 
 As AI applications scale, managing LLM API calls becomes increasingly complex. Helicone provides a powerful LLM gateway that adds observability, caching, request transformation, and rate limiting to any LLM API. This tutorial shows you how to integrate Claude Code with Helicone to build solid, efficient AI workflows.
@@ -263,32 +260,3 @@ Related Reading
 
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Helicone?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Option 1: Helicone Cloud?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Option 2: Self-Hosted?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Configuring Claude Code for Helicone?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Environment Setup?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Passing Context Between Claude Code Subagents Guide
 
-<!-- answer-capsule -->
 Claude Code enables powerful multi-agent architectures through subagents. For an introduction to subagent coordination, see [multi-agent orchestration with Claude subagents](/multi-agent-orchestration-with-claude-subagents-guide/). When building complex workflows, you need reliable ways to pass context, share state, and coordinate results between subagents. This guide covers practical patterns for context passing that work in real production workflows.
 
 ## Understanding Subagent Context Architecture
@@ -290,32 +289,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Subagent Context Architecture?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Pattern 1: Explicit Context Injection at Invocation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Pattern 2: Shared File-Based State?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Pattern 3: Structured Result Passing?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Pattern 4: Context Summarization for Long Workflows?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

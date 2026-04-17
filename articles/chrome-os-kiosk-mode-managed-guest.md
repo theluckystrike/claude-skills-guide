@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome OS Kiosk Mode and Managed Guest Session Configuration"
-description: "A technical guide to configuring Chrome OS kiosk mode and managed guest sessions for enterprise deployments, developer kiosks, and restricted user."
+title: "Chrome OS Kiosk Mode: Managed Guest Setup Guide"
+description: "Configure Chrome OS kiosk mode and managed guest sessions for enterprise deployments. Step-by-step setup for restricted user environments."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -14,7 +14,6 @@ tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Chrome OS provides two powerful mechanisms for deploying locked-down, single-purpose device configurations: Kiosk Mode and Managed Guest Sessions. These features serve different use cases but share a common goal, providing controlled access to Chrome OS devices while maintaining security and manageability.
 
 This guide covers the technical implementation details for both approaches, with practical configuration examples for enterprise administrators and developers building kiosk-style applications. Whether you are deploying a fleet of self-service terminals in a hospital lobby or setting up shared Chromebooks for a school computer lab, understanding how these two modes differ will help you choose the right approach and avoid common pitfalls.
@@ -460,21 +459,16 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding the Two Approaches?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Chrome OS offers two locked-down device configurations: Kiosk Mode runs a single specified web app or Android app as the only accessible application, requiring admin credentials to exit, ideal for digital signage, POS terminals, and self-service kiosks. Managed Guest Sessions create temporary browser sessions that wipe completely on logout, suited for shared devices in education, healthcare, and retail. Both require Chrome Enterprise or Education licenses and integrate with Google Admin Console for centralized fleet management.
 
 ### What is Quick Comparison?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Kiosk Mode restricts the device to a single app, requires admin credentials to exit, supports auto-launch on boot, and is best for digital signage, POS systems, and ATMs. Managed Guest Sessions provide full Chrome browser access, allow users to log out freely, wipe all data on logout, support policy-defined extension installation, and are best for shared browsers, computer labs, and hotel lobbies. Both require Chrome Enterprise or Education licensing and cannot run on Chrome OS Flex or unmanaged consumer devices.
 
 ### What is Kiosk Mode Implementation?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Kiosk Mode implementation requires a Chrome device enrolled in Chrome Enterprise or Education, Admin Console access, a Kiosk app (PWA or Android app) published to your organization, and Chrome OS version 87+ for PWA kiosks (64+ for Android apps). Configuration is done through Google Admin Console at Devices > Chrome > Apps & Extensions > Kiosks, where you add your app, enable auto-launch for production deployments, and assign it to organizational units. For bulk deployment, use JSON provisioning configurations with the Chrome Management API.
 
 ### What is Configuration via Google Admin Console?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+In Google Admin Console, navigate to Devices > Chrome > Apps & Extensions > Kiosks, click Add to select your kiosk application, configure auto-launch settings (always enable for production deployments to recover from power outages automatically), and assign to specific organizational units. Multiple kiosk apps per OU display a selection screen unless exactly one has auto-launch enabled. For fleet management at scale, use the Chrome Management API via `gcloud alpha chromeos-devices update` to push policy updates programmatically.

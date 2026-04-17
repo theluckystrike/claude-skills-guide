@@ -13,7 +13,6 @@ score: 6
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Adding AWS MCP to Claude Code gives it direct access to your AWS resources -- S3 buckets, DynamoDB tables, Lambda functions, and CloudWatch logs -- without leaving your editor. This guide covers the setup for connecting Claude Code to AWS services through MCP for infrastructure-aware development.
 
 ## The Problem
@@ -191,37 +190,3 @@ Related Reading
 - [Claude Code MCP Server Disconnected](/claude-code-mcp-server-disconnected/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
-
----
-
-## Frequently Asked Questions
-
-### What is The Problem?
-
-See the dedicated section above for a detailed explanation covering why Claude Code generates incorrect AWS resource references without direct MCP access to your account.
-
-### What is Quick Solution?
-
-See the dedicated section above for a detailed explanation covering the four-step setup from AWS MCP server installation through your first S3 bucket query.
-
-### What is How It Works?
-
-See the dedicated section above for a detailed explanation covering how the MCP server wraps the AWS SDK, uses local credentials, and respects IAM permission boundaries.
-
-### What is Common Issues?
-
-See the dedicated section above for a detailed explanation covering credential failures, IAM permission scoping, and slow responses on resource-heavy accounts.
-
-### What is Example CLAUDE.md Section?
-
-See the dedicated section above for a detailed explanation covering an AWS-specific CLAUDE.md with resource inventory, CDK conventions, and safety rules.
-
-### What is Best Practices?
-
-See the dedicated section above for a detailed explanation covering read-only roles, production isolation, resource listing, SSO token management, and region scoping.
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

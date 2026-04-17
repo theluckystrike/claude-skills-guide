@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Prisma Transactions and Error Handling Patterns"
-description: "Master Prisma transactions and error handling in your Claude Code skills. Learn practical patterns for atomic operations, rollback strategies, and."
+title: "Claude Code Prisma Error Handling Patterns"
+description: "Prisma transaction and error handling patterns for Claude Code. Atomic operations, rollback strategies, and retry logic with examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -14,7 +14,6 @@ score: 7
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Building reliable database operations requires more than just executing queries, it demands careful handling of transactions and errors. When you're writing Claude Code skills that interact with databases through Prisma, understanding how to manage atomic operations and handle failures gracefully can mean the difference between a solid application and one that leaves data in inconsistent states.
 
 This guide walks you through practical patterns for implementing transactions and error handling in Prisma-powered Claude skills, with actionable examples you can apply immediately.
@@ -369,32 +368,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Prisma Transactions?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Sequential vs. Batch Transaction APIs?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Interactive Transactions for Complex Workflows?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Transaction Timeouts?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Error Handling Strategies?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

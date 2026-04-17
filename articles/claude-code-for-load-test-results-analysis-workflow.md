@@ -14,7 +14,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 Claude Code for Load Test Results Analysis Workflow
 
 Load testing is essential for understanding how your application performs under stress, but analyzing the results can be time-consuming and error-prone. A well-designed Claude Code skill can transform raw load test data into actionable insights, helping you identify bottlenecks, compare performance across builds, and generate reports without manual effort.
@@ -368,32 +367,3 @@ Inconsistent findings across repeated analysis runs: Use Claude's temperature 0 
 
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Building Your Load Test Analysis Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Skill Structure?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Parsing Different Load Test Formats?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is JMeter CSV Parsing?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical analysis examples?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

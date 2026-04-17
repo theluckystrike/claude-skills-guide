@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Skills for Accessibility Testing WCAG A11y
 
-<!-- answer-capsule -->
 Web accessibility isn't optional, it's a requirement for many organizations and a moral imperative for all. The Web Content Accessibility Guidelines (WCAG) provide a framework for creating inclusive digital experiences, but manually checking compliance across every page, component, and interaction takes time you probably don't have. Claude skills can automate significant portions of your accessibility testing workflow, catching issues before they reach production. For a focused workflow on fixing color contrast failures specifically, the [Claude Code color contrast and accessibility fix guide](/claude-code-color-contrast-accessibility-fix-workflow/) provides step-by-step remediation patterns.
 
 ## Why Automate Accessibility Testing
@@ -162,32 +161,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### Why Automate Accessibility Testing?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Automated WCAG Checks?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Testing Color Contrast Automatically?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Document Accessibility with the PDF Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Keyboard Navigation Testing?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

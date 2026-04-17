@@ -14,7 +14,6 @@ render_with_liquid: false
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 {% raw %}
 Architecture Decision Records (ADRs) are a crucial part of sustainable software development. They document the "why" behind technical choices, making your project's architectural evolution traceable and understandable. Claude Code can significantly accelerate your ADR workflow, from initial drafting to ongoing maintenance. This guide shows you how to use Claude Code effectively for creating and managing ADRs.
 
@@ -454,32 +453,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
 
-
----
-
-## Frequently Asked Questions
-
-### Why Use Claude Code for ADRs?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Claude Code vs. Manual ADR Writing: What Changes?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is ADR Formats: Choosing the Right One?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Starting a New ADR?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Worked Example: Choosing a Message Queue?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

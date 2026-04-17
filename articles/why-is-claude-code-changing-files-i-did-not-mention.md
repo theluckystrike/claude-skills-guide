@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Why Is Claude Code Changing Files I Did Not Mention?"
+title: "Why Is Claude Code Changing Files I Did — Developer Guide"
 description: "Understand why Claude Code modifies files you didn't mention. Control skill auto-invocation, context awareness, and file modification scope."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,9 +12,6 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
-
-
-<!-- answer-capsule -->
 Why Is Claude Code Changing Files I Did Not Mention?
 
 You've asked Claude Code to modify one specific file, but you notice other files have been changed. Maybe a configuration file was updated, tests were modified, or a related module was altered. This behavior can be surprising, but it usually has understandable reasons. why Claude Code sometimes changes files you didn't explicitly mention.
@@ -243,32 +239,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Claude Code's File Awareness?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Skill Auto-Invocation: A Common Cause?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical example: auto-formatting skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### How to Control Skill Auto-Invocation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Method 1: Disable Auto-Invocation in Skill Configuration?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

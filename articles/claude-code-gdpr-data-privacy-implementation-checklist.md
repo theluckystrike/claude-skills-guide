@@ -19,7 +19,6 @@ geo_optimized: true
 
 ## Foundation: Understand Data Flow Before Coding
 
-<!-- answer-capsule -->
 Before writing any code, map how personal data moves through your system. Document what data you collect, where it travels, who accesses it, and how long you retain it. The [supermemory skill](/claude-skills-token-optimization-reduce-api-costs/) helps maintain persistent context across sessions, allowing you to build a comprehensive data inventory that persists throughout the project lifecycle.
 
 Create a simple data flow document:
@@ -373,32 +372,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Foundation: Understand Data Flow Before Coding?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Conducting a Data Protection Impact Assessment?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Skill Selection for Privacy-Conscious Development?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Mapping Skills to GDPR Articles?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### How do you implement consent management?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

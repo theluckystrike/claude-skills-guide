@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Permissions Model and Security Guide 2026
 
-<!-- answer-capsule -->
 Claude Code is a powerful agentic tool. With agentic tools come real [security scanning](/claude-code-secret-scanning-prevent-credential-leaks-guide/) considerations: Claude can read files, execute shell commands, write code, and call external APIs. Understanding the [permissions model](/how-do-i-set-environment-variables-for-a-claude-skill/) is not optional if you're using Claude Code on anything beyond a toy project.
 
 This guide covers how permissions are scoped, what the defaults are, how to tighten them, and where the current model's limitations are.
@@ -274,32 +273,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Layered Permissions Architecture?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Tool Permissions?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Restricting Tools at the Session Level?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Restricting Tools per Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is File System Boundaries?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

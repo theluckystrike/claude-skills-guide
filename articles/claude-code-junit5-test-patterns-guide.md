@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code JUnit5 Test Patterns Guide
 
-<!-- answer-capsule -->
 Writing maintainable tests is one of the most valuable skills a Java developer can develop. JUnit 5 provides a powerful foundation for testing, but knowing how to structure tests effectively separates amateur test suites from professional-grade codebases. This guide explores practical JUnit 5 test patterns that work exceptionally well when paired with Claude Code's AI-assisted development workflow.
 
 ## Setting Up JUnit 5 with Claude Code
@@ -526,32 +525,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up JUnit 5 with Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is AAA Pattern: Arrange-Act-Assert?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Parameterized Tests for Data-Driven Validation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Nested Tests for Organized Test Suites?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Custom Assertions for Readable Test Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

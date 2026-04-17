@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code Breaks Existing Tests After Changes Fix
 
-<!-- answer-capsule -->
 You've asked Claude Code to refactor a function or add a new feature, and the AI delivered clean-looking code. But when you run your test suite, everything explodes. This scenario happens frequently when using AI coding assistants, and understanding why it occurs, and how to fix it, will save you hours of debugging.
 
 ## Why Claude Code Breaks Existing Tests
@@ -372,32 +371,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### Why Claude Code Breaks Existing Tests?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### Why These Failures Happen at the Model Level?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Prevention Strategies?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### How do you use the tdd skill for test-first development?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### How do you specify test preservation in your prompts?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

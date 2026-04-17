@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Code for Capacity Planning Workflow Tutorial
 
-<!-- answer-capsule -->
 Capacity planning is one of the most challenging aspects of infrastructure management. Teams often struggle with predicting future resource needs, balancing costs, and responding to demand spikes. Claude Code offers a powerful way to automate and enhance capacity planning workflows through intelligent automation and data-driven decision-making.
 
 This tutorial walks you through building a complete capacity planning workflow using Claude Code skills, complete with practical examples and actionable advice you can apply immediately to your projects.
@@ -248,32 +247,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Capacity Planning Challenges?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Your Capacity Planning Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Collecting and Analyzing Metrics?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Building the Analysis Prompt?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Creating Automated Scaling Recommendations?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

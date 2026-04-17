@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Automate Image Optimization with Claude Code (Full Guide)"
-description: "Use Claude Code to batch-compress, resize, and convert images to WebP automatically. Cut page weight by 60% and boost Core Web Vitals scores."
+title: "AI Code Optimization with Claude Code — Guide"
+description: "Automate image optimization with Claude Code. Batch-compress, resize, and convert to WebP. Cut page weight 60% in minutes."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -16,7 +16,6 @@ geo_optimized: true
 
 
 
-<!-- answer-capsule -->
 Image optimization is a critical yet often tedious task for web developers. Large images slow down your site, hurt SEO rankings, and frustrate users. This guide shows you how to use Claude Code to automate image optimization workflows, saving time while ensuring consistent quality across your project.
 
 Why Automate Image Optimization with Claude Code?
@@ -488,25 +487,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding Modern Image Formats?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Modern image formats for web include AVIF (40-50% smaller than JPEG, 90%+ browser support), WebP (25-35% smaller, 97%+ support), JPEG (universal, baseline for photographs), and PNG (universal, required for alpha transparency). For 2026 projects, serve AVIF as first choice with WebP fallback and JPEG/PNG as universal fallback. Replace animated GIFs with WebP animations or short video clips. Use SVG exclusively for icons, logos, and scalable vector graphics.
 
 ### What is Setting Up Your Image Optimization Skill?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Create a Claude skill file at `.claude/image-optimization.md` that defines capabilities (bulk processing, responsive variants, WebP/AVIF conversion, consistent compression, srcset markup generation) and usage patterns. Extend it with project-specific rules like hero image max width of 1920px, product image 400x400 square crops, blog thumbnails at 800x450 in 16:9 ratio, and a rule to never enlarge images beyond original dimensions. This skill acts as the contract for your optimization pipeline.
 
 ### What is Creating the Optimization Script?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The optimization script is a Node.js file using the sharp library that processes each input image into multiple sizes (320, 640, 960, 1280, 1920px) and formats (WebP at quality 80, AVIF at quality 65, JPEG at quality 85). The `withoutEnlargement: true` flag prevents upscaling smaller images. The script includes both single-image `optimizeImage()` and batch `batchProcess()` functions that filter for jpg/png/gif/webp files and generate all variants in the output directory.
 
 ### What is Adding an Audit Mode?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Audit mode scans your images directory before optimization to report file sizes, dimensions, formats, and issues. It flags files over 500KB as oversized, images wider than 2500px as very wide, and GIF files as candidates for WebP animation conversion. Results are sorted by size descending so the biggest problems appear first. Running audit mode on legacy codebases with years of unoptimized assets shows which files benefit most before committing to full optimization.
 
 ### What is Generating Responsive Image Markup?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Generating responsive image markup produces HTML `<picture>` elements with multiple `<source>` tags for AVIF and WebP formats, plus an `<img>` fallback for JPEG. Each source includes a srcset attribute listing all width variants (320w through 1920w). Include the `sizes` attribute to prevent browsers from downloading oversized variants -- for example, `(max-width: 768px) 100vw, 50vw`. Add `loading="lazy"` and `decoding="async"` to below-the-fold images for Core Web Vitals performance.

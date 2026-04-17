@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skill Permissions: What Can Skills Access?"
+title: "Claude Skill Permissions What Can Skills — Developer Guide"
 description: "A comprehensive guide to understanding Claude skill permissions, tool access controls, and what capabilities skills have within your development."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -12,7 +12,6 @@ score: 7
 permalink: /claude-skill-permissions-what-can-skills-access/
 geo_optimized: true
 ---
-
 # Claude Skill Permissions: What Can Skills Access?
 
 [When you create or use a Claude skill, understanding what that skill can and cannot access is critical](/claude-skill-md-format-complete-specification-guide/) for security, reliability, and predictable behavior. This guide breaks down the permission model for Claude skills, showing developers and power users exactly what capabilities are available and how to control them.
@@ -21,7 +20,6 @@ geo_optimized: true
 
 [Claude skills operate within a defined permission boundary](/best-claude-code-skills-to-install-first-2026/) This boundary determines three key things:
 
-<!-- answer-capsule -->
 1. Tool access: Which tools the skill can call (Read, Write, Bash, etc.)
 2. Resource access: Which files, directories, and external services the skill can interact with
 3. Capability limits: Constraints on execution time, token usage, and turn count
@@ -239,28 +237,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Tool Access: The Primary Permission Control?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Declaring Allowed Tools?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### Why Tool Restriction Matters?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Default: Inheriting All Tools?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

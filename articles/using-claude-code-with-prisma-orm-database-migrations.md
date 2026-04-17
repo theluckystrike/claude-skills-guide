@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Using Claude Code with Prisma ORM Database Migrations"
+title: "Using Claude Code With Prisma Orm — Developer Guide"
 description: "Learn how to use Claude Code AI assistant to streamline your Prisma ORM database migration workflow with practical examples and code snippets."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -12,8 +12,6 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 Managing database schemas with Prisma ORM becomes significantly more efficient when paired with Claude Code, an AI assistant that understands your codebase and can generate migrations, explain schema changes, and help troubleshoot issues. This guide covers practical introductory workflows for integrating Claude Code into your Prisma development process. Once you are comfortable with the basics here, continue with the [Claude Code Prisma Schema Migrations Advanced Workflow Guide](/claude-code-prisma-schema-migrations-advanced-workflow-guide/) for production-grade patterns including zero-downtime migrations, atomic multi-step changes, and monorepo strategies.
 
 ## Setting Up Prisma for Claude Code Collaboration
@@ -326,32 +324,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Prisma for Claude Code Collaboration?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Singleton Client Pattern?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Generating Migrations with Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the practical migration workflows?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Adding New Models?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

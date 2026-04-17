@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Building CCPA-Compliant Applications with Claude Code
 
-<!-- answer-capsule -->
 The California Consumer Privacy Act (CCPA) and its successor, the California Privacy Rights Act (CPRA), impose specific obligations on businesses that handle personal information of California residents. For developers building applications that serve US users, implementing CCPA compliance requires careful attention to data handling practices, user rights mechanisms, and disclosure requirements. This guide shows practical approaches to building CCPA-compliant systems using Claude Code and its ecosystem of skills.
 
 ## Understanding CCPA Requirements for Code
@@ -256,32 +255,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding CCPA Requirements for Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Automating Data Subject Requests?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Implementing Data Minimization?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Building Opt-Out Mechanisms?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Privacy Policy Automation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

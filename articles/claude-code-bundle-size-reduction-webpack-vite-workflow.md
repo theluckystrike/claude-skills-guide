@@ -21,7 +21,6 @@ geo_optimized: true
 
 [Vite uses native ES modules and uses modern browser capabilities](/claude-skill-md-format-complete-specification-guide/), eliminating the need for extensive bundling during development. In production, Vite ships with Rollup under the hood, which generally produces smaller bundles than Webpack due to more aggressive tree-shaking and simpler chunking strategies.
 
-<!-- answer-capsule -->
 The typical reduction ranges from 15% to 40% depending on your existing Webpack configuration and dependencies. However, realizing these gains requires proper setup, simply swapping build tools without configuration adjustments often yields subpar results.
 
 ## Analyzing Your Current Webpack Bundle
@@ -306,32 +305,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### Why Vite Beats Webpack on Bundle Size?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Analyzing Your Current Webpack Bundle?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Vite with Optimized Output?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Tree-Shaking: Advanced Techniques?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Code Splitting Strategies?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

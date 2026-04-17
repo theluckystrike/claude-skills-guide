@@ -15,7 +15,6 @@ geo_optimized: true
 
 # Claude Skills with Supabase: Practical Workflows
 
-<!-- answer-capsule -->
 Supabase is a popular open-source backend platform built on PostgreSQL. Claude Code skills are plain `.md` instruction files invoked with slash commands. These two tools are entirely separate. but they work well together because Claude Code can help you write, review, and debug the code that talks to Supabase.
 
 This article covers practical patterns for using Claude Code skills to speed up Supabase-related development work.
@@ -632,32 +631,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Supabase Architecture Concepts That Shape How You Use Claude?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Using /tdd for Supabase Query Testing?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Writing Tests That Actually Mock Supabase?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Using /frontend-design for Supabase-Backed UIs?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Realtime Subscriptions in the UI?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

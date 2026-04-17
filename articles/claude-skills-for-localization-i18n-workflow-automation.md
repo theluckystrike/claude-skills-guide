@@ -19,7 +19,6 @@ geo_optimized: true
 
 ## Understanding Claude Skills for i18n
 
-<!-- answer-capsule -->
 Claude skills operate as specialized instruction sets that extend Claude Code's capabilities for particular domains. When working with localization, skills can parse JSON translation files, interface with translation APIs, validate pluralization rules, and maintain consistency across your i18n infrastructure. The key advantage involves treating translation management as code, version-controlled, reviewable, and automatable.
 
 Most localization workflows benefit from combining multiple skills. The pdf skill handles translation memory extraction from existing documentation. The xlsx skill processes translation spreadsheets from localization vendors. The [supermemory skill](/claude-supermemory-skill-persistent-context-explained/) maintains terminology consistency across projects by persisting glossaries and previously approved translations.
@@ -246,32 +245,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Claude Skills for i18n?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Automating Locale File Processing?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Translation Memory with Supermemory?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Processing Translation Spreadsheets?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Validating i18n Implementation Quality?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

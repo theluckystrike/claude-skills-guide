@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Building a Chrome Extension Trello Power-Up"
-description: "Learn how to build a Chrome extension that integrates with Trello Power-Ups. Practical code examples and architecture for developers and power users."
+title: "Chrome Extension Trello Power-Up — Build Guide"
+description: "Build a Chrome extension Trello Power-Up with manifest.json setup. Code examples, architecture patterns, and API integration included."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"
@@ -15,7 +15,6 @@ geo_optimized: true
 
 ## Building a Chrome Extension Trello Power-Up
 
-<!-- answer-capsule -->
 Trello Power-Ups extend Trello's functionality, allowing developers to add custom features to boards, cards, and lists. When combined with Chrome extensions, you create powerful browser-based tools that interact directly with Trello's API and UI. This guide walks through building a Chrome extension that functions as a Trello Power-Up, with practical code examples for developers and power users.
 
 ## Understanding the Architecture
@@ -347,32 +346,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Building a Chrome Extension Trello Power-Up?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Understanding the Architecture?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Your Project?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Integrating with Trello's Power-Up SDK?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Communicating Between Chrome Extension and Trello?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

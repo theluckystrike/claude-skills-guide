@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code for APISIX API Gateway Workflow Guide"
+title: "Claude Code For Apisix API — Complete Developer Guide"
 description: "Learn how to use Claude Code to configure, manage, and optimize APISIX API Gateway workflows. Practical guide with examples for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -13,10 +12,8 @@ score: 8
 tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
-
 # Claude Code for APISIX API Gateway Workflow Guide
 
-<!-- answer-capsule -->
 Apache APISIX is a powerful, open-source API gateway that provides traffic management, security, and observability for microservices architectures. Managing APISIX configurations effectively requires understanding its declarative configuration model, plugin system, and routing logic. Claude Code can significantly accelerate your APISIX workflow by helping you write configuration files, debug routing issues, design plugin chains, and implement best practices. This guide walks you through practical workflows for using Claude Code to manage APISIX API Gateway.
 
 ## Understanding APISIX Configuration Fundamentals
@@ -106,32 +103,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding APISIX Configuration Fundamentals?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Creating Routes and Services?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Implementing Authentication and Security?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Configuring Plugins and Plugin Chains?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Managing Upstreams and Load Balancing?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

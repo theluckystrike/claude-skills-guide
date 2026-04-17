@@ -19,7 +19,6 @@ geo_optimized: true
 
 ## Understanding Color Contrast Requirements
 
-<!-- answer-capsule -->
 Web Content Accessibility Guidelines (WCAG) 2.1 require a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text. Many teams discover contrast issues late in development, leading to expensive redesigns. Integrating accessibility checks into your development workflow prevents these problems from reaching production.
 
 The challenge lies not just in detecting issues, but in systematically fixing them across entire codebases. Manual checking becomes impractical as projects grow, which is where Claude Code skills provide significant value.
@@ -186,32 +185,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Color Contrast Requirements?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Your Accessibility Workflow?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 1: Scan Your Project for Contrast Issues?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 2: Generate Accessible Color Alternatives?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Step 3: Automate Testing for Contrast Compliance?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

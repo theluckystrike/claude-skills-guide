@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "Claude Code Data Engineer ETL Debugging Daily Workflow"
+title: "Claude Code Data Engineer Etl — Complete Developer Guide"
 description: "A practical guide to using Claude Code for debugging ETL pipelines, handling data quality issues, and optimizing your daily data engineering workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,8 +12,6 @@ score: 7
 tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 Data engineers spend a significant portion of their day debugging ETL pipelines, investigating data quality issues, and tracing the root cause of pipeline failures. Claude Code transforms this traditionally time-consuming workflow into a more efficient process by acting as an intelligent pair programmer that understands your pipeline logic, data schemas, and debugging patterns. This guide walks you through practical techniques for debugging ETL pipelines using Claude Code skills and features.
 
 ## Understanding Your ETL Pipeline Context
@@ -208,32 +205,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Your ETL Pipeline Context?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Daily Debugging Workflow with Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Morning Pipeline Health Check?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Investigating Data Quality Issues?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Debugging Transformation Logic?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

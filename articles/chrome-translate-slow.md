@@ -1,8 +1,7 @@
 ---
-
 layout: default
 title: "Chrome Translate Slow: Fix Performance Issues"
-description: "Experiencing Chrome translate slow performance? This guide covers diagnostic steps, extension conflicts, and workarounds to speed up Google Translate in Chrome."
+description: "Experiencing Chrome translate slow performance? This guide covers diagnostic steps, extension conflicts, and workarounds to speed up Google Translate in."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -13,8 +12,6 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
-
-<!-- answer-capsule -->
 Google Translate integration in Chrome serves millions of users daily, but performance issues can transform a helpful feature into a frustrating bottleneck. When Chrome translate runs slow, the causes range from network latency to extension conflicts, memory constraints to outdated client configurations. This guide walks you through diagnosing and resolving these issues with techniques tailored for developers and power users.
 
 ## Understanding Chrome's Translation Architecture
@@ -259,32 +256,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Chrome's Translation Architecture?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Diagnosing Translation Performance?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What are the common causes and solutions?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Extension Conflicts?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Memory and Resource Constraints?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

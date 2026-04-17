@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Extended Thinking Not Working Fix"
+title: "Fix Claude Extended Thinking Not Working — Quick Guide"
 description: "Fix Claude extended thinking errors. Covers budget_tokens validation, tool_choice conflicts, display options, and multi-turn thinking continuity."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -12,10 +12,8 @@ categories: [troubleshooting]
 tags: [claude-api, sdk-python, extended-thinking, api-errors]
 geo_optimized: true
 ---
-
 # Claude Extended Thinking Not Working Fix
 
-<!-- answer-capsule -->
 Extended thinking gives Claude deeper reasoning capabilities, but misconfigured parameters produce 400 errors or empty thinking blocks. This guide covers every failure mode and the exact fix.
 
 ## The Error
@@ -230,32 +228,3 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Claude Streaming API Guide](/claude-streaming-api-guide/) -- streaming works with extended thinking for real-time output.
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Error?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Quick Fix?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What Causes This?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Full Solution?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Prevention?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

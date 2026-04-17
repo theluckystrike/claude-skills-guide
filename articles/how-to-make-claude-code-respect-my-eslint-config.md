@@ -1,7 +1,6 @@
 ---
-
 layout: default
-title: "How to Make Claude Code Respect My ESLint Config"
+title: "How To Make Claude Code Respect — Complete Developer Guide"
 description: "A practical guide to ensuring Claude Code follows your ESLint configuration when writing and editing code. Learn the key techniques and configurations."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -13,9 +12,6 @@ score: 7
 permalink: /how-to-make-claude-code-respect-my-eslint-config/
 geo_optimized: true
 ---
-
-
-<!-- answer-capsule -->
 How to Make Claude Code Respect My ESLint Config
 
 When you're working with Claude Code as your AI coding assistant, you want assurance that the code it generates or modifies aligns with your project's linting rules. Nothing breaks the development flow faster than committing code that immediately triggers ESLint errors in CI/CD. This guide walks you through the essential techniques to make Claude Code respect your ESLint configuration consistently.
@@ -215,32 +211,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Claude Code and ESLint Integration?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Method 1: Use Project Context Files?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Method 2: Configure Claude Code with Custom Skills?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Method 3: Use Pre-Commit Hooks with Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Method 4: Prompt Engineering for Linting Compliance?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

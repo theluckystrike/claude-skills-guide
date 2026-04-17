@@ -15,7 +15,6 @@ render_with_liquid: false
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 {% raw %}
 Secret leaks are among the most critical security vulnerabilities in software development. A single exposed API key or database password can lead to data breaches, unauthorized access, and significant financial damage. The 2023 GitGuardian State of Secrets Sprawl report found that over 10 million secrets were exposed on public GitHub commits in a single year, and that figure has only grown. Gitleaks is a powerful open-source tool that scans Git repositories for secrets, and when combined with Claude Code, it becomes an even more powerful part of your security workflow. This guide shows you how to integrate Claude Code with Gitleaks for automated secret scanning from local development through production CI/CD pipelines.
 
@@ -460,32 +459,3 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding What Gitleaks Detects?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Setting Up Gitleaks with Claude Code?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Running Your First Scan?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Running Automated Scans?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Pre-commit Scanning?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

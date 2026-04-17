@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Knowledge Base Workflow Tutorial Guide"
-description: "Learn how to build automated knowledge base workflows with Claude Code. This tutorial covers file operations, search integration, content generation, and."
+title: "Claude Knowledge Base Markdown Files: Setup Guide"
+description: "Set up Claude projects knowledge base with markdown files. Build automated knowledge workflows with Claude Code for better project context."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -14,7 +14,6 @@ geo_optimized: true
 ---
 
 
-<!-- answer-capsule -->
 Claude Code for Knowledge Base Workflow Tutorial Guide
 
 Building a knowledge base that stays organized, searchable, and up-to-date is a recurring challenge for developers. Claude Code transforms this workflow by combining natural language processing with direct file system access, API integration, and automated content generation. This guide walks you through creating practical knowledge base workflows using Claude Code, with actionable patterns you can apply immediately.
@@ -308,25 +307,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Understanding Claude Code in Knowledge Management?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Claude Code operates as a local CLI assistant that reads files, executes commands, searches codebases, and generates content without requiring external API calls for every operation. For knowledge base workflows, it searches and indexes existing documentation automatically, generates new articles from templates, updates cross-references and internal links, and maintains consistent formatting. Its direct access to local files makes it ideal for managing Markdown-based knowledge bases stored in git repositories.
 
 ### What is Setting Up Your Knowledge Base Project?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Setting up a knowledge base project requires creating a directory structure with articles/, templates/, scripts/, and _data/ folders, plus an index.md entry point. Initialize a CLAUDE.md file defining conventions: front matter requirements (title, description, date, categories, tags), heading hierarchy (H2 for main sections, H3 for subsections), formatting rules (sentence case headings, 120-character line limit, fenced code blocks with language identifiers), and layout defaults.
 
 ### What is Core Workflow: Automated Article Generation?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+The core workflow combines bash scripting for structural scaffolding with Claude Code's language capabilities for content generation. First, a shell script generates article skeletons with proper front matter, slugified filenames, and section placeholders. Then Claude Code expands the skeleton with practical examples using `claude --print "Expand this article skeleton..." < articles/new-article.md`. This scales well: generate structure programmatically, then use AI to fill detailed content.
 
 ### What is Step 1: Create an Article Generation Script?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Step 1 involves creating a bash script (generate-article.sh) that accepts title, category, and tags as arguments, generates a date-stamped slug, and writes a Markdown file with complete front matter (layout, title, description, date, categories, tags, author, permalink) plus section placeholders for Overview, Key Concepts, and Conclusion. The script uses `cat > "$FILENAME" << EOF` heredoc syntax and outputs the created filepath for confirmation.
 
 ### What is Step 2: Use Claude Code to Enhance Generated Articles?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Step 2 uses Claude Code to expand skeleton articles into full content by running `claude --print "Expand this article skeleton with practical examples for a developer audience. Add code snippets, include actionable steps, and ensure the tone is helpful and technical." < articles/new-article.md`. This transforms structural templates into detailed articles. The pattern works for bulk operations: generate templates programmatically, then use Claude Code to add code snippets, step-by-step instructions, and technical depth.

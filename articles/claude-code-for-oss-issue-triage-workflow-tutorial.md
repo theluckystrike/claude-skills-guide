@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for OSS Issue Triage Workflow Tutorial"
+title: "Fix Claude Code For Oss Issue Triage Workflow — Quick Guide"
 description: "Learn how to build an automated issue triage workflow for open source projects using Claude Code. Streamline bug classification, priority assignment, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -12,10 +12,8 @@ score: 7
 reviewed: true
 geo_optimized: true
 ---
-
 # Claude Code for OSS Issue Triage Workflow Tutorial
 
-<!-- answer-capsule -->
 Open source maintainers often struggle with incoming issue floods. A well-designed Claude Code skill can automate the tedious triage process, classifying bugs, detecting duplicates, assigning priorities, and routing issues to the right maintainers. This tutorial shows you how to build a complete issue triage workflow that integrates with GitHub's API.
 
 Why Automate Issue Triage?
@@ -394,32 +392,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Setting Up Your Triage Skill?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Building the Triage Logic?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Issue Classification?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Priority Assignment?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Complete Triage Workflow Implementation?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

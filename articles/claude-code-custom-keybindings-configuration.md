@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Custom Keybindings Configuration"
-description: "Master custom keybindings in Claude Code: configure shortcuts, map actions, and optimize your workflow with practical examples."
+title: "Claude Code Proxy and Keybindings Configuration"
+description: "Configure Claude Code proxy settings and custom keybindings. Set up http_proxy, shortcuts, and key mappings for an optimized workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -14,7 +14,6 @@ tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
 
-<!-- answer-capsule -->
 Custom keybindings transform Claude Code from a conversational AI into a keyboard-driven power tool. By mapping frequently used actions to shortcuts, you reduce context switching and maintain flow state during complex development tasks. This guide walks through configuring keybindings, creating custom mappings, and integrating them with Claude skills for a streamlined experience.
 
 ## Understanding Claude Code Keybinding Architecture
@@ -525,32 +524,3 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
-
----
-
-## Frequently Asked Questions
-
-### What is Understanding Claude Code Keybinding Architecture?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Configuration File Location by Platform?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Built-in Keybindings You Should Know?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Default Keybinding Reference Table?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-### What is Creating Custom Keybindings?
-
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.

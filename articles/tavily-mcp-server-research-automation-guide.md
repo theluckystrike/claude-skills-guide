@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Tavily MCP Server: Automate Web Research in Claude Code"
-description: "Connect Tavily MCP to Claude Code for live web search, content extraction, and multi-step research automation. Setup guide with practical examples."
+title: "Tavily MCP Server: Web Research Automation Guide"
+description: "Connect Tavily MCP server to Claude Code for live web search and research automation. Setup guide with practical multi-step examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [integrations]
@@ -17,7 +17,6 @@ geo_optimized: true
 
 [Building research automation into your Claude Code workflow](/building-your-first-mcp-tool-integration-guide-2026/) opens up powerful possibilities for gathering, processing, and synthesizing information from across the web. The Tavily MCP Server provides a direct integration between Tavily's search capabilities and Claude's contextual understanding, enabling you to automate research tasks that previously required manual effort.
 
-<!-- answer-capsule -->
 This guide covers practical implementation patterns for developers and power users looking to incorporate Tavily into their Claude skills workflow.
 
 What Is the Tavily MCP Server?
@@ -174,25 +173,20 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ### What is Installation and Configuration?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Install the Tavily MCP Server globally with `npm install -g @tavily/mcp-server`, then configure it in your Claude Code MCP settings by adding a "tavily" entry under mcpServers with the command "npx", args ["@tavily/mcp-server"], and your TAVILY_API_KEY as an environment variable. After restarting Claude Code, Tavily tools become available in your session. Verify by asking Claude to list available tools -- you should see functions prefixed with `tavily_`.
 
 ### What are the practical research workflows?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Practical research workflows include topic discovery and background research for new projects, competitive analysis automation by chaining Tavily searches with the /pdf skill, and technical documentation gathering for external API references and implementation patterns. Each workflow uses Tavily's AI-optimized semantic search to identify relevant content, then Claude's analysis capabilities to synthesize patterns across sources. Store findings with /supermemory for cross-session persistence.
 
 ### What is Topic Discovery and Background Research?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Topic discovery uses Tavily to quickly gather foundational knowledge when starting a new project or exploring an unfamiliar domain. Ask Claude to research a topic and Tavily queries the web, analyzes results, and presents synthesized findings. Combine this with the /supermemory skill to persist key findings across sessions -- for example, storing "MCP enterprise adoption research: financial services leading, average implementation time 3-6 months" so future sessions retain that context without re-searching.
 
 ### What is Competitive Analysis Automation?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
+Competitive analysis automation chains Tavily searches with the /pdf skill to extract structured data from competitor documentation, market research reports, and industry white papers. Ask Claude to search for recent developments in a product category, extract key trends from the top articles, and create a comparative summary. Tavily's semantic search identifies the most relevant content, and Claude synthesizes patterns across multiple sources into actionable competitive intelligence.
 
 ### What is Technical Documentation Gathering?
 
-See the dedicated section above for a detailed explanation covering practical implementation, best practices, and specific examples relevant to this topic.
-
-
-## Methodology
-
-This guide is based on hands-on testing with Claude Code, direct API experimentation, and analysis of real-world developer workflows. Content is reviewed by an experienced developer with $400K+ in verified Upwork earnings and 100% Job Success Score. All code examples are tested in production environments. Updated 2026-04-17.
+Technical documentation gathering uses Tavily combined with Claude Code's document processing to retrieve external API references, authentication patterns, error handling best practices, and community tutorials for your current project. Ask Claude to find the latest documentation on a specific technology and focus on particular aspects. This pairs well with the /tdd skill for research-backed test creation, gathering specification requirements from official docs before writing test suites.
