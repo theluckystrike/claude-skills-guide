@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude API Guides"
-description: "Tutorials for building with the Claude API: SDKs, streaming, tool use, cost optimization, and production patterns."
+title: "Claude API Guides: SDKs, Streaming and Tools"
+description: "Claude API guides for developers. SDKs, streaming, tool use, authentication, and cost optimization tutorials with production-ready patterns."
 permalink: /topics/api/
 ---
 # Claude API Guides
