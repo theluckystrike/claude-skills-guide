@@ -1,308 +1,680 @@
 ---
 layout: default
-title: "Claude Code Guides — Tutorials, Workflows & AI Agent Guides"
-description: "2,500+ practical Claude Code tutorials for developers. Prompt engineering, API guides, MCP integrations, autonomous agents, and production workflows."
+title: "Claude Code Guides — Ship Faster with Claude Code"
+description: "2,665 production-tested Claude Code guides. CLAUDE.md templates, debugging workflows, and MCP integrations from a developer earning $400K+/year on Upwork."
 ---
 
 <style>
-/* --- Hero Bio & CTA --- */
-.hero-bio {
-  color: #9a9590;
-  font-size: 0.92rem;
-  max-width: 620px;
-  margin: 0 auto 1.25rem;
-  line-height: 1.6;
-}
-.hero-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: #d97757;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 10px 22px;
-  border: 1px solid #3a3a35;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  text-decoration: none;
-}
-.hero-cta:hover {
-  color: #e8856a;
-  border-color: #d97757;
-  background: rgba(217, 119, 87, 0.06);
-  text-decoration: none;
-  transform: translateY(-1px);
+/* ---------- Design tokens ---------- */
+:root {
+  --bg: #0a0a0a;
+  --ink: #f2f0ea;
+  --ink-muted: #7a756c;
+  --accent: #ff6a3d;
+  --rule: rgba(242, 240, 234, 0.08);
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
-/* --- Community Section --- */
-.community-section {
-  margin: 2.5rem 0;
-  padding: 2.5rem 2rem;
-  background: linear-gradient(135deg, #1c1c1a 0%, #2a2420 40%, #141413 100%);
-  border-radius: 14px;
-  border: 1px solid #3a3a35;
-  position: relative;
-  overflow: hidden;
+/* ---------- Reset page-body and body defaults ---------- */
+body {
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
-.community-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #d97757, transparent);
+.page-body {
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
-.community-section h2 {
-  color: #faf9f5;
-  font-size: 1.35rem;
-  border: none;
-  padding: 0;
+
+/* ---------- Override style.css .hero collision ---------- */
+.hero {
+  text-align: left !important;
+  background: none !important;
+  margin: 0 !important;
+  border: none !important;
+  padding: 0 !important;
+}
+.hero h1 {
+  text-align: left;
+  margin: 0;
+}
+.hero p {
+  color: inherit;
+}
+
+/* ---------- Kill h2::after accent underline on homepage ---------- */
+.tool-s10__headline::after,
+.work-s10__headline::after,
+.offer-s10__headline::after,
+.tool-s10__eyebrow::after,
+.work-s10__eyebrow::after,
+.offer-s10__eyebrow::after,
+.site-footer-s10 h2::after {
+  display: none !important;
+}
+.s10-section h2::after {
+  display: none !important;
+}
+.s10-section h2 {
+  border-bottom: none !important;
+  position: static;
+  padding-bottom: 0;
+}
+
+/* ---------- Section container ---------- */
+.s10-section {
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* ---------- SECTION 1: HERO ---------- */
+.hero-s10 {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.hero-s10__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.hero-s10__headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 6vw, 4.75rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--ink);
+  margin: 0;
+}
+.hero-s10__headline-italic {
+  display: block;
+  font-style: italic;
+}
+.hero-s10__lede {
+  font-family: var(--font-sans);
+  font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 44ch;
+  margin: 0;
+}
+.hero-s10__proof {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  max-width: 44ch;
+  margin: 0;
+}
+.hero-s10__cta {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.875rem 1.5rem;
+  border-radius: 2px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  align-self: flex-start;
+}
+.hero-s10__cta:hover {
+  opacity: 0.88;
+  text-decoration: none;
+  color: var(--bg);
+}
+.hero-s10__sig {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  margin: 0;
+}
+
+/* ---------- SECTION 2: PROOF ---------- */
+.proof-s10 {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.proof-s10__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.proof-s10__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.proof-s10__number {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 400;
+  color: var(--accent);
+  line-height: 1;
+}
+.proof-s10__text {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  margin: 0;
+}
+.proof-s10__text strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* ---------- SECTION 3: TOOL ---------- */
+.tool-s10 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.tool-s10__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.tool-s10__eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
   margin: 0 0 0.75rem 0;
 }
-.community-section h2::after {
-  display: none;
+.tool-s10__headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0 0 1.25rem 0;
 }
-.community-lead {
-  color: #b0aea5;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  max-width: 640px;
-  margin-bottom: 1.25rem;
+.tool-s10__body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  margin: 0 0 1rem 0;
 }
-.community-perks {
+.tool-s10__frameworks {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  margin: 0 0 2rem 0;
+}
+.tool-s10__cta {
+  display: inline-block;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 0.875rem 1.5rem;
+  border-radius: 2px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.tool-s10__cta:hover {
+  background: var(--ink);
+  color: var(--bg);
+  text-decoration: none;
+}
+.tool-s10__image {
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}
+
+/* ---------- SECTION 4: WORK ---------- */
+.work-s10 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  border-top: 1px solid var(--rule);
+}
+.work-s10__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.work-s10__eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin: 0 0 0.75rem 0;
+}
+.work-s10__headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0 0 3rem 0;
+}
+.work-s10__item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: start;
+  border-top: 1px solid var(--rule);
+  padding: 2rem 0;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.work-s10__item:hover {
+  transform: translateX(4px);
+  text-decoration: none;
+}
+.work-s10__item:hover .work-s10__title {
+  color: var(--accent);
+}
+.work-s10__title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0 0 0.5rem 0;
+  transition: color 0.2s ease;
+}
+.work-s10__desc {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  margin: 0;
+}
+.work-s10__arrow {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  color: var(--ink-muted);
+  padding-top: 0.25rem;
+}
+.work-s10__browse {
+  display: inline-block;
+  margin-top: 2rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.work-s10__browse:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+/* ---------- SECTION 5: OFFER ---------- */
+.offer-s10 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  border-top: 1px solid var(--rule);
+}
+.offer-s10__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.offer-s10__eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin: 0 0 0.75rem 0;
+}
+.offer-s10__headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0 0 3rem 0;
+}
+.offer-s10__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+}
+.offer-s10__card {
+  background: var(--bg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.offer-s10__card--featured {
+  border-top: 2px solid var(--accent);
+  background: linear-gradient(180deg, rgba(255, 106, 61, 0.04) 0%, var(--bg) 40%);
+}
+.offer-s10__tier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+.offer-s10__tier-name {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.offer-s10__tier-price {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+}
+.offer-s10__pitch {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 0 0 1.5rem 0;
+}
+.offer-s10__features {
   list-style: none;
   padding: 0;
-  margin: 0 0 1.75rem 0;
+  margin: 0 0 2rem 0;
+  flex-grow: 1;
 }
-.community-perks li {
-  color: #e8e6dc;
-  font-size: 0.92rem;
-  padding: 4px 0 4px 20px;
-  position: relative;
-  margin-bottom: 0.3rem;
+.offer-s10__features li {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+  padding: 0.625rem 0;
+  border-bottom: 1px solid var(--rule);
 }
-.community-perks li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 12px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #d97757;
+.offer-s10__features li:first-child {
+  border-top: 1px solid var(--rule);
 }
-.community-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-.community-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: #d97757;
+.offer-s10__cta--filled {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.875rem 1.5rem;
+  border-radius: 2px;
+  font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 0.9rem;
-  padding: 10px 20px;
-  border: 1px solid #3a3a35;
-  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+.offer-s10__cta--filled:hover {
+  opacity: 0.88;
+  text-decoration: none;
+  color: var(--bg);
+}
+.offer-s10__cta--outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 0.875rem 1.5rem;
+  border-radius: 2px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
   transition: all 0.2s ease;
+}
+.offer-s10__cta--outline:hover {
+  background: var(--ink);
+  color: var(--bg);
   text-decoration: none;
 }
-.community-btn:hover {
-  color: #e8856a;
-  border-color: #d97757;
-  background: rgba(217, 119, 87, 0.06);
+.offer-s10__cta--text {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink-muted);
   text-decoration: none;
-  transform: translateY(-1px);
+  transition: color 0.2s ease;
 }
-.community-btn-primary {
-  background: #d97757;
-  color: #141413;
-  border-color: #d97757;
+.offer-s10__cta--text:hover {
+  color: var(--accent);
+  text-decoration: none;
 }
-.community-btn-primary:hover {
-  background: #e8856a;
-  color: #141413;
-  border-color: #e8856a;
+.offer-s10__math {
+  text-align: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  max-width: 48ch;
+  margin: 3rem auto 0;
+  line-height: 1.6;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer-s10 {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+.footer__site {
+  color: var(--ink);
+  font-weight: 500;
+  margin: 0 0 0.75rem 0;
+}
+.footer__bio {
+  margin: 0 0 0.75rem 0;
+}
+.footer__links {
+  margin: 0 0 0.75rem 0;
+}
+.footer__links a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer__links a:hover {
+  color: var(--accent);
+}
+.footer__copy {
+  margin: 0;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .tool-s10__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .tool-s10__image {
+    min-height: 240px;
+  }
 }
 
 @media (max-width: 768px) {
-  .hero-bio {
-    font-size: 0.85rem;
+  .proof-s10__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
-  .community-section {
-    padding: 2rem 1.25rem;
+  .offer-s10__grid {
+    grid-template-columns: 1fr;
   }
-  .community-buttons {
-    flex-direction: column;
+  .work-s10__item {
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
   }
-  .community-btn {
-    justify-content: center;
+}
+
+@media (max-width: 375px) {
+  .hero-s10 {
+    min-height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .proof-s10__grid {
+    grid-template-columns: 1fr;
+  }
+  .offer-s10__grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>
 
-<div class="hero">
-  <h1>Claude Code Guides</h1>
-  <p class="hero-sub">Practical tutorials for developers who build with Claude. 2,500+ guides and counting.</p>
-  <div class="stats">
-    <div class="stat"><span class="number">2,500+</span><span class="label">Guides</span></div>
-    <div class="stat"><span class="number">7</span><span class="label">Topics</span></div>
-    <div class="stat"><span class="number">Daily</span><span class="label">Updates</span></div>
+<!-- ============ SECTION 1: HERO ============ -->
+<div class="s10-section">
+  <div class="hero-s10">
+    <div class="hero-s10__inner">
+      <h1 class="hero-s10__headline">
+        Claude Code<span class="hero-s10__headline-italic">was meant to work like this.</span>
+      </h1>
+      <p class="hero-s10__lede">One file in your repo. 300 lines.<br>Stops guessing your stack. Starts engineering.</p>
+      <p class="hero-s10__proof">I've shipped 2,665 guides on configuring it right.<br>I earn $400K+/year doing this for Upwork clients.<br>The configs are here.</p>
+      <a href="/generator/" class="hero-s10__cta">Generate your CLAUDE.md &rarr;</a>
+      <p class="hero-s10__sig">Michael Lip &mdash; solo dev, Da Nang</p>
+    </div>
   </div>
-  <p class="hero-bio">Built by Michael Lip — solo founder of Zovo, 20+ Chrome extensions, $400K+ on Upwork, 670+ open source contributions.</p>
-  <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="hero-cta">Join the Builder Community &rarr;</a>
 </div>
 
-<h2>Start Here</h2>
-<div class="card-grid">
-  <a href="/claude-code-for-beginners-complete-getting-started-2026/" class="card">
-    <h3>Complete Beginner Guide</h3>
-    <p>Installation, setup, and your first session</p>
-  </a>
-  <a href="/how-to-write-effective-prompts-for-claude-code/" class="card">
-    <h3>How to Write Effective Prompts</h3>
-    <p>Get better results from every prompt</p>
-  </a>
-  <a href="/mcp-integration-guide-for-claude-code-beginners/" class="card">
-    <h3>MCP Integration Guide for Beginners</h3>
-    <p>Connect Claude Code to external tools</p>
-  </a>
-  <a href="/claude-md-file-complete-guide-what-it-does/" class="card">
-    <h3>CLAUDE.md Complete Guide</h3>
-    <p>Project-level instructions that stick</p>
-  </a>
-  <a href="/building-a-rest-api-with-claude-code-tutorial/" class="card">
-    <h3>Building a REST API with Claude Code</h3>
-    <p>End-to-end walkthrough from scratch</p>
-  </a>
+<!-- ============ SECTION 2: PROOF ============ -->
+<div class="s10-section proof-s10">
+  <div class="proof-s10__grid">
+    <div class="proof-s10__item">
+      <span class="proof-s10__number">2,665</span>
+      <p class="proof-s10__text"><strong>guides shipped.</strong> Every one of them tested on a real problem I hit.</p>
+    </div>
+    <div class="proof-s10__item">
+      <span class="proof-s10__number">$400K+</span>
+      <p class="proof-s10__text"><strong>earned on Upwork</strong> writing production code with Claude Code. 100% Job Success Score.</p>
+    </div>
+    <div class="proof-s10__item">
+      <span class="proof-s10__number">50K+</span>
+      <p class="proof-s10__text"><strong>developers</strong> using the Chrome extensions I've shipped at zovo.one.</p>
+    </div>
+  </div>
 </div>
 
-<h2>Recently Updated</h2>
-<div class="recent-list">
-{% assign sorted_pages = site.pages | where_exp: "p", "p.path contains 'articles/'" | sort: "date" | reverse %}
-{% for p in sorted_pages limit: 6 %}{% if p.title %}
-<a href="{{ p.url }}" class="recent-item">{{ p.title }}</a>
-{% endif %}{% endfor %}
+<!-- ============ SECTION 3: TOOL ============ -->
+<div class="s10-section tool-s10">
+  <div class="tool-s10__grid">
+    <div class="tool-s10__content">
+      <p class="tool-s10__eyebrow">The tool</p>
+      <h2 class="tool-s10__headline">Try it.</h2>
+      <p class="tool-s10__body">Tell it your stack. Get a production CLAUDE.md in 60 seconds.</p>
+      <p class="tool-s10__frameworks">Next.js, FastAPI, Rails, Go, Rust, Terraform &mdash; 27 frameworks.<br>Drop it in your project. Claude Code stops guessing.</p>
+      <a href="/generator/" class="tool-s10__cta">Open the generator &rarr;</a>
+    </div>
+    <div class="tool-s10__image">Generator screenshot</div>
+  </div>
 </div>
 
-<h2>Browse by Topic</h2>
-<div class="topic-grid">
-  <div class="topic-card">
-    <h3>Getting Started</h3>
-    <p>New to Claude Code? Start with the fundamentals.</p>
-    <ul>
-      <li><a href="/claude-code-first-project-tutorial-hello-world/">First Project Tutorial: Hello World</a></li>
-      <li><a href="/claude-code-setup-on-mac-step-by-step/">Setup on Mac: Step-by-Step</a></li>
-      <li><a href="/claude-code-tips-for-absolute-beginners-2026/">Tips for Absolute Beginners</a></li>
-      <li><a href="/how-to-use-claude-code-with-existing-github-repo/">Using Claude Code with an Existing GitHub Repo</a></li>
-    </ul>
-    <a href="/topics/getting-started/" class="browse-link">Browse all &rarr;</a>
+<!-- ============ SECTION 4: WORK ============ -->
+<div class="s10-section work-s10">
+  <div class="work-s10__inner">
+    <p class="work-s10__eyebrow">The work</p>
+    <h2 class="work-s10__headline">What developers are actually reading.</h2>
+    <a href="/claude-api-timeout-error-handling-retry-guide/" class="work-s10__item">
+      <div>
+        <h3 class="work-s10__title">Fix Claude API Stream Idle Timeout</h3>
+        <p class="work-s10__desc">2,198 developers read this last month. Because stream timeouts are real, the fix is specific, and nobody else wrote it down.</p>
+      </div>
+      <span class="work-s10__arrow">&rarr;</span>
+    </a>
+    <a href="/claude-code-for-fpga-development-workflow-tutorial/" class="work-s10__item">
+      <div>
+        <h3 class="work-s10__title">Claude Code + FPGA Development</h3>
+        <p class="work-s10__desc">121 impressions, 16 clicks, 13.2% CTR. Most articles about FPGAs and AI don't exist. This one does.</p>
+      </div>
+      <span class="work-s10__arrow">&rarr;</span>
+    </a>
+    <a href="/all-articles/" class="work-s10__browse">Browse all 2,665 guides &rarr;</a>
   </div>
-
-
-  <div class="topic-card">
-    <h3>Prompt Engineering</h3>
-    <p>Write better prompts, get better results.</p>
-    <ul>
-      <li><a href="/how-to-write-effective-prompts-for-claude-code/">How to Write Effective Prompts</a></li>
-      <li><a href="/claude-api-system-prompt-engineering-for-production-apps/">System Prompt Engineering for Production</a></li>
-      <li><a href="/claude-skill-prompt-compression-techniques/">Prompt Compression Techniques</a></li>
-    </ul>
-    <a href="/topics/prompt-engineering/" class="browse-link">Browse all &rarr;</a>
-  </div>
-
-
-  <div class="topic-card">
-    <h3>Claude API</h3>
-    <p>Build production applications with the Claude API.</p>
-    <ul>
-      <li><a href="/building-apps-with-claude-api-anthropic-sdk-python-guide/">Building Apps with the Anthropic SDK (Python)</a></li>
-      <li><a href="/claude-api-streaming-responses-implementation-tutorial/">Streaming Responses Implementation</a></li>
-      <li><a href="/claude-api-tool-use-function-calling-deep-dive-guide/">Tool Use and Function Calling Deep Dive</a></li>
-      <li><a href="/claude-api-cost-optimization-strategies-for-saas-application/">Cost Optimization Strategies</a></li>
-    </ul>
-    <a href="/topics/api/" class="browse-link">Browse all &rarr;</a>
-  </div>
-
-
-  <div class="topic-card">
-    <h3>Agents</h3>
-    <p>Build autonomous and multi-agent systems.</p>
-    <ul>
-      <li><a href="/claude-code-multi-agent-orchestration-patterns-guide/">Multi-Agent Orchestration Patterns</a></li>
-      <li><a href="/building-production-ai-agents-with-claude-skills-2026/">Building Production AI Agents</a></li>
-      <li><a href="/building-stateful-agents-with-claude-skills-guide/">Stateful Agents Guide</a></li>
-      <li><a href="/agent-handoff-strategies-for-long-running-tasks-guide/">Agent Handoff Strategies</a></li>
-    </ul>
-    <a href="/topics/agents/" class="browse-link">Browse all &rarr;</a>
-  </div>
-
-
-  <div class="topic-card">
-    <h3>MCP Integrations</h3>
-    <p>Connect Claude Code to databases, APIs, and services.</p>
-    <ul>
-      <li><a href="/mcp-integration-guide-for-claude-code-beginners/">MCP Integration Guide for Beginners</a></li>
-      <li><a href="/building-your-first-mcp-tool-integration-guide-2026/">Building Your First MCP Tool</a></li>
-      <li><a href="/aws-mcp-server-cloud-automation-with-claude-code/">AWS MCP Server</a></li>
-      <li><a href="/brave-search-mcp-server-research-automation/">Brave Search MCP Server</a></li>
-    </ul>
-    <a href="/topics/mcp/" class="browse-link">Browse all &rarr;</a>
-  </div>
-
-
-  <div class="topic-card">
-    <h3>CLAUDE.md and Workflows</h3>
-    <p>Configure projects and automate your workflow.</p>
-    <ul>
-      <li><a href="/claude-md-file-complete-guide-what-it-does/">CLAUDE.md Complete Guide</a></li>
-      <li><a href="/claude-md-best-practices-for-large-codebases/">CLAUDE.md Best Practices for Large Codebases</a></li>
-      <li><a href="/claude-code-git-hooks-pre-commit-automation/">Git Hooks and Pre-Commit Automation</a></li>
-      <li><a href="/claude-code-2026-new-features-skills-and-hooks-roundup/">New Features: Skills and Hooks Roundup</a></li>
-    </ul>
-    <a href="/topics/workflows/" class="browse-link">Browse all &rarr;</a>
-  </div>
-
-
-  <div class="topic-card">
-    <h3>Chrome Extensions</h3>
-    <p>Guides for building, optimizing, and using Chrome extensions.</p>
-    <ul>
-      <li><a href="/ai-code-assistant-chrome-extension/">AI Code Assistant Chrome Extension</a></li>
-      <li><a href="/chrome-extension-service-worker-inspector/">Chrome Extension Service Worker Inspector</a></li>
-      <li><a href="/chrome-extension-performance-monitor/">Chrome Extension Performance Optimization</a></li>
-    </ul>
-    <a href="/topics/chrome-extensions/" class="browse-link">Browse all &rarr;</a>
-  </div>
-
 </div>
 
-<section class="community-section" aria-label="Builder community">
-  <h2>Join the Builder Community</h2>
-  <p class="community-lead">These guides are one piece of a larger developer ecosystem. Zovo is where developers building with AI and Chrome extensions connect, share, and ship together.</p>
-  <ul class="community-perks">
-    <li>2,500+ Claude Code guides (you're here)</li>
-    <li>20+ Chrome extensions (zovo.one)</li>
-    <li>Private Discord with verified builders</li>
-    <li>Monthly live calls &amp; extension teardowns</li>
-    <li>In-person meetups: Da Nang, Bangkok, Bali</li>
-  </ul>
-  <div class="community-buttons">
-    <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="community-btn community-btn-primary">Join Discord (Free) &rarr;</a>
-    <a href="https://zovo.one" target="_blank" rel="noopener noreferrer" class="community-btn">Explore Zovo &rarr;</a>
-    <a href="https://zovo.one/pricing" target="_blank" rel="noopener noreferrer" class="community-btn">View Pricing &rarr;</a>
+<!-- ============ SECTION 5: OFFER ============ -->
+<div class="s10-section offer-s10">
+  <div class="offer-s10__inner">
+    <p class="offer-s10__eyebrow">The offer</p>
+    <h2 class="offer-s10__headline">Three ways to use this site.</h2>
+    <div class="offer-s10__grid">
+      <!-- FREE -->
+      <div class="offer-s10__card">
+        <div class="offer-s10__tier-header">
+          <span class="offer-s10__tier-name">FREE</span>
+        </div>
+        <p class="offer-s10__pitch">What you're reading now.</p>
+        <ul class="offer-s10__features">
+          <li>2,665 guides</li>
+          <li>Generator tool</li>
+          <li>Weekly updates</li>
+        </ul>
+        <a href="/all-articles/" class="offer-s10__cta--text">Keep browsing &rarr;</a>
+      </div>
+      <!-- COMMUNITY -->
+      <div class="offer-s10__card">
+        <div class="offer-s10__tier-header">
+          <span class="offer-s10__tier-name">COMMUNITY</span>
+          <span class="offer-s10__tier-price">$4.99/mo</span>
+        </div>
+        <p class="offer-s10__pitch">When you want 16 templates instead of 1.</p>
+        <ul class="offer-s10__features">
+          <li>Private Discord</li>
+          <li>Monthly builder calls</li>
+          <li>Template library</li>
+        </ul>
+        <a href="https://zovo.one/community" class="offer-s10__cta--outline">Join community &rarr;</a>
+      </div>
+      <!-- LIFETIME -->
+      <div class="offer-s10__card offer-s10__card--featured">
+        <div class="offer-s10__tier-header">
+          <span class="offer-s10__tier-name">LIFETIME</span>
+          <span class="offer-s10__tier-price">$99 once</span>
+        </div>
+        <p class="offer-s10__pitch">When you want everything, forever.</p>
+        <ul class="offer-s10__features">
+          <li>16 templates</li>
+          <li>80 tested prompts</li>
+          <li>Orchestration configs</li>
+          <li>Every future build</li>
+        </ul>
+        <a href="https://zovo.one/lifetime" class="offer-s10__cta--filled">Get lifetime &rarr;</a>
+      </div>
+    </div>
+    <p class="offer-s10__math">After 20 months, Community costs the same as Lifetime. Lifetime members pay nothing from month 21 onward.</p>
   </div>
-</section>
-
-<div class="about-section">
-  <h2>About</h2>
-  <p>Tested, practical tutorials for developers building with Claude Code, Claude API, and Claude Desktop. Updated daily.</p>
-  <a href="/about/" class="browse-link">Learn more &rarr;</a>
 </div>
 
-<div style="text-align:center; margin: 2rem 0;">
-  <a href="/all-articles/" class="browse-link">Browse all 2,500+ guides &rarr;</a>
-</div>
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer-s10">
+  <p class="footer__site">claudecodeguides.com</p>
+  <p class="footer__bio">Built by Michael Lip in Da Nang, Vietnam.<br>Updated daily by an agent fleet running on five Claude Max subscriptions.</p>
+  <p class="footer__links"><a href="https://zovo.one">zovo.one</a> &middot; <a href="https://github.com/theluckystrike">GitHub</a></p>
+  <p class="footer__copy">&copy; 2026</p>
+</footer>
