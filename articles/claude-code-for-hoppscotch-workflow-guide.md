@@ -19,13 +19,14 @@ You are using Hoppscotch as your API testing platform — the open-source Postma
 
 2. **Uses Postman's `pm.*` scripting API.** Claude writes pre-request and test scripts with `pm.environment.set()` and `pm.response.json()`. Hoppscotch uses a different scripting API with `pw.*` functions.
 
-3. **Ignores Hoppscotch's environment variable syntax.** Claude uses `{{variable}}` which looks correct but Hoppscotch processes variables differently in headers vs body. Claude does not distinguish between these contexts.
+{% raw %}3. **Ignores Hoppscotch's environment variable syntax.** Claude uses `{%% raw %%}{% raw %}{%% endraw %%}{{variable}}{%% raw %%}{% endraw %}{%% endraw %%}` which looks correct but Hoppscotch processes variables differently in headers vs body. Claude does not distinguish between these contexts.{% endraw %}
 
 4. **Creates separate cURL commands instead of collections.** Claude generates individual cURL commands for testing. Hoppscotch organizes requests into collections with shared auth, environments, and test flows.
 
 ## The CLAUDE.md Configuration
 
 ```
+{% raw %}
 # Hoppscotch API Testing
 
 ## Tool
@@ -45,10 +46,11 @@ You are using Hoppscotch as your API testing platform — the open-source Postma
 ## Conventions
 - Collections in .hoppscotch/collections/ directory
 - Environments in .hoppscotch/environments/ directory
-- Base URL in environment variable: {{baseUrl}}
-- Auth token in environment: {{authToken}}
+{% raw %}- Base URL in environment variable: {{baseUrl}}{% endraw %}
+{% raw %}- Auth token in environment: {{authToken}}{% endraw %}
 - Run CI tests: hopp test -e environment.json collection.json
 - One collection per API domain (users, projects, billing)
+{% endraw %}
 ```
 
 ## Workflow Example

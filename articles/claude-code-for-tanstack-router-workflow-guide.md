@@ -26,6 +26,7 @@ You are building a React application with TanStack Router, the fully type-safe r
 ## The CLAUDE.md Configuration
 
 ```
+{% raw %}
 # TanStack Router Project
 
 ## Routing
@@ -39,7 +40,7 @@ You are building a React application with TanStack Router, the fully type-safe r
 - File structure = route structure (src/routes/users/$id.tsx)
 - Search params typed via validateSearch with Zod schema
 - Navigation: navigate({ to: '/path', params: {}, search: {} })
-- Link component: <Link to="/users/$id" params={{ id }} />
+{% raw %}- Link component: <Link to="/users/$id" params={{ id }} />{% endraw %}
 - Loaders: route.loader for data fetching before render
 - Layout routes: __root.tsx, _layout.tsx files
 - Route tree auto-generated — never edit routeTree.gen.ts
@@ -52,6 +53,7 @@ You are building a React application with TanStack Router, the fully type-safe r
 - Pending UI: route.pendingComponent for loading states
 - Error handling: route.errorComponent per route
 - Search params schemas colocated in route files
+{% endraw %}
 ```
 
 ## Workflow Example

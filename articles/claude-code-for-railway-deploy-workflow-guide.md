@@ -26,6 +26,7 @@ You are deploying applications with Railway, the cloud platform that auto-detect
 ## The CLAUDE.md Configuration
 
 ```
+{% raw %}
 # Railway Deployment Project
 
 ## Platform
@@ -48,10 +49,11 @@ You are deploying applications with Railway, the cloud platform that auto-detect
 - Railway CLI: railway login, railway up, railway logs
 - Environment vars in Railway dashboard, not .env files
 - Database: Railway-provisioned, connection auto-configured
-- Use ${{service.VARIABLE}} for cross-service references
+{% raw %}- Use ${{service.VARIABLE}} for cross-service references{% endraw %}
 - Health checks: /health endpoint recommended
 - Build: let Nixpacks detect, override only if needed
 - Custom domains: configure in Railway dashboard
+{% endraw %}
 ```
 
 ## Workflow Example

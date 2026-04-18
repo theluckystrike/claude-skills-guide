@@ -15,7 +15,7 @@ You are building an e-commerce backend with Medusa, an open-source headless comm
 
 ## What Claude Code Gets Wrong By Default
 
-1. **Creates Shopify Liquid templates.** Claude writes `.liquid` template files with Shopify's `{% for product in collections %}` syntax. Medusa is headless — there are no server-rendered templates. You build a separate frontend (Next.js, Gatsby) that calls Medusa's REST or GraphQL API.
+1. **Creates Shopify Liquid templates.** Claude writes `.liquid` template files with Shopify's template syntax. Medusa is headless — there are no server-rendered templates. You build a separate frontend (Next.js, Gatsby) that calls Medusa's REST or GraphQL API.
 
 2. **Uses WooCommerce hooks and filters.** Claude writes PHP action hooks for checkout customization. Medusa uses TypeScript subscribers and middleware — `@Subscriber()` decorators for event handling and custom API routes for extensions.
 

@@ -26,6 +26,7 @@ You are building real-time analytics APIs with Tinybird, a platform that ingests
 ## The CLAUDE.md Configuration
 
 ```
+{% raw %}
 # Tinybird Analytics Project
 
 ## Platform
@@ -39,7 +40,7 @@ You are building real-time analytics APIs with Tinybird, a platform that ingests
 - Pipes: .pipe files define SQL transformations
 - API: pipes with endpoints become REST APIs
 - Ingest: Events API (POST), Kafka, S3
-- Params: {{Type(param, default)}} in SQL
+{% raw %}- Params: {{Type(param, default)}} in SQL{% endraw %}
 - Materialized: TYPE materialized for pre-computation
 - CLI: tb push to deploy, tb sql for queries
 
@@ -51,6 +52,7 @@ You are building real-time analytics APIs with Tinybird, a platform that ingests
 - Events API for real-time ingestion
 - tb push --force for schema changes
 - Token auth for API endpoint security
+{% endraw %}
 ```
 
 ## Workflow Example
@@ -59,7 +61,7 @@ You want to build a real-time product analytics dashboard API. Prompt Claude Cod
 
 "Create Tinybird data sources and pipes for product analytics. Define a datasource for user events (timestamp, user_id, event_name, properties), create pipes for: events per hour, unique users per day, and top events by count. Each pipe should be an API endpoint with date range parameters."
 
-Claude Code should create `datasources/events.datasource` with the schema, `pipes/events_per_hour.pipe` with SQL using `{{DateTime(start_date)}}` and `{{DateTime(end_date)}}` parameters, similar pipes for daily unique users and top events, each with `TYPE endpoint` to expose as an API.
+{% raw %}Claude Code should create `datasources/events.datasource` with the schema, `pipes/events_per_hour.pipe` with SQL using `{%% raw %%}{% raw %}{%% endraw %%}{{DateTime(start_date)}}{%% raw %%}{% endraw %}{%% endraw %%}` and `{%% raw %%}{% raw %}{%% endraw %%}{{DateTime(end_date)}}{%% raw %%}{% endraw %}{%% endraw %%}` parameters, similar pipes for daily unique users and top events, each with `TYPE endpoint` to expose as an API.{% endraw %}
 
 ## Common Pitfalls
 

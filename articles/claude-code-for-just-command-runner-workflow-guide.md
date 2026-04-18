@@ -19,13 +19,14 @@ You are using Just, the command runner that replaces Make for project-specific c
 
 2. **Creates npm scripts in package.json.** Claude adds commands to `"scripts"` in `package.json`. With Just, project commands go in the `justfile` — it handles all languages, not just JavaScript.
 
-3. **Uses Make's variable syntax.** Claude writes `$(VAR)` or `${VAR}` for Make variables. Just uses `{{variable}}` double-brace syntax for recipe parameters and settings.
+{% raw %}3. **Uses Make's variable syntax.** Claude writes `$(VAR)` or `${VAR}` for Make variables. Just uses `{%% raw %%}{% raw %}{%% endraw %%}{{variable}}{%% raw %%}{% endraw %}{%% endraw %%}` double-brace syntax for recipe parameters and settings.{% endraw %}
 
 4. **Ignores Just's built-in features.** Claude writes manual `source .env` commands. Just has `set dotenv-load` to automatically load `.env` files, `set positional-arguments` for argument handling, and `set shell` for shell selection.
 
 ## The CLAUDE.md Configuration
 
 ```
+{% raw %}
 # Just Command Runner Project
 
 ## Task Runner
@@ -36,8 +37,8 @@ You are using Just, the command runner that replaces Make for project-specific c
 ## Just Rules
 - Commands defined in justfile, NOT Makefile or package.json
 - Recipe syntax: recipe-name arg='default': (no tabs required)
-- Variables: {{variable}} double braces
-- String interpolation in recipes uses {{}} not $()
+{% raw %}- Variables: {{variable}} double braces{% endraw %}
+{% raw %}- String interpolation in recipes uses {{}} not $(){% endraw %}
 - Default recipe: first recipe in file runs with bare `just`
 - List recipes: just --list
 - Use set dotenv-load for automatic .env loading
@@ -50,6 +51,7 @@ You are using Just, the command runner that replaces Make for project-specific c
 - Parameterized recipes: deploy env='staging':
 - Private recipes prefixed with underscore: _helper
 - Store justfile in project root, commit to version control
+{% endraw %}
 ```
 
 ## Workflow Example
@@ -66,7 +68,7 @@ Claude Code should create a `justfile` with `default` recipe running `just --lis
 
 2. **Missing shebang for multi-line recipes.** Claude writes multi-line recipes expecting each line to run in the same shell. By default, Just runs each line in a separate shell. Use `#!/usr/bin/env bash` as the first line of a recipe for multi-line scripts, or set `set shell` globally.
 
-3. **Variable scoping confusion.** Claude defines variables with `VAR := "value"` expecting them to be available as shell environment variables in recipes. Just variables are interpolated into recipes with `{{VAR}}` but are not automatically exported as environment variables. Use `export VAR := "value"` to make them available to subprocesses.
+{% raw %}3. **Variable scoping confusion.** Claude defines variables with `VAR := "value"` expecting them to be available as shell environment variables in recipes. Just variables are interpolated into recipes with `{%% raw %%}{% raw %}{%% endraw %%}{{VAR}}{%% raw %%}{% endraw %}{%% endraw %%}` but are not automatically exported as environment variables. Use `export VAR := "value"` to make them available to subprocesses.{% endraw %}
 
 ## Related Guides
 

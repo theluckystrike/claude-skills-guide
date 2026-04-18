@@ -26,6 +26,7 @@ You are building AI applications with Dify, an open-source platform that provide
 ## The CLAUDE.md Configuration
 
 ```
+{% raw %}
 # Dify AI Platform Project
 
 ## AI Platform
@@ -38,7 +39,7 @@ You are building AI applications with Dify, an open-source platform that provide
 - Workflows built in Dify UI, not in code
 - RAG: upload documents to Dify knowledge base
 - API calls: use Dify's REST API from application code
-- Prompts: managed in Dify UI with {{variable}} syntax
+{% raw %}- Prompts: managed in Dify UI with {{variable}} syntax{% endraw %}
 - Models: configured per node in workflow
 - Tools: custom tools via API or Dify tool plugins
 
@@ -50,6 +51,7 @@ You are building AI applications with Dify, an open-source platform that provide
 - Knowledge bases for document-grounded responses
 - Custom tools: register external APIs as Dify tools
 - Self-hosted: Docker Compose for Dify deployment
+{% endraw %}
 ```
 
 ## Workflow Example

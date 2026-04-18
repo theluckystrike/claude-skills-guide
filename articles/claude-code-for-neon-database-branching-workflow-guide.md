@@ -58,7 +58,7 @@ You want to set up a preview environment with its own database branch for each p
 
 "Create a GitHub Actions workflow that creates a Neon database branch for each pull request, sets the connection string as an environment variable for the preview deployment, and deletes the branch when the PR is closed. Use neonctl."
 
-Claude Code should create a GitHub Actions workflow with two jobs: one on `pull_request: opened/synchronize` that runs `neonctl branches create --name pr-${{ github.event.number }}` and outputs the connection string, and one on `pull_request: closed` that runs `neonctl branches delete pr-${{ github.event.number }}`.
+Claude Code should create a GitHub Actions workflow with two jobs: one on `pull_request: opened/synchronize` that runs `neonctl branches create --name pr-${%% raw %%}{% raw %}{%% endraw %%}{{ github.event.number }}{%% raw %%}{% endraw %}{%% endraw %%}` and outputs the connection string, and one on `pull_request: closed` that runs `neonctl branches delete pr-${%% raw %%}{% raw %}{%% endraw %%}{{ github.event.number }}{%% raw %%}{% endraw %}{%% endraw %%}`.
 
 ## Common Pitfalls
 
