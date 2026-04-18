@@ -304,9 +304,6 @@
       min-height: 50vh;
     }
 
-    /* =====================================       NEWSLETTER CTA
-       ============================================ */
-
     /* =====================================       RELATED GUIDES
        ============================================ */
     .related-guides {
@@ -551,30 +548,6 @@
       background: rgba(217, 119, 87, 0.06);
       text-decoration: none;
       transform: translateX(2px);
-    }
-
-    /* --- Recent List --- */
-    .recent-list {
-      display: grid;
-      gap: 6px;
-      margin: 1rem 0;
-    }
-    .recent-item {
-      display: block;
-      padding: 10px 16px;
-      background: #1c1c1a;
-      border: 1px solid #2e2e2a;
-      border-radius: 8px;
-      color: #d97757;
-      font-size: 0.92rem;
-      transition: border-color 0.2s ease, background 0.2s ease;
-      text-decoration: none;
-    }
-    .recent-item:hover {
-      border-color: rgba(217, 119, 87, 0.35);
-      background: #242422;
-      color: #e8856a;
-      text-decoration: none;
     }
 
     /* --- Page Header (Topic/About/Index pages) --- */
@@ -1174,13 +1147,6 @@
       color: #e8856a;
       transform: translateY(-1px);
       text-decoration: none;
-    }
-    .author-cta-actions .cta-btn-label {
-      display: block;
-      text-align: center;
-      color: #9a9590;
-      font-size: 0.75rem;
-      margin-top: -0.35rem;
     }
     .author-cta-actions .cta-pro-note {
       color: #9a9590;

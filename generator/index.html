@@ -52,15 +52,18 @@ select:focus-visible, textarea:focus-visible {
   border-bottom: 1px solid rgba(250,249,245,0.08);
 }
 .site-header .container-wide {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;
 }
 .site-logo {
   font-size: 1.05rem; font-weight: 600; color: #faf9f5;
   letter-spacing: -0.01em;
 }
+.site-nav {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center;
+}
 .site-nav a {
-  font-size: 0.875rem; color: rgba(250,249,245,0.6);
-  margin-left: 1.5rem; transition: color 0.2s;
+  font-size: 0.8rem; color: rgba(250,249,245,0.6);
+  transition: color 0.2s; white-space: nowrap;
 }
 .site-nav a:hover { color: #faf9f5; opacity: 1; }
 
@@ -519,9 +522,17 @@ select:focus-visible, textarea:focus-visible {
   <div class="container-wide">
     <a href="/" class="site-logo">Claude Code Guides</a>
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="/all-articles/">Articles</a>
-      <a href="/mastery/">Mastery</a>
-      <a href="/generator/" aria-current="page">Generator</a>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/topics/getting-started/">Getting Started</a>
+      <a href="/topics/prompt-engineering/">Prompts</a>
+      <a href="/topics/api/">API</a>
+      <a href="/topics/agents/">Agents</a>
+      <a href="/topics/mcp/">MCP</a>
+      <a href="/topics/chrome-extensions/">Extensions</a>
+      <a href="/all-articles/">All Guides</a>
+      <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer">Community &#8599;</a>
+      <a href="https://zovo.one" target="_blank" rel="noopener noreferrer">Zovo &#8599;</a>
     </nav>
   </div>
 </header>

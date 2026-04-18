@@ -9,7 +9,7 @@ description: "2,665 production-tested Claude Code guides. CLAUDE.md templates, d
 :root {
   --bg: #0a0a0a;
   --ink: #f2f0ea;
-  --ink-muted: #7a756c;
+  --ink-muted: #857f74;
   --accent: #ff6a3d;
   --rule: rgba(242, 240, 234, 0.08);
   --font-serif: 'Fraunces', Georgia, serif;
@@ -406,6 +406,7 @@ body {
 .offer-s10__card--featured {
   border-top: 2px solid var(--accent);
   background: linear-gradient(180deg, rgba(255, 106, 61, 0.04) 0%, var(--bg) 40%);
+  position: relative;
 }
 .offer-s10__tier-header {
   display: flex;
@@ -497,9 +498,6 @@ body {
 .offer-s10__cta--text:hover {
   color: var(--accent);
   text-decoration: none;
-}
-.offer-s10__card--featured {
-  position: relative;
 }
 .offer-s10__badge {
   position: absolute;
