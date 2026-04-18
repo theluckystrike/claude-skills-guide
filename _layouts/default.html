@@ -251,22 +251,6 @@
     </section>
     {% endif %}
   </main>
-  {% if site.newsletter.enabled and page.url != "/" %}
-  <section class="newsletter-cta" aria-label="Newsletter signup">
-    <h2>{{ site.newsletter.heading | default: "Stay Updated" }}</h2>
-    <p>{{ site.newsletter.subheading | default: "Get the latest guides delivered to your inbox." }}</p>
-    {% if site.newsletter.beehiiv_embed_url != "" %}
-    <iframe src="{{ site.newsletter.beehiiv_embed_url }}" data-test-id="beehiiv-embed" width="100%" height="52" frameborder="0" scrolling="no" style="background: transparent;" title="Newsletter signup form"></iframe>
-    {% else %}
-    <div class="nl-fallback">
-      <label for="newsletter-email" class="visually-hidden">Email address</label>
-      <input type="email" id="newsletter-email" placeholder="you@example.com" aria-label="Email address" disabled>
-      <button disabled>Coming Soon</button>
-    </div>
-    <p class="nl-note">Newsletter launching soon. Check back shortly.</p>
-    {% endif %}
-  </section>
-  {% endif %}
   {% if page.date %}
   {% assign cat = page.categories | first %}
   {% assign related_count = 0 %}
@@ -301,12 +285,9 @@
     </ul>
   </section>
   {% endif %}
-  {% unless page.url == "/" %}
   <footer aria-label="Footer">
-    <p><a href="https://chrometipsguide.com">Chrome Tips</a> &middot; <a href="https://bestchromeextensions.com">Extensions</a> &middot; <a href="https://securetoolsguide.com">Security Tools</a> &middot; <a href="https://bestremotetools.com">AI Tools</a> &middot; <a href="https://welikeremotestack.com">Remote Work</a></p>
     <p>&copy; 2026 Claude Code Guides &middot; Built by a <a href="https://www.upwork.com" target="_blank" rel="noopener noreferrer">Top Rated Plus</a> developer &middot; 2,600+ guides &middot; <a href="/about/">About</a></p>
   </footer>
-  {% endunless %}
 
   <!-- In-Content CTA: injected at ~50% article depth -->
   {% if page.date %}

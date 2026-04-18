@@ -120,17 +120,18 @@ body {
   display: inline-block;
   background: var(--accent);
   color: var(--bg);
-  padding: 0.875rem 1.5rem;
+  padding: 1rem 1.75rem;
   border-radius: 2px;
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.0625rem;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.15s ease;
   align-self: flex-start;
 }
 .hero-s10__cta:hover {
-  opacity: 0.88;
+  opacity: 0.92;
+  transform: translateY(-1px);
   text-decoration: none;
   color: var(--bg);
 }
@@ -497,15 +498,51 @@ body {
   color: var(--accent);
   text-decoration: none;
 }
-.offer-s10__math {
-  text-align: center;
+.offer-s10__card--featured {
+  position: relative;
+}
+.offer-s10__badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 2px;
+}
+.offer-s10__math-inline {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 0.875rem;
   color: var(--ink-muted);
-  max-width: 48ch;
-  margin: 3rem auto 0;
-  line-height: 1.6;
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--rule);
+}
+.offer-s10__cta--filled-large {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 1rem 1.75rem;
+  border-radius: 2px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+.offer-s10__cta--filled-large:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: var(--bg);
 }
 
 /* ---------- FOOTER ---------- */
@@ -588,8 +625,8 @@ body {
         Claude Code<span class="hero-s10__headline-italic">was meant to work like this.</span>
       </h1>
       <p class="hero-s10__lede">One file in your repo. 300 lines.<br>Stops guessing your stack. Starts engineering.</p>
-      <p class="hero-s10__proof">I've shipped 2,665 guides on configuring it right.<br>I earn $400K+/year doing this for Upwork clients.<br>The configs are here.</p>
       <a href="/generator/" class="hero-s10__cta">Generate your CLAUDE.md &rarr;</a>
+      <p class="hero-s10__proof">I've shipped 2,665 guides on configuring it right.<br>I earn $400K+/year doing this for Upwork clients.<br>The configs are here.</p>
       <p class="hero-s10__sig">Michael Lip &mdash; solo dev, Da Nang</p>
     </div>
   </div>
@@ -599,12 +636,12 @@ body {
 <div class="s10-section proof-s10">
   <div class="proof-s10__grid">
     <div class="proof-s10__item">
-      <span class="proof-s10__number">2,665</span>
-      <p class="proof-s10__text"><strong>guides shipped.</strong> Every one of them tested on a real problem I hit.</p>
-    </div>
-    <div class="proof-s10__item">
       <span class="proof-s10__number">$400K+</span>
       <p class="proof-s10__text"><strong>earned on Upwork</strong> writing production code with Claude Code. 100% Job Success Score.</p>
+    </div>
+    <div class="proof-s10__item">
+      <span class="proof-s10__number">2,665</span>
+      <p class="proof-s10__text"><strong>guides shipped.</strong> Every one of them tested on a real problem I hit.</p>
     </div>
     <div class="proof-s10__item">
       <span class="proof-s10__number">50K+</span>
@@ -675,6 +712,13 @@ body {
       </div>
       <span class="work-s10__arrow">&rarr;</span>
     </a>
+    <a href="/claude-opus-orchestrator-sonnet-worker-architecture/" class="work-s10__item">
+      <div>
+        <h3 class="work-s10__title">Opus Orchestrator + Sonnet Worker Architecture</h3>
+        <p class="work-s10__desc">3-layer delegation pattern. Opus plans, Sonnet executes, tokens drop 60%. The multi-agent architecture most teams discover too late.</p>
+      </div>
+      <span class="work-s10__arrow">&rarr;</span>
+    </a>
     <a href="/all-articles/" class="work-s10__browse">Browse all 2,665 guides &rarr;</a>
   </div>
 </div>
@@ -690,7 +734,7 @@ body {
         <div class="offer-s10__tier-header">
           <span class="offer-s10__tier-name">FREE</span>
         </div>
-        <p class="offer-s10__pitch">What you're reading now.</p>
+        <p class="offer-s10__pitch">Everything on this site, forever.</p>
         <ul class="offer-s10__features">
           <li>2,665 guides</li>
           <li>Generator tool</li>
@@ -704,7 +748,7 @@ body {
           <span class="offer-s10__tier-name">COMMUNITY</span>
           <span class="offer-s10__tier-price">$4.99/mo</span>
         </div>
-        <p class="offer-s10__pitch">When you want 16 templates instead of 1.</p>
+        <p class="offer-s10__pitch">16 CLAUDE.md templates + private Discord + monthly calls.</p>
         <ul class="offer-s10__features">
           <li>Private Discord</li>
           <li>Monthly builder calls</li>
@@ -714,21 +758,22 @@ body {
       </div>
       <!-- LIFETIME -->
       <div class="offer-s10__card offer-s10__card--featured">
+        <span class="offer-s10__badge">Most Popular</span>
         <div class="offer-s10__tier-header">
           <span class="offer-s10__tier-name">LIFETIME</span>
           <span class="offer-s10__tier-price">$99 once</span>
         </div>
-        <p class="offer-s10__pitch">When you want everything, forever.</p>
+        <p class="offer-s10__pitch">Everything above + 80 prompts + orchestration configs + every future build.</p>
         <ul class="offer-s10__features">
           <li>16 templates</li>
           <li>80 tested prompts</li>
           <li>Orchestration configs</li>
           <li>Every future build</li>
         </ul>
-        <a href="https://zovo.one/lifetime" class="offer-s10__cta--filled">Get lifetime &rarr;</a>
+        <p class="offer-s10__math-inline">After 20 months, Community costs the same as Lifetime.<br>Lifetime members pay nothing from month 21 onward.</p>
+        <a href="https://zovo.one/lifetime" class="offer-s10__cta--filled-large">Get lifetime &rarr;</a>
       </div>
     </div>
-    <p class="offer-s10__math">After 20 months, Community costs the same as Lifetime. Lifetime members pay nothing from month 21 onward.</p>
   </div>
 </div>
 

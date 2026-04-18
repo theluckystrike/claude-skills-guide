@@ -306,90 +306,6 @@
 
     /* =====================================       NEWSLETTER CTA
        ============================================ */
-    .newsletter-cta {
-      margin-top: 3rem;
-      padding: 2.5rem 2rem;
-      background: linear-gradient(135deg, #1c1c1a 0%, #2a2420 40%, #141413 100%);
-      border-radius: 14px;
-      text-align: center;
-      border: 1px solid #3a3a35;
-      position: relative;
-      overflow: hidden;
-    }
-    .newsletter-cta::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #d97757, transparent);
-    }
-    .newsletter-cta h2 {
-      color: #faf9f5;
-      font-size: 1.35rem;
-      border: none;
-      padding: 0;
-      margin: 0 0 0.5rem 0;
-      background: none;
-      -webkit-text-fill-color: #faf9f5;
-    }
-    .newsletter-cta h2::after {
-      display: none;
-    }
-    .newsletter-cta p {
-      color: #b0aea5;
-      font-size: 0.92rem;
-      margin: 0 0 1.5rem 0;
-    }
-    .newsletter-cta iframe {
-      border: none;
-      border-radius: 8px;
-      max-width: 100%;
-    }
-    .newsletter-cta .nl-fallback {
-      display: flex;
-      gap: 10px;
-      max-width: 440px;
-      margin: 0 auto;
-    }
-    .newsletter-cta .nl-fallback input {
-      flex: 1;
-      padding: 12px 16px;
-      border: 1px solid #3a3a35;
-      border-radius: 8px;
-      background: #141413;
-      color: #faf9f5;
-      font-size: 0.9rem;
-      font-family: inherit;
-      outline: none;
-      transition: border-color 0.2s ease;
-    }
-    .newsletter-cta .nl-fallback input:focus {
-      border-color: #d97757;
-    }
-    .newsletter-cta .nl-fallback button {
-      padding: 12px 24px;
-      background: #d97757;
-      color: #141413;
-      border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      font-family: inherit;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: background 0.2s ease, transform 0.15s ease;
-    }
-    .newsletter-cta .nl-fallback button:hover {
-      background: #e8856a;
-      transform: translateY(-1px);
-    }
-    .newsletter-cta .nl-note {
-      color: #9a9590;
-      font-size: 0.78rem;
-      margin-top: 1rem;
-    }
 
     /* =====================================       RELATED GUIDES
        ============================================ */
@@ -810,13 +726,7 @@
       .stat .number {
         font-size: 1.6rem;
       }
-      .newsletter-cta {
-        padding: 2rem 1.25rem;
-      }
-      .newsletter-cta .nl-fallback {
-        flex-direction: column;
-      }
-      .feature-grid {
+.feature-grid {
         grid-template-columns: 1fr;
       }
       pre {
@@ -925,11 +835,6 @@
     }
     .browse-link:focus-visible {
       outline-offset: 2px;
-    }
-    .nl-fallback input:focus-visible {
-      outline: 2px solid #d97757;
-      outline-offset: 0;
-      border-color: #d97757;
     }
 
     /* =====================================       STICKY FOOTER CTA BAR
