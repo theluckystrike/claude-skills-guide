@@ -49,7 +49,7 @@ You are deploying applications with Railway, the cloud platform that auto-detect
 - Railway CLI: railway login, railway up, railway logs
 - Environment vars in Railway dashboard, not .env files
 - Database: Railway-provisioned, connection auto-configured
-{% raw %}- Use ${{service.VARIABLE}} for cross-service references{% endraw %}
+- Use ${{service.VARIABLE}} for cross-service references
 - Health checks: /health endpoint recommended
 - Build: let Nixpacks detect, override only if needed
 - Custom domains: configure in Railway dashboard

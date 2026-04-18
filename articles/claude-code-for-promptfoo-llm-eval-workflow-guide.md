@@ -37,7 +37,7 @@ You are using Promptfoo for systematic LLM prompt evaluation — testing prompts
 ## Promptfoo Rules
 - Config in promptfooconfig.yaml (YAML format)
 - Providers: list of models to test against
-{% raw %}- Prompts: template strings with {{variable}} placeholders{% endraw %}
+- Prompts: template strings with {{variable}} placeholders
 - Tests: array of test cases with vars and assertions
 - Assertions: contains, icontains, javascript, llm-rubric, similar
 - Run: npx promptfoo eval (executes all tests)
@@ -65,7 +65,7 @@ Claude Code should create `promptfooconfig.yaml` with three providers, the syste
 
 ## Common Pitfalls
 
-{% raw %}1. **Missing variable syntax in prompts.** Claude uses `${variable}` JavaScript template literals. Promptfoo uses `{%% raw %%}{% raw %}{%% endraw %%}{{variable}}{%% raw %%}{% endraw %}{%% endraw %%}` Mustache-style syntax in prompt templates. Wrong syntax means variables are not substituted and tests pass with empty values.{% endraw %}
+{% raw %}1. **Missing variable syntax in prompts.** Claude uses `${variable}` JavaScript template literals. Promptfoo uses `{{variable}}` Mustache-style syntax in prompt templates. Wrong syntax means variables are not substituted and tests pass with empty values.{% endraw %}
 
 2. **Over-relying on exact match assertions.** Claude uses `equals` assertions for LLM output. LLM responses vary between runs. Use `contains`, `icontains`, or `similar` for fuzzy matching, and `llm-rubric` for semantic evaluation.
 

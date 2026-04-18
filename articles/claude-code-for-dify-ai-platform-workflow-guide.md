@@ -39,7 +39,7 @@ You are building AI applications with Dify, an open-source platform that provide
 - Workflows built in Dify UI, not in code
 - RAG: upload documents to Dify knowledge base
 - API calls: use Dify's REST API from application code
-{% raw %}- Prompts: managed in Dify UI with {{variable}} syntax{% endraw %}
+- Prompts: managed in Dify UI with {{variable}} syntax
 - Models: configured per node in workflow
 - Tools: custom tools via API or Dify tool plugins
 

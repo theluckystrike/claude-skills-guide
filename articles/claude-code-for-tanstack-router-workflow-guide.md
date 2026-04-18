@@ -40,7 +40,7 @@ You are building a React application with TanStack Router, the fully type-safe r
 - File structure = route structure (src/routes/users/$id.tsx)
 - Search params typed via validateSearch with Zod schema
 - Navigation: navigate({ to: '/path', params: {}, search: {} })
-{% raw %}- Link component: <Link to="/users/$id" params={{ id }} />{% endraw %}
+- Link component: <Link to="/users/$id" params={{ id }} />
 - Loaders: route.loader for data fetching before render
 - Layout routes: __root.tsx, _layout.tsx files
 - Route tree auto-generated — never edit routeTree.gen.ts

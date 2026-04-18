@@ -21,7 +21,7 @@ You are building automation workflows with n8n, the open-source workflow automat
 
 3. **Generates n8n workflow JSON incorrectly.** Claude tries to generate workflow JSON but gets the node connection format wrong. n8n's connection schema has specific `main: [[{ node, type, index }]]` formatting.
 
-{% raw %}4. **Ignores n8n's expression syntax.** Claude hardcodes values in nodes. n8n uses `{%% raw %%}{% raw %}{%% endraw %%}{{ $json.fieldName }}{%% raw %%}{% endraw %}{%% endraw %%}` expressions to reference data from previous nodes in the workflow chain.{% endraw %}
+{% raw %}4. **Ignores n8n's expression syntax.** Claude hardcodes values in nodes. n8n uses `{{ $json.fieldName }}` expressions to reference data from previous nodes in the workflow chain.{% endraw %}
 
 ## The CLAUDE.md Configuration
 
@@ -37,7 +37,7 @@ You are building automation workflows with n8n, the open-source workflow automat
 
 ## n8n Rules
 - Workflows are node graphs with connections
-{% raw %}- Reference previous node data: {{ $json.field }}{% endraw %}
+- Reference previous node data: {{ $json.field }}
 - Code node: JavaScript with items array input/output
 - Custom nodes: implement INodeType interface
 - Credentials: managed in n8n, not hardcoded
@@ -65,7 +65,7 @@ Claude Code should create a node class implementing `INodeType` with `descriptio
 
 ## Common Pitfalls
 
-{% raw %}1. **Expression vs static value confusion.** Claude sets node parameters as static strings when they should be expressions referencing previous nodes. In n8n, use the `=` toggle on fields to switch to expression mode and reference `{%% raw %%}{% raw %}{%% endraw %%}{{ $json.data }}{%% raw %%}{% endraw %}{%% endraw %%}`.{% endraw %}
+{% raw %}1. **Expression vs static value confusion.** Claude sets node parameters as static strings when they should be expressions referencing previous nodes. In n8n, use the `=` toggle on fields to switch to expression mode and reference `{{ $json.data }}`.{% endraw %}
 
 2. **Code node return format.** Claude returns plain objects from Code nodes. n8n Code nodes must return an array of items: `return items.map(item => ({ json: { ...item.json, newField: 'value' } }))`. Wrong format causes silent data loss.
 

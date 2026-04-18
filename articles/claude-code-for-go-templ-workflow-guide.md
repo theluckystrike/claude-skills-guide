@@ -15,13 +15,13 @@ You are building Go web applications with Templ, a type-safe HTML templating lan
 
 ## What Claude Code Gets Wrong By Default
 
-1. **Uses Go's `html/template` package.** Claude writes `{%% raw %%}{% raw %}{%% endraw %%}{{ .Title }}{%% raw %%}{% endraw %}{%% endraw %%}` Go template syntax with `template.ParseFiles()`. Templ uses a JSX-like syntax in `.templ` files that compiles to type-safe Go functions.
+1. **Uses Go's `html/template` package.** Claude writes Go template syntax like double-brace dot-Title with `template.ParseFiles()`. Templ uses a JSX-like syntax in `.templ` files that compiles to type-safe Go functions.
 
 2. **Passes data through interface{} maps.** Claude creates `map[string]interface{}` for template data. Templ components are Go functions with typed parameters — `templ Page(title string, items []Item)` gives compile-time type checking.
 
 3. **Separates templates from handlers.** Claude puts templates in a `templates/` directory loaded at runtime. Templ components are compiled into Go code — they live alongside your Go code and are checked at compile time.
 
-4. **Ignores component composition.** Claude creates monolithic templates with `{%% raw %%}{% raw %}{%% endraw %%}{{ template "header" . }}{%% raw %%}{% endraw %}{%% endraw %%}` includes. Templ supports proper component composition — `@Header()` calls inside `templ Page()` for nested, reusable components.
+4. **Ignores component composition.** Claude creates monolithic templates with Go's template-include syntax. Templ supports proper component composition — `@Header()` calls inside `templ Page()` for nested, reusable components.
 
 ## The CLAUDE.md Configuration
 
@@ -66,7 +66,7 @@ Claude Code should create `layout.templ` with a `templ Layout(title string)` com
 
 1. **Forgetting to run `templ generate`.** Claude edits `.templ` files but the changes do not appear. Templ files must be compiled to Go code with `templ generate` before building. Use `templ generate --watch` during development for automatic recompilation.
 
-2. **Using Go template syntax in .templ files.** Claude writes `{%% raw %%}{% raw %}{%% endraw %%}{{ .Title }}{%% raw %%}{% endraw %}{%% endraw %%}` inside `.templ` files. Templ uses `{ title }` without double braces — the syntax is different from Go's `html/template`.
+2. **Using Go template syntax in .templ files.** Claude writes double-brace Go template expressions inside `.templ` files. Templ uses `{ title }` without double braces — the syntax is different from Go's `html/template`.
 
 3. **Not installing the Templ VS Code extension.** Claude writes `.templ` files without syntax support. Install the Templ VS Code extension for syntax highlighting, autocomplete, and error checking in `.templ` files.
 
