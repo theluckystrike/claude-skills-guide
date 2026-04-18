@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Lsp Document — Complete Developer Guide"
+title: "How to Use For Lsp Document — Complete Developer"
 description: "Learn how to use Claude Code with Language Server Protocol (LSP) document symbols to enhance your code navigation, refactoring, and development."
 date: 2026-03-15
 last_modified_at: 2026-04-17

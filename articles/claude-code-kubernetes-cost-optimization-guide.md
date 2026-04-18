@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "AI Code Optimization: Kubernetes Cost Reduction"
+title: "How to Use AI Code Optimization: Kubernetes Cost Reduction"
 description: "Reduce Kubernetes costs with AI code optimization and Claude Code automation. Right-sizing strategies and smart resource management that save money."
 date: 2026-03-14
 last_modified_at: 2026-04-17

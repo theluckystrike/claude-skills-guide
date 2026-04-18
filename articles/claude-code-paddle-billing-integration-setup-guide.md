@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Paddle Billing Integration Setup Guide"
+title: "How to Use Paddle Billing Integration Setup"
 description: "Learn how to integrate Paddle billing into your applications using Claude Code. A comprehensive guide covering webhook handlers, subscription."
 date: 2026-03-14
 last_modified_at: 2026-04-17

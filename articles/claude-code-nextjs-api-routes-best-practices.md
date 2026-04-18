@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Next.js API Routes Best — Honest Review 2026"
-description: "Master NextJS API routes with Claude Code. Learn best practices for building robust, secure, and performant API endpoints in your NextJS applications."
+description: "Claude Code Next.js API Routes Best — Honest Review 2026. Practical guide with working examples for developers. Tested on Next.js."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

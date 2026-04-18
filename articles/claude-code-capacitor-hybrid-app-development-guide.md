@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Capacitor Hybrid App Development Guide"
+title: "How to Use Capacitor Hybrid App Development"
 description: "A practical guide to building hybrid mobile applications using Claude Code and Capacitor. Learn project setup, native features integration, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

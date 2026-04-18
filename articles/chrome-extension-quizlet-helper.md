@@ -2,7 +2,7 @@
 
 layout: default
 title: "Quizlet Helper Chrome Extension: Developer Guide"
-description: "Quizlet helper Chrome extension guide for developers. Learn how these extensions work technically and how to build your own study tool."
+description: "Quizlet Helper Chrome Extension: Developer Guide. Practical guide with working examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

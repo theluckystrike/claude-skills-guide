@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome Extension Trello Power-Up — Build Guide"
-description: "Build a Chrome extension Trello Power-Up with manifest.json setup. Code examples, architecture patterns, and API integration included."
+title: "Trello Power-Up manifest.json — Setup Guide (2026)"
+description: "Set up manifest.json for your Trello Power-Up Chrome extension. Code examples, API integration, and architecture patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"

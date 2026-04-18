@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Timeout Error — How to Fix It"
-description: "Fix Claude Code timeout and connection errors fast. Copy-paste config for timeout settings, MCP timeouts, and request limits."
+title: "Claude Code Request Timed Out — Quick Fix (2026)"
+description: "Fix 'request timed out' errors in Claude Code. Timeout settings, connection config, and MCP timeout solutions."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

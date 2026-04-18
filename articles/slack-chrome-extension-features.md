@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Slack Features Chrome Extension Guide (2026)"
-description: "Explore powerful Slack Chrome extension features that enhance team communication, automate workflows, and boost productivity for developers and power."
+description: "Slack Features Chrome Extension Guide. Practical guide with working examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 categories: [tutorials]

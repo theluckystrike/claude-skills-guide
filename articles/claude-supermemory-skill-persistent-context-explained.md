@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude SuperMemory Skill: Persistent Context Guide 2026"
-description: "How the SuperMemory skill stores project context across Claude sessions. Invocation, storage patterns, and when to use it over CLAUDE.md."
+description: "Claude SuperMemory Skill: Persistent Context Guide 2026. Practical guide with working examples for developers."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [guides]

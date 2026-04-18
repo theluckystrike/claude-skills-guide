@@ -2,7 +2,7 @@
 
 layout: default
 title: "Page Ruler Chrome Extension: Developer Measure Tool"
-description: "Page Ruler Chrome extension for measuring web elements and inspecting dimensions. The developer tool for pixel-perfect layouts and design QA."
+description: "Page Ruler Chrome Extension: Developer Measure Tool. Practical guide with working examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

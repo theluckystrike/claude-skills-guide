@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Prisma Schema Migrations Advanced Workflow Guide"
+title: "How to Use Prisma Schema Migrations Advanced Workflow (2026)"
 description: "Master advanced Prisma schema migration workflows with Claude Code. Learn expert strategies for database schema changes, atomic migrations."
 date: 2026-03-14
 last_modified_at: 2026-04-17

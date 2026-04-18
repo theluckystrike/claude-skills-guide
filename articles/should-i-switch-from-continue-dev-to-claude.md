@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Continue.dev vs Claude Code — Should You Switch?"
+title: "Continue.dev vs Claude Code — Should You Switch??"
 description: "Continue.dev vs Claude Code compared honestly. Key differences, unique features, and when switching makes sense for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

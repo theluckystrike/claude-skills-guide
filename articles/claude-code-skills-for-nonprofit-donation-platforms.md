@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Skills for Nonprofit Donation Platforms"
-description: "Practical Claude Code skills for building nonprofit donation platforms. from Stripe integration to donor management and receipt generation."
+description: "Claude Code Skills for Nonprofit Donation Platforms. Practical guide with working examples for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [use-cases]

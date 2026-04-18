@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Worktrees and Skills Isolation Explained"
-description: "How Claude Code uses git worktrees to isolate skill execution: what gets isolated, what doesn't, and how to design skills for worktree environments."
+description: "Claude Code Worktrees and Skills Isolation Explained. Practical guide with working examples for developers."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [advanced]

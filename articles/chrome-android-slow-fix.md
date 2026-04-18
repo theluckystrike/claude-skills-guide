@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Android Slow Fix: Speed Up Guide (2026)"
+title: "Fix Chrome Android Slow"
 description: "Fix Chrome running slow on Android with proven optimization steps. Speed up browsing, reduce lag, and improve mobile browser performance."
 date: 2026-03-15
 last_modified_at: 2026-04-17

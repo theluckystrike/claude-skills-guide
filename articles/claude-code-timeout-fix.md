@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix Claude Code Timeout Errors"
-description: "Resolve Claude Code timeout errors for bash commands, login, and diagnostics. Covers timeout settings and configuration."
+title: "Claude Timeout — How to Fix It (2026)"
+description: "Fix Claude timeout errors for bash commands, long tasks, and API requests. Copy-paste settings and configuration."
 date: 2026-04-14
 last_modified_at: 2026-04-17
 author: "Claude Code Guides"

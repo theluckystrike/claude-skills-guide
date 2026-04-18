@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix: SDK Streaming Hangs Indefinitely"
-description: "Anthropic SDK streaming responses hang forever when the server stops sending SSE events mid-stream. Implement idle timeout detection."
+title: "Stream Idle Timeout — Fix Partial Response Error"
+description: "Fix the API stream idle timeout error when Claude returns a partial response. Idle timeout detection code for the Anthropic SDK."
 date: 2026-04-15
 last_modified_at: 2026-04-17
 author: "Claude Code Guides"

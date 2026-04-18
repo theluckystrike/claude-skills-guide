@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Knowledge Base Markdown Files: Setup Guide"
+title: "How to Use Claude Knowledge Base Markdown Files: Setup"
 description: "Set up Claude projects knowledge base with markdown files. Build automated knowledge workflows with Claude Code for better project context."
 date: 2026-03-15
 last_modified_at: 2026-04-17

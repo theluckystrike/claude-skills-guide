@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Cloudflare R2 — Complete Developer Guide"
+title: "How to Use For Cloudflare R2 — Complete Developer"
 description: "Learn how to integrate Claude Code with Cloudflare R2 for efficient object storage workflows. Practical examples, code snippets, and best practices for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Lighthouse Chrome Extension — Complete Developer Guide"
+title: "How to Use Lighthouse Chrome Extension — Complete Developer"
 description: "Master Lighthouse Chrome extension for performance auditing. Step-by-step guide with practical examples, interpretation tips, and optimization."
 date: 2026-03-15
 last_modified_at: 2026-04-17
