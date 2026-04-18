@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use For Rtx Tool Version — Complete Developer"
+title: "How to Use For Rtx Tool Version — Complete Developer (2026)"
 description: "Master the RTX Tool Version Manager workflow with Claude Code. Learn how to automate tool version management, streamline CUDA environment setup, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

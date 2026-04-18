@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Dark Mode: Implementation Guide"
+title: "How to Use Dark Mode: Implementation (2026)"
 description: "Implement dark mode in web apps using Claude Code. CSS variables, theme toggles, and system preference detection with practical code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

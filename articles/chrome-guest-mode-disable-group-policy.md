@@ -2,7 +2,7 @@
 
 layout: default
 title: "Guest Mode vs Incognito: Differences and How to Disable"
-description: "Is guest mode the same as incognito? Learn the key differences and how to disable Chrome guest mode via group policy for enterprise control."
+description: "Guest Mode vs Incognito: Differences and How to Disable. Practical guide with working examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

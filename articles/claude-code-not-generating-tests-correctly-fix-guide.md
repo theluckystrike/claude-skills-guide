@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Not Generating Tests — Quick Guide"
+title: "Fix Claude Code Not Generating Tests — Quick Guide (2026)"
 description: "Learn how to fix common issues when Claude Code fails to generate tests correctly. Practical solutions for test generation problems with code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

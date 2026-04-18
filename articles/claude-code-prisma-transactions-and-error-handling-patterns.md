@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Prisma Error Handling Patterns"
-description: "Prisma transaction and error handling patterns for Claude Code. Atomic operations, rollback strategies, and retry logic with examples."
+title: "Claude Code Prisma Error Handling Patterns (2026)"
+description: "Claude Code Prisma Error Handling Patterns. Practical guide with working examples for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: Claude Skills Guide

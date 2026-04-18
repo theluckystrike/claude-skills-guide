@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Fix Chrome Using Too Much RAM"
-description: "Fix Chrome using too much RAM with memory profiling, flags, and extension management. Reduce browser memory usage by up to 40%."
+title: "Fix Chrome Using Too Much RAM (2026)"
+description: "Fix Chrome using too much RAM with memory profiling, flags, and extension management. Reduce browser memory usage by up to 40%. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

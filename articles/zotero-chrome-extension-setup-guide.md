@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Zotero Chrome Extension Setup Guide (2026)"
-description: "Set up Zotero Chrome extension connector. Configure metadata capture, troubleshoot sync issues, and optimize your research workflow."
+title: "How to Use Zotero Chrome Extension Setup Guide"
+description: "Set up Zotero Chrome extension connector. Configure metadata capture, troubleshoot sync issues, and optimize your research workflow. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

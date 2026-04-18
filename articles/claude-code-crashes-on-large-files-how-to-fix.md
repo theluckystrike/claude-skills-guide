@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Large Codebase Crashes — How to Fix"
+title: "Fix Claude Code Large Codebase Crashes (2026)"
 description: "Fix Claude Code crashes on large files and codebases. Memory plugin tips, file splitting, and .claudeignore config that works."
 date: 2026-03-14
 last_modified_at: 2026-04-17

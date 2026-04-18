@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Infinite Loop — How to Interrupt"
+title: "Claude Code Infinite Loop — How to Interrupt (2026)"
 description: "Claude Code stuck in a loop? Interrupt it instantly with these keyboard shortcuts and config fixes. Prevents future loops too."
 date: 2026-03-14
 last_modified_at: 2026-04-17

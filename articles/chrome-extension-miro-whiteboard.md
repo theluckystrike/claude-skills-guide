@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Miro Chrome Extension — Setup and Features Guide"
-description: "Set up the Miro Chrome extension for whiteboard collaboration. Features, integration techniques, and team workflow tips included."
+title: "Miro Chrome Extension — Setup and Features Guide (2026)"
+description: "Set up the Miro Chrome extension for whiteboard collaboration. Features, integration techniques, and team workflow tips included. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

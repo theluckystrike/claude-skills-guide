@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Connection Refused — How to Fix"
+title: "Fix Claude Code Connection Refused (2026)"
 description: "Fix Claude Code connection refused errors on localhost. Check ports, proxy settings, and API config. Copy-paste solution included."
 date: 2026-03-14
 last_modified_at: 2026-04-17

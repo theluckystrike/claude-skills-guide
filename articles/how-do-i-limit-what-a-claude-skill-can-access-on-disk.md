@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Skill Disk Access Limits: Security Guide"
-description: "Limit what Claude skills can access on disk. Configure permission scopes, directory isolation, and character limits for secure skill execution."
+title: "Claude Skill Disk Access Limits: Security Guide (2026)"
+description: "Learn how to claude skill disk access limits: security guide. Step-by-step with working examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

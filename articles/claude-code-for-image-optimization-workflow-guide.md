@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "AI Code Optimization with Claude Code — Guide"
+title: "How to Use AI Code Optimization with Claude Code (2026)"
 description: "Automate image optimization with Claude Code. Batch-compress, resize, and convert to WebP. Cut page weight 60% in minutes."
 date: 2026-03-15
 last_modified_at: 2026-04-17

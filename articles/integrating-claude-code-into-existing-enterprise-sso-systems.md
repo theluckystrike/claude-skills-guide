@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Enterprise SSO Setup Guide"
+title: "Claude Enterprise SSO Setup Guide (2026)"
 description: "Set up Claude Code with enterprise SSO: Okta, Azure AD, Google Workspace. Step-by-step auth flow config with code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

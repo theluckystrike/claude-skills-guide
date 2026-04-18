@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How to Use Claude Skills with n8n Automation Workflows"
-description: "Connect Claude Code skills to n8n workflows via Anthropic API. Practical patterns for PR review and document processing automation."
+description: "Learn how to claude skills with n8n automation workflows. Step-by-step with working examples."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [workflows]

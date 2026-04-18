@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Best Authenticator Chrome Extension — Honest Review 2026"
-description: "A practical guide to Chrome TOTP authenticator extensions for developers who need secure 2FA management across multiple accounts."
+description: "Best authenticator chrome extension — honest review 2026 for developers. Each one tested with real projects. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

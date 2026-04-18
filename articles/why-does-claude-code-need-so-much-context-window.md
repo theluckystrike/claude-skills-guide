@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Why Does Claude Keep Timing Out? Context Window Fix"
+title: "Why Does Claude Keep Timing Out? Context Window Fix (2026)"
 description: "Why does Claude keep timing out due to context window limits? Optimize your workflows to reduce token usage and prevent timeouts."
 date: 2026-03-14
 last_modified_at: 2026-04-17

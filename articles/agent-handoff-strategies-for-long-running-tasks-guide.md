@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Agent Handoff Strategies for Long Running Tasks Guide"
+title: "How to Use Agent Handoff Strategies for Long Running Tasks"
 description: "Master agent handoff strategies for long running tasks with Claude Code. Learn practical techniques for managing extended workflows, maintaining."
 date: 2026-03-14
 last_modified_at: 2026-04-17

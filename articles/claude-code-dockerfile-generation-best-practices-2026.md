@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Dockerfile Best Practices (2026)"
-description: "Generate production-ready Dockerfiles with Claude Code. Best practices for multi-stage builds, security, and automated container optimization."
+description: "Claude Code Dockerfile Best Practices. Practical guide with working examples for developers. Tested on Docker."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]

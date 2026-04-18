@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Best Screenshot Chrome Extensions 2026"
-description: "Top screenshot Chrome extensions for 2026. Full page capture, annotation, and API integration tools compared for developers."
+description: "Top screenshot Chrome extensions for 2026. Full page capture, annotation, and API integration tools compared for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

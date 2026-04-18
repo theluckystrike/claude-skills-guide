@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Context Window Cost — How to Reduce"
+title: "Why Claude Code Context Window Cost (2026)"
 description: "Claude Code too expensive? Reduce context token costs with these strategies. Cut your bill by 50% on large codebases."
 date: 2026-03-14
 last_modified_at: 2026-04-17

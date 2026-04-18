@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Linear MCP Server: Issue Tracking with Claude Code"
-description: "Integrate Linear issue tracking into Claude Code via MCP server. Streamline your development workflow with automated issue management."
+title: "Linear MCP Server: Issue Tracking with Claude Code (2026)"
+description: "Linear MCP Server: Issue Tracking with Claude Code. Practical guide with working examples for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Anvil Local Fork Workflow"
+title: "How to Use Anvil Local Fork (2026)"
 description: "A practical guide to using Claude Code with Anvil's local fork development environment for Ethereum smart contract development and testing."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Enterprise Release Schedule 2026"
-description: "Chrome Enterprise release dates for 2026. Stable, Extended Stable, and Beta channel schedules with upgrade planning tips."
+description: "Chrome Enterprise release dates for 2026. Stable, Extended Stable, and Beta channel schedules with upgrade planning tips. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome OS Kiosk Mode: Managed Guest Setup Guide"
+title: "Chrome OS Kiosk Mode: Managed Guest Setup Guide (2026)"
 description: "Configure Chrome OS kiosk mode and managed guest sessions for enterprise deployments. Step-by-step setup for restricted user environments."
 date: 2026-03-15
 last_modified_at: 2026-04-17

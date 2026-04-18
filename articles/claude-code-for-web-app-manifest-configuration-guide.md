@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Web App Manifest Configuration"
+title: "How to Use Web App Manifest Configuration (2026)"
 description: "A comprehensive guide to configuring web app manifests for Claude Code projects, with practical examples and actionable advice for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

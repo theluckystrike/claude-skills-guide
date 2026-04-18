@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Tree-Sitter Syntax Highlighting"
+title: "How to Use Tree-Sitter Syntax Highlighting (2026)"
 description: "Master Tree-sitter syntax highlighting with Claude Code. Learn to create custom grammars, build highlighting rules, and integrate with your editor for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

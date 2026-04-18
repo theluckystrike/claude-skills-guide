@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude SSL Certificate Verification Failed: Fix"
+title: "Fix Claude SSL Certificate Verification Failed (2026)"
 description: "Fix claude ssl certificate verification failed errors in Claude Code. Resolve proxy, corporate cert, and API connection issues fast."
 date: 2026-03-14
 last_modified_at: 2026-04-17

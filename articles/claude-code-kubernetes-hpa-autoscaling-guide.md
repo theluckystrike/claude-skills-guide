@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Skills Kubernetes: HPA Autoscaling Guide"
+title: "How to Use Claude Skills Kubernetes: HPA Autoscaling (2026)"
 description: "Implement Claude skills Kubernetes HPA autoscaling. Practical examples for CPU, memory, and custom metric-based pod scaling configurations."
 date: 2026-03-14
 last_modified_at: 2026-04-17

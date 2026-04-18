@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Service Worker Inspector Guide"
-description: "Inspect and debug Chrome extension service workers with DevTools. Step-by-step debugging techniques and monitoring tools explained."
+title: "Chrome Extension Service Worker Inspector Guide (2026)"
+description: "Chrome Extension Service Worker Inspector Guide. Practical guide with working examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Diffusers Stable Diffusion Training"
+title: "How to Use Diffusers Stable Diffusion Training (2026)"
 description: "Learn how to use Claude Code skills to build, train, and fine-tune Stable Diffusion models with the Diffusers library. Practical examples for AI."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "MongoDB Atlas Search Index Setup — Guide"
+title: "How to Use MongoDB Atlas Search Index Setup (2026)"
 description: "Create Atlas Search indexes with Claude Code. Step-by-step workflow for search index creation, configuration, and query building."
 date: 2026-03-15
 last_modified_at: 2026-04-17

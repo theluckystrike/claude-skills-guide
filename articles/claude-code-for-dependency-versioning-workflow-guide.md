@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Dependency Versioning Workflow Guide"
+title: "How to Use Dependency Versioning Workflow (2026)"
 description: "Automate dependency versioning with Claude Code. Practical workflows for semver, lockfile management, and automated version updates that save hours."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Data Access Permissions: Retention Guide"
+title: "How to Use Claude Data Access Permissions: Retention (2026)"
 description: "Configure Claude connectors data access permissions and retention policies. Automate cleanup, manage history, and optimize storage in Claude Code."
 date: 2026-03-14
 last_modified_at: 2026-04-17

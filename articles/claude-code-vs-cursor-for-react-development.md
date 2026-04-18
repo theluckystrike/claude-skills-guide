@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code vs Cursor for React Development"
+title: "Claude Code vs Cursor for React Development (2026)"
 description: "A practical comparison of Claude Code and Cursor for React development. Includes Claude Code skills, workflow examples, and recommendations for React."
 date: 2026-03-14
 last_modified_at: 2026-04-17

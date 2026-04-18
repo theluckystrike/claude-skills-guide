@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Tavily MCP Server: Web Research Automation Guide"
+title: "How to Use Tavily MCP Server: Web Research Automation (2026)"
 description: "Connect Tavily MCP server to Claude Code for live web search and research automation. Setup guide with practical multi-step examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

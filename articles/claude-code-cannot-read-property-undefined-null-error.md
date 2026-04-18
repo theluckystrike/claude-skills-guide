@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix Cannot Read Properties of Undefined — Claude"
+title: "Fix Cannot Read Properties of Undefined — Claude (2026)"
 description: "Fix 'cannot read properties of undefined' errors in Claude Code. Covers input_tokens, trim, and OAuth null errors with solutions."
 date: 2026-03-14
 last_modified_at: 2026-04-17

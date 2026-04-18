@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Starship Prompt + Claude Code: Workflow Guide"
+title: "How to Use Starship Prompt + Claude Code: Workflow (2026)"
 description: "Configure Starship prompt with Claude Code for a powerful terminal workflow. Practical prompts, code examples, and customization tips."
 date: 2026-03-15
 last_modified_at: 2026-04-17

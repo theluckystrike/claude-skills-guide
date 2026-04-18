@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Keeps Timing Out and Changing Style: Fix"
+title: "Claude Keeps Timing Out and Changing Style: Fix (2026)"
 description: "Fix Claude keeps timing out and changing indentation style. Configure your preferred formatting and prevent unwanted code style changes."
 date: 2026-03-14
 last_modified_at: 2026-04-17

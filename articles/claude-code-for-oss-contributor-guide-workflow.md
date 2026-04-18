@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use For Oss Contributor — Complete Developer"
+title: "How to Use For Oss Contributor — Complete Developer (2026)"
 description: "Learn how to use Claude Code effectively for open source contributions. Discover practical workflows for finding issues, exploring codebases, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Pomodoro Timer Chrome Extension — Honest Review 2026"
-description: "A practical guide to the best Pomodoro timer Chrome extensions for developers. Features, integrations, and custom solutions for maximizing productivity."
+description: "Pomodoro Timer Chrome Extension — Honest Review 2026. Practical guide with working examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

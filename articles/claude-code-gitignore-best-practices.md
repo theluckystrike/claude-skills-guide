@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Should .claude Be in Gitignore? Yes — Here's Why"
-description: "Should .claude be in gitignore? Yes. Copy-paste .gitignore rules for Claude Code projects, CLAUDE.md, caches, and secrets."
+title: "Should .claude Be in Gitignore? Yes — Here's Why (2026)"
+description: "Should .claude Be in Gitignore? Yes — Here's Why. Practical guide with working examples for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]

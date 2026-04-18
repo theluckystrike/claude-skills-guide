@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skill Token Usage Profiling and Optimization"
+title: "Claude Skill Token Usage Profiling and Optimization (2026)"
 description: "Claude Skill Token Usage Profiling and Optimization. Practical guide with working examples for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

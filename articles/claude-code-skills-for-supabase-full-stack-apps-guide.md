@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Supabase Full Stack Apps Guide"
+title: "How to Use Supabase Full Stack Apps (2026)"
 description: "Build Supabase full-stack apps with Claude Code skills. Database design, auth, Edge Functions, and deployment workflows in one guide."
 date: 2026-03-14
 last_modified_at: 2026-04-17

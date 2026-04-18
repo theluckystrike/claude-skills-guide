@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skill Not Recognized — Fix Custom Name"
+title: "Why Claude Skill Not Recognized Custom Name (2026)"
 description: "Fix Claude Code not recognizing custom skill names. Debug file naming, directory placement, registration issues, and skill loading failures."
 date: 2026-03-14
 last_modified_at: 2026-04-17

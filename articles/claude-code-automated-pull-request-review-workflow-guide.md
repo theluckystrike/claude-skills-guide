@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Automated Pull Request Review Workflow Guide"
+title: "Claude Code Automated Pull Request Review Workflow (2026)"
 description: "Learn how to build automated pull request review workflows using Claude Code skills. Automate code quality checks, security scans, and feedback generation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

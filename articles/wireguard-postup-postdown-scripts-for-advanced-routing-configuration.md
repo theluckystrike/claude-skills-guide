@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "WireGuard PostUp PostDown Scripts: Routing Guide"
-description: "WireGuard postup postdown scripts for advanced routing and firewall automation. Copy-paste examples for split tunneling and network config."
+description: "WireGuard PostUp PostDown Scripts: Routing Guide. Practical guide with working examples for developers."
 date: 2026-03-17
 last_modified_at: 2026-04-17
 author: Claude Skills Guide

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Memory Fix for Large Codebases"
+title: "Fix Claude Code Memory for Large Codebases (2026)"
 description: "Fix claude code memory plugin large codebase errors. Configuration tweaks and optimization techniques to eliminate out-of-memory crashes."
 date: 2026-03-14
 last_modified_at: 2026-04-17

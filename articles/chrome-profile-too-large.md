@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Profile Too Large — Fix It Fast"
-description: "Chrome profile eating gigabytes? Shrink it with these step-by-step commands. Reclaim disk space and stop it growing back."
+title: "Chrome Profile Too Large — Fix It Fast (2026)"
+description: "Chrome profile eating gigabytes? Shrink it with these step-by-step commands. Reclaim disk space and stop it growing back. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

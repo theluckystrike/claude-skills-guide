@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Why Does Claude Keep Timing Out and Repeating Errors"
+title: "Why Does Claude Keep Timing Out and Repeating Errors (2026)"
 description: "Why does Claude keep timing out and repeating errors? Learn how to break the error cycle and get consistent results from Claude Code."
 date: 2026-03-14
 last_modified_at: 2026-04-17

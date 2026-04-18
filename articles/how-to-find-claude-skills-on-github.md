@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Directory on GitHub — Find Guide"
+title: "Claude Skills Directory on GitHub — Find Guide (2026)"
 description: "Find Claude Code skills on GitHub with advanced search queries. Curated repos, install commands, and community directories listed."
 date: 2026-03-14
 last_modified_at: 2026-04-17

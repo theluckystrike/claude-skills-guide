@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Says Response Incomplete — How to Fix"
+title: "Claude Says Response Incomplete — How to Fix (2026)"
 description: "Fix Claude Code incomplete or truncated output. Adjust context limits, prompt structure, and output settings. Tested solution."
 date: 2026-03-14
 last_modified_at: 2026-04-17

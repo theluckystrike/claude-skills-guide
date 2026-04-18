@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix Chrome Cast Buffering — Quick Guide"
-description: "Discover why your Chrome Cast buffers and learn practical fixes ranging from network optimization to developer-level debugging techniques."
+title: "Fix Chrome Cast Buffering — Quick Guide (2026)"
+description: "Fix chrome cast buffering — quick guide fast. Step-by-step commands and config. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

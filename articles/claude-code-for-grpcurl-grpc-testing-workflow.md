@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "gRPC Testing with Claude Code: grpcurl Workflow"
+title: "How to Use gRPC Testing with Claude Code: grpcurl (2026)"
 description: "Streamline gRPC testing with Claude Code and grpcurl. Practical examples for API testing, load testing, and automated service verification."
 date: 2026-03-15
 last_modified_at: 2026-04-17

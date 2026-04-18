@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Can Claude Code Work Without Internet? Guide"
-description: "Can Claude Code work offline? Yes, partially. Set up local models, offline skills, and self-hosted MCP for air-gapped environments."
+title: "Can Claude Code Work Without Internet? Guide (2026)"
+description: "Can Claude Code Work Without Internet? Guide. Practical guide with working examples for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

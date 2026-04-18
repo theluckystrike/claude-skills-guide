@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Monthly Cost Breakdown — Developer Guide"
+title: "Claude Code Monthly Cost Breakdown — Developer Guide (2026)"
 description: "Claude Code Monthly Cost Breakdown — Developer Guide. Practical guide with working examples for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Qwik Store Reactive State Management"
+title: "How to Use Qwik Store Reactive State Management (2026)"
 description: "Master Qwik's reactive state management with useStore and useSignal. Learn patterns for building performant, resumable applications with proper state."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Slow Response — How to Fix Latency"
+title: "Fix Slow Response Latency (2026)"
 description: "Fix slow Claude Code response times. Trim context, optimize skills, and tune performance settings. Tested speed improvements."
 date: 2026-03-14
 last_modified_at: 2026-04-17

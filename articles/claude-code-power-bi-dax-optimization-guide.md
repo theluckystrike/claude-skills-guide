@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Power BI DAX Optimization with Claude Code Guide"
+title: "How to Use Power BI DAX Optimization with Claude Code (2026)"
 description: "Optimize Power BI DAX formulas with Claude Code. Practical examples and code snippets for faster report performance and cleaner measures."
 date: 2026-03-14
 last_modified_at: 2026-04-17

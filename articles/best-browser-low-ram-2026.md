@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Best Browser for Low RAM 2026 — Compared"
-description: "Browser RAM usage comparison 2026: Chrome vs Firefox vs Brave vs Edge. Tested with real memory benchmarks on low-RAM systems."
+description: "Best browser for low ram 2026 — compared for developers. Each one tested with real projects."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

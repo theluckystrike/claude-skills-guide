@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Verbose Output Not Working — Fix"
+title: "Fix Claude Code Verbose Output Not Working (2026)"
 description: "Fix Claude Code output formatting issues. Markdown rendering, code block problems, and verbose output display differences resolved."
 date: 2026-03-13
 last_modified_at: 2026-04-17

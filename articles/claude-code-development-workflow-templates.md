@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Development Workflow Templates"
+title: "How to Use Development Workflow Templates (2026)"
 description: "Practical workflow templates for structuring Claude Code projects, from skill creation to complex multi-agent systems. Includes code examples and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

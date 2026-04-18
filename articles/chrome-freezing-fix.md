@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome Keeps Freezing — How to Fix It"
-description: "Fix Chrome freezing and unresponsive page errors. Tested solutions using flags, task manager, and extension cleanup. Works fast."
+title: "Fix Chrome Keeps Freezing (2026)"
+description: "Fix Chrome freezing and unresponsive page errors. Tested solutions using flags, task manager, and extension cleanup. Works fast. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

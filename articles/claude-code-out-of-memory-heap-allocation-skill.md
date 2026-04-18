@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Out Of Memory Heap Allocation — Developer Guide"
+title: "Claude Code Out Of Memory Heap Allocation — Developer (2026)"
 description: "Claude Code Out Of Memory Heap Allocation — Developer. Practical guide with working examples for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

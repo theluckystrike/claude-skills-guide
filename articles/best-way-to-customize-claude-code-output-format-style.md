@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Output Format — How to Customize"
-description: "Customize Claude Code verbose output and response style. Configure CLAUDE.md, skill metadata, and prompt patterns for clean output."
+title: "Claude Code Output Format — How to Customize (2026)"
+description: "Claude Code Output Format — How to Customize. Practical guide with working examples for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

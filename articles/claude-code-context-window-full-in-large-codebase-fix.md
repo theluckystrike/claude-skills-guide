@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Context Window Full — How to Fix"
+title: "Fix Claude Code Context Window Full (2026)"
 description: "Fix Claude Code context window full errors in large codebases. Workspace config, file exclusions, and memory optimization that work."
 date: 2026-03-14
 last_modified_at: 2026-04-17

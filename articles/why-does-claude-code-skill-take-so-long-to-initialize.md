@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Keeps Timing Out — Fix Slow Init"
+title: "Why Claude Code Keeps Timing Out Slow Init (2026)"
 description: "Fix Claude Code timing out during skill initialization. Speed up slow loading with caching, lazy loading, and config optimization."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Quizlet Helper Chrome Extension: Developer Guide"
+title: "Quizlet Helper Chrome Extension: Developer Guide (2026)"
 description: "Quizlet Helper Chrome Extension: Developer Guide. Practical guide with working examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Vonage Voice API Workflow"
+title: "How to Use Vonage Voice API (2026)"
 description: "Learn how to use Claude Code to build, manage, and automate Vonage Voice API workflows with practical examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

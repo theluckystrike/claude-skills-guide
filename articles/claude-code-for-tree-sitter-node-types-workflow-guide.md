@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Tree-sitter Node Types with Claude Code — Guide"
-description: "Use Claude Code for Tree-sitter node type workflows. Parse, analyze, and transform code with practical tree-sitter examples."
+title: "How to Use Tree-sitter Node Types with Claude Code (2026)"
+description: "Use Claude Code for Tree-sitter node type workflows. Parse, analyze, and transform code with practical tree-sitter examples. Tested on Node.js."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide

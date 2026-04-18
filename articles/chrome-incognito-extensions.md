@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Incognito Extensions — Developer Guide"
-description: "Enable and configure Chrome extensions in incognito mode. Covers limitations, manifest settings, and privacy considerations for developers."
+title: "Chrome Incognito Extensions — Developer Guide (2026)"
+description: "Chrome Incognito Extensions — Developer Guide. Practical guide with working examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

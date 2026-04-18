@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use For Maxwell Cdc — Complete Developer"
+title: "How to Use For Maxwell Cdc — Complete Developer (2026)"
 description: "Learn how to use Claude Code with Maxwell CDC for real-time data streaming and change data capture workflows. Includes practical examples, skill."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Error Rate Limit 429. How to Handle"
-description: "Practical guide to handling HTTP 429 rate limit errors when using Claude Code. Includes retry strategies, exponential backoff patterns, and best."
+title: "Claude Code Error Rate Limit 429. How to Handle (2026)"
+description: "Learn how to claude code error rate limit 429. how to handle. Step-by-step with working examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [troubleshooting]

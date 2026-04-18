@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Next-Auth getServerSession: Claude Code Guide"
+title: "How to Use Next-Auth getServerSession: Claude Code (2026)"
 description: "Implement getServerSession with authOptions in Next-Auth using Claude Code. Provider integration, route protection, and session management guide."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "AI-Assisted Database Schema Design Workflow"
+title: "How to Use AI-Assisted Database Schema Design"
 description: "A practical workflow for designing database schemas with AI assistance. Learn how to use Claude Code skills to accelerate schema design."
 date: 2026-03-14
 last_modified_at: 2026-04-17

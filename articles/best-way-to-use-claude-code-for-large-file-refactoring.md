@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Large Codebase Refactoring: Best Way"
+title: "Claude Code Large Codebase Refactoring: Best Way (2026)"
 description: "Claude code memory plugin large codebase refactoring guide. Incremental strategies to avoid context overflow and refactor big files effectively."
 date: 2026-03-14
 last_modified_at: 2026-04-17

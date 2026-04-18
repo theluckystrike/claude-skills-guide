@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Web3Modal Wallet Integration Guide"
+title: "How to Use Web3Modal Wallet Integration (2026)"
 description: "Integrate Web3Modal wallet connections into your dApp using Claude Code. Practical examples for wallet connect, disconnect, and event handling."
 date: 2026-03-15
 last_modified_at: 2026-04-17

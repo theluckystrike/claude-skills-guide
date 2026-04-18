@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude API Error Handling — Best Practices"
-description: "Handle Claude API errors properly with retry logic, rate limiting, and error codes. Code examples and best practices for production."
+title: "Claude API Error Handling — Best Practices (2026)"
+description: "Claude API Error Handling — Best Practices. Practical guide with working examples for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]

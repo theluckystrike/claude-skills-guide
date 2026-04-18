@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix zsh: command not found: claude"
+title: "Fix zsh: command not found: claude (2026)"
 description: "Fix zsh command not found claude errors. Resolve PATH issues, shell configuration, and skill execution failures with step-by-step solutions."
 date: 2026-03-14
 last_modified_at: 2026-04-17

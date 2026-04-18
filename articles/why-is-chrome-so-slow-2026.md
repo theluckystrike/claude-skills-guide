@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Why Is Chrome So Slow in 2026? Quick Fixes"
-description: "Chrome running slow in 2026? Fix it with these developer-tested tweaks for extensions, memory, and rendering. Results in minutes."
+description: "Chrome running slow in 2026? Fix it with these developer-tested tweaks for extensions, memory, and rendering. Results in minutes. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

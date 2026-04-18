@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Code Review Workflow with Claude Code"
+title: "Code Review Workflow with Claude Code (2026)"
 description: "Set up automated code review with Claude Code. Self-review workflows using skills, prompts, and automation patterns for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

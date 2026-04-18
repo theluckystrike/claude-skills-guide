@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Memory Optimization for Large Codebases"
+title: "How to Use Memory Optimization for Large Codebases (2026)"
 description: "Claude code memory plugin for large codebase optimization. Reduce memory usage, prevent leaks, and improve performance with practical strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17

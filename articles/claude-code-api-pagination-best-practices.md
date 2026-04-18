@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code API Pagination: Best Practices"
+title: "Claude Code API Pagination: Best Practices (2026)"
 description: "Claude Code API pagination best practices. Implement cursor-based pagination, handle large datasets, and optimize API response performance."
 date: 2026-03-14
 last_modified_at: 2026-04-17

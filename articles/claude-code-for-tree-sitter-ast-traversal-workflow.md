@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Tree-Sitter AST Traversal with Claude Code Guide"
+title: "How to Use Tree-Sitter AST Traversal with Claude Code (2026)"
 description: "Master tree-sitter JavaScript node types and AST traversal with Claude Code. Find import_statement nodes and analyze code structure automatically."
 date: 2026-03-15
 last_modified_at: 2026-04-17

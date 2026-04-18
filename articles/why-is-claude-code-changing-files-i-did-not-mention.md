@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Why Is Claude Code Changing Files I Did — Developer Guide"
-description: "Understand why Claude Code modifies files you didn't mention. Control skill auto-invocation, context awareness, and file modification scope."
+description: "Why is claude code changing files i did — developer guide and how to stop it. Root causes and fixes explained."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [troubleshooting]

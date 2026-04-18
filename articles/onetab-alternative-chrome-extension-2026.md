@@ -2,7 +2,7 @@
 
 layout: default
 title: "Best OneTab Alternatives for Chrome 2026"
-description: "Top OneTab alternative extensions for Chrome 2026. Tab management tools compared by features, performance, and sync capabilities."
+description: "Top OneTab alternative extensions for Chrome 2026. Tab management tools compared by features, performance, and sync capabilities. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Timeout Fix: Increase Skill Time Limits"
+title: "Fix Timeout — Increase Skill Time Limits (2026)"
 description: "Fix claude timeout errors in Claude Code skills. Step-by-step guide to increase execution limits and prevent timeouts in long-running tasks."
 date: 2026-03-14
 last_modified_at: 2026-04-17

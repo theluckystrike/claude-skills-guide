@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Amplitude Analytics Workflow"
+title: "How to Use Amplitude Analytics (2026)"
 description: "Learn how to build Claude Code skills that integrate with Amplitude analytics for tracking events, analyzing user behavior, and generating insights."
 date: 2026-03-15
 last_modified_at: 2026-04-17

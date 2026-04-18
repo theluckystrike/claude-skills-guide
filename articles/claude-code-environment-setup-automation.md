@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Environment Setup Automation"
+title: "Claude Code Environment Setup Automation (2026)"
 description: "Learn how to automate your Claude Code environment setup with skills, hooks, and custom scripts for streamlined development workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

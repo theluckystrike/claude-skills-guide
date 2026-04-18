@@ -2,7 +2,7 @@
 
 layout: default
 title: "Best Tampermonkey Alternatives for Chrome 2026"
-description: "Top Tampermonkey alternatives compared: Violentmonkey, Userscripts, and more. Features, performance, and privacy ranked for 2026."
+description: "Top Tampermonkey alternatives compared: Violentmonkey, Userscripts, and more. Features, performance, and privacy ranked for 2026. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Request Timed Out — Quick Fix (2026)"
+title: "Fix Claude Code Request Timed Out"
 description: "Fix 'request timed out' errors in Claude Code. Timeout settings, connection config, and MCP timeout solutions."
 date: 2026-03-14
 last_modified_at: 2026-04-17

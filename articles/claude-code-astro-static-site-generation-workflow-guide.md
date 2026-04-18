@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code + Astro Workflow Guide"
+title: "How to Use Astro Workflow (2026)"
 description: "Build static sites with Claude Code and Astro. Workflow patterns, skill integration, and automation recipes for 2026."
 date: 2026-03-13
 last_modified_at: 2026-04-17

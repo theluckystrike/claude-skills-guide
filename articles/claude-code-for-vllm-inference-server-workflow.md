@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for vLLM Inference Server Workflow"
+title: "How to Use vLLM Inference Server (2026)"
 description: "Learn how to integrate Claude Code into your vLLM inference server workflow for efficient LLM deployment and management."
 date: 2026-03-15
 last_modified_at: 2026-04-17

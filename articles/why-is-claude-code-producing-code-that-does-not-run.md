@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Why Is Claude Code Producing Code That — Developer Guide"
-description: "Understand why Claude Code sometimes generates non-runnable code and learn practical strategies to improve code generation quality using Claude Code."
+description: "Why is claude code producing code that — developer guide and how to stop it. Root causes and fixes explained."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [troubleshooting]

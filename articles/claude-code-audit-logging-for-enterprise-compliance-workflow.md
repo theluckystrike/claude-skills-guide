@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Audit Logging for Enterprise Compliance"
+title: "How to Use Audit Logging for Enterprise Compliance (2026)"
 description: "Learn how to implement comprehensive audit logging in Claude Code for enterprise compliance. Practical patterns, code examples, and actionable advice."
 date: 2026-03-14
 last_modified_at: 2026-04-17

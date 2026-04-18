@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome Performance Flags — Developer Guide"
-description: "Learn how to use Chrome performance flags to optimize browser speed, reduce memory usage, and enhance your development workflow."
+title: "Chrome Performance Flags — Developer Guide (2026)"
+description: "Learn how to use Chrome performance flags to optimize browser speed, reduce memory usage, and enhance your development workflow. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

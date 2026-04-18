@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Docker Integration: Container Tutorial"
+title: "How to Use Docker Integration: Container (2026)"
 description: "Set up Claude Code Docker integration with containers. Isolated, reproducible AI-assisted development environments with step-by-step setup."
 date: 2026-03-14
 last_modified_at: 2026-04-17

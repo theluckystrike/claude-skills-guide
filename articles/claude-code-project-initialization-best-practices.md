@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Vibe Coding Best Practices — Claude Code Setup"
+title: "Vibe Coding Best Practices — Claude Code Setup (2026)"
 description: "Claude Code project initialization best practices. CLAUDE.md config, skill loading, and project structure setup for vibe coding workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
