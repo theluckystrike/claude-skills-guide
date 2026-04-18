@@ -285,9 +285,11 @@
     </ul>
   </section>
   {% endif %}
+  {% unless page.url == "/" %}
   <footer aria-label="Footer">
     <p>&copy; 2026 Claude Code Guides &middot; Built by a <a href="https://www.upwork.com" target="_blank" rel="noopener noreferrer">Top Rated Plus</a> developer &middot; 2,600+ guides &middot; <a href="/about/">About</a></p>
   </footer>
+  {% endunless %}
 
   <!-- In-Content CTA: injected at ~50% article depth -->
   {% if page.date %}
