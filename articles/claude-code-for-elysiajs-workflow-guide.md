@@ -1,0 +1,77 @@
+---
+layout: default
+title: "Claude Code for ElysiaJS — Workflow Guide"
+description: "Build type-safe Bun APIs with ElysiaJS and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+date: 2026-04-18
+permalink: /claude-code-for-elysiajs-workflow-guide/
+render_with_liquid: false
+categories: [workflow, niche-tools]
+tags: [claude-code, elysiajs, workflow]
+---
+
+## The Setup
+
+You are building an API with ElysiaJS, the Bun-native web framework with end-to-end type safety, automatic OpenAPI generation, and Eden Treaty for type-safe client-server communication. Claude Code can write Elysia APIs, but it generates Express patterns and misses Elysia's unique features.
+
+## What Claude Code Gets Wrong By Default
+
+1. **Writes Express middleware patterns.** Claude uses `app.use((req, res, next) => {})`. Elysia uses a plugin system with `.use(plugin)` and lifecycle hooks (onBeforeHandle, onAfterHandle) instead of the middleware chain pattern.
+
+2. **Ignores the type schema system.** Claude creates endpoints without type definitions. Elysia infers types from `t.Object({ name: t.String() })` schema definitions, providing compile-time validation and automatic OpenAPI documentation.
+
+3. **Uses separate validation libraries.** Claude adds Zod or Joi for request validation. Elysia has built-in validation via `t` (TypeBox) — `body: t.Object({ email: t.String({ format: 'email' }) })`.
+
+4. **Creates standalone API clients.** Claude writes separate Axios or fetch wrappers. Elysia's Eden Treaty generates a fully typed client directly from your server types — change the API and the client types update automatically.
+
+## The CLAUDE.md Configuration
+
+```
+# ElysiaJS API Project
+
+## Framework
+- Runtime: Bun
+- API: ElysiaJS (type-safe, Bun-native)
+- Validation: Built-in TypeBox (t.Object, t.String, etc.)
+- Client: Eden Treaty for type-safe RPC-style client
+
+## Elysia Rules
+- Create app: const app = new Elysia()
+- Routes: app.get('/path', handler, { body: t.Object({...}) })
+- Schema validation with t: t.String(), t.Number(), t.Optional()
+- Plugins: app.use(cors()).use(swagger())
+- Groups: app.group('/api', app => app.get('/users', ...))
+- Guards: .guard({ beforeHandle: authCheck }, app => ...)
+- Eden client: import { treaty } from '@elysiajs/eden'
+- Response types inferred from handler return type
+
+## Conventions
+- Entry: src/index.ts with Elysia app
+- Routes grouped by domain: .group('/users', userRoutes)
+- Plugins for cross-cutting concerns (auth, cors, logging)
+- Schemas defined inline on routes for co-location
+- Eden Treaty client exported from src/client.ts
+- Use derive() for dependency injection
+- Error handling: .onError(({ code, error }) => ...)
+```
+
+## Workflow Example
+
+You want to create a typed CRUD API with client generation. Prompt Claude Code:
+
+"Create an ElysiaJS API for managing tasks with GET (list), POST (create), PUT (update), and DELETE endpoints. Add TypeBox validation on all request bodies. Generate an Eden Treaty client for the frontend."
+
+Claude Code should create routes with `t.Object()` schemas for request bodies, grouped under `/tasks`, with proper response types inferred from handlers, and export the Elysia app type for Eden Treaty client generation: `const client = treaty<typeof app>('http://localhost:3000')`.
+
+## Common Pitfalls
+
+1. **Missing Bun runtime.** Claude tries to run Elysia with Node.js. ElysiaJS requires Bun — it uses Bun-specific APIs for performance. Install Bun and run with `bun run src/index.ts`, not `node` or `tsx`.
+
+2. **Plugin order affecting types.** Claude adds plugins after route definitions. Elysia's type system chains through plugins — auth plugins must be `.use()`'d before routes that depend on the auth context, or the derived types are unavailable.
+
+3. **Eden Treaty URL mismatch.** Claude hardcodes the server URL in the Eden client. The treaty URL must match exactly where the Elysia server runs. Use an environment variable: `treaty<typeof app>(process.env.API_URL)` to handle different environments.
+
+## Related Guides
+
+- [Using Claude Code with Bun Runtime JavaScript Projects](/using-claude-code-with-bun-runtime-javascript-projects/)
+- [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
+- [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

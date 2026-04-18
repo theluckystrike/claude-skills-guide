@@ -1,0 +1,76 @@
+---
+layout: default
+title: "Claude Code for Rio Terminal — Workflow Guide"
+description: "Configure Rio terminal for Claude Code workflows. Tested setup with copy-paste CLAUDE.md config."
+date: 2026-04-18
+permalink: /claude-code-for-rio-terminal-workflow-guide/
+render_with_liquid: false
+categories: [workflow, niche-tools]
+tags: [claude-code, rio-terminal, workflow]
+---
+
+## The Setup
+
+You are running Claude Code in Rio, a hardware-accelerated terminal built with Rust and WebGPU that supports tabs, split panes, and a configurable vi mode. Rio uses TOML configuration and provides built-in multiplexing without needing tmux. Claude Code can configure terminals, but it generates iTerm2 or Alacritty settings instead of Rio's configuration format.
+
+## What Claude Code Gets Wrong By Default
+
+1. **References iTerm2 preferences panes.** Claude says "open iTerm2 Preferences > Profiles." Rio is configured entirely through `~/.config/rio/config.toml` — there is no GUI preferences panel.
+
+2. **Suggests tmux for splits and tabs.** Claude tells you to install tmux for pane management. Rio has built-in tabs and split panes with keyboard shortcuts — tmux is optional, not required.
+
+3. **Uses Alacritty TOML structure.** Claude writes Alacritty-style TOML configuration. While both use TOML, Rio's configuration keys and structure differ — `[fonts]` vs `[font]`, `[navigation]` for tabs, etc.
+
+4. **Ignores Rio's vi mode and search.** Claude suggests installing shell plugins for vi bindings. Rio has a built-in vi mode for scrollback navigation and an inline search feature — no plugins needed.
+
+## The CLAUDE.md Configuration
+
+```
+# Rio Terminal Configuration
+
+## Terminal
+- Emulator: Rio (GPU-accelerated with WebGPU)
+- Config: ~/.config/rio/config.toml
+- Features: tabs, splits, vi mode, search
+- Rendering: WebGPU (hardware accelerated)
+
+## Rio Rules
+- Config: TOML format at ~/.config/rio/config.toml
+- Tabs: built-in (no tmux needed for tabs)
+- Splits: built-in horizontal/vertical splits
+- Vi mode: built-in scrollback navigation
+- Fonts: [fonts] section with family and size
+- Theme: [colors] section or theme file import
+- Navigation: [navigation] for tab bar configuration
+
+## Conventions
+- Use Rio's built-in tabs and splits for Claude Code
+- Font: monospace at 14px for readability
+- Scrollback: set history_size for Claude Code output
+- Vi mode for navigating long Claude Code output
+- Search: built-in search for finding in scrollback
+- Key bindings: [[keyboard]] for custom shortcuts
+- Padding: add padding for comfortable reading
+```
+
+## Workflow Example
+
+You want to configure Rio optimally for Claude Code development sessions. Prompt Claude Code:
+
+"Configure Rio terminal with JetBrains Mono font at size 14, a Catppuccin Mocha color theme, increased scrollback for long Claude Code output, and key bindings for creating splits and navigating between them."
+
+Claude Code should create `~/.config/rio/config.toml` with `[fonts]` section for JetBrains Mono, `[colors]` section with Catppuccin Mocha values, `history_size` set to 10000 or higher, and `[[keyboard]]` entries for split creation and navigation shortcuts.
+
+## Common Pitfalls
+
+1. **Scrollback too small for Claude Code.** Claude uses default scrollback settings. Claude Code can produce very long output. Set `history_size = 10000` or higher in the config to ensure you can scroll back through complete outputs.
+
+2. **WebGPU not available on older systems.** Claude configures Rio with WebGPU features that may not work. Rio falls back to other renderers if WebGPU is unavailable, but performance may differ. Check `rio --version` for renderer support.
+
+3. **Font not installed.** Claude configures JetBrains Mono without checking installation. Rio shows a fallback font if the configured font is missing. Install the font first or use a font known to be installed on your system.
+
+## Related Guides
+
+- [Claude Code for Alacritty Workflow Guide](/claude-code-for-alacritty-workflow-guide/)
+- [Claude Code for Ghostty Terminal Workflow](/claude-code-for-ghostty-terminal-workflow-tutorial/)
+- [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)

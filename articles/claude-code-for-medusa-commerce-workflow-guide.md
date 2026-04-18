@@ -1,0 +1,76 @@
+---
+layout: default
+title: "Claude Code for Medusa Commerce — Guide"
+description: "Build headless e-commerce with Medusa and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+date: 2026-04-18
+permalink: /claude-code-for-medusa-commerce-workflow-guide/
+render_with_liquid: false
+categories: [workflow, niche-tools]
+tags: [claude-code, medusa, workflow]
+---
+
+## The Setup
+
+You are building an e-commerce backend with Medusa, an open-source headless commerce platform built with Node.js. Medusa provides a modular architecture with products, orders, carts, payments, and shipping out of the box, plus an extensible plugin system. Claude Code can build e-commerce features, but it generates Shopify Liquid templates or WooCommerce PHP instead of Medusa's TypeScript API approach.
+
+## What Claude Code Gets Wrong By Default
+
+1. **Creates Shopify Liquid templates.** Claude writes `.liquid` template files with Shopify's `{% for product in collections %}` syntax. Medusa is headless — there are no server-rendered templates. You build a separate frontend (Next.js, Gatsby) that calls Medusa's REST or GraphQL API.
+
+2. **Uses WooCommerce hooks and filters.** Claude writes PHP action hooks for checkout customization. Medusa uses TypeScript subscribers and middleware — `@Subscriber()` decorators for event handling and custom API routes for extensions.
+
+3. **Ignores Medusa's module system.** Claude builds features as standalone Express routes. Medusa v2 uses a modular architecture where features are organized into modules with services, repositories, and migrations — custom logic extends existing modules.
+
+4. **Hardcodes payment processing.** Claude writes Stripe integration from scratch. Medusa has official payment plugins (`medusa-payment-stripe`, `medusa-payment-paypal`) that handle the payment flow — install and configure, do not rewrite.
+
+## The CLAUDE.md Configuration
+
+```
+# Medusa Commerce Project
+
+## Commerce
+- Platform: Medusa (open-source headless commerce)
+- Backend: Node.js/TypeScript API
+- Frontend: Separate (Next.js storefront)
+- Database: PostgreSQL with TypeORM/MikroORM
+
+## Medusa Rules
+- API: REST endpoints at /store/* and /admin/*
+- Modules: services, repositories, subscribers
+- Plugins: medusa-payment-stripe, medusa-fulfillment-*
+- Events: @Subscriber() for order, cart, payment events
+- Custom API: extend with custom routes in src/api/
+- Admin: Medusa Admin dashboard (React)
+- Storefront: Next.js starter or custom frontend
+
+## Conventions
+- Backend: src/services/ for business logic
+- API routes: src/api/routes/ for custom endpoints
+- Subscribers: src/subscribers/ for event handlers
+- Migrations: medusa migrations run for schema changes
+- Plugins in medusa-config.js plugins array
+- Use Medusa's built-in cart/order/payment flow
+- Seed data: medusa seed -f data/seed.json
+```
+
+## Workflow Example
+
+You want to add a custom loyalty points system to your Medusa store. Prompt Claude Code:
+
+"Create a Medusa module for loyalty points. Add a service that awards points on order completion, a custom API endpoint to check a customer's points balance, and a subscriber that listens to the order.placed event. Store points in a custom database table."
+
+Claude Code should create a `LoyaltyService` extending `TransactionBaseService`, a migration for the `loyalty_points` table, a subscriber listening to `order.placed` that calls the service, and a custom API route at `/store/loyalty/balance/:customerId` that returns the points balance.
+
+## Common Pitfalls
+
+1. **Modifying core Medusa files directly.** Claude edits files in `node_modules/medusa` or core source files. Medusa is extended through services, subscribers, and plugins — never modify core files as they are overwritten on updates.
+
+2. **Missing middleware for custom routes.** Claude creates API routes without authentication middleware. Medusa's store routes use session-based auth and admin routes use JWT — custom routes need the appropriate middleware applied.
+
+3. **Database migrations not running.** Claude creates a new entity but forgets the migration. Medusa uses TypeORM migrations — run `medusa migrations run` after adding new entities or modifying existing ones.
+
+## Related Guides
+
+- [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
+- [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
+- [Claude Code Database Schema Design Guide](/claude-code-database-schema-design-guide/)

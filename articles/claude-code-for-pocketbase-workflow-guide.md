@@ -1,0 +1,77 @@
+---
+layout: default
+title: "Claude Code for PocketBase — Workflow Guide"
+description: "Build backends fast with PocketBase and Claude Code setup. Tested setup with copy-paste CLAUDE.md config."
+date: 2026-04-18
+permalink: /claude-code-for-pocketbase-workflow-guide/
+render_with_liquid: false
+categories: [workflow, niche-tools]
+tags: [claude-code, pocketbase, workflow]
+---
+
+## The Setup
+
+You are building a backend with PocketBase, the open-source backend in a single Go binary that provides a database, REST API, authentication, file storage, and admin dashboard out of the box. Claude Code can write PocketBase integrations, but it creates Express APIs and PostgreSQL schemas instead of using PocketBase's SDK and collection system.
+
+## What Claude Code Gets Wrong By Default
+
+1. **Builds an Express API server.** Claude creates route handlers and database connections. PocketBase provides all CRUD endpoints automatically — you define collections through the admin UI or migrations and get REST/realtime APIs for free.
+
+2. **Sets up authentication from scratch.** Claude writes JWT and bcrypt auth logic. PocketBase has built-in auth with email/password, OAuth2, and magic links — configure it in the admin panel, not code.
+
+3. **Uses PostgreSQL or MongoDB.** Claude sets up external databases. PocketBase uses embedded SQLite — no database server needed. Data, auth, and files are all handled by the single PocketBase binary.
+
+4. **Creates file upload infrastructure.** Claude configures S3 and multer for file handling. PocketBase has built-in file storage in collections with automatic thumbnail generation.
+
+## The CLAUDE.md Configuration
+
+```
+# PocketBase Backend Project
+
+## Backend
+- Platform: PocketBase (single binary backend)
+- Database: Embedded SQLite (automatic)
+- Auth: Built-in (email, OAuth2, magic link)
+- SDK: pocketbase (JavaScript SDK for client)
+
+## PocketBase Rules
+- Collections defined in admin UI or migrations
+- CRUD API auto-generated: /api/collections/{name}/records
+- SDK: const pb = new PocketBase('http://127.0.0.1:8090')
+- Auth: pb.collection('users').authWithPassword(email, password)
+- Realtime: pb.collection('posts').subscribe('*', callback)
+- Files: upload via FormData, access via pb.files.getURL()
+- Expand relations: ?expand=author,comments
+- Filter: ?filter=(title~'hello' && created>'2024-01-01')
+
+## Conventions
+- PocketBase binary in pb/ directory
+- Migrations in pb/pb_migrations/ (JavaScript)
+- Client SDK in lib/pocketbase.ts
+- Auth state: pb.authStore (auto-persisted)
+- Realtime subscriptions for live data
+- Admin panel: http://localhost:8090/_/
+- Never build REST endpoints — PocketBase provides them
+```
+
+## Workflow Example
+
+You want to create a blog with user authentication and image uploads. Prompt Claude Code:
+
+"Set up PocketBase collections for a blog. Create users, posts (with title, content, cover image, author relation), and comments collections. Write the client-side code for creating a post with an image upload and listing posts with expanded author data."
+
+Claude Code should define collections via migration files, write client code using `pb.collection('posts').create(formData)` with the cover image in FormData, and list posts with `pb.collection('posts').getList(1, 20, { expand: 'author' })` to include the author's name and avatar.
+
+## Common Pitfalls
+
+1. **Auth store not persisted across page reloads.** Claude creates the PocketBase instance but does not configure auth store persistence. Use `pb.authStore.onChange()` to save tokens to localStorage, or PocketBase's built-in cookie store for SSR frameworks.
+
+2. **Realtime subscription cleanup.** Claude subscribes to collections but never unsubscribes. PocketBase subscriptions use WebSocket connections — unsubscribe with `pb.collection('posts').unsubscribe()` when the component unmounts.
+
+3. **File URL construction.** Claude builds file URLs manually with string concatenation. PocketBase provides `pb.files.getURL(record, filename)` which handles the correct URL format including CDN paths and thumb sizes.
+
+## Related Guides
+
+- [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
+- [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
+- [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)

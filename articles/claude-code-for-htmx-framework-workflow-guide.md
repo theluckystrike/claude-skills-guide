@@ -1,0 +1,77 @@
+---
+layout: default
+title: "Claude Code for HTMX — Workflow Guide"
+description: "Build modern UIs with HTMX hypermedia and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+date: 2026-04-18
+permalink: /claude-code-for-htmx-framework-workflow-guide/
+render_with_liquid: false
+categories: [workflow, niche-tools]
+tags: [claude-code, htmx, workflow]
+---
+
+## The Setup
+
+You are building a web application with HTMX, the library that lets you access modern browser features directly from HTML using attributes instead of writing JavaScript. HTMX replaces SPAs with a hypermedia-driven approach where the server returns HTML fragments. Claude Code can generate HTMX code, but it defaults to React/Vue SPA patterns with JSON APIs.
+
+## What Claude Code Gets Wrong By Default
+
+1. **Creates JSON REST APIs.** Claude returns `res.json({ data })` from endpoints. HTMX expects HTML fragment responses — the server renders HTML partials that replace parts of the page, not JSON that needs client-side rendering.
+
+2. **Writes JavaScript event handlers.** Claude adds `onclick="fetchData()"` JavaScript handlers. HTMX uses HTML attributes: `hx-get="/data" hx-target="#results"` — the HTML itself declares the behavior.
+
+3. **Sets up React or Vue for interactivity.** Claude installs a frontend framework for dynamic updates. HTMX provides the interactivity through `hx-*` attributes — no framework build step, no virtual DOM, no JavaScript bundling needed.
+
+4. **Implements client-side routing.** Claude builds a client-side router with pushState. HTMX uses `hx-push-url="true"` to update the URL after server requests and `hx-boost` to upgrade links for AJAX navigation.
+
+## The CLAUDE.md Configuration
+
+```
+# HTMX Hypermedia Project
+
+## Frontend
+- Interactivity: HTMX (HTML attributes, no framework)
+- Server: returns HTML fragments, NOT JSON
+- Styling: Tailwind CSS or plain CSS
+- Template engine: server-side (Handlebars, EJS, Jinja2, Go templates)
+
+## HTMX Rules
+- Server endpoints return HTML fragments, not JSON
+- hx-get/hx-post: make requests from any element
+- hx-target: where to put the response HTML
+- hx-swap: how to insert (innerHTML, outerHTML, beforeend, etc.)
+- hx-trigger: when to fire (click, submit, load, revealed)
+- hx-indicator: show loading indicator during request
+- hx-push-url: update browser URL after request
+- No JavaScript needed — behavior is in HTML attributes
+
+## Conventions
+- Server renders full pages AND HTML partials
+- Partial templates in views/partials/ directory
+- HX-Request header identifies HTMX requests (return partial, not full page)
+- Use hx-boost on <body> for progressive enhancement
+- Loading states with .htmx-indicator class
+- Form submission: hx-post with hx-target for response placement
+- Never return JSON from HTMX endpoints
+```
+
+## Workflow Example
+
+You want to create an infinite scroll list with HTMX. Prompt Claude Code:
+
+"Create an HTMX-powered product listing with infinite scroll. The server should render product cards as HTML fragments. When the user scrolls to the bottom, load the next page of products and append them to the list."
+
+Claude Code should create a server endpoint that returns HTML partial containing product card markup, an initial page with `hx-get="/products?page=2" hx-trigger="revealed" hx-swap="afterend"` on a sentinel element at the bottom, and each response includes the next sentinel element with an incremented page number.
+
+## Common Pitfalls
+
+1. **Returning full HTML pages instead of fragments.** Claude returns complete HTML documents (with `<html>`, `<head>`) from HTMX endpoints. Check for the `HX-Request` header to return only the fragment, not the full page layout.
+
+2. **Missing `hx-swap` leading to wrong insertion.** Claude omits `hx-swap` which defaults to `innerHTML`. For appending items to a list, use `hx-swap="beforeend"`. For replacing an entire element, use `hx-swap="outerHTML"`.
+
+3. **CSRF token handling.** Claude adds forms without CSRF protection. HTMX does not automatically include CSRF tokens. Use `hx-headers='{"X-CSRF-Token": "..."}` or configure a meta tag with `hx-vals` to include the token in all requests.
+
+## Related Guides
+
+- [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)
+- [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
+- [Vibe Coding for Web Apps NextJS Vercel Guide](/vibe-coding-for-web-apps-nextjs-vercel-guide/)

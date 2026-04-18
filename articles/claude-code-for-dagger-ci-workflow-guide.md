@@ -1,0 +1,75 @@
+---
+layout: default
+title: "Claude Code for Dagger CI — Workflow Guide"
+description: "Write portable CI pipelines with Dagger and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+date: 2026-04-18
+permalink: /claude-code-for-dagger-ci-workflow-guide/
+render_with_liquid: false
+categories: [workflow, niche-tools]
+tags: [claude-code, dagger, workflow]
+---
+
+## The Setup
+
+You are building CI/CD pipelines with Dagger, the programmable CI engine that lets you write pipelines as code in TypeScript, Python, or Go. Dagger runs pipelines in containers locally or in any CI system, making them portable and testable. Claude Code can write Dagger pipelines, but it generates GitHub Actions YAML or Jenkins files instead.
+
+## What Claude Code Gets Wrong By Default
+
+1. **Writes YAML CI configuration.** Claude generates `.github/workflows/ci.yml` with YAML steps. Dagger pipelines are written in real programming languages — TypeScript, Python, or Go — not YAML.
+
+2. **Uses CI-specific syntax.** Claude writes `jobs:`, `steps:`, `uses:` GitHub Actions syntax. Dagger uses programmatic container operations: `client.container().from('node:20').withMountedDirectory()`.
+
+3. **Cannot test locally.** Claude's YAML pipelines require pushing to CI to test. Dagger pipelines run identically on your local machine with `dagger run` — test everything before pushing.
+
+4. **Ignores Dagger's caching model.** Claude writes pipelines without caching. Dagger automatically caches container layers and has explicit cache volumes for dependencies like `node_modules` that persist across runs.
+
+## The CLAUDE.md Configuration
+
+```
+# Dagger CI Pipeline Project
+
+## CI/CD
+- Engine: Dagger (programmable CI, containers-as-code)
+- Language: TypeScript SDK (@dagger.io/dagger)
+- Run locally: dagger run node pipeline.ts
+- Run in CI: same pipeline, any CI provider
+
+## Dagger Rules
+- Pipelines are TypeScript/Python/Go code, NOT YAML
+- Entry: connect() to Dagger engine, build pipeline programmatically
+- Containers: client.container().from('image').withExec([...])
+- Mount source: .withMountedDirectory('/src', client.host().directory('.'))
+- Cache: .withMountedCache('/node_modules', client.cacheVolume('node'))
+- Export: .export() for artifacts, .stdout() for logs
+- Composable: extract pipeline steps as functions
+
+## Conventions
+- Pipeline in ci/pipeline.ts (or dagger/ directory)
+- Reusable functions for build, test, deploy steps
+- Cache volumes for package manager caches
+- Secrets via client.setSecret() — never hardcode
+- Test pipeline locally before CI: dagger run node ci/pipeline.ts
+- Same pipeline code runs in GitHub Actions, GitLab CI, etc.
+```
+
+## Workflow Example
+
+You want to create a test and build pipeline for a Node.js project. Prompt Claude Code:
+
+"Create a Dagger pipeline in TypeScript that installs dependencies with pnpm, runs lint, runs tests, and builds the project. Add cache volumes for pnpm store and node_modules. Make each step a reusable function."
+
+Claude Code should create `ci/pipeline.ts` with `connect(async (client) => { })`, container operations using `client.container().from('node:20')`, mounted cache volumes for pnpm, separate functions for `lint()`, `test()`, and `build()` that accept and return container instances, and composed execution.
+
+## Common Pitfalls
+
+1. **Mounting the entire project directory.** Claude mounts the root directory including `node_modules`, `.git`, and build artifacts. Use `.withMountedDirectory()` with exclusion patterns or a `.dockerignore` to avoid sending gigabytes to the Dagger engine.
+
+2. **Missing `withExec` for side effects.** Claude chains container operations but forgets `.withExec()` calls. Dagger uses lazy evaluation — containers are not actually executed until a `.withExec()`, `.stdout()`, or `.export()` forces evaluation.
+
+3. **Secret exposure in logs.** Claude logs pipeline output that contains environment variables with secrets. Use `client.setSecret('name', value)` and mount secrets with `.withSecretVariable()` — Dagger automatically redacts these from logs.
+
+## Related Guides
+
+- [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)
+- [Claude Code CI/CD Pipeline Optimization Guide](/claude-code-ci-cd-pipeline-optimization-guide/)
+- [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
