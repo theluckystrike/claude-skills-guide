@@ -277,6 +277,8 @@ Related Reading
 - [Claude Code for Benchmark Reporting Workflow Tutorial](/claude-code-for-benchmark-reporting-workflow-tutorial/)
 - [Claude Code for CDN Optimization Workflow Tutorial](/claude-code-for-cdn-optimization-workflow-tutorial/)
 - [Claude Code for Code Bookmark Workflow Tutorial Guide](/claude-code-for-code-bookmark-workflow-tutorial-guide/)
+- [Claude Code for Incident Retrospective Workflow Guide](/claude-code-for-incident-retrospective-workflow-guide/)
+- [Claude Code for MLflow Experiment Tracking Workflow](/claude-code-for-mlflow-experiment-tracking-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

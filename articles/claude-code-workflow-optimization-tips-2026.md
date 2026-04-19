@@ -329,6 +329,14 @@ Related Reading
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
 - [Claude Code Output Quality: How to Improve Results](/claude-code-output-quality-how-to-improve-results/)
 - [Getting Started Hub](/getting-started-hub/)
+- [How to Use AI Code Optimization with Claude Code (2026)](/claude-code-for-image-optimization-workflow-guide/)
+- [Claude Code for Vite Bundle Optimization Workflow](/claude-code-for-vite-bundle-optimization-workflow/)
+- [Claude Code For Go Profile — Complete Developer Guide](/claude-code-for-go-profile-guided-optimization/)
+- [Claude Code for GitLab CI Workflow Optimization](/claude-code-for-gitlab-ci-workflow-optimization/)
+- [Claude Code for P99 Latency Optimization Workflow](/claude-code-for-p99-latency-optimization-workflow/)
+- [Claude Code for Inner Loop Optimization Workflow](/claude-code-for-inner-loop-optimization-workflow/)
+- [When to Use Claude Haiku Instead of Opus](/when-to-use-claude-haiku-instead-of-opus/)
+- [Claude Code for Throughput Optimization Workflow Guide](/claude-code-for-throughput-optimization-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

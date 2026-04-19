@@ -74,3 +74,10 @@ Claude Code should create `supabase/functions/stripe-webhook/index.ts` with `Den
 - [Claude Code for Durable Objects CF Workflow Guide](/claude-code-for-durable-objects-cf-workflow-guide/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
 - [Claude Code for SST Serverless Workflow Guide](/claude-code-for-sst-serverless-workflow-guide/)
+
+## Related Articles
+
+- [Claude Code Supabase Storage Signed URL Workflow Guide](/claude-code-supabase-storage-signed-url-workflow-guide/)
+- [Claude Code Supabase Backend Development Workflow Tips](/claude-code-supabase-backend-development-workflow-tips/)
+- [How to Use Supabase Integration: Backend (2026)](/claude-code-with-supabase-backend-integration-guide/)
+- [Claude Code Supabase Auth Row — Complete Developer Guide](/claude-code-supabase-auth-row-level-security-guide/)

@@ -136,6 +136,7 @@ Related Reading
 - [Claude Code Dev Containers: devcontainer.json Setup Guide](/claude-code-dev-containers-devcontainer-json-setup-guide/). Pre-install skills inside containers for offline-ready environments
 - [Claude Skills for Enterprise Security and Compliance Guide](/claude-skills-for-enterprise-security-compliance-guide/). Deploy skills in regulated, security-hardened enterprise environments
 - [Claude Skills Hub](/use-cases-hub/). Explore secure and specialized deployment scenarios for Claude skills
+- [What Are Claude Skills And How — Complete Developer Guide](/what-are-claude-skills-and-how-to-use-them/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

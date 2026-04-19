@@ -182,6 +182,7 @@ Related Reading
 - [Claude Code for ScyllaDB Workflow Tutorial Guide](/claude-code-for-scylladb-workflow-tutorial-guide/)
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code for dbt Snapshot Workflow Tutorial](/claude-code-for-dbt-snapshot-workflow-tutorial/)
+- [Claude Code Engineering Manager Pull Request Review Workflow](/claude-code-engineering-manager-pull-request-review-workflow/)
 
 
 

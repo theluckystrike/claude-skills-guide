@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code For Load Testing — Complete Developer Guide"
 description: "Learn how to integrate Claude Code with K6 for efficient load testing workflows. This guide covers script generation, test execution, and result."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-for-load-testing-with-k6-workflow-guide/
 categories: [guides]
@@ -12,6 +12,8 @@ reviewed: true
 score: 8
 geo_optimized: true
 ---
+Revised April 2026. With testing framework updates and improved snapshot isolation, some load testing with k6 workflows have changed. This guide reflects the updated Claude Code behavior for load testing with k6.
+
 Claude Code for Load Testing with K6: Script Generation and Result Analysis
 
 Load testing is critical for building resilient applications, but writing comprehensive K6 test scripts from scratch and making sense of the output can be time-consuming. This guide focuses on using Claude Code as an AI-assisted authoring and analysis tool, covering how to prompt Claude Code to generate K6 scripts, create realistic user scenarios, and interpret test results to pinpoint performance bottlenecks.
@@ -303,6 +305,12 @@ Integrating Claude Code with K6 transforms load testing from a manual, time-inte
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

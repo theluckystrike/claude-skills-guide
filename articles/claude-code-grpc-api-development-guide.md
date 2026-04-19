@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code gRPC API Development — Complete Developer Guide"
 description: "Use Claude Code to generate .proto files, implement gRPC services in Node.js and Python, write tests, and debug gRPC issues. Real workflows and code."
-date: 2026-03-20
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [tutorials]
 tags: [claude-code, grpc, protobuf, nodejs, python, api-development]
 author: "Claude Skills Guide"
@@ -13,6 +13,8 @@ permalink: /claude-code-grpc-api-development-guide/
 geo_optimized: true
 ---
 # Claude Code for gRPC API Development: A Practical Guide
+
+Revised April 2026. With API specification tooling updates and OpenAPI 3.1 adoption, some grpc api workflows have changed. This guide reflects the updated Claude Code behavior for grpc api.
 
 gRPC sits in a peculiar spot: it is significantly more productive than REST for internal service communication, but the upfront cost of writing proto files and wiring up generated code puts many teams off. Claude Code changes that calculus. You can describe a service contract in plain language and get a working `.proto` file, server stubs, and client code in one pass.
 
@@ -317,6 +319,12 @@ For streaming errors, Claude is especially useful for diagnosing back-pressure i
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

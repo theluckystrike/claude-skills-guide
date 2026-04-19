@@ -272,6 +272,8 @@ Related Reading
 - [Claude Code Meilisearch Faceted Search Workflow Guide](/claude-code-meilisearch-faceted-search-workflow-guide/)
 - [Claude Code for Emacs Workflow Integration Guide](/claude-code-for-emacs-workflow-integration-guide/)
 - [Claude Code + LangChain Integration: Agent Workflow](/claude-code-langchain-integration-agent-workflow-guide/)
+- [Claude Code For Pr Bot — Complete Developer Guide](/claude-code-for-pr-bot-integration-workflow-guide/)
+- [Claude Code For Codesearch — Complete Developer Guide](/claude-code-for-codesearch-integration-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

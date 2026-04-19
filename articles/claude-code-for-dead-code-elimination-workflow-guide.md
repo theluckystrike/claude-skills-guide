@@ -245,6 +245,7 @@ Related Reading
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
+- [Claude Code for Knip Dead Code Finder Workflow](/claude-code-for-knip-dead-code-finder-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

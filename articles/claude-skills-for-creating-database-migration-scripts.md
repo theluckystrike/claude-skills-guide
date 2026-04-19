@@ -209,6 +209,7 @@ Related Reading
 - [Claude Code Skills for Backend Developers: Node.js and Python](/claude-code-skills-for-backend-developers-node-and-python/). Database integration patterns for backend development workflows
 - [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-tdd-skill-test-driven-development-workflow/). Wire migration tests into CI to catch regressions before they reach production
 - [Claude Skills with Supabase: Practical Workflows](/claude-skills-with-supabase-database-integration/). Apply these migration patterns in a Supabase + PostgreSQL project
+- [Claude Code Skills for Creating GitHub Actions Workflows](/claude-code-skills-for-creating-github-actions-workflows/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

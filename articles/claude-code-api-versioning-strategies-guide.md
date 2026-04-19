@@ -467,6 +467,14 @@ Related Reading
 - [Claude Code Tutorials Hub](/tutorials-hub/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Code Guides Hub](/guides-hub/)
+- [How to Save 50% on Every Claude API Call](/save-50-percent-every-claude-api-call/)
+- [Claude Code Laravel Sanctum API Authentication Guide](/claude-code-laravel-sanctum-api-authentication-guide/)
+- [Intl API Fingerprinting: How Locale Settings Leak Data](/intl-api-fingerprinting-how-locale-settings-reveal-your-brow/)
+- [Claude Code Rails API Mode Full Stack Workflow](/claude-code-rails-api-mode-full-stack-workflow/)
+- [How Context Window Size Drives Claude API Bills](/context-window-size-drives-claude-api-bills/)
+- [How to Use Vonage Voice API (2026)](/claude-code-for-vonage-voice-api-workflow/)
+- [Claude Code Pro vs API: Cost Comparison Guide](/claude-code-pro-vs-api-cost-comparison-guide/)
+- [Claude Max Subscription vs API for Agent Fleets](/claude-max-subscription-vs-api-agent-fleets/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

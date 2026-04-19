@@ -166,3 +166,14 @@ The description budget is per-session. If you have many skills loaded from multi
 - [Fix Unknown Skill Error in Claude Code](/fix-unknown-skill-error-claude-code/)
 - [Fix Claude Not Finding Skills Directory](/fix-claude-not-finding-skills-directory/)
 - [SKILL.md Frontmatter Fields Explained](/skill-md-file-frontmatter-fields-explained/)
+
+## Related Articles
+
+- [Why Is Claude Code Producing Code That — Developer Guide](/why-is-claude-code-producing-code-that-does-not-run/)
+- [Fix Claude Code Uncaught Typeerror Is Not A — Quick Guide](/claude-code-uncaught-typeerror-is-not-a-function/)
+- [Claude Code Not Recognizing TypeScript — Developer Guide](/claude-code-not-recognizing-typescript-path-aliases-tsconfig/)
+- [Why Is Claude Code Changing Files I Did — Developer Guide](/why-is-claude-code-changing-files-i-did-not-mention/)
+- [Fix Claude Md Not Being Read By Claude Code — Quick Guide](/claude-md-not-being-read-by-claude-code-fix/)
+- [Fix Claude Code Not Generating Tests — Quick Guide (2026)](/claude-code-not-generating-tests-correctly-fix-guide/)
+- [Fix GitHub MCP Auth Server Registration Error](/claude-code-github-mcp-error-incompatible-auth-server-does-not-support-dynamic-client-registration/)
+- [CLAUDE.md Not Loading in Claude Code — Fix Guide (2026)](/claude-md-not-loading-fix/)

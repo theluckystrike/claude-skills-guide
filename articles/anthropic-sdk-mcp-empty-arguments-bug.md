@@ -203,3 +203,9 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 When debugging MCP server interactions and permission flows, a dev tool extension can help inspect the JSON-RPC message exchanges between the SDK and Claude CLI.
 
 
+
+## Related Articles
+
+- [Fix Anthropic SDK IndexError When Streaming](/anthropic-sdk-indexerror-streaming-fix/)
+- [Fix: Anthropic SDK toolRunner Drops Headers](/anthropic-sdk-toolrunner-drops-headers/)
+- [Fix: Structured Output + Thinking + Tool Use Bugs](/anthropic-sdk-structured-output-thinking-tool-use-bug/)

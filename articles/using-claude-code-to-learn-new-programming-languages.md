@@ -125,6 +125,14 @@ Related Reading
 - [Aider AI Pair Programming Review 2026: An Honest Take](/aider-ai-pair-programming-review-2026-honest-take/)
 - [Chrome Extension Blackboard Learn Helper: A Developer Guide](/chrome-extension-blackboard-learn-helper/)
 - [Claude Code for Competitive Programming Practice Workflow](/claude-code-for-competitive-programming-practice-workflow/)
+- [Claude Code March 2026 Update: What Is New](/claude-code-march-2026-update-what-is-new/)
+- [How Students Use Claude Code for Learning Programming](/how-students-use-claude-code-for-learning-programming/)
+- [Using Claude Code to Learn Algorithms and Data Structures](/using-claude-code-to-learn-algorithms-and-structures/)
+- [Best Way To Onboard New Developers — Honest Review 2026](/best-way-to-onboard-new-developers-using-claude-code/)
+- [Claude Code For Writing — Complete Developer Guide](/claude-code-for-writing-contributingmd-files-guide/)
+- [Data & Methodology: Claude Code Research](/data/)
+- [Claude Code Research Reports 2026](/reports/)
+- [The US CTR Problem: Why Americans Skip Results](/claude-code-us-ctr-gap-analysis-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

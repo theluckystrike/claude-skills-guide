@@ -327,6 +327,14 @@ Related Reading
 - [Chrome Omnibox Slow? Here's How to Fix It](/chrome-omnibox-slow/)
 - [Chrome Password Manager Slow? Here's Why and How to Fix It](/chrome-password-manager-slow/)
 - [Chrome Proxy Slow? Here’s How to Diagnose and Fix It](/chrome-proxy-slow/)
+- [Fix ESLint and Prettier Conflicts in Claude Code Projects](/claude-code-eslint-prettier-conflict-fix/)
+- [Claude Code Stop Modifying Files: CLAUDE.md Fix (2026)](/how-to-make-claude-code-stop-adding-markdown-to-code/)
+- [Slowing Browser Chrome Extension Guide (2026)](/chrome-extension-slowing-browser/)
+- [Why Does Claude Code Hallucinate Code — Developer Guide](/why-does-claude-code-hallucinate-code-sometimes/)
+- [Fix Chrome High CPU — Developer Solutions](/chrome-high-cpu-fix/)
+- [Chrome Extension Coding Practice Problems](/chrome-extension-coding-practice-problems/)
+- [Claude Code Writes Code In Wrong — Developer Guide](/claude-code-writes-code-in-wrong-programming-language/)
+- [Claude Code Infinite Loop — How to Interrupt (2026)](/claude-code-stuck-infinite-loop-how-to-interrupt/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

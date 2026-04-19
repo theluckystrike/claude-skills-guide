@@ -121,3 +121,7 @@ When multiple skills reference the same large reference file (e.g., a 5,000-word
 - [Claude Skill Composition Patterns](/claude-skill-composition-patterns/) -- how skills interact architecturally
 - [Claude Skills for Monorepo Projects](/claude-skills-for-monorepo-projects/) -- shared dependencies across packages
 - [Claude Skill Registry Pattern for Teams](/claude-skill-registry-pattern-for-teams/) -- team-wide shared skill management
+
+## Related Articles
+
+- [Update Shared Claude Skills Without Breaking Team Workflows — 2026](/updating-shared-claude-skills-without-breaking-workflows/)

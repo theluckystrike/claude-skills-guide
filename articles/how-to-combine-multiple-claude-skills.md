@@ -134,3 +134,7 @@ Skill invocation order within a single turn is non-deterministic when Claude aut
 - [Claude Skill Composition Patterns](/claude-skill-composition-patterns/) -- detailed pattern reference
 - [Claude Skills Performance Optimization](/claude-skills-performance-optimization/) -- token budget management
 - [Claude Skills Shared Dependencies](/claude-skills-shared-dependencies/) -- sharing data between skills
+
+## Related Articles
+
+- [How to Combine Multiple Claude Skills in One Project](/how-to-combine-multiple-claude-skills-in-one-project/)

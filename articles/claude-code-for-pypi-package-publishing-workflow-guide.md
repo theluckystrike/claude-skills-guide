@@ -667,6 +667,14 @@ Related Reading
 - [Claude Code for NPM Package Publishing Workflow Guide](/claude-code-for-npm-package-publishing-workflow-guide/)
 - [Claude Code for Artifact Publishing Workflow Tutorial](/claude-code-for-artifact-publishing-workflow-tutorial/)
 - [Claude Code for Cargo Crate Publishing Workflow Guide](/claude-code-for-cargo-crate-publishing-workflow-guide/)
+- [Claude Code for Package Registry Workflow Tutorial](/claude-code-for-package-registry-workflow-tutorial/)
+- [Claude Code for Maven Artifact Publishing Workflow](/claude-code-for-maven-artifact-publishing-workflow/)
+- [Claude Code for Backstage Software Catalog Workflow](/claude-code-for-backstage-software-catalog-workflow/)
+- [Claude Code for ArgoCD App of Apps Workflow](/claude-code-for-argocd-app-of-apps-workflow/)
+- [Claude Code for Russian Developer Backend Workflow](/claude-code-for-russian-developer-backend-workflow/)
+- [Claude Code Rspec Ruby Bdd — Complete Developer Guide](/claude-code-rspec-ruby-bdd-workflow-guide/)
+- [Claude Code for Chart Museum Workflow Tutorial](/claude-code-for-chart-museum-workflow-tutorial/)
+- [Claude Code for Conventional Commits Workflow Guide](/claude-code-for-conventional-commits-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

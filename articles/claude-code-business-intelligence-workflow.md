@@ -183,6 +183,7 @@ Related Reading
 - [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)
 - [Claude Code Automated Alt Text Generation Workflow](/claude-code-automated-alt-text-generation-workflow/)
 - [Claude Code AWS S3 Multipart Upload Workflow Guide](/claude-code-aws-s3-multipart-upload-workflow-guide/)
+- [Claude Code for Code Intelligence Indexing Workflow](/claude-code-for-code-intelligence-indexing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

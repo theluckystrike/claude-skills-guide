@@ -721,6 +721,14 @@ Related Reading
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
+- [Claude Code for Sanity CMS Workflow Tutorial](/claude-code-for-sanity-cms-workflow-tutorial/)
+- [Claude Code for ElastiCache Cluster Workflow](/claude-code-for-elasticache-cluster-workflow/)
+- [Claude Code for CrewAI — Workflow Guide](/claude-code-for-crewai-workflow-guide/)
+- [Claude Code for Jujutsu VCS — Workflow Guide](/claude-code-for-jujutsu-vcs-workflow-guide/)
+- [Claude Code for TablePlus — Workflow Guide](/claude-code-for-tableplus-workflow-guide/)
+- [Claude Code for Vinxi Server — Workflow Guide](/claude-code-for-vinxi-server-workflow-guide/)
+- [Claude Code for Zellij — Workflow Guide](/claude-code-for-zellij-multiplexer-workflow-guide/)
+- [Claude Code for Medusa Commerce — Guide](/claude-code-for-medusa-commerce-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

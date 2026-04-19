@@ -154,6 +154,9 @@ Related Reading
 - [Claude Code Skills for Backend Developers: Node.js and Python](/claude-code-skills-for-backend-developers-node-and-python/). See how the REST API skills in this guide fit into the broader Node.js and Python backend workflow
 - [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/). Build a complete CI/CD testing pipeline for your REST API using the tdd and related skills
 - [Claude Skills Use Cases Hub](/use-cases-hub/). Explore more API development and backend automation use case skill guides
+- [Claude Code Skills for WordPress Development (2026)](/claude-code-skills-for-wordpress-development/)
+- [Claude Skills For Restaurant Pos System — Developer Guide](/claude-skills-for-restaurant-pos-system-development/)
+- [Claude Skills for Robotics ROS2 Development Workflow](/claude-skills-for-robotics-ros2-development-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

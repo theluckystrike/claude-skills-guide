@@ -297,6 +297,14 @@ Related Reading
 - [Claude Code CCPA Privacy Compliance Guide](/claude-code-ccpa-privacy-compliance-guide/)
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 - [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code ArXiv Paper Implementation Guide](/claude-code-arxiv-paper-implementation-guide/)
+- [Claude Code Kpi Dashboard — Complete Developer Guide](/claude-code-kpi-dashboard-implementation-guide/)
+- [Claude Code for Accessible Modal Dialog Implementation](/claude-code-for-accessible-modal-dialog-implementation/)
+- [Claude Code for Skip Navigation Implementation Guide](/claude-code-for-skip-navigation-implementation-guide/)
+- [Claude Code Mobile Push Notifications Implementation Guide](/claude-code-mobile-push-notifications-implementation-guide/)
+- [Claude Code SOLID Principles Implementation](/claude-code-solid-principles-implementation/)
+- [Claude Code ARIA Labels Implementation Guide](/claude-code-aria-labels-implementation-guide/)
+- [How to Use Dark Mode: Implementation (2026)](/claude-code-dark-mode-implementation-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

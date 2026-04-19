@@ -490,6 +490,14 @@ Related Reading
 - [Claude Code for Courier Notification Workflow Guide](/claude-code-for-courier-notification-workflow-guide/)
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
+- [Claude Code for Medusa Commerce — Guide](/claude-code-for-medusa-commerce-workflow-guide/)
+- [Claude Code for Oxlint — Workflow Guide](/claude-code-for-oxlint-workflow-guide/)
+- [Claude Code for UnJS Ecosystem — Workflow Guide](/claude-code-for-unjs-ecosystem-workflow-guide/)
+- [Claude Code for Automerge CRDT — Workflow Guide](/claude-code-for-automerge-crdt-workflow-guide/)
+- [Claude Code for Val Town — Workflow Guide](/claude-code-for-val-town-workflow-guide/)
+- [Claude Code for Unstructured IO — Guide](/claude-code-for-unstructured-io-workflow-guide/)
+- [Claude Code for Oxc Compiler — Workflow Guide](/claude-code-for-oxc-compiler-workflow-guide/)
+- [Claude Code for Helix Editor — Workflow Guide](/claude-code-for-helix-editor-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

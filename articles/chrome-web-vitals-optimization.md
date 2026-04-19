@@ -361,6 +361,8 @@ Related Reading
 - [Chrome Extension Core Web Vitals Checker: Developer Guide](/chrome-extension-core-web-vitals-checker/)
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
+- [AI Web Scraper Chrome Extension Guide (2026)](/ai-web-scraper-chrome-extension/)
+- [Notion Web Clipper Chrome Extension Guide (2026)](/chrome-extension-notion-web-clipper/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -74,3 +74,9 @@ Claude Code should create the libSQL client with `createClient({ url: 'file:loca
 - [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)
 - [Using Claude Code with Drizzle ORM Schema Management](/using-claude-code-with-drizzle-orm-schema-management/)
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
+
+## Related Articles
+
+- [Claude Code NextAuth Database Adapter Setup Guide](/claude-code-nextauth-database-adapter-setup-guide/)
+- [Claude Code for Neon DB Branching — Guide](/claude-code-for-neon-database-branching-workflow-guide/)
+- [Claude Code for Xata Database — Workflow Guide](/claude-code-for-xata-database-workflow-guide/)

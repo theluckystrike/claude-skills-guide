@@ -97,6 +97,10 @@ Related Reading
 - [Claude Code for Ambassador Sidecar Pattern Workflow](/claude-code-for-ambassador-sidecar-pattern-workflow/)
 - [Claude Code for BFF API Pattern Workflow Guide](/claude-code-for-bff-api-pattern-workflow-guide/)
 - [Claude Code for Claim Check Pattern Workflow](/claude-code-for-claim-check-pattern-workflow/)
+- [Claude Code For Strangler Fig — Complete Developer Guide](/claude-code-for-strangler-fig-pattern-workflow/)
+- [Claude Code for Gateway Routing Pattern Workflow](/claude-code-for-gateway-routing-pattern-workflow/)
+- [Claude Code for Roving Tabindex Pattern Workflow](/claude-code-for-roving-tabindex-pattern-workflow/)
+- [Claude Code for Kotlin Delegation Pattern Workflow](/claude-code-for-kotlin-delegation-pattern-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

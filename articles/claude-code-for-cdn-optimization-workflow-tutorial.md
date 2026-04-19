@@ -412,6 +412,14 @@ Related Reading
 - [Claude Code for Benchmark Reporting Workflow Tutorial](/claude-code-for-benchmark-reporting-workflow-tutorial/)
 - [Claude Code for Code Bookmark Workflow Tutorial Guide](/claude-code-for-code-bookmark-workflow-tutorial-guide/)
 - [Claude Code for Decision Log Workflow: A Complete.](/claude-code-for-decision-log-workflow-tutorial-guide/)
+- [How to Use AI Code Optimization with Claude Code (2026)](/claude-code-for-image-optimization-workflow-guide/)
+- [Claude Code for Vite Bundle Optimization Workflow](/claude-code-for-vite-bundle-optimization-workflow/)
+- [Claude Code For Go Profile — Complete Developer Guide](/claude-code-for-go-profile-guided-optimization/)
+- [Claude Code for GitLab CI Workflow Optimization](/claude-code-for-gitlab-ci-workflow-optimization/)
+- [Claude Code for P99 Latency Optimization Workflow](/claude-code-for-p99-latency-optimization-workflow/)
+- [Claude Code for Inner Loop Optimization Workflow](/claude-code-for-inner-loop-optimization-workflow/)
+- [Claude Code for Throughput Optimization Workflow Guide](/claude-code-for-throughput-optimization-workflow-guide/)
+- [Claude Code For Erc 721A Gas — Complete Developer Guide](/claude-code-for-erc-721a-gas-optimization-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

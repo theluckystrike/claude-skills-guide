@@ -272,6 +272,7 @@ Related Reading
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/). Distribute the onboarding skill bundle consistently so every new engineer starts with the same toolset
 - [How Do I Test a Claude Skill Before Deploying to Team](/how-do-i-test-a-claude-skill-before-deploying-to-team/). Validate your onboarding skills before rolling them out to new engineers to ensure a smooth first experience
 - [Claude Skills: Getting Started Hub](/getting-started-hub/). Explore the complete onboarding path for new Claude Code users and foundational skill installation patterns
+- [Onboarding New Developers to Your Team's Claude Skills — 2026](/claude-skills-onboarding-new-developers/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

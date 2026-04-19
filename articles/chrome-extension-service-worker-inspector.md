@@ -192,6 +192,9 @@ Related Reading
 - [Building a Chrome Extension DOM Inspector Tool: A.](/chrome-extension-dom-inspector-tool/)
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)
 - [AI Form Filler Chrome Extension: A Developer and Power.](/ai-form-filler-chrome-extension/)
+- [Figma Inspector Chrome Extension Guide (2026)](/chrome-extension-figma-inspector/)
+- [CSS Grid Inspector Chrome Extension](/css-grid-inspector-chrome/)
+- [GraphQL Network Inspector Chrome Extension Guide (2026)](/chrome-extension-graphql-network-inspector/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

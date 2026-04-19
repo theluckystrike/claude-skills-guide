@@ -225,6 +225,8 @@ Related Reading
 - [Claude Code Community Health Metrics Documentation Workflow](/claude-code-community-health-metrics-documentation-workflow/)
 - [Claude Code for CQRS Read Model Workflow Guide](/claude-code-for-cqrs-read-model-workflow-guide/)
 - [Claude Code for Documentation Review Workflow Guide](/claude-code-for-documentation-review-workflow-guide/)
+- [Claude Code for Diamond Model Intrusion Workflow Tutorial](/claude-code-for-diamond-model-intrusion-workflow-tutorial/)
+- [Claude Code for PyTorch Model Training Workflow](/claude-code-for-pytorch-model-training-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

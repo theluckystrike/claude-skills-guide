@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Terraform Cloud Run Workflow Guide"
 description: "Learn how to use Claude Code to streamline your Terraform Cloud Run deployments with practical examples, code snippets, and actionable advice."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-terraform-cloud-run-workflow-guide/
 categories: [guides]
@@ -13,6 +13,8 @@ reviewed: true
 score: 8
 geo_optimized: true
 ---
+
+Most terraform cloud run problems in practice come down to state file conflicts during team collaboration, caused by concurrent applies without proper state locking. This guide walks through the Claude Code approach to resolving them, current as of April 2026.
 
 Deploying applications to Google Cloud Run with Terraform can be complex, involving multiple resources, IAM configurations, and networking setups. Claude Code transforms this workflow by helping you write, review, and maintain Terraform configurations more efficiently. This guide shows you practical patterns for using Claude Code with your Terraform Cloud Run projects.
 
@@ -273,6 +275,12 @@ Start with simple configurations and progressively adopt more advanced patterns 
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

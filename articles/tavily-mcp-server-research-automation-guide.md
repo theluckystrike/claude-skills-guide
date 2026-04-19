@@ -162,6 +162,7 @@ Related Reading
 - [Claude Skills for SEO Content Generation Workflow](/claude-skills-for-seo-content-generation-workflow/)
 - [Claude Supermemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/)
 - [Integrations Hub](/integrations-hub/)
+- [Reddit MCP Server for Content Research Automation](/reddit-mcp-server-content-research-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

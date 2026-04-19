@@ -430,6 +430,14 @@ Related Reading
 - [Claude Code Permissions Model Security Guide 2026](/claude-code-permissions-model-security-guide-2026/)
 - [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/)
 - [Advanced Claude Skills Hub](/advanced-hub/)
+- [Claude Code GitHub Actions MCP Setup](/claude-code-github-actions-mcp/)
+- [Claude Code GCP MCP Server Setup](/claude-code-gcp-mcp/)
+- [Claude Code Azure DevOps MCP Setup](/claude-code-azure-devops-mcp/)
+- [Claude Code FastAPI MCP Server Guide](/claude-code-fastapi-mcp/)
+- [Claude Code Firebase MCP Integration](/claude-code-firebase-mcp/)
+- [Claude Code Flutter MCP Server Guide](/claude-code-flutter-mcp/)
+- [Claude Code Azure MCP Server Guide](/claude-code-azure-mcp/)
+- [Kubernetes MCP Server Cluster Management Guide](/kubernetes-mcp-server-cluster-management-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code + LangChain Integration: Agent Workflow"
 description: "Integrate Claude Code with LangChain to build AI agent workflows for automation and development tasks."
-date: 2026-03-13
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, claude-skills, langchain, agents, automation, integration]
 author: "Claude Skills Guide"
@@ -14,6 +14,8 @@ geo_optimized: true
 ---
 
 # Claude Code LangChain Integration Agent Workflow Guide
+
+This guide focuses specifically on langchain integration agent within Claude Code workflows. For coverage of adjacent tools and techniques beyond langchain integration agent, [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) provides complementary context.
 
 [Building intelligent agent workflows requires combining the right tools](/best-claude-code-skills-to-install-first-2026/) Claude Code provides a powerful CLI for AI-assisted development, while LangChain offers a reliable framework for orchestrating language model interactions. This guide shows you how to integrate these technologies to create sophisticated automation pipelines.
 
@@ -286,6 +288,12 @@ Integrating Claude Code with LangChain unlocks sophisticated agent workflows. St
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

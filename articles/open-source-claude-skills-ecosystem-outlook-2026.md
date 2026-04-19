@@ -188,6 +188,8 @@ Related Reading
 - [Claude Skills Directory: Where to Find Skills 2026](/claude-skills-directory-where-to-find-skills/). Browse community skills and find domain-specific skills to add to your collection.
 - [Official vs Community Claude Skills Guide (2026)](/anthropic-official-skills-vs-community-skills-comparison/). Understand the difference between built-in Anthropic skills and community-contributed ones.
 - [Getting Started with Claude Skills](/getting-started-hub/). Start with built-in skills before exploring the open source ecosystem.
+- [Where The Claude Code Skill Ecosystem Is — Developer Guide](/where-the-claude-code-skill-ecosystem-is-headed-2027/)
+- [Open Source vs Proprietary Claude Skills: Future Outlook](/open-source-vs-proprietary-claude-skills-future-outlook/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

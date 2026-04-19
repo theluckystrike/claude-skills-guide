@@ -201,6 +201,7 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Skills worth integrating into n8n pipelines
 - [How to Connect Claude Skills to External APIs](/how-to-connect-claude-skills-to-external-apis-guide/). Tool use and API integration patterns
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep n8n workflow API costs under control
+- [Standardizing Pull Request Workflows with Claude Code Skills](/standardizing-pull-request-workflows-with-claude-code-skills/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

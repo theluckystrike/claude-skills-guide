@@ -258,6 +258,11 @@ Related Reading
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code for Resend Email Workflow Tutorial](/claude-code-for-resend-email-workflow-tutorial/)
 - [Claude Code for Winglang Workflow Tutorial Guide](/claude-code-for-winglang-workflow-tutorial-guide/)
+- [Claude Code Flask Blueprint Architecture Guide](/claude-code-flask-blueprint-architecture-guide/)
+- [Product Architecture for a Claude Code Powered CLI Tool](/product-architecture-for-a-claude-code-powered-cli-tool/)
+- [Claude Code NestJS Modular Architecture Guide](/claude-code-nestjs-modular-architecture-guide/)
+- [Claude Code Msw Mock Service — Complete Developer Guide](/claude-code-msw-mock-service-worker-guide/)
+- [Supervisor-Agent Worker-Agent Pattern with Claude Code](/supervisor-agent-worker-agent-pattern-claude-code/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -270,6 +270,7 @@ Related Reading
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
 - [Claude Code Conventional Commits Enforcement Workflow](/claude-code-conventional-commits-enforcement-workflow/)
 - [Claude Code for Dutch Developer Team Workflow Guide](/claude-code-for-dutch-developer-team-workflow-guide/)
+- [Claude Code for Team Handbook Workflow Tutorial Guide](/claude-code-for-team-handbook-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -223,6 +223,7 @@ Related Reading
 - [AI Blog Post Generator for Chrome: A Developer's Guide](/ai-blog-post-generator-chrome/)
 - [Chrome Extension Blog Post Outline Generator: A Practical Guide for Content Creators](/chrome-extension-blog-post-outline-generator/)
 - [Claude Code for Technical Writing Workflow](/claude-code-for-technical-writing-workflow/)
+- [How to Use LaTeX Document Writing Workflow (2026)](/claude-code-latex-document-writing-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

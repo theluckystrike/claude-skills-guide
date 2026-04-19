@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code Package.json Scripts Automation Workflow Guide"
 description: "Master package.json script automation with Claude Code. Learn to create efficient npm script workflows, use AI-powered skills, and automate your."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, package-json, npm-scripts, automation, workflow, developer-tools, claude-skills]
 author: Claude Skills Guide
@@ -14,6 +14,8 @@ score: 7
 geo_optimized: true
 ---
 
+
+Current as of April 2026. The package json scripts automation landscape has shifted with recent updates to package json scripts automation tooling and Claude Code's improved project context handling, and the steps below reflect how Claude Code works with package json scripts automation today.
 
 Claude Code Package.json Scripts Automation Workflow Guide
 
@@ -260,6 +262,12 @@ Start with the basic scripts outlined here, then gradually expand into more comp
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

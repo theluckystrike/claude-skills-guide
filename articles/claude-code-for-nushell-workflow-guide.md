@@ -74,3 +74,14 @@ Claude Code should run `git log --oneline -5 --name-only --diff-filter=M` and pi
 - [Building a CLI Devtool with Claude Code Walkthrough](/building-a-cli-devtool-with-claude-code-walkthrough/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)
 - [Claude Code for Ghostty Terminal Workflow](/claude-code-for-ghostty-terminal-workflow-tutorial/)
+
+## Related Articles
+
+- [Claude Code For Zksync Era — Complete Developer Guide](/claude-code-for-zksync-era-workflow-guide/)
+- [Claude Code for ctags Configuration Workflow Tutorial](/claude-code-for-ctags-configuration-workflow-tutorial/)
+- [Claude Code for WASI Workflow Tutorial Guide](/claude-code-for-wasi-workflow-tutorial-guide/)
+- [Claude Code for Appsmith Dashboard Workflow Guide](/claude-code-for-appsmith-dashboard-workflow-guide/)
+- [Claude Code for Domain Events Workflow Guide](/claude-code-for-domain-events-workflow-guide/)
+- [Claude Code for Distributed Tracing Workflow Tutorial](/claude-code-for-distributed-tracing-workflow-tutorial/)
+- [Claude Code for Symbol Search Workflow Tutorial Guide](/claude-code-for-symbol-search-workflow-tutorial-guide/)
+- [Claude Code Qwik City Routing SSR — Complete Developer Guide](/claude-code-qwik-city-routing-ssr-workflow-tutorial/)

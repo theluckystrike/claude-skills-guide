@@ -75,3 +75,14 @@ Claude Code should create routes with `t.Object()` schemas for request bodies, g
 - [Using Claude Code with Bun Runtime JavaScript Projects](/using-claude-code-with-bun-runtime-javascript-projects/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
+
+## Related Articles
+
+- [Claude Code SDK Development Workflow Guide](/claude-code-sdk-development-workflow-guide/)
+- [Claude Code for ScoutSuite Audit Workflow Guide](/claude-code-for-scoutsuite-audit-workflow-guide/)
+- [Claude Code for RabbitMQ Topic Exchange Workflow](/claude-code-for-rabbitmq-topic-exchange-workflow/)
+- [Claude Code for Upbound Marketplace Workflow Guide](/claude-code-for-upbound-marketplace-workflow-guide/)
+- [Claude Code for Lottie Animation Workflow Tutorial](/claude-code-for-lottie-animation-workflow-tutorial/)
+- [Claude Code for License Scanning Workflow Tutorial](/claude-code-for-license-scanning-workflow-tutorial/)
+- [Claude Code for SharedArrayBuffer Workflow](/claude-code-for-shared-array-buffer-workflow/)
+- [Claude Code For Chainlink Vrf — Complete Developer Guide](/claude-code-for-chainlink-vrf-workflow-guide/)

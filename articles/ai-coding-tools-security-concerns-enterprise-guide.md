@@ -399,6 +399,9 @@ Related Reading
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 - [AI Coding Tools for Accessibility Improvements](/ai-coding-tools-for-accessibility-improvements/)
 - [AI Coding Tools for Code Migration Projects](/ai-coding-tools-for-code-migration-projects/)
+- [How to Add Authentication to Your App Using Claude Code](/how-to-add-authentication-to-your-app-using-claude-code/)
+- [Claude Code for Vault Transit Encryption Guide](/claude-code-for-vault-transit-encryption-guide/)
+- [Claude Code for WorkOS AuthKit — Workflow Guide](/claude-code-for-workos-authkit-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

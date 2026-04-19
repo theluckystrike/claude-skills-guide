@@ -101,6 +101,14 @@ Related Reading
 - [Chrome DevTools Performance Profiling: A Practical Guide](/chrome-devtools-performance-profiling/)
 - [Chrome Enterprise Password Manager Policy: A Practical Guide for Developers](/chrome-enterprise-password-manager-policy/)
 - [Chrome Extension Accessibility Audit: A Practical Guide](/chrome-extension-accessibility-audit/)
+- [HTTP Header Viewer Chrome Extension Guide (2026)](/chrome-extension-http-header-viewer/)
+- [Shadow Dom Viewer Chrome Extension Guide (2026)](/chrome-extension-shadow-dom-viewer/)
+- [Batch Image Download Chrome Extension Guide (2026)](/chrome-extension-batch-image-download/)
+- [How to Handle Chrome Third Party Cookies Blocked in 2026](/chrome-third-party-cookies-blocked/)
+- [JavaScript Profiler Chrome Extension Guide (2026)](/chrome-extension-javascript-profiler/)
+- [Chrome Extension Compress Images Before Upload](/chrome-extension-compress-images-before-upload/)
+- [Talend API Alternative Chrome Extension 2026](/talend-api-alternative-chrome-extension-2026/)
+- [Permissions Explained Chrome Extension Guide (2026)](/chrome-extension-permissions-explained/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

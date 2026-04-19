@@ -75,3 +75,14 @@ Claude Code should use `fish_add_path ./node_modules/.bin`, `abbr -a nr 'npm run
 - [Building a CLI Devtool with Claude Code Walkthrough](/building-a-cli-devtool-with-claude-code-walkthrough/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)
 - [Claude Code for Ghostty Terminal Workflow](/claude-code-for-ghostty-terminal-workflow-tutorial/)
+
+## Related Articles
+
+- [Claude Code for Carvel imgpkg Workflow Tutorial](/claude-code-for-carvel-imgpkg-workflow-tutorial/)
+- [Claude Code for Hackathon Development Workflow](/claude-code-for-hackathon-development-workflow/)
+- [How to Use VSCode Reload: Hot Config (2026)](/claude-code-for-hot-config-reload-workflow-guide/)
+- [Is Claude Code Good Enough For — Complete Developer Guide](/is-claude-code-good-enough-for-senior-developer-workflows/)
+- [Claude Code for Bottleneck Identification Workflow](/claude-code-for-bottleneck-identification-workflow/)
+- [Claude Code for Quantization with bitsandbytes Workflow](/claude-code-for-quantization-with-bitsandbytes-workflow/)
+- [Claude Code for Flux Bootstrap Workflow Tutorial](/claude-code-for-flux-bootstrap-workflow-tutorial/)
+- [Claude Code for Homebrew Bundle Workflow Tutorial](/claude-code-for-homebrew-bundle-workflow-tutorial/)

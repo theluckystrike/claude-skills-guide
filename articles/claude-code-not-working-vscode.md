@@ -186,3 +186,14 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 *Last verified: 2026-04-14. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*
 
 
+
+## Related Articles
+
+- [Why Is Claude Code Producing Code That — Developer Guide](/why-is-claude-code-producing-code-that-does-not-run/)
+- [Fix Claude Code Uncaught Typeerror Is Not A — Quick Guide](/claude-code-uncaught-typeerror-is-not-a-function/)
+- [Claude Code Not Recognizing TypeScript — Developer Guide](/claude-code-not-recognizing-typescript-path-aliases-tsconfig/)
+- [Why Is Claude Code Changing Files I Did — Developer Guide](/why-is-claude-code-changing-files-i-did-not-mention/)
+- [Fix Claude Md Not Being Read By Claude Code — Quick Guide](/claude-md-not-being-read-by-claude-code-fix/)
+- [Fix Claude Code Not Generating Tests — Quick Guide (2026)](/claude-code-not-generating-tests-correctly-fix-guide/)
+- [Fix Claude Code Crashing in VS Code](/claude-code-crashing-vscode/)
+- [Fix Claude Code Not Working in VS Code](/claude-code-not-working-in-vscode/)

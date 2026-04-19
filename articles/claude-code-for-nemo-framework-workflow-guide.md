@@ -403,6 +403,7 @@ Related Reading
 - [Claude Code for Fiber Go Web Framework Workflow](/claude-code-for-fiber-go-web-framework-workflow/)
 - [Claude Code for Fresh Deno Framework Workflow](/claude-code-for-fresh-deno-framework-workflow/)
 - [Claude Code for Nitric Cloud Framework Workflow](/claude-code-for-nitric-cloud-framework-workflow/)
+- [Claude Code for Evals Framework Workflow Tutorial](/claude-code-for-evals-framework-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -304,6 +304,7 @@ Related Reading
 - [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Complete skill.md format reference
 - [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). Step-by-step skill creation guide
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
+- [Claude Code Keeps Breaking Imports When Refactoring](/claude-code-keeps-breaking-imports-when-refactoring/)
 
 ---
 

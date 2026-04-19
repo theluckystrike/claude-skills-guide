@@ -289,6 +289,9 @@ Related Reading
 - [Claude Code for Beam Cloud ML Workflow Guide](/claude-code-for-beam-cloud-ml-workflow-guide/)
 - [Claude Code for Cloud Security Posture Workflow](/claude-code-for-cloud-security-posture-workflow/)
 - [Claude Code for Multi-Language Navigation Workflow](/claude-code-for-multi-language-navigation-workflow/)
+- [Claude Code for Submariner Multi-Cluster Workflow](/claude-code-for-submariner-multi-cluster-workflow/)
+- [Claude Code for Pulumi Policy Pack Workflow Guide](/claude-code-for-pulumi-policy-pack-workflow-guide/)
+- [Claude Code Freelancer Multi-Client Project Workflow Guide](/claude-code-freelancer-multi-client-project-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

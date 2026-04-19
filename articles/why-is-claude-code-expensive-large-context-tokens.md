@@ -117,6 +117,14 @@ Related Reading
 - [Caching Strategies for Claude Code Skill Outputs](/caching-strategies-for-claude-code-skill-outputs/). cache skill results to avoid redundant token spend
 - [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/). troubleshoot and resolve context overflow issues
 - [Claude Skill Lazy Loading: Token Savings Explained](/claude-skill-lazy-loading-token-savings-explained-deep-dive/). understand how lazy loading keeps context lean
+- [Claude Code Open Props Design Tokens Guide](/claude-code-open-props-design-tokens-guide/)
+- [How Tool Definitions Add 346 Tokens Per Call](/claude-tool-definitions-346-tokens-per-call/)
+- [Claude Model Pricing Per Million Tokens Guide](/claude-model-pricing-per-million-tokens-guide/)
+- [Claude Bash Tool Costs 245 Tokens Per Call](/claude-bash-tool-costs-245-tokens-per-call/)
+- [Claude Prompt Caching Implementation Tutorial](/claude-prompt-caching-implementation-tutorial/)
+- [Web Search Costs $10 per 1,000 Searches](/claude-web-search-costs-10-per-thousand/)
+- [Pruning Unused Claude Tools Saves Real Money](/pruning-unused-claude-tools-saves-money/)
+- [Claude XML Tags vs JSON for Token Efficiency](/claude-xml-tags-vs-json-token-efficiency/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

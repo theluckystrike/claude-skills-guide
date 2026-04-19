@@ -404,6 +404,14 @@ Related Reading
 - [Chrome Extension Arrow and Text Overlay Screenshot Guide](/chrome-extension-arrow-and-text-overlay-screenshot/)
 - [Chrome Extension Keyword Density Checker: A Developer's Guide](/chrome-extension-keyword-density-checker/)
 - [Responsive Viewer Alternative Chrome Extension 2026](/responsive-viewer-alternative-chrome-extension-2026/)
+- [Toby Alternative Chrome Extension in 2026](/toby-alternative-chrome-extension-2026/)
+- [Chrome Extension Sprint Planning Poker](/chrome-extension-sprint-planning-poker/)
+- [Chrome Extension Regex Tester: Build or Find Tools](/chrome-extension-regex-tester/)
+- [Font Identifier Chrome Extension Guide (2026)](/chrome-extension-font-identifier/)
+- [How to Inspect CSS Styles in Chrome Extensions](/chrome-extension-inspect-css-styles/)
+- [Disable Background Chrome Extension Guide (2026)](/disable-chrome-background-extensions/)
+- [Chrome Extension Discount Code Aggregator](/chrome-extension-discount-code-aggregator/)
+- [Best Free Time Tracking Chrome Extensions for Developers](/time-tracking-chrome-extension-free/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

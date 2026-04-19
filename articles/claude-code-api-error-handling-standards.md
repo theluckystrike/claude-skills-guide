@@ -289,6 +289,10 @@ Related Reading
 - [Claude Code Tutorials Hub](/tutorials-hub/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Code Guides Hub](/guides-hub/)
+- [Fix Claude Code API Error 400 Bad Request](/claude-code-api-error-400/)
+- [Claude Code Error Invalid API Key After Rotation Fix](/claude-code-error-invalid-api-key-after-rotation-fix/)
+- [Claude API Timeout Errors: Handling and Retry Guide](/claude-api-timeout-error-handling-retry-guide/)
+- [Claude API Error 413 request_too_large Fix](/claude-api-error-413-requesttoolarge-explained/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

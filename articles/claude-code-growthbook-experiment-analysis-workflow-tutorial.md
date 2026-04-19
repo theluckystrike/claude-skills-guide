@@ -191,6 +191,7 @@ Related Reading
 - [Claude Code GrowthBook Visual Editor A/B Test Guide](/claude-code-growthbook-visual-editor-ab-test-guide/)
 - [Claude Code for Call Graph Analysis Workflow Tutorial](/claude-code-for-call-graph-analysis-workflow-tutorial/)
 - [Claude Code for Dataflow Analysis Workflow Tutorial](/claude-code-for-dataflow-analysis-workflow-tutorial/)
+- [Claude Code for MLflow Experiment Tracking Workflow](/claude-code-for-mlflow-experiment-tracking-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

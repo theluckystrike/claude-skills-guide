@@ -388,6 +388,14 @@ Related Reading
 - [AI Summarizer Chrome Extension: Build Your Own Text Summarization Tool](/ai-summarizer-chrome-extension/)
 - [Chrome Extension Service Worker Inspector: Complete.](/chrome-extension-service-worker-inspector/)
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)
+- [Figma Inspector Chrome Extension Guide (2026)](/chrome-extension-figma-inspector/)
+- [Audit Tool Chrome Extension Guide (2026)](/chrome-extension-audit-tool/)
+- [Mockup Screenshot Tool Chrome Extension Guide (2026)](/chrome-extension-mockup-screenshot-tool/)
+- [Screen Annotation Tool Chrome Extension Guide (2026)](/chrome-extension-screen-annotation-tool/)
+- [Shadow Dom Viewer Chrome Extension Guide (2026)](/chrome-extension-shadow-dom-viewer/)
+- [Paraphrase Tool Students Chrome Extension Guide (2026)](/chrome-extension-paraphrase-tool-students/)
+- [GraphQL Network Inspector Chrome Extension Guide (2026)](/chrome-extension-graphql-network-inspector/)
+- [Chrome Extension Newsletter Design Tool for Developers](/chrome-extension-newsletter-design-tool/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

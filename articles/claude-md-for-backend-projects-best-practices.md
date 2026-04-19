@@ -260,6 +260,9 @@ Related Reading
 - [Claude MD Best Practices for Large Codebases](/claude-md-best-practices-for-large-codebases/)
 - [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/)
 - [Workflows Hub](/workflows-hub/)
+- [Using Claude Code for Polyglot Multi-Language Projects](/claude-md-for-polyglot-multi-language-projects/)
+- [Claude Md For Fullstack Projects — Complete Developer Guide](/claude-md-for-fullstack-projects-complete-guide/)
+- [CLAUDE.md Files for API Versioning Strategy](/writing-claude-md-files-that-define-your-projects-api-versio/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

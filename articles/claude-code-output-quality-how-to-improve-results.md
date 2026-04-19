@@ -210,6 +210,7 @@ Related Reading
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
 - [Claude Code First Project Tutorial: Hello World](/claude-code-first-project-tutorial-hello-world/)
 - [Getting Started Hub](/getting-started-hub/)
+- [Code Review Workflow with Claude Code (2026)](/how-to-make-claude-code-review-its-own-output/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

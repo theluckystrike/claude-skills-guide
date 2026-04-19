@@ -209,6 +209,14 @@ Related Reading
 - [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Discord MCP Server Community Automation Guide](/discord-mcp-server-community-automation-guide/)
 - [Integrations Hub](/integrations-hub/)
+- [Claude Code Azure MCP Server Guide](/claude-code-azure-mcp/)
+- [Figma MCP Server: Design to Code Workflow Guide](/figma-mcp-server-design-to-code-workflow/)
+- [How to Choose the Right MCP Server](/how-to-choose-the-right-mcp-server/)
+- [Mailchimp MCP Server Marketing Automation Guide](/mailchimp-mcp-server-marketing-automation-guide/)
+- [Firecrawl MCP Server: Web Scraping Automation with Claude](/firecrawl-mcp-server-web-scraping-automation/)
+- [Intercom MCP Server: Automating Customer Data Workflows](/intercom-mcp-server-customer-data-automation/)
+- [Claude Code for Playwright MCP — Workflow Guide](/claude-code-for-playwright-mcp-workflow-guide/)
+- [GitHub MCP Server Advanced Workflow Automation](/github-mcp-server-advanced-workflow-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

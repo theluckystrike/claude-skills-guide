@@ -379,6 +379,8 @@ Related Reading
 - [Claude Code SendGrid Email List Management Workflow](/claude-code-sendgrid-email-list-management-workflow/)
 - [AI Email Writer Chrome Extension: A Developer's Guide](/ai-email-writer-chrome-extension/)
 - [AI Tab Organizer Chrome Extension: A Practical Guide for.](/ai-tab-organizer-chrome-extension/)
+- [Chrome Extension Reading List Organizer Academic (2026)](/chrome-extension-reading-list-organizer-academic/)
+- [Outline Notes Organizer Chrome Extension Guide (2026)](/chrome-extension-outline-notes-organizer/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

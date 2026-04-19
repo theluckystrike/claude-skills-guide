@@ -230,3 +230,12 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Claude SDK Timeout Configuration](/claude-sdk-timeout-configuration-customization/) -- production timeout and retry tuning.
 
 
+
+## Related Articles
+
+- [Claude Code Pulumi TypeScript Infra Guide](/claude-code-pulumi-typescript-infra-guide/)
+- [Claude Code for TypeScript Declaration Merging Guide](/claude-code-for-typescript-declaration-merging-guide/)
+- [Claude Code JSDoc TypeScript Documentation Guide](/claude-code-jsdoc-typescript-documentation/)
+- [How to Stop Claude Code from Using Snake Case in TypeScript](/how-to-stop-claude-code-from-using-snake-case-in-typescript/)
+- [Claude Code For TypeScript — Complete Developer Guide](/claude-code-for-typescript-conditional-types-guide/)
+- [Claude Code SDK Versioning and Release Guide](/claude-code-sdk-versioning-release-guide/)

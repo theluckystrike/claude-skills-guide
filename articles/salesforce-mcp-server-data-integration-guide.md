@@ -179,6 +179,8 @@ Related Reading
 - [Jira MCP Server Claude Code Integration Guide](/jira-mcp-server-claude-code-integration-guide/)
 - [Claude Code Skills for Salesforce Apex Development](/claude-skills-for-salesforce-apex-development/)
 - [Integrations Hub](/integrations-hub/)
+- [MCP Integration Guide for Claude Code Beginners](/mcp-integration-guide-for-claude-code-beginners/)
+- [Claude Code MCP Server Data Exfiltration Prevention](/claude-code-mcp-server-data-exfiltration-prevention/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

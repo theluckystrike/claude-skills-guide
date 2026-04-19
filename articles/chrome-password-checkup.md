@@ -491,6 +491,14 @@ Related Reading
 - [Chrome Enterprise Password Manager Policy: A Practical Guide for Developers](/chrome-enterprise-password-manager-policy/)
 - [Best Encrypted Backup Solution for Developers: A 2026 Technical Guide](/best-encrypted-backup-solution-for-developers/)
 - [Best JSON Formatter Chrome Extensions for Developers in 2026](/json-formatter-chrome-extension-best/)
+- [Chrome Extension Sprint Planning Poker](/chrome-extension-sprint-planning-poker/)
+- [Chrome Extension Regex Tester: Build or Find Tools](/chrome-extension-regex-tester/)
+- [Font Identifier Chrome Extension Guide (2026)](/chrome-extension-font-identifier/)
+- [Disable Background Chrome Extension Guide (2026)](/disable-chrome-background-extensions/)
+- [Chrome Extension Discount Code Aggregator](/chrome-extension-discount-code-aggregator/)
+- [Best Free Time Tracking Chrome Extensions for Developers](/time-tracking-chrome-extension-free/)
+- [Screencastify Alternative Chrome Extension in 2026](/screencastify-alternative-chrome-extension-2026/)
+- [Clearbit Alternative Chrome Extension in 2026](/clearbit-alternative-chrome-extension-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

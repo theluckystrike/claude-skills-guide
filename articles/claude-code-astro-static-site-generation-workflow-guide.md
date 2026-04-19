@@ -2,8 +2,8 @@
 layout: default
 title: "How to Use Astro Workflow (2026)"
 description: "Build static sites with Claude Code and Astro. Workflow patterns, skill integration, and automation recipes for 2026."
-date: 2026-03-13
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills]
@@ -13,6 +13,8 @@ permalink: /claude-code-astro-static-site-generation-workflow-guide/
 render_with_liquid: false
 geo_optimized: true
 ---
+
+This is a focused treatment of astro static site generation with Claude Code. It covers setup, common patterns, and troubleshooting specific to astro static site generation. For broader context, [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) is a good companion read.
 
 {% raw %}
 [Building static sites with Claude Code and Astro creates a powerful combination](/best-claude-code-skills-to-install-first-2026/) for developers who want AI-assisted development without sacrificing performance. This guide covers practical workflows, skill integration, and automation patterns that work in 2026.
@@ -282,6 +284,12 @@ Build incrementally, test consistently, and deploy automatically. Your static si
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

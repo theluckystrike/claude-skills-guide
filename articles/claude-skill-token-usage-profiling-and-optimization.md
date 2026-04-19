@@ -240,6 +240,7 @@ Related Reading
 - [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-token-optimization-reduce-api-costs/). Extend token profiling results with broader API cost reduction strategies.
 - [Measuring Claude Code Skill Efficiency Metrics](/measuring-claude-code-skill-efficiency-metrics/). Go beyond token counts to measure full skill efficiency including task completion rates and time to output.
 - [Advanced Claude Skills](/advanced-hub/). Discover more advanced performance patterns for building production-quality skills.
+- [How Do I See Claude Skill Usage And Token — Developer Guide](/how-do-i-see-claude-skill-usage-and-token-costs-breakdown/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```

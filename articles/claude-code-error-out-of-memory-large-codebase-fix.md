@@ -317,6 +317,7 @@ Related Reading
 - [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/). Context management is key to avoiding memory issues
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/). Understanding the engineering constraints behind memory limits
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). All Claude Code error fix guides in one place
+- [Claude Code Out Of Memory Heap Allocation — Developer (2026)](/claude-code-out-of-memory-heap-allocation-skill/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

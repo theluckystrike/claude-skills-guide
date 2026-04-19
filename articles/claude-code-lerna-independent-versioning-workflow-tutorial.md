@@ -286,6 +286,8 @@ Related Reading
 - [Claude Code for Changesets Versioning Workflow](/claude-code-for-changesets-versioning-workflow/)
 - [Claude Code for Dependency Versioning Workflow Guide](/claude-code-for-dependency-versioning-workflow-guide/)
 - [Claude Code for DVC Data Versioning Workflow](/claude-code-for-dvc-data-versioning-workflow/)
+- [Claude Code for Semantic Versioning Workflow Tutorial](/claude-code-for-semantic-versioning-workflow-tutorial/)
+- [Claude Code for Lerna Monorepo Workflow](/claude-code-for-lerna-monorepo-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

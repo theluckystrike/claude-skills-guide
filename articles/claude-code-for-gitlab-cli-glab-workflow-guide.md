@@ -71,5 +71,16 @@ Claude Code should run `glab mr create --target-branch main --fill` to create th
 ## Related Guides
 
 - [Claude Code for GitHub CLI Workflow Guide](/claude-code-for-github-cli-workflow-guide/)
-- [Claude Code Git Workflow Best Practices](/claude-code-git-workflow-best-practices/)
+- [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/)
 - [Best Way to Set Up Claude Code for New Project](/best-way-to-set-up-claude-code-for-new-project/)
+
+## Related Articles
+
+- [Claude Code Sre On Call Incident — Complete Developer Guide](/claude-code-sre-on-call-incident-response-workflow-guide/)
+- [Claude Code For Cloudwatch Rum — Complete Developer Guide](/claude-code-for-cloudwatch-rum-workflow/)
+- [Claude Code for Aave Flash Loan Workflow](/claude-code-for-aave-flash-loan-workflow/)
+- [Claude Code for Find References Workflow Tutorial](/claude-code-for-find-references-workflow-tutorial/)
+- [How Claude Code Changed My — Complete Developer Guide](/how-claude-code-changed-my-development-workflow/)
+- [Claude Code for README Generation Workflow Tutorial](/claude-code-for-readme-generation-workflow-tutorial/)
+- [Claude Code for Echidna Fuzzing Workflow](/claude-code-for-echidna-fuzzing-workflow/)
+- [Claude Code for Metacontroller Workflow Guide](/claude-code-for-metacontroller-workflow-guide/)

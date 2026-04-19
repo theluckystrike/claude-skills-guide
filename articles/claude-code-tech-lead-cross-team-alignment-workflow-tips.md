@@ -224,6 +224,7 @@ Related Reading
 - [Claude Code Tech Lead Technical Debt Prioritization Workflow](/claude-code-tech-lead-technical-debt-prioritization-workflow/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
 - [Claude Code Developer Advocate Demo Content Workflow Tips](/claude-code-developer-advocate-demo-content-workflow-tips/)
+- [Claude Code for Team Handbook Workflow Tutorial Guide](/claude-code-for-team-handbook-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

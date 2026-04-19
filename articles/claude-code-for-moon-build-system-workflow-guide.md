@@ -72,5 +72,5 @@ Claude Code should create `.moon/workspace.yml` with project globs, `.moon/toolc
 ## Related Guides
 
 - [Claude Code for Turborepo Workflow Guide](/claude-code-for-turborepo-workflow-guide/)
-- [Claude Code Monorepo Management Guide](/claude-code-monorepo-management-guide/)
+- [Claude Code Monorepo Setup Guide](/claude-code-monorepo-setup-guide/)
 - [Best Way to Set Up Claude Code for New Project](/best-way-to-set-up-claude-code-for-new-project/)

@@ -268,6 +268,14 @@ Related Reading
 - [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/). Automate CloudFormation deployments by integrating Claude skills into your GitHub Actions pipeline.
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). The full toolkit of DevOps skills for infrastructure work.
 - [Claude Skills Workflow Guide](/workflows-hub/). See how CloudFormation generation fits into broader multi-skill automation pipelines.
+- [Claude Code For Pr Template — Complete Developer Guide](/claude-code-for-pr-template-workflow-tutorial-guide/)
+- [Should CLAUDE.md Be in .gitignore? When to Commit vs Ignore (2026)](/should-claude-md-be-in-gitignore/)
+- [CLAUDE.md Being Partially Read — Why Rules at the Bottom Get Ignored (2026)](/claude-md-being-partially-read/)
+- [Claude Code For TypeScript — Complete Developer Guide](/claude-code-for-typescript-template-literal-types-guide/)
+- [Claude Md Example For Flutter Mobile — Developer Guide](/claude-md-example-for-flutter-mobile-application/)
+- [Claude Code for Template Based Code Generation Guide](/claude-code-for-template-based-code-generation-guide/)
+- [Claude Md Example For Laravel Php — Developer Guide](/claude-md-example-for-laravel-php-application/)
+- [Claude Code Ignoring CLAUDE.md Entirely — Complete Diagnostic Guide (2026)](/claude-ignoring-claude-md-entirely/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

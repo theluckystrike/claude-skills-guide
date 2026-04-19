@@ -175,6 +175,14 @@ Related Reading
 - [Chrome Enterprise Password Manager Policy: A Practical Guide for Developers](/chrome-enterprise-password-manager-policy/)
 - [Chrome Incognito Mode Disable Enterprise: A Complete Guide](/chrome-incognito-mode-disable-enterprise/)
 - [Chrome Enterprise Deployment Guide 2026](/chrome-enterprise-deployment-guide-2026/)
+- [CLAUDE.md Example for React Native + Expo — Production Template (2026)](/claude-md-example-for-react-native-expo/)
+- [CLAUDE.md Example for FastAPI + SQLAlchemy — Production Template (2026)](/claude-md-example-for-fastapi-sqlalchemy/)
+- [CLAUDE.md Example for React + Vite + TypeScript — Production Template (2026)](/claude-md-example-for-react-vite-typescript/)
+- [CLAUDE.md Example for Rust + Axum + SQLx — Production Template (2026)](/claude-md-example-for-rust-axum-sqlx/)
+- [CLAUDE.md Example for Next.js + TypeScript — Production Template (2026)](/claude-md-example-for-nextjs-typescript/)
+- [CLAUDE.md Example for iOS + Swift + SwiftUI — Production Template (2026)](/claude-md-example-for-ios-swift-swiftui/)
+- [Update Team CLAUDE.md Without Breaking Existing Workflows (2026)](/updating-team-claude-md-without-breaking-workflows/)
+- [CLAUDE.md Code Review Process — Reviewing AI-Generated Code Against Rules (2026)](/claude-md-code-review-process/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

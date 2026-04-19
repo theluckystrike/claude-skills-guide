@@ -261,6 +261,7 @@ Related Reading
 - [Claude Code for Spring Virtual Threads Workflow](/claude-code-for-spring-virtual-threads-workflow/)
 - [Claude Code for Failsafe Java Resilience Workflow](/claude-code-for-failsafe-java-resilience-workflow/)
 - [Claude Code for Node.js Worker Threads Workflow](/claude-code-for-nodejs-worker-threads-workflow/)
+- [Chrome Extension Loom — Developer Comparison 2026](/chrome-extension-loom-alternative-free/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

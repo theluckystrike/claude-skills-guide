@@ -217,6 +217,8 @@ Related Reading
 - [Claude Code for Meilisearch Integration Workflow](/claude-code-for-meilisearch-integration-workflow/)
 - [Claude Code + LangChain Integration: Agent Workflow](/claude-code-langchain-integration-agent-workflow-guide/)
 - [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
+- [Claude Code For Pr Bot — Complete Developer Guide](/claude-code-for-pr-bot-integration-workflow-guide/)
+- [Claude Code For Codesearch — Complete Developer Guide](/claude-code-for-codesearch-integration-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

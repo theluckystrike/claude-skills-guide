@@ -312,3 +312,12 @@ $99 once. Free forever. 47/500 founding spots left.
 - [Claude Code Testcontainers Integration Testing](/claude-code-testcontainers-integration-testing/)
 
 
+
+## Related Articles
+
+- [How To Use Claude Code To Write — Complete Developer Guide](/how-to-use-claude-code-to-write-database-queries-from-scratch/)
+- [Claude Code NextAuth Database Adapter Setup Guide](/claude-code-nextauth-database-adapter-setup-guide/)
+- [Claude Code for Neon DB Branching — Guide](/claude-code-for-neon-database-branching-workflow-guide/)
+- [Claude Code for Xata Database — Workflow Guide](/claude-code-for-xata-database-workflow-guide/)
+- [Claude Code with PlanetScale Database Workflow Guide](/claude-code-with-planetscale-database-workflow-guide/)
+- [Claude Code with Firebase Realtime Database Workflow](/claude-code-with-firebase-realtime-database-workflow/)

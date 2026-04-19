@@ -330,6 +330,14 @@ Related Reading
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
+- [Claude Code for Statuspage Workflow Tutorial](/claude-code-for-statuspage-workflow-tutorial/)
+- [Claude Code For Fluent Bit — Complete Developer Guide](/claude-code-for-fluent-bit-workflow-tutorial/)
+- [Claude Code for PowerSync — Workflow Guide](/claude-code-for-powersync-offline-workflow-guide/)
+- [Claude Code for Adversarial Robustness Workflow](/claude-code-for-adversarial-robustness-workflow/)
+- [Claude Code for Envoy Proxy Workflow Tutorial](/claude-code-for-envoy-proxy-workflow-tutorial/)
+- [Claude Code For Ibc Cosmos — Complete Developer Guide](/claude-code-for-ibc-cosmos-workflow/)
+- [How to Use German Developer Localization Workflow (2026)](/claude-code-german-developer-localization-workflow-guide/)
+- [Claude Code for wasm-bindgen Workflow Tutorial](/claude-code-for-wasm-bindgen-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

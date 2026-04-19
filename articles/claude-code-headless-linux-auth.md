@@ -170,3 +170,9 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)
 
 
+
+## Related Articles
+
+- [Claude Code for Ory Auth — Workflow Guide](/claude-code-for-ory-auth-workflow-guide/)
+- [Claude Code for Lucia Auth — Workflow Guide](/claude-code-for-lucia-auth-workflow-workflow-guide/)
+- [Claude Code for Hanko Auth — Workflow Guide](/claude-code-for-hanko-auth-workflow-guide/)

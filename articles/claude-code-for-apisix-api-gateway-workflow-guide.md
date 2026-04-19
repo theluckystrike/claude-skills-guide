@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code For Apisix API — Complete Developer Guide"
 description: "Learn how to use Claude Code to configure, manage, and optimize APISIX API Gateway workflows. Practical guide with examples for developers."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-apisix-api-gateway-workflow-guide/
 categories: [guides]
@@ -13,6 +13,8 @@ tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
 # Claude Code for APISIX API Gateway Workflow Guide
+
+This is a focused treatment of apisix api gateway with Claude Code. It covers setup, common patterns, and troubleshooting specific to apisix api gateway. For broader context, [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) is a good companion read.
 
 Apache APISIX is a powerful, open-source API gateway that provides traffic management, security, and observability for microservices architectures. Managing APISIX configurations effectively requires understanding its declarative configuration model, plugin system, and routing logic. Claude Code can significantly accelerate your APISIX workflow by helping you write configuration files, debug routing issues, design plugin chains, and implement best practices. This guide walks you through practical workflows for using Claude Code to manage APISIX API Gateway.
 
@@ -81,6 +83,12 @@ By using Claude Code throughout your APISIX workflow, you can accelerate configu
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

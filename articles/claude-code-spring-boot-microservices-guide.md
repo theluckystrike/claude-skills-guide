@@ -422,6 +422,7 @@ Related Reading
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Deploy Spring Boot services to Kubernetes and cloud platforms
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep long microservices refactoring sessions economical
 - [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Monolith to Microservices Refactor Guide](/claude-code-for-monolith-to-microservices-refactor-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

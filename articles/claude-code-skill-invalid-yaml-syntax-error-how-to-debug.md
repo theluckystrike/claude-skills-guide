@@ -240,6 +240,7 @@ Related Reading
 - [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). Master the complete skill.md format to write valid YAML front matter from the start
 - [How Do I Debug a Claude Skill That Silently Fails](/how-do-i-debug-a-claude-skill-that-silently-fails/). Use these debugging strategies when YAML errors cause skills to load without error but produce no output
 - [Claude Skills: Getting Started Hub](/getting-started-hub/). Explore skill authoring fundamentals and common YAML patterns for well-structured Claude skills
+- [Fix Malformed YAML Frontmatter in SKILL.md Files — 2026](/fix-malformed-yaml-frontmatter-skill-md/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

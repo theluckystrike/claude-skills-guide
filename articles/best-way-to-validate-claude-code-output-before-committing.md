@@ -208,6 +208,8 @@ Related Reading
 - [What Is the Best Way to Organize Claude Skills in a Monorepo](/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/)
 - [Accessible Forms with Claude Code: Error Handling Guide](/claude-code-accessible-forms-validation-error-handling-guide/)
 - [Claude Code ActiveRecord Scopes and Callbacks Best Practices](/claude-code-activerecord-scopes-callbacks-best-practices/)
+- [How AI Agents Reason Before — Complete Developer Guide](/how-ai-agents-reason-before-taking-actions-guide/)
+- [Best Way To Give Claude Code — Honest Review 2026](/best-way-to-give-claude-code-repeatable-deterministic-output/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

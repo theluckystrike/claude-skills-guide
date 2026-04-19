@@ -371,6 +371,14 @@ Related Reading
 - [AI Coding Tool Evaluation Framework for Teams](/ai-coding-tool-evaluation-framework-for-teams/)
 - [Chrome Extension Mood Tracker for Teams: Building.](/chrome-extension-mood-tracker-team/)
 - [Measuring ROI of AI Coding Tools for Teams](/measuring-roi-of-ai-coding-tools-for-teams/)
+- [Scaling Claude Code Usage Across Multiple Engineering Teams](/scaling-claude-code-usage-across-multiple-engineering-teams/)
+- [Claude Code Roi Measurement Framework For — Developer Guide](/claude-code-roi-measurement-framework-for-engineering-manage/)
+- [Learning Claude Code In 30 Days Challenge — Developer Guide](/learning-claude-code-in-30-days-challenge/)
+- [Claude Code For Traceloop LLM — Complete Developer Guide](/claude-code-for-traceloop-llm-observability-guide/)
+- [Contributing to Open Source with Claude Code](/claude-code-for-open-source-contribution/)
+- [Claude Code OpenTelemetry Tracing Instrumentation Guide](/claude-code-opentelemetry-tracing-instrumentation-guide/)
+- [Claude Code JSDoc TypeScript Documentation Guide](/claude-code-jsdoc-typescript-documentation/)
+- [Claude Code Statsig Dynamic Config Remote Values Guide](/claude-code-statsig-dynamic-config-remote-values-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

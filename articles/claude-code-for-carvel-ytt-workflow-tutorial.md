@@ -385,6 +385,14 @@ Related Reading
 - [Claude Code for OpenEBS Storage Workflow Tutorial](/claude-code-for-openebs-storage-workflow-tutorial/)
 - [Claude Code for Shell Operator Workflow Tutorial](/claude-code-for-shell-operator-workflow-tutorial/)
 - [Claude Code Chaos Engineering Testing Automation Guide](/claude-code-chaos-engineering-testing-automation-guide/)
+- [Claude Code for CrewAI — Workflow Guide](/claude-code-for-crewai-workflow-guide/)
+- [Claude Code for Jujutsu VCS — Workflow Guide](/claude-code-for-jujutsu-vcs-workflow-guide/)
+- [Claude Code for TablePlus — Workflow Guide](/claude-code-for-tableplus-workflow-guide/)
+- [Claude Code for Zellij — Workflow Guide](/claude-code-for-zellij-multiplexer-workflow-guide/)
+- [Claude Code for Medusa Commerce — Guide](/claude-code-for-medusa-commerce-workflow-guide/)
+- [Claude Code for Oxlint — Workflow Guide](/claude-code-for-oxlint-workflow-guide/)
+- [Claude Code for UnJS Ecosystem — Workflow Guide](/claude-code-for-unjs-ecosystem-workflow-guide/)
+- [Claude Code for Automerge CRDT — Workflow Guide](/claude-code-for-automerge-crdt-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -235,3 +235,9 @@ $99 once. Free forever. 47/500 founding spots left.
 - [Claude Python SDK Getting Started](/claude-python-sdk-getting-started-example/) -- basic SDK setup before implementing caching.
 
 
+
+## Related Articles
+
+- [Claude Code API Response Caching Guide](/claude-code-api-response-caching-guide/)
+- [Combining Caching with Batch API for 95% Savings](/combining-caching-batch-api-95-percent-savings/)
+- [Prompt Compression Techniques for Claude API](/prompt-compression-techniques-claude-api/)

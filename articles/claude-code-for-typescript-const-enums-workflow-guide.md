@@ -252,6 +252,7 @@ Related Reading
 - [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/)
 - [Claude Code Express TypeScript API Guide: Build.](/claude-code-express-typescript-api-guide/)
 - [Claude Code for T3 Stack tRPC Next.js Workflow](/claude-code-for-t3-stack-trpc-nextjs-workflow/)
+- [Claude Code TypeScript Strict Mode Workflow](/claude-code-typescript-strict-mode-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

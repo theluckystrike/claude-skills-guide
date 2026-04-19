@@ -298,6 +298,14 @@ Related Reading
 - [AI Coding Tools for Code Migration Projects](/ai-coding-tools-for-code-migration-projects/)
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)
 - [Claude Code for Portfolio Project Development](/claude-code-for-portfolio-project-development/)
+- [Claude Code for MQTT IoT Messaging Workflow](/claude-code-for-mqtt-iot-messaging-workflow/)
+- [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
+- [Claude Code for Spark Delta Lake Workflow Tutorial](/claude-code-for-spark-delta-lake-workflow-tutorial/)
+- [How to Use Zeek Network Analysis (2026)](/claude-code-for-zeek-network-analysis-workflow/)
+- [Claude Code for Tree-sitter Playground Workflow Guide](/claude-code-for-tree-sitter-playground-workflow-guide/)
+- [Claude Code Figma to Tailwind Component Conversion](/claude-code-figma-to-tailwind-component-conversion/)
+- [How to Use Tree-sitter Node Types with Claude Code (2026)](/claude-code-for-tree-sitter-node-types-workflow-guide/)
+- [MCP Tool Description Injection Attack Explained](/mcp-tool-description-injection-attack-explained/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

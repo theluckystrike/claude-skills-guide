@@ -329,6 +329,7 @@ Related Reading
 - [Claude Code Skills for Golang Microservices](/claude-code-skills-for-golang-microservices/). compare microservice development patterns across languages
 - [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). build custom Rails-specific skills for your project
 - [Use Cases Hub](/use-cases-hub/). explore Claude Code skills for web application development
+- [Claude Skills vs Claude AI Projects — When to Use Code Skills vs Web-Based Project Instructions — 20](/claude-skills-vs-claude-ai-projects/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

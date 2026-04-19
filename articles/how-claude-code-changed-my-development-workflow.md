@@ -143,6 +143,7 @@ Related Reading
 - [Claude Code Data Engineer ETL Debugging Daily Workflow](/claude-code-data-engineer-etl-debugging-daily-workflow/)
 - [Claude Code Debug Configuration Workflow](/claude-code-debug-configuration-workflow/)
 - [Claude Code Error: npm install Fails in Skill Workflow](/claude-code-error-npm-install-fails-in-skill-workflow/)
+- [Claude Code for FPGA Development Workflow Tutorial](/claude-code-for-fpga-development-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

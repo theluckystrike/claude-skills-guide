@@ -472,6 +472,8 @@ Related Reading
 - [Claude Code for Prisma Cloud Workflow Tutorial](/claude-code-for-prisma-cloud-workflow-tutorial/)
 - [Claude Code for Twistlock Prisma Cloud Workflow Tutorial](/claude-code-for-twistlock-prisma-cloud-workflow-tutorial/)
 - [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
+- [Claude Code Laravel Queues, Jobs, Workers & Workflow Guide](/claude-code-laravel-queues-jobs-workers-workflow-guide/)
+- [Claude Code for Pulumi Multi-Cloud Workflow](/claude-code-for-pulumi-multi-cloud-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -405,6 +405,7 @@ Related Reading
 - [Claude Code for Meilisearch Integration Workflow](/claude-code-for-meilisearch-integration-workflow/)
 - [Claude Code for Algolia Search Workflow Guide](/claude-code-for-algolia-search-workflow-guide/)
 - [Claude Code for AST-Based Code Search Workflow](/claude-code-for-ast-based-code-search-workflow/)
+- [Claude Code for Hybrid Search Workflow Tutorial](/claude-code-for-hybrid-search-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

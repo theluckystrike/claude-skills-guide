@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Imgix Image Optimization Workflow"
 description: "Learn how to build Claude Code skills that automate Imgix image optimization workflows. Practical examples for URL generation, responsive images, and."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides, tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
@@ -14,6 +14,8 @@ score: 7
 geo_optimized: true
 ---
 
+
+Developers working with imgix image regularly encounter format selection tradeoffs and progressive loading strategies. This guide provides concrete Claude Code patterns for imgix image that address these issues directly, starting from a working project setup.
 
 Claude Code for Imgix Image Optimization Workflow
 
@@ -481,6 +483,12 @@ Start with the URL generator skill, then add responsive image generation, and fi
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

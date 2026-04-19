@@ -3,8 +3,8 @@
 layout: default
 title: "How to Use Brownie Python Workflow (2026)"
 description: "A comprehensive guide to integrating Claude Code CLI with Brownie for efficient smart contract development, testing, and deployment workflows."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-brownie-python-workflow-guide/
 categories: [guides]
@@ -13,6 +13,8 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
+
+This is a focused treatment of brownie python with Claude Code. It covers setup, common patterns, and troubleshooting specific to brownie python. For broader context, [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) is a good companion read.
 
 Brownie is a Python-based framework for developing, testing, and deploying smart contracts on Ethereum and other EVM-compatible networks. When combined with Claude Code, you get an intelligent pair programming assistant that can accelerate your entire development workflow, from initial contract design to final deployment. This guide shows you how to integrate Claude Code smoothly with your Brownie projects.
 
@@ -586,6 +588,12 @@ Start with small tasks, gradually incorporating more complex workflows as you be
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

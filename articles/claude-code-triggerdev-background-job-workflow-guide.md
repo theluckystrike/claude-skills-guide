@@ -213,6 +213,7 @@ Related Reading
 - [Claude Code for Trigger.dev Workflow Automation Tutorial](/claude-code-for-trigger-dev-workflow-automation-tutorial/)
 - [Chrome Enterprise Split Tunnel Browsing: A Practical Guide](/chrome-enterprise-split-tunnel-browsing/)
 - [Chrome Extension Arrow and Text Overlay Screenshot Guide](/chrome-extension-arrow-and-text-overlay-screenshot/)
+- [Claude Code Bullmq Delayed Retry — Complete Developer Guide](/claude-code-bullmq-delayed-retry-job-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -150,6 +150,7 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 - [Fan-Out Fan-In Pattern with Claude Code Subagents](/fan-out-fan-in-pattern-claude-code-subagents/). Apply decomposition patterns to parallel agent execution
+- [What Is An AI Agent Loop Explained Simply — Developer Guide](/what-is-an-ai-agent-loop-explained-simply/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -452,6 +452,7 @@ Related Reading
 - [Claude Code for Cloudflare R2 Storage Workflow Guide](/claude-code-for-cloudflare-r2-storage-workflow-guide/)
 - [Claude Code for Cloudflare WAF Rules Workflow](/claude-code-for-cloudflare-waf-rules-workflow/)
 - [Claude Code for Web Workers Workflow Guide](/claude-code-for-web-workers-workflow-guide/)
+- [Claude Code For Cloudflare D1 — Complete Developer Guide](/claude-code-for-cloudflare-d1-database-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

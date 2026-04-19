@@ -456,6 +456,8 @@ Related Reading
 - [Claude Code for wasm-bindgen Workflow Tutorial](/claude-code-for-wasm-bindgen-workflow-tutorial/)
 - [Jest to Vitest Migration Workflow with Claude Code](/claude-code-jest-to-vitest-migration-workflow-tutorial/)
 - [Claude Code NestJS Custom Decorators Workflow Tutorial](/claude-code-nestjs-custom-decorators-workflow-tutorial/)
+- [Claude Code for Moon Build System — Guide](/claude-code-for-moon-build-system-workflow-guide/)
+- [Pieces for Developers AI Review Workflow Tool](/pieces-for-developers-ai-review-workflow-tool/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

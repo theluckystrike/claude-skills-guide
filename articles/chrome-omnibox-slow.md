@@ -299,6 +299,14 @@ Related Reading
 - [Chrome iOS Slow Fix: A Developer's Guide to Speed Optimization](/chrome-ios-slow-fix/)
 - [Chrome Running Slow? Too Many Extensions is the Cause](/chrome-slow-too-many-extensions/)
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
+- [Why Is Chrome So Slow in 2026? Quick Fixes](/why-is-chrome-so-slow-2026/)
+- [Why Is Claude Code Suddenly Worse Than It — Developer Guide](/why-is-claude-code-suddenly-worse-than-it-was-before/)
+- [Claude Code Keeps Generating Placeholder TODO Comments](/claude-code-keeps-generating-placeholder-todo-comments/)
+- [Fix Chrome Slow Macbook — Quick Guide (2026)](/chrome-slow-macbook-fix/)
+- [Claude Says Response Incomplete — How to Fix (2026)](/claude-code-keeps-outputting-incomplete-truncated-code/)
+- [Securing Claude Code in Enterprise Environments](/securing-claude-code-in-enterprise-environments/)
+- [Claude Keeps Timing Out and Changing Style: Fix (2026)](/claude-code-keeps-changing-my-indentation-style/)
+- [How to Stop Claude Code from Modifying Unrelated Files](/how-to-stop-claude-code-from-modifying-unrelated-files/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

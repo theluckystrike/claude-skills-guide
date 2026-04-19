@@ -160,3 +160,8 @@ paths:
 Including rate limiting rules in your CLAUDE.md ensures Claude adds the correct middleware and headers when generating new endpoints, rather than creating unprotected endpoints that need to be secured after the fact.
 
 For the response envelope pattern and how it integrates with error handling, see the [error handling guide](/claude-md-error-handling-patterns/). For the overall CLAUDE.md structure, see the [senior engineer template](/senior-engineer-claude-md-template/). For database conventions behind your API, see the [database conventions guide](/claude-md-database-conventions/).
+
+## Related Articles
+
+- [Claude.md for API Design Standards Guide](/claude-md-for-api-design-standards-guide/)
+- [Claude Md Example For Go Fiber API Project — Developer Guide](/claude-md-example-for-go-fiber-api-project/)

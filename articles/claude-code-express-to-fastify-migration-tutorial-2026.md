@@ -723,6 +723,14 @@ Related Reading
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). The tdd and supermemory skills power migration workflows
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Trigger skills automatically during migration and refactoring tasks
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Manage token usage during long migration sessions
+- [How to Use TypeORM Entities Relations Migration (2026)](/claude-code-typeorm-entities-relations-migration-workflow/)
+- [Claude Code Struts to Spring Boot Migration Workflow](/claude-code-struts-to-spring-boot-migration-workflow/)
+- [Claude Code Next.js App Router — Complete Developer Guide](/claude-code-nextjs-app-router-migration-guide/)
+- [Claude Code MongoDB Aggregation Pipeline Workflow Guide](/claude-code-mongodb-aggregation-pipeline-workflow-guide/)
+- [Claude Code for Kotlin Multiplatform — Guide](/claude-code-for-kotlin-multiplatform-workflow-guide/)
+- [Claude Code for TanStack Form — Workflow Guide](/claude-code-for-tanstack-form-workflow-guide/)
+- [How to Use TypeORM Query Builder Patterns with Claude Code](/claude-code-typeorm-query-builder-advanced-patterns-guide/)
+- [Claude Code for Wormhole Bridge Workflow Guide](/claude-code-for-wormhole-bridge-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

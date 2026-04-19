@@ -311,6 +311,12 @@ Related Reading
 - [What Chrome Data Google Collects: A Technical Guide for.](/chrome-data-google-collects/)
 - [AI Data Extractor Chrome Extension: A Developer's Guide](/ai-data-extractor-chrome-extension/)
 - [Block WebRTC Leak in Chrome: A Developer's Guide](/block-webrtc-leak-chrome/)
+- [Structured Data Tester Chrome Extension Guide (2026)](/chrome-extension-structured-data-tester/)
+- [Google Workspace Chrome Policies — Developer Guide](/google-workspace-chrome-policies/)
+- [Block Distracting Sites Chrome Extension Guide (2026)](/chrome-extension-block-distracting-sites/)
+- [Google Calendar Sidebar Chrome Extension Guide (2026)](/chrome-extension-google-calendar-sidebar/)
+- [Chrome Extension Google Docs Citation Addon](/chrome-extension-google-docs-citation-addon/)
+- [ChatGPT For Google Chrome Extension Guide (2026)](/chatgpt-for-google-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

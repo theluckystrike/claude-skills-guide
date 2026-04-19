@@ -191,3 +191,14 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 *Last verified: 2026-04-14. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*
 
 
+
+## Related Articles
+
+- [Claude Code Angular MCP Configuration](/claude-code-angular-mcp/)
+- [Set Up Django MCP Server for Claude Code](/claude-code-django-mcp/)
+- [Set Up Docker MCP Server for Claude Code](/claude-code-docker-mcp/)
+- [Add MySQL MCP to Claude Code](/claude-code-add-mysql-mcp/)
+- [Add Angular MCP to Claude Code](/claude-code-add-angular-mcp/)
+- [Connect Claude Code to Remote MCP Servers](/claude-code-mcp-remote-http-server-setup/)
+- [Add MongoDB MCP to Claude Code](/claude-code-add-mongodb-mcp/)
+- [Claude Code Supabase MCP Setup Guide](/claude-code-supabase-mcp-setup/)

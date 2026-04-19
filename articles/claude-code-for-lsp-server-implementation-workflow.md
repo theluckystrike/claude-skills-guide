@@ -286,6 +286,9 @@ Related Reading
 - [Claude Code for Astro Server Endpoints Workflow](/claude-code-for-astro-server-endpoints-workflow/)
 - [Claude Code for Custom LSP Diagnostics Workflow](/claude-code-for-custom-lsp-diagnostics-workflow/)
 - [Claude Code for Language Server Protocol Workflow Guide](/claude-code-for-language-server-protocol-workflow-guide/)
+- [Claude Code for Vinxi Server — Workflow Guide](/claude-code-for-vinxi-server-workflow-guide/)
+- [How to Use vLLM Inference Server (2026)](/claude-code-for-vllm-inference-server-workflow/)
+- [Claude Code for Lazy Loading Implementation Workflow](/claude-code-for-lazy-loading-implementation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

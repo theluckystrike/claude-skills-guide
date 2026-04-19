@@ -168,6 +168,14 @@ Related Reading
 - [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/). Scoping prevents recurring mistakes
 - [Claude Code Gives Incorrect Imports How to Fix](/claude-code-gives-incorrect-imports-how-to-fix/). A specific recurring mistake and its fix
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). More behavioral issue fixes
+- [Claude Code Keeps Rewriting Functions I — Developer Guide](/claude-code-keeps-rewriting-functions-i-said-keep/)
+- [Claude Code Keeps Deleting My Comments In — Developer Guide](/claude-code-keeps-deleting-my-comments-in-code/)
+- [Claude Code Keeps Generating Placeholder TODO Comments](/claude-code-keeps-generating-placeholder-todo-comments/)
+- [Claude Code Keeps Breaking Imports When Refactoring](/claude-code-keeps-breaking-imports-when-refactoring/)
+- [Claude Says Response Incomplete — How to Fix (2026)](/claude-code-keeps-outputting-incomplete-truncated-code/)
+- [Claude Keeps Timing Out and Changing Style: Fix (2026)](/claude-code-keeps-changing-my-indentation-style/)
+- [Claude Code Keeps Suggesting The Same — Developer Guide](/claude-code-keeps-suggesting-the-same-broken-solution/)
+- [Claude Code Keeps Producing Slightly — Developer Guide](/claude-code-keeps-producing-slightly-different-code-each-tim/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

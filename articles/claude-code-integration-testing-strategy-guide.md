@@ -330,6 +330,9 @@ Related Reading
 - [Claude Code Skills for Writing Unit Tests Automatically](/claude-skills-for-writing-unit-tests-automatically/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Code Tutorials Hub](/tutorials-hub/)
+- [Claude Code Shift Left Testing Strategy Guide](/claude-code-shift-left-testing-strategy-guide/)
+- [Claude Code for Performance Testing Strategy Workflow](/claude-code-for-performance-testing-strategy-workflow/)
+- [Vibe Coding Testing Strategy How — Complete Developer Guide](/vibe-coding-testing-strategy-how-to-test-ai-code/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -503,6 +503,14 @@ Related Reading
 - [Chrome Enterprise Bookmark Bar Settings: A Complete Guide](/chrome-enterprise-bookmark-bar-settings/)
 - [Chrome Enterprise Device Trust Connector: A Developer Guide](/chrome-enterprise-device-trust-connector/)
 - [Chrome Enterprise Private Extension Hosting: A Complete Guide](/chrome-enterprise-private-extension-hosting/)
+- [Continue.dev vs Claude Code — Should You Switch? (2026)](/should-i-switch-from-continue-dev-to-claude/)
+- [Claude Code for Pants Build System Workflow Guide](/claude-code-for-pants-build-system-workflow-guide/)
+- [Claude Code for Buck2 Build System Workflow Guide](/claude-code-for-buck2-build-system-workflow-guide/)
+- [Claude Code for SAST Static Analysis Workflow Tips](/claude-code-for-sast-static-analysis-workflow-tips/)
+- [Claude Code for Hybrids Web Components Workflow](/claude-code-for-hybrids-web-components-workflow/)
+- [Claude Code For Sre Toil — Complete Developer Guide](/claude-code-for-sre-toil-automation-workflow/)
+- [Claude Code Triggerdev — Complete Developer Guide](/claude-code-triggerdev-background-job-workflow-guide/)
+- [Claude Code for Stencil Web Components Workflow](/claude-code-for-stencil-web-components-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

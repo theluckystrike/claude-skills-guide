@@ -742,6 +742,14 @@ Related Reading
 - [Claude Code for Custom LSP Diagnostics Workflow](/claude-code-for-custom-lsp-diagnostics-workflow/)
 - [Claude Code for LSP Hover Provider Workflow Tutorial](/claude-code-for-lsp-hover-provider-workflow-tutorial/)
 - [Claude Code for LSP Semantic Tokens Workflow Tutorial](/claude-code-for-lsp-semantic-tokens-workflow-tutorial/)
+- [Claude Code For Suricata Ids — Complete Developer Guide](/claude-code-for-suricata-ids-workflow-guide/)
+- [Claude Code For Prefect Ml — Complete Developer Guide](/claude-code-for-prefect-ml-workflow-tutorial/)
+- [Claude Code for AI Risk Assessment Workflow Guide](/claude-code-for-ai-risk-assessment-workflow-guide/)
+- [Claude Code for Code Splitting Workflow Tutorial](/claude-code-for-code-splitting-workflow-tutorial/)
+- [Claude Code for Standard Version Workflow](/claude-code-for-standard-version-workflow/)
+- [Claude Code for jsPolicy Workflow Tutorial Guide](/claude-code-for-jsolicy-workflow-tutorial-guide/)
+- [Claude Code for Hardhat Plugins Workflow](/claude-code-for-hardhat-plugins-workflow/)
+- [Claude Code for Incident Retrospective Workflow Guide](/claude-code-for-incident-retrospective-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

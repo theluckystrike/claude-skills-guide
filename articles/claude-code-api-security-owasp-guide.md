@@ -753,6 +753,13 @@ Related Reading
 - [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)
 - [AI Agent Goal Decomposition: How It Works Explained](/ai-agent-goal-decomposition-how-it-works-explained/)
 - [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)
+- [Claude Code Keeps Using Deprecated API Methods](/claude-code-keeps-using-deprecated-api-methods/)
+- [Model Routing by Task Cuts Claude API Bills](/model-routing-cut-claude-api-bills/)
+- [Smart Context Pruning for Claude API Savings](/smart-context-pruning-claude-api-savings/)
+- [Claude API Usage Metrics Every Team Needs](/claude-api-usage-metrics-every-team-needs/)
+- [Per-Request Cost Tracking for Claude API](/per-request-cost-tracking-claude-api/)
+- [Claude API Cost Dashboard Setup Guide 2026](/claude-api-cost-dashboard-setup-guide-2026/)
+- [Claude Code Express TypeScript — Complete Developer Guide](/claude-code-express-typescript-api-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

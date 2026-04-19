@@ -262,6 +262,14 @@ Related Reading
 - [Claude Code Gin GoLang REST API Development Guide](/claude-code-gin-golang-rest-api-development-guide/)
 - [AI Code Assistant Chrome Extension: Practical Guide for.](/ai-code-assistant-chrome-extension/)
 - [Best AI Chrome Extensions 2026: A Practical Guide for Developers](/best-ai-chrome-extensions-2026/)
+- [White Label Developer Copilot Built On — Developer Guide](/white-label-developer-copilot-built-on-claude-code-api/)
+- [Claude Code Fetch API Wrapper Guide](/claude-code-fetch-api-wrapper-guide/)
+- [Claude Code API Idempotency Implementation — Developer Guide](/claude-code-api-idempotency-implementation/)
+- [Claude Code API Mocking Development Guide](/claude-code-api-mocking-development-guide/)
+- [Claude Code API Rate Limiting Implementation Guide](/claude-code-api-rate-limiting-implementation/)
+- [Claude Code WireMock API Mocking Guide](/claude-code-wiremock-api-mocking-guide/)
+- [Building TypeScript APIs with Claude Code and Hono Framework](/claude-code-hono-framework-typescript-api-workflow/)
+- [Claude Code for Health Endpoint Pattern Workflow](/claude-code-for-health-endpoint-pattern-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

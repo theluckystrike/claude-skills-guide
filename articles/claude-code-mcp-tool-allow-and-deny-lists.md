@@ -172,6 +172,7 @@ Related Reading
 - [MCP Server Permission Auditing Best Practices](/mcp-server-permission-auditing-best-practices/)
 - [Claude Code Skill Permission Scope Error Explained](/claude-code-skill-permission-denied-error-fix-2026/)
 - [Advanced Hub](/advanced-hub/)
+- [Claude Code MCP Tool Categories and Use Cases Guide](/claude-code-mcp-tool-categories-use-cases-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

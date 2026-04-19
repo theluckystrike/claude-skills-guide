@@ -390,6 +390,8 @@ Related Reading
 - [Claude MD for Accessibility Requirements: A Practical.](/claude-md-for-accessibility-requirements-a11y/)
 - [Claude Code i18n Workflow for React Applications Guide](/claude-code-i18n-workflow-for-react-applications-guide/)
 - [Claude Code PostHog Feature Flag React SDK Guide](/claude-code-posthog-feature-flag-react-sdk-guide/)
+- [Claude Code for Atomico Web Components Workflow](/claude-code-for-atomico-web-components-workflow/)
+- [How to Create React Components Faster with Claude Code](/how-to-create-react-components-faster-with-claude-code/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

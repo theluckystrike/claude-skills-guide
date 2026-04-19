@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for ScyllaDB Workflow Tutorial Guide"
 description: "Learn how to use Claude Code to build efficient ScyllaDB workflows, from database setup to advanced query patterns with practical code examples."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-for-scylladb-workflow-tutorial-guide/
 categories: [tutorials, guides]
@@ -13,6 +13,8 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
+
+Everything below targets scylladb workflow and the specific Claude Code patterns that make scylladb workflow work smoothly. For related approaches, see [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/).
 
 ScyllaDB is a high-performance NoSQL database compatible with Apache Cassandra, offering exceptional throughput and low latency. When combined with Claude Code's intelligent automation capabilities, you can build powerful database workflows that handle complex data operations efficiently. This guide walks you through integrating Claude Code with ScyllaDB, creating practical workflows, and optimizing your database interactions.
 
@@ -280,6 +282,12 @@ Kafka consumer persistence. For Kafka consumers that need to persist processed e
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

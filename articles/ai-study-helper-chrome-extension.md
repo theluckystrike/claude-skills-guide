@@ -284,6 +284,13 @@ Related Reading
 - [Chrome Extension Canvas LMS Helper: A Developer Guide](/chrome-extension-canvas-lms-helper/)
 - [Chrome Extension Study Schedule Planner: Build Your Own](/chrome-extension-study-schedule-planner/)
 - [Chrome Extension Wolfram Alpha Helper](/chrome-extension-wolfram-alpha-helper/)
+- [Chrome Extension Thesis Writing Helper](/chrome-extension-thesis-writing-helper/)
+- [Chrome Helper High Cpu Mac — Developer Guide](/chrome-helper-high-cpu-mac/)
+- [Quizlet Helper Chrome Extension: Developer Guide (2026)](/chrome-extension-quizlet-helper/)
+- [Chrome Extension PubMed Search Helper](/chrome-extension-pubmed-search-helper/)
+- [Leetcode Helper Chrome Extension Guide (2026)](/chrome-extension-leetcode-helper/)
+- [AI Photo Enhancer Chrome Extension Guide (2026)](/ai-photo-enhancer-chrome-extension/)
+- [Chrome Lag Switching Tabs — Developer Guide](/chrome-lag-switching-tabs/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

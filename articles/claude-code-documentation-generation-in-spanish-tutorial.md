@@ -344,6 +344,14 @@ Related Reading
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/). build automated documentation pipelines
 - [Building Stateful Agents with Claude Skills Guide](/building-stateful-agents-with-claude-skills-guide/). maintain terminology preferences with supermemory across sessions
 - [Getting Started Hub](/getting-started-hub/). explore the full range of Claude skills for developer workflows
+- [Claude Code For Oss — Complete Developer Guide](/claude-code-for-oss-documentation-contribution-guide/)
+- [Claude Code JSDoc TypeScript Documentation Guide](/claude-code-jsdoc-typescript-documentation/)
+- [Claude Code Portuguese Documentation Generation Guide](/claude-code-portuguese-documentation-generation-guide/)
+- [Claude Code Official Documentation Walkthrough (2026)](/claude-code-official-documentation-walkthrough/)
+- [Claude Code Client Library Generation Guide](/claude-code-client-library-generation-guide/)
+- [Claude Code Confluence Documentation Guide](/claude-code-confluence-documentation-guide/)
+- [Claude Code Runbook Documentation Guide](/claude-code-runbook-documentation-guide/)
+- [Claude Code System Design Documentation — Developer Guide](/claude-code-system-design-documentation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

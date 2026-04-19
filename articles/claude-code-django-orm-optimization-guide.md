@@ -235,6 +235,8 @@ Related Reading
 - [Claude Code for Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/)
 - [Claude Code Power BI DAX Optimization Guide](/claude-code-power-bi-dax-optimization-guide/)
 - [Using Claude Code with Drizzle ORM Schema Management](/using-claude-code-with-drizzle-orm-schema-management/)
+- [Claude Code Laravel Eloquent Orm — Complete Developer Guide](/claude-code-laravel-eloquent-orm-guide/)
+- [Claude Code for Database Query Optimization Workflow](/claude-code-for-database-query-optimization-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

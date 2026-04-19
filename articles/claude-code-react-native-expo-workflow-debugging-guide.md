@@ -374,6 +374,10 @@ Related Reading
 - [Claude Code React Native Performance Optimization Guide](/claude-code-react-native-performance-optimization-guide/)
 - [Claude Code Expo EAS Build Submission Workflow Guide](/claude-code-expo-eas-build-submission-workflow-guide/)
 - [Claude Code React Native Paper Mobile UI Guide](/claude-code-react-native-paper-mobile-ui-guide/)
+- [Claude Code Frontend Developer CSS Debugging Workflow Guide](/claude-code-frontend-developer-css-debugging-workflow-guide/)
+- [Claude Code Verbose Output — Debugging Guide (2026)](/claude-code-verbose-mode-debugging-tips/)
+- [Claude Code Capacitor Hybrid App Debugging Workflow](/claude-code-capacitor-hybrid-app-debugging-workflow/)
+- [Claude Code CS50 Project Help and Debugging Guide](/claude-code-cs50-project-help-and-debugging-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

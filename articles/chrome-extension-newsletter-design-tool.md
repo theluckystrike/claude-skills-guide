@@ -246,6 +246,7 @@ Related Reading
 - [Pieces for Developers AI Review Workflow Tool](/pieces-for-developers-ai-review-workflow-tool/)
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)
+- [Eyedropper Tool Chrome Extension Guide (2026)](/chrome-extension-eyedropper-tool/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -139,3 +139,7 @@ When testing in CI environments, skills in `.claude/skills/` are discovered norm
 - [Build Your First Claude Code Skill](/building-your-first-claude-skill/)
 - [Fix Claude Code Skills Not Showing Up](/fix-claude-code-skills-not-showing-up/)
 - [SKILL.md Frontmatter Fields Explained](/skill-md-file-frontmatter-fields-explained/)
+
+## Related Articles
+
+- [Claude Skills for Git, Docker, and Testing Workflows — 2026](/claude-skills-for-git-docker-testing/)

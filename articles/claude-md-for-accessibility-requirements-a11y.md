@@ -447,6 +447,14 @@ Related Reading
 - [Claude Code Focus Management Audit Accessibility Guide](/claude-code-focus-management-audit-accessibility-guide/)
 - [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/)
 - [Claude Code Accessibility Regression Testing Guide](/claude-code-accessibility-regression-testing/)
+- [Why Does Claude Code Perform Better With — Developer Guide](/why-does-claude-code-perform-better-with-claude-md/)
+- [How to Use Claude Md Conflicting — Complete Developer (2026)](/claude-md-conflicting-instructions-resolution-guide/)
+- [Claude.md for API Design Standards Guide](/claude-md-for-api-design-standards-guide/)
+- [How Claude Code Eliminated Boilerplate Coding](/how-claude-code-eliminated-boilerplate-coding/)
+- [Claude Md For Contractor And Vendor Teams — Developer Guide](/claude-md-for-contractor-and-vendor-teams/)
+- [Claude Md Secrets And Sensitive Info — Developer Guide](/claude-md-secrets-and-sensitive-info-handling/)
+- [Claude Md For Dependency Management Rules — Developer Guide](/claude-md-for-dependency-management-rules/)
+- [CLAUDE.md Example for Rails + Turbo + Stimulus — Production Template (2026)](/claude-md-example-for-rails-turbo-stimulus/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

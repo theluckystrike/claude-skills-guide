@@ -180,6 +180,9 @@ Related Reading
 - [Claude Code for Pair Programming Workflow Guide](/claude-code-for-pair-programming-workflow-guide/)
 - [Claude Code for Pair Review Workflow Tutorial Guide](/claude-code-for-pair-review-workflow-tutorial-guide/)
 - [Is Claude Code Worth It? An Honest Beginner Review 2026](/is-claude-code-worth-it-honest-beginner-review-2026/)
+- [Should I Switch From Aider To Claude Code — Developer Guide](/should-i-switch-from-aider-to-claude-code/)
+- [How Freelancers Use Claude Code to Take More Clients](/how-freelancers-use-claude-code-to-take-more-clients/)
+- [Claude Code Pair Programming for Beginner Developers](/claude-code-pair-programming-for-beginner-developers/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

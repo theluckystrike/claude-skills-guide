@@ -491,6 +491,7 @@ Related Reading
 - [Using Claude Code with Drizzle ORM Schema Management](/using-claude-code-with-drizzle-orm-schema-management/). Schema management workflow, common pitfalls, and documentation automation
 - [Claude Code for Turso SQLite Edge Database Tutorial](/claude-code-for-turso-sqlite-edge-database-tutorial/). See also
 - [Claude Skills With Supabase Database Integration](/claude-skills-with-supabase-database-integration/). See also
+- [Claude Code For Database Orm — Complete Developer Guide](/claude-code-for-database-orm-code-generation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

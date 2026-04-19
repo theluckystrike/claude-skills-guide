@@ -309,6 +309,7 @@ Related Reading
 - [Claude Code for First OSS Contribution Workflow Guide](/claude-code-for-first-oss-contribution-workflow-guide/)
 - [Claude Code for OSS Community Engagement Workflow](/claude-code-for-oss-community-engagement-workflow/)
 - [Claude Code for OSS Contributor Guide Workflow](/claude-code-for-oss-contributor-guide-workflow/)
+- [Claude Code For Oss Maintainer — Complete Developer Guide](/claude-code-for-oss-maintainer-burnout-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

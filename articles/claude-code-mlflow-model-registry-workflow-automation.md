@@ -223,6 +223,7 @@ Related Reading
 - [Claude Code Container Registry Workflow Guide](/claude-code-container-registry-workflow-guide/)
 - [Claude Code Drone CI Workflow Automation](/claude-code-drone-ci-workflow-automation/)
 - [Claude Code for Browser Automation Workflow Guide](/claude-code-for-browser-automation-workflow-guide/)
+- [Claude Code for Diamond Model Intrusion Workflow Tutorial](/claude-code-for-diamond-model-intrusion-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

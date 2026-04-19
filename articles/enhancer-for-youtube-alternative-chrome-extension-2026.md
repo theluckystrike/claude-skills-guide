@@ -185,6 +185,14 @@ Related Reading
 - [Buffer Alternative Chrome Extension 2026](/buffer-alternative-chrome-extension-2026/)
 - [Nimbus Screenshot Alternative Chrome Extension in 2026](/nimbus-screenshot-alternative-chrome-extension-2026/)
 - [Semrush Alternative Chrome Extension in 2026](/semrush-alternative-chrome-extension-2026/)
+- [Google Meet Chrome Extension Enhancer Guide (2026)](/google-meet-chrome-extension-enhancer/)
+- [AI Youtube Summary Chrome Extension Guide (2026)](/ai-youtube-summary-chrome-extension/)
+- [Youtube Thumbnail Downloader Chrome Extension Guide (2026)](/chrome-extension-youtube-thumbnail-downloader/)
+- [AI Distraction Blocker Chrome Extension Guide (2026)](/ai-distraction-blocker-chrome-extension/)
+- [Best Chrome Extensions for Students in 2026](/best-chrome-extensions-for-students-2026/)
+- [Chrome Privacy Sandbox 2026 — Developer Guide](/chrome-privacy-sandbox-2026/)
+- [Security Headers Chrome Extension Guide (2026)](/chrome-security-headers-extension/)
+- [Page Ruler Chrome Extension: Developer Measure Tool (2026)](/chrome-extension-page-ruler-measure/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -257,6 +257,14 @@ Related Reading
 - [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/). Enterprise audit logging, access controls, and compliance framework implementation
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). pdf and xlsx skills for generating SOC 2 audit evidence packages
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Manage token usage during long compliance documentation sessions
+- [What Can Claude Code Do A Plain English — Developer Guide](/what-can-claude-code-do-a-plain-english-explanation/)
+- [Claude Code Weekly Digest Resources for Developers](/claude-code-weekly-digest-resources/)
+- [Claude Code Impact on Developer Happiness](/claude-code-impact-on-developer-happiness/)
+- [Claude Code Beta Program: How to Join](/claude-code-beta-program-how-to-join/)
+- [How Claude Code Helped Ship Product 3x Faster](/how-claude-code-helped-ship-product-3x-faster/)
+- [Claude Enterprise SSO Setup Guide (2026)](/integrating-claude-code-into-existing-enterprise-sso-systems/)
+- [Types Of LLM Agents Explained For — Developer Guide](/types-of-llm-agents-explained-for-developers-2026/)
+- [Switching From Copilot To Claude Code — Honest Review 2026](/switching-from-copilot-to-claude-code-honest-review/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

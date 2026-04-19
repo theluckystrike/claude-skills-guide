@@ -270,6 +270,7 @@ Related Reading
 - [AI Summarizer Chrome Extension: Build Your Own Text Summarization Tool](/ai-summarizer-chrome-extension/)
 - [How to Build an AI Video Summarizer Chrome Extension](/ai-video-summarizer-chrome-extension/)
 - [AI Webpage Summarizer Chrome Extension: A Developer Guide](/ai-webpage-summarizer-chrome-extension/)
+- [PDF Editor Free Chrome Extension Guide (2026)](/chrome-extension-pdf-editor-free/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

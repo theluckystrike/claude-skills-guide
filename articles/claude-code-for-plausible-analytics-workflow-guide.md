@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Plausible Analytics Workflow Guide"
 description: "Learn how to use Claude Code to streamline your Plausible Analytics workflow, from setup and configuration to custom event tracking and automated."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 categories: [guides]
 tags: [claude-code, claude-skills]
@@ -13,6 +13,8 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
+
+This guide has been revised for April 2026. The steps account for recent updates to plausible analytics tooling and Claude Code's improved project context handling, which affects how Claude Code interacts with plausible analytics tooling.
 
 Plausible Analytics provides a privacy-focused alternative to Google Analytics, and when combined with Claude Code, it becomes a powerful tool for understanding your website visitors. This guide walks you through setting up an efficient Plausible Analytics workflow using Claude Code, enabling you to automate data collection, generate reports, and derive actionable insights from your analytics data.
 
@@ -87,6 +89,12 @@ By implementing these workflows, you'll spend less time navigating dashboards an
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

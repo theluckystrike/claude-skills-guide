@@ -274,6 +274,7 @@ Related Reading
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Claude Code Automated Pull Request Review Workflow Guide](/claude-code-automated-pull-request-review-workflow-guide/)
 - [Claude Code Drone CI Workflow Automation](/claude-code-drone-ci-workflow-automation/)
+- [Claude Code Multi-Language Comment and Docstring Workflow](/claude-code-multi-language-comment-and-docstring-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

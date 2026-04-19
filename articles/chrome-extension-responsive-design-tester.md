@@ -366,6 +366,14 @@ Related Reading
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [Chrome Extension Color Picker Design: A Developer's Guide](/chrome-extension-color-picker-design/)
 - [Chrome Extension Newsletter Design Tool for Developers](/chrome-extension-newsletter-design-tool/)
+- [Claude Code for Rspack Webpack Compatible Workflow](/claude-code-for-rspack-webpack-compatible-workflow/)
+- [Chrome Extension Credit Card Rewards Optimizer](/chrome-extension-credit-card-rewards-optimizer/)
+- [Claude Code for Technical Writing Workflow](/claude-code-for-technical-writing-workflow/)
+- [Import Duty Calculator Chrome Extension Guide (2026)](/chrome-extension-import-duty-calculator/)
+- [Claude Code for Hyperlane Messaging Workflow](/claude-code-for-hyperlane-messaging-workflow/)
+- [Claude Code for Cheerio HTML Parsing Workflow](/claude-code-for-cheerio-html-parsing-workflow/)
+- [How To Make Claude Code Follow — Complete Developer Guide](/how-to-make-claude-code-follow-my-naming-conventions/)
+- [Claude Code for NGINX Ingress Workflow Tutorial](/claude-code-for-nginx-ingress-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

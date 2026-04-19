@@ -700,6 +700,14 @@ Related Reading
 - [Claude Code for Bazel Build System Workflow Guide](/claude-code-for-bazel-build-system-workflow-guide/)
 - [Claude Code for Prometheus Remote Write Workflow](/claude-code-for-prometheus-remote-write-workflow/)
 - [Claude Code Turborepo Remote Caching Setup Workflow Guide](/claude-code-turborepo-remote-caching-setup-workflow-guide/)
+- [Claude Code for Docs as Code Workflow Tutorial Guide](/claude-code-for-docs-as-code-workflow-tutorial-guide/)
+- [Claude Code for Knowledge Sharing Workflow Tutorial](/claude-code-for-knowledge-sharing-workflow-tutorial/)
+- [Claude Code for HAProxy Load Balancer Workflow](/claude-code-for-haproxy-load-balancer-workflow/)
+- [Claude Code for Retool Internal Tools Workflow](/claude-code-for-retool-internal-tools-workflow/)
+- [Claude Code for Android DataStore Workflow Guide](/claude-code-for-android-datastore-workflow-guide/)
+- [Claude Code Literature Review Summarization Workflow](/claude-code-literature-review-summarization-workflow/)
+- [Claude Code for OpenTelemetry Metrics Workflow Guide](/claude-code-for-opentelemetry-metrics-workflow-guide/)
+- [Claude Code for Halmos Symbolic Workflow Guide](/claude-code-for-halmos-symbolic-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

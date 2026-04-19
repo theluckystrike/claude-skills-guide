@@ -181,6 +181,9 @@ Related Reading
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 - [AI Color Picker Chrome Extension: A Developer's Guide](/ai-color-picker-chrome-extension/)
 - [AI Competitive Analysis Chrome Extension: A Developer's Guide](/ai-competitive-analysis-chrome-extension/)
+- [CSS Grid Inspector Chrome Extension](/css-grid-inspector-chrome/)
+- [How to Inspect CSS Styles in Chrome Extensions](/chrome-extension-inspect-css-styles/)
+- [CSS Peeper Alternative Chrome — Developer Comparison 2026](/css-peeper-alternative-chrome-extension-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

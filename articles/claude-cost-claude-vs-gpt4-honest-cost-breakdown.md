@@ -116,3 +116,14 @@ Track these metrics weekly after choosing a provider:
 - [Claude Haiku vs GPT-4o Mini Cost Showdown](/claude-cost-haiku-vs-gpt4o-mini-cheap-tier/)
 - [The Hybrid Stack: Best Model for Each Task](/claude-cost-hybrid-stack-claude-gpt-gemini/)
 - [When GPT-4o Mini Beats Claude Haiku](/claude-cost-when-gpt4o-mini-beats-haiku/)
+
+## Related Articles
+
+- [Claude Cost Reduction Guide 2026](/cost/)
+- [Claude Code with GitHub Models for Cost-Efficient Pipelines](/claude-code-with-github-models-for-cost-efficient-pipelines/)
+- [Claude Code vs Hiring Developer — Developer Comparison 2026](/claude-code-vs-hiring-developer-cost-comparison/)
+- [How Claude Cache Reads Cost $0.50 vs $5.00](/claude-cache-reads-cost-050-vs-500/)
+- [Claude Sonnet 4.6 Cost Analysis for Developers](/claude-sonnet-46-cost-analysis-developers/)
+- [Claude Haiku vs Sonnet vs Opus Cost Breakdown 2026](/claude-haiku-vs-sonnet-vs-opus-cost-breakdown/)
+- [Claude Cost Per Request by Model Comparison](/claude-cost-per-request-model-comparison/)
+- [Claude Code $200 Max Plan: Is It Worth the Cost](/claude-code-200-max-plan-worth-the-cost/)

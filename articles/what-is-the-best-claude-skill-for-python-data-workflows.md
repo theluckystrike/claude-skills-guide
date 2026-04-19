@@ -167,6 +167,9 @@ Related Reading
 - [Claude Code Skills for Scientific Python: NumPy and SciPy](/claude-code-skills-for-scientific-python-numpy-scipy/). Go deeper on NumPy/SciPy integration for numerical Python workflows
 - [Claude Skills for Data Science and Jupyter Notebooks](/claude-skills-for-data-science-and-jupyter-notebooks/). Combine the best Python data skills with Jupyter notebook automation
 - [Claude Skills Hub](/use-cases-hub/). Explore data science and Python workflow use cases for Claude Code
+- [Standardizing Pull Request Workflows with Claude Code Skills](/standardizing-pull-request-workflows-with-claude-code-skills/)
+- [Claude Code Skills for Creating GitHub Actions Workflows](/claude-code-skills-for-creating-github-actions-workflows/)
+- [Update Shared Claude Skills Without Breaking Team Workflows — 2026](/updating-shared-claude-skills-without-breaking-workflows/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

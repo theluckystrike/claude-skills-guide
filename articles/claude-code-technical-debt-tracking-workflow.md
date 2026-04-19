@@ -224,6 +224,7 @@ Related Reading
 - [Claude Code Output Quality How to Improve Results](/claude-code-output-quality-how-to-improve-results/). Debt tracking leads to quality improvements
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). TDD prevents future technical debt accumulation
 - [Advanced Claude Skills Hub](/advanced-hub/). Advanced code quality strategies
+- [Claude Code Tech Lead Technical — Complete Developer Guide](/claude-code-tech-lead-technical-debt-prioritization-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -276,6 +276,9 @@ Related Reading
 - [Claude Code for Call Graph Analysis Workflow Tutorial](/claude-code-for-call-graph-analysis-workflow-tutorial/)
 - [Claude Code for PR Diff Analysis Workflow Tutorial](/claude-code-for-pr-diff-analysis-workflow-tutorial/)
 - [Claude Code for Zeek Network Analysis Workflow](/claude-code-for-zeek-network-analysis-workflow/)
+- [Claude Code for Taint Analysis Workflow Tutorial Guide](/claude-code-for-taint-analysis-workflow-tutorial-guide/)
+- [Claude Code for Semgrep Static Analysis Workflow](/claude-code-for-semgrep-static-analysis-workflow/)
+- [Claude Code GrowthBook Experiment Analysis Workflow Tutorial](/claude-code-growthbook-experiment-analysis-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

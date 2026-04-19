@@ -132,6 +132,8 @@ Related Reading
 - [Why Is Claude Code Popular for Complex Codebases](/why-is-claude-code-popular-for-complex-codebases/). Legacy codebases are often complex codebases
 - [Why Is Claude Code Recommended for Refactoring Tasks](/why-is-claude-code-recommended-for-refactoring-tasks/). Refactoring is the next step after understanding legacy code
 - [What Is Claude Code and Why Developers Love It in 2026](/what-is-claude-code-and-why-developers-love-it-2026/). Claude Code fundamentals
+- [Modernizing Legacy Codebases with Claude Code](/claude-code-for-legacy-code-modernization/)
+- [How to Use Claude Code to Refactor Legacy JavaScript Code](/how-to-use-claude-code-to-refactor-legacy-javascript-code/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

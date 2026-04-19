@@ -212,6 +212,9 @@ Related Reading
 - [Vibe Coding for Web Apps: NextJS + Vercel Guide](/vibe-coding-for-web-apps-nextjs-vercel-guide/)
 - [Vibe Coding Testing Strategy: How to Test AI-Generated Code](/vibe-coding-testing-strategy-how-to-test-ai-code/)
 - [Claude Code ActiveRecord Scopes and Callbacks Best Practices](/claude-code-activerecord-scopes-callbacks-best-practices/)
+- [Claude Code and Linear AI for Project and Code Alignment](/claude-code-and-linear-ai-for-project-and-code-alignment/)
+- [Vibe Coding For Startup Founders Non — Developer Guide](/vibe-coding-for-startup-founders-non-technical/)
+- [Speed Up Claude Code Responses With — Developer Guide](/speed-up-claude-code-responses-with-better-prompt-structure/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

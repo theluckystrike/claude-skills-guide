@@ -497,6 +497,14 @@ Related Reading
 - [Claude Code Kubernetes Logging Stack Guide](/claude-code-kubernetes-logging-stack-guide/)
 - [Claude Code Platform Engineer Observability Stack Workflow](/claude-code-platform-engineer-observability-stack-workflow/)
 - [Claude Code Kubernetes Cost Optimization Guide](/claude-code-kubernetes-cost-optimization-guide/)
+- [Claude Code for Kubernetes Profiling Workflow](/claude-code-for-kubernetes-profiling-workflow/)
+- [How to Use Kubernetes Resource Limits (2026)](/claude-code-kubernetes-resource-limits-guide/)
+- [Claude Code Kubernetes Persistent Volumes Guide](/claude-code-kubernetes-persistent-volumes-guide/)
+- [Claude Code Kubernetes YAML Generation Workflow Guide](/claude-code-kubernetes-yaml-generation-workflow-guide/)
+- [Claude Code for OpenFaaS Kubernetes Workflow](/claude-code-for-openfaas-kubernetes-workflow/)
+- [Claude Code Kubernetes RBAC Security Guide](/claude-code-kubernetes-rbac-security-guide/)
+- [Claude Code for Traefik Ingress Kubernetes Workflow Guide](/claude-code-for-traefik-ingress-kubernetes-workflow-guide/)
+- [Claude Code GitHub Actions with Bedrock](/claude-code-github-actions-bedrock/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

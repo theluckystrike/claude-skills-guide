@@ -227,6 +227,9 @@ Related Reading
 - [Claude Code for Incident Management Workflow Tutorial](/claude-code-for-incident-management-workflow-tutorial/)
 - [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
+- [Claude Code for Review Queue Management Workflow](/claude-code-for-review-queue-management-workflow/)
+- [Claude Code For Stale Pr — Complete Developer Guide](/claude-code-for-stale-pr-management-workflow-guide/)
+- [Claude Code For Cla Management — Complete Developer Guide](/claude-code-for-cla-management-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

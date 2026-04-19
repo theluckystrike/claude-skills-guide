@@ -217,6 +217,7 @@ Related Reading
 - [Claude Code for Bazel Build System Workflow Guide](/claude-code-for-bazel-build-system-workflow-guide/)
 - [Claude Code for Buck2 Build System Workflow Guide](/claude-code-for-buck2-build-system-workflow-guide/)
 - [Claude Code Expo EAS Build Submission Workflow Guide](/claude-code-expo-eas-build-submission-workflow-guide/)
+- [Claude Code for Moon Build System — Guide](/claude-code-for-moon-build-system-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

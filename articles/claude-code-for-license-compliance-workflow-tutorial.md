@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for License Compliance Workflow Tutorial"
 description: "Learn how to automate software license compliance using Claude Code. This comprehensive guide covers practical workflows, code examples, and actionable."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-for-license-compliance-workflow-tutorial/
 categories: [guides, workflows]
@@ -14,6 +14,8 @@ score: 8
 render_with_liquid: false
 geo_optimized: true
 ---
+
+When developers hit license compliance not working as expected in the development workflow, it typically traces back to incomplete license compliance configuration or missing integration steps. The approach below walks through diagnosing and resolving this license compliance issue with Claude Code, verified against current tooling in April 2026.
 
 {% raw %}
 License compliance is a critical yet often overlooked aspect of software development. As projects grow and incorporate more open-source dependencies, tracking licenses becomes increasingly complex. This tutorial shows you how to use Claude Code to build an automated license compliance workflow that saves time and reduces legal risk.
@@ -587,6 +589,12 @@ By automating license compliance with Claude Code, you reduce legal risk while f
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

@@ -281,6 +281,7 @@ Related Reading
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Automate deployments with Claude skills
 - [Claude Code MCP Server SOC2 Compliance Guide](/claude-code-mcp-server-soc2-compliance-guide/). Using MCP servers for compliance
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). Quality assurance workflows
+- [Claude Code Sox Financial Code — Complete Developer Guide](/claude-code-sox-financial-code-audit-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

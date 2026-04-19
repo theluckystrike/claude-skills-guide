@@ -79,6 +79,11 @@ Related Reading
 - [Anthropic Official Skills vs Community Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/). Claude Code's skills ecosystem is a key differentiator from Amazon Q Developer; this guide maps out what is available
 - [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-vs-prompts-which-is-better/). Understanding reusable skills vs raw prompting helps clarify Claude Code's structural advantage over Q Developer's prompt-based approach
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Cost comparison between Claude Code and Amazon Q Developer depends partly on how efficiently you use tokens; these techniques help
+- [Codium AI vs Claude Code Comparison 2026](/codium-ai-vs-claude-code-comparison-2026/)
+- [Claude Code vs Sourcegraph Cody 2026 Comparison](/claude-code-vs-cody-comparison-2026/)
+- [Claude Code For Codeium — Developer Comparison 2026](/claude-code-for-codeium-windsurf-comparison-guide/)
+- [GitHub Copilot vs Claude Code: Deep Comparison 2026](/github-copilot-vs-claude-code-deep-comparison-2026/)
+- [Claude Code vs Cursor: Which to Use in 2026](/claude-code-vs-cursor-comparison-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

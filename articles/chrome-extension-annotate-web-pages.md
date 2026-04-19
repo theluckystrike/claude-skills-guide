@@ -366,6 +366,8 @@ Related Reading
 - [Chrome Extension Employee Recognition Tool: Build Your Own](/chrome-extension-employee-recognition-tool/)
 - [Chrome Extension Google Drive Sidebar: Build Your Own](/chrome-extension-google-drive-sidebar/)
 - [Chrome Extension Markdown Editor: Build Your Own Browser-Based Writing Tool](/chrome-extension-markdown-editor/)
+- [Chrome Preload Pages Setting — Developer Guide](/chrome-preload-pages-setting/)
+- [Translate Pages Chrome Extension Guide (2026)](/chrome-extension-translate-pages/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

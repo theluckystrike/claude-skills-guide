@@ -175,6 +175,7 @@ Related Reading
 - [Claude Code for Wormhole Workflow Guide](/claude-code-for-wormhole-workflow-guide/)
 - [Claude Code Workflow Optimization Tips for 2026](/claude-code-workflow-optimization-tips-2026/)
 - [Claude Skills Email Drafting Automation Workflow](/claude-skills-email-drafting-automation-workflow/)
+- [Claude Code for Knip Dead Code Finder Workflow](/claude-code-for-knip-dead-code-finder-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

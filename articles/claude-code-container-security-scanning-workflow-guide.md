@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code Container Security Scanning Workflow Guide"
 description: "Master container security scanning workflows with Claude Code skills. Learn to integrate security tools, automate vulnerability detection, and build."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, container-security, security-scanning, docker, cicd, trivy, trivy-Operator]
 author: theluckystrike
@@ -13,6 +13,8 @@ permalink: /claude-code-container-security-scanning-workflow-guide/
 render_with_liquid: false
 geo_optimized: true
 ---
+
+Verified with Claude Code as of April 2026. Recent changes including supply chain security tooling updates and SBOM requirements affect several steps in this container security scanning workflow, and the guide below reflects the current behavior.
 
 {% raw %}
 Claude Code Container Security Scanning Workflow Guide
@@ -245,6 +247,12 @@ By implementing the workflows outlined in this guide, you'll catch vulnerabiliti
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

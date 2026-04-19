@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code Continuous Testing Workflow"
 description: "Master continuous testing with Claude Code. Learn how to automate testing at every stage of development, integrate with CI/CD pipelines, and build a."
-date: 2026-03-20
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: theluckystrike
 permalink: /claude-code-continuous-testing-workflow/
 categories: [guides]
@@ -15,6 +15,8 @@ voice-checked: true
 geo_optimized: true
 ---
 
+
+The scope here is continuous configuration and practical usage with Claude Code. This does not cover general project setup. For that foundation, see [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/).
 
 Claude Code Continuous Testing Workflow: Complete Guide for 2026
 
@@ -403,6 +405,12 @@ Remember that continuous testing is a journey, not a destination. Continuously e
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

@@ -282,6 +282,13 @@ Related Reading
 - [Claude Code for Load Test Scenario Workflow Tutorial](/claude-code-for-load-test-scenario-workflow-tutorial/)
 - [Claude Code for Code Complexity Analysis Workflow](/claude-code-for-code-complexity-analysis-workflow/)
 - [Claude Code for Code Graph Analysis Workflow Guide](/claude-code-for-code-graph-analysis-workflow-guide/)
+- [Claude Code Growthbook Visual — Complete Developer Guide](/claude-code-growthbook-visual-editor-ab-test-guide/)
+- [Claude Code Test Data Generation Workflow](/claude-code-test-data-generation-workflow/)
+- [Claude Code vs Aider for Test Driven Development](/claude-code-vs-aider-for-test-driven-development/)
+- [Claude Code for Gatling Performance Test Workflow](/claude-code-for-gatling-performance-test-workflow/)
+- [Claude Code Test Environment Management Guide](/claude-code-test-environment-management-guide/)
+- [Claude Code Factory Bot Test Data — Complete Developer Guide](/claude-code-factory-bot-test-data-guide/)
+- [Claude Code Test Reporting Workflow Guide](/claude-code-test-reporting-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

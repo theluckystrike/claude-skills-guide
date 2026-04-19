@@ -255,6 +255,10 @@ Related Reading
 - [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-code-azure-devops-integration-workflow-tutorial/)
 - [Claude Code for APM Integration Workflow Tutorial Guide](/claude-code-for-apm-integration-workflow-tutorial-guide/)
 - [Claude Code for Benchmark CI Integration Workflow](/claude-code-for-benchmark-ci-integration-workflow/)
+- [Claude Code For Codesearch — Complete Developer Guide](/claude-code-for-codesearch-integration-workflow-guide/)
+- [Claude Code for Meilisearch Integration Workflow](/claude-code-for-meilisearch-integration-workflow/)
+- [How to Use Claude SSO Integration: Workflow Tutorial (2026)](/claude-code-for-claude-sso-integration-workflow-tutorial-gui/)
+- [Claude Code for Emacs Workflow Integration Guide](/claude-code-for-emacs-workflow-integration-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

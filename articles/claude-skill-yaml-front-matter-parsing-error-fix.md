@@ -365,6 +365,7 @@ Related Reading
 - [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). The canonical reference for valid YAML front matter fields, including all optional configuration keys
 - [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). A walkthrough for writing skill files from scratch with properly structured YAML that avoids common parse errors
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). How skill design and YAML front matter affect token consumption, helping you tune for cost efficiency
+- [Fix Malformed YAML Frontmatter in SKILL.md Files — 2026](/fix-malformed-yaml-frontmatter-skill-md/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

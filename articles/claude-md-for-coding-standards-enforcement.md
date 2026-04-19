@@ -135,3 +135,8 @@ paths:
 Each language gets its own file with its own path pattern. No conflicts, no confusion.
 
 For the complete writing guide to CLAUDE.md instructions, see the [best practices guide](/claude-code-claude-md-best-practices/). For architecture-level enforcement beyond coding standards, see the [architecture patterns guide](/claude-md-for-enforcing-architecture-patterns/). Teams managing shared standards should read the [team collaboration guide](/claude-md-team-collaboration-best-practices/).
+
+## Related Articles
+
+- [Claude.md for API Design Standards Guide](/claude-md-for-api-design-standards-guide/)
+- [How Claude Code Eliminated Boilerplate Coding](/how-claude-code-eliminated-boilerplate-coding/)

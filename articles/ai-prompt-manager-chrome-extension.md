@@ -303,6 +303,14 @@ Related Reading
 - [Claude Code for Prompt Chaining Workflows Tutorial Guide](/claude-code-for-prompt-chaining-workflows-tutorial-guide/)
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
 - [Best Cookie Manager Chrome Extensions for Developers in 2026](/best-cookie-manager-chrome/)
+- [Wireframe Builder Chrome Extension Guide (2026)](/chrome-extension-wireframe-builder/)
+- [Chrome Extension Periodic Table Reference: Developer Guide](/chrome-extension-periodic-table-reference/)
+- [Stop Chrome Tracking Location — Honest Review 2026](/stop-chrome-tracking-location/)
+- [Keywords Everywhere Alternative Chrome Extension in 2026](/keywords-everywhere-alternative-chrome-extension-2026/)
+- [Pushbullet Alternative Chrome Extension in 2026](/pushbullet-alternative-chrome-extension-2026/)
+- [GitHub Chrome Extension Code Review: Tools and Techniques](/github-chrome-extension-code-review/)
+- [Concept Map Builder Chrome Extension Guide (2026)](/chrome-extension-concept-map-builder/)
+- [Wappalyzer Chrome Extension Developer Guide](/wappalyzer-chrome-extension-developer/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

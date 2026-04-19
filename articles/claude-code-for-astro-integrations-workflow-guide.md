@@ -471,6 +471,14 @@ Related Reading
 - [Claude Code Astro Islands Architecture Workflow Deep Dive](/claude-code-astro-islands-architecture-workflow-deep-dive/)
 - [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
+- [Claude Code for Astro View Transitions Workflow](/claude-code-for-astro-view-transitions-workflow/)
+- [Claude Code For Chargebee — Complete Developer Guide](/claude-code-for-chargebee-subscription-workflow/)
+- [Claude Code for Clojure re-frame Workflow Guide](/claude-code-for-clojure-re-frame-workflow-guide/)
+- [Claude Code for DDoS Mitigation Workflow Guide](/claude-code-for-ddos-mitigation-workflow-guide/)
+- [Claude Code for Charm Bracelet Workflow Guide](/claude-code-for-charm-bracelet-workflow-guide/)
+- [Claude Code for Distributed Lock Workflow Guide](/claude-code-for-distributed-lock-workflow-guide/)
+- [Claude Code for Docs as Code Workflow Tutorial Guide](/claude-code-for-docs-as-code-workflow-tutorial-guide/)
+- [Claude Code for ChromaDB Vector Store Workflow](/claude-code-for-chromadb-vector-store-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

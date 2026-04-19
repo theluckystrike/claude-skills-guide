@@ -239,6 +239,14 @@ Related Reading
 - [Claude Skill Not Found in Skills Directory: How to Fix](/claude-code-skill-not-found-in-skills-directory-how-to-fix/). See also
 - [Claude Code Skill Permission Denied: Fix 2026](/claude-code-skill-permission-denied-error-fix-2026/). See also
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). See also
+- [Fix Claude Code Not Working in VS Code](/claude-code-not-working-in-vscode/)
+- [CLAUDE.md Not Loading in Claude Code — Fix Guide (2026)](/claude-md-not-loading-fix/)
+- [Fix 'command not found: claude' After Install](/claude-code-command-not-found-after-install-fix/)
+- [Fix: Claude Code Image 400 Error Loop](/claude-code-image-could-not-process-400/)
+- [Chrome Slow After Update: Causes and Solutions](/chrome-slow-after-update/)
+- [Fix Claude Md Changes Not Taking Effect Fix — Quick Guide](/claude-md-changes-not-taking-effect-fix-guide/)
+- [Fix Claude Code Not Responding Terminal Hangs — Quick Guide](/claude-code-not-responding-terminal-hangs-fix/)
+- [Fix Claude Code OAuth Login Paste Not Working — Quick Guide](/claude-code-oauth-login-paste-not-working/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -630,6 +630,14 @@ Related Reading
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
+- [Claude Code Consultant Codebase — Complete Developer Guide](/claude-code-consultant-codebase-context-switching-workflow/)
+- [Claude Code for Extract Method Refactoring Workflow](/claude-code-for-extract-method-refactoring-workflow/)
+- [Claude Code for Backstage Software Catalog Workflow](/claude-code-for-backstage-software-catalog-workflow/)
+- [LaunchDarkly Gradual Rollout with Claude Code](/claude-code-launchdarkly-gradual-rollout-workflow-tutorial/)
+- [Claude Code for Dialog Element HTML Workflow Guide](/claude-code-for-dialog-element-html-workflow-guide/)
+- [Claude Code for Network Firewall Workflow](/claude-code-for-network-firewall-workflow/)
+- [Claude Code for ArgoCD App of Apps Workflow](/claude-code-for-argocd-app-of-apps-workflow/)
+- [Claude Code for Russian Developer Backend Workflow](/claude-code-for-russian-developer-backend-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

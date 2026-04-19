@@ -338,6 +338,13 @@ Related Reading
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Claude API Tool Use and Function Calling Deep Dive Guide](/claude-api-tool-use-function-calling-deep-dive-guide/)
 - [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)
+- [Claude Code ArXiv Paper Implementation Guide](/claude-code-arxiv-paper-implementation-guide/)
+- [Claude Code Kpi Dashboard — Complete Developer Guide](/claude-code-kpi-dashboard-implementation-guide/)
+- [What Is An AI Agent Loop Explained Simply — Developer Guide](/what-is-an-ai-agent-loop-explained-simply/)
+- [Product Architecture for a Claude Code Powered CLI Tool](/product-architecture-for-a-claude-code-powered-cli-tool/)
+- [Claude Code for Accessible Modal Dialog Implementation](/claude-code-for-accessible-modal-dialog-implementation/)
+- [Claude Code for Skip Navigation Implementation Guide](/claude-code-for-skip-navigation-implementation-guide/)
+- [Claude Code Mobile Push Notifications Implementation Guide](/claude-code-mobile-push-notifications-implementation-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

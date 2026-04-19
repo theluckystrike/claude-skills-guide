@@ -562,6 +562,7 @@ Related Reading
 - [Claude Code REST API Design Best Practices](/claude-code-rest-api-design-best-practices/)
 - [Claude Code ActiveRecord Scopes and Callbacks Best Practices](/claude-code-activerecord-scopes-callbacks-best-practices/)
 - [Claude Code Bug Reporting Best Practices](/claude-code-bug-reporting-best-practices/)
+- [Claude Code API Pagination: Best Practices (2026)](/claude-code-api-pagination-best-practices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

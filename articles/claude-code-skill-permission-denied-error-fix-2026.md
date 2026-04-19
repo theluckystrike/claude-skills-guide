@@ -208,6 +208,14 @@ Related Reading
 - [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Understanding the correct structure for skill files helps avoid misconfiguration that can cause permission-related failures
 - [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). A step-by-step guide to authoring valid skill files including tools declarations and file placement rules
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). If your skill loads but never fires, understanding the invocation model can clarify whether the issue is permissions or trigger matching
+- [Fix Cannot Read Properties of Undefined — Claude (2026)](/claude-code-cannot-read-property-undefined-null-error/)
+- [Fixing Claude Code's 'Unexpected End of Input' JSON Error](/claude-code-unexpected-end-of-input-json-error/)
+- [Fix Claude SSL Certificate Verification Failed (2026)](/claude-code-ssl-certificate-verification-failed-error/)
+- [Claude Code Error: Unexpected Token in JSON Response Fix](/claude-code-error-unexpected-token-in-json-response-fix/)
+- [Fix Claude Code Request Timed Out (2026)](/claude-code-fetch-failed-network-request-skill-error/)
+- [Claude Code Unknown Skill Error: Fix Spawn Issues](/claude-code-spawn-unknown-error-node-skill-fix/)
+- [Fix Claude Code Bun Errors](/claude-code-bun-error/)
+- [Fix Claude Code NPM Install Eacces Permission — Quick Guide](/claude-code-npm-install-eacces-permission-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

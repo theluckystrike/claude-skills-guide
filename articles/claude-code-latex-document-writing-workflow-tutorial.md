@@ -512,6 +512,14 @@ Related Reading
 - [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
+- [Claude Code For Pr Status Check — Complete Developer Guide](/claude-code-for-pr-status-check-workflow-tutorial/)
+- [Claude Code For AI Red Teaming — Complete Developer Guide](/claude-code-for-ai-red-teaming-workflow-guide/)
+- [Claude Code for Delta Lake Workflow Guide](/claude-code-for-delta-lake-workflow-guide/)
+- [Claude Code For Kube State — Complete Developer Guide](/claude-code-for-kube-state-metrics-workflow/)
+- [Claude Code Laravel Livewire Real-Time Workflow Tutorial](/claude-code-laravel-livewire-real-time-workflow-tutorial/)
+- [Claude Code for Sanity CMS Workflow Tutorial](/claude-code-for-sanity-cms-workflow-tutorial/)
+- [Claude Code for LM Studio — Workflow Guide](/claude-code-for-lm-studio-workflow-guide/)
+- [Claude Code for Fig — Workflow Guide](/claude-code-for-fig-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

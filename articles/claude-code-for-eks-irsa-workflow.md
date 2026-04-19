@@ -465,6 +465,14 @@ Related Reading
 - [Claude Code for EKS Karpenter Workflow: A Complete Guide](/claude-code-for-eks-karpenter-workflow/)
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
+- [Claude Code for Split.io Experimentation Workflow](/claude-code-for-split-io-experimentation-workflow/)
+- [Claude Code For Go Benchmark — Complete Developer Guide](/claude-code-for-go-benchmark-workflow-tutorial-guide/)
+- [Claude Code for New Relic APM Workflow Guide](/claude-code-for-new-relic-apm-workflow-guide/)
+- [Claude Code For Chargebee — Complete Developer Guide](/claude-code-for-chargebee-subscription-workflow/)
+- [Claude Code for Clojure re-frame Workflow Guide](/claude-code-for-clojure-re-frame-workflow-guide/)
+- [Claude Code for DDoS Mitigation Workflow Guide](/claude-code-for-ddos-mitigation-workflow-guide/)
+- [Claude Code for Semantic Versioning Workflow Tutorial](/claude-code-for-semantic-versioning-workflow-tutorial/)
+- [Claude Code for Charm Bracelet Workflow Guide](/claude-code-for-charm-bracelet-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

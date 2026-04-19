@@ -267,6 +267,11 @@ Related Reading
 - [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-code-azure-devops-integration-workflow-tutorial/)
 - [Claude Code for Architect ARC Serverless Workflow](/claude-code-for-architect-arc-serverless-workflow/)
 - [Claude Code for Azure Cost Management Workflow](/claude-code-for-azure-cost-management-workflow/)
+- [Claude Code Azure DevOps Pipeline Automation](/claude-code-azure-devops-pipeline-automation/)
+- [Claude Code For Bicep Azure Iac — Complete Developer Guide](/claude-code-for-bicep-azure-iac-workflow-guide/)
+- [Claude Code with Azure OpenAI Setup](/claude-code-azure-openai/)
+- [Claude Code Azure DevOps Integration](/claude-code-azure-devops-integration/)
+- [Claude Code Azure API Integration Guide](/claude-code-azure-api/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

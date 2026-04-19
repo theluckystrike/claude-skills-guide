@@ -440,6 +440,7 @@ Related Reading
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Claude Code Agent Task Queue Architecture Deep Dive](/claude-code-agent-task-queue-architecture-deep-dive/)
 - [Claude Code Astro Islands Architecture Workflow Deep Dive](/claude-code-astro-islands-architecture-workflow-deep-dive/)
+- [FastAPI Pydantic V2 Validation with Claude Code](/claude-code-fastapi-pydantic-v2-validation-deep-dive/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

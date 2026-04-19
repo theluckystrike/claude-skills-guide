@@ -396,6 +396,7 @@ Related Reading
 - [Building a Chrome Extension DOM Inspector Tool: A.](/chrome-extension-dom-inspector-tool/)
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)
 - [AI Form Filler Chrome Extension: A Developer and Power.](/ai-form-filler-chrome-extension/)
+- [AI Webpage Summarizer Chrome Extension Guide (2026)](/ai-webpage-summarizer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

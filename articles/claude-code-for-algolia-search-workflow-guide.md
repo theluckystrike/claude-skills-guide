@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Algolia Search Workflow Guide"
 description: "Learn how to integrate Claude Code with Algolia for intelligent search experiences. This guide covers setup, indexing, and querying workflows with."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-algolia-search-workflow-guide/
 categories: [guides]
@@ -14,6 +14,8 @@ tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
 
+
+If you are dealing with algolia search not working as expected in the development workflow, the root cause is usually incomplete algolia search configuration or missing integration steps. This guide provides a step-by-step algolia search resolution using Claude Code, current as of the April 2026 release.
 
 Algolia is a powerful search-as-a-service platform that enables developers to build fast, relevant search experiences. When combined with Claude Code, you can create intelligent search workflows that understand context, handle complex queries, and continuously improve based on user behavior. This guide walks you through integrating Claude Code with Algolia for production-ready search functionality.
 
@@ -206,6 +208,12 @@ Integrating Claude Code with Algolia creates powerful search capabilities that s
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

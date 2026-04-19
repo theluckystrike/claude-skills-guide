@@ -361,6 +361,14 @@ Related Reading
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 - [AI Coding Tools for Accessibility Improvements](/ai-coding-tools-for-accessibility-improvements/)
 - [AI Coding Tools for Code Migration Projects](/ai-coding-tools-for-code-migration-projects/)
+- [Vibe Coding For Startup Founders Non — Developer Guide](/vibe-coding-for-startup-founders-non-technical/)
+- [Claude Code For Phd Student Coding — Developer Guide](/claude-code-for-phd-student-coding-productivity/)
+- [Setting Up Claude Code Approved Tools — Developer Guide](/setting-up-claude-code-approved-tools-list-for-enterprise/)
+- [Claude Code For Traceloop LLM — Complete Developer Guide](/claude-code-for-traceloop-llm-observability-guide/)
+- [Claude Code OpenTelemetry Tracing Instrumentation Guide](/claude-code-opentelemetry-tracing-instrumentation-guide/)
+- [Claude Code Statsig Dynamic Config Remote Values Guide](/claude-code-statsig-dynamic-config-remote-values-guide/)
+- [Claude Code Portuguese Documentation Generation Guide](/claude-code-portuguese-documentation-generation-guide/)
+- [Claude Code Managed Settings Enterprise Guide](/claude-code-managed-settings-enterprise-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

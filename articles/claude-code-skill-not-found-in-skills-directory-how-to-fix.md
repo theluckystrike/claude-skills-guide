@@ -207,6 +207,14 @@ Related Reading
 - [Why Does Claude Code Ignore My Skill MD File Entirely](/why-does-claude-code-ignore-my-skill-md-file-entirely/). Diagnose cases where skills are found but silently ignored by Claude Code
 - [Claude Code Skill Permission Denied Error Fix 2026](/claude-code-skill-permission-denied-error-fix-2026/). Resolve file permission issues that prevent skill files from loading
 - [Claude Skills Hub](/troubleshooting-hub/). Find solutions for common Claude skill setup and discovery problems
+- [Why Claude Code Wrong Directory (2026)](/why-is-claude-code-reading-the-wrong-directory-entirely/)
+- [Why Is Claude Code Producing Code That — Developer Guide](/why-is-claude-code-producing-code-that-does-not-run/)
+- [Fix Claude Code Uncaught Typeerror Is Not A — Quick Guide](/claude-code-uncaught-typeerror-is-not-a-function/)
+- [Claude Code Not Recognizing TypeScript — Developer Guide](/claude-code-not-recognizing-typescript-path-aliases-tsconfig/)
+- [Why Is Claude Code Changing Files I Did — Developer Guide](/why-is-claude-code-changing-files-i-did-not-mention/)
+- [Fix Claude Md Not Being Read By Claude Code — Quick Guide](/claude-md-not-being-read-by-claude-code-fix/)
+- [Fix Claude Code Not Generating Tests — Quick Guide (2026)](/claude-code-not-generating-tests-correctly-fix-guide/)
+- [CLAUDE.md Not Loading in Claude Code — Fix Guide (2026)](/claude-md-not-loading-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -291,6 +291,14 @@ Related Reading
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) - The memory architecture described here directly affects token consumption
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/) - Covers supermemory and context-aware skills in practical terms
 - [Building Stateful Agents with Claude Skills](/building-stateful-agents-with-claude-skills-guide/) - File-based state patterns in depth
+- [Claude Code Keeps Switching to Wrong File Context](/claude-code-keeps-switching-to-wrong-file-context/)
+- [Fix Claude Code MCP Tools Excessive Context — Quick Guide](/claude-code-mcp-tools-excessive-context-fix/)
+- [How to Use Memory Optimization for Large Codebases (2026)](/claude-code-for-memory-allocation-optimization-guide/)
+- [Tab Suspender Memory Saver Chrome Extension Guide (2026)](/chrome-extension-tab-suspender-memory-saver/)
+- [Chrome Task Manager Memory — Developer Guide](/chrome-task-manager-memory/)
+- [Chrome Extension Firebase Debugger](/chrome-extension-firebase-debugger/)
+- [Broken Link Finder Chrome Extension Guide (2026)](/chrome-extension-broken-link-finder/)
+- [Claude Code Expensive? Here Are 7 Fixes](/claude-code-expensive-7-fixes/)
 
 Built by theluckystrike - More at [zovo.one](https://zovo.one)
 

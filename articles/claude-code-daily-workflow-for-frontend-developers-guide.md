@@ -307,6 +307,8 @@ Related Reading
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/). Essential skills every frontend developer needs
 - [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/). Master CSS and styling workflows
 - [Claude Code for Rapid Prototyping](/best-way-to-use-claude-code-for-rapid-prototyping/). Build features faster
+- [Claude Code For Nx Monorepo — Complete Developer Guide](/claude-code-for-nx-monorepo-micro-frontend-guide/)
+- [Claude Code vs Windsurf — Developer Comparison 2026](/claude-code-vs-windsurf-tailwind-css-frontend/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

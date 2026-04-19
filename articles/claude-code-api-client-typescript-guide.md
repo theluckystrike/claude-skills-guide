@@ -309,6 +309,14 @@ Related Reading
 - [Claude Code Tutorials Hub](/tutorials-hub/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Code Guides Hub](/guides-hub/)
+- [Building TypeScript APIs with Claude Code and Hono Framework](/claude-code-hono-framework-typescript-api-workflow/)
+- [How Context Window Size Drives Claude API Bills](/context-window-size-drives-claude-api-bills/)
+- [How to Use Vonage Voice API (2026)](/claude-code-for-vonage-voice-api-workflow/)
+- [Claude Code For Openapi Zod — Complete Developer Guide](/claude-code-for-openapi-zod-client-workflow/)
+- [Claude Max Subscription vs API for Agent Fleets](/claude-max-subscription-vs-api-agent-fleets/)
+- [Claude Code Keeps Using Deprecated API Methods](/claude-code-keeps-using-deprecated-api-methods/)
+- [How to Reduce Claude API Token Usage by 50%](/reduce-claude-api-token-usage-50-percent/)
+- [Model Routing by Task Cuts Claude API Bills](/model-routing-cut-claude-api-bills/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

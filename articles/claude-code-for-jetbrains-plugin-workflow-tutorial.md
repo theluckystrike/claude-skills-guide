@@ -262,6 +262,8 @@ Related Reading
 - [Claude Code for Backstage Plugin Workflow Tutorial](/claude-code-for-backstage-plugin-workflow-tutorial/)
 - [Claude Code for Grafana Plugin Development Workflow](/claude-code-for-grafana-plugin-development-workflow/)
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
+- [Claude Code for ESLint Custom Plugin Workflow Tutorial](/claude-code-for-eslint-custom-plugin-workflow-tutorial/)
+- [Claude Code for Tauri Plugin Workflow Tutorial](/claude-code-for-tauri-plugin-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

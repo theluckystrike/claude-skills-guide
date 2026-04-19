@@ -74,3 +74,8 @@ Claude Code should configure the OpenAI client with `base_url="http://localhost:
 - [Claude Code for Ollama Local LLM Workflow Guide](/claude-code-for-ollama-local-llm-workflow-guide/)
 - [Claude Code for Groq Inference Workflow Guide](/claude-code-for-groq-inference-workflow-guide/)
 - [Claude Code for LangChain Framework Workflow Guide](/claude-code-for-langchain-framework-workflow-guide/)
+
+## Related Articles
+
+- [Claude Code for Beekeeper Studio — Workflow Guide](/claude-code-for-beekeeper-studio-workflow-guide/)
+- [Switching From Android Studio — Complete Developer Guide](/switching-from-android-studio-workflow/)

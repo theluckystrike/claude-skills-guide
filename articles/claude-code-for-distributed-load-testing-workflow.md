@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Distributed Load Testing Workflow"
 description: "Learn how to use Claude Code and specialized skills to build, execute, and analyze distributed load testing workflows for modern cloud-native."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-for-distributed-load-testing-workflow/
 categories: [guides]
@@ -14,6 +14,8 @@ score: 8
 render_with_liquid: false
 geo_optimized: true
 ---
+
+Developers working with distributed load regularly encounter algorithm selection and session affinity tradeoffs. This guide provides concrete Claude Code patterns for distributed load that address these issues directly, starting from a working project setup.
 
 {% raw %}
 Distributed load testing has become essential for validating that applications can handle real-world traffic patterns. When your system needs to scale across multiple geographic regions or simulate thousands of concurrent users, traditional testing approaches fall short. This guide shows you how to integrate Claude Code into your distributed load testing workflow, automating test generation, execution, and result analysis.
@@ -279,6 +281,12 @@ Claude Code transforms distributed load testing from a manual, error-prone proce
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

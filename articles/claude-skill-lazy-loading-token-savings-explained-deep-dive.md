@@ -226,6 +226,14 @@ Related Reading
 - [Claude Skills Context Window Management Best Practices](/claude-md-too-long-context-window-optimization/)
 - [Claude Skills Memory and Context Architecture Guide](/claude-skills-memory-and-context-architecture-explained/)
 - [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-slow-performance-speed-up-guide/)
+- [Monetizing Claude Code Skills as an Independent Developer](/monetizing-claude-code-skills-as-an-independent-developer/)
+- [Reducing Review Friction With — Honest Review 2026](/reducing-review-friction-with-standardized-claude-skill-prom/)
+- [Antigravity vs Claude Native Skills: Complete Guide (2026)](/antigravity-skills-vs-claude-native-skills/)
+- [How Do I Migrate From Cursor Rules To — Developer Guide](/how-do-i-migrate-from-cursor-rules-to-claude-skills/)
+- [Claude Code Skills for Insurance Claims Processing](/claude-code-skills-for-insurance-claims-processing/)
+- [Build a Claude Skills Library for Your Organization — 2026](/claude-skills-library-pattern-for-orgs/)
+- [Claude Skills for Legal Document Review — Automate Contract Clause Extraction, Risk Scoring, and Red](/claude-skills-for-legal-document-review/)
+- [Claude Code Skills for Japanese Developers Workflow Guide](/claude-code-skills-for-japanese-developers-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

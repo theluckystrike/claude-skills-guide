@@ -201,6 +201,7 @@ Related Reading
 - [Claude Code Container Environment Variables Management](/claude-code-container-environment-variables-management/)
 - [Claude Code Dockerfile Generation Best Practices 2026](/claude-code-dockerfile-generation-best-practices-2026/)
 - [Claude Code Buildah Container Builds Guide](/claude-code-buildah-container-builds-guide/)
+- [Claude Code Docker Multi-Stage Builds Guide](/claude-code-docker-multi-stage-builds-guide/)
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

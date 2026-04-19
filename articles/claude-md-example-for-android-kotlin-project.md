@@ -235,6 +235,14 @@ Related Reading
 - [Kotlin Android Development with Claude Code Guide](/claude-code-kotlin-android-development-workflow-guide/)
 - [Claude.md Example for Data Science Python Project](/claude-md-example-for-data-science-python-project/)
 - [Claude MD Example for .NET ASP.NET Core Project](/claude-md-example-for-dotnet-aspnet-core-project/)
+- [Claude MD Example For Next.js TypeScript — Developer Guide](/claude-md-example-for-nextjs-typescript-project/)
+- [CLAUDE.md Example for Rails and Ruby Apps](/claude-md-example-for-rails-ruby-application/)
+- [Claude Md Example For Machine Learning — Developer Guide](/claude-md-example-for-machine-learning-project/)
+- [CLAUDE.md Example for Elixir + Phoenix + LiveView — Production Template (2026)](/claude-md-example-for-elixir-phoenix-liveview/)
+- [CLAUDE.md Example for Node.js + Express + Prisma — Production Template (2026)](/claude-md-example-for-nodejs-express-prisma/)
+- [CLAUDE.md Example for Android + Kotlin + Jetpack Compose — Production Template (2026)](/claude-md-example-for-android-kotlin-jetpack/)
+- [CLAUDE.md Example for Flutter + Dart + Riverpod — Production Template (2026)](/claude-md-example-for-flutter-dart-riverpod/)
+- [CLAUDE.md Example for Laravel + PHP — Production Template (2026)](/claude-md-example-for-laravel-php/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

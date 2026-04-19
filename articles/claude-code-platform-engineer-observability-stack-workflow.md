@@ -327,6 +327,9 @@ Related Reading
 - [Claude Code Kubernetes Monitoring with Prometheus](/claude-code-kubernetes-monitoring-prometheus/)
 - [Claude Code for Bandwhich Bandwidth Monitor Workflow](/claude-code-for-bandwhich-bandwidth-monitor-workflow/)
 - [Claude Code Kubernetes Logging Stack Guide](/claude-code-kubernetes-logging-stack-guide/)
+- [Claude Code Spacelift Platform Guide](/claude-code-spacelift-platform-guide/)
+- [Claude Code for Dify AI Platform — Guide](/claude-code-for-dify-ai-platform-workflow-guide/)
+- [Claude Code For Platform Engineer — Developer Guide](/claude-code-for-platform-engineer-infrastructure-automation-/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

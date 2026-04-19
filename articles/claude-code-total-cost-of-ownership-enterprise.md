@@ -119,6 +119,14 @@ Related Reading
 - [Augment Code AI Review for Enterprise Teams 2026](/augment-code-ai-review-for-enterprise-teams-2026/)
 - [Cost Allocation and Chargebacks for Enterprise Claude Code](/cost-allocation-and-chargebacks-for-enterprise-claude-code/)
 - [How Enterprise Teams Adopt Claude Code Workflow: A.](/how-enterprise-teams-adopt-claude-code-workflow/)
+- [Why Claude Code Uses So Many Tokens Explained](/why-claude-code-uses-so-many-tokens-explained/)
+- [Claude Code $200 Max Plan: Is It Worth the Cost](/claude-code-200-max-plan-worth-the-cost/)
+- [Claude Code For Lsp Semantic — Complete Developer Guide](/claude-code-for-lsp-semantic-tokens-workflow-tutorial/)
+- [Tool Use vs Direct Prompting Cost Comparison](/tool-use-vs-direct-prompting-cost-comparison/)
+- [Claude Cache Minimum Token Requirements 2026](/claude-cache-minimum-token-requirements-2026/)
+- [Claude Code Max vs Pro: Which Plan Saves More](/claude-code-max-vs-pro-which-plan-saves/)
+- [Claude Code Cost Per Project Estimation Guide](/claude-code-cost-per-project-estimation-guide/)
+- [Cost-Efficient Multi-Agent Coding Workflows](/cost-efficient-multi-agent-coding-workflows/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

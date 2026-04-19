@@ -439,6 +439,8 @@ Related Reading
 - [Claude Code Nuxt Vue Full Stack Workflow](/claude-code-nuxt-vue-full-stack-workflow/)
 - [Claude Code Rails API Mode Full Stack Workflow](/claude-code-rails-api-mode-full-stack-workflow/)
 - [Claude Code for Hopsworks Feature Store Workflow](/claude-code-for-hopsworks-feature-store-workflow/)
+- [Claude Code for Chalk Feature Workflow Tutorial](/claude-code-for-chalk-feature-workflow-tutorial/)
+- [Claude Code Remix Full Stack Workflow Guide](/claude-code-remix-full-stack-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

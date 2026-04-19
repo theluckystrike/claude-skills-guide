@@ -376,6 +376,14 @@ Related Reading
 - [Claude Code Not Detecting My Virtual Environment Python Fix](/claude-code-not-detecting-my-virtual-environment-python-fix/). Similar environment detection issue (Python)
 - [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/). MCP server setup often involves npm installs
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). All install and environment error fixes
+- [Claude Code For War Room — Complete Developer Guide](/claude-code-for-war-room-workflow-tutorial-guide/)
+- [Fix Claude Code 'Bun Has Crashed' Error](/claude-code-bun-has-crashed/)
+- [Fix Claude Code Windows Requires Git Bash](/claude-code-windows-git-bash-required-fix/)
+- [Claude Code Crash Course with GitHub](/claude-code-crash-course-github/)
+- [Fix ESLint and Prettier Conflicts in Claude Code Projects](/claude-code-eslint-prettier-conflict-fix/)
+- [Fix Claude Code Failed to Authenticate](/claude-code-failed-to-authenticate/)
+- [Fix Claude Code NPM Install Eacces Permission — Quick Guide](/claude-code-npm-install-eacces-permission-fix/)
+- [Fix 'command not found: claude' After Install](/claude-code-command-not-found-after-install-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

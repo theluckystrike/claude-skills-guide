@@ -418,6 +418,8 @@ Related Reading
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Claude Code Automated Pull Request Review Workflow Guide](/claude-code-automated-pull-request-review-workflow-guide/)
 - [Claude Code for Async Code Review Workflow](/claude-code-for-async-code-review-workflow/)
+- [Claude Code for Runbook Automation Workflow Guide](/claude-code-for-runbook-automation-workflow-guide/)
+- [Claude Code for Process Manager Pattern Workflow](/claude-code-for-process-manager-pattern-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

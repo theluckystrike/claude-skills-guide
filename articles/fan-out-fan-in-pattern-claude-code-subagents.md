@@ -238,6 +238,8 @@ Related Reading
 - [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/). Broader orchestration patterns that build on the fan-out/fan-in foundation for complex workflows
 - [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/). How subagents communicate results during the fan-in aggregation phase
 - [Claude Skills: Advanced Hub](/advanced-hub/). Explore advanced parallel processing and agent architecture patterns for production use cases
+- [Claude Code Inngest Fan Out — Complete Developer Guide](/claude-code-inngest-fan-out-parallel-tasks-workflow/)
+- [Opus Orchestrator with Haiku Workers Pattern](/opus-orchestrator-haiku-workers-pattern/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

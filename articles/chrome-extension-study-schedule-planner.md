@@ -649,6 +649,14 @@ Related Reading
 - [Chrome Extension Google Drive Sidebar: Build Your Own](/chrome-extension-google-drive-sidebar/)
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
+- [Schedule Tweets Threads Chrome Extension Guide (2026)](/chrome-extension-schedule-tweets-threads/)
+- [Time Zone Meeting Planner Chrome Extension Guide (2026)](/chrome-extension-time-zone-meeting-planner/)
+- [Ebay Sniper Chrome Extension](/ebay-sniper-chrome-extension/)
+- [Dropbox Quick Share Chrome Extension Guide (2026)](/chrome-extension-dropbox-quick-share/)
+- [Building a Chrome Extension for a Read Later List](/chrome-extension-read-later-list/)
+- [Building a Chrome Extension for Team World Clock Management](/chrome-extension-world-clock-team/)
+- [Chrome Extension Word Counter for Essay Writing](/chrome-extension-word-counter-essay/)
+- [Chrome Extension Highlight Text Save](/chrome-extension-highlight-text-save/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

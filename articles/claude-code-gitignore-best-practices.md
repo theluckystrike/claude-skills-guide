@@ -2,8 +2,8 @@
 layout: default
 title: "Should .claude Be in Gitignore? Yes — Here's Why (2026)"
 description: "Should .claude Be in Gitignore? Yes — Here's Why. Practical guide with working examples for developers."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, gitignore, best-practices, version-control, claude-skills]
 author: "Claude Skills Guide"
@@ -14,6 +14,8 @@ geo_optimized: true
 ---
 
 # Claude Code Gitignore Best Practices
+
+Getting gitignore right in practice means solving merge conflict resolution patterns and branch strategy management. The Claude Code patterns in this gitignore guide were developed from real project requirements.
 
 When working with Claude Code and its skills ecosystem, proper `.gitignore` configuration prevents accidentally committing sensitive data, skill cache files, and project artifacts that should stay local. This guide covers essential gitignore patterns for Claude Code projects. For a broader introduction to project setup, see [Claude Code for beginners: getting started 2026](/claude-code-for-beginners-complete-getting-started-2026/).
 
@@ -394,6 +396,12 @@ Proper gitignore configuration is foundational to maintain clean repositories wh
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

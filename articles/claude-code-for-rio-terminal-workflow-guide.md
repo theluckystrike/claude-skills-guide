@@ -74,3 +74,14 @@ Claude Code should create `~/.config/rio/config.toml` with `[fonts]` section for
 - [Claude Code for Alacritty Workflow Guide](/claude-code-for-alacritty-workflow-guide/)
 - [Claude Code for Ghostty Terminal Workflow](/claude-code-for-ghostty-terminal-workflow-tutorial/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)
+
+## Related Articles
+
+- [Claude Code Unleash Strategy: Custom Activation Workflow](/claude-code-unleash-strategy-custom-activation-workflow/)
+- [Claude Code for Inspector v2 Workflow](/claude-code-for-inspector-v2-workflow/)
+- [Claude Code for Diagramming: Mermaid Workflow Guide](/claude-code-for-diagramming-mermaid-workflow/)
+- [Claude Code for Dependabot Configuration Workflow](/claude-code-for-dependabot-configuration-workflow/)
+- [Claude Code for Amber: Bash Scripting Workflow Guide](/claude-code-for-amber-bash-scripting-workflow-guide/)
+- [Claude Code for SolidJS Resources Workflow Guide](/claude-code-for-solidjs-resources-workflow-guide/)
+- [Claude Code for Hive Metastore Workflow Guide](/claude-code-for-hive-metastore-workflow-guide/)
+- [Claude Code for Release Candidate Workflow Tutorial](/claude-code-for-release-candidate-workflow-tutorial/)

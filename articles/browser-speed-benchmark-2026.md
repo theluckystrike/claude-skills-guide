@@ -539,6 +539,14 @@ Related Reading
 - [Chrome Update Broke Speed? Fix Performance Issues After Updates](/chrome-update-broke-speed-fix/)
 - [Chrome vs Edge Memory 2026: Which Browser Uses Less RAM?](/chrome-vs-edge-memory-2026/)
 - [Benchmarking Claude Code Skills Performance Guide](/benchmarking-claude-code-skills-performance-guide/)
+- [Claude Code Portuguese Documentation Generation Guide](/claude-code-portuguese-documentation-generation-guide/)
+- [Claude Code Managed Settings Enterprise Guide](/claude-code-managed-settings-enterprise-guide/)
+- [Claude Code Flutter LSP Setup Guide](/claude-code-flutter-lsp/)
+- [Claude Code Bun Install Setup Guide](/claude-code-bun-install/)
+- [Stop Claude Code from Modifying Unrelated Files — Fix Guide (2026)](/claude-code-stop-modifying-unrelated-files/)
+- [How Claude Code Resolves Git Merge Conflicts](/claude-code-git-merge-conflict-resolution/)
+- [Modernizing Legacy Codebases with Claude Code](/claude-code-for-legacy-code-modernization/)
+- [Claude Code Environment Variables Reference](/claude-code-environment-variables-reference/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

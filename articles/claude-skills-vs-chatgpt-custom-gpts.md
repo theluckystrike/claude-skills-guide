@@ -128,3 +128,7 @@ GPTs have a 128K context window but load all instructions and knowledge file con
 - [Claude Skills vs OpenAI Assistants API](/claude-skills-vs-openai-assistants-api/) -- API-level comparison
 - [Claude Skills vs Raw Prompts with Tools](/claude-skills-vs-raw-prompts-with-tools/) -- when skills are overkill
 - [Migrating OpenAI Assistants to Claude Skills](/migrating-openai-assistants-to-claude-skills/) -- migration guide
+
+## Related Articles
+
+- [Why Claude Skill Not Recognized Custom Name (2026)](/why-does-claude-code-not-recognize-my-custom-skill-name/)

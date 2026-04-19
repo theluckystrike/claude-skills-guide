@@ -227,6 +227,7 @@ Related Reading
 - [Claude Code Scala Functional Programming Workflow Tips](/claude-code-scala-functional-programming-workflow-tips/)
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
+- [Claude Code for Pair Programming Workflow Guide](/claude-code-for-pair-programming-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

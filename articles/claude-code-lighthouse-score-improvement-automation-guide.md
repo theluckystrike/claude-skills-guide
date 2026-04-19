@@ -333,6 +333,7 @@ Related Reading
 - [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/). Frontend skills for performance optimization and building high-scoring production UIs
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). The tdd and pdf skills power automated performance testing and reporting workflows
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep automated Lighthouse audit sessions economical
+- [Claude Code Semantic HTML Improvement Guide](/claude-code-semantic-html-improvement-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

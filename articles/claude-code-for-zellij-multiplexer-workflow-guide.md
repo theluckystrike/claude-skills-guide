@@ -73,3 +73,7 @@ Claude Code should create a `.kdl` layout file with a `layout { }` block definin
 - [Claude Code for Ghostty Terminal Workflow](/claude-code-for-ghostty-terminal-workflow-tutorial/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)
 - [Building a CLI Devtool with Claude Code Walkthrough](/building-a-cli-devtool-with-claude-code-walkthrough/)
+
+## Related Articles
+
+- [Claude Code for Zellij Terminal Multiplexer Workflow](/claude-code-for-zellij-terminal-multiplexer-workflow/)

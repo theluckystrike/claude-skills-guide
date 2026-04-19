@@ -74,3 +74,8 @@ Claude Code should use `db.select()` with a left join or subquery, `count(posts.
 - [Using Claude Code with Drizzle ORM Schema Management](/using-claude-code-with-drizzle-orm-schema-management/)
 - [Claude Code Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/)
 - [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)
+
+## Related Articles
+
+- [Claude Code Laravel Eloquent Orm — Complete Developer Guide](/claude-code-laravel-eloquent-orm-guide/)
+- [Claude Code For Database Orm — Complete Developer Guide](/claude-code-for-database-orm-code-generation-workflow/)

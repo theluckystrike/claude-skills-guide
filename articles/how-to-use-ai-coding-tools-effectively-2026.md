@@ -338,6 +338,14 @@ Related Reading
 - [Claude Code Keeps Losing Track of My Variable Names](/claude-code-keeps-losing-track-of-my-variable-names/)
 - [Claude Code Lost Context Mid Task. How to Recover](/claude-code-lost-context-mid-task-how-to-recover/)
 - [How Do I Know Which Claude Skill Is Currently Active?](/how-do-i-know-which-claude-skill-is-currently-active/)
+- [Should I Use Claude Code For Writing — Developer Guide](/should-i-use-claude-code-for-writing-infrastructure-scripts/)
+- [Claude Code --resume Flag — How to Use It (2026)](/claude-code-resume-flag-how-to-use-it/)
+- [Claude Code Tips from Experienced Users 2026](/claude-code-tips-from-experienced-users-2026/)
+- [Claude Code Changelog: What Changed This Week](/claude-code-changelog-what-changed-this-week/)
+- [Claude Code Announcements 2026: Complete Developer Overview](/anthropic-claude-code-announcements-2026/)
+- [Claude Code Kafka Consumer Producer Tutorial Guide](/claude-code-kafka-consumer-producer-tutorial-guide/)
+- [Claude Code for Continuing Education as a Developer](/claude-code-for-continuing-education-as-a-developer/)
+- [Claude Code Weights and Biases Experiment Tracking](/claude-code-weights-and-biases-experiment-tracking/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

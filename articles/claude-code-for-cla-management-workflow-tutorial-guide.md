@@ -206,6 +206,10 @@ Related Reading
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 - [Claude Code for Aurora Serverless V2 Workflow](/claude-code-for-aurora-serverless-v2-workflow/)
 - [Claude Code for Branch Protection Rules Workflow](/claude-code-for-branch-protection-rules-workflow/)
+- [Claude Code for Review Queue Management Workflow](/claude-code-for-review-queue-management-workflow/)
+- [Claude Code For Stale Pr — Complete Developer Guide](/claude-code-for-stale-pr-management-workflow-guide/)
+- [How to Use PR Size Management: Workflow (2026)](/claude-code-for-pr-size-management-workflow-tutorial/)
+- [Claude Code Datadog Log Management Workflow Tutorial](/claude-code-datadog-log-management-workflow-tutorial/)
 {% endraw %}
 
 

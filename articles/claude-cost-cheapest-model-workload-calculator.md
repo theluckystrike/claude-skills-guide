@@ -126,3 +126,13 @@ Use this decision tree to select the cheapest model for any workload:
 - [When GPT-4o Mini Beats Claude Haiku](/claude-cost-when-gpt4o-mini-beats-haiku/)
 - [Open Source LLMs as Cost Floor](/claude-cost-open-source-llm-cost-floor/)
 - [The Hybrid Stack: Claude for X, GPT for Y, Gemini for Z](/claude-cost-hybrid-stack-claude-gpt-gemini/)
+
+## Related Articles
+
+- [How to Choose the Cheapest Claude Model](/cheapest-claude-model-for-your-task/)
+
+## Related Articles
+
+- [Claude Usage Alerts to Prevent Cost Overruns](/claude-usage-alerts-prevent-cost-overruns/)
+- [Build a Claude Cost Attribution System](/build-claude-cost-attribution-system/)
+- [Total Cost of Ownership: Claude vs OpenAI vs Gemini](/claude-cost-total-cost-ownership-every-provider/)

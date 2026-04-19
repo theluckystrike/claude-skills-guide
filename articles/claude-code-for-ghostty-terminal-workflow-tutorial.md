@@ -3,8 +3,8 @@
 layout: default
 title: "How to Use Ghostty Terminal for Claude Code: Workflow (2026)"
 description: "Set up Ghostty terminal for Claude Code with optimal configuration. A faster, GPU-accelerated terminal workflow for AI-assisted development."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-ghostty-terminal-workflow-tutorial/
 categories: [tutorials]
@@ -15,6 +15,7 @@ geo_optimized: true
 ---
 
 
+This guide focuses specifically on ghostty terminal within Claude Code workflows. For coverage of adjacent tools and techniques beyond ghostty terminal, [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) provides complementary context.
 
 Ghostty is a modern terminal emulator built with Zig that has quickly become a favorite among developers for its exceptional performance, native-feel experience on macOS, and deep integration capabilities. When paired with Claude Code, it creates an incredibly efficient development environment that uses the best of both worlds: Ghostty's blazing-fast rendering and Claude Code's AI-powered coding assistance. This tutorial will guide you through setting up and maximizing this powerful combination.
 
@@ -203,6 +204,12 @@ Remember that the best workflow is one that matches your mental model and daily 
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

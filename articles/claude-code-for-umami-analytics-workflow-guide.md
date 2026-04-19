@@ -74,3 +74,8 @@ Claude Code should add the Umami script tag to the root layout with the website 
 - [Claude Code for Amplitude Analytics Workflow](/claude-code-for-amplitude-analytics-workflow/)
 - [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)
 - [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)
+
+## Related Articles
+
+- [Claude Code for Pirsch Analytics — Guide](/claude-code-for-pirsch-analytics-workflow-guide/)
+- [Claude Code for Tinybird Analytics — Guide](/claude-code-for-tinybird-analytics-workflow-guide/)

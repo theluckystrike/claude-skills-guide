@@ -217,6 +217,14 @@ Related Reading
 - [Fly.io MCP Server Deployment Workflow Guide](/fly-io-mcp-server-deployment-workflow-guide/)
 - [Brave Search MCP Server for Research Automation](/brave-search-mcp-server-research-automation/)
 - [Claude Code for Astro Server Endpoints Workflow](/claude-code-for-astro-server-endpoints-workflow/)
+- [Claude Code AWS MCP Setup Guide](/claude-code-aws-mcp/)
+- [Claude Code Angular MCP Configuration](/claude-code-angular-mcp/)
+- [Set Up Django MCP Server for Claude Code](/claude-code-django-mcp/)
+- [Set Up Docker MCP Server for Claude Code](/claude-code-docker-mcp/)
+- [Add MySQL MCP to Claude Code](/claude-code-add-mysql-mcp/)
+- [Add Angular MCP to Claude Code](/claude-code-add-angular-mcp/)
+- [Connect Claude Code to Remote MCP Servers](/claude-code-mcp-remote-http-server-setup/)
+- [Add MongoDB MCP to Claude Code](/claude-code-add-mongodb-mcp/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

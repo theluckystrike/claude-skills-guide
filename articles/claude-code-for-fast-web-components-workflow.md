@@ -306,6 +306,8 @@ Related Reading
 - [Claude Code for Hybrids Web Components Workflow](/claude-code-for-hybrids-web-components-workflow/)
 - [Claude Code for Stencil Web Components Workflow](/claude-code-for-stencil-web-components-workflow/)
 - [Claude Code for Bolt.new Web App Workflow Guide](/claude-code-for-bolt-new-web-app-workflow-guide/)
+- [Claude Code for Atomico Web Components Workflow](/claude-code-for-atomico-web-components-workflow/)
+- [Claude Code Styled Components Workflow Guide](/claude-code-styled-components-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

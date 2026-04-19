@@ -131,6 +131,14 @@ Related Reading
 - [Best AI Chrome Extensions 2026: A Practical Guide for Developers](/best-ai-chrome-extensions-2026/)
 - [How to Find Chrome Extensions That Use Memory for Enhanced Productivity](/find-chrome-extension-using-memory/)
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)
+- [Google Calendar Sidebar Chrome Extension Guide (2026)](/chrome-extension-google-calendar-sidebar/)
+- [Chrome Extension Content Calendar Manager](/chrome-extension-content-calendar-manager/)
+- [Outlook Calendar Integration Chrome Extension Guide (2026)](/chrome-extension-outlook-calendar-integration/)
+- [Firefox vs Chrome Privacy — Developer Comparison 2026](/firefox-vs-chrome-privacy-2026/)
+- [Local Storage Viewer Chrome Extension Guide (2026)](/chrome-extension-local-storage-viewer/)
+- [Resize Images Chrome Extension Guide (2026)](/chrome-extension-resize-images/)
+- [Session Storage Editor Chrome Extension Guide (2026)](/chrome-extension-session-storage-editor/)
+- [AI Accessibility Chrome Extension Guide (2026)](/ai-accessibility-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -76,3 +76,7 @@ You want to build a real-time product analytics dashboard API. Prompt Claude Cod
 - [Claude Code for ClickHouse Workflow Guide](/claude-code-for-clickhouse-workflow-guide/)
 - [Claude Code for PostHog Analytics Workflow Guide](/claude-code-for-posthog-analytics-workflow-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
+
+## Related Articles
+
+- [Claude Code for Pirsch Analytics — Guide](/claude-code-for-pirsch-analytics-workflow-guide/)

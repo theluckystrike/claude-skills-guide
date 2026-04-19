@@ -258,6 +258,9 @@ Related Reading
 - [Best Encrypted Backup Solution for Developers: A 2026 Technical Guide](/best-encrypted-backup-solution-for-developers/)
 - [DuckDuckGo vs Chrome Privacy: A Developer & Power User Guide](/duckduckgo-vs-chrome-privacy/)
 - [Chrome Fingerprint Test Extension: A Developer's Guide.](/chrome-fingerprint-test-extension/)
+- [Claude Code Pii Detection And — Complete Developer Guide](/claude-code-pii-detection-and-masking-guide/)
+- [Claude Code Translate Code Comments Between Languages](/claude-code-translate-code-comments-between-languages/)
+- [Claude Code Axum Rust Web Framework Guide](/claude-code-axum-rust-web-framework-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

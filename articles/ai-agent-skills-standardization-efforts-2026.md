@@ -198,6 +198,14 @@ Related Reading
 - [Claude Code Skills Roadmap 2026: What Is Coming](/claude-code-skills-roadmap-2026-what-is-coming/). See how Anthropic's own skill roadmap aligns with the broader standardization movement.
 - [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/). Build portable skills today that align with emerging standards for cross-platform distribution.
 - [Advanced Claude Skills](/advanced-hub/). Explore advanced skill patterns that benefit most from cross-platform portability.
+- [Why Does Claude Code Work Better With — Developer Guide](/why-does-claude-code-work-better-with-skills-loaded/)
+- [Monetizing Claude Code Skills as an Independent Developer](/monetizing-claude-code-skills-as-an-independent-developer/)
+- [Claude Skills vs Langflow for Building AI Agents — CLI Precision vs Visual Workflow Builder — 2026](/claude-skills-vs-langflow-ai-agents/)
+- [Reducing Review Friction With — Honest Review 2026](/reducing-review-friction-with-standardized-claude-skill-prom/)
+- [Versioning and Maintaining Published Claude Code Skills](/versioning-and-maintaining-published-claude-code-skills/)
+- [Claude Skills for Rust Systems Programming](/claude-skills-for-rust-systems-programming/)
+- [Antigravity vs Claude Native Skills: Complete Guide (2026)](/antigravity-skills-vs-claude-native-skills/)
+- [Claude Code Skill Versioning and Upgrades: What to Expect](/claude-code-skill-versioning-and-upgrades-what-to-expect/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

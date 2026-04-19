@@ -170,6 +170,7 @@ Related Reading
 - [Claude Code Tech Lead Cross-Team Alignment Workflow Tips](/claude-code-tech-lead-cross-team-alignment-workflow-tips/)
 - [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/)
 - [Claude Code for Technical Documentation Workflow Guide](/claude-code-for-technical-documentation-workflow-guide/)
+- [Claude Code Technical Cofounder — Complete Developer Guide](/claude-code-technical-cofounder-workflow-productivity/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

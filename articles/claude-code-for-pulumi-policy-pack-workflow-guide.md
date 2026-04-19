@@ -268,6 +268,7 @@ Related Reading
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 - [Claude Code for Calico Network Policy Workflow](/claude-code-for-calico-network-policy-workflow/)
 - [Claude Code for CDK Nag Policy Workflow Guide](/claude-code-for-cdk-nag-policy-workflow-guide/)
+- [Claude Code for Regula Policy Workflow Guide](/claude-code-for-regula-policy-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

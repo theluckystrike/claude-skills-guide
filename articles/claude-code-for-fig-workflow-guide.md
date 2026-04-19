@@ -73,3 +73,7 @@ Claude Code should create a TypeScript file at `.fig/autocomplete/src/deploy.ts`
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)
 - [Building a CLI Devtool with Claude Code Walkthrough](/building-a-cli-devtool-with-claude-code-walkthrough/)
 - [Claude Code for Warp AI Terminal Workflow Guide](/claude-code-for-warp-ai-terminal-workflow-guide/)
+
+## Related Articles
+
+- [Claude Code For Strangler Fig — Complete Developer Guide](/claude-code-for-strangler-fig-pattern-workflow/)

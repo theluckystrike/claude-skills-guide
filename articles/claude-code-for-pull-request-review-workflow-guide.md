@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code for Pull Request Review Workflow Guide"
 description: "Master pull request reviews with Claude Code: automate code analysis, generate review comments, and streamline your PR workflow with practical examples."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
@@ -13,6 +13,8 @@ reviewed: true
 render_with_liquid: false
 geo_optimized: true
 ---
+
+Everything below targets pull request review and the specific Claude Code patterns that make pull request review work smoothly. For related approaches, see [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/).
 
 {% raw %}
 Claude Code for Pull Request Review Workflow Guide
@@ -251,6 +253,12 @@ The result: faster reviews, more consistent quality, and more time for the nuanc
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

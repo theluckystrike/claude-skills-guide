@@ -736,6 +736,14 @@ Related Reading
 - [Claude Code for APISIX API Gateway Workflow Guide](/claude-code-for-apisix-api-gateway-workflow-guide/)
 - [Claude Code for Gravitee API Gateway Workflow](/claude-code-for-gravitee-api-gateway-workflow/)
 - [Best AI Tools for API Development in 2026: A Practical Guide](/best-ai-tools-for-api-development-2026/)
+- [Claude Code Webhook Handler Tutorial Guide](/claude-code-webhook-handler-tutorial-guide/)
+- [How to Save 50% on Every Claude API Call](/save-50-percent-every-claude-api-call/)
+- [Claude Code Server-Sent Events API Guide](/claude-code-server-sent-events-api-guide/)
+- [Claude Code for Docusaurus API Docs Workflow](/claude-code-for-docusaurus-api-docs-workflow/)
+- [Claude Code API Key vs Pro — Developer Comparison 2026](/claude-code-api-key-vs-pro-subscription-billing/)
+- [Claude Code Laravel Sanctum API Authentication Guide](/claude-code-laravel-sanctum-api-authentication-guide/)
+- [Intl API Fingerprinting: How Locale Settings Leak Data](/intl-api-fingerprinting-how-locale-settings-reveal-your-brow/)
+- [Claude Code Rails API Mode Full Stack Workflow](/claude-code-rails-api-mode-full-stack-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

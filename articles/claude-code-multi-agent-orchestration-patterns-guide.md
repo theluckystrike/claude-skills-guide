@@ -302,6 +302,9 @@ Related Reading
 - [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/)
 - [Human in the Loop Multi Agent Patterns Guide](/human-in-the-loop-multi-agent-patterns-guide/)
 - [Claude Opus Orchestrator Sonnet Worker Architecture](/claude-opus-orchestrator-sonnet-worker-architecture/)
+- [Multi-Agent Workflow Design Patterns for Developers](/multi-agent-workflow-design-patterns-for-developers/)
+- [Claude Code for Kestra Workflow Orchestration Guide](/claude-code-for-kestra-workflow-orchestration-guide/)
+- [Claude Code for Temporal Workflow Orchestration](/claude-code-for-temporal-workflow-orchestration/)
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -245,6 +245,7 @@ Related Reading
 - [Chrome Extension Annotate Web Pages: Build Your Own.](/chrome-extension-annotate-web-pages/)
 - [Chrome Extension Employee Recognition Tool: Build Your Own](/chrome-extension-employee-recognition-tool/)
 - [Chrome Extension Google Drive Sidebar: Build Your Own](/chrome-extension-google-drive-sidebar/)
+- [Concept Map Builder Chrome Extension Guide (2026)](/chrome-extension-concept-map-builder/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

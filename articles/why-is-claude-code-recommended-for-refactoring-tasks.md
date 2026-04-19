@@ -391,6 +391,14 @@ Related Reading
 - [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/). Complexity reduction is a key refactoring goal
 - [Why Is Claude Code Good at Understanding Legacy Code](/why-is-claude-code-good-at-understanding-legacy-code/). Understanding code is a prerequisite for refactoring
 - [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/). Refactoring reduces technical debt
+- [Claude Code Duplicate Code Refactoring Guide](/claude-code-duplicate-code-refactoring-guide/)
+- [Claude Code for Writing Research Methodology Sections](/claude-code-for-writing-research-methodology-sections/)
+- [How AI Agents Plan and Execute Tasks Explained](/how-ai-agents-plan-and-execute-tasks-explained/)
+- [Claude Code NestJS Guards Interceptors Pipes Deep Dive](/claude-code-nestjs-guards-interceptors-pipes-deep-dive/)
+- [Claude AI Cornell Notes — Generate Instantly (2026)](/claude-ai-cornell-notes-how-to-create-guide/)
+- [Claude Code Common Beginner Mistakes to Avoid](/claude-code-common-beginner-mistakes-to-avoid/)
+- [What Is Agentic AI And Why It Matters — Developer Guide](/what-is-agentic-ai-and-why-it-matters/)
+- [Is Claude Code Worth It Junior Developers — Developer Guide](/is-claude-code-worth-it-junior-developers/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

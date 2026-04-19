@@ -72,3 +72,7 @@ Claude Code should write the refactored code to the file. In Helix, run `:reload
 - [Zed Editor AI Features Review for Developers 2026](/zed-editor-ai-features-review-for-developers-2026/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)
 - [Building a CLI Devtool with Claude Code Walkthrough](/building-a-cli-devtool-with-claude-code-walkthrough/)
+
+## Related Articles
+
+- [Claude Code for Zed Editor — Workflow Guide](/claude-code-for-zed-editor-workflow-guide/)

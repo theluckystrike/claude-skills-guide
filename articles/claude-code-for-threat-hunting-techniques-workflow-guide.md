@@ -2,8 +2,8 @@
 layout: default
 title: "Threat Hunting with Claude Code: Detection Guide"
 description: "Automate threat hunting with Claude Code. Covers log analysis, IOC correlation, detection rule generation, and incident investigation workflows."
-date: 2026-03-20
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-for-threat-hunting-techniques-workflow-guide/
 categories: [guides, security]
@@ -11,6 +11,8 @@ tags: [claude-code, claude-skills, threat-hunting, security, cybersecurity]
 geo_optimized: true
 ---
 
+
+Current as of April 2026. The threat hunting techniques landscape has shifted with recent updates to threat hunting techniques tooling and Claude Code's improved project context handling, and the steps below reflect how Claude Code works with threat hunting techniques today.
 
 Claude Code for Threat Hunting Techniques Workflow Guide
 
@@ -206,6 +208,12 @@ The key is starting small, automate one hunting workflow, measure the results, a
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

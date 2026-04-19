@@ -72,3 +72,9 @@ Claude Code should verify the template has Node.js installed, check `coder gitau
 - [Claude Code for Gitpod Cloud Dev Workflow Guide](/claude-code-for-gitpod-cloud-dev-workflow-guide/)
 - [Claude Code for Devcontainers Workflow Guide](/claude-code-for-devcontainers-workflow-guide/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)
+
+## Related Articles
+
+- [Claude Code for Windmill Dev — Workflow Guide](/claude-code-for-windmill-dev-workflow-guide/)
+- [Claude Code for GitHub Codespaces — Guide](/claude-code-for-codespaces-dev-environments-workflow-guide/)
+- [Claude Code for Bazel Remote Cache Workflow](/claude-code-for-bazel-remote-cache-workflow/)

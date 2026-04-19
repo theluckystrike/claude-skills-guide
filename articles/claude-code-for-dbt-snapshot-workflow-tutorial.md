@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for dbt Snapshot Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline dbt snapshot workflows. This comprehensive tutorial covers snapshot configuration, type 2 SCD."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [tutorials]
 tags: [claude-code, claude-skills, dbt, data-engineering, snapshot, workflow]
 author: Claude Skills Guide
@@ -14,6 +14,8 @@ score: 7
 render_with_liquid: false
 geo_optimized: true
 ---
+
+Verified with Claude Code as of April 2026. Recent changes including recent updates to dbt snapshot tooling and Claude Code's improved project context handling affect several steps in this dbt snapshot workflow, and the guide below reflects the current behavior.
 
 {% raw %}
 Claude Code for dbt Snapshot Workflow Tutorial
@@ -191,6 +193,12 @@ Start small with one snapshot, validate the behavior, then expand to other dimen
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

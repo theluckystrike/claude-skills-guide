@@ -567,6 +567,14 @@ Related Reading
 - [Claude Code Continuous Testing Workflow: Complete Guide for 2026](/claude-code-continuous-testing-workflow/)
 - [Claude Code Docker Networking Workflow Guide](/claude-code-docker-networking-workflow-guide/)
 - [Claude Code for ArgoCD Image Updater Workflow](/claude-code-for-argocd-image-updater-workflow/)
+- [Claude Code Parallel Task Execution Workflow](/claude-code-parallel-task-execution-workflow/)
+- [Claude Code Bitbucket Pipelines Workflow Guide](/claude-code-bitbucket-pipelines-workflow-guide/)
+- [Claude Code Turborepo Pipeline Dependency Graph Workflow](/claude-code-turborepo-pipeline-dependency-graph-workflow/)
+- [Claude Code for Code Generation Pipeline Guide](/claude-code-for-code-generation-pipeline-guide/)
+- [Claude Code for CDK Pipelines Workflow Tutorial](/claude-code-for-cdk-pipelines-workflow-tutorial/)
+- [Claude Code for Mage AI Pipeline Workflow Guide](/claude-code-for-mage-ai-pipeline-workflow-guide/)
+- [Claude Code for ZenML Pipeline Workflow Guide](/claude-code-for-zenml-pipeline-workflow-guide/)
+- [How to Coordinate Multiple AI Agents in Pipeline](/how-to-coordinate-multiple-ai-agents-in-pipeline/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -76,3 +76,14 @@ Claude Code should create `promptfooconfig.yaml` with three providers, the syste
 - [Claude Code for AI Agent Tool Calling](/claude-code-for-ai-agent-tool-calling-implementation/)
 - [Building Production AI Agents with Claude Skills 2026](/building-production-ai-agents-with-claude-skills-2026/)
 - [Claude Code for Embedding Pipeline Workflow](/claude-code-for-embedding-pipeline-workflow/)
+
+## Related Articles
+
+- [Claude Code for Hygen Code Generation Workflow](/claude-code-for-hygen-code-generation-workflow/)
+- [Claude Code for Translation Key Extraction Workflow](/claude-code-for-translation-key-extraction-workflow/)
+- [Claude Code Portuguese Developer Coding Workflow Setup](/claude-code-portuguese-developer-coding-workflow-setup/)
+- [Claude Code for Production Profiling Workflow Guide](/claude-code-for-production-profiling-workflow-guide/)
+- [Claude Code for Configure8 Portal Workflow Guide](/claude-code-for-configure8-portal-workflow-guide/)
+- [Claude Code for Gymnasium Workflow Tutorial](/claude-code-for-gymnasium-workflow-tutorial/)
+- [Claude Code Solo SaaS Builder Launch Checklist Workflow](/claude-code-solo-saas-builder-launch-checklist-workflow/)
+- [How to Use Anvil Local Fork (2026)](/claude-code-for-anvil-local-fork-workflow/)

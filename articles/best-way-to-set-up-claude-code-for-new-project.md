@@ -329,6 +329,14 @@ Related Reading
 - [Best Way to Write CLAUDE.md File for Your Project](/how-to-write-effective-claude-md-for-your-project/). CLAUDE.md setup is a critical first step
 - [Claude Code Environment Setup Automation](/claude-code-environment-setup-automation/). Automate your dev environment alongside Claude Code
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/). The complete beginner's reference
+- [Best Way To Scope Claude Code To A — Honest Review 2026](/best-way-to-scope-claude-code-to-a-single-directory/)
+- [Claude Code March 2026 Update: What Is New](/claude-code-march-2026-update-what-is-new/)
+- [Claude Code and Linear AI for Project and Code Alignment](/claude-code-and-linear-ai-for-project-and-code-alignment/)
+- [Best Way To Get Claude Code To Explain — Honest Review 2026](/best-way-to-get-claude-code-to-explain-existing-code/)
+- [Best Way To Give Claude Code — Honest Review 2026](/best-way-to-give-claude-code-repeatable-deterministic-output/)
+- [Claude Code First Project Tutorial: Hello World](/claude-code-first-project-tutorial-hello-world/)
+- [Claude Code for Side Project to Startup Journey](/claude-code-for-side-project-to-startup-journey/)
+- [Best Way To Onboard New Developers — Honest Review 2026](/best-way-to-onboard-new-developers-using-claude-code/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

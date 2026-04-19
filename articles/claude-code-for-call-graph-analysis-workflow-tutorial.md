@@ -242,6 +242,7 @@ Related Reading
 - [Claude Code for Dataflow Analysis Workflow Tutorial](/claude-code-for-dataflow-analysis-workflow-tutorial/)
 - [Claude Code for PR Diff Analysis Workflow Tutorial](/claude-code-for-pr-diff-analysis-workflow-tutorial/)
 - [Claude Code for Zeek Network Analysis Workflow](/claude-code-for-zeek-network-analysis-workflow/)
+- [Claude Code for On-Call Rotation Workflow Tutorial](/claude-code-for-on-call-rotation-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

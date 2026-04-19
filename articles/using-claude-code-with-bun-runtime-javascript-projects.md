@@ -198,6 +198,9 @@ Related Reading
 - [Claude Code Nix Flake Reproducible Development Environment](/claude-code-nix-flake-reproducible-development-environment/). See also
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). See also
 - [Claude Code Tutorials Hub](/tutorials-hub/). See also
+- [Claude Code Developer Portfolio Projects Guide](/claude-code-developer-portfolio-projects-guide/)
+- [Claude Code Bun Install Setup Guide](/claude-code-bun-install/)
+- [Claude Code for University Software Engineering Projects](/claude-code-for-university-software-engineering-projects/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

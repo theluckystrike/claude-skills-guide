@@ -394,6 +394,10 @@ Related Reading
 - [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/). OOM errors often stem from memory leaks
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Write tests that catch memory leaks early
 - [Advanced Claude Skills Hub](/advanced-hub/). Advanced debugging and optimization patterns
+- [Claude Code for Flaky Test Detection and Fix Guide](/claude-code-for-flaky-test-detection-and-fix-guide/)
+- [Claude Code Memory Leak Detection — Complete Developer Guide](/claude-code-memory-leak-detection-guide/)
+- [Chrome Task Manager Memory — Developer Guide](/chrome-task-manager-memory/)
+- [Find Chrome Extensions Using Memory for Productivity](/find-chrome-extension-using-memory/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

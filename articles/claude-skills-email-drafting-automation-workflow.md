@@ -266,6 +266,7 @@ Related Reading
 - [Claude Skills Daily Standup Automation Workflow](/claude-skills-daily-standup-automation-workflow/). Automate daily team communications
 - [Build Personal AI Assistant with Claude Skills Guide](/build-personal-ai-assistant-with-claude-skills-guide/). Build a broader personal assistant on top of Claude skills
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/). Apply the same workflow approach to code docs
+- [Claude Code Skills SendGrid Email Automation Setup](/claude-code-skills-sendgrid-email-automation-setup/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

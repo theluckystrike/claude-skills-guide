@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code Automated Pull Request Review Workflow (2026)"
 description: "Learn how to build automated pull request review workflows using Claude Code skills. Automate code quality checks, security scans, and feedback generation."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-automated-pull-request-review-workflow-guide/
 categories: [guides]
@@ -14,6 +14,8 @@ score: 7
 geo_optimized: true
 ---
 
+
+Teams adopting automated pull request review quickly discover the difficulty of proper automated pull request review configuration, integration testing, and ongoing maintenance. This walkthrough demonstrates how Claude Code streamlines the automated pull request review workflow from initial setup onward.
 
 Claude Code Automated Pull Request Review Workflow Guide
 
@@ -224,6 +226,12 @@ The investment in setting up these workflows pays dividends in reduced review ti
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

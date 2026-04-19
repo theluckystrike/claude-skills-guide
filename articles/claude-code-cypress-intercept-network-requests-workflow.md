@@ -476,6 +476,9 @@ Related Reading
 - [Claude Code Cypress Custom Commands Workflow Best Practices](/claude-code-cypress-custom-commands-workflow-best-practices/)
 - [Claude Code for Calico Network Policy Workflow](/claude-code-for-calico-network-policy-workflow/)
 - [Claude Code for Network Firewall Workflow](/claude-code-for-network-firewall-workflow/)
+- [Claude Code Jest Mock Modules and Spies Deep Dive Guide](/claude-code-jest-mock-modules-and-spies-deep-dive-guide/)
+- [Claude Code Code Coverage Improvement Guide](/claude-code-code-coverage-improvement-guide/)
+- [Claude Code vs Copilot: Writing Unit Tests Automatically](/claude-code-vs-copilot-writing-unit-tests-automatically/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

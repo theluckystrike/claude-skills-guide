@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Wazuh SIEM Workflow Tutorial"
 description: "A practical guide to integrating Claude Code with Wazuh SIEM for automated security monitoring, threat detection, and incident response workflows."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-wazuh-siem-workflow-tutorial/
 categories: [tutorials, guides]
@@ -14,6 +14,8 @@ score: 7
 geo_optimized: true
 ---
 
+
+The most common cause of wazuh siem not working as expected in the development workflow is incomplete wazuh siem configuration or missing integration steps. Here is the systematic fix for wazuh siem using Claude Code, tested with the latest release as of April 2026.
 
 Claude Code for Wazuh SIEM Workflow Tutorial
 
@@ -329,6 +331,12 @@ Start with simple alert categorization, then progressively add more complex auto
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

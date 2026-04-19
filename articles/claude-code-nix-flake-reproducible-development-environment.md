@@ -332,6 +332,7 @@ Related Reading
 - [Claude Code GitPod Cloud IDE Integration Tutorial 2026](/claude-code-gitpod-cloud-ide-integration-tutorial-2026/). Run Claude Code in ephemeral cloud environments without local Nix setup
 - [Claude Code with Docker: Container Setup Guide](/using-claude-code-inside-docker-container-tutorial/). Compare Docker-based isolation against Nix flake reproducibility
 - [Claude Skills Hub](/integrations-hub/). Explore all environment setup and toolchain integration patterns
+- [Claude Code Environment Variables Reference](/claude-code-environment-variables-reference/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

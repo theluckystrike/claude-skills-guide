@@ -372,6 +372,13 @@ Related Reading
 - [Claude Code MCP Tool Categories and Use Cases Guide](/claude-code-mcp-tool-categories-use-cases-guide/)
 - [Deal Finder Chrome Extension: A Developer's Guide to Building Price Tracking Tools](/deal-finder-chrome-extension/)
 - [AI Screen Reader Chrome Extension: A Complete Guide for Developers](/ai-screen-reader-chrome-extension/)
+- [XPath Finder Chrome Extension Guide (2026)](/chrome-extension-xpath-finder/)
+- [Chrome Managed Bookmarks Group Policy: Full Guide (2026)](/chrome-managed-bookmarks-group-policy/)
+- [How to Build a Chrome Extension for Finding Grocery Coupons](/chrome-extension-grocery-coupon-finder/)
+- [How to Disable Chrome Developer Tools Using Group Policy](/chrome-disable-developer-tools-group-policy/)
+- [Chrome Extension Clearance Sale Finder](/chrome-extension-clearance-sale-finder/)
+- [Chrome Extension Stock Photo Finder Free](/chrome-extension-stock-photo-finder-free/)
+- [Guest Mode vs Incognito: Differences and How to Disable](/chrome-guest-mode-disable-group-policy/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

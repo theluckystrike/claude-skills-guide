@@ -380,6 +380,14 @@ Related Reading
 - [Chrome Extension Jira Ticket Creator: Automate Issue.](/chrome-extension-jira-ticket-creator/)
 - [Chrome Extension OneNote Clipper Setup Guide](/chrome-extension-onenote-clipper-setup/)
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)
+- [Capital One Shopping Chrome Extension Review (2026)](/capital-one-shopping-chrome-review/)
+- [Building a Chrome Extension for a Read Later List](/chrome-extension-read-later-list/)
+- [Chrome Extension Reading List Organizer Academic (2026)](/chrome-extension-reading-list-organizer-academic/)
+- [Chrome Topics API Privacy — Honest Review 2026](/chrome-topics-api-privacy/)
+- [Workona Alternative Chrome Extension 2026: Top Picks](/workona-alternative-chrome-extension-2026/)
+- [Chrome Extension Screen Capture with Scrolling](/chrome-extension-screen-capture-scrolling/)
+- [How to Spoof User Agent in Chrome](/spoof-user-agent-chrome/)
+- [Social Media Scheduler Chrome Extension Guide (2026)](/chrome-extension-social-media-scheduler/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

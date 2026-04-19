@@ -356,6 +356,8 @@ Related Reading
 - [Claude Code for Beam Cloud ML Workflow Guide](/claude-code-for-beam-cloud-ml-workflow-guide/)
 - [Claude Code for Cloud Security Posture Workflow](/claude-code-for-cloud-security-posture-workflow/)
 - [Claude Code for Language Server Protocol Workflow Guide](/claude-code-for-language-server-protocol-workflow-guide/)
+- [Claude Code for Pkl Config Language — Guide](/claude-code-for-pkl-configuration-language-workflow-guide/)
+- [Claude Code for Pulumi Multi-Cloud Workflow](/claude-code-for-pulumi-multi-cloud-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

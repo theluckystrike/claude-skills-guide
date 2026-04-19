@@ -819,6 +819,7 @@ Related Reading
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
+- [Claude Code for French Developer Team Productivity Tips](/claude-code-for-french-developer-team-productivity-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

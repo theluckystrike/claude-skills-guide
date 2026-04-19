@@ -211,6 +211,7 @@ Related Reading
 - [Claude Code Output Quality How to Improve Results](/claude-code-output-quality-how-to-improve-results/). Improving accuracy of generated code broadly
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/). CLAUDE.md can specify import style and module conventions
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). Related code generation issue fixes
+- [Claude Code Keeps Breaking Imports When Refactoring](/claude-code-keeps-breaking-imports-when-refactoring/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

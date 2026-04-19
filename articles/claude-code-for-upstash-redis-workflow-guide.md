@@ -72,3 +72,8 @@ Claude Code should create a rate limiter instance using `@upstash/ratelimit` wit
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
 - [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)
 - [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)
+
+## Related Articles
+
+- [Claude Code for Redis Streams Workflow Guide](/claude-code-for-redis-streams-workflow-guide/)
+- [Claude Code Upstash Redis Rate Limiting Workflow](/claude-code-upstash-redis-rate-limiting-workflow/)

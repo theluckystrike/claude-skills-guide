@@ -181,3 +181,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Claude API Error 400 invalid_request_error Fix](/claude-api-error-400-invalidrequesterror-explained/) -- fix request format errors that are NOT retryable.
 
 
+
+## Related Articles
+
+- [Fix: Anthropic API 500 Error with strict: true Tools](/anthropic-sdk-strict-true-500-error/)
+- [Fix Claude API Error 500 — Internal Server Error](/claude-api-error-500-fix/)

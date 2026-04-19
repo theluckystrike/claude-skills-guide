@@ -409,6 +409,10 @@ Related Reading
 - [Understanding Claude Code Hooks System: Complete Guide](/understanding-claude-code-hooks-system-complete-guide/). Claude Code hooks and git hooks work together
 - [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/). Pre-commit hooks are a git best practice
 - [Claude Code for Release Automation Workflow Tutorial](/claude-code-for-release-automation-workflow-tutorial/). Hooks are part of the full release automation pipeline
+- [Claude Code Git Commit Message Generator Guide](/claude-code-git-commit-message-generator-guide/)
+- [How Claude Code Resolves Git Merge Conflicts](/claude-code-git-merge-conflict-resolution/)
+- [Claude Code Git Branch Naming Conventions](/claude-code-git-branch-naming-conventions/)
+- [Claude Code Git Blame: Code Archaeology Guide](/claude-code-git-blame-code-archaeology-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

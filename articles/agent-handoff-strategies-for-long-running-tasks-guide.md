@@ -259,6 +259,7 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 - [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/). Design multi-agent workflows where agents hand off context and results between subagents in Claude Code.
+- [Claude Code Notification Setup for Long Tasks](/claude-code-notification-setup-for-long-tasks/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

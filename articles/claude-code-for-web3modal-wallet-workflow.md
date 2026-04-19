@@ -839,6 +839,14 @@ Related Reading
 - [Claude Code for Bolt.new Web App Workflow Guide](/claude-code-for-bolt-new-web-app-workflow-guide/)
 - [Claude Code for Fast Web Components Workflow](/claude-code-for-fast-web-components-workflow/)
 - [Claude Code for Fiber Go Web Framework Workflow](/claude-code-for-fiber-go-web-framework-workflow/)
+- [Claude Code for Weights & Biases Workflow Guide](/claude-code-for-weights-and-biases-workflow-guide/)
+- [Claude Code for Upstream Contribution Workflow Guide](/claude-code-for-upstream-contribution-workflow-guide/)
+- [Claude Code for Apache Flink Workflow Tutorial](/claude-code-for-apache-flink-workflow-tutorial/)
+- [Claude Code for Spring WebFlux Workflow Tutorial](/claude-code-for-spring-webflux-workflow-tutorial/)
+- [Claude Code for Wake Smart Contract Workflow](/claude-code-for-wake-smart-contract-workflow/)
+- [Claude Code for TanStack Start Workflow Guide](/claude-code-for-tanstack-start-workflow-guide/)
+- [Claude Code For Opa Rego — Complete Developer Guide](/claude-code-for-opa-rego-workflow-tutorial-guide/)
+- [Claude Code for Kong Mesh Workflow Tutorial](/claude-code-for-kong-mesh-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

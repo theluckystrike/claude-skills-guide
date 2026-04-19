@@ -72,3 +72,14 @@ Claude Code should create `.node-version` with `20`, add `eval "$(fnm env --use-
 - [Claude Code for Mise Dev Tool Manager Workflow Guide](/claude-code-for-mise-dev-tool-manager-workflow-guide/)
 - [Best Way to Set Up Claude Code for New Project](/best-way-to-set-up-claude-code-for-new-project/)
 - [Claude Code for Bun Runtime Workflow Guide](/claude-code-for-bun-runtime-workflow-guide/)
+
+## Related Articles
+
+- [Claude Code SDK Development Workflow Guide](/claude-code-sdk-development-workflow-guide/)
+- [Claude Code for Wing Cloud Language Workflow](/claude-code-for-wing-cloud-language-workflow/)
+- [Claude Code for ScoutSuite Audit Workflow Guide](/claude-code-for-scoutsuite-audit-workflow-guide/)
+- [Claude Code for RabbitMQ Topic Exchange Workflow](/claude-code-for-rabbitmq-topic-exchange-workflow/)
+- [Claude Code for Upbound Marketplace Workflow Guide](/claude-code-for-upbound-marketplace-workflow-guide/)
+- [Claude Code for Lottie Animation Workflow Tutorial](/claude-code-for-lottie-animation-workflow-tutorial/)
+- [Claude Code for License Scanning Workflow Tutorial](/claude-code-for-license-scanning-workflow-tutorial/)
+- [Claude Code for SharedArrayBuffer Workflow](/claude-code-for-shared-array-buffer-workflow/)

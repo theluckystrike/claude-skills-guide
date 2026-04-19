@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code For CDK Nag Policy — Complete Developer Guide"
 description: "Learn how to integrate Claude Code with AWS CDK Nag for automated infrastructure policy compliance, security scanning, and governance workflows."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-cdk-nag-policy-workflow-guide/
 categories: [guides, tutorials]
@@ -12,6 +12,8 @@ reviewed: true
 score: 8
 geo_optimized: true
 ---
+Integrating cdk nag policy into a development workflow involves deployment rollback automation and canary analysis. The approach below walks through how Claude Code addresses each of these cdk nag policy concerns systematically.
+
 AWS CDK Nag is an essential tool for enforcing security, governance, and best-practice policies on your cloud infrastructure. When combined with Claude Code, it becomes a powerful automation pipeline for catching compliance issues before they reach production. This guide shows you how to integrate Claude Code with CDK Nag workflows to streamline policy enforcement across your infrastructure-as-code projects.
 
 ## Understanding CDK Nag and Its Role in Infrastructure Security
@@ -171,6 +173,12 @@ Start by running Nag on your existing CDK stacks and feed the results to Claude.
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

@@ -179,6 +179,14 @@ Related Reading
 - [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/). Scoping prevents over-engineered solutions
 - [Best Way to Prompt Claude Code for Complex Features](/how-to-write-effective-prompts-for-claude-code/). Better prompts produce right-sized solutions
 - [Claude Skills Tutorials Hub](/tutorials-hub/). More how-to guides for Claude Code behavior
+- [How To Make Claude Code Not — Complete Developer Guide](/how-to-make-claude-code-not-break-type-definitions/)
+- [Claude Code for Senior Engineer Productivity](/claude-code-for-senior-engineer-productivity/)
+- [Claude Code Keeps Adding Code I Did Not — Developer Guide](/claude-code-keeps-adding-code-i-did-not-ask-for/)
+- [How To Make Claude Code Generate — Complete Developer Guide](/how-to-make-claude-code-generate-complete-files-not-snippets/)
+- [How To Make Claude Code Not Add — Complete Developer Guide](/how-to-make-claude-code-not-add-unused-imports/)
+- [How to Make Claude Code Stop Overwriting Your Edits (2026)](/how-to-make-claude-code-stop-overwriting-my-edits/)
+- [How to Make Claude Code Respect Your ESLint Config](/how-to-make-claude-code-respect-my-eslint-config/)
+- [How to Make Claude Code Handle Edge Cases Properly](/how-to-make-claude-code-handle-edge-cases-properly/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

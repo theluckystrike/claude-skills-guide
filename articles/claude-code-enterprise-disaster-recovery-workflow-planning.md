@@ -758,6 +758,14 @@ Related Reading
 - [Chrome Extension Enterprise Approval Workflow: A Practical Guide](/chrome-extension-enterprise-approval-workflow/)
 - [Claude Code Audit Logging for Enterprise Compliance Workflow](/claude-code-audit-logging-for-enterprise-compliance-workflow/)
 - [Claude Code for Capacity Planning Workflow Tutorial](/claude-code-for-capacity-planning-workflow-tutorial/)
+- [Claude Code for AI Risk Assessment Workflow Guide](/claude-code-for-ai-risk-assessment-workflow-guide/)
+- [Claude Code for Code Splitting Workflow Tutorial](/claude-code-for-code-splitting-workflow-tutorial/)
+- [Claude Code for jsPolicy Workflow Tutorial Guide](/claude-code-for-jsolicy-workflow-tutorial-guide/)
+- [Claude Code for Hardhat Plugins Workflow](/claude-code-for-hardhat-plugins-workflow/)
+- [Claude Code for Babylon.js Workflow Tutorial Guide](/claude-code-for-babylon-js-workflow-tutorial-guide/)
+- [Claude Code for Version Matrix Workflow Tutorial Guide](/claude-code-for-version-matrix-workflow-tutorial-guide/)
+- [Claude Code for Argo Rollouts Canary Workflow Guide](/claude-code-for-argo-rollouts-canary-workflow-guide/)
+- [Claude Code For Tooljet Low Code — Complete Developer Guide](/claude-code-for-tooljet-low-code-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

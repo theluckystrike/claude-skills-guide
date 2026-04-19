@@ -245,6 +245,8 @@ Related Reading
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/). Top frontend skills with examples
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Broader developer skill overview
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
+- [Claude Code for Kestra Workflow Orchestration Guide](/claude-code-for-kestra-workflow-orchestration-guide/)
+- [Claude Code for Temporal Workflow Orchestration](/claude-code-for-temporal-workflow-orchestration/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

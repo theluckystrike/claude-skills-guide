@@ -714,6 +714,14 @@ Related Reading
 - [Claude Skills Directory: Where to Find Skills 2026](/claude-skills-directory-where-to-find-skills/). discover community and official skills to install first
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). curated list of the highest-value skills for new users
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). understand how skills activate automatically in your sessions
+- [Claude Code for Operator Lifecycle Manager Guide](/claude-code-for-operator-lifecycle-manager-guide/)
+- [Best Claude Code Newsletters and Blogs 2026](/best-claude-code-newsletters-and-blogs-2026/)
+- [Claude Code Tips For Absolute Beginners — Developer Guide](/claude-code-tips-for-absolute-beginners-2026/)
+- [Claude Code Hidden Features Most Developers Miss](/claude-code-hidden-features-most-developers-miss/)
+- [How to Use Tree-Sitter Syntax Highlighting (2026)](/claude-code-for-tree-sitter-syntax-highlighting-guide/)
+- [Claude Code Custom Keybindings Configuration (2026)](/claude-code-custom-keybindings-configuration/)
+- [Claude Code Tips for Intermediate Developers](/claude-code-tips-for-intermediate-developers/)
+- [Claude Code Podman Rootless Container Guide](/claude-code-podman-rootless-container-guide/)
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

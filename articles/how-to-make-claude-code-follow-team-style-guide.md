@@ -234,6 +234,13 @@ Related Reading
 - [How to Make Claude Code Match Existing Code Patterns](/how-to-make-claude-code-follow-team-style-guide/). Provide representative code samples to anchor Claude's output to your project's style
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/). Keep docs consistent with your style guide as code evolves
 - [Best Claude Skills for Code Review Automation](/best-claude-skills-for-code-review-automation/). Automate style violation detection in your PR review workflow
+- [How To Make Claude Code Document — Complete Developer Guide](/how-to-make-claude-code-document-functions-automatically/)
+- [How To Make Claude Code Explain — Complete Developer Guide](/how-to-make-claude-code-explain-its-reasoning-steps/)
+- [How to Make Claude Code Stop Overwriting Your Edits (2026)](/how-to-make-claude-code-stop-overwriting-my-edits/)
+- [How to Make Claude Code Use Specific Library Version](/how-to-make-claude-code-use-specific-library-version/)
+- [How to Make Claude Code Respect Your ESLint Config](/how-to-make-claude-code-respect-my-eslint-config/)
+- [How to Make Claude Code Handle Edge Cases Properly](/how-to-make-claude-code-handle-edge-cases-properly/)
+- [How to Make Claude Code Understand Domain Business Logic](/how-to-make-claude-code-understand-domain-business-logic/)
 
 ---
 

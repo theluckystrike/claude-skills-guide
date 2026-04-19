@@ -604,6 +604,13 @@ Related Reading
 - [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)
 - [Claude Code Docker Compose API Tutorial Guide](/claude-code-docker-compose-api-tutorial-guide/)
 - [Claude Code Docker Compose Production Guide](/claude-code-docker-compose-production-guide/)
+- [Claude Code Azure Functions Development Workflow](/claude-code-azure-functions-development-workflow/)
+- [Claude Code Docker Secrets Management Guide](/claude-code-docker-secrets-management-guide/)
+- [How to Use GitHub Actions OIDC Workflow (2026)](/claude-code-for-github-actions-oidc-workflow-guide/)
+- [Claude Code GitHub Actions Environment Protection](/claude-code-github-actions-environment-protection/)
+- [Claude Code for Helm Hooks Workflow Tutorial](/claude-code-for-helm-hooks-workflow-tutorial/)
+- [Claude Code GitHub Actions Composite Actions](/claude-code-github-actions-composite-actions/)
+- [Claude Code For Act Local GitHub — Complete Developer Guide](/claude-code-for-act-local-github-actions-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

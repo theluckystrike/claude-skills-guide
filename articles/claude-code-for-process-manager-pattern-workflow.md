@@ -292,6 +292,7 @@ Related Reading
 - [Claude Code for Ambassador Sidecar Pattern Workflow](/claude-code-for-ambassador-sidecar-pattern-workflow/)
 - [Claude Code for asdf Version Manager Workflow Guide](/claude-code-for-asdf-version-manager-workflow-guide/)
 - [Claude Code for BFF API Pattern Workflow Guide](/claude-code-for-bff-api-pattern-workflow-guide/)
+- [Claude Code for Stow Dotfiles Manager Workflow Tutorial](/claude-code-for-stow-dotfiles-manager-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

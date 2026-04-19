@@ -372,6 +372,9 @@ Related Reading
 - [Claude Code for CPU Profiling Workflow Tutorial Guide](/claude-code-for-cpu-profiling-workflow-tutorial-guide/)
 - [Claude Code for Dhat Memory Profiling Workflow](/claude-code-for-dhat-memory-profiling-workflow/)
 - [Claude Code for Go pprof Profiling Workflow Tutorial](/claude-code-for-go-pprof-profiling-workflow-tutorial/)
+- [Claude Code For Node.js Profiling — Complete Developer Guide](/claude-code-for-nodejs-profiling-workflow-tutorial/)
+- [Claude Code for Zola Rust Static Site Workflow](/claude-code-for-zola-rust-static-site-workflow/)
+- [Claude Code for Rust Trait Objects Workflow Guide](/claude-code-for-rust-trait-objects-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

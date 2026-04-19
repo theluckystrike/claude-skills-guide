@@ -222,3 +222,7 @@ $99 once. Yours forever. I keep adding templates monthly.
 *Last verified: 2026-04-14. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*
 
 
+
+## Related Articles
+
+- [Claude Code Bun Install Setup Guide](/claude-code-bun-install/)

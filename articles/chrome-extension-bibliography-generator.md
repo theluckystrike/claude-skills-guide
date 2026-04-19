@@ -352,6 +352,11 @@ Related Reading
 - [Chrome Extension Blog Post Outline Generator: A Practical Guide for Content Creators](/chrome-extension-blog-post-outline-generator/)
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 - [AI Twitter Reply Generator for Chrome: A Developer's Guide](/ai-twitter-reply-generator-chrome/)
+- [Invoice Generator Freelance Chrome Extension Guide (2026)](/chrome-extension-invoice-generator-freelance/)
+- [Citation Generator Free Chrome Extension Guide (2026)](/citation-generator-chrome-extension-free/)
+- [Chrome Extension Favicon Generator](/chrome-extension-favicon-generator/)
+- [Chrome Extension Thumbnail Preview Generator](/chrome-extension-thumbnail-preview-generator/)
+- [AI Image Generator Chrome Extension Guide (2026)](/chrome-extension-ai-image-generator/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -232,6 +232,7 @@ Related Reading
 - [Claude Code Dockerfile Generation: Multi-Stage Build Guide](/claude-code-dockerfile-generation-multi-stage-build-guide/)
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/)
 - [Integrations Hub: MCP Servers and Claude Skills](/integrations-hub/)
+- [Heroku MCP Server Application Deployment Guide](/heroku-mcp-server-application-deployment-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

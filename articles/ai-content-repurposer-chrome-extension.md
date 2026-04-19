@@ -292,6 +292,8 @@ Related Reading
 - [Chrome Extension Blog Post Outline Generator: A Practical Guide for Content Creators](/chrome-extension-blog-post-outline-generator/)
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 - [AI Color Picker Chrome Extension: A Developer's Guide](/ai-color-picker-chrome-extension/)
+- [Chrome Enterprise Content Filtering — Developer Guide](/chrome-enterprise-content-filtering/)
+- [Chrome Extension Content Calendar Manager](/chrome-extension-content-calendar-manager/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

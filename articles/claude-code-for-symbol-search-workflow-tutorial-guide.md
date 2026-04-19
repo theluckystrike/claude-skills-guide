@@ -221,6 +221,10 @@ Related Reading
 - [Claude Code for Algolia Search Workflow Guide](/claude-code-for-algolia-search-workflow-guide/)
 - [Claude Code for AST-Based Code Search Workflow](/claude-code-for-ast-based-code-search-workflow/)
 - [Claude Code for Cross-Repo Code Search Workflow Guide](/claude-code-for-cross-repo-code-search-workflow-guide/)
+- [Claude Code for Hybrid Search Workflow Tutorial](/claude-code-for-hybrid-search-workflow-tutorial/)
+- [How to Use For Lsp Document — Complete Developer (2026)](/claude-code-for-lsp-document-symbol-workflow-guide/)
+- [Claude Code Meilisearch Faceted Search Workflow Guide](/claude-code-meilisearch-faceted-search-workflow-guide/)
+- [Claude Code for Semantic Code Search Workflow Tutorial](/claude-code-for-semantic-code-search-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

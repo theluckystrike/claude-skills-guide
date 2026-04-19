@@ -259,6 +259,7 @@ Related Reading
 - [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). The technical foundation for building any skill
 - [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Technical guide to the format your contribution must follow
 - [Official vs Community Claude Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/). Understand the ecosystem you're contributing to
+- [Open Source vs Proprietary Claude Skills: Future Outlook](/open-source-vs-proprietary-claude-skills-future-outlook/)
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

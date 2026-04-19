@@ -265,6 +265,10 @@ Related Reading
 - [Claude API Prompt Caching Performance Optimization Guide](/claude-api-prompt-caching-performance-optimization-guide/)
 - [Claude Code API Versioning Strategies Guide](/claude-code-api-versioning-strategies-guide/)
 - [Claude Code for Cost Optimization Monitoring Guide](/claude-code-for-cost-optimization-monitoring-guide/)
+- [Claude Code Pro vs API: Cost Comparison Guide](/claude-code-pro-vs-api-cost-comparison-guide/)
+- [Message Batches API Tutorial with Cost Examples](/message-batches-api-tutorial-cost-examples/)
+- [Per-Request Cost Tracking for Claude API](/per-request-cost-tracking-claude-api/)
+- [Claude API Cost Dashboard Setup Guide 2026](/claude-api-cost-dashboard-setup-guide-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

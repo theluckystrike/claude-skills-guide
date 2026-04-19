@@ -452,6 +452,8 @@ Related Reading
 - [Using Claude Code for Data Quality Validation Workflow](/claude-code-for-data-quality-validation-workflow/)
 - [Claude Code for Dependency License Audit Workflow](/claude-code-for-dependency-license-audit-workflow/)
 - [Claude Code for License Compatibility Workflow Guide](/claude-code-for-license-compatibility-workflow-guide/)
+- [Claude Code For Lemonsqueezy — Complete Developer Guide](/claude-code-for-lemonsqueezy-billing-workflow/)
+- [Claude Code for Pandera Dataframe Validation Workflow](/claude-code-for-pandera-dataframe-validation-workflow-tutori/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

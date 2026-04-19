@@ -261,6 +261,7 @@ Related Reading
 - [Claude Code vs Aider: Open Source Contribution Workflow.](/claude-code-vs-aider-open-source-contribution-workflow/)
 - [Claude Code for Open Source Contributions: 2026 Workflow Guide](/claude-code-open-source-contribution-workflow-guide-2026/)
 - [Claude Code Open Source Issue Triage Workflow Guide](/claude-code-open-source-issue-triage-workflow-guide/)
+- [Claude Code For Csharp Source — Complete Developer Guide](/claude-code-for-csharp-source-generators-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

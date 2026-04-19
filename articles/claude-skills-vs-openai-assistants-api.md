@@ -141,3 +141,7 @@ Claude Code skills run with your local user permissions. An Assistants code inte
 - [Migrating OpenAI Assistants to Claude Skills](/migrating-openai-assistants-to-claude-skills/) -- step-by-step migration guide
 - [Claude Skills vs ChatGPT Custom GPTs](/claude-skills-vs-chatgpt-custom-gpts/) -- consumer-facing comparison
 - [Hybrid Patterns: Skills, MCP, and Custom Tools](/hybrid-patterns-skills-mcp-custom-tools/) -- combining multiple AI tool systems
+
+## Related Articles
+
+- [Claude Skills vs OpenAI Assistants API: Comparison (2026)](/claude-skills-vs-openai-assistants-api-comparison/)

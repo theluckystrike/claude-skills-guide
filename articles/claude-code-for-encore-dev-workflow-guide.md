@@ -76,3 +76,14 @@ Claude Code should create a `notifications/` service directory, subscribe to the
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)
+
+## Related Articles
+
+- [Claude Code For Go To Definition — Complete Developer Guide](/claude-code-for-go-to-definition-workflow-tutorial/)
+- [Claude Code for Tabnine AI Autocomplete Workflow](/claude-code-for-tabnine-ai-autocomplete-workflow/)
+- [Claude Code for Few-Shot Prompting Best Practices Workflow](/claude-code-for-few-shot-prompting-best-practices-workflow/)
+- [Claude Code For Oss License — Complete Developer Guide](/claude-code-for-oss-license-selection-workflow-guide/)
+- [Claude Code For Mob Programming — Complete Developer Guide](/claude-code-for-mob-programming-workflow-tutorial/)
+- [Claude Code For Zig Programming — Complete Developer Guide](/claude-code-for-zig-programming-language-workflow/)
+- [Claude Code for BentoML Workflow Tutorial](/claude-code-for-bentoml-workflow-tutorial/)
+- [Claude Code For Ant Design — Complete Developer Guide](/claude-code-for-ant-design-workflow-guide/)

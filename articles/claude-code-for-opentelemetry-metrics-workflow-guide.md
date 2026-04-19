@@ -248,6 +248,7 @@ Related Reading
 - [Claude Code Community Health Metrics Documentation Workflow](/claude-code-community-health-metrics-documentation-workflow/)
 - [Claude Code for Code Review Metrics Workflow Guide](/claude-code-for-code-review-metrics-workflow-guide/)
 - [Claude Code for Incident Metrics Workflow Tutorial](/claude-code-for-incident-metrics-workflow-tutorial/)
+- [Claude Code For Kube State — Complete Developer Guide](/claude-code-for-kube-state-metrics-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

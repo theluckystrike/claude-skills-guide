@@ -287,6 +287,7 @@ Related Reading
 - [Aider AI Pair Programming Review 2026: An Honest Take](/aider-ai-pair-programming-review-2026-honest-take/)
 - [Claude Code for Competitive Programming Practice Workflow](/claude-code-for-competitive-programming-practice-workflow/)
 - [Claude Code for Pair Review Workflow Tutorial Guide](/claude-code-for-pair-review-workflow-tutorial-guide/)
+- [Claude Code Scala Functional Programming Workflow Tips](/claude-code-scala-functional-programming-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

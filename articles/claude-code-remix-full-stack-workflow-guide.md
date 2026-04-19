@@ -400,6 +400,7 @@ Related Reading
 - [Claude Code Skills for Product Engineers Building Full Stack](/claude-code-skills-for-product-engineers-building-full-stack/)
 - [Claude Code Nuxt Vue Full Stack Workflow](/claude-code-nuxt-vue-full-stack-workflow/)
 - [Claude Code for Vercel Supabase Clerk Full Stack Development](/claude-code-for-vercel-supabase-clerk-full-stack/)
+- [Claude Code Full Stack Developer Feature Shipping Workflow](/claude-code-full-stack-developer-feature-shipping-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

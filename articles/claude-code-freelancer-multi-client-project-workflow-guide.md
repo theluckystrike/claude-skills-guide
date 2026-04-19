@@ -285,6 +285,8 @@ Related Reading
 - [Claude Code Axios HTTP Client Workflow](/claude-code-axios-http-client-workflow/)
 - [Claude Code for Bruno API Client Workflow Tutorial](/claude-code-for-bruno-api-client-workflow-tutorial/)
 - [Claude Code for Multi-Language Navigation Workflow](/claude-code-for-multi-language-navigation-workflow/)
+- [Claude Code for Submariner Multi-Cluster Workflow](/claude-code-for-submariner-multi-cluster-workflow/)
+- [Claude Code Indie Developer Side Project Workflow Guide](/claude-code-indie-developer-side-project-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

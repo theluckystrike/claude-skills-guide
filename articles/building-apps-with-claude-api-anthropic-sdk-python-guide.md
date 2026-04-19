@@ -278,6 +278,7 @@ Related Reading
 - [Claude API System Prompt Engineering for Production Apps](/claude-api-system-prompt-engineering-for-production-apps/)
 - [Claude Code for Claude Batch API: Anthropic Workflow Guide](/claude-code-for-claude-batch-api-anthropic-workflow-guide/)
 - [Claude Code Python SDK Package Guide](/claude-code-python-sdk-package-guide/)
+- [Claude Code FastAPI Async Python Guide](/claude-code-fastapi-async-python-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

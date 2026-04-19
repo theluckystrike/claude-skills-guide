@@ -210,6 +210,7 @@ Related Reading
 - [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/). Data skills for validating, transforming, and reporting on database migration results
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). The tdd and supermemory skills drive test-driven migration and progress tracking
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Manage token usage during long database migration sessions
+- [Claude Code MongoDB Aggregation Pipeline Workflow Guide](/claude-code-mongodb-aggregation-pipeline-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

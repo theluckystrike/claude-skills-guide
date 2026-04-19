@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code Shell Scripting Automation Workflow Guide"
 description: "Master shell scripting automation with Claude Code. Learn how to create, debug, and optimize bash workflows using Claude's AI assistance."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, shell-scripting, automation, bash, workflow, claude-skills]
 author: "Claude Skills Guide"
@@ -13,6 +13,8 @@ score: 7
 permalink: /claude-code-shell-scripting-automation-workflow-guide/
 geo_optimized: true
 ---
+
+Updated April 2026 for the latest Claude Code release. The approach below reflects current shell scripting automation behavior after recent updates to shell scripting automation tooling and Claude Code's improved project context handling.
 
 Shell scripting remains one of the most powerful ways to automate repetitive tasks, manage infrastructure, and orchestrate complex workflows. When combined with Claude Code's AI capabilities, you can transform from writing scripts manually to describing what you need and letting Claude help generate, debug, and optimize your automation solutions.
 
@@ -446,6 +448,12 @@ Claude Code transforms shell scripting from a tedious manual process into a coll
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

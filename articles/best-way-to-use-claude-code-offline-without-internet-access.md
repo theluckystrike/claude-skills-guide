@@ -237,6 +237,9 @@ Related Reading
 - [Best Way to Configure Claude Code to Understand Your Internal APIs](/best-way-to-configure-claude-code-to-understand-your-internal-apis/)
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [AI Agent Skills Standardization Efforts 2026](/ai-agent-skills-standardization-efforts-2026/)
+- [Claude Code for ABAC: Attribute-Based Access Control Guide](/claude-code-for-abac-attribute-based-access-guide/)
+- [How to Use Claude Code with Existing GitHub Repo](/how-to-use-claude-code-with-existing-github-repo/)
+- [Claude Code Beta Features: How to Access and Use Them](/claude-code-beta-features-how-to-access/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -232,6 +232,7 @@ Related Reading
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Claude Code Automated Pull Request Review Workflow Guide](/claude-code-automated-pull-request-review-workflow-guide/)
 - [Claude Code Dotfiles Configuration Management Workflow](/claude-code-dotfiles-configuration-management-workflow/)
+- [How to Use PR Size Management: Workflow (2026)](/claude-code-for-pr-size-management-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -271,6 +271,14 @@ Related Reading
 - [Angular DevTools Chrome Extension Setup: A Complete Guide](/angular-devtools-chrome-extension-setup/)
 - [Chrome Extension Notion Web Clipper: A Developer Guide](/chrome-extension-notion-web-clipper/)
 - [Evernote Web Clipper Alternative for Chrome in 2026: A.](/evernote-web-clipper-alternative-chrome-extension-2026/)
+- [How to Use Zotero Chrome Extension Setup Guide](/zotero-chrome-extension-setup-guide/)
+- [Notion Web Clipper Alternative Chrome Extension in 2026](/notion-web-clipper-alternative-chrome-extension-2026/)
+- [Kanban Board Chrome Extension Guide (2026)](/kanban-board-chrome-extension/)
+- [How to Build a Chrome Extension for Watermarking Images](/chrome-extension-watermark-images/)
+- [Twitter Analytics Chrome Extension Guide (2026)](/chrome-extension-twitter-analytics/)
+- [Ebay Sniper Chrome Extension](/ebay-sniper-chrome-extension/)
+- [Dropbox Quick Share Chrome Extension Guide (2026)](/chrome-extension-dropbox-quick-share/)
+- [Building a Chrome Extension for a Read Later List](/chrome-extension-read-later-list/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

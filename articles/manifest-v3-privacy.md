@@ -350,6 +350,14 @@ Related Reading
 - [Chrome Block Phishing Extension: A Developer Guide to.](/chrome-block-phishing-extension/)
 - [Chrome Extension Auto Meeting Summary: A Developer Guide](/chrome-extension-auto-meeting-summary/)
 - [Chrome Extension Screen Recorder for Meetings: A.](/chrome-extension-screen-recorder-meetings/)
+- [How to Use Web App Manifest Configuration (2026)](/claude-code-for-web-app-manifest-configuration-guide/)
+- [Claude Code Kafka Consumer Producer Tutorial Guide](/claude-code-kafka-consumer-producer-tutorial-guide/)
+- [Claude Code for Continuing Education as a Developer](/claude-code-for-continuing-education-as-a-developer/)
+- [Claude Code Weights and Biases Experiment Tracking](/claude-code-weights-and-biases-experiment-tracking/)
+- [Claude Code for Writing Research Methodology Sections](/claude-code-for-writing-research-methodology-sections/)
+- [Claude Code Pulumi Python Infrastructure Guide](/claude-code-pulumi-python-infrastructure-guide/)
+- [Claude Code Unleash Feature — Complete Developer Guide](/claude-code-unleash-feature-toggle-nodejs-integration-guide/)
+- [Claude Code NestJS Guards Interceptors Pipes Deep Dive](/claude-code-nestjs-guards-interceptors-pipes-deep-dive/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

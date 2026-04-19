@@ -387,6 +387,14 @@ Related Reading
 - [Claude Code Axe Accessibility Testing Guide](/claude-code-axe-accessibility-testing-guide/)
 - [Claude Code Screen Reader Testing Workflow](/claude-code-screen-reader-testing-workflow/)
 - [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Val Town — Workflow Guide](/claude-code-for-val-town-workflow-guide/)
+- [Claude Code for Unstructured IO — Guide](/claude-code-for-unstructured-io-workflow-guide/)
+- [Claude Code for Oxc Compiler — Workflow Guide](/claude-code-for-oxc-compiler-workflow-guide/)
+- [Claude Code for Helix Editor — Workflow Guide](/claude-code-for-helix-editor-workflow-guide/)
+- [Claude Code for Inngest — Workflow Guide](/claude-code-for-inngest-workflow-guide/)
+- [Claude Code for Just — Workflow Guide](/claude-code-for-just-command-runner-workflow-guide/)
+- [Claude Code for Zed Editor — Workflow Guide](/claude-code-for-zed-editor-workflow-guide/)
+- [Claude Code for StarRocks — Workflow Guide](/claude-code-for-starrocks-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

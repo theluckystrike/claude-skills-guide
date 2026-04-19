@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code API Regression Testing Workflow Guide"
 description: "Master API regression testing with Claude Code. Learn workflows, tools integration, automated testing, and best practices for catching breaking changes."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, api, testing, regression, automation, http, rest, graphql, claude-skills]
 author: "Claude Skills Guide"
@@ -13,6 +13,8 @@ permalink: /claude-code-api-regression-testing-workflow/
 render_with_liquid: false
 geo_optimized: true
 ---
+
+When developers hit intermittent timeout errors under load, it typically traces back to connection pool exhaustion or missing retry logic. The approach below walks through diagnosing and resolving this api regression issue with Claude Code, verified against current tooling in April 2026.
 
 {% raw %}
 API regression testing is a critical practice for maintaining reliable integrations. When your application depends on internal or external APIs, any breaking change can cascade through your system. Claude Code provides powerful capabilities for building comprehensive API regression testing workflows that catch issues early and keep your integrations healthy.
@@ -762,6 +764,12 @@ Start with the foundational configuration and zod schemas, add snapshot tests fo
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

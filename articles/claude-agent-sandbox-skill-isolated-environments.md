@@ -387,6 +387,7 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Overview of essential Claude Code skills for developers
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How Claude decides when to load skills
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep API costs down as you scale
+- [Distributing Claude Skills Across — Developer Guide](/distributing-claude-skills-across-isolated-client-environmen/)
 
 ---
 

@@ -164,3 +164,7 @@ Monorepos have the highest conflict risk because multiple teams share the same r
 Combined with path-specific rules, this gives each team in a monorepo isolation from other teams' instructions. Shared, cross-team rules go in the repository root CLAUDE.md.
 
 For the complete loading order and mechanics, see the [CLAUDE.md complete guide](/claude-md-file-complete-guide-what-it-does/). For managing team versus personal files, see the [team vs personal guide](/team-claude-md-vs-personal-claude-md/). For version control practices that prevent conflicts during merges, see the [version control strategies guide](/claude-md-version-control-strategies/).
+
+## Related Articles
+
+- [How to Use Claude Md Conflicting — Complete Developer (2026)](/claude-md-conflicting-instructions-resolution-guide/)

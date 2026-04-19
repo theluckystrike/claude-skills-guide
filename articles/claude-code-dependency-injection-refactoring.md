@@ -186,6 +186,9 @@ Related Reading
 - [Claude Code Coupling and Cohesion Improvement](/claude-code-coupling-and-cohesion-improvement/). DI reduces coupling between components
 - [Claude Code Test Driven Refactoring Guide](/claude-code-test-driven-refactoring-guide/). DI refactoring needs test coverage
 - [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/). Tightly-coupled code is a common tech debt item
+- [Claude Code Duplicate Code Refactoring Guide](/claude-code-duplicate-code-refactoring-guide/)
+- [Best AI Tools for Code Refactoring in 2026](/best-ai-tools-for-code-refactoring-2026/)
+- [Claude Code Design Patterns Refactoring Guide](/claude-code-design-patterns-refactoring-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

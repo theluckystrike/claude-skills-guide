@@ -138,6 +138,7 @@ Related Reading
 - [AI Agent Skills Standardization Efforts 2026](/ai-agent-skills-standardization-efforts-2026/). Understand the MCP standardization work that underpins many of the ecosystem predictions covered here.
 - [Claude Code Skills Roadmap 2026: What Is Coming](/claude-code-skills-roadmap-2026-what-is-coming/). See Anthropic's official skill development roadmap that informs these ecosystem predictions.
 - [Advanced Claude Skills](/advanced-hub/). Master the advanced skill patterns that will be most relevant as the ecosystem evolves.
+- [Where The Claude Code Skill Ecosystem Is — Developer Guide](/where-the-claude-code-skill-ecosystem-is-headed-2027/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

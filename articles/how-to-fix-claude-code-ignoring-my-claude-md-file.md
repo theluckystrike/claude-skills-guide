@@ -207,6 +207,7 @@ Related Reading
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Claude Code Not Working After Update: How to Fix](/claude-code-not-working-after-update-how-to-fix/)
 - [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [Claude Code Keeps Switching to Wrong File Context](/claude-code-keeps-switching-to-wrong-file-context/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

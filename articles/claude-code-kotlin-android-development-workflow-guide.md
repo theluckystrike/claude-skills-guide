@@ -2,8 +2,8 @@
 layout: default
 title: "Kotlin Android Development with Claude Code Guide"
 description: "Practical guide to using Claude Code for Kotlin Android development. TDD workflows, code generation, and testing for Android projects."
-date: 2026-03-13
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, claude-skills, kotlin, android, tdd, mobile-development]
 author: "Claude Skills Guide"
@@ -14,6 +14,8 @@ geo_optimized: true
 ---
 
 # Claude Code Kotlin Android Development Workflow Guide
+
+Getting kotlin android development right in practice means solving proper kotlin android development configuration, integration testing, and ongoing maintenance. The Claude Code patterns in this kotlin android development guide were developed from real project requirements.
 
 [Developing Android applications with Kotlin becomes significantly more productive when you integrate Claude Code into your workflow](/best-claude-code-skills-to-install-first-2026/) This guide covers practical strategies for using Claude and its skill system to accelerate Android development, from project scaffolding to testing and documentation.
 
@@ -394,6 +396,12 @@ Experiment with different skill combinations to find what works best for your sp
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

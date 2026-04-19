@@ -105,6 +105,14 @@ Related Reading
 - [Claude Code Kubernetes Helm Charts Guide](/claude-code-kubernetes-helm-charts-guide/)
 - [Claude Code Kubernetes Logging Stack Guide](/claude-code-kubernetes-logging-stack-guide/)
 - [Claude Code Kubernetes Monitoring with Prometheus](/claude-code-kubernetes-monitoring-prometheus/)
+- [Claude Code for Kubernetes Profiling Workflow](/claude-code-for-kubernetes-profiling-workflow/)
+- [How to Use Kubernetes Resource Limits (2026)](/claude-code-kubernetes-resource-limits-guide/)
+- [Claude Code Kubernetes Persistent Volumes Guide](/claude-code-kubernetes-persistent-volumes-guide/)
+- [Claude Code for OpenFaaS Kubernetes Workflow](/claude-code-for-openfaas-kubernetes-workflow/)
+- [Claude Code Kubernetes RBAC Security Guide](/claude-code-kubernetes-rbac-security-guide/)
+- [Claude Code for Traefik Ingress Kubernetes Workflow Guide](/claude-code-for-traefik-ingress-kubernetes-workflow-guide/)
+- [Using Claude Code for Kubernetes Priority Class Workflow](/claude-code-for-kubernetes-priority-class-workflow/)
+- [Claude Code Kubernetes Secrets Management — Developer Guide](/claude-code-kubernetes-secrets-management/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

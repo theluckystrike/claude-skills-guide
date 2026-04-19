@@ -476,6 +476,9 @@ Related Reading
 - [Claude Code for Imgix Image Optimization Workflow](/claude-code-for-imgix-image-optimization-workflow/)
 - [Claude Code Next.js Image Optimization Guide](/claude-code-nextjs-image-optimization-guide/)
 - [AI Coding Tools for Performance Optimization: A.](/ai-coding-tools-for-performance-optimization/)
+- [How to Use Power BI DAX Optimization with Claude Code (2026)](/claude-code-power-bi-dax-optimization-guide/)
+- [How to Use PWA Install Prompt Workflow (2026)](/claude-code-for-pwa-install-prompt-workflow-guide/)
+- [Claude Code For Coding Interview — Complete Developer Guide](/claude-code-for-coding-interview-preparation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

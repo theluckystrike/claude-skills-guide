@@ -122,3 +122,14 @@ These ranges apply similarly to both Anthropic and OpenAI enterprise agreements.
 - [Migration Cost Analysis: Switching Providers](/claude-cost-migration-switching-providers-analysis/)
 - [Total Cost of Ownership: Every Provider](/claude-cost-total-cost-ownership-every-provider/)
 - [Claude vs GPT-4o Honest Cost Breakdown](/claude-cost-claude-vs-gpt4-honest-cost-breakdown/)
+
+## Related Articles
+
+- [Tool Use vs Direct Prompting Cost Comparison](/tool-use-vs-direct-prompting-cost-comparison/)
+- [Claude Code Max vs Pro: Which Plan Saves More](/claude-code-max-vs-pro-which-plan-saves/)
+- [Cost-Efficient Multi-Agent Coding Workflows](/cost-efficient-multi-agent-coding-workflows/)
+- [Claude Agent Loop Cost: Tokens Per Iteration](/claude-agent-loop-cost-tokens-per-iteration/)
+- [Async Claude Processing: Half Price Same Quality](/async-claude-processing-half-price-same-quality/)
+- [Claude Code /compact Saves Thousands of Tokens](/claude-code-compact-saves-thousands-tokens/)
+- [Enterprise Claude Cost Chargebacks by Team](/enterprise-claude-cost-chargebacks-by-team/)
+- [Reduce Claude Code Token Consumption by 60%](/reduce-claude-code-token-consumption-60-percent/)

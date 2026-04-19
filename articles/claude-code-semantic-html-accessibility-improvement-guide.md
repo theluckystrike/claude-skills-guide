@@ -379,6 +379,14 @@ Related Reading
 - [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/). Frontend skills for building accessible, semantic HTML structures
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). Developer skills including tdd for writing accessibility tests
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Auto-trigger frontend and accessibility skills when working on HTML files
+- [Claude Code for Landmark Regions Accessibility Guide](/claude-code-for-landmark-regions-accessibility-guide/)
+- [Claude Code for Reviewing Open Source Pull Requests](/claude-code-for-reviewing-open-source-pull-requests/)
+- [Claude Code With Task Runners Just — Developer Guide](/claude-code-with-task-runners-just-taskfile/)
+- [Splitting Large Codebases Across Specialized Claude Agents](/splitting-large-codebases-across-specialized-claude-agents/)
+- [Claude Code for Developer Advocate Demos](/claude-code-for-developer-advocate-demos/)
+- [Claude Code with Mise Version Manager Guide](/claude-code-with-mise-version-manager-guide/)
+- [Claude Code Git Commit Message Generator Guide](/claude-code-git-commit-message-generator-guide/)
+- [SuperMaven Review: Fast AI Code Completion in 2026](/supermaven-review-fast-ai-code-completion-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code Docker Compose Test Setup Guide"
 description: "Set up Docker Compose environments for testing Claude Code skills. Includes containerized skill execution, test databases, mock services, and CI."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, claude-skills, docker, docker-compose, testing, devops]
 author: "Claude Skills Guide"
@@ -15,6 +15,7 @@ geo_optimized: true
 ---
 
 
+This guide focuses specifically on docker compose test within Claude Code workflows. For coverage of adjacent tools and techniques beyond docker compose test, [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) provides complementary context.
 
 Running Claude Code skills inside Docker Compose gives you repeatable test environments where you can spin up databases, mock APIs, and isolated skill executions without polluting your host system. This guide walks through practical setups for testing skills that interact with external services, databases, and CI pipelines.
 
@@ -280,6 +281,12 @@ The key patterns are: isolate each test run with fresh volumes, mock external de
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

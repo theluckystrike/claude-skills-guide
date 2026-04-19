@@ -259,6 +259,13 @@ Related Reading
 - [Claude Code for Computer Science Bootcamp Students](/claude-code-for-computer-science-bootcamp-students/)
 - [Chrome Extension Bookmark Manager for Students: A.](/chrome-extension-bookmark-manager-students/)
 - [Chrome Extension Focus Timer Productivity: A Developer Guide](/chrome-extension-focus-timer-productivity/)
+- [Claude Code For Thai Developer Teams — Developer Guide](/claude-code-for-thai-developer-teams-productivity-tips/)
+- [Claude Code for Senior Engineer Productivity](/claude-code-for-senior-engineer-productivity/)
+- [How Students Use Claude Code for Learning Programming](/how-students-use-claude-code-for-learning-programming/)
+- [Claude Code: Helping Students Understand Recursion Concepts](/claude-code-helping-students-understand-recursion-concepts/)
+- [Developer Productivity Gains from Using Claude Code](/developer-productivity-gains-from-using-claude-code/)
+- [Claude Code for French Developer Team Productivity Tips](/claude-code-for-french-developer-team-productivity-tips/)
+- [Claude Code for Developer Productivity Tracking](/claude-code-for-developer-productivity-tracking/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

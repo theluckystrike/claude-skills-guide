@@ -746,6 +746,7 @@ Related Reading
 - [Claude Code vLLM Inference Server Deployment Workflow](/claude-code-vllm-inference-server-deployment-workflow/)
 - [Claude Code for Astro Server Endpoints Workflow](/claude-code-for-astro-server-endpoints-workflow/)
 - [Claude Code for Language Server Protocol Workflow Guide](/claude-code-for-language-server-protocol-workflow-guide/)
+- [Claude Code for Vinxi Server — Workflow Guide](/claude-code-for-vinxi-server-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

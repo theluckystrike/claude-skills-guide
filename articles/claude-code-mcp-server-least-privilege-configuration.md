@@ -362,6 +362,7 @@ Related Reading
 - [Claude Code Permissions Model Security Guide 2026](/claude-code-permissions-model-security-guide-2026/)
 - [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/)
 - [Advanced Claude Skills Hub](/advanced-hub/)
+- [MCP Transport Layer Security TLS Configuration Guide](/mcp-transport-layer-security-tls-configuration/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

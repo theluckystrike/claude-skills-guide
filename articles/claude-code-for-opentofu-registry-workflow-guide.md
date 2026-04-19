@@ -238,6 +238,8 @@ Related Reading
 - [Claude Code Container Registry Workflow Guide](/claude-code-container-registry-workflow-guide/)
 - [Claude Code for Nacos Service Registry Workflow](/claude-code-for-nacos-service-registry-workflow/)
 - [Claude Code for OpenTofu Migration Workflow Guide](/claude-code-for-opentofu-migration-workflow-guide/)
+- [Claude Code for Package Registry Workflow Tutorial](/claude-code-for-package-registry-workflow-tutorial/)
+- [Claude Code for OpenTofu Provider Workflow Tutorial](/claude-code-for-opentofu-provider-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

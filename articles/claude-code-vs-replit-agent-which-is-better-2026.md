@@ -157,6 +157,12 @@ Related Reading
 - [Anthropic Official Skills vs Community Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/). Claude Code's skills ecosystem is a key differentiator; this guide explains what is available and how to evaluate options
 - [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-vs-prompts-which-is-better/). Compares Claude Code's structured skill model to simpler prompt-based approaches used by tools like Replit Agent
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). One of Claude Code's standout capabilities over Replit Agent is context-aware automatic skill firing. this explains how it works
+- [Claude Code vs Jan AI Local — Developer Comparison 2026](/claude-code-vs-jan-ai-local-assistant/)
+- [Claude Code Subscription Worth It — Honest Review 2026](/claude-code-subscription-worth-it-honest-review/)
+- [Automatic vs Manual Cache Breakpoints Guide](/automatic-vs-manual-cache-breakpoints-guide/)
+- [Claude Code vs Windsurf Python — Developer Comparison 2026](/claude-code-vs-windsurf-python-backend-development/)
+- [Claude Code vs Aider Open — Developer Comparison 2026](/claude-code-vs-aider-open-source-contribution-workflow/)
+- [Replit Agent Review for Solo Developers 2026](/replit-agent-review-for-solo-developers-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

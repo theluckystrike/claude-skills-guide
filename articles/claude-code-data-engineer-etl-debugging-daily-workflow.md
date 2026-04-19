@@ -201,6 +201,7 @@ Related Reading
 - [Claude Code Frontend Developer CSS Debugging Workflow Guide](/claude-code-frontend-developer-css-debugging-workflow-guide/)
 - [AI Tools for Incident Debugging and Postmortems](/ai-tools-for-incident-debugging-and-postmortems/)
 - [Chrome DevTools Memory Leak Debugging: Find and Fix.](/chrome-devtools-memory-leak-debugging/)
+- [Claude Skills for Generating Mock Data and Fixtures](/claude-skills-for-generating-mock-data-and-fixtures/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

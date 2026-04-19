@@ -496,6 +496,14 @@ Related Reading
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)
+- [Claude Code for CDK Aspects Workflow Tutorial](/claude-code-for-cdk-aspects-workflow-tutorial/)
+- [Claude Code for Prowler Compliance Workflow](/claude-code-for-prowler-compliance-workflow/)
+- [Claude Code for Statuspage Workflow Tutorial](/claude-code-for-statuspage-workflow-tutorial/)
+- [Claude Code For Fluent Bit — Complete Developer Guide](/claude-code-for-fluent-bit-workflow-tutorial/)
+- [Claude Code for MQTT IoT Messaging Workflow](/claude-code-for-mqtt-iot-messaging-workflow/)
+- [Claude Code for PowerSync — Workflow Guide](/claude-code-for-powersync-offline-workflow-guide/)
+- [Claude Code for Neon Branching — Workflow Guide](/claude-code-for-neon-branching-workflow-guide/)
+- [Claude Code for Qdrant Vector DB — Guide](/claude-code-for-qdrant-vector-db-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

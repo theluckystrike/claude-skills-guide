@@ -261,6 +261,7 @@ Related Reading
 - [What Is the Best Claude Skill for Automated Code Review](/best-claude-skills-for-code-review-automation/). Combine test generation with automated code review for complete coverage
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/). Automate test generation and review as part of your CI/CD workflow
 - [Claude Skills Getting Started Hub](/getting-started-hub/). Explore the full range of skills available for developer workflows
+- [Claude Code Skills for Writing Integration Tests](/claude-code-skills-for-writing-integration-tests/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

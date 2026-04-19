@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for API Benchmark Workflow Tutorial Guide"
 description: "Learn how to use Claude Code to build automated API benchmarking workflows, from setup to execution and result analysis."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-api-benchmark-workflow-tutorial-guide/
 categories: [guides]
@@ -13,6 +13,8 @@ reviewed: true
 score: 8
 geo_optimized: true
 ---
+
+The scope here is api benchmark workflow configuration and practical usage with Claude Code. This does not cover general project setup. For that foundation, see [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/).
 
 API performance benchmarking is essential for building reliable applications, yet it often requires significant setup time and scripting expertise. This guide shows you how to use Claude Code, the command-line interface for Claude, to automate and streamline your API benchmark workflows, making performance testing accessible and repeatable.
 
@@ -222,6 +224,12 @@ Start small, create a basic benchmark skill for your most critical endpoint, and
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

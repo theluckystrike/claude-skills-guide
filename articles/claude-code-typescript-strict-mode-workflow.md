@@ -208,6 +208,7 @@ Related Reading
 - [Claude Code Static Analysis Automation Guide](/claude-code-static-analysis-automation-guide/). TypeScript strict mode is a form of static analysis
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Strict TypeScript + TDD for maximum quality
 - [How to Make Claude Code Follow DRY and SOLID Principles](/how-to-make-claude-code-follow-dry-solid-principles/). Strict mode enforces solid design principles
+- [Claude Code for TypeScript Const Enums Workflow Guide](/claude-code-for-typescript-const-enums-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -201,6 +201,10 @@ Related Reading
 - [Claude Code for Huh Forms Terminal Workflow Guide](/claude-code-for-huh-forms-terminal-workflow-guide/)
 - [Claude Code for k9s Kubernetes Terminal Workflow Guide](/claude-code-for-k9s-kubernetes-terminal-workflow-guide/)
 - [Claude Code for Slides Terminal Presentation Workflow](/claude-code-for-slides-terminal-presentation-workflow/)
+- [Claude Code for Zellij Terminal Multiplexer Workflow](/claude-code-for-zellij-terminal-multiplexer-workflow/)
+- [Claude Code for WezTerm Terminal Workflow Guide](/claude-code-for-wezterm-terminal-workflow-guide/)
+- [Claude Code for Tabby Terminal — Workflow Guide](/claude-code-for-tabby-terminal-workflow-guide/)
+- [Claude Code For Vhs Terminal — Complete Developer Guide](/claude-code-for-vhs-terminal-recorder-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

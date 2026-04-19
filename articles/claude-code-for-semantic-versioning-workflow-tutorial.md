@@ -319,6 +319,7 @@ Related Reading
 - [Claude Code for Semantic Code Search Workflow Tutorial](/claude-code-for-semantic-code-search-workflow-tutorial/)
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
+- [Claude Code Lerna Independent Versioning Workflow Tutorial](/claude-code-lerna-independent-versioning-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

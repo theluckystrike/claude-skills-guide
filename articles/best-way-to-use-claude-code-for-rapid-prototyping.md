@@ -158,6 +158,14 @@ Related Reading
 - [Claude Code Project Scaffolding Automation](/claude-code-project-scaffolding-automation/). Scaffolding accelerates prototyping
 - [Best Way to Prompt Claude Code for Complex Features](/how-to-write-effective-prompts-for-claude-code/). Effective prompting for faster prototype iterations
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/). Start prototyping from day one
+- [How Technical Writers Use Claude Code For — Developer Guide](/how-technical-writers-use-claude-code-for-docs/)
+- [How Product Managers Use Claude Code for Specs](/how-product-managers-use-claude-code-for-specs/)
+- [How Open Source Maintainers Use Claude Code in 2026](/how-open-source-maintainers-use-claude-code-2026/)
+- [How To Use Claude Code To — Complete Developer Guide](/how-to-use-claude-code-to-understand-unfamiliar-codebase-quickly/)
+- [How to Use Claude Code with Existing GitHub Repo](/how-to-use-claude-code-with-existing-github-repo/)
+- [Best Way To Get Claude Code To Explain — Honest Review 2026](/best-way-to-get-claude-code-to-explain-existing-code/)
+- [How Data Scientists Use Claude Code for Analysis](/how-data-scientists-use-claude-code-for-analysis/)
+- [How Designers Use Claude Code for Prototyping](/how-designers-use-claude-code-for-prototyping/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

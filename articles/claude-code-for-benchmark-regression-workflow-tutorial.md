@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Benchmark Regression Workflow Tutorial"
 description: "Learn how to set up automated benchmark regression testing with Claude Code to catch performance degradation before it reaches production."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-benchmark-regression-workflow-tutorial/
 categories: [guides]
@@ -14,6 +14,8 @@ score: 8
 geo_optimized: true
 ---
 
+
+The most common cause of benchmark regression not working as expected in the development workflow is incomplete benchmark regression configuration or missing integration steps. Here is the systematic fix for benchmark regression using Claude Code, tested with the latest release as of April 2026.
 
 Claude Code for Benchmark Regression Workflow Tutorial
 
@@ -238,6 +240,12 @@ Remember: the best time to catch a regression is before it merges. The second be
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

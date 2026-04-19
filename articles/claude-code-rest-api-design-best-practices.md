@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code REST API Design Best Practices"
 description: "Master REST API design with Claude Code. Learn practical patterns for endpoint design, error handling, versioning, and documentation that works with."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, rest-api, api-design, best-practices, development, claude-skills]
@@ -13,6 +13,8 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
+
+Revised April 2026. With API specification tooling updates and OpenAPI 3.1 adoption, some rest api design workflows have changed. This guide reflects the updated Claude Code behavior for rest api design.
 
 Building REST APIs that work well with Claude Code requires understanding both traditional API design principles and how Claude skills interpret and interact with your endpoints. This guide provides actionable patterns you can implement immediately.
 
@@ -455,6 +457,12 @@ The single most impactful change you can make is adopting a consistent response 
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

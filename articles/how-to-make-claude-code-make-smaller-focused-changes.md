@@ -391,6 +391,14 @@ Related Reading
 - [How to Make Claude Code Not Over Engineer Solutions](/how-to-make-claude-code-not-over-engineer-solutions/). Over-engineering and large changes are related
 - [Claude Code Trunk Based Development Guide](/claude-code-trunk-based-development-guide/). Small changes are core to trunk-based development
 - [Claude Skills Tutorials Hub](/tutorials-hub/). More behavioral guidance for Claude Code
+- [How To Make Claude Code Not — Complete Developer Guide](/how-to-make-claude-code-not-break-type-definitions/)
+- [How To Make Claude Code Document — Complete Developer Guide](/how-to-make-claude-code-document-functions-automatically/)
+- [How To Make Claude Code Generate — Complete Developer Guide](/how-to-make-claude-code-generate-complete-files-not-snippets/)
+- [How To Make Claude Code Explain — Complete Developer Guide](/how-to-make-claude-code-explain-its-reasoning-steps/)
+- [How To Make Claude Code Not Add — Complete Developer Guide](/how-to-make-claude-code-not-add-unused-imports/)
+- [Claude Code Flutter LSP Setup Guide](/claude-code-flutter-lsp/)
+- [Stop Claude Code from Modifying Unrelated Files — Fix Guide (2026)](/claude-code-stop-modifying-unrelated-files/)
+- [How Claude Code Resolves Git Merge Conflicts](/claude-code-git-merge-conflict-resolution/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

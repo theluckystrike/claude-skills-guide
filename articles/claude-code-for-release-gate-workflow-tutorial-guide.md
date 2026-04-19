@@ -322,6 +322,9 @@ Related Reading
 - [Claude Code for Changesets Monorepo Release Workflow](/claude-code-for-changesets-monorepo-release-workflow/)
 - [Claude Code for Hotfix Release Workflow Tutorial Guide](/claude-code-for-hotfix-release-workflow-tutorial-guide/)
 - [Claude Code for Multi-Platform Release Workflow Guide](/claude-code-for-multi-platform-release-workflow-guide/)
+- [Claude Code for SonarQube Quality Gate Workflow Guide](/claude-code-for-sonarqube-quality-gate-workflow-guide/)
+- [Claude Code for Release Branching Strategy Workflow](/claude-code-for-release-branching-strategy-workflow/)
+- [Claude Code for Release Rollback Workflow Tutorial](/claude-code-for-release-rollback-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

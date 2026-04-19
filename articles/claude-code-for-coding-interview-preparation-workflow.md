@@ -179,6 +179,8 @@ Related Reading
 - [Using Claude Code to Prepare for Coding Interviews](/using-claude-code-to-prepare-for-coding-interviews/)
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 - [AI Coding Tool Evaluation Framework for Teams](/ai-coding-tool-evaluation-framework-for-teams/)
+- [Claude Code AppSec: Developer Secure Coding Workflow Tips](/claude-code-appsec-developer-secure-coding-workflow-tips/)
+- [Claude Code Team Coding Standards Enforcement Workflow](/claude-code-team-coding-standards-enforcement-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

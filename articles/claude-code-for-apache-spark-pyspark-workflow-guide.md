@@ -335,6 +335,7 @@ Related Reading
 - [Claude Code for Apache Spark DataFrame Workflow Guide](/claude-code-for-apache-spark-dataframe-workflow-guide/)
 - [Claude Code for Apache Spark ML Workflow](/claude-code-for-apache-spark-ml-workflow/)
 - [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
+- [Claude Code for Apache Flink Workflow Tutorial](/claude-code-for-apache-flink-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

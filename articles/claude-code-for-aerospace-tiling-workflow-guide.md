@@ -72,3 +72,14 @@ Claude Code should produce a valid `~/.aerospace.toml` file with `[mode.main.bin
 - [Claude Code for Ghostty Terminal Workflow](/claude-code-for-ghostty-terminal-workflow-tutorial/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)
 - [Building a CLI Devtool with Claude Code Walkthrough](/building-a-cli-devtool-with-claude-code-walkthrough/)
+
+## Related Articles
+
+- [Claude Code SDK Development Workflow Guide](/claude-code-sdk-development-workflow-guide/)
+- [Claude Code for Wing Cloud Language Workflow](/claude-code-for-wing-cloud-language-workflow/)
+- [Claude Code for ScoutSuite Audit Workflow Guide](/claude-code-for-scoutsuite-audit-workflow-guide/)
+- [Claude Code for RabbitMQ Topic Exchange Workflow](/claude-code-for-rabbitmq-topic-exchange-workflow/)
+- [Claude Code for Upbound Marketplace Workflow Guide](/claude-code-for-upbound-marketplace-workflow-guide/)
+- [Claude Code for Lottie Animation Workflow Tutorial](/claude-code-for-lottie-animation-workflow-tutorial/)
+- [Claude Code for License Scanning Workflow Tutorial](/claude-code-for-license-scanning-workflow-tutorial/)
+- [Claude Code for SharedArrayBuffer Workflow](/claude-code-for-shared-array-buffer-workflow/)

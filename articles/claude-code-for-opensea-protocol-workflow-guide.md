@@ -276,6 +276,7 @@ Related Reading
 - [Claude Skills for Solidity Smart Contract Development](/claude-skills-for-solidity-smart-contract-development/)
 - [Claude Code for IBC Cosmos Workflow](/claude-code-for-ibc-cosmos-workflow/)
 - [Claude Code for Mythril Workflow Tutorial](/claude-code-for-mythril-workflow-tutorial/)
+- [Claude Code for Across Protocol Workflow](/claude-code-for-across-protocol-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

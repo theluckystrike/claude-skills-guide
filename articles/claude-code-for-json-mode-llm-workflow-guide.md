@@ -277,6 +277,7 @@ Related Reading
 - [Claude Code for Helicone LLM Gateway Workflow Tutorial](/claude-code-for-helicone-llm-gateway-workflow-tutorial/)
 - [Claude Code for LLM Caching Workflow Tutorial](/claude-code-for-llm-caching-workflow-tutorial/)
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
+- [Claude Code TypeScript Strict Mode Workflow](/claude-code-typescript-strict-mode-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

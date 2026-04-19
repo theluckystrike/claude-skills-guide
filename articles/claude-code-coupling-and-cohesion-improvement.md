@@ -429,6 +429,14 @@ Related Reading
 - [How to Make Claude Code Follow DRY and SOLID Principles](/how-to-make-claude-code-follow-dry-solid-principles/). SOLID principles directly address coupling
 - [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/). Cyclomatic complexity reduction often improves cohesion
 - [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/). High coupling is a technical debt indicator
+- [Claude Code for Reviewing Open Source Pull Requests](/claude-code-for-reviewing-open-source-pull-requests/)
+- [Claude Code for Developer Advocate Demos](/claude-code-for-developer-advocate-demos/)
+- [Claude Code with Mise Version Manager Guide](/claude-code-with-mise-version-manager-guide/)
+- [SuperMaven Review: Fast AI Code Completion in 2026](/supermaven-review-fast-ai-code-completion-2026/)
+- [Claude Code Msw Mock Service — Complete Developer Guide](/claude-code-msw-mock-service-worker-guide/)
+- [Claude Code for TypeScript Declaration Merging Guide](/claude-code-for-typescript-declaration-merging-guide/)
+- [Claude Code Triggerdev Scheduled — Complete Developer Guide](/claude-code-triggerdev-scheduled-cron-job-tutorial/)
+- [Learning Claude Code In 30 Days Challenge — Developer Guide](/learning-claude-code-in-30-days-challenge/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

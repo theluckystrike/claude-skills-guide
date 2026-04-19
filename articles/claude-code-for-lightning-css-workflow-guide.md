@@ -72,3 +72,10 @@ Claude Code should remove `postcss.config.js`, uninstall PostCSS plugins, instal
 - [Claude Code CSS Animations Workflow Guide](/claude-code-css-animations-workflow-guide/)
 - [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/)
 - [Claude Code CI/CD Pipeline Optimization Guide](/claude-code-ci-cd-pipeline-optimization-guide/)
+
+## Related Articles
+
+- [Claude Code For Critical CSS — Complete Developer Guide](/claude-code-for-critical-css-workflow-tutorial/)
+- [Optimize Tailwind CSS with Claude Code](/claude-code-tailwind-css-optimization-guide/)
+- [Claude Code Vanilla Extract Type Safe CSS](/claude-code-vanilla-extract-type-safe-css/)
+- [Claude Code Emotion CSS-in-JS Guide](/claude-code-emotion-css-in-js-guide/)

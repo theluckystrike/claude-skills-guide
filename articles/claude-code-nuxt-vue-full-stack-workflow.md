@@ -289,6 +289,8 @@ Related Reading
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 - [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-code-dotfiles-management-and-skill-sync-workflow/)
 - [Claude Code for Interview Preparation Workflow](/claude-code-for-interview-preparation-workflow/)
+- [Claude Code For Vue 3 Suspense — Complete Developer Guide](/claude-code-for-vue-3-suspense-workflow-tutorial/)
+- [Claude Code SvelteKit Full Stack Guide](/claude-code-sveltekit-full-stack-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

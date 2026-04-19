@@ -371,6 +371,14 @@ Related Reading
 - [Chrome Enterprise Release Schedule 2026: A Practical Guide](/chrome-enterprise-release-schedule-2026/)
 - [Chrome Enterprise Stable Channel Management: A Practical Guide](/chrome-enterprise-stable-channel-management/)
 - [Chrome Extension Bibliography Generator: A Practical Guide](/chrome-extension-bibliography-generator/)
+- [How to Export Passwords from Chrome Safely](/export-passwords-chrome-safely/)
+- [Flash Sale Notification Chrome Extension Guide (2026)](/chrome-extension-flash-sale-notification/)
+- [Noise Cancellation Chrome Extension Guide (2026)](/noise-cancellation-chrome-extension/)
+- [Pinterest Pin Scheduler Chrome Extension Guide (2026)](/chrome-extension-pinterest-pin-scheduler/)
+- [Chrome Extension Retrospective Board: Agile Tools](/chrome-extension-retrospective-board/)
+- [Best Violentmonkey Alternatives for Chrome 2026](/violentmonkey-alternative-chrome-extension-2026/)
+- [Chrome Browser Token Enrollment — Developer Guide](/chrome-browser-token-enrollment/)
+- [Lightshot Alternative Chrome Extension 2026](/lightshot-alternative-chrome-extension-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

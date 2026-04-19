@@ -237,6 +237,14 @@ Related Reading
 - [Claude Code for Rye Python Project Workflow Guide](/claude-code-for-rye-python-project-workflow-guide/)
 - [Claude MD Example for Android Kotlin Project](/claude-md-example-for-android-kotlin-project/)
 - [Claude MD Example for .NET ASP.NET Core Project](/claude-md-example-for-dotnet-aspnet-core-project/)
+- [Claude MD Example For Next.js TypeScript — Developer Guide](/claude-md-example-for-nextjs-typescript-project/)
+- [Why Does Claude Code Perform Better With — Developer Guide](/why-does-claude-code-perform-better-with-claude-md/)
+- [CLAUDE.md Example for Rails and Ruby Apps](/claude-md-example-for-rails-ruby-application/)
+- [Claude Md For Contractor And Vendor Teams — Developer Guide](/claude-md-for-contractor-and-vendor-teams/)
+- [Claude Md Example For Machine Learning — Developer Guide](/claude-md-example-for-machine-learning-project/)
+- [CLAUDE.md Example for Elixir + Phoenix + LiveView — Production Template (2026)](/claude-md-example-for-elixir-phoenix-liveview/)
+- [CLAUDE.md Example for Node.js + Express + Prisma — Production Template (2026)](/claude-md-example-for-nodejs-express-prisma/)
+- [CLAUDE.md Example for Android + Kotlin + Jetpack Compose — Production Template (2026)](/claude-md-example-for-android-kotlin-jetpack/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

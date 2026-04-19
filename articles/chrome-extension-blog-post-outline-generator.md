@@ -142,6 +142,7 @@ Related Reading
 - [Chrome Extension Bibliography Generator: A Practical Guide](/chrome-extension-bibliography-generator/)
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 - [AI Content Repurposer Chrome Extension: A Developer Guide](/ai-content-repurposer-chrome-extension/)
+- [AI LinkedIn Post Writer Chrome: Tools and Techniques](/ai-linkedin-post-writer-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

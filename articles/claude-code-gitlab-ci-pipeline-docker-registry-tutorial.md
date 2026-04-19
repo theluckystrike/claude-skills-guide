@@ -336,6 +336,7 @@ Related Reading
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Automate infrastructure with Claude skills
 - [Claude Code Skills for Testing](/best-claude-skills-for-code-review-automation/). Improve test coverage with AI assistance
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). Build testing workflows with Claude
+- [Claude Code Docker CI/CD Pipeline Integration Guide](/claude-code-docker-ci-cd-pipeline-integration-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

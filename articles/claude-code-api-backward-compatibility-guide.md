@@ -344,6 +344,8 @@ Related Reading
 - [MCP Updates March 2026: What Developers Need to Know](/anthropic-model-context-protocol-updates-march-2026/)
 - [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
 - [Mailchimp MCP Server Marketing Automation Guide](/mailchimp-mcp-server-marketing-automation-guide/)
+- [Smart Context Pruning for Claude API Savings](/smart-context-pruning-claude-api-savings/)
+- [Claude API Usage Metrics Every Team Needs](/claude-api-usage-metrics-every-team-needs/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

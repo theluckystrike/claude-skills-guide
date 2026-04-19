@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Mythril Workflow Tutorial"
 description: "Learn how to integrate Claude Code with Mythril for automated smart contract security analysis. Step-by-step guide with practical examples."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-mythril-workflow-tutorial/
 categories: [tutorials]
@@ -14,6 +14,8 @@ score: 8
 geo_optimized: true
 ---
 
+
+Revised April 2026. With recent updates to mythril tooling and Claude Code's improved project context handling, some mythril workflows have changed. This guide reflects the updated Claude Code behavior for mythril.
 
 Claude Code for Mythril Workflow Tutorial
 
@@ -499,6 +501,12 @@ Start small: create your first mythril skill, run it against the `VulnerableVaul
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

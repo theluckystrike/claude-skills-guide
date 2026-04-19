@@ -170,6 +170,8 @@ Related Reading
 - [Railway MCP Server Deployment Automation Guide](/railway-mcp-server-deployment-automation-guide/)
 - [Fly.io MCP Server Deployment Workflow Guide](/fly-io-mcp-server-deployment-workflow-guide/)
 - [Integrations Hub: MCP Servers and Claude Skills](/integrations-hub/)
+- [Firecrawl MCP Server: Web Scraping Automation with Claude](/firecrawl-mcp-server-web-scraping-automation/)
+- [Puppeteer MCP Server Web Automation Workflow](/puppeteer-mcp-server-web-automation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

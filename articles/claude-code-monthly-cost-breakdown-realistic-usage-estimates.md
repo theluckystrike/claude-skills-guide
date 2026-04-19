@@ -174,6 +174,14 @@ Related Reading
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
 - [Claude Code Free Tier vs Pro Plan: Feature Comparison 2026](/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/)
 - [Is Claude Code Worth It for Solo Developers?](/is-claude-code-worth-it-for-solo-developers-freelancers/)
+- [Claude Haiku vs Sonnet vs Opus Cost Breakdown 2026](/claude-haiku-vs-sonnet-vs-opus-cost-breakdown/)
+- [Fix: Claude Code High Token Usage](/claude-code-high-token-usage/)
+- [Claude Agent Token Budget Management Guide](/claude-agent-token-budget-management/)
+- [Claude Batch Processing Limits and Best Practices](/claude-batch-processing-limits-best-practices/)
+- [Claude Workspace Spend Limits Configuration](/claude-workspace-spend-limits-configuration/)
+- [Claude Computer Use Token Cost Breakdown](/claude-computer-use-token-cost-breakdown/)
+- [Prompt Caching Break-Even Calculator for Claude](/prompt-caching-break-even-calculator-claude/)
+- [Claude 1M Context Window: What It Really Costs](/claude-1m-context-window-what-it-costs/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

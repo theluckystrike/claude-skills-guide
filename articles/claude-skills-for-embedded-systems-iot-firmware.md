@@ -188,6 +188,8 @@ Related Reading
 - [Claude /xlsx Skill: Spreadsheet Automation Guide](/claude-xlsx-skill-spreadsheet-automation-tutorial/)
 - [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/)
 - [Claude Code for Beginners: Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/)
+- [Claude Skills for Rust Systems Programming](/claude-skills-for-rust-systems-programming/)
+- [Claude Code Skills for Agriculture IoT Monitoring](/claude-code-skills-for-agriculture-iot-monitoring/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

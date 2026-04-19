@@ -313,6 +313,14 @@ Related Reading
 - [Chrome Zoom Slow: Diagnosing and Fixing Performance Issues](/chrome-zoom-slow/)
 - [Chrome vs Edge Memory 2026: Which Browser Uses Less RAM?](/chrome-vs-edge-memory-2026/)
 - [Chrome Update Broke Speed? Fix Performance Issues After Updates](/chrome-update-broke-speed-fix/)
+- [Chrome vs Safari Battery Mac: Power User Guide](/chrome-vs-safari-battery-mac/)
+- [AI Tone Changer Chrome Extension Guide (2026)](/ai-tone-changer-chrome-extension/)
+- [Meeting Transcription Live Chrome Extension Guide (2026)](/chrome-extension-meeting-transcription-live/)
+- [Chrome WASM Performance — Developer Guide](/chrome-wasm-performance/)
+- [Chrome Passkeys How to Use](/chrome-passkeys-how-to-use/)
+- [Best Pesticide Alternatives for Chrome in 2026](/pesticide-alternative-chrome-extension-2026/)
+- [CORS Unblock Development Chrome Extension Guide (2026)](/chrome-extension-cors-unblock-development/)
+- [Schedule Tweets Threads Chrome Extension Guide (2026)](/chrome-extension-schedule-tweets-threads/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -223,6 +223,9 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top skills every developer should know
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/). Decide when skills beat plain prompts
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
+- [Where The Claude Code Skill Ecosystem Is — Developer Guide](/where-the-claude-code-skill-ecosystem-is-headed-2027/)
+- [Claude Code Enoent No Such File Directory — Developer Guide](/claude-code-enoent-no-such-file-directory-skill/)
+- [Claude Skills Directory on GitHub — Find Guide (2026)](/how-to-find-claude-skills-on-github/)
 
 ---
 

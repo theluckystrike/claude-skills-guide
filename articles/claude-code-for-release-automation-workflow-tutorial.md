@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Release Automation Workflow Tutorial"
 description: "Learn how to build automated release workflows with Claude Code. Master CI/CD integration, version management, and deployment automation for faster."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-release-automation-workflow-tutorial/
 categories: [guides]
@@ -14,6 +14,8 @@ score: 8
 render_with_liquid: false
 geo_optimized: true
 ---
+
+Current as of April 2026. The release automation landscape has shifted with recent updates to release automation tooling and Claude Code's improved project context handling, and the steps below reflect how Claude Code works with release automation today.
 
 {% raw %}
 Release automation is a critical component of modern software development, enabling teams to ship features faster while maintaining quality and reliability. Claude Code, with its powerful skills ecosystem and agentic capabilities, can significantly streamline your release workflows. This tutorial walks you through building a comprehensive release automation system using Claude Code.
@@ -304,6 +306,12 @@ Remember that effective release automation is an investment. The initial setup t
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

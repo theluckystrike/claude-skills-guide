@@ -413,6 +413,9 @@ Related Reading
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 - [AI Color Picker Chrome Extension: A Developer's Guide](/ai-color-picker-chrome-extension/)
 - [AI Competitive Analysis Chrome Extension: A Developer's Guide](/ai-competitive-analysis-chrome-extension/)
+- [Chrome Extension Thesis Writing Helper](/chrome-extension-thesis-writing-helper/)
+- [SEO Checker Chrome Extension Guide (2026)](/chrome-extension-seo-checker/)
+- [Writing Assistant Chrome Extension Guide (2026)](/chrome-extension-writing-assistant/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

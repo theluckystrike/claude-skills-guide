@@ -374,6 +374,14 @@ Related Reading
 - [Claude Code Selenium Browser Testing Automation Guide](/claude-code-selenium-browser-testing-automation-guide/)
 - [Chrome Extension Jira Ticket Creator: Automate Issue.](/chrome-extension-jira-ticket-creator/)
 - [Chrome Extension Microphone Test Tool: Developer Guide](/chrome-extension-microphone-test-tool/)
+- [Language Learning Immersion Chrome Extension Guide (2026)](/chrome-extension-language-learning-immersion/)
+- [Social Blade Alternative Chrome Extension in 2026](/social-blade-alternative-chrome-extension-2026/)
+- [Webcam Overlay Recording Chrome Extension Guide (2026)](/chrome-extension-webcam-overlay-recording/)
+- [AI Answer Engine Chrome Extension Guide (2026)](/ai-answer-engine-chrome-extension/)
+- [Octotree GitHub Chrome Extension Guide (2026)](/octotree-chrome-extension-github/)
+- [AI Translation Chrome Extension: Developer Guide (2026)](/ai-translation-chrome-extension/)
+- [Chrome vs Safari Battery Mac: Power User Guide](/chrome-vs-safari-battery-mac/)
+- [AI Tone Changer Chrome Extension Guide (2026)](/ai-tone-changer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

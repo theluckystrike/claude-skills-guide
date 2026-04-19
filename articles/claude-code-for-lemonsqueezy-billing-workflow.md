@@ -250,6 +250,7 @@ Related Reading
 - [Claude Code for Zuora Billing Workflow Tutorial](/claude-code-for-zuora-billing-workflow-tutorial/)
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
+- [Claude Code LemonSqueezy License Key Validation Workflow](/claude-code-lemonsqueezy-license-key-validation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

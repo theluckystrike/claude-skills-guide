@@ -476,6 +476,7 @@ Related Reading
 - [Claude Code Not Working After Update: How to Fix](/claude-code-not-working-after-update-how-to-fix/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
+- [Fix Claude Code NPM Install Eacces Permission — Quick Guide](/claude-code-npm-install-eacces-permission-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

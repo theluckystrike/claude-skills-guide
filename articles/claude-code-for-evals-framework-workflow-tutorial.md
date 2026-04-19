@@ -237,6 +237,7 @@ Related Reading
 - [Jest to Vitest Migration Workflow with Claude Code](/claude-code-jest-to-vitest-migration-workflow-tutorial/)
 - [Claude Code L10n Testing Automation Workflow Tutorial](/claude-code-l10n-testing-automation-workflow-tutorial/)
 - [Claude Code Vitest Coverage Reporting Workflow Tutorial](/claude-code-vitest-coverage-reporting-workflow-tutorial/)
+- [Claude Code for NeMo Framework Workflow Guide](/claude-code-for-nemo-framework-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -204,6 +204,13 @@ Related Reading
 - [Chrome Extension MLA Citation Generator: Build Your Own Tool](/chrome-extension-mla-citation-generator/)
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)
 - [AI Summarizer Chrome Extension: Build Your Own Text Summarization Tool](/ai-summarizer-chrome-extension/)
+- [Invoice Generator Freelance Chrome Extension Guide (2026)](/chrome-extension-invoice-generator-freelance/)
+- [Citation Generator Free Chrome Extension Guide (2026)](/citation-generator-chrome-extension-free/)
+- [Chrome Extension Favicon Generator](/chrome-extension-favicon-generator/)
+- [Chrome Extension Thumbnail Preview Generator](/chrome-extension-thumbnail-preview-generator/)
+- [AI Image Generator Chrome Extension Guide (2026)](/chrome-extension-ai-image-generator/)
+- [AI Lead Generator Chrome Extension Guide (2026)](/ai-lead-generator-chrome-extension/)
+- [AI Password Generator Chrome Extension Guide (2026)](/ai-password-generator-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -353,6 +353,14 @@ Related Reading
 - [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/). Scoping tasks explicitly leads to more complete outputs
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). TDD catches missing error handling before it ships
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). More guides on working around Claude Code limitations
+- [Fix Claude Md For Error Handling Patterns — Quick Guide](/claude-md-for-error-handling-patterns-guide/)
+- [WASM Debugger Chrome Extension Guide (2026)](/chrome-extension-wasm-debugger/)
+- [Chrome Sync Slowing Browser — Developer Guide](/chrome-sync-slowing-browser/)
+- [Fix Chrome Using Too Much RAM (2026)](/chrome-using-too-much-ram-fix/)
+- [Chrome Extension Firebase Debugger](/chrome-extension-firebase-debugger/)
+- [Why Does Claude Keep Timing Out and Repeating Errors (2026)](/why-does-claude-code-occasionally-repeat-same-errors/)
+- [Chrome Extension Loom — Developer Comparison 2026](/chrome-extension-loom-alternative-free/)
+- [Fix Claude Skill Infinite Loop: Stop Recursive Triggering — 2026](/fix-claude-skill-infinite-loop/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

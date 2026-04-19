@@ -343,6 +343,13 @@ Related Reading
 - [Vibe Coding Project Structure Best Practices](/vibe-coding-project-structure-best-practices/)
 - [Best Tools for Vibe Coding Developers in 2026](/best-tools-for-vibe-coding-developers-2026/)
 - [Claude Code for French Developer Team Productivity Tips](/claude-code-for-french-developer-team-productivity-tips/)
+- [Claude Code for Senior Engineer Productivity](/claude-code-for-senior-engineer-productivity/)
+- [Vibe Coding For Startup Founders Non — Developer Guide](/vibe-coding-for-startup-founders-non-technical/)
+- [Claude Code For Phd Student Coding — Developer Guide](/claude-code-for-phd-student-coding-productivity/)
+- [Developer Productivity Gains from Using Claude Code](/developer-productivity-gains-from-using-claude-code/)
+- [Claude Code for Code Review Preparation Tips](/claude-code-for-code-review-preparation-tips/)
+- [Claude Code Remix Loader Action Data Fetching Tutorial](/claude-code-remix-loader-action-data-fetching-tutorial/)
+- [How a Solo Developer Ships Faster with Claude Code](/how-a-solo-developer-ships-faster-with-claude-code/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

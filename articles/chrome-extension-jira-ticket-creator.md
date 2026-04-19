@@ -626,6 +626,14 @@ Related Reading
 - [Chrome Extension Shopping List Organizer: A Developer Guide](/chrome-extension-shopping-list-organizer/)
 - [Claude Code Package.json Scripts Automation Workflow Guide](/claude-code-package-json-scripts-automation-workflow-guide/)
 - [Chrome Extension OneNote Clipper Setup Guide](/chrome-extension-onenote-clipper-setup/)
+- [Refined GitHub Chrome Extension Guide (2026)](/refined-github-chrome-extension/)
+- [Best Readability Alternatives for Chrome 2026](/readability-alternative-chrome-extension-2026/)
+- [How to Mock API Responses in Chrome Extensions](/chrome-extension-mock-api-responses/)
+- [GitLab Productivity Chrome Extension Guide (2026)](/gitlab-chrome-extension-productivity/)
+- [Toby Alternative Chrome Extension in 2026](/toby-alternative-chrome-extension-2026/)
+- [Chrome Extension Sprint Planning Poker](/chrome-extension-sprint-planning-poker/)
+- [Chrome Extension Regex Tester: Build or Find Tools](/chrome-extension-regex-tester/)
+- [Font Identifier Chrome Extension Guide (2026)](/chrome-extension-font-identifier/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

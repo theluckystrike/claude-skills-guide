@@ -528,6 +528,8 @@ Related Reading
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)
 - [AI Form Filler Chrome Extension: A Developer and Power.](/ai-form-filler-chrome-extension/)
 - [AI Podcast Summary Chrome Extension: A Developer's Guide.](/ai-podcast-summary-chrome-extension/)
+- [Headline Analyzer Chrome Extension Guide (2026)](/chrome-extension-headline-analyzer/)
+- [CSS Coverage Analyzer Chrome Extension Guide (2026)](/chrome-extension-css-coverage-analyzer/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

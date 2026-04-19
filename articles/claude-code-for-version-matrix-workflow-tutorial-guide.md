@@ -258,6 +258,8 @@ Related Reading
 - [Claude Code for asdf Version Manager Workflow Guide](/claude-code-for-asdf-version-manager-workflow-guide/)
 - [Claude Code for RTX Tool Version Manager Workflow](/claude-code-for-rtx-tool-version-manager-workflow/)
 - [Claude Code for Runbook Version Control Workflow](/claude-code-for-runbook-version-control-workflow/)
+- [Claude Code for Standard Version Workflow](/claude-code-for-standard-version-workflow/)
+- [Claude Code for Version Bump Workflow Tutorial Guide](/claude-code-for-version-bump-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

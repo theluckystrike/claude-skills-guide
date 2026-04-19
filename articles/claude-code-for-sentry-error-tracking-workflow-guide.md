@@ -75,3 +75,13 @@ Claude Code should install `@sentry/nextjs`, run the Sentry wizard or create `se
 - [Claude Code for Amplitude Analytics Workflow](/claude-code-for-amplitude-analytics-workflow/)
 - [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)
 - [AI Tools for Incident Debugging and Postmortems](/ai-tools-for-incident-debugging-and-postmortems/)
+
+## Related Articles
+
+- [Fix Next.js Hydration Errors Using Claude Code](/claude-code-next-js-hydration-error-fix/)
+- [Fix Claude Code Remix Error Boundaries Nested — Quick Guide](/claude-code-remix-error-boundaries-nested-routes-guide/)
+- [Fix Claude Opus Prefill Not Supported Error — Quick Guide](/claude-opus-prefill-not-supported-error-fix/)
+- [Fix Claude Code Esm Module Not Found Import — Quick Guide](/claude-code-esm-module-not-found-import-error-fix/)
+- [Claude Code for Remix Error Boundary Workflow Guide](/claude-code-for-remix-error-boundary-workflow-guide/)
+- [Fix Skill Name Already in Use: Resolve Claude Code Naming Conflicts — 2026](/fix-skill-name-already-in-use-error/)
+- [Fix Claude Code Spawn Unknown Error When Running Skill Scripts — 2026](/fix-claude-code-spawn-unknown-error-skills/)

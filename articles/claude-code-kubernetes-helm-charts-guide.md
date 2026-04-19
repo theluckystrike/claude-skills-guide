@@ -249,6 +249,10 @@ Related Reading
 - [Claude Code Chaos Engineering Testing Automation Guide](/claude-code-chaos-engineering-testing-automation-guide/)
 - [Claude Code Kubernetes Cost Optimization Guide](/claude-code-kubernetes-cost-optimization-guide/)
 - [Claude Code Kubernetes Logging Stack Guide](/claude-code-kubernetes-logging-stack-guide/)
+- [Claude Code for Helm Chart Publishing Workflow Guide](/claude-code-for-helm-chart-publishing-workflow-guide/)
+- [Claude Code Kubernetes Ingress Configuration](/claude-code-kubernetes-ingress-configuration/)
+- [Claude Code For Kubernetes Csi — Complete Developer Guide](/claude-code-for-kubernetes-csi-driver-workflow/)
+- [Claude Code for Helm Hooks Workflow Tutorial](/claude-code-for-helm-hooks-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

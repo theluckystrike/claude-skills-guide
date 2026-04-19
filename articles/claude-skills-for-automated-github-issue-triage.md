@@ -233,6 +233,9 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). A curated overview of the highest-impact skills for professional developers, including triage, review, and testing workflows
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). How Claude skills integrate with CI/CD pipelines, infrastructure automation, and deployment processes
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Practical techniques for keeping triage and automation workflows efficient without exceeding token budgets
+- [Chrome Extension GitHub Issues Manager Guide](/chrome-extension-github-issues-manager/)
+- [Debugging Failed GitHub Actions Skill Steps in Claude Code](/claude-code-github-actions-skill-step-failed-debug/)
+- [Claude Code Crash Course with GitHub](/claude-code-crash-course-github/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

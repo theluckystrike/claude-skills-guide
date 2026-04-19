@@ -342,6 +342,7 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Understanding which skills are most powerful helps security teams prioritize which ones need the strictest enterprise controls
 - [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). The `tools` field and YAML structure are the first things to audit when reviewing skills for enterprise compliance
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Enterprise deployments at scale need both security controls and cost management; these techniques address the latter
+- [OpenCLAW Skill Security Risks and Mitigations](/openclaw-skill-security-risks-and-mitigations/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

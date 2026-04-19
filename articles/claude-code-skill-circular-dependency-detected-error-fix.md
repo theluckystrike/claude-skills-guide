@@ -318,6 +318,14 @@ Related Reading
 - [Claude Code Skill Conflicts with MCP Server Resolution Guide](/claude-code-skill-conflicts-with-mcp-server-resolution-guide/). Resolve conflicts when skills and MCP servers share overlapping tool names
 - [How Do I Debug a Claude Skill That Silently Fails](/how-do-i-debug-a-claude-skill-that-silently-fails/). Diagnose other types of skill failures alongside circular dependency errors
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). More troubleshooting guides for common Claude skill errors
+- [Claude Code Keeps Producing Slightly — Developer Guide](/claude-code-keeps-producing-slightly-different-code-each-tim/)
+- [Claude Code For War Room — Complete Developer Guide](/claude-code-for-war-room-workflow-tutorial-guide/)
+- [Fix Claude Code Crashing in VS Code](/claude-code-crashing-vscode/)
+- [Claude Code for Flaky Test Detection and Fix Guide](/claude-code-for-flaky-test-detection-and-fix-guide/)
+- [How to Choose the Cheapest Claude Model](/cheapest-claude-model-for-your-task/)
+- [Fix Claude Code 'Bun Has Crashed' Error](/claude-code-bun-has-crashed/)
+- [Fix Claude Code Windows Requires Git Bash](/claude-code-windows-git-bash-required-fix/)
+- [Claude Code Crash Course with GitHub](/claude-code-crash-course-github/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

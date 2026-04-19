@@ -242,6 +242,8 @@ Related Reading
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/). Distribute your monorepo-organized skills consistently across all team members
 - [What Is the Best File Structure for a Complex Claude Skill](/what-is-the-best-file-structure-for-a-complex-claude-skill/). Apply the individual skill file structure guidance alongside this monorepo organization approach
 - [Claude Skills: Getting Started Hub](/getting-started-hub/). Explore foundational patterns for skill organization, authoring, and team distribution
+- [Claude Code Skills Monorepo Management Workflow](/claude-code-skills-monorepo-management-workflow/)
+- [What Is The Best Way To Name Claude — Honest Review 2026](/what-is-the-best-way-to-name-claude-skill-files-consistently/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

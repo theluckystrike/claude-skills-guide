@@ -326,6 +326,7 @@ Related Reading
 - [Claude Code CSS Animations Workflow Guide](/claude-code-css-animations-workflow-guide/)
 - [Claude Code Dark Mode Implementation Guide](/claude-code-dark-mode-implementation-guide/)
 - [Claude Code Backbone.js to Vue Migration Guide](/claude-code-backbone-js-to-vue-migration-guide/)
+- [Claude Code Classic Asp To — Complete Developer Guide](/claude-code-classic-asp-to-dotnet-migration-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

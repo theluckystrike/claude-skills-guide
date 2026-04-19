@@ -288,6 +288,11 @@ Related Reading
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Skills that integrate with CI/CD workflows
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep CI/CD API costs under control
+- [Claude Code Skills for Creating GitHub Actions Workflows](/claude-code-skills-for-creating-github-actions-workflows/)
+- [Claude Skills Directory on GitHub — Find Guide (2026)](/how-to-find-claude-skills-on-github/)
+- [Top 10 Free Claude Code Skills on GitHub (2026)](/top-10-free-claude-code-skills-github/)
+- [What Is The Best Free Claude Code — Honest Review 2026](/what-is-the-best-free-claude-code-skill-available-on-github/)
+- [Publish Claude Code Skills to GitHub for Team and Public Use — 2026](/publishing-claude-skills-to-github/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

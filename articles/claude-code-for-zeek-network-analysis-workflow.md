@@ -676,6 +676,8 @@ Related Reading
 - [Claude Code for Go Fuzz Workflow Tutorial Guide](/claude-code-for-go-fuzz-workflow-tutorial-guide/)
 - [Claude Code for Mythril Workflow Tutorial](/claude-code-for-mythril-workflow-tutorial/)
 - [Claude Code for OSS Security Policy Workflow Tutorial](/claude-code-for-oss-security-policy-workflow-tutorial/)
+- [Claude Code for Taint Analysis Workflow Tutorial Guide](/claude-code-for-taint-analysis-workflow-tutorial-guide/)
+- [Claude Code for Network Firewall Workflow](/claude-code-for-network-firewall-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

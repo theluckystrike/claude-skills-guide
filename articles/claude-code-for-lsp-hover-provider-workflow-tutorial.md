@@ -291,6 +291,8 @@ Related Reading
 - [Claude Code Cold Fusion Modernization Workflow Guide](/claude-code-cold-fusion-modernization-workflow-guide/)
 - [Claude Code Daily Workflow for Frontend Developers Guide](/claude-code-daily-workflow-for-frontend-developers-guide/)
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
+- [How to Use For Lsp Document — Complete Developer (2026)](/claude-code-for-lsp-document-symbol-workflow-guide/)
+- [Claude Code for OpenTofu Provider Workflow Tutorial](/claude-code-for-opentofu-provider-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

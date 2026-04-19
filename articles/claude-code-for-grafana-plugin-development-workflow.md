@@ -279,6 +279,7 @@ Related Reading
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
 - [Claude Code for Backstage Plugin Workflow Tutorial](/claude-code-for-backstage-plugin-workflow-tutorial/)
 - [Claude Code for Chef Cookbook Development Workflow](/claude-code-for-chef-cookbook-development-workflow/)
+- [Claude Code for JetBrains Plugin Workflow Tutorial](/claude-code-for-jetbrains-plugin-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

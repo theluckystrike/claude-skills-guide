@@ -237,6 +237,10 @@ Related Reading
 - [Claude Code React Native Expo Workflow Debugging Guide](/claude-code-react-native-expo-workflow-debugging-guide/)
 - [Claude Code React Native Paper Mobile UI Guide](/claude-code-react-native-paper-mobile-ui-guide/)
 - [Claude Code Capacitor Hybrid App Development Guide](/claude-code-capacitor-hybrid-app-development-guide/)
+- [Claude Code For Performance Slo — Complete Developer Guide](/claude-code-for-performance-slo-workflow-tutorial/)
+- [Claude Code for Performance Regression Workflow Guide](/claude-code-for-performance-regression-workflow-guide/)
+- [How to Use WireGuard Performance Tuning — Speed](/wireguard-performance-tuning-large-file-transfer-optimization-guide/)
+- [Next.js Performance Optimization with Claude Code](/claude-code-nextjs-performance-optimization/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

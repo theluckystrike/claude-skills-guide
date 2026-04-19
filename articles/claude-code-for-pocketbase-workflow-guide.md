@@ -75,3 +75,14 @@ Claude Code should define collections via migration files, write client code usi
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
+
+## Related Articles
+
+- [Claude Code for Microbenchmark Workflow Tutorial Guide](/claude-code-for-microbenchmark-workflow-tutorial-guide/)
+- [How to Use For Braintree Payment — Complete Developer (2026)](/claude-code-for-braintree-payment-workflow-guide/)
+- [Claude Code for Confluence Workflow Tutorial Guide](/claude-code-for-confluence-workflow-tutorial-guide/)
+- [Claude Code for Transaction Tracing Workflow Tutorial](/claude-code-for-transaction-tracing-workflow-tutorial/)
+- [Claude Code for Auto Assign Reviewer Workflow Tutorial](/claude-code-for-auto-assign-reviewer-workflow-tutorial/)
+- [Claude Code for Nomad Container Scheduling Workflow](/claude-code-for-nomad-container-scheduling-workflow/)
+- [Claude Code For Step Ca Pki — Complete Developer Guide](/claude-code-for-step-ca-pki-workflow-guide/)
+- [How to Use Ripgrep: Search Workflow (2026)](/claude-code-with-ripgrep-and-grep-workflow-tips/)

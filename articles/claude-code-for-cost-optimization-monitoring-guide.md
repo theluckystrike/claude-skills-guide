@@ -248,6 +248,14 @@ Related Reading
 - [Claude API Cost Optimization Strategies for SaaS.](/claude-api-cost-optimization-strategies-for-saas-application/)
 - [Claude Code Kubernetes Cost Optimization Guide](/claude-code-kubernetes-cost-optimization-guide/)
 - [AI Coding Tools for Performance Optimization: A.](/ai-coding-tools-for-performance-optimization/)
+- [Claude Code Infracost Cost Estimation Guide](/claude-code-infracost-cost-estimation-guide/)
+- [Claude Code For Spot Instance — Complete Developer Guide](/claude-code-for-spot-instance-cost-savings-workflow/)
+- [Claude Cost Reduction Guide 2026](/cost/)
+- [Claude Code with GitHub Models for Cost-Efficient Pipelines](/claude-code-with-github-models-for-cost-efficient-pipelines/)
+- [Claude Code vs Hiring Developer — Developer Comparison 2026](/claude-code-vs-hiring-developer-cost-comparison/)
+- [How Claude Cache Reads Cost $0.50 vs $5.00](/claude-cache-reads-cost-050-vs-500/)
+- [Claude Sonnet 4.6 Cost Analysis for Developers](/claude-sonnet-46-cost-analysis-developers/)
+- [Claude Code For Erc 721A Gas — Complete Developer Guide](/claude-code-for-erc-721a-gas-optimization-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

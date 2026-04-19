@@ -199,6 +199,8 @@ Related Reading
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
 - [Claude Code Skills for Writing CloudFormation Templates](/claude-code-cloudformation-template-generation-workflow-guid/)
 - [Integrations Hub](/integrations-hub/)
+- [Claude Code AWS MCP Setup Guide](/claude-code-aws-mcp/)
+- [Claude Code AWS MCP Server Setup Guide](/claude-code-aws-mcp-server/)
 
 Related guides: [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)
 

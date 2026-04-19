@@ -351,6 +351,7 @@ Related Reading
 - [Claude Code for Compound Governance Workflow](/claude-code-for-compound-governance-workflow/)
 - [Claude Code for First OSS Contribution Workflow Guide](/claude-code-for-first-oss-contribution-workflow-guide/)
 - [Claude Code for OSS Community Engagement Workflow](/claude-code-for-oss-community-engagement-workflow/)
+- [Claude Code For Oss Funding — Complete Developer Guide](/claude-code-for-oss-funding-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

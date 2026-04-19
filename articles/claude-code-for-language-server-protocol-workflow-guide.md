@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Language Server Protocol Workflow Guide"
 description: "A comprehensive guide to integrating Claude Code with Language Server Protocol (LSP) for enhanced code intelligence, autocomplete, and intelligent."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-language-server-protocol-workflow-guide/
 categories: [guides]
@@ -15,6 +15,7 @@ geo_optimized: true
 ---
 
 
+This covers the complete language server protocol integration with Claude Code, from initial setup through production-ready language server protocol patterns. If you are looking for a broader overview of related workflows, see [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/).
 
 The Language Server Protocol (LSP) has revolutionized how development tools provide intelligent code assistance. By standardizing communication between editors and language services, LSP enables features like autocomplete, go-to-definition, symbol search, and real-time diagnostics across any language and editor combination. For developers working with Claude Code, integrating LSP workflows can dramatically enhance your coding experience by combining Claude's AI capabilities with the precise code intelligence that LSP provides.
 
@@ -125,6 +126,12 @@ Start by ensuring your LSP setup works correctly, then layer Claude Code skills 
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

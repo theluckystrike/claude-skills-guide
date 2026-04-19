@@ -240,6 +240,7 @@ Related Reading
 - [Claude Code for Font Loading Optimization Workflow](/claude-code-for-font-loading-optimization-workflow/)
 - [Claude Code for LSP Server Implementation Workflow](/claude-code-for-lsp-server-implementation-workflow/)
 - [Claude Code Webhook Handler Implementation Workflow Guide](/claude-code-webhook-handler-implementation-workflow-guide/)
+- [Claude Code Qwik Resumability Lazy Loading Workflow Guide](/claude-code-qwik-resumability-lazy-loading-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

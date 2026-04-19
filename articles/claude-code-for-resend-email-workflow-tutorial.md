@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Resend Email Workflow Tutorial"
 description: "Learn how to build automated email workflows using Resend and Claude Code. This tutorial covers practical examples, code snippets, and actionable."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-for-resend-email-workflow-tutorial/
 categories: [tutorials]
@@ -14,6 +14,8 @@ score: 7
 render_with_liquid: false
 geo_optimized: true
 ---
+
+This article addresses resend email specifically as it applies to Claude Code development workflows. If you need a different angle on resend email, [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) may be more relevant.
 
 {% raw %}
 Claude Code for Resend Email Workflow Tutorial
@@ -295,6 +297,12 @@ Start with the basics outlined here, then iterate based on your specific use cas
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

@@ -453,6 +453,14 @@ Related Reading
 - [Claude Code Skills for WebSocket Real-Time App Development](/claude-code-skills-websocket-real-time-app-development/)
 - [Claude Skills for WebSocket Realtime App Development](/claude-skills-for-websocket-realtime-app-development/)
 - [Claude Code Skills for Gaming Backend Development](/claude-code-skills-for-gaming-backend-development/)
+- [Claude Code With Convex Backend Real-Time Data Setup](/claude-code-with-convex-backend-real-time-data-setup/)
+- [Claude Code for Accessible Modal Dialog Implementation](/claude-code-for-accessible-modal-dialog-implementation/)
+- [Claude Code for Skip Navigation Implementation Guide](/claude-code-for-skip-navigation-implementation-guide/)
+- [Claude Code Mobile Push Notifications Implementation Guide](/claude-code-mobile-push-notifications-implementation-guide/)
+- [Grounding AI Agents in Real World Data Explained](/grounding-ai-agents-in-real-world-data-explained/)
+- [Claude Code for Learning System Design Concepts](/claude-code-for-learning-system-design-concepts/)
+- [AI Writing Tools For Real Estate Listings — Developer Guide](/ai-writing-tools-for-real-estate-listings-2026/)
+- [Why Is Claude Code Popular For Complex — Developer Guide](/why-is-claude-code-popular-for-complex-codebases/)
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

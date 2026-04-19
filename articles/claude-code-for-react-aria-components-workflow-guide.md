@@ -74,3 +74,9 @@ Claude Code should import `ComboBox`, `Label`, `Input`, `Popover`, `ListBox`, `L
 - [Claude Code for Shadcn UI Workflow Guide](/claude-code-for-shadcn-ui-workflow-guide/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
 - [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)
+
+## Related Articles
+
+- [Claude Code for Atomico Web Components Workflow](/claude-code-for-atomico-web-components-workflow/)
+- [How to Create React Components Faster with Claude Code](/how-to-create-react-components-faster-with-claude-code/)
+- [Claude Code Styled Components Workflow Guide](/claude-code-styled-components-workflow/)

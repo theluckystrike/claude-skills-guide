@@ -226,6 +226,14 @@ Related Reading
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Tests validate complexity reduction refactors
 - [Claude Code Output Quality How to Improve Results](/claude-code-output-quality-how-to-improve-results/). Quality improvements include complexity reduction
 - [Advanced Claude Skills Hub](/advanced-hub/). Advanced code quality and optimization patterns
+- [Claude Code for Noise Reduction Alerting Workflow](/claude-code-for-noise-reduction-alerting-workflow/)
+- [Bundle Size Reduction: Webpack to Vite 2026 Guide](/claude-code-bundle-size-reduction-webpack-vite-workflow/)
+- [Claude Usage Alerts to Prevent Cost Overruns](/claude-usage-alerts-prevent-cost-overruns/)
+- [RAG vs Context Stuffing: Claude Cost Analysis](/rag-vs-context-stuffing-claude-cost-analysis/)
+- [System Prompt Optimization to Cut Claude Costs](/system-prompt-optimization-cut-claude-costs/)
+- [Reducing Agent Fleet Costs with Model Routing](/reducing-agent-fleet-costs-model-routing/)
+- [Optimal Context Size for Cost-Efficient Claude](/optimal-context-size-cost-efficient-claude/)
+- [Why Your Claude Prompts Use Too Many Tokens](/why-claude-prompts-use-too-many-tokens/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

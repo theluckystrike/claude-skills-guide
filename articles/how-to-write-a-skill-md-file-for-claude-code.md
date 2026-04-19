@@ -169,6 +169,7 @@ Related Reading
 - [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Full format reference with real examples
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How your skill's metadata controls auto-triggering
 - [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/). Share your finished skill with the community
+- [Claude Code Enoent No Such File Directory — Developer Guide](/claude-code-enoent-no-such-file-directory-skill/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

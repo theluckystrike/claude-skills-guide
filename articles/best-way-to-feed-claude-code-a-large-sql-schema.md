@@ -341,6 +341,14 @@ Related Reading
 - [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)
 - [Claude Code Database Seeding Automation](/claude-code-database-seeding-automation/)
 - [Claude Code FastAPI OpenAPI Schema Generation Workflow](/claude-code-fastapi-openapi-schema-generation-workflow/)
+- [Claude Code for Electric SQL Sync Workflow Guide](/claude-code-for-electric-sql-sync-workflow-guide/)
+- [Claude Code for Kotlin Multiplatform — Guide](/claude-code-for-kotlin-multiplatform-workflow-guide/)
+- [Claude Code for TanStack Form — Workflow Guide](/claude-code-for-tanstack-form-workflow-guide/)
+- [Claude Code Output Format — How to Customize (2026)](/best-way-to-customize-claude-code-output-format-style/)
+- [Claude Code Cloudinary Image Transformation Workflow Guide](/claude-code-cloudinary-image-transformation-workflow-guide/)
+- [How to Make Claude Code Write Performant SQL Queries](/how-to-make-claude-code-write-performant-sql-queries/)
+- [Claude Code Supabase Storage Signed URL Workflow Guide](/claude-code-supabase-storage-signed-url-workflow-guide/)
+- [Claude Code Upstash Redis Rate Limiting Workflow](/claude-code-upstash-redis-rate-limiting-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

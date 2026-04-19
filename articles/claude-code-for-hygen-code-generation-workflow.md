@@ -418,6 +418,8 @@ Related Reading
 - [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)
 - [Claude Code Automated Alt Text Generation Workflow](/claude-code-automated-alt-text-generation-workflow/)
 - [Automating Icon Sprite Generation Workflow with Claude Code](/claude-code-automating-icon-sprite-generation-workflow/)
+- [Claude Code for Postman Collection Generation Workflow](/claude-code-for-postman-collection-generation-workflow/)
+- [Claude Code Code Example Generation Workflow](/claude-code-code-example-generation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

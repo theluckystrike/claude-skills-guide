@@ -315,6 +315,14 @@ Related Reading
 - [Claude Code Output Quality: How to Improve Results](/claude-code-output-quality-how-to-improve-results/)
 - [Claude Code SendGrid Email List Management Workflow](/claude-code-sendgrid-email-list-management-workflow/)
 - [Claude Code Cold Fusion Modernization Workflow Guide](/claude-code-cold-fusion-modernization-workflow-guide/)
+- [Claude Code for Review Queue Management Workflow](/claude-code-for-review-queue-management-workflow/)
+- [How to Use Starship Prompt + Claude Code: Workflow (2026)](/claude-code-for-starship-prompt-workflow/)
+- [Claude Code For Stale Pr — Complete Developer Guide](/claude-code-for-stale-pr-management-workflow-guide/)
+- [Claude Code For Cla Management — Complete Developer Guide](/claude-code-for-cla-management-workflow-tutorial-guide/)
+- [Claude Code for Capacity Planning Workflow Tutorial](/claude-code-for-capacity-planning-workflow-tutorial/)
+- [Claude Code for Medallion Architecture Workflow](/claude-code-for-medallion-architecture-workflow/)
+- [Claude Code for Code Smell Detection Workflow Guide](/claude-code-for-code-smell-detection-workflow-guide/)
+- [Claude Code for Packer Machine Image Workflow](/claude-code-for-packer-machine-image-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

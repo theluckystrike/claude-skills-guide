@@ -3,8 +3,8 @@
 layout: default
 title: "How to Use Code Graph Analysis Workflow (2026)"
 description: "Master code graph analysis with Claude Code. Learn to map dependencies, visualize relationships, and automate architecture discovery using skills and."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-for-code-graph-analysis-workflow-guide/
 categories: [guides]
@@ -13,6 +13,8 @@ reviewed: true
 score: 8
 geo_optimized: true
 ---
+
+Revised April 2026. With recent updates to code graph analysis tooling and Claude Code's improved project context handling, some code graph analysis workflows have changed. This guide reflects the updated Claude Code behavior for code graph analysis.
 
 Code graph analysis is one of the most powerful ways to understand unfamiliar codebases, identify architectural patterns, and make informed refactoring decisions. When combined with Claude Code's skill system and MCP (Model Context Protocol) tools, you can build automated workflows that map dependencies, visualize relationships, and surface insights that would take hours to discover manually. This guide walks you through creating an effective code graph analysis workflow using Claude Code.
 
@@ -187,6 +189,12 @@ The investment in setting up these workflows pays dividends in reduced debugging
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

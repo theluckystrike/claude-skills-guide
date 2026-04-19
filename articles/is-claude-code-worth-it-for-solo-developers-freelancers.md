@@ -255,6 +255,14 @@ Related Reading
 - [How a Solo Developer Ships Faster with Claude Code](/how-a-solo-developer-ships-faster-with-claude-code/). See also
 - [Is Claude Code Worth It? Honest Beginner Review 2026](/is-claude-code-worth-it-honest-beginner-review-2026/). See also
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/). See also
+- [How Freelancers Use Claude Code to Take More Clients](/how-freelancers-use-claude-code-to-take-more-clients/)
+- [Is Claude Code Worth It Junior Developers — Developer Guide](/is-claude-code-worth-it-junior-developers/)
+- [Claude Code Podcast Episodes Worth Listening](/claude-code-podcast-episodes-worth-listening/)
+- [Claude Code for Self-Taught Developer Upskilling](/claude-code-for-self-taught-developer-upskilling/)
+- [What Can Claude Code Do A Plain English — Developer Guide](/what-can-claude-code-do-a-plain-english-explanation/)
+- [Claude Code Keeps Adding Code I Did Not — Developer Guide](/claude-code-keeps-adding-code-i-did-not-ask-for/)
+- [Claude Code Model Compression and Quantization Guide](/claude-code-model-compression-quantization/)
+- [Claude Code Weekly Digest Resources for Developers](/claude-code-weekly-digest-resources/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

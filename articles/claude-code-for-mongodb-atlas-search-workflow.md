@@ -670,6 +670,14 @@ Related Reading
 - [Claude Code for Algolia Search Workflow Guide](/claude-code-for-algolia-search-workflow-guide/)
 - [Claude Code for AST-Based Code Search Workflow](/claude-code-for-ast-based-code-search-workflow/)
 - [Claude Code for Cross-Repo Code Search Workflow Guide](/claude-code-for-cross-repo-code-search-workflow-guide/)
+- [Claude Code For Formik Form — Complete Developer Guide](/claude-code-for-formik-form-workflow-tutorial/)
+- [Claude Code Prettier Code Formatting Guide](/claude-code-prettier-code-formatting-guide/)
+- [Claude Code For Homebrew Formula — Complete Developer Guide](/claude-code-for-homebrew-formula-workflow-tutorial/)
+- [Auto-Format Code with Claude Code Hooks](/claude-code-hooks-auto-format-prettier-eslint/)
+- [Claude Code MongoDB Aggregation Pipeline Workflow Guide](/claude-code-mongodb-aggregation-pipeline-workflow-guide/)
+- [Claude Code for Kotlin Multiplatform — Guide](/claude-code-for-kotlin-multiplatform-workflow-guide/)
+- [Claude Code for TanStack Form — Workflow Guide](/claude-code-for-tanstack-form-workflow-guide/)
+- [How to Use TypeORM Query Builder Patterns with Claude Code](/claude-code-typeorm-query-builder-advanced-patterns-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

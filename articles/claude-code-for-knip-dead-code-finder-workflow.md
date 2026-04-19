@@ -227,6 +227,7 @@ Related Reading
 - [Claude Code for FZF Fuzzy Finder Workflow Guide](/claude-code-for-fzf-fuzzy-finder-workflow-guide/)
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/)
+- [Claude Code for Dead Code Elimination Workflow Guide](/claude-code-for-dead-code-elimination-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

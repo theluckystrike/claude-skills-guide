@@ -74,3 +74,14 @@ Claude Code should create theme variables with `stylex.defineVars`, create style
 - [Claude Code for Panda CSS Workflow Guide](/claude-code-for-panda-css-workflow-guide/)
 - [Claude Code for Lightning CSS Workflow Guide](/claude-code-for-lightning-css-workflow-guide/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
+
+## Related Articles
+
+- [Claude Code for Zellij Terminal Multiplexer Workflow](/claude-code-for-zellij-terminal-multiplexer-workflow/)
+- [Claude Code for Keep a Changelog Workflow Tutorial](/claude-code-for-keep-a-changelog-workflow-tutorial/)
+- [Claude Code for Flamegraph Visualization Workflow](/claude-code-for-flamegraph-visualization-workflow/)
+- [Claude Code for Glow Markdown Viewer Workflow](/claude-code-for-glow-markdown-viewer-workflow/)
+- [Claude Code for LazyGit Workflow Tutorial Guide](/claude-code-for-lazygit-workflow-tutorial-guide/)
+- [Claude Code for Nightwatch.js Workflow Guide](/claude-code-for-nightwatch-js-workflow-guide/)
+- [Claude Code + Warp Terminal: Workflow Guide](/claude-code-for-warp-terminal-workflow-guide/)
+- [Claude Code For Pr Bot — Complete Developer Guide](/claude-code-for-pr-bot-integration-workflow-guide/)

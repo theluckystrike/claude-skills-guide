@@ -230,6 +230,14 @@ Related Reading
 - [Chrome Enterprise Bookmark Bar Settings: A Complete Guide](/chrome-enterprise-bookmark-bar-settings/)
 - [Chrome Enterprise Device Trust Connector: A Developer Guide](/chrome-enterprise-device-trust-connector/)
 - [Chrome Enterprise Private Extension Hosting: A Complete Guide](/chrome-enterprise-private-extension-hosting/)
+- [Chrome Enterprise Self-Hosted Extension Store Guide (2026)](/chrome-enterprise-self-hosted-extension-store/)
+- [AI Font Identifier Chrome Extension Guide (2026)](/ai-font-identifier-chrome-extension/)
+- [WhatFont Alternative Chrome Extension in 2026](/whatfont-alternative-chrome-extension-2026/)
+- [Speedtest Alternative Chrome — Developer Comparison 2026](/speedtest-alternative-chrome-extension-2026/)
+- [Delivery Date Estimator Chrome Extension Guide (2026)](/chrome-extension-delivery-date-estimator/)
+- [Pomodoro Timer Chrome Extension — Honest Review 2026](/pomodoro-timer-chrome-extension-best/)
+- [How to Automatically Delete Cookies in Chrome](/chrome-delete-cookies-automatically/)
+- [Best CRX Extractor Alternatives for Chrome 2026](/crx-extractor-alternative-chrome-extension-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

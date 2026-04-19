@@ -250,6 +250,8 @@ Related Reading
 - [Claude Code for ML Engineer: Feature Store Workflow.](/claude-code-ml-engineer-feature-store-workflow-daily-tips/)
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
+- [Claude Code for Hopsworks Feature Store Workflow](/claude-code-for-hopsworks-feature-store-workflow/)
+- [Claude Code for Qdrant Vector DB — Guide](/claude-code-for-qdrant-vector-db-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

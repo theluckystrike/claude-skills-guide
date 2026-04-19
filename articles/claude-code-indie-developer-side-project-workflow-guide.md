@@ -292,6 +292,14 @@ Related Reading
 - [Claude Code for Rye Python Project Workflow Guide](/claude-code-for-rye-python-project-workflow-guide/)
 - [Claude Code for Side Project to Startup Journey](/claude-code-for-side-project-to-startup-journey/)
 - [Claude Code Freelancer Multi-Client Project Workflow Guide](/claude-code-freelancer-multi-client-project-workflow-guide/)
+- [Claude Code for Just — Workflow Guide](/claude-code-for-just-command-runner-workflow-guide/)
+- [Claude Code for StarRocks — Workflow Guide](/claude-code-for-starrocks-workflow-guide/)
+- [Claude Code for Typia Validator — Workflow Guide](/claude-code-for-typia-runtime-validator-workflow-guide/)
+- [Claude Code for Difftastic — Workflow Guide](/claude-code-for-difftastic-workflow-guide/)
+- [Claude Code for RisingWave Streaming — Guide](/claude-code-for-risingwave-streaming-workflow-guide/)
+- [Claude Code for Python Reflex — Workflow Guide](/claude-code-for-python-reflex-workflow-guide/)
+- [Claude Code for DBeaver — Workflow Guide](/claude-code-for-dbeaver-workflow-guide/)
+- [Claude Code for EKS IRSA Workflow](/claude-code-for-eks-irsa-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

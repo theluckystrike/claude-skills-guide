@@ -251,6 +251,8 @@ Related Reading
 - [Claude Code PII Detection and Masking Guide](/claude-code-pii-detection-and-masking-guide/)
 - [Claude Code Cookie Consent Implementation](/claude-code-cookie-consent-implementation/)
 - [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Compliance Reporting Automation](/claude-code-compliance-reporting-automation/)
+- [Claude Code CMMC Compliance Checklist Automation](/claude-code-cmmc-compliance-checklist-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

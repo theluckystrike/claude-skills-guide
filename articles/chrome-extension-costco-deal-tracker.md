@@ -297,6 +297,14 @@ Related Reading
 - [Chrome Extension Black Friday Deal Tracker: A.](/chrome-extension-black-friday-deal-tracker/)
 - [Chrome Extension Open Box Deal Tracker: Build Your Own.](/chrome-extension-open-box-deal-tracker/)
 - [Building a Chrome Extension for Gaming Deal Finding](/chrome-extension-gaming-deal-finder-chrome/)
+- [Package Tracker All Carriers Chrome Extension Guide (2026)](/chrome-extension-package-tracker-all-carriers/)
+- [Workload Balance Tracker Chrome Extension Guide (2026)](/chrome-extension-workload-balance-tracker/)
+- [Stockx Price Tracker Chrome Extension Guide (2026)](/chrome-extension-stockx-price-tracker/)
+- [Chrome Extension Warranty Tracker: Practical Guide](/chrome-extension-warranty-tracker/)
+- [Team Status Tracker Chrome Extension Guide (2026)](/chrome-extension-team-status-tracker/)
+- [Chrome Extension TikTok Analytics Tracker](/chrome-extension-tiktok-analytics-tracker/)
+- [Word Count Tracker Chrome Extension Guide (2026)](/chrome-extension-word-count-tracker/)
+- [Travel Deal Alert Chrome Extension Guide (2026)](/chrome-extension-travel-deal-alert/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

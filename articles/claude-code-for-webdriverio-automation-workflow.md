@@ -535,6 +535,14 @@ Related Reading
 - [Claude Code Drone CI Workflow Automation](/claude-code-drone-ci-workflow-automation/)
 - [Claude Code for Browser Automation Workflow Guide](/claude-code-for-browser-automation-workflow-guide/)
 - [Claude Code for Fly.io Deployment Automation Workflow](/claude-code-for-fly-io-deployment-automation-workflow/)
+- [Claude Code for Workspace Automation Workflow](/claude-code-for-workspace-automation-workflow/)
+- [Claude Code for Runbook Automation Workflow Guide](/claude-code-for-runbook-automation-workflow-guide/)
+- [Claude Code for Taskfile Workflow Automation Guide](/claude-code-for-taskfile-workflow-automation-guide/)
+- [Claude Code for Review Comment Automation Workflow](/claude-code-for-review-comment-automation-workflow/)
+- [Claude Code for MLflow Model Registry Workflow Automation](/claude-code-mlflow-model-registry-workflow-automation/)
+- [Claude Code Twilio Voice Call Automation Workflow Guide](/claude-code-twilio-voice-call-automation-workflow-guide/)
+- [Claude Code for Trello Automation Workflow Guide](/claude-code-for-trello-automation-workflow-guide/)
+- [Claude Code GitFlow Workflow Automation Guide](/claude-code-gitflow-workflow-automation-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

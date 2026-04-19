@@ -452,6 +452,8 @@ Related Reading
 - [MCP Server Permission Auditing Best Practices](/mcp-server-permission-auditing-best-practices/)
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
 - [Integrations Hub](/integrations-hub/)
+- [MCP Server Sandbox Isolation Security Guide (2026)](/mcp-server-sandbox-isolation-security-guide/)
+- [MCP Server Supply Chain Security Risks (2026)](/mcp-server-supply-chain-security-risks-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

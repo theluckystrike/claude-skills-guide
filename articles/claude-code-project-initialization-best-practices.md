@@ -219,6 +219,11 @@ Related Reading
 - [How to Write Effective Prompts for Claude Code](/how-to-write-effective-prompts-for-claude-code/)
 - [Claude Code for Beginners: Complete Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Getting Started Hub](/getting-started-hub/)
+- [Claude Code and Linear AI for Project and Code Alignment](/claude-code-and-linear-ai-for-project-and-code-alignment/)
+- [Claude Code First Project Tutorial: Hello World](/claude-code-first-project-tutorial-hello-world/)
+- [Claude Code for Portfolio Project Development](/claude-code-for-portfolio-project-development/)
+- [Claude Code Data Visualization Best Practices](/claude-code-data-visualization-best-practices/)
+- [Claude Code for Side Project to Startup Journey](/claude-code-for-side-project-to-startup-journey/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

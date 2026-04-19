@@ -405,6 +405,8 @@ Related Reading
 - [Claude Code for Bolt.new Web App Workflow Guide](/claude-code-for-bolt-new-web-app-workflow-guide/)
 - [Claude Code for Cloudflare Workers KV Workflow](/claude-code-for-cloudflare-workers-kv-workflow/)
 - [Claude Code for Fast Web Components Workflow](/claude-code-for-fast-web-components-workflow/)
+- [Claude Code for Core Web Vitals Workflow Tutorial](/claude-code-for-core-web-vitals-workflow-tutorial/)
+- [Claude Code Laravel Queues, Jobs, Workers & Workflow Guide](/claude-code-laravel-queues-jobs-workers-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

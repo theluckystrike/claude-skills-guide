@@ -545,6 +545,8 @@ Related Reading
 - [AI Tools for Incident Debugging and Postmortems](/ai-tools-for-incident-debugging-and-postmortems/)
 - [Chrome DevTools Memory Leak Debugging: Find and Fix.](/chrome-devtools-memory-leak-debugging/)
 - [Claude Code CS50 Project Help and Debugging Guide](/claude-code-cs50-project-help-and-debugging-guide/)
+- [Claude Code For Nginx Waf — Complete Developer Guide](/claude-code-for-nginx-waf-workflow-tutorial/)
+- [Claude Code for Axolotl Fine-Tuning Workflow Guide](/claude-code-for-axolotl-fine-tuning-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

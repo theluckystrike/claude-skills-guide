@@ -563,6 +563,14 @@ Related Reading
 - [Chrome Enterprise VPN Integration - A Practical Guide.](/chrome-enterprise-vpn-integration/)
 - [Chrome Extension Anki Web Integration: A Developer Guide](/chrome-extension-anki-web-integration/)
 - [Chrome Extension Outlook Calendar Integration: A.](/chrome-extension-outlook-calendar-integration/)
+- [Claude Code Artillery Performance Testing — Developer Guide](/claude-code-artillery-performance-testing/)
+- [Claude Code Vitest Fast Testing Workflow](/claude-code-vitest-fast-testing-workflow/)
+- [Claude Code for PWA Testing and Auditing Workflow](/claude-code-for-pwa-testing-and-auditing-workflow/)
+- [Claude Code for Performance Testing Strategy Workflow](/claude-code-for-performance-testing-strategy-workflow/)
+- [Claude Code For Sam Local Testing — Complete Developer Guide](/claude-code-for-sam-local-testing-workflow/)
+- [Claude Code Mockito Java Testing Workflow](/claude-code-mockito-java-testing-workflow/)
+- [Claude Code Mutation Testing Workflow Guide](/claude-code-mutation-testing-workflow-guide/)
+- [Claude Code Firebase Security Rules Validation Testing Guide](/claude-code-firebase-security-rules-validation-testing-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

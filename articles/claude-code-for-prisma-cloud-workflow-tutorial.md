@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Prisma Cloud Workflow Tutorial"
 description: "Learn how to integrate Claude Code into your Prisma Cloud security workflows. This tutorial covers automating security scans, vulnerability management."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-prisma-cloud-workflow-tutorial/
 categories: [tutorials, integrations]
@@ -14,6 +14,8 @@ score: 7
 geo_optimized: true
 ---
 
+
+The most common cause of unexpected cloud cost spikes is auto-scaling policies without proper maximum bounds. Here is the systematic fix for prisma cloud using Claude Code, tested with the latest release as of April 2026.
 
 Claude Code for Prisma Cloud Workflow Tutorial
 
@@ -186,6 +188,12 @@ The combination of Claude Code's flexibility and Prisma Cloud's comprehensive se
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

@@ -190,6 +190,10 @@ Related Reading
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)
 - [Getting Started Hub](/getting-started-hub/)
+- [Meeting Agenda Template Chrome Extension Guide (2026)](/chrome-extension-meeting-agenda-template/)
+- [Share and Reuse CLAUDE.md Patterns Across Teams and Projects (2026)](/share-reuse-claude-md-across-teams/)
+- [CLAUDE.md for Architecture Decisions — Encoding Design Intent (2026)](/claude-md-for-architecture-decisions/)
+- [Senior Engineer CLAUDE.md Template — Production-Ready Config (2026)](/senior-engineer-claude-md-template/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

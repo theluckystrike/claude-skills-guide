@@ -228,6 +228,14 @@ Related Reading
 - [Comparisons Hub](/comparisons-hub/). How Claude Code stacks up against Copilot, Cursor, and other tools
 - [Workflows Hub](/workflows-hub/). Practical skill workflows for code review, documentation, and CI/CD
 - [Projects Hub](/projects-hub/). Build real SaaS apps, CLI tools, and APIs using Claude skills
+- [Claude Code for Soulbound Token Workflow](/claude-code-for-soulbound-token-workflow/)
+- [Claude Code for Optimism Bedrock Workflow](/claude-code-for-optimism-bedrock-workflow/)
+- [Claude Prompt Caching Saves 90% on Input Costs](/claude-prompt-caching-saves-90-percent-input-costs/)
+- [5-Minute vs 1-Hour Cache: Which Saves More](/5-minute-vs-1-hour-cache-which-saves-more/)
+- [Claude Code for JWT Refresh Token Workflow Guide](/claude-code-for-jwt-refresh-token-workflow-guide/)
+- [Claude Tool Use Hidden Token Costs Explained](/claude-tool-use-hidden-token-costs-explained/)
+- [Claude Caching for Multi-Turn Conversations](/claude-caching-multi-turn-conversations/)
+- [Claude Model Pricing Per Million Tokens Guide](/claude-model-pricing-per-million-tokens-guide/)
 
 ---
 

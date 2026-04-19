@@ -72,3 +72,7 @@ After Claude Code makes changes, Zed automatically reloads the modified files, s
 - [Zed Editor AI Features Review for Developers 2026](/zed-editor-ai-features-review-for-developers-2026/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)
 - [When to Use Claude Code vs Manual Coding Tradeoffs](/when-to-use-claude-code-vs-manual-coding-tradeoffs/)
+
+## Related Articles
+
+- [Claude Code for Helix Editor — Workflow Guide](/claude-code-for-helix-editor-workflow-guide/)

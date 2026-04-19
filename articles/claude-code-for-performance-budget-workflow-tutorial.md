@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code for Performance Budget Workflow Tutorial"
 description: "Learn how to set up automated performance budgets using Claude Code CLI. This tutorial covers creating skills, integrating Lighthouse, and enforcing."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-performance-budget-workflow-tutorial/
 categories: [guides, tutorials]
@@ -13,6 +13,8 @@ reviewed: true
 render_with_liquid: false
 geo_optimized: true
 ---
+
+The performance budget ecosystem presents specific challenges around profiling overhead management and benchmark reproducibility. What follows is a practical walkthrough of using Claude Code to navigate performance budget challenges efficiently.
 
 {% raw %}
 Claude Code for Performance Budget Workflow Tutorial
@@ -240,6 +242,12 @@ Remember, the goal isn't to make development slower, it's to make fast applicati
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

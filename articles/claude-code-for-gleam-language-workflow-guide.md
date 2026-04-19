@@ -75,3 +75,14 @@ Claude Code should define a `User` custom type, a `ValidationError` type, write 
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)
 - [Using Claude Code to Learn New Programming Languages](/using-claude-code-to-learn-new-programming-languages/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
+
+## Related Articles
+
+- [Claude Code for Wing Cloud Language Workflow](/claude-code-for-wing-cloud-language-workflow/)
+- [Claude Code for Tabnine AI Autocomplete Workflow](/claude-code-for-tabnine-ai-autocomplete-workflow/)
+- [Claude Code for Few-Shot Prompting Best Practices Workflow](/claude-code-for-few-shot-prompting-best-practices-workflow/)
+- [Claude Code For Oss License — Complete Developer Guide](/claude-code-for-oss-license-selection-workflow-guide/)
+- [Claude Code For Mob Programming — Complete Developer Guide](/claude-code-for-mob-programming-workflow-tutorial/)
+- [Claude Code For Zig Programming — Complete Developer Guide](/claude-code-for-zig-programming-language-workflow/)
+- [Claude Code for BentoML Workflow Tutorial](/claude-code-for-bentoml-workflow-tutorial/)
+- [Claude Code For Ant Design — Complete Developer Guide](/claude-code-for-ant-design-workflow-guide/)

@@ -355,6 +355,7 @@ Related Reading
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 - [Chrome Extension Bibliography Generator: A Practical Guide](/chrome-extension-bibliography-generator/)
 - [Chrome Extension Blog Post Outline Generator: A Practical Guide for Content Creators](/chrome-extension-blog-post-outline-generator/)
+- [Twitter Analytics Chrome Extension Guide (2026)](/chrome-extension-twitter-analytics/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

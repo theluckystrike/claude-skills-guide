@@ -404,6 +404,14 @@ Related Reading
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
 - [Async Product Discovery Process for Remote Teams Using Recorded Interviews](/async-product-discovery-process-for-remote-teams-using-recorded-interviews/)
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/)
+- [Claude Code Phoenix LiveView Workflow Guide](/claude-code-phoenix-liveview-workflow-guide/)
+- [Claude Code for Pulsar Tenant Workflow Tutorial](/claude-code-for-pulsar-tenant-workflow-tutorial/)
+- [Claude Code for Code Intelligence Indexing Workflow](/claude-code-for-code-intelligence-indexing-workflow/)
+- [Claude Code for OpenObserve Workflow Tutorial](/claude-code-for-openobserve-workflow-tutorial/)
+- [Claude Code For Uma Oracle — Complete Developer Guide](/claude-code-for-uma-oracle-workflow-tutorial/)
+- [Claude Code for Elastic SIEM Workflow Guide](/claude-code-for-elastic-siem-workflow-guide/)
+- [Claude Code for TypeScript Const Enums Workflow Guide](/claude-code-for-typescript-const-enums-workflow-guide/)
+- [Claude Code for Team Handbook Workflow Tutorial Guide](/claude-code-for-team-handbook-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -338,6 +338,14 @@ Related Reading
 - [Best Privacy Browser 2026 Ranked: A Developer and Power User Guide](/best-privacy-browser-2026-ranked/)
 - [Browser Memory Comparison 2026: A Developer and Power User Guide](/browser-memory-comparison-2026/)
 - [Chrome Enterprise Printing Settings: A Power User Guide](/chrome-enterprise-printing-settings/)
+- [HTTP Header Viewer Chrome Extension Guide (2026)](/chrome-extension-http-header-viewer/)
+- [Refined GitHub Chrome Extension Guide (2026)](/refined-github-chrome-extension/)
+- [Chrome Extension Color Palette Extractor](/chrome-extension-color-palette-extractor/)
+- [Best Readability Alternatives for Chrome 2026](/readability-alternative-chrome-extension-2026/)
+- [How to Mock API Responses in Chrome Extensions](/chrome-extension-mock-api-responses/)
+- [GitLab Productivity Chrome Extension Guide (2026)](/gitlab-chrome-extension-productivity/)
+- [Toby Alternative Chrome Extension in 2026](/toby-alternative-chrome-extension-2026/)
+- [Block Distracting Sites Chrome Extension Guide (2026)](/chrome-extension-block-distracting-sites/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

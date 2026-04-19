@@ -156,3 +156,7 @@ Track three metrics per week: average session token count (target: under 80K at 
 - [Why Is Claude Code Expensive Large Context Tokens](/why-is-claude-code-expensive-large-context-tokens/)
 - [Claude Code Monthly Cost Breakdown Realistic Usage](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/)
 - [Is Claude Code Worth the Cost for Small Startups](/is-claude-code-worth-the-cost-for-small-startups-2026/)
+
+## Related Articles
+
+- [Optimal Context Size for Cost-Efficient Claude](/optimal-context-size-cost-efficient-claude/)

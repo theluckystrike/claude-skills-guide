@@ -203,6 +203,7 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 - [Using Claude Code with Prisma ORM Database Migrations](/using-claude-code-with-prisma-orm-database-migrations/). Put your AI-designed schema into practice with automated Prisma migration workflows in Claude Code.
+- [Optimizing Tool Schemas to Cut Token Count](/optimizing-tool-schemas-reduce-token-count/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

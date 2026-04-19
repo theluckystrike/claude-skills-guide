@@ -324,6 +324,8 @@ Related Reading
 - [Claude Code for Prompt Engineering Techniques: 2026 Workflow Guide](/claude-code-for-prompt-engineering-techniques-2026-workflow-/)
 - [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
+- [How to Use Starship Prompt + Claude Code: Workflow (2026)](/claude-code-for-starship-prompt-workflow/)
+- [How to Use PWA Install Prompt Workflow (2026)](/claude-code-for-pwa-install-prompt-workflow-guide/)
 
 
 

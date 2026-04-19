@@ -233,6 +233,8 @@ Related Reading
 - [Claude Code for Changesets Monorepo Release Workflow](/claude-code-for-changesets-monorepo-release-workflow/)
 - [Claude Code for Hotfix Release Workflow Tutorial Guide](/claude-code-for-hotfix-release-workflow-tutorial-guide/)
 - [Claude Code for Multi-Platform Release Workflow Guide](/claude-code-for-multi-platform-release-workflow-guide/)
+- [Claude Code for Release Rollback Workflow Tutorial](/claude-code-for-release-rollback-workflow-tutorial/)
+- [Claude Code for Neon Branching — Workflow Guide](/claude-code-for-neon-branching-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

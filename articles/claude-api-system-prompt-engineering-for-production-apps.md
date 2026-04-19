@@ -273,6 +273,7 @@ Related Reading
 - [Building Apps with Claude API: Anthropic SDK Python Guide](/building-apps-with-claude-api-anthropic-sdk-python-guide/)
 - [Claude API Prompt Caching Performance Optimization Guide](/claude-api-prompt-caching-performance-optimization-guide/)
 - [Claude Code for Prompt Engineering Techniques: 2026 Workflow Guide](/claude-code-for-prompt-engineering-techniques-2026-workflow-/)
+- [Prompt Compression Techniques for Claude API](/prompt-compression-techniques-claude-api/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

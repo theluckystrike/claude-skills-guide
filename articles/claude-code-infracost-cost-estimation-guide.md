@@ -374,6 +374,7 @@ Related Reading
 - [Claude Code Cost Per Project Estimation Calculator Guide](/claude-code-cost-per-project-estimation-calculator-guide/)
 - [Claude API Cost Optimization Strategies for SaaS.](/claude-api-cost-optimization-strategies-for-saas-application/)
 - [Claude Code Cost for Agencies and Consultancies: A.](/claude-code-cost-for-agencies-and-consultancies/)
+- [Claude Cost Anomaly Detection Setup Guide](/claude-cost-anomaly-detection-setup-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

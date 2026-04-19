@@ -192,6 +192,10 @@ Related Reading
 - [Claude Code Trunk Based Development Guide](/claude-code-trunk-based-development-guide/). Trunk-based development is the alternative to gitflow
 - [Claude Code Git Branch Naming Conventions](/claude-code-git-branch-naming-conventions/). Branch naming is central to gitflow
 - [Claude Skills Workflows Hub](/workflows-hub/). Git automation and workflow guides
+- [Claude Code for Workspace Automation Workflow](/claude-code-for-workspace-automation-workflow/)
+- [Claude Code for Taskfile Workflow Automation Guide](/claude-code-for-taskfile-workflow-automation-guide/)
+- [Claude Code for Review Comment Automation Workflow](/claude-code-for-review-comment-automation-workflow/)
+- [Claude Code for Trigger.dev Workflow Automation Tutorial](/claude-code-for-trigger-dev-workflow-automation-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

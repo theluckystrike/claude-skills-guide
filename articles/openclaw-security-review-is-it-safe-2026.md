@@ -410,6 +410,14 @@ Related Reading
 - [Cline AI Code Assistant Review 2026](/cline-ai-code-assistant-review-2026/). Compare OpenCLAW with another autonomous AI coding agent in the same security context
 - [Claude Code for Dependency Audit Automation](/claude-code-for-dependency-vulnerability-scanning/). Automate supply chain security audits to complement your OpenCLAW hardening
 - [Claude Skills Comparisons Hub](/comparisons-hub/). Read more comparisons of AI coding tools to inform your security evaluation
+- [Manifest V3 vs V2 Security — Developer Comparison 2026](/manifest-v3-vs-v2-security/)
+- [Why Claude Code Keeps Asking Permission (2026)](/why-does-claude-code-keep-asking-for-permission-repeatedly/)
+- [Claude Code For Modsecurity Waf — Complete Developer Guide](/claude-code-for-modsecurity-waf-workflow-guide/)
+- [Claude Code for Security Scan Automation? (2026)](/claude-code-for-security-scan-automation/)
+- [Claude Code Clerk Organization — Complete Developer Guide](/claude-code-clerk-organization-roles-permissions-workflow/)
+- [Claude Code for Zero Trust Security Workflow Guide](/claude-code-for-zero-trust-security-workflow-guide/)
+- [Claude Code for Falco Runtime Security Workflow](/claude-code-for-falco-runtime-security-workflow/)
+- [Claude Code For Security Hub — Complete Developer Guide](/claude-code-for-security-hub-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

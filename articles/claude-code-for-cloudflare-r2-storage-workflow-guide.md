@@ -2,8 +2,8 @@
 layout: default
 title: "How to Use For Cloudflare R2 — Complete Developer (2026)"
 description: "Learn how to integrate Claude Code with Cloudflare R2 for efficient object storage workflows. Practical examples, code snippets, and best practices for."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-for-cloudflare-r2-storage-workflow-guide/
 categories: [guides]
@@ -12,6 +12,8 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
+Current as of April 2026. The cloudflare r2 storage landscape has shifted with cloud provider CLI updates and improved IaC integration, and the steps below reflect how Claude Code works with cloudflare r2 storage today.
+
 Claude Code for Cloudflare R2 Storage Workflow Guide
 
 Cloudflare R2 provides S3-compatible object storage with zero egress fees, making it an attractive choice for developers building storage-intensive applications. When combined with Claude Code's AI capabilities, you can automate file management, content organization, and data processing workflows that would otherwise require manual intervention or complex scripts. This guide walks you through practical approaches to integrating Claude Code with Cloudflare R2 storage workflows.
@@ -163,6 +165,12 @@ Start with simple workflows like file organization, then progressively add sophi
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

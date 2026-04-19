@@ -298,6 +298,14 @@ Related Reading
 - [Chrome Extension Annotate Web Pages: Build Your Own.](/chrome-extension-annotate-web-pages/)
 - [Chrome Extension Black Friday Deal Tracker: A.](/chrome-extension-black-friday-deal-tracker/)
 - [Chrome Extension Employee Recognition Tool: Build Your Own](/chrome-extension-employee-recognition-tool/)
+- [Package Tracker All Carriers Chrome Extension Guide (2026)](/chrome-extension-package-tracker-all-carriers/)
+- [Workload Balance Tracker Chrome Extension Guide (2026)](/chrome-extension-workload-balance-tracker/)
+- [Chrome Extension Warranty Tracker: Practical Guide](/chrome-extension-warranty-tracker/)
+- [Team Status Tracker Chrome Extension Guide (2026)](/chrome-extension-team-status-tracker/)
+- [Chrome Extension TikTok Analytics Tracker](/chrome-extension-tiktok-analytics-tracker/)
+- [Word Count Tracker Chrome Extension Guide (2026)](/chrome-extension-word-count-tracker/)
+- [Habit Tracker Work Chrome Extension Guide (2026)](/chrome-extension-habit-tracker-work/)
+- [Mood Tracker Team Chrome Extension Guide (2026)](/chrome-extension-mood-tracker-team/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

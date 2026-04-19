@@ -157,6 +157,7 @@ Related Reading
 - [Accessible Forms with Claude Code: Error Handling Guide](/claude-code-accessible-forms-validation-error-handling-guide/)
 - [Semantic HTML Accessibility with Claude Code Guide](/claude-code-semantic-html-accessibility-improvement-guide/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
+- [Claude Skills for Git, Docker, and Testing Workflows — 2026](/claude-skills-for-git-docker-testing/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

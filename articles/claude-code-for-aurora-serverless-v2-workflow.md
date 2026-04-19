@@ -246,6 +246,10 @@ Related Reading
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 - [Claude Code for Branch Protection Rules Workflow](/claude-code-for-branch-protection-rules-workflow/)
 - [Claude Code for Chef Cookbook Development Workflow](/claude-code-for-chef-cookbook-development-workflow/)
+- [Claude Code Netlify Serverless Functions Workflow](/claude-code-netlify-serverless-functions-workflow/)
+- [Claude Code for Modal Serverless ML — Guide](/claude-code-for-modal-serverless-ml-workflow-guide/)
+- [How to Use Xata Database Branching (2026)](/claude-code-xata-serverless-database-branching-guide/)
+- [Claude Code For Architect Arc — Complete Developer Guide](/claude-code-for-architect-arc-serverless-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

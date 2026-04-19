@@ -244,3 +244,10 @@ $99 once. Free forever. 47/500 founding spots left.
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 
 
+
+## Related Articles
+
+- [Claude Code for Git Stash Advanced Workflow](/claude-code-for-git-stash-advanced-workflow/)
+- [Claude Code for Git Absorb Workflow Tutorial](/claude-code-for-git-absorb-workflow-tutorial/)
+- [Claude Code Git Cherry-Pick Workflow Guide](/claude-code-git-cherry-pick-workflow-guide/)
+- [Claude Code for Git Filter-Repo Workflow](/claude-code-for-git-filter-repo-workflow/)

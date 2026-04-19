@@ -261,6 +261,14 @@ Related Reading
 - [Claude Code ActiveRecord Scopes and Callbacks Best Practices](/claude-code-activerecord-scopes-callbacks-best-practices/)
 - [Claude Code Factory Bot Test Data Guide](/claude-code-factory-bot-test-data-guide/)
 - [Claude Code Skills for Ruby on Rails Projects](/claude-code-skills-for-ruby-on-rails-projects/)
+- [Claude Code for Font Loading Optimization Workflow](/claude-code-for-font-loading-optimization-workflow/)
+- [Claude Code for Algorithm Complexity Optimization Guide](/claude-code-for-algorithm-complexity-optimization-guide/)
+- [Claude Batch Processing 100K Requests Guide](/claude-batch-processing-100k-requests-guide/)
+- [Smart Model Selection Saves 80% on Claude API](/smart-model-selection-saves-80-percent-claude/)
+- [Claude /compact Command Token Savings Guide](/claude-compact-command-token-savings/)
+- [Claude Token Counter: Measure Before You Optimize](/claude-token-counter-measure-before-optimize/)
+- [When Full Context Costs More Than a RAG Pipeline](/when-full-context-costs-more-than-rag/)
+- [Claude Tool Use Cost Calculator Guide](/claude-tool-use-cost-calculator-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

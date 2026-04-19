@@ -449,6 +449,10 @@ Related Reading
 - [Claude Code Axe Accessibility Testing Guide](/claude-code-axe-accessibility-testing-guide/). Axe is a core tool for accessibility regression testing
 - [Claude Code WCAG Accessibility Audit Workflow](/claude-code-wcag-accessibility-audit-workflow/). WCAG audits provide the baseline for regression testing
 - [Claude Code Aria Labels Implementation Guide](/claude-code-aria-labels-implementation-guide/). ARIA label regressions are among the most common
+- [Claude Code Playwright Visual Regression Testing Guide](/claude-code-playwright-visual-regression-testing-guide/)
+- [Claude Code Mobile App Accessibility Testing Workflow](/claude-code-mobile-app-accessibility-testing-workflow/)
+- [Claude Code Screen Reader Testing Workflow](/claude-code-screen-reader-testing-workflow/)
+- [Claude Code for Documentation Testing Workflow Guide](/claude-code-for-documentation-testing-workflow-guide/)
 
 Built by theluckystrike. More at https://zovo.one
 

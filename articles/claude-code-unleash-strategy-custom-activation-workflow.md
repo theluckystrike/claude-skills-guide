@@ -349,6 +349,14 @@ Related Reading
 - [Claude Code Cypress Custom Commands Workflow Best Practices](/claude-code-cypress-custom-commands-workflow-best-practices/)
 - [Claude Code for Custom Elements Workflow Guide](/claude-code-for-custom-elements-workflow-guide/)
 - [Claude Code for Custom LSP Diagnostics Workflow](/claude-code-for-custom-lsp-diagnostics-workflow/)
+- [Claude Code for HAProxy Load Balancer Workflow](/claude-code-for-haproxy-load-balancer-workflow/)
+- [Claude Code for Retool Internal Tools Workflow](/claude-code-for-retool-internal-tools-workflow/)
+- [Claude Code for Android DataStore Workflow Guide](/claude-code-for-android-datastore-workflow-guide/)
+- [Claude Code Literature Review Summarization Workflow](/claude-code-literature-review-summarization-workflow/)
+- [Claude Code for OpenTelemetry Metrics Workflow Guide](/claude-code-for-opentelemetry-metrics-workflow-guide/)
+- [Claude Code for Halmos Symbolic Workflow Guide](/claude-code-for-halmos-symbolic-workflow-guide/)
+- [Claude Code for Pulumi Policy Pack Workflow Guide](/claude-code-for-pulumi-policy-pack-workflow-guide/)
+- [Claude Code for Polygon zkEVM Workflow](/claude-code-for-polygon-zkevm-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

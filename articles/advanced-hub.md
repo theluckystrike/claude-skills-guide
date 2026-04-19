@@ -128,6 +128,7 @@ Related Reading
 - [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/). The logical next step after mastering single-skill optimization
 - [Claude Skills Memory and Context Architecture Explained](/claude-skills-memory-and-context-architecture-explained/). Foundational knowledge for any advanced optimization strategy
 - [Best Claude Code Skills 2026 Rankings Hub](/best-of-hub/). Know which skills deserve your advanced optimization effort
+- [WireGuard PostUp PostDown Scripts: Routing Guide](/wireguard-postup-postdown-scripts-for-advanced-routing-configuration/)
 
 ---
 

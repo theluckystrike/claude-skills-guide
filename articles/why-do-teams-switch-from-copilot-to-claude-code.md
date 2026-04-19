@@ -174,6 +174,14 @@ Related Reading
 - [Why Is Claude Code Popular for Complex Codebases](/why-is-claude-code-popular-for-complex-codebases/). What drives teams to choose Claude Code
 - [Is Claude Code Worth It for Solo Developers and Freelancers](/is-claude-code-worth-it-for-solo-developers-freelancers/). ROI analysis for individual developers
 - [Claude Code Free Tier vs Pro Plan Feature Comparison 2026](/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/). What you get for the price
+- [Scaling Claude Code Usage Across Multiple Engineering Teams](/scaling-claude-code-usage-across-multiple-engineering-teams/)
+- [Claude Code For Thai Developer Teams — Developer Guide](/claude-code-for-thai-developer-teams-productivity-tips/)
+- [Should I Switch From Aider To Claude Code — Developer Guide](/should-i-switch-from-aider-to-claude-code/)
+- [Claude AI Cornell Notes — Generate Instantly (2026)](/claude-ai-cornell-notes-how-to-create-guide/)
+- [Claude Code Common Beginner Mistakes to Avoid](/claude-code-common-beginner-mistakes-to-avoid/)
+- [What Is Agentic AI And Why It Matters — Developer Guide](/what-is-agentic-ai-and-why-it-matters/)
+- [Claude Code Podcast Episodes Worth Listening](/claude-code-podcast-episodes-worth-listening/)
+- [Claude Code for Self-Taught Developer Upskilling](/claude-code-for-self-taught-developer-upskilling/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -156,6 +156,7 @@ Related Reading
 - [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/). Build coordinated multi-agent systems with specialized subagents
 - [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/). Implement reliable communication protocols between orchestrator and worker agents
 - [Claude Skills Hub](/advanced-hub/). Explore advanced orchestration patterns and multi-agent system design
+- [Opus Orchestrator with Haiku Workers Pattern](/opus-orchestrator-haiku-workers-pattern/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

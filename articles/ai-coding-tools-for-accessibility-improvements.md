@@ -546,6 +546,14 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 - [Claude Skills for Accessibility Testing WCAG A11y](/claude-skills-for-accessibility-testing-wcag-a11y/). Automate WCAG compliance checks and accessibility audits using purpose-built Claude Code skills.
+- [Claude Code for Landmark Regions Accessibility Guide](/claude-code-for-landmark-regions-accessibility-guide/)
+- [Claude Code Version History and Improvements](/claude-code-version-history-and-improvements/)
+- [Using Claude Code as a Backend Engine for Dev Tools](/using-claude-code-as-a-backend-engine-for-dev-tools/)
+- [Claude Code French Developer Community Resources Guide](/claude-code-french-developer-community-resources-guide/)
+- [Switching From Jetbrains AI To Claude Code — Developer Guide](/switching-from-jetbrains-ai-to-claude-code/)
+- [Claude Code Proxy Configuration — Setup Guide (2026)](/claude-code-network-proxy-configuration-for-enterprise/)
+- [How to Stop Claude Code from Using Snake Case in TypeScript](/how-to-stop-claude-code-from-using-snake-case-in-typescript/)
+- [Using Claude Code to Prepare for Coding Interviews](/using-claude-code-to-prepare-for-coding-interviews/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

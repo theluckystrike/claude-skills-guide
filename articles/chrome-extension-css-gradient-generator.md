@@ -209,6 +209,9 @@ Related Reading
 - [Chrome Extension Return Policy Finder: Tools and Techniques for Developers](/chrome-extension-return-policy-finder/)
 - [Best Tools for Vibe Coding Developers in 2026](/best-tools-for-vibe-coding-developers-2026/)
 - [Chrome Check Link Safety: Developer Tools and Techniques](/chrome-check-link-safety/)
+- [CSS Grid Inspector Chrome Extension](/css-grid-inspector-chrome/)
+- [Invoice Generator Freelance Chrome Extension Guide (2026)](/chrome-extension-invoice-generator-freelance/)
+- [How to Inspect CSS Styles in Chrome Extensions](/chrome-extension-inspect-css-styles/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

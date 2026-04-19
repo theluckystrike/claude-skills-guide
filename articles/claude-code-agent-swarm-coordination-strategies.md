@@ -192,6 +192,7 @@ Related Reading
 - [Fan-Out Fan-In Pattern with Claude Code Subagents](/fan-out-fan-in-pattern-claude-code-subagents/). Apply fan-out fan-in for efficient parallel task distribution within agent swarms.
 - [Monitoring and Logging in Claude Code Multi-Agent Systems](/monitoring-and-logging-claude-code-multi-agent-systems/). Implement observability to track swarm behavior and debug coordination issues.
 - [Claude Skills Advanced Hub](/advanced-hub/). Explore advanced multi-agent patterns and swarm coordination architectures.
+- [What Is An AI Agent Loop Explained Simply — Developer Guide](/what-is-an-ai-agent-loop-explained-simply/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

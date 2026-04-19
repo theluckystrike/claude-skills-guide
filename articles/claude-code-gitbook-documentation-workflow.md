@@ -365,6 +365,10 @@ Related Reading
 - [Claude Code Guides Hub](/guides-hub/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)
+- [Claude Code for Inline Code Documentation Workflow](/claude-code-for-inline-code-documentation-workflow/)
+- [Claude Code SDK Documentation Workflow](/claude-code-sdk-documentation-workflow/)
+- [Claude Code for Model Card Documentation Workflow](/claude-code-for-model-card-documentation-workflow/)
+- [Claude Code MkDocs Documentation Workflow](/claude-code-mkdocs-documentation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

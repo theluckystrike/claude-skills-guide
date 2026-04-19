@@ -305,6 +305,9 @@ Related Reading
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/). Top frontend skills with examples
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Broader developer skill overview
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
+- [Claude Skills vs Langflow for Building AI Agents — CLI Precision vs Visual Workflow Builder — 2026](/claude-skills-vs-langflow-ai-agents/)
+- [How AI Agents Use Tools and Skills Explained](/how-ai-agents-use-tools-and-skills-explained/)
+- [Claude Skills vs Langflow for AI Agents (2026)](/claude-skills-vs-langflow-for-building-ai-agents/)
 
 ---
 

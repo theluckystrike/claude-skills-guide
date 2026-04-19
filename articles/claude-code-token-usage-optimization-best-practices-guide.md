@@ -233,6 +233,14 @@ Related Reading
 - [Claude MD Too Long: Context Window Optimization](/claude-md-too-long-context-window-optimization/)
 - [Claude Code Slow Response: How to Fix Latency Issues](/claude-code-slow-response-how-to-fix-latency-issues/)
 - [Claude Skill Lazy Loading: Token Savings Explained](/claude-skill-lazy-loading-token-savings-explained-deep-dive/)
+- [Claude Code for Soulbound Token Workflow](/claude-code-for-soulbound-token-workflow/)
+- [Claude Code for JWT Refresh Token Workflow Guide](/claude-code-for-jwt-refresh-token-workflow-guide/)
+- [Claude Tool Use Hidden Token Costs Explained](/claude-tool-use-hidden-token-costs-explained/)
+- [Fix: Claude Code High Token Usage](/claude-code-high-token-usage/)
+- [Claude XML Tags vs JSON for Token Efficiency](/claude-xml-tags-vs-json-token-efficiency/)
+- [Track Claude Token Spend Per Project and Team](/track-claude-token-spend-per-project-team/)
+- [Claude Code for SuperTokens Auth — Guide](/claude-code-for-supertokens-auth-workflow-guide/)
+- [Claude Code Design Token Automation from Figma Variables](/claude-code-design-token-automation-from-figma-variables/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

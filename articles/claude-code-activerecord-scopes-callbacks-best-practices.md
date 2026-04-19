@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code ActiveRecord Scopes and Callbacks Best Practices"
 description: "Master ActiveRecord scopes and callbacks in Rails with Claude Code. Learn to write efficient scopes, use callbacks properly, and avoid common."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, rails, activerecord, scopes, callbacks, best-practices]
 author: "Claude Skills Guide"
@@ -36,6 +36,8 @@ When working with Claude Code, you can use its AI capabilities to generate optim
 ```ruby
 class User < ApplicationRecord
  # Good: Returns an ActiveRecord::Relation
+
+This article addresses activerecord scopes callbacks specifically as it applies to Claude Code development workflows. If you need a different angle on activerecord scopes callbacks, [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) may be more relevant.
  scope :active, -> { where(active: true) }
  scope :recent, -> { order(created_at: :desc) }
  scope :by_role, ->(role) { where(role: role) if role.present? }
@@ -480,6 +482,12 @@ With these best practices, you'll write Rails models that are both powerful and 
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

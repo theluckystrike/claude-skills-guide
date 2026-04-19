@@ -203,6 +203,8 @@ Related Reading
 - [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). Learn the basics of authoring skill files before keeping them private
 - [How Do I Use Claude Skills in an Air-Gapped Environment](/how-do-i-use-claude-skills-in-an-air-gapped-environment/). Extend private skill setups to fully offline secure environments
 - [Claude Skills Hub](/getting-started-hub/). Explore foundational skill creation and distribution approaches
+- [Top 10 Free Claude Code Skills on GitHub (2026)](/top-10-free-claude-code-skills-github/)
+- [Fix zsh: command not found: claude (2026)](/claude-code-bash-command-not-found-in-skill/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```

@@ -214,6 +214,7 @@ Related Reading
 - [Why Teams Switch from Copilot to Claude Code](/why-do-teams-switch-from-copilot-to-claude-code/)
 - [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
 - [Comparisons Hub](/comparisons-hub/)
+- [When to Use Claude Code vs ChatGPT for Coding Tasks](/when-to-use-claude-code-vs-chatgpt-for-coding-tasks/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -744,6 +744,14 @@ Related Reading
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
+- [Claude Code for DDoS Mitigation Workflow Guide](/claude-code-for-ddos-mitigation-workflow-guide/)
+- [Claude Code for Charm Bracelet Workflow Guide](/claude-code-for-charm-bracelet-workflow-guide/)
+- [Claude Code for Distributed Lock Workflow Guide](/claude-code-for-distributed-lock-workflow-guide/)
+- [Claude Code for Docs as Code Workflow Tutorial Guide](/claude-code-for-docs-as-code-workflow-tutorial-guide/)
+- [Claude Code for Knowledge Sharing Workflow Tutorial](/claude-code-for-knowledge-sharing-workflow-tutorial/)
+- [Claude Code for HAProxy Load Balancer Workflow](/claude-code-for-haproxy-load-balancer-workflow/)
+- [Claude Code Technical Cofounder — Complete Developer Guide](/claude-code-technical-cofounder-workflow-productivity/)
+- [Claude Code for Retool Internal Tools Workflow](/claude-code-for-retool-internal-tools-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

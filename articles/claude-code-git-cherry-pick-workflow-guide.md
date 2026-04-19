@@ -393,6 +393,8 @@ Related Reading
 - [Claude Code Git Rebase Interactive Workflow](/claude-code-git-rebase-interactive-workflow/)
 - [Claude MD Version Control Strategy Best Practices](/claude-md-version-control-strategy-best-practices/)
 - [Claude Code for Delta Git Diff Workflow Guide](/claude-code-for-delta-git-diff-workflow-guide/)
+- [Claude Code Git Workflow Guide](/claude-code-with-git-workflow-guide/)
+- [Claude Code for Git Absorb Workflow Tutorial](/claude-code-for-git-absorb-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

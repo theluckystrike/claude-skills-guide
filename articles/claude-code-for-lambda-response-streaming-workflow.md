@@ -281,6 +281,9 @@ Related Reading
 - [Claude Code for Streaming LLM Response Workflow](/claude-code-for-streaming-llm-response-workflow/)
 - [Claude Code for Claude RFP Response AI Workflow Tutorial Guide](/claude-code-for-claude-rfp-response-ai-workflow-tutorial-gui/)
 - [Claude Code for Incident Response Runbook Workflow](/claude-code-for-incident-response-runbook-workflow/)
+- [Claude Code for S3 Object Lambda Workflow](/claude-code-for-s3-object-lambda-workflow/)
+- [Claude Code for Lambda SnapStart Workflow](/claude-code-for-lambda-snapstart-workflow/)
+- [Claude Code for Lambda Layers Workflow](/claude-code-for-lambda-layers-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -387,6 +387,14 @@ Related Reading
 - [Claude Code for GraphQL Federation Workflow Guide](/claude-code-for-graphql-federation-workflow-guide/)
 - [Claude Code for Prometheus Remote Write Workflow](/claude-code-for-prometheus-remote-write-workflow/)
 - [Claude Code for Webpack Federation Workflow Guide](/claude-code-for-webpack-federation-workflow-guide/)
+- [Claude Code for Code Outline Navigation Workflow](/claude-code-for-code-outline-navigation-workflow/)
+- [How to Use For Maxwell Cdc — Complete Developer (2026)](/claude-code-for-maxwell-cdc-workflow-tutorial/)
+- [Claude Code for Wagmi Hooks Workflow](/claude-code-for-wagmi-hooks-workflow/)
+- [Claude Code for NPM Package Publishing Workflow Guide](/claude-code-for-npm-package-publishing-workflow-guide/)
+- [Claude Code for Hyperlane Messaging Workflow](/claude-code-for-hyperlane-messaging-workflow/)
+- [Claude Code for Cheerio HTML Parsing Workflow](/claude-code-for-cheerio-html-parsing-workflow/)
+- [Claude Code for CDK Aspects Workflow Tutorial](/claude-code-for-cdk-aspects-workflow-tutorial/)
+- [Claude Code for NGINX Ingress Workflow Tutorial](/claude-code-for-nginx-ingress-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

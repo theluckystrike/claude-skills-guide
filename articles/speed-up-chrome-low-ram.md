@@ -404,6 +404,7 @@ Related Reading
 - [Best Browser for Low RAM in 2026 - A Developer's Guide](/best-browser-low-ram-2026/)
 - [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)
 - [AI Speed Reader Chrome Extension: A Developer Guide](/ai-speed-reader-chrome-extension/)
+- [Chrome Experimental Features Speed — Developer Guide](/chrome-experimental-features-speed/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

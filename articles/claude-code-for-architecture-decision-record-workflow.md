@@ -448,6 +448,14 @@ Related Reading
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [Claude Code Astro Islands Architecture Workflow Deep Dive](/claude-code-astro-islands-architecture-workflow-deep-dive/)
 - [Claude Code for Medallion Architecture Workflow](/claude-code-for-medallion-architecture-workflow/)
+- [Claude Code for OpenSSL Certificate Workflow Guide](/claude-code-for-openssl-certificate-workflow-guide/)
+- [Claude Code for Metaflow Workflow Tutorial](/claude-code-for-metaflow-workflow-tutorial/)
+- [Claude Code for Detectron2 Workflow Guide](/claude-code-for-detectron2-workflow-guide/)
+- [Claude Code GitHub Discussions Summarizer Workflow](/claude-code-github-discussions-summarizer-workflow/)
+- [Claude Code for Consistent Hashing Workflow Guide](/claude-code-for-consistent-hashing-workflow-guide/)
+- [Claude Code For Twilio Sms — Complete Developer Guide](/claude-code-for-twilio-sms-workflow-guide/)
+- [Claude Code for tRPC WebSocket Workflow Guide](/claude-code-for-trpc-websocket-workflow-guide/)
+- [Claude Code for Netcat (nc) Networking Workflow](/claude-code-for-netcat-nc-networking-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

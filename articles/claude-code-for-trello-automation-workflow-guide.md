@@ -598,6 +598,13 @@ Related Reading
 - [Claude Code for Mailchimp Automation Workflow Guide](/claude-code-for-mailchimp-automation-workflow-guide/)
 - [Claude Code for SRE Toil Automation Workflow](/claude-code-for-sre-toil-automation-workflow/)
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
+- [Claude Code for Workspace Automation Workflow](/claude-code-for-workspace-automation-workflow/)
+- [Claude Code for Runbook Automation Workflow Guide](/claude-code-for-runbook-automation-workflow-guide/)
+- [Claude Code for Taskfile Workflow Automation Guide](/claude-code-for-taskfile-workflow-automation-guide/)
+- [Claude Code for Review Comment Automation Workflow](/claude-code-for-review-comment-automation-workflow/)
+- [Claude Code for MLflow Model Registry Workflow Automation](/claude-code-mlflow-model-registry-workflow-automation/)
+- [Claude Code Twilio Voice Call Automation Workflow Guide](/claude-code-twilio-voice-call-automation-workflow-guide/)
+- [Claude Code Reporting Automation Workflow](/claude-code-reporting-automation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

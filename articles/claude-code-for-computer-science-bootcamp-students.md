@@ -251,6 +251,8 @@ Related Reading
 - [Claude Code for Students: Homework and Projects](/claude-code-for-students-homework-and-projects/)
 - [Claude Code for University Software Engineering Projects](/claude-code-for-university-software-engineering-projects/)
 - [Best AI Tools for API Development in 2026: A Practical Guide](/best-ai-tools-for-api-development-2026/)
+- [Claude Code: Helping Students Understand Recursion Concepts](/claude-code-helping-students-understand-recursion-concepts/)
+- [Is Claude Code Worth It Data Science Work — Developer Guide](/is-claude-code-worth-it-data-science-work/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

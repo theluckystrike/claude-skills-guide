@@ -709,6 +709,14 @@ Related Reading
 - [Claude Code FastAPI OpenAPI Schema Generation Workflow](/claude-code-fastapi-openapi-schema-generation-workflow/)
 - [Claude Code API Reference Generation Guide](/claude-code-api-reference-generation-guide/)
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
+- [Claude Code for tRPC WebSocket Workflow Guide](/claude-code-for-trpc-websocket-workflow-guide/)
+- [Claude Code for Netcat (nc) Networking Workflow](/claude-code-for-netcat-nc-networking-workflow/)
+- [Claude Code For Pr Status Check — Complete Developer Guide](/claude-code-for-pr-status-check-workflow-tutorial/)
+- [Claude Code For AI Red Teaming — Complete Developer Guide](/claude-code-for-ai-red-teaming-workflow-guide/)
+- [Claude Code for Delta Lake Workflow Guide](/claude-code-for-delta-lake-workflow-guide/)
+- [Claude Code For Kube State — Complete Developer Guide](/claude-code-for-kube-state-metrics-workflow/)
+- [Claude Code Laravel Livewire Real-Time Workflow Tutorial](/claude-code-laravel-livewire-real-time-workflow-tutorial/)
+- [Claude Code for Astro Middleware Workflow Guide](/claude-code-for-astro-middleware-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

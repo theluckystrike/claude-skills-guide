@@ -566,6 +566,14 @@ Related Reading
 - [Claude Code for Artifact Publishing Workflow Tutorial](/claude-code-for-artifact-publishing-workflow-tutorial/)
 - [Claude Code for Cargo Crate Publishing Workflow Guide](/claude-code-for-cargo-crate-publishing-workflow-guide/)
 - [Claude Code for Docker Image Publishing Workflow Guide](/claude-code-for-docker-image-publishing-workflow-guide/)
+- [Claude Code for Pulsar Tenant Workflow Tutorial](/claude-code-for-pulsar-tenant-workflow-tutorial/)
+- [Claude Code for OpenObserve Workflow Tutorial](/claude-code-for-openobserve-workflow-tutorial/)
+- [Claude Code For Uma Oracle — Complete Developer Guide](/claude-code-for-uma-oracle-workflow-tutorial/)
+- [Claude Code for Elastic SIEM Workflow Guide](/claude-code-for-elastic-siem-workflow-guide/)
+- [Claude Code for TypeScript Const Enums Workflow Guide](/claude-code-for-typescript-const-enums-workflow-guide/)
+- [Claude Code for Split.io Experimentation Workflow](/claude-code-for-split-io-experimentation-workflow/)
+- [Claude Code For Go Benchmark — Complete Developer Guide](/claude-code-for-go-benchmark-workflow-tutorial-guide/)
+- [Claude Code for New Relic APM Workflow Guide](/claude-code-for-new-relic-apm-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

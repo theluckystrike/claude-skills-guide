@@ -482,6 +482,14 @@ Related Reading
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
+- [Claude Code for DBeaver — Workflow Guide](/claude-code-for-dbeaver-workflow-guide/)
+- [Color Contrast Checking Workflow with Claude Code](/claude-code-color-contrast-checking-workflow/)
+- [Claude Code for Cursor Rules Workflow Tutorial](/claude-code-for-cursor-rules-workflow-tutorial/)
+- [Claude Code for Courier Notification Workflow Guide](/claude-code-for-courier-notification-workflow-guide/)
+- [Claude Code ISO 27001 Evidence Collection Workflow](/claude-code-iso27001-evidence-collection-workflow/)
+- [Claude Code for Rome Biome Linting Workflow](/claude-code-for-rome-biome-linting-workflow/)
+- [Claude Code For EKS Karpenter — Complete Developer Guide](/claude-code-for-eks-karpenter-workflow/)
+- [Claude Code for Winglang Workflow Tutorial Guide](/claude-code-for-winglang-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -236,6 +236,10 @@ Related Reading
 - [Claude Agent Sandbox Skill: Complete Guide (2026)](/claude-agent-sandbox-skill-isolated-environments/)
 - [What Are AI Agent Skills: Complete Guide for Developers](/what-are-ai-agent-skills-complete-guide-developers/)
 - [Building Supervisor Worker Agent Architecture Tutorial](/building-supervisor-worker-agent-architecture-tutorial/)
+- [Claude Code Flask Blueprint Architecture Guide](/claude-code-flask-blueprint-architecture-guide/)
+- [Claude Code NestJS Guards Interceptors Pipes Deep Dive](/claude-code-nestjs-guards-interceptors-pipes-deep-dive/)
+- [Claude Code NestJS Modular Architecture Guide](/claude-code-nestjs-modular-architecture-guide/)
+- [Claude Code With Task Runners Just — Developer Guide](/claude-code-with-task-runners-just-taskfile/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

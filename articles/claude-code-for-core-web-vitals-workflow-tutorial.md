@@ -651,6 +651,8 @@ Related Reading
 - [Claude Code for gRPC Web Workflow Tutorial](/claude-code-for-grpc-web-workflow-tutorial/)
 - [Claude Code for Infura Web3 Workflow Tutorial](/claude-code-for-infura-web3-workflow-tutorial/)
 - [Claude Code for Web Share API Workflow Tutorial](/claude-code-for-web-share-api-workflow-tutorial/)
+- [Claude Code for Soda Core Data Quality Workflow](/claude-code-for-soda-core-data-quality-workflow/)
+- [Claude Code for Web Workers Workflow Guide](/claude-code-for-web-workers-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

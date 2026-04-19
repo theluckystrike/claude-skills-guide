@@ -177,6 +177,8 @@ Related Reading
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). See also
 - [Why Is Claude Code Expensive: Large Context Tokens](/why-is-claude-code-expensive-large-context-tokens/). See also
 - [Best AI Code Completion Tools vs Claude Code](/best-ai-code-completion-tools-vs-claude-code/). Compare Claude Code against other AI completion tools before choosing a plan
+- [Claude Code vs Free Supermaven — Developer Comparison 2026](/claude-code-vs-free-supermaven-tier-enough/)
+- [Free vs Pro vs Max: Claude Code Plan Calculator](/free-vs-pro-vs-max-claude-code-plan-calculator/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

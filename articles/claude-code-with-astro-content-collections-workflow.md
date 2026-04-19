@@ -333,6 +333,14 @@ Related Reading
 - [Claude Code Astro Islands Architecture Workflow Deep Dive](/claude-code-astro-islands-architecture-workflow-deep-dive/)
 - [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)
 - [Claude Code Developer Advocate Demo Content Workflow Tips](/claude-code-developer-advocate-demo-content-workflow-tips/)
+- [Claude Code for Astro View Transitions Workflow](/claude-code-for-astro-view-transitions-workflow/)
+- [Claude Code for Astro Middleware Workflow Guide](/claude-code-for-astro-middleware-workflow-guide/)
+- [Claude Code For Quicknode Rpc — Complete Developer Guide](/claude-code-for-quicknode-rpc-workflow-guide/)
+- [Claude Code for Golden Path Developer Workflow](/claude-code-for-golden-path-developer-workflow/)
+- [Claude Code for Compound Governance Workflow](/claude-code-for-compound-governance-workflow/)
+- [Claude Code for Code Review Checklist Workflow Guide (2026)](/claude-code-for-code-review-checklist-workflow-guide/)
+- [Claude Code for Weights & Biases Workflow Guide](/claude-code-for-weights-and-biases-workflow-guide/)
+- [Claude Code For Csharp Source — Complete Developer Guide](/claude-code-for-csharp-source-generators-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

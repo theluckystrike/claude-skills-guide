@@ -250,3 +250,7 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Claude Python SDK Getting Started](/claude-python-sdk-getting-started-example/) -- basic SDK setup before implementing tools.
 
 
+
+## Related Articles
+
+- [Fix Claude Code Skill Tool Not Found Error — Quick Guide](/claude-code-skill-tool-not-found-error-solution/)

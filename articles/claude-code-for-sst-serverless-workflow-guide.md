@@ -74,3 +74,9 @@ Claude Code should create resources in `infra/storage.ts` using `new sst.aws.Dyn
 - [Claude Code AWS Lambda Deployment Guide](/claude-code-aws-lambda-deployment-guide/)
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)
 - [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)
+
+## Related Articles
+
+- [Claude Code Netlify Serverless Functions Workflow](/claude-code-netlify-serverless-functions-workflow/)
+- [Claude Code for Modal Serverless ML — Guide](/claude-code-for-modal-serverless-ml-workflow-guide/)
+- [How to Use Xata Database Branching (2026)](/claude-code-xata-serverless-database-branching-guide/)

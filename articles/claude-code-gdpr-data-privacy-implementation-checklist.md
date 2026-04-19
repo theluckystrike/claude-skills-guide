@@ -368,6 +368,14 @@ Related Reading
 - [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/). Enterprise-grade access controls, audit logging, and compliance framework patterns
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). The tdd, pdf, and xlsx skills referenced throughout GDPR implementation workflows
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep compliance audit automation sessions cost-efficient
+- [Claude Code Responsible AI — Complete Developer Guide](/claude-code-responsible-ai-checklist-guide/)
+- [Claude Code for Reviewing Open Source Pull Requests](/claude-code-for-reviewing-open-source-pull-requests/)
+- [Claude Code With Task Runners Just — Developer Guide](/claude-code-with-task-runners-just-taskfile/)
+- [Splitting Large Codebases Across Specialized Claude Agents](/splitting-large-codebases-across-specialized-claude-agents/)
+- [Claude Code for Developer Advocate Demos](/claude-code-for-developer-advocate-demos/)
+- [Claude Code with Mise Version Manager Guide](/claude-code-with-mise-version-manager-guide/)
+- [Claude Code Git Commit Message Generator Guide](/claude-code-git-commit-message-generator-guide/)
+- [SuperMaven Review: Fast AI Code Completion in 2026](/supermaven-review-fast-ai-code-completion-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

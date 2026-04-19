@@ -510,6 +510,14 @@ Related Reading
 - [Claude Code Continuous Testing Workflow: Complete Guide for 2026](/claude-code-continuous-testing-workflow/)
 - [Claude Code Docker Networking Workflow Guide](/claude-code-docker-networking-workflow-guide/)
 - [Claude Code for ArgoCD Image Updater Workflow](/claude-code-for-argocd-image-updater-workflow/)
+- [Claude Code for ZenRows Scraping Workflow Tutorial](/claude-code-for-zenrows-scraping-workflow-tutorial/)
+- [Claude Code for Notion Workflow Tutorial Guide](/claude-code-for-notion-workflow-tutorial-guide/)
+- [Claude Code for Pandera Dataframe Validation Workflow](/claude-code-for-pandera-dataframe-validation-workflow-tutori/)
+- [Claude Code for OpenSSL Certificate Workflow Guide](/claude-code-for-openssl-certificate-workflow-guide/)
+- [Claude Code for Metaflow Workflow Tutorial](/claude-code-for-metaflow-workflow-tutorial/)
+- [Claude Code for Detectron2 Workflow Guide](/claude-code-for-detectron2-workflow-guide/)
+- [Claude Code GitHub Discussions Summarizer Workflow](/claude-code-github-discussions-summarizer-workflow/)
+- [Claude Code for Consistent Hashing Workflow Guide](/claude-code-for-consistent-hashing-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

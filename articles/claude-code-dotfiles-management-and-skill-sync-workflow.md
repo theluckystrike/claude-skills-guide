@@ -209,6 +209,8 @@ Related Reading
 - [Claude Skills Directory: Where to Find Skills 2026](/claude-skills-directory-where-to-find-skills/). Discover which skills are worth adding to your dotfiles repository in the first place.
 - [Skill MD File Format Explained With Examples Guide](/claude-skill-md-format-complete-specification-guide/). Understand the format of the skill files you are managing in your dotfiles.
 - [Getting Started with Claude Skills](/getting-started-hub/). The foundational guide before you start syncing and managing skill files across machines.
+- [Claude Skills for Puppet Chef Configuration Management](/claude-skills-for-puppet-chef-configuration-management/)
+- [Claude Skills for EdTech Learning Management Systems](/claude-skills-for-edtech-learning-management-systems/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

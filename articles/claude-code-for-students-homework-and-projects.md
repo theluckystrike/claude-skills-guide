@@ -277,6 +277,12 @@ Related Reading
 - [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/)
 - [Claude Code Setup on Mac: Step by Step](/claude-code-setup-on-mac-step-by-step/)
 - [Getting Started Hub](/getting-started-hub/)
+- [Claude Code Developer Portfolio Projects Guide](/claude-code-developer-portfolio-projects-guide/)
+- [How Students Use Claude Code for Learning Programming](/how-students-use-claude-code-for-learning-programming/)
+- [Claude Code: Helping Students Understand Recursion Concepts](/claude-code-helping-students-understand-recursion-concepts/)
+- [Claude Code for University Software Engineering Projects](/claude-code-for-university-software-engineering-projects/)
+- [How Agencies Use Claude Code for Client Projects](/how-agencies-use-claude-code-for-client-projects/)
+- [Using Claude Code To Study Open Source — Developer Guide](/using-claude-code-to-study-open-source-projects/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

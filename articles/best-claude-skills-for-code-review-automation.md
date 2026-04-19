@@ -288,6 +288,8 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack including tdd
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Automate deployments with Claude skills
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
+- [Claude Code Skills for Ansible Automation](/claude-code-skills-for-ansible-automation/)
+- [Claude Skills for Legal Document Automation](/claude-skills-for-legal-document-automation/)
 
 Related guides: [Best Way to Use Claude Code for Code Review Prep](/claude-code-for-code-review-preparation-tips/)
 

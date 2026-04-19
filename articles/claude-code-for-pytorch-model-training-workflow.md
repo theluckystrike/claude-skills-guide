@@ -436,6 +436,7 @@ Related Reading
 - [Claude Code Axolotl QLoRA Training Script Workflow](/claude-code-axolotl-qlora-training-script-workflow/)
 - [Claude Code for CQRS Read Model Workflow Guide](/claude-code-for-cqrs-read-model-workflow-guide/)
 - [Claude Code for HuggingFace Transformers Model Training](/claude-code-for-huggingface-transformers-model-training/)
+- [Claude Code for Diamond Model Intrusion Workflow Tutorial](/claude-code-for-diamond-model-intrusion-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

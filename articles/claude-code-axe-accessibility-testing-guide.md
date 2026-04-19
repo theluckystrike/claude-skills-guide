@@ -415,6 +415,14 @@ Related Reading
 - [Claude Code Aria Labels Implementation Guide](/claude-code-aria-labels-implementation-guide/). Fix the ARIA issues axe discovers
 - [Claude Code Keyboard Navigation Testing Guide](/claude-code-keyboard-navigation-testing-guide/). Combine axe with keyboard nav testing
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Run axe tests in your TDD workflow
+- [Claude Code for Percy Visual Testing Workflow Guide](/claude-code-for-percy-visual-testing-workflow-guide/)
+- [Claude Code for Runbook Testing Workflow Tutorial](/claude-code-for-runbook-testing-workflow-tutorial/)
+- [Claude Code for Soak Testing Workflow Tutorial Guide](/claude-code-for-soak-testing-workflow-tutorial-guide/)
+- [How to Use Claude Code with Jest Testing](/claude-code-with-jest-testing-workflow/)
+- [React Component Testing with Claude Code](/claude-code-react-component-testing-guide/)
+- [Claude Code for Browser Mode Testing — Guide](/claude-code-for-browser-mode-testing-workflow-guide/)
+- [Claude Code Shift Left Testing Strategy Guide](/claude-code-shift-left-testing-strategy-guide/)
+- [Claude Code for Load Testing with Locust Workflow Guide](/claude-code-for-load-testing-with-locust-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

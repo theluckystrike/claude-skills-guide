@@ -346,6 +346,7 @@ Related Reading
 - [Claude Code Tutorials Hub](/tutorials-hub/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Code Guides Hub](/guides-hub/)
+- [Claude Code for gRPC Stub Generation Workflow Guide](/claude-code-for-grpc-stub-generation-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

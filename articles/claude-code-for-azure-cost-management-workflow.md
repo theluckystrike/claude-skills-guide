@@ -280,6 +280,11 @@ Related Reading
 - [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-code-azure-devops-integration-workflow-tutorial/)
 - [Claude Code Dotfiles Configuration Management Workflow](/claude-code-dotfiles-configuration-management-workflow/)
 - [Claude Code Flutter State Management Workflow Best Practices](/claude-code-flutter-state-management-workflow-bestpractices/)
+- [Claude Code For Bicep Azure Iac — Complete Developer Guide](/claude-code-for-bicep-azure-iac-workflow-guide/)
+- [Claude Code with Azure OpenAI Setup](/claude-code-azure-openai/)
+- [Claude Code Azure DevOps Integration](/claude-code-azure-devops-integration/)
+- [Claude Code Azure API Integration Guide](/claude-code-azure-api/)
+- [Claude Code GitHub Actions Secrets Management](/claude-code-github-actions-secrets-management/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```

@@ -155,3 +155,8 @@ Multi-city itineraries create multiple HL (hierarchical level) segments in the P
 - [Claude Skills for E-Commerce Platforms](/claude-skills-for-ecommerce-platforms/) -- checkout and payment patterns
 - [Claude Skills for Logistics and Supply Chain](/claude-skills-for-logistics-supply-chain/) -- cargo and freight booking
 - [Claude Skill Composition Patterns](/claude-skill-composition-patterns/) -- combining booking with notification skills
+
+## Related Articles
+
+- [Claude Code Skills for Nonprofit Donation Platforms (2026)](/claude-code-skills-for-nonprofit-donation-platforms/)
+- [Claude Code Skills for Travel Booking Platforms](/claude-code-skills-for-travel-booking-platforms/)

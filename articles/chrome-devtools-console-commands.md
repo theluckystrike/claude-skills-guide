@@ -404,6 +404,13 @@ $99 once. Free forever. 47/500 founding spots left.
 </div>
 
 Related Reading
+- [Svelte Devtools Chrome Extension Guide (2026)](/chrome-extension-svelte-devtools/)
+- [Chrome Devtools Workspaces Local Overrides — Developer Guide](/chrome-devtools-workspaces-local-overrides/)
+- [Chrome DevTools Responsive Design Mode Guide (2026)](/chrome-devtools-responsive-design-mode/)
+- [React Devtools Chrome Extension — Complete Developer Guide](/react-devtools-chrome-extension-guide/)
+- [Chrome Devtools Snippets — Complete Developer Guide](/chrome-devtools-snippets-tutorial/)
+- [AWS Console Enhancer Chrome Extension Guide (2026)](/chrome-extension-aws-console-enhancer/)
+- [Chrome DevTools Tips and Tricks for 2026](/chrome-devtools-tips-tricks-2026/)
 
 - Chrome DevTools Tips for Frontend Developers. Additional techniques for maximizing your DevTools workflow
 - JavaScript Debugging Techniques for Production. Strategies for debugging in live environments

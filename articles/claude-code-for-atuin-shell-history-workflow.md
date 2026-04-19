@@ -194,6 +194,7 @@ Related Reading
 - [Claude Code for Devenv Nix Development Shell Workflow](/claude-code-for-devenv-nix-development-shell-workflow/)
 - [Claude Code Shell Scripting Automation Workflow Guide](/claude-code-shell-scripting-automation-workflow-guide/)
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
+- [Claude Code for Shell Operator Workflow Tutorial](/claude-code-for-shell-operator-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

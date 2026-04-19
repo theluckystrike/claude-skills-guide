@@ -299,6 +299,14 @@ Related Reading
 - [Workflows Hub](/workflows-hub/). Practical skill workflows for code review, documentation, and CI/CD
 - [Projects Hub](/projects-hub/). Build real SaaS apps, CLI tools, and APIs using Claude skills
 - [Pricing Hub](/pricing-hub/). Cost optimization and Claude Code pricing breakdown
+- [Claude Code Mentorship and Teaching Guide](/claude-code-mentorship-and-teaching-guide/)
+- [Claude Code for Resilience4j Circuit Breaker Guide](/claude-code-for-resilience4j-circuit-breaker-guide/)
+- [Claude Code Cookbook: Practical Recipes Collection](/claude-code-cookbook-recipes-collection/)
+- [Claude Code from Zero to Hero Learning Path](/claude-code-from-zero-to-hero-learning-path/)
+- [Claude Code Tips from Experienced Users 2026](/claude-code-tips-from-experienced-users-2026/)
+- [Claude Code Version History and Improvements](/claude-code-version-history-and-improvements/)
+- [Claude Code for Seldon Core Model Serving Guide](/claude-code-for-seldon-core-model-serving-guide/)
+- [Claude Code Responsible AI — Complete Developer Guide](/claude-code-responsible-ai-checklist-guide/)
 
 ---
 

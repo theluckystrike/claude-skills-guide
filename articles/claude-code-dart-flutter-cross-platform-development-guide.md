@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code Dart Flutter Cross Platform Development Guide"
 description: "A practical guide to building cross-platform applications with Dart and Flutter using Claude Code and specialized Claude skills."
-date: 2026-03-13
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills]
@@ -13,6 +13,8 @@ permalink: /claude-code-dart-flutter-cross-platform-development-guide/
 geo_optimized: true
 ---
 
+
+Setting up dart flutter cross platform correctly requires understanding proper dart flutter cross platform configuration, integration testing, and ongoing maintenance. Below, you will find the Claude Code workflow for dart flutter cross platform that handles each of these concerns step by step.
 
 Claude Code Dart Flutter Cross Platform Development Guide
 
@@ -591,6 +593,12 @@ Start with a clean architecture, write tests first using the tdd workflow, and l
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

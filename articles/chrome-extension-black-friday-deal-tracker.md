@@ -310,6 +310,14 @@ Related Reading
 - [Chrome Extension Open Box Deal Tracker: Build Your Own.](/chrome-extension-open-box-deal-tracker/)
 - [Building a Chrome Extension for Gaming Deal Finding](/chrome-extension-gaming-deal-finder-chrome/)
 - [Chrome Extension Linear Issue Tracker: A Developer's Guide](/chrome-extension-linear-issue-tracker/)
+- [Package Tracker All Carriers Chrome Extension Guide (2026)](/chrome-extension-package-tracker-all-carriers/)
+- [Workload Balance Tracker Chrome Extension Guide (2026)](/chrome-extension-workload-balance-tracker/)
+- [Chrome Extension Warranty Tracker: Practical Guide](/chrome-extension-warranty-tracker/)
+- [Team Status Tracker Chrome Extension Guide (2026)](/chrome-extension-team-status-tracker/)
+- [Chrome Extension TikTok Analytics Tracker](/chrome-extension-tiktok-analytics-tracker/)
+- [Habit Tracker Work Chrome Extension Guide (2026)](/chrome-extension-habit-tracker-work/)
+- [Mood Tracker Team Chrome Extension Guide (2026)](/chrome-extension-mood-tracker-team/)
+- [Spending Tracker Chrome Extension Guide (2026)](/chrome-extension-spending-tracker-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

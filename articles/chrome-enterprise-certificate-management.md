@@ -232,6 +232,10 @@ Related Reading
 - [Chrome Enterprise Bandwidth Management: A Practical Guide](/chrome-enterprise-bandwidth-management/)
 - [Chrome Enterprise Extension Management API: A Practical.](/chrome-enterprise-extension-management-api/)
 - [Chrome Enterprise Stable Channel Management: A Practical Guide](/chrome-enterprise-stable-channel-management/)
+- [Project Management Chrome Extension Guide (2026)](/project-management-chrome-extension/)
+- [Chrome Check SSL Certificate — Developer Guide](/chrome-check-ssl-certificate/)
+- [Chrome Os Enterprise Management — Developer Guide](/chrome-os-enterprise-management/)
+- [Chrome Enterprise Munki Deployment: Complete Setup Guide](/chrome-enterprise-munki-deployment/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

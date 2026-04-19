@@ -286,6 +286,8 @@ Related Reading
 - [Chrome Extension OneNote Clipper Setup Guide](/chrome-extension-onenote-clipper-setup/)
 - [Chrome Extension Markdown Editor: Build Your Own Browser-Based Writing Tool](/chrome-extension-markdown-editor/)
 - [Chrome Extension Annotate Web Pages: Build Your Own.](/chrome-extension-annotate-web-pages/)
+- [Mockup Screenshot Tool Chrome Extension Guide (2026)](/chrome-extension-mockup-screenshot-tool/)
+- [Screen Annotation Tool Chrome Extension Guide (2026)](/chrome-extension-screen-annotation-tool/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

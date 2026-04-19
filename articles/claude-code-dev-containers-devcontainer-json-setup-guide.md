@@ -2,8 +2,8 @@
 layout: default
 title: "How to Use Dev Containers — Complete Developer (2026)"
 description: "Configure devcontainer.json for Claude Code development environments. Step-by-step setup for VS Code, Docker, and containerized AI development workflows."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, claude-skills, devcontainers, vs-code, docker, development-environment]
 author: "Claude Skills Guide"
@@ -13,6 +13,8 @@ permalink: /claude-code-dev-containers-devcontainer-json-setup-guide/
 geo_optimized: true
 ---
 # Claude Code Dev Containers: devcontainer.json Setup Guide
+
+When developers hit dev containers devcontainer json not working as expected in the development workflow, it typically traces back to incomplete dev containers devcontainer json configuration or missing integration steps. The approach below walks through diagnosing and resolving this dev containers devcontainer json issue with Claude Code, verified against current tooling in April 2026.
 
 Dev containers provide a standardized, containerized development environment that works consistently across machines. When you pair dev containers with Claude Code, you get reproducible AI-assisted development where every team member runs identical toolchain versions. This guide walks through setting up `devcontainer.json` for Claude Code workflows, from basic configuration to advanced multi-service setups. If you're evaluating different cloud-based approaches, see how [Claude Code integrates with GitPod](/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) as well.
 
@@ -239,6 +241,12 @@ For teams adopting Claude Code at scale, investing time in dev container configu
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

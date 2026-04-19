@@ -229,6 +229,8 @@ Related Reading
 - [Claude Code Contract Testing with Pact Guide](/claude-code-contract-testing-pact-guide/)
 - [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/)
 - [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)
+- [Claude Code for Wake Smart Contract Workflow](/claude-code-for-wake-smart-contract-workflow/)
+- [Claude Code for Upgradeable Contract Workflow Guide](/claude-code-for-upgradeable-contract-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

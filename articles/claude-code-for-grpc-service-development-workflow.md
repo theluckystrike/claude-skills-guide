@@ -480,6 +480,7 @@ Related Reading
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
 - [Claude Code for Chef Cookbook Development Workflow](/claude-code-for-chef-cookbook-development-workflow/)
 - [Claude Code for Consul Service Discovery Workflow](/claude-code-for-consul-service-discovery-workflow/)
+- [Claude Code for Nacos Service Registry Workflow](/claude-code-for-nacos-service-registry-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

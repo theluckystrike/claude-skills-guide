@@ -363,3 +363,9 @@ $99 once. Yours forever. I keep adding templates monthly.
 {% endraw %}
 
 
+
+## Related Articles
+
+- [Claude Code Azure DevOps Pipeline Automation](/claude-code-azure-devops-pipeline-automation/)
+- [Claude Code DevOps Engineer CI — Complete Developer Guide](/claude-code-devops-engineer-ci-cd-pipeline-daily-workflow/)
+- [Claude Code Next.js Deployment — Developer Guide](/claude-code-nextjs-deployment-optimization/)

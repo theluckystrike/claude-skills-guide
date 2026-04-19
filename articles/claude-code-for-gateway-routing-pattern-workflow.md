@@ -299,6 +299,10 @@ Related Reading
 - [Claude Code for Benchmark Reporting Workflow Tutorial](/claude-code-for-benchmark-reporting-workflow-tutorial/)
 - [Claude Code for CDN Optimization Workflow Tutorial](/claude-code-for-cdn-optimization-workflow-tutorial/)
 - [Claude Code for Code Bookmark Workflow Tutorial Guide](/claude-code-for-code-bookmark-workflow-tutorial-guide/)
+- [Claude Code For Strangler Fig — Complete Developer Guide](/claude-code-for-strangler-fig-pattern-workflow/)
+- [Claude Code for Mediator Pattern and CQRS Workflow](/claude-code-for-mediator-pattern-cqrs-workflow/)
+- [Claude Code for Roving Tabindex Pattern Workflow](/claude-code-for-roving-tabindex-pattern-workflow/)
+- [Claude Code for Kotlin Delegation Pattern Workflow](/claude-code-for-kotlin-delegation-pattern-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

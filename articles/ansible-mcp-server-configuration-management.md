@@ -553,6 +553,8 @@ Related Reading
 - [MCP Server Permission Auditing Best Practices](/mcp-server-permission-auditing-best-practices/)
 - [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Integrations Hub](/integrations-hub/)
+- [Kubernetes MCP Server Cluster Management Guide](/kubernetes-mcp-server-cluster-management-guide/)
+- [PagerDuty MCP Server Incident Management Guide](/pagerduty-mcp-server-incident-management-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

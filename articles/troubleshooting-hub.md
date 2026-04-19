@@ -264,6 +264,14 @@ Related Reading
 - [Integrations Hub](/integrations-hub/). Connect skills to GitHub Actions, n8n, Supabase, Slack, and more
 - [Projects Hub](/projects-hub/). Build real SaaS apps, CLI tools, and APIs using Claude skills
 - [Pricing Hub](/pricing-hub/). Cost optimization and Claude Code pricing breakdown
+- [Chrome Tabs Crashing: Diagnosis and Fixes](/chrome-tabs-crashing/)
+- [Claude Code Keeps Rewriting Functions I — Developer Guide](/claude-code-keeps-rewriting-functions-i-said-keep/)
+- [Why Claude Code Wrong Directory (2026)](/why-is-claude-code-reading-the-wrong-directory-entirely/)
+- [Fix Claude Code Over Engineers Simple Solution — Quick Guide](/claude-code-over-engineers-simple-solution-fix/)
+- [Claude Code for Test Fixture Generation Workflow](/claude-code-for-test-fixture-generation-workflow/)
+- [Claude Code Keeps Deleting My Comments In — Developer Guide](/claude-code-keeps-deleting-my-comments-in-code/)
+- [Fix Why Does Claude Code Produce Incomplete — Quick Guide](/why-does-claude-code-produce-incomplete-code-blocks-fix/)
+- [Claude Code Docker Networking Troubleshooting Guide](/claude-code-docker-networking-troubleshooting-guide/)
 
 ---
 

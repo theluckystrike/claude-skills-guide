@@ -151,6 +151,12 @@ Related Reading
 - [Claude SuperMemory Skill: Persistent Context Guide](/claude-supermemory-skill-persistent-context-explained/). store and retrieve project context across sessions
 - [Claude TDD Skill: Test-Driven Development Guide](/claude-tdd-skill-test-driven-development-workflow/). build automated validation tests for localization
 - [Claude Frontend Design Skill Review and Tutorial](/claude-frontend-design-skill-review-and-tutorial/). UI layout and design workflows including RTL support
+- [Claude Code Snippet Library Management](/claude-code-snippet-library-management/)
+- [Claude Code Git Tags Release Management — Developer Guide](/claude-code-git-tags-release-management/)
+- [How To Use Claude Code To — Complete Developer Guide](/how-to-use-claude-code-to-understand-unfamiliar-codebase-quickly/)
+- [Claude Code For Reading Unfamiliar Open — Developer Guide](/claude-code-for-reading-unfamiliar-open-source-codebase/)
+- [Claude Code Git Submodules Management Guide](/claude-code-git-submodules-management-guide/)
+- [Claude Code Focus Management Audit Accessibility Guide](/claude-code-focus-management-audit-accessibility-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

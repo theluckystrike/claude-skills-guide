@@ -74,3 +74,14 @@ Claude Code should use `kitty @` commands to create the layout, launch panes wit
 - [Claude Code for Ghostty Terminal Workflow](/claude-code-for-ghostty-terminal-workflow-tutorial/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)
 - [Building a CLI Devtool with Claude Code Walkthrough](/building-a-cli-devtool-with-claude-code-walkthrough/)
+
+## Related Articles
+
+- [Claude Code for Translation Key Extraction Workflow](/claude-code-for-translation-key-extraction-workflow/)
+- [Claude Code Portuguese Developer Coding Workflow Setup](/claude-code-portuguese-developer-coding-workflow-setup/)
+- [Claude Code for Production Profiling Workflow Guide](/claude-code-for-production-profiling-workflow-guide/)
+- [Claude Code for Configure8 Portal Workflow Guide](/claude-code-for-configure8-portal-workflow-guide/)
+- [Claude Code for Gymnasium Workflow Tutorial](/claude-code-for-gymnasium-workflow-tutorial/)
+- [Claude Code Solo SaaS Builder Launch Checklist Workflow](/claude-code-solo-saas-builder-launch-checklist-workflow/)
+- [How to Use Anvil Local Fork (2026)](/claude-code-for-anvil-local-fork-workflow/)
+- [Claude Code Sre On Call Incident — Complete Developer Guide](/claude-code-sre-on-call-incident-response-workflow-guide/)

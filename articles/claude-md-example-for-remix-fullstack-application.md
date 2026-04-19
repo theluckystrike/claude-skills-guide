@@ -504,6 +504,14 @@ Related Reading
 - [Claude MD Example for Elixir Phoenix Application](/claude-md-example-for-elixir-phoenix-application/)
 - [Claude MD Example for Laravel PHP Application](/claude-md-example-for-laravel-php-application/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
+- [CLAUDE.md Example for Rails and Ruby Apps](/claude-md-example-for-rails-ruby-application/)
+- [CLAUDE.md Example for Elixir + Phoenix + LiveView — Production Template (2026)](/claude-md-example-for-elixir-phoenix-liveview/)
+- [CLAUDE.md Example for Node.js + Express + Prisma — Production Template (2026)](/claude-md-example-for-nodejs-express-prisma/)
+- [CLAUDE.md Example for Android + Kotlin + Jetpack Compose — Production Template (2026)](/claude-md-example-for-android-kotlin-jetpack/)
+- [CLAUDE.md Example for Flutter + Dart + Riverpod — Production Template (2026)](/claude-md-example-for-flutter-dart-riverpod/)
+- [CLAUDE.md Example for Laravel + PHP — Production Template (2026)](/claude-md-example-for-laravel-php/)
+- [CLAUDE.md Example for Rails + Turbo + Stimulus — Production Template (2026)](/claude-md-example-for-rails-turbo-stimulus/)
+- [CLAUDE.md Example for NestJS + TypeORM — Production Template (2026)](/claude-md-example-for-nestjs-typeorm/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

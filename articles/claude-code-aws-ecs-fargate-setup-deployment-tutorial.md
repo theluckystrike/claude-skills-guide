@@ -315,6 +315,8 @@ Related Reading
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/). Integrating Claude Code into automated deployment pipelines
 - [Claude Code Skills for Terraform Infrastructure as Code](/claude-code-skills-for-infrastructure-as-code-terraform/). IaC patterns for reproducible cloud infrastructure
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Skills for deployment workflows
+- [Claude Code AWS Bedrock Setup Guide](/claude-code-aws-bedrock-setup/)
+- [Claude Code GitHub Actions Setup Guide](/claude-code-github-actions-setup-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

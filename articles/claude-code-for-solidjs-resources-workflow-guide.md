@@ -493,6 +493,14 @@ Related Reading
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
+- [Claude Code For AI Red Teaming — Complete Developer Guide](/claude-code-for-ai-red-teaming-workflow-guide/)
+- [Claude Code for Sanity CMS Workflow Tutorial](/claude-code-for-sanity-cms-workflow-tutorial/)
+- [Claude Code for Fig — Workflow Guide](/claude-code-for-fig-workflow-guide/)
+- [Claude Code for ElastiCache Cluster Workflow](/claude-code-for-elasticache-cluster-workflow/)
+- [Claude Code for CrewAI — Workflow Guide](/claude-code-for-crewai-workflow-guide/)
+- [Claude Code for Jujutsu VCS — Workflow Guide](/claude-code-for-jujutsu-vcs-workflow-guide/)
+- [Claude Code for Beekeeper Studio — Workflow Guide](/claude-code-for-beekeeper-studio-workflow-guide/)
+- [Claude Code for TablePlus — Workflow Guide](/claude-code-for-tableplus-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

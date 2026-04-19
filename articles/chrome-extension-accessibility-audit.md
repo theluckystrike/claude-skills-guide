@@ -475,6 +475,14 @@ Related Reading
 - [Chrome DevTools Performance Profiling: A Practical Guide](/chrome-devtools-performance-profiling/)
 - [Chrome Enterprise Password Manager Policy: A Practical Guide for Developers](/chrome-enterprise-password-manager-policy/)
 - [Chrome Extension Base64 Encoder Decoder: A Practical Guide](/chrome-extension-base64-encoder-decoder/)
+- [Audit Tool Chrome Extension Guide (2026)](/chrome-extension-audit-tool/)
+- [Chrome Extension Privacy Audit: Step-by-Step Guide (2026)](/chrome-extension-privacy-audit/)
+- [Spending Tracker Chrome Extension Guide (2026)](/chrome-extension-spending-tracker-chrome/)
+- [Writing Assistant Chrome Extension Guide (2026)](/chrome-extension-writing-assistant/)
+- [Batch Image Download Chrome Extension Guide (2026)](/chrome-extension-batch-image-download/)
+- [How to Handle Chrome Third Party Cookies Blocked in 2026](/chrome-third-party-cookies-blocked/)
+- [Translate Pages Chrome Extension Guide (2026)](/chrome-extension-translate-pages/)
+- [JavaScript Profiler Chrome Extension Guide (2026)](/chrome-extension-javascript-profiler/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

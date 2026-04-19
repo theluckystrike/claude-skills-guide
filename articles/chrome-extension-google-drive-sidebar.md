@@ -369,6 +369,11 @@ Related Reading
 - [Chrome Extension Asana Task Manager: A Developer's Guide](/chrome-extension-asana-task-manager/)
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
+- [Chrome Extension Google Serp P — Honest Review 2026](/chrome-extension-google-serp-preview/)
+- [Google Workspace Chrome Policies — Developer Guide](/google-workspace-chrome-policies/)
+- [Google Calendar Sidebar Chrome Extension Guide (2026)](/chrome-extension-google-calendar-sidebar/)
+- [Chrome Extension Google Docs Citation Addon](/chrome-extension-google-docs-citation-addon/)
+- [ChatGPT For Google Chrome Extension Guide (2026)](/chatgpt-for-google-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

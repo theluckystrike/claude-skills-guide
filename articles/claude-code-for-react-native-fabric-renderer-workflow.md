@@ -283,6 +283,8 @@ Related Reading
 - [Claude Code Expo EAS Build Submission Workflow Guide](/claude-code-expo-eas-build-submission-workflow-guide/)
 - [Claude Code React Native Expo Workflow Debugging Guide](/claude-code-react-native-expo-workflow-debugging-guide/)
 - [Claude Code React Native Performance Optimization Guide](/claude-code-react-native-performance-optimization-guide/)
+- [How to Use React Native Mobile App Development (2026)](/claude-code-react-native-mobile-app-development-workflow/)
+- [Claude Code for React Native Gesture Handler Guide](/claude-code-for-react-native-gesture-handler-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

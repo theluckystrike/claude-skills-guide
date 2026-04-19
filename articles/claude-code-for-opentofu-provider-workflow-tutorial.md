@@ -276,6 +276,8 @@ Related Reading
 - [Claude Code OpenTofu Guide: Terraform Alternative Workflow](/claude-code-opentofu-terraform-alternative-guide/)
 - [Claude Code Skills for Terraform IaC: Complete Guide](/claude-code-skills-for-infrastructure-as-code-terraform/)
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
+- [Claude Code for OpenTofu Registry Workflow Guide](/claude-code-for-opentofu-registry-workflow-guide/)
+- [Claude Code For Lsp Hover — Complete Developer Guide](/claude-code-for-lsp-hover-provider-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

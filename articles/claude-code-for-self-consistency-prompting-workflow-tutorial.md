@@ -259,6 +259,7 @@ Related Reading
 - [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
+- [How to Use Tree of Thought Prompting with Claude Code (2026)](/claude-code-for-tree-of-thought-prompting-workflow-guide/)
 {% endraw %}
 
 

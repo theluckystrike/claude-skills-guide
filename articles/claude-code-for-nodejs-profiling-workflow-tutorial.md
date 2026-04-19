@@ -253,6 +253,8 @@ Related Reading
 - [Claude Code for 0x Node Flame Workflow Guide](/claude-code-for-0x-node-flame-workflow-guide/)
 - [Claude Code for CPU Profiling Workflow Tutorial Guide](/claude-code-for-cpu-profiling-workflow-tutorial-guide/)
 - [Claude Code for Dhat Memory Profiling Workflow](/claude-code-for-dhat-memory-profiling-workflow/)
+- [Claude Code For Node.js VM Module — Complete Developer Guide](/claude-code-for-nodejs-vm-module-workflow-guide/)
+- [Claude Code For Node.js Worker — Complete Developer Guide](/claude-code-for-nodejs-worker-threads-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

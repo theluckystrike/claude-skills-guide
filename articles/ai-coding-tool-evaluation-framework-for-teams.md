@@ -315,6 +315,14 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 - [How Enterprise Teams Adopt Claude Code Workflow](/how-enterprise-teams-adopt-claude-code-workflow/). Real-world case studies of how enterprise engineering teams roll out and measure AI coding tools.
+- [Claude Code Cookbook: Practical Recipes Collection](/claude-code-cookbook-recipes-collection/)
+- [Claude Code from Zero to Hero Learning Path](/claude-code-from-zero-to-hero-learning-path/)
+- [Claude Code Tips from Experienced Users 2026](/claude-code-tips-from-experienced-users-2026/)
+- [Claude Code Version History and Improvements](/claude-code-version-history-and-improvements/)
+- [Claude Code for Seldon Core Model Serving Guide](/claude-code-for-seldon-core-model-serving-guide/)
+- [Claude Code Responsible AI — Complete Developer Guide](/claude-code-responsible-ai-checklist-guide/)
+- [Claude Code Changelog: What Changed This Week](/claude-code-changelog-what-changed-this-week/)
+- [Claude Code Announcements 2026: Complete Developer Overview](/anthropic-claude-code-announcements-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -254,6 +254,7 @@ Related Reading
 - [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/). Resolve context overload that compounds slow responses
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). Start lean with only the skills that justify their overhead
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). All performance and troubleshooting guides indexed
+- [Chrome Extension GitHub Issues Manager Guide](/chrome-extension-github-issues-manager/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

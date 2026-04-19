@@ -343,6 +343,14 @@ Related Reading
 - [Claude Code for Performance Monitoring Workflow Guide](/claude-code-for-performance-monitoring-workflow-guide/)
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
+- [Claude Code for Upstream Contribution Workflow Guide](/claude-code-for-upstream-contribution-workflow-guide/)
+- [Claude Code For Opa Rego — Complete Developer Guide](/claude-code-for-opa-rego-workflow-tutorial-guide/)
+- [Claude Code for Kong Mesh Workflow Tutorial](/claude-code-for-kong-mesh-workflow-tutorial/)
+- [Claude Code for Capacity Planning Workflow Tutorial](/claude-code-for-capacity-planning-workflow-tutorial/)
+- [Claude Code for SOLID Principles Refactoring Workflow](/claude-code-for-solid-principles-refactoring-workflow/)
+- [Claude Code for Medallion Architecture Workflow](/claude-code-for-medallion-architecture-workflow/)
+- [Claude Code for Code Smell Detection Workflow Guide](/claude-code-for-code-smell-detection-workflow-guide/)
+- [Claude Code for Packer Machine Image Workflow](/claude-code-for-packer-machine-image-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

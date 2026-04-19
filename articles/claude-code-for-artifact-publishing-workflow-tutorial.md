@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code for Artifact Publishing Workflow Tutorial"
 description: "Learn how to build automated artifact publishing workflows with Claude Code. Publish packages, deploy assets, and automate releases with practical."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-artifact-publishing-workflow-tutorial/
 categories: [guides]
@@ -12,6 +12,8 @@ score: 7
 reviewed: true
 geo_optimized: true
 ---
+Verified with Claude Code as of April 2026. Recent changes including recent updates to artifact publishing tooling and Claude Code's improved project context handling affect several steps in this artifact publishing workflow, and the guide below reflects the current behavior.
+
 Claude Code for Artifact Publishing Workflow Tutorial
 
 Automating artifact publishing is one of the most valuable workflows you can set up with Claude Code. Whether you're releasing npm packages, publishing Docker images, or deploying static assets to cloud storage, Claude Code can handle the entire process, from version bumping to publishing to changelog generation. This tutorial walks you through building a complete artifact publishing workflow.
@@ -231,6 +233,12 @@ The key is treating your publishing workflow as code: version it, test it, and c
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

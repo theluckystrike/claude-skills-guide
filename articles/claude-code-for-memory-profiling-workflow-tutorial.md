@@ -558,6 +558,8 @@ Related Reading
 - [Claude Code for Dhat Memory Profiling Workflow](/claude-code-for-dhat-memory-profiling-workflow/)
 - [Claude Code for CPU Profiling Workflow Tutorial Guide](/claude-code-for-cpu-profiling-workflow-tutorial-guide/)
 - [Claude Code for Go pprof Profiling Workflow Tutorial](/claude-code-for-go-pprof-profiling-workflow-tutorial/)
+- [Claude Code for Spectral Linting Workflow Tutorial](/claude-code-for-spectral-linting-workflow-tutorial/)
+- [Claude Code Lerna Independent Versioning Workflow Tutorial](/claude-code-lerna-independent-versioning-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

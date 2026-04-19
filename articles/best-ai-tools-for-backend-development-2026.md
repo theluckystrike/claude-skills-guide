@@ -159,6 +159,14 @@ Related Reading
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Go Module Development — Complete Developer Guide](/claude-code-go-module-development-guide/)
+- [Career Change to Software Development with AI](/claude-code-for-career-changers-into-software-development/)
+- [Setting Up Claude Code Approved Tools — Developer Guide](/setting-up-claude-code-approved-tools-list-for-enterprise/)
+- [Claude Code Rust Crate Development Guide](/claude-code-rust-crate-development-guide/)
+- [Claude Code Roi Calculation For — Developer Guide](/claude-code-roi-calculation-for-development-teams/)
+- [Building Startup MVPs with Claude Code](/claude-code-for-startup-mvp-development/)
+- [Claude Code for Portfolio Project Development](/claude-code-for-portfolio-project-development/)
+- [Claude Code VSCode Restart Reload: Hot Reload Setup (2026)](/claude-code-hot-reload-development-setup/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

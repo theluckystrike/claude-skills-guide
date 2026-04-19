@@ -239,6 +239,7 @@ Related Reading
 - [Claude Code for MLflow Model Registry Workflow Automation](/claude-code-mlflow-model-registry-workflow-automation/)
 - [Claude Code Sentry Error Tracking Source Maps Workflow](/claude-code-sentry-error-tracking-source-maps-workflow/)
 - [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/)
+- [Claude Code for Incident Tracking Workflow Tutorial](/claude-code-for-incident-tracking-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

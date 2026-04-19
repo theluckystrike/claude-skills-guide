@@ -290,6 +290,7 @@ Related Reading
 - [MCP Servers vs. Claude Skills: What Is the Difference](/mcp-servers-vs-claude-skills-what-is-the-difference/). Understand when to use each approach
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/). Configure MCP servers from scratch
 - [Competitive Analysis Automation Workflow](/claude-skills-competitive-analysis-automation-workflow/). Build multi-source research pipelines
+- [Reddit MCP Server for Content Research Automation](/reddit-mcp-server-content-research-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

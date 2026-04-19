@@ -72,3 +72,7 @@ Claude Code should define `createForm<T extends StandardSchema>(schema: T)` that
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)
 - [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/)
 - [Claude Code Drizzle ORM TypeScript Database Workflow](/claude-code-drizzle-orm-typescript-database-workflow/)
+
+## Related Articles
+
+- [Claude Code for Kafka Schema Evolution Workflow](/claude-code-for-kafka-schema-evolution-workflow/)

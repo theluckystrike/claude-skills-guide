@@ -189,3 +189,14 @@ If you rename a skill directory while Claude Code is running, the old name becom
 - [Fix Claude Code Skills Not Showing Up](/fix-claude-code-skills-not-showing-up/)
 - [Fix Claude Not Finding Skills Directory](/fix-claude-not-finding-skills-directory/)
 - [Build Your First Claude Code Skill](/building-your-first-claude-skill/)
+
+## Related Articles
+
+- [Fix Cannot Read Properties of Undefined — Claude (2026)](/claude-code-cannot-read-property-undefined-null-error/)
+- [Fixing Claude Code's 'Unexpected End of Input' JSON Error](/claude-code-unexpected-end-of-input-json-error/)
+- [Fix Claude SSL Certificate Verification Failed (2026)](/claude-code-ssl-certificate-verification-failed-error/)
+- [Claude Code Error: Unexpected Token in JSON Response Fix](/claude-code-error-unexpected-token-in-json-response-fix/)
+- [Fix Claude Code Request Timed Out (2026)](/claude-code-fetch-failed-network-request-skill-error/)
+- [Claude Code Unknown Skill Error: Fix Spawn Issues](/claude-code-spawn-unknown-error-node-skill-fix/)
+- [Fix Claude Code Bun Errors](/claude-code-bun-error/)
+- [Fix Next.js Hydration Errors Using Claude Code](/claude-code-next-js-hydration-error-fix/)

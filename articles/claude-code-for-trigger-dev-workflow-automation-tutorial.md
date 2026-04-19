@@ -295,6 +295,9 @@ Related Reading
 - [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
 - [Claude Skills Serverless Function Development Workflow](/claude-skills-serverless-function-development-workflow/)
 - [Integrations Hub](/integrations-hub/)
+- [Claude Code for Windmill Dev — Workflow Guide](/claude-code-for-windmill-dev-workflow-guide/)
+- [Claude Code for Coder — Workflow Guide](/claude-code-for-coder-remote-dev-workflow-guide/)
+- [Claude Code for GitHub Codespaces — Guide](/claude-code-for-codespaces-dev-environments-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

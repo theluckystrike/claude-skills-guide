@@ -153,3 +153,7 @@ Amazon SP-API (if you also sell on Amazon) uses ASIN (10-character alphanumeric 
 - [Claude Skills for SEO Content Generation](/claude-skills-for-seo-content-generation/) -- product page SEO and schema markup
 - [Claude Skills for Logistics and Supply Chain](/claude-skills-for-logistics-supply-chain/) -- order fulfillment
 - [Claude Skills for Financial Analysis](/claude-skills-for-financial-analysis/) -- revenue and margin reporting
+
+## Related Articles
+
+- [Claude Code Skills for Nonprofit Donation Platforms (2026)](/claude-code-skills-for-nonprofit-donation-platforms/)

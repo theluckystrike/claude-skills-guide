@@ -365,6 +365,7 @@ Related Reading
 - [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-code-agent-pipeline-sequential-vs-parallel/). Choose pipeline execution models that minimize cascading errors
 - [Monitoring and Logging Claude Code Multi-Agent Systems](/monitoring-and-logging-claude-code-multi-agent-systems/). Detect and diagnose errors before they require manual recovery
 - [Claude Skills Hub](/advanced-hub/). Explore advanced multi-agent reliability and error handling patterns
+- [How to Test and Debug Multi Agent Workflows](/how-to-test-and-debug-multi-agent-workflows/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -284,6 +284,8 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-code-skills-to-install-first-2026/). Essential skills to add to your setup
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). Full walkthrough of test-driven development workflows
 - [Claude Skills Token Optimization Guide](/claude-skills-token-optimization-reduce-api-costs/). Reduce API costs while using skills effectively
+- [Claude Code Unleash Feature — Complete Developer Guide](/claude-code-unleash-feature-toggle-nodejs-integration-guide/)
+- [Claude Code Japanese Developer Team Integration Tips](/claude-code-japanese-developer-team-integration-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

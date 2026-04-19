@@ -177,6 +177,11 @@ Related Reading
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Claude Code Automated Pull Request Review Workflow Guide](/claude-code-automated-pull-request-review-workflow-guide/)
 - [Claude Code for Async Code Review Workflow](/claude-code-for-async-code-review-workflow/)
+- [Claude Code for Langfuse LLM Analytics — Guide](/claude-code-for-langfuse-llm-analytics-workflow-guide/)
+- [Claude Code for Instructor Structured LLM — Guide](/claude-code-for-instructor-structured-llm-workflow-guide/)
+- [Claude Code For Ray Serve LLM — Complete Developer Guide](/claude-code-for-ray-serve-llm-workflow-tutorial-guide/)
+- [How to Use For JSON Mode LLM — Complete Developer (2026)](/claude-code-for-json-mode-llm-workflow-guide/)
+- [Claude Code For LLM Caching — Complete Developer Guide](/claude-code-for-llm-caching-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -283,6 +283,14 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 - [Claude Code for jQuery to React Migration Workflow](/claude-code-for-jquery-to-react-migration-workflow/). A concrete migration example: how Claude Code automates the jQuery-to-React rewrite pattern step by step.
+- [Claude Code For Formik Form — Complete Developer Guide](/claude-code-for-formik-form-workflow-tutorial/)
+- [Claude Code Prettier Code Formatting Guide](/claude-code-prettier-code-formatting-guide/)
+- [Claude Code SQLAlchemy Alembic Migrations Deep Dive Guide](/claude-code-sqlalchemy-alembic-migrations-deep-dive-guide/)
+- [Claude Code for PostgreSQL JSONB Workflow Tutorial](/claude-code-for-postgres-jsonb-workflow-tutorial/)
+- [Claude Code For Homebrew Formula — Complete Developer Guide](/claude-code-for-homebrew-formula-workflow-tutorial/)
+- [Claude Code for Electric SQL Sync Workflow Guide](/claude-code-for-electric-sql-sync-workflow-guide/)
+- [Claude Code for Redis Streams Workflow Guide](/claude-code-for-redis-streams-workflow-guide/)
+- [Auto-Format Code with Claude Code Hooks](/claude-code-hooks-auto-format-prettier-eslint/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

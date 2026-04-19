@@ -559,6 +559,14 @@ Related Reading
 - [AI Study Helper Chrome Extension: A Developer's Guide](/ai-study-helper-chrome-extension/)
 - [Chrome Extension Wolfram Alpha Helper](/chrome-extension-wolfram-alpha-helper/)
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)
+- [Chrome Helper High Cpu Mac — Developer Guide](/chrome-helper-high-cpu-mac/)
+- [Quizlet Helper Chrome Extension: Developer Guide (2026)](/chrome-extension-quizlet-helper/)
+- [Cashback Chrome Extension Best 2026](/cashback-chrome-extension-best-2026/)
+- [Perplexity Chrome Extension — Honest Review 2026](/perplexity-chrome-extension-review/)
+- [Rakuten Chrome Extension Review](/rakuten-chrome-extension-review/)
+- [JSON Formatter Chrome Extension — Honest Review 2026](/json-formatter-chrome-extension-best/)
+- [Chrome Managed Browser vs — Developer Comparison 2026](/chrome-managed-browser-vs-unmanaged/)
+- [Claude AI Chrome Extension — Setup Guide (2026)](/claude-ai-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

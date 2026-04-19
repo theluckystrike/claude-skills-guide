@@ -269,6 +269,14 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Understanding which skills are most powerful helps you prioritize which ones need tightest permission controls
 - [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). The `tools` field in skill YAML directly controls the permission surface; this guide explains every available option
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Auto-invocation can trigger skills with broad tool access unexpectedly; understanding the mechanism is part of a sound security posture
+- [Manifest V3 vs V2 Security — Developer Comparison 2026](/manifest-v3-vs-v2-security/)
+- [Claude Code Clerk Organization — Complete Developer Guide](/claude-code-clerk-organization-roles-permissions-workflow/)
+- [Claude Code for Zero Trust Security Workflow Guide](/claude-code-for-zero-trust-security-workflow-guide/)
+- [Claude Code for Falco Runtime Security Workflow](/claude-code-for-falco-runtime-security-workflow/)
+- [Claude Code For Security Hub — Complete Developer Guide](/claude-code-for-security-hub-workflow/)
+- [Should I Use Claude Code For Security — Developer Guide](/should-i-use-claude-code-for-security-sensitive-applications/)
+- [Claude Code Security Engineer Vulnerability Triage Workflow](/claude-code-security-engineer-vulnerability-triage-workflow/)
+- [Claude Code Security Engineer Threat Modeling Workflow Tips](/claude-code-security-engineer-threat-modeling-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

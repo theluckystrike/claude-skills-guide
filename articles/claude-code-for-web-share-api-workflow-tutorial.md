@@ -605,6 +605,9 @@ Related Reading
 - [Claude Code Actix Web Rust API Guide](/claude-code-actix-web-rust-api-guide/)
 - [Claude Code for Bruno API Client Workflow Tutorial](/claude-code-for-bruno-api-client-workflow-tutorial/)
 - [Claude Code for Core Web Vitals Workflow Tutorial](/claude-code-for-core-web-vitals-workflow-tutorial/)
+- [How to Use LaTeX Document Writing Workflow (2026)](/claude-code-latex-document-writing-workflow-tutorial/)
+- [Claude Code for Spring WebFlux Workflow Tutorial](/claude-code-for-spring-webflux-workflow-tutorial/)
+- [Claude Code for Self-Consistency Prompting Workflow Tutorial](/claude-code-for-self-consistency-prompting-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

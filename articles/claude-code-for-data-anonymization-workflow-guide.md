@@ -356,6 +356,7 @@ Related Reading
 - [Claude Code Data Cleaning and Preprocessing Workflow](/claude-code-data-cleaning-and-preprocessing-workflow/)
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 - [Claude Code Data Visualization Workflow for Researchers](/claude-code-data-visualization-workflow-for-researchers/)
+- [Claude Code for Soda Core Data Quality Workflow](/claude-code-for-soda-core-data-quality-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

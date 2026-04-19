@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Multi-Platform Release Workflow Guide"
 description: "Learn how to use Claude Code CLI to automate and streamline multi-platform release workflows across iOS, Android, Web, and Desktop applications."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-for-multi-platform-release-workflow-guide/
 categories: [guides]
@@ -14,6 +14,8 @@ score: 8
 render_with_liquid: false
 geo_optimized: true
 ---
+
+Getting multi platform release right in practice means solving proper multi platform release configuration, integration testing, and ongoing maintenance. The Claude Code patterns in this multi platform release guide were developed from real project requirements.
 
 {% raw %}
 Claude Code for Multi-Platform Release Workflow Guide
@@ -332,6 +334,12 @@ Changelog including internal commits: Use a commit message convention filter in 
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

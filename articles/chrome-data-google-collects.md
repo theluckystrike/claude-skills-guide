@@ -408,6 +408,14 @@ Related Reading
 - [How to Block Chrome from Sending Data to Google](/block-chrome-sending-data-google/)
 - [AI Data Extractor Chrome Extension: A Developer's Guide](/ai-data-extractor-chrome-extension/)
 - [AI Reading Assistant Chrome: Technical Implementation Guide](/ai-reading-assistant-chrome/)
+- [Structured Data Tester Chrome Extension Guide (2026)](/chrome-extension-structured-data-tester/)
+- [Google Meet Chrome Extension Enhancer Guide (2026)](/google-meet-chrome-extension-enhancer/)
+- [Chrome Extension Google Serp P — Honest Review 2026](/chrome-extension-google-serp-preview/)
+- [Google Workspace Chrome Policies — Developer Guide](/google-workspace-chrome-policies/)
+- [Have I Been Pwned Chrome Extension Guide](/have-i-been-pwned-chrome/)
+- [HTTP Header Viewer Chrome Extension Guide (2026)](/chrome-extension-http-header-viewer/)
+- [Refined GitHub Chrome Extension Guide (2026)](/refined-github-chrome-extension/)
+- [How to Save Research Sessions with Chrome Extensions](/chrome-extension-save-research-sessions/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

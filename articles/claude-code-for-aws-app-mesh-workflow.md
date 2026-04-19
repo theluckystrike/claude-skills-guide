@@ -401,6 +401,8 @@ Related Reading
 - [Claude Code AWS S3 Multipart Upload Workflow Guide](/claude-code-aws-s3-multipart-upload-workflow-guide/)
 - [Claude Code for AWS WAF Workflow: A Practical Guide](/claude-code-for-aws-waf-workflow/)
 - [Claude Code for Bolt.new Web App Workflow Guide](/claude-code-for-bolt-new-web-app-workflow-guide/)
+- [Claude Code for AWS Config Rules Workflow](/claude-code-for-aws-config-rules-workflow/)
+- [Claude Code with AWS Bedrock Guide](/claude-code-aws-bedrock/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

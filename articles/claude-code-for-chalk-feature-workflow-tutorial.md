@@ -187,6 +187,7 @@ Related Reading
 - [Claude Code Feature Flags Workflow Git Guide](/claude-code-feature-flags-workflow-git-guide/)
 - [Claude Code for ML Engineer: Feature Store Workflow.](/claude-code-ml-engineer-feature-store-workflow-daily-tips/)
 - [Claude Code PostHog Feature Flags Analytics Workflow](/claude-code-posthog-feature-flags-analytics-workflow/)
+- [Claude Code for Hopsworks Feature Store Workflow](/claude-code-for-hopsworks-feature-store-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

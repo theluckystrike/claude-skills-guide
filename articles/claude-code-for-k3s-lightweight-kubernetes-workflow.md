@@ -191,6 +191,11 @@ Related Reading
 - [Claude Code for Azure Arc Kubernetes Workflow](/claude-code-for-azure-arc-kubernetes-workflow/)
 - [Claude Code for k9s Kubernetes Terminal Workflow Guide](/claude-code-for-k9s-kubernetes-terminal-workflow-guide/)
 - [Claude Code for Kubernetes CSI Driver Workflow](/claude-code-for-kubernetes-csi-driver-workflow/)
+- [Using Claude Code for Kubernetes Priority Class Workflow](/claude-code-for-kubernetes-priority-class-workflow/)
+- [Claude Code Kubernetes Secrets Management — Developer Guide](/claude-code-kubernetes-secrets-management/)
+- [Claude Code Kubernetes Ingress Configuration](/claude-code-kubernetes-ingress-configuration/)
+- [Claude Code Kubernetes Deployment Workflow Guide](/claude-code-kubernetes-deployment-workflow-guide/)
+- [How to Use Claude Skills Kubernetes: HPA Autoscaling (2026)](/claude-code-kubernetes-hpa-autoscaling-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

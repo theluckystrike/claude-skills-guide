@@ -218,6 +218,8 @@ Related Reading
 - [Claude Code for Multi-Language Navigation Workflow](/claude-code-for-multi-language-navigation-workflow/)
 - [Claude Code for Multi-Platform Release Workflow Guide](/claude-code-for-multi-platform-release-workflow-guide/)
 - [Claude Code for Node.js Cluster Module Workflow](/claude-code-for-node-js-cluster-module-workflow/)
+- [Claude Code for ElastiCache Cluster Workflow](/claude-code-for-elasticache-cluster-workflow/)
+- [Claude Code Freelancer Multi-Client Project Workflow Guide](/claude-code-freelancer-multi-client-project-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

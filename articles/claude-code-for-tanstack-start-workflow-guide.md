@@ -295,6 +295,7 @@ Related Reading
 - [Claude Code for T3 Stack tRPC Next.js Workflow](/claude-code-for-t3-stack-trpc-nextjs-workflow/)
 - [Claude MD Example for Remix Fullstack Application](/claude-md-example-for-remix-fullstack-application/)
 - [Claude Code Accessibility Workflow for Frontend Engineers](/claude-code-accessibility-workflow-for-frontend-engineers/)
+- [Claude Code For Sprint Start — Complete Developer Guide](/claude-code-for-sprint-start-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -230,6 +230,7 @@ Related Reading
 - [1Password vs Bitwarden Chrome: Which Password Manager.](/1password-vs-bitwarden-chrome/)
 - [Best AI Code Review Tools 2026 Guide](/best-ai-code-review-tools-2026-guide/)
 - [Best AI Pair Programming Tools 2026 Review](/best-ai-pair-programming-tools-2026-review/)
+- [Claude Code for Stow Dotfiles Manager Workflow Tutorial](/claude-code-for-stow-dotfiles-manager-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

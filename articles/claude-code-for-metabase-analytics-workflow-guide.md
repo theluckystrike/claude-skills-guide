@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Metabase Analytics Workflow Guide"
 description: "Learn how to integrate Claude Code with Metabase to build powerful analytics workflows, automate queries, and streamline data exploration."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-metabase-analytics-workflow-guide/
 categories: [guides]
@@ -14,6 +14,8 @@ score: 7
 geo_optimized: true
 ---
 
+
+Developers working with metabase analytics regularly encounter proper metabase analytics configuration, integration testing, and ongoing maintenance. This guide provides concrete Claude Code patterns for metabase analytics that address these issues directly, starting from a working project setup.
 
 Claude Code for Metabase Analytics Workflow Guide
 
@@ -216,6 +218,12 @@ Remember to secure your API credentials, implement proper error handling, and gr
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

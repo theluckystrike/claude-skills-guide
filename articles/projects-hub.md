@@ -255,6 +255,14 @@ Related Reading
 - [Comparisons Hub](/comparisons-hub/). How Claude Code stacks up against Copilot, Cursor, and other tools
 - [Workflows Hub](/workflows-hub/). Practical skill workflows for code review, documentation, and CI/CD
 - [Pricing Hub](/pricing-hub/). Cost optimization and Claude Code pricing breakdown
+- [Claude Code Developer Portfolio Projects Guide](/claude-code-developer-portfolio-projects-guide/)
+- [Claude Code Changelog: What Changed This Week](/claude-code-changelog-what-changed-this-week/)
+- [Claude Code Kafka Consumer Producer Tutorial Guide](/claude-code-kafka-consumer-producer-tutorial-guide/)
+- [Claude Code for Continuing Education as a Developer](/claude-code-for-continuing-education-as-a-developer/)
+- [Claude Code Weights and Biases Experiment Tracking](/claude-code-weights-and-biases-experiment-tracking/)
+- [Claude Code Flask Blueprint Architecture Guide](/claude-code-flask-blueprint-architecture-guide/)
+- [Claude Code Pulumi TypeScript Infra Guide](/claude-code-pulumi-typescript-infra-guide/)
+- [Claude Code for Writing Research Methodology Sections](/claude-code-for-writing-research-methodology-sections/)
 
 ---
 

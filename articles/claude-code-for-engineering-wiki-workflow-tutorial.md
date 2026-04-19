@@ -303,6 +303,7 @@ Related Reading
 - [Claude Code for Prompt Engineering Techniques: 2026 Workflow Guide](/claude-code-for-prompt-engineering-techniques-2026-workflow-/)
 - [Claude Code for Team Wiki Maintenance Workflow](/claude-code-for-team-wiki-maintenance-workflow/)
 - [Claude Code for Wiki Analytics Workflow Tutorial Guide](/claude-code-for-wiki-analytics-workflow-tutorial-guide/)
+- [Claude Code Engineering Manager Pull Request Review Workflow](/claude-code-engineering-manager-pull-request-review-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

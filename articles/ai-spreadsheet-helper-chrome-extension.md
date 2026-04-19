@@ -172,6 +172,11 @@ Related Reading
 - [AI Study Helper Chrome Extension: A Developer's Guide](/ai-study-helper-chrome-extension/)
 - [Chrome Extension Blackboard Learn Helper: A Developer Guide](/chrome-extension-blackboard-learn-helper/)
 - [Chrome Extension Canvas LMS Helper: A Developer Guide](/chrome-extension-canvas-lms-helper/)
+- [Chrome Extension Thesis Writing Helper](/chrome-extension-thesis-writing-helper/)
+- [Chrome Helper High Cpu Mac — Developer Guide](/chrome-helper-high-cpu-mac/)
+- [Quizlet Helper Chrome Extension: Developer Guide (2026)](/chrome-extension-quizlet-helper/)
+- [Chrome Extension PubMed Search Helper](/chrome-extension-pubmed-search-helper/)
+- [Leetcode Helper Chrome Extension Guide (2026)](/chrome-extension-leetcode-helper/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -264,6 +264,8 @@ Related Reading
 - [Claude Code for Developer Blog Post Writing Workflow](/claude-code-for-developer-blog-post-writing-workflow/)
 - [Claude Code for Technical Documentation Workflow Guide](/claude-code-for-technical-documentation-workflow-guide/)
 - [Claude Code LaTeX Document Writing Workflow Tutorial](/claude-code-latex-document-writing-workflow-tutorial/)
+- [Claude Code Technical Cofounder — Complete Developer Guide](/claude-code-technical-cofounder-workflow-productivity/)
+- [Claude Code Tech Lead Technical — Complete Developer Guide](/claude-code-tech-lead-technical-debt-prioritization-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

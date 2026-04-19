@@ -495,6 +495,11 @@ Related Reading
 - [Discord MCP Server Community Automation Guide](/discord-mcp-server-community-automation-guide/)
 - [Slack MCP Server Team Notification Automation](/slack-mcp-server-team-notification-automation/)
 - [Integrations Hub: MCP Servers and Claude Skills](/integrations-hub/)
+- [Mailchimp MCP Server Marketing Automation Guide](/mailchimp-mcp-server-marketing-automation-guide/)
+- [Intercom MCP Server: Automating Customer Data Workflows](/intercom-mcp-server-customer-data-automation/)
+- [Notion MCP Server Knowledge Base Automation](/notion-mcp-server-knowledge-base-automation/)
+- [Datadog MCP Server Monitoring Automation with Claude](/datadog-mcp-server-monitoring-automation-claude/)
+- [Ghost MCP Server: Blogging Automation Workflow](/ghost-mcp-server-blogging-automation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

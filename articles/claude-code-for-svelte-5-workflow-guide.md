@@ -75,3 +75,7 @@ Claude Code should use `let todos = $state<Todo[]>([])` for the list, `let compl
 - [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
 - [Vibe Coding for Web Apps NextJS Vercel Guide](/vibe-coding-for-web-apps-nextjs-vercel-guide/)
+
+## Related Articles
+
+- [Claude Code for Svelte Animations Workflow Tutorial](/claude-code-for-svelte-animations-workflow-tutorial/)

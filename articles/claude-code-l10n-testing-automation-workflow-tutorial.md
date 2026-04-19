@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code L10n Testing Automation Workflow Tutorial"
 description: "Build automated localization testing pipelines with Claude Code skills. Learn to integrate tdd, pdf, and supermemory skills for comprehensive l10n."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [tutorials]
 tags: [claude-code, claude-skills, l10n, testing, automation, i18n]
 author: "Claude Skills Guide"
@@ -13,6 +13,8 @@ permalink: /claude-code-l10n-testing-automation-workflow-tutorial/
 render_with_liquid: false
 geo_optimized: true
 ---
+
+Everything below targets l10n testing automation and the specific Claude Code patterns that make l10n testing automation work smoothly. For related approaches, see [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/).
 
 {% raw %}
 [Localization (L10n) testing remains one of the most time-consuming aspects of software development](/best-claude-code-skills-to-install-first-2026/) Teams often struggle with maintaining string consistency across languages, validating translated content, and catching encoding issues before deployment. Claude Code skills offer a practical solution by automating repetitive localization testing tasks and creating reproducible workflows.
@@ -264,6 +266,12 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

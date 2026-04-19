@@ -317,6 +317,14 @@ Related Reading
 - [AI Task Prioritizer Chrome Extension: A Practical Guide for Developers](/ai-task-prioritizer-chrome-extension/)
 - [Chrome Extension Asana Task Manager: A Developer's Guide](/chrome-extension-asana-task-manager/)
 - [Chrome Task Manager Memory: A Developer Guide to.](/chrome-task-manager-memory/)
+- [How AI Agents Reason Before — Complete Developer Guide](/how-ai-agents-reason-before-taking-actions-guide/)
+- [What Is Agentic AI And Why It Matters — Developer Guide](/what-is-agentic-ai-and-why-it-matters/)
+- [Claude Code for Self-Taught Developer Upskilling](/claude-code-for-self-taught-developer-upskilling/)
+- [What Can Claude Code Do A Plain English — Developer Guide](/what-can-claude-code-do-a-plain-english-explanation/)
+- [Claude Code Keeps Adding Code I Did Not — Developer Guide](/claude-code-keeps-adding-code-i-did-not-ask-for/)
+- [Claude Code Model Compression and Quantization Guide](/claude-code-model-compression-quantization/)
+- [Claude Code Weekly Digest Resources for Developers](/claude-code-weekly-digest-resources/)
+- [Claude Code Impact on Developer Happiness](/claude-code-impact-on-developer-happiness/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

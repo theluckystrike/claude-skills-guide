@@ -374,6 +374,14 @@ Related Reading
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)
+- [Claude Code for Flamegraph Visualization Workflow](/claude-code-for-flamegraph-visualization-workflow/)
+- [Claude Code for Glow Markdown Viewer Workflow](/claude-code-for-glow-markdown-viewer-workflow/)
+- [Claude Code for LazyGit Workflow Tutorial Guide](/claude-code-for-lazygit-workflow-tutorial-guide/)
+- [Claude Code for Nightwatch.js Workflow Guide](/claude-code-for-nightwatch-js-workflow-guide/)
+- [Claude Code for SonarQube Quality Gate Workflow Guide](/claude-code-for-sonarqube-quality-gate-workflow-guide/)
+- [Claude Code For Suricata Ids — Complete Developer Guide](/claude-code-for-suricata-ids-workflow-guide/)
+- [Claude Code for Knip Dead Code Finder Workflow](/claude-code-for-knip-dead-code-finder-workflow/)
+- [Claude Code For Prefect Ml — Complete Developer Guide](/claude-code-for-prefect-ml-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

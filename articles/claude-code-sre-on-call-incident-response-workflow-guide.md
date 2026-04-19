@@ -189,6 +189,7 @@ Related Reading
 - [Claude Code for Incident Tracking Workflow Tutorial](/claude-code-for-incident-tracking-workflow-tutorial/)
 - [Claude Code for On-Call Rotation Workflow Tutorial](/claude-code-for-on-call-rotation-workflow-tutorial/)
 - [Claude Code for On-Call Runbook Workflow Tutorial](/claude-code-for-on-call-runbook-workflow-tutorial/)
+- [Claude Code for Incident Retrospective Workflow Guide](/claude-code-for-incident-retrospective-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

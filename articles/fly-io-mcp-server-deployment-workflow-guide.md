@@ -449,6 +449,14 @@ Related Reading
 - [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Claude Code for Fly.io Deployment Automation Workflow](/claude-code-for-fly-io-deployment-automation-workflow/)
 - [Integrations Hub](/integrations-hub/)
+- [Claude Code Firebase MCP Integration](/claude-code-firebase-mcp/)
+- [Claude Code Flutter MCP Server Guide](/claude-code-flutter-mcp/)
+- [Claude Code Azure MCP Server Guide](/claude-code-azure-mcp/)
+- [Figma MCP Server: Design to Code Workflow Guide](/figma-mcp-server-design-to-code-workflow/)
+- [Heroku MCP Server Application Deployment Guide](/heroku-mcp-server-application-deployment-guide/)
+- [How to Choose the Right MCP Server](/how-to-choose-the-right-mcp-server/)
+- [PagerDuty MCP Server Incident Management Guide](/pagerduty-mcp-server-incident-management-guide/)
+- [Claude Code for Playwright MCP — Workflow Guide](/claude-code-for-playwright-mcp-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

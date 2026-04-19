@@ -333,6 +333,12 @@ Related Reading
 - [Chrome Extension Screen Recorder for Meetings: A.](/chrome-extension-screen-recorder-meetings/)
 - [Chrome Extension Development in 2026: A Practical Manifest V3 Guide](/chrome-extension-development-2026/)
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)
+- [Meeting Scheduler Chrome Extension Guide (2026)](/meeting-scheduler-chrome-extension/)
+- [AI Youtube Summary Chrome Extension Guide (2026)](/ai-youtube-summary-chrome-extension/)
+- [Meeting Transcription Live Chrome Extension Guide (2026)](/chrome-extension-meeting-transcription-live/)
+- [Time Zone Meeting Planner Chrome Extension Guide (2026)](/chrome-extension-time-zone-meeting-planner/)
+- [Auto Summarize Articles Chrome Extension Guide (2026)](/chrome-extension-auto-summarize-articles/)
+- [Auto Caption Video Chrome Extension Guide (2026)](/chrome-extension-auto-caption-video/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

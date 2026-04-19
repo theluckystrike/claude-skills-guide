@@ -313,6 +313,9 @@ Related Reading
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Complete token optimization guide
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Skills worth the token cost
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
+- [Claude Code Keeps Switching to Wrong File Context](/claude-code-keeps-switching-to-wrong-file-context/)
+- [Fix Claude Code MCP Tools Excessive Context — Quick Guide](/claude-code-mcp-tools-excessive-context-fix/)
+- [Claude Memory Feature vs SuperMemory Skill](/claude-memory-feature-vs-supermemory-skill-comparison/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -133,3 +133,7 @@ Container tracking APIs (ocean carriers like Maersk, MSC, CMA CGM) each have dif
 - [Claude Skills for E-Commerce Platforms](/claude-skills-for-ecommerce-platforms/) -- order fulfillment integration
 - [Claude Skills for Manufacturing QA](/claude-skills-for-manufacturing-qa/) -- supplier quality tracking
 - [Claude Skills Data Flow Patterns](/claude-skills-data-flow-patterns/) -- piping EDI output to downstream systems
+
+## Related Articles
+
+- [Claude Skills for Logistics Supply Chain Software](/claude-skills-for-logistics-supply-chain-software/)

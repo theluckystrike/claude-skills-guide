@@ -506,6 +506,14 @@ Related Reading
 - [Chrome Extension Session Storage Editor: Complete.](/chrome-extension-session-storage-editor/)
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)
 - [AI Form Filler Chrome Extension: A Developer and Power.](/ai-form-filler-chrome-extension/)
+- [PDF Editor Free Chrome Extension Guide (2026)](/chrome-extension-pdf-editor-free/)
+- [SVG Editor Chrome Extension Guide (2026)](/chrome-extension-svg-editor/)
+- [JSON Formatter Chrome Extension — Honest Review 2026](/json-formatter-chrome-extension-best/)
+- [Claude AI Chrome Extension — Setup Guide (2026)](/claude-ai-chrome-extension/)
+- [AI Presentation Maker Chrome Extension Guide (2026)](/ai-presentation-maker-chrome-extension/)
+- [Latex Equation Editor Chrome Extension Guide (2026)](/chrome-extension-latex-equation-editor/)
+- [Chrome Energy Saver Mode — Developer Guide (2026)](/chrome-energy-saver-mode/)
+- [AI Headline Writer Chrome Extension Guide (2026)](/ai-headline-writer-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

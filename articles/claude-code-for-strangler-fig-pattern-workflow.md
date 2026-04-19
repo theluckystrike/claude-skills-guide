@@ -225,6 +225,9 @@ Related Reading
 - [Claude Code for Ambassador Sidecar Pattern Workflow](/claude-code-for-ambassador-sidecar-pattern-workflow/)
 - [Claude Code for BFF API Pattern Workflow Guide](/claude-code-for-bff-api-pattern-workflow-guide/)
 - [Claude Code for Claim Check Pattern Workflow](/claude-code-for-claim-check-pattern-workflow/)
+- [Claude Code for Fig — Workflow Guide](/claude-code-for-fig-workflow-guide/)
+- [Claude Code for Mediator Pattern and CQRS Workflow](/claude-code-for-mediator-pattern-cqrs-workflow/)
+- [Claude Code for Gateway Routing Pattern Workflow](/claude-code-for-gateway-routing-pattern-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

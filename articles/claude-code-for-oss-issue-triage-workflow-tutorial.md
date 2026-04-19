@@ -388,6 +388,7 @@ Related Reading
 - [Claude Code for Claude Issue Triage Workflow Tutorial Guide](/claude-code-for-claude-issue-triage-workflow-tutorial-guide/)
 - [Claude Code for OSS Good First Issue Workflow Guide](/claude-code-for-oss-good-first-issue-workflow-guide/)
 - [Claude Code Open Source Issue Triage Workflow Guide](/claude-code-open-source-issue-triage-workflow-guide/)
+- [Claude Code For Oss Deprecation — Complete Developer Guide](/claude-code-for-oss-deprecation-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -457,6 +457,7 @@ Related Reading
 - [Claude Code for Cloudflare Workers KV Workflow](/claude-code-for-cloudflare-workers-kv-workflow/)
 - [Claude Code for Web Workers Workflow Guide](/claude-code-for-web-workers-workflow-guide/)
 - [Claude Skills for PHP Laravel Development Workflow](/claude-skills-for-php-laravel-development-workflow/)
+- [Claude Code Laravel Livewire Real-Time Workflow Tutorial](/claude-code-laravel-livewire-real-time-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

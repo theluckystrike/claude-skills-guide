@@ -307,6 +307,8 @@ Related Reading
 - [Claude Skills Token Optimization: Reduce API Costs Guide](/claude-skills-token-optimization-reduce-api-costs/). Optimize token usage so each skill invocation consumes less before you hit rate limits.
 - [Measuring Claude Code Skill Efficiency Metrics](/measuring-claude-code-skill-efficiency-metrics/). Track which skills consume the most API budget and prioritize optimization efforts.
 - [Advanced Claude Skills](/advanced-hub/). Advanced patterns for building reliable, rate-limit-aware automation pipelines.
+- [Standardizing Pull Request Workflows with Claude Code Skills](/standardizing-pull-request-workflows-with-claude-code-skills/)
+- [Claude Skills for Puppet Chef Configuration Management](/claude-skills-for-puppet-chef-configuration-management/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

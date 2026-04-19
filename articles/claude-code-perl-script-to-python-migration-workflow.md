@@ -236,6 +236,7 @@ Related Reading
 - [Claude Code for jQuery to React Migration Workflow](/claude-code-for-jquery-to-react-migration-workflow/)
 - [Claude Code Classic ASP to .NET Migration Guide](/claude-code-classic-asp-to-dotnet-migration-guide/)
 - [Claude Code Data Engineer ETL Debugging Daily Workflow](/claude-code-data-engineer-etl-debugging-daily-workflow/)
+- [Claude Code Vba Excel Macros To Python — Developer Guide](/claude-code-vba-excel-macros-to-python-migration/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

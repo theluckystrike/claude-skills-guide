@@ -465,6 +465,14 @@ Related Reading
 - [Claude Code for Apache Flink Workflow Tutorial](/claude-code-for-apache-flink-workflow-tutorial/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code for Code Splitting Workflow Tutorial](/claude-code-for-code-splitting-workflow-tutorial/)
+- [Claude Code for jsPolicy Workflow Tutorial Guide](/claude-code-for-jsolicy-workflow-tutorial-guide/)
+- [Claude Code for Hardhat Plugins Workflow](/claude-code-for-hardhat-plugins-workflow/)
+- [Claude Code for Babylon.js Workflow Tutorial Guide](/claude-code-for-babylon-js-workflow-tutorial-guide/)
+- [Claude Code for Argo Rollouts Canary Workflow Guide](/claude-code-for-argo-rollouts-canary-workflow-guide/)
+- [Claude Code For Tooljet Low Code — Complete Developer Guide](/claude-code-for-tooljet-low-code-workflow-guide/)
+- [Claude Code for Across Protocol Workflow](/claude-code-for-across-protocol-workflow/)
+- [Claude Code Phoenix LiveView Workflow Guide](/claude-code-phoenix-liveview-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

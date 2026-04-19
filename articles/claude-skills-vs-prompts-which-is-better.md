@@ -225,6 +225,7 @@ Related Reading
 - [Official vs Community Claude Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/). Not all skills are equal, know the difference
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate without explicit prompting
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The skills worth replacing prompts with
+- [Why Does Claude Code Work Better With — Developer Guide](/why-does-claude-code-work-better-with-skills-loaded/)
 
 ---
 

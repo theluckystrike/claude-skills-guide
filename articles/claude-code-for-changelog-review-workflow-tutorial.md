@@ -244,6 +244,8 @@ Related Reading
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Claude Code Automated Pull Request Review Workflow Guide](/claude-code-automated-pull-request-review-workflow-guide/)
 - [Claude Code for Async Code Review Workflow](/claude-code-for-async-code-review-workflow/)
+- [Claude Code for Keep a Changelog Workflow Tutorial](/claude-code-for-keep-a-changelog-workflow-tutorial/)
+- [Claude Code For Pr Changelog — Complete Developer Guide](/claude-code-for-pr-changelog-generation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

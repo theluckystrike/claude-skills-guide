@@ -257,6 +257,8 @@ Related Reading
 - [Claude Skills Slow Performance: Speed Up Guide](/claude-skills-slow-performance-speed-up-guide/). Investigate related performance bottlenecks that accompany memory limit errors.
 - [Claude Code Skills Context Window Exceeded Error Fix](/claude-code-skills-context-window-exceeded-error-fix/). Resolve context window errors that often appear together with memory limit issues.
 - [Getting Started with Claude Skills](/getting-started-hub/). Learn best practices for skill configuration to prevent resource limit errors.
+- [Fix Claude Code Install Killed on Linux](/claude-code-install-killed-low-memory-linux-fix/)
+- [Chrome GPU Process High Memory: Fix Guide (2026)](/chrome-gpu-process-high-memory/)
 
 Built by Claude Skills Guide. More at [zovo.one](https://zovo.one)
 

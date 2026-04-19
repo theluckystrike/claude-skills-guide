@@ -328,6 +328,9 @@ Related Reading
 - [Claude Code for 0x Node Flame Workflow Guide](/claude-code-for-0x-node-flame-workflow-guide/)
 - [Claude Code for Java Virtual Threads (Loom) Workflow](/claude-code-for-java-virtual-threads-loom-workflow/)
 - [Claude Code for Node.js Cluster Module Workflow](/claude-code-for-node-js-cluster-module-workflow/)
+- [Claude Code for Spring Virtual Threads Workflow](/claude-code-for-spring-virtual-threads-workflow/)
+- [Claude Code for Workbox Service Worker Workflow Guide](/claude-code-for-workbox-service-worker-workflow-guide/)
+- [Claude Code For Node.js VM Module — Complete Developer Guide](/claude-code-for-nodejs-vm-module-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -290,6 +290,8 @@ Related Reading
 - [Claude Code Input Validation and Sanitization Patterns Guide](/claude-code-input-validation-sanitization-patterns-guide/). Pair error handling with solid input validation to prevent the errors before they need handling.
 - [Express to Fastify Migration with Claude Code (2026)](/claude-code-express-to-fastify-migration-tutorial-2026/). When your Express error handling outgrows the framework, migrate to Fastify with Claude Code assistance.
 - [Getting Started with Claude Skills](/getting-started-hub/). Learn the foundational Claude skills that power Express and Node.js development workflows.
+- [Fix Claude Md For Error Handling Patterns — Quick Guide](/claude-md-for-error-handling-patterns-guide/)
+- [Claude Code Prisma Error Handling Patterns (2026)](/claude-code-prisma-transactions-and-error-handling-patterns/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -328,6 +328,9 @@ Related Reading
 - [Chrome Extension Blog Post Outline Generator: A Practical Guide for Content Creators](/chrome-extension-blog-post-outline-generator/)
 - [Claude Code for Developer Blog Post Writing Workflow](/claude-code-for-developer-blog-post-writing-workflow/)
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
+- [AI LinkedIn Post Writer Chrome: Tools and Techniques](/ai-linkedin-post-writer-chrome/)
+- [Chrome Extension LinkedIn Post Scheduler](/chrome-extension-linkedin-post-scheduler/)
+- [Instagram Post Scheduler Chrome Extension Guide (2026)](/chrome-extension-instagram-post-scheduler/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

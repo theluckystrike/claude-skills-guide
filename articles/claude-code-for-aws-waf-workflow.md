@@ -423,6 +423,10 @@ Related Reading
 - [Chrome Extension Enterprise Approval Workflow: A Practical Guide](/chrome-extension-enterprise-approval-workflow/)
 - [Claude Code AWS S3 Multipart Upload Workflow Guide](/claude-code-aws-s3-multipart-upload-workflow-guide/)
 - [Claude Code for AWS App Mesh Workflow](/claude-code-for-aws-app-mesh-workflow/)
+- [Claude Code for AWS Config Rules Workflow](/claude-code-for-aws-config-rules-workflow/)
+- [Claude Code with AWS Bedrock Guide](/claude-code-aws-bedrock/)
+- [Claude Code AWS Bedrock Setup Guide](/claude-code-aws-bedrock-setup/)
+- [Deploy to AWS with Claude Code](/claude-code-deploy-to-aws/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

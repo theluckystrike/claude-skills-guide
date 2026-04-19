@@ -216,6 +216,8 @@ Related Reading
 - [Claude Code for Harness CD Pipeline Workflow](/claude-code-for-harness-cd-pipeline-workflow/)
 - [Claude Code for Mage AI Pipeline Workflow Guide](/claude-code-for-mage-ai-pipeline-workflow-guide/)
 - [Claude Code for ZenML Pipeline Workflow Guide](/claude-code-for-zenml-pipeline-workflow-guide/)
+- [Claude Code Turborepo Pipeline Dependency Graph Workflow](/claude-code-turborepo-pipeline-dependency-graph-workflow/)
+- [Claude Code for Code Generation Pipeline Guide](/claude-code-for-code-generation-pipeline-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

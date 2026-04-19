@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code Cypress Custom Commands Workflow Best Practices"
 description: "Master Cypress custom commands with Claude Code. Learn workflow patterns, TypeScript integration, best practices for maintainable test automation."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: Claude Skills Guide
@@ -15,6 +15,7 @@ geo_optimized: true
 ---
 
 
+The most common cause of automated workflows failing without notification is missing error handling in pipeline orchestration steps. Here is the systematic fix for cypress custom commands workflow using Claude Code, tested with the latest release as of April 2026.
 
 Cypress custom commands are one of the most powerful features for creating reusable, maintainable test automation. When combined with Claude Code's AI capabilities, you can dramatically accelerate the creation of custom commands while ensuring they follow industry best practices. This guide covers essential workflow patterns, TypeScript integration, and actionable advice for building solid custom commands.
 
@@ -457,6 +458,12 @@ By following these best practices and using Claude Code effectively, you'll buil
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

@@ -257,6 +257,10 @@ Related Reading
 - [Claude Code for Amplitude Analytics Workflow](/claude-code-for-amplitude-analytics-workflow/)
 - [Claude Code for Engineering Wiki Workflow Tutorial](/claude-code-for-engineering-wiki-workflow-tutorial/)
 - [Claude Code for Metabase Analytics Workflow Guide](/claude-code-for-metabase-analytics-workflow-guide/)
+- [Claude Code for Pirsch Analytics — Guide](/claude-code-for-pirsch-analytics-workflow-guide/)
+- [Claude Code for Tinybird Analytics — Guide](/claude-code-for-tinybird-analytics-workflow-guide/)
+- [Claude Code for Langfuse LLM Analytics — Guide](/claude-code-for-langfuse-llm-analytics-workflow-guide/)
+- [Claude Code for Umami Analytics — Workflow Guide](/claude-code-for-umami-analytics-workflow-guide/)
 
 
 

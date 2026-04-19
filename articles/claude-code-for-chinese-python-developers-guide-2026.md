@@ -420,6 +420,7 @@ Related Reading
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). apply test-driven development to Python projects
 - [Building Stateful Agents with Claude Skills Guide](/building-stateful-agents-with-claude-skills-guide/). persist project preferences with supermemory across sessions
 - [Getting Started Hub](/getting-started-hub/). explore all skills available for Python developers
+- [MCP Integration Guide for Claude Code Beginners](/mcp-integration-guide-for-claude-code-beginners/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

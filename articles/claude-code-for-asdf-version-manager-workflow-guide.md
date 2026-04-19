@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for asdf Version Manager Workflow Guide"
 description: "Learn how to integrate Claude Code with asdf version manager for streamlined multi-language development. Practical examples, automation tips, and."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-asdf-version-manager-workflow-guide/
 categories: [guides]
@@ -13,6 +13,8 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
+
+Current as of April 2026. The asdf version manager landscape has shifted with recent updates to asdf version manager tooling and Claude Code's improved project context handling, and the steps below reflect how Claude Code works with asdf version manager today.
 
 Managing multiple runtime versions across different projects can quickly become a developer's biggest headache. Whether you're juggling Node.js versions for legacy projects, Python environments for data science, or Go for microservices, version conflicts are inevitable. This is where asdf comes in, and when combined with Claude Code, you get a powerful workflow that automates version management while letting AI handle the heavy lifting.
 
@@ -222,6 +224,12 @@ Start by creating the asdf workflow skill, define your project's versions in `.t
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

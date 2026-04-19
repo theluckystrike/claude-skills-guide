@@ -238,6 +238,7 @@ Related Reading
 - [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Securing MCP Servers in Production Environments](/securing-mcp-servers-in-production-environments/)
 - [Integrations Hub](/integrations-hub/)
+- [Claude Code MCP Server Soc2 — Complete Developer Guide](/claude-code-mcp-server-soc2-compliance-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

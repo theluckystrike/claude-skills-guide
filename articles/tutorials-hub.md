@@ -381,6 +381,14 @@ Related Reading
 - [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). The starting point before most tutorials
 - [Skill MD File Format Explained With Examples Guide](/claude-skill-md-format-complete-specification-guide/). The format reference every tutorial assumes
 - [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/). The most used Claude Code skill, explained in full
+- [Claude Code for Operator Lifecycle Manager Guide](/claude-code-for-operator-lifecycle-manager-guide/)
+- [Best Claude Code Newsletters and Blogs 2026](/best-claude-code-newsletters-and-blogs-2026/)
+- [Claude Code Hidden Features Most Developers Miss](/claude-code-hidden-features-most-developers-miss/)
+- [How to Use Tree-Sitter Syntax Highlighting (2026)](/claude-code-for-tree-sitter-syntax-highlighting-guide/)
+- [Claude Code Custom Keybindings Configuration (2026)](/claude-code-custom-keybindings-configuration/)
+- [Claude Code Tips for Intermediate Developers](/claude-code-tips-for-intermediate-developers/)
+- [Claude Code Mentorship and Teaching Guide](/claude-code-mentorship-and-teaching-guide/)
+- [Claude Code for Resilience4j Circuit Breaker Guide](/claude-code-for-resilience4j-circuit-breaker-guide/)
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

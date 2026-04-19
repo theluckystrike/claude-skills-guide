@@ -185,6 +185,14 @@ Related Reading
 - [Chrome Enterprise Bookmark Bar Settings: A Complete Guide](/chrome-enterprise-bookmark-bar-settings/)
 - [Chrome Enterprise Device Trust Connector: A Developer Guide](/chrome-enterprise-device-trust-connector/)
 - [Chrome Enterprise Release Schedule 2026: A Practical Guide](/chrome-enterprise-release-schedule-2026/)
+- [Building a Chrome Extension for Team World Clock Management](/chrome-extension-world-clock-team/)
+- [Chrome Extension Word Counter for Essay Writing](/chrome-extension-word-counter-essay/)
+- [Key Points Extractor Chrome Extension Guide (2026)](/chrome-extension-key-points-extractor/)
+- [Flash Sale Notification Chrome Extension Guide (2026)](/chrome-extension-flash-sale-notification/)
+- [Noise Cancellation Chrome Extension Guide (2026)](/noise-cancellation-chrome-extension/)
+- [Pinterest Pin Scheduler Chrome Extension Guide (2026)](/chrome-extension-pinterest-pin-scheduler/)
+- [Chrome OS Kiosk Mode: Managed Guest Setup Guide (2026)](/chrome-os-kiosk-mode-managed-guest/)
+- [Chrome Managed Profiles: Work and Personal Browsing](/chrome-managed-profiles-work-personal/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

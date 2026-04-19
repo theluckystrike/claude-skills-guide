@@ -197,6 +197,11 @@ Related Reading
 - [Chrome Enterprise Bandwidth Management: A Practical Guide](/chrome-enterprise-bandwidth-management/)
 - [Chrome Enterprise Context-Aware Access: Implementation Guide](/chrome-enterprise-context-aware-access/)
 - [Chrome Enterprise Extension Management API: A Practical.](/chrome-enterprise-extension-management-api/)
+- [Chrome Managed Bookmarks Group Policy: Full Guide (2026)](/chrome-managed-bookmarks-group-policy/)
+- [Chrome Enterprise Sync Settings Policy — Developer Guide](/chrome-enterprise-sync-settings-policy/)
+- [Chrome Enterprise Extension Permissions Policy (2026)](/chrome-enterprise-extension-permissions-policy/)
+- [How to Disable Chrome Developer Tools Using Group Policy](/chrome-disable-developer-tools-group-policy/)
+- [Chrome Enterprise Startup Pages Policy — Developer Guide](/chrome-enterprise-startup-pages-policy/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

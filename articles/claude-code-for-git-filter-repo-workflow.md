@@ -335,6 +335,7 @@ Related Reading
 - [Claude Code Feature Flags Workflow Git Guide](/claude-code-feature-flags-workflow-git-guide/)
 - [Claude Code for Cross-Repo Code Search Workflow Guide](/claude-code-for-cross-repo-code-search-workflow-guide/)
 - [Claude Code for Delta Git Diff Workflow Guide](/claude-code-for-delta-git-diff-workflow-guide/)
+- [Claude Code Git Workflow Guide](/claude-code-with-git-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

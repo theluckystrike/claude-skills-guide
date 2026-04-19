@@ -238,6 +238,9 @@ Related Reading
 - [Claude Code for Apache Drill Workflow Tutorial](/claude-code-for-apache-drill-workflow-tutorial/)
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
+- [Claude Code for Semantic Versioning Workflow Tutorial](/claude-code-for-semantic-versioning-workflow-tutorial/)
+- [Claude Code for Hybrid Search Workflow Tutorial](/claude-code-for-hybrid-search-workflow-tutorial/)
+- [Claude Code Meilisearch Faceted Search Workflow Guide](/claude-code-meilisearch-faceted-search-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -184,6 +184,12 @@ Related Reading
 - [Claude Code International Date Format Handling Workflow](/claude-code-international-date-format-handling-workflow/)
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
 - [Workflows Hub](/workflows-hub/)
+- [Claude Code Sketch to React Component Workflow Guide](/claude-code-sketch-to-react-component-workflow-guide/)
+- [Claude Code with Angular vs React](/claude-code-angular-vs-react/)
+- [Claude Code for Million.js — Workflow Guide](/claude-code-for-million-js-react-workflow-guide/)
+- [Claude Code Resend React Email Component Workflow](/claude-code-resend-react-email-component-workflow/)
+- [Claude Code for React Reasoning Agent Workflow](/claude-code-for-react-reasoning-agent-workflow/)
+- [Claude Code for tRPC React Query Workflow](/claude-code-for-trpc-react-query-workflow/)
 {% endraw %}
 
 

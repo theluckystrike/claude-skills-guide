@@ -225,6 +225,7 @@ Related Reading
 - [Claude Code for Semgrep Static Analysis Workflow](/claude-code-for-semgrep-static-analysis-workflow/)
 - [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)
 - [Claude Code Developer Advocate Demo Content Workflow Tips](/claude-code-developer-advocate-demo-content-workflow-tips/)
+- [Claude Code for Zola Rust Static Site Workflow](/claude-code-for-zola-rust-static-site-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

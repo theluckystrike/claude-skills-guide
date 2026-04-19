@@ -190,6 +190,7 @@ Related Reading
 - [Claude Code Security Code Review Checklist Automation](/claude-code-security-code-review-checklist-automation/). Automate security code reviews for Solidity smart contracts using the same checklist approach.
 - [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/). Build comprehensive test suites for smart contract logic using the tdd skill workflow.
 - [Advanced Claude Skills](/advanced-hub/). Explore more advanced skill patterns for specialized technical development.
+- [Claude Skills for Energy Smart Grid Applications](/claude-skills-for-energy-smart-grid-applications/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

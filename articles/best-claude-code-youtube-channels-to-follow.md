@@ -163,6 +163,14 @@ Related Reading
 - [Best Claude Code Courses Online 2026: A Developer Guide](/best-claude-code-courses-online-2026/)
 - [Chrome Extension Spaced Repetition Tool: Building Memory.](/chrome-extension-spaced-repetition-tool/)
 - [Claude Code for Computer Science Bootcamp Students](/claude-code-for-computer-science-bootcamp-students/)
+- [Claude Code Msw Mock Service — Complete Developer Guide](/claude-code-msw-mock-service-worker-guide/)
+- [Claude Code for TypeScript Declaration Merging Guide](/claude-code-for-typescript-declaration-merging-guide/)
+- [Claude Code Triggerdev Scheduled — Complete Developer Guide](/claude-code-triggerdev-scheduled-cron-job-tutorial/)
+- [Learning Claude Code In 30 Days Challenge — Developer Guide](/learning-claude-code-in-30-days-challenge/)
+- [Claude Code For Oss — Complete Developer Guide](/claude-code-for-oss-documentation-contribution-guide/)
+- [Claude Code For Traceloop LLM — Complete Developer Guide](/claude-code-for-traceloop-llm-observability-guide/)
+- [Contributing to Open Source with Claude Code](/claude-code-for-open-source-contribution/)
+- [Claude Code OpenTelemetry Tracing Instrumentation Guide](/claude-code-opentelemetry-tracing-instrumentation-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

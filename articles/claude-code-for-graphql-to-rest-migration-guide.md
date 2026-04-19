@@ -298,6 +298,7 @@ Related Reading
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
 - [ASP.NET WebForms to Blazor Migration with Claude Code](/claude-code-asp-net-webforms-to-blazor-migration/)
 - [Express to Fastify Migration with Claude Code (2026)](/claude-code-express-to-fastify-migration-tutorial-2026/)
+- [Claude Code Backbone JS To Vue — Complete Developer Guide](/claude-code-backbone-js-to-vue-migration-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

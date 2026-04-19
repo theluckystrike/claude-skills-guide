@@ -73,3 +73,14 @@ Claude Code should run `devbox add python@3.12 poetry postgresql@16`, configure 
 - [Claude Code for Devenv Nix Development Shell Workflow](/claude-code-for-devenv-nix-development-shell-workflow/)
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
 - [Best Way to Set Up Claude Code for New Project](/best-way-to-set-up-claude-code-for-new-project/)
+
+## Related Articles
+
+- [Claude Code for LitServe Lightning Workflow Guide](/claude-code-for-litserve-lightning-workflow-guide/)
+- [Claude Code for Reentrancy Guard Workflow](/claude-code-for-reentrancy-guard-workflow/)
+- [Claude Code For Mitre Attck — Complete Developer Guide](/claude-code-for-mitre-attck-workflow-guide/)
+- [Claude Code with Astro Content Collections Workflow](/claude-code-with-astro-content-collections-workflow/)
+- [How to Use Web3Modal Wallet Integration (2026)](/claude-code-for-web3modal-wallet-workflow/)
+- [Claude Code for Synthetic Monitoring Workflow Guide](/claude-code-for-synthetic-monitoring-workflow-guide/)
+- [Claude Code Prompt Management Workflow Guide](/claude-code-prompt-management-workflow-guide/)
+- [Claude Code for FreeRTOS Workflow Tutorial Guide](/claude-code-for-freertos-workflow-tutorial-guide/)

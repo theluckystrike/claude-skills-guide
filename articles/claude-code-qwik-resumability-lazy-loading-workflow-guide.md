@@ -265,6 +265,7 @@ Related Reading
 - [Bundle Size Reduction: Webpack to Vite 2026 Guide](/claude-code-bundle-size-reduction-webpack-vite-workflow/). Complement Qwik's zero-JS approach with bundle optimization techniques for other toolchains.
 - [Claude Code Lighthouse Score Improvement Automation Guide](/claude-code-lighthouse-score-improvement-automation-guide/). Measure and automate the performance wins your Qwik resumability implementation delivers.
 - [Claude Skills Workflow Guide](/workflows-hub/). See how frontend skill workflows chain together for complete development pipelines.
+- [Claude Code for Lazy Loading Implementation Workflow](/claude-code-for-lazy-loading-implementation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

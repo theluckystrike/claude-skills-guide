@@ -326,6 +326,7 @@ Related Reading
 - [Claude Code SRE Postmortem Documentation Workflow Guide](/claude-code-sre-postmortem-documentation-workflow-guide/)
 - [Claude Skills for Site Reliability Engineers SRE](/claude-skills-for-site-reliability-engineers-sre/)
 - [Claude Code for Engineering Wiki Workflow Tutorial](/claude-code-for-engineering-wiki-workflow-tutorial/)
+- [Claude Code Engineering Manager Pull Request Review Workflow](/claude-code-engineering-manager-pull-request-review-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

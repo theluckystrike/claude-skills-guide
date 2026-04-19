@@ -251,6 +251,10 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Where MCP fits in the developer stack
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How Claude decides when to load skills
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep API costs down as you scale
+- [Claude Code for Seldon Core Model Serving Guide](/claude-code-for-seldon-core-model-serving-guide/)
+- [Claude Code Announcements 2026: Complete Developer Overview](/anthropic-claude-code-announcements-2026/)
+- [Claude Code March 2026 Update: What Is New](/claude-code-march-2026-update-what-is-new/)
+- [Claude Code Model Compression and Quantization Guide](/claude-code-model-compression-quantization/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

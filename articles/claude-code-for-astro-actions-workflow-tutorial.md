@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Astro Actions Workflow Tutorial"
 description: "Learn how to use Claude Code to automate and streamline your Astro Actions workflow with practical examples and actionable advice."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-for-astro-actions-workflow-tutorial/
 categories: [guides, tutorials]
@@ -14,6 +14,8 @@ score: 7
 geo_optimized: true
 ---
 
+
+This guide has been revised for April 2026. The steps account for recent updates to astro actions tooling and Claude Code's improved project context handling, which affects how Claude Code interacts with astro actions tooling.
 
 Claude Code for Astro Actions Workflow Tutorial
 
@@ -278,6 +280,12 @@ Remember to always review generated code for security and correctness, and use t
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

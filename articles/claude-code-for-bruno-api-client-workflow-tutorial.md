@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code for Bruno API Client Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline your Bruno API client workflow. This tutorial covers automating request generation, managing..."
-date: 2026-03-20
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-for-bruno-api-client-workflow-tutorial/
 categories: [tutorials, guides]
@@ -11,6 +11,8 @@ tags: [claude-code, claude-skills, bruno, api-client, workflow-automation]
 render_with_liquid: false
 geo_optimized: true
 ---
+
+This covers the complete bruno api client integration with Claude Code, from initial setup through production-ready bruno api client patterns. If you are looking for a broader overview of related workflows, see [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/).
 
 {% raw %}
 Claude Code for Bruno API Client Workflow Tutorial
@@ -185,6 +187,12 @@ The combination of Bruno's git-friendly approach and Claude Code's contextual un
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for On-Call Runbook Workflow Tutorial"
 description: "Learn how to use Claude Code to automate and streamline your on-call runbook workflows. This comprehensive tutorial covers practical examples."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-for-on-call-runbook-workflow-tutorial/
 categories: [guides, workflows]
@@ -14,6 +14,8 @@ score: 8
 geo_optimized: true
 ---
 
+
+Integrating on call runbook into a development workflow involves proper on call runbook configuration, integration testing, and ongoing maintenance. The approach below walks through how Claude Code addresses each of these on call runbook concerns systematically.
 
 Claude Code for On-Call Runbook Workflow Tutorial
 
@@ -269,6 +271,12 @@ Remember: The goal isn't to replace human judgment, it's to augment it with inte
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

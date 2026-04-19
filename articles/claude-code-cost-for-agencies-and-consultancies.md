@@ -339,6 +339,14 @@ Related Reading
 - [Claude Code Monthly Cost Breakdown: Realistic Usage.](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/)
 - [How Agencies Use Claude Code for Client Projects](/how-agencies-use-claude-code-for-client-projects/)
 - [Chrome Extension Price Per Unit Calculator: A Practical.](/chrome-extension-price-per-unit-calculator/)
+- [Claude Code Infracost Cost Estimation Guide](/claude-code-infracost-cost-estimation-guide/)
+- [Claude Code For Spot Instance — Complete Developer Guide](/claude-code-for-spot-instance-cost-savings-workflow/)
+- [Claude Cost Reduction Guide 2026](/cost/)
+- [Claude Code with GitHub Models for Cost-Efficient Pipelines](/claude-code-with-github-models-for-cost-efficient-pipelines/)
+- [Claude Code for Soulbound Token Workflow](/claude-code-for-soulbound-token-workflow/)
+- [Claude Code vs Hiring Developer — Developer Comparison 2026](/claude-code-vs-hiring-developer-cost-comparison/)
+- [Claude Code for Optimism Bedrock Workflow](/claude-code-for-optimism-bedrock-workflow/)
+- [Claude Prompt Caching Saves 90% on Input Costs](/claude-prompt-caching-saves-90-percent-input-costs/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

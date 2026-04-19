@@ -478,6 +478,14 @@ Related Reading
 - [Claude Code Git Submodules Management Guide](/claude-code-git-submodules-management-guide/). Another large-repo management technique
 - [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/). Large files often cause OOM issues
 - [Claude Skills Workflows Hub](/workflows-hub/). Git workflow automation guides
+- [Claude Code for OpenObserve Workflow Tutorial](/claude-code-for-openobserve-workflow-tutorial/)
+- [Claude Code For Uma Oracle — Complete Developer Guide](/claude-code-for-uma-oracle-workflow-tutorial/)
+- [Claude Code for Elastic SIEM Workflow Guide](/claude-code-for-elastic-siem-workflow-guide/)
+- [Claude Code for Split.io Experimentation Workflow](/claude-code-for-split-io-experimentation-workflow/)
+- [Claude Code For Go Benchmark — Complete Developer Guide](/claude-code-for-go-benchmark-workflow-tutorial-guide/)
+- [Claude Code for New Relic APM Workflow Guide](/claude-code-for-new-relic-apm-workflow-guide/)
+- [Claude Code For Chargebee — Complete Developer Guide](/claude-code-for-chargebee-subscription-workflow/)
+- [Claude Code for Clojure re-frame Workflow Guide](/claude-code-for-clojure-re-frame-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

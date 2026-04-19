@@ -74,3 +74,9 @@ Claude Code should create four Windmill TypeScript scripts: a Shopify fetch scri
 - [Claude Code for n8n Automation Workflow Guide](/claude-code-for-n8n-automation-workflow-guide/)
 - [Claude Code for Activepieces Workflow Guide](/claude-code-for-activepieces-workflow-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
+
+## Related Articles
+
+- [Claude Code for Coder — Workflow Guide](/claude-code-for-coder-remote-dev-workflow-guide/)
+- [Claude Code for GitHub Codespaces — Guide](/claude-code-for-codespaces-dev-environments-workflow-guide/)
+- [Claude Code for Mise — Workflow Guide](/claude-code-for-mise-dev-tool-manager-workflow-guide/)

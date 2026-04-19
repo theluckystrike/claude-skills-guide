@@ -228,6 +228,8 @@ Related Reading
 - [Claude Code for wasm-bindgen Workflow Tutorial](/claude-code-for-wasm-bindgen-workflow-tutorial/)
 - [Claude Code Actix Web Rust API Guide](/claude-code-actix-web-rust-api-guide/)
 - [Claude Code Axum Rust Web Framework Guide](/claude-code-axum-rust-web-framework-guide/)
+- [Claude Code for ESLint Custom Plugin Workflow Tutorial](/claude-code-for-eslint-custom-plugin-workflow-tutorial/)
+- [Claude Code for JetBrains Plugin Workflow Tutorial](/claude-code-for-jetbrains-plugin-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

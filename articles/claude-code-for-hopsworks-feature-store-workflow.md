@@ -274,6 +274,8 @@ Related Reading
 - [Claude Code Full Stack Developer Feature Shipping Workflow](/claude-code-full-stack-developer-feature-shipping-workflow/)
 - [Claude Skills Feature Flag Implementation Workflow](/claude-skills-feature-flag-implementation-workflow/)
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
+- [Claude Code for ChromaDB Vector Store Workflow](/claude-code-for-chromadb-vector-store-workflow/)
+- [Claude Code for Chalk Feature Workflow Tutorial](/claude-code-for-chalk-feature-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

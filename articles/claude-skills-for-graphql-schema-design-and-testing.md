@@ -492,6 +492,7 @@ Related Reading
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
 - [Best Claude Skills for Code Review Automation](/best-claude-skills-for-code-review-automation/)
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/)
+- [Claude Skills for Git, Docker, and Testing Workflows — 2026](/claude-skills-for-git-docker-testing/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

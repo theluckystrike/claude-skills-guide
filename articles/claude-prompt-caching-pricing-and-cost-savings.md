@@ -175,3 +175,14 @@ $99 once. Pays for itself in saved tokens within a week.
 - [Claude Python SDK Getting Started](/claude-python-sdk-getting-started-example/) -- basic SDK setup before implementing caching.
 
 
+
+## Related Articles
+
+- [Claude Code For Spot Instance — Complete Developer Guide](/claude-code-for-spot-instance-cost-savings-workflow/)
+- [Claude Prompt Caching Saves 90% on Input Costs](/claude-prompt-caching-saves-90-percent-input-costs/)
+- [Claude Caching for Multi-Turn Conversations](/claude-caching-multi-turn-conversations/)
+- [Claude Prompt Caching Implementation Tutorial](/claude-prompt-caching-implementation-tutorial/)
+- [When NOT to Use Claude Prompt Caching](/when-not-to-use-claude-prompt-caching/)
+- [Claude Batch Plus Caching for 95% Cost Savings](/claude-batch-plus-caching-95-percent-cost-savings/)
+- [Per-Agent Cost Attribution in Claude Systems](/per-agent-cost-attribution-claude-systems/)
+- [Prompt Caching Break-Even Calculator for Claude](/prompt-caching-break-even-calculator-claude/)

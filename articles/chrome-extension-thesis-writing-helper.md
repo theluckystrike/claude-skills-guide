@@ -514,6 +514,7 @@ Related Reading
 - [AI SEO Writing Chrome Extension: A Developer's Guide](/ai-seo-writing-chrome-extension/)
 - [AI Spreadsheet Helper Chrome Extension: A Developer's Guide](/ai-spreadsheet-helper-chrome-extension/)
 - [AI Study Helper Chrome Extension: A Developer's Guide](/ai-study-helper-chrome-extension/)
+- [Chrome Extension Wolfram Alpha Helper](/chrome-extension-wolfram-alpha-helper/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -338,6 +338,9 @@ Related Reading
 - [How Do I Test a Claude Skill Before Deploying to Team](/how-do-i-test-a-claude-skill-before-deploying-to-team/). Validate each version before bumping to the next release with a structured pre-deployment test workflow
 - [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). Understand the full skill.md format including version metadata fields used in semver workflows
 - [Claude Skills: Getting Started Hub](/getting-started-hub/). Explore skill authoring, distribution, and maintenance patterns across the skill lifecycle
+- [Versioning and Maintaining Published Claude Code Skills](/versioning-and-maintaining-published-claude-code-skills/)
+- [Claude Code Skill Versioning and Upgrades: What to Expect](/claude-code-skill-versioning-and-upgrades-what-to-expect/)
+- [Claude Skills Versioning: Track Changes Without Breaking Workflows — 2026](/claude-skills-versioning-strategies/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

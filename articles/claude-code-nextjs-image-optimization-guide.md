@@ -373,6 +373,11 @@ Related Reading
 - [Claude Code React Router v7 Navigation Guide](/claude-code-react-router-v7-navigation-guide/)
 - [Vibe Coding with Claude Code: Complete Guide 2026](/vibe-coding-productivity-tips-and-best-practices/)
 - [Workflows Hub](/workflows-hub/)
+- [Claude Code Angular LSP Integration](/claude-code-angular-lsp/)
+- [Claude Code for Gradio ML UI — Workflow Guide](/claude-code-for-gradio-ml-ui-workflow-guide/)
+- [Claude Code for Remix Optimistic UI Workflow](/claude-code-for-remix-optimistic-ui-workflow/)
+- [Claude Code SvelteKit Hooks Handle Load Workflow Tutorial](/claude-code-sveltekit-hooks-handle-load-workflow-tutorial/)
+- [How to Use Qwik Store Reactive State Management (2026)](/claude-code-qwik-store-reactive-state-management-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

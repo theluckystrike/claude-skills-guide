@@ -115,3 +115,14 @@ The 5% quality gap matters when errors are expensive. If a wrong classification 
 - [Claude Haiku vs GPT-4o Mini Cost Showdown](/claude-cost-haiku-vs-gpt4o-mini-cheap-tier/)
 - [The Cheapest Model for Your Workload](/claude-cost-cheapest-model-workload-calculator/)
 - [The Hybrid Stack: Claude for X, GPT for Y, Gemini for Z](/claude-cost-hybrid-stack-claude-gpt-gemini/)
+
+## Related Articles
+
+- [Claude Haiku vs Sonnet vs Opus Cost Breakdown 2026](/claude-haiku-vs-sonnet-vs-opus-cost-breakdown/)
+- [When to Use Claude Haiku Instead of Opus](/when-to-use-claude-haiku-instead-of-opus/)
+- [When NOT to Use Claude Prompt Caching](/when-not-to-use-claude-prompt-caching/)
+- [Async Claude Processing: Half Price Same Quality](/async-claude-processing-half-price-same-quality/)
+- [Claude Code /compact Saves Thousands of Tokens](/claude-code-compact-saves-thousands-tokens/)
+- [Reduce Claude Code Token Consumption by 60%](/reduce-claude-code-token-consumption-60-percent/)
+- [Claude Haiku 4.5 Budget-Friendly Coding Guide](/claude-haiku-45-budget-friendly-coding/)
+- [Text Editor Tool: 700 Token Overhead Explained](/claude-text-editor-tool-700-token-overhead/)

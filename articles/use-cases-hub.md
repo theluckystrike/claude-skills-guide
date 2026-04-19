@@ -319,6 +319,14 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). the most impactful skills across all developer roles
 - [Claude Skills for Startup Founders and Solopreneurs 2026](/claude-skills-for-startup-founders-and-solopreneurs/). key use cases for builders moving fast
 - [Claude Code Skills for Enterprise Architects Governance](/claude-code-skills-for-enterprise-architects-governance/). apply Claude skills at organizational scale
+- [Should I Use Claude Code For Writing — Developer Guide](/should-i-use-claude-code-for-writing-infrastructure-scripts/)
+- [Claude Code Tips for Intermediate Developers](/claude-code-tips-for-intermediate-developers/)
+- [Claude Code --resume Flag — How to Use It (2026)](/claude-code-resume-flag-how-to-use-it/)
+- [Claude Code Mentorship and Teaching Guide](/claude-code-mentorship-and-teaching-guide/)
+- [Claude Code for Resilience4j Circuit Breaker Guide](/claude-code-for-resilience4j-circuit-breaker-guide/)
+- [How AI Agents Reason Before — Complete Developer Guide](/how-ai-agents-reason-before-taking-actions-guide/)
+- [Claude Code Cookbook: Practical Recipes Collection](/claude-code-cookbook-recipes-collection/)
+- [Claude Code from Zero to Hero Learning Path](/claude-code-from-zero-to-hero-learning-path/)
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

@@ -337,6 +337,7 @@ Related Reading
 - [Claude Code for Rust Profiling Workflow Tutorial Guide](/claude-code-for-rust-profiling-workflow-tutorial-guide/)
 - [Claude Code for Zola Rust Static Site Workflow](/claude-code-for-zola-rust-static-site-workflow/)
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
+- [Claude Code for Durable Objects — Workflow Guide](/claude-code-for-durable-objects-cf-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

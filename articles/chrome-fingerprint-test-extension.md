@@ -370,6 +370,14 @@ Related Reading
 - [Chrome Incognito Mode Disable Enterprise: A Complete Guide](/chrome-incognito-mode-disable-enterprise/)
 - [Chrome Topics API: Privacy-First Advertising Without.](/chrome-topics-api-privacy/)
 - [Best Privacy Extensions for Chrome in 2026](/best-privacy-extensions-chrome-2026/)
+- [Record Tab Audio Chrome Extension Guide (2026)](/chrome-extension-record-tab-audio/)
+- [Webp To Png Converter Chrome Extension Guide (2026)](/chrome-extension-webp-to-png-converter/)
+- [Video Downloader Chrome Extension Guide (2026)](/chrome-extension-video-downloader/)
+- [Trello Power-Up manifest.json — Setup Guide (2026)](/chrome-extension-trello-power-up/)
+- [Chrome Extension Manifest V3 — Complete Developer Guide](/chrome-extension-manifest-v3-migration-guide/)
+- [Full Page Screenshot Chrome Extension](/full-page-screenshot-chrome-extension/)
+- [Kanban Board Chrome Extension Guide (2026)](/kanban-board-chrome-extension/)
+- [How to Build a Chrome Extension for Watermarking Images](/chrome-extension-watermark-images/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

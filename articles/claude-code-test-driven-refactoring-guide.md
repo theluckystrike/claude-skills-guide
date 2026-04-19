@@ -138,6 +138,14 @@ Related Reading
 - [Claude Code vs Aider for Test Driven Development](/claude-code-vs-aider-for-test-driven-development/)
 - [Best AI Tools for Code Refactoring in 2026](/best-ai-tools-for-code-refactoring-2026/)
 - [Best Way to Use Claude Code for Large File Refactoring](/best-way-to-use-claude-code-for-large-file-refactoring/)
+- [PostHog A/B Testing with Claude Code Guide](/claude-code-posthog-multivariate-test-implementation-guide/)
+- [Claude Code Vcr Test Recording — Complete Developer Guide](/claude-code-vcr-test-recording-workflow/)
+- [Claude Code Statsig Ab Test — Complete Developer Guide](/claude-code-statsig-ab-test-experiment-setup-guide/)
+- [Claude Code for Test Driven Development Workflow Tutorial](/claude-code-for-test-driven-development-workflow-tutorial/)
+- [How QA Engineers Use Claude Code for Test Automation](/how-qa-engineers-use-claude-code-for-test-automation/)
+- [Claude Code for Chromatic Visual Test — Guide](/claude-code-for-chromatic-visual-test-workflow-guide/)
+- [How To Make Claude Code Use My — Complete Developer Guide](/how-to-make-claude-code-use-my-preferred-test-framework/)
+- [Claude Code JUnit5 Test Patterns Guide](/claude-code-junit5-test-patterns-guide/)
 
 Built by theluckystrike. More at [https://zovo.one](https://zovo.one)
 

@@ -384,6 +384,9 @@ Related Reading
 - [Claude Code for Fly.io Deployment Automation Workflow](/claude-code-for-fly-io-deployment-automation-workflow/)
 - [Claude Code Vercel Deployment Next.js Workflow Guide](/claude-code-vercel-deployment-nextjs-workflow-guide/)
 - [Fly.io MCP Server Deployment Workflow Guide](/fly-io-mcp-server-deployment-workflow-guide/)
+- [Claude Code Deployment with Amazon Bedrock](/claude-code-deployment-patterns-and-best-practices-with-amazon-bedrock/)
+- [Claude Code vLLM Inference Server Deployment Workflow](/claude-code-vllm-inference-server-deployment-workflow/)
+- [Claude Code for Code Freeze Deployment Workflow](/claude-code-for-code-freeze-deployment-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

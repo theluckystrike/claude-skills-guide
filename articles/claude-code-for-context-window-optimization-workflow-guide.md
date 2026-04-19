@@ -227,6 +227,14 @@ Related Reading
 - [Claude MD Too Long Context Window Optimization](/claude-md-too-long-context-window-optimization/)
 - [Claude Code ActiveRecord Query Optimization Workflow Guide](/claude-code-activerecord-query-optimization-workflow-guide/)
 - [Claude Code Consultant Codebase Context Switching Workflow](/claude-code-consultant-codebase-context-switching-workflow/)
+- [Why Large Context Makes Claude Code Expensive](/why-large-context-makes-claude-code-expensive/)
+- [Claude Context Management: Pay Less, Use More](/claude-context-management-pay-less-use-more/)
+- [Shrink Claude Context Without Losing Quality](/shrink-claude-context-without-losing-quality/)
+- [Claude Code Context Management Cost Tips 2026](/claude-code-context-management-cost-tips-2026/)
+- [Claude 200K vs 1M Context Cost Comparison](/claude-200k-vs-1m-context-cost-comparison/)
+- [Claude 1M Context Window: What It Really Costs](/claude-1m-context-window-what-it-costs/)
+- [When Full Context Costs More Than a RAG Pipeline](/when-full-context-costs-more-than-rag/)
+- [Claude Orchestrator-Worker Cost Optimization](/claude-orchestrator-worker-cost-optimization/)
 
 
 

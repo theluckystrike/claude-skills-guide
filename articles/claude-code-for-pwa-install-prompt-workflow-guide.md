@@ -362,6 +362,8 @@ Related Reading
 - [Claude Code for MCP Prompt Server Workflow](/claude-code-for-mcp-prompt-server-workflow/)
 - [Claude Code for Prompt Engineering Techniques: 2026 Workflow Guide](/claude-code-for-prompt-engineering-techniques-2026-workflow-/)
 - [Claude Code for PWA Testing and Auditing Workflow](/claude-code-for-pwa-testing-and-auditing-workflow/)
+- [How to Use Starship Prompt + Claude Code: Workflow (2026)](/claude-code-for-starship-prompt-workflow/)
+- [Claude Code for Prompt Chaining Workflows Tutorial Guide](/claude-code-for-prompt-chaining-workflows-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

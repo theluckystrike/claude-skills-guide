@@ -212,6 +212,7 @@ Related Reading
 - [Claude Code for MCP Prompt Server Workflow](/claude-code-for-mcp-prompt-server-workflow/)
 - [Claude Code for Prompt Engineering Techniques: 2026 Workflow Guide](/claude-code-for-prompt-engineering-techniques-2026-workflow-/)
 - [Claude Code for PWA Install Prompt Workflow Guide](/claude-code-for-pwa-install-prompt-workflow-guide/)
+- [Claude Code for Prompt Chaining Workflows Tutorial Guide](/claude-code-for-prompt-chaining-workflows-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -303,6 +303,14 @@ Related Reading
 - [Claude Code for Changesets Monorepo Release Workflow](/claude-code-for-changesets-monorepo-release-workflow/)
 - [Claude Code for Hotfix Release Workflow Tutorial Guide](/claude-code-for-hotfix-release-workflow-tutorial-guide/)
 - [Claude Code for Multi-Platform Release Workflow Guide](/claude-code-for-multi-platform-release-workflow-guide/)
+- [Claude Code for Release Branching Strategy Workflow](/claude-code-for-release-branching-strategy-workflow/)
+- [Claude Code for Release Rollback Workflow Tutorial](/claude-code-for-release-rollback-workflow-tutorial/)
+- [Claude Code for Oxlint — Workflow Guide](/claude-code-for-oxlint-workflow-guide/)
+- [Claude Code for UnJS Ecosystem — Workflow Guide](/claude-code-for-unjs-ecosystem-workflow-guide/)
+- [Claude Code for Automerge CRDT — Workflow Guide](/claude-code-for-automerge-crdt-workflow-guide/)
+- [Claude Code for Val Town — Workflow Guide](/claude-code-for-val-town-workflow-guide/)
+- [Claude Code for Unstructured IO — Guide](/claude-code-for-unstructured-io-workflow-guide/)
+- [Claude Code for Oxc Compiler — Workflow Guide](/claude-code-for-oxc-compiler-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

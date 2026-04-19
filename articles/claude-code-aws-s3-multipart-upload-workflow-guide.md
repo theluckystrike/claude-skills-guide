@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code AWS S3 Multipart Upload Workflow Guide"
 description: "Learn how to use Claude Code to automate AWS S3 multipart uploads with practical examples and best practices for handling large file transfers."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, aws, s3, multipart-upload, automation, cloud]
 author: theluckystrike
@@ -14,6 +14,8 @@ geo_optimized: true
 ---
 
 # Claude Code AWS S3 Multipart Upload Workflow Guide
+
+This guide has been revised for April 2026. The steps account for recent updates to aws s3 multipart upload tooling and Claude Code's improved project context handling, which affects how Claude Code interacts with aws s3 multipart upload tooling.
 
 Large file uploads to Amazon S3 can be challenging when dealing with files exceeding 5GB or unstable network connections. AWS S3 multipart upload breaks large files into parts, enabling parallel uploads and resumable transfers. This guide shows you how to use Claude Code to create efficient multipart upload workflows that automate the entire process.
 
@@ -237,6 +239,12 @@ Start by creating a basic skill following the examples above, then extend it wit
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

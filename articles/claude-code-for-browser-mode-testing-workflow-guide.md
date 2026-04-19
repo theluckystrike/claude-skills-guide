@@ -71,6 +71,6 @@ Claude Code should configure the browser test with `import { page } from '@vites
 
 ## Related Guides
 
-- [Claude Code Testing Strategy Workflow Guide](/claude-code-testing-strategy-workflow-guide/)
+- [Claude Code Integration Testing Strategy Guide](/claude-code-integration-testing-strategy-guide/)
 - [Claude Code for Playwright MCP Workflow Guide](/claude-code-for-playwright-mcp-workflow-guide/)
 - [Claude Code for Storybook Test Workflow Guide](/claude-code-for-storybook-test-workflow-guide/)

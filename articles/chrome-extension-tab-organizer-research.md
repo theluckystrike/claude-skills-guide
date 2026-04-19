@@ -377,6 +377,11 @@ Related Reading
 - [Chrome Extension Outline Notes Organizer: A Developer Guide](/chrome-extension-outline-notes-organizer/)
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 - [AI Color Picker Chrome Extension: A Developer's Guide](/ai-color-picker-chrome-extension/)
+- [How to Save Research Sessions with Chrome Extensions](/chrome-extension-save-research-sessions/)
+- [Record Tab Audio Chrome Extension Guide (2026)](/chrome-extension-record-tab-audio/)
+- [Research Organizer Chrome Extension Guide (2026)](/chrome-extension-research-organizer/)
+- [Chrome Extension for Amazon Product Research](/chrome-extension-product-research-amazon/)
+- [Tab Resize Alternative Chrome Extension 2026](/tab-resize-alternative-chrome-extension-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

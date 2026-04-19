@@ -226,6 +226,7 @@ Related Reading
 - [Claude Code API Regression Testing Workflow Guide](/claude-code-api-regression-testing-workflow/)
 - [Claude Code Continuous Testing Workflow: Complete Guide for 2026](/claude-code-continuous-testing-workflow/)
 - [Claude Code for Distributed Load Testing Workflow](/claude-code-for-distributed-load-testing-workflow/)
+- [Claude Code for Load Testing with Locust Workflow Guide](/claude-code-for-load-testing-with-locust-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

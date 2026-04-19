@@ -227,6 +227,11 @@ Related Reading
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
 - [Claude Code Django ORM Optimization Guide](/claude-code-django-orm-optimization-guide/)
 - [Claude Code Power BI DAX Optimization Guide](/claude-code-power-bi-dax-optimization-guide/)
+- [Reduce Claude Code API Costs by 50%](/claude-code-reduce-api-costs-guide/)
+- [Batch API Cost Calculator for Claude Models](/batch-api-cost-calculator-claude-models/)
+- [Claude Batch API 50% Discount Complete Guide](/claude-batch-api-50-percent-discount-guide/)
+- [How to Reduce Claude API Token Usage by 50%](/reduce-claude-api-token-usage-50-percent/)
+- [When to Use Claude Batch vs Real-Time API](/when-to-use-claude-batch-vs-real-time-api/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

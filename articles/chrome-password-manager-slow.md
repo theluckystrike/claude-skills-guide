@@ -354,6 +354,14 @@ Related Reading
 - [Chrome Omnibox Slow? Here's How to Fix It](/chrome-omnibox-slow/)
 - [Chrome Proxy Slow? Here’s How to Diagnose and Fix It](/chrome-proxy-slow/)
 - [Chrome Remote Desktop Slow? Here's How to Fix Lag and Performance Issues](/chrome-remote-desktop-slow/)
+- [Chrome Extension GitHub Issues Manager Guide](/chrome-extension-github-issues-manager/)
+- [Securing Claude Code in Enterprise Environments](/securing-claude-code-in-enterprise-environments/)
+- [Why Does Claude Code Sometimes Ignore My — Developer Guide](/why-does-claude-code-sometimes-ignore-my-instructions/)
+- [Claude Code Keeps Suggesting The Same — Developer Guide](/claude-code-keeps-suggesting-the-same-broken-solution/)
+- [Claude Code Keeps Producing Slightly — Developer Guide](/claude-code-keeps-producing-slightly-different-code-each-tim/)
+- [Claude Code For War Room — Complete Developer Guide](/claude-code-for-war-room-workflow-tutorial-guide/)
+- [Fix Claude Code Crashing in VS Code](/claude-code-crashing-vscode/)
+- [Claude Code for Flaky Test Detection and Fix Guide](/claude-code-for-flaky-test-detection-and-fix-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

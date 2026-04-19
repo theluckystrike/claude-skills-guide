@@ -184,3 +184,7 @@ Compare estimated cost to actual cost at project completion. Track the estimatio
 - [Why Is Claude Code Expensive Large Context Tokens](/why-is-claude-code-expensive-large-context-tokens/)
 - [Claude Code Monthly Cost Breakdown Realistic Usage](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/)
 - [Is Claude Code Worth the Cost for Small Startups](/is-claude-code-worth-the-cost-for-small-startups-2026/)
+
+## Related Articles
+
+- [Claude vs Gemini Cost Per Capability 2026](/claude-cost-claude-vs-gemini-cost-per-capability/)

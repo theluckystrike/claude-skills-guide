@@ -282,6 +282,12 @@ Related Reading
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)
 - [Chrome Extension Eyedropper Tool: A Developer's Guide](/chrome-extension-eyedropper-tool/)
 - [Chrome Extension MLA Citation Generator: Build Your Own Tool](/chrome-extension-mla-citation-generator/)
+- [Chrome Site Isolation Explained — Developer Guide](/chrome-site-isolation-explained/)
+- [Audit Tool Chrome Extension Guide (2026)](/chrome-extension-audit-tool/)
+- [Mockup Screenshot Tool Chrome Extension Guide (2026)](/chrome-extension-mockup-screenshot-tool/)
+- [Screen Annotation Tool Chrome Extension Guide (2026)](/chrome-extension-screen-annotation-tool/)
+- [Paraphrase Tool Students Chrome Extension Guide (2026)](/chrome-extension-paraphrase-tool-students/)
+- [Lighthouse Audit Runner Chrome Extension Guide (2026)](/chrome-extension-lighthouse-audit-runner/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

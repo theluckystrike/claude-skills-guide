@@ -255,6 +255,7 @@ Related Reading
 - [Claude Skills for Enterprise Security & Compliance Guide](/claude-skills-for-enterprise-security-compliance-guide/)
 - [Claude Code Skill Permission Scope Error: Fix Guide](/claude-code-skill-permission-denied-error-fix-2026/)
 - [Structuring Claude Skills for Large Enterprise Codebases](/structuring-claude-skills-for-large-enterprise-codebases/)
+- [Claude Skill Permissions What Can Skills — Developer Guide](/claude-skill-permissions-what-can-skills-access/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

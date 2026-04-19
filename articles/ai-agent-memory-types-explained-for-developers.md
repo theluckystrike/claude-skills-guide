@@ -258,6 +258,8 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
 - [Building Stateful Agents with Claude Skills: Complete Guide](/building-stateful-agents-with-claude-skills-guide/). Design Claude Code agents that persist and retrieve state across turns using the memory types covered here.
+- [How to Test and Debug Multi Agent Workflows](/how-to-test-and-debug-multi-agent-workflows/)
+- [Claude Code as a Debugging Agent](/claude-code-debugging-agent/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

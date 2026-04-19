@@ -265,6 +265,8 @@ Related Reading
 - [Claude Code Inngest Event Driven Function Workflow Tutorial](/claude-code-inngest-event-driven-function-workflow-tutorial/)
 - [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)
 - [Claude Code Notification Setup for Long Tasks](/claude-code-notification-setup-for-long-tasks/)
+- [Claude Code for Inngest — Workflow Guide](/claude-code-for-inngest-workflow-guide/)
+- [Claude Code for Durable Objects — Workflow Guide](/claude-code-for-durable-objects-cf-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

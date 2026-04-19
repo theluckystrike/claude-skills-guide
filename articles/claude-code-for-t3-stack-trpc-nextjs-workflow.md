@@ -301,6 +301,7 @@ Related Reading
 - [Claude Code for TanStack Start Workflow Guide](/claude-code-for-tanstack-start-workflow-guide/)
 - [Claude Code Next.js Authentication NextAuth Guide](/claude-code-nextjs-authentication-next-auth-guide/)
 - [Claude Code Next.js Image Optimization Guide](/claude-code-nextjs-image-optimization-guide/)
+- [Claude Code SvelteKit Full Stack Guide](/claude-code-sveltekit-full-stack-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

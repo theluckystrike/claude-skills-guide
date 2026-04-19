@@ -407,6 +407,10 @@ Related Reading
 - [Chrome Extension Development: Getting Started Guide](/chrome-extension-development-2026/)
 - [Web Speech API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
+- [AI Text Expander Chrome Extension Guide (2026)](/ai-text-expander-chrome-extension/)
+- [Chrome Extension Highlight Text Save](/chrome-extension-highlight-text-save/)
+- [Text To Speech Chrome Extension Guide (2026)](/chrome-extension-text-to-speech/)
+- [Building a Chrome Extension Text Expander from Scratch](/chrome-extension-text-expander/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -217,6 +217,14 @@ Related Reading
 - [Claude MD Example for Android Kotlin Project](/claude-md-example-for-android-kotlin-project/)
 - [Claude.md Example for Data Science Python Project](/claude-md-example-for-data-science-python-project/)
 - [Claude MD Example for Go Fiber API Project](/claude-md-example-for-go-fiber-api-project/)
+- [Claude MD Example For Next.js TypeScript — Developer Guide](/claude-md-example-for-nextjs-typescript-project/)
+- [Claude Md Example For Machine Learning — Developer Guide](/claude-md-example-for-machine-learning-project/)
+- [CLAUDE.md Example for Flutter + Dart + Riverpod — Production Template (2026)](/claude-md-example-for-flutter-dart-riverpod/)
+- [CLAUDE.md Example for Laravel + PHP — Production Template (2026)](/claude-md-example-for-laravel-php/)
+- [CLAUDE.md Example for Rails + Turbo + Stimulus — Production Template (2026)](/claude-md-example-for-rails-turbo-stimulus/)
+- [CLAUDE.md Example for NestJS + TypeORM — Production Template (2026)](/claude-md-example-for-nestjs-typeorm/)
+- [CLAUDE.md Example for Go + Gin + GORM — Production Template (2026)](/claude-md-example-for-go-gin-gorm/)
+- [CLAUDE.md Example for Django + PostgreSQL — Production Template (2026)](/claude-md-example-for-django-postgresql/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -74,3 +74,14 @@ Claude Code should create a `fn matmul` with typed `Tensor` parameters, implemen
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
 - [Claude Code for Groq Inference Workflow Guide](/claude-code-for-groq-inference-workflow-guide/)
 - [Best Way to Set Up Claude Code for New Project](/best-way-to-set-up-claude-code-for-new-project/)
+
+## Related Articles
+
+- [Claude Code Unleash Strategy: Custom Activation Workflow](/claude-code-unleash-strategy-custom-activation-workflow/)
+- [Claude Code for Inspector v2 Workflow](/claude-code-for-inspector-v2-workflow/)
+- [Claude Code for Diagramming: Mermaid Workflow Guide](/claude-code-for-diagramming-mermaid-workflow/)
+- [Claude Code for Dependabot Configuration Workflow](/claude-code-for-dependabot-configuration-workflow/)
+- [Claude Code for Amber: Bash Scripting Workflow Guide](/claude-code-for-amber-bash-scripting-workflow-guide/)
+- [Claude Code for SolidJS Resources Workflow Guide](/claude-code-for-solidjs-resources-workflow-guide/)
+- [Claude Code for Hive Metastore Workflow Guide](/claude-code-for-hive-metastore-workflow-guide/)
+- [Claude Code for Release Candidate Workflow Tutorial](/claude-code-for-release-candidate-workflow-tutorial/)

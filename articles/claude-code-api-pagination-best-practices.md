@@ -409,6 +409,7 @@ Related Reading
 - Claude Code GraphQL Schema Design Guide
 - [Claude Code OpenAPI Spec Generation Guide](/claude-code-openapi-spec-generation-guide/)
 - [Claude Skills Integrations Hub](/integrations-hub/)
+- [Claude Code Next.js API Routes Best — Honest Review 2026](/claude-code-nextjs-api-routes-best-practices/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

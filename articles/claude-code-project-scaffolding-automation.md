@@ -245,6 +245,14 @@ Related Reading
 - [Best Way to Write CLAUDE.md File for Your Project](/how-to-write-effective-claude-md-for-your-project/). Add CLAUDE.md as part of your scaffold
 - [Is Claude Code Worth It for Solo Developers and Freelancers](/is-claude-code-worth-it-for-solo-developers-freelancers/). Scaffolding is where solo developers see the most value
 - [Claude Skills Workflows Hub](/workflows-hub/). More project initialization workflow guides
+- [Why Does Claude Code Perform Better With — Developer Guide](/why-does-claude-code-perform-better-with-claude-md/)
+- [How to Use Claude Md Conflicting — Complete Developer (2026)](/claude-md-conflicting-instructions-resolution-guide/)
+- [How Claude Code Eliminated Boilerplate Coding](/how-claude-code-eliminated-boilerplate-coding/)
+- [Claude Md For Contractor And Vendor Teams — Developer Guide](/claude-md-for-contractor-and-vendor-teams/)
+- [Claude Md Secrets And Sensitive Info — Developer Guide](/claude-md-secrets-and-sensitive-info-handling/)
+- [Claude Md For Dependency Management Rules — Developer Guide](/claude-md-for-dependency-management-rules/)
+- [CLAUDE.md Example for NestJS + TypeORM — Production Template (2026)](/claude-md-example-for-nestjs-typeorm/)
+- [CLAUDE.md Example for Go + Gin + GORM — Production Template (2026)](/claude-md-example-for-go-gin-gorm/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -195,6 +195,8 @@ Related Reading
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/). See also
 - Claude Code Error: Rate Limit Exceeded 429 Workaround. See also
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). See also
+- [Fix WebSocket Connection Failures in Claude Code](/claude-code-websocket-connection-failed-fix/)
+- [Fix Claude Code TLS/SSL Errors Behind Proxy](/claude-code-tls-ssl-connection-error-corporate-proxy-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

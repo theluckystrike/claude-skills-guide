@@ -502,6 +502,9 @@ Related Reading
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)
+- [Claude Code for Gitleaks Secret Scanning Workflow](/claude-code-for-gitleaks-secret-scanning-workflow/)
+- [Claude Code for CloudSploit Scanning Workflow](/claude-code-for-cloudsploit-scanning-workflow/)
+- [Claude Code LemonSqueezy License Key Validation Workflow](/claude-code-lemonsqueezy-license-key-validation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

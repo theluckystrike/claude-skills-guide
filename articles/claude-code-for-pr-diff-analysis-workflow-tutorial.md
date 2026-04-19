@@ -250,6 +250,9 @@ Related Reading
 - [Claude Code for Benchmark Reporting Workflow Tutorial](/claude-code-for-benchmark-reporting-workflow-tutorial/)
 - [Claude Code for CDN Optimization Workflow Tutorial](/claude-code-for-cdn-optimization-workflow-tutorial/)
 - [Claude Code for Code Bookmark Workflow Tutorial Guide](/claude-code-for-code-bookmark-workflow-tutorial-guide/)
+- [Claude Code for Taint Analysis Workflow Tutorial Guide](/claude-code-for-taint-analysis-workflow-tutorial-guide/)
+- [Claude Code GrowthBook Experiment Analysis Workflow Tutorial](/claude-code-growthbook-experiment-analysis-workflow-tutorial/)
+- [Claude Code for Dataflow Analysis Workflow Tutorial](/claude-code-for-dataflow-analysis-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

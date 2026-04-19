@@ -338,6 +338,8 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Covers the tdd and supermemory skills used throughout this Linear integration guide, with usage patterns and invocation tips
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Extends the Linear workflow into deployment pipelines, closing the loop from issue creation to production release
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Batch triage of Linear issues can generate significant API costs; these techniques help you keep them manageable
+- [Claude Skills for Puppet Chef Configuration Management](/claude-skills-for-puppet-chef-configuration-management/)
+- [Claude Skills for EdTech Learning Management Systems](/claude-skills-for-edtech-learning-management-systems/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

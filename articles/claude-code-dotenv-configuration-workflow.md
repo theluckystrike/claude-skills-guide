@@ -328,6 +328,7 @@ Related Reading
 - [Claude Code Grafana Dashboard Configuration Workflow Tips](/claude-code-grafana-dashboard-configuration-workflow-tips/)
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/)
+- [Claude Code for Pkl Config Language — Guide](/claude-code-for-pkl-configuration-language-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

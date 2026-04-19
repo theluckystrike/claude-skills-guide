@@ -287,6 +287,14 @@ Related Reading
 - [Claude Code Git Bisect Automated Bug Finding Workflow](/claude-code-git-bisect-automated-bug-finding-workflow/)
 - [How to Debug a Claude Skill That Silently Fails](/how-do-i-debug-a-claude-skill-that-silently-fails/)
 - [Workflows Hub](/workflows-hub/)
+- [Claude Code for LlamaIndex RAG Pipeline Debugging](/claude-code-for-llamaindex-rag-pipeline-debugging/)
+- [Claude Code as a Debugging Agent](/claude-code-debugging-agent/)
+- [Claude Code Debugging Tips from Reddit](/claude-code-debugging-reddit/)
+- [Master Claude Code Debugging Skills](/claude-code-debugging-skills/)
+- [Claude Code Browser Debugging Guide](/claude-code-browser-debugging/)
+- [Debug MCP Servers in Claude Code](/claude-code-debugging-mcp/)
+- [Claude Code Debugging Prompts That Work](/claude-code-debugging-prompt/)
+- [Claude Code Debugging Skill Setup](/claude-code-debugging-skill/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

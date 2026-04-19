@@ -469,6 +469,8 @@ Related Reading
 - [Claude Code for GraphQL Code Generation Workflow](/claude-code-for-graphql-code-generation-workflow/)
 - [Claude Code for GraphQL Codegen Workflow Tutorial](/claude-code-for-graphql-codegen-workflow-tutorial/)
 - [Claude Code for GraphQL Complexity Workflow Guide](/claude-code-for-graphql-complexity-workflow-guide/)
+- [Claude Code for Prometheus Federation Workflow Guide](/claude-code-for-prometheus-federation-workflow-guide/)
+- [Claude Code for Webpack Federation Workflow Guide](/claude-code-for-webpack-federation-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

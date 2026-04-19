@@ -376,6 +376,14 @@ Related Reading
 - [Building Stateful Agents with Claude Skills](/building-stateful-agents-with-claude-skills-guide/). Hooks are core to stateful agent design
 - [Claude Skill .md File Format: Full Specification](/claude-skill-md-format-complete-specification-guide/). Skill file format reference
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top developer skills that work well with hooks
+- [2,675 Articles to 496 Clicks: AI Content Lessons](/ai-content-at-scale-lessons-2675-articles/)
+- [Claude Code Developer Census 2026](/claude-code-developer-census-2026/)
+- [What 1,024 Queries Reveal About Claude Code Users](/claude-code-search-query-analysis-2026/)
+- [Claude Code Beta Features: How to Access and Use Them](/claude-code-beta-features-how-to-access/)
+- [Zero-Click Crisis: 26,619 Wasted Impressions](/claude-code-zero-click-crisis-2026-study/)
+- [Claude Code Client Library Generation Guide](/claude-code-client-library-generation-guide/)
+- [Why Senior Developers Prefer Claude Code (2026)](/why-do-senior-developers-prefer-claude-code-2026/)
+- [Claude Code Fortran Scientific — Complete Developer Guide](/claude-code-fortran-scientific-code-modernization-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

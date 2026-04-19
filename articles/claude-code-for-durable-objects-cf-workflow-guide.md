@@ -73,3 +73,8 @@ Claude Code should create a DO class with `this.count` state initialized from st
 - [Claude Code AWS Lambda Deployment Guide](/claude-code-aws-lambda-deployment-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
 - [Claude Code for AI Agent Tool Calling](/claude-code-for-ai-agent-tool-calling-implementation/)
+
+## Related Articles
+
+- [Claude Code for Rust Trait Objects Workflow Guide](/claude-code-for-rust-trait-objects-workflow-guide/)
+- [Claude Code Inngest Durable Workflow for Long Running Tasks](/claude-code-inngest-durable-workflow-long-running-tasks/)

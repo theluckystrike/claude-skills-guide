@@ -3,8 +3,8 @@
 layout: default
 title: "How to Use Capacitor Hybrid App Development (2026)"
 description: "A practical guide to building hybrid mobile applications using Claude Code and Capacitor. Learn project setup, native features integration, and."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-capacitor-hybrid-app-development-guide/
 categories: [tutorials]
@@ -14,6 +14,8 @@ score: 7
 geo_optimized: true
 ---
 
+
+Everything below targets capacitor hybrid app and the specific Claude Code patterns that make capacitor hybrid app work smoothly. For related approaches, see [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/).
 
 Claude Code Capacitor Hybrid App Development Guide
 
@@ -348,6 +350,12 @@ Continue exploring Capacitor's capabilities by experimenting with additional plu
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

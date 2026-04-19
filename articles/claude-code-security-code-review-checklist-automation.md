@@ -255,6 +255,7 @@ Related Reading
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). Core developer skills that complement automated security review workflows
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep automated code review sessions affordable at scale
 - [Claude Code API Security OWASP Guide](/claude-code-api-security-owasp-guide/). Secure your Claude Code API integrations against the OWASP Top 10
+- [Claude Code for Security Scan Automation? (2026)](/claude-code-for-security-scan-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

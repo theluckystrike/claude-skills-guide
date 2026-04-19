@@ -243,3 +243,7 @@ Monitor batch operations at scale:
 - [Anthropic Message Batches API Guide](/anthropic-message-batches-api-guide/)
 - [Claude API Batch Processing Large Datasets](/claude-api-batch-processing-large-datasets-workflow-guide/)
 - [Claude Code for Batch Processing Optimization](/claude-code-for-batch-processing-optimization-workflow/)
+
+## Related Articles
+
+- [Migrating Real-Time Claude Calls to Batch API](/migrating-real-time-claude-calls-to-batch/)

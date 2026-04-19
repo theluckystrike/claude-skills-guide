@@ -284,6 +284,7 @@ Related Reading
 - [Claude Code for Cloudflare R2 Storage Workflow Guide](/claude-code-for-cloudflare-r2-storage-workflow-guide/)
 - [Claude Code for IPFS Decentralized Storage Workflow](/claude-code-for-ipfs-decentralized-storage-workflow/)
 - [Claude Code for Web Storage Workflow Guide](/claude-code-for-web-storage-workflow-guide/)
+- [Claude Code for OpenEBS Storage Workflow Tutorial](/claude-code-for-openebs-storage-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

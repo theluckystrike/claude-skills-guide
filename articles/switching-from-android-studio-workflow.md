@@ -436,6 +436,10 @@ Related Reading
 - [Claude Code for WindSurf Cascade Workflow Guide](/claude-code-for-windsurf-cascade-workflow-guide/)
 - [Best Claude Code Courses Online 2026: A Developer Guide](/best-claude-code-courses-online-2026/)
 - [Best Claude Code YouTube Channels to Follow in 2026](/best-claude-code-youtube-channels-to-follow/)
+- [Claude Code for Android DataStore Workflow Guide](/claude-code-for-android-datastore-workflow-guide/)
+- [Claude Code for LM Studio — Workflow Guide](/claude-code-for-lm-studio-workflow-guide/)
+- [Claude Code for Beekeeper Studio — Workflow Guide](/claude-code-for-beekeeper-studio-workflow-guide/)
+- [Claude Code Consultant Codebase — Complete Developer Guide](/claude-code-consultant-codebase-context-switching-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

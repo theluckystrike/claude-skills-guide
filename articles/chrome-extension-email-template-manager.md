@@ -224,6 +224,14 @@ Related Reading
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
 - [AI Email Writer Chrome Extension: A Developer's Guide](/ai-email-writer-chrome-extension/)
 - [AI Inbox Organizer Chrome Extension: A Developer's Guide to Intelligent Email Management](/ai-inbox-organizer-chrome-extension/)
+- [Claude Code For Pr Template — Complete Developer Guide](/claude-code-for-pr-template-workflow-tutorial-guide/)
+- [Claude Md Template For New — Complete Developer Guide](/claude-md-template-for-new-projects-starter-guide/)
+- [Claude Code For TypeScript — Complete Developer Guide](/claude-code-for-typescript-template-literal-types-guide/)
+- [Claude Code for Template Based Code Generation Guide](/claude-code-for-template-based-code-generation-guide/)
+- [Claude Md Example For Laravel Php — Developer Guide](/claude-md-example-for-laravel-php-application/)
+- [Claude Code Ignoring CLAUDE.md Entirely — Complete Diagnostic Guide (2026)](/claude-ignoring-claude-md-entirely/)
+- [Chrome Group Policy Templates 2026: Complete Admin Guide](/chrome-group-policy-templates-2026/)
+- [Claude Md Example For Elixir Phoenix — Developer Guide](/claude-md-example-for-elixir-phoenix-application/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

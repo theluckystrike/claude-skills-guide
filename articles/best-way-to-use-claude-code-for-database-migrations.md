@@ -225,6 +225,9 @@ Related Reading
 - [Using Claude Code with Prisma ORM Database Migrations](/using-claude-code-with-prisma-orm-database-migrations/). See also
 - [Should I Use Claude Code for Production Database Migrations](/should-i-use-claude-code-for-production-database-migrations/). See also
 - [Claude Code Tutorials Hub](/tutorials-hub/). See also
+- [How To Use Claude Code To Write — Complete Developer Guide](/how-to-use-claude-code-to-write-database-queries-from-scratch/)
+- [Claude Code SQLAlchemy Alembic Migrations Deep Dive Guide](/claude-code-sqlalchemy-alembic-migrations-deep-dive-guide/)
+- [Claude Code Output Format — How to Customize (2026)](/best-way-to-customize-claude-code-output-format-style/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

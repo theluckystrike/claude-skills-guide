@@ -304,6 +304,14 @@ Related Reading
 - [Anthropic Official Skills vs Community Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/). Understanding what the skills ecosystem offers helps you evaluate Claude Code's extensibility advantage over Gemini CLI
 - [Claude Skills vs Prompts: Which Is Better for Your Workflow?](/claude-skills-vs-prompts-which-is-better/). Explores how reusable skill invocations differ from raw prompting, relevant to comparing Claude Code with simpler CLI tools
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How Claude Code's automatic skill matching works and why it matters when choosing between agentic coding tools
+- [Tabnine vs Claude Code for Team Development](/tabnine-vs-claude-code-for-team-development/)
+- [Sweep AI GitHub Bot vs Claude — Developer Comparison 2026](/sweep-ai-github-bot-vs-claude-code/)
+- [Should I Switch From Supermaven To Claude — Developer Guide](/should-i-switch-from-supermaven-to-claude-code/)
+- [Claude Code vs Supermaven Large — Developer Comparison 2026](/claude-code-vs-supermaven-large-codebase-navigation/)
+- [Claude Code For GitHub — Developer Comparison 2026](/claude-code-for-github-codespaces-vs-gitpod-workflow-guide/)
+- [Claude Code vs Copilot Code — Developer Comparison 2026](/claude-code-vs-copilot-code-documentation-generation/)
+- [Switching From Xcode To Claude — Complete Developer Guide](/switching-from-xcode-to-claude-code-guide/)
+- [Claude Code vs Traditional IDE — Developer Comparison 2026](/claude-code-vs-traditional-ide-productivity-study/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

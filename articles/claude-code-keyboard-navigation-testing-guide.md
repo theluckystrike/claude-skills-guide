@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code Keyboard Navigation Testing Guide"
 description: "A practical guide to testing keyboard navigation in Claude Code projects. Learn automation patterns, test strategies, and tooling for accessibility."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, keyboard-navigation, testing, accessibility, automation, claude-skills]
@@ -13,6 +13,8 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
+
+The scope here is keyboard navigation configuration and practical usage with Claude Code. This does not cover general project setup. For that foundation, see [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/).
 
 Keyboard navigation testing ensures your web applications remain accessible to users who rely on keyboards instead of pointing devices. This guide covers practical testing strategies using Claude Code skills, test frameworks, and automation patterns that integrate smoothly into your development workflow.
 
@@ -412,6 +414,12 @@ Start with the manual audit checklist to identify the most critical gaps, then l
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

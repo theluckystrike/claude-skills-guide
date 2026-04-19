@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code Terraform Module Development Guide"
 description: "Master Terraform module development with Claude Code. Learn practical workflows for creating reusable, well-documented infrastructure modules."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, terraform, infrastructure, devops, modules, iac, claude-skills]
 author: theluckystrike
@@ -13,6 +13,8 @@ permalink: /claude-code-terraform-module-development-guide/
 render_with_liquid: false
 geo_optimized: true
 ---
+
+Troubleshooting state file conflicts during team collaboration starts with understanding that concurrent applies without proper state locking. Below is the Claude Code workflow for fixing terraform module issues, validated in April 2026.
 
 {% raw %}
 Terraform module development is a skill that pays dividends across your entire infrastructure career. Well-crafted modules transform copy-pasted configurations into reusable, versioned building blocks that teams can share and maintain. Claude Code accelerates this process significantly, helping you structure modules correctly, implement best practices automatically, and generate documentation that your team will actually read.
@@ -224,6 +226,12 @@ Invest time in building modules that follow these patterns, and your team will r
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

@@ -277,6 +277,14 @@ Related Reading
 - [Claude Code Project Initialization Best Practices](/claude-code-project-initialization-best-practices/)
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
 - [Getting Started Hub](/getting-started-hub/)
+- [Claude Code With Convex Backend Real-Time Data Setup](/claude-code-with-convex-backend-real-time-data-setup/)
+- [Claude Code Developer Portal Setup Guide](/claude-code-developer-portal-setup-guide/)
+- [Claude Code with Turborepo Monorepo Setup Guide](/claude-code-with-turborepo-monorepo-setup-guide/)
+- [How to Use Paddle Billing Integration Setup (2026)](/claude-code-paddle-billing-integration-setup-guide/)
+- [Claude Code Auto Mode Setup Guide](/claude-code-auto-mode-setup-guide/)
+- [Claude Code Monorepo Setup — Complete Developer Guide](/claude-code-monorepo-setup-guide/)
+- [Claude Code VSCode Restart Reload: Hot Reload Setup (2026)](/claude-code-hot-reload-development-setup/)
+- [Claude Code Typesense Full Text Search Setup Tutorial](/claude-code-typesense-full-text-search-setup-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

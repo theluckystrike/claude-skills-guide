@@ -232,5 +232,10 @@ Related Reading
 - [Claude Code for OSS Bug Report Workflow Tutorial](/claude-code-for-oss-bug-report-workflow-tutorial/)
 - [Claude Code for OSS CoC Enforcement Workflow Tutorial](/claude-code-for-oss-coc-enforcement-workflow-tutorial/)
 - [Claude Code for OSS Maintainer Workflow Tutorial Guide](/claude-code-for-oss-maintainer-workflow-tutorial-guide/)
+- [Claude Code For Oss Funding — Complete Developer Guide](/claude-code-for-oss-funding-workflow-tutorial-guide/)
+- [Claude Code For Oss Maintainer — Complete Developer Guide](/claude-code-for-oss-maintainer-burnout-workflow/)
+- [Claude Code For Oss Governance — Complete Developer Guide](/claude-code-for-oss-governance-workflow-tutorial-guide/)
+- [Claude Code For Oss Deprecation — Complete Developer Guide](/claude-code-for-oss-deprecation-workflow-tutorial/)
+- [How to Use For Oss Contributor — Complete Developer (2026)](/claude-code-for-oss-contributor-guide-workflow/)
 
 

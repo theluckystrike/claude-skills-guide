@@ -306,6 +306,10 @@ Related Reading
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
+- [Building a Chrome Extension for Prime Day Deal Finding](/chrome-extension-prime-day-deal-finder/)
+- [Travel Deal Alert Chrome Extension Guide (2026)](/chrome-extension-travel-deal-alert/)
+- [Chrome Extension Stock Photo Finder Free](/chrome-extension-stock-photo-finder-free/)
+- [Restaurant Deal Finder Chrome Extension Guide (2026)](/chrome-extension-restaurant-deal-finder/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

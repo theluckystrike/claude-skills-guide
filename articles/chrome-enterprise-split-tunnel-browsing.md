@@ -154,6 +154,14 @@ Related Reading
 - [Chrome Incognito Mode Disable Enterprise: A Complete Guide](/chrome-incognito-mode-disable-enterprise/)
 - [Claude Code for Prisma Cloud Workflow Tutorial](/claude-code-for-prisma-cloud-workflow-tutorial/)
 - [Claude Code for Twistlock Prisma Cloud Workflow Tutorial](/claude-code-for-twistlock-prisma-cloud-workflow-tutorial/)
+- [Chrome Flags for Faster Browsing: Complete 2026 Guide](/chrome-flags-faster-browsing/)
+- [AI Knowledge Base Chrome Extension Guide (2026)](/ai-knowledge-base-chrome-extension/)
+- [Dangerous Chrome Extensions 2026: Security Risks](/dangerous-chrome-extensions-2026/)
+- [Session Manager Tabs Chrome Extension Guide (2026)](/chrome-extension-session-manager-tabs/)
+- [Chrome Extension Credit Card Rewards Optimizer](/chrome-extension-credit-card-rewards-optimizer/)
+- [Car Rental Deals Chrome Extension Guide (2026)](/chrome-extension-car-rental-deals/)
+- [Import Duty Calculator Chrome Extension Guide (2026)](/chrome-extension-import-duty-calculator/)
+- [Building a Chrome Extension for Senior Discounts](/chrome-extension-senior-discount-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

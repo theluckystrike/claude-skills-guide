@@ -517,6 +517,14 @@ Related Reading
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)
+- [Claude Code Rspec Ruby Bdd — Complete Developer Guide](/claude-code-rspec-ruby-bdd-workflow-guide/)
+- [Claude Code for Chart Museum Workflow Tutorial](/claude-code-for-chart-museum-workflow-tutorial/)
+- [Claude Code for Conventional Commits Workflow Guide](/claude-code-for-conventional-commits-workflow-guide/)
+- [Claude Code for Rspack Webpack Compatible Workflow](/claude-code-for-rspack-webpack-compatible-workflow/)
+- [Claude Code for Code Outline Navigation Workflow](/claude-code-for-code-outline-navigation-workflow/)
+- [Claude Code for Upgradeable Contract Workflow Guide](/claude-code-for-upgradeable-contract-workflow-guide/)
+- [How to Use For Maxwell Cdc — Complete Developer (2026)](/claude-code-for-maxwell-cdc-workflow-tutorial/)
+- [Claude Code for Wagmi Hooks Workflow](/claude-code-for-wagmi-hooks-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

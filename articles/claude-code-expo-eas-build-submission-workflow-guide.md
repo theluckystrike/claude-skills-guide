@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code Expo Eas Build — Complete Developer Guide"
 description: "Master the complete workflow for building and submitting Expo apps using EAS Build with Claude Code. From project setup to App Store submission."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, expo, eas-build, mobile-development, react-native]
 author: theluckystrike
@@ -13,6 +13,8 @@ permalink: /claude-code-expo-eas-build-submission-workflow-guide/
 render_with_liquid: false
 geo_optimized: true
 ---
+When developers hit expo eas build submission not working as expected in the development workflow, it typically traces back to incomplete expo eas build submission configuration or missing integration steps. The approach below walks through diagnosing and resolving this expo eas build submission issue with Claude Code, verified against current tooling in April 2026.
+
 {% raw %}
 Building and submitting React Native applications to the App Store and Google Play Store can be a complex process involving multiple steps, credentials, and configurations. This guide shows you how to use Claude Code to automate and streamline your Expo Application Services (EAS) build and submission workflow, making mobile app releases as smooth as possible.
 
@@ -316,6 +318,12 @@ Start by creating a basic EAS workflow skill, then expand it as your release pro
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

@@ -73,3 +73,14 @@ Claude Code should create `packages/ui/package.json` with proper `"exports"` and
 - [Using Claude Code with Bun Runtime JavaScript Projects](/using-claude-code-with-bun-runtime-javascript-projects/)
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)
 - [What Is the Best Way to Organize Claude Skills in a Monorepo](/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/)
+
+## Related Articles
+
+- [Claude Code for Microbenchmark Workflow Tutorial Guide](/claude-code-for-microbenchmark-workflow-tutorial-guide/)
+- [How to Use For Braintree Payment — Complete Developer (2026)](/claude-code-for-braintree-payment-workflow-guide/)
+- [Claude Code for Confluence Workflow Tutorial Guide](/claude-code-for-confluence-workflow-tutorial-guide/)
+- [Claude Code for Transaction Tracing Workflow Tutorial](/claude-code-for-transaction-tracing-workflow-tutorial/)
+- [Claude Code for Auto Assign Reviewer Workflow Tutorial](/claude-code-for-auto-assign-reviewer-workflow-tutorial/)
+- [Claude Code for Nomad Container Scheduling Workflow](/claude-code-for-nomad-container-scheduling-workflow/)
+- [Claude Code For Step Ca Pki — Complete Developer Guide](/claude-code-for-step-ca-pki-workflow-guide/)
+- [How to Use Ripgrep: Search Workflow (2026)](/claude-code-with-ripgrep-and-grep-workflow-tips/)

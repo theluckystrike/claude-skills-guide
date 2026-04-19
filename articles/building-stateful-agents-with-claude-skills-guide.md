@@ -307,6 +307,8 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top skills every developer should know
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep long-running agents cost-efficient
+- [Claude Skills vs Langflow for Building AI Agents — CLI Precision vs Visual Workflow Builder — 2026](/claude-skills-vs-langflow-ai-agents/)
+- [How AI Agents Use Tools and Skills Explained](/how-ai-agents-use-tools-and-skills-explained/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

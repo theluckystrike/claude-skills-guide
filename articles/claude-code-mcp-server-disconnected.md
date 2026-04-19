@@ -174,3 +174,14 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Apache Kafka MCP Server Event Streaming Guide](/apache-kafka-mcp-server-event-streaming-guide/)
 
 
+
+## Related Articles
+
+- [Connect Claude Code to Remote MCP Servers](/claude-code-mcp-remote-http-server-setup/)
+- [Claude Code Supabase MCP Setup Guide](/claude-code-supabase-mcp-setup/)
+- [Claude Code Cloudflare MCP Server Setup](/claude-code-cloudflare-mcp/)
+- [Claude Code GitHub Actions MCP Setup](/claude-code-github-actions-mcp/)
+- [Claude Code GCP MCP Server Setup](/claude-code-gcp-mcp/)
+- [Claude Code Azure DevOps MCP Setup](/claude-code-azure-devops-mcp/)
+- [Claude Code AWS MCP Server Setup Guide](/claude-code-aws-mcp-server/)
+- [Claude Code FastAPI MCP Server Guide](/claude-code-fastapi-mcp/)

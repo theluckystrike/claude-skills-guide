@@ -503,6 +503,11 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/)
 - [Claude Code Guides Hub](/guides-hub/)
+- [Claude Code SDK Documentation Workflow](/claude-code-sdk-documentation-workflow/)
+- [Claude Code for FPGA Development Workflow Tutorial](/claude-code-for-fpga-development-workflow-tutorial/)
+- [Claude Code for Development Environment Workflow](/claude-code-for-development-environment-workflow/)
+- [Claude Code for Alchemy SDK Workflow Tutorial](/claude-code-for-alchemy-sdk-workflow-tutorial/)
+- [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

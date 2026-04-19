@@ -194,6 +194,14 @@ Related Reading
 - [Claude Code Free Tier vs Pro Plan: Feature Comparison 2026](/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/)
 - [Is Claude Code Worth It for Solo Developers?](/is-claude-code-worth-it-for-solo-developers-freelancers/)
 - [Claude Code Cost Per Project Estimation Calculator Guide](/claude-code-cost-per-project-estimation-calculator-guide/). Estimate exactly what Claude Code will cost for your next startup project
+- [How Claude Cache Reads Cost $0.50 vs $5.00](/claude-cache-reads-cost-050-vs-500/)
+- [Claude Sonnet 4.6 Cost Analysis for Developers](/claude-sonnet-46-cost-analysis-developers/)
+- [Claude Prompt Caching Implementation Tutorial](/claude-prompt-caching-implementation-tutorial/)
+- [Claude Cost Per Request by Model Comparison](/claude-cost-per-request-model-comparison/)
+- [Web Search Costs $10 per 1,000 Searches](/claude-web-search-costs-10-per-thousand/)
+- [Pruning Unused Claude Tools Saves Real Money](/pruning-unused-claude-tools-saves-money/)
+- [Claude XML Tags vs JSON for Token Efficiency](/claude-xml-tags-vs-json-token-efficiency/)
+- [Track Claude Token Spend Per Project and Team](/track-claude-token-spend-per-project-team/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

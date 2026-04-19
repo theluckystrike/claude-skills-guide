@@ -174,6 +174,8 @@ Related Reading
 - [Claude Code for Monolith to Microservices Refactor Guide](/claude-code-for-monolith-to-microservices-refactor-guide/)
 - [Claude Code Spring Boot Microservices Guide](/claude-code-spring-boot-microservices-guide/)
 - [Claude Code Container Registry Workflow Guide](/claude-code-container-registry-workflow-guide/)
+- [Claude Code for Package Registry Workflow Tutorial](/claude-code-for-package-registry-workflow-tutorial/)
+- [Claude Code for Workbox Service Worker Workflow Guide](/claude-code-for-workbox-service-worker-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

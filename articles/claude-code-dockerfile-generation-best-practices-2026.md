@@ -508,6 +508,14 @@ Related Reading
 - [Claude Code Docker Networking Workflow Guide](/claude-code-docker-networking-workflow-guide/)
 - [Claude Code Dockerfile Generation: Multi-Stage Build Guide](/claude-code-dockerfile-generation-multi-stage-build-guide/)
 - [Claude Code Buildah Container Builds Guide](/claude-code-buildah-container-builds-guide/)
+- [Claude Code Kubernetes YAML Generation Workflow Guide](/claude-code-kubernetes-yaml-generation-workflow-guide/)
+- [Claude Code for GCP Security Command Workflow](/claude-code-for-gcp-security-command-workflow/)
+- [Claude Code Deployment with Amazon Bedrock](/claude-code-deployment-patterns-and-best-practices-with-amazon-bedrock/)
+- [Claude Code GitHub Actions with Bedrock](/claude-code-github-actions-bedrock/)
+- [Claude Code For Pixie K8S — Complete Developer Guide](/claude-code-for-pixie-k8s-observability-workflow/)
+- [Claude Code GitHub Actions Secrets Management](/claude-code-github-actions-secrets-management/)
+- [How to Use GitHub Actions OIDC Workflow (2026)](/claude-code-for-github-actions-oidc-workflow-guide/)
+- [Claude Code GitHub Actions Environment Protection](/claude-code-github-actions-environment-protection/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -398,6 +398,14 @@ Related Reading
 - [Claude Code Generates Insecure Code Patterns Fix](/claude-code-generates-insecure-code-patterns-fix/). Fix insecure patterns when they appear
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Security tests catch vulnerabilities before they ship
 - [Best Way to Prompt Claude Code for Complex Features](/how-to-write-effective-prompts-for-claude-code/). Include security requirements in complex prompts
+- [How To Make Claude Code Not — Complete Developer Guide](/how-to-make-claude-code-not-break-type-definitions/)
+- [How To Make Claude Code Document — Complete Developer Guide](/how-to-make-claude-code-document-functions-automatically/)
+- [How To Make Claude Code Generate — Complete Developer Guide](/how-to-make-claude-code-generate-complete-files-not-snippets/)
+- [How To Make Claude Code Explain — Complete Developer Guide](/how-to-make-claude-code-explain-its-reasoning-steps/)
+- [How To Make Claude Code Not Add — Complete Developer Guide](/how-to-make-claude-code-not-add-unused-imports/)
+- [How to Make Claude Code Stop Overwriting Your Edits (2026)](/how-to-make-claude-code-stop-overwriting-my-edits/)
+- [Best Free VPN for Chrome + Always-On Android Guide](/how-to-set-up-always-on-vpn-on-android-technically/)
+- [How to Make Claude Code Use Specific Library Version](/how-to-make-claude-code-use-specific-library-version/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

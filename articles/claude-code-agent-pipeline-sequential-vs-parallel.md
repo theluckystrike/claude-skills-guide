@@ -272,6 +272,13 @@ Related Reading
 - [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/). Coordinate multiple Claude agents for parallel and sequential task execution
 - [Fan-Out Fan-In Pattern with Claude Code Subagents](/fan-out-fan-in-pattern-claude-code-subagents/). Implement parallel workloads that converge on aggregated results
 - [Claude Skills Hub](/advanced-hub/). Explore advanced multi-agent patterns and orchestration techniques
+- [Claude Code Parallel Task Execution Workflow](/claude-code-parallel-task-execution-workflow/)
+- [Claude Code Bitbucket Pipelines Workflow Guide](/claude-code-bitbucket-pipelines-workflow-guide/)
+- [Claude Code Turborepo Pipeline Dependency Graph Workflow](/claude-code-turborepo-pipeline-dependency-graph-workflow/)
+- [Claude Code for Code Generation Pipeline Guide](/claude-code-for-code-generation-pipeline-guide/)
+- [Claude Code for CDK Pipelines Workflow Tutorial](/claude-code-for-cdk-pipelines-workflow-tutorial/)
+- [How 5 Parallel Claude Agents Cost $1,000/Month](/5-parallel-claude-agents-1000-per-month/)
+- [Parallel AI Agent Execution Patterns and Trade-offs](/parallel-ai-agent-execution-patterns-and-trade-offs/)
 
 
 

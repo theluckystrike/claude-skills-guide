@@ -218,3 +218,7 @@ The `allowed-tools` field accepts glob patterns (`Bash(git *)`) that CI cannot v
 - [Claude Skills Code Review Workflow](/claude-skills-code-review-workflow/)
 - [Testing Claude Skills Before Production](/testing-claude-skills-before-production/)
 - [Security Review Process for Claude Skills](/security-review-process-for-claude-skills/)
+
+## Related Articles
+
+- [Claude Skill State Machine Design Patterns](/claude-skill-state-machine-design-patterns/)

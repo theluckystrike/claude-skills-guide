@@ -312,6 +312,10 @@ Related Reading
 - [Claude Code Batch File Processing Workflow](/claude-code-batch-file-processing-workflow/)
 - [Claude Code for Batch Processing Optimization Workflow](/claude-code-for-batch-processing-optimization-workflow/)
 - [Claude Code for Claude Batch API: Anthropic Workflow Guide](/claude-code-for-claude-batch-api-anthropic-workflow-guide/)
+- [Combining Caching with Batch API for 95% Savings](/combining-caching-batch-api-95-percent-savings/)
+- [Batch API Cost Calculator for Claude Models](/batch-api-cost-calculator-claude-models/)
+- [Claude Batch API 50% Discount Complete Guide](/claude-batch-api-50-percent-discount-guide/)
+- [When to Use Claude Batch vs Real-Time API](/when-to-use-claude-batch-vs-real-time-api/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

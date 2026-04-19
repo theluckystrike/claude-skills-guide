@@ -269,6 +269,7 @@ Related Reading
 - [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/) -- Complete data analysis skill guide
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/) -- Keep data workflows cost-efficient
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/) -- How skills activate automatically
+- [Distributing Claude Skills Across — Developer Guide](/distributing-claude-skills-across-isolated-client-environmen/)
 
 Built by theluckystrike -- More at [zovo.one](https://zovo.one)
 

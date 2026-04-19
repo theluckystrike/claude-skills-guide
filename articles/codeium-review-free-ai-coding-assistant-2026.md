@@ -196,6 +196,10 @@ Related Reading
 - [Claude Code Skills Roadmap 2026: What Is Coming](/claude-code-skills-roadmap-2026-what-is-coming/)
 - [Zed Editor AI Features Review for Developers 2026](/zed-editor-ai-features-review-for-developers-2026/)
 - [Bolt.new Review: AI Web App Builder 2026](/bolt-new-review-ai-web-app-builder-2026/)
+- [Claude Code For Phd Student Coding — Developer Guide](/claude-code-for-phd-student-coding-productivity/)
+- [Using Claude Code to Prepare for Coding Interviews](/using-claude-code-to-prepare-for-coding-interviews/)
+- [Neovim AI Coding Setup with Claude 2026: Complete Guide](/neovim-ai-coding-setup-with-claude-2026/)
+- [Difference Between AI Agent and AI Assistant Explained](/difference-between-ai-agent-and-ai-assistant-explained/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

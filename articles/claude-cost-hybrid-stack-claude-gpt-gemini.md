@@ -121,3 +121,14 @@ The routing layer itself can be as simple as a dictionary mapping task types to 
 - [Claude vs GPT-4o Honest Cost Breakdown](/claude-cost-claude-vs-gpt4-honest-cost-breakdown/)
 - [Claude vs Gemini Cost Per Capability](/claude-cost-claude-vs-gemini-cost-per-capability/)
 - [Open Source LLMs as Cost Floor](/claude-cost-open-source-llm-cost-floor/)
+
+## Related Articles
+
+- [Claude Opus 4.7: Is It Worth the Extra Cost?](/claude-opus-47-is-it-worth-extra-cost/)
+- [Claude Haiku 4.5 Budget-Friendly Coding Guide](/claude-haiku-45-budget-friendly-coding/)
+- [Multi-Agent Claude Fleet Cost Architecture Guide](/multi-agent-claude-fleet-cost-architecture/)
+- [Text Editor Tool: 700 Token Overhead Explained](/claude-text-editor-tool-700-token-overhead/)
+- [Claude Agent Token Budget Management Guide](/claude-agent-token-budget-management/)
+- [Claude Batch Processing Limits and Best Practices](/claude-batch-processing-limits-best-practices/)
+- [Claude Workspace Spend Limits Configuration](/claude-workspace-spend-limits-configuration/)
+- [Shrink Claude Context Without Losing Quality](/shrink-claude-context-without-losing-quality/)

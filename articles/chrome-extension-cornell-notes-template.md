@@ -226,6 +226,14 @@ Related Reading
 - [Chrome Extension Email Template Manager: A Complete Guide](/chrome-extension-email-template-manager/)
 - [Chrome Extension Export Highlights Notes: A Practical Guide](/chrome-extension-export-highlights-notes/)
 - [Chrome Extension Meeting Agenda Template: A Developer's.](/chrome-extension-meeting-agenda-template/)
+- [Claude Code For Pr Template — Complete Developer Guide](/claude-code-for-pr-template-workflow-tutorial-guide/)
+- [CLAUDE.md Example for Django + PostgreSQL — Production Template (2026)](/claude-md-example-for-django-postgresql/)
+- [CLAUDE.md Example for React Native + Expo — Production Template (2026)](/claude-md-example-for-react-native-expo/)
+- [CLAUDE.md Example for FastAPI + SQLAlchemy — Production Template (2026)](/claude-md-example-for-fastapi-sqlalchemy/)
+- [CLAUDE.md Example for React + Vite + TypeScript — Production Template (2026)](/claude-md-example-for-react-vite-typescript/)
+- [CLAUDE.md Example for Rust + Axum + SQLx — Production Template (2026)](/claude-md-example-for-rust-axum-sqlx/)
+- [CLAUDE.md Example for Next.js + TypeScript — Production Template (2026)](/claude-md-example-for-nextjs-typescript/)
+- [CLAUDE.md Example for iOS + Swift + SwiftUI — Production Template (2026)](/claude-md-example-for-ios-swift-swiftui/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

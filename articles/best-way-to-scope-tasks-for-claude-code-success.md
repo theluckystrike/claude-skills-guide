@@ -218,6 +218,9 @@ Related Reading
 - [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). Creating reusable skills that encode your best practices and scoping patterns
 - [Claude Code Installation and First Steps](/claude-code-for-beginners-complete-getting-started-2026/). Getting started with Claude Code and understanding its capabilities
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-code-token-usage-optimization-best-practices-guide/). Managing token usage as your tasks become more detailed
+- [Best Way To Scope Claude Code To A — Honest Review 2026](/best-way-to-scope-claude-code-to-a-single-directory/)
+- [How AI Agents Plan and Execute Tasks Explained](/how-ai-agents-plan-and-execute-tasks-explained/)
+- [Best Way To Get Claude Code To Explain — Honest Review 2026](/best-way-to-get-claude-code-to-explain-existing-code/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

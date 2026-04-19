@@ -218,3 +218,9 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Claude SDK Timeout Configuration](/claude-sdk-timeout-configuration-customization/) -- tune retry and timeout settings for production.
 
 
+
+## Related Articles
+
+- [Claude Code Pulumi Python Infrastructure Guide](/claude-code-pulumi-python-infrastructure-guide/)
+- [Claude Code Python SDK Package Guide](/claude-code-python-sdk-package-guide/)
+- [How to Use Python Developers](/claude-code-for-chinese-python-developers-guide-2026/)

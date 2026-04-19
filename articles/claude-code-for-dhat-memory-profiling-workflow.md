@@ -233,6 +233,7 @@ Related Reading
 - [Claude Code for Memory Profiling Workflow Tutorial](/claude-code-for-memory-profiling-workflow-tutorial/)
 - [Claude Code for CPU Profiling Workflow Tutorial Guide](/claude-code-for-cpu-profiling-workflow-tutorial-guide/)
 - [Claude Code for Go pprof Profiling Workflow Tutorial](/claude-code-for-go-pprof-profiling-workflow-tutorial/)
+- [Claude Code for Heap Profiling Workflow Tutorial Guide](/claude-code-for-heap-profiling-workflow-tutorial-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -337,6 +337,8 @@ Related Reading
 - [Chrome Autofill Slow: Causes and Solutions for Developers](/chrome-autofill-slow/)
 - [Chrome GPU Process High Memory: Causes and Solutions](/chrome-gpu-process-high-memory/)
 - [Chrome WebGL Slow: Causes and Solutions for Developers](/chrome-webgl-slow/)
+- [Chrome Network Request Blocker Extension Guide (2026)](/chrome-extension-network-request-blocker/)
+- [Chrome Devtools Network Throttling — Developer Guide](/chrome-devtools-network-throttling/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

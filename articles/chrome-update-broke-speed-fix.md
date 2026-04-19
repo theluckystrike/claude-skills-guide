@@ -210,6 +210,14 @@ Related Reading
 - [Chrome Too Many Processes: A Developer's Guide to Fixing High Memory Usage](/chrome-too-many-processes/)
 - [Chrome vs Edge Memory 2026: Which Browser Uses Less RAM?](/chrome-vs-edge-memory-2026/)
 - [Chrome Zoom Slow: Diagnosing and Fixing Performance Issues](/chrome-zoom-slow/)
+- [Claude Code Stop Modifying Files: CLAUDE.md Fix (2026)](/how-to-make-claude-code-stop-adding-markdown-to-code/)
+- [Why Does Claude Code Hallucinate Code — Developer Guide](/why-does-claude-code-hallucinate-code-sometimes/)
+- [Fix Chrome High CPU — Developer Solutions](/chrome-high-cpu-fix/)
+- [Chrome Extension Coding Practice Problems](/chrome-extension-coding-practice-problems/)
+- [WASM Debugger Chrome Extension Guide (2026)](/chrome-extension-wasm-debugger/)
+- [Chrome Sync Slowing Browser — Developer Guide](/chrome-sync-slowing-browser/)
+- [Claude Code for Heap Profiling Workflow Tutorial Guide](/claude-code-for-heap-profiling-workflow-tutorial-guide/)
+- [Fix Chrome Using Too Much RAM (2026)](/chrome-using-too-much-ram-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

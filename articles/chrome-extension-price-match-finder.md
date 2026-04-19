@@ -362,6 +362,14 @@ Related Reading
 - [Deal Finder Chrome Extension: A Developer's Guide to Building Price Tracking Tools](/deal-finder-chrome-extension/)
 - [Chrome Extension Hotel Price Comparison: A Developer Guide](/chrome-extension-hotel-price-comparison/)
 - [Chrome Extension Restaurant Deal Finder: A Developer Guide](/chrome-extension-restaurant-deal-finder/)
+- [XPath Finder Chrome Extension Guide (2026)](/chrome-extension-xpath-finder/)
+- [How to Build a Chrome Extension for Finding Grocery Coupons](/chrome-extension-grocery-coupon-finder/)
+- [Stockx Price Tracker Chrome Extension Guide (2026)](/chrome-extension-stockx-price-tracker/)
+- [Price Comparison Chrome — Developer Comparison 2026](/price-comparison-chrome-extension/)
+- [Building a Chrome Extension for Prime Day Deal Finding](/chrome-extension-prime-day-deal-finder/)
+- [Used Item Price Checker Chrome Extension Guide (2026)](/chrome-extension-used-item-price-checker/)
+- [Military Discount Finder Chrome Extension Guide (2026)](/chrome-extension-military-discount-finder/)
+- [Amazon Price Tracker Chrome Extension — Guide (2026)](/price-tracker-chrome-extension-amazon/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

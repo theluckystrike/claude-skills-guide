@@ -244,6 +244,8 @@ Related Reading
 - [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Understanding the `max_turns` and `tools` fields helps you design skills with built-in loop prevention
 - [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). Best practices for writing skill bodies that include clear exit conditions to prevent runaway execution
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Auto-invocation can unexpectedly re-trigger skills in ways that create loops; this guide explains the full invocation model
+- [Claude Code Infinite Loop — How to Interrupt (2026)](/claude-code-stuck-infinite-loop-how-to-interrupt/)
+- [Fix Claude Skill Infinite Loop: Stop Recursive Triggering — 2026](/fix-claude-skill-infinite-loop/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

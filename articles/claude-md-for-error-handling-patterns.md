@@ -153,3 +153,10 @@ Your CLAUDE.md should also specify how error handling integrates with your monit
 This ensures Claude generates code that participates in your observability pipeline rather than creating isolated error handling that monitoring systems cannot see.
 
 For the complete CLAUDE.md writing guide, see the [best practices documentation](/claude-code-claude-md-best-practices/). If your error handling rules interact with architecture boundaries, see the [architecture decisions guide](/claude-md-for-architecture-decisions/). For database-specific error handling patterns, see the [database conventions guide](/claude-md-for-database-conventions-and-patterns/).
+
+## Related Articles
+
+- [Fix Claude Md For Error Handling Patterns — Quick Guide](/claude-md-for-error-handling-patterns-guide/)
+- [Claude Code Prisma Error Handling Patterns (2026)](/claude-code-prisma-transactions-and-error-handling-patterns/)
+- [Fix Claude Opus Prefill Not Supported Error — Quick Guide](/claude-opus-prefill-not-supported-error-fix/)
+- [How to Use Claude Error Handling Patterns (2026)](/claude-code-for-claude-error-handling-patterns-workflow-guid/)

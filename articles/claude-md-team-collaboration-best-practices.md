@@ -361,6 +361,14 @@ Related Reading
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
 - [Chrome Enterprise Security Best Practices for 2026](/chrome-enterprise-security-best-practices/)
+- [Claude Md Secrets And Sensitive Info — Developer Guide](/claude-md-secrets-and-sensitive-info-handling/)
+- [CLAUDE.md Example for Go + Gin + GORM — Production Template (2026)](/claude-md-example-for-go-gin-gorm/)
+- [CLAUDE.md Example for Django + PostgreSQL — Production Template (2026)](/claude-md-example-for-django-postgresql/)
+- [CLAUDE.md Example for React Native + Expo — Production Template (2026)](/claude-md-example-for-react-native-expo/)
+- [CLAUDE.md Example for FastAPI + SQLAlchemy — Production Template (2026)](/claude-md-example-for-fastapi-sqlalchemy/)
+- [CLAUDE.md Example for React + Vite + TypeScript — Production Template (2026)](/claude-md-example-for-react-vite-typescript/)
+- [CLAUDE.md Example for Rust + Axum + SQLx — Production Template (2026)](/claude-md-example-for-rust-axum-sqlx/)
+- [CLAUDE.md Example for Next.js + TypeScript — Production Template (2026)](/claude-md-example-for-nextjs-typescript/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

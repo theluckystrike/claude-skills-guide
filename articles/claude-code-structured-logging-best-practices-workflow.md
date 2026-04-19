@@ -342,6 +342,7 @@ Related Reading
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Claude Code Audit Logging for Enterprise Compliance Workflow](/claude-code-audit-logging-for-enterprise-compliance-workflow/)
 - [Claude Code Cypress Custom Commands Workflow Best Practices](/claude-code-cypress-custom-commands-workflow-best-practices/)
+- [Claude Code for Instructor Structured LLM — Guide](/claude-code-for-instructor-structured-llm-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

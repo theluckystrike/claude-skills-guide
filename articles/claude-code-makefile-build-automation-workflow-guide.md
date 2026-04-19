@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code Makefile Build Automation Workflow Guide"
 description: "Master Makefile build automation with Claude Code. Learn to create efficient build workflows, use AI-powered skills, and automate your development."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [guides]
 tags: [claude-code, makefile, build-automation, devops, workflow, automation]
 author: theluckystrike
@@ -13,6 +13,8 @@ score: 7
 geo_optimized: true
 ---
 
+
+The scope here is makefile build automation configuration and practical usage with Claude Code. This does not cover general project setup. For that foundation, see [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/).
 
 Claude Code Makefile Build Automation Workflow Guide
 
@@ -678,6 +680,12 @@ Start small, iterate, and let Claude Code handle the boilerplate while you focus
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

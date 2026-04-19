@@ -205,6 +205,14 @@ Related Reading
 
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). Discover how Claude Code fits into your complete development toolkit
 - [Guides Hub](/guides-hub/). Browse all practical developer guides
+- [Claude Code GitHub Actions Notification Setup](/claude-code-github-actions-notification-setup/)
+- [Claude Code GitHub Actions Custom Workflow Automation Tips](/claude-code-github-actions-custom-workflow-automation-tips/)
+- [How to Use GitHub Actions Self-Hosted Runner (2026)](/claude-code-for-github-actions-self-hosted-runner-guide/)
+- [Claude Code GitHub Actions Caching Strategies (2026)](/claude-code-github-actions-caching-strategies/)
+- [Claude Code Mobile CI/CD GitHub Actions Workflow Guide](/claude-code-mobile-ci-cd-github-actions-workflow-guide/)
+- [Claude Code For Pr Automation — Complete Developer Guide](/claude-code-for-pr-automation-with-github-actions-guide/)
+- [Claude Code GitHub Actions Monorepo Workflow](/claude-code-github-actions-monorepo-workflow/)
+- [Claude Code GitHub Actions Integration](/claude-code-github-actions-integration/)
 
 ---
 

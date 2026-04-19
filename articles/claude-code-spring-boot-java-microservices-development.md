@@ -368,6 +368,7 @@ Related Reading
 - [Claude Code Spring Boot Microservices Guide](/claude-code-spring-boot-microservices-guide/)
 - [Claude Code Skills for Golang Microservices](/claude-code-skills-for-golang-microservices/)
 - [Chrome Extension Development in 2026: A Practical Manifest V3 Guide](/chrome-extension-development-2026/)
+- [Claude Code Java Library Development Guide](/claude-code-java-library-development-guide/)
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

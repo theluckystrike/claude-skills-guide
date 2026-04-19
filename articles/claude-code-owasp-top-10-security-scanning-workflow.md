@@ -259,6 +259,7 @@ Related Reading
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). Developer skills that pair with security scanning in the CI/CD pipeline
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Run regular security scans without runaway API costs
 - [Claude Code API Security OWASP Guide](/claude-code-api-security-owasp-guide/). Apply OWASP Top 10 protections specifically to Claude Code API integrations
+- [Claude Code Checkov Security Scanning Guide](/claude-code-checkov-security-scanning-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

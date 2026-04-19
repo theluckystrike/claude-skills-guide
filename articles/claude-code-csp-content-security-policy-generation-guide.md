@@ -372,6 +372,13 @@ Related Reading
 - [Claude Skills for Enterprise Security and Compliance](/claude-skills-for-enterprise-security-compliance-guide/). Enterprise security framework patterns that complement CSP implementation
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). Developer skills for building and testing security configurations
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Efficiently generate and iterate on security policy configurations
+- [Claude Code For Modsecurity Waf — Complete Developer Guide](/claude-code-for-modsecurity-waf-workflow-guide/)
+- [How to Add Authentication to Your App Using Claude Code](/how-to-add-authentication-to-your-app-using-claude-code/)
+- [Claude Code for Runbook Authoring Workflow Tutorial](/claude-code-for-runbook-authoring-workflow-tutorial/)
+- [Claude Code for Vault Transit Encryption Guide](/claude-code-for-vault-transit-encryption-guide/)
+- [Claude Code Permission Rules in settings.json](/claude-code-permission-rules-settings-json-guide/)
+- [Claude Code for WorkOS AuthKit — Workflow Guide](/claude-code-for-workos-authkit-workflow-guide/)
+- [Claude Code for Vault Secrets Management Workflow](/claude-code-for-vault-secrets-management-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

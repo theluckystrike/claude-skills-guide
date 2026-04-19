@@ -313,6 +313,9 @@ Related Reading
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 - [AI Twitter Reply Generator for Chrome: A Developer's Guide](/ai-twitter-reply-generator-chrome/)
+- [Citation Generator Free Chrome Extension Guide (2026)](/citation-generator-chrome-extension-free/)
+- [Chrome Extension Google Docs Citation Addon](/chrome-extension-google-docs-citation-addon/)
+- [Apa Citation Formatter Chrome Extension Guide (2026)](/chrome-extension-apa-citation-formatter/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

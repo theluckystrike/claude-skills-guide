@@ -348,6 +348,14 @@ Related Reading
 - [Chrome DevTools Performance Profiling: A Practical Guide](/chrome-devtools-performance-profiling/)
 - [React DevTools Chrome Extension Guide: Master Component.](/react-devtools-chrome-extension-guide/)
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)
+- [Tailwind CSS Devtools Chrome Extension Guide (2026)](/chrome-extension-tailwind-css-devtools/)
+- [Redux DevTools Chrome Tutorial: Debug State Like a Pro](/redux-devtools-chrome-tutorial/)
+- [How to Use Zotero Chrome Extension Setup Guide](/zotero-chrome-extension-setup-guide/)
+- [Svelte Devtools Chrome Extension Guide (2026)](/chrome-extension-svelte-devtools/)
+- [How to Use Lighthouse Chrome Extension — Complete Developer](/lighthouse-chrome-extension-guide/)
+- [Chrome Devtools Workspaces Local Overrides — Developer Guide](/chrome-devtools-workspaces-local-overrides/)
+- [Capital One Shopping Chrome Extension Review (2026)](/capital-one-shopping-chrome-review/)
+- [Have I Been Pwned Chrome Extension Guide](/have-i-been-pwned-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

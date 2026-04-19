@@ -262,6 +262,11 @@ Related Reading
 - [Claude Code for Helicone LLM Gateway Workflow Tutorial](/claude-code-for-helicone-llm-gateway-workflow-tutorial/)
 - [Claude Code for JSON Mode LLM Workflow Guide](/claude-code-for-json-mode-llm-workflow-guide/)
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
+- [Claude Code for Langfuse LLM Analytics — Guide](/claude-code-for-langfuse-llm-analytics-workflow-guide/)
+- [Claude Code for Instructor Structured LLM — Guide](/claude-code-for-instructor-structured-llm-workflow-guide/)
+- [Claude Code for Memcached Caching Workflow Guide](/claude-code-for-memcached-caching-workflow-guide/)
+- [Claude Code For Ray Serve LLM — Complete Developer Guide](/claude-code-for-ray-serve-llm-workflow-tutorial-guide/)
+- [Claude Code For LLM Code Review — Complete Developer Guide](/claude-code-for-llm-code-review-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```

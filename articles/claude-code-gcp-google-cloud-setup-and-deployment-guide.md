@@ -237,6 +237,8 @@ Related Reading
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Skills tailored for cloud deployments and infrastructure automation
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). Start with the foundational developer skills before adding cloud-specific ones
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep cloud automation sessions cost-effective
+- [Claude Code for GCP Security Command Workflow](/claude-code-for-gcp-security-command-workflow/)
+- [Claude Code GitHub Actions Setup Guide](/claude-code-github-actions-setup-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

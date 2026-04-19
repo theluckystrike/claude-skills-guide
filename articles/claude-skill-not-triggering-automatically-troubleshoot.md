@@ -224,6 +224,13 @@ Related Reading
 - [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Reference for the exact YAML front matter fields that control how skills are loaded and matched
 - [How to Write a Skill .md File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). A guide for writing skills that actually fire, covering trigger phrases, descriptions, and invocation testing
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How the matching algorithm determines whether a skill fires automatically or needs manual invocation
+- [Fix 'command not found: claude' After Install](/claude-code-command-not-found-after-install-fix/)
+- [Fix: Claude Code Image 400 Error Loop](/claude-code-image-could-not-process-400/)
+- [Fix Claude Md Changes Not Taking Effect Fix — Quick Guide](/claude-md-changes-not-taking-effect-fix-guide/)
+- [Fix Claude Code Not Responding Terminal Hangs — Quick Guide](/claude-code-not-responding-terminal-hangs-fix/)
+- [Fix Claude Command Not Found After Install (2026)](/claude-code-command-not-found-after-install-troubleshooting/)
+- [Fix Claude Skill Not Saving State Between — Quick Guide](/claude-skill-not-saving-state-between-sessions-fix/)
+- [Fix Claude Code Not Finding the Skills Directory — 2026](/fix-claude-not-finding-skills-directory/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

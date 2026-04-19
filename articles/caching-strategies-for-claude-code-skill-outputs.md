@@ -312,6 +312,8 @@ Related Reading
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Optimize token usage per skill call alongside caching to minimize total API costs
 - [Measuring Claude Code Skill Efficiency Metrics](/measuring-claude-code-skill-efficiency-metrics/). Track cache hit rates and skill efficiency metrics to quantify the value of your caching implementation
 - [Claude Skills: Advanced Hub](/advanced-hub/). Explore advanced performance optimization and skill architecture patterns for production workflows
+- [Claude Skills Disaster Recovery and Backup Strategies](/claude-skills-disaster-recovery-and-backup-strategies/)
+- [Claude Code Skills Redis Caching Layer Implementation](/claude-code-skills-redis-caching-layer-implementation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

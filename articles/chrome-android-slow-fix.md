@@ -326,6 +326,9 @@ Related Reading
 - [Chrome Zoom Slow: Diagnosing and Fixing Performance Issues](/chrome-zoom-slow/)
 - [Chrome iPad Slow Fix. Complete Guide for Developers and.](/chrome-ipad-slow-fix/)
 - [Claude Code Slow Response: How to Fix Latency Issues](/claude-code-slow-response-how-to-fix-latency-issues/)
+- [Fix Chrome Print Slow — Quick Guide](/chrome-print-slow-fix/)
+- [Chrome Developer Tools Slow — Developer Guide](/chrome-developer-tools-slow/)
+- [Chrome Service Workers Slow — Developer Guide](/chrome-service-workers-slow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

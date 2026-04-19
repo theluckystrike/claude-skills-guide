@@ -340,6 +340,8 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Code Guides Hub](/guides-hub/)
 - [Claude Code API Versioning Strategies Guide](/claude-code-api-versioning-strategies-guide/). Plan your API version strategy so generated clients remain compatible across releases
+- [Claude Code for OpenAPI 3.1 Workflow Tutorial](/claude-code-for-openapi-3-1-workflow-tutorial/)
+- [Claude Code For Openapi Zod — Complete Developer Guide](/claude-code-for-openapi-zod-client-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

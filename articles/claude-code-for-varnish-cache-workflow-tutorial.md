@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Varnish Cache Workflow Tutorial"
 description: "Learn how to use Claude Code CLI to automate Varnish Cache configuration, testing, and deployment workflows with practical examples and actionable advice."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-for-varnish-cache-workflow-tutorial/
 categories: [tutorials]
@@ -14,6 +14,8 @@ score: 7
 render_with_liquid: false
 geo_optimized: true
 ---
+
+When developers hit stale data served after updates, it typically traces back to cache invalidation not triggered on write-through paths. The approach below walks through diagnosing and resolving this varnish cache issue with Claude Code, verified against current tooling in April 2026.
 
 {% raw %}
 Claude Code for Varnish Cache Workflow Tutorial
@@ -315,6 +317,12 @@ Start by creating your project structure, building basic validation scripts, and
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

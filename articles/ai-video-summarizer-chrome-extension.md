@@ -364,6 +364,9 @@ Related Reading
 - [AI Summarizer Chrome Extension: Build Your Own Text Summarization Tool](/ai-summarizer-chrome-extension/)
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)
 - [AI PDF Summarizer Chrome Extension: A Developer Guide](/ai-pdf-summarizer-chrome-extension/)
+- [Video Downloader Chrome Extension Guide (2026)](/chrome-extension-video-downloader/)
+- [AI Webpage Summarizer Chrome Extension Guide (2026)](/ai-webpage-summarizer-chrome-extension/)
+- [Auto Caption Video Chrome Extension Guide (2026)](/chrome-extension-auto-caption-video/)
 
 Built by theluckystrike. More at https://zovo.one
 

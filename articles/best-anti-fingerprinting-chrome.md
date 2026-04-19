@@ -161,6 +161,7 @@ Related Reading
 - [Best Ad Blocker for Chrome in 2026](/best-ad-blocker-chrome-2026/)
 - [Best Browser for Old Laptop: A Developer and Power User.](/best-browser-old-laptop/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
+- [Block Canvas Fingerprinting in Chrome: Guide (2026)](/block-canvas-fingerprinting-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

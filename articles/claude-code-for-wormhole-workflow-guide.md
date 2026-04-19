@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Wormhole Workflow Guide"
 description: "Learn how to build wormhole-style workflows with Claude Code to instantly transfer context, code patterns, and solutions across projects, teams, and."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-wormhole-workflow-guide/
 categories: [workflows]
@@ -14,6 +14,8 @@ score: 8
 render_with_liquid: false
 geo_optimized: true
 ---
+
+Production use of wormhole surfaces real problems with proper wormhole configuration, integration testing, and ongoing maintenance. This wormhole guide shows how Claude Code helps you address each issue methodically.
 
 {% raw %}
 Claude Code for Wormhole Workflow Guide
@@ -258,6 +260,12 @@ The beauty of wormhole workflows is that they improve with use. Every pattern yo
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [How to Use TypeORM Entities Relations Migration (2026)](/claude-code-typeorm-entities-relations-migration-workflow/) for updated steps.*
 
 <div class="mastery-cta">
 

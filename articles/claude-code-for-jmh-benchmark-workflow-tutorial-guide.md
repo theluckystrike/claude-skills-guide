@@ -545,6 +545,14 @@ Related Reading
 - [Claude Code for API Benchmark Workflow Tutorial Guide](/claude-code-for-api-benchmark-workflow-tutorial-guide/)
 - [Claude Code for Benchmark CI Integration Workflow](/claude-code-for-benchmark-ci-integration-workflow/)
 - [Claude Code for Benchmark Regression Workflow Tutorial](/claude-code-for-benchmark-regression-workflow-tutorial/)
+- [Claude Code for Babylon.js Workflow Tutorial Guide](/claude-code-for-babylon-js-workflow-tutorial-guide/)
+- [Claude Code for Argo Rollouts Canary Workflow Guide](/claude-code-for-argo-rollouts-canary-workflow-guide/)
+- [Claude Code For Tooljet Low Code — Complete Developer Guide](/claude-code-for-tooljet-low-code-workflow-guide/)
+- [Claude Code for Across Protocol Workflow](/claude-code-for-across-protocol-workflow/)
+- [Claude Code Phoenix LiveView Workflow Guide](/claude-code-phoenix-liveview-workflow-guide/)
+- [Claude Code for Version Bump Workflow Tutorial Guide](/claude-code-for-version-bump-workflow-tutorial-guide/)
+- [Claude Code for Pulsar Tenant Workflow Tutorial](/claude-code-for-pulsar-tenant-workflow-tutorial/)
+- [Claude Code for Code Intelligence Indexing Workflow](/claude-code-for-code-intelligence-indexing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

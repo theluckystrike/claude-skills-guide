@@ -715,5 +715,6 @@ Related Reading
 - [Claude Code SOC 2 Compliance Audit Preparation Guide 2026](/claude-code-soc2-compliance-audit-preparation-guide-2026/). Step-by-step SOC 2 preparation workflow for fintech teams using Claude skills for evidence generation
 - [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-code-owasp-top-10-security-scanning-workflow/). Automated security scanning workflows that complement compliance documentation requirements
 - [Claude Skills Use Cases Hub](/use-cases-hub/). Explore additional use-case skill guides for security, compliance, and regulated industry development
+- [Claude Skills Feature Flag Implementation Workflow](/claude-skills-feature-flag-implementation-workflow/)
 
 

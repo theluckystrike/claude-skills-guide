@@ -372,6 +372,14 @@ Related Reading
 - [Chrome Developer Tools Running Slow? Here is How to Fix It](/chrome-developer-tools-slow/)
 - [Chrome DevTools Memory Leak Debugging: Find and Fix.](/chrome-devtools-memory-leak-debugging/)
 - [Claude Code CS50 Project Help and Debugging Guide](/claude-code-cs50-project-help-and-debugging-guide/)
+- [Claude Code for LlamaIndex RAG Pipeline Debugging](/claude-code-for-llamaindex-rag-pipeline-debugging/)
+- [Claude Code as a Debugging Agent](/claude-code-debugging-agent/)
+- [Claude Code Debugging Tips from Reddit](/claude-code-debugging-reddit/)
+- [Master Claude Code Debugging Skills](/claude-code-debugging-skills/)
+- [Claude Code Browser Debugging Guide](/claude-code-browser-debugging/)
+- [Debug MCP Servers in Claude Code](/claude-code-debugging-mcp/)
+- [Claude Code Debugging Prompts That Work](/claude-code-debugging-prompt/)
+- [Claude Code Debugging Skill Setup](/claude-code-debugging-skill/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

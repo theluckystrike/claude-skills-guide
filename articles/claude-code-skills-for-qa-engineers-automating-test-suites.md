@@ -155,6 +155,7 @@ Related Reading
 - [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/). Build a complete CI-integrated testing pipeline using the skills covered in this QA guide
 - [Claude Code Firebase Security Rules Validation Testing Guide](/claude-code-firebase-security-rules-validation-testing-guide/). Apply these QA automation skills to Firebase security rules testing and validation
 - [Claude Skills Use Cases Hub](/use-cases-hub/). Explore more QA automation, testing, and quality assurance skill workflows
+- [Claude Skills For Site Reliability — Developer Guide](/claude-skills-for-site-reliability-engineers-sre/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -289,6 +289,8 @@ Related Reading
 - [Open Source Claude Skills Ecosystem Outlook 2026](/open-source-claude-skills-ecosystem-outlook-2026/)
 - [Using Claude Code to Study Open Source Projects: A.](/using-claude-code-to-study-open-source-projects/)
 - [Claude Code for Open Source Contributions: 2026 Workflow Guide](/claude-code-open-source-contribution-workflow-guide-2026/)
+- [Using Claude Code for Polyglot Multi-Language Projects](/claude-md-for-polyglot-multi-language-projects/)
+- [Claude Md For Fullstack Projects — Complete Developer Guide](/claude-md-for-fullstack-projects-complete-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

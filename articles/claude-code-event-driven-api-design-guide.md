@@ -248,6 +248,7 @@ Related Reading
 - [Claude Code WebSocket Implementation Real-Time Events Guide](/claude-code-websocket-implementation-real-time-events-guide/)
 - [Claude Skills Event-Driven Architecture Setup](/claude-skills-event-driven-architecture-setup/)
 - [Claude Code Guides Hub](/guides-hub/)
+- [Claude Code for AsyncAPI Event-Driven Workflow Guide](/claude-code-for-asyncapi-event-driven-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

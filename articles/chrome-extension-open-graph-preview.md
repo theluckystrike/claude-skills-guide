@@ -257,6 +257,8 @@ Related Reading
 - [Chrome Extension Markdown Editor: Build Your Own Browser-Based Writing Tool](/chrome-extension-markdown-editor/)
 - [Responsive Viewer Alternative Chrome Extension 2026](/responsive-viewer-alternative-chrome-extension-2026/)
 - [Web Developer Toolbar Alternative Chrome Extension in 2026](/web-developer-toolbar-alternative-chrome-extension-2026/)
+- [Chrome Extension Markdown Preview: Complete Developer Guide](/chrome-extension-markdown-preview/)
+- [Chrome Extension Google Serp P — Honest Review 2026](/chrome-extension-google-serp-preview/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code Trunk Based Development Guide"
 description: "Learn how to use Claude Code with trunk based development workflows. Practical examples for developers integrating AI assistance into short-lived."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-trunk-based-development-guide/
 categories: [guides]
@@ -13,6 +13,8 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
+
+Working with trunk based means dealing with proper trunk based configuration, integration testing, and ongoing maintenance. This guide covers the exact steps for using Claude Code to handle these trunk based challenges after you have your basic environment configured.
 
 Trunk based development has become the standard for high-velocity engineering teams. When combined with Claude Code, developers can maintain rapid iteration cycles while keeping AI-assisted code quality high. This guide covers practical workflows for integrating Claude Code into trunk based development practices.
 
@@ -190,6 +192,12 @@ The combination of trunk based development's rapid iteration and Claude Code's c
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

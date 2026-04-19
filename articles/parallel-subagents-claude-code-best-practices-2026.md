@@ -238,6 +238,12 @@ Related Reading
 - [Fan-Out Fan-In Pattern with Claude Code Subagents](/fan-out-fan-in-pattern-claude-code-subagents/). Implement the fan-out fan-in pattern for controlled parallel subagent workflows
 - [Claude Code Tmux Session Management Multi Agent Workflow](/claude-code-tmux-session-management-multi-agent-workflow/). Manage parallel subagent sessions visually with tmux terminal multiplexing
 - [Claude Skills Hub](/advanced-hub/). Explore advanced parallel execution and subagent orchestration patterns
+- [Claude Code Parallel Task Execution Workflow](/claude-code-parallel-task-execution-workflow/)
+- [Claude Code Bitbucket Pipelines Workflow Guide](/claude-code-bitbucket-pipelines-workflow-guide/)
+- [Claude Code for CDK Pipelines Workflow Tutorial](/claude-code-for-cdk-pipelines-workflow-tutorial/)
+- [Claude Code Inngest Fan Out — Complete Developer Guide](/claude-code-inngest-fan-out-parallel-tasks-workflow/)
+- [How 5 Parallel Claude Agents Cost $1,000/Month](/5-parallel-claude-agents-1000-per-month/)
+- [Claude Code Git Worktree Parallel Development Workflow](/claude-code-git-worktree-parallel-development-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

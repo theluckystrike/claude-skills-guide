@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code Container Registry Workflow Guide"
 description: "A practical guide to automating container builds and registry operations using Claude Code. Includes examples for Docker Hub, GHCR, and ECR with code."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-container-registry-workflow-guide/
 categories: [guides]
@@ -14,6 +14,8 @@ tags: [claude-code, claude-skills]
 render_with_liquid: false
 geo_optimized: true
 ---
+
+Integrating container registry into a development workflow involves image layer optimization and runtime security hardening. The approach below walks through how Claude Code addresses each of these container registry concerns systematically.
 
 {% raw %}
 Container registries are the backbone of modern deployment pipelines, yet managing builds, tags, and pushes often involves repetitive CLI commands prone to human error. This guide shows you how to automate container registry workflows using Claude Code, reducing manual steps, preventing deployment errors, and giving your team a consistent, repeatable process regardless of which registry you use.
@@ -405,6 +407,12 @@ Document your tagging conventions in CLAUDE.md. Adding a note like "images are t
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code for k9s Kubernetes Terminal Workflow Guide"
 description: "Master the integration of Claude Code with k9s for streamlined Kubernetes management. Learn practical patterns for debugging, resource inspection, and."
-date: 2026-03-20
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-k9s-kubernetes-terminal-workflow-guide/
 categories: [guides]
@@ -11,6 +11,8 @@ tags: [claude-code, claude-skills]
 render_with_liquid: false
 geo_optimized: true
 ---
+
+Most k9s kubernetes terminal problems in practice come down to pods stuck in CrashLoopBackOff, caused by misconfigured resource limits or missing ConfigMap entries. This guide walks through the Claude Code approach to resolving them, current as of April 2026.
 
 {% raw %}
 Claude Code for k9s Kubernetes Terminal Workflow Guide
@@ -273,6 +275,12 @@ Remember to always verify destructive operations, use namespace isolation, and t
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

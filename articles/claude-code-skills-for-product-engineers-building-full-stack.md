@@ -162,6 +162,7 @@ Related Reading
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/). UI generation, design, and component workflows
 - [Claude Code Skills for Backend Developers](/claude-code-skills-for-backend-developers-node-and-python/). API development and server-side patterns
 - [Claude Code TDD Workflow Guide](/claude-tdd-skill-test-driven-development-workflow/). Test-driven development with Claude
+- [Claude Skills Workflow for Technical Product Managers](/claude-skills-workflow-for-technical-product-managers/)
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

@@ -72,3 +72,7 @@ Claude Code should generate a `SELECT` query with proper joins and a `WHERE` cla
 - [Claude Code Database Schema Design Guide](/claude-code-database-schema-design-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
 - [Claude Code for Drizzle ORM Workflow Guide](/claude-code-for-drizzle-orm-workflow-workflow-guide/)
+
+## Related Articles
+
+- [Claude Code for LM Studio — Workflow Guide](/claude-code-for-lm-studio-workflow-guide/)

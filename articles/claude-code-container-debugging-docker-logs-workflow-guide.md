@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code Container Debugging: Docker Logs Workflow Guide"
 description: "A practical workflow guide for debugging Docker containers using Claude Code and Docker logs. Real commands, scripts, and patterns for developers."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
@@ -13,6 +13,8 @@ permalink: /claude-code-container-debugging-docker-logs-workflow-guide/
 render_with_liquid: false
 geo_optimized: true
 ---
+
+Teams adopting container debugging docker logs quickly discover the difficulty of container orchestration complexity and build reproducibility. This walkthrough demonstrates how Claude Code streamlines the container debugging docker logs workflow from initial setup onward.
 
 {% raw %}
 Debugging containerized applications requires a systematic approach to log analysis, process inspection, and runtime investigation. This guide provides a practical workflow for debugging Docker containers using Claude Code, covering essential commands, automation patterns, and real-world scenarios that developers encounter daily. For setting up Claude Code itself inside Docker containers, see the [Claude Code with Docker container setup guide](/using-claude-code-inside-docker-container-tutorial/).
@@ -293,6 +295,12 @@ Claude Code enhances this workflow through skills that maintain context, generat
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

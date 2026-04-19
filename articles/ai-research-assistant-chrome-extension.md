@@ -268,6 +268,14 @@ Related Reading
 - [AI Calendar Assistant Chrome Extension: A Developer's Guide](/ai-calendar-assistant-chrome-extension/)
 - [AI Code Assistant Chrome Extension: Practical Guide for.](/ai-code-assistant-chrome-extension/)
 - [AI Reading Assistant Chrome: Technical Implementation Guide](/ai-reading-assistant-chrome/)
+- [How to Save Research Sessions with Chrome Extensions](/chrome-extension-save-research-sessions/)
+- [Research Organizer Chrome Extension Guide (2026)](/chrome-extension-research-organizer/)
+- [Chrome Extension for Amazon Product Research](/chrome-extension-product-research-amazon/)
+- [AI Knowledge Base Chrome Extension Guide (2026)](/ai-knowledge-base-chrome-extension/)
+- [Dangerous Chrome Extensions 2026: Security Risks](/dangerous-chrome-extensions-2026/)
+- [Car Rental Deals Chrome Extension Guide (2026)](/chrome-extension-car-rental-deals/)
+- [Building a Chrome Extension for Senior Discounts](/chrome-extension-senior-discount-chrome/)
+- [Page Speed Insights Chrome Extension Guide (2026)](/chrome-extension-page-speed-insights/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

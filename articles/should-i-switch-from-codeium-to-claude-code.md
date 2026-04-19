@@ -146,6 +146,8 @@ Related Reading
 - [Should I Switch From Continue Dev to Claude? A Practical.](/should-i-switch-from-continue-dev-to-claude/)
 - [Claude Code vs Codeium for SQL Query Generation](/claude-code-vs-codeium-sql-query-generation/)
 - [Codeium Review: Free AI Coding Assistant 2026](/codeium-review-free-ai-coding-assistant-2026/)
+- [Should I Use Claude Code For Writing — Developer Guide](/should-i-use-claude-code-for-writing-infrastructure-scripts/)
+- [Should I Switch From Aider To Claude Code — Developer Guide](/should-i-switch-from-aider-to-claude-code/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

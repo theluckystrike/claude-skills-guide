@@ -227,6 +227,7 @@ Related Reading
 - [Claude Code Multi-Agent Orchestration Patterns Guide](/claude-code-multi-agent-orchestration-patterns-guide/)
 - [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/)
 - [Parallel AI Agent Execution Patterns and Trade-offs](/parallel-ai-agent-execution-patterns-and-trade-offs/)
+- [Multi-Agent Workflow Design Patterns for Developers](/multi-agent-workflow-design-patterns-for-developers/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

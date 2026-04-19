@@ -213,3 +213,7 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Claude API Tool Use Function Calling Deep Dive Guide](/claude-api-tool-use-function-calling-deep-dive-guide/) -- full parameter reference for the Messages endpoint.
 
 
+
+## Related Articles
+
+- [Fix Claude Code API Error 400 Bad Request](/claude-code-api-error-400/)

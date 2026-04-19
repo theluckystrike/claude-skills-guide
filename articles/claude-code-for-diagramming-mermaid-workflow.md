@@ -434,6 +434,14 @@ Related Reading
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
+- [Claude Code for Polygon zkEVM Workflow](/claude-code-for-polygon-zkevm-workflow/)
+- [Claude Code for ZenRows Scraping Workflow Tutorial](/claude-code-for-zenrows-scraping-workflow-tutorial/)
+- [Claude Code for Kotlin Coroutines Flow Workflow](/claude-code-for-kotlin-coroutines-flow-workflow/)
+- [Claude Code For Lemonsqueezy — Complete Developer Guide](/claude-code-for-lemonsqueezy-billing-workflow/)
+- [Claude Code for Notion Workflow Tutorial Guide](/claude-code-for-notion-workflow-tutorial-guide/)
+- [Claude Code for Wasmtime Runtime Workflow Guide](/claude-code-for-wasmtime-runtime-workflow-guide/)
+- [Claude Code for Pandera Dataframe Validation Workflow](/claude-code-for-pandera-dataframe-validation-workflow-tutori/)
+- [Claude Code for OpenSSL Certificate Workflow Guide](/claude-code-for-openssl-certificate-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

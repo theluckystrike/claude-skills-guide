@@ -411,6 +411,7 @@ Related Reading
 - [Claude Code for Release Automation Workflow Tutorial](/claude-code-for-release-automation-workflow-tutorial/)
 - [Brave Search MCP Server for Research Automation](/brave-search-mcp-server-research-automation/)
 - [Chrome Enterprise Release Schedule 2026: A Practical Guide](/chrome-enterprise-release-schedule-2026/)
+- [Claude AI Cornell Notes — Generate Instantly (2026)](/claude-ai-cornell-notes-how-to-create-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

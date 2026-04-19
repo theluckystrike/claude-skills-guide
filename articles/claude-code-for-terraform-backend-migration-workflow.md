@@ -263,6 +263,14 @@ Related Reading
 - [Claude Code for CDKTF Terraform CDK Workflow](/claude-code-for-cdktf-terraform-cdk-workflow/)
 - [Claude Code for OpenTofu Migration Workflow Guide](/claude-code-for-opentofu-migration-workflow-guide/)
 - [Claude Code for Russian Developer Backend Workflow](/claude-code-for-russian-developer-backend-workflow/)
+- [Terraform with Claude Code: Setup and Workflow](/claude-code-for-terraform-workflow-tutorial-guide/)
+- [Claude Code for Terraform Workspace Workflow Guide](/claude-code-for-terraform-workspace-workflow-guide/)
+- [Claude Code Terraform Cloud Workflow Guide](/claude-code-terraform-cloud-workflow-guide/)
+- [Claude Code Atlantis Terraform Automation](/claude-code-atlantis-terraform-automation/)
+- [Claude Code for Terraform Compliance Workflow](/claude-code-for-terraform-compliance-workflow/)
+- [Claude Code Tfsec Terraform Security Guide](/claude-code-tfsec-terraform-security-guide/)
+- [Claude Code Terraform State Management Guide](/claude-code-terraform-state-management-guide/)
+- [Claude Code OpenTofu Guide: Terraform Alternative Workflow](/claude-code-opentofu-terraform-alternative-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

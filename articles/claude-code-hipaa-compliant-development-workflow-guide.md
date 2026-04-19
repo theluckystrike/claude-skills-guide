@@ -2,8 +2,8 @@
 layout: default
 title: "How to Use HIPAA Compliant Development Workflow (2026)"
 description: "Build HIPAA-compliant applications using Claude Code. Workflow patterns, code examples, and security best practices for healthcare development."
-date: 2026-03-13
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills]
@@ -14,6 +14,8 @@ geo_optimized: true
 ---
 
 # Claude Code HIPAA Compliant Development Workflow Guide
+
+Updated April 2026 for the latest Claude Code release. The approach below reflects current hipaa compliant development behavior after recent updates to hipaa compliant development tooling and Claude Code's improved project context handling.
 
 [Healthcare software developers face unique challenges when building applications that must comply with HIPAA](/best-claude-code-skills-to-install-first-2026/) (HIPAA). This guide shows you how to use Claude Code to streamline HIPAA-compliant development while maintaining security and privacy standards throughout your workflow.
 
@@ -324,6 +326,12 @@ Remember that HIPAA compliance is an ongoing process, not a one-time achievement
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

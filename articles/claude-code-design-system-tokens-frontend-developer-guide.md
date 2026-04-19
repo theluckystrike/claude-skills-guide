@@ -562,6 +562,7 @@ Related Reading
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
 - [Claude Code Accessibility Workflow for Frontend Engineers](/claude-code-accessibility-workflow-for-frontend-engineers/)
 - [Claude Code Daily Workflow for Frontend Developers Guide](/claude-code-daily-workflow-for-frontend-developers-guide/)
+- [Claude Code Generating CSS Variables from Design System](/claude-code-generating-css-variables-from-design-system/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

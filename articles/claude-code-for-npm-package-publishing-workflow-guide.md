@@ -243,6 +243,7 @@ Related Reading
 - [Claude Code for PyPI Package Publishing Workflow Guide](/claude-code-for-pypi-package-publishing-workflow-guide/)
 - [Claude Code for Artifact Publishing Workflow Tutorial](/claude-code-for-artifact-publishing-workflow-tutorial/)
 - [Claude Code for Cargo Crate Publishing Workflow Guide](/claude-code-for-cargo-crate-publishing-workflow-guide/)
+- [Claude Code for Maven Artifact Publishing Workflow](/claude-code-for-maven-artifact-publishing-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

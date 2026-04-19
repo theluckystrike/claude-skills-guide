@@ -269,6 +269,7 @@ Related Reading
 - [Claude Code Multi Agent Orchestration Patterns Guide](/claude-code-multi-agent-orchestration-patterns-guide/). Apply composition patterns to orchestrate multiple specialized agents in complex workflows.
 - [How Do I Combine Two Claude Skills in One Workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/). Practical guide to chaining and composing skills in real development scenarios.
 - [Advanced Claude Skills](/advanced-hub/). Discover more advanced patterns for building modular, reusable skill architectures.
+- [Claude Skill Inheritance and Composition — Extending Base Skills Without Duplication — 2026](/claude-skill-inheritance-composition/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

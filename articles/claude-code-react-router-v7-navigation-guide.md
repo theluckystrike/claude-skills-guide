@@ -279,6 +279,10 @@ Related Reading
 - [Claude Code React Testing Library Workflow](/claude-code-react-testing-library-workflow/)
 - [Claude Code Cypress Component Testing Guide](/claude-code-cypress-component-testing-guide/)
 - [How Designers Use Claude Code for Prototyping](/how-designers-use-claude-code-for-prototyping/)
+- [Claude Code with Angular vs React](/claude-code-angular-vs-react/)
+- [Claude Code for Million.js — Workflow Guide](/claude-code-for-million-js-react-workflow-guide/)
+- [Claude Code for React Reasoning Agent Workflow](/claude-code-for-react-reasoning-agent-workflow/)
+- [Claude Code for React Native Navigation Setup Guide](/claude-code-for-react-native-navigation-setup-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

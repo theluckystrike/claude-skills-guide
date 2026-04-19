@@ -351,6 +351,7 @@ Related Reading
 - [Claude Code for Competitive Programming Practice Workflow](/claude-code-for-competitive-programming-practice-workflow/)
 - [AI Autocomplete Chrome Extension: A Developer's Guide](/ai-autocomplete-chrome-extension/)
 - [AI Code Assistant Chrome Extension: Practical Guide for.](/ai-code-assistant-chrome-extension/)
+- [Claude Code AppSec: Developer Secure Coding Workflow Tips](/claude-code-appsec-developer-secure-coding-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

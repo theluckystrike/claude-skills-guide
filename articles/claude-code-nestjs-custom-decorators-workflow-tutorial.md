@@ -247,6 +247,7 @@ Related Reading
 - [Claude Code for Unbuild Build Tool Workflow Guide](/claude-code-for-unbuild-build-tool-workflow-guide/)
 - [Claude Code GraphQL Client Codegen Guide (2026)](/claude-code-graphql-client-codegen-guide/)
 - [Claude Code OpenAPI Client Generation Guide](/claude-code-openapi-client-generation-guide/)
+- [Claude Code for Custom Elements Workflow Guide](/claude-code-for-custom-elements-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

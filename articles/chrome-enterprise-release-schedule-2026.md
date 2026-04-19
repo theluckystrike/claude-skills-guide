@@ -244,6 +244,8 @@ Related Reading
 - [Chrome Enterprise Stable Channel Management: A Practical Guide](/chrome-enterprise-stable-channel-management/)
 - [Chrome Extension Enterprise Approval Workflow: A Practical Guide](/chrome-extension-enterprise-approval-workflow/)
 - [Chrome Enterprise Bookmark Bar Settings: A Complete Guide](/chrome-enterprise-bookmark-bar-settings/)
+- [Schedule Tweets Threads Chrome Extension Guide (2026)](/chrome-extension-schedule-tweets-threads/)
+- [Sneaker Release Alert Chrome Extension Guide (2026)](/chrome-extension-sneaker-release-alert-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

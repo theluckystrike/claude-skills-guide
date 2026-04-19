@@ -223,6 +223,10 @@ Related Reading
 - [How to Make Claude Code Match Existing Code Patterns](/how-to-make-claude-code-follow-team-style-guide/). SOLID patterns should match existing codebase conventions
 - [Claude Code Technical Debt Tracking Workflow](/claude-code-technical-debt-tracking-workflow/). DRY violations are a common debt source
 - [Advanced Claude Skills Hub](/advanced-hub/). Advanced code quality patterns
+- [Claude Code SOLID Principles Implementation](/claude-code-solid-principles-implementation/)
+- [How To Make Claude Code Follow — Complete Developer Guide](/how-to-make-claude-code-follow-my-naming-conventions/)
+- [How to Make Claude Code Understand Domain Business Logic](/how-to-make-claude-code-understand-domain-business-logic/)
+- [How to Make Claude Code Respect Module Boundaries](/how-to-make-claude-code-respect-module-boundaries/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

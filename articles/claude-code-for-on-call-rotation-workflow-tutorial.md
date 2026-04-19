@@ -280,6 +280,7 @@ Related Reading
 - [Claude Code for On-Call Runbook Workflow Tutorial](/claude-code-for-on-call-runbook-workflow-tutorial/)
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 - [Claude Code for Aurora Serverless V2 Workflow](/claude-code-for-aurora-serverless-v2-workflow/)
+- [Claude Code for Call Graph Analysis Workflow Tutorial](/claude-code-for-call-graph-analysis-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

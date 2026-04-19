@@ -277,6 +277,14 @@ Related Reading
 - [Best Way to Validate Claude Code Output Before Committing](/best-way-to-validate-claude-code-output-before-committing/)
 - [Is Chrome's Built-in Password Manager Safe? A Developer Perspective](/chrome-built-in-password-manager-safe/)
 - [How to Check if Your Email Has Been Compromised in a Data Breach](/chrome-check-email-breaches/)
+- [Which Safe Chrome Extension Guide (2026)](/which-chrome-extensions-safe/)
+- [Chrome Safe Browsing How Works — Developer Guide](/chrome-safe-browsing-how-works/)
+- [Chrome Check SSL Certificate — Developer Guide](/chrome-check-ssl-certificate/)
+- [Ebay Sniper Chrome Extension](/ebay-sniper-chrome-extension/)
+- [Dropbox Quick Share Chrome Extension Guide (2026)](/chrome-extension-dropbox-quick-share/)
+- [Building a Chrome Extension for Team World Clock Management](/chrome-extension-world-clock-team/)
+- [Chrome Extension Word Counter for Essay Writing](/chrome-extension-word-counter-essay/)
+- [Key Points Extractor Chrome Extension Guide (2026)](/chrome-extension-key-points-extractor/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

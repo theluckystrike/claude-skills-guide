@@ -294,6 +294,14 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). Test-driven development workflow
 - [Claude Skills Token Optimization](/claude-skills-token-optimization-reduce-api-costs/). Reduce API costs with smart seeding patterns
+- [How To Use Claude Code To Write — Complete Developer Guide](/how-to-use-claude-code-to-write-database-queries-from-scratch/)
+- [Claude Code NextAuth Database Adapter Setup Guide](/claude-code-nextauth-database-adapter-setup-guide/)
+- [Claude Code for Neon DB Branching — Guide](/claude-code-for-neon-database-branching-workflow-guide/)
+- [Claude Code for Xata Database — Workflow Guide](/claude-code-for-xata-database-workflow-guide/)
+- [Should I Use Claude Code For Production — Developer Guide](/should-i-use-claude-code-for-production-database-migrations/)
+- [Claude Code with PlanetScale Database Workflow Guide](/claude-code-with-planetscale-database-workflow-guide/)
+- [Claude Code with Firebase Realtime Database Workflow](/claude-code-with-firebase-realtime-database-workflow/)
+- [Claude Code for Database Benchmark Workflow Tutorial](/claude-code-for-database-benchmark-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

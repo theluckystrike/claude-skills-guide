@@ -136,6 +136,12 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Once you decide Claude Code is worth it, this is the starting point for knowing which skills to install first
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Understanding how automatic skill triggering works helps beginners get more value from Claude Code early on
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). The cost question is central to whether Claude Code is "worth it"; this guide shows how to keep API costs manageable
+- [Claude Code Common Beginner Mistakes to Avoid](/claude-code-common-beginner-mistakes-to-avoid/)
+- [Is Claude Code Worth It Junior Developers — Developer Guide](/is-claude-code-worth-it-junior-developers/)
+- [Claude Code Podcast Episodes Worth Listening](/claude-code-podcast-episodes-worth-listening/)
+- [Is Claude Code Worth It Data Science Work — Developer Guide](/is-claude-code-worth-it-data-science-work/)
+- [Claude Code Pair Programming for Beginner Developers](/claude-code-pair-programming-for-beginner-developers/)
+- [Is Claude Code Worth It Open Source — Developer Guide](/is-claude-code-worth-it-open-source-maintainers/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

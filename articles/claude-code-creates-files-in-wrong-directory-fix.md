@@ -394,6 +394,14 @@ Related Reading
 - [Claude Code Ignores CLAUDE.md Instructions Fix](/how-to-fix-claude-code-ignoring-my-claude-md-file/). ensure your project configuration is read correctly
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). overview of popular skills and their directory assumptions
 - [Troubleshooting Hub](/troubleshooting-hub/). solutions to common Claude Code file and path errors
+- [Why Claude Code Wrong Directory (2026)](/why-is-claude-code-reading-the-wrong-directory-entirely/)
+- [How to Stop Claude Code from Modifying Unrelated Files](/how-to-stop-claude-code-from-modifying-unrelated-files/)
+- [Fix Claude Code Large Codebase Crashes (2026)](/claude-code-crashes-on-large-files-how-to-fix/)
+- [Claude Code Writes Code In Wrong — Developer Guide](/claude-code-writes-code-in-wrong-programming-language/)
+- [CLAUDE.md Too Long? How to Split and Optimize for Context Window (2026)](/claude-md-too-long-fix/)
+- [Fix Color Contrast and Accessibility with Claude Code](/claude-code-color-contrast-accessibility-fix-workflow/)
+- [Claude Code Keeps Adding Unnecessary — Developer Guide](/claude-code-keeps-adding-unnecessary-console-log-statements/)
+- [Claude Code Merge Conflict Resolution Guide](/claude-code-merge-conflict-resolution-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

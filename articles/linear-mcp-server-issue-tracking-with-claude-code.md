@@ -192,6 +192,10 @@ Related Reading
 - [Jira MCP Server Claude Code Integration Guide](/jira-mcp-server-claude-code-integration-guide/)
 - [ClickUp MCP Server Workflow Automation Guide](/clickup-mcp-server-workflow-automation-guide/)
 - [Integrations Hub](/integrations-hub/)
+- [Fix Claude Code MCP Server Connection Closed](/claude-code-mcp-server-connection-closed-fix/)
+- [Fix GitHub MCP Auth Server Registration Error](/claude-code-github-mcp-error-incompatible-auth-server-does-not-support-dynamic-client-registration/)
+- [Zoom MCP Server Meeting Summary Automation](/zoom-mcp-server-meeting-summary-automation/)
+- [Fix Skill Conflicts with MCP Servers in Claude Code — 2026](/fix-skill-conflicts-with-mcp-server/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

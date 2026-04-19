@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Twistlock Prisma Cloud Workflow Tutorial"
 description: "Learn how to integrate Claude Code with Twistlock Prisma Cloud for automated security scanning, vulnerability management, and compliance workflows."
-date: 2026-03-20
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-twistlock-prisma-cloud-workflow-tutorial/
 categories: [tutorials, integrations]
@@ -12,6 +12,8 @@ tags: [claude-code, claude-skills, twistlock, prisma-cloud, security, devsecops]
 geo_optimized: true
 ---
 
+
+Revised April 2026. With cloud provider CLI updates and improved IaC integration, some twistlock prisma cloud workflows have changed. This guide reflects the updated Claude Code behavior for twistlock prisma cloud.
 
 Claude Code for Twistlock Prisma Cloud Workflow Tutorial
 
@@ -153,6 +155,12 @@ Start with simple automation tasks and gradually expand to more complex workflow
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

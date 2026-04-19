@@ -303,6 +303,8 @@ Related Reading
 - [Claude Code Actix Web Rust API Guide](/claude-code-actix-web-rust-api-guide/)
 - [Claude Code for GraphQL to REST Migration Guide](/claude-code-for-graphql-to-rest-migration-guide/)
 - [Ansible MCP Server Configuration Management](/ansible-mcp-server-configuration-management/)
+- [Claude Code REST API Versioning Strategy Workflow Tips](/claude-code-rest-api-versioning-strategy-workflow-tips/)
+- [Claude Code Gin Golang Rest API — Complete Developer Guide](/claude-code-gin-golang-rest-api-development-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

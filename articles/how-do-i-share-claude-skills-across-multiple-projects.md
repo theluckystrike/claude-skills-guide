@@ -179,6 +179,7 @@ Related Reading
 - [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-code-dotfiles-management-and-skill-sync-workflow/). Use dotfiles management to sync shared skills automatically across all developer machines.
 - [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/). Graduate from sharing skills across your projects to sharing them with the broader community.
 - [Getting Started with Claude Skills](/getting-started-hub/). Learn the foundational skill concepts before setting up cross-project sharing infrastructure.
+- [Distributing Claude Skills Across — Developer Guide](/distributing-claude-skills-across-isolated-client-environmen/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

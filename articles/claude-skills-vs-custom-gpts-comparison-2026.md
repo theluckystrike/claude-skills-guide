@@ -159,6 +159,7 @@ Related Reading
 - [Official vs Community Claude Skills: Which Should You Use?](/anthropic-official-skills-vs-community-skills-comparison/). Another key Claude comparison
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/). Skills vs plain prompts decision guide
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
+- [Claude Skills vs Subagents — Inline Instructions vs Isolated Execution — 2026](/claude-skills-vs-subagents-comparison/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

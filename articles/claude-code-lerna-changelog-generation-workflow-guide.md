@@ -815,6 +815,7 @@ Related Reading
 - [Claude Code for PR Changelog Generation Workflow](/claude-code-for-pr-changelog-generation-workflow/)
 - [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)
 - [Claude Code Automated Alt Text Generation Workflow](/claude-code-automated-alt-text-generation-workflow/)
+- [Claude Code for Lerna Monorepo Workflow](/claude-code-for-lerna-monorepo-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

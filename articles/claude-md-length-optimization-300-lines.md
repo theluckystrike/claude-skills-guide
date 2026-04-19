@@ -144,3 +144,7 @@ fi
 ```
 
 For a deeper look at the import system and resolution mechanics, see the [CLAUDE.md complete guide](/claude-md-file-complete-guide-what-it-does/). If your file grew long because of team standards, the [team collaboration guide](/claude-md-team-collaboration-best-practices/) explains how to split shared versus personal content. For context window management beyond CLAUDE.md, see the [context window optimization guide](/claude-md-too-long-context-window-optimization/).
+
+## Related Articles
+
+- [Claude Md Character Limit And — Complete Developer Guide](/claude-md-character-limit-and-optimization-guide/)

@@ -133,3 +133,11 @@ paths:
 ```
 
 For backend API patterns that your frontend consumes, see the [API design guide](/claude-md-api-design-patterns/). For the general CLAUDE.md structure, see the [best practices guide](/claude-code-claude-md-best-practices/). For testing conventions including component tests, see the [testing conventions guide](/claude-md-testing-conventions/).
+
+## Related Articles
+
+- [Using Claude Code for Polyglot Multi-Language Projects](/claude-md-for-polyglot-multi-language-projects/)
+- [Claude Md For Fullstack Projects — Complete Developer Guide](/claude-md-for-fullstack-projects-complete-guide/)
+- [Claude Md Template For New — Complete Developer Guide](/claude-md-template-for-new-projects-starter-guide/)
+- [CLAUDE.md Files for API Versioning Strategy](/writing-claude-md-files-that-define-your-projects-api-versio/)
+- [Claude Md For Frontend Projects Best — Honest Review 2026](/claude-md-for-frontend-projects-best-practices/)

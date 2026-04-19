@@ -280,6 +280,9 @@ Related Reading
 - [Using Claude Code for Data Quality Validation Workflow](/claude-code-for-data-quality-validation-workflow/)
 - [Claude Code Data Cleaning and Preprocessing Workflow](/claude-code-data-cleaning-and-preprocessing-workflow/)
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
+- [Claude Code for SonarQube Quality Gate Workflow Guide](/claude-code-for-sonarqube-quality-gate-workflow-guide/)
+- [Claude Code for Core Web Vitals Workflow Tutorial](/claude-code-for-core-web-vitals-workflow-tutorial/)
+- [Claude Code for Data Anonymization Workflow Guide](/claude-code-for-data-anonymization-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

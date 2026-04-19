@@ -220,6 +220,9 @@ Related Reading
 - [Claude Code Crashes When Loading Skill: Debug Steps](/claude-code-crashes-when-loading-skill-debug-steps/). Handle hard crashes and fatal errors during skill initialization
 - [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skill-yaml-front-matter-parsing-error-fix/). Diagnose and fix YAML parsing errors that cause silent skill failures
 - [Claude Skills Hub](/troubleshooting-hub/). Find solutions to common Claude skill problems and failures
+- [How to Test and Debug Multi Agent Workflows](/how-to-test-and-debug-multi-agent-workflows/)
+- [Debugging Failed GitHub Actions Skill Steps in Claude Code](/claude-code-github-actions-skill-step-failed-debug/)
+- [Claude Code Debug Configuration Workflow](/claude-code-debug-configuration-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -600,6 +600,14 @@ Related Reading
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 - [Claude Code for Aurora Serverless V2 Workflow](/claude-code-for-aurora-serverless-v2-workflow/)
 - [Claude Code for Branch Protection Rules Workflow](/claude-code-for-branch-protection-rules-workflow/)
+- [Claude Code Tech Lead Cross-Team Alignment Workflow Tips](/claude-code-tech-lead-cross-team-alignment-workflow-tips/)
+- [Claude Code Business Intelligence Workflow](/claude-code-business-intelligence-workflow/)
+- [Claude Code for Gravitee API Gateway Workflow](/claude-code-for-gravitee-api-gateway-workflow/)
+- [Claude Code for PyTorch LoRA Fine-Tuning Workflow](/claude-code-for-pytorch-lora-fine-tuning-workflow/)
+- [Claude Code for Engineering Wiki Workflow Tutorial](/claude-code-for-engineering-wiki-workflow-tutorial/)
+- [Claude Code for Fresh Deno Framework Workflow](/claude-code-for-fresh-deno-framework-workflow/)
+- [Claude Code Docker Compose API Tutorial Guide](/claude-code-docker-compose-api-tutorial-guide/)
+- [Claude Code Nx Generators — Complete Developer Guide](/claude-code-nx-generators-executors-custom-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

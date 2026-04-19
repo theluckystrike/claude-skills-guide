@@ -116,6 +116,11 @@ Related Reading
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
+- [Sweep AI GitHub Bot vs Claude — Developer Comparison 2026](/sweep-ai-github-bot-vs-claude-code/)
+- [Claude Code For GitHub — Developer Comparison 2026](/claude-code-for-github-codespaces-vs-gitpod-workflow-guide/)
+- [Claude Code vs Copilot Code — Developer Comparison 2026](/claude-code-vs-copilot-code-documentation-generation/)
+- [GitHub Copilot vs Claude Code: Deep Comparison 2026](/github-copilot-vs-claude-code-deep-comparison-2026/)
+- [Cursor vs GitHub Copilot vs — Developer Comparison 2026](/cursor-vs-github-copilot-vs-claude-code-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

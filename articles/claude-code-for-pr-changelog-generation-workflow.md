@@ -190,6 +190,7 @@ Related Reading
 - [Claude Code Lerna Changelog Generation Workflow Guide](/claude-code-lerna-changelog-generation-workflow-guide/)
 - [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)
 - [Claude Code Automated Alt Text Generation Workflow](/claude-code-automated-alt-text-generation-workflow/)
+- [Claude Code for Keep a Changelog Workflow Tutorial](/claude-code-for-keep-a-changelog-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

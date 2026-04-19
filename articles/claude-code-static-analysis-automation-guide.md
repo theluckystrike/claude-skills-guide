@@ -337,6 +337,14 @@ Related Reading
 - [Claude Code Dead Code Detection Workflow](/claude-code-for-dead-code-elimination-workflow-guide/). Static analysis is the primary dead code detection method
 - [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/). Static analysis tools measure cyclomatic complexity
 - [Advanced Claude Skills Hub](/advanced-hub/). Advanced code quality automation strategies
+- [Claude Code Tutorial Writing Automation Guide](/claude-code-tutorial-writing-automation-guide/)
+- [Claude Code for Survey Data Analysis Automation](/claude-code-for-survey-data-analysis-automation/)
+- [Claude Code Flutter LSP Setup Guide](/claude-code-flutter-lsp/)
+- [Stop Claude Code from Modifying Unrelated Files — Fix Guide (2026)](/claude-code-stop-modifying-unrelated-files/)
+- [Modernizing Legacy Codebases with Claude Code](/claude-code-for-legacy-code-modernization/)
+- [2,675 Articles to 496 Clicks: AI Content Lessons](/ai-content-at-scale-lessons-2675-articles/)
+- [Claude Code Enterprise Announcements — Developer Guide](/claude-code-enterprise-announcements-2026/)
+- [Claude Code Developer Census 2026](/claude-code-developer-census-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

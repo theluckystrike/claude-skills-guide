@@ -631,6 +631,7 @@ Related Reading
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/). generate property listing documentation automatically
 - [Claude Code Skills for Travel Booking Platforms](/claude-code-skills-for-travel-booking-platforms/). similar patterns for booking and availability management
 - [Use Cases Hub](/use-cases-hub/). explore Claude Code skills for property and booking platforms
+- [Claude Code Skills for Nonprofit Donation Platforms (2026)](/claude-code-skills-for-nonprofit-donation-platforms/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

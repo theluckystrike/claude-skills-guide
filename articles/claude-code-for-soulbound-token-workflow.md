@@ -463,6 +463,8 @@ Related Reading
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/)
 - [Before and After: Switching to Claude Code Workflow](/before-and-after-switching-to-claude-code-workflow/)
+- [Real-Time Claude Token Monitoring Pipeline](/real-time-claude-token-monitoring-pipeline/)
+- [Token-Efficient Few-Shot Examples for Claude](/token-efficient-few-shot-examples-claude/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -185,6 +185,14 @@ Related Reading
 - [Chrome Extension Anki Web Integration: A Developer Guide](/chrome-extension-anki-web-integration/)
 - [Chrome Extension Arrow and Text Overlay Screenshot Guide](/chrome-extension-arrow-and-text-overlay-screenshot/)
 - [Chrome Extension Keyword Density Checker: A Developer's Guide](/chrome-extension-keyword-density-checker/)
+- [Chrome Enterprise Bundle Download — Developer Guide](/chrome-enterprise-bundle-download/)
+- [Chrome Enterprise Network Settings Proxy — Developer Guide](/chrome-enterprise-network-settings-proxy-pac/)
+- [Vpn Quick Connect Chrome Extension Guide (2026)](/chrome-extension-vpn-quick-connect/)
+- [Outlook Calendar Integration Chrome Extension Guide (2026)](/chrome-extension-outlook-calendar-integration/)
+- [Best Vpn Chrome Extension Free — Honest Review 2026](/best-vpn-chrome-extension-free/)
+- [Chrome Browser Audit Enterprise — Developer Guide](/chrome-browser-audit-enterprise/)
+- [Chrome Enterprise Single App Kiosk — Developer Guide](/chrome-enterprise-single-app-kiosk/)
+- [Chrome New Tab Page Enterprise Customization Guide](/chrome-new-tab-page-enterprise-customization/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

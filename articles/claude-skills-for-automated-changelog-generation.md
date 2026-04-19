@@ -248,6 +248,7 @@ Related Reading
 - [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-code-github-actions-workflow-matrix-strategy-guide/). wire changelog generation into your CI/CD pipeline
 - [Claude Skill Versioning: Semver Best Practices](/claude-skill-versioning-semver-best-practices/). version your skills using the same conventions as your changelogs
 - [Best Claude Skills for Code Review Automation](/best-claude-skills-for-code-review-automation/). combine code review with automated release notes
+- [Claude PDF Skill: Document Generation Guide](/claude-code-pdf-skill-document-generation-guide/)
 
 ---
 

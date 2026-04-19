@@ -284,6 +284,11 @@ Related Reading
 - [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Claude Code for CodeCommit Migration Workflow](/claude-code-for-codecommit-migration-workflow/)
 - [Claude Code AWS ECS Fargate Setup and Deployment Tutorial](/claude-code-aws-ecs-fargate-setup-deployment-tutorial/)
+- [Claude Code for AWS Config Rules Workflow](/claude-code-for-aws-config-rules-workflow/)
+- [Claude Code with AWS Bedrock Guide](/claude-code-aws-bedrock/)
+- [Claude Code AWS Bedrock Setup Guide](/claude-code-aws-bedrock-setup/)
+- [Deploy to AWS with Claude Code](/claude-code-deploy-to-aws/)
+- [Claude Code Terraform AWS Provider Guide](/claude-code-terraform-aws-provider-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -73,3 +73,14 @@ Claude Code should use `z backend` to jump to the backend project, examine the A
 - [Building a CLI Devtool with Claude Code Walkthrough](/building-a-cli-devtool-with-claude-code-walkthrough/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)
 - [Best Way to Set Up Claude Code for New Project](/best-way-to-set-up-claude-code-for-new-project/)
+
+## Related Articles
+
+- [Claude Code for LitServe Lightning Workflow Guide](/claude-code-for-litserve-lightning-workflow-guide/)
+- [Claude Code for Reentrancy Guard Workflow](/claude-code-for-reentrancy-guard-workflow/)
+- [Claude Code For Mitre Attck — Complete Developer Guide](/claude-code-for-mitre-attck-workflow-guide/)
+- [Claude Code with Astro Content Collections Workflow](/claude-code-with-astro-content-collections-workflow/)
+- [How to Use Web3Modal Wallet Integration (2026)](/claude-code-for-web3modal-wallet-workflow/)
+- [Claude Code for Synthetic Monitoring Workflow Guide](/claude-code-for-synthetic-monitoring-workflow-guide/)
+- [Claude Code Prompt Management Workflow Guide](/claude-code-prompt-management-workflow-guide/)
+- [Claude Code for FreeRTOS Workflow Tutorial Guide](/claude-code-for-freertos-workflow-tutorial-guide/)

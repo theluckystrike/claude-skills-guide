@@ -246,6 +246,7 @@ Related Reading
 - [Chrome Android Slow Fix: Speed Up Your Browser](/chrome-android-slow-fix/)
 - [Chrome iPad Slow Fix. Complete Guide for Developers and.](/chrome-ipad-slow-fix/)
 - [Chrome Zoom Slow: Diagnosing and Fixing Performance Issues](/chrome-zoom-slow/)
+- [Claude Code Memory Leak Detection — Complete Developer Guide](/claude-code-memory-leak-detection-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

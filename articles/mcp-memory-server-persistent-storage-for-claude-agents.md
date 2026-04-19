@@ -393,6 +393,10 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Covers the supermemory skill and other memory-related capabilities that complement the MCP memory server
 - [MCP Servers vs Claude Skills: What Is the Difference?](/mcp-servers-vs-claude-skills-what-is-the-difference/). Explains how MCP servers and Claude skills relate and when to use each
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Persistent memory via MCP servers reduces repeated context loading; this article explains token savings strategies
+- [Fix Claude Code MCP Server Connection Closed](/claude-code-mcp-server-connection-closed-fix/)
+- [Fix GitHub MCP Auth Server Registration Error](/claude-code-github-mcp-error-incompatible-auth-server-does-not-support-dynamic-client-registration/)
+- [Zoom MCP Server Meeting Summary Automation](/zoom-mcp-server-meeting-summary-automation/)
+- [Fix Skill Conflicts with MCP Servers in Claude Code — 2026](/fix-skill-conflicts-with-mcp-server/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -162,6 +162,14 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-code-token-usage-optimization-best-practices-guide/)
 - [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code Duplicate Code Refactoring Guide](/claude-code-duplicate-code-refactoring-guide/)
+- [How Technical Writers Use Claude Code For — Developer Guide](/how-technical-writers-use-claude-code-for-docs/)
+- [How Product Managers Use Claude Code for Specs](/how-product-managers-use-claude-code-for-specs/)
+- [How Open Source Maintainers Use Claude Code in 2026](/how-open-source-maintainers-use-claude-code-2026/)
+- [Splitting Large Codebases Across Specialized Claude Agents](/splitting-large-codebases-across-specialized-claude-agents/)
+- [How to Use Claude Code with Existing GitHub Repo](/how-to-use-claude-code-with-existing-github-repo/)
+- [Claude Code for Dependency Inversion Refactoring Guide](/claude-code-for-dependency-inversion-refactoring-guide/)
+- [Claude Code Config File Location and Settings](/claude-code-config-file-location/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

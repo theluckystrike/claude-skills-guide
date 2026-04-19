@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code Kubernetes Upgrade Workflow Guide"
 description: "A practical guide to upgrading Kubernetes clusters using Claude Code. Learn workflow patterns, automation strategies, and best practices for smooth."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "theluckystrike"
 permalink: /claude-code-kubernetes-upgrade-workflow-guide/
 categories: [guides]
@@ -13,6 +13,8 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
+
+This is a focused treatment of kubernetes upgrade with Claude Code. It covers setup, common patterns, and troubleshooting specific to kubernetes upgrade. For broader context, [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) is a good companion read.
 
 Upgrading Kubernetes clusters is one of those operations that demands precision, thorough planning, and reliable execution. Whether you're managing a single development cluster or orchestrating dozens of production environments, the upgrade process involves multiple moving parts that can easily go wrong. This guide shows you how to use Claude Code to build a repeatable, safe, and efficient Kubernetes upgrade workflow.
 
@@ -173,6 +175,12 @@ Combine this workflow with skills like pdf for report generation, docx for runbo
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

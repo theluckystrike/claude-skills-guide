@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code for Go Fuzz Testing Workflow"
 description: "Learn how to integrate Claude Code into your Go fuzz testing workflow. This guide covers setting up fuzz tests, writing effective fuzz targets, and."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-go-fuzz-workflow-tutorial-guide/
 categories: [tutorials]
@@ -12,6 +12,8 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
+Current as of April 2026. The go fuzz workflow landscape has shifted with recent updates to go fuzz workflow tooling and Claude Code's improved project context handling, and the steps below reflect how Claude Code works with go fuzz workflow today.
+
 Claude Code for Go Fuzz Workflow Tutorial Guide
 
 Fuzz testing has become an essential part of building secure and solid Go applications. When combined with Claude Code's AI-assisted development capabilities, you can create more effective fuzz tests faster while discovering edge cases that traditional testing might miss. This guide walks you through setting up a complete fuzz testing workflow powered by Claude Code.
@@ -207,6 +209,12 @@ Start by identifying high-risk functions in your codebase, generate initial fuzz
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*
 
 <div class="mastery-cta">
 

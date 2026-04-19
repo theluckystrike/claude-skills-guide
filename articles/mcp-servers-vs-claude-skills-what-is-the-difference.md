@@ -212,6 +212,7 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). A practical guide to the skills worth combining with MCP servers in a production Claude Code workflow
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How Claude decides to invoke a skill automatically is relevant when designing MCP server + skill integrations that should trigger without manual invocation
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Skills that orchestrate multiple MCP server calls can accumulate context quickly; this guide covers how to keep combined workflows efficient
+- [Claude Skills vs MCP Servers: When to Use Each — 2026](/claude-skills-vs-mcp-servers-differences/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

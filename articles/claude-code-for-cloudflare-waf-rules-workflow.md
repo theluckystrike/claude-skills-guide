@@ -178,6 +178,7 @@ Related Reading
 - [Claude Code for AWS WAF Workflow: A Practical Guide](/claude-code-for-aws-waf-workflow/)
 - [Claude Code for Branch Protection Rules Workflow](/claude-code-for-branch-protection-rules-workflow/)
 - [Claude Code for Cloudflare R2 Storage Workflow Guide](/claude-code-for-cloudflare-r2-storage-workflow-guide/)
+- [Claude Code For Cloudflare D1 — Complete Developer Guide](/claude-code-for-cloudflare-d1-database-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

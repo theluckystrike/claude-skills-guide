@@ -726,6 +726,14 @@ Related Reading
 - [Claude Code Not Detecting My Virtual Environment Python Fix](/claude-code-not-detecting-my-virtual-environment-python-fix/). Fix environment detection issues after setup
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/). Document your environment setup in CLAUDE.md
 - [Claude Skills Workflows Hub](/workflows-hub/). More project setup and workflow automation
+- [Claude Code With Convex Backend Real-Time Data Setup](/claude-code-with-convex-backend-real-time-data-setup/)
+- [Claude Code Developer Portal Setup Guide](/claude-code-developer-portal-setup-guide/)
+- [Claude Code Tutorial Writing Automation Guide](/claude-code-tutorial-writing-automation-guide/)
+- [Claude Code with Turborepo Monorepo Setup Guide](/claude-code-with-turborepo-monorepo-setup-guide/)
+- [How to Use Paddle Billing Integration Setup (2026)](/claude-code-paddle-billing-integration-setup-guide/)
+- [Claude Code Auto Mode Setup Guide](/claude-code-auto-mode-setup-guide/)
+- [Claude Code for Survey Data Analysis Automation](/claude-code-for-survey-data-analysis-automation/)
+- [Claude Code Monorepo Setup — Complete Developer Guide](/claude-code-monorepo-setup-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

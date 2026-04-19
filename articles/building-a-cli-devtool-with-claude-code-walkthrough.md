@@ -255,6 +255,8 @@ Related Reading
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 - [AI Code Assistant Chrome Extension: Practical Guide for.](/ai-code-assistant-chrome-extension/)
 - [AI Tab Organizer Chrome Extension: A Practical Guide for.](/ai-tab-organizer-chrome-extension/)
+- [Product Architecture for a Claude Code Powered CLI Tool](/product-architecture-for-a-claude-code-powered-cli-tool/)
+- [Claude Code Official Documentation Walkthrough (2026)](/claude-code-official-documentation-walkthrough/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

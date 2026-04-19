@@ -299,6 +299,10 @@ Related Reading
 - [Claude Code for First OSS Contribution Workflow Guide](/claude-code-for-first-oss-contribution-workflow-guide/)
 - [Claude Code for OSS Issue Triage Workflow Tutorial](/claude-code-for-oss-issue-triage-workflow-tutorial/)
 - [Claude Code for Claude Issue Triage Workflow Tutorial Guide](/claude-code-for-claude-issue-triage-workflow-tutorial-guide/)
+- [Claude Code For Fzf Fuzzy Finder — Complete Developer Guide](/claude-code-for-fzf-fuzzy-finder-workflow-guide/)
+- [Claude Code for NeMo Framework Workflow Guide](/claude-code-for-nemo-framework-workflow-guide/)
+- [Claude Code for Wormhole Bridge Workflow Guide](/claude-code-for-wormhole-bridge-workflow-guide/)
+- [Claude Code for Dialog Element HTML Workflow Guide](/claude-code-for-dialog-element-html-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

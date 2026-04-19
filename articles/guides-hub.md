@@ -504,6 +504,14 @@ Related Reading
 - [Claude Code for Beginners: Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/). Start here before the guides
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top-ranked skills across all categories
 - [Vibe Coding with Claude Code: Complete Guide 2026](/vibe-coding-productivity-tips-and-best-practices/). The methodology behind modern Claude Code workflows
+- [Claude Code for Operator Lifecycle Manager Guide](/claude-code-for-operator-lifecycle-manager-guide/)
+- [Best Claude Code Newsletters and Blogs 2026](/best-claude-code-newsletters-and-blogs-2026/)
+- [How to Use Web App Manifest Configuration (2026)](/claude-code-for-web-app-manifest-configuration-guide/)
+- [Claude Code Tips For Absolute Beginners — Developer Guide](/claude-code-tips-for-absolute-beginners-2026/)
+- [Claude Code Hidden Features Most Developers Miss](/claude-code-hidden-features-most-developers-miss/)
+- [How to Use Tree-Sitter Syntax Highlighting (2026)](/claude-code-for-tree-sitter-syntax-highlighting-guide/)
+- [Claude Code Custom Keybindings Configuration (2026)](/claude-code-custom-keybindings-configuration/)
+- [Claude Code for Landmark Regions Accessibility Guide](/claude-code-for-landmark-regions-accessibility-guide/)
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *

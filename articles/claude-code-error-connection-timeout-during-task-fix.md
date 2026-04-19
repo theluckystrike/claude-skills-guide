@@ -247,6 +247,10 @@ Related Reading
 - [Claude Code Slow Response How to Fix Latency Issues](/claude-code-slow-response-how-to-fix-latency-issues/). Performance and network issues guide
 - [Claude Code Error Rate Limit 429 How to Handle](/claude-code-error-rate-limit-429-how-to-handle/). Another API error that affects connectivity
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). All Claude Code error and connectivity fixes
+- [How to Choose the Cheapest Claude Model](/cheapest-claude-model-for-your-task/)
+- [Fix WebSocket Connection Failures in Claude Code](/claude-code-websocket-connection-failed-fix/)
+- [Fix Claude Code TLS/SSL Errors Behind Proxy](/claude-code-tls-ssl-connection-error-corporate-proxy-fix/)
+- [Claude Code Error: Git Push Rejected During Skill Fix](/claude-code-error-git-push-rejected-during-skill-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

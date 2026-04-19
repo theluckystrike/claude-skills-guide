@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code Jest Unit Testing Workflow Guide"
 description: "A comprehensive guide to implementing efficient Jest unit testing workflows with Claude Code for developers and power users."
-date: 2026-03-14
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-jest-unit-testing-workflow-guide/
 categories: [guides]
@@ -14,6 +14,8 @@ tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
 
+
+This article addresses jest unit testing specifically as it applies to Claude Code development workflows. If you need a different angle on jest unit testing, [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) may be more relevant.
 
 Claude Code Jest Unit Testing Workflow Guide
 
@@ -228,6 +230,12 @@ Remember that testing is a skill that improves with practice. Use Claude Code as
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

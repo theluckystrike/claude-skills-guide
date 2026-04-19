@@ -158,6 +158,14 @@ Related Reading
 - [Claude MD Too Long: Context Window Optimization](/claude-md-too-long-context-window-optimization/)
 - [Claude Code Slow Response: How to Fix Latency Issues](/claude-code-slow-response-how-to-fix-latency-issues/)
 - [Claude Skill Lazy Loading: Token Savings Explained](/claude-skill-lazy-loading-token-savings-explained-deep-dive/)
+- [Claude Code Open Props Design Tokens Guide](/claude-code-open-props-design-tokens-guide/)
+- [How Tool Definitions Add 346 Tokens Per Call](/claude-tool-definitions-346-tokens-per-call/)
+- [Claude Model Pricing Per Million Tokens Guide](/claude-model-pricing-per-million-tokens-guide/)
+- [Claude Bash Tool Costs 245 Tokens Per Call](/claude-bash-tool-costs-245-tokens-per-call/)
+- [Pruning Unused Claude Tools Saves Real Money](/pruning-unused-claude-tools-saves-money/)
+- [Claude Code for SuperTokens Auth — Guide](/claude-code-for-supertokens-auth-workflow-guide/)
+- [Claude Code for Noise Reduction Alerting Workflow](/claude-code-for-noise-reduction-alerting-workflow/)
+- [Claude Code Design Token Automation from Figma Variables](/claude-code-design-token-automation-from-figma-variables/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

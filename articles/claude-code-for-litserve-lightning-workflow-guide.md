@@ -871,6 +871,14 @@ Related Reading
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
+- [Claude Code for Difftastic — Workflow Guide](/claude-code-for-difftastic-workflow-guide/)
+- [Claude Code for RisingWave Streaming — Guide](/claude-code-for-risingwave-streaming-workflow-guide/)
+- [Claude Code for DBeaver — Workflow Guide](/claude-code-for-dbeaver-workflow-guide/)
+- [Claude Code for Architecture Decision Record Workflow](/claude-code-for-architecture-decision-record-workflow/)
+- [Claude Code for FluxCD Notification Workflow Guide](/claude-code-for-fluxcd-notification-workflow-guide/)
+- [Color Contrast Checking Workflow with Claude Code](/claude-code-color-contrast-checking-workflow/)
+- [Claude Code Indie Developer Side Project Workflow Guide](/claude-code-indie-developer-side-project-workflow-guide/)
+- [Claude Code for Regula Policy Workflow Guide](/claude-code-for-regula-policy-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

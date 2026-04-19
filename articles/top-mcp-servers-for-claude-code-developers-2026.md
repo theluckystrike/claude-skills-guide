@@ -288,6 +288,14 @@ Related Reading
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code AWS MCP Setup Guide](/claude-code-aws-mcp/)
+- [Claude Code Angular MCP Configuration](/claude-code-angular-mcp/)
+- [Set Up Django MCP Server for Claude Code](/claude-code-django-mcp/)
+- [Set Up Docker MCP Server for Claude Code](/claude-code-docker-mcp/)
+- [Add MySQL MCP to Claude Code](/claude-code-add-mysql-mcp/)
+- [Add Angular MCP to Claude Code](/claude-code-add-angular-mcp/)
+- [Add MongoDB MCP to Claude Code](/claude-code-add-mongodb-mcp/)
+- [Claude Code Supabase MCP Setup Guide](/claude-code-supabase-mcp-setup/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -223,6 +223,11 @@ Related Reading
 - [Claude Code for First OSS Contribution Workflow Guide](/claude-code-for-first-oss-contribution-workflow-guide/)
 - [Claude Code for OSS Community Engagement Workflow](/claude-code-for-oss-community-engagement-workflow/)
 - [Claude Code for OSS Deprecation Workflow Tutorial](/claude-code-for-oss-deprecation-workflow-tutorial/)
+- [Claude Code For Oss Funding — Complete Developer Guide](/claude-code-for-oss-funding-workflow-tutorial-guide/)
+- [Claude Code For Oss Maintainer — Complete Developer Guide](/claude-code-for-oss-maintainer-burnout-workflow/)
+- [Claude Code For Oss Governance — Complete Developer Guide](/claude-code-for-oss-governance-workflow-tutorial-guide/)
+- [Claude Code For Oss Roadmap — Complete Developer Guide](/claude-code-for-oss-roadmap-workflow-tutorial-guide/)
+- [Claude Code For Oss Coc — Complete Developer Guide](/claude-code-for-oss-coc-enforcement-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

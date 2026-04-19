@@ -539,6 +539,14 @@ Related Reading
 - [Claude Code Dockerfile Generation: Multi-Stage Build Guide](/claude-code-dockerfile-generation-multi-stage-build-guide/)
 - [Claude Code Buildah Container Builds Guide](/claude-code-buildah-container-builds-guide/)
 - [Claude Code Docker Compose Test Setup Guide](/claude-code-docker-compose-test-setup-guide/)
+- [Claude Code Snippet Library Management](/claude-code-snippet-library-management/)
+- [Claude Code Podman Rootless Container Guide](/claude-code-podman-rootless-container-guide/)
+- [Claude Code Git Tags Release Management — Developer Guide](/claude-code-git-tags-release-management/)
+- [Claude Code Environment Variables Reference](/claude-code-environment-variables-reference/)
+- [What 1,024 Queries Reveal About Claude Code Users](/claude-code-search-query-analysis-2026/)
+- [Zero-Click Crisis: 26,619 Wasted Impressions](/claude-code-zero-click-crisis-2026-study/)
+- [Why Senior Developers Prefer Claude Code (2026)](/why-do-senior-developers-prefer-claude-code-2026/)
+- [Claude Code Fortran Scientific — Complete Developer Guide](/claude-code-fortran-scientific-code-modernization-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

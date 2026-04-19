@@ -640,6 +640,14 @@ Related Reading
 - [Building Production AI Agents with Claude Skills in 2026](/building-production-ai-agents-with-claude-skills-2026/). production architecture patterns for serverless AI applications
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/). automate serverless function deployment in CI/CD
 - [Workflows Hub](/workflows-hub/). explore Claude Code workflows for cloud and serverless development
+- [Claude Code Skills for WordPress Development (2026)](/claude-code-skills-for-wordpress-development/)
+- [Claude Skills For Restaurant Pos System — Developer Guide](/claude-skills-for-restaurant-pos-system-development/)
+- [Claude Code Skills for iOS Swift Development](/claude-code-skills-for-ios-swift-development/)
+- [Claude Skills for Unity Game Development Workflow](/claude-skills-for-unity-game-development-workflow/)
+- [Claude Code Skills for Gaming Backend Development](/claude-code-skills-for-gaming-backend-development/)
+- [Claude Skills For Android Kotlin — Developer Guide](/claude-skills-for-android-kotlin-development/)
+- [Claude Skills for Salesforce Apex Development](/claude-skills-for-salesforce-apex-development/)
+- [Claude Skills For Php Laravel — Complete Developer Guide](/claude-skills-for-php-laravel-development-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

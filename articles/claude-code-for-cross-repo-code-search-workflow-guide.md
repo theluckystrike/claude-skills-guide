@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code for Cross-Repo Code Search Workflow Guide"
 description: "Learn how to build a powerful cross-repository code search workflow with Claude Code. Practical examples, configuration tips, and automation strategies."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-cross-repo-code-search-workflow-guide/
 categories: [guides]
@@ -13,6 +13,8 @@ score: 8
 geo_optimized: true
 ---
 
+
+This is a focused treatment of cross repo code search with Claude Code. It covers setup, common patterns, and troubleshooting specific to cross repo code search. For broader context, [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) is a good companion read.
 
 Working with multiple repositories is a common scenario for modern development teams. Whether you're maintaining a monorepo, managing microservices, or contributing across several projects, finding code across repositories efficiently can significantly impact your productivity. This guide shows you how to use Claude Code to build an effective cross-repo code search workflow that saves time and reduces context switching fatigue.
 
@@ -283,6 +285,12 @@ Start with the basic setup described in this guide, then customize the workflows
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

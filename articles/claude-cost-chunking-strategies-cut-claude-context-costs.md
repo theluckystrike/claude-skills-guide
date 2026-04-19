@@ -309,3 +309,7 @@ Compare average context size per request before and after implementing chunking.
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — context size as the main cost driver
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/) — broader context management strategies
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — understanding context design decisions
+
+## Related Articles
+
+- [System Prompt Optimization to Cut Claude Costs](/system-prompt-optimization-cut-claude-costs/)

@@ -167,6 +167,14 @@ Related Reading
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
 - [Claude Code Free Tier vs Pro Plan: Feature Comparison 2026](/claude-code-free-tier-vs-pro-plan-feature-comparison-2026/)
 - [Is Claude Code Worth It for Solo Developers?](/is-claude-code-worth-it-for-solo-developers-freelancers/)
+- [Claude Code Infracost Cost Estimation Guide](/claude-code-infracost-cost-estimation-guide/)
+- [How Tool Definitions Add 346 Tokens Per Call](/claude-tool-definitions-346-tokens-per-call/)
+- [Claude Bash Tool Costs 245 Tokens Per Call](/claude-bash-tool-costs-245-tokens-per-call/)
+- [Claude Cost Per Request by Model Comparison](/claude-cost-per-request-model-comparison/)
+- [Web Search Costs $10 per 1,000 Searches](/claude-web-search-costs-10-per-thousand/)
+- [Track Claude Token Spend Per Project and Team](/track-claude-token-spend-per-project-team/)
+- [Claude Code Cost Per Project Estimation Guide](/claude-code-cost-per-project-estimation-guide/)
+- [Claude Agent Loop Cost: Tokens Per Iteration](/claude-agent-loop-cost-tokens-per-iteration/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

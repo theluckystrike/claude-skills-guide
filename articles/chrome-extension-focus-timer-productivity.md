@@ -377,6 +377,14 @@ Related Reading
 - [Chrome Extension Focus Mode for Studying: A Practical Guide](/chrome-extension-focus-mode-studying/)
 - [Claude Code for Bootcamp Students: Productivity Guide](/claude-code-for-bootcamp-students-productivity-guide/)
 - [Claude Code for Developer Productivity Tracking](/claude-code-for-developer-productivity-tracking/)
+- [Pomodoro Timer Chrome Extension — Honest Review 2026](/pomodoro-timer-chrome-extension-best/)
+- [GitLab Productivity Chrome Extension Guide (2026)](/gitlab-chrome-extension-productivity/)
+- [Picture in Picture Alternative Chrome Extension in 2026](/picture-in-picture-alternative-chrome-extension-2026/)
+- [Best SimilarWeb Alternatives for Chrome 2026](/similarweb-alternative-chrome-extension-2026/)
+- [Timezone Converter Remote Chrome Extension Guide (2026)](/chrome-extension-timezone-converter-remote/)
+- [User Agent Switcher Developer Chrome Extension Guide (2026)](/chrome-extension-user-agent-switcher-developer/)
+- [Knowledge Wiki Team Chrome Extension Guide (2026)](/chrome-extension-knowledge-wiki-team/)
+- [LastPass Alternative Chrome Extension 2026](/lastpass-alternative-chrome-extension-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

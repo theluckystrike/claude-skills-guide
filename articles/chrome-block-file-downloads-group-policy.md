@@ -428,6 +428,14 @@ Related Reading
 - [Chrome Extension Return Policy Finder: Tools and Techniques for Developers](/chrome-extension-return-policy-finder/)
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)
 - [AI Color Picker Chrome Extension: A Developer's Guide](/ai-color-picker-chrome-extension/)
+- [Chrome Passkeys How to Use](/chrome-passkeys-how-to-use/)
+- [Best Pesticide Alternatives for Chrome in 2026](/pesticide-alternative-chrome-extension-2026/)
+- [Chrome Managed Bookmarks Group Policy: Full Guide (2026)](/chrome-managed-bookmarks-group-policy/)
+- [CORS Unblock Development Chrome Extension Guide (2026)](/chrome-extension-cors-unblock-development/)
+- [Chrome Performance Flags — Developer Guide (2026)](/chrome-performance-flags/)
+- [How to Use Lighthouse Chrome Extension — Complete Developer](/lighthouse-chrome-extension-guide/)
+- [Capital One Shopping Chrome Extension Review (2026)](/capital-one-shopping-chrome-review/)
+- [Have I Been Pwned Chrome Extension Guide](/have-i-been-pwned-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

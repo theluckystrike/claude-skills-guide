@@ -168,6 +168,8 @@ Related Reading
 - [Claude Code Typesense Full Text Search Setup Tutorial](/claude-code-typesense-full-text-search-setup-tutorial/)
 - [Claude Code Automated Alt Text Generation Workflow](/claude-code-automated-alt-text-generation-workflow/)
 - [Claude Code for Algolia Search Workflow Guide](/claude-code-for-algolia-search-workflow-guide/)
+- [Claude Code for PostgreSQL JSONB Workflow Tutorial](/claude-code-for-postgres-jsonb-workflow-tutorial/)
+- [Claude Code for Postgres Logical Replication Workflow](/claude-code-for-postgres-logical-replication-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

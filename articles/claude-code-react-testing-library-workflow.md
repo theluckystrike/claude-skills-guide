@@ -363,6 +363,7 @@ Related Reading
 - [Claude Code Cypress Component Testing Guide](/claude-code-cypress-component-testing-guide/)
 - [Claude Code Daily Workflow for Frontend Developers Guide](/claude-code-daily-workflow-for-frontend-developers-guide/)
 - [Claude Code vs Cursor for React Development](/claude-code-vs-cursor-for-react-development/)
+- [React Component Testing with Claude Code](/claude-code-react-component-testing-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

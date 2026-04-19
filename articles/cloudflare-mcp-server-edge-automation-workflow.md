@@ -211,6 +211,7 @@ Related Reading
 - [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Claude Skills Serverless Function Development Workflow](/claude-skills-serverless-function-development-workflow/)
 - [Integrations Hub](/integrations-hub/)
+- [Claude Code Cloudflare MCP Server Setup](/claude-code-cloudflare-mcp/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

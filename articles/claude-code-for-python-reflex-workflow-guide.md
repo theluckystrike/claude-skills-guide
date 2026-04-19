@@ -74,3 +74,7 @@ Claude Code should create a `DashboardState(rx.State)` with `orders`, `search_qu
 - [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
 - [Best Way to Set Up Claude Code for New Project](/best-way-to-set-up-claude-code-for-new-project/)
+
+## Related Articles
+
+- [Claude Code for Plotly Dash Python Workflow](/claude-code-for-plotly-dash-python-workflow/)

@@ -198,3 +198,8 @@ $99 once. Free forever. 47/500 founding spots left.
 - [Claude API Tool Use Function Calling Guide](/claude-api-tool-use-function-calling-deep-dive-guide/)
 
 
+
+## Related Articles
+
+- [Message Batches API Tutorial with Cost Examples](/message-batches-api-tutorial-cost-examples/)
+- [Claude Code for Claude Batch API: Anthropic Workflow Guide](/claude-code-for-claude-batch-api-anthropic-workflow-guide/)

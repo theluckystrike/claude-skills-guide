@@ -74,3 +74,14 @@ Claude Code should create CSF3 stories with `play` functions using `userEvent.ty
 - [Claude Code Accessibility Regression Testing](/claude-code-accessibility-regression-testing/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
 - [Claude Code Cypress Component Testing Guide](/claude-code-cypress-component-testing-guide/)
+
+## Related Articles
+
+- [PostHog A/B Testing with Claude Code Guide](/claude-code-posthog-multivariate-test-implementation-guide/)
+- [Claude Code Vcr Test Recording — Complete Developer Guide](/claude-code-vcr-test-recording-workflow/)
+- [Claude Code Statsig Ab Test — Complete Developer Guide](/claude-code-statsig-ab-test-experiment-setup-guide/)
+- [Claude Code for Test Driven Development Workflow Tutorial](/claude-code-for-test-driven-development-workflow-tutorial/)
+- [How QA Engineers Use Claude Code for Test Automation](/how-qa-engineers-use-claude-code-for-test-automation/)
+- [Claude Code for Chromatic Visual Test — Guide](/claude-code-for-chromatic-visual-test-workflow-guide/)
+- [How To Make Claude Code Use My — Complete Developer Guide](/how-to-make-claude-code-use-my-preferred-test-framework/)
+- [Claude Code JUnit5 Test Patterns Guide](/claude-code-junit5-test-patterns-guide/)

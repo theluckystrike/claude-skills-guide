@@ -139,6 +139,7 @@ Related Reading
 - [Claude Skill YAML Front Matter Parsing Error Fix](/claude-skill-yaml-front-matter-parsing-error-fix/). Fix malformed YAML that causes Claude Code to skip your skill entirely
 - [Why Is My Claude Skill Not Showing Up: Fix Guide](/claude-code-skill-not-found-in-skills-directory-how-to-fix/). Systematic checklist for skill visibility and discovery issues
 - [Claude Skills Hub](/troubleshooting-hub/). Find solutions to common skill loading and configuration problems
+- [Claude Code Enoent No Such File Directory — Developer Guide](/claude-code-enoent-no-such-file-directory-skill/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

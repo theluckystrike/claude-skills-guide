@@ -211,6 +211,7 @@ Related Reading
 - [Bolt.new vs Claude Code for Web Apps in 2026](/bolt-new-vs-claude-code-for-web-apps-2026/)
 - [Claude Code vs Cursor 2026: Detailed Comparison for.](/claude-code-vs-cursor-2026-detailed-comparison/)
 - [Replit Agent Review for Solo Developers 2026](/replit-agent-review-for-solo-developers-2026/)
+- [Free vs Pro vs Max: Claude Code Plan Calculator](/free-vs-pro-vs-max-claude-code-plan-calculator/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

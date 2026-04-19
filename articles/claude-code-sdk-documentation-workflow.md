@@ -240,6 +240,8 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/)
 - [Claude Code Guides Hub](/guides-hub/)
+- [Claude Code for Inline Code Documentation Workflow](/claude-code-for-inline-code-documentation-workflow/)
+- [Claude Code for Alchemy SDK Workflow Tutorial](/claude-code-for-alchemy-sdk-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

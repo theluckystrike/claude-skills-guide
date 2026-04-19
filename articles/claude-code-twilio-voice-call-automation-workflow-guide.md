@@ -299,6 +299,7 @@ Related Reading
 - [Claude Code Drone CI Workflow Automation](/claude-code-drone-ci-workflow-automation/)
 - [Claude Code for Browser Automation Workflow Guide](/claude-code-for-browser-automation-workflow-guide/)
 - [Claude Code for Fly.io Deployment Automation Workflow](/claude-code-for-fly-io-deployment-automation-workflow/)
+- [Claude Code For Twilio Sms — Complete Developer Guide](/claude-code-for-twilio-sms-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

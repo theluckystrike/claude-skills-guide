@@ -797,6 +797,14 @@ Related Reading
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
+- [Claude Code for Flamegraph Visualization Workflow](/claude-code-for-flamegraph-visualization-workflow/)
+- [Claude Code for Glow Markdown Viewer Workflow](/claude-code-for-glow-markdown-viewer-workflow/)
+- [Claude Code for LazyGit Workflow Tutorial Guide](/claude-code-for-lazygit-workflow-tutorial-guide/)
+- [Claude Code for Nightwatch.js Workflow Guide](/claude-code-for-nightwatch-js-workflow-guide/)
+- [Claude Code For Suricata Ids — Complete Developer Guide](/claude-code-for-suricata-ids-workflow-guide/)
+- [Claude Code For Prefect Ml — Complete Developer Guide](/claude-code-for-prefect-ml-workflow-tutorial/)
+- [Claude Code for AI Risk Assessment Workflow Guide](/claude-code-for-ai-risk-assessment-workflow-guide/)
+- [Claude Code TypeScript Strict Mode Workflow](/claude-code-typescript-strict-mode-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

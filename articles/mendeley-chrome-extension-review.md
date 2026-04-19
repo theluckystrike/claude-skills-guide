@@ -335,6 +335,14 @@ Related Reading
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [AI Code Assistant Chrome Extension: Practical Guide for.](/ai-code-assistant-chrome-extension/)
+- [Claude Code for EKS IRSA Workflow](/claude-code-for-eks-irsa-workflow/)
+- [Claude Code for Travis CI Workflow Migration Guide](/claude-code-for-travis-ci-workflow-migration-guide/)
+- [Claude Code for Architecture Decision Record Workflow](/claude-code-for-architecture-decision-record-workflow/)
+- [Claude Code for FluxCD Notification Workflow Guide](/claude-code-for-fluxcd-notification-workflow-guide/)
+- [Claude Code for PyPI Package Publishing Workflow Guide](/claude-code-for-pypi-package-publishing-workflow-guide/)
+- [Claude Code for Gitleaks Secret Scanning Workflow](/claude-code-for-gitleaks-secret-scanning-workflow/)
+- [Claude Code for Rome Biome Linting Workflow](/claude-code-for-rome-biome-linting-workflow/)
+- [Claude Code for CloudSploit Scanning Workflow](/claude-code-for-cloudsploit-scanning-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

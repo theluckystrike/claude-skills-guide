@@ -149,6 +149,8 @@ Related Reading
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Chrome Extension Newsletter Design Tool for Developers](/chrome-extension-newsletter-design-tool/)
 - [Claude Code Automated Pull Request Review Workflow Guide](/claude-code-automated-pull-request-review-workflow-guide/)
+- [Claude Code for Mise — Workflow Guide](/claude-code-for-mise-dev-tool-manager-workflow-guide/)
+- [Claude Code for Unbuild Build Tool Workflow Guide](/claude-code-for-unbuild-build-tool-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

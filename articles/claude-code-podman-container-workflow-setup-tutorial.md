@@ -304,6 +304,7 @@ Related Reading
 - [Claude Code Container Registry Workflow Guide](/claude-code-container-registry-workflow-guide/)
 - [Claude Code Container Security Scanning Workflow Guide](/claude-code-container-security-scanning-workflow-guide/)
 - [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)
+- [Claude Code for Snyk Container Workflow Guide](/claude-code-for-snyk-container-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

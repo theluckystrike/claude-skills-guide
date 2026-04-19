@@ -478,6 +478,14 @@ Related Reading
 - [Claude Code for Unsloth Fast Fine Tuning Workflow Tutorial](/claude-code-for-unsloth-fast-fine-tuning-workflow-tutorial/)
 - [Claude Code for Axolotl Fine-Tuning Workflow Guide](/claude-code-for-axolotl-fine-tuning-workflow-guide/)
 - [Claude Code for PyTorch LoRA Fine-Tuning Workflow](/claude-code-for-pytorch-lora-fine-tuning-workflow/)
+- [Claude Code for Inngest — Workflow Guide](/claude-code-for-inngest-workflow-guide/)
+- [Claude Code for Just — Workflow Guide](/claude-code-for-just-command-runner-workflow-guide/)
+- [Claude Code for Zed Editor — Workflow Guide](/claude-code-for-zed-editor-workflow-guide/)
+- [Claude Code for StarRocks — Workflow Guide](/claude-code-for-starrocks-workflow-guide/)
+- [Claude Code for Typia Validator — Workflow Guide](/claude-code-for-typia-runtime-validator-workflow-guide/)
+- [Claude Code for Difftastic — Workflow Guide](/claude-code-for-difftastic-workflow-guide/)
+- [Claude Code for RisingWave Streaming — Guide](/claude-code-for-risingwave-streaming-workflow-guide/)
+- [Claude Code for Python Reflex — Workflow Guide](/claude-code-for-python-reflex-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

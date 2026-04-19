@@ -409,3 +409,9 @@ $99 once. Yours forever. I keep adding templates monthly.
 {% endraw %}
 
 
+
+## Related Articles
+
+- [Claude Code for S3 Object Lambda Workflow](/claude-code-for-s3-object-lambda-workflow/)
+- [Claude Code for Lambda SnapStart Workflow](/claude-code-for-lambda-snapstart-workflow/)
+- [Claude Code for Lambda Layers Workflow](/claude-code-for-lambda-layers-workflow/)

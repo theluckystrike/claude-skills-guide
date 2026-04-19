@@ -587,6 +587,9 @@ Related Reading
 - [How to Make Claude Code Write Secure Code Always](/how-to-make-claude-code-write-secure-code-always/)
 - [Claude Code GDPR Data Privacy Implementation Checklist](/claude-code-gdpr-data-privacy-implementation-checklist/)
 - [Troubleshooting Hub](/troubleshooting-hub/)
+- [Claude Code for CORS Misconfiguration Fix Workflow Guide](/claude-code-for-cors-misconfiguration-fix-workflow-guide/)
+- [Fix Claude Code Bun Crash](/claude-code-bun-crash/)
+- [Fix Claude Code Login — Cannot Paste Auth Code](/claude-code-login-paste-fix/)
 {% endraw %}
 
 

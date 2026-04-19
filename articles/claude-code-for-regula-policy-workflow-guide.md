@@ -630,6 +630,7 @@ Related Reading
 - [Claude Code for OPA Rego Workflow Tutorial Guide](/claude-code-for-opa-rego-workflow-tutorial-guide/)
 - [Claude Code Kubernetes Upgrade Workflow Guide](/claude-code-kubernetes-upgrade-workflow-guide/)
 - [Claude Code Terraform Module Development Guide](/claude-code-terraform-module-development-guide/)
+- [Claude Code for Pulumi Policy Pack Workflow Guide](/claude-code-for-pulumi-policy-pack-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

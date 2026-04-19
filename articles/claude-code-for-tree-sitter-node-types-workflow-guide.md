@@ -309,6 +309,7 @@ Related Reading
 - [Claude Code for Tree-sitter AST Traversal Workflow](/claude-code-for-tree-sitter-ast-traversal-workflow/)
 - [Claude Code for Tree-sitter Playground Workflow Guide](/claude-code-for-tree-sitter-playground-workflow-guide/)
 - [Claude Code for Tree-sitter Workflow Tutorial](/claude-code-for-tree-sitter-workflow-tutorial/)
+- [How to Use Tree of Thought Prompting with Claude Code (2026)](/claude-code-for-tree-of-thought-prompting-workflow-guide/)
 
 
 

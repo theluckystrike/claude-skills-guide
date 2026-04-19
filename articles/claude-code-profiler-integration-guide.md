@@ -246,6 +246,14 @@ Related Reading
 - [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/). Profiling reveals which code needs simplification
 - [Claude Code Slow Response How to Fix Latency Issues](/claude-code-slow-response-how-to-fix-latency-issues/). Profiling helps diagnose slow response times
 - [Advanced Claude Skills Hub](/advanced-hub/). Performance optimization and advanced patterns
+- [Claude Code Unleash Feature — Complete Developer Guide](/claude-code-unleash-feature-toggle-nodejs-integration-guide/)
+- [How to Use Paddle Billing Integration Setup (2026)](/claude-code-paddle-billing-integration-setup-guide/)
+- [Claude Code Keeps Losing Track Of My — Developer Guide](/claude-code-keeps-losing-track-of-my-variable-names/)
+- [Claude Code For Writing — Complete Developer Guide](/claude-code-for-writing-contributingmd-files-guide/)
+- [Claude Code Config File Location and Settings](/claude-code-config-file-location/)
+- [Data & Methodology: Claude Code Research](/data/)
+- [Claude Code For TypeScript — Complete Developer Guide](/claude-code-for-typescript-conditional-types-guide/)
+- [Claude Code Research Reports 2026](/reports/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

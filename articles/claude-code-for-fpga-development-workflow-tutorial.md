@@ -469,6 +469,7 @@ Related Reading
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
 - [Claude Code for Chef Cookbook Development Workflow](/claude-code-for-chef-cookbook-development-workflow/)
 - [Claude Code for Development Environment Workflow](/claude-code-for-development-environment-workflow/)
+- [Claude Code for Grafana Plugin Development Workflow](/claude-code-for-grafana-plugin-development-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

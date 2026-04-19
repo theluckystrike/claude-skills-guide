@@ -289,6 +289,7 @@ Related Reading
 - [Claude Code Astro Islands Architecture Workflow Deep Dive](/claude-code-astro-islands-architecture-workflow-deep-dive/)
 - [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
+- [Claude Code for Astro View Transitions Workflow](/claude-code-for-astro-view-transitions-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

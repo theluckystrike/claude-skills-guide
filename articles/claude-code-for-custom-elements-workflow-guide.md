@@ -600,6 +600,8 @@ Related Reading
 - [Claude Code Cypress Custom Commands Workflow Best Practices](/claude-code-cypress-custom-commands-workflow-best-practices/)
 - [Claude Code for Custom LSP Diagnostics Workflow](/claude-code-for-custom-lsp-diagnostics-workflow/)
 - [Claude Code Nx Generators Executors Custom Workflow Guide](/claude-code-nx-generators-executors-custom-workflow-guide/)
+- [Claude Code for ESLint Custom Plugin Workflow Tutorial](/claude-code-for-eslint-custom-plugin-workflow-tutorial/)
+- [Claude Code NestJS Custom Decorators Workflow Tutorial](/claude-code-nestjs-custom-decorators-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

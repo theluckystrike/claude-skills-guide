@@ -216,6 +216,14 @@ Related Reading
 - [MCP Server Permission Auditing Best Practices](/mcp-server-permission-auditing-best-practices/)
 - [Claude Code Skill Permission Scope Error Explained](/claude-code-skill-permission-denied-error-fix-2026/)
 - [Advanced Hub](/advanced-hub/)
+- [Manifest V3 vs V2 Security — Developer Comparison 2026](/manifest-v3-vs-v2-security/)
+- [Claude Code for Security Scan Automation? (2026)](/claude-code-for-security-scan-automation/)
+- [Claude Code for Zero Trust Security Workflow Guide](/claude-code-for-zero-trust-security-workflow-guide/)
+- [Claude Code for Falco Runtime Security Workflow](/claude-code-for-falco-runtime-security-workflow/)
+- [Claude Code For Security Hub — Complete Developer Guide](/claude-code-for-security-hub-workflow/)
+- [Claude Code Checkov Security Scanning Guide](/claude-code-checkov-security-scanning-guide/)
+- [Should I Use Claude Code For Security — Developer Guide](/should-i-use-claude-code-for-security-sensitive-applications/)
+- [Claude Code Security Engineer Vulnerability Triage Workflow](/claude-code-security-engineer-vulnerability-triage-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

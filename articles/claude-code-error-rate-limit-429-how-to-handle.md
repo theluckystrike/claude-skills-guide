@@ -247,6 +247,7 @@ Related Reading
 - [Claude Code Uses Deprecated API Methods Fix](/claude-code-uses-deprecated-api-methods-fix/). Related API error: deprecated methods causing failures
 - [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/). Track which operations consume most requests
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). All Claude Code error and API issue guides
+- [Fix Claude Code API Rate Limit Reached Error](/claude-code-api-error-rate-limit-reached/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

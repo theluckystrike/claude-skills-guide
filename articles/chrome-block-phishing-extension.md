@@ -366,6 +366,10 @@ Related Reading
 - [Dangerous Chrome Extensions in 2026: Security Risks Developers Must Know](/dangerous-chrome-extensions-2026/)
 - [Manifest V3 Privacy: What Developers and Power Users.](/manifest-v3-privacy/)
 - [Chrome Check Link Safety: Developer Tools and Techniques](/chrome-check-link-safety/)
+- [Block Distracting Sites Chrome Extension Guide (2026)](/chrome-extension-block-distracting-sites/)
+- [Block Canvas Fingerprinting in Chrome: Guide (2026)](/block-canvas-fingerprinting-chrome/)
+- [Chrome Block Cryptomining — Developer Guide](/chrome-block-cryptomining/)
+- [Block WebRTC Leak Chrome — Developer Guide](/block-webrtc-leak-chrome/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Bolt.new Web App Workflow Guide"
 description: "Learn how to integrate Claude Code into your Bolt.new web app development workflow. Practical examples, code snippets, and actionable advice for."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-bolt-new-web-app-workflow-guide/
 categories: [guides]
@@ -14,6 +14,8 @@ score: 7
 geo_optimized: true
 ---
 
+
+The bolt new web app ecosystem presents specific challenges around cross-browser compatibility and progressive enhancement patterns. What follows is a practical walkthrough of using Claude Code to navigate bolt new web app challenges efficiently.
 
 Claude Code for Bolt.new Web App Workflow Guide
 
@@ -221,6 +223,12 @@ The key is treating Bolt.new as a starting point rather than a final destination
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

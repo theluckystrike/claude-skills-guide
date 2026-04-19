@@ -331,6 +331,14 @@ Related Reading
 - [AI Document Editor Chrome Extension: A Developer's Guide](/ai-document-editor-chrome-extension/)
 - [AI Paraphraser Chrome Extension Free: A Developer's Guide](/ai-paraphraser-chrome-extension-free/)
 - [AI PDF Summarizer Chrome Extension: A Developer Guide](/ai-pdf-summarizer-chrome-extension/)
+- [Claude Code Terraform Cloud Workflow Guide](/claude-code-terraform-cloud-workflow-guide/)
+- [Claude Code for Compound Governance Workflow](/claude-code-for-compound-governance-workflow/)
+- [Claude Code for Semantic Code Search Workflow Tutorial](/claude-code-for-semantic-code-search-workflow-tutorial/)
+- [Claude Code for Development Environment Workflow](/claude-code-for-development-environment-workflow/)
+- [Claude Code for SOLID Principles Refactoring Workflow](/claude-code-for-solid-principles-refactoring-workflow/)
+- [Claude Code for Extract Method Refactoring Workflow](/claude-code-for-extract-method-refactoring-workflow/)
+- [Claude Code for Semgrep Static Analysis Workflow](/claude-code-for-semgrep-static-analysis-workflow/)
+- [Claude Code For Pr Changelog — Complete Developer Guide](/claude-code-for-pr-changelog-generation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

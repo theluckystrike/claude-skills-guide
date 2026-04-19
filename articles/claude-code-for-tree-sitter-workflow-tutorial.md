@@ -3,8 +3,8 @@
 layout: default
 title: "Claude Code for Tree-sitter Workflow Tutorial"
 description: "A comprehensive guide to integrating Claude Code with Tree-sitter for efficient code parsing, analysis, and automated refactoring workflows."
-date: 2026-03-15
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: Claude Skills Guide
 permalink: /claude-code-for-tree-sitter-workflow-tutorial/
 categories: [workflows, guides]
@@ -14,6 +14,8 @@ score: 8
 geo_optimized: true
 ---
 
+
+The tree sitter ecosystem presents specific challenges around proper tree sitter configuration, integration testing, and ongoing maintenance. What follows is a practical walkthrough of using Claude Code to navigate tree sitter challenges efficiently.
 
 Claude Code for Tree-sitter Workflow Tutorial
 
@@ -256,6 +258,12 @@ Remember that Tree-sitter is most effective when used iteratively, parse, analyz
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [How to Use TypeORM Entities Relations Migration (2026)](/claude-code-typeorm-entities-relations-migration-workflow/) for updated steps.*
 
 <div class="mastery-cta">
 

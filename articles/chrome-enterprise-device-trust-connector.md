@@ -214,6 +214,7 @@ Related Reading
 - [Chrome Enterprise Bookmark Bar Settings: A Complete Guide](/chrome-enterprise-bookmark-bar-settings/)
 - [Chrome Enterprise Private Extension Hosting: A Complete Guide](/chrome-enterprise-private-extension-hosting/)
 - [Chrome Enterprise Release Schedule 2026: A Practical Guide](/chrome-enterprise-release-schedule-2026/)
+- [Chrome Reporting Connector Enterprise: Implementation Guide](/chrome-reporting-connector-enterprise/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -216,6 +216,7 @@ Related Reading
 - [How Do I Share Claude Skills Across Multiple Projects](/how-do-i-share-claude-skills-across-multiple-projects/). Use cross-project sharing as the building block for organization-wide skill distribution.
 - [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-code-dotfiles-management-and-skill-sync-workflow/). Combine dotfiles management with organization distribution for fully automated skill provisioning.
 - [Getting Started with Claude Skills](/getting-started-hub/). Ensure your team understands skill fundamentals before rolling out organization-wide.
+- [What Is The Best Free Claude Code — Honest Review 2026](/what-is-the-best-free-claude-code-skill-available-on-github/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

@@ -269,3 +269,7 @@ Use attribution data to drive optimization:
 - [Claude Opus Orchestrator Sonnet Worker Architecture](/claude-opus-orchestrator-sonnet-worker-architecture/)
 - [Parallel Subagents Claude Code Best Practices](/parallel-subagents-claude-code-best-practices-2026/)
 - [Monitoring and Logging Claude Code Multi-Agent Systems](/monitoring-and-logging-claude-code-multi-agent-systems/)
+
+## Related Articles
+
+- [Build a Claude Cost Attribution System](/build-claude-cost-attribution-system/)

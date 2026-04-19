@@ -372,6 +372,11 @@ Related Reading
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). The tdd skill powers test-driven browser automation workflows
 - [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/). Frontend skills that pair with Selenium for full-stack testing
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Trigger testing skills automatically when working on browser test files
+- [Fastest Browser for Web Development in 2026](/fastest-browser-web-development/)
+- [Claude Code Penetration Tester Recon Automation Workflow](/claude-code-penetration-tester-recon-automation-workflow/)
+- [Claude Code Frontend Developer Cross Browser Testing Guide](/claude-code-frontend-developer-cross-browser-testing-guide/)
+- [Claude Code for Browser Mode Testing — Guide](/claude-code-for-browser-mode-testing-workflow-guide/)
+- [Claude Code Code Coverage Improvement Guide](/claude-code-code-coverage-improvement-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

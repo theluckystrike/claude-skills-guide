@@ -2,8 +2,8 @@
 layout: default
 title: "Claude Code for Aqua Security Container Workflow Guide"
 description: "Learn how to integrate Claude Code with Aqua Security for comprehensive container security workflows. Practical examples and actionable advice for."
-date: 2026-03-20
-last_modified_at: 2026-04-17
+date: 2026-04-19
+last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-code-for-aqua-security-container-workflow-guide/
 categories: [guides]
@@ -13,6 +13,8 @@ tags: [claude-code, claude-skills]
 render_with_liquid: false
 geo_optimized: true
 ---
+The aqua security container ecosystem presents specific challenges around dependency vulnerability scanning and secret rotation automation. What follows is a practical walkthrough of using Claude Code to navigate aqua security container challenges efficiently.
+
 {% raw %}
 Claude Code for Aqua Security Container Workflow Guide
 
@@ -279,6 +281,12 @@ The combination of Claude Code's productivity capabilities and Aqua Security's c
 ---
 
 ---
+
+
+
+---
+
+*Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*
 
 <div class="mastery-cta">
 

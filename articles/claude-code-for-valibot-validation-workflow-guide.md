@@ -75,3 +75,14 @@ Claude Code should create schemas with `pipe()` composition: `pipe(string(), min
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)
 - [Claude Code Accessible Forms Validation Error Handling Guide](/claude-code-accessible-forms-validation-error-handling-guide/)
 - [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/)
+
+## Related Articles
+
+- [Claude Code for Carvel imgpkg Workflow Tutorial](/claude-code-for-carvel-imgpkg-workflow-tutorial/)
+- [Claude Code for Hackathon Development Workflow](/claude-code-for-hackathon-development-workflow/)
+- [How to Use VSCode Reload: Hot Config (2026)](/claude-code-for-hot-config-reload-workflow-guide/)
+- [Is Claude Code Good Enough For — Complete Developer Guide](/is-claude-code-good-enough-for-senior-developer-workflows/)
+- [Claude Code for Bottleneck Identification Workflow](/claude-code-for-bottleneck-identification-workflow/)
+- [Claude Code for Quantization with bitsandbytes Workflow](/claude-code-for-quantization-with-bitsandbytes-workflow/)
+- [Claude Code for Flux Bootstrap Workflow Tutorial](/claude-code-for-flux-bootstrap-workflow-tutorial/)
+- [Claude Code for Homebrew Bundle Workflow Tutorial](/claude-code-for-homebrew-bundle-workflow-tutorial/)

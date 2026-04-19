@@ -147,6 +147,7 @@ Related Reading
 - [Claude Code for Incident Communication Workflow Guide](/claude-code-for-incident-communication-workflow-guide/)
 - [Claude Code for Incident Escalation Workflow Tutorial](/claude-code-for-incident-escalation-workflow-tutorial/)
 - [Claude Code for Incident Management Workflow Tutorial](/claude-code-for-incident-management-workflow-tutorial/)
+- [Claude Code for Incident Tracking Workflow Tutorial](/claude-code-for-incident-tracking-workflow-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

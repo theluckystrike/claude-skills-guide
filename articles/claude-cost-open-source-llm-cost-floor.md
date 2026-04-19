@@ -116,3 +116,14 @@ Deciding between self-hosted open source and commercial APIs requires evaluating
 - [Claude Haiku vs GPT-4o Mini Cost Showdown](/claude-cost-haiku-vs-gpt4o-mini-cheap-tier/)
 - [The Hybrid Stack: Claude for X, GPT for Y, Gemini for Z](/claude-cost-hybrid-stack-claude-gpt-gemini/)
 - [The Cheapest Model for Your Workload](/claude-cost-cheapest-model-workload-calculator/)
+
+## Related Articles
+
+- [Claude Code Open Props Design Tokens Guide](/claude-code-open-props-design-tokens-guide/)
+- [Claude Code for SuperTokens Auth — Guide](/claude-code-for-supertokens-auth-workflow-guide/)
+- [Bundle Size Reduction: Webpack to Vite 2026 Guide](/claude-code-bundle-size-reduction-webpack-vite-workflow/)
+- [Why Large Context Makes Claude Code Expensive](/why-large-context-makes-claude-code-expensive/)
+- [Why Claude Code Uses So Many Tokens Explained](/why-claude-code-uses-so-many-tokens-explained/)
+- [Claude Code For Lsp Semantic — Complete Developer Guide](/claude-code-for-lsp-semantic-tokens-workflow-tutorial/)
+- [Claude Context Management: Pay Less, Use More](/claude-context-management-pay-less-use-more/)
+- [Claude Cache Minimum Token Requirements 2026](/claude-cache-minimum-token-requirements-2026/)

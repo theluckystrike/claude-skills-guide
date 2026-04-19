@@ -206,6 +206,8 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The natural next step: an in-depth look at the most impactful skills to install once you have Claude Code running
 - [Skill .md File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). When you're ready to write your own skills, this guide explains the exact format and fields
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Understanding when Claude activates skills automatically helps you get more value from your setup as you grow beyond the basics
+- [Claude Code Tips For Absolute Beginners — Developer Guide](/claude-code-tips-for-absolute-beginners-2026/)
+- [Claude Code for Hindi Speaking Developers - Getting Started](/claude-code-for-hindi-speaking-developers-getting-started/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

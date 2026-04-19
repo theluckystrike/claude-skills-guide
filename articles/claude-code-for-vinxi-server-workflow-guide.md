@@ -74,3 +74,8 @@ Claude Code should create `app.config.js` with client and server routers, a Reac
 - [Claude Code for TanStack Router Workflow Guide](/claude-code-for-tanstack-router-workflow-guide/)
 - [Claude Code for Hono Framework Workflow Guide](/claude-code-for-hono-framework-workflow-guide/)
 - [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)
+
+## Related Articles
+
+- [How to Use vLLM Inference Server (2026)](/claude-code-for-vllm-inference-server-workflow/)
+- [Claude Code For Lsp Server — Complete Developer Guide](/claude-code-for-lsp-server-implementation-workflow/)

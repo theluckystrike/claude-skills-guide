@@ -74,3 +74,14 @@ Claude Code should query the CSV directly with `read_csv()`, use `date_trunc('ho
 - [Best Way to Feed Claude Code a Large SQL Schema](/best-way-to-feed-claude-code-a-large-sql-schema/)
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
+
+## Related Articles
+
+- [Claude Code For Chainlink Vrf — Complete Developer Guide](/claude-code-for-chainlink-vrf-workflow-guide/)
+- [Claude Code for Criterion Benchmarking Workflow Guide](/claude-code-for-criterion-benchmarking-workflow-guide/)
+- [Claude Code LaunchDarkly Targeting Rules Setup Workflow](/claude-code-launchdarkly-targeting-rules-setup-workflow/)
+- [Claude Code GitBook Documentation Workflow](/claude-code-gitbook-documentation-workflow/)
+- [Claude Code Structured Logging Best Practices Workflow](/claude-code-structured-logging-best-practices-workflow/)
+- [Claude Code Terragrunt Modules — Complete Developer Guide](/claude-code-terragrunt-modules-workflow/)
+- [Claude Code for Arrow Flight Workflow Tutorial](/claude-code-for-arrow-flight-workflow-tutorial/)
+- [Claude Code Jupyter Notebook Analysis Workflow Guide](/claude-code-jupyter-notebook-analysis-workflow-guide/)

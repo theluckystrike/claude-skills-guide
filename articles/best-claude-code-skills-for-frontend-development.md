@@ -355,6 +355,14 @@ Related Reading
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Extend your stack into CI/CD and infrastructure
 - [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/). Data processing and reporting workflows
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/). Decide when skills beat plain prompts
+- [Claude Code Skills for WordPress Development (2026)](/claude-code-skills-for-wordpress-development/)
+- [Claude Skills For Restaurant Pos System — Developer Guide](/claude-skills-for-restaurant-pos-system-development/)
+- [Claude Code Skills for iOS Swift Development](/claude-code-skills-for-ios-swift-development/)
+- [Claude Skills for Unity Game Development Workflow](/claude-skills-for-unity-game-development-workflow/)
+- [Claude Code Skills for Gaming Backend Development](/claude-code-skills-for-gaming-backend-development/)
+- [Claude Skills For Android Kotlin — Developer Guide](/claude-skills-for-android-kotlin-development/)
+- [Claude Skills for Salesforce Apex Development](/claude-skills-for-salesforce-apex-development/)
+- [Claude Code for Unreal Engine C++ — Guide (2026)](/claude-skills-for-unreal-engine-c-development/)
 
 Related guides: [Claude Code Accessibility Regression Testing Guide](/claude-code-accessibility-regression-testing/)
 

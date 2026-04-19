@@ -187,6 +187,14 @@ Related Reading
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). TypeScript TDD patterns with Claude
 - [How to Make Claude Code Generate Consistent API Responses](/how-to-make-claude-code-generate-consistent-api-responses/). TypeScript APIs need consistent response types
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/). TypeScript setup and getting started
+- [Best Way To Scope Claude Code To A — Honest Review 2026](/best-way-to-scope-claude-code-to-a-single-directory/)
+- [Claude Code --resume Flag — How to Use It (2026)](/claude-code-resume-flag-how-to-use-it/)
+- [How Technical Writers Use Claude Code For — Developer Guide](/how-technical-writers-use-claude-code-for-docs/)
+- [How Freelancers Use Claude Code to Take More Clients](/how-freelancers-use-claude-code-to-take-more-clients/)
+- [Claude Code Pulumi TypeScript Infra Guide](/claude-code-pulumi-typescript-infra-guide/)
+- [How Product Managers Use Claude Code for Specs](/how-product-managers-use-claude-code-for-specs/)
+- [How Open Source Maintainers Use Claude Code in 2026](/how-open-source-maintainers-use-claude-code-2026/)
+- [How To Use Claude Code To — Complete Developer Guide](/how-to-use-claude-code-to-understand-unfamiliar-codebase-quickly/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

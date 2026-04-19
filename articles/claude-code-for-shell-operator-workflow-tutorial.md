@@ -301,6 +301,7 @@ Related Reading
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code for Carvel YTT Workflow Tutorial](/claude-code-for-carvel-ytt-workflow-tutorial/)
 - [Claude Code for dbt Snapshot Workflow Tutorial](/claude-code-for-dbt-snapshot-workflow-tutorial/)
+- [Claude Code for Atuin Shell History Workflow](/claude-code-for-atuin-shell-history-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

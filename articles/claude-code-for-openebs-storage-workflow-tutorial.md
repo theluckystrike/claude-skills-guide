@@ -437,6 +437,8 @@ Related Reading
 - [Claude Code for Carvel YTT Workflow Tutorial](/claude-code-for-carvel-ytt-workflow-tutorial/)
 - [Claude Code for Shell Operator Workflow Tutorial](/claude-code-for-shell-operator-workflow-tutorial/)
 - [Claude Code Chaos Engineering Testing Automation Guide](/claude-code-chaos-engineering-testing-automation-guide/)
+- [Claude Code for Rook Ceph Storage Workflow Guide](/claude-code-for-rook-ceph-storage-workflow-guide/)
+- [Claude Code for IPFS Decentralized Storage Workflow](/claude-code-for-ipfs-decentralized-storage-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

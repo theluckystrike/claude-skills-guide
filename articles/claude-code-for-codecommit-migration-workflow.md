@@ -217,6 +217,14 @@ Related Reading
 - [Claude Code for AWS PrivateLink Workflow](/claude-code-for-aws-privatelink-workflow/)
 - [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Jest to Vitest Migration Workflow with Claude Code](/claude-code-jest-to-vitest-migration-workflow-tutorial/)
+- [How to Use TypeORM Entities Relations Migration (2026)](/claude-code-typeorm-entities-relations-migration-workflow/)
+- [Claude Code Struts to Spring Boot Migration Workflow](/claude-code-struts-to-spring-boot-migration-workflow/)
+- [Claude Code Vba Excel Macros To Python — Developer Guide](/claude-code-vba-excel-macros-to-python-migration/)
+- [Claude Code Next.js App Router — Complete Developer Guide](/claude-code-nextjs-app-router-migration-guide/)
+- [Claude Code for Travis CI Workflow Migration Guide](/claude-code-for-travis-ci-workflow-migration-guide/)
+- [Claude Code For Ant To Maven Gradle Build — Developer Guide](/claude-code-for-ant-to-maven-gradle-build-migration/)
+- [ASP.NET WebForms to Blazor Migration with Claude Code](/claude-code-asp-net-webforms-to-blazor-migration/)
+- [Migrate Express to Fastify with Claude Code](/claude-code-migration-guide-express-to-fastify/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

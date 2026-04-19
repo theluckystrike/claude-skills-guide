@@ -150,3 +150,8 @@ The `--add-dir` flag for accessing skills from external directories creates an e
 - [Claude Skills Shared Dependencies](/claude-skills-shared-dependencies/) -- sharing resources across package skills
 - [Claude Skill Registry Pattern for Teams](/claude-skill-registry-pattern-for-teams/) -- tracking all skills across the monorepo
 - [Claude Skill Inheritance and Composition](/claude-skill-inheritance-composition/) -- extending root skills in packages
+
+## Related Articles
+
+- [Claude Code Skills Monorepo Management Workflow](/claude-code-skills-monorepo-management-workflow/)
+- [Claude Skills vs Claude AI Projects — When to Use Code Skills vs Web-Based Project Instructions — 20](/claude-skills-vs-claude-ai-projects/)

@@ -215,6 +215,7 @@ Related Reading
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). Apply TDD skill patterns to Solidity test coverage and contract verification
 - [Claude Code Skills for Infrastructure as Code](/claude-code-skills-for-infrastructure-as-code-terraform/). Apply similar domain-specific skill patterns to infrastructure tooling alongside smart contract work
 - [Advanced Claude Code Skills Hub](/advanced-hub/). Explore specialized skill patterns for complex technical domains
+- [Claude Skills for Energy Smart Grid Applications](/claude-skills-for-energy-smart-grid-applications/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

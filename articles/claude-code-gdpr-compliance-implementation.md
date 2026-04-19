@@ -381,6 +381,14 @@ Related Reading
 - [Claude Code PII Detection and Masking Guide](/claude-code-pii-detection-and-masking-guide/)
 - [Claude Code Cookie Consent Implementation](/claude-code-cookie-consent-implementation/)
 - [Claude Skills Guides Hub](/guides-hub/)
+- [Claude Code ArXiv Paper Implementation Guide](/claude-code-arxiv-paper-implementation-guide/)
+- [Claude Code Kpi Dashboard — Complete Developer Guide](/claude-code-kpi-dashboard-implementation-guide/)
+- [Claude Code Beta Program: How to Join](/claude-code-beta-program-how-to-join/)
+- [Types Of LLM Agents Explained For — Developer Guide](/types-of-llm-agents-explained-for-developers-2026/)
+- [Switching From Copilot To Claude Code — Honest Review 2026](/switching-from-copilot-to-claude-code-honest-review/)
+- [Using Claude Code to Learn Algorithms and Data Structures](/using-claude-code-to-learn-algorithms-and-structures/)
+- [Claude Code for ABAC: Attribute-Based Access Control Guide](/claude-code-for-abac-attribute-based-access-guide/)
+- [Claude Code NestJS Modular Architecture Guide](/claude-code-nestjs-modular-architecture-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
