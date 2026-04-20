@@ -14,6 +14,10 @@ author:
   url: https://github.com/theluckystrike
 
 
+exclude:
+  - plan.md
+  - plan-archive.md
+
 include:
   - _headers
   - _redirects
