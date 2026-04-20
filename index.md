@@ -18,7 +18,6 @@ description: "3,021 production-tested Claude Code guides. CLAUDE.md templates, d
   --track-tight: 0.08em;
   --track: 0.12em;
   --track-wide: 0.18em;
-  --u: 8px;
 }
 
 /* Dark (default) */
@@ -34,7 +33,6 @@ html[data-theme="dark"] {
   --ink-4: oklch(0.42 0.010 70);
   --green: oklch(0.78 0.14 150);
   --red: oklch(0.72 0.16 25);
-  --blue: oklch(0.78 0.12 230);
   --shadow-1: 0 1px 0 rgba(255,255,255,0.05) inset;
   --shadow-2: 0 30px 60px -30px rgba(0,0,0,.6), 0 1px 0 rgba(255,255,255,0.04) inset;
 }
@@ -52,7 +50,6 @@ html[data-theme="light"] {
   --ink-4: oklch(0.65 0.010 60);
   --green: oklch(0.48 0.13 150);
   --red: oklch(0.52 0.18 25);
-  --blue: oklch(0.48 0.13 230);
   --shadow-1: 0 1px 0 rgba(0,0,0,0.03) inset;
   --shadow-2: 0 30px 60px -30px rgba(60,40,20,.18), 0 1px 0 rgba(0,0,0,0.03) inset;
 }
@@ -816,7 +813,7 @@ html[data-theme="light"] .nav {
   font-size: 17px; max-width: 36ch; margin: 24px 0 0;
   line-height: 1.4; letter-spacing: -0.01em;
 }
-.foot-col h4 {
+.foot-col h3 {
   font-family: var(--mono); font-size: 10.5px; letter-spacing: var(--track-wide);
   text-transform: uppercase; color: var(--ink-3);
   margin: 0 0 20px; font-weight: 500;
@@ -841,31 +838,24 @@ html[data-theme="light"] .nav {
   .nav-links a { padding: 8px 10px; font-size: 12.5px; }
 }
 
-@media (max-width: 880px) {
-  .hero-grid, .gen-grid, .section-head, .stats-head { grid-template-columns: 1fr; gap: 32px; }
-  .stats-grid, .price-grid, .guide-grid, .guides-more, .footer-top { grid-template-columns: 1fr; }
-  .stat, .price { border-right: 0; border-bottom: 1px solid var(--line); }
-  .hero-meta { grid-template-columns: 1fr 1fr; }
-  .hero-meta > div:nth-child(2) { border-right: 0; }
-  .hero-stack { display: none; }
-  .bio { grid-template-columns: 1fr; gap: 24px; text-align: left; }
-  .bio-meta { text-align: left; }
-  .nav-links { display: none; }
-  .price-math { grid-template-columns: 1fr; gap: 12px; }
-}
-
 @media (max-width: 900px) {
   .wrap { padding: 0 24px; }
   .nav-right .btn-primary { padding: 10px 14px; font-size: 12.5px; }
-  .hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .nav-links { display: none; }
+  .hero-grid, .gen-grid, .section-head, .stats-head { grid-template-columns: 1fr !important; gap: 32px !important; }
   .hero-copy { max-width: 100%; }
   .hero-stack { position: static !important; transform: none !important; margin-top: 24px; width: 100% !important; max-width: 100%; }
+  .hero-meta { grid-template-columns: 1fr 1fr; }
+  .hero-meta > div:nth-child(2) { border-right: 0; }
   .display { font-size: clamp(44px, 11vw, 82px); line-height: 0.98; }
   .stats-grid { grid-template-columns: 1fr !important; gap: 0 !important; }
-  .stat { border-right: none !important; border-bottom: 1px solid var(--line); padding: 32px 0 !important; }
+  .stat, .price { border-right: none !important; border-bottom: 1px solid var(--line); }
+  .stat { padding: 32px 0 !important; }
   .stat:last-child { border-bottom: none; }
   .bio { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .bio-meta { text-align: left; }
   .bio-portrait { width: 140px; height: 140px; }
+  .guide-grid, .guides-more { grid-template-columns: 1fr; }
   .gen-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
   .price-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
   .price-math { grid-template-columns: 1fr !important; gap: 16px !important; text-align: left; }
@@ -900,7 +890,6 @@ html[data-theme="light"] .nav {
   .guides-more { grid-template-columns: 1fr !important; }
   .guide-tabs {
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
     flex-wrap: nowrap !important;
     padding-bottom: 4px;
   }
@@ -936,7 +925,7 @@ html[data-theme="light"] .nav {
       <span class="brand-word">Claude Code <span>Guides</span></span>
     </a>
     <div class="nav-links">
-      <a href="/all-articles/">Guides <span style="color:var(--ink-4);font-family:var(--mono);font-size:11px">3,021</span></a>
+      <a href="/all-articles/">Guides <span style="color:var(--ink-3);font-family:var(--mono);font-size:11px">3,021</span></a>
       <a href="/generator/">Generator</a>
       <a href="/about/">About</a>
       <a href="#pricing">Pricing</a>
@@ -1377,7 +1366,7 @@ html[data-theme="light"] .nav {
         <p>An independent reference for Claude Code operators &mdash; maintained daily by Michael Lip and a small fleet of agents.</p>
       </div>
       <div class="foot-col">
-        <h4>&sect; Read</h4>
+        <h3>&sect; Read</h3>
         <a href="/all-articles/">All guides</a>
         <a href="/topics/getting-started/">Getting started</a>
         <a href="/topics/api/">API</a>
@@ -1386,14 +1375,14 @@ html[data-theme="light"] .nav {
         <a href="/topics/prompt-engineering/">Prompts</a>
       </div>
       <div class="foot-col">
-        <h4>&sect; Tools</h4>
+        <h3>&sect; Tools</h3>
         <a href="/generator/">CLAUDE.md generator</a>
         <a href="https://zovo.one/lifetime">Template library</a>
         <a href="https://zovo.one/lifetime">Orchestration kit</a>
         <a href="/feed.xml">RSS feed</a>
       </div>
       <div class="foot-col">
-        <h4>&sect; Elsewhere</h4>
+        <h3>&sect; Elsewhere</h3>
         <a href="https://zovo.one" target="_blank" rel="noopener noreferrer">zovo.one &#8599;</a>
         <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer">Discord &#8599;</a>
         <a href="https://github.com/theluckystrike" target="_blank" rel="noopener noreferrer">GitHub &#8599;</a>
