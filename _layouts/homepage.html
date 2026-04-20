@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141413">
+  <meta name="msapplication-TileColor" content="#d97757">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  {% seo %}
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      { "@type": "SiteNavigationElement", "position": 1, "name": "Getting Started", "url": "https://claudecodeguides.com/topics/getting-started/" },
+      { "@type": "SiteNavigationElement", "position": 2, "name": "Prompts", "url": "https://claudecodeguides.com/topics/prompt-engineering/" },
+      { "@type": "SiteNavigationElement", "position": 3, "name": "API", "url": "https://claudecodeguides.com/topics/api/" },
+      { "@type": "SiteNavigationElement", "position": 4, "name": "Agents", "url": "https://claudecodeguides.com/topics/agents/" },
+      { "@type": "SiteNavigationElement", "position": 5, "name": "MCP", "url": "https://claudecodeguides.com/topics/mcp/" },
+      { "@type": "SiteNavigationElement", "position": 6, "name": "Extensions", "url": "https://claudecodeguides.com/topics/chrome-extensions/" },
+      { "@type": "SiteNavigationElement", "position": 7, "name": "All Guides", "url": "https://claudecodeguides.com/all-articles/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Claude Code Guides",
+    "url": "https://claudecodeguides.com",
+    "logo": "https://claudecodeguides.com/assets/og-default.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Michael Lip",
+      "jobTitle": "Solo Founder",
+      "worksFor": { "@type": "Organization", "name": "Zovo" },
+      "sameAs": [
+        "https://github.com/theluckystrike",
+        "https://www.upwork.com/freelancers/~01b0e2c31b7c8a0e5c"
+      ]
+    },
+    "sameAs": [
+      "https://github.com/theluckystrike/claude-skills-guide",
+      "https://discord.com/invite/QeHxTFbqmC",
+      "https://zovo.one"
+    ]
+  }
+  </script>
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('ccg-theme') || 'dark');</script>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2241192243363112" crossorigin="anonymous"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <main id="main-content">
+    {{ content }}
+  </main>
+  <!-- Sticky Footer CTA Bar -->
+  <aside class="cta-footer-bar" id="ctaFooterBar" aria-label="Community invitation">
+    <div class="cta-footer-bar-inner">
+      <span class="cta-footer-bar-text">Generate a free CLAUDE.md for your stack. 27 frameworks. 60 seconds.</span>
+      <a href="/generator/?utm_source=ccg&utm_medium=footer-bar&utm_campaign=sticky" class="cta-footer-bar-btn">Generate free CLAUDE.md &#8594;</a>
+      <button type="button" class="cta-footer-bar-dismiss" id="ctaFooterDismiss" aria-label="Dismiss community banner">&#10005;</button>
+    </div>
+  </aside>
+  <script>
+  (function() {
+    'use strict';
+    var COOKIE_NAME = 'zovo_footer_dismissed';
+    var COOKIE_DAYS = 7;
+    var SHOW_DELAY_MS = 5000;
+    var SCROLL_THRESHOLD = 0.3;
+
+    function getCookie(name) {
+      var match = document.cookie.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]*)'));
+      return match ? match[1] : null;
+    }
+
+    if (getCookie(COOKIE_NAME) === '1') {
+      return;
+    }
+
+    var bar = document.getElementById('ctaFooterBar');
+    var dismissBtn = document.getElementById('ctaFooterDismiss');
+    if (!bar || !dismissBtn) { return; }
+
+    var shown = false;
+    var timer = null;
+
+    function showBar() {
+      if (shown) { return; }
+      shown = true;
+      if (timer) { clearTimeout(timer); timer = null; }
+      window.removeEventListener('scroll', onScroll);
+      bar.style.display = 'block';
+      bar.offsetHeight;
+      bar.classList.add('is-visible');
+    }
+
+    function dismissBar() {
+      bar.classList.remove('is-visible');
+      var expires = new Date();
+      expires.setTime(expires.getTime() + (COOKIE_DAYS * 24 * 60 * 60 * 1000));
+      document.cookie = COOKIE_NAME + '=1;expires=' + expires.toUTCString() + ';path=/;SameSite=Lax';
+      setTimeout(function() { bar.style.display = 'none'; }, 350);
+    }
+
+    dismissBtn.addEventListener('click', dismissBar, { once: true });
+
+    function onScroll() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight > 0 && (scrollTop / docHeight) >= SCROLL_THRESHOLD) {
+        showBar();
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    timer = setTimeout(showBar, SHOW_DELAY_MS);
+  })();
+  </script>
+</body>
+</html>
