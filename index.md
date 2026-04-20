@@ -39,6 +39,8 @@ html[data-theme="dark"] {
 
 /* Light */
 html[data-theme="light"] {
+  --accent: oklch(0.56 0.12 var(--accent-h));
+  --accent-dim: oklch(0.46 0.10 var(--accent-h));
   --bg: oklch(0.98 0.005 80);
   --bg-2: oklch(0.96 0.007 80);
   --bg-3: oklch(0.935 0.009 80);
@@ -46,8 +48,8 @@ html[data-theme="light"] {
   --line-soft: oklch(0.90 0.008 70);
   --ink: oklch(0.18 0.010 60);
   --ink-2: oklch(0.34 0.010 60);
-  --ink-3: oklch(0.52 0.010 60);
-  --ink-4: oklch(0.52 0.010 60);
+  --ink-3: oklch(0.42 0.010 60);
+  --ink-4: oklch(0.48 0.010 60);
   --green: oklch(0.48 0.13 150);
   --red: oklch(0.52 0.18 25);
   --shadow-1: 0 1px 0 rgba(0,0,0,0.03) inset;
@@ -821,7 +823,7 @@ html[data-theme="light"] .nav {
   margin: 0 0 20px; font-weight: 500;
 }
 .foot-col a {
-  display: block; padding: 7px 0; min-height: 44px;
+  padding: 7px 0; min-height: 44px;
   font-size: 14px; color: var(--ink-2); text-decoration: none;
   letter-spacing: -0.005em;
   display: flex; align-items: center;
