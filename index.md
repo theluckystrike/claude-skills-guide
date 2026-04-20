@@ -47,7 +47,7 @@ html[data-theme="light"] {
   --ink: oklch(0.18 0.010 60);
   --ink-2: oklch(0.34 0.010 60);
   --ink-3: oklch(0.52 0.010 60);
-  --ink-4: oklch(0.65 0.010 60);
+  --ink-4: oklch(0.52 0.010 60);
   --green: oklch(0.48 0.13 150);
   --red: oklch(0.52 0.18 25);
   --shadow-1: 0 1px 0 rgba(0,0,0,0.03) inset;
@@ -78,6 +78,7 @@ body {
 ::selection { background: var(--accent); color: var(--accent-ink); }
 
 /* Kill style.css collisions */
+body::before { display: none !important; }
 .hero { text-align: left !important; background: none !important; margin: 0 !important; border: none !important; padding: 0 !important; }
 .hero h1 { text-align: left; margin: 0; }
 .hero p { color: inherit; }
@@ -348,6 +349,7 @@ html[data-theme="light"] .nav {
 }
 .mdpane-foot .gen {
   color: var(--accent); cursor: pointer;
+  background: none; border: none; padding: 0; font: inherit;
 }
 .mdpane-foot .gen:hover { text-decoration: underline; }
 
@@ -819,9 +821,10 @@ html[data-theme="light"] .nav {
   margin: 0 0 20px; font-weight: 500;
 }
 .foot-col a {
-  display: block; padding: 7px 0;
+  display: block; padding: 7px 0; min-height: 44px;
   font-size: 14px; color: var(--ink-2); text-decoration: none;
   letter-spacing: -0.005em;
+  display: flex; align-items: center;
 }
 .foot-col a:hover { color: var(--ink); }
 .foot-bottom {
@@ -872,7 +875,7 @@ html[data-theme="light"] .nav {
   .brand-word { font-size: 18px !important; }
   .brand-mark { width: 28px !important; height: 28px !important; font-size: 16px !important; }
   .nav-right .btn-primary { font-size: 12px; padding: 9px 12px; }
-  .theme-toggle { width: 32px !important; height: 32px !important; }
+  .theme-toggle { width: 44px !important; height: 44px !important; }
   .hero-meta { grid-template-columns: 1fr; font-size: 10px; }
   .hero-meta > div {
     border-right: none !important;
@@ -898,7 +901,7 @@ html[data-theme="light"] .nav {
   .mdpane-head, .mdpane-foot { font-size: 10px !important; padding: 10px 12px !important; }
   .hero-stack { font-size: 11.5px; padding: 14px 16px !important; }
   .btn { min-height: 44px; padding: 12px 16px; }
-  .chip { font-size: 11.5px; }
+  .chip { font-size: 11.5px; min-height: 44px; }
   .price { padding: 28px 22px !important; }
   .price ul li { grid-template-columns: 16px 1fr auto; gap: 10px; font-size: 13px; }
   .footer-top { grid-template-columns: 1fr !important; }
@@ -933,7 +936,7 @@ html[data-theme="light"] .nav {
     </div>
     <div class="nav-right">
       <button class="theme-toggle" id="themeBtn" aria-label="Toggle theme">
-        <svg id="themeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <svg id="themeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
           <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
         </svg>
       </button>
@@ -968,7 +971,7 @@ html[data-theme="light"] .nav {
         <div class="hero-cta">
           <a class="btn btn-primary" href="/generator/">
             Generate your CLAUDE.md
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
           </a>
           <a class="btn btn-ghost" href="/all-articles/">Browse 3,021 guides</a>
         </div>
@@ -1011,7 +1014,7 @@ html[data-theme="light"] .nav {
         </div>
         <div class="mdpane-foot">
           <span>YAML &middot; 23 lines &middot; 642 bytes</span>
-          <span class="gen" id="regen">&#8635; regenerate for my stack</span>
+          <button class="gen" id="regen" type="button">&#8635; regenerate for my stack</button>
         </div>
       </div>
 
@@ -1111,14 +1114,14 @@ html[data-theme="light"] .nav {
       <a class="btn btn-ghost" href="/all-articles/">Browse all 3,021 &#8594;</a>
     </div>
 
-    <div class="guide-tabs" id="tabs" role="tablist" aria-label="Guide categories">
-      <button class="on" role="tab" aria-selected="true" data-tab="trending">Trending <span class="count">[12]</span></button>
-      <button role="tab" aria-selected="false" data-tab="new">Newest <span class="count">[47]</span></button>
-      <button role="tab" aria-selected="false" data-tab="api">API <span class="count">[134]</span></button>
-      <button role="tab" aria-selected="false" data-tab="agents">Agents <span class="count">[66]</span></button>
-      <button role="tab" aria-selected="false" data-tab="mcp">MCP <span class="count">[92]</span></button>
-      <button role="tab" aria-selected="false" data-tab="prompts">Prompts <span class="count">[34]</span></button>
-      <button role="tab" aria-selected="false" data-tab="start">Getting started <span class="count">[60]</span></button>
+    <div class="guide-tabs" id="tabs" role="toolbar" aria-label="Guide categories">
+      <button class="on" aria-pressed="true" data-tab="trending">Trending <span class="count">[12]</span></button>
+      <button aria-pressed="false" data-tab="new">Newest <span class="count">[47]</span></button>
+      <button aria-pressed="false" data-tab="api">API <span class="count">[134]</span></button>
+      <button aria-pressed="false" data-tab="agents">Agents <span class="count">[66]</span></button>
+      <button aria-pressed="false" data-tab="mcp">MCP <span class="count">[92]</span></button>
+      <button aria-pressed="false" data-tab="prompts">Prompts <span class="count">[34]</span></button>
+      <button aria-pressed="false" data-tab="start">Getting started <span class="count">[60]</span></button>
     </div>
 
     <div class="guide-grid">
@@ -1236,29 +1239,29 @@ html[data-theme="light"] .nav {
         </div>
         <div class="gen-form" aria-label="Generator demo">
           <div class="gen-field">
-            <label>framework</label>
-            <div class="gen-chips" data-group="fw" role="radiogroup" aria-label="Select framework">
-              <button class="chip on" role="radio" aria-checked="true">Next.js 14</button>
-              <button class="chip" role="radio" aria-checked="false">FastAPI</button>
-              <button class="chip" role="radio" aria-checked="false">Rails 7</button>
-              <button class="chip" role="radio" aria-checked="false">Go</button>
-              <button class="chip" role="radio" aria-checked="false">Rust</button>
-              <button class="chip" role="radio" aria-checked="false">Svelte</button>
-              <button class="chip" role="radio" aria-checked="false">+ 21 more</button>
+            <label id="lbl-fw">framework</label>
+            <div class="gen-chips" data-group="fw" role="group" aria-labelledby="lbl-fw">
+              <button class="chip on" aria-pressed="true">Next.js 14</button>
+              <button class="chip" aria-pressed="false">FastAPI</button>
+              <button class="chip" aria-pressed="false">Rails 7</button>
+              <button class="chip" aria-pressed="false">Go</button>
+              <button class="chip" aria-pressed="false">Rust</button>
+              <button class="chip" aria-pressed="false">Svelte</button>
+              <button class="chip" aria-pressed="false">+ 21 more</button>
             </div>
           </div>
           <div class="gen-field">
-            <label>language</label>
-            <div class="gen-chips" data-group="lang" role="radiogroup" aria-label="Select language">
-              <button class="chip on" role="radio" aria-checked="true">TypeScript strict</button>
-              <button class="chip" role="radio" aria-checked="false">Python 3.12</button>
-              <button class="chip" role="radio" aria-checked="false">Ruby</button>
-              <button class="chip" role="radio" aria-checked="false">Rust</button>
+            <label id="lbl-lang">language</label>
+            <div class="gen-chips" data-group="lang" role="group" aria-labelledby="lbl-lang">
+              <button class="chip on" aria-pressed="true">TypeScript strict</button>
+              <button class="chip" aria-pressed="false">Python 3.12</button>
+              <button class="chip" aria-pressed="false">Ruby</button>
+              <button class="chip" aria-pressed="false">Rust</button>
             </div>
           </div>
           <div class="gen-field">
-            <label>constraints (pick any)</label>
-            <div class="gen-chips" data-group="c" data-multi="1" role="group" aria-label="Select constraints">
+            <label id="lbl-c">constraints (pick any)</label>
+            <div class="gen-chips" data-group="c" data-multi="1" role="group" aria-labelledby="lbl-c">
               <button class="chip on" aria-pressed="true">Don't touch auth</button>
               <button class="chip on" aria-pressed="true">Colocate tests</button>
               <button class="chip" aria-pressed="false">No new deps</button>
@@ -1267,7 +1270,7 @@ html[data-theme="light"] .nav {
             </div>
           </div>
         </div>
-        <div class="gen-out" id="genOut"><span class="c-cmt"># Generated by claudecodeguides.com &middot; hit &darr; regenerate</span>
+        <div class="gen-out" id="genOut" aria-live="polite"><span class="c-cmt"># Generated by claudecodeguides.com &middot; hit &darr; regenerate</span>
 <span class="c-key">project</span>: <span id="gp">your-app</span>
 <span class="c-key">framework</span>: <span class="c-str" id="gf">next.js 14 (app router)</span>
 <span class="c-key">language</span>: <span class="c-str" id="gl">typescript 5.4 strict</span>
@@ -1440,10 +1443,10 @@ html[data-theme="light"] .nav {
       if (!b) return;
       tabs.querySelectorAll('button').forEach(function(x) {
         x.classList.remove('on');
-        x.setAttribute('aria-selected', 'false');
+        x.setAttribute('aria-pressed', 'false');
       });
       b.classList.add('on');
-      b.setAttribute('aria-selected', 'true');
+      b.setAttribute('aria-pressed', 'true');
     });
   }
 
@@ -1462,10 +1465,10 @@ html[data-theme="light"] .nav {
       } else {
         group.querySelectorAll('.chip').forEach(function(x) {
           x.classList.remove('on');
-          x.setAttribute('aria-checked', 'false');
+          x.setAttribute('aria-pressed', 'false');
         });
         c.classList.add('on');
-        c.setAttribute('aria-checked', 'true');
+        c.setAttribute('aria-pressed', 'true');
       }
       updateGen();
     });
