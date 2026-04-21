@@ -103,6 +103,12 @@ Yes. Paste your code into Canvas and ask for a review. It will add inline commen
 ### Is there a way to use both tools together?
 Some developers use Canvas for quick prototyping and brainstorming, then switch to Claude Code for implementation and integration into their actual project. This hybrid approach works well when exploring ideas before committing to an implementation path.
 
+### How do they compare for debugging production issues?
+Claude Code is significantly stronger. It reads your logs, traces error stacks through multiple files, runs diagnostic commands, and can apply fixes directly. Canvas has no access to your running infrastructure, logs, or filesystem. For production debugging, Claude Code operates as an on-call engineer while Canvas operates as a knowledge base you query manually.
+
+### What are the data privacy differences?
+Claude Code sends your code to Anthropic's servers for processing but does not train on it (per Anthropic's policy). ChatGPT Enterprise offers SOC 2 compliance and contractual data exclusion from training. For teams with strict data requirements, check your organization's policy on both providers. Neither tool offers on-premise deployment — for air-gapped environments, consider Ollama with local models instead.
+
 ## When To Use Neither
 
 If your primary need is real-time autocomplete inside an IDE as you type, neither Claude Code nor ChatGPT Canvas is the right tool. Claude Code is a terminal agent, not an inline suggestion engine. Canvas is a browser app, not an editor plugin. For in-editor autocomplete, use GitHub Copilot ($10/mo) or Cursor's tab completion. These tools predict the next line as you write, which is a fundamentally different workflow from the conversational approach both Claude Code and Canvas provide.
