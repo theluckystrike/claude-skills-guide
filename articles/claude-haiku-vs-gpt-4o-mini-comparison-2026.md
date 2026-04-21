@@ -3,9 +3,15 @@ layout: default
 title: "Claude Haiku 4.5 vs GPT-4o Mini: Budget AI Coding"
 description: "Comparing the cheapest AI coding models — Claude Haiku 4.5 vs GPT-4o Mini on price, speed, and code quality for budget workflows."
 date: 2026-04-21
+last_tested: "2026-04-21"
 permalink: /claude-haiku-vs-gpt-4o-mini-comparison-2026/
 categories: [comparisons]
 tags: [claude-code, haiku, gpt-4o-mini, budget, cost-optimization]
+tools_compared:
+  - name: "Claude Haiku 4.5"
+    version: "4.5"
+  - name: "GPT-4o Mini"
+    version: "2025-03"
 ---
 
 Claude Haiku 4.5 and GPT-4o Mini are the budget workhorses of AI coding — designed for high-throughput, cost-sensitive tasks where paying premium model prices makes no economic sense. Both cost pennies per task and respond in milliseconds. The choice between them comes down to specific quality differences on coding tasks, ecosystem integration, and how you plan to scale usage across your team or product.

@@ -3,9 +3,15 @@ layout: default
 title: "Claude Code vs Cline: Setup and Configuration"
 description: "Compare setting up Claude Code CLI vs Cline VS Code extension. Both use Anthropic API but differ in interface and capabilities."
 date: 2026-04-21
+last_tested: "2026-04-21"
 permalink: /claude-code-vs-cline-setup-comparison/
 categories: [comparisons]
 tags: [claude-code, cline, setup, vs-code-extension]
+tools_compared:
+  - name: "Claude Code"
+    version: "CLI 2.x"
+  - name: "Cline"
+    version: "3.x"
 ---
 
 Claude Code and Cline share a notable connection — Cline was originally named "Claude Dev" and was built specifically to bring Claude's capabilities into VS Code. Both tools connect to Anthropic's API and provide agentic coding assistance. The key difference is where they live: Claude Code runs in your terminal while Cline runs inside VS Code. This comparison covers the full setup experience and configuration options for each.

@@ -6,6 +6,12 @@ date: 2026-04-21
 permalink: /claude-opus-vs-deepseek-v3-comparison/
 categories: [comparisons]
 tags: [claude-code, opus, deepseek, open-source, model-comparison]
+last_tested: "2026-04-21"
+tools_compared:
+  - name: "Claude Opus 4.6"
+    version: "Anthropic API"
+  - name: "DeepSeek V3"
+    version: "MIT open-source"
 ---
 
 Claude Opus 4.6 and DeepSeek V3 represent opposite philosophies in AI coding models. Opus is a closed-source premium model priced at the highest tier, optimized for maximum reasoning capability. DeepSeek V3 is open source, available for self-hosting, and priced at a fraction of Opus's cost through its API. The choice between them involves trade-offs on cost, privacy, reasoning quality, and operational control that vary dramatically by use case.

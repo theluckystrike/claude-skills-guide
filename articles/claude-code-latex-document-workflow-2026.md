@@ -98,6 +98,7 @@ claude
 
 Claude Code generates:
 
+{% raw %}
 ```latex
 % main.tex
 \documentclass[sigconf,nonacm]{acmart}
@@ -221,6 +222,7 @@ reduces inference latency for distributed LLM serving.
 
 \end{document}
 ```
+{% endraw %}
 
 ```makefile
 # Makefile

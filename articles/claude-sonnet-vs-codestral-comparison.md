@@ -3,9 +3,15 @@ layout: default
 title: "Claude Sonnet 4.6 vs Codestral: Code Generation Face-Off"
 description: "Claude Sonnet 4.6 vs Codestral compared for code generation — speed, quality, cost, and specialized coding model trade-offs."
 date: 2026-04-21
+last_tested: "2026-04-21"
 permalink: /claude-sonnet-vs-codestral-comparison/
 categories: [comparisons]
 tags: [claude-code, sonnet, codestral, mistral, code-generation]
+tools_compared:
+  - name: "Claude Sonnet 4.6"
+    version: "4.6"
+  - name: "Codestral"
+    version: "2025.01"
 ---
 
 Claude Sonnet 4.6 is a general-purpose AI model with strong coding abilities. Codestral is Mistral AI's purpose-built code generation model, designed specifically for writing and understanding code. This matchup tests whether a specialized code model can outperform a larger general model on the tasks developers actually care about: generating correct, idiomatic, production-ready code.

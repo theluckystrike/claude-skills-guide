@@ -3,9 +3,15 @@ layout: default
 title: "Claude Code vs Aider: Git Integration Compared"
 description: "Compare how Claude Code and Aider handle git operations. Auto-commits, branch management, diff workflows, and repository awareness."
 date: 2026-04-21
+last_tested: "2026-04-21"
 permalink: /claude-code-vs-aider-git-integration/
 categories: [comparisons]
 tags: [claude-code, aider, git-integration, version-control]
+tools_compared:
+  - name: "Claude Code"
+    version: "CLI 2.x"
+  - name: "Aider"
+    version: "0.75+"
 ---
 
 Git integration separates serious AI coding tools from glorified chatbots. Both Claude Code and Aider treat git as a first-class citizen, but their philosophies differ. Aider auto-commits every change with descriptive messages, creating a granular history you can review and revert. Claude Code gives you full git access as a tool, letting you control when and how commits happen. This comparison examines which approach produces better development workflows.

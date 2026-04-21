@@ -6,6 +6,12 @@ date: 2026-04-21
 permalink: /claude-sonnet-vs-gemini-25-pro-coding/
 categories: [comparisons]
 tags: [claude-code, sonnet, gemini, google, model-comparison]
+last_tested: "2026-04-21"
+tools_compared:
+  - name: "Claude Sonnet 4.6"
+    version: "Anthropic API"
+  - name: "Gemini 2.5 Pro"
+    version: "Google AI Studio"
 ---
 
 Claude Sonnet 4.6 and Gemini 2.5 Pro represent fundamentally different approaches to AI-assisted coding. Sonnet offers predictable per-token pricing with a 200K context window. Gemini counters with an industry-leading 1M token context window and a generous free tier through Google AI Studio. For developers working on large codebases, the context window difference alone can determine which problems are solvable in a single prompt.

@@ -1,0 +1,47 @@
+---
+title: "Prompt Cache Stale Context Warning — Fix (2026)"
+permalink: /claude-code-prompt-caching-stale-context-fix-2026/
+description: "Run claude cache clear to invalidate stale prompt context after external file changes. Fixes outdated code suggestions based on cached file state."
+last_tested: "2026-04-21"
+render_with_liquid: false
+---
+
+## The Error
+
+```
+Cached prompt context is stale (file modified since cache creation)
+```
+
+## The Fix
+
+```bash
+# Clear the prompt cache to force fresh context loading
+claude cache clear
+
+# Or invalidate cache for specific files
+claude cache invalidate src/modified-file.ts
+```
+
+## Why This Works
+
+Claude Code caches file contents and project context between requests to reduce token usage and latency. When you modify files outside Claude Code (using another editor, git operations, or build tools), the cache becomes stale. Clearing it forces Claude Code to re-read the current file state on the next request, ensuring suggestions reflect your latest changes.
+
+## If That Doesn't Work
+
+```bash
+# Start a fresh session which always loads current state
+claude session new
+
+# If cache corruption persists, remove the cache directory entirely
+rm -rf ~/.config/claude-code/cache/
+# Claude Code will rebuild the cache on next interaction
+```
+
+If you frequently edit files outside Claude Code, the cache will repeatedly go stale. In that workflow, consider disabling prompt caching or reducing the cache TTL to minimize stale hits.
+
+## Prevention
+
+Add to your CLAUDE.md:
+```
+When switching between editors or running git operations that modify files (rebase, cherry-pick, stash pop), clear the Claude Code cache before resuming work. Run: claude cache clear.
+```

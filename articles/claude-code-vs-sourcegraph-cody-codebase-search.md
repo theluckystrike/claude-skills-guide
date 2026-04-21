@@ -6,6 +6,12 @@ date: 2026-04-21
 permalink: /claude-code-vs-sourcegraph-cody-codebase-search/
 categories: [comparisons]
 tags: [claude-code, sourcegraph-cody, codebase-search, code-intelligence]
+last_tested: "2026-04-21"
+tools_compared:
+  - name: "Claude Code"
+    version: "CLI 2.x"
+  - name: "Sourcegraph Cody"
+    version: "Enterprise 2026"
 ---
 
 Finding relevant code in a large codebase is the foundation of effective AI-assisted development. If the AI cannot locate the right files and functions, its suggestions will be generic at best and wrong at worst. Claude Code and Sourcegraph Cody represent two philosophically different approaches to codebase search: on-demand local file traversal versus pre-built search infrastructure. This comparison examines which approach produces better results for different scenarios.

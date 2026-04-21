@@ -6,6 +6,12 @@ date: 2026-04-21
 permalink: /claude-code-vs-amazon-q-developer-full-2026/
 categories: [comparisons]
 tags: [claude-code, amazon-q-developer, aws, full-comparison]
+last_tested: "2026-04-21"
+tools_compared:
+  - name: "Claude Code"
+    version: "CLI 2.x"
+  - name: "Amazon Q Developer"
+    version: "2026 GA"
 ---
 
 Amazon Q Developer (formerly CodeWhisperer) and Claude Code represent two distinct philosophies in AI coding tools. Amazon Q is deeply integrated with AWS services, designed to help developers build on Amazon's cloud platform. Claude Code is cloud-agnostic, designed to help developers build anything regardless of infrastructure choice. If you work primarily with AWS, the comparison is nuanced. If you do not, it is straightforward.

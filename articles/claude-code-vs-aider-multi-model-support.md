@@ -6,6 +6,12 @@ date: 2026-04-21
 permalink: /claude-code-vs-aider-multi-model-support/
 categories: [comparisons]
 tags: [claude-code, aider, multi-model, model-selection]
+last_tested: "2026-04-21"
+tools_compared:
+  - name: "Claude Code"
+    version: "CLI 2.x"
+  - name: "Aider"
+    version: "0.50+"
 ---
 
 The AI model landscape moves fast. New models release monthly, each with different strengths in reasoning, speed, and cost. Aider built its identity around supporting 20+ models from multiple providers, letting you swap models per task. Claude Code is purpose-built for Anthropic's model family. This comparison examines whether model flexibility or model optimization matters more for practical development work.

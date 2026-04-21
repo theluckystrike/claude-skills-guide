@@ -3,9 +3,15 @@ layout: default
 title: "Claude Code vs VS Code IntelliSense: Completion Compared"
 description: "Claude Code AI completions vs VS Code IntelliSense — comparing accuracy, speed, context awareness, and when each approach wins."
 date: 2026-04-21
+last_tested: "2026-04-21"
 permalink: /claude-code-vs-vscode-intellisense-comparison/
 categories: [comparisons]
 tags: [claude-code, vscode, intellisense, autocomplete, ide]
+tools_compared:
+  - name: "Claude Code"
+    version: "CLI 2.x"
+  - name: "VS Code IntelliSense"
+    version: "1.96+"
 ---
 
 VS Code IntelliSense provides instant, deterministic code completions powered by Language Server Protocol (LSP) analysis. Claude Code provides AI-generated completions that understand intent, context, and patterns beyond what static analysis can offer. These tools solve overlapping but distinct problems — understanding where each excels will help you configure a development environment that provides both speed and intelligence.

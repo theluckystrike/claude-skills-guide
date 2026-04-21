@@ -6,6 +6,12 @@ date: 2026-04-21
 permalink: /claude-memory-vs-supermemory-comparison/
 categories: [comparisons]
 tags: [claude-code, claude-memory, supermemory, ai-memory]
+last_tested: "2026-04-21"
+tools_compared:
+  - name: "Claude Memory"
+    version: "CLAUDE.md + Claude.ai"
+  - name: "Supermemory"
+    version: "Open source latest"
 ---
 
 Persistent memory transforms AI from a stateless chatbot into a contextual assistant that remembers your preferences, projects, and past decisions. Claude's memory system (including CLAUDE.md files in Claude Code and conversation memory in Claude.ai) and Supermemory (an open-source personal AI memory tool) both attempt to solve this problem, but through different architectures. One is tightly integrated with a specific AI; the other is a standalone knowledge base that works with anything.

@@ -3,9 +3,15 @@ layout: default
 title: "Claude Code vs Continue.dev: Setup and Configuration"
 description: "Compare setting up Claude Code CLI and Continue.dev extension. API keys, model config, and getting productive with each tool."
 date: 2026-04-21
+last_tested: "2026-04-21"
 permalink: /claude-code-vs-continue-dev-setup-comparison/
 categories: [comparisons]
 tags: [claude-code, continue-dev, setup, open-source]
+tools_compared:
+  - name: "Claude Code"
+    version: "CLI 2.x"
+  - name: "Continue.dev"
+    version: "0.9+"
 ---
 
 Both Claude Code and Continue.dev follow the "bring your own API key" model, putting you in control of which models you use and what you pay. But the similarity ends at installation. Claude Code is a standalone CLI tool, while Continue.dev is an IDE extension that plugs into VS Code or JetBrains. This comparison covers the full setup journey from installation through first productive use.

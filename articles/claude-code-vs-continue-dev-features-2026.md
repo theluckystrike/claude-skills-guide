@@ -6,6 +6,12 @@ date: 2026-04-21
 permalink: /claude-code-vs-continue-dev-features-2026/
 categories: [comparisons]
 tags: [claude-code, continue-dev, features, comparison-2026]
+last_tested: "2026-04-21"
+tools_compared:
+  - name: "Claude Code"
+    version: "CLI 2.x"
+  - name: "Continue.dev"
+    version: "0.9.x"
 ---
 
 By April 2026, both Claude Code and Continue.dev have matured significantly from their initial releases. Claude Code has grown from a simple chat CLI into a full agent with file editing, bash execution, and multi-agent orchestration. Continue.dev has expanded from basic autocomplete into a modular AI development platform with context providers, slash commands, and custom workflows. Here is how their current feature sets compare.

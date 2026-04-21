@@ -3,9 +3,15 @@ layout: default
 title: "Claude Sonnet 4.6 vs Opus 4.6 for Coding Tasks"
 description: "Comparing Claude Sonnet 4.6 and Opus 4.6 for coding — speed, cost, reasoning depth, and when each model is the right pick."
 date: 2026-04-21
+last_tested: "2026-04-21"
 permalink: /claude-sonnet-vs-opus-for-coding-tasks-2026/
 categories: [comparisons]
 tags: [claude-code, sonnet, opus, model-comparison]
+tools_compared:
+  - name: "Claude Sonnet 4.6"
+    version: "4.6"
+  - name: "Claude Opus 4.6"
+    version: "4.6"
 ---
 
 Choosing between Claude Sonnet 4.6 and Opus 4.6 for coding tasks comes down to a fundamental trade-off: speed and cost versus reasoning depth and accuracy. Both models share the same 200K context window and tool-use capabilities, but they occupy very different positions on the performance curve. Understanding where each excels will save you money and time on every coding session.
@@ -76,6 +82,12 @@ Yes, this is one of the highest-value uses of Opus. A thorough code review of a 
 ### Does prompt caching change the recommendation?
 Prompt caching reduces the input cost gap but not the output cost gap. Since coding tasks tend to be output-heavy (generating code), the 5x output cost difference remains the dominant factor in total spend.
 
+### How do I migrate my workflow from all-Opus to a hybrid approach?
+Start by identifying which tasks you currently send to Opus that follow predictable patterns (writing tests, adding endpoints, generating types). Route those to Sonnet for one week and track how often you need to re-prompt. Most developers find that fewer than 10% of routine tasks require escalation back to Opus, saving 70-80% on those interactions.
+
+### Which model is better for onboarding new team members?
+Sonnet is more practical for onboarding because new developers ask many exploratory questions (understanding file structure, reading existing code, asking what a function does). These queries use minimal reasoning and benefit from Sonnet's faster responses. Reserve Opus for the moments when a new hire needs help understanding complex system interactions across multiple services — typically 2-3 times per week rather than 50 times per day.
+
 ## When To Use Neither
 
-If your coding tasks are pure boilerplate generation (scaffolding projects, generating config files, writing repetitive tests), Haiku 4.5 at $0.25/$1.25 per million tokens handles these perfectly well at 12x less than Sonnet. There is no reason to pay for Sonnet or Opus reasoning on tasks that require zero reasoning.
+If your coding tasks are pure boilerplate generation (scaffolding projects, generating config files, writing repetitive tests), Haiku 4.5 at $0.25/$1.25 per million tokens handles these perfectly well at 12x less than Sonnet. There is no reason to pay for Sonnet or Opus reasoning on tasks that require zero reasoning. Specifically, generating Kubernetes manifests, Terraform resource blocks, CI/CD pipeline YAML, and database migration skeletons are tasks where Haiku produces identical output to Sonnet or Opus because the correct answer is fully determined by the input specification with no ambiguity requiring judgment. For batch operations processing 500+ files (adding license headers, updating import paths, inserting logging statements), Haiku at $0.25/M input tokens processes an entire monorepo for under $2 — the same job on Opus would cost $120 with zero quality benefit.

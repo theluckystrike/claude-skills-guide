@@ -3,9 +3,15 @@ layout: default
 title: "Claude Code vs Sourcegraph Cody: Setup and First Run"
 description: "Compare initial setup of Claude Code and Sourcegraph Cody. Installation, authentication, codebase connection, and first query experience."
 date: 2026-04-21
+last_tested: "2026-04-21"
 permalink: /claude-code-vs-sourcegraph-cody-setup/
 categories: [comparisons]
 tags: [claude-code, sourcegraph-cody, setup, codebase-awareness]
+tools_compared:
+  - name: "Claude Code"
+    version: "CLI 2.x"
+  - name: "Sourcegraph Cody"
+    version: "5.x"
 ---
 
 Claude Code and Sourcegraph Cody both aim to be deeply aware of your codebase, but they achieve this through entirely different mechanisms. Claude Code reads files on demand from your local filesystem. Cody indexes your repositories through Sourcegraph's search infrastructure. This fundamental difference shapes everything about how each tool is set up and how quickly you reach productive use.
