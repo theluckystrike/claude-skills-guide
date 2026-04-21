@@ -5,6 +5,8 @@ description: "Materials science simulation with Claude Code. Automate VASP input
 last_tested: "2026-04-22"
 render_with_liquid: false
 ---
+{% raw %}
+
 
 ## Why Claude Code for Materials Science Simulation
 
@@ -268,3 +270,4 @@ print('VASP input generation: PASS')
 - [Claude Code for Computational Chemistry (ORCA)](/claude-code-computational-chemistry-orca-2026/)
 - [Claude Code for Molecular Dynamics (GROMACS)](/claude-code-molecular-dynamics-gromacs-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+{% endraw %}

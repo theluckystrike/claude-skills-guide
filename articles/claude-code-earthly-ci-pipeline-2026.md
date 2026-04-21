@@ -6,6 +6,8 @@ last_tested: "2026-04-22"
 domain: "CI/CD"
 render_with_liquid: false
 ---
+{% raw %}
+
 
 ## Why Claude Code for Earthly
 
@@ -223,3 +225,4 @@ earthly --verbose +frontend-deps 2>&1 | grep -i cache
 - [Claude Code for Bazel Build System](/claude-code-bazel-build-system-2026/)
 - [Claude Code for Turborepo Monorepo Management](/claude-code-turborepo-monorepo-management-2026/)
 - [Claude Code for Pulumi Infrastructure as Code](/claude-code-pulumi-infrastructure-as-code-2026/)
+{% endraw %}

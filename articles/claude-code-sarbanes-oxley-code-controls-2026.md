@@ -6,6 +6,8 @@ last_tested: "2026-04-22"
 domain: "financial compliance"
 render_with_liquid: false
 ---
+{% raw %}
+
 
 ## Why Claude Code for Sarbanes-Oxley Code Controls
 
@@ -234,3 +236,4 @@ psql -d financial_db -c "
 - [Claude Code for SOX Audit Automation](/claude-code-sox-audit-automation-2026/)
 - [Claude Code for SOC 2 Evidence Collection](/claude-code-soc2-evidence-collection-2026/)
 - [Claude Code for Basel III Risk Calculation](/claude-code-basel-iii-risk-calculation-2026/)
+{% endraw %}

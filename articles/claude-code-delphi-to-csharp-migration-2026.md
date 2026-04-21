@@ -5,6 +5,8 @@ permalink: /claude-code-delphi-to-csharp-migration-2026/
 last_tested: "2026-04-21"
 render_with_liquid: false
 ---
+{% raw %}
+
 
 ## Why Claude Code for Delphi Migration
 
@@ -282,3 +284,4 @@ dotnet test MigratedApp.Tests/
 - [Claude Code for COBOL to Java](/claude-code-cobol-to-java-migration-2026/)
 - [Claude Code for VB6 to .NET](/claude-code-vb6-to-dotnet-migration-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+{% endraw %}

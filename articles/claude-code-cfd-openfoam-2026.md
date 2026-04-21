@@ -5,6 +5,8 @@ description: "Computational fluid dynamics with Claude Code and OpenFOAM. Automa
 last_tested: "2026-04-22"
 render_with_liquid: false
 ---
+{% raw %}
+
 
 ## Why Claude Code for CFD (OpenFOAM)
 
@@ -393,3 +395,4 @@ checkMesh 2>&1 | tail -20
 - [Claude Code for FEA Mesh Generation](/claude-code-fea-mesh-generation-2026/)
 - [Claude Code for Climate Model Data Processing](/claude-code-climate-model-netcdf-processing-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+{% endraw %}

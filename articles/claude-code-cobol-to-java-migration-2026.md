@@ -5,6 +5,8 @@ permalink: /claude-code-cobol-to-java-migration-2026/
 last_tested: "2026-04-21"
 render_with_liquid: false
 ---
+{% raw %}
+
 
 ## Why Claude Code for COBOL Migration
 
@@ -306,3 +308,4 @@ java -cp . com.migration.records.CustomerRecord < test_data/CUSTOMER.dat
 - [Claude Code for VB6 to .NET Migration](/claude-code-vb6-to-dotnet-migration-2026/)
 - [Claude Code for Delphi to C# Migration](/claude-code-delphi-to-csharp-migration-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+{% endraw %}

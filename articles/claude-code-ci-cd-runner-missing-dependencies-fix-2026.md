@@ -5,6 +5,8 @@ description: "Fix CI/CD runner missing dependencies for Claude Code. Add Node.js
 last_tested: "2026-04-22"
 render_with_liquid: false
 ---
+{% raw %}
+
 
 ## The Error
 
@@ -83,3 +85,4 @@ Use the official Claude Code GitHub Action if available:
 # CLAUDE.md rule
 CI pipelines must install Claude Code explicitly. Add ANTHROPIC_API_KEY to CI secrets. Use --print flag for non-interactive CI usage. Cache npm global installs for faster CI runs.
 ```
+{% endraw %}

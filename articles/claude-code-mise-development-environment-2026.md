@@ -6,6 +6,8 @@ last_tested: "2026-04-22"
 domain: "developer tooling"
 render_with_liquid: false
 ---
+{% raw %}
+
 
 ## Why Claude Code for mise
 
@@ -232,3 +234,4 @@ mise trust
 - [Claude Code for Ruff Python Linter Configuration](/claude-code-ruff-python-linter-configuration-2026/)
 - [Claude Code for Biome Formatter Setup](/claude-code-biome-formatter-setup-2026/)
 - [Claude Code for Earthly CI Pipeline](/claude-code-earthly-ci-pipeline-2026/)
+{% endraw %}

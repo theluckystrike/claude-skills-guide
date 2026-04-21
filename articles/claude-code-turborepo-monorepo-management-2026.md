@@ -6,6 +6,8 @@ last_tested: "2026-04-22"
 domain: "monorepo tooling"
 render_with_liquid: false
 ---
+{% raw %}
+
 
 ## Why Claude Code for Turborepo
 
@@ -202,3 +204,4 @@ turbo build --graph=graph.html
 - [Claude Code for Nx Workspace Orchestration](/claude-code-nx-workspace-orchestration-2026/)
 - [Claude Code for Biome Formatter Setup](/claude-code-biome-formatter-setup-2026/)
 - [Claude Code for Earthly CI Pipeline](/claude-code-earthly-ci-pipeline-2026/)
+{% endraw %}

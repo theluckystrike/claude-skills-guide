@@ -5,6 +5,8 @@ permalink: /claude-code-github-actions-secret-not-available-forked-pr-fix/
 last_tested: "2026-04-21"
 render_with_liquid: false
 ---
+{% raw %}
+
 
 ## The Error
 
@@ -96,3 +98,4 @@ For CI workflows with Claude Code, use pull_request_target for fork PRs. Never r
 ```
 
 **Related articles:** [GitHub Actions Setup Guide](/claude-code-github-actions-setup-guide/), [GitHub Actions Step Failed](/claude-code-github-actions-skill-step-failed-debug/), [Troubleshooting Hub](/troubleshooting-hub/)
+{% endraw %}
