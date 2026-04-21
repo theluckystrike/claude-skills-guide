@@ -12,6 +12,7 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
 ---
 
 Chrome sends various types of telemetry data to Google's servers by default. This includes usage statistics, crash reports, search suggestions, and browsing history synced to your Google account. For developers and power users who prioritize privacy, understanding how to block Chrome from sending data to Google becomes essential.

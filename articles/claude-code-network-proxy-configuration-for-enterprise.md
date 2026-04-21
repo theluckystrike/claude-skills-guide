@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code Proxy Configuration — Setup Guide (2026)"
-description: "Configure Claude Code proxy settings: HTTP_PROXY, HTTPS_PROXY, and SSL certs for enterprise networks. Copy-paste env variables included."
+title: "Configure Claude Code Proxy: HTTP_PROXY (2026)"
+description: "Configure Claude Code proxy: HTTP_PROXY, HTTPS_PROXY, NO_PROXY, and SSL certificate settings for enterprise networks. Copy-paste env variables."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-network-proxy-configuration-for-enterprise/
 categories: [guides]

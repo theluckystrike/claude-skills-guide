@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Timeout — How to Fix It (2026)"
-description: "Fix Claude timeout errors for bash commands, long tasks, and API requests. Copy-paste settings and configuration."
+title: "Fix Claude Timeout: 3 Proven Methods (2026)"
+description: "Fix Claude timeout with 3 commands: set timeout to 600000ms, use run_in_background, or add timeout parameter to bash calls. Tested April 2026."
 date: 2026-04-14
-last_modified_at: 2026-04-17
+last_modified_at: 2026-04-21
+last_tested: "2026-04-21"
 author: "Claude Code Guides"
 permalink: /claude-code-timeout-fix/
 reviewed: true

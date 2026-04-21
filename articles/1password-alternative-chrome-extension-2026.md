@@ -12,6 +12,7 @@ score: 8
 categories: [comparisons]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
 ---
 
 # 1Password Alternative Chrome Extension in 2026

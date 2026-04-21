@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Skill Token Usage Profiling and Optimization (2026)"
-description: "Claude Skill Token Usage Profiling and Optimization. Practical guide with working examples for developers."
+title: "Reduce Claude Skill Token Consumption (2026)"
+description: "Profile and reduce Claude skill token consumption. Identify expensive operations, optimize context injection, and cut API costs by 50%+ in 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, claude-skills, token-optimization, performance]
 author: "Claude Skills Guide"

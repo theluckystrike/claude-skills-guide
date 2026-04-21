@@ -11,6 +11,7 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
 ---
 Building a chrome extension to block distracting sites gives you granular control over your browsing environment. Unlike generic blockers, a custom solution lets you define exact blocking rules, integrate with your workflow, and extend functionality as needs change. This guide walks through the implementation using Chrome's declarative NetRequest API for Manifest V3 compliance.
 

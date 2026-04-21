@@ -11,6 +11,7 @@ score: 8
 categories: [guides]
 tags: [chrome, claude-skills]
 geo_optimized: true
+sitemap: false
 ---
 ## Chrome Extension AWS Console Enhancer: Boost Your Cloud Workflow
 

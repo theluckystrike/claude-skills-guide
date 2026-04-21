@@ -11,6 +11,7 @@ score: 8
 categories: [guides]
 tags: [chrome, claude-skills]
 geo_optimized: true
+sitemap: false
 ---
 Accessibility in Chrome extensions often receives less attention than web applications, yet millions of users depend on assistive technologies to interact with browser extensions. Whether you are maintaining an existing extension or reviewing one you just shipped, conducting regular accessibility audits ensures your extension serves all users effectively, including those using screen readers, keyboard navigation, or magnification tools.
 

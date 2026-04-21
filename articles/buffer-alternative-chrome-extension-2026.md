@@ -12,6 +12,7 @@ tags: [tools]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
 ---
 
 # Buffer Alternative Chrome Extension 2026

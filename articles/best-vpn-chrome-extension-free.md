@@ -11,6 +11,7 @@ score: 8
 categories: [best-of]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
 ---
 ## Best Free VPN Chrome Extension: A Developer and Power User Guide
 

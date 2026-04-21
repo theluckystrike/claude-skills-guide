@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "How to Use Starship Prompt + Claude Code: Workflow (2026)"
-description: "Configure Starship prompt with Claude Code for a powerful terminal workflow. Practical prompts, code examples, and customization tips."
+title: "Claude Code + Starship Prompt Setup Guide (2026)"
+description: "Configure Starship prompt to show Claude Code status, context usage, and session info. Copy-paste TOML config with practical customization tips."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-starship-prompt-workflow/
 categories: [guides]

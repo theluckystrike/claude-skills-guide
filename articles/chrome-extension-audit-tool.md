@@ -11,6 +11,7 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
 ---
 Chrome Extension Audit Tool: A Developer's Guide
 

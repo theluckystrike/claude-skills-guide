@@ -11,6 +11,7 @@ score: 8
 categories: [best-of]
 tags: [chrome-extension, claude-skills]
 geo_optimized: true
+sitemap: false
 ---
 ## Building a Chrome Extension for Best Buy Price Alerts
 

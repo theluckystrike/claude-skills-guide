@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "How to Use Claude SSO Integration: Workflow Tutorial (2026)"
-description: "Set up Claude SSO integration with Claude Code. Implementation steps, SAML/OIDC configuration, and best practices for enterprise authentication."
+title: "Claude SSO Integration: Setup Tutorial (2026)"
+description: "Set up Claude SSO with SAML/OIDC. Implementation steps for Okta, Azure AD, and Google Workspace with enterprise authentication best practices."
 date: 2026-03-20
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-claude-sso-integration-workflow-tutorial-gui/
 categories: [guides, security]

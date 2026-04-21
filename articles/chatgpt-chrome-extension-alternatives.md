@@ -12,6 +12,7 @@ reviewed: true
 score: 7
 render_with_liquid: false
 geo_optimized: true
+sitemap: false
 ---
 {% raw %}
 # ChatGPT Chrome Extension Alternatives: A Developer's Guide

@@ -1,7 +1,8 @@
 ---
 layout: default
-title: "Claude AI Cornell Notes — Generate Instantly (2026)"
-description: "Learn how to claude ai cornell notes — generate instantly. Step-by-step with working examples."
+title: "Generate Cornell Notes with Claude AI (2026)"
+description: "Generate formatted Cornell Notes with Claude AI in seconds. Includes prompts for lectures, meetings, and study sessions with real output examples."
+last_tested: "2026-04-21"
 date: 2026-04-01
 last_modified_at: 2026-04-17
 categories: [tutorials]

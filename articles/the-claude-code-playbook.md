@@ -1,8 +1,9 @@
 ---
 layout: default
-title: "The Claude Code Playbook — 200 Battle-Tested Patterns for Claude Code"
-description: "The definitive collection: 50 error fixes, 25 CLAUDE.md templates, 15 orchestration configs, 10 cost optimization patterns, and 100 proven prompts. All curated from 3,000+ articles."
+title: "Claude Code Guides: Complete Collection (2026)"
+description: "Complete Claude Code collection: 50 error fixes, 25 CLAUDE.md templates, 15 orchestration configs, and 100 proven prompts. Tested April 2026."
 date: 2026-04-19
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /playbook/
 categories: [playbook]

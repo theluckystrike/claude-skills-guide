@@ -10,6 +10,7 @@ reviewed: true
 score: 8
 categories: [guides]
 geo_optimized: true
+sitemap: false
 ---
 ## Best Awesome Screenshot Alternative Chrome Extension for 2026
 

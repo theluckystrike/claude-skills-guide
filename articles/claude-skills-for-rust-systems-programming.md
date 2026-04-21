@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Skills for Rust Systems Programming"
-description: "Practical guide to using Claude skills for Rust systems programming. Memory management, unsafe code, FFI, and performance optimization examples."
+title: "Claude Code Rust Skills: Complete Setup (2026)"
+description: "Activate Rust-specific Claude skills for borrow checker fixes, unsafe audits, FFI bindings, and zero-cost abstractions. 6 ready-to-use skill files."
 date: 2026-03-14
-last_modified_at: 2026-04-17
+last_modified_at: 2026-04-21
+last_tested: "2026-04-21"
 categories: [tutorials]
 tags: [claude-code, claude-skills, rust, systems-programming, ffi, memory-management]
 author: "Claude Skills Guide"

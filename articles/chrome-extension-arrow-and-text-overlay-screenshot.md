@@ -12,6 +12,7 @@ score: 8
 categories: [integrations, guides]
 tags: [chrome-extension, javascript, screenshot-api]
 geo_optimized: true
+sitemap: false
 ---
 
 # Chrome Extension Arrow and Text Overlay Screenshot Guide

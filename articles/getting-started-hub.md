@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code Getting Started: Complete Beginner Guide"
-description: "Everything you need to get started with Claude Code: installation, your first skill, understanding the interface, and essential workflows."
+title: "Claude Code Guides: Install to First Skill (2026)"
+description: "Install Claude Code in 90 seconds, activate your first skill, and ship working code. Step-by-step walkthrough with terminal screenshots for every OS."
 date: 2026-03-14
-last_modified_at: 2026-04-17
+last_modified_at: 2026-04-21
+last_tested: "2026-04-21"
 categories: [getting-started]
 tags: [claude-skills, getting-started, claude-code, beginners, installation]
 is_pillar: true

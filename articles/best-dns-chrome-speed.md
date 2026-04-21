@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
 ---
 DNS (Domain Name System) resolution is often the hidden bottleneck in browser performance. When Chrome visits a website, it must translate human-readable domain names into IP addresses before establishing a connection. This process can add measurable latency to page load times, especially on networks with slow or congested DNS resolvers.
 

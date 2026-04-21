@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code For Oss Coc — Complete Developer Guide"
-description: "Learn how to build automated Code of Conduct enforcement workflows using Claude Code skills. Practical examples for handling reports, notifications."
+title: "Claude Code for CoC Automation (2026)"
+description: "Automate Code of Conduct enforcement with Claude Code. Handle reports, send notifications, and track violations with practical skill examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-oss-coc-enforcement-workflow-tutorial/
 categories: [tutorials]

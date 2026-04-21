@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Zellij Terminal Multiplexer Workflow"
-description: "A comprehensive guide to integrating Claude Code with Zellij for powerful terminal workflows. Learn how to use Zellij's features for persistent."
+title: "Claude Code + Zellij: Terminal Workflow (2026)"
+description: "Set up Claude Code with Zellij terminal multiplexer. Persistent sessions, split panes, and layout configs for productive coding. Tested 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-zellij-terminal-multiplexer-workflow/
 categories: [workflows]

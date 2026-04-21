@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "How to Share Claude Skills with Team: Complete Guide"
-description: "How to share claude skills with team using Git repos, naming conventions, and update distribution. Get your whole team productive fast."
+title: "How to Share Claude Skills with Your Team (2026)"
+description: "Share Claude Code skills across your team via Git repos, naming conventions, and managed distribution. Three methods with step-by-step setup."
 date: 2026-03-13
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, claude-skills, team, collaboration]
 author: "Claude Skills Guide"

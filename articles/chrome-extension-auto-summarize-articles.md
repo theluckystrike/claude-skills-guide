@@ -11,6 +11,7 @@ score: 8
 categories: [guides]
 tags: [chrome-extension, claude-skills]
 geo_optimized: true
+sitemap: false
 ---
 Building a Chrome extension to automatically summarize articles is a practical project that combines browser extension development with text processing. This guide walks you through creating an extension that extracts and condenses article content, perfect for developers looking to enhance productivity or power users wanting to consume content faster.
 

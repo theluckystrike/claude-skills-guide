@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
 ---
 
 Chrome extensions have become essential tools for developers who spend hours in the browser debugging, testing, and building web applications. The right set of extensions can dramatically improve your workflow, saving minutes throughout the day that add up to significant productivity gains.

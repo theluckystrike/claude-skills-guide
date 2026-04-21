@@ -11,6 +11,7 @@ score: 8
 categories: [comparisons]
 tags: [chrome, claude-skills]
 geo_optimized: true
+sitemap: false
 ---
 ## Brave vs Chrome Privacy: A Technical Comparison for Developers and Power Users
 

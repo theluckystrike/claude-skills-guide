@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Tree-sitter Workflow Tutorial"
-description: "A comprehensive guide to integrating Claude Code with Tree-sitter for efficient code parsing, analysis, and automated refactoring workflows."
+title: "Claude Code + Tree-sitter: AST Workflow (2026)"
+description: "Use Claude Code with Tree-sitter for AST-based code analysis, refactoring, and syntax-aware transformations. Practical workflow examples for 2026."
 date: 2026-04-19
 last_modified_at: 2026-04-19
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-tree-sitter-workflow-tutorial/
 categories: [workflows, guides]

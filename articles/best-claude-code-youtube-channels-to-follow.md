@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Best Claude Code YouTube Channels 2026"
-description: "Best YouTube channels for Claude AI coding tutorials in 2026. Curated list with links, content style, and what each channel teaches."
+title: "Best Claude Code YouTube Channels (2026)"
+description: "Best YouTube channels for Claude AI coding tutorials in 2026. Curated list with links, content style, and what each channel teaches developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, youtube, learning, tutorials, ai-coding, claude-skills]
 author: "Claude Skills Guide"

@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Hackathon Development Workflow"
-description: "A practical guide to using Claude Code for rapid prototyping, team coordination, and shipping winning hackathon projects in record time."
+title: "Win Hackathons with Claude Code: Guide (2026)"
+description: "Win hackathons with Claude Code: rapid prototyping, team coordination, and shipping strategies. Time-boxed workflow for 24-48 hour events in 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "theluckystrike"
 permalink: /claude-code-for-hackathon-development-workflow/
 categories: [guides]

@@ -12,6 +12,7 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
 ---
 
 Chrome extensions enhance browser functionality but can also access sensitive data. Before installing any extension, you should verify its safety. This guide covers practical methods for developers and power users to assess extension security.

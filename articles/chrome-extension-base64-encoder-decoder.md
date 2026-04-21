@@ -11,6 +11,7 @@ score: 8
 categories: [guides]
 tags: [chrome, claude-skills]
 geo_optimized: true
+sitemap: false
 ---
 Base64 encoding is a fundamental technique in web development, used for embedding binary data in text formats, handling image uploads, API authentication, and more. Having a reliable Chrome extension for Base64 encoding and decoding can significantly streamline your workflow as a developer or power user. This guide walks you through understanding, building, and using Base64 tools directly in your browser.
 

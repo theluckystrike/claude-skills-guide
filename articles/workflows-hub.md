@@ -1,135 +1,83 @@
 ---
-layout: default
-title: "Workflows Hub — Complete Developer Guide"
-description: "Build repeatable Claude skills workflows. Covers skill chaining patterns, contributing to open source, and production-ready automation pipelines."
-date: 2026-03-13
-last_modified_at: 2026-04-17
-categories: [workflows]
-tags: [claude-code, claude-skills, workflows, automation, open-source]
-author: "Claude Skills Guide"
-reviewed: true
-score: 7
-permalink: /workflows-hub/
-geo_optimized: true
----
-# Claude Skills Workflow Guide: Build, Chain & Contribute
-
-Skills are most powerful when they're embedded in repeatable workflows rather than used ad-hoc. This hub covers how to build, contribute, and maintain Claude skill workflows that scale.
-
-## Table of Contents
-
-1. [Building Your Skill Workflow](#building-your-skill-workflow)
-2. [Contributing Skills to the Community](#contributing-skills-to-the-community)
-3. [Workflow Patterns That Work](#workflow-patterns-that-work)
-4. [Full Guide Index](#full-guide-index)
-
+layout: post
+title: "Claude Code Workflows & Integrations (2026)"
+description: "Tested Claude Code workflows for IDEs, terminals, frameworks, and teams. Setup guides with working commands verified April 2026."
+permalink: /workflows/
+date: 2026-04-21
+last_tested: "2026-04-21"
+render_with_liquid: false
 ---
 
-## Building Your Skill Workflow
+# Claude Code Workflows & Integrations
 
-A mature Claude skill workflow has three phases:
+Tested integration guides and workflow patterns for Claude Code. Every guide includes working commands, verified April 2026.
 
-1. Discovery. Start with prompts to explore the problem space. Identify recurring patterns.
+## IDE Integrations
 
-2. Codification. When a pattern recurs, build a skill. Use the [skill.md format](/claude-skill-md-format-complete-specification-guide/) to encode your preferences, conventions, and domain knowledge. See [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/) for the step-by-step process.
+- [How to Use Claude Code in IntelliJ IDEA 2026](/claude-code-intellij-idea-integration-2026/) — Terminal integration, keybindings, and workflow tips for Java/Kotlin
+- [How to Set Up Claude Code in Ghostty Terminal 2026](/claude-code-ghostty-terminal-setup-2026/) — GPU-accelerated rendering, custom fonts, keybindings
+- [Use Claude Code with GitHub Codespaces 2026](/claude-code-github-codespaces-setup-2026/) — Devcontainer config, SSH tunnels, remote development
+- [Claude Code + Emacs Integration Guide 2026](/claude-code-emacs-integration-guide-2026/) — Shell-mode, vterm, custom elisp, keybindings
+- [How to Use Claude Code with Warp Terminal 2026](/claude-code-warp-terminal-workflow-2026/) — AI command suggestions, blocks workflow, session management
+- [Claude Code + Linear MCP Integration Guide 2026](/claude-code-linear-mcp-integration-2026/) — Issue management, sprint planning, PR-to-issue linking
+- [How to Run Claude Code in Docker Container 2026](/claude-code-docker-container-setup-2026/) — Isolated environments, volume mounts, Dockerfile examples
+- [Claude Code + Neovim Terminal Integration 2026](/claude-code-neovim-terminal-integration-2026/) — Toggleterm, custom commands, Lua config
+- [Set Up Claude Code in Dev Containers 2026](/claude-code-dev-containers-setup-2026/) — devcontainer.json, pre-installed dependencies, env vars
+- [Claude Code + WebStorm JetBrains Setup 2026](/claude-code-webstorm-jetbrains-setup-2026/) — JS/TS development, terminal integration, file watching
+- [Claude Code + Starship Prompt Workflow](/claude-code-for-starship-prompt-workflow/) — Custom TOML config for Claude status display
+- [Claude Code Gitpod Cloud IDE Integration](/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) — Cloud workspace setup
+- [Neovim AI Coding Setup with Claude 2026](/neovim-ai-coding-setup-with-claude-2026/) — Full Neovim configuration guide
 
-3. Automation. Chain skills together so Claude can execute multi-step workflows with minimal prompting. Examples:
-- PR review workflow: code analysis → test generation with tdd → documentation update with docx
-- Data pipeline: pdf extraction → xlsx analysis → pptx reporting
-- Deployment workflow: Claude Code-generated deploy scripts → CI/CD config → security scanning
+## Terminal & Shell
 
----
+- [Claude Code Batch Processing: Queue Prompts 2026](/claude-code-batch-processing-queue-prompts-2026/) — Queue multiple prompts, shell scripts, task files
+- [How to Resume Claude Code Sessions 2026](/claude-code-resume-sessions-guide-2026/) — --resume flag, context recovery, session history
+- [Claude Code Verbose Mode: Debug Output Guide 2026](/claude-code-verbose-mode-debug-output-2026/) — API logs, token counts, request tracing
+- [How to Use Claude Code with WSL2 on Windows 2026](/claude-code-wsl2-windows-setup-2026/) — Path resolution, SSH keys, VS Code remote
+- [Claude Code Tab Completion Setup Guide 2026](/claude-code-tab-completion-setup-2026/) — bash, zsh, fish shell completion scripts
+- [Claude Code Workflow Optimization Tips 2026](/claude-code-workflow-optimization-tips-2026/) — Speed and efficiency patterns
 
-## Contributing Skills to the Community
+## Framework Workflows
 
-Once you've built a skill that solves a real problem, contributing it to open source multiplies its impact. The process:
+- [Claude Code for FastAPI Development Workflow 2026](/claude-code-fastapi-development-workflow-2026/) — Endpoint generation, Pydantic models, async handlers
+- [Claude Code for React Native Development 2026](/claude-code-react-native-development-2026/) — Component generation, navigation, native modules
+- [Claude Code for LaTeX Document Workflow 2026](/claude-code-latex-document-workflow-2026/) — Paper formatting, bibliography, equation editing
+- [Build N8N Workflows with Claude Code 2026](/claude-code-n8n-workflow-automation-2026/) — Workflow JSON generation, node creation, webhooks
+- [Claude Code for VBA Macro Development 2026](/claude-code-vba-macro-development-2026/) — Excel/Office macro generation and debugging
+- [Use Claude Code for Figma-to-Code Workflow 2026](/claude-code-figma-to-code-workflow-2026/) — Design token extraction, component generation
+- [Claude Code for Prompt Chaining Workflows 2026](/claude-code-prompt-chaining-workflow-2026/) — Multi-step orchestration patterns
+- [How to Build Claude Code GitHub Actions 2026](/claude-code-github-actions-workflow-2026/) — CI/CD automation, workflow YAML generation
 
-1. Prepare. Remove hardcoded values, add clear documentation, test in isolation
-2. Format. Follow the skill.md format exactly (see [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/))
-3. Submit. Fork the target repository, create a feature branch, open a PR with a comprehensive description
-4. Maintain. Monitor issues, respond to feedback, update for compatibility
+## Team & Collaboration
 
-Community skills that become widely adopted follow a pattern: clear use case, clean code, honest documentation about limitations, and an [active maintainer](/how-to-contribute-claude-skills-to-open-source/).
+- [Claude Code CLAUDE.md Best Practices for Teams 2026](/claude-code-claude-md-best-practices-teams-2026/) — Shared config, team standards, onboarding
+- [Claude Code Security Best Practices Guide 2026](/claude-code-security-best-practices-2026/) — Permission model, secret handling, audit trails
+- [How to Distribute Claude Skills Across Teams 2026](/distribute-claude-skills-across-teams-2026/) — Git repos, naming conventions, managed distribution
+- [Claude Code Pull Request Review Skill Guide 2026](/claude-code-pull-request-review-skill-2026/) — Automated code review workflow
+- [Claude Code for Confluence Documentation 2026](/claude-code-confluence-documentation-workflow-2026/) — Doc generation, page updates, knowledge base sync
 
-Full guide: [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/)
+## Advanced Patterns
 
----
+- [Claude Code Context Window Management Guide 2026](/claude-code-context-window-management-2026/) — Token budgeting, context pruning, long sessions
+- [Claude Code Embeddings and RAG Workflow 2026](/claude-code-embeddings-rag-workflow-2026/) — Vector search, retrieval augmented generation
+- [Automate Source Code Analysis with Claude 2026](/automate-source-code-analysis-claude-2026/) — Static analysis, pattern detection, codebase audits
+- [Claude Code for Perl to Python Migration 2026](/claude-code-perl-to-python-migration-2026/) — Automated language migration workflow
+- [Claude Code Tool Calling and Parallel Execution 2026](/claude-code-tool-calling-parallel-execution-2026/) — Multi-tool orchestration, parallel subagents
+- [Parallel Subagents Best Practices 2026](/parallel-subagents-claude-code-best-practices-2026/) — Running multiple agents concurrently
+- [Building Your First MCP Tool Integration](/building-your-first-mcp-tool-integration-guide-2026/) — Model Context Protocol setup guide
+- [Claude Code Open Source Contribution Workflow](/claude-code-open-source-contribution-workflow-guide-2026/) — OSS contribution patterns
 
-## Workflow Patterns That Work
+## Education & Learning
 
-Based on real production use, these patterns consistently deliver high ROI:
+- [Learn Programming Languages with Claude Code 2026](/learn-programming-languages-claude-code-2026/) — Language learning workflow with Claude
+- [Best Claude Code Courses and Tutorials 2026](/best-claude-code-courses-tutorials-2026/) — Curated learning resources
+- [Claude Code for Beginners: Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/) — First steps guide
+- [Claude Code Tips for Absolute Beginners 2026](/claude-code-tips-for-absolute-beginners-2026/) — Essential starter tips
+- [How to Use AI Coding Tools Effectively 2026](/how-to-use-ai-coding-tools-effectively-2026/) — Best practices for AI-assisted development
 
-Document Processing Automation
-```
-Input: batch of PDF invoices/reports
-pdf skill → Python cleaning (tdd-tested) → xlsx analysis → docx report output
-```
-Replaces: manual data entry, copy-paste workflows, manual report formatting.
+## More Resources
 
-Frontend Development Loop
-```
-frontend-design (scaffold) → tdd (test-first) → supermemory (reference similar patterns) → pdf/docx (document)
-```
-Replaces: manual component scaffolding, ad-hoc test writing, documentation sprints.
-
-DevOps Pipeline Generation
-```
-Claude Code (deployment scripts) → Claude Code (IaC templates) → webapp-testing (E2E verification)
-```
-Replaces: manual script authoring, configuration errors, untested deployments.
-
-For cost-conscious teams running these workflows at scale, see [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/).
-
----
-
-## Full Guide Index: Workflows Cluster
-
-| Article | What You'll Learn |
-|---------|-------------------|
-| [How to Contribute Claude Skills to Open Source](/how-to-contribute-claude-skills-to-open-source/) | End-to-end guide: prepare, format, submit, maintain |
-| [Claude Skills Automated Blog Post Workflow Tutorial](/claude-skills-automated-blog-post-workflow-tutorial/) | Building a fully automated blog writing pipeline with Claude skills |
-| [Automate Social Media Content with Claude Skills](/claude-skills-automated-social-media-content-workflow/) | Scheduling and generating social posts automatically via skills |
-| [Daily Standup Automation with Claude Skills](/claude-skills-daily-standup-automation-workflow/) | Generating daily standups automatically from project context |
-| [Automated Dependency Updates with Claude Skills](/claude-skills-automated-dependency-update-workflow/) | Keeping dependencies current with an automated Claude skill workflow |
-| [How to Automate Pull Request Review with Claude Skill](/best-claude-skills-for-code-review-automation/) | Setting up an automated PR review skill for code quality |
-| [How to Automate Client Reports with Claude Skills](/how-to-automate-client-reports-with-claude-skills/) | Generating polished client reports from raw data automatically |
-| [How to Automate Code Reviews with Claude Skills](/best-claude-skills-for-code-review-automation/) | Automating detailed code review as part of your CI pipeline |
-| [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/) | Integrating Claude skills directly into GitHub Actions workflows |
-| [Automated GitHub Issue Triage with Claude Skills](/claude-skills-for-automated-github-issue-triage/) | Automatically categorize and route GitHub issues using skills |
-| [Competitive Analysis Automation with Claude Skills](/claude-skills-competitive-analysis-automation-workflow/) | Running recurring competitive research with an automated skill |
-| [Claude Skills for SEO Content Generation Workflow](/claude-skills-for-seo-content-generation-workflow/) | Producing SEO-optimized content at scale using Claude skills |
-| [Automated Testing Pipeline with Claude TDD Skill in 2026](/claude-tdd-skill-test-driven-development-workflow/) | Building a continuous testing pipeline driven by the TDD skill |
-| [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/) | Using the TDD skill to enforce test-first development |
-| [Claude xlsx Skill Spreadsheet Automation Tutorial](/claude-xlsx-skill-spreadsheet-automation-tutorial/) | Automating spreadsheet generation and updates via the xlsx skill |
-| [Best Claude Skills for Code Review Automation](/best-claude-skills-for-code-review-automation/) | Top skills for building reliable automated code review workflows |
-| [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-your-team/) | Distributing and standardizing skills across an engineering team |
-| [How to Use Claude Skills with n8n Automation Workflows](/how-to-use-claude-skills-with-n8n-automation-workflows/) | Building end-to-end automation with n8n and Claude skills |
-| [Claude Skill Not Triggering? Troubleshooting Guide](/claude-skill-not-triggering-automatically-troubleshoot/) | Why workflow automation can fail and how to debug trigger issues |
-| [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/) | Generating code documentation automatically using Claude skills |
-| [Claude Skills with Slack Bot Integration Tutorial](/claude-skills-with-slack-bot-integration-tutorial/) | Building a Slack bot powered by Claude skills for team workflows |
-| [Claude Skills Email Drafting Automation Workflow](/claude-skills-email-drafting-automation-workflow/) | Automating email drafts with Claude skills for professional outreach |
-| [How to Optimize Claude Skill Prompts for Accuracy](/how-to-optimize-claude-skill-prompts-for-accuracy/) | Writing precise skill prompts to get more accurate outputs |
-| [How to Connect Claude Skills to External APIs Guide](/how-to-connect-claude-skills-to-external-apis-guide/) | Integrating external APIs into Claude skill workflows |
-| [Claude Skills with Vercel Deployment Automation](/claude-code-vercel-deployment-nextjs-workflow-guide/) | Automating Vercel deployments with Claude skills as part of a CI/CD workflow |
-
----
-
-## Related Hubs
-
-- [Getting Started with Claude Skills](/getting-started-hub/). Workflow foundations: skill format and auto-invocation
-- [Advanced Claude Skills Architecture](/advanced-hub/). Token optimization and skill chaining for production workflows
-- [Claude Skills by Use Case](/use-cases-hub/). Industry-specific workflow recommendations
-
----
-
-Related Reading
-
-- [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-tdd-skill-test-driven-development-workflow/). Build a continuous testing pipeline driven by the TDD skill for reliable, repeatable results.
-- [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/). Integrate Claude skills directly into GitHub Actions for fully automated deployment workflows.
-- [How to Automate Code Reviews with Claude Skills](/best-claude-skills-for-code-review-automation/). Set up automated code review as part of your CI pipeline with Claude skills.
-- [Claude Skills by Use Case](/use-cases-hub/). Find the right skills for your specific domain before building them into workflows.
-
-*Built by theluckystrike. More at [zovo.one](https://zovo.one)
-*
-
-
+- [The Claude Code Playbook — 200 Production Items](/playbook/)
+- [Error Messages Atlas](/errors-atlas/)
+- [CLAUDE.md Templates Library](/templates-library/)
+- [Claude Code 2026 Features Roundup](/claude-code-2026-new-features-skills-and-hooks-roundup/)

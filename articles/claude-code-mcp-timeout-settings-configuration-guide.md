@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code MCP Timeout: How to Configure Settings"
-description: "Fix MCP tool call timeouts in Claude Code. Learn timeout configuration, environment variables, and debugging slow MCP servers."
+title: "Fix Claude Code MCP Timeout Settings (2026)"
+description: "Fix MCP tool call timeouts in Claude Code. Set transport-level overrides, configure retry logic, and resolve cold-start delays. Tested April 2026."
 date: 2026-04-01
-last_modified_at: 2026-04-17
+last_modified_at: 2026-04-21
+last_tested: "2026-04-21"
 categories: [troubleshooting]
 tags: [claude-code, mcp, timeout, troubleshooting]
 author: "theluckystrike"

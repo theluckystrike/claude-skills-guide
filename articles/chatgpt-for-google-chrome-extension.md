@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
 ---
 # ChatGPT for Google Chrome Extension: A Developer Guide
 

@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Segfault and Core Dump Analysis with Claude Code Guide"
-description: "Analyze segfaults and core dumps using Claude Code. Configure core dump capture, extract stack traces, and identify root causes with AI-assisted debugging."
+title: "Fix Claude Code Segmentation Fault (2026)"
+description: "Debug segmentation faults with Claude Code. Configure core dump capture, extract stack traces, and identify root causes with AI-assisted analysis."
 date: 2026-04-19
 last_modified_at: 2026-04-19
+last_tested: "2026-04-21"
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, segfault, core-dump, gdb, debugging, troubleshooting]
 author: "Claude Skills Guide"

@@ -11,6 +11,7 @@ tags: [calendar, chrome-extension, productivity, developer-tools, time-managemen
 reviewed: true
 score: 7
 geo_optimized: true
+sitemap: false
 ---
 # Best Calendar Chrome Extensions for Developers and Power Users
 

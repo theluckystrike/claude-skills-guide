@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Enterprise SSO Setup Guide (2026)"
-description: "Set up Claude Code with enterprise SSO: Okta, Azure AD, Google Workspace. Step-by-step auth flow config with code examples."
+title: "Set Up Claude SSO with Okta & Azure AD (2026)"
+description: "Set up Claude with enterprise SSO: Okta, Azure AD, Google Workspace. Step-by-step SAML/OIDC auth flow configuration with working code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: theluckystrike
 permalink: /integrating-claude-code-into-existing-enterprise-sso-systems/
 categories: [guides]

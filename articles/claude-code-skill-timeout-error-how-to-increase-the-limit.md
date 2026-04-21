@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Fix Timeout — Increase Skill Time Limits (2026)"
-description: "Fix claude timeout errors in Claude Code skills. Step-by-step guide to increase execution limits and prevent timeouts in long-running tasks."
+title: "How to Increase Claude Code Timeout Limit (2026)"
+description: "Increase Claude Code timeout from 120s default. Use timeout parameter, run_in_background flag, or chunked execution for long-running builds."
 date: 2026-03-14
-last_modified_at: 2026-04-17
+last_modified_at: 2026-04-21
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]

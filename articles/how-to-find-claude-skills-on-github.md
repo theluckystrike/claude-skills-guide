@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Skills Directory on GitHub — Find Guide (2026)"
-description: "Find Claude Code skills on GitHub with advanced search queries. Curated repos, install commands, and community directories listed."
+title: "Find Claude Skills on GitHub: Directory (2026)"
+description: "Find Claude Code skills on GitHub with advanced search queries. Curated repos, install commands, and community skill directories. Updated 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, claude-skills, github, discovery, community]
 author: "Claude Skills Guide"

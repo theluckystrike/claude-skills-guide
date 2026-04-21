@@ -11,6 +11,7 @@ score: 8
 categories: [integrations]
 tags: [chrome, extensions, productivity]
 geo_optimized: true
+sitemap: false
 ---
 
 # Best Chrome Extensions for Students in 2026

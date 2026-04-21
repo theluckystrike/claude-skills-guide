@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude API Timeout Errors: Handling and Retry Guide"
-description: "Handle Claude API timeout errors with proper retry logic, exponential backoff, and timeout configuration for production applications."
+title: "Fix Claude API Timeout: Retry Logic Guide (2026)"
+description: "Handle Claude API timeout errors with retry logic, exponential backoff, and per-request timeout configuration. Tested with production apps in 2026."
 date: 2026-04-01
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [troubleshooting]
 tags: [claude-code, claude-api, timeout, error-handling]
 author: "theluckystrike"

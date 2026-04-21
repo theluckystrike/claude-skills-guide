@@ -1,8 +1,9 @@
 ---
 layout: default
-title: "Stream Idle Timeout — Fix Partial Response Error"
-description: "Fix the API stream idle timeout error when Claude returns a partial response. Idle timeout detection code for the Anthropic SDK."
+title: "Fix Stream Idle Timeout in Claude Code (2026)"
+description: "Fix the API stream idle timeout error when Claude returns a partial response. Working idle timeout detection code for the Anthropic SDK in 2026."
 date: 2026-04-15
+last_tested: "2026-04-21"
 last_modified_at: 2026-04-17
 author: "Claude Code Guides"
 permalink: /anthropic-sdk-streaming-hang-timeout/

@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "How to Use Claude Knowledge Base Markdown Files: Setup"
-description: "Set up Claude projects knowledge base with markdown files. Build automated knowledge workflows with Claude Code for better project context."
+title: "Claude Projects Knowledge Base: Markdown (2026)"
+description: "Add markdown files to Claude projects as knowledge base context. File structure, size limits, auto-indexing, and cross-reference linking setup."
 date: 2026-03-15
-last_modified_at: 2026-04-17
+last_modified_at: 2026-04-21
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-knowledge-base-workflow-tutorial-guide/
 categories: [guides, tutorials]

@@ -11,6 +11,7 @@ tags: [tools]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
 ---
 Chrome Extension Auto Caption Video: A Developer Guide
 

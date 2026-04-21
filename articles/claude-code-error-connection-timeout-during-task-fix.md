@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Fix Claude Code Request Timed Out"
-description: "Fix 'request timed out' errors in Claude Code. Timeout settings, connection config, and MCP timeout solutions."
+title: "Fix Claude Code Request Timed Out Error (2026)"
+description: "Fix 'request timed out' in Claude Code with copy-paste config. Covers API timeouts, MCP connection drops, and retry settings that actually work."
 date: 2026-03-14
-last_modified_at: 2026-04-17
+last_modified_at: 2026-04-21
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-error-connection-timeout-during-task-fix/
 categories: [troubleshooting]

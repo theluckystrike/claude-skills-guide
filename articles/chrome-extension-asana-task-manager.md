@@ -11,6 +11,7 @@ tags: [asana, chrome-extension, task-management, productivity, developer-tools, 
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
 ---
 # Chrome Extension Asana Task Manager: A Developer's Guide
 

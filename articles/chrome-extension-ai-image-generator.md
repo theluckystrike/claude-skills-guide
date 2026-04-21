@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
 ---
 Chrome Extension AI Image Generator: A Complete Guide for Developers
 

@@ -10,6 +10,7 @@ reviewed: true
 score: 8
 categories: [guides]
 geo_optimized: true
+sitemap: false
 ---
 Chrome Extension Blackboard Learn Helper: A Developer Guide
 

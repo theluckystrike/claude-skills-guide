@@ -12,6 +12,7 @@ score: 8
 categories: [guides]
 tags: [chrome-extension, claude-skills]
 geo_optimized: true
+sitemap: false
 ---
 
 

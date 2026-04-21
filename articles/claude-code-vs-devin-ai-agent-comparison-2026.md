@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code vs Devin AI — Honest Comparison 2026"
-description: "Claude Code vs Devin compared side-by-side: pricing, autonomy, code quality, and real results. Updated for 2026."
+title: "Devin vs Claude Code: Pricing and Speed (2026)"
+description: "Devin costs $500/mo for async tasks. Claude Code costs $20/mo and runs locally. Side-by-side benchmarks on real PRs, deploy speed, and code quality."
 date: 2026-03-13
-last_modified_at: 2026-04-17
+last_modified_at: 2026-04-21
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 categories: [comparisons]
 tags: [claude-code, claude-skills, devin, ai-coding, comparison]
