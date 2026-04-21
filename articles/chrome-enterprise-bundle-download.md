@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome Enterprise bundles provide IT administrators and developers with a streamlined way to deploy and manage Google Chrome across organization-wide infrastructure. Whether you're scripting automated deployments or configuring group policies, understanding the bundle download process saves time and reduces deployment friction.
 

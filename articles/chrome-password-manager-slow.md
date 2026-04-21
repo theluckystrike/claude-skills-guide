@@ -11,6 +11,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 If you use Chrome's built-in password manager, you've probably experienced those frustrating moments when saving or retrieving credentials takes longer than expected. For developers and power users who interact with password management dozens of times daily, this latency adds up quickly. Let's diagnose why Chrome's password manager slows down and explore practical fixes.
 

@@ -11,6 +11,8 @@ score: 8
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Service workers have transformed web performance by enabling powerful caching strategies and offline capabilities. However, developers frequently encounter situations where service workers themselves become a performance bottleneck. Understanding why Chrome service workers slow down and knowing how to diagnose and fix these issues is essential for building responsive Progressive Web Apps.
 

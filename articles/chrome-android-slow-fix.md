@@ -12,6 +12,8 @@ score: 8
 categories: [troubleshooting]
 tags: [chrome, android, performance]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Chrome Android Slow Fix: Speed Up Your Browser

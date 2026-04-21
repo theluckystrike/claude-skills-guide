@@ -12,6 +12,8 @@ categories: [comparisons]
 tags: [chrome, claude-skills]
 render_with_liquid: false
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 {% raw %}
 1Password vs Bitwarden Chrome: Which Password Manager Works Best for Developers?

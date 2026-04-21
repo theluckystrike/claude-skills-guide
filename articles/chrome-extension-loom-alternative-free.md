@@ -11,6 +11,8 @@ score: 8
 categories: [comparisons]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Screen recording has become essential for developer workflows, creating tutorials, bug reports, and code walkthroughs. Loom set the standard, but its free tier comes with limitations that frustrate power users. Several legitimate free alternatives exist, each with distinct trade-offs worth understanding.
 

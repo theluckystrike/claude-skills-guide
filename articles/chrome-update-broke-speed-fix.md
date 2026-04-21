@@ -12,6 +12,8 @@ score: 8
 categories: [guides]
 tags: [chrome, browser, performance, troubleshooting]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Chrome Update Broke Speed? Fix Performance Issues After Updates

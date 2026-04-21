@@ -11,6 +11,8 @@ score: 8
 categories: [integrations, enterprise, guides]
 tags: [chrome-enterprise, split-tunnel, networking, security]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 # Chrome Enterprise Split Tunnel Browsing: A Practical Guide
 

@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome Enterprise provides organizations with solid controls over browser extensions. Understanding how extension blocking works becomes essential when managing a fleet of devices or developing extensions that need to function in enterprise environments. This guide covers the technical mechanisms behind Chrome Enterprise's extension blocking, configuration approaches, and practical strategies for developers and power users.
 

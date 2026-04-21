@@ -12,6 +12,8 @@ score: 8
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 Chrome slow startup frustrates developers and power users who depend on the browser for daily workflows. When your browser takes 10, 20, or 30 seconds to launch, productivity suffers. This guide walks through systematic diagnosis and practical fixes for Chrome startup performance issues.

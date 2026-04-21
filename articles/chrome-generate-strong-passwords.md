@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [chrome, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 ## How to Generate Strong Passwords in Chrome: A Developer's Guide
 

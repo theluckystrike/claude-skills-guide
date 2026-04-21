@@ -12,6 +12,8 @@ score: 8
 categories: [comparisons]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 Managing multiple browser tabs efficiently is a common challenge for developers and power users. While the Tab Resize extension has been a popular choice for split-screen window management, many alternatives offer enhanced features, better performance, or native solutions that don't require additional extensions. This guide explores the best options available in 2026.

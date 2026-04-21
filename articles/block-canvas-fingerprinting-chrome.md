@@ -12,6 +12,8 @@ score: 8
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 ## How to Block Canvas Fingerprinting in Chrome: A Practical Guide

@@ -11,6 +11,8 @@ score: 8
 categories: [comparisons]
 tags: [chrome, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Introduction
 

@@ -12,6 +12,8 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 The Chrome GPU process consuming excessive memory is a common issue that affects developers and power users who rely on Chrome for intensive workflows. Understanding what drives this behavior and how to address it can significantly improve your browser's performance and system stability.

@@ -11,6 +11,8 @@ score: 8
 categories: [comparisons]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 If you have spent any time debugging web applications or managing user sessions, you have probably used a cookie editor. For years, EditThisCookie was the go-to extension for Chrome users needing to view, edit, and delete cookies. However, the extension has not kept pace with modern browser security requirements, and developers increasingly need more solid solutions.
 

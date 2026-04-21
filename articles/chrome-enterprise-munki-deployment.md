@@ -12,6 +12,8 @@ score: 8
 categories: [guides]
 tags: [chrome-extension, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 Deploying Google Chrome Enterprise across a Mac fleet requires a reliable package management solution. Munki provides an open-source framework for software distribution that gives administrators fine-grained control over installations, updates, and removals. This guide covers the complete workflow for getting Chrome Enterprise running in your organization using Munki.

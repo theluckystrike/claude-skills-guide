@@ -11,6 +11,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 Chrome consuming excessive CPU can disrupt your workflow, drain your laptop battery, and make even simple tasks feel sluggish. For developers and power users running multiple tabs, heavy web applications, or browser-based development tools, high CPU usage becomes a common frustration. This guide covers practical diagnostic steps and fixes to bring Chrome back to reasonable resource levels.

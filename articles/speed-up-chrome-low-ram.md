@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Speed Up Chrome When Running Low on RAM: A Developer's Guide
 

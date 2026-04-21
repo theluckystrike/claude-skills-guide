@@ -12,6 +12,8 @@ permalink: /chrome-passkeys-how-to-use/
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 Passkeys represent the biggest shift in web authentication since HTTPS became standard. Instead of relying on passwords that can be stolen, leaked, or reused across sites, passkeys use cryptographic key pairs that stay on your devices. Google Chrome has full passkey support built in, making it the easiest browser to start with. This guide walks you through everything you need to know to use passkeys effectively.

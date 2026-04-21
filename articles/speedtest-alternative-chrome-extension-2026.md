@@ -11,6 +11,8 @@ score: 8
 categories: [comparisons]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Speedtest Alternative Chrome Extension 2026: Developer Options for Network Performance Testing
 

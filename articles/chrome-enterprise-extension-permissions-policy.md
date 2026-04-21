@@ -11,6 +11,8 @@ permalink: /chrome-enterprise-extension-permissions-policy/
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 ## Chrome Enterprise Extension Permissions Policy: A Complete Guide
 

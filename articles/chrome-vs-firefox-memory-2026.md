@@ -11,6 +11,8 @@ score: 8
 categories: [integrations, guides]
 tags: [chrome, firefox, memory, performance]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 # Chrome vs Firefox Memory Usage in 2026: A Developer Guide
 

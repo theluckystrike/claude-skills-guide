@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [chrome-extension, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome Browser Enterprise includes several built-in mechanisms for controlling network bandwidth usage across your organization. Whether you manage a fleet of thousands of devices or need to optimize bandwidth for remote workers on limited connections, understanding these configuration options helps you reduce data consumption without sacrificing productivity.
 

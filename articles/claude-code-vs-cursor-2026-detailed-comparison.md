@@ -89,6 +89,24 @@ Switching from Cursor to Claude Code:
 4. **Keep Cursor for autocomplete** — Most developers who migrate keep Cursor (or switch to VS Code + Copilot) for inline completions. Claude Code does not replace the typing-flow experience.
 5. **Set up MCP integrations** — Connect Claude Code to GitHub, your database, or monitoring tools via MCP servers. This unlocks the cross-system workflows that justified the switch.
 
+## FAQ
+
+### Can I use Claude Code inside Cursor?
+
+Yes. Open Cursor's built-in terminal and run Claude Code there. You get Cursor's autocomplete and visual editing for routine work, plus Claude Code's agent capabilities in the terminal panel for complex tasks. Many developers use this combination daily.
+
+### Is Cursor's Composer agent as good as Claude Code?
+
+For IDE-scoped tasks (edit these 5 files, refactor this component), Composer is comparable and arguably more convenient with visual diffs. For system-level tasks (run Docker, debug a deployment, install and configure a database), Claude Code wins because Composer operates within IDE boundaries while Claude Code has full system access.
+
+### Which tool is better for a team just starting with AI coding?
+
+Cursor has a lower barrier to entry — familiar IDE, visual interface, predictable pricing. Teams new to AI coding tools can be productive in Cursor within hours. Claude Code requires terminal comfort and prompt engineering skills that take 1-2 weeks to develop. Start the team with Cursor, then add Claude Code for power users once the team is AI-fluent.
+
+### Can I use both without paying for both AI models separately?
+
+Yes, with caveats. Cursor includes AI model access in its $20/month subscription. Claude Code requires a separate Anthropic API key or Max plan. However, if you already pay for Anthropic API access for other purposes, Claude Code adds minimal marginal cost for your existing workload. The total cost of Cursor Pro + Claude Code usage is typically $80-220/month.
+
 ## Related Comparisons
 
 - [Claude Code vs Windsurf: Full Comparison 2026](/claude-code-vs-windsurf-full-comparison-2026/)

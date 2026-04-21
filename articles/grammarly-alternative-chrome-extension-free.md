@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [chrome-extension, writing-tools, grammar-checker]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 # Best Free Grammarly Alternatives for Chrome in 2026
 

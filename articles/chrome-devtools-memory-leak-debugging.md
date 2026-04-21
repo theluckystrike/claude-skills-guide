@@ -11,6 +11,8 @@ score: 8
 categories: [troubleshooting]
 tags: [chrome, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 ## Chrome DevTools Memory Leak Debugging: Find and Fix Memory Issues
 

@@ -11,6 +11,8 @@ tags: [chrome, browser, zoom, performance, debugging]
 score: 7
 reviewed: true
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Chrome Zoom Slow: Diagnosing and Fixing Performance Issues

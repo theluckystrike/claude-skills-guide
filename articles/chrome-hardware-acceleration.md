@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome hardware acceleration is a powerful feature that allows the browser to use your computer's GPU (Graphics Processing Unit) for rendering web content. For developers and power users, understanding how to configure and optimize hardware acceleration can significantly improve performance for graphics-intensive web applications, video playback, and complex animations.
 

@@ -11,6 +11,8 @@ score: 8
 categories: [comparisons]
 tags: [chrome-extension, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 ## Chrome Extension Canva Alternative: Build Your Own Design Tool
 

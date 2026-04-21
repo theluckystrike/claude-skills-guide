@@ -12,6 +12,8 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 Chrome OS provides two powerful mechanisms for deploying locked-down, single-purpose device configurations: Kiosk Mode and Managed Guest Sessions. These features serve different use cases but share a common goal, providing controlled access to Chrome OS devices while maintaining security and manageability.

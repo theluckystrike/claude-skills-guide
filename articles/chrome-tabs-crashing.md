@@ -12,6 +12,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Chrome Tabs Crashing: A Developer's Guide to Diagnosis and Fixes

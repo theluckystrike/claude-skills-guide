@@ -12,6 +12,8 @@ score: 8
 categories: [comparisons]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 If you've been using the Page Ruler extension to measure elements on web pages, you is looking for alternatives that offer more features, better precision, or tighter integration with your development workflow. Whether you're a frontend developer debugging layouts, a designer verifying mockups, or a QA engineer testing responsive designs, having the right measurement tool can significantly speed up your workflow.

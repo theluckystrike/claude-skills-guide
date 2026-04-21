@@ -12,6 +12,8 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 Chrome extensions power productivity across organizations, but distributing them securely within an enterprise requires more than the public Chrome Web Store. A self-hosted extension store gives IT administrators complete control over which extensions are available, when they're updated, and who can access them.

@@ -11,6 +11,8 @@ score: 8
 categories: [comparisons]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Tor vs Chrome Privacy: A Technical Comparison for Developers
 

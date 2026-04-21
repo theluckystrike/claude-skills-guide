@@ -12,6 +12,8 @@ categories: [comparisons]
 tags: [chrome, claude-skills]
 geo_optimized: true
 sitemap: false
+sitemap: false
+robots: "noindex, nofollow"
 ---
 ## Brave vs Chrome Privacy: A Technical Comparison for Developers and Power Users
 

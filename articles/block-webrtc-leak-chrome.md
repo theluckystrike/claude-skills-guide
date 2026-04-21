@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 WebRTC (Web Real-Time Communication) enables peer-to-peer audio, video, and data sharing directly in browsers. While powerful, it presents a privacy risk: WebRTC can expose your real IP address even when using a VPN or proxy. This guide covers practical methods to block WebRTC leaks in Chrome for developers and power users.
 

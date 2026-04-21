@@ -11,6 +11,8 @@ score: 8
 categories: [troubleshooting]
 tags: [chrome, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome on iPad can become sluggish for various reasons, from memory constraints to outdated configurations. This guide provides actionable solutions for developers and power users experiencing performance issues with Chrome on iPad devices.
 

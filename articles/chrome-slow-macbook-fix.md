@@ -11,6 +11,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome running slowly on your MacBook can derail your entire workflow. Whether you're debugging applications, managing multiple development environments, or just browsing, a sluggish browser wastes time. This guide provides concrete fixes targeting developers and power users who need Chrome to perform reliably.
 

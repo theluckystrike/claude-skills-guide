@@ -13,6 +13,8 @@ score: 8
 permalink: /responsive-viewer-alternative-chrome-extension-2026/
 render_with_liquid: false
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 {% raw %}

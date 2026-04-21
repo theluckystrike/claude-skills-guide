@@ -13,6 +13,8 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 {% raw %}

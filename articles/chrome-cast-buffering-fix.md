@@ -11,6 +11,8 @@ score: 8
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome Cast buffering issues plague users across various setups, from simple screen mirroring to sophisticated custom receiver applications. Understanding the root causes and implementing targeted fixes can dramatically improve streaming quality. This guide covers practical solutions for both end users and developers building Cast-enabled applications.
 

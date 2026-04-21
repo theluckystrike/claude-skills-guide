@@ -12,6 +12,8 @@ score: 8
 categories: [integrations, guides]
 tags: [browsers, web-development, devtools]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Fastest Browser for Web Development in 2026

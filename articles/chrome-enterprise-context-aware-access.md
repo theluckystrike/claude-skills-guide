@@ -12,6 +12,8 @@ score: 8
 categories: [guides]
 tags: [chrome-extension, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 Context-aware access represents a fundamental shift in how enterprises secure browser-based resources. Instead of relying on traditional perimeter-based security, organizations now evaluate access requests based on multiple contextual factors including user identity, device posture, location, and real-time risk signals. For developers and power users working within enterprise environments, understanding this architecture becomes essential for building compliant applications and troubleshooting access issues.

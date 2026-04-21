@@ -11,6 +11,8 @@ score: 8
 categories: [integrations]
 tags: [chrome-extension, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 ## Chrome Enterprise VPN Integration - A Practical Guide for Developers
 

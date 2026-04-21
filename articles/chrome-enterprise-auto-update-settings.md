@@ -11,6 +11,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 # Chrome Enterprise Auto Update Settings: A Developer's Guide
 

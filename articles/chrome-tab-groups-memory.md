@@ -9,6 +9,8 @@ permalink: /chrome-tab-groups-memory/
 score: 7
 reviewed: true
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Chrome Tab Groups Memory: A Developer Guide to Efficient Tab Management

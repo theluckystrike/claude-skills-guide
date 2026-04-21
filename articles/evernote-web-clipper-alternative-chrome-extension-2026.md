@@ -11,6 +11,8 @@ score: 8
 categories: [comparisons]
 tags: [chrome-extension, productivity, web-clipper]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 ## Evernote Web Clipper Alternative for Chrome in 2026: A Developer Guide
 

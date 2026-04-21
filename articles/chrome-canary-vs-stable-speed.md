@@ -11,6 +11,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 Chrome offers multiple release channels, each serving different purposes for different users. The two most common options are Chrome Stable and Chrome Canary. While Stable provides reliability, Canary gives you access to the newest features before anyone else. But how do these channels compare in terms of speed and performance?

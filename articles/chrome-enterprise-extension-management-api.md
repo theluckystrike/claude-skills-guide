@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [chrome-extension, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 The Chrome Enterprise Extension Management API provides administrators with powerful programmatic controls for managing browser extensions across their organization. This API, part of Google's Chrome Browser Cloud Management suite, enables IT teams to install, configure, and remove extensions across managed devices without requiring manual intervention on each workstation.
 

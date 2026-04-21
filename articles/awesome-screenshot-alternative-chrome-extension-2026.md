@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 geo_optimized: true
 sitemap: false
+sitemap: false
+robots: "noindex, nofollow"
 ---
 ## Best Awesome Screenshot Alternative Chrome Extension for 2026
 

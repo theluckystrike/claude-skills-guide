@@ -9,6 +9,8 @@ permalink: /chrome-helper-high-cpu-mac/
 score: 7
 reviewed: true
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome Helper High CPU Mac: Complete Troubleshooting Guide
 

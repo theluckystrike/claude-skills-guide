@@ -12,6 +12,8 @@ categories: [best-of]
 tags: [chrome, claude-skills]
 geo_optimized: true
 sitemap: false
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Developers handle credentials constantly, API keys, database passwords, SSH keys, and service accounts. Finding a free password manager that integrates well with Chrome and respects your security standards can be challenging. This guide evaluates the top options from a developer perspective.
 

@@ -12,6 +12,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 When you're working on a MacBook, browser choice directly impacts how long you can code before reaching for the charger. For developers running local servers, debugging tools, and multiple tabs, understanding the battery implications of Chrome versus Safari becomes essential for mobile workflows.

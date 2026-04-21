@@ -92,6 +92,24 @@ Moving from ChatGPT-only to adding Claude Code:
 4. **Build the feedback loop** — Where ChatGPT generated code you manually applied and tested, Claude Code writes code AND runs tests. The feedback loop shortens dramatically.
 5. **Create CLAUDE.md** — Document your project's architecture, conventions, and key patterns. This replaces the context you would normally paste into ChatGPT at the start of every conversation.
 
+## FAQ
+
+### Can ChatGPT access my local files like Claude Code does?
+
+No. ChatGPT only knows what you paste into the conversation or upload as files. It cannot browse your filesystem, read your project structure, or make changes to your code. Claude Code has full local filesystem access (with permission gating). This is the fundamental capability gap between a chat interface and a development agent.
+
+### Is Claude.ai the same as Claude Code for coding?
+
+No. Claude.ai is Anthropic's web chat interface — similar to ChatGPT in that you paste code and get responses. Claude Code is Anthropic's CLI agent that runs in your terminal with file system access, command execution, and autonomous workflows. Claude.ai is good for quick questions; Claude Code is good for doing work.
+
+### Can I use ChatGPT Plus inside Claude Code somehow?
+
+No. They are separate products from different companies. However, you can use both in the same workflow — ChatGPT for brainstorming and research, Claude Code for implementation. Some developers keep ChatGPT open in a browser tab alongside their terminal running Claude Code.
+
+### Which produces better code quality?
+
+For isolated code snippets (single functions, algorithms), both produce comparable quality. For code that needs to integrate with your existing project (matching patterns, using your types, following conventions), Claude Code produces significantly better results because it reads your project for context. ChatGPT generates code in isolation.
+
 ## Related Comparisons
 
 - [Claude Code vs Cursor 2026: Detailed Comparison](/claude-code-vs-cursor-2026-detailed-comparison/)

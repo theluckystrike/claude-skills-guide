@@ -12,6 +12,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 If you're a developer running multiple instances of Chrome, Firefox, or Edge while simultaneously working with Docker containers, Kubernetes clusters, and local development servers, you've likely experienced the frustration of watching your available RAM disappear. Browser memory consumption has become a critical concern for power users in 2026, especially as web applications grow more complex and resource-intensive.

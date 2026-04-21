@@ -11,6 +11,8 @@ tags: [tools]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 # Chrome Memory Saver Mode: A Developer's Guide to Reducing Browser Memory Usage
 

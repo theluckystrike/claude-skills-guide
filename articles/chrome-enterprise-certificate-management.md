@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome Enterprise certificate management enables organizations to control SSL/TLS certificates across managed Chrome browsers. For IT administrators and developers working in enterprise environments, understanding how Chrome handles certificates through group policies provides control over security, enables smooth internal tool access, and reduces certificate-related support tickets.
 

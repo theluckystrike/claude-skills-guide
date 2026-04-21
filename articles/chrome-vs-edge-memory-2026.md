@@ -12,6 +12,8 @@ tags: [chrome, edge, browser, memory, performance, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 Chrome vs Edge Memory 2026: Which Browser Uses Less RAM?

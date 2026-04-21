@@ -11,6 +11,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 If you've configured a proxy in Chrome and noticed significant slowdowns, you're not alone. Many developers and power users rely on proxies for development, testing, or privacy, but unexpected latency can derail productivity. This guide walks you through diagnosing why your Chrome proxy feels slow and provides actionable solutions to restore fast browsing speeds.
 

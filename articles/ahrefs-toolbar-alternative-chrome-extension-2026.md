@@ -13,6 +13,8 @@ categories: [comparisons]
 tags: [claude-code, claude-skills]
 geo_optimized: true
 sitemap: false
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 If you've been relying on the Ahrefs SEO toolbar for quick domain analysis and backlink checks, you know it comes with a significant price tag. While Ahrefs remains one of the most comprehensive SEO platforms, the toolbar requires an active subscription that starts at $99 per month. For developers, freelancers, and small teams working on a budget, this cost adds up quickly. The great news is that 2026 has brought several capable alternatives that deliver solid functionality without breaking the bank.

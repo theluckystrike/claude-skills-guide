@@ -11,6 +11,8 @@ permalink: /chrome-managed-browser-vs-unmanaged/
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 When you install Chrome from google.com/chrome, you get an unmanaged browser. Your settings sync to your Google Account, extensions install freely, and you control everything locally. But organizations often deploy Chrome differently. through managed browsers that enforce policies, restrict capabilities, and centralize control. Understanding these differences matters if you're building browser-based applications, managing development environments, or working in enterprise IT.
 

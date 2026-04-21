@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome Energy Saver Mode represents one of the browser's most underutilized features for developers and power users who spend significant time working in Chrome. Understanding how this feature works and how to configure it appropriately can help you extend battery life on laptops, reduce heat generation during intensive coding sessions, and optimize resource allocation across multiple browser windows.
 

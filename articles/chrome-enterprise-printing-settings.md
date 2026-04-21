@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome Enterprise printing settings provide granular control over how Chrome handles print jobs in organizational environments. Whether you're managing a fleet of devices or building applications that integrate with Chrome's printing subsystem, understanding these settings helps you optimize workflows and reduce support overhead.
 

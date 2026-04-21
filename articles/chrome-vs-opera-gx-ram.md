@@ -11,6 +11,8 @@ score: 8
 categories: [comparisons]
 tags: [chrome, opera, browser, ram, performance]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome vs Opera GX RAM: Which Browser Uses Less Memory?
 

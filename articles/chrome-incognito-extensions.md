@@ -13,6 +13,8 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 Chrome's incognito mode provides a privacy-focused browsing session that does not save history, cookies, or site data. However, many users expect their extensions to work smoothly in this mode, and developers need to understand how to handle incognito-specific behavior properly.

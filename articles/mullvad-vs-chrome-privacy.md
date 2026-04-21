@@ -11,6 +11,8 @@ score: 8
 categories: [comparisons]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 When building privacy-conscious applications or simply browsing the web without leaving traces, the choice between Mullvad Browser and Chrome carries significant implications. This comparison breaks down the technical differences for developers and power users who need to understand exactly what happens to their network traffic, browsing fingerprint, and personal data.
 

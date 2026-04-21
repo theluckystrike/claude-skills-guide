@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Deploying Google Chrome Enterprise on Mac at scale requires more than simple package installation. Jamf Pro provides the infrastructure to push Chrome Enterprise to managed Macs, configure enterprise policies, and maintain browser settings across your organization. This guide covers the practical implementation details developers and IT professionals need.
 

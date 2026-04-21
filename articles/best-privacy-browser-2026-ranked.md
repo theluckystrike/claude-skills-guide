@@ -12,6 +12,8 @@ tags: [browser, privacy, security, developer-tools, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 Privacy-focused browsers have matured significantly. What once required extensive configuration now ships ready for threat model protection. This ranking evaluates browsers based on technical implementation, transparency, and features relevant to developers and power users.

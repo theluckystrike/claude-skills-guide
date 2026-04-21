@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [chrome, claude-skills]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Performance profiling is essential for building responsive web applications. Chrome DevTools provides a comprehensive suite of tools for analyzing runtime performance, identifying bottlenecks, and optimizing your code. This guide walks through the key features of Chrome DevTools performance profiling with practical examples you can apply immediately. from basic timeline reading to memory leak detection and production monitoring strategies.
 
