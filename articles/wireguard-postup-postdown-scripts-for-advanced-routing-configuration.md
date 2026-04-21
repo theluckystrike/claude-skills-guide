@@ -11,6 +11,8 @@ tags: [wireguard, vpn-scripts, postup-postdown, routing, firewall, network-confi
 score: 7
 reviewed: true
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 

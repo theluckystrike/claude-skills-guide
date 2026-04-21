@@ -48,6 +48,8 @@ Claude Opus 4.6 provides stronger multi-step reasoning for complex coding tasks,
 
 - **Broader API knowledge** — GPT-4o demonstrates slightly better recall of obscure API signatures, library behaviors, and framework internals, likely due to a broader or more recent training corpus. When your complex task depends on knowing the exact behavior of a specific library version, GPT-4o sometimes avoids the need for documentation lookup.
 
+- **JSON-mode reliability** — For tasks requiring structured output (generating configuration files, API response schemas, or data transformation pipelines), GPT-4o's structured output mode produces valid JSON on 99%+ of attempts. Opus occasionally includes commentary or markdown formatting around JSON output that requires post-processing, adding a parsing step to automated workflows.
+
 ## Cost Reality
 
 The price gap between Opus and GPT-4o is the largest in this comparison:
@@ -87,6 +89,9 @@ Yes, chain-of-thought prompting, breaking problems into steps, and providing exp
 ### Should I use Opus for all code reviews?
 Not all — only high-stakes ones. Reviewing a 5-line bug fix does not benefit from Opus over Sonnet or GPT-4o. Reviewing a 500-line PR that touches authentication, database schema, and API contracts simultaneously is where Opus's multi-file reasoning justifies the cost.
 
+### Which model is better for onboarding a new team member?
+GPT-4o's faster responses and lower cost make it better for exploratory questions during onboarding ("what does this service do?", "explain this pattern"). Opus is unnecessary for explanation tasks where any strong model provides adequate answers. Reserve Opus for the new team member's first architectural contribution where getting the design right on the first attempt prevents costly rework.
+
 ## When To Use Neither
 
-For mathematical reasoning and formal verification tasks (proving algorithm correctness, analyzing computational complexity, formal specification checking), neither model is reliable enough to trust without verification. These tasks require deterministic tools — proof assistants like Lean or Coq, model checkers, or formal verification frameworks. AI models can assist in drafting proofs but should never be the sole authority on correctness.
+For mathematical reasoning and formal verification tasks (proving algorithm correctness, analyzing computational complexity, formal specification checking), neither model is reliable enough to trust without verification. These tasks require deterministic tools — proof assistants like Lean or Coq, model checkers, or formal verification frameworks. AI models can assist in drafting proofs but should never be the sole authority on correctness. Similarly, for real-time systems where latency budgets are under 200ms per response, direct API calls to either model are too slow for inline use.

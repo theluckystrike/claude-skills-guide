@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [chrome-extensions, productivity]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Extensity Alternative Chrome Extension in 2026

@@ -94,6 +94,9 @@ When your .eslintrc is in the context (automatically included by Claude Code whe
 ### Can I replace custom ESLint plugins with Claude Code?
 For enforcement at scale (CI pipelines, pre-commit), no. Custom ESLint plugins are deterministic, instant, and free — you cannot replace them with AI. For catching the issues that inspired those custom plugins during development (before commit), Claude Code can detect the same patterns and more. Use both: Claude during development, ESLint at commit time.
 
+### How do I migrate from relying on Claude Code for formatting to ESLint + Prettier?
+Install both tools (`npm install -D eslint prettier eslint-config-prettier`), run `npx eslint --init` to generate a base configuration, then run `npx prettier --write .` to format your entire codebase in one pass. Add pre-commit hooks via Husky + lint-staged. Total setup time: 30-60 minutes. After this, Claude Code no longer needs to handle formatting — it focuses exclusively on semantic analysis where it provides unique value.
+
 ## When To Use Neither
 
-For type safety, use TypeScript's compiler (tsc) directly. Neither ESLint nor Claude Code is a substitute for a type system. TypeScript catches type errors at compile time with mathematical certainty — no rules to configure, no AI to prompt. If you are still using untyped JavaScript and relying on linting rules or AI to catch type errors, migrate to TypeScript instead.
+For type safety, use TypeScript's compiler (tsc) directly. Neither ESLint nor Claude Code is a substitute for a type system. TypeScript catches type errors at compile time with mathematical certainty — no rules to configure, no AI to prompt. If you are still using untyped JavaScript and relying on linting rules or AI to catch type errors, migrate to TypeScript instead. For projects under 500 lines of code, the overhead of configuring ESLint rules exceeds the value — just write clean code and have a colleague review it.

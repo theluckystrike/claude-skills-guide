@@ -49,6 +49,8 @@ Gemini 2.5 Pro's 1M context window makes it superior for whole-codebase analysis
 
 - **Native code execution** — Gemini includes a built-in code interpreter that can run Python code during generation, verify outputs, and iterate on solutions. This creates a generate-test-fix loop inside a single API call. Sonnet requires external tool infrastructure (like Claude Code) to achieve the same workflow.
 
+- **Multimodal input breadth** — For projects that involve processing screenshots of UI mockups alongside code, Gemini handles image-to-code workflows with slightly higher fidelity on complex layouts. Given a 1920x1080 screenshot of a dashboard with 8 data panels, Gemini produces a closer structural match in the first attempt. This is particularly relevant for frontend teams iterating on visual designs.
+
 ## Cost Reality
 
 Gemini's pricing model differs significantly from Claude's straightforward per-token billing:
@@ -92,6 +94,12 @@ Yes, and this is often optimal. Use Gemini for the "understand the whole codebas
 
 ### How does multimodal capability help with coding?
 Gemini's broader multimodal support (video, audio) rarely helps for coding specifically. Both models handle image input (screenshots of UIs, diagrams, error messages) effectively. The multimodal gap only matters if you are building applications that process non-text media.
+
+### How do I migrate prompts from Sonnet to Gemini or vice versa?
+Most prompts transfer directly without modification. The main adjustments: Sonnet handles XML-structured prompts better, while Gemini prefers Markdown-formatted instructions. System prompts longer than 4,000 tokens may need restructuring for Gemini since its instruction adherence drops at extreme system prompt lengths. Budget 2-4 hours to test and adapt your 10 most-used prompts when switching.
+
+### Which model handles larger TypeScript monorepos better?
+For a 200K+ token TypeScript monorepo, Gemini wins simply because Sonnet cannot load the full context. For repos under 150K tokens, Sonnet produces more precise type-safe code on the first attempt. A typical 80-file Next.js application fits within both context windows, so the deciding factor is instruction precision (Sonnet) versus ability to reference distant files (Gemini).
 
 ## When To Use Neither
 

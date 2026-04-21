@@ -91,6 +91,12 @@ Claude Code is designed specifically for Anthropic's models. However, DeepSeek V
 ### Does the 128K vs 200K context window matter?
 For most coding tasks, 128K is sufficient. The scenarios where 200K matters (loading 15+ large files simultaneously) are relatively rare in daily development. However, when you hit the limit, it forces context management strategies (summarization, selective file loading) that add complexity and potential information loss.
 
+### How do I switch from Opus to DeepSeek V3 for daily tasks?
+Start by running both models on 10-15 representative tasks from your actual workload. Identify which task categories produce acceptable results with DeepSeek V3 (typically: boilerplate generation, simple refactoring, documentation, test writing) versus which still require Opus (complex debugging, multi-constraint architecture, security-sensitive code review). Most developers find 60-75% of their daily tasks transfer to DeepSeek V3 without quality loss.
+
+### Which model is better for onboarding engineers to a new codebase?
+DeepSeek V3 handles exploratory questions ("what does this module do?", "how is auth implemented here?") adequately at 1/68th the cost. For a new engineer asking 50-100 questions during their first week, DeepSeek V3 costs under $1 total versus $50-70 on Opus. The quality difference for explanation tasks is minimal. Use Opus only when the new engineer begins making architectural contributions.
+
 ## When To Use Neither
 
 For generating code that must meet formal correctness guarantees (safety-critical systems, cryptographic implementations, aerospace control software), neither AI model is appropriate as the primary author. Use formal methods, verified compilers, and mathematical proofs for correctness. AI models can assist in drafting and exploration, but the final code must be verified through rigorous non-AI processes.

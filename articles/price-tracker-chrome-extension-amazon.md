@@ -12,6 +12,8 @@ tags: [chrome-extension, amazon, price-tracking, web-scraping]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 

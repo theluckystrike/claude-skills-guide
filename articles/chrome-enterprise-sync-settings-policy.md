@@ -11,6 +11,8 @@ tags: [chrome-browser, enterprise-policy, sync-settings, gpo, chrome-admx]
 reviewed: true
 score: 7
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 # Chrome Enterprise Sync Settings Policy: Complete Configuration Guide
 

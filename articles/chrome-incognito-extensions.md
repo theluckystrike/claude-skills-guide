@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Chrome Incognito Extensions — Developer Guide (2026)"
-description: "Chrome Incognito Extensions — Developer Guide. Practical guide with working examples for developers. Tested on Chrome."
+title: "Chrome Extension Development for Claude Code Plugins (2026)"
+description: "Build Chrome extensions that work in incognito mode using Claude Code. Configuration, API patterns, and testing strategies for Claude Code-generated browser plugins."
 date: 2026-03-15
-last_modified_at: 2026-04-17
+last_modified_at: 2026-04-21
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /chrome-incognito-extensions/
 reviewed: true
@@ -17,6 +18,23 @@ geo_optimized: true
 Chrome's incognito mode provides a privacy-focused browsing session that does not save history, cookies, or site data. However, many users expect their extensions to work smoothly in this mode, and developers need to understand how to handle incognito-specific behavior properly.
 
 This guide covers the technical details of Chrome incognito extensions, including configuration options, API limitations, implementation patterns, and actionable advice for developers and power users alike.
+
+## Building Chrome Extensions with Claude Code
+
+Claude Code excels at generating Chrome extension boilerplate, implementing Manifest V3 service workers, and handling the nuanced incognito mode configurations that trip up many developers. When you ask Claude Code to build a Chrome extension, understanding incognito behavior ensures your generated code works correctly across all browsing modes.
+
+Key advantages of using Claude Code for Chrome extension development:
+- Claude Code generates correct `manifest.json` with proper `incognito` field configuration
+- It handles the split vs spanning mode decision based on your extension's requirements
+- Claude Code writes service worker event handlers that correctly isolate incognito storage
+- It generates test scripts that validate extension behavior in both normal and incognito contexts
+
+When prompting Claude Code to build extensions that support incognito mode, include the incognito requirements in your initial prompt to avoid refactoring later.
+
+**Related Claude Code guides:**
+- [Claude Code Chrome Extension Manifest V3 Guide](/claude-code-chrome-extension-development/)
+- [Claude Code Testing Automation](/claude-code-testing-strategies/)
+- [Claude Code JavaScript Best Practices](/claude-code-javascript-patterns/)
 
 ## How Incognito Mode Affects Extensions
 

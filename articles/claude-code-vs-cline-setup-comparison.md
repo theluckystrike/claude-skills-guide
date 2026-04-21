@@ -80,6 +80,12 @@ Claude Code handles large files more gracefully through selective reading (it ca
 ### Do both tools have access to the same Claude models?
 Yes. Both access Anthropic's API and can use Opus 4.6, Sonnet 4.6, and Haiku 4.5. The model capabilities are identical since the same API endpoint serves both tools.
 
+### How do I migrate from Cline to Claude Code?
+Copy your custom system prompts from Cline's VS Code settings into a CLAUDE.md file at your project root. Claude Code reads this file on every session start, providing equivalent persistent context. If you rely on Cline's multi-provider model switching, note that Claude Code only supports Anthropic models natively — you would need a proxy or custom endpoint for non-Anthropic models. The migration typically takes under 20 minutes for basic setups. Expect API costs to decrease by 30-50% due to Claude Code's more efficient context management.
+
+### Which tool is better for onboarding new developers?
+Cline's visual approve/reject workflow is more intuitive for developers who have never used an AI coding agent — they see exactly what will change before anything happens, which builds trust. Claude Code's terminal output scrolls past quickly and requires developers to understand git diff to verify changes after the fact. For cautious teams or regulated environments where every AI-generated change needs explicit approval, Cline's confirmation-per-action model is safer during the learning period.
+
 ## When To Use Neither
 
 If you need a coding assistant that works without internet access (air-gapped environment, airplane, unreliable connection), neither Claude Code nor Cline can function since both require API calls to Anthropic's servers. For offline AI coding assistance, you would need a local model setup (Ollama + Continue.dev, or a local code completion server).

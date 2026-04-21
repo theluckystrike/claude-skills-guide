@@ -11,6 +11,8 @@ tags: [css, chrome-extensions, web-development, developer-tools, css-inspection]
 reviewed: true
 score: 7
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 # CSS Peeper Alternative Chrome Extensions for Developers in 2026
 

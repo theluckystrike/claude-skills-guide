@@ -88,6 +88,12 @@ Supermemory is an active open-source project that is usable for personal and sma
 ### Can I export Claude's memory to use elsewhere?
 CLAUDE.md files are plain text and completely portable. Claude.ai's conversation memory can be viewed but is harder to export programmatically. Supermemory's data is fully exportable since you control the database.
 
+### How do I migrate from Supermemory to Claude's built-in memory?
+Export your Supermemory entries as text, then organize them into a CLAUDE.md file structured by category (architecture decisions, coding standards, project context). For a typical collection of 50-100 memory entries, the migration takes 1-2 hours. The main loss is rich content types (PDFs, bookmarks) that CLAUDE.md cannot replicate — those need to remain in a separate knowledge base or be summarized as text references.
+
+### Which approach works better for teams adopting AI tools for the first time?
+Claude's CLAUDE.md files require no additional infrastructure — create a file, commit it, and every team member benefits immediately. Supermemory requires deploying an instance, configuring access, and training the team on its interface. For teams with fewer than 10 developers, CLAUDE.md provides 80% of the value at zero operational overhead. Scale to Supermemory only when your knowledge base exceeds what fits comfortably in a 2,000-token text file.
+
 ## When To Use Neither
 
-If your memory needs are simply "remember my code style preferences," a simple text file or an EditorConfig file serves the purpose without AI memory infrastructure. Both Claude Memory and Supermemory are overkill for developers who just need consistent formatting rules or a list of project conventions. A well-written CONTRIBUTING.md or style guide may be all you actually need.
+If your memory needs are simply "remember my code style preferences," a simple text file or an EditorConfig file serves the purpose without AI memory infrastructure. Both Claude Memory and Supermemory are overkill for developers who just need consistent formatting rules or a list of project conventions. A well-written CONTRIBUTING.md or style guide may be all you actually need. For teams with established wikis (Notion, Confluence) that already contain institutional knowledge, adding another memory layer creates fragmentation rather than solving it.

@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [chrome, userscripts, automation]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Violentmonkey Alternative Chrome Extension 2026

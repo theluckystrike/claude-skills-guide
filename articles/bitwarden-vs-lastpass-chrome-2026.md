@@ -12,6 +12,8 @@ categories: [comparisons]
 tags: [chrome, password-manager, bitwarden, lastpass]
 geo_optimized: true
 sitemap: false
+sitemap: false
+robots: "noindex, nofollow"
 ---
 # Bitwarden vs LastPass Chrome 2026: Which Password Manager for Developers?
 

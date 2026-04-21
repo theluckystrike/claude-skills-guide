@@ -41,6 +41,8 @@ GitHub Actions remains essential for deterministic CI/CD pipelines (build, test,
 
 - **Fix-and-retry loops** — When a CI build fails, Claude Code can read the error, understand the root cause, generate a fix, and create a new commit. GitHub Actions can notify you about the failure but cannot fix it. This turns a "developer investigates and fixes" workflow into a "Claude fixes and developer reviews" workflow.
 
+- **Context-aware changelog generation** — Claude Code reads your commit history, understands the semantic meaning of changes, and generates human-readable release notes grouped by feature, fix, and breaking change. A project with 47 commits between releases gets a structured changelog in 15 seconds. GitHub Actions can template commits but cannot understand which changes matter to end users versus which are internal refactoring.
+
 ## Where GitHub Actions Wins
 
 - **Deterministic, reproducible builds** — Building your application the same way every single time, across every branch, with no variance, is a correctness guarantee that AI cannot provide. You need byte-identical builds for production deployments, security audits, and compliance. GitHub Actions delivers this; Claude Code cannot.
@@ -92,6 +94,9 @@ Yes, you can call Claude or other AI APIs from within a GitHub Action step. This
 
 ### Which should I set up first for a new project?
 GitHub Actions first. Basic CI (lint, test, build) provides immediate value from day one and prevents regressions. Add Claude Code automation later when you have enough code and patterns established for AI assistance to be meaningful. Attempting AI automation before you have basic CI is building on an unstable foundation.
+
+### How do I migrate from manual CI scripts to Claude Code automation?
+Start by identifying your most time-consuming manual tasks: PR review, test writing, and failure triage are the highest-ROI candidates. Set up Claude Code in a GitHub Action step that triggers on PR open events. Feed it the diff and your review checklist. Most teams see measurable time savings within the first week, with the typical setup taking 2-3 hours for the initial workflow configuration.
 
 ## When To Use Neither
 

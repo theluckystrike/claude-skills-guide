@@ -12,6 +12,8 @@ tags: [tools]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Chrome Enterprise Stable Channel Management: A Practical Guide

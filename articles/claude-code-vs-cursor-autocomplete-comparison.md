@@ -78,6 +78,12 @@ Both perform well with TypeScript and Java, but Cursor's inline completions bene
 ### How do both handle completing code in languages with limited training data?
 For niche languages (Elixir, Nim, Zig), both tools rely on their underlying model's training. Cursor may hallucinate more in autocomplete mode because it must respond quickly with less deliberation. Claude Code's explicit generation allows more reasoning time, which can produce better results for uncommon patterns.
 
+### How do I switch from Cursor to Claude Code without losing productivity?
+The transition takes 3-5 days of adjustment. During week one, keep Cursor open alongside a terminal running Claude Code. Use Cursor for typing-flow completions and Claude Code for anything requiring more than one line of thought. By week two, most developers find they can classify tasks instinctively: Tab-complete-level tasks stay in the editor (or use a lightweight tool like Codeium Free), while generation tasks go to Claude Code. Expect a temporary 15-20% slowdown in raw lines-per-hour during the transition, which recovers fully by day five.
+
+### Which is better for onboarding new developers to a codebase?
+Claude Code excels here because new developers can ask contextual questions ("what does this service do?", "show me how authentication works in this project") and get explanations alongside code. Cursor's autocomplete assumes you already know what you want to write. For the first 2 weeks on a new codebase, Claude Code's conversational approach reduces ramp-up time by an estimated 30-40% compared to navigating code with only passive suggestions.
+
 ## When To Use Neither
 
-If you work exclusively in a language with excellent static analysis tooling (Rust with rust-analyzer, Go with gopls), the built-in completions from your language server may be sufficient for 90% of your needs. Adding AI autocomplete on top of already-accurate type-driven suggestions can create noise rather than value. Consider AI tools only when you need generation beyond what types and signatures can predict.
+If you work exclusively in a language with excellent static analysis tooling (Rust with rust-analyzer, Go with gopls), the built-in completions from your language server may be sufficient for 90% of your needs. Adding AI autocomplete on top of already-accurate type-driven suggestions can create noise rather than value. Consider AI tools only when you need generation beyond what types and signatures can predict. Similarly, for codebases with comprehensive code snippets and templates already configured in the editor, the marginal value of AI completions drops significantly since your custom snippets already encode team-specific patterns.

@@ -11,6 +11,8 @@ tags: [chrome, arc, browser, performance]
 score: 7
 reviewed: true
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Arc Browser, developed by The Browser Company, has gained significant attention among developers and power users seeking alternatives to traditional browsers. This article provides a technical performance comparison between Chrome and Arc, examining memory usage, startup times, rendering performance, and practical considerations for development workflows.
 

@@ -3,9 +3,15 @@ layout: default
 title: "Claude Projects vs Cursor Composer: Project Context Compared"
 description: "Claude Projects vs Cursor Composer for managing project context — persistent knowledge vs multi-file editing workflows compared."
 date: 2026-04-21
+last_tested: "2026-04-21"
 permalink: /claude-projects-vs-cursor-composer-comparison/
 categories: [comparisons]
 tags: [claude-code, claude-projects, cursor, composer, project-context]
+tools_compared:
+  - name: "Claude Projects"
+    version: "2025"
+  - name: "Cursor Composer"
+    version: "2025"
 ---
 
 Claude Projects and Cursor Composer both address the challenge of giving AI full project context, but they approach it from opposite directions. Claude Projects provides persistent context through uploaded files and custom instructions within Claude.ai. Cursor Composer provides real-time multi-file editing with the AI reading your actual project files as you work. The choice between them reflects whether you want AI that understands your project documentation or AI that operates directly on your codebase.
@@ -97,4 +103,4 @@ Yes, significant overlap. Claude Code's CLAUDE.md file serves the same purpose a
 
 ## When To Use Neither
 
-For pair programming and real-time collaborative coding with another human, neither AI context tool replaces the value of a live collaborator. Tools like VS Code Live Share, Tuple, or Pop provide human-to-human collaboration that AI cannot replicate — shared cursors, voice communication, and real-time discussion about trade-offs. AI assists individual work; human collaboration drives team alignment and knowledge transfer.
+For pair programming and real-time collaborative coding with another human, neither AI context tool replaces the value of a live collaborator. Tools like VS Code Live Share, Tuple, or Pop provide human-to-human collaboration that AI cannot replicate — shared cursors, voice communication, and real-time discussion about trade-offs. AI assists individual work; human collaboration drives team alignment and knowledge transfer. For developers who want project context management without vendor lock-in, Cody by Sourcegraph offers an open-source alternative that indexes codebases locally and connects to multiple LLM providers.

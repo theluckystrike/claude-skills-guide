@@ -12,6 +12,8 @@ score: 8
 categories: [comparisons]
 tags: [tools, productivity]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Lightshot Alternative Chrome Extension 2026

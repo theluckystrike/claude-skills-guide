@@ -11,6 +11,8 @@ score: 8
 categories: [integrations, guides]
 tags: [chrome-extension, seo, keyword-research]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Chrome Extension Keyword Density Checker: A Developer's Guide

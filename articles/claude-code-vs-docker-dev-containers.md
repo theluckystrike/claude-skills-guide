@@ -96,6 +96,9 @@ For a simple Node.js or Python project with no system dependencies, a Dev Contai
 ### What about performance inside containers?
 File system performance on macOS with Docker Desktop is notably slower than native (30-50% slower for I/O-heavy operations like node_modules installation or compilation). Linux and Windows WSL2 have minimal performance impact. If build speed is critical and you are on macOS, this overhead is worth measuring before committing to Dev Containers.
 
+### How do I migrate from manual environment setup to Dev Containers?
+Document your current setup steps (every `brew install`, `apt-get`, `npm install -g`, and environment variable). Feed this list to Claude Code and ask it to generate a `.devcontainer/devcontainer.json` and `Dockerfile`. Test with one team member, then roll out. Typical migration for a 5-dependency project takes 2-4 hours; complex projects with 15+ system dependencies may take a full day.
+
 ## When To Use Neither
 
-For projects that are a single static file (a script, a configuration, a Markdown document), neither Dev Containers nor Claude Code adds value for environment management. If your project has no dependencies and runs with a single system-installed interpreter, the environment is trivially simple and does not need management tools. Keep your tooling proportional to your project's complexity.
+For projects that are a single static file (a script, a configuration, a Markdown document), neither Dev Containers nor Claude Code adds value for environment management. If your project has no dependencies and runs with a single system-installed interpreter, the environment is trivially simple and does not need management tools. Keep your tooling proportional to your project's complexity. A project with only a `package.json` and no native dependencies often works better with a simple `.nvmrc` file than a full container configuration.

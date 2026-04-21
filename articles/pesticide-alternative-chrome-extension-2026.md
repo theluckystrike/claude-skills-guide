@@ -11,6 +11,8 @@ tags: [tools]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 If you've been using the Pesticide Chrome extension for CSS layout debugging, you is searching for alternatives that offer more features, better performance, or additional functionality. The original Pesticide extension has been a go-to tool for many developers, but several excellent alternatives have emerged that can enhance your debugging workflow.

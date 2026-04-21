@@ -11,6 +11,8 @@ score: 8
 categories: [guides, security]
 tags: [duckduckgo, chrome, privacy, developer-tools]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 # DuckDuckGo vs Chrome Privacy: A Developer & Power User Guide
 

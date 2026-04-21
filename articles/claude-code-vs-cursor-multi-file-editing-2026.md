@@ -46,6 +46,8 @@ Claude Code handles multi-file refactoring with greater accuracy for large-scope
 
 - **Speed for focused edits** — For changes touching 2-5 files, Composer generates all modifications simultaneously and presents them in under 10 seconds. Claude Code's sequential approach (read file, edit, read next file, edit) takes longer per file when the scope is small. For quick feature additions, Composer's parallel generation feels faster.
 
+- **Context from open tabs** — Cursor automatically includes currently open editor tabs as context for Composer operations. If you have the relevant files already open (a common pattern when you know what needs changing), Composer understands the relationships between them without explicit file references. Claude Code requires you to either reference files by path or let its search tools discover them, adding 5-10 seconds per operation for small focused edits.
+
 - **Undo granularity** — If a Composer edit goes wrong, you reject it and the file returns to its previous state instantly. With Claude Code, you need to use git checkout or the undo command, which requires more git familiarity. Cursor's UI-based undo is more accessible to developers who are less comfortable with git.
 
 ## Cost Reality
@@ -77,6 +79,9 @@ Claude Code is aware of git state and can resolve merge conflicts as part of its
 
 ### What happens if my internet drops mid-edit with either tool?
 Claude Code may leave partially-applied changes since it writes files as it goes. You would use git to revert incomplete work. Cursor Composer stages all changes before applying, so a disconnection means the changes simply are not applied and you can retry.
+
+### Which tool is better for onboarding developers who need to make cross-cutting changes?
+Cursor's visual diff preview makes it easier for developers unfamiliar with the codebase to understand what the AI proposes before accepting. Claude Code's approach requires more git confidence since changes apply directly. For junior developers or those new to a project, Cursor's reject-per-hunk workflow reduces the risk of accepting incorrect changes they do not fully understand yet.
 
 ## When To Use Neither
 

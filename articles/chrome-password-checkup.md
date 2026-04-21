@@ -12,6 +12,8 @@ reviewed: true
 score: 8
 render_with_liquid: false
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 {% raw %}
 ## Chrome Password Checkup: Complete Guide for Developers and Power Users

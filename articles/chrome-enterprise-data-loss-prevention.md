@@ -11,6 +11,8 @@ score: 8
 categories: [guides, security]
 tags: [chrome-browser, enterprise-security, dlp]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 # Chrome Enterprise Data Loss Prevention: A Developer Guide
 

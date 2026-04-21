@@ -11,6 +11,8 @@ permalink: /chrome-enterprise-deployment-guide-2026/
 score: 7
 reviewed: true
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Chrome Enterprise Deployment Guide 2026

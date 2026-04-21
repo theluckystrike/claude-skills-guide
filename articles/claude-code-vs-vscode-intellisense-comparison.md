@@ -91,6 +91,12 @@ AI models are trained on code snapshots and may suggest APIs from older library 
 ### Should I use GitHub Copilot instead of Claude Code for completions?
 Copilot occupies a middle ground — faster than Claude Code (inline suggestions) but less capable for complex generation. If your primary need is line-level autocomplete with AI enhancement, Copilot integrates into VS Code more smoothly. If you need multi-file reasoning and agentic code generation, Claude Code is more capable.
 
+### How do I set up a combined IntelliSense + Claude Code workflow?
+Keep VS Code's IntelliSense active with proper TypeScript or Pylance configuration (ensure `tsconfig.json` has strict mode enabled for best type completions). Run Claude Code in VS Code's integrated terminal. Use IntelliSense for all dot-completions, import suggestions, and type explorations. Switch to Claude Code when you need to generate a new function body, implement an interface, or write logic that requires understanding multiple files. This dual setup costs $5-10/month in Claude Code API usage while keeping all IntelliSense benefits at zero cost.
+
+### Which is better for onboarding developers to a new TypeScript project?
+IntelliSense provides immediate value by showing every available method, property, and type as developers explore unfamiliar code — they can navigate the API surface by typing a dot and reading the suggestions. Claude Code adds value by answering "why" questions ("why does this function return a Promise of null?", "how should I handle the error case here?"). For the first week on a new project, IntelliSense handles 90% of exploration needs. Claude Code becomes more valuable starting week two when developers need to write new code that fits existing patterns.
+
 ## When To Use Neither
 
 For configuration files with strict schemas (JSON Schema-validated configs, YAML with known structure, TOML files), neither AI completions nor IntelliSense provide the best experience. Schema-aware editors that validate against JSON Schema definitions give you autocomplete that is both instant and guaranteed valid. VS Code's built-in JSON schema support handles this better than either IntelliSense or Claude Code for files like package.json, tsconfig.json, and docker-compose.yml.

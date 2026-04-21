@@ -12,6 +12,8 @@ permalink: /chrome-group-policy-templates-2026/
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Chrome Group Policy Templates 2026: Complete Admin Guide

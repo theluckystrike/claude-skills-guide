@@ -78,6 +78,12 @@ Claude Code handles large repos immediately since it reads files on demand. Curs
 ### Can I import my VS Code settings into either tool?
 Cursor imports VS Code settings, extensions, and keybindings automatically on first launch. Claude Code does not use IDE settings at all since it runs in the terminal, so there is nothing to migrate.
 
+### How do I migrate from Cursor to Claude Code?
+Export your `.cursorrules` file content into a CLAUDE.md file in your project root — both serve the same purpose of providing persistent project context. Cursor's chat history does not transfer, so start fresh conversations in Claude Code. The biggest adjustment is workflow: replace Cmd+K inline edits with explicit prompts like "edit file X to do Y." Most developers report full productivity within 3-5 days. If you use Cursor's autocomplete heavily, pair Claude Code with a free autocomplete tool (Codeium Free or Supermaven) to maintain typing-flow suggestions.
+
+### Which tool is better for onboarding new team members?
+Cursor wins for visual learners and developers coming from traditional IDE backgrounds — its familiar VS Code interface means zero learning curve on the editor itself. Claude Code wins for developers who prefer working in the terminal and who need to understand a codebase deeply before writing code. For teams with both profiles, making either tool available and letting developers self-select produces better adoption than mandating one approach.
+
 ## When To Use Neither
 
 If your primary need is autocomplete for a single language and you want zero cost, tools like Codeium's free tier or GitHub Copilot's student plan may serve you better. Neither Claude Code nor Cursor is the right choice for developers who only want inline suggestions without chat or agent capabilities — both are designed for deeper AI interaction than simple tab completion.

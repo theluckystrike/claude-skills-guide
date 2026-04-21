@@ -87,6 +87,12 @@ Absolutely. Many developers use Sonnet via Claude Code for deep reasoning tasks 
 ### Which model handles errors better?
 Sonnet produces fewer hallucinated API calls and is more likely to say "I don't know" rather than inventing a plausible-sounding but incorrect solution. GPT-4o sometimes generates calls to non-existent library functions with high confidence. Both models benefit from providing explicit documentation in context.
 
+### How do I migrate from GPT-4o to Claude Sonnet?
+Switch your API endpoint from `api.openai.com` to `api.anthropic.com` and update the request format from OpenAI's chat completions to Anthropic's messages API. System prompts transfer directly. Most developers complete the migration in under an hour for simple integrations. If you use structured outputs (JSON mode), Sonnet supports this natively. Expect to spend 1-2 days adjusting prompt phrasing since Sonnet responds better to direct instructions while GPT-4o sometimes prefers examples.
+
+### Which model is better for teams with mixed experience levels?
+Sonnet's consistent instruction following makes it more predictable across skill levels — junior developers get reliable output from straightforward prompts without needing advanced prompt engineering. GPT-4o's output quality varies more with prompt quality, rewarding experienced users but creating inconsistency when less experienced developers write vague prompts. For team-wide standardization with shared prompt templates, Sonnet produces more uniform results.
+
 ## When To Use Neither
 
-For real-time autocomplete in your IDE (suggestions as you type), neither Sonnet nor GPT-4o is optimal. That use case demands sub-100ms latency, which requires a smaller, specialized model like Haiku 4.5 or GPT-4o Mini running locally or on a fast edge endpoint. Using a full reasoning model for keystroke-level completions wastes money and adds frustrating latency.
+For real-time autocomplete in your IDE (suggestions as you type), neither Sonnet nor GPT-4o is optimal. That use case demands sub-100ms latency, which requires a smaller, specialized model like Haiku 4.5 or GPT-4o Mini running locally or on a fast edge endpoint. Using a full reasoning model for keystroke-level completions wastes money and adds frustrating latency. At 200 autocomplete requests per hour (typical for active coding), Sonnet would cost $4.80/hour versus Haiku's $0.08/hour for the same typing-flow suggestions. Reserve mid-tier models for explicit code generation and reasoning tasks where the 1-3 second response time is acceptable.

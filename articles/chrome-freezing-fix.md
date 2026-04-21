@@ -11,6 +11,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 Chrome freezing issues can bring productivity to a halt, especially when you're debugging web applications or managing multiple tabs during development work. This guide provides practical solutions for developers and power users experiencing Chrome freezes, covering command-line tools, browser flags, and systematic troubleshooting approaches.

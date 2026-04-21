@@ -78,6 +78,12 @@ Claude Code's documentation at docs.anthropic.com is thorough but focused on a s
 ### Can I switch between Claude Code and Continue.dev without conflict?
 Absolutely. They operate independently — Claude Code runs in the terminal and Continue.dev runs in the IDE. Many developers use both simultaneously: Continue.dev for quick inline suggestions and Claude Code for complex multi-file operations.
 
+### How do I migrate from Continue.dev to Claude Code?
+Export your Continue.dev custom slash commands and context providers into a CLAUDE.md file that describes the same project conventions and patterns. Claude Code reads CLAUDE.md on every session start, providing similar persistent context. Migrate any custom model routing logic by specifying your preferred model via the `--model` flag or environment variable. Most developers complete the migration in under 30 minutes. The reverse migration (Claude Code to Continue.dev) requires translating your CLAUDE.md instructions into Continue.dev's config.json format, which takes slightly longer due to the structured JSON syntax.
+
+### Which is better for onboarding developers who are new to AI coding tools?
+Continue.dev has a lower barrier because it lives inside VS Code where developers already work. The visual configuration wizard and inline suggestions require no terminal knowledge. Claude Code's terminal-first approach is more natural for developers who already use command-line tools daily but can feel unfamiliar to IDE-only developers. For teams with mixed comfort levels, deploying Continue.dev broadly and reserving Claude Code for developers who request it produces the smoothest adoption curve.
+
 ## When To Use Neither
 
 If you only need autocomplete and nothing else, GitHub Copilot at $10/month or Codeium's free tier provides tab completion without any configuration of API keys or model endpoints. Both Claude Code and Continue.dev are designed for developers who want more control over their AI tooling, which comes with more setup responsibility. If you just want it to work with zero configuration, a managed service is simpler.

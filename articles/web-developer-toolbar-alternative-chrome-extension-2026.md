@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [chrome-extension, web-development, developer-tools]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Web Developer Toolbar Alternative Chrome Extension in 2026

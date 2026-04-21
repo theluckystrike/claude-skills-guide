@@ -12,6 +12,8 @@ reviewed: true
 score: 7
 tags: [chrome, developer-tools, window-management]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 

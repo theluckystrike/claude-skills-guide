@@ -81,6 +81,12 @@ Claude Code has a configurable maximum iteration limit and will stop if it detec
 ### Which agent mode produces cleaner git history?
 Claude Code typically produces cleaner commits because it completes entire features before committing. Cline's step-by-step nature can result in partial work being present if you stop mid-task. However, Claude Code's larger autonomous changes may need splitting into smaller commits for review clarity.
 
+### How do I migrate from Cline to Claude Code's agent mode?
+The primary adjustment is comfort with higher autonomy. Start by using Claude Code with its default permissions (asks before destructive operations) for 2-3 days. If you want Cline-style control initially, configure Claude Code to require approval for all file writes via its permission settings. Gradually relax permissions as you build trust. Most developers find they prefer the higher autonomy within one week, reporting 40-60% faster task completion compared to step-by-step approval.
+
+### Which is better for onboarding junior developers to agent-based workflows?
+Cline's approval-based model is better for the first 2-4 weeks because junior developers learn from watching the AI's decision process. They see each file it plans to edit, each command it plans to run, and can ask "why?" before approving. After the learning phase, transitioning to Claude Code's autonomous mode provides the productivity benefits once the developer understands the patterns well enough to review via git diff rather than pre-approval.
+
 ## When To Use Neither
 
 If your tasks are straightforward enough to describe in a single prompt and do not require multi-step execution (e.g., "write this function," "explain this code"), agent mode is overkill. A simple chat interface — whether in Claude.ai, ChatGPT, or an IDE chat panel — will answer faster without the overhead of tool-use protocols. Reserve agent mode for tasks that genuinely require reading, writing, and verification across multiple steps.

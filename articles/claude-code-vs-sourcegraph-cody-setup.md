@@ -78,6 +78,12 @@ Cody excels here if the organization already has Sourcegraph set up — you get 
 ### Can both tools explain code they find?
 Yes. Both can explain functions, trace call chains, and describe architectural patterns. Claude Code does this through conversation in the terminal. Cody does this through the IDE sidebar with clickable code references that jump to the relevant file.
 
+### How do I migrate from Cody to Claude Code?
+Clone all relevant repositories locally (Cody's cross-repo search relies on Sourcegraph indexing, which has no equivalent in Claude Code). Set up a workspace directory containing all repos you frequently reference. Create a CLAUDE.md file listing the project structure and key entry points so Claude Code can navigate efficiently without an index. Expect the first week to feel slower for cross-repo queries since you must explicitly point Claude Code at files rather than relying on indexed search. Single-repo workflows migrate instantly with zero configuration.
+
+### Which tool is better for onboarding to a company with 50+ repositories?
+Cody with an existing Sourcegraph instance is significantly better for this scenario. A new developer can ask "where is the payment processing implemented?" and get results from any indexed repository without knowing which repo to look in. Claude Code requires the developer to already know which directory to open — it cannot search across repositories they have not cloned. If Sourcegraph is already deployed, Cody provides immediate organization-wide code awareness that would take Claude Code users weeks to build manually.
+
 ## When To Use Neither
 
 If your primary need is code search without AI generation (finding where something is defined, tracing dependencies, understanding call graphs), plain Sourcegraph search (without Cody's AI features) or GitHub's code search may be sufficient and free. Similarly, if you just need to read and understand local files, tools like `grep`, `ast-grep`, or your IDE's built-in search may be faster than invoking an AI for simple lookups.

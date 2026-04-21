@@ -91,6 +91,12 @@ Absolutely, and this is the recommended workflow. Use JetBrains to rename the ex
 ### Is Claude Code refactoring faster for large changes?
 For changes touching 50+ files with complex logic, Claude Code is often faster end-to-end despite per-operation latency because it handles the entire transformation in one prompt. The equivalent in JetBrains would require 20-30 individual refactoring operations applied manually in sequence, taking more developer time even though each operation is instant.
 
+### How do I migrate from JetBrains-only refactoring to a hybrid workflow?
+Keep JetBrains as your primary editor and add Claude Code in a terminal panel within the IDE. Establish a simple rule: if the refactoring appears in JetBrains' Refactor menu (Shift+F6 for rename, Ctrl+Alt+M for extract method), use the IDE. If the refactoring requires a sentence to describe ("convert all callbacks to async/await in the data layer"), use Claude Code. This hybrid workflow adds approximately $5-15/month in API costs while preserving all of JetBrains' correctness guarantees for mechanical operations.
+
+### Which approach is better for onboarding developers new to refactoring?
+JetBrains' refactoring menu teaches developers what refactoring operations exist — the menu itself is an educational tool showing "extract variable," "extract method," "inline," and "move." Claude Code teaches developers to think about higher-level design improvements since they must articulate what they want to achieve. For junior developers, start with JetBrains to build vocabulary, then introduce Claude Code after 3-6 months once they understand the building blocks.
+
 ## When To Use Neither
 
 For refactoring that requires deep domain knowledge (financial regulations, medical protocols, legal compliance), neither automated tool is appropriate as the primary decision-maker. These refactorings must be driven by domain experts who understand the business implications of structural changes. Use both tools as assistants to execute the expert's plan, but never let either tool decide what to refactor in regulated domains.

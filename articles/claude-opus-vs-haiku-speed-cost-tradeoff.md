@@ -88,6 +88,12 @@ For unit tests of isolated functions, both models produce equivalent quality. Fo
 ### When should I escalate from Haiku to Opus mid-task?
 Escalate when: Haiku gives a wrong answer on the second attempt, the task involves reasoning about more than 5 files simultaneously, you need to debug a subtle concurrency or timing issue, or you are making an irreversible architectural decision.
 
+### How do I switch from an all-Opus workflow to smart routing?
+Start by logging which tasks you send to Opus for one week. Categorize each as "routine" (clear input, predictable output) or "complex" (ambiguous, multi-file, requires judgment). Most developers discover 75-80% of their prompts are routine. Redirect those to Haiku and monitor your acceptance rate — if you accept Haiku's first response more than 85% of the time, the routing is working. The transition takes about 3 days to calibrate.
+
+### Which model is better for onboarding junior developers?
+Haiku is ideal for junior developers because their questions tend to be straightforward (explain this function, generate a test, add a type annotation) and they ask many questions per day. At 150 tokens/sec, Haiku keeps pace with their learning speed without budget concerns. A junior developer using Haiku exclusively costs approximately $3-5/month versus $180-250/month on Opus — a 50x difference that makes providing AI assistance to every team member financially practical.
+
 ## When To Use Neither
 
-For tasks that require neither reasoning nor code generation — like reformatting JSON, sorting imports, or removing trailing whitespace — use your IDE's built-in tools or a simple script. Paying even Haiku's minimal cost for deterministic text transformations is wasteful when a regex or formatter handles it in milliseconds with zero API calls.
+For tasks that require neither reasoning nor code generation — like reformatting JSON, sorting imports, or removing trailing whitespace — use your IDE's built-in tools or a simple script. Paying even Haiku's minimal cost for deterministic text transformations is wasteful when a regex or formatter handles it in milliseconds with zero API calls. Prettier for formatting, ESLint with --fix for style enforcement, and `isort` for Python imports all produce guaranteed-correct output in under 100ms. If your task has a deterministic answer that a tool can compute, skip the AI entirely regardless of how cheap the model is. For teams that need reasoning capability but cannot afford cloud API costs at all, running a local model like Llama 3 via Ollama provides free inference at the cost of reduced quality and slower speeds on consumer hardware.

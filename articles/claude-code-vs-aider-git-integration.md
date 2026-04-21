@@ -81,6 +81,12 @@ Claude Code can read conflict markers, understand both sides, and write a resolu
 ### Do both tools respect .gitignore?
 Yes. Both tools respect .gitignore when searching for files. Claude Code reads .gitignore as part of its file system awareness. Aider uses it when building its repository map to exclude irrelevant files.
 
+### How do I migrate from Aider to Claude Code?
+Install Claude Code and start using it in the same repository — no configuration migration is needed since Aider does not store project-specific config files by default. If you relied on Aider's auto-commit for safety, add "always commit after completing each task" to your project's CLAUDE.md file to replicate similar behavior. The biggest adjustment is mental: stop expecting automatic commits and build a habit of explicitly requesting commits at logical checkpoints. Most developers adapt within 2-3 days.
+
+### Which tool is better for onboarding developers who are new to git?
+Aider's automatic commits mean new developers never lose work and can always review what just changed with `git log --oneline`. This is forgiving and educational — they see proper commit messages being generated and learn what good git history looks like. Claude Code assumes git proficiency and will execute whatever git commands you request, including destructive ones. For developers still learning git fundamentals, Aider's guardrails prevent common mistakes like forgetting to commit before switching branches.
+
 ## When To Use Neither
 
 For purely mechanical git operations (rebasing, cherry-picking, managing remotes), standard git CLI or GUI tools (GitKraken, lazygit, tig) are faster and more reliable than AI tools. Neither Claude Code nor Aider adds value when the operation is deterministic and does not require code understanding. Use AI git integration specifically when changes involve understanding code semantics, not just moving commits around.

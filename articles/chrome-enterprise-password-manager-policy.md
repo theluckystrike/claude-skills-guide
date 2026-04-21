@@ -11,6 +11,8 @@ tags: [chrome, enterprise, password-manager, security, policy, group-policy]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome's built-in password manager has evolved significantly, becoming a viable option for enterprise credential management when properly configured through policies. This guide walks through the available enterprise controls, practical implementation strategies, and configuration examples you can apply immediately.
 

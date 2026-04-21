@@ -12,6 +12,8 @@ score: 8
 categories: [troubleshooting]
 tags: [chrome-devtools, responsive-design, web-development]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 Chrome DevTools responsive design mode is a powerful built-in tool that lets you test how your website renders across different screen sizes without leaving your browser. Instead of resizing your browser window manually or switching between devices, you can emulate dozens of device viewports directly in Chrome.

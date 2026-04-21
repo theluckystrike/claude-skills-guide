@@ -11,6 +11,8 @@ tags: [tools]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # How to Clear Chrome Cache for Faster Browsing: A Developer's Guide

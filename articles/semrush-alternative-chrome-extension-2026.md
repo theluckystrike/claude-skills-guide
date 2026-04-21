@@ -12,6 +12,8 @@ tags: [tools]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Semrush Alternative Chrome Extension in 2026

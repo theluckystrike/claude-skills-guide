@@ -214,7 +214,7 @@ Docker networking fails due to five common categories: bridge network misconfigu
 
 ### What is Essential Diagnostic Commands?
 
-Essential Docker networking diagnostic commands include `docker network ls` to list all networks, `docker network inspect bridge` to examine a specific network's subnet and connected containers, `docker inspect container_name --format='{{json .NetworkSettings}}'` for container-level network configuration, `docker port container_name` to view active port mappings, and `docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"` to list running containers with their network info. Claude Code analyzes the output and explains misconfigured subnets or missing connections.
+Essential Docker networking diagnostic commands include `docker network ls` to list all networks, `docker network inspect bridge` to examine a specific network's subnet and connected containers, `docker inspect container_name --format='{% raw %}{{json .NetworkSettings}}{% endraw %}'` for container-level network configuration, `docker port container_name` to view active port mappings, and `docker ps --format "table {% raw %}{{.Names}}\t{{.Status}}\t{{.Ports}}{% endraw %}"` to list running containers with their network info. Claude Code analyzes the output and explains misconfigured subnets or missing connections.
 
 ### What are the common docker networking issues and solutions?
 

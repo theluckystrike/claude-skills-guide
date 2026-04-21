@@ -48,6 +48,8 @@ Claude Sonnet 4.6 is the better default for most coding tasks because its 5x low
 
 - **Ambiguous specifications** — When requirements are vague or contradictory, Opus asks better clarifying questions and makes more reasonable assumptions. It demonstrates stronger theory-of-mind about what the developer likely intended, reducing back-and-forth cycles.
 
+- **Long-session consistency** — In extended conversations exceeding 50 messages, Opus maintains better coherence about earlier decisions, constraints, and context. Sonnet occasionally "forgets" requirements stated 30+ messages earlier in very long sessions, requiring developers to re-state constraints. For full-day pair programming sessions spanning 100+ interactions, Opus's consistency reduces the need for repetitive context reminders by approximately 40%.
+
 ## Cost Reality
 
 For a solo developer using Claude Code daily:

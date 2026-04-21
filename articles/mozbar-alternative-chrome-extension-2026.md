@@ -12,6 +12,8 @@ reviewed: true
 score: 0
 tags: [chrome-extension, seo, developer-tools, browser]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # MozBar Alternative Chrome Extension 2026: Developer SEO Tools

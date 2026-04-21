@@ -12,6 +12,8 @@ score: 8
 categories: [guides, security]
 tags: [wireguard, vpn, performance, file-transfer]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 

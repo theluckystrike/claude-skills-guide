@@ -11,6 +11,8 @@ tags: [chrome, browser, performance, debugging, developer-tools]
 reviewed: true
 score: 7
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 # Chrome Too Many Processes: A Developer's Guide to Fixing High Memory Usage
 

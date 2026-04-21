@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "How to Use Zotero Chrome Extension Setup Guide"
-description: "Set up Zotero Chrome extension connector. Configure metadata capture, troubleshoot sync issues, and optimize your research workflow. Tested on Chrome."
+title: "Using Claude Code with Zotero for Research Paper Workflows (2026)"
+description: "Combine Claude Code with Zotero to process research papers, generate summaries, and implement paper algorithms. Setup guide for academic developer workflows."
 date: 2026-03-15
-last_modified_at: 2026-04-17
+last_modified_at: 2026-04-21
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /zotero-chrome-extension-setup-guide/
 reviewed: true
@@ -16,9 +17,26 @@ geo_optimized: true
 ---
 
 {% raw %}
-# Zotero Chrome Extension Setup Guide
+# Using Claude Code with Zotero for Research Paper Workflows
 
 Zotero's Chrome connector transforms your browser into a powerful research assistant, automatically detecting and saving academic papers, web articles, and citations as you browse. For developers and power users, the extension offers granular control over metadata extraction, storage behavior, and integration with local Zotero installations. This guide covers the complete setup process, configuration options, and practical troubleshooting strategies.
+
+## How Claude Code Supercharges Zotero Research Workflows
+
+The combination of Zotero for paper collection and Claude Code for paper processing creates a powerful academic development workflow. Once you have collected papers via the Zotero Chrome connector, Claude Code can:
+
+- **Summarize collected papers** by reading PDFs from your Zotero storage directory and generating concise technical summaries
+- **Implement paper algorithms** directly from research papers you have saved, translating pseudocode into working implementations
+- **Generate literature review sections** by analyzing metadata and abstracts across your Zotero collections
+- **Extract and organize citations** for documentation and README files in your codebases
+- **Compare methodologies** across multiple papers in the same Zotero collection
+
+A typical workflow: collect 10-15 papers on a topic using Zotero's Chrome connector, then use Claude Code to read the PDFs, synthesize the key findings, and generate implementation code based on the most promising approaches.
+
+**Related Claude Code guides:**
+- [Claude Code PDF Processing and Analysis](/claude-code-pdf-processing/)
+- [Claude Code Research Automation](/claude-code-research-workflows/)
+- [Claude Code Documentation Generation](/claude-code-documentation-generation/)
 
 ## Prerequisites and Initial Installation
 

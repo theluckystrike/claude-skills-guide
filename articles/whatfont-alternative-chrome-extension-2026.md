@@ -11,6 +11,8 @@ reviewed: true
 score: 7
 tags: [chrome-extension, fonts, web-development, design-tools]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # WhatFont Alternative Chrome Extension in 2026

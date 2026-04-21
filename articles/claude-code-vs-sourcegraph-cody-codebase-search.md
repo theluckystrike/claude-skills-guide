@@ -49,6 +49,8 @@ Sourcegraph Cody provides more comprehensive search across large multi-repositor
 
 - **Scale performance** — For codebases with millions of files across hundreds of repositories, Sourcegraph's purpose-built search infrastructure returns results in under a second. Claude Code's on-demand approach would take impractical amounts of time to search that volume of code since it reads files sequentially.
 
+- **Code navigation and references** — Cody integrates with Sourcegraph's code intelligence for precise "find all references" and "go to definition" across repository boundaries. When tracing a shared library function used by 12 different services, Cody shows every callsite across the entire organization in under 500ms. Claude Code's grep-based search finds text matches but cannot distinguish between a function definition, an import, and a comment mentioning the same name without additional reasoning steps.
+
 ## Cost Reality
 
 Claude Code's search costs are part of its token usage. A search operation (running grep, reading 3-5 matching files, analyzing results) costs approximately $0.02-0.10 depending on file sizes and model used. Running 50 searches per day on Sonnet 4.6 costs roughly $2-5/day.
@@ -79,6 +81,9 @@ Yes. Some developers use Cody for initial broad searches ("where does this patte
 ### How does search quality compare for test files?
 Both tools search test files, but Claude Code's explicit search means you can specifically target test directories. Cody's relevance ranking sometimes deprioritizes test files unless you explicitly mention tests in your query, since it optimizes for implementation code.
 
+### How do I migrate from Sourcegraph Cody to Claude Code for search?
+You cannot fully replace Cody with Claude Code if you depend on cross-repository search. However, for single-repo work, clone the repository locally and use Claude Code's grep and glob tools. The main workflow change: instead of typing a search query into Cody's interface, you describe what you are looking for in natural language to Claude Code, which then runs appropriate search commands and analyzes results in one step. For teams that used Cody primarily for single-repo exploration, Claude Code provides equivalent or better results at lower latency.
+
 ## When To Use Neither
 
-For simple symbol lookup (finding a function definition, jumping to a type declaration), your IDE's built-in "Go to Definition" and "Find All References" features are instantaneous and 100% accurate since they use the actual language server. Neither AI-based search tool is necessary for deterministic navigation tasks that language tooling handles perfectly.
+For simple symbol lookup (finding a function definition, jumping to a type declaration), your IDE's built-in "Go to Definition" and "Find All References" features are instantaneous and 100% accurate since they use the actual language server. Neither AI-based search tool is necessary for deterministic navigation tasks that language tooling handles perfectly. For codebases under 10,000 lines, manual grep or your IDE's built-in search handles every realistic search need without the overhead of either tool's setup and cost.

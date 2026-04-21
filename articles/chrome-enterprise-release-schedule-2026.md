@@ -11,6 +11,8 @@ tags: [tools]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Chrome Enterprise Release Schedule 2026: A Practical Guide

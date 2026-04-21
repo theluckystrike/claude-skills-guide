@@ -12,6 +12,8 @@ tags: [chrome-extension, enterprise, chrome-enterprise]
 score: 7
 reviewed: true
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 When managing Chrome extensions across an enterprise organization, you often need more control than the public Chrome Web Store provides. Chrome Enterprise Webstore Private offers a solution for deploying internal extensions to your organization without making them publicly available. This guide covers everything developers and IT administrators need to know about setting up and using private extension deployment.

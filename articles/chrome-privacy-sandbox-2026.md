@@ -11,6 +11,8 @@ reviewed: true
 score: 7
 permalink: /chrome-privacy-sandbox-2026/
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Chrome Privacy Sandbox 2026: A Developer Guide to the Latest APIs

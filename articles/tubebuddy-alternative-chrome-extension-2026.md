@@ -12,6 +12,8 @@ score: 8
 categories: [comparisons]
 tags: [youtube, seo, chrome-extension]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # TubeBuddy Alternative Chrome Extension in 2026

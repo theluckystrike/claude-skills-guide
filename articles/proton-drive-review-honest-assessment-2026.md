@@ -12,6 +12,8 @@ score: 7
 categories: [guides]
 tags: [proton, cloud-storage, privacy]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Proton Drive Review: Honest Assessment 2026

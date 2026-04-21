@@ -12,6 +12,8 @@ score: 8
 categories: [guides]
 tags: [chrome-extension, userscripts, automation]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # TamperMonkey Alternative Chrome Extension in 2026

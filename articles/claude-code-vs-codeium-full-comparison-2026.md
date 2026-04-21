@@ -87,6 +87,12 @@ Not practically. Claude Code is designed for explicit interactions, not passive 
 ### Which is better for learning to code?
 Codeium's autocomplete helps beginners write code faster by suggesting patterns. Claude Code's explanations help intermediate developers understand why code works. For true beginners, Codeium's visual IDE integration is less intimidating than a terminal tool.
 
+### How do I migrate from Codeium to Claude Code?
+There is no configuration to migrate since the tools serve different purposes. Most developers do not replace Codeium with Claude Code — they add Claude Code alongside it. Keep Codeium installed for passive autocomplete (it remains free) and use Claude Code for tasks that require reasoning, multi-file changes, or command execution. If budget forces a single choice, evaluate whether your daily work is primarily typing-speed-limited (keep Codeium) or thinking-speed-limited (switch to Claude Code).
+
+### Which tool is better for onboarding new team members?
+Codeium onboards faster because it starts working immediately after extension installation with zero prompt engineering knowledge required. New hires see suggestions as they type within 60 seconds. Claude Code requires understanding how to phrase requests effectively, which takes 2-3 days of practice. However, Claude Code provides deeper onboarding value for understanding an unfamiliar codebase — new developers can ask "explain how the authentication middleware works" and get contextual answers that Codeium's autocomplete cannot provide.
+
 ## When To Use Neither
 
-If you work in a highly regulated environment where no code can leave the network (defense, certain financial institutions), neither cloud-based tool is appropriate. Self-hosted solutions like Tabby (open source autocomplete) or local models via Ollama provide AI coding assistance without transmitting code to external servers. Both Claude Code and Codeium send code to cloud APIs for processing.
+If you work in a highly regulated environment where no code can leave the network (defense, certain financial institutions), neither cloud-based tool is appropriate. Self-hosted solutions like Tabby (open source autocomplete) or local models via Ollama provide AI coding assistance without transmitting code to external servers. Both Claude Code and Codeium send code to cloud APIs for processing. Tabby specifically offers a compelling middle ground: it provides IDE-integrated autocomplete similar to Codeium but runs entirely on your own GPU infrastructure, making it suitable for air-gapped networks and strict data sovereignty requirements.

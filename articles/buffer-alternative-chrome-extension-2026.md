@@ -13,6 +13,8 @@ reviewed: true
 score: 8
 geo_optimized: true
 sitemap: false
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 # Buffer Alternative Chrome Extension 2026

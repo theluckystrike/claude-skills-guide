@@ -11,6 +11,8 @@ score: 8
 categories: [troubleshooting]
 tags: [chrome, browser-performance, developer-tools, chrome-2026]
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 
 

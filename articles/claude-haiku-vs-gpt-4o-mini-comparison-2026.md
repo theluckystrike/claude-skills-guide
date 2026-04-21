@@ -94,6 +94,12 @@ Both are fast enough (140-150 tokens/sec) for autocomplete features. GPT-4o Mini
 ### Should I fine-tune GPT-4o Mini for my team's code style?
 If your team has highly specific patterns (proprietary frameworks, unusual naming conventions, custom architectures) that appear in >80% of generated code, fine-tuning yields measurable quality improvements. If you follow standard patterns (React, Express, Django, etc.), the base model already knows them well and fine-tuning provides minimal benefit.
 
+### How do I migrate from GPT-4o Mini to Haiku?
+Swap the API endpoint from OpenAI to Anthropic and adjust the request body format (OpenAI uses `messages` with `role`/`content`; Anthropic uses a similar structure with a separate `system` field). Most prompts transfer without rewriting. Budget an approximately 2x increase in per-token cost ($1.25 vs $0.60 per million output tokens) in exchange for the larger 200K context window and more reliable instruction following. The migration itself takes under an hour for simple integrations.
+
+### Which model is better for onboarding junior developers?
+Both are suitable for junior developer workloads since the tasks are typically straightforward. Choose based on ecosystem: if your team uses Claude Code, Haiku provides a consistent experience when juniors escalate to Sonnet or Opus. If your team uses OpenAI-based tools, GPT-4o Mini avoids context-switching between API providers. At these price points ($3-6/month per junior developer), cost should not influence the decision.
+
 ## When To Use Neither
 
-For tasks where correctness is critical and reasoning is required — security-sensitive code, financial calculations, concurrency logic — neither budget model is appropriate. Their cost savings disappear when you factor in developer time reviewing and fixing subtle bugs. Spend the extra $0.50-1.00 per task to use Sonnet 4.6 or GPT-4o and get it right the first time.
+For tasks where correctness is critical and reasoning is required — security-sensitive code, financial calculations, concurrency logic — neither budget model is appropriate. Their cost savings disappear when you factor in developer time reviewing and fixing subtle bugs. Spend the extra $0.50-1.00 per task to use Sonnet 4.6 or GPT-4o and get it right the first time. For latency-critical autocomplete where even these budget models feel too slow, consider local models like DeepSeek Coder running on-device through Ollama, which eliminates network round-trips entirely at the cost of reduced accuracy.

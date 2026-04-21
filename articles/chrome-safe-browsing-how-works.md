@@ -11,6 +11,8 @@ tags: [safe-browsing, chrome-security, web-protection, phishing-detection]
 reviewed: true
 score: 7
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 # Chrome Safe Browsing: How It Works Under the Hood
 

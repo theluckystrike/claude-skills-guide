@@ -1,225 +1,98 @@
 ---
-layout: default
-title: "Claude Code vs Sourcegraph Cody 2026 Comparison"
-description: "Compare Claude Code and Sourcegraph Cody for AI-assisted development. Context engines, code search, editing capabilities, and team workflows."
-date: 2026-04-15
-last_modified_at: 2026-04-17
-author: "Claude Code Guides"
+layout: post
+title: "Claude Code vs Sourcegraph Cody (2026): Compared"
+description: "Claude Code vs Sourcegraph Cody compared: pricing, context, features. 3-persona verdict for solo devs, teams, enterprise."
 permalink: /claude-code-vs-cody-comparison-2026/
-reviewed: true
-categories: [comparisons, claude-code]
-tags: [comparison, cody, sourcegraph, code-search, tools]
-geo_optimized: true
+date: 2026-04-21
+last_tested: "2026-04-21"
+render_with_liquid: false
 ---
 
-# Claude Code vs Sourcegraph Cody 2026 Comparison
+## Quick Verdict
 
-## Overview
+Sourcegraph Cody is the superior choice for large organizations with hundreds of repositories where cross-repo code search and understanding matter most. Claude Code is the superior choice for developers who need an autonomous agent to plan, execute, and verify changes within a project. Cody finds code across your organization; Claude Code builds and modifies code in your project.
 
-Claude Code and Sourcegraph Cody both bring AI assistance to software development, but they come from different lineages. Claude Code is Anthropic's terminal-native agentic coding assistant. Cody is Sourcegraph's AI assistant built on top of their code search and intelligence platform. The key differentiator is context: Claude Code works with your local project, while Cody leverages Sourcegraph's deep understanding of your entire codebase including cross-repository dependencies.
+## Feature Comparison
 
-## Context Engines
+| Feature | Claude Code | Sourcegraph Cody |
+|---------|-------------|-----------------|
+| Pricing | API usage ($60-200/mo) or $200/mo Max | Free tier, Pro $9/mo, Enterprise custom |
+| Context window | 200K tokens (project-level) | Model-dependent + Sourcegraph retrieval |
+| IDE support | Terminal only | VS Code, JetBrains (extension) |
+| Language support | All via Claude model | All (with SCIP indexing for many) |
+| Offline mode | No | No (self-hosted Enterprise option) |
+| Terminal integration | Native — IS the terminal | None (IDE extension) |
+| Multi-file editing | Unlimited autonomous | Inline suggestions (one file at a time) |
+| Custom instructions | CLAUDE.md project files | Cody context files |
+| Cross-repo search | No (single repo) | Yes — organization-wide via Sourcegraph |
+| Symbol-level indexing | No (text search only) | Yes — SCIP index (types, functions, classes) |
+| Agent mode | Full autonomous execution | None (chat + inline edit) |
+| Shell execution | Yes — permission-gated | No |
+| Code graph | No pre-built graph | Yes — full dependency graph |
 
-**Sourcegraph Cody** has access to Sourcegraph's code intelligence graph. This means it can:
+## Pricing Breakdown
 
-- Search across all repositories in your organization
-- Follow cross-repository references (function defined in repo A, called in repo B)
-- Understand code at the symbol level (types, functions, classes)
-- Access code that was recently changed by other teams
-- Index documentation alongside code
+**Sourcegraph Cody** (source: [sourcegraph.com/pricing](https://sourcegraph.com/pricing)):
+- Free: Limited chat and completions
+- Pro ($9/month): Unlimited chat, enhanced completions
+- Enterprise: Custom pricing — includes Sourcegraph platform, cross-repo search, SCIP indexing, admin controls, self-hosted option
 
-Cody's context window is enhanced by Sourcegraph's retrieval system, which fetches the most relevant code snippets automatically based on your query.
+**Claude Code** (source: [anthropic.com/pricing](https://anthropic.com/pricing)):
+- Sonnet 4.6: $3/$15 per million tokens ($60-160/month typical)
+- Opus 4.6: $15/$75 per million tokens ($150-400/month typical)
+- Max plan: $200/mo unlimited
+- No free tier
 
-**Claude Code** reads files from your local filesystem using tools like Read, Grep, and Glob. Its context comes from:
+## Where Claude Code Wins
 
-- Files you explicitly reference or that it discovers through search
-- Your CLAUDE.md configuration file
-- Git history and diff information
-- Shell command output
-- The ongoing conversation
+- **Autonomous task execution:** Describe a feature and Claude Code implements it end-to-end — creating files, writing code, running tests, fixing failures. Cody suggests code and answers questions but does not execute changes autonomously or run commands.
 
-Claude Code builds context dynamically during the conversation by searching and reading files as needed. It does not have a pre-built code graph but compensates with powerful search capabilities and the ability to explore the codebase interactively.
+- **Shell command access:** Claude Code runs tests, builds projects, starts services, reads logs, and manages git. This enables complete development workflows from a single tool. Cody operates within the IDE sandbox with no system-level capabilities.
 
-| Context Feature | Claude Code | Sourcegraph Cody |
-|----------------|------------|-----------------|
-| Local file access | Full | Via IDE extension |
-| Cross-repo search | No (single repo) | Yes (organization-wide) |
-| Symbol-level indexing | No (text search) | Yes (SCIP index) |
-| Pre-built code graph | No | Yes |
-| Dynamic exploration | Yes (read, grep, glob) | Limited |
-| CLAUDE.md/config | Yes | Cody context files |
-| Git history | Yes | Yes (via Sourcegraph) |
+- **Dynamic deep-dive exploration:** Claude Code reads files on demand, follows call chains, traces bugs, and explores codebases interactively during conversation. While Cody has the code graph, Claude Code's active exploration often surfaces issues that static indexing misses.
 
-## Editing Capabilities
+- **Project memory via CLAUDE.md:** Persistent project files encode architecture decisions, conventions, and patterns. Team members share context through version-controlled documentation. Cody's context files exist but are less developed.
 
-**Claude Code** edits files directly on your filesystem. It can:
+## Where Sourcegraph Cody Wins
 
-- Create, edit, and delete files
-- Run shell commands (build, test, lint, deploy)
-- Chain operations (fix a bug, run tests, iterate)
-- Work with any tool available in your terminal
-- Execute multi-step workflows autonomously
+- **Cross-repository search:** Ask "where is the PaymentProvider interface implemented across our repos?" and Cody queries Sourcegraph's index across every repository in your organization. Precise results with file paths, line numbers, and context. Claude Code can only search the current repository.
 
-```
-Fix the N+1 query in the user list endpoint. Check the database
-query logs, add the proper eager loading, and verify with a test
-that the query count is bounded.
-```
+- **Symbol-level code intelligence:** Cody understands code at the type level through SCIP indexing — function signatures, class hierarchies, interface implementations, and dependency relationships. Claude Code uses text-based grep search which misses semantic relationships.
 
-Claude Code reads the code, runs the application, checks query logs, makes the fix, and runs tests to verify.
+- **Organization-wide context:** When you ask Cody a question, it retrieves relevant code from across hundreds of repositories automatically. A question about authentication pulls middleware from one repo, token validation from another, and configuration from a third. Claude Code sees only the current project directory.
 
-**Sourcegraph Cody** operates primarily through IDE extensions (VS Code, JetBrains). It can:
+- **IDE-native experience:** Cody works as a sidebar in VS Code and JetBrains with inline suggestions, code highlighting, and hover actions. The interaction feels like a natural extension of your editor. Claude Code's terminal interface requires context-switching.
 
-- Suggest inline completions
-- Generate code from natural language in the editor
-- Edit selected code based on instructions
-- Answer questions about the codebase
-- Generate unit tests for selected code
+- **Lower entry price:** Cody Pro at $9/month provides unlimited chat and enhanced completions. Claude Code's minimum useful spend is $60-80/month. For developers who primarily need code search and Q&A, Cody delivers more at a lower price.
 
-Cody's editing is more interactive and integrated into the editor workflow. You select code, give an instruction, and Cody modifies the selection.
+## When To Use Neither
 
-## Code Search and Understanding
+If you work on a single small project (under 10K lines) with no cross-repository dependencies, both tools are overkill. A standard autocomplete tool (Copilot, Codeium) covers most needs. If your organization does not use Sourcegraph for code search, Cody loses its primary advantage and becomes a generic AI chat — in that case, compare Claude Code to other tools like Cursor or Copilot instead.
 
-This is where the tools diverge most significantly.
+## The 3-Persona Verdict
 
-**Sourcegraph Cody** inherits Sourcegraph's code search capabilities. When you ask Cody "Where is the payment processing logic?", it queries Sourcegraph's index across all repositories and returns precise results with file paths, line numbers, and surrounding context. This is invaluable for large organizations with hundreds of repositories.
+### Solo Developer
+Claude Code provides more value for solo developers who typically work within a single project and need agent capabilities. Cody's cross-repo search advantage is irrelevant when you have one repository. Choose Claude Code for autonomous execution or Cody Pro ($9/mo) for affordable AI chat in your IDE.
 
-```
-# Cody can answer questions like:
-"What services depend on the UserService interface?"
-"Show me all implementations of the PaymentProvider interface across our repos"
-"Who last modified the rate limiting configuration?"
-```
+### Small Team (3-10 devs)
+If your team shares a monorepo, Claude Code's single-project focus works well and its skills system standardizes team workflows. If your team maintains multiple repositories with shared libraries, Cody's cross-repo search becomes genuinely valuable for understanding how changes propagate. Consider Cody for the team + Claude Code for the lead.
 
-**Claude Code** searches the current repository using grep and glob patterns. It is thorough within a single repo but cannot search across repositories without explicit setup:
+### Enterprise (50+ devs)
+Sourcegraph Cody Enterprise with the full Sourcegraph platform is the clear choice for organizations with hundreds of repositories, thousands of developers, and complex dependency graphs. Add Claude Code for automation (CI/CD, code review bots, migration scripts) where Cody's chat-based interface falls short. These tools complement each other at enterprise scale.
 
-```
-Search for all usages of the PaymentProvider interface in this codebase.
-Show me the implementations and where they are injected.
-```
+## Migration Guide
 
-Claude Code will find everything within the current project but will not automatically discover implementations in other repositories.
+Adding Claude Code to a Cody workflow:
 
-## Workflow Comparison
+1. **Keep Cody for search and understanding** — Cody's cross-repo intelligence is irreplaceable. Use it when you need to find code, understand dependencies, or ask questions spanning multiple repos.
+2. **Use Claude Code for execution** — Once Cody helps you identify the right files and patterns, switch to Claude Code to make the actual changes, run tests, and verify the fix.
+3. **Create CLAUDE.md from Cody knowledge** — Use Cody to answer architectural questions about your project, then document those answers in CLAUDE.md for Claude Code's reference.
+4. **Establish the workflow split** — Cody for "where is it and how does it work?", Claude Code for "change it, test it, and ship it." The tools serve different phases of the development cycle.
+5. **Connect both to your CI pipeline** — Cody provides context in the IDE; Claude Code automates tasks in the terminal. Together they cover understanding and execution.
 
-### Exploring unfamiliar code
+## Related Comparisons
 
-**With Cody:**
-Open the IDE, ask "How does the authentication flow work in this service?", and Cody pulls relevant code from across the codebase using Sourcegraph's context engine. It can reference middleware in one repo, token validation in another, and the auth configuration in a third.
-
-**With Claude Code:**
-```
-Trace the authentication flow starting from the login endpoint.
-Read each file in the chain: route handler → middleware → service → database.
-Explain the flow and identify any security concerns.
-```
-Claude Code systematically reads files and follows the call chain within the current repo.
-
-### Fixing bugs
-
-**With Cody:**
-Select the buggy code in your editor, tell Cody to fix it, review the inline suggestion, accept or reject. Cody understands the broader context through Sourcegraph's index.
-
-**With Claude Code:**
-```
-The login endpoint returns 500 when the user has a null display name.
-Find the bug, fix it, add a test for the null case, and run the test suite.
-```
-Claude Code finds the bug, writes the fix, creates a test, executes it, and reports back. The full loop happens without manual intervention.
-
-### Generating code
-
-**With Cody:**
-Type a comment or select a block and ask Cody to generate. Cody's completions are informed by patterns from your entire codebase, so generated code matches your organization's conventions.
-
-**With Claude Code:**
-Ask for a complete implementation. Claude Code reads existing code for patterns and generates new code that matches:
-```
-Create a new API endpoint for managing team invitations.
-Follow the same pattern as the existing user endpoint in src/routes/users.ts.
-Include validation, error handling, and tests.
-```
-
-## Team and Enterprise Features
-
-**Sourcegraph Cody Enterprise** offers:
-- Organization-wide code context (every repo indexed)
-- Custom context files (similar to CLAUDE.md)
-- Admin controls for allowed repositories
-- Usage analytics and audit logs
-- Self-hosted deployment option
-- SSO/SAML authentication
-
-**Claude Code** for teams offers:
-- CLAUDE.md per project (committed to version control)
-- API key management
-- Usage-based billing
-- Claude Max plans for individuals
-- Enterprise API with custom SLAs
-
-## Pricing (as of April 2026)
-
-| Plan | Claude Code | Sourcegraph Cody |
-|------|------------|-----------------|
-| Free | API free tier | Cody Free (limited) |
-| Pro | $20/month (Claude Pro) | Cody Pro ($9/month) |
-| Power | $100-200/month (Claude Max) | Included in Pro |
-| Enterprise | API usage-based | Sourcegraph Enterprise (custom) |
-
-## When to Use Claude Code
-
-- **Full agentic workflows**: Build, test, debug, deploy from the terminal
-- **Single-repo focus**: Deep work within one project at a time
-- **Command execution**: Tasks that need to run builds, tests, or scripts
-- **Custom tool chains**: Work with any language, framework, or CLI tool
-- **Multi-step reasoning**: Complex tasks requiring iteration and verification
-
-## When to Use Sourcegraph Cody
-
-- **Large organizations**: Many repositories with shared libraries and services
-- **Cross-repo understanding**: Questions that span multiple repositories
-- **IDE-integrated workflow**: Prefer staying in VS Code or JetBrains
-- **Code discovery**: Finding implementations, usages, and patterns across the org
-- **Onboarding**: New team members exploring a large, unfamiliar codebase
-
-## Using Both Together
-
-The tools complement each other well:
-
-1. Use **Cody** to understand the broader codebase and find relevant code across repos
-2. Use **Claude Code** to make changes, run tests, and verify the fix
-3. Use **Cody** for inline completions while coding in the IDE
-4. Use **Claude Code** for complex agentic tasks that need shell access
-
----
-
-
-<div class="author-bio">
-
-**Written by Michael** — solo dev, Da Nang, Vietnam. 50K+ Chrome extension users. $500K+ on Upwork (100% Job Success). Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
-
-</div>
-
----
-
-<div class="mastery-cta">
-
-I've tried them all. Claude Code wins — but only if you set it up right.
-
-The gap isn't the tool. It's the CLAUDE.md, the prompts, the workflow. I run 5 Claude Max subscriptions in parallel with autonomous agent fleets. These are my actual configs — the ones that let a solo dev outproduce a small team.
-
-**[See the full setup →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-compare&utm_campaign=claude-code-vs-cody-comparison-2026)**
-
-$99. Once. Everything I use to ship.
-
-</div>
-
----
-
-## Related Guides
-
-- [Claude Code VS Cursor 2026 Detailed Comparison](/claude-code-vs-cursor-2026-detailed-comparison/)
-- [Claude Code VS Amazon Q Developer Comparison 2026](/claude-code-vs-amazon-q-developer-comparison-2026/)
-- [Agentic AI Coding Tools Comparison 2026](/agentic-ai-coding-tools-comparison-2026/)
-
-
+- [Claude Code vs Cursor 2026: Detailed Comparison](/claude-code-vs-cursor-2026-detailed-comparison/)
+- [Claude Code vs Amazon Q Developer 2026](/claude-code-vs-amazon-q-developer-full-2026/)
+- [Agentic AI Coding Tools Compared 2026](/agentic-ai-coding-tools-comparison-2026/)
+- [Claude Code vs Tabnine: Complete Comparison 2026](/claude-code-vs-tabnine-full-comparison-2026/)

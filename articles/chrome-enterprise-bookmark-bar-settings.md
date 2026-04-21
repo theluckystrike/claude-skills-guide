@@ -11,6 +11,8 @@ tags: [tools]
 reviewed: true
 score: 8
 geo_optimized: true
+sitemap: false
+robots: "noindex, nofollow"
 ---
 The Chrome browser's bookmark bar remains one of the most frequently accessed features for developers and power users who need quick access to documentation, repositories, and internal tools. For organizations deploying Chrome across multiple machines, understanding how to configure bookmark bar settings through enterprise policies becomes essential for maintaining consistency and productivity.
 
