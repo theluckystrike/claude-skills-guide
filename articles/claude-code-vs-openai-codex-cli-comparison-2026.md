@@ -77,6 +77,24 @@ Codex CLI's kernel-level sandboxing, open-source auditability, and deny-read pol
 
 Source: [anthropic.com/pricing](https://anthropic.com/pricing), [github.com/openai/codex](https://github.com/openai/codex)
 
+## FAQ
+
+### Can I use both Claude Code and Codex CLI on the same project?
+
+Yes. Both tools operate independently in the terminal. Some developers use Codex CLI for quick, sandboxed tasks where they want security guarantees, and Claude Code for complex tasks requiring unrestricted system access. They do not interfere with each other.
+
+### Is Codex CLI's kernel-level sandbox truly more secure than Claude Code's permissions?
+
+For preventing unintended filesystem and network access, yes. Codex CLI's Seatbelt (macOS) and Landlock/seccomp (Linux) enforcement happens at the OS kernel level, which cannot be bypassed by creative prompt injection. Claude Code's application-layer permissions can theoretically be circumvented if the model constructs commands that the permission system does not anticipate.
+
+### Which tool works better with large monorepos?
+
+Claude Code's unrestricted filesystem access lets it navigate across service boundaries in a monorepo without configuration. Codex CLI restricts access to the working directory by default, so you may need to adjust sandbox policies for monorepos where tasks span multiple top-level directories.
+
+### Does Codex CLI work on Windows?
+
+As of April 2026, Codex CLI officially supports macOS and Linux. Windows support requires WSL2 (Windows Subsystem for Linux). Claude Code runs natively on macOS, Linux, and Windows without a compatibility layer.
+
 ## The Bottom Line
 
 Claude Code and Codex CLI are the two strongest terminal-native AI coding agents in 2026 — but they make different architectural bets. Claude Code bets on capability: give the agent full system access with human-gated permissions, and it can solve any problem that spans code, infrastructure, and operations. Codex CLI bets on safety: restrict the agent at the kernel level by default, and developers can trust autonomous operation without worrying about unintended side effects. Both approaches are valid. Your choice depends on whether your bottleneck is capability (choose Claude Code) or trust (choose Codex CLI). The tools will likely converge over time as both add the other's strengths.

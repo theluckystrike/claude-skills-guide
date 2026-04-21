@@ -106,6 +106,24 @@ Claude Code Enterprise. Replit has no enterprise-grade security, audit logging, 
 
 Source: [anthropic.com/pricing](https://anthropic.com/pricing), [replit.com/pricing](https://replit.com/pricing)
 
+## FAQ
+
+### Can I import my existing project into Replit and use Replit Agent on it?
+
+You can import repositories into Replit, but complex projects with custom build systems, Docker dependencies, or non-standard toolchains frequently break during import. Replit Agent works best on projects created within Replit. For existing codebases, Claude Code running locally avoids all import friction.
+
+### Does Replit Agent work with languages Replit does not officially support?
+
+Replit supports most mainstream languages, but niche languages, specific compiler versions, or custom toolchains are not available. Claude Code runs on your machine and supports any language or tool your system has installed.
+
+### Which is cheaper for a solo developer building side projects?
+
+Replit Core at $25/month bundles AI, hosting, database, and domain management into one subscription. Claude Code Pro at $20/month covers agent access but hosting and databases are separate costs. If you deploy frequently, Replit's all-in-one pricing is simpler. If you already have hosting infrastructure, Claude Code costs less overall.
+
+### Can I switch from Replit Agent to Claude Code later without losing work?
+
+Yes. Export your Replit project to a GitHub repository, clone it locally, and continue development with Claude Code. Create a CLAUDE.md file documenting your project conventions so Claude Code understands the codebase context. The migration is straightforward for standard web applications.
+
 ## The Bottom Line
 
 Claude Code and Replit Agent are not competing for the same developer. Claude Code is for professionals who already have a development environment, existing code, and engineering practices. Replit Agent is for people who want to create software without managing infrastructure. The question is not which is better — it is which developer are you. If you are reading technical comparisons like this one, you are probably a Claude Code user. If someone sent you this link and you have never used a terminal, start with Replit.

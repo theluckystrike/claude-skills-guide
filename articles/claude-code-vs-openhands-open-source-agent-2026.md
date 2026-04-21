@@ -105,6 +105,24 @@ The gap narrows significantly when OpenHands uses Claude models via API. The pri
 4. Transfer CLAUDE.md instructions to OpenHands system prompts
 5. Set up git credentials within the container for repository access
 
+## FAQ
+
+### Can I use Claude models inside OpenHands?
+
+Yes. OpenHands supports any model accessible via API, including Claude Opus and Sonnet through Anthropic's API. This means you can get Claude-quality reasoning with OpenHands' open-source agent infrastructure and self-hosted deployment.
+
+### Does OpenHands require Docker to run?
+
+Yes. OpenHands uses Docker containers for sandboxed execution of agent-generated code. This is a hard requirement — if your environment cannot run Docker (corporate restrictions, certain cloud instances), OpenHands will not work. Claude Code runs directly on your machine with no container dependency.
+
+### Which tool is better for a team with strict data privacy requirements?
+
+OpenHands, self-hosted with local models (via Ollama), keeps all code and data on your infrastructure with zero external API calls. Claude Code always sends code context to Anthropic's API servers. For air-gapped or regulated environments, self-hosted OpenHands is the only viable option between the two.
+
+### How much maintenance does a self-hosted OpenHands deployment require?
+
+Expect 2-4 hours per month for updates, Docker image management, and model configuration changes. A dedicated platform engineer should handle initial setup (4-8 hours). Claude Code requires zero infrastructure maintenance since Anthropic manages everything server-side.
+
 ## Related Comparisons
 
 - [Claude Code vs Devin: AI Agent Comparison](/claude-code-vs-devin-ai-agent-comparison-2026/)

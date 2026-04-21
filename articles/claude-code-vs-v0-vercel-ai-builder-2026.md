@@ -108,6 +108,24 @@ This workflow leverages v0's speed for visual decisions and Claude Code's depth 
 4. Start asking Claude Code directly for component implementations rather than generating in v0 first
 5. Reserve v0 for the exploration phase when you genuinely do not know what you want
 
+## FAQ
+
+### Can I use v0-generated components directly in a Claude Code project?
+
+Yes. Export the component code from v0 (React + Tailwind), paste it into your project directory, then use Claude Code to adapt imports, add TypeScript types, connect to your data layer, and write tests. This is a common workflow for teams that use v0 for visual exploration and Claude Code for integration.
+
+### Does v0 support frameworks other than React and Next.js?
+
+v0 is optimized for React with Tailwind CSS and generates Next.js-compatible code by default. It does not natively generate Vue, Svelte, or Angular components. Claude Code supports any framework because it works with your existing project structure regardless of stack.
+
+### Is v0 useful for backend development?
+
+No. v0 generates frontend components exclusively — HTML structure, CSS styling, and client-side interactivity. For backend logic, API routes, database queries, and server-side processing, Claude Code is the appropriate tool.
+
+### Which is more cost-effective for a frontend-heavy project?
+
+For a project that is primarily UI work (landing pages, marketing sites, component libraries), v0 Premium at $20/month with 100 daily generations may be more productive per dollar. For projects with significant business logic, state management, and backend integration alongside the UI, Claude Code delivers more value because it handles the full stack.
+
 ## Related Comparisons
 
 - [Bolt.new vs Claude Code for Web Apps](/bolt-new-vs-claude-code-for-web-apps-2026/)

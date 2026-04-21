@@ -84,6 +84,24 @@ Cursor Business for all developers provides predictable budgeting and immediate 
 
 Source: [anthropic.com/pricing](https://anthropic.com/pricing), [cursor.com/pricing](https://cursor.com/pricing)
 
+## FAQ
+
+### Can I use Claude Code inside Cursor?
+
+Not directly. Claude Code runs in the terminal or as a VS Code extension. Cursor is a separate VS Code fork. You can run Claude Code in a terminal pane within Cursor, but the two tools do not share context or state.
+
+### Does Cursor support Claude models?
+
+Yes. Cursor allows you to select Claude Sonnet or Opus as the underlying model for chat and Composer requests. However, this uses Cursor's API proxy with Cursor's rate limits, not your own Anthropic API key.
+
+### Which tool handles larger codebases better?
+
+Claude Code reads files on demand and works within a 200K token context window with selective access across the entire repository. Cursor indexes your workspace for search but limits AI context to the files you actively reference. For repositories over 100K lines, Claude Code's on-demand file reading handles navigation and cross-cutting changes more effectively.
+
+### Is it worth paying for both Claude Code and Cursor?
+
+For most active developers, yes. Cursor Pro at $20/month provides inline autocomplete and visual diffs that save time during manual coding. Claude Code handles autonomous multi-step tasks, CI/CD automation, and large refactors that Cursor cannot. The combined $90-140/month cost is justified by covering both ends of the AI-assisted development spectrum.
+
 ## The Bottom Line
 
 Cursor is the best AI-enhanced code editor available — inline autocomplete, visual diffs, and model flexibility in a familiar VS Code interface at a predictable price. Claude Code is the best autonomous coding agent available — unrestricted system access, parallel subagents, and headless operation for complex development workflows. They solve different problems and work together naturally. The combination of Cursor for editing flow and Claude Code for autonomous heavy-lifting is arguably the most powerful developer setup in 2026.
