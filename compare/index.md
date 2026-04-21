@@ -26,6 +26,8 @@ The tools most developers evaluate against Claude Code.
 - [Claude Code vs Gemini CLI (2026): Compared](/claude-code-vs-gemini-cli-for-developers-2026/) — Google's terminal AI tool vs Anthropic's. Both target the command line; different philosophies.
 - [Claude Code vs OpenAI Codex CLI (2026): Compared](/claude-code-vs-openai-codex-cli-comparison-2026/) — OpenAI's terminal coding tool. How it measures against Claude Code.
 - [Claude Code vs Devin (2026): AI Agent Comparison](/claude-code-vs-devin-ai-agent-comparison-2026/) — The first AI software engineer vs Claude Code. Devin runs full environments; Claude Code integrates into yours.
+- [Claude Code vs ChatGPT Canvas (2026)](/claude-code-vs-chatgpt-canvas-coding-2026/) — OpenAI's coding workspace vs Anthropic's terminal agent. Different paradigms for AI-assisted development.
+- [Claude Code vs Warp AI (2026): Terminal AI](/claude-code-vs-warp-ai-terminal-2026/) — Two visions for AI in the terminal. Warp enhances shell UX; Claude Code acts as autonomous agent.
 
 ---
 
@@ -48,6 +50,9 @@ Tools that embed AI directly into your editor.
 - [Claude Code vs Sourcegraph Cody: Setup](/claude-code-vs-sourcegraph-cody-setup/) — Getting started with each codebase AI.
 - [Claude Code vs Sourcegraph Cody: Codebase Search](/claude-code-vs-sourcegraph-cody-codebase-search/) — Finding code in large repos.
 - [Claude Code vs Augment Code (2026): Enterprise AI](/claude-code-vs-augment-code-enterprise-2026/) — Emerging enterprise competitor targeting large codebases.
+- [Claude Code vs Augment Code: AI Coding Compared (2026)](/claude-code-vs-augment-code-ai-2026/) — Updated head-to-head with pricing, architecture, and 3-persona verdicts.
+- [Claude Code vs Zed AI: Terminal Agent vs Speed Editor (2026)](/claude-code-vs-zed-ai-editor-comparison-2026/) — Rust-native editor with built-in AI vs terminal-first coding agent.
+- [Claude Code vs Kilo Code (2026)](/claude-code-vs-kilo-code-comparison-2026/) — VS Code extension agent vs terminal CLI agent. Different autonomy models.
 
 ---
 
@@ -65,6 +70,9 @@ Autonomous coding agents and app builders.
 - [Claude Code vs Smol Developer (2026)](/claude-code-vs-smol-developer-ai-agents-2026/) — Lightweight AI agent comparison.
 - [Claude Code vs Sweep AI PR Automation (2026)](/claude-code-vs-sweep-ai-pr-automation-2026/) — Automated PR generation approaches.
 - [Claude Code vs v0 Vercel AI Builder (2026)](/claude-code-vs-v0-vercel-ai-builder-2026/) — UI generation vs full-stack coding.
+- [Claude Code vs Manus AI Agent (2026)](/claude-code-vs-manus-ai-agent-2026/) — Developer-focused agent vs general-purpose AI agent. Different scopes, different strengths.
+- [Claude Code vs GitHub Copilot Workspace Agent (2026)](/claude-code-vs-github-copilot-workspace-agent-2026/) — GitHub's plan-and-execute agent vs Claude Code's autonomous approach.
+- [Claude Code Teams vs Cursor Teams: Enterprise (2026)](/claude-code-teams-vs-cursor-teams-enterprise-2026/) — Team and enterprise plans compared: admin controls, SSO, audit logs, pricing per seat.
 
 ---
 
@@ -90,6 +98,8 @@ For developers building AI-powered applications.
 - [Claude Skills vs Custom GPTs (2026)](/claude-skills-vs-custom-gpts-comparison-2026/) — OpenAI's GPT Store vs Claude's skill system.
 - [Claude Skills vs MCP Servers](/claude-skills-vs-mcp-servers-comparison/) — Skills vs Model Context Protocol servers.
 - [Claude Skills vs Subagents](/claude-skills-vs-subagents-comparison/) — When to use skills vs when to spawn subagents.
+- [Claude Skills vs LangChain Agents (2026)](/claude-skills-vs-langchain-agents-comparison-2026/) — Claude's skill system vs LangChain's agent framework for building AI applications.
+- [Claude Skills vs OpenAI Assistants API (2026)](/claude-skills-vs-openai-assistants-api-2026/) — Updated comparison of agent-building abstractions with current pricing.
 
 ---
 
@@ -130,6 +140,10 @@ Multi-tool comparisons and decision frameworks.
 - [Best AI Coding Tools for Python (2026)](/best-ai-coding-tools-python-comparison-2026/) — Language-specific recommendations.
 - [Best AI Coding Tools for JavaScript (2026)](/best-ai-coding-tools-javascript-comparison-2026/) — Framework-aware tool recommendations.
 - [Claude Code vs Manual Coding: Tradeoffs](/when-to-use-claude-code-vs-manual-coding-tradeoffs/) — When AI helps and when it hurts.
+- [AI Coding Tools Pricing Comparison (April 2026)](/ai-coding-tools-pricing-comparison-2026/) — Every major tool's pricing on one page: free tiers, pro plans, enterprise quotes.
+- [AI Coding Tools Roundup: 14 Tools Compared (2026)](/ai-coding-tools-comparison-roundup-2026/) — All major agentic and editor AI tools ranked with concrete benchmarks.
+- [AI Coding Tools vs Manual Coding: When to Use Each (2026)](/when-to-use-ai-coding-tools-vs-manual-coding-2026/) — Decision framework for when AI accelerates and when it slows you down.
+- [Best Free AI Coding Tools vs Claude Code (2026)](/best-free-ai-coding-tools-alternatives-to-claude-code-2026/) — Top free alternatives for developers who can't justify a paid plan.
 
 ---
 
