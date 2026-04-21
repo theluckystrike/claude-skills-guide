@@ -278,7 +278,7 @@ Related Reading
 - [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/)
 - [Claude Code GitHub Actions Matrix Builds Guide](/claude-code-github-actions-matrix-builds-guide/)
 - [Claude Code GitHub Actions Composite Actions](/claude-code-github-actions-composite-actions/)
-- [Workflows Hub](/workflows-hub/)
+- [Workflows Hub](/workflows/)
 - [Claude Code GitHub Actions Notification Setup](/claude-code-github-actions-notification-setup/)
 - [Claude Code GitHub Actions Custom Workflow Automation Tips](/claude-code-github-actions-custom-workflow-automation-tips/)
 - [How to Use GitHub Actions Self-Hosted Runner (2026)](/claude-code-for-github-actions-self-hosted-runner-guide/)

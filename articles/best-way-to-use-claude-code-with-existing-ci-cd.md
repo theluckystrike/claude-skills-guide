@@ -279,7 +279,7 @@ Related Reading
 
 - [Claude Code GitHub Actions Approval Workflows](/claude-code-github-actions-approval-workflows/). GitHub Actions integration specifics
 - Claude Code Semantic Versioning Automation. Automate versioning as part of your CI pipeline
-- [Claude Skills Workflows Hub](/workflows-hub/). All CI/CD and automation workflow guides
+- [Claude Skills Workflows Hub](/workflows/). All CI/CD and automation workflow guides
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

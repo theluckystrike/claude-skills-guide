@@ -267,7 +267,7 @@ Related Reading
 - [Claude Code Skills for Terraform IaC: Complete Guide](/claude-code-skills-for-infrastructure-as-code-terraform/). Apply the same iterative generation approach to Terraform modules and provider configurations.
 - [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/). Automate CloudFormation deployments by integrating Claude skills into your GitHub Actions pipeline.
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). The full toolkit of DevOps skills for infrastructure work.
-- [Claude Skills Workflow Guide](/workflows-hub/). See how CloudFormation generation fits into broader multi-skill automation pipelines.
+- [Claude Skills Workflow Guide](/workflows/). See how CloudFormation generation fits into broader multi-skill automation pipelines.
 - [Claude Code For Pr Template — Complete Developer Guide](/claude-code-for-pr-template-workflow-tutorial-guide/)
 - [Should CLAUDE.md Be in .gitignore? When to Commit vs Ignore (2026)](/should-claude-md-be-in-gitignore/)
 - [CLAUDE.md Being Partially Read — Why Rules at the Bottom Get Ignored (2026)](/claude-md-being-partially-read/)

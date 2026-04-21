@@ -184,7 +184,7 @@ Related Reading
 - [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/). Submodule management is part of git workflow
 - [How to Make Claude Code Respect Module Boundaries](/how-to-make-claude-code-respect-module-boundaries/). Module boundaries and submodules are related
 - [Claude Code for Git Stash Advanced Workflow](/claude-code-for-git-stash-advanced-workflow/). Stash tips apply to submodule workflows too
-- [Claude Skills Workflows Hub](/workflows-hub/). Git automation and workflow guides
+- [Claude Skills Workflows Hub](/workflows/). Git automation and workflow guides
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -175,7 +175,7 @@ Related Reading
 - [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-code-dotfiles-management-and-skill-sync-workflow/). Sync your Claude Code skills and dotfiles to GitHub Codespaces so your environment is ready on first launch
 - [Claude Code GitHub Actions Workflow Matrix Strategy Guide](/claude-code-github-actions-workflow-matrix-strategy-guide/). Combine Codespaces cloud development with GitHub Actions CI/CD for a complete cloud-native workflow
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Master the tdd skill used in this Codespaces workflow for test-first development in the cloud
-- [Claude Skills Workflows Hub](/workflows-hub/). Explore more cloud development and CI/CD workflow skill guides
+- [Claude Skills Workflows Hub](/workflows/). Explore more cloud development and CI/CD workflow skill guides
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

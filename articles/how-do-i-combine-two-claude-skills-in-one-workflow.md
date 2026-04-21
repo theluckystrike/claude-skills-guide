@@ -169,7 +169,7 @@ Start by identifying tasks you repeat frequently. Look for patterns where you pe
 
 Document your successful chains as standard procedures. A three-skill pipeline you use weekly becomes a valuable productivity multiplier when formalized.
 
-The [combination possibilities are nearly endless](/workflows-hub/), pdf for document generation, docx for formatted writing, pptx for presentations, canvas-design for visuals, supermemory for knowledge management. Each skill brings unique capabilities that multiply when composed effectively.
+The [combination possibilities are nearly endless](/workflows/), pdf for document generation, docx for formatted writing, pptx for presentations, canvas-design for visuals, supermemory for knowledge management. Each skill brings unique capabilities that multiply when composed effectively.
 
 Experiment with different combinations. The workflow that solves your specific challenges often emerges from trying unexpected skill pairings.
 
@@ -194,7 +194,7 @@ Related Reading
 - [Claude Skill Inheritance and Composition Patterns](/claude-skill-inheritance-and-composition-patterns/). Learn the formal patterns behind skill composition that power the workflow chaining described here.
 - [Claude Code Multi Agent Orchestration Patterns Guide](/claude-code-multi-agent-orchestration-patterns-guide/). Scale from combining two skills to orchestrating entire multi-agent pipelines.
 - [Fan Out Fan In Pattern with Claude Code Subagents](/fan-out-fan-in-pattern-claude-code-subagents/). Apply parallel skill execution patterns using the fan out fan in architecture with subagents.
-- [Claude Skills Workflows Hub](/workflows-hub/). Explore more workflow patterns that combine multiple skills for complex development tasks.
+- [Claude Skills Workflows Hub](/workflows/). Explore more workflow patterns that combine multiple skills for complex development tasks.
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

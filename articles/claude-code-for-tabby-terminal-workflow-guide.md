@@ -77,5 +77,5 @@ Claude Code should modify `~/.config/tabby/config.yaml` to add a shell profile n
 
 ## Related Articles
 
-- [Claude Code + Warp Terminal: Workflow Guide](/claude-code-for-warp-terminal-workflow-guide/)
+- [Claude Code + Warp Terminal: Workflow Guide](/claude-code-for-warp-ai-terminal-workflow-guide/)
 - [Claude Code for WezTerm Terminal Workflow Guide](/claude-code-for-wezterm-terminal-workflow-guide/)

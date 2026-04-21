@@ -725,7 +725,7 @@ Related Reading
 - [Claude Code Project Scaffolding Automation](/claude-code-project-scaffolding-automation/). Scaffolding is the first step in environment setup
 - [Claude Code Not Detecting My Virtual Environment Python Fix](/claude-code-not-detecting-my-virtual-environment-python-fix/). Fix environment detection issues after setup
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/). Document your environment setup in CLAUDE.md
-- [Claude Skills Workflows Hub](/workflows-hub/). More project setup and workflow automation
+- [Claude Skills Workflows Hub](/workflows/). More project setup and workflow automation
 - [Claude Code With Convex Backend Real-Time Data Setup](/claude-code-with-convex-backend-real-time-data-setup/)
 - [Claude Code Developer Portal Setup Guide](/claude-code-developer-portal-setup-guide/)
 - [Claude Code Tutorial Writing Automation Guide](/claude-code-tutorial-writing-automation-guide/)

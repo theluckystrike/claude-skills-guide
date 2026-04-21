@@ -210,7 +210,7 @@ Your skill code should check for emergency disable and log prominently when trig
 
 Feature flags transform how you develop and ship Claude skills. By implementing this workflow, you gain fine-grained control over feature availability, reduce deployment risk, and enable rapid iteration. Start with simple kill switches, gradually adopt percentage rollouts, and build toward sophisticated A/B testing as your skill portfolio matures.
 
-The key is consistency: check flags consistently, log evaluations thoroughly, and maintain your configuration as version-controlled infrastructure. This discipline pays dividends as your skill ecosystem grows. Explore related workflows at the [workflows hub](/workflows-hub/).
+The key is consistency: check flags consistently, log evaluations thoroughly, and maintain your configuration as version-controlled infrastructure. This discipline pays dividends as your skill ecosystem grows. Explore related workflows at the [workflows hub](/workflows/).
 
 ---
 

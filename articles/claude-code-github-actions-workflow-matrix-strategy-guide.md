@@ -336,7 +336,7 @@ Related Reading
 - [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/). Integrate Claude skills directly into GitHub Actions workflows beyond matrix strategy patterns.
 - [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-tdd-skill-test-driven-development-workflow/). Build continuous testing pipelines that feed results back into your matrix analysis workflows.
 - [How to Automate Pull Request Review with Claude Skills](/best-claude-skills-for-code-review-automation/). Extend your matrix CI pipeline with automated pull request review for every combination.
-- [Claude Skills Workflow Guide](/workflows-hub/). See how matrix workflows fit into larger multi-skill automation patterns.
+- [Claude Skills Workflow Guide](/workflows/). See how matrix workflows fit into larger multi-skill automation patterns.
 - [Claude Code GitHub Actions Notification Setup](/claude-code-github-actions-notification-setup/)
 - [Claude Code GitHub Actions Custom Workflow Automation Tips](/claude-code-github-actions-custom-workflow-automation-tips/)
 - [How to Use GitHub Actions Self-Hosted Runner (2026)](/claude-code-for-github-actions-self-hosted-runner-guide/)

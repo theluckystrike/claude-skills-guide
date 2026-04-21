@@ -321,7 +321,7 @@ Related Reading
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). identify the most valuable skills for media and content workflows
 - [How Do I Combine Two Claude Skills in One Workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/). chain pdf, xlsx, and canvas-design skills into media pipelines
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/). apply documentation patterns to media asset management
-- [Workflows Hub](/workflows-hub/). explore Claude Code automation workflows for content teams
+- [Workflows Hub](/workflows/). explore Claude Code automation workflows for content teams
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

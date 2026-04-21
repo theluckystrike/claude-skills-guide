@@ -190,7 +190,7 @@ Claude Code can assist with implementing these best practices and help you gener
 
 Building background job workflows with Trigger.dev becomes significantly more productive when combined with Claude Code's assistance. From initial scaffolding to production monitoring, Claude Code skills help you write better code faster while maintaining quality standards. Start with simple jobs, iterate on error handling, and progressively add complexity as your background processing needs grow.
 
-For more information on related topics, explore the [workflow automation hub](/workflows-hub/) or learn about [event-driven architectures](/claude-skills-event-driven-architecture-setup/) that complement background job patterns.
+For more information on related topics, explore the [workflow automation hub](/workflows/) or learn about [event-driven architectures](/claude-skills-event-driven-architecture-setup/) that complement background job patterns.
 
 ---
 

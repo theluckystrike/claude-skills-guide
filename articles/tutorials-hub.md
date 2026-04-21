@@ -369,7 +369,7 @@ Getting Started Tutorials:
 
 - [Getting Started Hub](/getting-started-hub/). Install Claude Code and run your first skill
 - [Guides Hub](/guides-hub/). Deep reference guides for every Claude Code topic
-- [Workflows Hub](/workflows-hub/). Repeatable workflow automation patterns
+- [Workflows Hub](/workflows/). Repeatable workflow automation patterns
 - [Integrations Hub](/integrations-hub/). Connect Claude skills to GitHub Actions, Slack, Supabase, and more
 - [Troubleshooting Hub](/troubleshooting-hub/). Fix every common Claude Code skill error
 - [Advanced Hub](/advanced-hub/). Token optimization, chaining, and production architecture

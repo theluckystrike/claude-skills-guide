@@ -278,7 +278,7 @@ Related Reading
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Use the tdd skill to drive component design from tests first, before writing implementation code
 - [Claude Code Jest Unit Testing Workflow Guide](/claude-code-jest-unit-testing-workflow-guide/). Pair Cypress component tests with Jest unit tests for full coverage across your frontend
 - [Claude Code Hypothesis Property Testing Guide](/claude-code-hypothesis-property-testing-guide/). Extend your testing strategy with property-based testing for edge case discovery
-- [Claude Skills Workflows Hub](/workflows-hub/). Explore more Claude Code skill workflows for testing and frontend development
+- [Claude Skills Workflows Hub](/workflows/). Explore more Claude Code skill workflows for testing and frontend development
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

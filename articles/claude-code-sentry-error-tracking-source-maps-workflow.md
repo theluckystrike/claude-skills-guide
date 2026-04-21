@@ -81,7 +81,7 @@ This automation ensures every deployment includes the corresponding source maps 
 
 ## Connecting Claude Code to Sentry
 
-While there's no dedicated Sentry skill for Claude Code, you can use the tdd skill to create a debugging workflow. The tdd skill provides structured test-driven development patterns that integrate well with error tracking [workflows](/workflows-hub/).
+While there's no dedicated Sentry skill for Claude Code, you can use the tdd skill to create a debugging workflow. The tdd skill provides structured test-driven development patterns that integrate well with error tracking [workflows](/workflows/).
 
 Here's how to use Claude Code with Sentry:
 
@@ -313,7 +313,7 @@ Related Reading
 - [Claude Code Container Debugging: Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/). Debug containerized applications alongside Sentry source map workflows
 - [Claude Code OWASP Top 10 Security Scanning Workflow](/claude-code-owasp-top-10-security-scanning-workflow/). Layer security scanning on top of error tracking for comprehensive coverage
 - [Monitoring and Logging Claude Code Multi-Agent Systems](/monitoring-and-logging-claude-code-multi-agent-systems/). Extend Sentry error tracking to multi-agent Claude Code orchestration
-- [Claude Skills Hub](/workflows-hub/). Explore monitoring, observability, and debugging workflows with Claude Code
+- [Claude Skills Hub](/workflows/). Explore monitoring, observability, and debugging workflows with Claude Code
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

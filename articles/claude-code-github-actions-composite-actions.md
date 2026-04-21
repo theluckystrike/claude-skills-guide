@@ -420,7 +420,7 @@ Related Reading
 - [Claude Code GitHub Actions Approval Workflows](/claude-code-github-actions-approval-workflows/)
 - [Claude Code GitHub Actions Matrix Builds Guide](/claude-code-github-actions-matrix-builds-guide/)
 - [Automated Testing Pipeline with Claude TDD Skill 2026](/claude-tdd-skill-test-driven-development-workflow/)
-- [Workflows Hub](/workflows-hub/)
+- [Workflows Hub](/workflows/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

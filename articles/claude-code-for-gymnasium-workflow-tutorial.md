@@ -573,7 +573,7 @@ Related Reading
 
 - [Best Claude Code Skills to Install First 2026](/best-claude-code-skills-to-install-first-2026/)
 - [Claude Code for Debugging Sessions](/best-way-to-use-claude-code-for-debugging-sessions/)
-- [Workflows Hub](/workflows-hub/)
+- [Workflows Hub](/workflows/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

@@ -290,7 +290,7 @@ Related Reading
 - [Claude Code i18n Workflow for React Applications](/claude-code-i18n-workflow-for-react-applications-guide/)
 - [Claude Code International Date Format Handling Workflow](/claude-code-international-date-format-handling-workflow/)
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
-- [Workflows Hub](/workflows-hub/)
+- [Workflows Hub](/workflows/)
 {% endraw %}
 
 

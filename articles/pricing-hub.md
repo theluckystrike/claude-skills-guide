@@ -226,7 +226,7 @@ Related Reading
 - [Troubleshooting Hub](/troubleshooting-hub/). Fix every common skill error: permissions, YAML, context overflow, and more
 - [Integrations Hub](/integrations-hub/). Connect skills to GitHub Actions, n8n, Supabase, Slack, and more
 - [Comparisons Hub](/comparisons-hub/). How Claude Code stacks up against Copilot, Cursor, and other tools
-- [Workflows Hub](/workflows-hub/). Practical skill workflows for code review, documentation, and CI/CD
+- [Workflows Hub](/workflows/). Practical skill workflows for code review, documentation, and CI/CD
 - [Projects Hub](/projects-hub/). Build real SaaS apps, CLI tools, and APIs using Claude skills
 - [Claude Code for Soulbound Token Workflow](/claude-code-for-soulbound-token-workflow/)
 - [Claude Code for Optimism Bedrock Workflow](/claude-code-for-optimism-bedrock-workflow/)

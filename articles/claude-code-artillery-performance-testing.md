@@ -266,7 +266,7 @@ Related Reading
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Combine TDD practices with load testing to ensure new features ship with both functional and performance coverage
 - [Claude Code GitHub Actions Approval Workflows](/claude-code-github-actions-approval-workflows/). Gate deployments with Artillery performance thresholds in your CI/CD pipeline
 - [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/). Track load test baselines and regressions across multiple Artillery runs with persistent memory
-- [Claude Skills Workflows Hub](/workflows-hub/). Explore more Claude Code automation workflows for testing and deployment
+- [Claude Skills Workflows Hub](/workflows/). Explore more Claude Code automation workflows for testing and deployment
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}

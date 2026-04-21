@@ -359,7 +359,7 @@ Related Reading
 - [Claude Code Multilingual Codebase Management Guide](/claude-code-multilingual-codebase-management-guide/)
 - [Claude Code i18n Workflow for React Applications](/claude-code-i18n-workflow-for-react-applications-guide/)
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
-- [Workflows Hub](/workflows-hub/)
+- [Workflows Hub](/workflows/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

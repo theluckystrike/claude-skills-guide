@@ -408,7 +408,7 @@ Related Reading
 - [Claude Code Local Development Setup Guide](/claude-code-local-development-setup-guide/). Local dev setup includes hot reload configuration
 - [Claude Code Environment Setup Automation](/claude-code-environment-setup-automation/). Environment setup with hot reload enabled
 - [Best Way to Use Claude Code for Rapid Prototyping](/best-way-to-use-claude-code-for-rapid-prototyping/). Hot reload accelerates prototyping
-- [Claude Skills Workflows Hub](/workflows-hub/). Development environment workflow guides
+- [Claude Skills Workflows Hub](/workflows/). Development environment workflow guides
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

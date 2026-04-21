@@ -260,7 +260,7 @@ Related Reading
 
 - [Getting Started Hub](/getting-started-hub/). Foundations: what skills are, the .md format, and writing your first skill
 - [Comparisons Hub](/comparisons-hub/). How Claude Code stacks up against Copilot, Cursor, and other tools
-- [Workflows Hub](/workflows-hub/). Practical skill workflows for code review, documentation, and CI/CD
+- [Workflows Hub](/workflows/). Practical skill workflows for code review, documentation, and CI/CD
 - [Integrations Hub](/integrations-hub/). Connect skills to GitHub Actions, n8n, Supabase, Slack, and more
 - [Projects Hub](/projects-hub/). Build real SaaS apps, CLI tools, and APIs using Claude skills
 - [Pricing Hub](/pricing-hub/). Cost optimization and Claude Code pricing breakdown

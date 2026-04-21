@@ -494,7 +494,7 @@ Related Reading
 - [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-code-agent-pipeline-sequential-vs-parallel/). Understand when to run batch jobs sequentially versus in parallel for maximum throughput
 - [Rate Limit Management for Claude Code Skill-Intensive Workflows](/rate-limit-management-claude-code-skill-intensive-workflows/). Avoid hitting API rate limits when running large batch processing jobs
 - [Fan-Out Fan-In Pattern with Claude Code Subagents](/fan-out-fan-in-pattern-claude-code-subagents/). Distribute batch workloads across multiple subagents and collect results
-- [Claude Skills Hub](/workflows-hub/). Explore automation workflows and batch processing patterns with Claude Code
+- [Claude Skills Hub](/workflows/). Explore automation workflows and batch processing patterns with Claude Code
 - [Claude Code Skills for Insurance Claims Processing](/claude-code-skills-for-insurance-claims-processing/)
 - [Claude Skills for Medical Records Processing — Automate CPT Code Mapping, FHIR Validation, and Clini](/claude-skills-for-medical-records-processing/)
 

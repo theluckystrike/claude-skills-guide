@@ -113,7 +113,7 @@ describe('UserService', () => {
 });
 ```
 
-The primary changes involve importing test utilities explicitly and replacing `jest` global with `vi`. Vitest supports `--globals` flag if you prefer the Jest-style global API, but explicit imports align better with modern ESM [workflows](/workflows-hub/).
+The primary changes involve importing test utilities explicitly and replacing `jest` global with `vi`. Vitest supports `--globals` flag if you prefer the Jest-style global API, but explicit imports align better with modern ESM [workflows](/workflows/).
 
 ## Phase 4: Handling Jest-Specific Features
 

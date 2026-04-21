@@ -184,7 +184,7 @@ Related Reading
 - [Claude Code for End-of-Day Commit Workflow](/claude-code-for-end-of-day-commit-workflow/). Close the loop on each sprint day with an automated, consistent commit workflow
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). Generate sprint test scaffolding during planning so estimates include verification effort
 - [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/). Carry sprint context and backlog knowledge across multiple Claude Code sessions
-- [Claude Skills Workflows Hub](/workflows-hub/). Explore more Claude Code workflow patterns for agile and sprint-based development
+- [Claude Skills Workflows Hub](/workflows/). Explore more Claude Code workflow patterns for agile and sprint-based development
 - [Claude Code for TanStack Start Workflow Guide](/claude-code-for-tanstack-start-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

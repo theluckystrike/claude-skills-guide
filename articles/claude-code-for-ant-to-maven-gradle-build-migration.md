@@ -235,7 +235,7 @@ Related Reading
 - [Claude Skill MD Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
 - [Claude SuperMemory Skill: Persistent Context Guide](/claude-supermemory-skill-persistent-context-explained/)
-- [Workflows Hub](/workflows-hub/)
+- [Workflows Hub](/workflows/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

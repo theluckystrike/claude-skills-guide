@@ -253,7 +253,7 @@ Related Reading
 - [Troubleshooting Hub](/troubleshooting-hub/). Fix every common skill error: permissions, YAML, context overflow, and more
 - [Integrations Hub](/integrations-hub/). Connect skills to GitHub Actions, n8n, Supabase, Slack, and more
 - [Comparisons Hub](/comparisons-hub/). How Claude Code stacks up against Copilot, Cursor, and other tools
-- [Workflows Hub](/workflows-hub/). Practical skill workflows for code review, documentation, and CI/CD
+- [Workflows Hub](/workflows/). Practical skill workflows for code review, documentation, and CI/CD
 - [Pricing Hub](/pricing-hub/). Cost optimization and Claude Code pricing breakdown
 - [Claude Code Developer Portfolio Projects Guide](/claude-code-developer-portfolio-projects-guide/)
 - [Claude Code Changelog: What Changed This Week](/claude-code-changelog-what-changed-this-week/)

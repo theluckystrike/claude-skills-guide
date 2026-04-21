@@ -15,7 +15,7 @@ geo_optimized: true
 
 # Claude Code Skills Monorepo Management Workflow
 
-Managing a monorepo presents unique challenges: coordinating builds across packages, handling shared dependencies, running targeted tests, and maintaining consistent tooling. Claude Code skills transform these complex workflows into repeatable, [skill-driven processes](/claude-skill-md-format-complete-specification-guide/) that reduce cognitive load and accelerate development. For workspace best practices visit the [workflows hub](/workflows-hub/).
+Managing a monorepo presents unique challenges: coordinating builds across packages, handling shared dependencies, running targeted tests, and maintaining consistent tooling. Claude Code skills transform these complex workflows into repeatable, [skill-driven processes](/claude-skill-md-format-complete-specification-guide/) that reduce cognitive load and accelerate development. For workspace best practices visit the [workflows hub](/workflows/).
 
 [This guide shows you how to build a monorepo management system](/shared-claude-skills-across-monorepo-multiple-packages/) using Claude Code skills, with practical examples you can adapt to your own repository structure.
 

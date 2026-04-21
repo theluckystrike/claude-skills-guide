@@ -209,7 +209,7 @@ Related Reading
 - [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-tdd-skill-test-driven-development-workflow/). Scale your pytest workflows into a continuous testing pipeline driven by the TDD skill.
 - [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/). How to enforce test-first development in Python and beyond using the tdd skill.
 - [Claude Skills for Data Science and Jupyter: 2026 Guide](/claude-skills-for-data-science-and-jupyter-notebooks/). Extend your parametrized pytest patterns into Jupyter-based data analysis workflows.
-- [Claude Skills Workflow Guide](/workflows-hub/). See how testing automation fits into broader multi-skill development pipelines.
+- [Claude Skills Workflow Guide](/workflows/). See how testing automation fits into broader multi-skill development pipelines.
 - [Claude Skills for Generating Mock Data and Fixtures](/claude-skills-for-generating-mock-data-and-fixtures/)
 - [Claude Code Database Test Fixtures Guide](/claude-code-database-test-fixtures-guide/)
 

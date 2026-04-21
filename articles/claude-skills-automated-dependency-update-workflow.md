@@ -23,7 +23,7 @@ Dependency management involves more than simply running `npm update` or `pip ins
 
 Claude skills provide a structured approach to automation. By chaining together skills like supermemory for tracking dependency states, tdd for running test suites, and webapp-testing for validating functionality, you create a comprehensive workflow that handles the entire update lifecycle.
 
-Each skill is a Markdown file stored in `~/.claude/skills/` and invoked during a Claude Code session by typing `/skill-name`. For example, you invoke the tdd skill with `/tdd`, which prompts Claude to apply test-driven [workflows](/workflows-hub/) to your current task.
+Each skill is a Markdown file stored in `~/.claude/skills/` and invoked during a Claude Code session by typing `/skill-name`. For example, you invoke the tdd skill with `/tdd`, which prompts Claude to apply test-driven [workflows](/workflows/) to your current task.
 
 ## Understanding Semantic Versioning Before Automating
 

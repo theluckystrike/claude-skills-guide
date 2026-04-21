@@ -183,7 +183,7 @@ Related Reading
 - [Claude Code Multilingual Codebase Management Guide](/claude-code-multilingual-codebase-management-guide/)
 - [Claude Code International Date Format Handling Workflow](/claude-code-international-date-format-handling-workflow/)
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
-- [Workflows Hub](/workflows-hub/)
+- [Workflows Hub](/workflows/)
 - [Claude Code Sketch to React Component Workflow Guide](/claude-code-sketch-to-react-component-workflow-guide/)
 - [Claude Code with Angular vs React](/claude-code-angular-vs-react/)
 - [Claude Code for Million.js — Workflow Guide](/claude-code-for-million-js-react-workflow-guide/)

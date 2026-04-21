@@ -688,7 +688,7 @@ Guides for specific industries and regulated domains.
 
 Once you have the basics down, the rest of the library is organized by topic:
 
-- [Workflows Hub](/workflows-hub/). repeatable, automated workflows once you have skills running
+- [Workflows Hub](/workflows/). repeatable, automated workflows once you have skills running
 - [Advanced Hub](/advanced-hub/). multi-agent systems, hooks architecture, and production patterns
 - [Integrations Hub](/integrations-hub/). connecting Claude Code to your existing tools and services
 - [Comparisons Hub](/comparisons-hub/). Claude Code vs GitHub Copilot, Cursor, Devin, and other AI coding tools

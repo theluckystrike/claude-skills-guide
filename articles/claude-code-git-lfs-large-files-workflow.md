@@ -477,7 +477,7 @@ Related Reading
 - [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/). LFS is part of git best practices for large repos
 - [Claude Code Git Submodules Management Guide](/claude-code-git-submodules-management-guide/). Another large-repo management technique
 - [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/). Large files often cause OOM issues
-- [Claude Skills Workflows Hub](/workflows-hub/). Git workflow automation guides
+- [Claude Skills Workflows Hub](/workflows/). Git workflow automation guides
 - [Claude Code for OpenObserve Workflow Tutorial](/claude-code-for-openobserve-workflow-tutorial/)
 - [Claude Code For Uma Oracle — Complete Developer Guide](/claude-code-for-uma-oracle-workflow-tutorial/)
 - [Claude Code for Elastic SIEM Workflow Guide](/claude-code-for-elastic-siem-workflow-guide/)

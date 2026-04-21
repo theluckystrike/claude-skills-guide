@@ -309,7 +309,7 @@ This section lists every article in the use-cases cluster, grouped by sub-topic.
 
 - [Getting Started with Claude Skills](/getting-started-hub/). Learn skills fundamentals before specializing by use case.
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Comprehensive developer skill overview across all stacks.
-- [Claude Skills Workflow Guide](/workflows-hub/). Chain use-case skills together into automated multi-step pipelines.
+- [Claude Skills Workflow Guide](/workflows/). Chain use-case skills together into automated multi-step pipelines.
 
 ---
 

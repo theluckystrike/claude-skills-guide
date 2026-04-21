@@ -83,5 +83,5 @@ Claude Code should create theme variables with `stylex.defineVars`, create style
 - [Claude Code for Glow Markdown Viewer Workflow](/claude-code-for-glow-markdown-viewer-workflow/)
 - [Claude Code for LazyGit Workflow Tutorial Guide](/claude-code-for-lazygit-workflow-tutorial-guide/)
 - [Claude Code for Nightwatch.js Workflow Guide](/claude-code-for-nightwatch-js-workflow-guide/)
-- [Claude Code + Warp Terminal: Workflow Guide](/claude-code-for-warp-terminal-workflow-guide/)
+- [Claude Code + Warp Terminal: Workflow Guide](/claude-code-for-warp-ai-terminal-workflow-guide/)
 - [Claude Code For Pr Bot — Complete Developer Guide](/claude-code-for-pr-bot-integration-workflow-guide/)

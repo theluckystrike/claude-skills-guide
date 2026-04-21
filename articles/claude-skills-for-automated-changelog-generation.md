@@ -17,7 +17,7 @@ geo_optimized: true
 {% raw %}
 This guide focuses on *building* the Claude skill files that power automated changelog generation: the `.md` definitions for `changelog-generator`, `git-changelog-extractor`, `changelog-filter`, `changelog-formatter`, and `changelog-summarizer`. If you are looking for the *operational* side. how to invoke the workflow, configure output formats, and wire it into CI/CD. see [Claude Code Changelog Generation Workflow](/claude-code-changelogs-and-release-notes-automation/).
 
-Changelogs are critical for maintaining transparent release processes, yet manually documenting every change across commits, pull requests, and issues consumes valuable development time. Claude skills enable you to automate this process entirely, generating comprehensive, well-formatted changelogs that keep your team and users informed without the manual effort. For an overview of automation workflows, visit the [workflows hub](/workflows-hub/).
+Changelogs are critical for maintaining transparent release processes, yet manually documenting every change across commits, pull requests, and issues consumes valuable development time. Claude skills enable you to automate this process entirely, generating comprehensive, well-formatted changelogs that keep your team and users informed without the manual effort. For an overview of automation workflows, visit the [workflows hub](/workflows/).
 
 ## Understanding the Changelog Generation Challenge
 

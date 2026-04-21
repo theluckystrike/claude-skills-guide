@@ -15,7 +15,7 @@ geo_optimized: true
 ---
 
 {% raw %}
-GitHub Actions has become the backbone of modern CI/CD pipelines, but writing and maintaining workflow files can be repetitive and error-prone. Claude Code skills offer a powerful solution by encapsulating workflow patterns into reusable, AI-assisted templates that generate production-ready workflows on demand. Explore the full range of workflow skills in the [workflows hub](/workflows-hub/).
+GitHub Actions has become the backbone of modern CI/CD pipelines, but writing and maintaining workflow files can be repetitive and error-prone. Claude Code skills offer a powerful solution by encapsulating workflow patterns into reusable, AI-assisted templates that generate production-ready workflows on demand. Explore the full range of workflow skills in the [workflows hub](/workflows/).
 
 This guide shows you how to create Claude skills specifically designed for GitHub Actions workflow development.
 

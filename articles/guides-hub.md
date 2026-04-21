@@ -17,7 +17,7 @@ geo_optimized: true
 
 This hub is the master index for every general Claude Code guide in the library. With 178 guides covering MCP servers, security, language-specific workflows, productivity patterns, enterprise adoption, and the Claude MD configuration system, it serves as the single page you return to when you need to find the right article fast.
 
-The guides cluster covers depth-first explanations and reference material. If you want step-by-step tutorials, see the [Tutorials Hub](/tutorials-hub/). If you want workflow automation patterns, see the [Workflows Hub](/workflows-hub/).
+The guides cluster covers depth-first explanations and reference material. If you want step-by-step tutorials, see the [Tutorials Hub](/tutorials-hub/). If you want workflow automation patterns, see the [Workflows Hub](/workflows/).
 
 ## Table of Contents
 
@@ -492,7 +492,7 @@ This section lists every article in the guides cluster alphabetically for quick 
 
 - [Getting Started Hub](/getting-started-hub/). Installation, first skill, and interface fundamentals
 - [Tutorials Hub](/tutorials-hub/). Step-by-step tutorials for specific stacks and workflows
-- [Workflows Hub](/workflows-hub/). Repeatable workflow automation patterns
+- [Workflows Hub](/workflows/). Repeatable workflow automation patterns
 - [Advanced Hub](/advanced-hub/). Token optimization, skill chaining, and production architecture
 - [Troubleshooting Hub](/troubleshooting-hub/). Fix every common Claude Code skill error
 - [Integrations Hub](/integrations-hub/). Connect Claude skills to GitHub Actions, Slack, Supabase, and more

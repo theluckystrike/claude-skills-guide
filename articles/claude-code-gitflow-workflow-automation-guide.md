@@ -191,7 +191,7 @@ Related Reading
 - [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/). Git best practices that gitflow builds on
 - [Claude Code Trunk Based Development Guide](/claude-code-trunk-based-development-guide/). Trunk-based development is the alternative to gitflow
 - [Claude Code Git Branch Naming Conventions](/claude-code-git-branch-naming-conventions/). Branch naming is central to gitflow
-- [Claude Skills Workflows Hub](/workflows-hub/). Git automation and workflow guides
+- [Claude Skills Workflows Hub](/workflows/). Git automation and workflow guides
 - [Claude Code for Workspace Automation Workflow](/claude-code-for-workspace-automation-workflow/)
 - [Claude Code for Taskfile Workflow Automation Guide](/claude-code-for-taskfile-workflow-automation-guide/)
 - [Claude Code for Review Comment Automation Workflow](/claude-code-for-review-comment-automation-workflow/)

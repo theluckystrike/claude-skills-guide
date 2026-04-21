@@ -639,7 +639,7 @@ Related Reading
 - [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). structure serverless deployment skills with proper configuration
 - [Building Production AI Agents with Claude Skills in 2026](/building-production-ai-agents-with-claude-skills-2026/). production architecture patterns for serverless AI applications
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/). automate serverless function deployment in CI/CD
-- [Workflows Hub](/workflows-hub/). explore Claude Code workflows for cloud and serverless development
+- [Workflows Hub](/workflows/). explore Claude Code workflows for cloud and serverless development
 - [Claude Code Skills for WordPress Development (2026)](/claude-code-skills-for-wordpress-development/)
 - [Claude Skills For Restaurant Pos System — Developer Guide](/claude-skills-for-restaurant-pos-system-development/)
 - [Claude Code Skills for iOS Swift Development](/claude-code-skills-for-ios-swift-development/)

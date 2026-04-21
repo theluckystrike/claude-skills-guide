@@ -127,7 +127,7 @@ When working with RTL (right-to-left) languages like Arabic or Hebrew, test layo
 
 Claude Code's skill system provides powerful capabilities for managing multilingual codebases at scale. By using skills like supermemory for documentation, tdd for validation, pdf for content extraction, and xlsx for data management, you can establish reliable localization workflows that maintain quality across all supported languages. These tools transform what was once a manual coordination nightmare into an automated, reliable process.
 
-Start by structuring your translation files properly, then layer in automation through Claude Code skills. Your translators and end users will thank you for the improved consistency and reduced errors. Explore more automation patterns at the [workflows hub](/workflows-hub/).
+Start by structuring your translation files properly, then layer in automation through Claude Code skills. Your translators and end users will thank you for the improved consistency and reduced errors. Explore more automation patterns at the [workflows hub](/workflows/).
 
 ---
 

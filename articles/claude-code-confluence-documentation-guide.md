@@ -206,7 +206,7 @@ Related Reading
 - [Claude Code Documentation Generation Workflow](/automated-code-documentation-workflow-with-claude-skills/). Documentation generation powers Confluence content
 
 - [How to Integrate Claude Skills with Notion API Guide](/how-to-integrate-claude-skills-with-notion-api-guide/). Notion and Confluence are alternative doc platforms
-- [Claude Skills Workflows Hub](/workflows-hub/). Documentation workflow automation guides
+- [Claude Skills Workflows Hub](/workflows/). Documentation workflow automation guides
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

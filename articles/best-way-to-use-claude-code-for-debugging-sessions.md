@@ -286,7 +286,7 @@ Related Reading
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
 - [Claude Code Git Bisect Automated Bug Finding Workflow](/claude-code-git-bisect-automated-bug-finding-workflow/)
 - [How to Debug a Claude Skill That Silently Fails](/how-do-i-debug-a-claude-skill-that-silently-fails/)
-- [Workflows Hub](/workflows-hub/)
+- [Workflows Hub](/workflows/)
 - [Claude Code for LlamaIndex RAG Pipeline Debugging](/claude-code-for-llamaindex-rag-pipeline-debugging/)
 - [Claude Code as a Debugging Agent](/claude-code-debugging-agent/)
 - [Claude Code Debugging Tips from Reddit](/claude-code-debugging-reddit/)

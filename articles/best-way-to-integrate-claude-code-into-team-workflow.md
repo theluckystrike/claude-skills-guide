@@ -183,7 +183,7 @@ Related Reading
 - [Best Way to Use Claude Code with Existing CI/CD Pipelines](/best-way-to-use-claude-code-with-existing-ci-cd/). CI/CD is central to team workflow integration
 - [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/). Git workflow is the team's shared foundation
 - [How to Make Claude Code Write Better Unit Tests](/claude-tdd-skill-test-driven-development-workflow/). Shared test standards matter for team workflows
-- [Claude Skills Workflows Hub](/workflows-hub/). Team and workflow automation guides
+- [Claude Skills Workflows Hub](/workflows/). Team and workflow automation guides
 
 Related guides: [Best Way to Onboard New Developers Using Claude Code](/best-way-to-onboard-new-developers-using-claude-code/)
 

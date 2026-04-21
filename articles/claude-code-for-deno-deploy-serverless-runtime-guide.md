@@ -15,7 +15,7 @@ geo_optimized: true
 
 # Claude Code for Deno Deploy Serverless Runtime Guide
 
-Deno Deploy is a serverless runtime that lets you run JavaScript, TypeScript, and WebAssembly at the edge. When combined with Claude Code, you get a powerful workflow for building, deploying, and maintaining serverless applications. For related serverless patterns, see the [workflows hub](/workflows-hub/). This guide shows you how to use Claude Code effectively with Deno Deploy.
+Deno Deploy is a serverless runtime that lets you run JavaScript, TypeScript, and WebAssembly at the edge. When combined with Claude Code, you get a powerful workflow for building, deploying, and maintaining serverless applications. For related serverless patterns, see the [workflows hub](/workflows/). This guide shows you how to use Claude Code effectively with Deno Deploy.
 
 ## Why Deno Deploy Works Well with Claude Code
 

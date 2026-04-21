@@ -372,7 +372,7 @@ Related Reading
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
 - [Claude Code React Router v7 Navigation Guide](/claude-code-react-router-v7-navigation-guide/)
 - [Vibe Coding with Claude Code: Complete Guide 2026](/vibe-coding-productivity-tips-and-best-practices/)
-- [Workflows Hub](/workflows-hub/)
+- [Workflows Hub](/workflows/)
 - [Claude Code Angular LSP Integration](/claude-code-angular-lsp/)
 - [Claude Code for Gradio ML UI — Workflow Guide](/claude-code-for-gradio-ml-ui-workflow-guide/)
 - [Claude Code for Remix Optimistic UI Workflow](/claude-code-for-remix-optimistic-ui-workflow/)

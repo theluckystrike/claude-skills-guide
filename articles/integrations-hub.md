@@ -296,7 +296,7 @@ Related Reading
 - [Getting Started Hub](/getting-started-hub/). Foundations: what skills are, the .md format, and writing your first skill
 - [Troubleshooting Hub](/troubleshooting-hub/). Fix every common skill error: permissions, YAML, context overflow, and more
 - [Comparisons Hub](/comparisons-hub/). How Claude Code stacks up against Copilot, Cursor, and other tools
-- [Workflows Hub](/workflows-hub/). Practical skill workflows for code review, documentation, and CI/CD
+- [Workflows Hub](/workflows/). Practical skill workflows for code review, documentation, and CI/CD
 - [Projects Hub](/projects-hub/). Build real SaaS apps, CLI tools, and APIs using Claude skills
 - [Pricing Hub](/pricing-hub/). Cost optimization and Claude Code pricing breakdown
 - [Claude Code Mentorship and Teaching Guide](/claude-code-mentorship-and-teaching-guide/)

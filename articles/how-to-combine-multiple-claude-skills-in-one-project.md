@@ -256,7 +256,7 @@ Related Reading
 - [How Do I Combine Two Claude Skills in One Workflow](/how-do-i-combine-two-claude-skills-in-one-workflow/)
 - [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
-- [Workflows Hub](/workflows-hub/)
+- [Workflows Hub](/workflows/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

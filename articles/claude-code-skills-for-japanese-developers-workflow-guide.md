@@ -465,7 +465,7 @@ Claude Code skills significantly enhance productivity for Japanese developers by
 
 Start by configuring a `CLAUDE.md` file with your project's locale, timezone, and client conventions. Then load supermemory with the context that would otherwise require repetitive explanation. Add the `/tdd` skill to your feature development flow for test-first discipline, use `/frontend-design` for Japanese typography and layout requirements, and reach for `/pdf` and `/docx` at sprint boundaries to generate polished client deliverables without manual formatting work.
 
-Create custom skills for your team's recurring patterns. code review checklists, PR validation, and i18n auditing. so every developer on the team applies the same Japanese-specific standards consistently. The initial setup time pays dividends through consistent code quality, comprehensive documentation, and reduced context-switching overhead. See the [workflows hub](/workflows-hub/) for more developer workflow guides.
+Create custom skills for your team's recurring patterns. code review checklists, PR validation, and i18n auditing. so every developer on the team applies the same Japanese-specific standards consistently. The initial setup time pays dividends through consistent code quality, comprehensive documentation, and reduced context-switching overhead. See the [workflows hub](/workflows/) for more developer workflow guides.
 
 ---
 

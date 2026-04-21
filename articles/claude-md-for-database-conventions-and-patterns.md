@@ -151,7 +151,7 @@ Related Reading
 - [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
 - [Claude MD for Backend Projects Best Practices](/claude-md-for-backend-projects-best-practices/)
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)
-- [Workflows Hub](/workflows-hub/)
+- [Workflows Hub](/workflows/)
 - [Claude Md For Enforcing Architecture — Developer Guide](/claude-md-for-enforcing-architecture-patterns/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
