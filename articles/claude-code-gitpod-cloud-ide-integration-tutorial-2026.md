@@ -15,7 +15,7 @@ geo_optimized: true
 
 # Claude Code Gitpod Cloud IDE Integration Tutorial (2026)
 
-Gitpod provides cloud-based [development environment configuration](/how-do-i-set-environment-variables-for-a-claude-skill/)s that spin up in seconds. Combining Gitpod with Claude Code gives you AI-powered development sessions that run entirely in your browser or connect to local Claude CLI. This tutorial walks through integrating Claude Code with Gitpod for a powerful remote development setup.
+Gitpod provides cloud-based [development environment configuration](/how-do-i-set-environment-variables-for-a-claude-skill/)s that spin up in seconds. Combining Gitpod with Claude Code gives you AI-powered development sessions that run entirely in your browser or connect to local Claude CLI. This tutorial walks through integrating Claude Code with Gitpod for a powerful remote development setup. See also [Claude Code for gRPC Service Development Workflow](/claude-code-for-grpc-service-development-workflow/) for more on this topic.
 
 ## Why Cloud IDEs Matter for AI-Assisted Development
 
@@ -120,7 +120,7 @@ For frontend work:
 /frontend-design Create a responsive card component with hover states
 ```
 
-The `/frontend-design` skill provides component structure guidance and suggests appropriate CSS patterns.
+The `/frontend-design` skill provides component structure guidance and suggests appropriate CSS patterns. See also [Claude Code for Health Endpoint Pattern Workflow](/claude-code-for-health-endpoint-pattern-workflow/) for more on this topic.
 
 ## Reviewing Pull Requests with Claude Code in Gitpod
 
@@ -269,7 +269,7 @@ Configure your repository with the appropriate `.gitpod.yml`, sync your skills d
 
 <div class="mastery-cta">
 
-I'm a solo developer in Vietnam. 50K Chrome extension users. $500K+ on Upwork. 5 Claude Max subscriptions running agent fleets in parallel.
+I'm a solo developer in Vietnam. 50K Chrome extension users. $500K+ on Upwork. 5 Claude Max subscriptions running agent fleets in parallel. See also [Claude Code For GitHub — Developer Comparison 2026](/claude-code-for-github-codespaces-vs-gitpod-workflow-guide/) for more on this topic.
 
 These are my actual CLAUDE.md templates, orchestration configs, and prompts. Not a course. Not theory. The files I copy into every project before I write a line of code.
 

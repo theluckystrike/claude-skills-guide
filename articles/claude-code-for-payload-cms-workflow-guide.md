@@ -68,7 +68,7 @@ Claude Code should create collection configs in `src/collections/` with proper f
 
 2. **Rich text editor configuration.** Claude uses a basic text field for content. Payload's rich text field supports Lexical editor with customizable toolbars, embedded blocks, and media — configure it with `editor: lexicalEditor({ features })`.
 
-3. **Deployment database mismatch.** Claude develops with SQLite (default) and deploys to production. Payload supports PostgreSQL and MongoDB for production — configure the production adapter in `payload.config.ts` and ensure schemas migrate properly.
+3. **Deployment database mismatch.** Claude develops with SQLite (default) and deploys to production. Payload supports PostgreSQL and MongoDB for production — configure the production adapter in `payload.config.ts` and ensure schemas migrate properly. For a deeper dive, see [Claude Code for Kamal Deploy — Workflow Guide](/claude-code-for-kamal-deploy-workflow-guide/).
 
 ## Related Guides
 

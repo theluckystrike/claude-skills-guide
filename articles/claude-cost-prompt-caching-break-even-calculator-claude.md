@@ -14,7 +14,7 @@ render_with_liquid: false
 
 # Prompt Caching Break-Even Calculator for Claude
 
-The 5-minute cache on Claude breaks even after exactly 1 cache read. The 1-hour cache breaks even after 2 reads. These are not approximations -- they are provable from the pricing multipliers: 1.25x write + 0.1x read for 5-minute, 2.0x write + 0.1x read for 1-hour.
+The 5-minute cache on Claude breaks even after exactly 1 cache read. The 1-hour cache breaks even after 2 reads. These are not approximations -- they are provable from the pricing multipliers: 1.25x write + 0.1x read for 5-minute, 2.0x write + 0.1x read for 1-hour. We cover this further in [5-Minute vs 1-Hour Cache: Which Saves More](/5-minute-vs-1-hour-cache-which-saves-more/).
 
 ## The Setup
 
@@ -136,7 +136,7 @@ print(f'Savings: \${uncached - cached:.3f} ({(uncached-cached)/uncached*100:.0f}
 "
 ```
 
-The calculator handles edge cases: if `requests_per_window` is 1, the cached cost equals the write cost (1.25x or 2.0x base), which is more expensive than not caching. The tool correctly flags this as a net loss.
+The calculator handles edge cases: if `requests_per_window` is 1, the cached cost equals the write cost (1.25x or 2.0x base), which is more expensive than not caching. The tool correctly flags this as a net loss. We cover this further in [Claude Tool Use Cost Calculator Guide](/claude-tool-use-cost-calculator-guide/).
 
 ## The Tradeoffs
 

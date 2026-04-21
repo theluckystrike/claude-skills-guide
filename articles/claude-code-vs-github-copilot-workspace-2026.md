@@ -15,7 +15,7 @@ geo_optimized: true
 
 # Claude Code vs GitHub Copilot Workspace 2026
 
-GitHub Copilot Workspace and Claude Code are both aiming at the same big idea: an AI that does not just suggest code, but handles complete development tasks. But they approach this from very different angles. Copilot Workspace is built into GitHub's platform; Claude Code is built for your terminal. your repository and its cloud-accessible dependencies.
+GitHub Copilot Workspace and Claude Code are both aiming at the same big idea: an AI that does not just suggest code, but handles complete development tasks. But they approach this from very different angles. Copilot Workspace is built into GitHub's platform; Claude Code is built for your terminal. your repository and its cloud-accessible dependencies. We cover this further in [Claude Code vs Copilot for TypeScript Refactoring](/claude-code-vs-copilot-for-typescript-refactoring/).
 
 Skills ecosystem. The Claude skills pattern allows teams to define, version-control, and share reusable agent behaviors. A "dependency upgrade" skill, a "security audit" skill, a "performance profiling" skill. these can be built once, refined over time, and used consistently across your team. Copilot Workspace has no equivalent composable workflow system.
 
@@ -78,7 +78,7 @@ For teams already on Copilot, the marginal cost of Workspace is zero. For teams 
 
 ## Verdict
 
-For professional developers with complex, real-world codebases, Claude Code with skills and MCP servers is the more powerful long-term tool. The ability to build reusable workflows, access the full local environment, and compose agent behaviors across tools is a significant advantage.
+For professional developers with complex, real-world codebases, Claude Code with skills and MCP servers is the more powerful long-term tool. The ability to build reusable workflows, access the full local environment, and compose agent behaviors across tools is a significant advantage. For a deeper dive, see [Claude Code vs Supermaven Large — Developer Comparison 2026](/claude-code-vs-supermaven-large-codebase-navigation/).
 
 GitHub Copilot Workspace excels in its niche: the issue-to-PR pipeline within GitHub, for teams who want no setup and a polished GitHub-native experience. For simple issue resolution tasks, it is fast and convenient.
 

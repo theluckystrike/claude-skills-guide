@@ -14,7 +14,7 @@ tools_compared:
     version: "2025-03"
 ---
 
-Claude Haiku 4.5 and GPT-4o Mini are the budget workhorses of AI coding — designed for high-throughput, cost-sensitive tasks where paying premium model prices makes no economic sense. Both cost pennies per task and respond in milliseconds. The choice between them comes down to specific quality differences on coding tasks, ecosystem integration, and how you plan to scale usage across your team or product.
+Claude Haiku 4.5 and GPT-4o Mini are the budget workhorses of AI coding — designed for high-throughput, cost-sensitive tasks where paying premium model prices makes no economic sense. Both cost pennies per task and respond in milliseconds. The choice between them comes down to specific quality differences on coding tasks, ecosystem integration, and how you plan to scale usage across your team or product. For a deeper dive, see [Claude Opus 4.6 vs Haiku 4.5: Speed and Cost Tradeoffs](/claude-opus-vs-haiku-speed-cost-tradeoff/).
 
 ## Hypothesis
 
@@ -102,4 +102,4 @@ Both are suitable for junior developer workloads since the tasks are typically s
 
 ## When To Use Neither
 
-For tasks where correctness is critical and reasoning is required — security-sensitive code, financial calculations, concurrency logic — neither budget model is appropriate. Their cost savings disappear when you factor in developer time reviewing and fixing subtle bugs. Spend the extra $0.50-1.00 per task to use Sonnet 4.6 or GPT-4o and get it right the first time. For latency-critical autocomplete where even these budget models feel too slow, consider local models like DeepSeek Coder running on-device through Ollama, which eliminates network round-trips entirely at the cost of reduced accuracy.
+For tasks where correctness is critical and reasoning is required — security-sensitive code, financial calculations, concurrency logic — neither budget model is appropriate. Their cost savings disappear when you factor in developer time reviewing and fixing subtle bugs. Spend the extra $0.50-1.00 per task to use Sonnet 4.6 or GPT-4o and get it right the first time. For latency-critical autocomplete where even these budget models feel too slow, consider local models like DeepSeek Coder running on-device through Ollama, which eliminates network round-trips entirely at the cost of reduced accuracy. For a deeper dive, see [Claude Sonnet 4.6 vs Codestral: Code Generation Face-Off](/claude-sonnet-vs-codestral-comparison/).

@@ -86,7 +86,7 @@ When the model has structured output format active and needs to call a tool, the
 2. Tool use requires generating `tool_use` blocks (which are not JSON text blocks)
 3. Extended thinking adds a preliminary reasoning step
 
-The model's thinking block correctly determines that tools should be called. But when it transitions to generating content, the structured output grammar captures the output stream and constrains it to produce JSON. The tool_use block generation never fires, and the model ends the turn with an empty text block.
+The model's thinking block correctly determines that tools should be called. But when it transitions to generating content, the structured output grammar captures the output stream and constrains it to produce JSON. The tool_use block generation never fires, and the model ends the turn with an empty text block. See also [Fix: Anthropic SDK Grammar Too Large Error](/anthropic-sdk-structured-output-grammar-too-large/) for more on this topic.
 
 ### Bug 2: Invalid JSON in Structured Output
 
@@ -95,7 +95,7 @@ In the final turn (after tool results are provided), the model sometimes generat
 - **Case A**: Mixed text and JSON that cannot be parsed
 - **Case B**: Partial JSON, followed by many blank lines, followed by valid JSON — all in one text block
 
-This appears to be a token generation issue where the model starts producing JSON, hits an internal constraint, resets, and generates the correct JSON appended to the failed attempt.
+This appears to be a token generation issue where the model starts producing JSON, hits an internal constraint, resets, and generates the correct JSON appended to the failed attempt. For a deeper dive, see [Fix Claude API Error 500 — Internal Server Error](/claude-api-error-500-fix/).
 
 ### Feature Interaction Matrix
 

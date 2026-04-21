@@ -46,7 +46,7 @@ Claude Code excels at database schema design because it can:
 2. **Identify missing indexes** by analyzing your query patterns
 3. **Spot data integrity gaps** like missing foreign key constraints or cascading delete issues
 4. **Generate migration files** that safely transform existing schemas
-5. **Review schemas against best practices** and catch common mistakes before they reach production
+5. **Review schemas against best practices** and catch common mistakes before they reach production. See also [Generate GraphQL Schemas with Claude Code](/claude-code-graphql-schema-generation-guide/) for more on this topic.
 
 ## Step-by-Step Guide
 

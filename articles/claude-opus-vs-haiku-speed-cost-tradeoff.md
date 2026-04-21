@@ -14,11 +14,11 @@ tools_compared:
     version: "4.5"
 ---
 
-Claude Opus 4.6 and Haiku 4.5 sit at opposite ends of Anthropic's model lineup — one optimized for maximum reasoning depth, the other for raw speed and minimal cost. The gap between them is enormous: 60x on input pricing and 60x on output pricing. Understanding exactly where Haiku's limitations appear lets you route 70-80% of coding tasks to the cheapest model without sacrificing quality.
+Claude Opus 4.6 and Haiku 4.5 sit at opposite ends of Anthropic's model lineup — one optimized for maximum reasoning depth, the other for raw speed and minimal cost. The gap between them is enormous: 60x on input pricing and 60x on output pricing. Understanding exactly where Haiku's limitations appear lets you route 70-80% of coding tasks to the cheapest model without sacrificing quality. For a deeper dive, see [Claude Haiku 4.5 vs GPT-4o Mini: Budget AI Coding](/claude-haiku-vs-gpt-4o-mini-comparison-2026/).
 
 ## Hypothesis
 
-Haiku 4.5 handles the majority of routine coding tasks at 60x lower cost than Opus 4.6, with quality degradation only appearing in tasks requiring multi-step reasoning across large contexts.
+Haiku 4.5 handles the majority of routine coding tasks at 60x lower cost than Opus 4.6, with quality degradation only appearing in tasks requiring multi-step reasoning across large contexts. For related guidance, see [Claude Projects vs Cursor Composer: Project Context Compared](/claude-projects-vs-cursor-composer-comparison/).
 
 ## At A Glance
 
@@ -96,4 +96,4 @@ Haiku is ideal for junior developers because their questions tend to be straight
 
 ## When To Use Neither
 
-For tasks that require neither reasoning nor code generation — like reformatting JSON, sorting imports, or removing trailing whitespace — use your IDE's built-in tools or a simple script. Paying even Haiku's minimal cost for deterministic text transformations is wasteful when a regex or formatter handles it in milliseconds with zero API calls. Prettier for formatting, ESLint with --fix for style enforcement, and `isort` for Python imports all produce guaranteed-correct output in under 100ms. If your task has a deterministic answer that a tool can compute, skip the AI entirely regardless of how cheap the model is. For teams that need reasoning capability but cannot afford cloud API costs at all, running a local model like Llama 3 via Ollama provides free inference at the cost of reduced quality and slower speeds on consumer hardware.
+For tasks that require neither reasoning nor code generation — like reformatting JSON, sorting imports, or removing trailing whitespace — use your IDE's built-in tools or a simple script. Paying even Haiku's minimal cost for deterministic text transformations is wasteful when a regex or formatter handles it in milliseconds with zero API calls. Prettier for formatting, ESLint with --fix for style enforcement, and `isort` for Python imports all produce guaranteed-correct output in under 100ms. If your task has a deterministic answer that a tool can compute, skip the AI entirely regardless of how cheap the model is. For teams that need reasoning capability but cannot afford cloud API costs at all, running a local model like Llama 3 via Ollama provides free inference at the cost of reduced quality and slower speeds on consumer hardware. For a deeper dive, see [Claude Sonnet 4.6 vs Codestral: Code Generation Face-Off](/claude-sonnet-vs-codestral-comparison/).

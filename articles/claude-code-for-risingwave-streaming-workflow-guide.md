@@ -11,7 +11,7 @@ tags: [claude-code, risingwave, workflow]
 
 ## The Setup
 
-You are building real-time streaming data pipelines with RisingWave, a Postgres-compatible streaming database. Unlike Kafka + Flink setups, RisingWave lets you write SQL to define streaming computations — materialized views that update continuously as new data arrives. Claude Code can build data pipelines, but it generates Kafka consumer code or Flink jobs instead of RisingWave's SQL-based approach.
+You are building real-time streaming data pipelines with RisingWave, a Postgres-compatible streaming database. Unlike Kafka + Flink setups, RisingWave lets you write SQL to define streaming computations — materialized views that update continuously as new data arrives. Claude Code can build data pipelines, but it generates Kafka consumer code or Flink jobs instead of RisingWave's SQL-based approach. For a deeper dive, see [Claude Code for Turso Database — Workflow Guide](/claude-code-for-turso-edge-database-workflow-guide/).
 
 ## What Claude Code Gets Wrong By Default
 
@@ -21,7 +21,7 @@ You are building real-time streaming data pipelines with RisingWave, a Postgres-
 
 3. **Uses batch SQL queries on a schedule.** Claude creates cron jobs that run `SELECT` queries periodically. RisingWave's materialized views update incrementally in real-time — there is no polling or scheduling needed.
 
-4. **Ignores Postgres compatibility.** Claude connects with custom streaming SDKs. RisingWave speaks the Postgres wire protocol — connect with `psql`, any Postgres driver, or standard BI tools.
+4. **Ignores Postgres compatibility.** Claude connects with custom streaming SDKs. RisingWave speaks the Postgres wire protocol — connect with `psql`, any Postgres driver, or standard BI tools. Learn more in [Claude Code for Standard Schema — Workflow Guide](/claude-code-for-standard-schema-workflow-guide/).
 
 ## The CLAUDE.md Configuration
 

@@ -12,6 +12,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
 sitemap: false
+robots: "noindex, nofollow"
 ---
 Finding academic papers efficiently is a common challenge for researchers, students, and developers working in technical fields. Chrome extensions designed for academic paper discovery have evolved significantly, offering various approaches from simple search overlays to sophisticated AI-powered research assistants. This guide covers the ecosystem of available tools and provides implementation patterns for developers interested in building custom solutions.
 

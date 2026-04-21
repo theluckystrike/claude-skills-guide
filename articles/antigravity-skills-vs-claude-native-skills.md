@@ -37,7 +37,7 @@ To use any skill, invoke it by name:
 
 What Are Claude Native Skills?
 
-Native skills ship pre-installed in `~/.claude/skills/` as part of the standard Claude Code distribution. They cover the tasks most developers encounter daily: document processing, test-driven development, spreadsheet automation, memory management, and frontend verification.
+Native skills ship pre-installed in `~/.claude/skills/` as part of the standard Claude Code distribution. They cover the tasks most developers encounter daily: document processing, test-driven development, spreadsheet automation, memory management, and frontend verification. For related guidance, see [Claude API vs OpenAI API: Developer Experience in 2026](/claude-api-vs-openai-api-comparison-2026/).
 
 The core native skills include:
 
@@ -64,7 +64,7 @@ Once in place, invoke it like any other skill:
 /pptx create a slide deck from this outline: [paste outline]
 ```
 
-Community skills fill gaps in the native offering. Popular Antigravity skills handle presentation generation (`pptx`), Word document creation (`docx`), web app testing (`webapp-testing`).
+Community skills fill gaps in the native offering. Popular Antigravity skills handle presentation generation (`pptx`), Word document creation (`docx`), web app testing (`webapp-testing`). We cover this further in [Claude Artifacts vs Replit: Code Generation Platforms](/claude-artifacts-vs-replit-comparison/).
 
 ## Key Differences
 

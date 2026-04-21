@@ -14,11 +14,11 @@ render_with_liquid: false
 
 # Claude API Cost Dashboard Setup Guide 2026
 
-A team running Claude Opus 4.7 for all requests discovered at month's end they'd spent $5,000 -- but 60% of their requests were simple classifications that Haiku 4.5 could handle at $1.00/MTok instead of $5.00/MTok. After building a cost dashboard and rerouting those requests, they cut spending to $2,600/month. The dashboard paid for itself in the first week. Without visibility into per-model, per-request costs, you're flying blind.
+A team running Claude Opus 4.7 for all requests discovered at month's end they'd spent $5,000 -- but 60% of their requests were simple classifications that Haiku 4.5 could handle at $1.00/MTok instead of $5.00/MTok. After building a cost dashboard and rerouting those requests, they cut spending to $2,600/month. The dashboard paid for itself in the first week. Without visibility into per-model, per-request costs, you're flying blind. For a deeper dive, see [Claude Batch Processing 100K Requests Guide](/claude-batch-processing-100k-requests-guide/).
 
 ## The Setup
 
-Every Claude API response includes a `usage` object containing `input_tokens`, `output_tokens`, `cache_read_input_tokens`, `cache_creation_input_tokens`, and `server_tool_use` metrics. These fields provide everything needed to calculate exact per-request costs. The problem is that most teams never aggregate this data. They check the Claude Console monthly billing page and react after the fact. A real-time dashboard transforms reactive cost management into proactive optimization by showing spend patterns as they develop.
+Every Claude API response includes a `usage` object containing `input_tokens`, `output_tokens`, `cache_read_input_tokens`, `cache_creation_input_tokens`, and `server_tool_use` metrics. These fields provide everything needed to calculate exact per-request costs. The problem is that most teams never aggregate this data. They check the Claude Console monthly billing page and react after the fact. A real-time dashboard transforms reactive cost management into proactive optimization by showing spend patterns as they develop. For a deeper dive, see [Claude Tool Use Hidden Token Costs Explained](/claude-tool-use-hidden-token-costs-explained/).
 
 ## The Math
 
@@ -200,7 +200,7 @@ Logging every API call adds a database write per request, which introduces laten
 
 ## Measuring Impact
 
-The dashboard itself doesn't save money -- the insights it surfaces do. Track two meta-metrics: time-to-insight (how quickly you spot an anomaly) and cost-per-insight-action (how much each dashboard-driven optimization saves). Most teams find their first actionable insight within 48 hours of deploying a dashboard, typically a model routing optimization worth $500-$2,000/month.
+The dashboard itself doesn't save money -- the insights it surfaces do. Track two meta-metrics: time-to-insight (how quickly you spot an anomaly) and cost-per-insight-action (how much each dashboard-driven optimization saves). Most teams find their first actionable insight within 48 hours of deploying a dashboard, typically a model routing optimization worth $500-$2,000/month. We cover this further in [5-Minute vs 1-Hour Cache: Which Saves More](/5-minute-vs-1-hour-cache-which-saves-more/).
 
 ## Related Guides
 

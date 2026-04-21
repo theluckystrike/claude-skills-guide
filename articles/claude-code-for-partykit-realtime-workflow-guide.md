@@ -11,7 +11,7 @@ tags: [claude-code, partykit, workflow]
 
 ## The Setup
 
-You are building real-time multiplayer features using PartyKit, a platform for deploying collaborative servers that manage WebSocket connections, state, and room-based coordination. Claude Code can generate PartyKit servers and client integrations, but it defaults to raw WebSocket code or Socket.io patterns instead of PartyKit's server-per-room model.
+You are building real-time multiplayer features using PartyKit, a platform for deploying collaborative servers that manage WebSocket connections, state, and room-based coordination. Claude Code can generate PartyKit servers and client integrations, but it defaults to raw WebSocket code or Socket.io patterns instead of PartyKit's server-per-room model. For a deeper dive, see [Claude Code for Kamal Deploy — Workflow Guide](/claude-code-for-kamal-deploy-workflow-guide/).
 
 ## What Claude Code Gets Wrong By Default
 

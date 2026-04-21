@@ -12,7 +12,7 @@ last_updated: 2026-04-19
 
 Your e-commerce platform has 15,000 SKUs across 200 product categories. Each SKU follows a format: `CAT-BRAND-VARIANT-SIZE` (e.g., `SHO-NKE-AF1W-10`). Product data feeds for Google Merchant Center require GTIN-13 (EAN), MPN, and Google Product Category IDs that map to a 7-level taxonomy. A developer adding a new product category needs to know the correct `google_product_category` ID (e.g., "Apparel & Accessories > Shoes > Athletic Shoes" = 187), the required Merchant Center fields for that category, and which variant attributes (color, size, material) trigger separate listings.
 
-A Claude Code skill encodes your SKU naming convention, Merchant Center field requirements per category, cart pricing rules (bulk discounts, tiered pricing, promo stacking), and checkout validation logic. It activates when developers touch product, cart, or checkout code.
+A Claude Code skill encodes your SKU naming convention, Merchant Center field requirements per category, cart pricing rules (bulk discounts, tiered pricing, promo stacking), and checkout validation logic. It activates when developers touch product, cart, or checkout code. We cover this further in [Claude Skills for Travel Booking Platforms — Automate GDS Parsing, Fare Rules, and PNR Validation — 2026](/claude-skills-for-travel-booking-platforms/).
 
 ## Technical Foundation
 
@@ -136,7 +136,7 @@ function validateGTIN13(gtin) {
 
 ## Production Gotchas
 
-Google Merchant Center enforces a 30-day feed freshness window. If your feed generation script fails silently, products disappear from Google Shopping after 30 days. Set up a monitoring check that alerts when `feeds/google-merchant-*.xml` has not been updated in 48 hours.
+Google Merchant Center enforces a 30-day feed freshness window. If your feed generation script fails silently, products disappear from Google Shopping after 30 days. Set up a monitoring check that alerts when `feeds/google-merchant-*.xml` has not been updated in 48 hours. For a deeper dive, see [Claude Sonnet 4.6 vs Codestral: Code Generation Face-Off](/claude-sonnet-vs-codestral-comparison/).
 
 Amazon SP-API (if you also sell on Amazon) uses ASIN (10-character alphanumeric starting with B0) instead of GTIN. Your product data model needs both identifiers, and the feed generator must output the correct one per marketplace.
 

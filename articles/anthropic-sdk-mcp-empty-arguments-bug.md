@@ -200,7 +200,7 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Tools That Help
 
-When debugging MCP server interactions and permission flows, a dev tool extension can help inspect the JSON-RPC message exchanges between the SDK and Claude CLI.
+When debugging MCP server interactions and permission flows, a dev tool extension can help inspect the JSON-RPC message exchanges between the SDK and Claude CLI. For a deeper dive, see [Fix Claude API Error 500 — Internal Server Error](/claude-api-error-500-fix/).
 
 
 

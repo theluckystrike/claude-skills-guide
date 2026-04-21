@@ -22,6 +22,9 @@ include:
   - _headers
   - _redirects
 
+sass:
+  style: compressed
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag

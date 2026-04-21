@@ -21,7 +21,7 @@ This guide shows you how to create Claude skills specifically designed for GitHu
 
 ## Understanding the Skill Structure for Workflows
 
-A Claude skill for GitHub Actions follows the [standard skill .md format](/claude-skill-md-format-complete-specification-guide/), a Markdown file with YAML front matter containing metadata, followed by the skill body that serves as the system prompt. The skill body guides Claude in generating valid workflow files, understanding your repository structure, and applying best practices automatically.
+A Claude skill for GitHub Actions follows the [standard skill .md format](/claude-skill-md-format-complete-specification-guide/), a Markdown file with YAML front matter containing metadata, followed by the skill body that serves as the system prompt. The skill body guides Claude in generating valid workflow files, understanding your repository structure, and applying best practices automatically. Learn more in [Claude Code DevOps Engineer CI — Complete Developer Guide](/claude-code-devops-engineer-ci-cd-pipeline-daily-workflow/).
 
 The key insight is that your skill should not just generate YAML, it should understand the context of your project. A well-designed workflow skill knows when to use Node.js setup actions versus Python setup actions, when to run integration tests versus unit tests, and how to handle secrets and environment-specific configurations.
 
@@ -149,7 +149,7 @@ After generating a workflow:
 4. Record successful patterns for future regeneration
 ```
 
-This feedback loop helps your skills produce increasingly better workflows over time.
+This feedback loop helps your skills produce increasingly better workflows over time. For a deeper dive, see [Claude Code for Inner Loop Optimization Workflow](/claude-code-for-inner-loop-optimization-workflow/).
 
 ## Security Best Practices Integration
 
@@ -165,7 +165,7 @@ Your skill should include these patterns by default and flag any workflow that v
 
 ---
 
-Claude Code skills transform GitHub Actions workflow development from manual YAML editing into an intelligent, context-aware process. By building skills that understand your project structure, validate against best practices, and manage reusable templates, you create a powerful automation layer that improves consistency and reduces errors across your entire codebase.
+Claude Code skills transform GitHub Actions workflow development from manual YAML editing into an intelligent, context-aware process. By building skills that understand your project structure, validate against best practices, and manage reusable templates, you create a powerful automation layer that improves consistency and reduces errors across your entire codebase. For a deeper dive, see [Claude Code vs GitHub Actions: Automation Approaches](/claude-code-vs-github-actions-ci-comparison/).
 
 Start with one skill focused on your most common workflow type, then expand as you identify more opportunities for automation. The investment pays dividends in reduced CI/CD maintenance and fewer pipeline failures.
 

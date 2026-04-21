@@ -16,7 +16,7 @@ geo_optimized: true
 ---
 
 
-The scope here is continuous configuration and practical usage with Claude Code. This does not cover general project setup. For that foundation, see [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/).
+The scope here is continuous configuration and practical usage with Claude Code. This does not cover general project setup. For that foundation, see [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/). We cover this further in [Claude Code vs Sourcegraph Cody: Setup and First Run](/claude-code-vs-sourcegraph-cody-setup/).
 
 Claude Code Continuous Testing Workflow: Complete Guide for 2026
 
@@ -36,7 +36,7 @@ Modern continuous testing workflows incorporate multiple testing types, includin
 
 Before implementing continuous testing, establish a solid infrastructure. This includes your test framework, test runners, and the environment where tests execute. Claude Code can assist in setting up these components correctly and ensuring they're optimized for continuous execution.
 
-Start by choosing appropriate test frameworks for your technology stack. For JavaScript and TypeScript projects, Jest and Vitest are popular choices that offer excellent integration with continuous integration systems. Python projects benefit from pytest's rich plugin ecosystem, while Go projects can use the built-in testing package. Claude Code can generate starter configurations for these frameworks:
+Start by choosing appropriate test frameworks for your technology stack. For JavaScript and TypeScript projects, Jest and Vitest are popular choices that offer excellent integration with continuous integration systems. Python projects benefit from pytest's rich plugin ecosystem, while Go projects can use the built-in testing package. Claude Code can generate starter configurations for these frameworks. See also [Claude MCP vs ChatGPT Plugins: Extension Systems Compared](/claude-mcp-vs-chatgpt-plugins-comparison/) for more on this topic.
 
 ```javascript
 // vitest.config.ts for fast testing
@@ -198,7 +198,7 @@ describe('POST /api/payments', () => {
 
 ## GitHub Actions Workflow
 
-Continuous testing requires automated execution in your CI/CD pipeline. GitHub Actions provides excellent integration with testing frameworks and offers flexible configuration for various testing scenarios. Claude Code can help you design workflows that optimize test execution time while maintaining comprehensive coverage.
+Continuous testing requires automated execution in your CI/CD pipeline. GitHub Actions provides excellent integration with testing frameworks and offers flexible configuration for various testing scenarios. Claude Code can help you design workflows that optimize test execution time while maintaining comprehensive coverage. For a deeper dive, see [Claude Code vs GitHub Actions: Automation Approaches](/claude-code-vs-github-actions-ci-comparison/).
 
 A well-designed GitHub Actions workflow runs different test types at appropriate stages:
 

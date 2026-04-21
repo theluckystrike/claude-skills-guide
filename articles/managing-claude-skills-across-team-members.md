@@ -10,7 +10,7 @@ last_updated: 2026-04-19
 
 ## The Specific Situation
 
-Your 8-person team shares a `deploy` skill in the project repo. Developer Alice has a personal `deploy` skill at `~/.claude/skills/deploy/SKILL.md` that skips tests (she uses it for hotfixes). Developer Bob installed a plugin that also has a `deploy` skill. When Alice types `/deploy`, she gets her personal version. When Bob types `/deploy`, he gets the project version, but the plugin version shows as `plugin-name:deploy`. Nobody knows who gets what, and a production deploy just ran without tests.
+Your 8-person team shares a `deploy` skill in the project repo. Developer Alice has a personal `deploy` skill at `~/.claude/skills/deploy/SKILL.md` that skips tests (she uses it for hotfixes). Developer Bob installed a plugin that also has a `deploy` skill. When Alice types `/deploy`, she gets her personal version. When Bob types `/deploy`, he gets the project version, but the plugin version shows as `plugin-name:deploy`. Nobody knows who gets what, and a production deploy just ran without tests. We cover this further in [Claude Skills for Travel Booking Platforms — Automate GDS Parsing, Fare Rules, and PNR Validation — 2026](/claude-skills-for-travel-booking-platforms/).
 
 ## Technical Foundation
 
@@ -132,7 +132,7 @@ There is no `--list-skills` CLI flag or audit log. The only way to see active sk
 
 Enterprise-managed skills via managed settings cannot be excluded or overridden by any developer. If IT deploys a `deploy` skill via managed settings, every developer gets that exact version regardless of their personal or project skills with the same name.
 
-The `claudeMdExcludes` setting works for CLAUDE.md files but does NOT apply to skills. There is no equivalent `skillExcludes` setting. All discovered skills in all scopes are active.
+The `claudeMdExcludes` setting works for CLAUDE.md files but does NOT apply to skills. There is no equivalent `skillExcludes` setting. All discovered skills in all scopes are active. Learn more in [Polyglot Claude Skills — Building Skills That Work Across TypeScript, Python, Rust, and Go — 2026](/polyglot-claude-skills-multi-language/).
 
 When a legacy command exists at `.claude/commands/deploy.md` and a skill exists at `.claude/skills/deploy/SKILL.md`, the skill takes precedence. The command file is ignored. Migrate or delete the command file to avoid confusion.
 

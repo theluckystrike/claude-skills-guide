@@ -134,7 +134,7 @@ When you write a new instruction, ask these questions in order:
 2. Does this apply to this project for all team members? Put it in `./CLAUDE.md`.
 3. Does this apply to this project for only me? Put it in `./CLAUDE.local.md`.
 4. Does this apply to specific file types? Put it in `.claude/rules/` with paths.
-5. Is this a multi-step procedure? Make it a skill in `.claude/skills/`.
+5. Is this a multi-step procedure? Make it a skill in `.claude/skills/`. Learn more in [Migrate CLAUDE.md Between Projects — Portable Patterns (2026)](/migrating-claude-md-between-projects/).
 
 Following this decision tree prevents the two most common problems: rules in the wrong layer (causing conflicts) and rules duplicated across layers (causing maintenance burden).
 

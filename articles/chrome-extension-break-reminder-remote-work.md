@@ -12,6 +12,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 geo_optimized: true
 sitemap: false
+robots: "noindex, nofollow"
 ---
 Remote work offers flexibility and freedom, but it also blurs the boundaries between focused work and rest. Without the natural interruptions of an office environment, colleagues stopping by, meetings, or simply walking to a different room, developers and power users often find themselves staring at screens for hours without taking breaks. This habit leads to eye strain, decreased productivity, and burnout.
 

@@ -10,7 +10,7 @@ last_updated: 2026-04-19
 
 ## The Duplication Problem
 
-When your organization runs 10 microservices, each with its own CLAUDE.md, you end up copying the same coding standards into every repository. One team updates their error handling rules, another does not. Six months later, each repo follows slightly different conventions. Claude generates different patterns depending on which repo you are working in.
+When your organization runs 10 microservices, each with its own CLAUDE.md, you end up copying the same coding standards into every repository. One team updates their error handling rules, another does not. Six months later, each repo follows slightly different conventions. Claude generates different patterns depending on which repo you are working in. Learn more in [Migrate CLAUDE.md Between Projects — Portable Patterns (2026)](/migrating-claude-md-between-projects/).
 
 The fix is sharing CLAUDE.md content across projects without copy-paste. Claude Code supports several mechanisms for this.
 

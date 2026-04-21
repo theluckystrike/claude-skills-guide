@@ -42,7 +42,7 @@ source .venv/bin/activate
 pip install sigma-core sigmac pyyaml
 ```
 
-The `sigma-core` package provides the core library for Sigma rule processing, while `sigmac` converts Sigma rules to SIEM-specific queries. This tooling forms the foundation for your Claude Code enhanced workflow.
+The `sigma-core` package provides the core library for Sigma rule processing, while `sigmac` converts Sigma rules to SIEM-specific queries. This tooling forms the foundation for your Claude Code enhanced workflow. For a deeper dive, see [Claude Code for GraphQL Persisted Queries Workflow](/claude-code-for-graphql-persisted-queries-workflow/).
 
 ## Creating Sigma Rules with Claude Code
 
@@ -169,7 +169,7 @@ Claude Code accelerates each phase of this workflow, but human oversight remains
 
 Using Claude Code for Sigma rules development transforms a traditionally manual process into an efficient, automated workflow. From initial rule generation through validation, conversion, and deployment, Claude Code serves as an intelligent assistant that understands both Sigma syntax and security concepts. Start by setting up your development environment, then gradually incorporate Claude Code into each phase of your detection engineering practice.
 
-The key is maintaining human oversight while using Claude's ability to accelerate the mechanical aspects of rule writing. With proper validation and testing procedures in place, you'll build a solid detection library that catches real threats while minimizing analyst fatigue from false positives.
+The key is maintaining human oversight while using Claude's ability to accelerate the mechanical aspects of rule writing. With proper validation and testing procedures in place, you'll build a solid detection library that catches real threats while minimizing analyst fatigue from false positives. We cover this further in [How to Use gRPC Testing with Claude Code: grpcurl (2026)](/claude-code-for-grpcurl-grpc-testing-workflow/).
 
 ---
 

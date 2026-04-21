@@ -633,7 +633,7 @@ The key workflow is: collect the right profile type for your symptom, export it 
 
 I'm a solo developer in Vietnam. 50K Chrome extension users. $500K+ on Upwork. 5 Claude Max subscriptions running agent fleets in parallel.
 
-These are my actual CLAUDE.md templates, orchestration configs, and prompts. Not a course. Not theory. The files I copy into every project before I write a line of code.
+These are my actual CLAUDE.md templates, orchestration configs, and prompts. Not a course. Not theory. The files I copy into every project before I write a line of code. See also [Claude Code for Prompt Testing Evaluation Guide](/claude-code-for-prompt-testing-evaluation-guide/) for more on this topic.
 
 **[See what's inside →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-default&utm_campaign=claude-code-for-go-pprof-profiling-workflow-tutorial)**
 

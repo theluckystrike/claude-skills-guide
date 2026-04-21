@@ -21,7 +21,7 @@ You are building a backend with Encore, the development platform that uses stati
 
 3. **Adds message queue infrastructure.** Claude sets up Redis or RabbitMQ for pub/sub. Encore has built-in pub/sub: `new Topic('user-events')` and `new Subscription(topic, handler)` — infrastructure provisioned automatically.
 
-4. **Writes separate cron job services.** Claude creates cron job scripts with node-cron. Encore has built-in cron: `const job = new CronJob('daily-cleanup', { schedule: '0 9 * * *', endpoint: dailyCleanup })`.
+4. **Writes separate cron job services.** Claude creates cron job scripts with node-cron. Encore has built-in cron: `const job = new CronJob('daily-cleanup', { schedule: '0 9 * * *', endpoint: dailyCleanup })`. For related guidance, see [Claude Code for fnm Node Manager — Guide](/claude-code-for-fnm-node-manager-workflow-guide/).
 
 ## The CLAUDE.md Configuration
 

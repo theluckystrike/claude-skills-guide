@@ -16,13 +16,13 @@ geo_optimized: true
 
 When developers hit dev containers devcontainer json not working as expected in the development workflow, it typically traces back to incomplete dev containers devcontainer json configuration or missing integration steps. The approach below walks through diagnosing and resolving this dev containers devcontainer json issue with Claude Code, verified against current tooling in April 2026.
 
-Dev containers provide a standardized, containerized development environment that works consistently across machines. When you pair dev containers with Claude Code, you get reproducible AI-assisted development where every team member runs identical toolchain versions. This guide walks through setting up `devcontainer.json` for Claude Code workflows, from basic configuration to advanced multi-service setups. If you're evaluating different cloud-based approaches, see how [Claude Code integrates with GitPod](/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) as well.
+Dev containers provide a standardized, containerized development environment that works consistently across machines. When you pair dev containers with Claude Code, you get reproducible AI-assisted development where every team member runs identical toolchain versions. This guide walks through setting up `devcontainer.json` for Claude Code workflows, from basic configuration to advanced multi-service setups. If you're evaluating different cloud-based approaches, see how [Claude Code integrates with GitPod](/claude-code-gitpod-cloud-ide-integration-tutorial-2026/) as well. We cover this further in [Claude Code vs Sourcegraph Cody: Setup and First Run](/claude-code-vs-sourcegraph-cody-setup/).
 
 ## Understanding the Dev Container Workflow
 
 [Dev containers let you develop inside a Docker container](/best-claude-code-skills-to-install-first-2026/) while using your local IDE. The `.devcontainer/devcontainer.json` file defines the container image, extensions, and settings. When you open a project in VS Code with the Dev Containers extension, it builds the container and reconnects your editor reliably.
 
-For [Claude Code users, this approach delivers three key benefits](/claude-skill-md-format-complete-specification-guide/) First, consistency, every developer and CI pipeline uses the exact same Node.js, Python, and Claude Code versions. Second, isolation, skill installations and dependencies stay contained, preventing conflicts with host system packages. Third, portability, clone the repo anywhere with Docker installed, and your environment works immediately.
+For [Claude Code users, this approach delivers three key benefits](/claude-skill-md-format-complete-specification-guide/) First, consistency, every developer and CI pipeline uses the exact same Node.js, Python, and Claude Code versions. Second, isolation, skill installations and dependencies stay contained, preventing conflicts with host system packages. Third, portability, clone the repo anywhere with Docker installed, and your environment works immediately. Learn more in [Claude Code vs Git Merge Conflict Resolution Tools](/claude-code-vs-git-merge-conflict-resolution/).
 
 ## Creating Your First devcontainer.json
 
@@ -120,7 +120,7 @@ For skills requiring additional dependencies, chain with package installs:
 
 ## Using Compose for Multi-Service Setups
 
-Complex projects often need multiple services, a database, cache, or message queue alongside your main development environment. Dev Containers supports Docker Compose for these scenarios:
+Complex projects often need multiple services, a database, cache, or message queue alongside your main development environment. Dev Containers supports Docker Compose for these scenarios: For related guidance, see [Claude Code vs Docker Dev Containers: Development Environments](/claude-code-vs-docker-dev-containers/).
 
 ```json
 {

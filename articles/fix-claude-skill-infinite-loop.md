@@ -14,7 +14,7 @@ You invoke `/fix-lint`. The skill tells Claude to fix linting errors. Claude fix
 
 ## Technical Foundation
 
-Skills can trigger in two ways: manually (user types `/name`) and automatically (Claude matches the conversation against skill descriptions). Auto-invocation creates the possibility of loops: if a skill's output matches its own trigger conditions, Claude may re-invoke it.
+Skills can trigger in two ways: manually (user types `/name`) and automatically (Claude matches the conversation against skill descriptions). Auto-invocation creates the possibility of loops: if a skill's output matches its own trigger conditions, Claude may re-invoke it. Learn more in [Fix ENOENT No Such File or Directory Error with Claude Skills — 2026](/fix-claude-code-enoent-skills/).
 
 The content lifecycle matters here:
 - Skill body enters as a single message and stays for the session

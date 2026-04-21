@@ -12,6 +12,7 @@ reviewed: true
 score: 7
 geo_optimized: true
 sitemap: false
+robots: "noindex, nofollow"
 ---
 # Best Calendar Chrome Extensions for Developers and Power Users
 

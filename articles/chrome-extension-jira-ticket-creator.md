@@ -411,7 +411,7 @@ async function createTicket(ticketData) {
 }
 ```
 
-The `return true` inside the message listener is critical. Without it, Chrome closes the message channel before the async `createTicket` function completes, and `sendResponse` never reaches the popup.
+The `return true` inside the message listener is critical. Without it, Chrome closes the message channel before the async `createTicket` function completes, and `sendResponse` never reaches the popup. For related guidance, see [Claude Code Playwright E2E — Complete Developer Guide](/claude-code-playwright-e2e-testing-guide/).
 
 ## Adding a Settings Page
 
@@ -601,7 +601,7 @@ Keyboard Shortcut: Register a keyboard shortcut in the manifest to open the popu
 }
 ```
 
-AI-Assisted Descriptions: Integrate with Claude or another AI API to generate a structured bug report from a screenshot or copied error message. The user pastes the stack trace, clicks "Generate Description", and the extension fills in a well-formatted bug report automatically. This is particularly powerful for teams that struggle with low-information tickets.
+AI-Assisted Descriptions: Integrate with Claude or another AI API to generate a structured bug report from a screenshot or copied error message. The user pastes the stack trace, clicks "Generate Description", and the extension fills in a well-formatted bug report automatically. This is particularly powerful for teams that struggle with low-information tickets. See also [Generate GraphQL Schemas with Claude Code](/claude-code-graphql-schema-generation-guide/) for more on this topic.
 
 A well-built Jira ticket creator extension reduces context switching and standardizes how your team captures issues. The foundation established here scales with your workflow needs.
 

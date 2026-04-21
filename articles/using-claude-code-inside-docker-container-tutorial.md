@@ -15,13 +15,13 @@ geo_optimized: true
 
 # Using Claude Code Inside Docker Container Tutorial
 
-Docker containers have become the standard for creating reproducible development environments, and combining them with Claude Code unlocks powerful possibilities for AI-assisted coding. Running Claude Code inside a Docker container gives you an isolated workspace where you can use AI assistance without polluting your local system, share configured development environments with team members, or create consistent coding environments across different machines.
+Docker containers have become the standard for creating reproducible development environments, and combining them with Claude Code unlocks powerful possibilities for AI-assisted coding. Running Claude Code inside a Docker container gives you an isolated workspace where you can use AI assistance without polluting your local system, share configured development environments with team members, or create consistent coding environments across different machines. For related guidance, see [Claude Code vs Docker Dev Containers: Development Environments](/claude-code-vs-docker-dev-containers/).
 
 This tutorial walks you through setting up Claude Code inside a Docker container, configuring it for optimal development workflows, and integrating it with your containerized projects.
 
 Why Run Claude Code in Docker?
 
-There are several compelling reasons to run Claude Code within Docker containers. First, isolation ensures that Claude Code's operations, file access, and tool executions are contained within the container, preventing unintended modifications to your host system. Second, reproducibility allows you to create a fixed environment with specific dependencies, tools, and configurations that work identically on any machine running Docker. Third, team collaboration enables you to share a fully configured development environment with colleagues, ensuring everyone works with the same setup.
+There are several compelling reasons to run Claude Code within Docker containers. First, isolation ensures that Claude Code's operations, file access, and tool executions are contained within the container, preventing unintended modifications to your host system. Second, reproducibility allows you to create a fixed environment with specific dependencies, tools, and configurations that work identically on any machine running Docker. Third, team collaboration enables you to share a fully configured development environment with colleagues, ensuring everyone works with the same setup. We cover this further in [Claude Code vs Sourcegraph Cody: Setup and First Run](/claude-code-vs-sourcegraph-cody-setup/).
 
 Additionally, Docker provides security benefits by containing AI operations within a sandboxed environment. This is particularly valuable when working with unfamiliar code or when Claude Code needs to execute commands that could affect the system.
 
@@ -257,7 +257,7 @@ claude-review:
  - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
 ```
 
-This enables automated code review and refactoring suggestions as part of your development workflow.
+This enables automated code review and refactoring suggestions as part of your development workflow. Learn more in [Claude Code vs JetBrains Refactoring: AI vs IDE Native](/claude-code-vs-jetbrains-refactor-comparison/).
 
 ## Troubleshooting Common Issues
 

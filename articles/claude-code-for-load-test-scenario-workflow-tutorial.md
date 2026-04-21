@@ -19,13 +19,13 @@ The load test scenario ecosystem presents specific challenges around test isolat
 {% raw %}
 Claude Code for Load Test Scenario Workflow Tutorial
 
-Load testing is critical for ensuring your applications can handle real-world traffic conditions. In this comprehensive tutorial, you'll learn how to use Claude Code to create, manage, and execute load test scenario workflows that integrate smoothly into your development pipeline.
+Load testing is critical for ensuring your applications can handle real-world traffic conditions. In this comprehensive tutorial, you'll learn how to use Claude Code to create, manage, and execute load test scenario workflows that integrate smoothly into your development pipeline. We cover this further in [Claude Code for Load Testing Automation Guide](/claude-code-for-load-testing-automation-guide/).
 
 ## Understanding Load Test Scenarios with Claude Code
 
 Claude Code isn't just for writing code, it can orchestrate entire load testing workflows. By combining Claude's natural language processing with shell execution capabilities, you can build sophisticated test scenarios that would otherwise require complex scripting or dedicated tools.
 
-The key advantage of using Claude Code for load testing is its ability to understand context, make decisions during test execution, and adapt scenarios based on real-time results. This makes it particularly valuable for exploratory load testing and iterative performance tuning.
+The key advantage of using Claude Code for load testing is its ability to understand context, make decisions during test execution, and adapt scenarios based on real-time results. This makes it particularly valuable for exploratory load testing and iterative performance tuning. We cover this further in [Claude Code for Performance Monitoring Workflow Guide](/claude-code-for-performance-monitoring-workflow-guide/).
 
 ## Setting Up Your Load Test Environment
 
@@ -227,7 +227,7 @@ This gives you quick insights into response times, error rates, and throughput m
 
 4. Use Realistic Scenarios: Structure your test scripts to mirror actual user behavior patterns, not just simple endpoint pinging.
 
-5. Automate Regression Testing: Integrate load tests into your CI/CD pipeline to catch performance regressions before deployment.
+5. Automate Regression Testing: Integrate load tests into your CI/CD pipeline to catch performance regressions before deployment. For related guidance, see [Claude Code for Performance Regression Workflow Guide](/claude-code-for-performance-regression-workflow-guide/).
 
 ## Conclusion
 

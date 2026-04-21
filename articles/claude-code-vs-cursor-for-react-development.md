@@ -16,11 +16,11 @@ geo_optimized: true
 
 
 
-Choosing the right AI coding assistant can significantly impact your productivity as a React developer. While both Claude Code and Cursor offer powerful AI capabilities, they take different approaches to assisting with React development. This guide examines their strengths with practical examples to help you decide which tool fits your workflow.
+Choosing the right AI coding assistant can significantly impact your productivity as a React developer. While both Claude Code and Cursor offer powerful AI capabilities, they take different approaches to assisting with React development. This guide examines their strengths with practical examples to help you decide which tool fits your workflow. For a deeper dive, see [Claude Code vs Chrome DevTools: Debugging Approaches](/claude-code-vs-chrome-devtools-debugging/).
 
 ## The Core Difference in Approach
 
-Cursor integrates AI directly into a modified VS Code environment, providing an IDE-centric experience with chat panels, inline suggestions, and project-aware context. You interact with AI through a sidebar chat and receive code suggestions as you type.
+Cursor integrates AI directly into a modified VS Code environment, providing an IDE-centric experience with chat panels, inline suggestions, and project-aware context. You interact with AI through a sidebar chat and receive code suggestions as you type. See also [Claude Code vs Cursor: Setup and First Experience Compared](/claude-code-vs-cursor-setup-first-experience/) for more on this topic.
 
 Claude Code operates as a terminal-based agent, emphasizing skill-based extensibility and automation pipelines. Rather than relying on IDE integration, Claude Code works through command-line interactions and customizable skills that encode expert workflows.
 
@@ -64,7 +64,7 @@ Place a component-generator skill in .claude/ then invoke:
 Create a UserProfile component with TypeScript, tests, and Storybook configuration
 ```
 
-This invokes the skill, which creates the component file, TypeScript definitions, corresponding test file, and Storybook configuration, all from a single prompt. The skill understands React best practices and applies them consistently across your project.
+This invokes the skill, which creates the component file, TypeScript definitions, corresponding test file, and Storybook configuration, all from a single prompt. The skill understands React best practices and applies them consistently across your project. Learn more in [Claude Code vs Cline: Setup and Configuration](/claude-code-vs-cline-setup-comparison/).
 
 Here is an example of what a generated `UserProfile.tsx` might look like from a well-written component skill:
 
@@ -509,7 +509,7 @@ This hybrid approach captures the strengths of both: Cursor's flexibility during
 
 Both tools have merit for React development. Cursor offers a polished IDE experience with AI deeply integrated into the visual editing environment. Claude Code provides skill-based extensibility that transforms AI assistance into reusable, automatable workflows.
 
-For teams building multiple React applications, Claude Code's skill system offers significant advantages, consistent patterns, automated best practices, and shareable workflows that survive team turnover. For individual developers who prefer visual interaction and are frequently exploring new territory, Cursor's IDE integration remains compelling.
+For teams building multiple React applications, Claude Code's skill system offers significant advantages, consistent patterns, automated best practices, and shareable workflows that survive team turnover. For individual developers who prefer visual interaction and are frequently exploring new territory, Cursor's IDE integration remains compelling. For a deeper dive, see [Claude Code vs Aider: Multi-Model Support](/claude-code-vs-aider-multi-model-support/).
 
 The ideal choice depends on your development style, team size, and how much you value automation versus conversational interaction. Consider the nature of your current project: if you're past the architecture phase and shipping features at scale, Claude Code skills will eliminate more friction. If you're still discovering what you're building, Cursor's conversational interface serves you better.
 

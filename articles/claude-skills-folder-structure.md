@@ -10,7 +10,7 @@ last_updated: 2026-04-19
 
 ## The Specific Situation
 
-You have built a skill that generates test files. The SKILL.md contains a 200-line template, a 50-line validation script, and three example outputs. Everything is crammed into one file. Claude loads all 400+ lines every time the skill triggers, consuming context window for content it may not need. The fix is progressive disclosure: split the skill into a directory with supporting files that Claude loads only on demand.
+You have built a skill that generates test files. The SKILL.md contains a 200-line template, a 50-line validation script, and three example outputs. Everything is crammed into one file. Claude loads all 400+ lines every time the skill triggers, consuming context window for content it may not need. The fix is progressive disclosure: split the skill into a directory with supporting files that Claude loads only on demand. We cover this further in [Claude Skills for Travel Booking Platforms — Automate GDS Parsing, Fare Rules, and PNR Validation — 2026](/claude-skills-for-travel-booking-platforms/).
 
 ## Technical Foundation
 
@@ -111,7 +111,7 @@ This is the core design principle from Anthropic's official skill development gu
 
 The `--add-dir` flag grants file access to additional directories. Any `.claude/skills/` directory within an added directory is loaded automatically as a special exception. However, other `.claude/` config files (like CLAUDE.md) from `--add-dir` directories are NOT loaded by default.
 
-After compaction, each skill gets at most 5,000 tokens re-attached, with a combined budget of 25,000 tokens across all active skills. Skills with large bodies effectively get truncated. The progressive disclosure pattern avoids this: keep SKILL.md concise and let Claude pull reference material from files only when needed.
+After compaction, each skill gets at most 5,000 tokens re-attached, with a combined budget of 25,000 tokens across all active skills. Skills with large bodies effectively get truncated. The progressive disclosure pattern avoids this: keep SKILL.md concise and let Claude pull reference material from files only when needed. Learn more in [Polyglot Claude Skills — Building Skills That Work Across TypeScript, Python, Rust, and Go — 2026](/polyglot-claude-skills-multi-language/).
 
 ## Checklist
 

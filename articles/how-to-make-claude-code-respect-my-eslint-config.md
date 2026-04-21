@@ -14,11 +14,11 @@ geo_optimized: true
 ---
 How to Make Claude Code Respect My ESLint Config
 
-When you're working with Claude Code as your AI coding assistant, you want assurance that the code it generates or modifies aligns with your project's linting rules. Nothing breaks the development flow faster than committing code that immediately triggers ESLint errors in CI/CD. This guide walks you through the essential techniques to make Claude Code respect your ESLint configuration consistently.
+When you're working with Claude Code as your AI coding assistant, you want assurance that the code it generates or modifies aligns with your project's linting rules. Nothing breaks the development flow faster than committing code that immediately triggers ESLint errors in CI/CD. This guide walks you through the essential techniques to make Claude Code respect your ESLint configuration consistently. For a deeper dive, see [Claude Code vs ESLint + Prettier: Code Quality Tools](/claude-code-vs-eslint-prettier-comparison/).
 
 ## Understanding Claude Code and ESLint Integration
 
-Claude Code interacts with your codebase through tools that read, write, and execute commands. When generating code or making edits, it doesn't automatically "see" your ESLint configuration, it relies on you to provide context about your coding standards. The good news is that Claude Code can absolutely respect your ESLint setup when properly configured.
+Claude Code interacts with your codebase through tools that read, write, and execute commands. When generating code or making edits, it doesn't automatically "see" your ESLint configuration, it relies on you to provide context about your coding standards. The good news is that Claude Code can absolutely respect your ESLint setup when properly configured. For a deeper dive, see [Claude Code Docker VSCode Setup Guide](/claude-code-docker-vscode/).
 
 The key is understanding that Claude Code operates within a skill framework and session context. Within those boundaries, you have several powerful mechanisms to ensure linting compliance.
 

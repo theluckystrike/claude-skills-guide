@@ -17,7 +17,7 @@ You are using Kysely, the type-safe SQL query builder for TypeScript that genera
 
 1. **Writes Knex.js query syntax.** Claude uses `knex('users').where('id', 1)` string-based column references. Kysely uses `db.selectFrom('users').where('id', '=', 1)` with explicit operator arguments and typed column names.
 
-2. **Uses an ORM-style relation API.** Claude writes `User.findOne({ include: ['posts'] })` eager loading. Kysely is a query builder, not an ORM — joins are explicit SQL joins: `db.selectFrom('users').innerJoin('posts', 'posts.userId', 'users.id')`.
+2. **Uses an ORM-style relation API.** Claude writes `User.findOne({ include: ['posts'] })` eager loading. Kysely is a query builder, not an ORM — joins are explicit SQL joins: `db.selectFrom('users').innerJoin('posts', 'posts.userId', 'users.id')`. Learn more in [Claude Code for fd (Find Alternative) — Guide](/claude-code-for-fd-find-alternative-workflow-guide/).
 
 3. **Skips the Database type interface.** Claude queries without defining the TypeScript Database interface. Kysely's type safety comes from a `Database` interface that maps table names to column types — without it, you lose all autocompletion.
 

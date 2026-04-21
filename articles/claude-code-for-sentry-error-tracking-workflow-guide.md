@@ -21,7 +21,7 @@ You are integrating Sentry for error tracking, performance monitoring, and sessi
 
 3. **Wraps everything in manual try/catch.** Claude adds try/catch blocks sending errors with `Sentry.captureException()`. Modern Sentry SDKs automatically capture unhandled errors and promise rejections — manual capture is only for handled errors.
 
-4. **Ignores source maps.** Claude deploys without uploading source maps. Sentry errors show minified code without source maps, making debugging impossible. The build must upload maps to Sentry.
+4. **Ignores source maps.** Claude deploys without uploading source maps. Sentry errors show minified code without source maps, making debugging impossible. The build must upload maps to Sentry. Learn more in [Claude Code for Railway Deploy — Workflow Guide](/claude-code-for-railway-deploy-workflow-guide/).
 
 ## The CLAUDE.md Configuration
 
@@ -58,7 +58,7 @@ You are integrating Sentry for error tracking, performance monitoring, and sessi
 
 You want to set up Sentry for a Next.js app with error boundaries and performance monitoring. Prompt Claude Code:
 
-"Integrate Sentry into this Next.js project. Set up client and server configs, add error boundaries for React components, configure performance tracing at 10% sample rate, enable session replay, and ensure source maps are uploaded on build."
+"Integrate Sentry into this Next.js project. Set up client and server configs, add error boundaries for React components, configure performance tracing at 10% sample rate, enable session replay, and ensure source maps are uploaded on build.". See also [Claude Code for React Aria Components — Guide](/claude-code-for-react-aria-components-workflow-guide/) for more on this topic.
 
 Claude Code should install `@sentry/nextjs`, run the Sentry wizard or create `sentry.client.config.ts` and `sentry.server.config.ts` with proper init, wrap the root layout with `Sentry.ErrorBoundary`, configure `next.config.js` with the Sentry plugin for source map uploads, and set sample rates for traces and replays.
 

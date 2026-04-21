@@ -11,7 +11,7 @@ tags: [claude-code, liveblocks, workflow]
 
 ## The Setup
 
-You are adding real-time collaborative features to a React application using Liveblocks. This means presence indicators, live cursors, and shared document state that syncs between users without manual WebSocket management. Claude Code can generate the room setup, presence hooks, and storage mutations, but it tends to reinvent WebSocket plumbing instead of using the Liveblocks abstractions.
+You are adding real-time collaborative features to a React application using Liveblocks. This means presence indicators, live cursors, and shared document state that syncs between users without manual WebSocket management. Claude Code can generate the room setup, presence hooks, and storage mutations, but it tends to reinvent WebSocket plumbing instead of using the Liveblocks abstractions. See also [Claude Code for React Aria Components — Guide](/claude-code-for-react-aria-components-workflow-guide/) for more on this topic.
 
 ## What Claude Code Gets Wrong By Default
 

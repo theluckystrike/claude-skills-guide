@@ -14,7 +14,7 @@ score: 7
 geo_optimized: true
 ---
 
-Setting up celery chord correctly requires understanding proper celery chord configuration, integration testing, and ongoing maintenance. Below, you will find the Claude Code workflow for celery chord that handles each of these concerns step by step.
+Setting up celery chord correctly requires understanding proper celery chord configuration, integration testing, and ongoing maintenance. Below, you will find the Claude Code workflow for celery chord that handles each of these concerns step by step. We cover this further in [How to Use gRPC Testing with Claude Code: grpcurl (2026)](/claude-code-for-grpcurl-grpc-testing-workflow/).
 
 Celery chord workflows are one of the most powerful patterns in distributed task processing, allowing you to execute a group of tasks in parallel and then run a final callback when all tasks complete. However, building and debugging these workflows can be challenging. This tutorial shows you how to use Claude Code to build, test, and optimize Celery chord workflows efficiently.
 
@@ -160,7 +160,7 @@ def process_all_uploads(upload_ids):
  return workflow.apply_async()
 ```
 
-When asking Claude Code to generate this kind of pattern, be explicit about your failure strategy. Saying "if any task fails, the callback should still run with partial results" produces different code than "if any task fails, abort the chord." Claude handles both, but you need to tell it which behavior you want.
+When asking Claude Code to generate this kind of pattern, be explicit about your failure strategy. Saying "if any task fails, the callback should still run with partial results" produces different code than "if any task fails, abort the chord." Claude handles both, but you need to tell it which behavior you want. See also [Generate GraphQL Schemas with Claude Code](/claude-code-graphql-schema-generation-guide/) for more on this topic.
 
 ## Practical Example: Image Processing Pipeline
 

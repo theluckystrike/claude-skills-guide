@@ -18,9 +18,9 @@ If you have ever hit a wall while working on a large project with Claude Code, y
 
 What Is the Context Window?
 
-The context window refers to the maximum amount of text Claude Code can process in a single conversation. This includes your prompts, Claude's responses, code files, and any additional context you provide. When you paste a large codebase or load multiple files, each character counts against this limit.
+The context window refers to the maximum amount of text Claude Code can process in a single conversation. This includes your prompts, Claude's responses, code files, and any additional context you provide. When you paste a large codebase or load multiple files, each character counts against this limit. For a deeper dive, see [Claude Code vs Aider: Multi-Model Support](/claude-code-vs-aider-multi-model-support/).
 
-Currently, Claude Code supports a context window significantly larger than many competitors, but it is not infinite. When you approach the limit, Claude will summarize earlier parts of the conversation or ask you to continue with a fresh session.
+Currently, Claude Code supports a context window significantly larger than many competitors, but it is not infinite. When you approach the limit, Claude will summarize earlier parts of the conversation or ask you to continue with a fresh session. See also [Claude Code vs Continue.dev: Setup and Configuration](/claude-code-vs-continue-dev-setup-comparison/) for more on this topic.
 
 ## Why Anthropic Limits Context Window
 

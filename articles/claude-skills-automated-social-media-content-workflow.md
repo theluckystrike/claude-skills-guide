@@ -15,7 +15,7 @@ geo_optimized: true
 
 # Automate Social Media Content with Claude Skills
 
-[Social media management](/build-personal-ai-assistant-with-claude-skills-guide/) for developers and content creators. This guide walks through building an automated social media content workflow using Claude Code skills, Markdown files stored in `~/.claude/skills/` that you invoke with `/skill-name` inside a Claude Code session.
+[Social media management](/build-personal-ai-assistant-with-claude-skills-guide/) for developers and content creators. This guide walks through building an automated social media content workflow using Claude Code skills, Markdown files stored in `~/.claude/skills/` that you invoke with `/skill-name` inside a Claude Code session. See also [Automate Code Reviews with Claude Code](/claude-code-code-review-automation-guide/) for more on this topic.
 
 ## Understanding the Workflow Architecture
 
@@ -39,7 +39,7 @@ The docx skill complements this by generating or reading Word documents. Create 
 Read product-launch.docx and generate three LinkedIn post drafts from the key benefits section
 ```
 
-For image requirements, describe your needs directly to Claude Code, it can generate HTML/CSS mockups or prompt structures for tools like Figma or Canva, but there is no `canvas-design` skill with a `require()` API.
+For image requirements, describe your needs directly to Claude Code, it can generate HTML/CSS mockups or prompt structures for tools like Figma or Canva, but there is no `canvas-design` skill with a `require()` API. We cover this further in [How to Use Claude Docker Image Size: Reduction (2026)](/claude-code-docker-image-size-reduction-guide/).
 
 ## Scheduling and Calendar Management
 

@@ -18,7 +18,7 @@ The landscape of AI pair programming has matured significantly over the past yea
 
 ## Claude Code: The Extensible Powerhouse
 
-Claude Code remains the dominant force in AI-assisted development, and for good reason. Its architecture supports an extensive skill system that allows developers to create reusable, task-specific workflows. The ability to package specialized capabilities into skills like `frontend-design`, `pdf`, `tdd`, and `supermemory` transforms Claude Code from a conversational assistant into a customizable development environment.
+Claude Code remains the dominant force in AI-assisted development, and for good reason. Its architecture supports an extensive skill system that allows developers to create reusable, task-specific workflows. The ability to package specialized capabilities into skills like `frontend-design`, `pdf`, `tdd`, and `supermemory` transforms Claude Code from a conversational assistant into a customizable development environment. For related guidance, see [Claude Code Playwright E2E — Complete Developer Guide](/claude-code-playwright-e2e-testing-guide/).
 
 The skill system proves particularly valuable for teams with specific requirements. Rather than repeating complex setup instructions for every task, you can define a skill once and invoke it whenever needed. For instance, a `tdd` skill can automatically set up test files, run test suites, and provide feedback on test coverage:
 
@@ -27,7 +27,7 @@ Invoking a TDD skill for test-driven development
 claude "Using the tdd skill, create tests for the user authentication module"
 ```
 
-Claude Code's tool calling capabilities extend beyond simple code generation. The agent can execute shell commands, interact with databases, run test suites, and manage git operations, all within a single conversation flow. This end-to-end workflow support reduces the context switching that plagues other tools.
+Claude Code's tool calling capabilities extend beyond simple code generation. The agent can execute shell commands, interact with databases, run test suites, and manage git operations, all within a single conversation flow. This end-to-end workflow support reduces the context switching that plagues other tools. We cover this further in [Claude Artifacts vs Replit: Code Generation Platforms](/claude-artifacts-vs-replit-comparison/).
 
 The 2026 updates have improved context retention significantly. Claude Code now maintains clearer understanding of project-wide relationships, making it more effective at multi-file refactoring tasks. The agent remembers architectural decisions made earlier in a session, allowing for more coherent and consistent code generation across larger codebases.
 
@@ -67,7 +67,7 @@ Copilot's strength is ubiquity. It works across more languages and frameworks th
 
 Zed AI has emerged as a compelling option for developers who prioritize speed and responsiveness. Built on Rust, the editor provides near-instantaneous response times that make AI interactions feel genuinely interactive rather than asynchronous.
 
-The AI features in Zed have matured considerably in 2026. The agent mode allows for multi-step problem solving while maintaining the editor's characteristic speed. For developers frustrated by latency in other AI coding tools, Zed provides a noticeably snappier experience.
+The AI features in Zed have matured considerably in 2026. The agent mode allows for multi-step problem solving while maintaining the editor's characteristic speed. For developers frustrated by latency in other AI coding tools, Zed provides a noticeably snappier experience. For related guidance, see [Claude API vs OpenAI API: Developer Experience in 2026](/claude-api-vs-openai-api-comparison-2026/).
 
 Zed's collaborative features complement its AI capabilities nicely. The ability to share coding sessions with remote teammates while both benefitting from AI assistance makes it attractive for distributed teams.
 
@@ -81,7 +81,7 @@ For teams committed to the VS Code ecosystem but wanting deeper AI integration t
 
 ## Choosing the Right Tool for Your Workflow
 
-Selecting an AI pair programming tool depends significantly on your workflow preferences and team requirements. If you need extensibility and comprehensive tool integration, Claude Code's skill system provides unmatched customization. For terminal-native workflows, Aider delivers simplicity without sacrificing core capabilities. GitHub Copilot works best for teams already invested in Microsoft's ecosystem, while Zed appeals to developers who value speed above all else.
+Selecting an AI pair programming tool depends significantly on your workflow preferences and team requirements. If you need extensibility and comprehensive tool integration, Claude Code's skill system provides unmatched customization. For terminal-native workflows, Aider delivers simplicity without sacrificing core capabilities. GitHub Copilot works best for teams already invested in Microsoft's ecosystem, while Zed appeals to developers who value speed above all else. For related guidance, see [Claude Code vs Aider: Git Integration Compared](/claude-code-vs-aider-git-integration/).
 
 Consider also how the tool handles specialized tasks. Claude Code skills like `supermemory` enable knowledge management across sessions, valuable for teams building institutional knowledge bases. The `pdf` skill allows direct manipulation of documentation, while `frontend-design` skills can generate UI components matching your design system automatically.
 

@@ -14,7 +14,7 @@ geo_optimized: true
 
 # Fix Claude API Error 500 — Internal Server Error
 
-> **TL;DR:** A 500 error means Anthropic's servers failed to process your request. Retry with exponential backoff, validate your payload, and check the status page before escalating.
+> **TL;DR:** A 500 error means Anthropic's servers failed to process your request. Retry with exponential backoff, validate your payload, and check the status page before escalating. We cover this further in [Fix Claude API Error 401 — Authentication Failed](/claude-api-error-401-fix/).
 
 ## The Problem
 
@@ -34,7 +34,7 @@ This can happen sporadically or consistently for specific request shapes. Some u
 
 ## Why This Happens
 
-HTTP 500 is a server-side error — it means Anthropic's infrastructure failed to process your request. Common triggers include:
+HTTP 500 is a server-side error — it means Anthropic's infrastructure failed to process your request. Learn more in [Fix Claude API Rate Limit Errors (HTTP 429)](/claude-api-rate-limit-fix/). Common triggers include:
 
 - **Overloaded model infrastructure** during peak usage periods
 - **Malformed request payloads** that pass initial validation but fail during processing (e.g., conflicting parameters)

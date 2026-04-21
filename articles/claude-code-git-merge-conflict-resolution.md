@@ -26,7 +26,7 @@ const API_URL = process.env.API_URL || "https://api.staging.com/v1";
 >>>>>>> feature/config-refactor
 ```
 
-Manually resolving dozens of conflicts across multiple files is tedious and error-prone. You need to understand both sides of each conflict, determine the correct resolution, and verify nothing breaks afterward.
+Manually resolving dozens of conflicts across multiple files is tedious and error-prone. You need to understand both sides of each conflict, determine the correct resolution, and verify nothing breaks afterward. Learn more in [Claude Code vs Git Merge Conflict Resolution Tools](/claude-code-vs-git-merge-conflict-resolution/).
 
 ## Quick Fix
 

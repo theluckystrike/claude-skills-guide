@@ -17,7 +17,7 @@ geo_optimized: true
 
 Managing conversation history and temporary data is essential when working extensively with Claude Code. Whether you're handling sensitive client information, managing disk space on development machines, or maintaining compliance requirements, implementing a data retention policy prevents accumulation of unnecessary files while preserving what matters.
 
-This guide covers practical approaches to automate data retention in your Claude Code workflows, including conversation archiving, temporary file cleanup, and session management strategies.
+This guide covers practical approaches to automate data retention in your Claude Code workflows, including conversation archiving, temporary file cleanup, and session management strategies. See also [Automate Code Reviews with Claude Code](/claude-code-code-review-automation-guide/) for more on this topic.
 
 ## Understanding Claude Code Data Storage
 

@@ -41,7 +41,7 @@ tools:
  - bash
 ```
 
-When you invoke this skill, either explicitly with `/api-docs` or implicitly when Claude detects you're working on API documentation, it loads this context automatically. You skip the setup conversation entirely.
+When you invoke this skill, either explicitly with `/api-docs` or implicitly when Claude detects you're working on API documentation, it loads this context automatically. You skip the setup conversation entirely. For a deeper dive, see [Fix Claude Code Not Working VSCode — Quick Guide](/claude-code-not-working-vscode/).
 
 ## Traditional Prompts: The Default Approach
 
@@ -74,7 +74,7 @@ Here's a useful mental test: if you would not bother creating a shell alias for 
 
 ## The Case for Claude Skills
 
-Skills become valuable when you perform tasks repeatedly with consistent requirements. Consider the tdd skill, if you practice test-driven development regularly, the skill encapsulates your preferred patterns, testing frameworks, and workflows. Instead of explaining your TDD process each time, you simply invoke the skill and start coding. For the full developer skill stack built around tdd, see [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/).
+Skills become valuable when you perform tasks repeatedly with consistent requirements. Consider the tdd skill, if you practice test-driven development regularly, the skill encapsulates your preferred patterns, testing frameworks, and workflows. Instead of explaining your TDD process each time, you simply invoke the skill and start coding. For the full developer skill stack built around tdd, see [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). For related guidance, see [Claude API vs OpenAI API: Developer Experience in 2026](/claude-api-vs-openai-api-comparison-2026/).
 
 The frontend-design skill demonstrates similar benefits. Rather than describing your design preferences, component library choices, and styling conventions in every prompt, the skill understands your standards upfront.
 
