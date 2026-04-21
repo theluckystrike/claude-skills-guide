@@ -1,0 +1,14 @@
+---
+---
+{% capture _nl %}
+{% endcapture %}{%- assign _dblnl = _nl | append: _nl -%}
+{%- assign _c = content -%}
+{%- assign _c = _c | split: _dblnl | join: _nl -%}
+{%- assign _c = _c | split: _dblnl | join: _nl -%}
+{%- assign _c = _c | split: _dblnl | join: _nl -%}
+{%- assign _c = _c | split: _dblnl | join: _nl -%}
+{%- assign _c = _c | split: _dblnl | join: _nl -%}
+{%- assign _c = _c | split: _dblnl | join: _nl -%}
+{%- assign _c = _c | split: _dblnl | join: _nl -%}
+{%- assign _c = _c | split: _dblnl | join: _nl -%}
+{{ _c -}}
