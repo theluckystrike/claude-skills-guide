@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How To Make Claude Code Not Over — Complete Developer Guide"
-description: "Practical strategies to prevent Claude Code from building overly complex solutions. Learn to set boundaries, scope prompts effectively, and use."
+title: "Stop Claude Code From Over-Engineering (2026)"
+description: "Prevent Claude Code from building overly complex solutions. Set clear boundaries, scope prompts tightly, and use constraints that keep output simple."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 Claude Code excels at writing code, but sometimes it builds castles when you need cottages. The AI naturally gravitates toward comprehensive solutions, adding abstractions, future-proofing, and features you never requested. This tendency creates technical debt instead of delivering value. Here's how to keep Claude Code focused on practical, appropriately scoped solutions.
 

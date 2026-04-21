@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Cypress Intercept Network Requests Workflow"
-description: "Learn how to use Claude Code to streamline Cypress intercept network requests workflow. Practical examples, code snippets, and actionable advice for."
+title: "Claude Code for Cypress Network Interception (2026)"
+description: "Intercept and mock network requests in Cypress tests with Claude Code. Covers route matching, fixture generation, and dynamic response stubbing."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "How to Use Diffusers Stable Diffusion Training (2026)"
-description: "Learn how to use Claude Code skills to build, train, and fine-tune Stable Diffusion models with the Diffusers library. Practical examples for AI."
+title: "Train Stable Diffusion with Claude Code (2026)"
+description: "Fine-tune Stable Diffusion models using Claude Code and HuggingFace Diffusers. Covers DreamBooth, LoRA training, and optimization for custom AI art."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, diffusers, stable-diffusion, machine-learning, ai-art, training, claude-skills]

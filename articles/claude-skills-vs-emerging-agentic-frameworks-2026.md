@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Skills vs Emerging Agentic Frameworks 2026"
-description: "A practical comparison of Claude skills against emerging agentic frameworks like LangChain Agents, CrewAI, and AutoGPT."
+title: "Claude Skills vs Agentic Frameworks (2026)"
+description: "Compare Claude skills against LangChain Agents, CrewAI, and AutoGPT. See which agentic framework fits your use case with practical code comparisons."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-skills-vs-emerging-agentic-frameworks-2026/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Claude Skills vs Emerging Agentic Frameworks 2026

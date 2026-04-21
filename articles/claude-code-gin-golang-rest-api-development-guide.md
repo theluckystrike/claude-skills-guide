@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code Gin Golang Rest API — Complete Developer Guide"
-description: "Learn how to build production-ready REST APIs using Go Gin framework with Claude Code assistance. Includes practical examples, code snippets, and best."
+title: "Build Go Gin REST APIs with Claude Code (2026)"
+description: "Build production-ready Go Gin REST APIs using Claude Code for scaffolding, routing, middleware, and GORM integration. Includes working code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [golang, gin, rest-api, claude-code, backend-development, programming]
 author: theluckystrike

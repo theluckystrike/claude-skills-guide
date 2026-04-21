@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code for New Relic APM Workflow Guide"
-description: "Learn how to integrate Claude Code with New Relic APM for enhanced application performance monitoring, debugging, and observability workflows."
+title: "Claude Code + New Relic APM Workflow (2026)"
+description: "Integrate Claude Code with New Relic APM for application monitoring, transaction tracing, and error analysis. Set up observability workflows faster."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-new-relic-apm-workflow-guide/
 categories: [guides]
@@ -112,7 +113,7 @@ Here's a skill structure for common APM tasks:
 ```markdown
 ---
 name: newrelic-apm
-description: "Integration with New Relic APM for monitoring and debugging"
+description: "Integrate Claude Code with New Relic APM for application monitoring, transaction tracing, and error analysis. Set up observability workflows faster."
 ---
 
 APM Overview

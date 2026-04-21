@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Automated Pull Request Review Workflow (2026)"
-description: "Learn how to build automated pull request review workflows using Claude Code skills. Automate code quality checks, security scans, and feedback generation."
+title: "Automate PR Reviews with Claude Code (2026)"
+description: "Build automated pull request review workflows with Claude Code skills for code quality checks, security scans, and feedback generation pipelines."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 
@@ -41,7 +42,7 @@ Create a new skill for automated PR reviews. This skill will handle the entire r
 ```yaml
 ---
 name: pr-reviewer
-description: Automated pull request review workflow
+description: "Automatically review pull requests for code quality, security, and style issues"
 ---
 
 Automated Pull Request Reviewer
@@ -171,7 +172,7 @@ Here's how all pieces fit together in a cohesive workflow:
 ```yaml
 ---
 name: full-pr-review
-description: Complete PR review automation
+description: "Complete PR review workflow with linting, security scanning, and formatted feedback"
 ---
 
 Full PR Review Workflow

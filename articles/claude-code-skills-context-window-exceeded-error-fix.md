@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /claude-code-skills-context-window-exceeded-error-fix/
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

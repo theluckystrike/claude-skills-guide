@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Kafka Schema Evolution Workflow"
-description: "Learn how to use Claude Code CLI to automate and streamline Kafka schema evolution, manage Avro/Protobuf schemas, and prevent compatibility issues in."
+title: "Claude Code for Kafka Schema Evolution (2026)"
+description: "Manage Kafka schema evolution with Claude Code. Avro and Protobuf compatibility checks, automated validation, and breaking change prevention."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 
@@ -43,7 +44,7 @@ Your skill definition should include the necessary tools for schema operations:
 ```markdown
 ---
 name: kafka-schema-evolution
-description: Manages Kafka schema evolution, validates compatibility, and generates migration documentation
+description: "Validate Avro and Protobuf schema compatibility and prevent breaking changes"
 ---
 
 Available Commands

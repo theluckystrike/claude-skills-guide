@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Agent Pipeline: Sequential vs Parallel Execution"
-description: "Understand when to use sequential vs parallel agent pipeline design with Claude Code. This guide covers sequential and parallel agent pipeline execution patterns for maximum productivity."
+title: "Claude Code Pipeline: Sequential vs Parallel (2026)"
+description: "Choose between sequential and parallel agent pipeline execution in Claude Code. Patterns, benchmarks, and decision framework for max productivity."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -9,6 +9,7 @@ categories: [advanced]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 9
+last_tested: "2026-04-21"
 permalink: /claude-code-agent-pipeline-sequential-vs-parallel/
 geo_optimized: true
 ---

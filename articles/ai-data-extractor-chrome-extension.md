@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "AI Data Extractor Chrome Extension Guide (2026)"
-description: "Learn how to build and use AI-powered data extraction tools for Chrome. Practical examples, code snippets, and implementation patterns for developers."
+title: "Build an AI Data Extractor Extension (2026)"
+description: "Build an AI-powered Chrome extension that extracts structured data from any webpage. Manifest V3, content scripts, and LLM integration patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: theluckystrike
 permalink: /ai-data-extractor-chrome-extension/
 categories: [guides]

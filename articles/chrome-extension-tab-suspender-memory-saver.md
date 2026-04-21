@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Tab Suspender Memory Saver Chrome Extension Guide (2026)"
-description: "Learn how chrome extension tab suspenders save memory, the technical implementation behind them, and how to build or optimize your own extension."
+title: "Build Tab Suspender Chrome Extension (2026)"
+description: "Build a Chrome tab suspender extension that saves memory. Technical implementation patterns, APIs, and optimization strategies for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -10,6 +10,7 @@ reviewed: true
 score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 Chrome Extension Tab Suspender Memory Saver: A Developer Guide

@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code WebSocket Implementation: Real-Time Events Guide"
-description: "How to use Claude Code to implement WebSocket connections for real-time event handling. Covers server setup, client integration, and error handling."
+title: "Claude Code WebSocket Implementation (2026)"
+description: "Implement WebSocket connections with Claude Code for real-time events, server setup, client integration, and reconnection handling. Working code samples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, websocket, real-time, backend]
 author: "Claude Skills Guide"

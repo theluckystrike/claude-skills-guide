@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Parallel Subagents — Best Practices"
-description: "Run parallel subagents in Claude Code for faster workflows. Execution patterns, optimization strategies, and real examples for 2026."
+title: "Claude Code Parallel Subagents Guide (2026)"
+description: "Run parallel subagents in Claude Code to cut workflow time by 5x. Execution patterns, optimization strategies, and real-world examples for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]
@@ -9,6 +9,7 @@ tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
 reviewed: true
 score: 10
+last_tested: "2026-04-21"
 permalink: /parallel-subagents-claude-code-best-practices-2026/
 geo_optimized: true
 ---

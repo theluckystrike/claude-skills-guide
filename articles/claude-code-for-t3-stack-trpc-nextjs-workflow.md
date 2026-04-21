@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code For T3 Stack Trpc — Complete Developer Guide"
-description: "Master Claude Code CLI with the T3 stack (tRPC, Next.js, TypeScript). Practical workflow examples for building type-safe full-stack applications."
+title: "Claude Code for T3 Stack (tRPC + Next.js) (2026)"
+description: "Build type-safe T3 stack apps with Claude Code for tRPC routers, Next.js pages, and Prisma schemas. Full-stack TypeScript workflow examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, t3-stack, trpc, nextjs, typescript, fullstack, web-development]
 author: theluckystrike

@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "How to Use For Cloudflare R2 — Complete Developer (2026)"
-description: "Learn how to integrate Claude Code with Cloudflare R2 for efficient object storage workflows. Practical examples, code snippets, and best practices for."
+title: "Claude Code for Cloudflare R2 Storage (2026)"
+description: "Manage Cloudflare R2 object storage with Claude Code for bucket operations, presigned URLs, and migration from S3. Working integration examples."
 date: 2026-04-19
 last_modified_at: 2026-04-19
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-cloudflare-r2-storage-workflow-guide/
 categories: [guides]
@@ -110,7 +111,7 @@ For more sophisticated workflows, create Claude Code skills that encapsulate you
 ```yaml
 ---
 name: r2-manager
-description: "Manage Cloudflare R2 storage operations"
+description: "Manage Cloudflare R2 object storage with Claude Code for bucket operations, presigned URLs, and migration from S3. Working integration examples."
 ---
 
 R2 Storage Manager

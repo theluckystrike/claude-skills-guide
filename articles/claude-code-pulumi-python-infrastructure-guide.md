@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Pulumi Python Infrastructure Guide"
-description: "Learn how to use Claude Code with Pulumi and Python for infrastructure automation. Practical patterns for provisioning and managing cloud resources."
+title: "Claude Code with Pulumi Python for IaC (2026)"
+description: "Provision cloud infrastructure with Pulumi and Python using Claude Code. Covers AWS, GCP, and Azure resource definitions with type-safe automation."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -13,6 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 {% raw %}

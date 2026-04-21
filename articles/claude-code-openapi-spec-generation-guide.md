@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use OpenAPI Spec Generation (2026)"
-description: "Learn how to generate OpenAPI specifications using Claude Code. Practical examples, workflows, and tips for API developers."
+title: "Generate OpenAPI Specs with Claude Code (2026)"
+description: "Generate OpenAPI specifications from existing code or from scratch using Claude Code. Practical examples and tested workflows for API developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]
@@ -11,6 +11,7 @@ author: "theluckystrike"
 permalink: /claude-code-openapi-spec-generation-guide/
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

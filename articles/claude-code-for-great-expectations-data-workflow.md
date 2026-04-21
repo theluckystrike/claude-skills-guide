@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Great Expectations Data Workflow"
-description: "Learn how to integrate Claude Code CLI with Great Expectations to build automated data validation pipelines, create custom expectations, and maintain."
+title: "Claude Code for Great Expectations: Data Validation (2026)"
+description: "Build automated data validation pipelines using Claude Code with Great Expectations. Create custom expectations and catch data quality issues early."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 Data quality is the foundation of reliable analytics and machine learning pipelines. [Great Expectations](https://greatexpectations.io/) (GX) has become the industry standard for validating data through declarative "expectations," but integrating it smoothly into developer workflows can be challenging. This guide shows you how to use Claude Code CLI to streamline Great Expectations workflows, automate expectation creation, and build solid data validation pipelines.

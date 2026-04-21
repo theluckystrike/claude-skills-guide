@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Insomnia vs Postman 2026 Workflow Guide"
-description: "A comprehensive guide comparing Claude Code workflows with Insomnia and Postman for API development in 2026. Learn practical integration patterns and..."
+title: "Insomnia vs Postman with Claude Code (2026)"
+description: "Compare Insomnia and Postman API workflows inside Claude Code. See which tool pairs better for automated testing, collections, and environment sync."
 date: 2026-03-20
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 {% raw %}

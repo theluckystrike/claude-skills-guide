@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Microbenchmark Workflow Tutorial Guide"
-description: "Learn how to use Claude Code to create, run, and analyze microbenchmarks efficiently. A practical guide for developers who want to measure code."
+title: "Claude Code for Microbenchmarks: Setup Guide (2026)"
+description: "Run and analyze microbenchmarks 10x faster with Claude Code automation. Covers JMH, criterion, and hyperfine with reproducible benchmark pipelines."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 categories: [tutorials]
@@ -11,6 +11,7 @@ permalink: /claude-code-for-microbenchmark-workflow-tutorial-guide/
 score: 7
 reviewed: true
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

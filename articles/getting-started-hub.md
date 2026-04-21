@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Guides: Install to First Skill (2026)"
+title: "Claude Code: Install to First Skill (2026)"
 description: "Install Claude Code in 90 seconds, activate your first skill, and ship working code. Step-by-step walkthrough with terminal screenshots for every OS."
 date: 2026-03-14
 last_modified_at: 2026-04-21
@@ -104,7 +104,7 @@ Here is a minimal skill file:
 ```yaml
 ---
 name: my-skill
-description: "What this skill does in one sentence"
+description: "Install Claude Code in 90 seconds, activate your first skill, and ship working code. Step-by-step walkthrough with terminal screenshots for every OS."
 ---
 
 You are a specialist for this type of work.

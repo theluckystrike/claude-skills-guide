@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Skills Auto Invocation: How It Works"
-description: "How Claude Code's auto invocation works: TRIGGER conditions in skill files, keyword detection, and when to use explicit /skill-name invocation instead."
+title: "Claude Skills Auto Invocation: How It Works (2026)"
+description: "Trigger Claude skills automatically using TRIGGER conditions and keyword detection. Learn when auto-invocation beats explicit slash command invocation."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-skills-auto-invocation-how-it-works/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 # Claude Skills Auto Invocation: How It Works
 

@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code Netlify Serverless Functions Workflow"
-description: "Learn how to build and deploy serverless APIs using Claude Code and Netlify Functions. This guide covers setup, best practices, and practical patterns."
+title: "Claude Code Netlify Functions Workflow (2026)"
+description: "Build and deploy Netlify serverless functions with Claude Code for API endpoints, background jobs, and edge functions. Working deployment examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-netlify-serverless-functions-workflow/
 categories: [guides]

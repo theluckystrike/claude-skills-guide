@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Perplexity Chrome Extension — Honest Review 2026"
-description: "A practical review of the Perplexity AI Chrome extension for developers and power users. Explore features, integration patterns, and real-world use cases."
+title: "Perplexity Chrome Extension Review (2026)"
+description: "Perplexity Chrome extension tested for developer workflows including API research, debugging, and docs lookup. See real performance data and features."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /perplexity-chrome-extension-review/
 reviewed: true

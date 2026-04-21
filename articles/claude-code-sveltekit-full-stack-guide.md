@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code SvelteKit Full Stack Guide"
-description: "Build full-stack SvelteKit applications faster with Claude Code. Learn practical workflows, skill recommendations, and code generation patterns for."
+title: "Build SvelteKit Apps with Claude Code (2026)"
+description: "Build full-stack SvelteKit applications faster with Claude Code. Covers server routes, form actions, load functions, and deployment configuration."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -12,6 +12,7 @@ permalink: /claude-code-sveltekit-full-stack-guide/
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 SvelteKit has become a top choice for developers seeking a unified framework that handles both frontend and backend logic. When paired with Claude Code, you gain an AI coding assistant that understands your project structure, generates type-safe code, and helps you navigate the full development lifecycle from scaffolding to deployment.

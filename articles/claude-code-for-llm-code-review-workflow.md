@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code For LLM Code Review — Complete Developer Guide"
-description: "Master the art of building LLM-powered code review workflows with Claude Code. Learn practical implementations, automation patterns, and best practices."
+title: "Claude Code for LLM-Powered Code Review (2026)"
+description: "Build automated code review pipelines with Claude Code for PR analysis, security scanning, and style enforcement. Reduce review time by 50% or more."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-llm-code-review-workflow/
 categories: [guides]

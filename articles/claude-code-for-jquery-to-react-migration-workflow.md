@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for jQuery to React Migration Workflow"
-description: "A practical guide to migrating legacy jQuery codebases to React using Claude Code. Learn how to use AI-assisted refactoring, component extraction."
+title: "Migrate jQuery to React with Claude Code (2026)"
+description: "Migrate legacy jQuery codebases to React components using Claude Code. Covers DOM manipulation rewrites, event handler conversion, and state extraction."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "How to Use Agent Handoff Strategies for Long Running Tasks"
-description: "Master agent handoff strategies for long running tasks with Claude Code. Learn practical techniques for managing extended workflows, maintaining."
+title: "Agent Handoff for Long-Running Tasks (2026)"
+description: "Implement agent handoff strategies for multi-hour tasks using checkpointing, state preservation, and session resumption. Proven patterns for Claude Code."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /agent-handoff-strategies-for-long-running-tasks-guide/
 categories: [guides]

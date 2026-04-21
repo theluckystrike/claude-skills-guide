@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Wazuh SIEM Workflow Tutorial"
-description: "A practical guide to integrating Claude Code with Wazuh SIEM for automated security monitoring, threat detection, and incident response workflows."
+title: "Claude Code for Wazuh SIEM Automation (2026)"
+description: "Automate Wazuh SIEM workflows with Claude Code. Covers rule creation, alert correlation, log analysis, and incident response automation for SecOps."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills, wazuh, siem, security, automation]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

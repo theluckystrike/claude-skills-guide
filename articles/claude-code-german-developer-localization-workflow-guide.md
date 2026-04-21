@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "How to Use German Developer Localization Workflow (2026)"
-description: "A comprehensive guide for German developers on using Claude Code to streamline localization workflows, manage translations, and build multilingual."
+title: "Claude Code German Localization Workflow (2026)"
+description: "Streamline German localization with Claude Code for translation management, i18n setup, and multilingual app builds. Practical workflow for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, localization, german, i18n, internationalization, translation, claude-skills]
 author: "Claude Skills Guide"

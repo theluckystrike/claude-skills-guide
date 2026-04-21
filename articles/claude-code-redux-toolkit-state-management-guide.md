@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Redux Toolkit State Management Guide"
-description: "A practical guide to integrating Redux Toolkit with Claude Code for efficient state management in your applications."
+title: "Claude Code for Redux Toolkit Setup (2026)"
+description: "Set up Redux Toolkit state management with Claude Code. Covers slice creation, async thunks, RTK Query, entity adapters, and middleware configuration."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 State management remains one of the most challenging aspects of building React applications. Redux Toolkit, the official opinionated approach to Redux, simplifies this process significantly. When combined with Claude Code's capabilities, you can accelerate Redux implementation while maintaining clean, maintainable code architecture.

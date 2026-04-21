@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code For Platform Engineer — Developer Guide"
-description: "Master Claude Code to automate infrastructure tasks, manage Kubernetes, write Terraform, and streamline DevOps workflows with practical examples."
+title: "Claude Code for Platform Engineers (2026)"
+description: "Automate infrastructure tasks with Claude Code. Kubernetes management, Terraform generation, and DevOps workflow automation for platform engineers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 render_with_liquid: false
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 {% raw %}
@@ -95,7 +96,7 @@ Create custom Claude skills that understand your specific infrastructure pattern
 ```markdown
 ---
 name: infra-deploy
-description: Deploy infrastructure using our standard patterns
+description: "Assist with infrastructure deployment using team-specific patterns and conventions"
 ---
 
 You are a platform engineering assistant specializing in our infrastructure deployment patterns.

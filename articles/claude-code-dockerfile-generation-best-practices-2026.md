@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code Dockerfile Best Practices (2026)"
-description: "Claude Code Dockerfile Best Practices. Practical guide with working examples for developers. Tested on Docker."
+description: "Generate production Dockerfiles with Claude Code. Multi-stage builds, security hardening, and layer optimization patterns for Node, Python, and Go."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-dockerfile-generation-best-practices-2026/
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 
@@ -380,7 +381,7 @@ If your team has specific Dockerfile standards, create a custom skill:
 ```yaml
 ---
 name: corporate-dockerfile
-description: Generate Dockerfiles following company standards
+description: "Generate Dockerfiles that comply with corporate security and operational standards"
 ---
 
 Corporate Dockerfile Generator

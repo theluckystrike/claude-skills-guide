@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Why Does Claude Code Ignore My Skill Md — Developer Guide"
-description: "Troubleshooting guide for when Claude Code fails to load your skill MD file. Learn the common causes and fixes for skills that get completely ignored."
+title: "Fix Claude Code Ignoring Skill .md File (2026)"
+description: "Fix Claude Code silently ignoring your skill .md file. Common causes include wrong directory, bad YAML, encoding issues, and file permissions."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -10,6 +10,7 @@ score: 8
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 permalink: /why-does-claude-code-ignore-my-skill-md-file-entirely/
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 # Why Does Claude Code Ignore My Skill MD File Entirely

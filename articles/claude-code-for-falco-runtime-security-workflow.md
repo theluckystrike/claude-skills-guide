@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Falco Runtime Security Workflow"
-description: "Learn how to integrate Claude Code with Falco for automated runtime security monitoring and incident response in containerized environments."
+title: "Claude Code for Falco Runtime Security (2026)"
+description: "Integrate Claude Code with Falco for container runtime security. Automate rule creation, alert tuning, and incident response in Kubernetes clusters."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills, falco, runtime-security, containers]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

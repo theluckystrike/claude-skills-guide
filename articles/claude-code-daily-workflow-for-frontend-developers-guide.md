@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Daily Workflow for Frontend Developers Guide"
-description: "A practical guide to integrating Claude Code into your daily frontend development workflow. Learn skills, workflows, and tips for building better web."
+title: "Claude Code Daily Workflow for Frontend Devs (2026)"
+description: "Integrate Claude Code into your daily frontend workflow. Covers component creation, CSS debugging, accessibility checks, and build optimization tasks."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ reviewed: true
 score: 9
 permalink: /claude-code-daily-workflow-for-frontend-developers-guide/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Claude Code Daily Workflow for Frontend Developers Guide

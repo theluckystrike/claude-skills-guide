@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code for k9s Kubernetes Terminal Workflow Guide"
-description: "Master the integration of Claude Code with k9s for streamlined Kubernetes management. Learn practical patterns for debugging, resource inspection, and."
+title: "Claude Code + k9s Kubernetes Terminal (2026)"
+description: "Combine Claude Code with k9s for faster Kubernetes debugging, resource inspection, and cluster management from your terminal. Workflow patterns."
 date: 2026-04-19
 last_modified_at: 2026-04-19
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-k9s-kubernetes-terminal-workflow-guide/
 categories: [guides]
@@ -46,7 +47,7 @@ Create a Claude Skill that understands Kubernetes concepts and can generate appr
 ```yaml
 ---
 name: k8s-assistant
-description: "Kubernetes cluster management assistant with k9s integration"
+description: "Combine Claude Code with k9s for faster Kubernetes debugging, resource inspection, and cluster management from your terminal. Workflow patterns."
 tools: [bash, read_file, write_file]
 version: 1.0.0
 ---

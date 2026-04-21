@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for PyTorch LoRA Fine-Tuning Workflow"
-description: "Learn how to use Claude Code skills to streamline PyTorch LoRA fine-tuning workflows. Includes practical examples for dataset preparation, training."
+title: "Claude Code PyTorch LoRA Fine-Tuning (2026)"
+description: "Fine-tune models with PyTorch LoRA and Claude Code for dataset prep, rank selection, and training optimization. Reduce VRAM usage by 75% or more."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

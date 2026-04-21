@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "How to Use For Braintree Payment — Complete Developer (2026)"
-description: "Learn how to use Claude Code to build, automate, and optimize Braintree payment workflows. Includes practical examples, code snippets, and actionable."
+title: "Claude Code for Braintree Payments (2026)"
+description: "Build Braintree payment workflows with Claude Code for checkout integration, subscription billing, and webhook handling. Working code examples included."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-braintree-payment-workflow-guide/
 categories: [tutorials]

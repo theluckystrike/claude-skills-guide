@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Keeps Timing Out and Changing Style: Fix (2026)"
-description: "Fix Claude keeps timing out and changing indentation style. Configure your preferred formatting and prevent unwanted code style changes."
+title: "Fix Claude Code Changing Indentation Style (2026)"
+description: "Stop Claude Code from changing your indentation style. Configure tab vs spaces, nesting depth, and formatting rules via CLAUDE.md and EditorConfig."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, indentation, formatting, code-style, configuration, claude-s
 permalink: /claude-code-keeps-changing-my-indentation-style/
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 
@@ -93,7 +94,7 @@ Create a file at `CLAUDE.md` in your project root (or in `.claude/skills/`):
 ```markdown
 ---
 name: preserve-indentation
-description: Preserves your project's indentation style exactly as defined
+description: "Preserve existing indentation style when editing or generating code"
 ---
 
 Indentation Preservation

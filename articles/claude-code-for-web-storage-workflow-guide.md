@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Web Storage Workflow Guide"
-description: "Learn how to use Claude Code CLI to automate and streamline your web storage operations with practical examples and actionable advice."
+title: "Claude Code for Web Storage API Workflow (2026)"
+description: "Automate localStorage, sessionStorage, and IndexedDB operations with Claude Code CLI. Practical patterns for web storage management and debugging."
 date: 2026-04-19
 last_modified_at: 2026-04-19
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-web-storage-workflow-guide/
 categories: [guides, workflows]

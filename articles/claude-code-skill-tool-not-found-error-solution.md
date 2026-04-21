@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix Claude Code Skill Tool Not Found Error — Quick Guide"
-description: "Solve the tool not found error in Claude Code skills. Fix tool name mismatches, missing skill declarations, sandbox restrictions, and dependencies."
+title: "Fix Claude Code Skill Not Found Error (2026)"
+description: "Fix the tool not found error in Claude Code skills. Resolve skill file loading errors, name mismatches, and sandbox restrictions with exact steps."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [troubleshooting]
@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 8
 permalink: /claude-code-skill-tool-not-found-error-solution/
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 # Claude Code Skill Tool Not Found Error Solution
@@ -167,7 +168,7 @@ If you want to rule out a tool declaration issue entirely, strip the skill to mi
 
 ```markdown
 ---
-description: "Test skill with no tool declarations"
+description: "A minimal test skill for debugging"
 ---
 
 Test Skill

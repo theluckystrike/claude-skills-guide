@@ -2,7 +2,7 @@
 
 layout: default
 title: "Claude Code + Vercel + Supabase + Clerk: Full Stack (2026)"
-description: "Build full-stack apps with Claude Code, Vercel, Supabase, and Clerk. Practical workflows for auth, database, and deployment in one guide."
+description: "Build full-stack apps with Claude Code, Vercel, Supabase, and Clerk. Practical workflows for auth, database, and deployment all in one guide."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-for-vercel-supabase-clerk-full-stack/
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

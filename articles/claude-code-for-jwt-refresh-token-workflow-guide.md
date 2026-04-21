@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for JWT Refresh Token Workflow Guide"
-description: "Learn how to implement secure JWT refresh token workflows with Claude Code. Practical examples and code snippets for handling token rotation."
+title: "Claude Code JWT Refresh Token Workflow (2026)"
+description: "Implement secure JWT refresh token rotation with Claude Code. Handle token expiry, refresh flows, and revocation with tested Node.js and Python examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-jwt-refresh-token-workflow-guide/
 categories: [guides]

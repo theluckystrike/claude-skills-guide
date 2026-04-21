@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Team Wiki Maintenance Workflow"
-description: "Learn how to use Claude Code to streamline and automate your team wiki maintenance workflow. A practical guide for engineering teams."
+title: "Claude Code for Team Wiki Maintenance (2026)"
+description: "Automate team wiki updates with Claude Code for stale page detection, content migration, and documentation consistency. Save 5+ hours per sprint."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-team-wiki-maintenance-workflow/
 categories: [guides, workflows]

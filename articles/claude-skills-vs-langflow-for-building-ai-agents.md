@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skills vs Langflow for AI Agents (2026)"
-description: "Claude skills vs Langflow for AI agents: file-based vs visual drag-and-drop pipelines. Strengths, weaknesses, and when to use each in 2026."
+description: "Claude skills vs Langflow for building AI agents. File-based vs visual drag-and-drop pipelines compared with strengths, weaknesses, and use cases."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [comparisons]
@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 9
 permalink: /claude-skills-vs-langflow-for-building-ai-agents/
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

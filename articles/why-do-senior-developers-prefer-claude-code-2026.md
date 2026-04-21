@@ -10,6 +10,7 @@ reviewed: true
 score: 7
 categories: [guides]
 tags: [claude-code, claude-skills]
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Slides Terminal Presentation Workflow"
-description: "Learn how to create stunning presentations using terminal-based tools and Claude Code. This guide covers slide generation, markdown-to-slides."
+title: "Build Terminal Slides with Claude Code (2026)"
+description: "Create terminal-based presentations with Claude Code. Markdown-to-slides generation using Marp, Slidev, and terminal presentation frameworks."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -10,6 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code For EKS Karpenter — Complete Developer Guide"
-description: "Learn how to use Claude Code to automate and streamline your Amazon EKS Karpenter workflow for efficient Kubernetes cluster management."
+title: "Claude Code for EKS Karpenter Autoscaling (2026)"
+description: "Automate EKS Karpenter node provisioning with Claude Code. NodePool config, consolidation policies, and cost-optimized scaling workflow patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -10,6 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 Managing Amazon EKS clusters with Karpenter doesn't have to be complex. With Claude Code, you can automate Karpenter provisioning, optimize node lifecycle management, and build reproducible infrastructure workflows. This guide walks you through practical examples to integrate Claude Code into your EKS Karpenter operations.

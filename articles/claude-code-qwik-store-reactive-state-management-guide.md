@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use Qwik Store Reactive State Management (2026)"
-description: "Master Qwik's reactive state management with useStore and useSignal. Learn patterns for building performant, resumable applications with proper state."
+title: "Qwik State Management with Claude Code (2026)"
+description: "Master Qwik useStore and useSignal reactive state management with Claude Code. Resumability patterns and serialization strategies explained."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

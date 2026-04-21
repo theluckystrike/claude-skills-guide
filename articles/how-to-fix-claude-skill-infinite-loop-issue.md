@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Infinite Loop: How to Fix It"
-description: "Fix claude code infinite loop issues in skills. Diagnose exit conditions, tool re-invocation cycles, and recursive bash calls with proven solutions."
+title: "Fix Claude Code Infinite Loop in Skills (2026)"
+description: "Fix Claude Code infinite loop issues by diagnosing exit conditions, tool re-invocation cycles, and recursive bash calls with proven solutions."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [troubleshooting]
@@ -9,6 +9,7 @@ tags: [claude-code, claude-skills, debugging, troubleshooting, infinite-loop]
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+last_tested: "2026-04-21"
 permalink: /how-to-fix-claude-skill-infinite-loop-issue/
 geo_optimized: true
 ---

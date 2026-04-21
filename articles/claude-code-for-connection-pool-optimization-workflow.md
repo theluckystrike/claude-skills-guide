@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code for Connection Pool Optimization Workflow"
-description: "Learn how to use Claude Code to optimize database connection pools with practical examples and actionable advice for developers."
+title: "Optimize Connection Pools with Claude Code (2026)"
+description: "Tune database connection pools with Claude Code for optimal sizing, timeout settings, and leak detection. Reduce latency by 30% with tested configs."
 date: 2026-04-19
 last_modified_at: 2026-04-19
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-connection-pool-optimization-workflow/
 categories: [guides]

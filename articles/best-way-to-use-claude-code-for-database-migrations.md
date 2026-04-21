@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Best Way To Use Claude Code For — Honest Review 2026"
-description: "A practical guide for developers on using Claude Code to streamline database migrations, generate safe SQL, and automate schema changes with confidence."
+title: "Use Claude Code for Database Migrations (2026)"
+description: "Generate safe database migrations with Claude Code. Covers schema diffing, rollback scripts, data backfilling, and zero-downtime migration patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]
@@ -11,6 +11,7 @@ reviewed: true
 score: 9
 permalink: /best-way-to-use-claude-code-for-database-migrations/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 # Best Way to Use Claude Code for Database Migrations
 

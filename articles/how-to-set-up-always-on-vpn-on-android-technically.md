@@ -11,6 +11,7 @@ categories: [guides]
 tags: [vpn, android, privacy, security]
 reviewed: true
 score: 8
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

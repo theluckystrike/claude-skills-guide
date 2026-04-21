@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Styles Character Limit: Workarounds (2026)"
-description: "Claude styles have a character limit. Learn the exact ceiling, what happens when you exceed it, and practical techniques to stay within bounds."
+title: "Claude MD Character Limit and Optimization (2026)"
+description: "Work within Claude MD character limits using practical optimization techniques. Exact ceiling, overflow behavior, and compression strategies."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

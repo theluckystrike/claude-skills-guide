@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Best Way To Use Claude Code With — Honest Review 2026"
-description: "Way To Use Claude Code With — Honest Review 2026. Practical guide with working examples for developers. Tested on TypeScript."
+title: "Use Claude Code with TypeScript Projects (2026)"
+description: "Use Claude Code effectively with TypeScript projects. Skill selection, type-safe workflows, and practical patterns for shipping production TS code."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -10,6 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 TypeScript has become the standard for building scalable JavaScript applications, and Claude Code brings intelligent automation to your development workflow. Using Claude Code effectively with TypeScript projects requires understanding which skills to apply and when to use them. This guide covers practical approaches that actually work for developers shipping TypeScript code.

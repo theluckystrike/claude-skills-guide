@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Use Python Developers"
-description: "Claude Code guide for Python developers in 2026. Setup, essential skills, and real-world workflows for productive AI-assisted Python coding."
+title: "Claude Code for Python Developers Guide (2026)"
+description: "Claude Code guide for Python developers covering setup, essential skills, and real-world workflows for productive AI-assisted Python coding."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [getting-started]
@@ -9,6 +9,7 @@ tags: [claude-code, claude-skills, python, chinese-developers]
 author: "Claude Skills Guide"
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 permalink: /claude-code-for-chinese-python-developers-guide-2026/
 geo_optimized: true
 ---

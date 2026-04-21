@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code Writes Code In Wrong — Developer Guide"
-description: "Practical solutions for when Claude Code generates code in the wrong language. Learn context management, skill configuration, and prevention techniques."
+title: "Fix Claude Code Wrong Language Output (2026)"
+description: "Stop Claude Code from generating code in the wrong language. Set project context, configure language preferences, and use skill-based language pinning."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, programming-languages, context-management, debugging]
 author: theluckystrike

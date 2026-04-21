@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Gif Recorder Chrome Extension Guide (2026)"
-description: "Learn how GIF recorder Chrome extensions work, their technical implementation, and popular use cases for developers documenting bugs and creating."
+title: "Build a GIF Recorder Chrome Extension (2026)"
+description: "Build a Chrome extension that records screen captures as GIFs. Covers MediaRecorder API, canvas rendering, frame optimization, and file size reduction."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"
@@ -11,6 +11,7 @@ tags: [chrome-extension, gif, screen-recording, developer-tools, documentation, 
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 # GIF Recorder Chrome Extension: Capture Browser Activity with Code Examples
 

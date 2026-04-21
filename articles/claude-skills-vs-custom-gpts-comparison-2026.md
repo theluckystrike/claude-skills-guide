@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Skills vs Custom GPTs — Comparison 2026"
-description: "Claude Code skills vs Custom GPTs compared for 2026. Features, flexibility, and developer workflow differences side-by-side."
+description: "Claude Code skills vs Custom GPTs compared for 2026. Features, flexibility, developer workflow differences, and when to use each side by side."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [comparisons]
@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 permalink: /claude-skills-vs-custom-gpts-comparison-2026/
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

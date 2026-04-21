@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Mutation Testing Workflow Guide"
-description: "Learn how to build an automated mutation testing workflow in Claude Code. Practical examples, tool setup, and integration patterns for developers."
+title: "Claude Code for Mutation Testing Workflows (2026)"
+description: "Find weak tests with mutation testing automated by Claude Code. Covers Stryker, PITest, and mutmut setup with CI pipeline integration and reporting."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [workflows]
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-mutation-testing-workflow-guide/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Claude Code Mutation Testing Workflow Guide

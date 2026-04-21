@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code For Critical CSS — Complete Developer Guide"
-description: "Learn how to automate and optimize your critical CSS workflow using Claude Code. This comprehensive tutorial covers practical examples, code snippets."
+title: "Claude Code for Critical CSS Optimization (2026)"
+description: "Extract and inline critical CSS automatically with Claude Code. Improve Largest Contentful Paint scores by eliminating render-blocking stylesheets."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 Critical CSS is one of the most impactful optimizations you can make for your website's performance. By inlining the CSS needed to render above-the-fold content and deferring the rest, you can dramatically reduce render-blocking resources and improve First Contentful Paint (FCP). In this tutorial, this guide covers how to use Claude Code to automate and streamline your critical CSS workflow.
 

@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code Multi-Agent Error Recovery Strategies"
-description: "Practical strategies for handling errors in Claude Code multi-agent workflows. Code examples, retry patterns, and skill integration for resilient."
+title: "Claude Code Multi-Agent Error Recovery (2026)"
+description: "Handle errors in multi-agent Claude Code workflows with retry patterns, fallback strategies, and graceful degradation. Build resilient agent systems."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Astro Actions Workflow Tutorial"
-description: "Learn how to use Claude Code to automate and streamline your Astro Actions workflow with practical examples and actionable advice."
+title: "Claude Code for Astro Actions Workflow (2026)"
+description: "Build Astro Actions with Claude Code for server-side form handling, API routes, and data mutations. Type-safe server functions with working examples."
 date: 2026-04-19
 last_modified_at: 2026-04-19
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-astro-actions-workflow-tutorial/
 categories: [guides, tutorials]

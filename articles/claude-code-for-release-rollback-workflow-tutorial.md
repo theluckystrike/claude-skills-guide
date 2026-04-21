@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Release Rollback Workflow Tutorial"
-description: "Learn how to implement automated release rollback workflows using Claude Code. Practical examples, code snippets, and actionable advice for developers."
+title: "Claude Code for Release Rollback Workflows (2026)"
+description: "Automate release rollback procedures with Claude Code. Covers health checks, canary analysis, database migration reversal, and notification triggers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -13,6 +13,7 @@ reviewed: true
 score: 8
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 {% raw %}

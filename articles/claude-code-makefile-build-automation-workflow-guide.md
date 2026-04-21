@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Makefile Build Automation Workflow Guide"
-description: "Master Makefile build automation with Claude Code. Learn to create efficient build workflows, use AI-powered skills, and automate your development."
+title: "Claude Code for Makefile Build Automation (2026)"
+description: "Automate build systems with Makefiles and Claude Code. Covers target generation, dependency tracking, phony targets, and multi-project build graphs."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 categories: [guides]
@@ -11,6 +11,7 @@ permalink: /claude-code-makefile-build-automation-workflow-guide/
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

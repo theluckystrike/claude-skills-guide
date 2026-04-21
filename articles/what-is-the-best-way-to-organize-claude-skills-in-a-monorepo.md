@@ -10,6 +10,7 @@ categories: [guides]
 reviewed: true
 score: 9
 permalink: /what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

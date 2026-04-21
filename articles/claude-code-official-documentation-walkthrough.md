@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code Official Documentation Walkthrough (2026)"
-description: "A comprehensive walkthrough of Claude Code's official documentation. Learn the core concepts, configuration options, and best practices for using."
+title: "Claude Code Official Docs Walkthrough (2026)"
+description: "Walk through Claude Code official documentation covering core concepts, configuration, skills setup, and MCP integration. Get productive in 30 minutes."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [tutorials]
 tags: [claude-code, documentation, getting-started, tutorial]
 author: "theluckystrike"

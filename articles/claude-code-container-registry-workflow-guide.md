@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Container Registry Workflow Guide"
-description: "A practical guide to automating container builds and registry operations using Claude Code. Includes examples for Docker Hub, GHCR, and ECR with code."
+title: "Claude Code for Container Registry Workflows (2026)"
+description: "Automate container builds and registry pushes with Claude Code. Covers Docker Hub, GHCR, and ECR with multi-stage builds and vulnerability scanning."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
@@ -13,6 +13,7 @@ score: 7
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 Integrating container registry into a development workflow involves image layer optimization and runtime security hardening. The approach below walks through how Claude Code addresses each of these container registry concerns systematically.

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Use Astro Workflow (2026)"
-description: "Build static sites with Claude Code and Astro. Workflow patterns, skill integration, and automation recipes for 2026."
+title: "Claude Code for Astro Static Sites (2026)"
+description: "Build static sites with Claude Code and Astro using workflow patterns, skill integration, and tested automation recipes. Updated for April 2026."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,6 +9,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+last_tested: "2026-04-21"
 permalink: /claude-code-astro-static-site-generation-workflow-guide/
 render_with_liquid: false
 geo_optimized: true
@@ -247,7 +248,7 @@ For documentation sites, the workflow adapts to markdown-heavy content:
 ```markdown
 ---
 title: API Reference
-description: Complete API documentation for v2.0
+description: "Complete reference for all available API endpoints and authentication methods."
 ---
 
 API Reference

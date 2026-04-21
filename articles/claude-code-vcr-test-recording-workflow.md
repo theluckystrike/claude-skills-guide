@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Vcr Test Recording — Complete Developer Guide"
-description: "Learn how to implement VCR-style test recording in Claude Code for reproducible AI interactions. Capture, replay, and verify AI-driven test scenarios."
+title: "Claude Code VCR Test Recording Workflow (2026)"
+description: "Implement VCR-style test recording in Claude Code for reproducible AI interactions. Capture, replay, and verify tool calls deterministically."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 permalink: /claude-code-vcr-test-recording-workflow/
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 # Claude Code VCR Test Recording Workflow
@@ -77,7 +78,7 @@ You can encapsulate the recording logic in a Claude skill for easier access. The
 ```yaml
 ---
 name: vcr-test-helper
-description: "Helper skill for recording and replaying Claude Code test interactions"
+description: "Record and replay Claude Code interactions for deterministic testing"
 ---
 
 VCR Test Helper Skill

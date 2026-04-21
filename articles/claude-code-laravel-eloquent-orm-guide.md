@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Laravel Eloquent Orm — Complete Developer Guide"
-description: "Master Laravel Eloquent ORM with Claude Code. Learn relationship handling, query scopes, eager loading, and performance optimization techniques."
+title: "Claude Code for Laravel Eloquent ORM (2026)"
+description: "Master Eloquent ORM with Claude Code handling relationships, query scopes, eager loading, and N+1 detection. Practical patterns for Laravel developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 Building solid Laravel applications requires mastering Eloquent ORM, and Claude Code can significantly accelerate your learning curve and development speed. This guide walks you through practical techniques for working with Eloquent, from basic model relationships to advanced query optimization.
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Agent Skills Standardization Efforts 2026"
-description: "Explore the emerging standards for AI agent skills in 2026. Learn about MCP, skill manifests, cross-platform compatibility, and how developers can build po"
+title: "AI Agent Skills Standardization in 2026"
+description: "Explore emerging standards for AI agent skills including MCP, skill manifests, and cross-platform compatibility for building portable agent workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /ai-agent-skills-standardization-efforts-2026/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # AI Agent Skills Standardization Efforts 2026

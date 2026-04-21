@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Fix Claude SSL Certificate Verification Failed (2026)"
-description: "Fix claude ssl certificate verification failed errors in Claude Code. Resolve proxy, corporate cert, and API connection issues fast."
+title: "Fix Claude SSL Certificate Error (2026)"
+description: "Fix SSL certificate verification failed errors in Claude Code with 3 commands. Covers proxy, corporate firewall, and self-signed cert scenarios."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [troubleshooting]
@@ -12,6 +12,7 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

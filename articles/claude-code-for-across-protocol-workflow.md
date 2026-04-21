@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Across Protocol Workflow"
-description: "A comprehensive guide for developers on using Claude Code across multiple communication protocols. Learn how to build, test, and integrate services."
+title: "Claude Code for Cross-Protocol Workflows (2026)"
+description: "Build and test services across REST, gRPC, WebSocket, and GraphQL using Claude Code. Covers protocol bridging, contract testing, and integration flows."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 Modern applications rarely rely on a single communication protocol. As systems become more distributed, developers must navigate a ecosystem that includes REST APIs, GraphQL endpoints, WebSocket connections, gRPC services, message queues, and more. Claude Code provides powerful capabilities to help developers build, debug, and maintain applications that span multiple protocols.

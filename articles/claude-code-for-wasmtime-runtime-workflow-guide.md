@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Wasmtime Runtime Workflow Guide"
-description: "Learn how to use Claude Code effectively with Wasmtime for WebAssembly runtime development. This guide covers workflow patterns, code examples, and."
+title: "Claude Code for Wasmtime Runtime Development (2026)"
+description: "Build WebAssembly applications with Wasmtime and Claude Code. Covers module compilation, host functions, WASI integration, and component model usage."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

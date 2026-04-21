@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use Next-Auth getServerSession: Claude Code (2026)"
-description: "Implement getServerSession with authOptions in Next-Auth using Claude Code. Provider integration, route protection, and session management guide."
+title: "Setup Next-Auth with Claude Code (2026)"
+description: "Implement getServerSession with authOptions in Next-Auth using Claude Code for provider integration, route protection, and session management."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-nextjs-authentication-next-auth-guide/
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Aave Flash Loan Workflow"
-description: "Learn how to build secure Aave flash loan workflows using Claude Code. Practical examples for Solidity smart contracts, integration patterns, and best."
+title: "Claude Code for Aave Flash Loans (2026)"
+description: "Build Aave flash loan smart contracts with Claude Code for arbitrage, liquidation, and collateral swap workflows. Solidity examples with test suites."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-aave-flash-loan-workflow/
 categories: [guides]

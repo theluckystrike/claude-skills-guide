@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Chrome Extension Thesis Writing Helper"
-description: "Build a Chrome extension to streamline thesis writing: auto-save drafts, organize citations, track word counts, and integrate reference management."
+title: "Build a Thesis Writing Chrome Extension (2026)"
+description: "Build a Chrome extension for thesis writing with auto-save, citation management, word count tracking, and reference integration. Full implementation."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: theluckystrike
 permalink: /chrome-extension-thesis-writing-helper/
 categories: [guides]

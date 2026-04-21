@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Infinite Loop — How to Interrupt (2026)"
-description: "Claude Code stuck in a loop? Interrupt it instantly with these keyboard shortcuts and config fixes. Prevents future loops too."
+description: "Claude Code stuck in a loop? Interrupt it instantly with keyboard shortcuts, config fixes, and prevention strategies that stop future loops too."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -9,6 +9,7 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills, troubleshooting, debugging]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 permalink: /claude-code-stuck-infinite-loop-how-to-interrupt/
 geo_optimized: true
 ---

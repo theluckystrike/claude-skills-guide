@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Incident Management Workflow Tutorial"
-description: "Learn how to build Claude skills for incident management workflows. Create automated response systems, on-call escalation handlers, and post-incident."
+title: "Claude Code for Incident Management (2026)"
+description: "Build automated incident management workflows with Claude Code. Covers alert routing, escalation policies, status pages, and post-mortem generation."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ reviewed: true
 score: 8
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 Getting incident management right in practice means solving pipeline caching strategies and flaky test isolation. The Claude Code patterns in this incident management guide were developed from real project requirements.

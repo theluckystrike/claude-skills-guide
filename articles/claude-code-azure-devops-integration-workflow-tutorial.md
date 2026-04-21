@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code Azure DevOps Integration Workflow Tutorial"
-description: "Learn how to integrate Claude Code with Azure DevOps for automated builds, deployments, and CI/CD pipelines. Practical examples with code snippets."
+title: "Claude Code Azure DevOps Integration (2026)"
+description: "Integrate Claude Code with Azure DevOps for automated builds, release pipelines, and CI/CD workflows. YAML pipeline configs and practical examples."
 date: 2026-04-19
 last_modified_at: 2026-04-19
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills]

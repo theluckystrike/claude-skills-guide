@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Increase Claude Code Timeout Limit (2026)"
-description: "Increase Claude Code timeout from 120s default. Use timeout parameter, run_in_background flag, or chunked execution for long-running builds."
+title: "Fix Claude Code Timeout Error (2026)"
+description: "Increase Claude Code timeout from the 120s default using timeout parameter, run_in_background flag, or chunked execution for long-running builds."
 date: 2026-03-14
 last_modified_at: 2026-04-21
 last_tested: "2026-04-21"

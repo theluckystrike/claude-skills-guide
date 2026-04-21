@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Version Bump Workflow Tutorial Guide"
-description: "Learn how to automate version bumping in your projects using Claude Code. A comprehensive guide with practical examples, code snippets, and actionable."
+title: "Automate Version Bumps with Claude Code (2026)"
+description: "Automate semantic version bumps with Claude Code. Covers package.json updates, git tags, changelog generation, and CI release pipeline integration."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 # Claude Code for Version Bump Workflow Tutorial Guide
 

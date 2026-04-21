@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use TypeORM Query Builder Patterns with Claude Code"
-description: "Advanced TypeORM Query Builder patterns: subqueries, joins, conditional filtering, and dynamic queries. Code examples included."
+title: "TypeORM Query Builder Patterns with Claude (2026)"
+description: "Build advanced TypeORM Query Builder patterns including subqueries, joins, conditional filtering, and dynamic queries. Code examples included."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ categories: [guides, tutorials]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code Weekly Digest Resources for Developers"
-description: "Curated collection of Claude Code weekly digest resources, skills, and workflows. Practical examples for developers integrating AI-assisted development."
+title: "Claude Code Weekly Digest and Resources (2026)"
+description: "Curated Claude Code resources updated weekly with new skills, workflow patterns, and community tools. Stay current with the latest AI coding techniques."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, weekly-digest, resources, developer-tools]

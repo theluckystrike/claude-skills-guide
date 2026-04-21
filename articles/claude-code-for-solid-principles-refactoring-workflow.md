@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for SOLID Principles Refactoring Workflow"
-description: "A practical workflow for using Claude Code to refactor codebases to follow SOLID principles. Learn how to use AI-assisted refactoring for cleaner."
+title: "Refactor to SOLID Principles with Claude Code (2026)"
+description: "Refactor codebases to follow SOLID principles using Claude Code. Covers single responsibility extraction, interface segregation, and dependency fixes."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 Writing clean, maintainable code is a goal every developer pursues, yet the path to achieving it often feels overwhelming. The SOLID principles, Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion, provide a proven framework for object-oriented design. But applying these principles to existing codebases, especially large ones, requires a systematic approach. This is where Claude Code becomes invaluable.

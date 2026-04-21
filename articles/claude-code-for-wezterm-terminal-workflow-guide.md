@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for WezTerm Terminal Workflow Guide"
-description: "Master the integration between Claude Code and WezTerm terminal emulator. Learn practical workflows for enhanced productivity, custom keybindings, and."
+title: "Claude Code + WezTerm Terminal Setup (2026)"
+description: "Configure Claude Code with WezTerm terminal for split panes, custom keybindings, and multiplexed AI workflows that boost daily productivity."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use Web App Manifest Configuration (2026)"
-description: "A comprehensive guide to configuring web app manifests for Claude Code projects, with practical examples and actionable advice for developers."
+title: "Configure Web App Manifest with Claude Code (2026)"
+description: "Configure web app manifests for PWA projects using Claude Code. Icons, display modes, start URL, and installability settings with code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

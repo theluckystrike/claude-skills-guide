@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code For Modsecurity Waf — Complete Developer Guide"
-description: "Learn how to use Claude Code to streamline ModSecurity WAF rule development, configuration, and troubleshooting workflows for solid web application."
+title: "Claude Code for ModSecurity WAF Rules (2026)"
+description: "Write and test ModSecurity WAF rules with Claude Code. Covers OWASP CRS tuning, false positive reduction, and virtual patching for web applications."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 Claude Code for ModSecurity WAF Workflow Guide
 

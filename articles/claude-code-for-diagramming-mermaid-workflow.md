@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Diagramming: Mermaid Workflow Guide"
-description: "Learn how to use Claude Code with Mermaid diagrams for visualizing workflows, architecture, and complex processes. Practical examples and actionable."
+title: "Claude Code for Mermaid Diagram Generation (2026)"
+description: "Generate Mermaid diagrams from code with Claude Code. Covers flowcharts, sequence diagrams, ERDs, and architecture visualizations from your codebase."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 Diagramming is an essential part of software development, yet it's often overlooked until you need to explain complex architectures or debug tangled workflows. Claude Code, combined with Mermaid's declarative syntax, offers a powerful workflow for creating, maintaining, and iterating on diagrams as code. This guide shows you how to use this combination effectively.

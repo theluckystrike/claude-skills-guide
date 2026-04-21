@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code vs Tabnine Offline — Developer Comparison 2026"
-description: "A comprehensive comparison of Claude Code and Tabnine for developers working with offline or private codebases. Discover which AI coding assistant."
+title: "Claude Code vs Tabnine for Offline Use (2026)"
+description: "Claude Code vs Tabnine compared for offline and air-gapped environments. Privacy features, local inference, and private codebase support analyzed."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-vs-tabnine-offline-private-codebase/
 reviewed: true
@@ -50,7 +51,7 @@ Claude Code's skills system allows you to create custom instructions for working
 
 ```yaml
 name: "Private Codebase Security"
-description: "Guidelines for handling sensitive codebases"
+description: "Claude Code vs Tabnine compared for offline and air-gapped environments. Privacy features, local inference, and private codebase support analyzed."
 ```
 
 This skill ensures Claude Code follows security best practices automatically.
@@ -132,7 +133,7 @@ Claude Code can trace authentication flows, explain vulnerabilities, and suggest
 
 ```yaml
 name: "Security Review"
-description: "Enhanced security analysis for sensitive code"
+description: "Claude Code vs Tabnine compared for offline and air-gapped environments. Privacy features, local inference, and private codebase support analyzed."
 ```
 
 ## Feature Comparison Table

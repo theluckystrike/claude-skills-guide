@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code for Symbol Search Workflow Tutorial Guide"
-description: "Master symbol search workflows with Claude Code. Learn to find functions, classes, and variables efficiently across your codebase using practical examples."
+title: "Claude Code Symbol Search Workflow (2026)"
+description: "Find functions, classes, and variables across large codebases with Claude Code symbol search. Navigate unfamiliar code faster with practical examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-symbol-search-workflow-tutorial-guide/
 categories: [guides]

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Use For Rtx Tool Version — Complete Developer (2026)"
-description: "Master the RTX Tool Version Manager workflow with Claude Code. Learn how to automate tool version management, streamline CUDA environment setup, and."
+title: "Claude Code with RTX Tool Version Manager (2026)"
+description: "Manage tool versions with RTX and Claude Code. Automate Node, Python, and Go version switching with reproducible development environment configuration."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 Claude Code for RTX Tool Version Manager Workflow
 

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use AI Code Optimization: Kubernetes Cost Reduction"
-description: "Reduce Kubernetes costs with AI code optimization and Claude Code automation. Right-sizing strategies and smart resource management that save money."
+title: "Claude Code Kubernetes Cost Optimization (2026)"
+description: "Reduce Kubernetes costs with Claude Code automation. Right-sizing strategies, idle resource detection, and spot instance optimization workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, kubernetes, cost-optimization, devops, cloud-costs, claude-s
 permalink: /claude-code-kubernetes-cost-optimization-guide/
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

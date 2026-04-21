@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Will Claude Skills Support Voice Interfaces in 2026?"
-description: "Will Claude Skills Support Voice Interfaces in 2026. Practical guide with working examples for developers."
+title: "Claude Skills Voice Interface Workarounds (2026)"
+description: "Use voice input with Claude Code skills today. Practical workarounds using Whisper, macOS dictation, and custom MCP servers for hands-free coding."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]
@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 permalink: /will-claude-skills-support-voice-interfaces-2026/
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

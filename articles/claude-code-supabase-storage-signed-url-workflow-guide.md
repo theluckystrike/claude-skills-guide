@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Supabase Storage Signed URL Workflow Guide"
-description: "Learn how to build secure file upload and download workflows using Claude Code with Supabase Storage signed URLs. Practical examples for handling."
+title: "Claude Code for Supabase Signed URLs (2026)"
+description: "Build secure file upload and download workflows using Claude Code with Supabase Storage signed URLs. Covers permissions, expiry, and access patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -12,6 +12,7 @@ reviewed: true
 score: 7
 permalink: /claude-code-supabase-storage-signed-url-workflow-guide/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 Supabase Storage provides a powerful, secure way to handle file uploads and downloads in your applications. When combined with Claude Code, you can build intelligent file management systems that understand context, validate content, and automate complex workflows. This guide walks you through creating signed URL workflows that keep your files secure while enabling powerful AI-driven interactions.

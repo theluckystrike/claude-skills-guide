@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code for Pinecone vs Alternatives: 2026 Workflow"
-description: "A practical comparison of using Claude Code with Pinecone versus alternative vector databases. Includes workflow patterns, code examples, and..."
+title: "Claude Code for Pinecone vs Alternatives (2026)"
+description: "Compare Pinecone, Weaviate, Qdrant, and Chroma with Claude Code workflows. Benchmark results, code examples, and migration patterns for vector search."
 date: 2026-03-20
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-pinecone-vs-alternatives-2026-workflow-guide/
 categories: [guides]
@@ -54,7 +55,7 @@ A well-designed Claude Skill can abstract away the complexities of different vec
 ```yaml
 ---
 name: vector-db
-description: "Interact with vector databases for semantic search and RAG operations"
+description: "Compare Pinecone, Weaviate, Qdrant, and Chroma with Claude Code workflows. Benchmark results, code examples, and migration patterns for vector search."
 tools: [Bash, Read, Write]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code For Spot Instance — Complete Developer Guide"
-description: "Learn how to use Claude Code and Claude Skills to automate spot instance management, reduce AWS costs, and build cost-effective cloud."
+title: "Claude Code for AWS Spot Instance Savings (2026)"
+description: "Cut AWS compute costs up to 90% using spot instances managed by Claude Code. Automate bidding strategies, fallback logic, and interruption handling."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 Spot instances can reduce your AWS compute costs by up to 90% compared to on-demand pricing, but managing them effectively requires careful orchestration. you'll learn how to use Claude Code to build automated workflows that handle spot instance lifecycle management, fault tolerance, and cost optimization without manual intervention.
 

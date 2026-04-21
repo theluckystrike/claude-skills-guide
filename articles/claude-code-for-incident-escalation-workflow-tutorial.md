@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Incident Escalation Workflow Tutorial"
-description: "Learn how to build an incident escalation workflow system with Claude Code. This tutorial covers skill creation, escalation logic, notification."
+title: "Claude Code for Incident Escalation Workflows (2026)"
+description: "Build incident escalation systems with Claude Code. Covers severity classification, notification chains, SLA tracking, and runbook automation steps."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
@@ -13,6 +13,7 @@ reviewed: true
 score: 8
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 Most incident escalation problems in practice come down to CI pipeline taking too long, caused by unnecessary full rebuilds when only a subset of packages changed. This guide walks through the Claude Code approach to resolving them, current as of April 2026.

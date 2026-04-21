@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Slowing Browser Chrome Extension Guide (2026)"
-description: "Diagnose and fix Chrome extensions causing browser slowdowns. Practical techniques for developers and power users to identify resource-heavy extensions."
+title: "Fix Chrome Extensions Slowing Your Browser (2026)"
+description: "Identify and fix Chrome extensions causing slowdowns using Task Manager, DevTools profiling, and memory audits. Reduce browser memory usage by 40-60%."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /chrome-extension-slowing-browser/
 reviewed: true

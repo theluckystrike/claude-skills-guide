@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Astro View Transitions Workflow"
-description: "Learn how to use Claude Code skills to build smooth page transitions in Astro. Master the View Transitions API with practical examples and actionable."
+title: "Claude Code for Astro View Transitions (2026)"
+description: "Build smooth page transitions in Astro with Claude Code. Covers the View Transitions API, persistent elements, animation customization, and fallbacks."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -13,6 +13,7 @@ reviewed: true
 score: 7
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 {% raw %}

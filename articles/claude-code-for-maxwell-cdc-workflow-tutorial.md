@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "How to Use For Maxwell Cdc — Complete Developer (2026)"
-description: "Learn how to use Claude Code with Maxwell CDC for real-time data streaming and change data capture workflows. Includes practical examples, skill."
+title: "Claude Code for Maxwell CDC Streaming (2026)"
+description: "Stream database changes in real-time with Maxwell CDC and Claude Code. Configure binlog capture, Kafka output, and schema migration workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, maxwell-cdc, data-engineering, database, streaming, mysql, kafka, claude-skills]
 author: "Claude Skills Guide"

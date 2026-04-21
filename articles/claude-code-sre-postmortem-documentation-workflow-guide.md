@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code Sre Postmortem — Complete Developer Guide"
-description: "Learn how to use Claude Code and skills to streamline SRE postmortem documentation. Practical examples for incident analysis, root cause analysis, and."
+title: "Claude Code for SRE Postmortem Docs (2026)"
+description: "Automate SRE postmortem documentation with Claude Code for incident analysis, root cause identification, and action item tracking. Template included."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "theluckystrike"
 permalink: /claude-code-sre-postmortem-documentation-workflow-guide/
 categories: [workflows, guides]
@@ -127,7 +128,7 @@ A postmortem skill might include instructions like:
 
 ```yaml
 name: postmortem
-description: "Streamline SRE postmortem creation from incident data"
+description: "Automate SRE postmortem documentation with Claude Code for incident analysis, root cause identification, and action item tracking. Template included."
 ```
 
 This skill automates routine portions while preserving human judgment for analysis and conclusions.

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Browser Automation Workflow Guide"
-description: "Master browser automation with Claude Code: set up Playwright MCP, create reusable automation skills, and build reliable scraping and testing workflows."
+title: "Claude Code for Browser Automation (2026)"
+description: "Automate browsers with Claude Code using Playwright MCP. Build reusable scraping skills, test workflows, and handle dynamic pages with AI assistance."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 This is a focused treatment of browser automation with Claude Code. It covers setup, common patterns, and troubleshooting specific to browser automation. For broader context, [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) is a good companion read.

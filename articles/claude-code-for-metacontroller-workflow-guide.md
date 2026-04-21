@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Metacontroller Workflow Guide"
-description: "A practical guide for developers to use Claude Code when building and managing Metacontroller workflows in Kubernetes. Learn how to use AI."
+title: "Claude Code for K8s Metacontroller Workflow (2026)"
+description: "Build Kubernetes Metacontroller composite controllers with Claude Code. Webhook-based workflows, sync hooks, and declarative logic patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

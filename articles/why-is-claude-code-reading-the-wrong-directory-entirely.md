@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Why Claude Code Wrong Directory (2026)"
-description: "Fix Claude Code reading the wrong directory. Set workspace path, fix context misdirection, and resolve 'no such file or directory' errors."
+title: "Fix Claude Code Wrong Directory Error (2026)"
+description: "Fix Claude Code reading the wrong directory by setting workspace path, fixing context misdirection, and resolving file not found errors fast."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [troubleshooting]
@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /why-is-claude-code-reading-the-wrong-directory-entirely/
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code vs GitHub Copilot Workspace 2026"
-description: "Claude Code vs GitHub Copilot Workspace 2026: compare agentic features, GitHub integration, team workflows, and pricing."
+title: "Claude Code vs Copilot Workspace (2026)"
+description: "Claude Code vs GitHub Copilot Workspace compared on agentic autonomy, GitHub integration, team workflows, and pricing. Side-by-side feature breakdown."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

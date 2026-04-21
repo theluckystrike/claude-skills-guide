@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Delta Lake Schema Evolution Workflow"
-description: "Learn how to use Claude Code to automate and streamline Delta Lake schema evolution workflows. Practical examples and actionable advice for data engineers."
+title: "Claude Code Delta Lake Schema Evolution (2026)"
+description: "Manage Delta Lake schema changes with Claude Code for column additions, type migrations, and backward-compatible table evolution. Spark SQL examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-delta-lake-schema-evolution-workflow/
 categories: [guides]

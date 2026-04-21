@@ -1,0 +1,215 @@
+---
+title: "Claude Code for Climate Model Data Processing (2026)"
+description: "Climate model NetCDF/HDF5 processing with Claude Code. Extract, regrid, and analyze CMIP6 data programmatically."
+permalink: /claude-code-climate-model-netcdf-processing-2026/
+last_tested: "2026-04-21"
+render_with_liquid: false
+---
+
+## Why Claude Code for Climate Data
+
+Climate scientists work with CMIP6 datasets that span terabytes of NetCDF files across hundreds of models, scenarios, and variables. Extracting a regional time series, regridding from a model's native grid to a common resolution, or computing ensemble statistics requires specialized knowledge of CF conventions, coordinate reference systems, and the xarray/dask ecosystem.
+
+Claude Code generates scripts that correctly handle NetCDF metadata conventions, lazy-loaded dask arrays for out-of-core computation, and the specific regridding approaches (conservative, bilinear) needed for different variable types (fluxes vs temperatures).
+
+## The Workflow
+
+### Step 1: Environment Setup
+
+```bash
+conda create -n climate -c conda-forge \
+  xarray=2024.1 dask=2024.1 netcdf4=1.6 \
+  cftime=1.6 nc-time-axis cartopy=0.22 \
+  xesmf=0.8 cf_xarray=0.9 intake-esm=2024.1
+
+conda activate climate
+
+# Download sample CMIP6 data (surface temperature)
+# Via ESGF or intake-esm catalog
+mkdir -p data/cmip6 output/
+```
+
+### Step 2: Process CMIP6 Data
+
+```python
+# climate/process_cmip6.py
+"""Process CMIP6 climate model output: extract, regrid, compute ensemble stats."""
+import xarray as xr
+import numpy as np
+from pathlib import Path
+import cf_xarray  # noqa: F401 — enables CF accessor
+
+MAX_MODELS = 50
+TARGET_RES = 1.0  # degrees
+
+
+def load_cmip6_dataset(filepath: str) -> xr.Dataset:
+    """Load a CMIP6 NetCDF file with CF convention awareness."""
+    assert Path(filepath).exists(), f"File not found: {filepath}"
+    ds = xr.open_dataset(filepath, chunks={"time": 120})
+
+    # Validate CF conventions
+    assert "time" in ds.dims or "time" in ds.cf.coordinates, \
+        "Missing time dimension — not CF-compliant"
+    assert any(v in ds.data_vars for v in ["tas", "pr", "tos", "psl"]), \
+        "No recognized CMIP6 variable found"
+
+    return ds
+
+
+def extract_region(ds: xr.Dataset, var: str,
+                   lat_min: float, lat_max: float,
+                   lon_min: float, lon_max: float) -> xr.DataArray:
+    """Extract a geographic region using CF-aware coordinate selection."""
+    assert var in ds.data_vars, f"Variable {var} not in dataset"
+    assert lat_min < lat_max, "lat_min must be less than lat_max"
+    assert lon_min < lon_max, "lon_min must be less than lon_max"
+
+    da = ds[var]
+
+    # Handle both -180/180 and 0/360 longitude conventions
+    lon_name = da.cf["longitude"].name
+    if da[lon_name].values.max() > 180:
+        if lon_min < 0:
+            lon_min += 360
+        if lon_max < 0:
+            lon_max += 360
+
+    lat_name = da.cf["latitude"].name
+    region = da.sel({
+        lat_name: slice(lat_min, lat_max),
+        lon_name: slice(lon_min, lon_max),
+    })
+
+    assert region.size > 0, "Region selection returned empty array"
+    return region
+
+
+def compute_annual_mean(da: xr.DataArray) -> xr.DataArray:
+    """Compute area-weighted annual mean from monthly data."""
+    assert "time" in da.dims, "DataArray must have time dimension"
+
+    # Area weights from latitude
+    lat_name = da.cf["latitude"].name
+    weights = np.cos(np.deg2rad(da[lat_name]))
+    weights.name = "weights"
+
+    # Weighted spatial mean, then annual mean
+    spatial_mean = da.weighted(weights).mean(
+        dim=[da.cf["latitude"].name, da.cf["longitude"].name])
+    annual = spatial_mean.groupby("time.year").mean("time")
+
+    return annual
+
+
+def compute_ensemble_stats(file_list: list, var: str,
+                           lat_min: float, lat_max: float,
+                           lon_min: float, lon_max: float) -> xr.Dataset:
+    """Compute ensemble mean and spread across multiple models."""
+    assert len(file_list) > 0, "Empty file list"
+    assert len(file_list) <= MAX_MODELS, \
+        f"Too many models: {len(file_list)} > {MAX_MODELS}"
+
+    annual_means = []
+    for fp in file_list:
+        ds = load_cmip6_dataset(fp)
+        region = extract_region(ds, var, lat_min, lat_max, lon_min, lon_max)
+        annual = compute_annual_mean(region)
+        annual_means.append(annual)
+        ds.close()
+
+    ensemble = xr.concat(annual_means, dim="model")
+    result = xr.Dataset({
+        f"{var}_ensemble_mean": ensemble.mean(dim="model"),
+        f"{var}_ensemble_std": ensemble.std(dim="model"),
+        f"{var}_ensemble_min": ensemble.min(dim="model"),
+        f"{var}_ensemble_max": ensemble.max(dim="model"),
+    })
+
+    return result
+
+
+if __name__ == "__main__":
+    import glob
+    import sys
+
+    assert len(sys.argv) >= 2, \
+        "Usage: python process_cmip6.py <data_dir> [variable]"
+
+    data_dir = sys.argv[1]
+    var = sys.argv[2] if len(sys.argv) > 2 else "tas"
+
+    files = sorted(glob.glob(f"{data_dir}/*.nc"))
+    assert len(files) > 0, f"No NetCDF files found in {data_dir}"
+
+    # Example: European region, 35N-70N, -10W-40E
+    result = compute_ensemble_stats(files, var, 35.0, 70.0, -10.0, 40.0)
+    result.to_netcdf(f"output/{var}_europe_ensemble.nc")
+    print(f"Wrote ensemble stats: {len(files)} models processed")
+```
+
+### Step 3: Validate and Visualize
+
+```bash
+python3 climate/process_cmip6.py data/cmip6/ tas
+# Expected: output/tas_europe_ensemble.nc with 4 variables
+
+# Quick validation
+python3 -c "
+import xarray as xr
+ds = xr.open_dataset('output/tas_europe_ensemble.nc')
+print(ds)
+print(f'Mean range: {float(ds.tas_ensemble_mean.min()):.1f} - {float(ds.tas_ensemble_mean.max()):.1f} K')
+# Expected: ~280-290 K for European surface temperature
+"
+
+# Plot with cartopy (optional)
+ncdump -h output/tas_europe_ensemble.nc | head -20
+```
+
+## CLAUDE.md for Climate Data
+
+```markdown
+# Climate Model Data Processing Rules
+
+## Standards
+- CF Conventions 1.11 (NetCDF metadata)
+- CMIP6 data reference syntax (DRS)
+- ESGF data access protocols
+
+## File Formats
+- .nc (NetCDF-4/HDF5)
+- .zarr (cloud-optimized)
+- .grib2 (reanalysis data)
+- .csv (station observations)
+
+## Libraries
+- xarray 2024.1+ (lazy array operations)
+- dask 2024.1+ (parallel/out-of-core)
+- cf_xarray 0.9+ (CF convention support)
+- xESMF 0.8+ (regridding)
+- cartopy 0.22+ (map projections)
+- intake-esm 2024.1+ (CMIP catalog access)
+
+## Testing
+- Verify coordinate units (K vs C for temperature, kg/m2/s vs mm/day for precip)
+- Check longitude convention (0-360 vs -180-180) before subsetting
+- Validate time axis with cftime (climate calendars: 360-day, noleap)
+
+## Data Access
+- ESGF for CMIP6 model output
+- ERA5 via CDS API for reanalysis
+- NOAA NCEI for observations
+```
+
+## Common Pitfalls
+
+- **Calendar mismatch:** CMIP6 models use different calendars (360_day, noleap, standard). Concatenating datasets without calendar harmonization via cftime produces wrong annual means. Claude Code adds explicit calendar checks before any time operations.
+- **Longitude convention collision:** Some models use 0-360, others use -180 to 180. Selecting a region that crosses the prime meridian fails silently. Claude Code detects the convention and adjusts selection bounds.
+- **Loading full datasets into memory:** A single CMIP6 variable can be 50+ GB. Claude Code always uses dask chunking with `chunks={"time": 120}` to enable out-of-core processing.
+
+## Related
+
+- [Claude Code for Computational Biology](/claude-skills-for-computational-biology-bioinformatics/)
+- [Claude Code for Molecular Dynamics](/claude-code-molecular-dynamics-gromacs-2026/)
+- [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Fix YAML Front Matter Parsing Errors in Claude Skills (2026)"
-description: "Fix YAML frontmatter parsing errors in Claude Code skills. Missing --- delimiters, indentation, and special character issues solved."
+description: "Fix YAML frontmatter parsing errors in Claude Code skills. Missing delimiters, bad indentation, and special character issues solved with examples."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [troubleshooting]
@@ -9,6 +9,7 @@ tags: [claude-code, claude-skills, troubleshooting, yaml, front-matter]
 author: "Claude Skills Guide"
 reviewed: true
 score: 8
+last_tested: "2026-04-21"
 permalink: /claude-skill-yaml-front-matter-parsing-error-fix/
 geo_optimized: true
 ---
@@ -24,7 +25,7 @@ Skill `.md` files begin with a YAML front matter block delimited by triple dashe
 ```yaml
 ---
 name: tdd
-description: "Run tests before writing implementation code (TDD)"
+description: "Test-driven development workflow for Claude Code"
 ---
 
 The rest of the skill instructions go here...
@@ -39,7 +40,7 @@ The most common mistake. YAML front matter requires exactly three dashes on the 
 ```yaml
 Broken. closing delimiter is missing
 ---
-description: "My skill"
+description: "Run tests first, then implement code"
 
 Skill body starts here but YAML never closed...
 ```
@@ -47,7 +48,7 @@ Skill body starts here but YAML never closed...
 ```yaml
 Fixed
 ---
-description: "My skill"
+description: "Run tests first, then implement code"
 ---
 ```
 
@@ -66,7 +67,7 @@ YAML does not allow tabs for indentation. This is the single most common source 
 ```yaml
 Broken. tab characters used for indentation
 ---
-description: "My skill"
+description: "Format SQL queries with consistent style"
 name:	sql-formatter
 ---
 ```
@@ -75,7 +76,7 @@ name:	sql-formatter
 Fixed. no tabs, use spaces
 ---
 name: sql-formatter
-description: "My skill"
+description: "Format SQL queries with consistent style"
 ---
 ```
 
@@ -101,12 +102,12 @@ A colon followed by a space in an unquoted YAML value starts a new key-value pai
 
 ```yaml
 Broken. the colon after "Fix:" confuses the parser
-description: Fix: handle edge cases in auth
+description: Fix: this value breaks YAML parsing
 ```
 
 ```yaml
 Fixed. quote the string
-description: "Fix: handle edge cases in auth"
+description: "Fix: this value is properly quoted"
 ```
 
 This hits frequently with `description` fields in the `tdd` and `frontend-design` skills when people write descriptions like "Step 1: write test, Step 2: implement".
@@ -125,11 +126,11 @@ Certain characters have special meaning in YAML and must be quoted when used lit
 
 ```yaml
 Broken
-description: Use {curly braces} for templates
+description: Use * and & for anchors # these are special chars
 tags: [tdd, test-first] # this is actually valid inline list syntax
 
 Safe approach. always quote description values
-description: "Use {curly braces} for templates"
+description: "Use * and & for anchors - special chars safely quoted"
 ```
 
 ## Error 5: Duplicate Keys
@@ -140,8 +141,8 @@ If the same key appears twice in the front matter block, most YAML parsers use t
 Broken. description appears twice
 ---
 name: my-skill
-description: "My skill v1"
-description: "My skill v2"
+description: "First description value"
+description: "Second description value overrides the first"
 ---
 ```
 
@@ -219,7 +220,7 @@ Claude Code skills recognize two front matter fields: `name` and `description`. 
 ```yaml
 ---
 name: my-skill
-description: "One sentence description of what this skill does"
+description: "A brief description of what this skill does"
 ---
 ```
 
@@ -236,13 +237,13 @@ File: ~/.claude/skills/tdd.md
 Correct. name matches filename
 ---
 name: tdd
-description: "Write tests before implementation using TDD workflow"
+description: "Test-driven development workflow"
 ---
 
 Incorrect. name doesn't match filename
 ---
 name: test-driven-development
-description: "Write tests before implementation using TDD workflow"
+description: "Test-driven development workflow"
 ---
 ```
 

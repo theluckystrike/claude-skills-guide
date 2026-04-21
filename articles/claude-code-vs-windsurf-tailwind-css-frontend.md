@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code vs Windsurf — Developer Comparison 2026"
-description: "A practical comparison of Claude Code and Windsurf for Tailwind CSS frontend development. Learn which AI coding assistant excels at building modern web."
+title: "Claude Code vs Windsurf for Tailwind CSS (2026)"
+description: "Claude Code vs Windsurf compared for Tailwind CSS frontend development. Test results on component generation, responsive design, and utility classes."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-vs-windsurf-tailwind-css-frontend/
 reviewed: true

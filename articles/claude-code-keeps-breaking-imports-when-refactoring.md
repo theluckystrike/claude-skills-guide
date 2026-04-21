@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Keeps Breaking Imports When Refactoring"
-description: "Discover why Claude Code breaks imports during refactoring and learn practical solutions using Claude Code skills, configuration, and workflows to."
+title: "Fix Claude Code Breaking Imports in Refactoring (2026)"
+description: "Stop Claude Code from breaking imports during refactoring. Covers path aliasing, barrel file handling, and import resolution configuration patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills, imports, refactoring]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code Kubernetes Monitoring with Prometheus"
-description: "Learn how to use Claude Code for Kubernetes monitoring with Prometheus. Includes practical examples, Alertmanager configuration, and skill."
+title: "Claude Code K8s Monitoring with Prometheus (2026)"
+description: "Set up Kubernetes monitoring with Prometheus and Claude Code for custom dashboards, Alertmanager rules, and PromQL queries. Production-ready configs."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, kubernetes, prometheus, monitoring, devops, observability, claude-skills]
 author: "Claude Skills Guide"

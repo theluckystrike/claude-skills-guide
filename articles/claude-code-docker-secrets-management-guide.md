@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code Docker Secrets Management Guide"
-description: "Learn how to manage Docker secrets effectively with Claude Code. Practical techniques for developers and power users working with containerized."
+title: "Claude Code Docker Secrets Management (2026)"
+description: "Manage Docker secrets securely with Claude Code for credential rotation, Swarm secrets, and Compose secret injection. Zero plaintext in your configs."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-docker-secrets-management-guide/
 categories: [guides]

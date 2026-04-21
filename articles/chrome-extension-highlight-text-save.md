@@ -1,13 +1,14 @@
 ---
 
 layout: default
-title: "Chrome Extension Highlight Text Save"
-description: "Learn how to build and use Chrome extensions to highlight and save text. Practical implementation guide with code examples for developers and power users."
+title: "Build a Text Highlighter Chrome Extension (2026)"
+description: "Build a Chrome extension that highlights and saves text from any page. Covers selection API, IndexedDB storage, tagging, and cross-device sync."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike
 permalink: /chrome-extension-highlight-text-save/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Chrome Extension Highlight Text Save

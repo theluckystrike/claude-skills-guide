@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for FPGA Development Workflow Tutorial"
-description: "Learn how to use Claude Code to streamline your FPGA development workflow, from project setup to simulation and synthesis."
+title: "Claude Code for FPGA Development Workflow (2026)"
+description: "Use Claude Code for FPGA development from project setup to simulation and synthesis. Verilog and VHDL code generation with AI-assisted tooling."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

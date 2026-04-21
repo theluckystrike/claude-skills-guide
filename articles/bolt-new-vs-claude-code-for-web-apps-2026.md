@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bolt.new vs Claude Code for Web Apps (2026)"
-description: "Bolt.new vs Claude Code compared: pricing, context, features. 3-persona verdict for solo devs, teams, enterprise."
+description: "Bolt.new handles visual prototyping while Claude Code manages full codebases. Pricing, context limits, and feature comparison for solo devs and teams."
 permalink: /bolt-new-vs-claude-code-for-web-apps-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"

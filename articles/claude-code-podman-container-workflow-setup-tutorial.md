@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code Podman Container Workflow Setup Tutorial"
-description: "Learn how to set up and automate Podman container workflows using Claude Code skills. This tutorial covers skill creation, container management."
+title: "Setup Podman Containers with Claude Code (2026)"
+description: "Set up and automate Podman container workflows using Claude Code for rootless containers, pod management, and CI/CD integration. Step-by-step guide."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-podman-container-workflow-setup-tutorial/
 categories: [guides]
@@ -70,7 +71,7 @@ A Claude Code skill is a Markdown file with YAML front matter. Create a file nam
 ```yaml
 ---
 name: podman-manager
-description: "Manage Podman containers with Claude Code - start, stop, inspect, and monitor containers"
+description: "Set up and automate Podman container workflows using Claude Code for rootless containers, pod management, and CI/CD integration. Step-by-step guide."
 ---
 
 Podman Container Manager
@@ -114,7 +115,7 @@ Create a skill that sets up development containers for different project types:
 ```yaml
 ---
 name: dev-container
-description: "Create and manage development containers for various programming languages"
+description: "Set up and automate Podman container workflows using Claude Code for rootless containers, pod management, and CI/CD integration. Step-by-step guide."
 ---
 
 Development Container Helper
@@ -170,7 +171,7 @@ Create a skill specifically for database containers:
 ```yaml
 ---
 name: db-containers
-description: "Quickly start and manage database containers for development"
+description: "Set up and automate Podman container workflows using Claude Code for rootless containers, pod management, and CI/CD integration. Step-by-step guide."
 ---
 
 Database Container Manager
@@ -201,7 +202,7 @@ Create a monitoring skill that tracks container health and resource usage:
 ```yaml
 ---
 name: container-monitor
-description: "Monitor container health, resource usage, and performance metrics"
+description: "Set up and automate Podman container workflows using Claude Code for rootless containers, pod management, and CI/CD integration. Step-by-step guide."
 ---
 
 Container Health Monitor

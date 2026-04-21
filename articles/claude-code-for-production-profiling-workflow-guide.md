@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Production Profiling Workflow Guide"
-description: "Learn how to use Claude Code for production profiling workflows. This guide covers practical techniques to identify performance bottlenecks, analyze."
+title: "Claude Code for Production Profiling (2026)"
+description: "Profile production applications with Claude Code for CPU hotspots, memory leaks, and latency analysis. Identify bottlenecks without downtime."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-production-profiling-workflow-guide/
 categories: [guides]

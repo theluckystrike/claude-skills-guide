@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Changesets Monorepo Release Workflow"
-description: "Learn how to use Claude Code to streamline your Changesets-based monorepo release workflow with practical examples and actionable advice."
+title: "Claude Code for Changesets Monorepo Releases (2026)"
+description: "Automate monorepo versioning and releases with Claude Code and Changesets. Streamline changelogs, version bumps, and npm publishing across packages."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

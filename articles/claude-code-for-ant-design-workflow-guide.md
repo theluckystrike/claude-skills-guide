@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code For Ant Design — Complete Developer Guide"
-description: "Master the integration of Claude Code with Ant Design to accelerate your React component development. Learn practical workflows, code generation."
+title: "Claude Code + Ant Design React Workflow (2026)"
+description: "Accelerate Ant Design React component development with Claude Code. Practical workflows for theming, form generation, and table configuration."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 render_with_liquid: false
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 {% raw %}

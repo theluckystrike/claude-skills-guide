@@ -1,10 +1,11 @@
 ---
 layout: default
-title: "Fix Claude Code Large Codebase Crashes (2026)"
-description: "Fix Claude Code crashes on large files and codebases. Memory plugin tips, file splitting, and .claudeignore config that works."
+title: "Fix Claude Code Large File Crashes (2026)"
+description: "Fix Claude Code crashes on large files with memory plugin tips, file splitting strategies, and .claudeignore configuration that actually works."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
+last_tested: "2026-04-21"
 permalink: /claude-code-crashes-on-large-files-how-to-fix/
 reviewed: true
 score: 7

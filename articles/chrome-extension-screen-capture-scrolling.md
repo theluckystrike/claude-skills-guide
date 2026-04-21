@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Chrome Extension Screen Capture with Scrolling"
-description: "Learn how to capture full-page screenshots with automatic scrolling in Chrome. Technical implementation, use cases, and practical examples for developers."
+title: "Scrolling Screen Capture Chrome Extension (2026)"
+description: "Capture full-page scrolling screenshots in Chrome with automatic stitching. Build the extension using canvas API, scrollTo, and image concatenation."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: theluckystrike
 permalink: /chrome-extension-screen-capture-scrolling/
 categories: [guides]

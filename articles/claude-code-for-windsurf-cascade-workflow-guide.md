@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for WindSurf Cascade Workflow Guide"
-description: "Master the integration of Claude Code with WindSurf Cascade workflow. Learn practical techniques to enhance your AI-assisted development with powerful."
+title: "Claude Code with Windsurf Cascade Workflow (2026)"
+description: "Combine Claude Code with Windsurf Cascade for enhanced AI development. Covers workflow chaining, context sharing, and multi-tool orchestration tips."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: Claude Skills Guide
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills, windsurf, cascade, workflow, ai-coding]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 Production use of windsurf cascade surfaces real problems with proper windsurf cascade configuration, integration testing, and ongoing maintenance. This windsurf cascade guide shows how Claude Code helps you address each issue methodically.

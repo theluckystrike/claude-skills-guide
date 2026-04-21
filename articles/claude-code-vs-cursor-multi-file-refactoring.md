@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code vs Cursor: Multi-File Refactoring Comparison"
-description: "A comprehensive comparison of Claude Code and Cursor for multi-file refactoring tasks. Learn how Claude Code's CLI-first approach and skill system."
+title: "Claude Code vs Cursor: Multi-File Refactoring (2026)"
+description: "Compare Claude Code and Cursor for multi-file refactoring. CLI vs IDE approach benchmarked across rename, extract, and restructure operations."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

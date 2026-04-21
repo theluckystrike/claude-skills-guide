@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use PR Size Management: Workflow (2026)"
-description: "Manage PR sizes with Claude Code. Enforce size limits, automate review workflows, and maintain healthy pull request habits for faster merges."
+title: "Claude Code PR Size Management Workflow (2026)"
+description: "Enforce PR size limits with Claude Code automation to maintain healthy pull request habits and ship smaller, faster-merging code review batches."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [guides, tutorials]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+last_tested: "2026-04-21"
 render_with_liquid: false
 geo_optimized: true
 ---

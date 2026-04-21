@@ -1,12 +1,13 @@
 ---
 layout: default
-title: "Save Articles Offline Chrome Extension Guide (2026)"
-description: "Learn how to build a Chrome extension to save articles for offline reading. Practical code examples, storage strategies, and implementation patterns for."
+title: "Build an Offline Article Saver Extension (2026)"
+description: "Build a Chrome extension to save articles for offline reading. Covers IndexedDB storage, service workers, content extraction, and sync strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"
 permalink: /chrome-extension-save-articles-offline/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 Chrome Extension Save Articles Offline: A Developer Guide
 

@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code React Native Expo Workflow Debugging Guide"
-description: "Master debugging React Native Expo applications with Claude Code. Learn practical workflows for diagnosing runtime errors, native module issues, and."
+title: "Debug React Native Expo with Claude Code (2026)"
+description: "Fix React Native Expo runtime errors, native module crashes, and build failures using Claude Code debugging workflows. Tested solutions included."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [tutorials]
 tags: [claude-code, react-native, expo, debugging, mobile-development, workflow]
 author: theluckystrike

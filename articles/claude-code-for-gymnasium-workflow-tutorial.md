@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Gymnasium Workflow Tutorial"
-description: "A comprehensive guide for developers on using Claude Code for Gymnasium reinforcement learning environments. Learn practical workflows, code patterns."
+title: "Claude Code for Gymnasium RL Workflow (2026)"
+description: "Build reinforcement learning environments with Claude Code and Gymnasium. Agent training, environment setup, and evaluation workflow patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [workflows]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

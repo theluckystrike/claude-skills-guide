@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Use Tree of Thought Prompting with Claude Code (2026)"
-description: "Use tree-of-thought prompting with Claude Code to explore multiple solution paths. Systematic problem-solving strategies with practical examples."
+title: "Use Tree-of-Thought Prompting in Claude Code (2026)"
+description: "Explore multiple solution paths with tree-of-thought prompting in Claude Code. Systematic problem-solving strategies with branching and evaluation."
 date: 2026-03-20
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -9,6 +9,7 @@ permalink: /claude-code-for-tree-of-thought-prompting-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Can Claude Code Work Without Internet? Guide (2026)"
-description: "Can Claude Code Work Without Internet? Guide. Practical guide with working examples for developers."
+title: "Claude Code Offline Mode Setup (2026)"
+description: "Use Claude Code offline without internet access. Local model fallbacks, cached skills, and air-gapped workflow patterns for disconnected coding."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, offline, air-gapped, local-models, mcp, claude-skills]
 permalink: /best-way-to-use-claude-code-offline-without-internet-access/
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 
@@ -59,7 +60,7 @@ Create a focused skill for code review that works locally
 In your skill, specify local model preferences:
 ---
 name: Code Review
-description: Perform thorough code reviews
+description: "Analyze code for security, performance, and quality issues"
 ---
 
 You are an expert code reviewer. Analyze the provided code for:
@@ -80,7 +81,7 @@ When writing skills for offline use, avoid referencing external URLs or APIs tha
 ```markdown
 ---
 name: Docker Commands
-description: Common Docker commands for offline reference
+description: "Quick reference for common Docker container management commands"
 ---
 
 Docker Commands Reference
@@ -174,7 +175,7 @@ mkdir -p .claude/mcp
 Create project-specific skill
 echo '---
 name: Project Helper
-description: Project-specific assistance
+description: "Answer questions about our specific project codebase and conventions"
 ---
 
 Project Help

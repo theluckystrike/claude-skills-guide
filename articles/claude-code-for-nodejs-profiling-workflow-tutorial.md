@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code For Node.js Profiling — Complete Developer Guide"
-description: "Learn how to use Claude Code to streamline your Node.js profiling workflow. This tutorial covers practical techniques for identifying performance."
+title: "Claude Code Node.js Profiling Workflow (2026)"
+description: "Profile Node.js applications with Claude Code for CPU flame graphs, memory snapshots, and event loop analysis. Find and fix performance bottlenecks."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-nodejs-profiling-workflow-tutorial/
 categories: [guides]

@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Elastic SIEM Workflow Guide"
-description: "Learn how to use Claude Code with Elastic SIEM for automated security monitoring, threat detection, and incident response workflows."
+title: "Claude Code for Elastic SIEM Workflows (2026)"
+description: "Automate Elastic SIEM security monitoring with Claude Code for threat detection rules, incident response playbooks, and alert triage. Config examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-elastic-siem-workflow-guide/
 categories: [guides]

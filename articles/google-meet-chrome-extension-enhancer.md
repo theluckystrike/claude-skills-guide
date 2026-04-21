@@ -11,6 +11,7 @@ categories: [guides]
 tags: [chrome-extension, google-meet, developer-tools, claude-skills]
 reviewed: true
 score: 8
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

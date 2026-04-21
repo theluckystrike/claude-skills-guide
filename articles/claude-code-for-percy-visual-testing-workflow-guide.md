@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Percy Visual Testing Workflow Guide"
-description: "Learn how to integrate Claude Code with Percy for automated visual testing. Set up workflows, capture snapshots, and catch visual regressions before."
+title: "Claude Code + Percy Visual Testing (2026)"
+description: "Automate visual regression testing with Percy and Claude Code. Capture snapshots, review diffs, and catch UI breaks before production deployment."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-percy-visual-testing-workflow-guide/
 categories: [guides]

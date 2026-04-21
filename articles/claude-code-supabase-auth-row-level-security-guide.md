@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Supabase Auth Row — Complete Developer Guide"
-description: "A comprehensive guide to implementing Supabase authentication with Row Level Security (RLS) policies using Claude Code. Learn how to secure your data."
+title: "Claude Code for Supabase Auth and RLS (2026)"
+description: "Implement Supabase authentication with Row Level Security using Claude Code. Covers policy creation, JWT claims, role-based access, and testing RLS."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills, supabase, security]
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 Supabase's Row Level Security (RLS) combined with their authentication system provides a powerful, declarative way to secure your database at the row level. When paired with Claude Code, you can rapidly implement solid security policies that protect user data while maintaining flexibility. This guide focuses specifically on RLS policy design. team-based access, role-based access, and Edge Function integration. For a broader overview of Supabase backend integration with database operations, authentication, and Edge Functions, see the [Supabase Backend Integration Guide](/claude-code-with-supabase-backend-integration-guide/).
 

@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code for Multi-Language Navigation Workflow"
-description: "Learn how to use Claude Code CLI to navigate and manage multi-language projects efficiently with practical examples and actionable workflows."
+title: "Claude Code Multi-Language Project Navigation (2026)"
+description: "Navigate multi-language codebases efficiently with Claude Code for cross-file search, dependency tracing, and polyglot project management patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-multi-language-navigation-workflow/
 categories: [guides]

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Playwright Visual Regression Testing Guide"
-description: "Learn how to set up visual regression testing with Claude Code and Playwright. Practical examples, code snippets, and actionable advice for maintaining."
+title: "Claude Code for Playwright Visual Testing (2026)"
+description: "Set up visual regression testing with Playwright and Claude Code. Catch UI bugs before production with automated screenshot comparison and baselines."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -13,6 +13,7 @@ reviewed: true
 score: 7
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 {% raw %}

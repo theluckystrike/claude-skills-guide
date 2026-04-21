@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Skill Disk Access Limits: Security Guide (2026)"
-description: "Learn how to claude skill disk access limits: security guide. Step-by-step with working examples."
+title: "Limit Claude Skill Disk Access (2026)"
+description: "Restrict Claude skill file system access with allowlists, directory scoping, and permission hooks. Prevent unauthorized reads and writes to your disk."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills, permissions, security, file-access]

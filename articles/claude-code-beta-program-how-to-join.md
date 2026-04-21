@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Beta Program: How to Join"
-description: "A practical guide for developers and power users looking to join the Claude Code beta program and unlock advanced AI-assisted coding capabilities."
+title: "Join the Claude Code Beta Program (2026)"
+description: "Apply for the Claude Code beta program to get early access to new features. Covers eligibility, application steps, and what beta testers get access to."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ score: 7
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

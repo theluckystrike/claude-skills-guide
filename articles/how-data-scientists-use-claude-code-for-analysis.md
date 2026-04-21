@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How Data Scientists Use Claude Code for Analysis"
-description: "Practical guide for data scientists using Claude Code with specialized skills for data analysis, automation, and insight generation."
+title: "Claude Code for Data Science Analysis (2026)"
+description: "Data scientists use Claude Code for exploratory analysis, feature engineering, and visualization. Practical workflows with pandas, numpy, and sklearn."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [use-cases]
@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 permalink: /how-data-scientists-use-claude-code-for-analysis/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # How Data Scientists Use Claude Code for Analysis

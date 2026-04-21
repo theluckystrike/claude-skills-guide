@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Color Contrast Checking Workflow with Claude Code"
-description: "Learn how to systematically check color contrast ratios and ensure WCAG accessibility compliance in your projects using Claude Code skills and automation."
+title: "Check Color Contrast with Claude Code (2026)"
+description: "Check WCAG color contrast ratios with Claude Code for accessibility compliance. Automate contrast audits across your entire design system and codebase."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-color-contrast-checking-workflow/
 categories: [guides]

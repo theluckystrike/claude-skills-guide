@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Use For Oss Contributor — Complete Developer (2026)"
-description: "Learn how to use Claude Code effectively for open source contributions. Discover practical workflows for finding issues, exploring codebases, and."
+title: "Claude Code for Open Source Contributions (2026)"
+description: "Use Claude Code for open source contributions with workflows for finding issues, exploring unfamiliar codebases, and submitting quality PRs."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -10,6 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 Open source software drives modern development, and contributing to OSS projects has become an essential skill for developers. However, navigating unfamiliar codebases, understanding project conventions, and crafting quality pull requests can feel intimidating. Claude Code transforms this process, making open source contributions more accessible and efficient for developers at any experience level.

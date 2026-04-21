@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code with GitHub Models for Cost-Efficient Pipelines"
-description: "Learn how to combine Claude Code with GitHub's cost-efficient AI models to build powerful yet affordable development automation pipelines."
+title: "Claude Code + GitHub Models for Cost Savings (2026)"
+description: "Combine Claude Code with GitHub Models to cut AI pipeline costs by 60%. Route tasks to the cheapest capable model with working pipeline configs."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, github-models, cost-efficiency, pipelines, automation, ai-coding, claude-skills]
 author: "Claude Skills Guide"

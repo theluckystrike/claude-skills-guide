@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Harness CD Pipeline Workflow"
-description: "Learn how to integrate Claude Code into your Harness CD pipeline workflow for intelligent deployment automation, automated pipeline generation, and."
+title: "Claude Code for Harness CD Pipelines (2026)"
+description: "Integrate Claude Code with Harness CD for intelligent deployment automation, pipeline generation, and canary release management. Working YAML configs."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-harness-cd-pipeline-workflow/
 categories: [guides]
@@ -56,7 +57,7 @@ Claude Code can then use these credentials to authenticate with Harness. Here's 
 ```yaml
 ---
 name: harness-pipeline-assistant
-description: "AI-powered assistant for Harness CD pipeline management"
+description: "Integrate Claude Code with Harness CD for intelligent deployment automation, pipeline generation, and canary release management. Working YAML configs."
 ---
 ```
 
@@ -241,7 +242,7 @@ Create a monitoring skill that watches deployment progress:
 ```yaml
 ---
 name: harness-deployment-monitor
-description: "Monitor Harness deployments and provide intelligent alerts"
+description: "Integrate Claude Code with Harness CD for intelligent deployment automation, pipeline generation, and canary release management. Working YAML configs."
 ---
 Deployment Monitor
 

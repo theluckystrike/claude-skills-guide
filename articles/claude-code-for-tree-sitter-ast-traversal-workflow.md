@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use Tree-Sitter AST Traversal with Claude Code (2026)"
-description: "Master tree-sitter JavaScript node types and AST traversal with Claude Code. Find import_statement nodes and analyze code structure automatically."
+title: "Tree-Sitter AST Traversal with Claude Code (2026)"
+description: "Traverse tree-sitter ASTs with Claude Code to find import_statement nodes, analyze code structure, and automate refactoring patterns in projects."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ categories: [workflows, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 
@@ -102,7 +103,7 @@ A well-structured skill for AST-based analysis separates concerns cleanly, the s
 ```yaml
 ---
 name: analyze-functions
-description: "Analyze function definitions in codebase"
+description: "Analyze function definitions, parameters, and complexity using Tree-sitter AST traversal"
 ---
 
 Usage

@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code Kubernetes Upgrade Workflow Guide"
-description: "A practical guide to upgrading Kubernetes clusters using Claude Code. Learn workflow patterns, automation strategies, and best practices for smooth."
+title: "Claude Code Kubernetes Upgrade Workflow (2026)"
+description: "Upgrade Kubernetes clusters safely with Claude Code for version planning, compatibility checks, and rolling node updates. Zero-downtime upgrade guide."
 date: 2026-04-19
 last_modified_at: 2026-04-19
+last_tested: "2026-04-21"
 author: "theluckystrike"
 permalink: /claude-code-kubernetes-upgrade-workflow-guide/
 categories: [guides]

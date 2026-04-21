@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Record Tab Audio Chrome Extension Guide (2026)"
-description: "Learn how to build Chrome extensions that capture audio from browser tabs. Practical code examples, APIs, and implementation patterns for developers and."
+title: "Build Tab Audio Recorder Chrome Extension (2026)"
+description: "Build Chrome extensions that capture audio from browser tabs using the MediaRecorder API. Practical code examples and implementation patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -10,6 +10,7 @@ reviewed: true
 score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 Chrome Extension Record Tab Audio: A Developer Guide

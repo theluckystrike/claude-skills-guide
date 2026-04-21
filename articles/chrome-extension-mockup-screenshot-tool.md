@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Mockup Screenshot Tool Chrome Extension Guide (2026)"
-description: "Learn how to use and build chrome extension mockup screenshot tools for creating professional UI mockups. Code examples and practical implementation guide."
+title: "Mockup Screenshot Tool Extension Guide (2026)"
+description: "Create professional UI mockups with a Chrome extension screenshot tool. Frame captures in device bezels, add annotations, and export high-res images."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: theluckystrike
 permalink: /chrome-extension-mockup-screenshot-tool/
 categories: [guides]

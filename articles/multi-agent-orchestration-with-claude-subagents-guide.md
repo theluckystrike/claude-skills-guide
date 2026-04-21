@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Multi-Agent Orchestration with Claude Subagents Guide"
-description: "Orchestrate multiple Claude Code subagents with practical patterns. Covers sequential, parallel, and hierarchical coordination with workflow examples."
+title: "Orchestrate Claude Code Subagents (2026)"
+description: "Run multiple Claude Code subagents in parallel and sequence. Covers task decomposition, result aggregation, error handling, and hierarchical patterns."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ reviewed: true
 score: 9
 permalink: /multi-agent-orchestration-with-claude-subagents-guide/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Multi-Agent Orchestration with Claude Subagents Guide

@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code Docker CI/CD Pipeline Integration Guide"
-description: "Learn how to integrate Claude Code with Docker and CI/CD pipelines for automated containerized development workflows."
+title: "Claude Code Docker CI/CD Pipeline Setup (2026)"
+description: "Integrate Claude Code with Docker in CI/CD pipelines for automated container builds, testing, and deployment. GitHub Actions and GitLab CI examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "theluckystrike"
 permalink: /claude-code-docker-ci-cd-pipeline-integration-guide/
 reviewed: true

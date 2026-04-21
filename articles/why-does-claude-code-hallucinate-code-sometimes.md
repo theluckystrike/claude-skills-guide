@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Why Does Claude Code Hallucinate Code — Developer Guide"
-description: "Understanding why Claude Code occasionally generates incorrect or non-existent code, and how to work effectively with AI coding assistants."
+title: "Why Claude Code Hallucinates Code and How to Fix It"
+description: "Claude Code sometimes generates non-existent APIs or wrong imports. Learn the root causes and 5 proven strategies to reduce hallucinations in output."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 If you've used Claude Code extensively for software development, you've probably encountered a frustrating phenomenon: the model generating code that looks correct but doesn't actually work, sometimes calling non-existent functions, using APIs that don't exist, or producing syntax that fails to compile. This behavior is called hallucination, and understanding why it happens is essential for working effectively with AI coding assistants.
 

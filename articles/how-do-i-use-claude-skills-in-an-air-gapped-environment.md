@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How Do I Use Claude Skills In An Air — Developer Guide"
-description: "A practical guide for developers and power users on running Claude AI skills offline in air-gapped or secure environments."
+title: "Use Claude Skills in Air-Gapped Environments (2026)"
+description: "Run Claude AI skills offline in air-gapped or secure environments. Setup guide for government, defense, and restricted network deployment scenarios."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -10,6 +10,7 @@ score: 7
 categories: [tutorials]
 tags: [claude-code, claude-skills]
 permalink: /how-do-i-use-claude-skills-in-an-air-gapped-environment/
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 # How Do I Use Claude Skills in an Air-Gapped Environment
@@ -34,7 +35,7 @@ Here's a typical skill structure you might transfer:
 Example skill structure (front matter only)
 ---
 name: pdf
-description: "Comprehensive PDF manipulation capabilities"
+description: "Extract text, tables, and metadata from PDF documents"
 ---
 ```
 

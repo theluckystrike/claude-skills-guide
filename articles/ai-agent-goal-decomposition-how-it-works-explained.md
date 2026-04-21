@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "AI Agent Goal Decomposition Explained"
-description: "Learn how AI agents break down complex tasks into manageable sub-goals. Practical examples using Claude Code skills and the skill system."
+title: "AI Agent Goal Decomposition Explained (2026)"
+description: "Understand how AI agents decompose complex tasks into sub-goals using planning algorithms. Claude Code skill examples show real decomposition patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "theluckystrike"
 permalink: /ai-agent-goal-decomposition-how-it-works-explained/
 categories: [guides]

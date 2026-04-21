@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Self-Consistency Prompting Workflow Tutorial"
-description: "Learn how to build solid self-consistency prompting workflows using Claude Code CLI. A practical guide for developers with real-world examples."
+title: "Self-Consistency Prompting in Claude Code (2026)"
+description: "Improve Claude Code output reliability with self-consistency prompting. Generate multiple solutions, compare approaches, and select the best answer."
 date: 2026-03-20
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -10,6 +10,7 @@ categories: [tutorials, guides]
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 {% raw %}

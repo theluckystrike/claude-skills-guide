@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Mage AI Pipeline Workflow Guide"
-description: "Learn how to use Claude Code to build, debug, and optimize Mage AI data pipelines. Practical examples and actionable workflows for data engineers."
+title: "Claude Code for Mage AI Data Pipelines (2026)"
+description: "Build, debug, and optimize Mage AI data pipelines with Claude Code. Covers block creation, orchestration, testing, and deployment for data engineers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Twilio Voice Call Automation Workflow Guide"
-description: "Learn how to use Claude Code skills to build powerful Twilio voice call automation workflows. This comprehensive guide covers practical examples."
+title: "Claude Code for Twilio Voice Automation (2026)"
+description: "Build Twilio voice call workflows with Claude Code. Covers TwiML generation, call routing, IVR menus, recording, and webhook handling with examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ score: 7
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 Voice automation is transforming how businesses handle customer interactions, and combining Claude Code with Twilio creates a powerful synergy for building intelligent voice systems. This guide walks you through creating solid Twilio voice call automation workflows using Claude Code skills, complete with practical examples and battle-tested patterns.

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "SVG Editor Chrome Extension Guide (2026)"
-description: "Learn how to build powerful SVG editing chrome extensions. Practical code examples, APIs, and implementation patterns for developers and power users."
+title: "Build an SVG Editor Chrome Extension (2026)"
+description: "Build a Chrome extension for editing SVGs in the browser. Covers DOM manipulation, path editing, Canvas API integration, and export functionality."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -11,6 +11,7 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 Chrome Extension SVG Editor: A Developer Guide
 

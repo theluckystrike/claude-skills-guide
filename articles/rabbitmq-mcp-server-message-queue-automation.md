@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "RabbitMQ MCP Server for Message Queue Automation"
-description: "Learn how to build automated message queue workflows using RabbitMQ with MCP server integration for streamlined development workflows."
+title: "RabbitMQ MCP Server: Queue Automation (2026)"
+description: "Automate message queue operations with the RabbitMQ MCP server in Claude Code. Covers publishing, consuming, exchange routing, and dead letter handling."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 permalink: /rabbitmq-mcp-server-message-queue-automation/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # RabbitMQ MCP Server for Message Queue Automation

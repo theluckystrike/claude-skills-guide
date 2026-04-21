@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Taint Analysis Workflow Tutorial Guide"
-description: "Learn how to use Claude Code CLI for implementing taint analysis workflows. This guide covers practical examples, code snippets, and actionable."
+title: "Claude Code for Taint Analysis Workflows (2026)"
+description: "Trace untrusted data flows through your codebase with Claude Code taint analysis. Find injection vulnerabilities and sanitization gaps automatically."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 Taint analysis is a powerful security technique that tracks untrusted data (tainted input) as it flows through your application, helping you identify potential vulnerabilities like SQL injection, cross-site scripting (XSS), and command injection. When combined with Claude Code, you can create efficient, reproducible taint analysis workflows that integrate smoothly into your development process.

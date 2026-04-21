@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Soda Core Data Quality Workflow"
-description: "Learn how to integrate Claude Code with Soda Core to build automated data quality monitoring pipelines that catch issues before they reach production."
+title: "Claude Code + Soda Core Data Quality (2026)"
+description: "Monitor data quality with Soda Core and Claude Code for automated checks, schema validation, and freshness monitoring. Catch data issues in CI/CD."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-soda-core-data-quality-workflow/
 categories: [guides]
@@ -53,7 +54,7 @@ The most effective approach is creating a dedicated Claude skill that understand
 ```yaml
 ---
 name: soda-data-quality
-description: "Generates and manages Soda Core data quality checks"
+description: "Monitor data quality with Soda Core and Claude Code for automated checks, schema validation, and freshness monitoring. Catch data issues in CI/CD."
 ---
 
 Soda Core Data Quality Skill

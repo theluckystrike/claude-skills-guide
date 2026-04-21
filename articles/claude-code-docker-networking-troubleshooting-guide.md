@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Docker Networking Troubleshooting Guide"
-description: "Master Docker networking debugging with Claude Code skills. Learn practical techniques for diagnosing container connectivity issues, DNS resolution."
+title: "Fix Docker Networking with Claude Code (2026)"
+description: "Debug Docker networking issues with Claude Code. Fix DNS resolution, port mapping, and bridge network misconfigurations using systematic workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ categories: [guides]
 score: 7
 tags: [claude-code, claude-skills]
 render_with_liquid: false
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 
@@ -122,7 +123,7 @@ You can create a reusable Claude Code skill that automates common diagnostic seq
 
 ```yaml
 name: docker-network-debug
-description: Diagnose common Docker networking issues
+description: "Diagnose and fix Docker container networking issues systematically"
 ```
 
 This skill provides a consistent starting point for any networking troubleshooting session. You can expand it with conditional logic that runs additional diagnostics based on what it discovers.

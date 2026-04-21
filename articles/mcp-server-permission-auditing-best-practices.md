@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "MCP Server Permission Auditing Best Practices"
-description: "A practical guide to auditing and managing Model Context Protocol server permissions for secure AI agent deployments."
+title: "Audit MCP Server Permissions: Best Practices (2026)"
+description: "Secure your MCP server deployments by auditing tool permissions, restricting file access, and applying least-privilege policies for AI agent workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /mcp-server-permission-auditing-best-practices/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # MCP Server Permission Auditing Best Practices

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code ArXiv Paper Implementation Guide"
-description: "Learn how to use Claude Code to understand, extract, and implement algorithms from ArXiv research papers with practical code examples."
+title: "Implement ArXiv Papers with Claude Code (2026)"
+description: "Turn ArXiv research papers into working code using Claude Code. Algorithm extraction, implementation workflow, and benchmark validation guide."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Performance Bottleneck Finding"
-description: "A practical guide for developers to identify and resolve performance bottlenecks in Claude Code. Learn to profile skill execution, analyze tool call."
+title: "Find Performance Bottlenecks with Claude Code (2026)"
+description: "Identify and fix performance bottlenecks using Claude Code. Profile skill execution, analyze tool call overhead, and optimize response latency issues."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 Performance bottlenecks in Claude Code can silently drain your productivity, inflate token usage, and slow down your development workflow. Whether you are using skills for automated testing with the tdd skill, generating documents with the pdf skill, or building presentations with the pptx skill, understanding how to identify and resolve these bottlenecks is essential for maintaining an efficient AI-assisted development environment.

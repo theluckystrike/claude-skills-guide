@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code vs Copilot for TypeScript Refactoring"
-description: "Compare Claude Code and GitHub Copilot for TypeScript refactoring tasks. Learn which AI tool excels at type-safe code transformations, large-scale."
+title: "Claude Code vs Copilot: TypeScript Refactoring (2026)"
+description: "Compare Claude Code and GitHub Copilot for TypeScript refactoring. See which AI handles type-safe transformations, large-scale renames, and imports."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

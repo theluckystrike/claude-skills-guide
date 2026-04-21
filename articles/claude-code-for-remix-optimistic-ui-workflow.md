@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Remix Optimistic UI Workflow"
-description: "Learn how to use Claude Code to build responsive Remix applications with optimistic UI patterns. Practical examples and actionable advice for."
+title: "Claude Code for Remix Optimistic UI (2026)"
+description: "Build responsive Remix apps with optimistic UI patterns using Claude Code. Implement instant feedback, pending states, and error rollback strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-remix-optimistic-ui-workflow/
 categories: [guides]

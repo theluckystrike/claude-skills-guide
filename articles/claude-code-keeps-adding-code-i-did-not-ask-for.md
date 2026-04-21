@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code Keeps Adding Code I Did Not — Developer Guide"
-description: "Why Claude Code sometimes generates extra code you didn't request, and how to prevent it with better prompting techniques and skill configurations."
+title: "Fix Claude Code Adding Unwanted Code (2026)"
+description: "Prevent Claude Code from generating extra code you did not request. Use targeted prompts, scope boundaries, and skill configs to control output scope."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-keeps-adding-code-i-did-not-ask-for/
 categories: [guides]

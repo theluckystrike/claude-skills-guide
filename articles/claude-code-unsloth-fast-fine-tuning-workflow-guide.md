@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "How to Use + Unsloth: Fast Fine-Tuning Workflow (2026)"
-description: "A practical guide to using Claude Code with Unsloth for accelerated LLM fine-tuning workflows"
+title: "Claude Code + Unsloth Fast Fine-Tuning (2026)"
+description: "Fine-tune LLMs 2x faster with Unsloth and Claude Code for QLoRA training, dataset preparation, and model merging. Reduce GPU costs significantly."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

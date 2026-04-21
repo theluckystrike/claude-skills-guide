@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Distributing Claude Skills Across — Developer Guide"
-description: "Learn how to effectively distribute and manage Claude Code skills across multiple isolated client environments for consistent AI assistance."
+title: "Distribute Claude Skills Across Environments (2026)"
+description: "Deploy Claude skills across isolated client environments with versioning, packaging, and sync strategies. Maintain consistency across 10+ instances."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /distributing-claude-skills-across-isolated-client-environmen/
 reviewed: true

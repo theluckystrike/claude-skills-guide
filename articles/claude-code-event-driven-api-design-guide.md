@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Event Driven API Design Guide"
-description: "Build event-driven APIs with Claude Code: patterns for webhooks, message queues, real-time updates, and asynchronous workflows."
+title: "Claude Code for Event-Driven API Design (2026)"
+description: "Design event-driven APIs with Claude Code. Covers webhook patterns, message queue integration, real-time updates, and asynchronous workflow handling."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ permalink: /claude-code-event-driven-api-design-guide/
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Claude Code Event Driven API Design Guide

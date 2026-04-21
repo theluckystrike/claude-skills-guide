@@ -1,13 +1,14 @@
 ---
 layout: default
-title: "Claude Code For Claude Rfp — Complete Developer Guide"
-description: "Learn how to use Claude Code to automate and streamline your RFP response process with AI-powered workflows."
+title: "Automate RFP Responses with Claude Code (2026)"
+description: "Automate RFP response workflows with Claude Code. Draft proposals, review compliance, and optimize submission quality with AI-powered assistance."
 date: 2026-03-20
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
 permalink: /claude-code-for-claude-rfp-response-ai-workflow-tutorial-gui/
 categories: [guides]
 tags: [claude-code, claude-skills]
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 Claude Code for Claude RFP Response AI Workflow Tutorial Guide

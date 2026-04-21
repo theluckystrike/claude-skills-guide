@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use Paddle Billing Integration Setup (2026)"
-description: "Learn how to integrate Paddle billing into your applications using Claude Code. A comprehensive guide covering webhook handlers, subscription."
+title: "Setup Paddle Billing with Claude Code (2026)"
+description: "Integrate Paddle billing into your app using Claude Code with webhook handlers, subscription management, and complete checkout flow configuration."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [guides]
 reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 
@@ -28,7 +29,7 @@ Before writing integration code, you can define a Claude skill that encapsulates
 ```markdown
 ---
 name: paddle-billing
-description: Handles Paddle billing events and manages subscription workflows
+description: "Handle Paddle webhook events and execute billing workflows"
 ---
 
 Paddle Billing Workflow Handler

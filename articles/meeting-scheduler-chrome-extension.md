@@ -1,9 +1,10 @@
 ---
 layout: default
 title: "Meeting Scheduler Chrome Extension Guide (2026)"
-description: "Learn how to build and use meeting scheduler Chrome extensions for efficient calendar management. Practical code examples and integration tips for."
+description: "Build a meeting scheduler Chrome extension with Google Calendar integration, availability detection, and one-click booking. Working Manifest V3 code."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: theluckystrike
 permalink: /meeting-scheduler-chrome-extension/
 categories: [guides]

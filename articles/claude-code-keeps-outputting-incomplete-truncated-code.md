@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Says Response Incomplete — How to Fix (2026)"
-description: "Fix Claude Code incomplete or truncated output. Adjust context limits, prompt structure, and output settings. Tested solution."
+title: "Fix Claude Code Truncated Output (2026)"
+description: "Fix Claude Code incomplete or truncated code output by adjusting context limits, prompt structure, and output settings. Copy-paste solution included."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, troubleshooting, code-output, token-limits, claude-skills]
 permalink: /claude-code-keeps-outputting-incomplete-truncated-code/
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code For K3S Lightweight — Complete Developer Guide"
-description: "Learn how to use Claude Code to streamline K3s Kubernetes management. This guide covers practical workflows for deploying, managing, and monitoring."
+title: "Claude Code for K3s Kubernetes Management (2026)"
+description: "Deploy and manage K3s lightweight Kubernetes clusters with Claude Code. Covers Helm charts, service mesh, monitoring, and resource optimization."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 K3s is Rancher Labs' lightweight Kubernetes distribution designed for edge computing, IoT, and resource-constrained environments. It packages all Kubernetes components into a single binary under 100MB and consumes minimal resources while maintaining full Kubernetes API compatibility. When combined with Claude Code, you get an intelligent assistant that can help you deploy, manage, and troubleshoot K3s clusters with natural language commands.
 

@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code French Developer Community Resources Guide"
-description: "A practical guide to French developer communities, documentation, and resources for Claude Code users. Find Discord servers, forums, and specialized tools."
+title: "Claude Code French Developer Resources (2026)"
+description: "Find French Claude Code communities, Discord servers, forums, and localized documentation. Connect with francophone developers using AI coding tools."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, claude-skills, french, community, resources]
 author: "Claude Skills Guide"

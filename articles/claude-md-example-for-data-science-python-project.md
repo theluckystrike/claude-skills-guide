@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude.md Example for Data Science Python Project"
-description: "Practical Claude.md examples for data science Python projects. Learn how to create effective skill files for data analysis, ML pipelines, and pandas."
+title: "Claude.md Example for Data Science Python (2026)"
+description: "Configure Claude Code for data science with real CLAUDE.md examples. Covers pandas workflows, ML pipelines, Jupyter integration, and analysis patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 Claude Code skills use `.md` files to encapsulate project-specific knowledge, preferences, and workflows. For data science Python projects, these skill files become invaluable for maintaining consistent analysis patterns, enforcing coding standards, and accelerating common data tasks. This guide provides practical examples of Claude.md files tailored for data science workflows.

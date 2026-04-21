@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Gitpod Cloud IDE Integration Tutorial (2026)"
-description: "Learn how to integrate Claude Code CLI with Gitpod cloud IDE. Step-by-step setup guide with practical examples and Claude skill workflows for 2026."
+title: "Setup Claude Code in Gitpod Cloud IDE (2026)"
+description: "Install and configure Claude Code CLI in Gitpod cloud workspaces. Covers devcontainer setup, persistent configuration, and skill sync across sessions."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-gitpod-cloud-ide-integration-tutorial-2026/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Claude Code Gitpod Cloud IDE Integration Tutorial (2026)

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Dangerous Chrome Extensions 2026: Security Risks"
-description: "Learn about the most dangerous Chrome extensions threatening developer security in 2026. Understand permission risks, data exfiltration threats, and how."
+description: "Dangerous Chrome extensions threatening developers in 2026. Identify credential harvesters, cryptojackers, and data exfiltration risks before install."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -10,6 +10,7 @@ reviewed: false
 score: 0
 categories: [security]
 tags: [chrome-extensions, browser-security]
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

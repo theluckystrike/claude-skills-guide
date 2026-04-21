@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "CCPA Privacy Compliance with Claude Code 2026"
-description: "A practical guide for developers implementing California Consumer Privacy Act compliance using Claude Code. Includes code examples, automation."
+title: "CCPA Compliance with Claude Code (2026)"
+description: "Implement CCPA privacy compliance with Claude Code for data mapping, consent management, and deletion request handling. Code examples for each requirement."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, ccpa, privacy, compliance, california, data-privacy]
 author: theluckystrike

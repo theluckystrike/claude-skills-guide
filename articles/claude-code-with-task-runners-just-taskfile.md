@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code With Task Runners Just — Developer Guide"
-description: "Learn how to integrate Task (just-taskfile) with Claude Code to automate development workflows and boost productivity."
+title: "Claude Code with Just Taskfile Runner (2026)"
+description: "Integrate Just task runner with Claude Code to automate development workflows. Covers Justfile syntax, task chaining, and AI-powered build automation."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 {% raw %}
 If you spend time in terminal running repetitive commands, task runners can transform your workflow. Task (commonly referred to as just-taskfile) stands out as a lightweight, YAML-based task runner that pairs exceptionally well with Claude Code. This combination lets you automate complex development sequences while keeping configuration human-readable.

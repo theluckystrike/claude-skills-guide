@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "AI Sentiment Analyzer Chrome Extension Guide (2026)"
-description: "Learn how to build and use AI-powered sentiment analysis Chrome extensions for real-time text emotion detection in your browser."
+title: "Build an AI Sentiment Analyzer Extension (2026)"
+description: "Build a Chrome extension for real-time sentiment analysis using AI. Detect positive, negative, and neutral tone in any text on any webpage instantly."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /ai-sentiment-analyzer-chrome-extension/
 reviewed: true

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code with Other AI Models? (2026)"
-description: "Use Claude Code alongside GPT-4, Gemini, and Cursor. Multi-AI workflow patterns for developers who use multiple models."
+title: "Use Claude Code with Other AI Models (2026)"
+description: "Run Claude Code alongside GPT-4, Gemini, and Cursor in multi-AI workflows. Practical integration patterns for developers using multiple models."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -9,6 +9,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, ai-models, gpt-4, multi-ai, integration]
 reviewed: true
 score: 9
+last_tested: "2026-04-21"
 permalink: /can-claude-code-skills-work-alongside-other-ai-models/
 geo_optimized: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Md Example For Laravel Php — Developer Guide"
-description: "A practical guide to using Claude Code with Laravel PHP. Real skill examples, code snippets, and workflow patterns for Laravel developers."
+title: "Claude.md Example for Laravel PHP Projects (2026)"
+description: "Configure Claude Code for Laravel with real CLAUDE.md examples. Covers Eloquent patterns, Blade templates, route definitions, and Artisan commands."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-md-example-for-laravel-php-application/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 # Claude MD Example for Laravel PHP Application
 

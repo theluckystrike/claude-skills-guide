@@ -2,7 +2,7 @@
 
 layout: default
 title: "Best Claude Code Newsletters and Blogs 2026"
-description: "Discover the top newsletters and blogs for Claude Code developers. Stay updated on AI coding tools, skill development, and automation workflows."
+description: "Top newsletters and blogs for Claude Code developers in 2026. Curated list of resources for AI coding tools, skills, and automation workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /best-claude-code-newsletters-and-blogs-2026/
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

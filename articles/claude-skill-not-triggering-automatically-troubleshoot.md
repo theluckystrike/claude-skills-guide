@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Fix Claude Skill Not Triggering Automatically — Quick Guide"
-description: "Troubleshoot Claude Code skill not triggering automatically. Fix invocation syntax, file location, permissions, and YAML front matter issues."
+title: "Fix Claude Skill Not Triggering (2026)"
+description: "Fix Claude skills that fail to trigger automatically. Check invocation syntax, file location, permissions, and YAML frontmatter in under 5 minutes."
 date: 2026-03-13
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 categories: [guides]
 reviewed: true
@@ -85,7 +86,7 @@ A malformed YAML block at the top of the skill file can cause issues. Verify the
 ```yaml
 ---
 name: tdd
-description: "Run tests before implementation using TDD principles"
+description: "Fix Claude skills that fail to trigger automatically. Check invocation syntax, file location, permissions, and YAML frontmatter in under 5 minutes."
 ---
 ```
 

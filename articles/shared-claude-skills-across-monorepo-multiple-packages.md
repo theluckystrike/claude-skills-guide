@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Shared Claude Skills Across Monorepo Multiple Packages"
-description: "Learn how to create, organize, and share Claude skills across a monorepo with multiple packages. Practical patterns for teams building large-scale TypeS..."
+title: "Share Claude Skills Across Monorepo Packages (2026)"
+description: "Share Claude Code skills across monorepo packages without duplication. Directory layouts, symlinks, and inheritance patterns for large TypeScript teams."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -9,6 +9,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, monorepo, multiple-packages, shared-skills]
 reviewed: true
 score: 9
+last_tested: "2026-04-21"
 permalink: /shared-claude-skills-across-monorepo-multiple-packages/
 geo_optimized: true
 ---

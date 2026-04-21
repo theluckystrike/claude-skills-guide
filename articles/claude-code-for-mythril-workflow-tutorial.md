@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Mythril Workflow Tutorial"
-description: "Learn how to integrate Claude Code with Mythril for automated smart contract security analysis. Step-by-step guide with practical examples."
+title: "Claude Code + Mythril Smart Contract Audit (2026)"
+description: "Integrate Claude Code with Mythril for automated smart contract security analysis. Step-by-step guide with practical Solidity audit examples."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, mythril, security, ethereum, smart-contracts]
 reviewed: true
 score: 8
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

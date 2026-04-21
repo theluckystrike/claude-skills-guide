@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Skills for WebSocket Real-Time App Development"
-description: "Use Claude Code skills to build real-time WebSocket applications. Covers connection management, event handling, and scaling patterns."
+title: "Build WebSocket Apps with Claude Code Skills (2026)"
+description: "Build real-time WebSocket applications using Claude Code skills. Covers connection management, event handling, reconnection logic, and scaling patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]
@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 permalink: /claude-code-skills-websocket-real-time-app-development/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Claude Code Skills for WebSocket Real-Time App Development

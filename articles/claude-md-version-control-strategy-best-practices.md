@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Md Version Control Strategy — Honest Review 2026"
-description: "Master version control strategies for Claude Code skills. Learn branching, commit conventions, and workflow patterns for managing skill repositories."
+title: "CLAUDE.md Version Control Best Practices (2026)"
+description: "Version control your CLAUDE.md files with branching strategies, commit conventions, and merge workflows. Keep skill configs consistent across teams."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, version-control, git, claude-skills, workflow]

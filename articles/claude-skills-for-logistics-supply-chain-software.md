@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Skills for Logistics Supply Chain Software"
-description: "Learn how Claude skills automate logistics workflows, inventory management, and supply chain operations. Practical examples and code snippets for."
+title: "Claude Code for Logistics Supply Chain (2026)"
+description: "Automate logistics workflows, inventory management, and supply chain operations with Claude Code skills. Practical code examples and patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -9,6 +9,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, logistics, supply-chain, automation]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 permalink: /claude-skills-for-logistics-supply-chain-software/
 geo_optimized: true
 ---
@@ -111,7 +112,7 @@ Warehouse management systems (WMS) require constant synchronization between phys
 ```yaml
 Cycle counting workflow
 skill: cycle-count-automation
-description: Generate cycle count sheets, process results, flag variances
+description: "Automated cycle counting with variance detection and ERP updates"
 steps:
  - query current inventory from database
  - /xlsx Generate cycle-count-{date}.xlsx with:

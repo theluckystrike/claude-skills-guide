@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Save Research Sessions with Chrome Extensions"
-description: "Learn how to use Chrome extensions to save and restore your research sessions, keeping tabs organized and accessible across browsing sessions."
+title: "Save Research Sessions Chrome Extension (2026)"
+description: "Save and restore browser research sessions with one click. Build a Chrome extension that preserves tabs, scroll positions, and session history."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Fix Claude Code Verbose Output Not Working (2026)"
-description: "Fix Claude Code output formatting issues. Markdown rendering, code block problems, and verbose output display differences resolved."
+title: "Fix Claude Code Output Formatting Issues (2026)"
+description: "Fix broken markdown rendering, code block display, and verbose output in Claude Code. Resolve formatting differences between terminal and IDE modes."
 date: 2026-03-13
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [troubleshooting]
 tags: [claude-code, claude-skills, output-formatting, debugging, troubleshooting]
 author: "Claude Skills Guide"

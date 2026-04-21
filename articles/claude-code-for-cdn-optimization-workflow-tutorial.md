@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for CDN Optimization Workflow Tutorial"
-description: "Learn how to use Claude Code to automate and streamline your CDN optimization workflow. This comprehensive tutorial covers caching strategies, asset."
+title: "Claude Code CDN Optimization Workflow (2026)"
+description: "Optimize CDN performance with Claude Code for cache headers, asset compression, edge rules, and origin shield configuration. Improve TTFB by 40%."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-cdn-optimization-workflow-tutorial/
 categories: [workflows, tutorials]

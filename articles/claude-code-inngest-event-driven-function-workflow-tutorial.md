@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Inngest Event Driven Function Workflow Tutorial"
-description: "Learn how to build event-driven function workflows with Claude Code and Inngest. Step-by-step tutorial with practical code examples for developers."
+title: "Claude Code for Inngest Event Functions (2026)"
+description: "Build event-driven function workflows with Claude Code and Inngest. Covers step functions, retries, cron scheduling, and fan-out patterns with code."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: theluckystrike
@@ -11,6 +11,7 @@ tags: [claude-code, inngest, event-driven, workflow, tutorial, functions]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 The inngest event driven function ecosystem presents specific challenges around ordering guarantees and idempotent event processing. What follows is a practical walkthrough of using Claude Code to navigate inngest event driven function challenges efficiently.

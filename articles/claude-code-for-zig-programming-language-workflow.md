@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code For Zig Programming — Complete Developer Guide"
-description: "Learn how to integrate Claude Code into your Zig development workflow for faster prototyping, code generation, debugging, and project scaffolding."
+title: "Claude Code for Zig Programming Workflow (2026)"
+description: "Use Claude Code for Zig systems programming. Project scaffolding, memory-safe code generation, debugging, and build system integration tips."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -10,6 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 Claude Code for Zig Programming Language Workflow

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix Why Does Claude Code Produce Incomplete — Quick Guide"
-description: "Learn why Claude Code sometimes produces truncated code blocks and discover practical solutions to fix this common issue."
+title: "Fix Claude Code Incomplete Code Blocks (2026)"
+description: "Fix Claude Code producing truncated code blocks mid-function. Adjust prompt structure, token limits, and output settings to get complete code."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -10,6 +10,7 @@ reviewed: true
 score: 7
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 If you've worked with Claude Code (claude.ai/code), you may have encountered situations where the model generates incomplete code blocks. This behavior can be frustrating, especially when you're in the middle of a complex coding task and need complete, functional code. Understanding why this happens and how to fix it will significantly improve your experience with Claude Code.

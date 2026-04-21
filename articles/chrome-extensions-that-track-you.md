@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Track You Chrome Extension Guide (2026)"
-description: "A technical breakdown of how Chrome extensions track users, with code examples showing the tracking mechanisms. Learn to audit extensions and protect."
+title: "Chrome Extensions That Track You (2026)"
+description: "Identify Chrome extensions that spy on your browsing data. Code-level analysis of tracking mechanisms with audit tools to protect your privacy."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "theluckystrike"
 permalink: /chrome-extensions-that-track-you/
 reviewed: true

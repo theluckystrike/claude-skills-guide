@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Turso SQLite Edge Database Tutorial"
-description: "A practical guide to using Turso SQLite edge database with Claude Code. Setup, integration patterns, and real-world examples for developers."
+title: "Claude Code for Turso SQLite Edge Database (2026)"
+description: "Build edge-first applications with Turso SQLite and Claude Code. Covers database creation, libSQL client setup, replication, and embedded replicas."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-for-turso-sqlite-edge-database-tutorial/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Claude Code for Turso SQLite Edge Database Tutorial

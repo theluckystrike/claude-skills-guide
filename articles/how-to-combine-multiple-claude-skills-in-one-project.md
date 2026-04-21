@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Combine Multiple Claude Skills in One Project"
-description: "A practical guide for developers and power users on combining multiple Claude skills within a single project. Learn skill orchestration patterns, code."
+title: "Combine Multiple Claude Skills in One Project (2026)"
+description: "Orchestrate multiple Claude Code skills in a single project for automated workflows. Skill chaining, data passing, and composition patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]
@@ -10,6 +10,7 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 permalink: /how-to-combine-multiple-claude-skills-in-one-project/
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 
@@ -201,7 +202,7 @@ Create a master skill that orchestrates other skills. This "meta-skill" defines 
 ```markdown
 ---
 name: "project-workflow"
-description: "Orchestrates the full feature development workflow"
+description: "Coordinate multiple specialized skills for complete feature development"
 ---
 
 Project Workflow Skill

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Code Review Workflow with Claude Code (2026)"
-description: "Set up automated code review with Claude Code. Self-review workflows using skills, prompts, and automation patterns for developers."
+title: "Claude Code Self-Review Workflow (2026)"
+description: "Set up automated self-review workflows in Claude Code that catch bugs, enforce standards, and improve output quality before you merge any code."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -9,6 +9,7 @@ categories: [guides]
 tags: [claude-code, claude-skills, workflow, code-review, productivity]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 permalink: /how-to-make-claude-code-review-its-own-output/
 geo_optimized: true
 ---

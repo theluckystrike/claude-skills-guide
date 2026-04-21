@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code with Astro Content Collections Workflow"
-description: "Master content management in Astro using Claude Code skills. Learn to define schemas, query collections, and build type-safe content workflows with."
+title: "Claude Code + Astro Content Collections (2026)"
+description: "Manage Astro content collections with Claude Code for schema definitions, type-safe queries, and automated content workflows. Build faster static sites."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"
@@ -57,7 +58,7 @@ A well-designed Claude Code skill can automate repetitive content tasks. Here's 
 ```yaml
 ---
 name: astro-content
-description: "Manage Astro content collections with schema validation and content generation"
+description: "Manage Astro content collections with Claude Code for schema definitions, type-safe queries, and automated content workflows. Build faster static sites."
 ---
 
 Astro Content Collection Helper

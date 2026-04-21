@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Typesense Full Text Search Setup Tutorial"
-description: "Learn how to integrate Claude Code with Typesense for powerful full-text search capabilities in your applications."
+title: "Setup Typesense Search with Claude Code (2026)"
+description: "Set up Typesense full-text search with Claude Code. Server config, schema definition, indexing pipeline, and faceted search query code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [guides]
 reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

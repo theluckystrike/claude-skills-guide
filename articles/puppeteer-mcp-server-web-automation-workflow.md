@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Puppeteer MCP Server Web Automation Workflow"
-description: "Master web automation using Puppeteer MCP server with Claude Code. Learn practical workflows for browser testing, data extraction, and automated."
+title: "Puppeteer MCP Server: Web Automation Guide (2026)"
+description: "Automate browser testing and data extraction with the Puppeteer MCP server in Claude Code. Covers headless scraping, screenshots, and PDF generation."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]
@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 permalink: /puppeteer-mcp-server-web-automation-workflow/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Puppeteer MCP Server Web Automation Workflow

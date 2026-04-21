@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Semantic HTML Accessibility with Claude Code Guide"
-description: "Use Claude Code to write semantic HTML that improves accessibility. Practical patterns for building inclusive web applications."
+title: "Fix Semantic HTML Accessibility with Claude Code (2026)"
+description: "Improve web accessibility by fixing semantic HTML with Claude Code. Covers ARIA roles, landmark regions, heading hierarchy, and screen reader testing."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-semantic-html-accessibility-improvement-guide/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Claude Code Semantic HTML Accessibility Improvement Guide

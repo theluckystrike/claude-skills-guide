@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Project Scaffolding Automation"
-description: "Learn how to automate project scaffolding with Claude Code using skills, templates, and intelligent automation workflows for faster development setup."
+title: "Claude Code Project Scaffolding Automation (2026)"
+description: "Automate project scaffolding with Claude Code using skills, templates, and intelligent workflows. Set up new codebases in minutes, not hours."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

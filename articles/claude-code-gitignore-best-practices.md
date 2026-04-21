@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Should .claude Be in Gitignore? Yes — Here's Why (2026)"
-description: "Should .claude Be in Gitignore? Yes — Here's Why. Practical guide with working examples for developers."
+title: "Should .claude Be in .gitignore? (2026)"
+description: "Add .claude to .gitignore to protect API keys and session data. Also covers node_modules, .env, and OS files for a clean Claude Code project setup."
 date: 2026-04-19
 last_modified_at: 2026-04-19
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, gitignore, best-practices, version-control, claude-skills]
 author: "Claude Skills Guide"

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Security Code Review Checklist Automation"
-description: "Automate security code review checklists with Claude Code. Streamline security checks and find vulnerabilities in your workflow."
+title: "Automate Security Code Reviews with Claude (2026)"
+description: "Automate security code review checklists with Claude Code skills. Find vulnerabilities, enforce OWASP checks, and standardize security workflows."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -10,6 +10,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 permalink: /claude-code-security-code-review-checklist-automation/
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

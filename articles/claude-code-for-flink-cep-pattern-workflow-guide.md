@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code For Flink Cep Pattern — Complete Developer Guide"
-description: "Master Complex Event Processing patterns in Apache Flink with Claude Code. Learn to build pattern detection workflows, implement alerting systems, and."
+title: "Claude Code for Flink CEP Patterns (2026)"
+description: "Build Complex Event Processing patterns in Apache Flink with Claude Code. Pattern detection, alerting systems, and streaming data workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -10,6 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 Complex Event Processing (CEP) with Apache Flink enables developers to detect patterns across streaming data in real-time. Whether you're building fraud detection systems, monitoring infrastructure alerts, or analyzing user behavior sequences, Flink CEP provides powerful pattern matching capabilities. This guide demonstrates how Claude Code accelerates your CEP workflow from pattern design to production deployment.

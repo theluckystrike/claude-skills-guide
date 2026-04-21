@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome Extension Compress Images Before Upload"
-description: "Learn how to build a Chrome extension that compresses images before upload. Includes implementation code, optimization techniques, and practical examples."
+title: "Build an Image Compressor Chrome Extension (2026)"
+description: "Build a Chrome extension that compresses images before upload. Covers Canvas API resizing, WebP conversion, quality settings, and batch processing."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"
@@ -11,6 +11,7 @@ tags: [chrome-extension, image-compression, javascript, browser-api, developer-t
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Chrome Extension Compress Images Before Upload: Practical Guide

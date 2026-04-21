@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Performance Monitoring Workflow Guide"
-description: "Learn how to use Claude Code for performance monitoring workflows. This comprehensive guide covers practical examples, code snippets, and actionable."
+title: "Claude Code Performance Monitoring Workflow (2026)"
+description: "Set up performance monitoring with Claude Code for metrics collection, alerting, and dashboard creation. Catch regressions before users notice them."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-performance-monitoring-workflow-guide/
 categories: [guides]

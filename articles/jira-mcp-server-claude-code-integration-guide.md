@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Jira MCP Server Claude Code Integration Guide"
-description: "Learn how to integrate Jira MCP server with Claude Code for smooth project management automation. Practical examples, configuration patterns, and."
+title: "Jira MCP Server + Claude Code Integration (2026)"
+description: "Connect Jira to Claude Code via MCP server for automated ticket management, sprint planning, and issue tracking. Configuration and examples included."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [tutorials]
 tags: [claude-code, claude-skills, jira, mcp, project-management, automation, integration]
 author: theluckystrike

@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Language Learning Immersion Chrome Extension Guide (2026)"
-description: "Learn how to build and use Chrome extensions for language learning immersion. Practical code examples and architecture patterns for developers."
+title: "Language Learning Chrome Extension Guide (2026)"
+description: "Build a language learning immersion Chrome extension that replaces words on web pages with target language translations. Code examples and API patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /chrome-extension-language-learning-immersion/
 reviewed: true

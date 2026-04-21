@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Failsafe Java Resilience Workflow"
-description: "Learn how to use Claude Code to build solid Failsafe Java resilience patterns including retries, circuit breakers, and fallbacks for."
+title: "Claude Code for Failsafe Java Resilience (2026)"
+description: "Build retry policies, circuit breakers, and fallbacks in Java using Claude Code with Failsafe. Reduce production failures with tested resilience code."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -12,6 +12,7 @@ permalink: /claude-code-for-failsafe-java-resilience-workflow/
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

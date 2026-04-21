@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use Capacitor Hybrid App Development (2026)"
-description: "A practical guide to building hybrid mobile applications using Claude Code and Capacitor. Learn project setup, native features integration, and."
+title: "Build Hybrid Apps with Claude Code + Capacitor (2026)"
+description: "Build hybrid mobile apps with Claude Code and Capacitor. Native features, plugin integration, and cross-platform deployment workflows explained."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ categories: [tutorials]
 tags: [claude-code, capacitor, hybrid-app, mobile-development, ionic, ai-assisted-development, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

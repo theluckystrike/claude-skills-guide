@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code Compliance Reporting Automation"
-description: "Learn how to automate compliance reporting workflows using Claude Code and specialized skills. Practical examples for developers and power users."
+title: "Automate Compliance Reports with Claude Code (2026)"
+description: "Automate compliance reporting with Claude Code for SOC2, ISO 27001, and GDPR evidence collection. Generate audit-ready reports from your codebase."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-compliance-reporting-automation/
 categories: [guides]

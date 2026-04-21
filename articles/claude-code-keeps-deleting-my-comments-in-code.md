@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code Keeps Deleting My Comments In — Developer Guide"
-description: "Understanding why Claude Code removes code comments and how to prevent it. Practical solutions to preserve comments during AI-assisted code editing."
+title: "Fix Claude Code Deleting Code Comments (2026)"
+description: "Stop Claude Code from removing your code comments during edits. Configure comment preservation rules and use skill patterns to protect documentation."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Bazel Build System Workflow Guide"
-description: "A comprehensive guide to integrating Claude Code into your Bazel build system workflow for efficient C++ and multi-language project development."
+title: "Claude Code for Bazel Build System Workflows (2026)"
+description: "Integrate Claude Code into Bazel build workflows for C++ and multi-language projects. Covers BUILD files, rules, remote caching, and query analysis."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: Claude Skills Guide
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 If you are dealing with bazel build system not working as expected in the development workflow, the root cause is usually incomplete bazel build system configuration or missing integration steps. This guide provides a step-by-step bazel build system resolution using Claude Code, current as of the April 2026 release.

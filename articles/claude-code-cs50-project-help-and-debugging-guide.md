@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code CS50 Project Help and Debugging Guide"
-description: "A comprehensive guide to using Claude Code for CS50 projects, featuring debugging techniques, code analysis, and practical examples to help you succeed."
+title: "Claude Code for CS50 Projects and Debugging (2026)"
+description: "Debug CS50 problem sets with Claude Code for C, Python, and SQL assignments. Learn analysis techniques without violating academic integrity policies."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

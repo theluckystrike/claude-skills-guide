@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Kong Mesh Workflow Tutorial"
-description: "A practical guide to using Claude Code for Kong Mesh configuration, deployment, and management. Learn workflows for service mesh, traffic routing, and."
+title: "Claude Code for Kong Mesh Service Mesh (2026)"
+description: "Configure Kong Mesh with Claude Code for service mesh management. Covers traffic routing, mTLS policies, rate limiting, and observability setup."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills, kong, kong-mesh, service-mesh]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 Kong Mesh is an enterprise-grade service mesh built on top of Kubernetes and Envoy proxy. It provides zero-trust security, traffic management, and observability for distributed systems. While Kong Mesh offers powerful features, configuring and managing it effectively requires understanding its control plane, data plane proxies, and policies. This tutorial demonstrates how Claude Code streamlines Kong Mesh workflows, accelerating configuration, automating deployments, and simplifying day-two operations.

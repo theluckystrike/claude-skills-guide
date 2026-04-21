@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Docusaurus API Docs Workflow"
-description: "Learn how to automate Docusaurus API documentation generation using Claude Code. Streamline your docs workflow with practical examples and actionable."
+title: "Claude Code for Docusaurus API Docs (2026)"
+description: "Generate Docusaurus API documentation with Claude Code for OpenAPI specs, markdown pages, and versioned docs. Automate your entire docs pipeline."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-docusaurus-api-docs-workflow/
 categories: [guides]

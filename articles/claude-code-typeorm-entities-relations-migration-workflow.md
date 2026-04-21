@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use TypeORM Entities Relations Migration (2026)"
-description: "A comprehensive guide to building TypeORM entities, defining relationships, and managing database migrations using Claude Code skills."
+title: "TypeORM Entities and Migrations with Claude (2026)"
+description: "Build TypeORM entities, define relationships, and manage database migrations using Claude Code skills with production-ready patterns and examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [workflows, guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

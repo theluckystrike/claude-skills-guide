@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code Accessibility Workflow for Frontend Engineers"
-description: "Learn how to build accessible web applications using Claude Code. This guide covers automated accessibility testing, ARIA patterns, semantic HTML, and."
+title: "Claude Code Accessibility Workflow (2026)"
+description: "Build accessible web apps with Claude Code for WCAG testing, ARIA patterns, semantic HTML, and automated a11y audits. Frontend engineer workflow guide."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, accessibility, frontend, web-development, a11y, claude-skills]
 author: "Claude Skills Guide"
@@ -59,7 +60,7 @@ A well-designed Claude Code skill can automate much of your accessibility workfl
 ```yaml
 ---
 name: accessibility-audit
-description: "Run automated accessibility audits on React/Vue components"
+description: "Build accessible web apps with Claude Code for WCAG testing, ARIA patterns, semantic HTML, and automated a11y audits. Frontend engineer workflow guide."
 ---
 ```
 

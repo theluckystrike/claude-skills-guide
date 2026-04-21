@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Why Claude Code Keeps Timing Out Slow Init (2026)"
-description: "Fix Claude Code timing out during skill initialization. Speed up slow loading with caching, lazy loading, and config optimization."
+title: "Fix Claude Code Slow Skill Initialization (2026)"
+description: "Speed up Claude Code skill initialization with caching, lazy loading, and config optimization. Cut load times from multiple seconds to milliseconds."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -9,6 +9,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 9
+last_tested: "2026-04-21"
 permalink: /why-does-claude-code-skill-take-so-long-to-initialize/
 geo_optimized: true
 ---

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use Audit Logging for Enterprise Compliance (2026)"
-description: "Learn how to implement comprehensive audit logging in Claude Code for enterprise compliance. Practical patterns, code examples, and actionable advice."
+title: "Claude Code Audit Logging for Compliance (2026)"
+description: "Implement audit logging in Claude Code for SOC 2, ISO 27001, and HIPAA compliance. Practical patterns and code examples for enterprise teams."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

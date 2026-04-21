@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Charm Bracelet Workflow Guide"
-description: "Learn how to build modular, composable Claude Code workflows that combine multiple skills like charms on a bracelet. Practical examples for developers."
+title: "Claude Code for Charm CLI Tool Workflows (2026)"
+description: "Build elegant CLI tools with Charm libraries and Claude Code. Covers Bubble Tea TUIs, Lip Gloss styling, Huh forms, and Wish SSH app development."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -13,6 +13,7 @@ reviewed: true
 score: 7
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 {% raw %}

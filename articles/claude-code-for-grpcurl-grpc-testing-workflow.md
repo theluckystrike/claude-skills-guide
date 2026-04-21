@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use gRPC Testing with Claude Code: grpcurl (2026)"
-description: "Streamline gRPC testing with Claude Code and grpcurl. Practical examples for API testing, load testing, and automated service verification."
+title: "gRPC Testing with Claude Code and grpcurl (2026)"
+description: "Streamline gRPC testing with Claude Code and grpcurl using practical examples for API testing, load testing, and automated service verification."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code Laravel Livewire Real-Time Workflow Tutorial"
-description: "Learn how to build real-time Laravel Livewire applications with Claude Code. This tutorial covers component creation, real-time updates, and workflow."
+title: "Claude Code Laravel Livewire Tutorial (2026)"
+description: "Build real-time Laravel Livewire apps with Claude Code for component creation, reactive updates, and form handling. Full-stack PHP workflow examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-laravel-livewire-real-time-workflow-tutorial/
 categories: [tutorials]

@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code Permissions Model and Security Guide"
-description: "A precise security guide to Claude Code's permissions model: tool access, file system boundaries, skill scoping, and hooks for keeping your codebase safe."
+title: "Claude Code Permissions and Security Model (2026)"
+description: "Lock down Claude Code with permission boundaries, tool access controls, file system scoping, and security hooks. Protect your codebase effectively."
 date: 2026-03-13
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [advanced]
 tags: [claude-code, claude-skills, security, permissions, hooks]
 author: "Claude Skills Guide"

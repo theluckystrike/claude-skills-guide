@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for License Compatibility Workflow Guide"
-description: "A practical guide to using Claude Code for managing software license compatibility in your projects. Learn how to automate license checks, resolve."
+title: "Claude Code License Compatibility Check (2026)"
+description: "Automate software license compatibility checks with Claude Code for dependency scanning, conflict detection, and compliance reporting across packages."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-license-compatibility-workflow-guide/
 categories: [workflows, guides]

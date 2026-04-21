@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use Human in the Loop Multi Agent Patterns"
-description: "Master human in the loop multi agent patterns with Claude Code. Learn practical techniques for integrating human oversight into agentic workflows."
+title: "Human-in-the-Loop Multi-Agent Patterns (2026)"
+description: "Build human-in-the-loop multi-agent patterns with Claude Code. Practical techniques for approval gates, escalation, and oversight in AI workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, multi-agent, human-in-the-loop, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

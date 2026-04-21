@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Intl API Fingerprinting: How Locale Settings Leak Data"
-description: "Discover how websites use the Internationalization API to fingerprint your browser through locale settings. Learn about the techniques, privacy."
+title: "Intl API Fingerprinting: Browser Locale Leaks (2026)"
+description: "Discover how websites use the Intl API to fingerprint your browser through locale settings. Detection techniques and privacy countermeasures."
 date: 2026-03-16
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -9,6 +9,7 @@ permalink: /intl-api-fingerprinting-how-locale-settings-reveal-your-brow/
 reviewed: false
 score: 0
 categories: [guides, security]
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

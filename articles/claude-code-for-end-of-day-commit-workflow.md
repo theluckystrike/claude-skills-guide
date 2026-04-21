@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for End of Day Commit Workflow"
-description: "Learn how to automate your end-of-day commit workflow with Claude Code. Practical examples for staging changes, writing commit messages, and pushing to."
+title: "Automate End-of-Day Git Commits with Claude Code (2026)"
+description: "Automate daily commit workflows with Claude Code. Stage changes, generate descriptive commit messages, and push to remote with a single command."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ permalink: /claude-code-for-end-of-day-commit-workflow/
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Claude Code for End of Day Commit Workflow

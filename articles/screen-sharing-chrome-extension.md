@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Screen Sharing Chrome Extension Guide (2026)"
-description: "Learn how to build and use screen sharing Chrome extensions for developer workflows. Covers the chrome.desktopCapture API, security permissions, and."
+title: "Build a Screen Sharing Chrome Extension (2026)"
+description: "Build a screen sharing Chrome extension using the desktopCapture API. Handle permissions, stream encoding, and WebRTC peer connections securely."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: theluckystrike
 permalink: /screen-sharing-chrome-extension/
 categories: [guides]

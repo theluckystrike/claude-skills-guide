@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code Open Props Design Tokens Guide"
-description: "Learn how to use Open Props design tokens effectively with Claude Code for streamlined frontend development."
+title: "Claude Code + Open Props Design Tokens (2026)"
+description: "Use Open Props design tokens with Claude Code for consistent spacing, colors, and typography in frontend projects. Integration patterns and examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-open-props-design-tokens-guide/
 reviewed: true

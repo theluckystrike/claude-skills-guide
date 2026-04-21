@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code Sox Financial Code — Complete Developer Guide"
-description: "A comprehensive guide to using Claude Code for SOX compliance code audits, featuring practical workflows, essential skills, and automation strategies."
+title: "Claude Code for SOX Compliance Audits (2026)"
+description: "Automate SOX compliance code audits with Claude Code for financial controls, access logging, and change tracking. Meet Section 404 requirements."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 categories: [workflows]
 tags: [claude-code, sox, compliance, financial, audit, security, claude-skills]

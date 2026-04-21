@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code Keeps Using Deprecated API Methods"
-description: "Why Claude Code generates code with deprecated API methods and how to fix it. Practical solutions for developers working with Claude Code."
+title: "Fix Claude Code Using Deprecated APIs (2026)"
+description: "Stop Claude Code from generating deprecated API calls. Configure version pinning, add API docs to context, and enforce modern method usage patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 categories: [troubleshooting]
 tags: [claude-code, troubleshooting, deprecated-apis, code-quality, claude-skills]

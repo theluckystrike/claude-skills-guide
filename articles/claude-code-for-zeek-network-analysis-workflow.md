@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use Zeek Network Analysis (2026)"
-description: "Learn how to use Claude Code CLI to streamline Zeek network analysis workflows, automate log processing, and build efficient security."
+title: "Claude Code for Zeek Network Analysis (2026)"
+description: "Streamline Zeek network analysis with Claude Code CLI. Automate log processing, build security monitoring workflows, and speed up investigations."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills, zeek, network-analysis, security]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 
@@ -44,7 +45,7 @@ Before diving into advanced analysis, ensure your environment is properly config
 ```yaml
 ---
 name: zeek-analysis
-description: Analyzes Zeek network logs for security insights
+description: "Analyze Zeek network logs for threat hunting and incident response"
 ---
 ```
 
@@ -53,7 +54,7 @@ A more complete skill file gives Claude Code persistent context about your envir
 ```markdown
 ---
 name: zeek-analyst
-description: Network security analyst assistant for Zeek log investigation
+description: "Network security analysis with Zeek log parsing, threat detection, and incident investigation"
 ---
 
 Environment

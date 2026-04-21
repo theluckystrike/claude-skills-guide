@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code Lost Context Mid — Complete Developer Guide"
-description: "Practical methods to recover lost context when Claude Code loses track of your task mid-way. Includes real examples, recovery commands, and prevention."
+title: "Fix Claude Code Lost Context Mid-Task (2026)"
+description: "Recover lost context when Claude Code forgets your task mid-session. Five proven recovery commands and prevention techniques with real examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [tutorials]
 tags: [claude-code, claude-skills, troubleshooting, workflow, productivity]
 author: theluckystrike

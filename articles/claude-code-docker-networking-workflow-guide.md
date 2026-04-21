@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code Docker Networking Workflow Guide"
-description: "Master Docker networking with Claude Code: connect containers, troubleshoot networks, and automate networking tasks using Claude skills and agents."
+title: "Claude Code Docker Networking Workflow (2026)"
+description: "Connect Docker containers, troubleshoot network issues, and automate networking with Claude Code. Bridge, overlay, and host network patterns explained."
 date: 2026-04-19
 last_modified_at: 2026-04-19
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, docker, networking, devops, containerization]
 author: theluckystrike

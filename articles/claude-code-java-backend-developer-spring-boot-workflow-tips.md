@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Java Backend Developer Spring Boot Workflow Tips"
-description: "Master Claude Code for Java Spring Boot development with practical tips on project setup, dependency management, testing, and debugging workflows."
+title: "Claude Code for Java Spring Boot Workflows (2026)"
+description: "Speed up Spring Boot development with Claude Code. Covers project setup, dependency injection, REST controllers, JPA queries, and testing workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 This guide has been revised for April 2026. The steps account for recent updates to java backend developer spring boot tooling and Claude Code's improved project context handling, which affects how Claude Code interacts with java backend developer spring boot tooling.

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code PostHog Product Analytics Guide"
-description: "Master product analytics implementation with Claude Code and PostHog. Learn practical workflows for tracking events, analyzing user behavior, and."
+title: "Claude Code for PostHog Analytics Setup (2026)"
+description: "Set up PostHog product analytics with Claude Code. Track custom events, build funnels, analyze user behavior, and automate dashboard creation faster."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -12,6 +12,7 @@ permalink: /claude-code-posthog-product-analytics-guide/
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

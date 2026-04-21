@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "How to Stop Claude Code from Modifying Unrelated Files"
-description: "A practical guide for developers to prevent Claude Code from accidentally modifying files outside the intended scope of your tasks."
+title: "Stop Claude Code Modifying Unrelated Files (2026)"
+description: "Prevent Claude Code from editing files outside your task scope. Configure file boundaries, use allowlists, and set permission hooks effectively."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /how-to-stop-claude-code-from-modifying-unrelated-files/
 categories: [troubleshooting]

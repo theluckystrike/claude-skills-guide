@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Google Drive Sidebar Chrome Extension Guide (2026)"
-description: "A practical guide to building a Chrome extension with Google Drive sidebar integration. Learn manifest configuration, authentication, Drive API usage."
+title: "Google Drive Sidebar Chrome Extension (2026)"
+description: "Build a Chrome extension with Google Drive sidebar integration for file browsing, search, and quick access. Drive API auth and manifest config included."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: theluckystrike
 permalink: /chrome-extension-google-drive-sidebar/
 categories: [guides]

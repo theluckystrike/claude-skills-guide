@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code disallowedTools Security Configuration"
-description: "Master disallowedTools configuration in Claude Code to control tool access, enhance security, and build safer AI-assisted workflows for development teams."
+title: "Configure disallowedTools in Claude Code (2026)"
+description: "Restrict tool access in Claude Code with disallowedTools configuration. Control file operations, bash commands, and MCP tools for safer AI workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-disallowedtools-security-configuration/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Claude Code disallowedTools Security Configuration

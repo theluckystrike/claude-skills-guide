@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code For Dvc Data — Complete Developer Guide"
-description: "Learn how to integrate Claude Code with DVC for efficient data versioning, ML model tracking, and reproducible data science workflows."
+title: "Claude Code for DVC Data Versioning (2026)"
+description: "Version datasets and ML models with DVC and Claude Code. Covers pipeline tracking, remote storage, experiment management, and reproducible workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 Claude Code for DVC Data Versioning Workflow
 

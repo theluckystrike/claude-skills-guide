@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Why Is Claude Code Suddenly Worse Than It — Developer Guide"
-description: "Understanding why Claude Code may seem to have regressed and how to troubleshoot performance issues with your AI coding assistant."
+title: "Fix Claude Code Suddenly Worse Performance (2026)"
+description: "Diagnose why Claude Code quality dropped and fix it. Check model version, context window, skill configs, and API changes causing regression."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [troubleshooting]
 tags: [claude-code, troubleshooting, performance, issues, claude-skills]
 author: "Claude Skills Guide"

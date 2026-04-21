@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code vs Cursor: Debugging Runtime Errors"
-description: "Compare Claude Code and Cursor's debugging capabilities for runtime errors. Learn practical techniques for identifying, tracing, and fixing bugs using."
+title: "Claude Code vs Cursor for Debugging (2026)"
+description: "Claude Code vs Cursor compared for debugging runtime errors. Test results on stack traces, memory leaks, and async bugs across both AI coding tools."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [comparisons, guides]

@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "How To Use Claude Code To Write — Complete Developer Guide"
-description: "Learn how to use Claude Code to generate database queries from scratch, with practical examples and expert techniques for developers."
+title: "Write Database Queries with Claude Code (2026)"
+description: "Generate SQL and NoSQL queries from scratch using Claude Code. Covers SELECT, JOIN, subqueries, and ORM patterns with tested working examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /how-to-use-claude-code-to-write-database-queries-from-scratch/
 reviewed: true

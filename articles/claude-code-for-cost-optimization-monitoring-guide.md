@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Cost Optimization Monitoring Guide"
-description: "Learn how to use Claude Code CLI to monitor, analyze, and optimize your cloud infrastructure costs with practical examples and actionable strategies."
+title: "Claude Code for Cloud Cost Optimization (2026)"
+description: "Monitor and reduce cloud infrastructure costs with Claude Code CLI. Automated analysis, right-sizing recommendations, and spending alert setup."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 
@@ -62,7 +63,7 @@ You can create custom Claude Skills specifically for cost monitoring. Here's a s
 ```yaml
 ---
 name: cost-monitor
-description: Monitors cloud infrastructure costs and identifies optimization opportunities
+description: "Monitor and reduce cloud infrastructure costs with Claude Code CLI. Automated analysis, right-sizing recommendations, and spending alerts."
 ---
 
 Daily Cost Summary
@@ -129,7 +130,7 @@ Implement automatic scaling for non-production environments:
 ```yaml
 ---
 name: scheduler
-description: Manages resource scheduling for cost optimization
+description: "Monitor and reduce cloud infrastructure costs with Claude Code CLI. Automated analysis, right-sizing recommendations, and spending alerts."
 ---
 
 Schedule Non-Production Resources

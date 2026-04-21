@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Figma MCP Server: Design to Code Workflow Guide"
-description: "Learn how to build a complete design-to-code workflow using the Figma MCP server. Practical examples, automation patterns, and integration tips for."
+title: "Figma MCP Server: Design to Code (2026)"
+description: "Build a complete design-to-code pipeline with Figma MCP server. Extract components, generate React code, and sync design tokens automatically."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [tutorials]
 tags: [figma, mcp-server, design-to-code, automation, claude-code, workflow]
 author: theluckystrike

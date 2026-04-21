@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Branch Protection Rules Workflow"
-description: "Learn how to use Claude Code to automate and manage Git branch protection rules workflow for safer deployments."
+title: "Claude Code for Git Branch Protection Rules (2026)"
+description: "Automate Git branch protection rules with Claude Code for safer deployments. Configure required reviews, status checks, and merge restrictions."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-branch-protection-rules-workflow/
 categories: [guides, workflows]

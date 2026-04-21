@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix Claude Code Not Generating Tests — Quick Guide (2026)"
-description: "Learn how to fix common issues when Claude Code fails to generate tests correctly. Practical solutions for test generation problems with code examples."
+title: "Fix Claude Code Test Generation Issues (2026)"
+description: "Fix Claude Code not generating tests correctly. Resolve incomplete coverage, wrong assertions, and failing test output with proven solutions."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -10,6 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 Test-driven development (TDD) is a cornerstone of modern software engineering, and Claude Code can be an invaluable assistant for generating comprehensive test suites. However, developers sometimes encounter situations where Claude Code doesn't generate tests correctly, producing incomplete coverage, incorrect assertions, or tests that simply fail to run. This guide provides practical solutions for diagnosing and fixing these common test generation issues.

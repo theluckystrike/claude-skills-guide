@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code For Cloudflare — Complete Developer Guide"
-description: "Learn how to use Claude Code to build efficient Cloudflare Workers KV workflows for serverless applications."
+title: "Claude Code for Cloudflare Workers KV (2026)"
+description: "Build and deploy Cloudflare Workers with KV storage using Claude Code. Covers bindings, caching patterns, and Wrangler CLI automation in one workflow."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 Claude Code for Cloudflare Workers KV Workflow
 

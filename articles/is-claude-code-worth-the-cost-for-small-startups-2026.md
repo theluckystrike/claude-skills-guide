@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Is Claude Code Worth The Cost For Small — Developer Guide"
-description: "A practical cost-benefit analysis for small startups considering Claude Code in 2026. Includes real ROI calculations, skill recommendations, and."
+title: "Is Claude Code Worth It for Startups? (2026)"
+description: "Claude Code costs $20/month per developer. This ROI analysis shows when startups break even, which skills save the most time, and when to skip it."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ score: 7
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 # Is Claude Code Worth the Cost for Small Startups in 2026?
 

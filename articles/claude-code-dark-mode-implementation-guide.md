@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Use Dark Mode: Implementation (2026)"
-description: "Implement dark mode in web apps using Claude Code. CSS variables, theme toggles, and system preference detection with practical code examples."
+title: "Build Dark Mode with Claude Code (2026)"
+description: "Implement dark mode in web apps using Claude Code with CSS variables, theme toggles, and system preference detection. Practical code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ author: "Claude Skills Guide"
 permalink: /claude-code-dark-mode-implementation-guide/
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Large Codebase Refactoring: Best Way (2026)"
-description: "Claude code memory plugin large codebase refactoring guide. Incremental strategies to avoid context overflow and refactor big files effectively."
+title: "Claude Code Large File Refactoring Guide (2026)"
+description: "Refactor large files with Claude Code using incremental strategies that avoid context overflow. Memory plugin tips and file splitting patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -9,6 +9,7 @@ tags: [claude-code, refactoring, large-files, code-quality]
 author: theluckystrike
 reviewed: true
 score: 8
+last_tested: "2026-04-21"
 permalink: /best-way-to-use-claude-code-for-large-file-refactoring/
 geo_optimized: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code For Apisix API — Complete Developer Guide"
-description: "Learn how to use Claude Code to configure, manage, and optimize APISIX API Gateway workflows. Practical guide with examples for developers."
+title: "Claude Code for APISIX API Gateway Setup (2026)"
+description: "Configure and manage APISIX API Gateway with Claude Code. Covers route definitions, plugin configuration, upstream health checks, and traffic control."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 # Claude Code for APISIX API Gateway Workflow Guide
 

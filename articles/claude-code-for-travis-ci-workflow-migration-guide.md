@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for Travis CI Workflow Migration Guide"
-description: "A comprehensive guide to migrating your Travis CI workflows to Claude Code, featuring practical examples, code snippets, and actionable advice for."
+title: "Migrate Travis CI to Claude Code Workflows (2026)"
+description: "Migrate your Travis CI pipelines to modern CI/CD with Claude Code automation. Step-by-step migration path with config translation and YAML examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /claude-code-for-travis-ci-workflow-migration-guide/
 categories: [guides]

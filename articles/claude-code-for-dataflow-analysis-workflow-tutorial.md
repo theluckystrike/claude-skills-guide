@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Dataflow Analysis Workflow Tutorial"
-description: "Learn how to build powerful dataflow analysis workflows with Claude Code. This tutorial covers practical patterns for analyzing code data flow, tracing."
+title: "Claude Code for Dataflow Analysis Workflows (2026)"
+description: "Trace data flows through your codebase with Claude Code. Covers variable tracking, dependency graphs, taint propagation, and dead code identification."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 score: 7
 reviewed: true
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

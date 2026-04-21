@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "How to Use CSP Content Security — Complete Developer (2026)"
-description: "Generate and implement Content Security Policy headers with Claude Code. Secure your web apps against XSS and data injection attacks."
+title: "Generate CSP Headers with Claude Code (2026)"
+description: "Generate Content Security Policy headers with Claude Code to block XSS and data injection attacks. Includes policy testing and report-uri setup."
 date: 2026-03-13
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills]

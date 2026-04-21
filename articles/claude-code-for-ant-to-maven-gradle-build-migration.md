@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code For Ant To Maven Gradle Build — Developer Guide"
-description: "Learn how to use Claude Code and its skills to automate migration from Ant build.xml to Maven pom.xml or Gradle build.gradle."
+title: "Migrate Ant to Maven/Gradle with Claude Code (2026)"
+description: "Migrate Ant build.xml to Maven pom.xml or Gradle build.gradle using Claude Code automation. Convert dependencies, plugins, and build lifecycle steps."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [workflows]
 tags: [claude-code, claude-skills, build-tools, ant, maven, gradle, migration, automation]
 author: "Claude Skills Guide"

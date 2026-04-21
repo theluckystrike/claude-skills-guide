@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Session Manager Tabs Chrome Extension Guide (2026)"
-description: "Learn how to build Chrome extensions that manage browser sessions, save and restore tab groups, and automate tab organization for efficient workflows."
+title: "Build Session Manager Chrome Extension (2026)"
+description: "Build Chrome extensions that manage browser sessions, save and restore tab groups, and automate tab organization for efficient developer workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -10,6 +10,7 @@ reviewed: true
 score: 8
 categories: [guides]
 tags: [chrome-extension, claude-skills]
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 ## Chrome Extension Session Manager Tabs: A Complete Guide for Developers

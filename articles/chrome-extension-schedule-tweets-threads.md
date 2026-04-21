@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Schedule Tweets Threads Chrome Extension Guide (2026)"
-description: "Learn how to build a chrome extension to schedule tweets and threads. Practical code examples, API integration, and implementation patterns for developers."
+title: "Schedule Tweets Chrome Extension Guide (2026)"
+description: "Build a Chrome extension to schedule tweets and threads with X API integration, queue management, and draft storage. Complete Manifest V3 source code."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: theluckystrike
 permalink: /chrome-extension-schedule-tweets-threads/
 reviewed: true

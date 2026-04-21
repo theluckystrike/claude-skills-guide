@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Types Of LLM Agents Explained For — Developer Guide"
-description: "A comprehensive guide to understanding different types of LLM agents and how to build them using Claude Code. Learn about reactive, deliberative."
+title: "Types of LLM Agents Explained for Devs (2026)"
+description: "Understand reactive, deliberative, and hybrid LLM agent architectures. Practical guide to choosing the right agent type for your development project."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "theluckystrike"
@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 As large language models have evolved from simple text generators to sophisticated reasoning engines, a new paradigm has emerged: LLM agents. These AI systems can not only understand and generate text but also plan, execute actions, and interact with external tools and environments. For developers building with Claude Code in 2026, understanding the different types of LLM agents is essential for selecting the right architecture for your application.
 

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for OpenSea Protocol Workflow Guide"
-description: "Learn how to integrate Claude Code with OpenSea's protocol for NFT marketplace automation, collection management, and smart contract interactions."
+title: "Claude Code for OpenSea Protocol Development (2026)"
+description: "Build NFT marketplace integrations with Claude Code and OpenSea protocol. Covers listing automation, collection management, and smart contract calls."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -13,6 +13,7 @@ reviewed: true
 score: 7
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 {% raw %}

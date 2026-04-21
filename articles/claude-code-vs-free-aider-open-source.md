@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs Aider: Terminal AI Agents Compared (2026)"
+title: "Claude Code vs Aider: AI Agents Compared (2026)"
 permalink: /claude-code-vs-free-aider-open-source/
 description: "Claude Code has skills and MCP integrations. Aider has multi-model support and auto-commits. Honest comparison for terminal-first developers in 2026."
 last_tested: "2026-04-21"

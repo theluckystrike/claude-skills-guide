@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code Shell Scripting Automation Workflow Guide"
-description: "Master shell scripting automation with Claude Code. Learn how to create, debug, and optimize bash workflows using Claude's AI assistance."
+title: "Claude Code Shell Script Automation (2026)"
+description: "Automate bash and shell scripting with Claude Code for script generation, debugging, and optimization. Create robust CI/CD and DevOps shell workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19
+last_tested: "2026-04-21"
 categories: [guides]
 tags: [claude-code, shell-scripting, automation, bash, workflow, claude-skills]
 author: "Claude Skills Guide"

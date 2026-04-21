@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How Do I Migrate From Cursor Rules To — Developer Guide"
-description: "A practical guide for developers moving custom AI rules from Cursor to Claude Code skills. Includes step-by-step migration, code examples, and skill rec..."
+title: "Migrate Cursor Rules to Claude Skills (2026)"
+description: "Move your custom AI rules from Cursor to Claude Code skills in under 30 minutes. Step-by-step migration with syntax mapping and skill file examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ reviewed: true
 score: 9
 permalink: /how-do-i-migrate-from-cursor-rules-to-claude-skills/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 # How Do I Migrate from Cursor Rules to Claude Skills
 

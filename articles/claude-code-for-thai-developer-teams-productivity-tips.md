@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code For Thai Developer Teams — Developer Guide"
-description: "เรียนรู้เคล็ดลับการใช้ Claude Code เพื่อเพิ่มผลิตภาพให้ทีมนักพัฒนาซอฟต์แวร์ไทย พร้อมตัวอย่างการใช้งานจริงและแนวทางปฏิบัติที่นำไปใช้ได้ทันที"
+title: "Claude Code for Thai Developer Teams (2026)"
+description: "Boost Thai developer team productivity with Claude Code. Covers localized workflows, Thai-language prompting tips, and team collaboration patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 Claude Code สำหรับทีมนักพัฒนาไทย: เคล็ดลับเพิ่มผลิตภาพ
 

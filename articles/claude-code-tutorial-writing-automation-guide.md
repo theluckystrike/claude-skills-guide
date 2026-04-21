@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Tutorial Writing Automation Guide"
-description: "Learn how to automate tutorial writing with Claude Code. Build workflows that generate code examples, explanations, and step-by-step guides using."
+title: "Automate Tutorial Writing with Claude Code (2026)"
+description: "Generate developer tutorials automatically with Claude Code. Covers code example creation, step-by-step structure, screenshot workflows, and publishing."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [workflows]
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-tutorial-writing-automation-guide/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 # Claude Code Tutorial Writing Automation Guide

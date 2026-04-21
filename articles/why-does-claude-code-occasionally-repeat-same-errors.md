@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Why Does Claude Keep Timing Out and Repeating Errors (2026)"
-description: "Why does Claude keep timing out and repeating errors? Learn how to break the error cycle and get consistent results from Claude Code."
+title: "Fix Claude Code Repeating Same Errors (2026)"
+description: "Stop Claude Code from repeating the same errors in a loop. Break the error cycle with context resets, prompt adjustments, and session management."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code For Oss — Complete Developer Guide"
-description: "Learn how to use Claude Code effectively to contribute high-quality documentation to open source projects. Practical examples and actionable advice for."
+title: "Claude Code for OSS Documentation Contributions (2026)"
+description: "Contribute high-quality documentation to open source projects using Claude Code. Covers API docs, tutorials, migration guides, and style consistency."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ permalink: /claude-code-for-oss-documentation-contribution-guide/
 score: 7
 reviewed: true
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 Claude Code for OSS Documentation Contribution Guide
 

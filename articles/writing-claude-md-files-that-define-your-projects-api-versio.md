@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "CLAUDE.md Files for API Versioning Strategy"
-description: "Learn how to create effective CLAUDE.md files that establish clear API versioning strategies for AI-powered projects in 2026."
+title: "CLAUDE.md Files for API Versioning (2026)"
+description: "Define API versioning strategies in CLAUDE.md files for consistent version management across your project. Templates and patterns for teams of any size."
 date: 2026-03-16
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: theluckystrike
 permalink: /writing-claude-md-files-that-define-your-projects-api-versio/
 categories: [guides]

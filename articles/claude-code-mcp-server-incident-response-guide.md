@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code MCP Server Incident Response Guide"
-description: "A practical guide to troubleshooting and resolving MCP server issues in Claude Code. Includes diagnostic commands, log analysis, and recovery procedures."
+title: "Fix MCP Server Issues in Claude Code (2026)"
+description: "Troubleshoot MCP server failures in Claude Code with diagnostic commands, log analysis, and recovery procedures. Resolve connection and timeout errors."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 categories: [tutorials]
 tags: [claude-code, mcp-server, troubleshooting, incident-response, debugging, claude-skills]

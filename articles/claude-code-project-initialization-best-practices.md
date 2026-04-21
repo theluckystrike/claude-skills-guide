@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Vibe Coding Best Practices — Claude Code Setup (2026)"
-description: "Claude Code project initialization best practices. CLAUDE.md config, skill loading, and project structure setup for vibe coding workflows."
+title: "Setup Claude Code Project: Best Practices (2026)"
+description: "Initialize Claude Code projects with CLAUDE.md config, skill loading, and project structure setup. Production-ready patterns for new codebases."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]
@@ -9,6 +9,7 @@ tags: [claude-code, claude-skills, project-initialization, best-practices, setup
 author: "Claude Skills Guide"
 reviewed: true
 score: 9
+last_tested: "2026-04-21"
 permalink: /claude-code-project-initialization-best-practices/
 geo_optimized: true
 ---

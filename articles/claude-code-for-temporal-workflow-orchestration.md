@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Temporal Workflow Orchestration"
-description: "Learn how to orchestrate complex workflows using Claude Code with Temporal. Practical examples, code patterns, and actionable advice for developers."
+title: "Claude Code for Temporal Workflow Orchestration (2026)"
+description: "Orchestrate durable workflows with Temporal and Claude Code. Covers activity definitions, retry policies, saga patterns, and workflow versioning."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills, temporal, workflow-orchestration, durable-exe
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

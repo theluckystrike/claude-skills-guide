@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Vba Excel Macros To Python — Developer Guide"
-description: "A practical guide to transforming your legacy VBA Excel macros into modern Python scripts using Claude Code's powerful development capabilities."
+title: "Migrate VBA Excel Macros to Python with Claude (2026)"
+description: "Convert legacy VBA Excel macros to modern Python scripts using Claude Code. Step-by-step migration workflow with tested code examples included."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -10,6 +10,7 @@ categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 Migrating VBA Excel Macros to Python with Claude Code

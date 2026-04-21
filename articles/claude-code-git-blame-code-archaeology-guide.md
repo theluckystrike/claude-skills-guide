@@ -1,10 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code Git Blame: Code Archaeology Guide"
-description: "Master git blame in Claude Code for code archaeology. Track down when and why code was written, understand legacy decisions, and trace ownership across."
+title: "Claude Code Git Blame Archaeology Guide (2026)"
+description: "Trace code history with git blame and Claude Code for ownership tracking, legacy code analysis, and understanding why decisions were made. Workflow tips."
 date: 2026-03-14
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 categories: [workflows]
 tags: [claude-code, claude-skills, git, blame, debugging, code-analysis]
 author: "Claude Skills Guide"

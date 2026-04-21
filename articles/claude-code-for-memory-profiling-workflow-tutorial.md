@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Memory Profiling Workflow Tutorial"
-description: "Learn how to use Claude Code to streamline memory profiling in your development workflow. Practical examples and actionable advice for developers."
+title: "Claude Code Memory Profiling Workflow (2026)"
+description: "Profile memory usage with Claude Code across Python, Node.js, and Go. Identify leaks, optimize allocation, and automate profiling workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -10,6 +10,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 score: 7
 reviewed: true
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

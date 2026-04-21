@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Timezone Converter Remote Chrome Extension Guide (2026)"
-description: "Learn how to build a Chrome extension that handles timezone conversion for remote teams. Includes practical code examples and implementation patterns."
+title: "Timezone Converter Chrome Extension (2026)"
+description: "Build a timezone converter Chrome extension for remote teams. Convert meeting times, display multiple clocks, and integrate with Google Calendar."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: "Claude Skills Guide"
 permalink: /chrome-extension-timezone-converter-remote/
 reviewed: true

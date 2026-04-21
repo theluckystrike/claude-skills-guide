@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Chrome Extension for Royalty-Free Image Search"
-description: "Learn how to build and use Chrome extensions for finding royalty-free images directly from your browser. Practical examples for developers and power users."
+title: "Royalty-Free Image Search Extension (2026)"
+description: "Find royalty-free images directly in Chrome with a search extension. Integrates Unsplash, Pexels, and Pixabay APIs for instant license-safe results."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: theluckystrike
 permalink: /chrome-extension-royalty-free-image-search/
 categories: [guides]

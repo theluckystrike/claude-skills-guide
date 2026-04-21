@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Dart Flutter Cross Platform Development Guide"
-description: "A practical guide to building cross-platform applications with Dart and Flutter using Claude Code and specialized Claude skills."
+title: "Claude Code for Dart and Flutter Development (2026)"
+description: "Build cross-platform apps with Dart and Flutter using Claude Code skills. Covers widget generation, state management, and platform-specific adapters."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-dart-flutter-cross-platform-development-guide/
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 
 

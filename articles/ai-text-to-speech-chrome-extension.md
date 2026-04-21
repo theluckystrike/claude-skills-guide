@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Text To Speech Chrome Extension Guide (2026)"
-description: "Learn how to build AI-powered text-to-speech Chrome extensions. Practical code examples, Web Speech API integration, and implementation patterns for."
+title: "Build an AI Text-to-Speech Extension (2026)"
+description: "Build a Chrome extension with AI-powered text-to-speech. Covers Web Speech API, voice selection, SSML markup, and streaming audio playback for devs."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -11,6 +11,7 @@ tags: [tools]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-21"
 ---
 AI Text to Speech Chrome Extension: A Developer Guide
 

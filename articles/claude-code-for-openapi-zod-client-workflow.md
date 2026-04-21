@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Claude Code For Openapi Zod — Complete Developer Guide"
-description: "Learn how to use Claude Code to streamline your OpenAPI to Zod client workflow with practical examples and actionable advice."
+title: "Claude Code OpenAPI to Zod Client Workflow (2026)"
+description: "Generate type-safe Zod clients from OpenAPI specs with Claude Code. Automate schema validation, client generation, and runtime type checking."
 date: 2026-03-15
 last_modified_at: 2026-04-17
+last_tested: "2026-04-21"
 author: Claude Skills Guide
 permalink: /claude-code-for-openapi-zod-client-workflow/
 categories: [guides]

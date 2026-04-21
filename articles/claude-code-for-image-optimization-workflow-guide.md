@@ -1,11 +1,12 @@
 ---
 
 layout: default
-title: "How to Use AI Code Optimization with Claude Code (2026)"
-description: "Automate image optimization with Claude Code. Batch-compress, resize, and convert to WebP. Cut page weight 60% in minutes."
+title: "Claude Code Image Optimization Workflow (2026)"
+description: "Automate image optimization with Claude Code to batch-compress, resize, and convert to WebP format. Cuts total page weight by 60% in minutes."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
+last_tested: "2026-04-21"
 permalink: /claude-code-for-image-optimization-workflow-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]

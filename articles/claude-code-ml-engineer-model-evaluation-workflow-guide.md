@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Ml Engineer Model — Complete Developer Guide"
-description: "Master model evaluation workflows with Claude Code. Learn how ML engineers can automate testing, benchmark models, and build reproducible evaluation."
+title: "Claude Code for ML Model Evaluation (2026)"
+description: "Automate ML model evaluation with Claude Code. Testing pipelines, benchmark comparisons, and reproducible evaluation workflows for ML engineers."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 categories: [workflows]
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-code-ml-engineer-model-evaluation-workflow-guide/
 render_with_liquid: false
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 Troubleshooting model accuracy dropping after retraining starts with understanding that data drift between training and serving distributions. Below is the Claude Code workflow for fixing ml engineer model evaluation issues, validated in April 2026.

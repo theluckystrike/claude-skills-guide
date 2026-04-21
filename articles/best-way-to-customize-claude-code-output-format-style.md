@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Output Format — How to Customize (2026)"
-description: "Claude Code Output Format — How to Customize. Practical guide with working examples for developers."
+title: "Customize Claude Code Output Format (2026)"
+description: "Control Claude Code output format using CLAUDE.md settings, skill metadata, and prompt patterns. Working examples for consistent code style output."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 
@@ -137,7 +138,7 @@ A skill definition lives in a YAML file. The description and prompt fields shape
 
 ```yaml
 name: api-doc-generator
-description: Generates consistently formatted REST API endpoint documentation
+description: "Generate structured API documentation from code"
 
 system_prompt: |
  You are a technical writer generating API documentation.

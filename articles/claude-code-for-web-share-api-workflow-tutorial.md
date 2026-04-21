@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Web Share API Workflow Tutorial"
-description: "Learn how to use Claude Code to build efficient workflows around the Web Share API for smooth content sharing in web applications."
+title: "Build Web Share API with Claude Code (2026)"
+description: "Implement the Web Share API with Claude Code for native sharing in web apps. Feature detection, fallback handling, and share target registration."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ categories: [tutorials]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 

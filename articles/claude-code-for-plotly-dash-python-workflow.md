@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for Plotly Dash Python Workflow"
-description: "Learn how to use Claude Code to streamline your Plotly Dash Python development workflow with practical examples and actionable tips."
+title: "Claude Code for Plotly Dash Python Apps (2026)"
+description: "Build Plotly Dash analytical web apps with Claude Code. Project setup, interactive callbacks, performance tuning, and deployment workflow guide."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -11,6 +11,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
+last_tested: "2026-04-21"
 geo_optimized: true
 ---
 
