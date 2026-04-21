@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Fzf Fuzzy Finder — Complete Developer Guide"
+title: "Claude Code For Fzf Fuzzy Finder — Complete (2026)"
 description: "Master the FZF fuzzy finder workflow with Claude Code. Learn practical examples, code snippets, and actionable tips to boost your command-line."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -11,6 +11,7 @@ permalink: /claude-code-for-fzf-fuzzy-finder-workflow-guide/
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 Claude Code for FZF Fuzzy Finder Workflow Guide
 

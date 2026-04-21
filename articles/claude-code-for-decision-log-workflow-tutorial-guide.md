@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Decision Log — Complete Developer Guide"
+title: "Claude Code For Decision Log — Complete Developer (2026)"
 description: "Learn how to create, manage, and automate decision logs using Claude Code. This guide covers practical workflows, code examples, and best practices for."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 Integrating decision log workflow into a development workflow involves pipeline caching strategies and flaky test isolation. The approach below walks through how Claude Code addresses each of these decision log workflow concerns systematically.
 

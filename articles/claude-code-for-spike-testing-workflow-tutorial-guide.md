@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Spike Testing Workflow Tutorial Guide"
+title: "Claude Code for Spike Testing Workflow Tutorial Guide (2026)"
 description: "Learn how to use Claude Code for spike testing workflows. A practical guide for developers to create, execute, and analyze spike tests effectively."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -13,6 +13,7 @@ reviewed: true
 score: 8
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 {% raw %}

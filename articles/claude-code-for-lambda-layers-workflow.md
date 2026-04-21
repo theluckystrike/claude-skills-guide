@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Lambda Layers Workflow"
+title: "Claude Code for Lambda Layers Workflow (2026)"
 description: "Learn how to use Claude Code to automate AWS Lambda Layers creation, management, and deployment. Practical workflow patterns with code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -12,6 +12,7 @@ permalink: /claude-code-for-lambda-layers-workflow/
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 

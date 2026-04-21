@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "WireGuard PostUp PostDown Scripts: Routing Guide"
-description: "WireGuard PostUp PostDown Scripts: Routing Guide. Practical guide with working examples for developers."
+title: "WireGuard PostUp PostDown Scripts: Routing Guide (2026)"
+description: "WireGuard PostUp PostDown Scripts: Routing Guide explained with practical examples and tested code. Step-by-step guide covering setup, common pitfalls,..."
 date: 2026-03-17
 last_modified_at: 2026-04-17
 author: Claude Skills Guide
@@ -13,6 +13,7 @@ reviewed: true
 geo_optimized: true
 sitemap: false
 robots: "noindex, nofollow"
+last_tested: "2026-04-22"
 ---
 
 

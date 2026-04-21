@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Skills for Nonprofit Donation Platforms (2026)"
-description: "Claude Code Skills for Nonprofit Donation Platforms. Practical guide with working examples for developers."
+description: "Claude Code Skills for Nonprofit Donation Platforms. Practical guide with working examples for developers. Includes code examples and fixes."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [use-cases]
@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 permalink: /claude-code-skills-for-nonprofit-donation-platforms/
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 # Claude Code Skills for Nonprofit Donation Platforms

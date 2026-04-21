@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Apache Spark DataFrame Workflow Guide"
+title: "Claude Code for Apache Spark DataFrame Workflow Guide (2026)"
 description: "A comprehensive guide to using Claude Code for Apache Spark DataFrame development, including practical examples and actionable advice for developers."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 

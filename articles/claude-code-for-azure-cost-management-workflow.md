@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Azure Cost Management Workflow"
+title: "Claude Code for Azure Cost Management Workflow (2026)"
 description: "Learn how to build Claude skills that automate Azure cost management, monitor spending, and optimize cloud expenses with practical code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -13,6 +13,7 @@ reviewed: true
 score: 7
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 {% raw %}

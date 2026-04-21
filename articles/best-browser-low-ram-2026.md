@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Best Browser Setup for Running Claude Code on Low-RAM Machines (2026)"
-description: "Optimize your browser choice when running Claude Code on machines with limited RAM. Firefox, Brave, and lightweight browsers compared for AI coding workflows."
+title: "Best Browser Setup for Running Claude Code (2026)"
+description: "Optimize your browser choice when running Claude Code on machines with limited RAM. Firefox, Brave, and lightweight browsers compared for AI coding..."
 date: 2026-03-15
 last_modified_at: 2026-04-21
-last_tested: "2026-04-21"
+last_tested: "2026-04-22"
 author: theluckystrike
 permalink: /best-browser-low-ram-2026/
 categories: [guides]

@@ -1,8 +1,9 @@
 ---
 
 layout: default
-title: "Claude Code Docker Health Checks Guide"
-description: "Learn how to implement Docker health checks for your containerized applications with practical examples and best practices."
+title: "Claude Code Docker Health Checks Guide (2026)"
+description: "Learn how to implement Docker health checks for your containerized applications with practical examples and best practices. Tested and working in 2026."
+last_tested: "2026-04-22"
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

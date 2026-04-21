@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome WASM Performance — Developer Guide"
-description: "Learn how WebAssembly performs in Chrome, with code examples and optimization techniques for building high-performance web applications."
+title: "Chrome WASM Performance — Developer Guide (2026)"
+description: "Learn how WebAssembly performs in Chrome, with code examples and optimization techniques for building high-performance web applications. Updated for 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -13,6 +13,7 @@ tags: [claude-code, claude-skills]
 geo_optimized: true
 robots: "noindex, nofollow"
 sitemap: false
+last_tested: "2026-04-22"
 ---
 WebAssembly (WASM) has transformed what's possible in browser-based applications. When you run compiled code in Chrome, you're tapping into a execution environment designed for near-native performance. This guide covers practical techniques for optimizing Chrome WASM performance in real-world applications.
 

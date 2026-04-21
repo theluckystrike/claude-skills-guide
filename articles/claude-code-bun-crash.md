@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix Claude Code Bun Crash"
-description: "Resolve Claude Code crashing when using Bun runtime. Covers memory limits, version conflicts, and Bun-specific workarounds."
+title: "Fix Claude Code Bun Crash (2026)"
+description: "Resolve Claude Code crashing when using Bun runtime. Covers memory limits, version conflicts, and Bun-specific workarounds. Tested and working in 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills, bun, crash-fix]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Claude Code can crash when running under the Bun runtime due to memory limits, incompatible native modules, or Bun-specific bugs. This guide covers the most common Bun crash scenarios and how to fix each one.

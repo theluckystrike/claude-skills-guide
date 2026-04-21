@@ -1,12 +1,13 @@
 ---
 layout: default
-title: "Claude Code for Chromatic Visual Test — Guide"
-description: "Catch visual regressions with Chromatic and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Chromatic Visual Test — Guide (2026)"
+description: "Claude Code for Chromatic Visual Test — Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified..."
 date: 2026-04-18
 permalink: /claude-code-for-chromatic-visual-test-workflow-guide/
 render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, chromatic, workflow]
+last_tested: "2026-04-22"
 ---
 
 ## The Setup

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Screen Reader Testing Workflow"
-description: "A practical guide to testing web accessibility with screen readers using Claude Code. Automate your a11y workflow with proven techniques."
+title: "Claude Code Screen Reader Testing Workflow (2026)"
+description: "A practical guide to testing web accessibility with screen readers using Claude Code. Automate your a11y workflow with proven techniques. Updated for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Building accessible web applications requires more than just following WCAG guidelines. You need to verify that your content actually works with assistive technologies. Screen reader testing is a critical part of this process, and Claude Code can help streamline your workflow.

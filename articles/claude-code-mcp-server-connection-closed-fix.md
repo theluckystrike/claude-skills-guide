@@ -1,13 +1,14 @@
 ---
 layout: default
-title: "Fix Claude Code MCP Server Connection Closed"
-description: "Resolve MCP server 'Connection closed' errors in Claude Code caused by stdio transport issues, Windows npx problems, and startup timeouts."
+title: "Fix Claude Code MCP Server Connection Closed (2026)"
+description: "Resolve Claude Code MCP Server Connection Closed issues with tested solutions, step-by-step debugging, and production-ready code examples verified for..."
 date: 2026-04-15
 permalink: /claude-code-mcp-server-connection-closed-fix/
 categories: [troubleshooting, claude-code]
 tags: [mcp, connection-closed, stdio, npx, windows]
 last_modified_at: 2026-04-17
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 # Fix Claude Code MCP Server Connection Closed

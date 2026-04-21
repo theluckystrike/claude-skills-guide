@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Out Of Memory Heap Allocation — Developer (2026)"
-description: "Claude Code Out Of Memory Heap Allocation — Developer. Practical guide with working examples for developers."
+description: "Claude Code Out Of Memory Heap Allocation — Developer. Practical guide with working examples for developers. Includes code examples and fixes."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -11,6 +11,7 @@ permalink: /claude-code-out-of-memory-heap-allocation-skill/
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 When working with Claude Code on memory-intensive tasks, understanding heap allocation becomes crucial for maintaining stable and efficient workflows. This guide explores practical skills and techniques to handle out-of-memory errors, optimize memory usage, and build solid Claude Code experiences.
 

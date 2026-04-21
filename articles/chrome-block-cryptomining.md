@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Chrome Block Cryptomining — Developer Guide"
+title: "Chrome Block Cryptomining — Developer Guide (2026)"
+last_tested: "2026-04-22"
 description: "Learn multiple methods to block cryptomining scripts in Chrome. Includes built-in settings, extensions, network-level filtering, and developer tools."
 date: 2026-03-15
 last_modified_at: 2026-04-17

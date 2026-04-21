@@ -1,12 +1,13 @@
 ---
 layout: default
-title: "Claude Code for Helix Editor — Workflow Guide"
-description: "Pair Claude Code with Helix editor for modal editing. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Helix Editor — Workflow Guide (2026)"
+description: "Claude Code for Helix Editor — Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified..."
 date: 2026-04-18
 permalink: /claude-code-for-helix-editor-workflow-guide/
 render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, helix, workflow]
+last_tested: "2026-04-22"
 ---
 
 ## The Setup

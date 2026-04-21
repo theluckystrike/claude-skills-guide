@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Angular MCP Configuration"
-description: "Set up MCP servers for Angular projects in Claude Code to enable component-aware code generation and project navigation."
+title: "Claude Code Angular MCP Configuration (2026)"
+description: "Set up MCP servers for Angular projects in Claude Code to enable component-aware code generation and project navigation. Tested and working in 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills, angular, mcp]
 reviewed: true
 score: 6
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Configuring MCP for Angular in Claude Code enables project-aware code generation by giving it direct filesystem access to your components, services, and configuration. This guide covers the recommended MCP setup for Angular monorepos, multi-project workspaces, and standalone apps.

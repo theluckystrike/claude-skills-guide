@@ -1,7 +1,8 @@
 ---
 layout: default
-title: "Fix TypeScript Strict Mode Errors with Claude Code"
-description: "Resolve TypeScript strict mode errors using Claude Code. Fix strictNullChecks, noImplicitAny, strictPropertyInitialization, and more."
+title: "Fix TypeScript Strict Mode Errors with Claude Code (2026)"
+description: "Resolve TypeScript strict mode errors using Claude Code. Fix strictNullChecks, noImplicitAny, strictPropertyInitialization, and more. Updated for 2026."
+last_tested: "2026-04-22"
 date: 2026-04-15
 last_modified_at: 2026-04-17
 author: "Claude Code Guides"

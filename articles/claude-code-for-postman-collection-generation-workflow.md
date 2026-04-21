@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Postman Collection Generation Workflow"
+title: "Claude Code for Postman Collection Generation Workflow 2026"
+last_tested: "2026-04-22"
 description: "Learn how to automate Postman collection generation using Claude Code skills. Create API test collections, generate request templates, and streamline."
 date: 2026-03-15
 last_modified_at: 2026-04-17

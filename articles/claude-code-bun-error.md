@@ -1,7 +1,8 @@
 ---
 layout: default
-title: "Fix Claude Code Bun Errors"
-description: "Troubleshoot Claude Code Bun runtime errors including module resolution, compatibility issues, and package install failures."
+title: "Fix Claude Code Bun Errors (2026)"
+description: "Troubleshoot Claude Code Bun runtime errors including module resolution, compatibility issues, and package install failures. Tested and working in 2026."
+last_tested: "2026-04-22"
 date: 2026-04-17
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Code Outline Navigation Workflow"
+title: "Claude Code for Code Outline Navigation Workflow (2026)"
 description: "Master code outline navigation in Claude Code to quickly understand codebase structure, jump to definitions, and traverse complex codebases efficiently."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -12,6 +12,7 @@ permalink: /claude-code-for-code-outline-navigation-workflow/
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Modern codebases can span thousands of files across multiple directories. Navigating this complexity efficiently is a critical skill for any developer. Claude Code provides powerful outline navigation capabilities that help you understand code structure, jump to definitions, and traverse relationships, all without leaving your terminal. This guide walks you through practical techniques to master code outline navigation in Claude Code.

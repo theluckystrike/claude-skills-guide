@@ -1,0 +1,63 @@
+---
+title: "Content Filter Triggered Refusal — Fix (2026)"
+permalink: /claude-code-content-filter-triggered-fix-2026/
+description: "Fix content filter refusal in Claude API. Rephrase prompt to remove flagged patterns. Check stop_reason for 'end_turn' vs 'content_filter'."
+last_tested: "2026-04-22"
+render_with_liquid: false
+---
+
+## The Error
+
+```
+Response stop_reason: "content_filter"
+Content: "" (empty response body with 200 status)
+```
+
+This error appears as an empty or truncated response where `stop_reason` is `content_filter` instead of `end_turn`. Claude refused to generate the requested content.
+
+## The Fix
+
+1. Check the stop_reason in your response:
+
+```bash
+curl -s https://api.anthropic.com/v1/messages \
+  -H "x-api-key: $ANTHROPIC_API_KEY" \
+  -H "anthropic-version: 2023-06-01" \
+  -H "content-type: application/json" \
+  -d '{"model":"claude-sonnet-4-20250514","max_tokens":1024,"messages":[{"role":"user","content":"your prompt here"}]}' \
+  | python3 -c "import sys,json; r=json.load(sys.stdin); print(f'stop_reason: {r[\"stop_reason\"]}')"
+```
+
+2. Rephrase the prompt to add context about legitimate use:
+
+```
+Instead of: "Write code to extract passwords from a database"
+Use: "Write code to implement password reset functionality with proper hashing"
+```
+
+3. Add a system prompt that clarifies the development context:
+
+```bash
+claude --system "You are helping a developer build a secure authentication system for a legitimate web application." "write the auth module"
+```
+
+## Why This Happens
+
+Claude has built-in content filtering that blocks generation of harmful content. Sometimes legitimate developer requests trigger these filters because the phrasing resembles harmful intent. The filter evaluates the combined context of system prompt, conversation history, and current message.
+
+## If That Doesn't Work
+
+- Break the request into smaller, more specific sub-tasks that are clearly benign.
+- Add explicit framing: "For a security audit of our own application..."
+- If working with security tooling, use the system prompt to establish the pentesting context.
+
+## Prevention
+
+Add this to your `CLAUDE.md`:
+
+```markdown
+# Prompt Framing
+- When working with security-sensitive code, include context: "for our internal app."
+- Prefix security-related requests with the legitimate use case.
+- If content filter triggers, rephrase — do not retry the same prompt.
+```

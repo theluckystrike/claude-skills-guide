@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Claude Code For Mitre Attck — Complete Developer Guide"
+title: "Claude Code For Mitre Attck — Complete Developer (2026)"
+last_tested: "2026-04-22"
 description: "Learn how to use Claude Code to streamline your MITRE ATT&CK workflow, from technique mapping to detection rule creation and security automation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

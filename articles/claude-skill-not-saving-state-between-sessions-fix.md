@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix Claude Skill Not Saving State Between — Quick Guide"
-description: "Fix Claude Code skills losing state between sessions. Covers supermemory, CLAUDE.md context, file-based persistence, and pitfalls."
+title: "Fix Claude Skill Not Saving State Between — Quick (2026)"
+description: "Fix Claude Code skills losing state between sessions. Covers supermemory, CLAUDE.md context, file-based persistence, and pitfalls. Updated for 2026."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [troubleshooting]
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 permalink: /claude-skill-not-saving-state-between-sessions-fix/
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 # Claude Skill Not Saving State Between Sessions Fix
 

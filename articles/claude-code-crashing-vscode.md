@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix Claude Code Crashing in VS Code"
-description: "Stop Claude Code from crashing VS Code with fixes for memory limits, extension conflicts, and terminal configuration issues."
+title: "Fix Claude Code Crashing in VS Code (2026)"
+description: "Stop Claude Code from crashing VS Code with fixes for memory limits, extension conflicts, and terminal configuration issues. Tested and working in 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills, vscode, crash-fix]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Claude Code crashing inside VS Code is usually caused by memory limits, extension conflicts, or terminal misconfiguration. This guide walks through each cause and gives you a fix that gets Claude Code stable in VS Code.

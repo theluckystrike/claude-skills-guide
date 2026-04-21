@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Chrome Enterprise Startup Pages Policy — Developer Guide"
+title: "Chrome Enterprise Startup Pages Policy — Developer (2026)"
+last_tested: "2026-04-22"
 description: "Learn how to configure Chrome enterprise startup pages policy for your organization. Practical examples for developers managing browser configurations."
 date: 2026-03-15
 last_modified_at: 2026-04-17

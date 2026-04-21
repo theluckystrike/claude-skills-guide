@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Backstage Plugin Workflow Tutorial"
+title: "Claude Code for Backstage Plugin Workflow Tutorial (2026)"
 description: "A comprehensive tutorial on building Backstage plugins using Claude Code. Learn how to create, test, and deploy custom plugins with AI-assisted."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -13,6 +13,7 @@ reviewed: true
 score: 8
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Setting up backstage plugin correctly requires understanding version compatibility checking and lifecycle hook management. Below, you will find the Claude Code workflow for backstage plugin that handles each of these concerns step by step.

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix WebSocket Connection Failures in Claude Code"
+title: "Fix WebSocket Connection Failures in Claude Code (2026)"
 description: "Resolve WebSocket connection failed errors in Claude Code projects. Debug WS handshake failures, proxy issues, and CORS configuration problems."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -10,6 +10,7 @@ reviewed: true
 categories: [troubleshooting, claude-code]
 tags: [websocket, connection, debugging, real-time, networking]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 # Fix WebSocket Connection Failures in Claude Code

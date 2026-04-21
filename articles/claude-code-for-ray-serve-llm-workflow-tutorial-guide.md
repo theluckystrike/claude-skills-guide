@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Ray Serve LLM — Complete Developer Guide"
+title: "Claude Code For Ray Serve LLM — Complete Developer (2026)"
 description: "Learn how to use Claude Code with Ray Serve to build production-ready LLM workflows. This comprehensive guide covers deployment patterns, API..."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -9,6 +9,7 @@ permalink: /claude-code-for-ray-serve-llm-workflow-tutorial-guide/
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 Claude Code for Ray Serve LLM Workflow Tutorial Guide
 

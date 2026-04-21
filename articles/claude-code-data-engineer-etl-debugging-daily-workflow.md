@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for ETL Debugging: Daily Workflow (2026)"
+title: "Debug: Claude Code for ETL Debugging: Daily Workflow (2026)"
 description: "Debug ETL pipelines faster with Claude Code. Covers data quality checks, transformation errors, and scheduling issues in your daily engineering flow."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -11,7 +11,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 geo_optimized: true
-last_tested: "2026-04-21"
+last_tested: "2026-04-22"
 ---
 Data engineers spend a significant portion of their day debugging ETL pipelines, investigating data quality issues, and tracing the root cause of pipeline failures. Claude Code transforms this traditionally time-consuming workflow into a more efficient process by acting as an intelligent pair programmer that understands your pipeline logic, data schemas, and debugging patterns. This guide walks you through practical techniques for debugging ETL pipelines using Claude Code skills and features.
 

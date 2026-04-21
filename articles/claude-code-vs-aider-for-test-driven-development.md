@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Claude Code vs Aider (2026): CLI Coding Compared"
-description: "Claude Code vs Aider compared: pricing, context, features. 3-persona verdict for solo devs, teams, enterprise."
+description: "Claude Code vs Aider compared: pricing, context, features. 3-persona verdict for solo devs, teams, enterprise. Includes code examples and fixes."
+last_tested: "2026-04-22"
 permalink: /claude-code-vs-aider-for-test-driven-development/
 date: 2026-04-21
 last_tested: "2026-04-21"

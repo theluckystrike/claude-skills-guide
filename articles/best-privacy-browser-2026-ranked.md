@@ -2,7 +2,7 @@
 
 layout: default
 title: "Best Privacy Browsers 2026 — Ranked"
-description: "Best privacy browsers for 2026 ranked: Brave, Firefox, Tor, and more. Anti-fingerprinting, tracker blocking, and security compared."
+description: "Best privacy browsers for 2026 ranked: Brave, Firefox, Tor, and more. Anti-fingerprinting, tracker blocking, and security compared. Updated for 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -14,6 +14,7 @@ score: 8
 geo_optimized: true
 sitemap: false
 robots: "noindex, nofollow"
+last_tested: "2026-04-22"
 ---
 
 Privacy-focused browsers have matured significantly. What once required extensive configuration now ships ready for threat model protection. This ranking evaluates browsers based on technical implementation, transparency, and features relevant to developers and power users.

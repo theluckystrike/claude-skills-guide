@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix Claude Code Not Working in VS Code"
-description: "Resolve Claude Code extension failures in VS Code with tested fixes for authentication, PATH, and startup errors."
+title: "Fix Claude Code Not Working in VS Code (2026)"
+description: "Resolve Claude Code extension failures in VS Code with tested fixes for authentication, PATH, and startup errors. Tested and working in 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills, vscode, troubleshooting]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Claude Code in VS Code can fail silently due to PATH issues, authentication problems, or extension conflicts. This guide walks through every known fix so you can get Claude Code running in your editor within minutes.

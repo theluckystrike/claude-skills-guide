@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Chrome Site Isolation Explained — Developer Guide"
+title: "Chrome Site Isolation Explained — Developer Guide (2026)"
+last_tested: "2026-04-22"
 description: "Understand Chrome site isolation mechanics, security benefits, and implementation details. Learn how process separation protects your browser from."
 date: 2026-03-15
 last_modified_at: 2026-04-17

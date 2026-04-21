@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code CMMC Compliance Checklist Automation"
+title: "Claude Code CMMC Compliance Checklist Automation (2026)"
 description: "Learn how to automate CMMC compliance checklist tasks using Claude Code skills. Practical examples for defense contractors managing cybersecurity."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -12,6 +12,7 @@ permalink: /claude-code-cmmc-compliance-checklist-automation/
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 The Cybersecurity Maturity Model Certification (CMMC) has become a critical requirement for defense contractors handling Controlled Unclassified Information (CUI). With over 300 specific controls across five maturity levels, manually tracking compliance across your organization's systems is time-consuming and error-prone. Claude Code offers a powerful solution through skill-based automation that can streamline your CMMC compliance workflow significantly.

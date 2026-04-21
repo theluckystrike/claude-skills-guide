@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Set Up Docker MCP Server for Claude Code"
-description: "Give Claude Code direct Docker access via MCP. Manage containers, images, and compose stacks with a Docker MCP server configuration."
+title: "Set Up Docker MCP Server for Claude Code (2026)"
+description: "Give Claude Code direct Docker access via MCP. Manage containers, images, and compose stacks with a Docker MCP server configuration. Updated for 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills, docker, mcp, devops]
 reviewed: true
 score: 6
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 A Docker MCP server lets Claude Code manage containers, inspect images, read logs, and orchestrate compose stacks directly. Instead of copying and pasting Docker CLI output, Claude can query container status, tail logs, and restart services through structured MCP tool calls.

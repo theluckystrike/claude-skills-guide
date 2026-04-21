@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code ARIA Labels Implementation Guide"
-description: "A practical guide to implementing ARIA labels in your projects using Claude Code and related skills for accessible web development."
+title: "Claude Code ARIA Labels Implementation Guide (2026)"
+description: "A practical guide to implementing ARIA labels in your projects using Claude Code and related skills for accessible web development. Updated for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Accessibility in web development requires more than semantic HTML. ARIA (Accessible Rich Internet Applications) labels bridge the gap between complex UI components and assistive technologies. This guide shows you how to implement ARIA labels effectively using Claude Code and complementary skills. with enough depth to handle real production scenarios where the naive approach breaks down.

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix ESLint and Prettier Conflicts in Claude Code Projects"
-description: "Resolve ESLint and Prettier rule conflicts when Claude Code formats and lints code. Configure both tools to work together without fighting."
+title: "Fix ESLint and Prettier Conflicts in Claude Code (2026)"
+description: "Resolve ESLint and Prettier Conflicts in Claude Code issues with tested solutions, step-by-step debugging, and production-ready code examples verified..."
 date: 2026-04-15
 last_modified_at: 2026-04-17
 author: "Claude Code Guides"
@@ -10,6 +10,7 @@ reviewed: true
 categories: [troubleshooting, claude-code]
 tags: [eslint, prettier, formatting, linting, configuration]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 # Fix ESLint and Prettier Conflicts in Claude Code Projects

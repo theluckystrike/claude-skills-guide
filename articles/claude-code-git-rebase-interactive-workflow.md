@@ -1,7 +1,8 @@
 ---
 layout: default
-title: "Claude Code Git Rebase Interactive Workflow"
-description: "Master git rebase interactive workflows with Claude Code. Practical examples and automation patterns for developers."
+title: "Claude Code Git Rebase Interactive Workflow (2026)"
+description: "Master git rebase interactive workflows with Claude Code. Practical examples and automation patterns for developers. Tested and working in 2026."
+last_tested: "2026-04-22"
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]

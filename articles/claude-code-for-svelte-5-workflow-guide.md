@@ -1,12 +1,13 @@
 ---
 layout: default
-title: "Claude Code for Svelte 5 — Workflow Guide"
-description: "Build reactive UIs with Svelte 5 runes and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Svelte 5 — Workflow Guide (2026)"
+description: "Claude Code for Svelte 5 — Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified for..."
 date: 2026-04-18
 permalink: /claude-code-for-svelte-5-workflow-guide/
 render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, svelte, workflow]
+last_tested: "2026-04-22"
 ---
 
 ## The Setup

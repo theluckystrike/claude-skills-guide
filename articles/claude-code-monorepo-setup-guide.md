@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Monorepo Setup — Complete Developer Guide"
+title: "Claude Code Monorepo Setup — Complete Developer Guide (2026)"
 description: "Configure Claude Code for monorepos using Turborepo, Nx, or pnpm workspaces. CLAUDE.md structure, context management, and multi-package workflows."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -10,6 +10,7 @@ reviewed: true
 categories: [guides, claude-code]
 tags: [monorepo, turborepo, nx, pnpm, workspaces]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 # How to Set Up Claude Code for Monorepo Projects
 

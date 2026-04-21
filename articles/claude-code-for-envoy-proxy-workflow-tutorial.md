@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Envoy Proxy Workflow Tutorial"
+title: "Claude Code for Envoy Proxy Workflow Tutorial (2026)"
 description: "A practical guide to using Claude Code for Envoy Proxy configuration, deployment, and management. Learn workflows for service mesh, traffic routing."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills, envoy, proxy, service-mesh]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Envoy Proxy has become the de facto standard for service mesh and edge proxy solutions in modern cloud-native architectures. From Kubernetes ingress to microservices communication, Envoy handles traffic routing, load balancing, and observability for some of the largest deployments in production. However, configuring Envoy effectively requires deep understanding of its extensive filter chain, listener configurations, and cluster management. This is where Claude Code transforms the workflow, accelerating configuration generation, debugging runtime issues, and automating repetitive tasks.

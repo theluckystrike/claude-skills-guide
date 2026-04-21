@@ -1,8 +1,9 @@
 ---
 
 layout: default
-title: "Claude Code for SharedArrayBuffer Workflow"
-description: "Learn how to use SharedArrayBuffer for high-performance parallel computing in JavaScript with practical examples and best practices."
+title: "Claude Code for SharedArrayBuffer Workflow (2026)"
+description: "Learn how to use SharedArrayBuffer for high-performance parallel computing in JavaScript with practical examples and best practices. Updated for 2026."
+last_tested: "2026-04-22"
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: Claude Skills Guide

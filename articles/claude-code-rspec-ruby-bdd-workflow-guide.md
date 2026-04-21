@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Rspec Ruby Bdd — Complete Developer Guide"
+title: "Claude Code Rspec Ruby Bdd — Complete Developer Guide (2026)"
 description: "A practical guide to integrating Claude Code with RSpec for Behavior-Driven Development in Ruby. Learn AI-assisted BDD workflow, test writing, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -11,6 +11,7 @@ score: 7
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 Integrating Claude Code into your RSpec and BDD workflow transforms how Ruby developers write, maintain, and debug tests. This guide provides practical strategies for combining Claude's AI capabilities with RSpec, Cucumber, and Behavior-Driven Development practices to accelerate your test-driven development cycle.
 

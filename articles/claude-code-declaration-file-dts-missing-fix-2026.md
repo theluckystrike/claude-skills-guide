@@ -1,0 +1,88 @@
+---
+title: "Declaration File .d.ts Missing Error — Fix (2026)"
+permalink: /claude-code-declaration-file-dts-missing-fix-2026/
+description: "Fix 'Could not find declaration file' TypeScript error. Install @types package or create a custom .d.ts declaration."
+last_tested: "2026-04-22"
+render_with_liquid: false
+---
+
+## The Error
+
+```
+error TS7016: Could not find a declaration file for module 'some-library'.
+  '/node_modules/some-library/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/some-library` if it exists or add a new declaration (.d.ts) file.
+```
+
+This error occurs when TypeScript cannot find type declarations for an imported JavaScript library. The library works at runtime but TypeScript cannot type-check it.
+
+## The Fix
+
+1. Try installing the community types package:
+
+```bash
+npm install --save-dev @types/some-library
+```
+
+2. If no @types package exists, create a declaration file:
+
+```bash
+mkdir -p src/types
+```
+
+```typescript
+// src/types/some-library.d.ts
+declare module 'some-library' {
+  export function doSomething(input: string): Promise<string>;
+  export default function init(config: Record<string, unknown>): void;
+}
+```
+
+3. Ensure tsconfig includes the types directory:
+
+```json
+{
+  "compilerOptions": {
+    "typeRoots": ["./node_modules/@types", "./src/types"]
+  }
+}
+```
+
+4. Verify:
+
+```bash
+npx tsc --noEmit
+```
+
+## Why This Happens
+
+Many npm packages are written in JavaScript without TypeScript declarations. TypeScript needs `.d.ts` files to understand the types of imported modules. When Claude adds a dependency that lacks types, the compiler throws TS7016. The `@types/` namespace on npm hosts community-maintained declarations, but not every package has one.
+
+## If That Doesn't Work
+
+- Suppress the error for a single import:
+
+```typescript
+// @ts-ignore
+import something from 'untyped-library';
+```
+
+- Set `noImplicitAny: false` in tsconfig (not recommended for strict projects).
+- Use `skipLibCheck: true` to skip checking all .d.ts files:
+
+```json
+{
+  "compilerOptions": { "skipLibCheck": true }
+}
+```
+
+## Prevention
+
+Add this to your `CLAUDE.md`:
+
+```markdown
+# TypeScript Declarations
+- After adding a new dependency, check: npm info @types/PACKAGE
+- If no @types exists, create src/types/PACKAGE.d.ts with at least basic types.
+- Keep typeRoots in tsconfig pointing to both node_modules/@types and src/types.
+```

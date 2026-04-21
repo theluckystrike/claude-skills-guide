@@ -1,13 +1,14 @@
 ---
 layout: default
-title: "Fix Anthropic SDK IndexError When Streaming"
-description: "Resolve IndexError in the Anthropic Python SDK when streaming responses with tool use, thinking, or empty content blocks."
+title: "Fix Anthropic SDK IndexError When Streaming (2026)"
+description: "Resolve IndexError in the Anthropic Python SDK when streaming responses with tool use, thinking, or empty content blocks. Tested and working in 2026."
 date: 2026-04-15
 permalink: /anthropic-sdk-indexerror-streaming-fix/
 categories: [troubleshooting, anthropic-api]
 tags: [SDK, Python, IndexError, streaming, tool-use]
 last_modified_at: 2026-04-17
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 # Fix Anthropic SDK IndexError When Streaming

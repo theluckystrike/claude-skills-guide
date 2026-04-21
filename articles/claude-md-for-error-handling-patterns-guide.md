@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude MD Error Handling Patterns Guide (2026)"
+title: "Fix: Claude MD Error Handling Patterns Guide (2026)"
 description: "Add error handling patterns to Claude MD skill files. Recovery logic, retry strategies, and graceful fallbacks for production-ready skill files."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -11,7 +11,7 @@ score: 7
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 render_with_liquid: false
-last_tested: "2026-04-21"
+last_tested: "2026-04-22"
 geo_optimized: true
 ---
 {% raw %}

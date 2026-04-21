@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code TestContainers Integration Testing"
+title: "Claude Code TestContainers Integration Testing (2026)"
 description: "Learn how to use TestContainers with Claude Code for reliable integration testing. Practical examples for database, message queue, and service testing."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -12,6 +12,7 @@ score: 7
 categories: [integrations]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Integration testing with real dependencies is essential for validating Claude Code skills that interact with databases, message queues, or external services. TestContainers provides Docker-based test fixtures that spin up actual services instead of mocks, giving you confidence that your skills work in production-like environments. This guide shows you how to integrate TestContainers into your Claude Code testing workflow, from basic setup through advanced multi-service orchestration.

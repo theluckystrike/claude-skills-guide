@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Export Passwords from Chrome Safely"
+title: "How to Export Passwords from Chrome Safely (2026)"
 description: "Learn the official methods and best practices for exporting your Chrome passwords securely. Includes command-line tools, encryption details, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -11,6 +11,7 @@ tags: [tools]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Chrome's built-in password manager stores credentials locally with encryption, but there are legitimate reasons to export them: migrating to a dedicated password manager, backing up your data, or auditing stored credentials. This guide covers the official export method, security considerations, and programmatic approaches for developers and power users.

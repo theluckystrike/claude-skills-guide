@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Docusaurus Documentation Site Guide"
+title: "Claude Code Docusaurus Documentation Site Guide (2026)"
 description: "Learn how to use Claude Code to build, customize, and maintain Docusaurus documentation sites. Practical workflows for content creation, theme."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -12,6 +12,7 @@ score: 7
 permalink: /claude-code-docusaurus-docs-site-guide/
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 {% raw %}

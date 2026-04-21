@@ -1,0 +1,76 @@
+---
+title: "Linux AppArmor Restricting Access Fix"
+permalink: /claude-code-linux-apparmor-restricting-access-fix-2026/
+description: "Fix Linux AppArmor restricting Claude Code file access. Create an AppArmor profile or set complain mode to allow Claude Code filesystem operations."
+last_tested: "2026-04-22"
+render_with_liquid: false
+---
+
+## The Error
+
+```
+Error: EACCES: permission denied, open '/home/user/project/src/app.ts'
+  AppArmor DENIED operation="open" profile="node" name="/home/user/project/src/app.ts"
+  audit: type=1400 msg=apparmor="DENIED" operation="open" class="file"
+  Claude Code blocked by AppArmor mandatory access control
+```
+
+This appears on Linux systems where AppArmor restricts the Node.js process (running Claude Code) from accessing files outside its allowed paths.
+
+## The Fix
+
+```bash
+sudo aa-complain /usr/bin/node
+```
+
+1. Set the Node.js AppArmor profile to complain mode (logs violations but does not block).
+2. Run Claude Code and verify it can access your project files.
+3. Review AppArmor logs to create a proper allow-list profile.
+
+## Why This Happens
+
+AppArmor is a Linux mandatory access control system that restricts what files and operations a program can perform. Some Linux distributions (Ubuntu, SUSE) ship with AppArmor profiles for common programs. If a Node.js profile exists, it may restrict file access to a narrow set of directories, blocking Claude Code from reading or writing your project files. The EACCES error looks like a standard permission issue, but `dmesg` or `/var/log/syslog` reveals the AppArmor denial.
+
+## If That Doesn't Work
+
+Check AppArmor status for Node.js:
+
+```bash
+sudo aa-status | grep node
+```
+
+Create a custom AppArmor profile for Claude Code:
+
+```bash
+sudo tee /etc/apparmor.d/claude-code << 'EOF'
+#include <tunables/global>
+/usr/local/bin/node {
+  #include <abstractions/base>
+  #include <abstractions/nameservice>
+  /home/** rw,
+  /tmp/** rw,
+  /usr/** r,
+  /etc/** r,
+}
+EOF
+sudo apparmor_parser -r /etc/apparmor.d/claude-code
+```
+
+Disable AppArmor for Node.js entirely (not recommended for production):
+
+```bash
+sudo aa-disable /usr/bin/node
+```
+
+Check audit logs for the exact denial:
+
+```bash
+sudo dmesg | grep apparmor | tail -20
+```
+
+## Prevention
+
+```markdown
+# CLAUDE.md rule
+On Linux with AppArmor enabled, ensure the Node.js profile allows access to your project directory. Run 'sudo aa-status' to check. Use complain mode during development and enforce mode in production with a proper profile.
+```

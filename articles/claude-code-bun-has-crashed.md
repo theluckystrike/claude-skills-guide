@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix Claude Code 'Bun Has Crashed' Error"
-description: "Resolve the 'Bun has crashed' error in Claude Code with memory fixes, version updates, and diagnostic steps to get back to coding."
+title: "Fix Claude Code 'Bun Has Crashed' Error (2026)"
+description: "Resolve the 'Bun has crashed' error in Claude Code with memory fixes, version updates, and diagnostic steps to get back to coding. Updated for 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills, bun, crash-fix]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 The "Bun has crashed" message in Claude Code means the Bun runtime hit a fatal error — usually a segfault or out-of-memory condition. This guide gives you the exact diagnostic and fix steps to resolve it permanently.

@@ -1,0 +1,85 @@
+---
+title: "ESM vs CJS Module Resolution Failure — Fix (2026)"
+permalink: /claude-code-esm-vs-cjs-module-resolution-fix-2026/
+description: "Fix ERR_REQUIRE_ESM when Claude generates import/require mismatch. Align module format with package.json type field."
+last_tested: "2026-04-22"
+render_with_liquid: false
+---
+
+## The Error
+
+```
+Error [ERR_REQUIRE_ESM]: require() of ES Module /node_modules/some-package/index.mjs is not supported.
+Instead change the require of index.mjs to a dynamic import() which is available in all CommonJS modules.
+```
+
+This error occurs when Claude generates `require()` calls for a package that only exports ESM modules, or when your project mixes ESM and CJS formats.
+
+## The Fix
+
+1. Check your package.json `type` field:
+
+```bash
+python3 -c "import json; print(json.load(open('package.json')).get('type', 'commonjs'))"
+```
+
+2. If your project is ESM (`"type": "module"`), use import syntax:
+
+```typescript
+// Before (CJS - fails in ESM project):
+const pkg = require('some-package');
+
+// After (ESM - correct):
+import pkg from 'some-package';
+```
+
+3. If your project is CJS and the dependency is ESM-only, use dynamic import:
+
+```javascript
+// In a .cjs or "type": "commonjs" project:
+const pkg = await import('some-package');
+```
+
+4. Verify the fix:
+
+```bash
+node --experimental-vm-modules your-script.js
+```
+
+## Why This Happens
+
+Node.js has two module systems: CommonJS (require/module.exports) and ES Modules (import/export). They are not interchangeable. Claude sometimes generates CJS code for an ESM project or vice versa because it does not always detect the project's module format. Many npm packages have migrated to ESM-only, breaking require() calls.
+
+## If That Doesn't Work
+
+- Add explicit file extensions to all imports (required in ESM):
+
+```typescript
+// ESM requires extensions:
+import { helper } from './utils.js';  // Not './utils'
+```
+
+- Configure tsconfig.json for ESM:
+
+```json
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler"
+  }
+}
+```
+
+- Use a bundler (Vite, esbuild) that handles mixed module formats transparently.
+
+## Prevention
+
+Add this to your `CLAUDE.md`:
+
+```markdown
+# Module Format
+- This project uses ESM ("type": "module" in package.json).
+- Always use import/export, never require()/module.exports.
+- Always include .js extensions in relative imports.
+- Check dependency module format before importing.
+```

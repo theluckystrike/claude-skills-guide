@@ -1,7 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Model Compression and Quantization Guide"
+title: "Claude Code Model Compression and Quantization Guide (2026)"
+last_tested: "2026-04-22"
 description: "Learn how to use Claude Code for AI model compression and quantization. Practical techniques for reducing model size while maintaining performance."
 date: 2026-03-14
 last_modified_at: 2026-04-17

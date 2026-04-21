@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for MLflow Model Registry Workflow Automation"
-description: "Learn how to use Claude Code to automate MLflow Model Registry workflows with practical examples for streamlining your MLOps pipeline."
+title: "Claude Code for MLflow Model Registry Workflow (2026)"
+description: "Learn how to use Claude Code to automate MLflow Model Registry workflows with practical examples for streamlining your MLOps pipeline. Updated for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -12,6 +12,7 @@ permalink: /claude-code-mlflow-model-registry-workflow-automation/
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 

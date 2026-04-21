@@ -1,7 +1,8 @@
 ---
 layout: default
-title: "Fix Claude Code Install Killed on Linux"
-description: "Resolve the 'Killed' error during Claude Code installation on low-memory Linux servers and VPS instances by adding swap space."
+title: "Fix Claude Code Install Killed on Linux (2026)"
+description: "Resolve the 'Killed' error during Claude Code installation on low-memory Linux servers and VPS instances by adding swap space. Tested and working in 2026."
+last_tested: "2026-04-22"
 date: 2026-04-15
 permalink: /claude-code-install-killed-low-memory-linux-fix/
 categories: [troubleshooting, claude-code]

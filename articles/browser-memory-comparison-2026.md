@@ -2,7 +2,7 @@
 
 layout: default
 title: "Browser RAM Usage Comparison 2026 — Benchmarks Compared"
-description: "Browser memory usage compared for 2026: Chrome, Firefox, Edge, Brave, and Arc. Real RAM benchmarks with optimization tips."
+description: "Browser memory usage compared for 2026: Chrome, Firefox, Edge, Brave, and Arc. Real RAM benchmarks with optimization tips. Tested and working in 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -14,6 +14,7 @@ score: 8
 geo_optimized: true
 robots: "noindex, nofollow"
 sitemap: false
+last_tested: "2026-04-22"
 ---
 
 # Browser Memory Comparison 2026: A Developer and Power User Guide

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for CDK Pipelines Workflow Tutorial"
+title: "Claude Code for CDK Pipelines Workflow Tutorial (2026)"
 description: "Learn how to use Claude Code with AWS CDK Pipelines for automated infrastructure deployment. Practical examples and code snippets for building robust."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 

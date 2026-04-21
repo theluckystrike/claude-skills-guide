@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code JUnit5 Test Patterns Guide"
+title: "Claude Code JUnit5 Test Patterns Guide (2026)"
 description: "Master JUnit 5 test patterns with Claude Code. Learn practical testing strategies, parameterized tests, and advanced assertions for solid Java."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 permalink: /claude-code-junit5-test-patterns-guide/
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 # Claude Code JUnit5 Test Patterns Guide

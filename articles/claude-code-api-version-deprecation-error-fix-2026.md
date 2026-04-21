@@ -1,0 +1,75 @@
+---
+title: "API Version Deprecated Error — Fix (2026)"
+permalink: /claude-code-api-version-deprecation-error-fix-2026/
+description: "Fix 'API version deprecated' error by updating anthropic-version header. Upgrade SDK to get the latest supported version."
+last_tested: "2026-04-22"
+render_with_liquid: false
+---
+
+## The Error
+
+```
+Error 400: API version '2023-01-01' is deprecated. Minimum supported version is '2023-06-01'. Please update the anthropic-version header.
+```
+
+This error occurs when your SDK or manual API calls use a deprecated `anthropic-version` header value. Anthropic periodically sunsets old API versions.
+
+## The Fix
+
+1. Update the Anthropic SDK to the latest version:
+
+```bash
+pip install --upgrade anthropic
+# or for Node.js
+npm install @anthropic-ai/sdk@latest
+```
+
+2. If making direct HTTP calls, update the header:
+
+```bash
+curl https://api.anthropic.com/v1/messages \
+  -H "anthropic-version: 2023-06-01" \
+  -H "x-api-key: $ANTHROPIC_API_KEY" \
+  -H "content-type: application/json" \
+  -d '{"model":"claude-sonnet-4-20250514","max_tokens":100,"messages":[{"role":"user","content":"test"}]}'
+```
+
+3. Verify Claude Code itself is up to date:
+
+```bash
+claude --version
+npm update -g @anthropic-ai/claude-code
+```
+
+## Why This Happens
+
+Anthropic uses API versioning to evolve the message format, tool schemas, and response structures. Older versions eventually become unsupported as breaking changes accumulate. The SDK normally sets the correct version automatically, but pinned dependencies or old SDK versions send outdated headers.
+
+## If That Doesn't Work
+
+- Check if your code manually sets the version header, overriding the SDK:
+
+```bash
+grep -r "anthropic-version" . --include="*.py" --include="*.ts" --include="*.js"
+```
+
+- Check your lockfile for a pinned SDK version:
+
+```bash
+pip show anthropic | grep Version
+# or
+npm ls @anthropic-ai/sdk
+```
+
+- If using a wrapper library, check that it has been updated to support the current API version.
+
+## Prevention
+
+Add this to your `CLAUDE.md`:
+
+```markdown
+# SDK Version
+- Keep @anthropic-ai/sdk at latest. Run npm update weekly.
+- Never hardcode anthropic-version header — let the SDK manage it.
+- Pin SDK major version only (e.g., ^1.0.0), allow minor/patch updates.
+```

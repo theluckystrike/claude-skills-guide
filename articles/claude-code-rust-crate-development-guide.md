@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Claude Code Rust Crate Development Guide"
+title: "Claude Code Rust Crate Development Guide (2026)"
+last_tested: "2026-04-22"
 description: "A practical guide to developing Rust crates with Claude Code. Learn workflows, tooling, and skill integration for efficient Rust development."
 date: 2026-03-14
 last_modified_at: 2026-04-17

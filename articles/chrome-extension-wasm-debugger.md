@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "WASM Debugger Chrome Extension Guide (2026)"
-description: "Learn how to debug WebAssembly modules within Chrome extensions using built-in DevTools features and practical techniques."
+title: "Debug: WASM Debugger Chrome Extension Guide (2026)"
+description: "Learn how to debug WebAssembly modules within Chrome extensions using built-in DevTools features and practical techniques. Tested and working in 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ score: 8
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 WebAssembly (WASM) has become a cornerstone technology for running high-performance code in browsers. When you're building Chrome extensions that incorporate WASM modules, whether for cryptographic operations, image processing, or game engines, debugging those modules requires specific knowledge. This guide covers practical approaches to debugging WASM within Chrome extensions.
 

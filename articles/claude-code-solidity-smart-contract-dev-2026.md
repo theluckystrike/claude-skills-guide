@@ -1,0 +1,315 @@
+---
+title: "Claude Code for Solidity Smart Contracts (2026)"
+permalink: /claude-code-solidity-smart-contract-dev-2026/
+description: "Solidity smart contract development with Claude Code and Foundry. Build, test, and audit ERC-20/721 contracts securely."
+last_tested: "2026-04-22"
+render_with_liquid: false
+---
+
+## Why Claude Code for Smart Contract Development
+
+Smart contract bugs are irreversible and expensive -- the DAO hack lost $60M, the Wormhole bridge exploit $320M. Solidity development requires thinking about reentrancy, integer overflow (pre-0.8), storage layout collisions in upgradeable proxies, gas optimization, and the EVM's unique execution model. A single unchecked external call or missing access control modifier can drain an entire protocol.
+
+Claude Code generates Solidity contracts with security-first patterns (checks-effects-interactions, OpenZeppelin SafeMath/AccessControl), produces comprehensive Foundry test suites that cover edge cases and attack vectors, and identifies common vulnerabilities that Slither and Mythril might miss. It understands the EVM at the opcode level well enough to suggest gas optimizations that save real deployment costs.
+
+## The Workflow
+
+### Step 1: Foundry Project Setup
+
+```bash
+# Install Foundry
+curl -L https://foundry.paradigm.xyz | bash
+foundryup
+
+# Create project
+forge init my_protocol && cd my_protocol
+forge install OpenZeppelin/openzeppelin-contracts
+
+# Configure remappings
+echo '@openzeppelin/=lib/openzeppelin-contracts/' > remappings.txt
+```
+
+### Step 2: Build a Secure Token Contract
+
+```solidity
+// src/StakingVault.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+/**
+ * @title StakingVault
+ * @notice Stake ERC-20 tokens and earn yield over time.
+ * @dev Follows checks-effects-interactions pattern throughout.
+ *      Uses SafeERC20 for non-standard token compatibility.
+ */
+contract StakingVault is ReentrancyGuard, Ownable {
+    using SafeERC20 for IERC20;
+
+    IERC20 public immutable stakingToken;
+    uint256 public rewardRate;         // tokens per second per staked token (18 decimals)
+    uint256 public lastUpdateTime;
+    uint256 public rewardPerTokenStored;
+    uint256 public totalStaked;
+
+    mapping(address => uint256) public stakedBalance;
+    mapping(address => uint256) public userRewardPerTokenPaid;
+    mapping(address => uint256) public rewards;
+
+    event Staked(address indexed user, uint256 amount);
+    event Withdrawn(address indexed user, uint256 amount);
+    event RewardClaimed(address indexed user, uint256 reward);
+
+    error ZeroAmount();
+    error InsufficientBalance(uint256 requested, uint256 available);
+
+    constructor(address _stakingToken, uint256 _rewardRate) Ownable(msg.sender) {
+        require(_stakingToken != address(0), "Zero address");
+        stakingToken = IERC20(_stakingToken);
+        rewardRate = _rewardRate;
+        lastUpdateTime = block.timestamp;
+    }
+
+    modifier updateReward(address account) {
+        rewardPerTokenStored = rewardPerToken();
+        lastUpdateTime = block.timestamp;
+        if (account != address(0)) {
+            rewards[account] = earned(account);
+            userRewardPerTokenPaid[account] = rewardPerTokenStored;
+        }
+        _;
+    }
+
+    function rewardPerToken() public view returns (uint256) {
+        if (totalStaked == 0) {
+            return rewardPerTokenStored;
+        }
+        return rewardPerTokenStored +
+            ((block.timestamp - lastUpdateTime) * rewardRate * 1e18) / totalStaked;
+    }
+
+    function earned(address account) public view returns (uint256) {
+        return (stakedBalance[account] *
+            (rewardPerToken() - userRewardPerTokenPaid[account])) / 1e18
+            + rewards[account];
+    }
+
+    /**
+     * @notice Stake tokens into the vault.
+     * @param amount Number of tokens to stake (must have approval).
+     */
+    function stake(uint256 amount)
+        external
+        nonReentrant
+        updateReward(msg.sender)
+    {
+        // Checks
+        if (amount == 0) revert ZeroAmount();
+
+        // Effects (state changes before external calls)
+        stakedBalance[msg.sender] += amount;
+        totalStaked += amount;
+
+        // Interactions (external call last)
+        stakingToken.safeTransferFrom(msg.sender, address(this), amount);
+
+        emit Staked(msg.sender, amount);
+    }
+
+    /**
+     * @notice Withdraw staked tokens.
+     * @param amount Number of tokens to withdraw.
+     */
+    function withdraw(uint256 amount)
+        external
+        nonReentrant
+        updateReward(msg.sender)
+    {
+        // Checks
+        if (amount == 0) revert ZeroAmount();
+        if (amount > stakedBalance[msg.sender]) {
+            revert InsufficientBalance(amount, stakedBalance[msg.sender]);
+        }
+
+        // Effects
+        stakedBalance[msg.sender] -= amount;
+        totalStaked -= amount;
+
+        // Interactions
+        stakingToken.safeTransfer(msg.sender, amount);
+
+        emit Withdrawn(msg.sender, amount);
+    }
+
+    function claimReward()
+        external
+        nonReentrant
+        updateReward(msg.sender)
+    {
+        uint256 reward = rewards[msg.sender];
+        if (reward == 0) revert ZeroAmount();
+
+        rewards[msg.sender] = 0;
+        stakingToken.safeTransfer(msg.sender, reward);
+
+        emit RewardClaimed(msg.sender, reward);
+    }
+}
+```
+
+### Step 3: Comprehensive Foundry Tests
+
+```solidity
+// test/StakingVault.t.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+import "forge-std/Test.sol";
+import "../src/StakingVault.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract MockToken is ERC20 {
+    constructor() ERC20("Mock", "MCK") {
+        _mint(msg.sender, 1_000_000 * 1e18);
+    }
+    function mint(address to, uint256 amount) external {
+        _mint(to, amount);
+    }
+}
+
+contract StakingVaultTest is Test {
+    StakingVault vault;
+    MockToken token;
+    address alice = makeAddr("alice");
+    address bob = makeAddr("bob");
+
+    function setUp() public {
+        token = new MockToken();
+        vault = new StakingVault(address(token), 1e15); // reward rate
+        token.transfer(alice, 10_000 * 1e18);
+        token.transfer(bob, 10_000 * 1e18);
+        // Fund vault with rewards
+        token.transfer(address(vault), 100_000 * 1e18);
+    }
+
+    function testStakeAndWithdraw() public {
+        vm.startPrank(alice);
+        token.approve(address(vault), 1000 * 1e18);
+        vault.stake(1000 * 1e18);
+        assertEq(vault.stakedBalance(alice), 1000 * 1e18);
+        assertEq(vault.totalStaked(), 1000 * 1e18);
+
+        vault.withdraw(500 * 1e18);
+        assertEq(vault.stakedBalance(alice), 500 * 1e18);
+        vm.stopPrank();
+    }
+
+    function testCannotWithdrawMoreThanStaked() public {
+        vm.startPrank(alice);
+        token.approve(address(vault), 1000 * 1e18);
+        vault.stake(1000 * 1e18);
+
+        vm.expectRevert();
+        vault.withdraw(2000 * 1e18);
+        vm.stopPrank();
+    }
+
+    function testRewardAccumulation() public {
+        vm.startPrank(alice);
+        token.approve(address(vault), 1000 * 1e18);
+        vault.stake(1000 * 1e18);
+        vm.stopPrank();
+
+        // Advance time by 1 day
+        vm.warp(block.timestamp + 86400);
+
+        uint256 earned = vault.earned(alice);
+        assertGt(earned, 0, "Should have earned rewards");
+    }
+
+    function testReentrancyProtection() public {
+        // Reentrancy guard prevents re-entry during stake/withdraw
+        vm.startPrank(alice);
+        token.approve(address(vault), 1000 * 1e18);
+        vault.stake(1000 * 1e18);
+        // Direct reentrancy would revert with ReentrancyGuardReentrantCall
+        vm.stopPrank();
+    }
+
+    // Fuzz test: any valid amount should work
+    function testFuzzStake(uint256 amount) public {
+        amount = bound(amount, 1, 10_000 * 1e18);
+        vm.startPrank(alice);
+        token.approve(address(vault), amount);
+        vault.stake(amount);
+        assertEq(vault.stakedBalance(alice), amount);
+        vm.stopPrank();
+    }
+}
+```
+
+### Step 4: Verify and Audit
+
+```bash
+# Compile and test
+forge build
+forge test -vvv
+
+# Gas report
+forge test --gas-report
+
+# Static analysis with Slither
+pip install slither-analyzer
+slither src/StakingVault.sol --solc-remaps '@openzeppelin/=lib/openzeppelin-contracts/'
+
+# Expected: 0 high/medium findings, all tests pass
+```
+
+## CLAUDE.md for Solidity Development
+
+```markdown
+# Solidity Smart Contract Standards
+
+## Security Patterns
+- Checks-Effects-Interactions (CEI) in every state-changing function
+- ReentrancyGuard on all external-facing functions that transfer value
+- SafeERC20 for all token transfers (handles non-standard return values)
+- Ownable or AccessControl for admin functions
+- Custom errors over require strings (gas efficient)
+
+## Testing Requirements
+- Unit tests for every public function
+- Fuzz tests for numeric inputs (forge fuzz)
+- Invariant tests for protocol-wide properties
+- Fork tests against mainnet state for integrations
+
+## Libraries
+- OpenZeppelin Contracts 5.0+
+- Foundry (forge, cast, anvil)
+- Slither (static analysis)
+- Mythril (symbolic execution)
+
+## Common Commands
+- forge build — compile contracts
+- forge test -vvv — run tests with verbose output
+- forge test --gas-report — measure gas usage
+- slither . — static security analysis
+- cast call <addr> "balanceOf(address)" <user> — read contract state
+- anvil — local Ethereum node for testing
+```
+
+## Common Pitfalls
+
+- **Missing reentrancy guard on withdrawal:** Without ReentrancyGuard and CEI pattern, an attacker can re-enter withdraw() before the balance update. Claude Code adds nonReentrant to all value-transferring functions and orders state changes before external calls.
+- **Unsafe ERC-20 assumptions:** Some tokens (USDT) do not return bool from transfer(). Using raw transfer() without SafeERC20 silently ignores failures. Claude Code always uses safeTransfer/safeTransferFrom.
+- **Storage collision in proxy upgrades:** Adding new state variables to the wrong position in an upgradeable contract overwrites existing data. Claude Code uses storage gaps and verifies layout compatibility with forge inspect.
+
+## Related
+
+- [Claude Code for DeFi Protocol Integration](/claude-code-defi-protocol-integration-2026/)
+- [Claude Code for Options Pricing](/claude-code-options-pricing-black-scholes-2026/)
+- [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Keyboard Navigation Testing Guide"
+title: "Claude Code Keyboard Navigation Testing Guide (2026)"
 description: "A practical guide to testing keyboard navigation in Claude Code projects. Learn automation patterns, test strategies, and tooling for accessibility."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -12,6 +12,7 @@ permalink: /claude-code-keyboard-navigation-testing-guide/
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 The scope here is keyboard navigation configuration and practical usage with Claude Code. This does not cover general project setup. For that foundation, see [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/).

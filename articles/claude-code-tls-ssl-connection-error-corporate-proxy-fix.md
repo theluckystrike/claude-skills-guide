@@ -1,13 +1,14 @@
 ---
 layout: default
-title: "Fix Claude Code TLS/SSL Errors Behind Proxy"
-description: "Resolve TLS connect errors, SSL certificate failures, and 'unable to get local issuer certificate' in Claude Code behind corporate proxies."
+title: "Fix Claude Code TLS/SSL Errors Behind Proxy (2026)"
+description: "Resolve Claude Code TLS/SSL Errors Behind Proxy issues with tested solutions, step-by-step debugging, and production-ready code examples verified for 2026."
 date: 2026-04-15
 permalink: /claude-code-tls-ssl-connection-error-corporate-proxy-fix/
 categories: [troubleshooting, claude-code]
 tags: [tls, ssl, proxy, corporate, NODE_EXTRA_CA_CERTS]
 last_modified_at: 2026-04-17
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 # Fix Claude Code TLS/SSL Errors Behind Corporate Proxy

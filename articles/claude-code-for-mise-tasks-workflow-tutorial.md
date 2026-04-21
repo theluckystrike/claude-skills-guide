@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Mise Tasks Workflow Tutorial"
+title: "Claude Code for Mise Tasks Workflow Tutorial (2026)"
 description: "Master the integration of Claude Code with Mise tasks to automate your development workflow. Learn practical patterns for creating intelligent task."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -12,6 +12,7 @@ tags: [claude-code, mise, workflow-automation, developer-tools, task-runner, cla
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 This guide focuses specifically on mise tasks within Claude Code workflows. For coverage of adjacent tools and techniques beyond mise tasks, [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) provides complementary context.

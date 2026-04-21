@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Load Testing — Complete Developer Guide"
+title: "Claude Code For Load Testing — Complete Developer (2026)"
 description: "Learn how to integrate Claude Code with K6 for efficient load testing workflows. This guide covers script generation, test execution, and result."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills, k6, load-testing, performance]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 Revised April 2026. With testing framework updates and improved snapshot isolation, some load testing with k6 workflows have changed. This guide reflects the updated Claude Code behavior for load testing with k6.
 

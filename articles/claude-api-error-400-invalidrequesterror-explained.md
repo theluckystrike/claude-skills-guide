@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude API Error 400 invalid_request_error Fix"
+title: "Fix: Claude API Error 400 invalid_request_error Fix (2026)"
 description: "Fix Claude API 400 invalid_request_error. Covers malformed JSON, missing parameters, prefill errors, and request validation with Python and TypeScript."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -11,6 +11,7 @@ score: 8
 categories: [troubleshooting]
 tags: [claude-api, sdk-python, sdk-typescript, api-errors]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 # Claude API Error 400 invalid_request_error Fix

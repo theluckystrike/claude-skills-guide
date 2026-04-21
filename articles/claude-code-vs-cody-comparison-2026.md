@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Claude Code vs Sourcegraph Cody (2026): Compared"
-description: "Claude Code vs Sourcegraph Cody compared: pricing, context, features. 3-persona verdict for solo devs, teams, enterprise."
+description: "Claude Code vs Sourcegraph Cody compared: pricing, context, features. 3-persona verdict for solo devs, teams, enterprise. Tested and working in 2026."
 permalink: /claude-code-vs-cody-comparison-2026/
 date: 2026-04-21
-last_tested: "2026-04-21"
+last_tested: "2026-04-22"
 render_with_liquid: false
 ---
 

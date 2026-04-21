@@ -2,10 +2,10 @@
 
 layout: default
 title: "Tab Management for Claude Code Research Workflows (2026)"
-description: "Best tab management extensions for Claude Code research sessions. Organize documentation, API references, and project tabs while pair-programming with Claude."
+description: "Best tab management extensions for Claude Code research sessions. Organize documentation, API references, and project tabs while pair-programming with..."
 date: 2026-03-15
 last_modified_at: 2026-04-21
-last_tested: "2026-04-21"
+last_tested: "2026-04-22"
 author: "Claude Skills Guide"
 permalink: /onetab-alternative-chrome-extension-2026/
 reviewed: true

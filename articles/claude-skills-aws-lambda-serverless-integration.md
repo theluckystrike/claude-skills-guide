@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills + AWS Lambda: Serverless Guide"
+title: "Claude Skills + AWS Lambda: Serverless Guide (2026)"
 description: "Integrate Claude Code skills with AWS Lambda for serverless AI workflows. Patterns for document processing, test generation, and event-driven pipelines."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -12,6 +12,7 @@ score: 9
 permalink: /claude-skills-aws-lambda-serverless-integration/
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 {% raw %}

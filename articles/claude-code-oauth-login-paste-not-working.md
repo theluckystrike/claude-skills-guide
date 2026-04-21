@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code OAuth Login Paste Not Working — Quick Guide"
+title: "Fix Claude Code OAuth Login Paste Not Working — (2026)"
 description: "Fix the Claude Code OAuth login paste bug where pasting the auth code into the terminal prompt silently fails. Workaround and root cause explained."
 date: 2026-04-14
 last_modified_at: 2026-04-17
@@ -10,6 +10,7 @@ reviewed: true
 categories: [troubleshooting]
 tags: [claude-code, oauth, authentication, error, troubleshooting]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 # Fix: Claude Code OAuth Login Paste Not Working
 

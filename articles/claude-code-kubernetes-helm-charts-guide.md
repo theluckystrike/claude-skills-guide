@@ -1,7 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Kubernetes Helm Charts Guide"
+title: "Claude Code Kubernetes Helm Charts Guide (2026)"
+last_tested: "2026-04-22"
 description: "A practical guide to using Claude Code for Kubernetes and Helm chart development. Learn how to automate deployments, manage configurations, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

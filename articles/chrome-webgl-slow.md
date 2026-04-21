@@ -1,8 +1,9 @@
 ---
 
 layout: default
-title: "Chrome WebGL Slow: Causes and Solutions for Developers"
-description: "Diagnose and fix WebGL performance issues in Chrome. Practical solutions for developers and power users experiencing slow WebGL rendering."
+title: "Chrome WebGL Slow: Causes and Solutions (2026)"
+description: "Chrome WebGL Slow: Causes and Solutions explained with practical examples and tested code. Step-by-step guide covering setup, common pitfalls, and tips..."
+last_tested: "2026-04-22"
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

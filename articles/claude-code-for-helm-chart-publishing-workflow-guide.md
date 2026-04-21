@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Helm Chart Publishing Workflow Guide"
+title: "Claude Code for Helm Chart Publishing Workflow Guide (2026)"
 description: "Learn how to use Claude Code to streamline your Helm chart publishing workflow. This guide covers automating chart creation, validation, versioning, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -12,6 +12,7 @@ score: 7
 reviewed: true
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 {% raw %}

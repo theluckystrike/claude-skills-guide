@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Ebay Sniper Chrome Extension"
+title: "Ebay Sniper Chrome Extension (2026)"
 description: "Learn how to build and use an eBay sniper Chrome extension for automated bidding and price monitoring targeted at developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -11,6 +11,7 @@ tags: [tools]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Tool Use Not Working — Quick Guide"
+title: "Fix Claude Tool Use Not Working — Quick Guide (2026)"
 description: "Fix Claude tool use errors. Covers tool definition validation, tool_choice settings, strict mode, stop_reason handling, and multi-turn tool loops."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -11,6 +11,7 @@ score: 8
 categories: [troubleshooting]
 tags: [claude-api, sdk-python, sdk-typescript, tool-use]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 # Claude Tool Use Not Working Fix
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wappalyzer Alternative Chrome Extension in 2026"
-description: "Wappalyzer Alternative Chrome Extension in 2026. Practical guide with working examples for developers. Tested on Chrome."
+description: "Wappalyzer Alternative Chrome Extension in 2026. Practical guide with working examples for developers. Tested on Chrome. Tested and working in 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -13,6 +13,7 @@ tags: [claude-code, claude-skills]
 geo_optimized: true
 sitemap: false
 robots: "noindex, nofollow"
+last_tested: "2026-04-22"
 ---
 
 # Wappalyzer Alternative Chrome Extension in 2026

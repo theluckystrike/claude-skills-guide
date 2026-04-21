@@ -1,7 +1,8 @@
 ---
 layout: default
-title: "Fix: Claude Code PreToolUse Hooks Stop Working"
-description: "Claude Code PreToolUse hooks and --dangerously-skip-permissions stop working after background tasks complete. Diagnosis and workarounds."
+title: "Fix: Claude Code PreToolUse Hooks Stop Working (2026)"
+description: "Claude Code PreToolUse hooks and --dangerously-skip-permissions stop working after background tasks complete. Diagnosis and workarounds. Updated for 2026."
+last_tested: "2026-04-22"
 date: 2026-04-14
 last_modified_at: 2026-04-17
 author: "Claude Code Guides"

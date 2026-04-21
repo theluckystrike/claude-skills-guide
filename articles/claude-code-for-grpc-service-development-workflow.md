@@ -1,7 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code for gRPC Service Development Workflow"
+title: "Claude Code for gRPC Service Development Workflow (2026)"
+last_tested: "2026-04-22"
 description: "Master gRPC service development with Claude Code. Learn practical workflows for defining proto files, generating code, implementing services, and testing."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Tabs Crashing: Diagnosis and Fixes"
+title: "Chrome Tabs Crashing: Diagnosis and Fixes (2026)"
 description: "Diagnose and fix Chrome tabs crashing issues with developer-focused techniques. Learn memory profiling, extension debugging, and advanced troubleshooting."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -14,6 +14,7 @@ score: 8
 geo_optimized: true
 sitemap: false
 robots: "noindex, nofollow"
+last_tested: "2026-04-22"
 ---
 
 # Chrome Tabs Crashing: A Developer's Guide to Diagnosis and Fixes

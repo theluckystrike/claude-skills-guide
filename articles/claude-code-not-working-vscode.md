@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix Claude Code Not Working VSCode — Quick Guide"
-description: "Resolve Claude Code extension issues in VS Code — blank panels, missing output, connection errors, and WSL integration problems."
+title: "Fix Claude Code Not Working VSCode — Quick Guide (2026)"
+description: "Resolve Claude Code extension issues in VS Code — blank panels, missing output, connection errors, and WSL integration problems. Updated for 2026."
 date: 2026-04-14
 last_modified_at: 2026-04-17
 author: "Claude Code Guides"
@@ -10,6 +10,7 @@ reviewed: true
 categories: [Desktop & IDE Integration]
 tags: ["claude-code", "vscode", "ide", "troubleshooting"]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 # Fix Claude Code Not Working in VS Code
 

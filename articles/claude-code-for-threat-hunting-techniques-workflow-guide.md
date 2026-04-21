@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Threat Hunting with Claude Code: Detection Guide"
+title: "Threat Hunting with Claude Code: Detection Guide (2026)"
 description: "Automate threat hunting with Claude Code. Covers log analysis, IOC correlation, detection rule generation, and incident investigation workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -9,6 +9,7 @@ permalink: /claude-code-for-threat-hunting-techniques-workflow-guide/
 categories: [guides, security]
 tags: [claude-code, claude-skills, threat-hunting, security, cybersecurity]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 

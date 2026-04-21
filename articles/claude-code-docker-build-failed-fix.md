@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Docker Build Failures When Using Claude Code"
+title: "Fix Docker Build Failures When Using Claude Code (2026)"
 description: "Resolve Docker build failures with Claude Code. Fix multi-stage build errors, missing dependencies, layer caching issues, and platform mismatches."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -10,6 +10,7 @@ reviewed: true
 categories: [troubleshooting, claude-code]
 tags: [docker, build, containers, deployment, devops]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 # Fix Docker Build Failures When Using Claude Code

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code OpenTelemetry Tracing Instrumentation Guide"
+title: "Claude Code OpenTelemetry Tracing Instrumentation (2026)"
 description: "Master OpenTelemetry tracing instrumentation with Claude Code. Learn how to set up distributed tracing, create custom spans, and monitor your."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -12,6 +12,7 @@ reviewed: true
 score: 7
 permalink: /claude-code-opentelemetry-tracing-instrumentation-guide/
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 OpenTelemetry has become the industry standard for observability, providing vendor-neutral APIs, SDKs, and tools for collecting distributed traces, metrics, and logs. When combined with Claude Code's AI assistance, you can rapidly implement comprehensive tracing in your applications without deep prior knowledge of OpenTelemetry internals.

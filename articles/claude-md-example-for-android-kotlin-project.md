@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md Example For Android Kotlin — Developer Guide"
+title: "Claude Md Example For Android Kotlin — Developer (2026)"
 description: "Practical guide to creating Claude skill files for Android Kotlin projects. Includes real examples, patterns, and integration tips for mobile development."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 Creating effective Claude skill files for Android Kotlin projects requires understanding both the skill format and how Claude Code processes mobile development workflows. This guide provides practical examples you can adapt immediately for building Android apps with Kotlin.
 

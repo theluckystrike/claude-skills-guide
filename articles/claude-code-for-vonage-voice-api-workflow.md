@@ -2,7 +2,7 @@
 
 layout: default
 title: "How to Use Vonage Voice API (2026)"
-description: "Learn how to use Claude Code to build, manage, and automate Vonage Voice API workflows with practical examples and actionable advice."
+description: "Learn how to use Claude Code to build, manage, and automate Vonage Voice API workflows with practical examples and actionable advice. Updated for 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -12,6 +12,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Building voice applications with Vonage API just got smarter. This guide shows you how to integrate Claude Code into your Vonage Voice API development workflow to automate repetitive tasks, generate boilerplate code, debug NCCO (Nexmo Call Control Objects), and build more reliable voice applications faster.

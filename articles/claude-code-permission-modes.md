@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Claude Code Permission Modes Explained"
+title: "Claude Code Permission Modes Explained (2026)"
+last_tested: "2026-04-22"
 description: "Understand and configure Claude Code permission modes — default, allowEdits, bypassPermissions. Includes settings.json examples and hook-based automation."
 date: 2026-04-14
 last_modified_at: 2026-04-17

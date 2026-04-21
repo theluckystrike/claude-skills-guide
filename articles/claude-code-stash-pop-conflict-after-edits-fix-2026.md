@@ -1,0 +1,64 @@
+---
+title: "Stash Pop Conflict After Claude Edits Fix"
+permalink: /claude-code-stash-pop-conflict-after-edits-fix-2026/
+description: "Fix git stash pop conflict after Claude Code edits. Resolve conflicts manually or drop the stash and re-apply changes to files Claude already modified."
+last_tested: "2026-04-22"
+render_with_liquid: false
+---
+
+## The Error
+
+```
+Auto-merging src/utils/helpers.ts
+CONFLICT (content): Merge conflict in src/utils/helpers.ts
+  Stashed changes conflict with Claude Code's edits on lines 12-34
+  The stash was not dropped. Use 'git stash drop' after resolving.
+```
+
+This appears when you `git stash pop` and the stashed changes conflict with modifications Claude Code made while the changes were stashed.
+
+## The Fix
+
+```bash
+claude "Resolve the stash conflict in src/utils/helpers.ts — keep Claude's refactored version and integrate the stashed validation logic"
+```
+
+1. Let Claude Code resolve the conflict by reading the conflict markers and merging both versions.
+2. Stage the resolved file: `git add src/utils/helpers.ts`.
+3. Drop the stash after confirming the resolution: `git stash drop`.
+
+## Why This Happens
+
+A common workflow is to stash uncommitted changes before asking Claude Code to work on the same files. When you pop the stash afterwards, Git tries to merge the stashed changes with Claude's modifications. If both touched the same lines, the merge fails with conflict markers. Unlike a branch merge, the stash remains in the stash list until explicitly dropped after resolution.
+
+## If That Doesn't Work
+
+Keep Claude's version and discard the stashed changes:
+
+```bash
+git checkout --theirs src/utils/helpers.ts
+git add src/utils/helpers.ts
+git stash drop
+```
+
+Keep the stashed version and discard Claude's changes:
+
+```bash
+git checkout --ours src/utils/helpers.ts
+git add src/utils/helpers.ts
+git stash drop
+```
+
+Apply the stash to a new branch instead:
+
+```bash
+git stash branch stash-recovery
+# Now resolve conflicts on the separate branch
+```
+
+## Prevention
+
+```markdown
+# CLAUDE.md rule
+Before stashing, commit your work-in-progress to a WIP branch instead: 'git checkout -b wip && git commit -am "WIP"'. This avoids stash conflicts entirely. Never stash and then ask Claude to edit the same files.
+```

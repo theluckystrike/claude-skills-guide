@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Contract Testing with Pact Guide"
-description: "Learn how to integrate Pact contract testing into your Claude Code workflow. Practical examples for API consumer and provider verification."
+title: "Claude Code Contract Testing with Pact Guide (2026)"
+description: "Claude Code Contract Testing with Pact Guide practical guide covering setup, configuration, common pitfalls, and advanced tips. All steps tested and..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -11,6 +11,7 @@ reviewed: true
 score: 7
 permalink: /claude-code-contract-testing-pact-guide/
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 

@@ -1,11 +1,11 @@
 ---
 
 layout: default
-title: "Claude Code for CS50 Projects and Debugging (2026)"
+title: "Debug: Claude Code for CS50 Projects and Debugging (2026)"
 description: "Debug CS50 problem sets with Claude Code for C, Python, and SQL assignments. Learn analysis techniques without violating academic integrity policies."
 date: 2026-03-14
 last_modified_at: 2026-04-17
-last_tested: "2026-04-21"
+last_tested: "2026-04-22"
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 author: "Claude Skills Guide"

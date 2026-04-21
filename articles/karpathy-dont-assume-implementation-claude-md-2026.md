@@ -1,0 +1,150 @@
+---
+title: "Implement Karpathy Don't Assume in CLAUDE.md (2026)"
+description: "Copy-paste CLAUDE.md rules that enforce Karpathy's Don't Assume principle — with severity levels, exception handling, and team customization."
+permalink: /karpathy-dont-assume-implementation-claude-md-2026/
+last_tested: "2026-04-22"
+render_with_liquid: false
+---
+
+# Implement Karpathy Don't Assume in CLAUDE.md (2026)
+
+This article provides production-ready CLAUDE.md blocks that enforce Karpathy's Don't Assume principle. Copy-paste these into your project, customize the exception list, and Claude Code stops making silent decisions.
+
+## The Principle
+
+Don't Assume means Claude Code asks before choosing when the codebase doesn't dictate the answer. The implementation challenge is calibration: too strict and every action requires approval; too loose and the principle is toothless.
+
+## Why It Matters
+
+Teams that deploy the Don't Assume principle report 40-60% fewer reverted PRs from Claude Code. The clarification round-trip adds 15-30 seconds but prevents 10-30 minute rewrite cycles when assumptions are wrong.
+
+The key is making the rules specific enough that Claude Code knows exactly when to ask and when to proceed.
+
+## CLAUDE.md Implementation
+
+### Minimal Version (Solo Developers)
+
+```markdown
+## Assumptions Policy
+- When a task has multiple valid approaches, list them with tradeoffs before implementing
+- When adding a new dependency, confirm it's wanted before installing
+- When the task scope is ambiguous, state what you think is in/out and ask
+- EXCEPTION: Follow existing codebase patterns without asking
+```
+
+### Standard Version (Small Teams)
+
+```markdown
+## Don't Assume — Clarification Rules
+
+### Always Ask Before
+- Adding a dependency not in package.json / requirements.txt / go.mod
+- Creating a new directory or file naming convention
+- Choosing between 2+ valid architectural approaches
+- Modifying shared configuration files (tsconfig, eslint, webpack, etc.)
+- Adding functionality beyond what was explicitly requested
+- Changing error handling patterns from what exists in the codebase
+
+### Never Ask About
+- Following established patterns in the codebase (same validation lib, same test structure)
+- Variable and function naming that follows existing conventions
+- Import ordering and formatting (handled by linters)
+- Adding types/interfaces that mirror existing data structures
+
+### How to Ask
+Present options in this format:
+1. **Option A** — [description]. Pros: [x]. Cons: [y].
+2. **Option B** — [description]. Pros: [x]. Cons: [y].
+Recommendation: [your pick and why]
+```
+
+### Strict Version (Enterprise / Compliance)
+
+```markdown
+## Don't Assume — Strict Clarification Protocol
+
+### CRITICAL — Always Ask
+- Any new dependency (including transitive dependencies over 1MB)
+- Any change to authentication, authorization, or security boundaries
+- Any modification to database schemas or migrations
+- Any change to API contracts (request/response shapes, status codes)
+- Any modification to CI/CD pipelines or deployment configurations
+- Any change to environment variables or secrets management
+- Creating, renaming, or deleting files outside the task's stated scope
+
+### IMPORTANT — Ask When Ambiguous
+- Implementation approach when 2+ patterns exist in the codebase
+- Error handling strategy when the task involves new error types
+- Test coverage scope (unit only, integration, e2e)
+- Performance optimization approach (caching, pagination, lazy loading)
+
+### LOW — Proceed With Note
+- Formatting and style choices within established linter rules
+- Internal variable and function naming
+- Comment content and documentation phrasing
+- Test case naming conventions
+
+When asking, use this format:
+**Decision needed:** [what]
+**Options:**
+1. [option with tradeoffs]
+2. [option with tradeoffs]
+**My recommendation:** [pick with reasoning]
+**Risk if wrong:** [consequence of choosing incorrectly]
+```
+
+## Before/After Examples
+
+### Before (No Rules)
+
+```
+User: Add rate limiting to the API
+
+Claude Code: Done. I installed express-rate-limit and applied a
+100 req/15min limit to all routes. I also added Redis store for
+distributed rate limiting since you have Redis in docker-compose.
+```
+
+Problems: chose the library, set arbitrary limits, assumed distributed need.
+
+### After (Standard Version)
+
+```
+User: Add rate limiting to the API
+
+Claude Code:
+**Decision needed:** Rate limiting implementation
+
+**Options:**
+1. **express-rate-limit (in-memory)** — simple, no new deps if you
+   use the built-in store. Won't work across multiple instances.
+2. **express-rate-limit + rate-limit-redis** — adds Redis store.
+   Works across instances. You already have Redis in docker-compose.
+3. **Custom middleware** — full control, no dependencies, but more
+   code to maintain.
+
+**My recommendation:** Option 2 — you have Redis available and your
+docker-compose suggests multi-instance deployment.
+
+Also need to confirm:
+- Rate limits: per-user, per-IP, or per-API-key?
+- Thresholds: how many requests per window?
+- Which routes: all routes, or just auth-sensitive ones?
+```
+
+## Common Mistakes
+
+1. **Rules too vague** — "Ask before making big decisions" gives Claude Code no calibration. Define specific categories.
+
+2. **No exception list** — without "never ask about" items, Claude Code asks about everything, including trivial formatting choices.
+
+3. **Missing the "how to ask" format** — without a format template, Claude Code asks unstructured questions that are hard to answer quickly.
+
+4. **Forgetting to update exceptions** — as your project matures, more patterns become established. Update the "never ask" list to match.
+
+## Related Principles
+
+- [Don't Assume: Real Project Examples](/karpathy-dont-assume-examples-real-projects-2026/) — see these rules in action
+- [Debug When Claude Code Assumes Wrong](/karpathy-dont-assume-debugging-failures-2026/) — diagnose assumption failures
+- [Karpathy Skills Complete Guide](/karpathy-claude-code-skills-complete-guide-2026/) — all four principles
+- [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) — structuring your full CLAUDE.md

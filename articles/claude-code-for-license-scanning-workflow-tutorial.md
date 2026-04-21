@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for License Scanning Workflow Tutorial"
+title: "Claude Code for License Scanning Workflow Tutorial (2026)"
 description: "Learn how to automate software license compliance using Claude Code. This tutorial covers setting up license scanning workflows, integrating tools like."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -13,6 +13,7 @@ reviewed: true
 score: 8
 render_with_liquid: false
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 {% raw %}

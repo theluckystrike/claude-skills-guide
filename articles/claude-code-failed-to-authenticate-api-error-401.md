@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix Claude Code API Error 401 Authentication"
-description: "Resolve Claude Code 'failed to authenticate api error 401' with step-by-step API key validation, environment config, and troubleshooting."
+title: "Fix Claude Code API Error 401 Authentication (2026)"
+description: "Resolve Claude Code 'failed to authenticate api error 401' with step-by-step API key validation, environment config, and troubleshooting. Updated for 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills, api-error, authentication]
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Claude Code throwing "failed to authenticate. api error 401" means your API key is missing, expired, or misconfigured. This guide walks through every cause and gives you a working fix for each.

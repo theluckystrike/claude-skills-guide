@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Meilisearch Integration Workflow"
+title: "Claude Code for Meilisearch Integration Workflow (2026)"
 description: "Learn how to integrate Meilisearch with Claude Code for building fast, relevant search experiences. This guide covers setup, indexing, querying, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -12,6 +12,7 @@ tags: [claude-code, meilisearch, integration, search, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Integrating Meilisearch with Claude Code creates a powerful combination for building lightning-fast search functionality in your applications. Meilisearch delivers sub-50ms search results with typo tolerance and instant indexing, while Claude Code automates the integration complexity, generates boilerplate code, and helps you design optimal indexing strategies. This guide walks you through practical workflows for connecting these two technologies effectively.

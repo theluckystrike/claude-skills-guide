@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Prisma Migration Failures with Claude Code"
+title: "Fix Prisma Migration Failures with Claude Code (2026)"
 description: "Resolve Prisma migration errors using Claude Code. Fix drift detection, failed migrations, data loss warnings, and production rollback scenarios."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -10,6 +10,7 @@ reviewed: true
 categories: [troubleshooting, claude-code]
 tags: [prisma, migration, database, postgresql, debugging]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 # Fix Prisma Migration Failures with Claude Code

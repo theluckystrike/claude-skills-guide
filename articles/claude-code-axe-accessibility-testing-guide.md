@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Axe Accessibility — Complete Developer Guide"
-description: "Automate accessibility audits with axe-core and Claude Code. Fix common WCAG violations using Claude skills."
+title: "Claude Code Axe Accessibility — Complete Developer (2026)"
+description: "Automate accessibility audits with axe-core and Claude Code. Fix common WCAG violations using Claude skills. Includes code examples and fixes."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -11,6 +11,7 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 7
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 Automated accessibility testing has become essential for building inclusive web applications. Axe, the accessibility engine from Deque Systems, provides a powerful library for detecting accessibility violations directly in your development workflow. This guide demonstrates how to integrate axe accessibility testing with Claude Code using specialized skills and practical automation patterns.
 

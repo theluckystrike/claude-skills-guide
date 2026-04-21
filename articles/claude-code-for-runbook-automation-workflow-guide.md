@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Runbook Automation Workflow Guide"
+title: "Claude Code for Runbook Automation Workflow Guide (2026)"
 description: "Learn how to use Claude Code to automate runbook workflows, reduce manual intervention, and build reliable operational automation for your infrastructure."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -11,6 +11,7 @@ reviewed: true
 score: 8
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 

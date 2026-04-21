@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Opus Prefill Not Supported Error — Quick Guide"
+title: "Fix Claude Opus Prefill Not Supported Error — Quick (2026)"
 description: "Fix Claude Opus 4.6 prefill not supported error. Use structured outputs, system prompts, or output_config.format instead of assistant prefilling."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -11,6 +11,7 @@ score: 8
 categories: [troubleshooting]
 tags: [claude-api, sdk-python, sdk-typescript, api-errors]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 # Claude Opus Prefill Not Supported Error Fix
 

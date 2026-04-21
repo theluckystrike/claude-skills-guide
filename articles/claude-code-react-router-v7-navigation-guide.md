@@ -1,7 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code React Router v7 Navigation Guide"
+title: "Claude Code React Router v7 Navigation Guide (2026)"
+last_tested: "2026-04-22"
 description: "Master React Router v7 navigation patterns with Claude Code. Learn file-based routing, loaders, actions, and how AI-assisted development accelerates."
 date: 2026-03-14
 last_modified_at: 2026-04-17

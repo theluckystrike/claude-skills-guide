@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "How to Use Claude Code with Warp Terminal 2026"
-description: "Configure Warp terminal for Claude Code with AI command suggestions, blocks workflow, and session management for productive development."
+description: "Configure Warp terminal for Claude Code with AI command suggestions, blocks workflow, and session management for productive development. Updated for 2026."
 permalink: /claude-code-warp-terminal-workflow-2026/
 date: 2026-04-21
-last_tested: "2026-04-21"
+last_tested: "2026-04-22"
 author: "Claude Skills Guide"
 categories: [guides]
 tags: [claude-code, claude-skills]

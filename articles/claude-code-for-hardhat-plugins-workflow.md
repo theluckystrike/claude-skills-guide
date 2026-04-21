@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Hardhat Plugins Workflow"
+title: "Claude Code for Hardhat Plugins Workflow (2026)"
 description: "Learn how to use Claude Code effectively with Hardhat plugins. Practical examples, code snippets, and actionable advice for Ethereum developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -12,6 +12,7 @@ permalink: /claude-code-for-hardhat-plugins-workflow/
 reviewed: true
 score: 8
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Hardhat is the go-to development environment for Ethereum developers, and its plugin ecosystem is one of its strongest features. Whether you're deploying contracts, running tests, or verifying source code on Etherscan, Hardhat plugins automate repetitive tasks. Claude Code can help you discover, configure, debug, and even build custom Hardhat plugins faster than ever.

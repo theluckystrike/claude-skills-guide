@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Prompt Caching Not Working — Quick Guide"
+title: "Fix Claude Prompt Caching Not Working — Quick Guide (2026)"
 description: "Fix Claude prompt caching issues. Covers minimum token thresholds, cache invalidation, breakpoint placement, and monitoring cache hit rates."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -11,6 +11,7 @@ score: 8
 categories: [troubleshooting]
 tags: [claude-api, sdk-python, prompt-caching, cost-optimization]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 # Claude Prompt Caching Not Working Fix
 

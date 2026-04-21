@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Beta Features: How to Access and Use Them"
+title: "Claude Code Beta Features: How to Access and Use Them (2026)"
 description: "A practical guide for developers and power users on accessing Claude Code beta features. Learn the setup process, configuration options, and practical."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -12,6 +12,7 @@ score: 7
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+last_tested: "2026-04-22"
 ---
 
 Claude Code continues to evolve with new capabilities that enhance developer productivity. Beta features give you early access to cutting-edge functionality before it reaches general availability. This guide walks you through accessing these features, understanding their requirements, and integrating them into your workflow.

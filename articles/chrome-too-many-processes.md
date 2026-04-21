@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Too Many Processes — Developer Guide"
+title: "Chrome Too Many Processes — Developer Guide (2026)"
 description: "Learn why Chrome uses so many processes and how to diagnose which tabs and extensions are consuming the most resources. Practical solutions for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -13,6 +13,7 @@ score: 7
 geo_optimized: true
 sitemap: false
 robots: "noindex, nofollow"
+last_tested: "2026-04-22"
 ---
 # Chrome Too Many Processes: A Developer's Guide to Fixing High Memory Usage
 

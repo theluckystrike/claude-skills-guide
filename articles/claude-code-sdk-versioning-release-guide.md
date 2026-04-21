@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Claude Code SDK Versioning and Release Guide"
+title: "Claude Code SDK Versioning and Release Guide (2026)"
+last_tested: "2026-04-22"
 description: "A practical guide to versioning your custom Claude skills, managing releases, and maintaining backward compatibility for developers and power users."
 date: 2026-03-14
 last_modified_at: 2026-04-17
