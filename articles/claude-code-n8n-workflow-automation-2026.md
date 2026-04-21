@@ -7,6 +7,7 @@ date: 2026-04-21
 last_tested: "2026-04-21"
 render_with_liquid: false
 ---
+{% raw %}
 
 ## The Workflow
 
@@ -214,3 +215,4 @@ Version-controlled N8N workflows enable reproducible automation across environme
 - [Claude Code for GitHub Actions Workflows](/claude-code-skills-for-creating-github-actions-workflows/)
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)
 - [Claude Code Prompt Chaining Workflow 2026](/claude-code-prompt-chaining-workflow-2026/)
+{% endraw %}

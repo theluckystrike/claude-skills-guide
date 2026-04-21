@@ -7,6 +7,7 @@ date: 2026-04-21
 last_tested: "2026-04-21"
 render_with_liquid: false
 ---
+{% raw %}
 
 ## The Workflow
 
@@ -269,3 +270,4 @@ Automated Claude Code in CI catches issues within minutes of pushing code, befor
 - [Claude Code Skills for Creating GitHub Actions Workflows](/claude-code-skills-for-creating-github-actions-workflows/)
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/)
 - [Claude Code Pull Request Review Skill Guide 2026](/claude-code-pull-request-review-skill-2026/)
+{% endraw %}

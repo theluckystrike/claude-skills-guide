@@ -7,6 +7,7 @@ date: 2026-04-21
 last_tested: "2026-04-21"
 render_with_liquid: false
 ---
+{% raw %}
 
 ## The Workflow
 
@@ -278,3 +279,4 @@ Without distribution infrastructure, each team reinvents the same Claude Code co
 - [How to Share Claude Skills with Team](/how-to-share-claude-skills-with-team/)
 - [Claude Skill Naming Conventions](/claude-skill-naming-conventions/)
 - [How Do I Test a Claude Skill Before Deploying to Team](/how-do-i-test-a-claude-skill-before-deploying-to-team/)
+{% endraw %}

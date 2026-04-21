@@ -7,6 +7,7 @@ date: 2026-04-21
 last_tested: "2026-04-21"
 render_with_liquid: false
 ---
+{% raw %}
 
 ## The Workflow
 
@@ -213,3 +214,4 @@ Single prompts hit complexity limits. Chaining breaks complex tasks into focused
 - [Claude Code Batch Processing: Queue Prompts 2026](/claude-code-batch-processing-queue-prompts-2026/)
 - [Claude Opus Orchestrator Sonnet Worker Architecture](/claude-opus-orchestrator-sonnet-worker-architecture/)
 - [Claude Code Tmux Session Management Multi-Agent Workflow](/claude-code-tmux-session-management-multi-agent-workflow/)
+{% endraw %}

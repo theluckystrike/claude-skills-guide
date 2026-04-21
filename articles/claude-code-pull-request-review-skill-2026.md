@@ -7,6 +7,7 @@ date: 2026-04-21
 last_tested: "2026-04-21"
 render_with_liquid: false
 ---
+{% raw %}
 
 ## The Workflow
 
@@ -230,3 +231,4 @@ Automated PR reviews catch security vulnerabilities and code quality issues befo
 - [Best Claude Skills for Code Review Automation](/best-claude-skills-for-code-review-automation/)
 - [AI-Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Claude Code for GitHub Actions Workflows](/claude-code-skills-for-creating-github-actions-workflows/)
+{% endraw %}

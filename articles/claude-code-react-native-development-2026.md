@@ -7,6 +7,7 @@ date: 2026-04-21
 last_tested: "2026-04-21"
 render_with_liquid: false
 ---
+{% raw %}
 
 ## The Workflow
 
@@ -290,3 +291,4 @@ React Native projects have significant boilerplate per screen. Claude Code gener
 - [Claude Code for React Native Navigation Setup Guide](/claude-code-for-react-native-navigation-setup-guide/)
 - [Claude Code for React Native Push Notifications Guide](/claude-code-for-react-native-push-notifications-guide/)
 - [How to Create React Components Faster with Claude Code](/how-to-create-react-components-faster-with-claude-code/)
+{% endraw %}
