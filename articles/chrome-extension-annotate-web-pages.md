@@ -12,6 +12,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 geo_optimized: true
 sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome Extension Annotate Web Pages: Build Your Own Annotation Tool
 

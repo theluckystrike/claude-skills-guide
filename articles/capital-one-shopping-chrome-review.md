@@ -13,6 +13,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 geo_optimized: true
 sitemap: false
+robots: "noindex, nofollow"
 ---
 
 

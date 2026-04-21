@@ -31,9 +31,9 @@ Claude Code is particularly effective for:
 When you encounter a "Service Worker stopped" error or intermittent message passing failures, Claude Code can analyze your full service worker code and identify whether the issue is caused by incorrect event registration timing, missing `chrome.runtime.onInstalled` handlers, or alarm-based keepalive patterns.
 
 **Related Claude Code guides:**
-- [Claude Code Chrome Extension Development](/claude-code-chrome-extension-development/)
-- [Claude Code Debugging Strategies](/claude-code-debugging-strategies/)
-- [Claude Code JavaScript Async Patterns](/claude-code-javascript-patterns/)
+- [Claude Code Chrome Extension Development](/chrome-extension-development-2026/)
+- [Claude Code Debugging Strategies](/claude-code-debugging-skills/)
+- Claude Code JavaScript Async Patterns
 
 ## Understanding Chrome Extension Service Workers
 

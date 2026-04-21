@@ -12,6 +12,8 @@ tags: [tools]
 reviewed: true
 score: 8
 geo_optimized: true
+robots: "noindex, nofollow"
+sitemap: false
 ---
 
 # Best Cookie Manager Chrome Extensions for Developers in 2026

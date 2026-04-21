@@ -12,6 +12,7 @@ reviewed: true
 score: 8
 geo_optimized: true
 sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome Extension Batch Image Download: A Developer Guide
 

@@ -34,9 +34,9 @@ The combination of Zotero for paper collection and Claude Code for paper process
 A typical workflow: collect 10-15 papers on a topic using Zotero's Chrome connector, then use Claude Code to read the PDFs, synthesize the key findings, and generate implementation code based on the most promising approaches.
 
 **Related Claude Code guides:**
-- [Claude Code PDF Processing and Analysis](/claude-code-pdf-processing/)
-- [Claude Code Research Automation](/claude-code-research-workflows/)
-- [Claude Code Documentation Generation](/claude-code-documentation-generation/)
+- Claude Code PDF Processing and Analysis
+- Claude Code Research Automation
+- [Claude Code Documentation Generation](/claude-code-vs-copilot-code-documentation-generation/)
 
 ## Prerequisites and Initial Installation
 

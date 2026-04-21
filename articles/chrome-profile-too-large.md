@@ -36,7 +36,7 @@ The fixes below help you reclaim 2-8 GB of disk space and 500MB-2GB of RAM, dire
 **Related Claude Code guides:**
 - [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/)
 - [How to Fix Claude Code Context Window Full](/claude-code-context-window-full-in-large-codebase-fix/)
-- [Claude Code Performance Optimization Guide](/claude-code-performance-optimization/)
+- [Claude Code Performance Optimization Guide](/claude-code-nextjs-performance-optimization/)
 
 ## What Is a Chrome Profile
 

@@ -12,6 +12,7 @@ categories: [guides]
 tags: [chrome-extension, claude-skills]
 geo_optimized: true
 sitemap: false
+robots: "noindex, nofollow"
 ---
 ## Chrome Extension Black Friday Deal Tracker: A Developer's Guide
 

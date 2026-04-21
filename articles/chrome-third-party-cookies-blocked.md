@@ -12,6 +12,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+robots: "noindex, nofollow"
+sitemap: false
 ---
 
 Chrome's continued rollout of third-party cookies blocking has fundamentally changed how developers build web applications. Starting in 2025 and accelerating through 2026, Chrome now blocks third-party cookies by default for all users who have not explicitly opted into tracking. This guide covers what developers and power users need to know about this change and how to adapt.

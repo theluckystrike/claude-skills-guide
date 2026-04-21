@@ -12,6 +12,7 @@ reviewed: true
 score: 8
 geo_optimized: true
 sitemap: false
+robots: "noindex, nofollow"
 ---
 Building a Chrome extension for bibliography generation can save researchers, students, and developers hours of tedious citation work. This guide walks you through creating a functional bibliography generator extension, from understanding the core architecture to implementing practical features that integrate smoothly with Chrome.
 

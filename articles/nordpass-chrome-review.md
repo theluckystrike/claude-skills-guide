@@ -35,9 +35,9 @@ Claude Code workflows generate and consume credentials at a higher rate than tra
 Storing these in plaintext files, shell history, or clipboard managers creates security vulnerabilities. A password manager with CLI integration lets Claude Code agents retrieve secrets programmatically without exposing them in configuration files that might be committed to version control.
 
 **Related Claude Code guides:**
-- [Claude Code Environment Variables and Configuration](/claude-code-environment-variables/)
-- [Claude Code Security Best Practices](/claude-code-security-best-practices/)
-- [Claude Code Multi-Agent Orchestration](/claude-code-multi-agent-orchestration/)
+- [Claude Code Environment Variables and Configuration](/claude-code-environment-variables-reference/)
+- [Claude Code Security Best Practices](/claude-code-security-best-practices-2026/)
+- [Claude Code Multi-Agent Orchestration](/claude-code-multi-agent-orchestration-patterns-guide/)
 
 The average developer maintains credentials across a substantial number of services: cloud providers, CI/CD platforms, container registries, DNS providers, monitoring tools, code repositories, staging environments, and dozens of SaaS subscriptions. Password reuse across these services is an acute security risk, and storing credentials in plaintext files or environment variables committed to version control is an even worse alternative that appears in more codebases than anyone would like to admit. A capable password manager is not optional for serious development work, the question is which one fits your workflow.
 

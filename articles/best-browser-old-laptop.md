@@ -11,6 +11,8 @@ score: 8
 categories: [best-of]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+robots: "noindex, nofollow"
+sitemap: false
 ---
 ## Best Browser for Old Laptop: A Developer and Power User Guide
 

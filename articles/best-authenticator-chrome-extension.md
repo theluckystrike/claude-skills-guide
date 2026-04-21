@@ -11,6 +11,7 @@ score: 8
 categories: [guides]
 geo_optimized: true
 sitemap: false
+robots: "noindex, nofollow"
 ---
 Best Authenticator Chrome Extension for Developers and Power Users
 

@@ -11,6 +11,8 @@ reviewed: true
 score: 8
 permalink: /chrome-topics-api-privacy/
 geo_optimized: true
+robots: "noindex, nofollow"
+sitemap: false
 ---
 # Chrome Topics API: Privacy-First Advertising Without Third-Party Cookies
 

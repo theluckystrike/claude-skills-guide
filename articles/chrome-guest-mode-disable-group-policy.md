@@ -35,9 +35,9 @@ Key use cases for Claude Code developers:
 If you are building browser tools with Claude Code, understanding Guest Mode behavior and Group Policy controls ensures your extensions work correctly across managed and unmanaged environments.
 
 **Related Claude Code guides:**
-- [Claude Code Chrome Extension Development](/claude-code-chrome-extension-development/)
+- [Claude Code Chrome Extension Development](/chrome-extension-development-2026/)
 - [Claude Code MCP Server Setup Guide](/claude-code-mcp-server-setup/)
-- [Claude Code Workflow Automation](/claude-code-workflow-automation/)
+- [Claude Code Workflow Automation](/claude-code-drone-ci-workflow-automation/)
 
 ## Understanding Chrome Guest Mode
 

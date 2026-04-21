@@ -33,8 +33,8 @@ On a 16 GB machine running 3 Claude Code agents, switching from Chrome to a ligh
 
 **Related Claude Code guides:**
 - [Claude Code Error Out of Memory Fix](/claude-code-error-out-of-memory-large-codebase-fix/)
-- [Claude Code Performance Optimization](/claude-code-performance-optimization/)
-- [Claude Code Multi-Agent Orchestration](/claude-code-multi-agent-orchestration/)
+- [Claude Code Performance Optimization](/claude-code-nextjs-performance-optimization/)
+- [Claude Code Multi-Agent Orchestration](/claude-code-multi-agent-orchestration-patterns-guide/)
 
 ## Understanding Browser Memory Consumption
 

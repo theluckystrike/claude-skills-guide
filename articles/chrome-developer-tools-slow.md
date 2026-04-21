@@ -11,6 +11,8 @@ score: 8
 categories: [troubleshooting]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+robots: "noindex, nofollow"
+sitemap: false
 ---
 Chrome Developer Tools is the backbone of web development debugging, but performance bottlenecks can turn a powerful tool into a frustrating experience. When DevTools slows down, your productivity takes a direct hit. This guide covers the most common causes of Chrome Developer Tools running slow and provides actionable solutions to restore speed.
 

@@ -34,9 +34,9 @@ Key advantages of using Claude Code for Chrome extension development:
 When prompting Claude Code to build extensions that support incognito mode, include the incognito requirements in your initial prompt to avoid refactoring later.
 
 **Related Claude Code guides:**
-- [Claude Code Chrome Extension Manifest V3 Guide](/claude-code-chrome-extension-development/)
-- [Claude Code Testing Automation](/claude-code-testing-strategies/)
-- [Claude Code JavaScript Best Practices](/claude-code-javascript-patterns/)
+- [Claude Code Chrome Extension Manifest V3 Guide](/chrome-extension-development-2026/)
+- [Claude Code Testing Automation](/claude-code-shift-left-testing-strategy-guide/)
+- Claude Code JavaScript Best Practices
 
 ## How Incognito Mode Affects Extensions
 

@@ -114,11 +114,11 @@ Each template is a production-ready CLAUDE.md file for a specific framework. Dro
 | 13 | [CLAUDE.md for React + Vite + TypeScript](/claude-md-example-for-react-vite-typescript/) | React 19 -- Vite 6, HMR, lazy loading, Tanstack Query |
 | 14 | [CLAUDE.md for Android + Kotlin + Jetpack Compose](/claude-md-example-for-android-kotlin-jetpack/) | Kotlin 2.1 -- Compose state, ViewModel, Room |
 | 15 | [CLAUDE.md for React Native + Expo](/claude-md-example-for-react-native-expo/) | React Native 0.76 -- Expo SDK 52, EAS Build, Reanimated |
-| 21 | [CLAUDE.md for SvelteKit](/claude-md-example-for-sveltekit/) | SvelteKit 2.x -- Svelte 5 runes, form actions, Drizzle ORM |
-| 22 | [CLAUDE.md for Nuxt 3 + Vue](/claude-md-example-for-nuxt3-vue/) | Nuxt 3.14 -- Vue 3 Composition API, Pinia, Nitro server routes |
-| 23 | [CLAUDE.md for Spring Boot + Java](/claude-md-example-for-spring-boot-java/) | Spring Boot 3.4 -- Java 21, JPA, Spring Security, virtual threads |
-| 24 | [CLAUDE.md for Astro](/claude-md-example-for-astro/) | Astro 5.1 -- content collections, islands architecture, MDX |
-| 25 | [CLAUDE.md for .NET + ASP.NET Core](/claude-md-example-for-dotnet-aspnet/) | ASP.NET Core 9.0 -- C# 13, EF Core 9, minimal APIs, MediatR |
+| 21 | CLAUDE.md for SvelteKit | SvelteKit 2.x -- Svelte 5 runes, form actions, Drizzle ORM |
+| 22 | CLAUDE.md for Nuxt 3 + Vue | Nuxt 3.14 -- Vue 3 Composition API, Pinia, Nitro server routes |
+| 23 | CLAUDE.md for Spring Boot + Java | Spring Boot 3.4 -- Java 21, JPA, Spring Security, virtual threads |
+| 24 | CLAUDE.md for Astro | Astro 5.1 -- content collections, islands architecture, MDX |
+| 25 | [CLAUDE.md for .NET + ASP.NET Core](/claude-md-example-for-dotnet-aspnet-core-project/) | ASP.NET Core 9.0 -- C# 13, EF Core 9, minimal APIs, MediatR |
 
 ### Pattern-Specific Templates
 
@@ -398,7 +398,7 @@ Prompt injection prevention and security engineering workflows.
 
 The complete Playbook includes every article above as clean markdown files, organized by category, plus a quick-start guide that tells you the 5 articles to read first.
 
-[Download the Complete Playbook](/playbook/download/) -- Free with email signup.
+Download the Complete Playbook -- Free with email signup.
 
 The public half (100 patterns) is also available as a [GitHub repository](https://github.com/theluckystrike/claude-code-playbook) you can star, fork, and contribute to.
 

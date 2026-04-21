@@ -12,6 +12,7 @@ reviewed: true
 score: 8
 geo_optimized: true
 sitemap: false
+robots: "noindex, nofollow"
 ---
 # ChatGPT for Google Chrome Extension: A Developer Guide
 

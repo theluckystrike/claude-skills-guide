@@ -12,6 +12,7 @@ reviewed: true
 score: 8
 geo_optimized: true
 sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome Extension AI Image Generator: A Complete Guide for Developers
 

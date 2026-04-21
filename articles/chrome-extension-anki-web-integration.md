@@ -12,6 +12,7 @@ categories: [integrations]
 tags: [chrome-extension, claude-skills]
 geo_optimized: true
 sitemap: false
+robots: "noindex, nofollow"
 ---
 Building a Chrome extension that integrates with Anki opens up powerful possibilities for automated learning. Whether you want to capture vocabulary from foreign language websites, save technical documentation highlights, or create flashcards from research articles, combining Chrome's web access with Anki's spaced repetition system creates a smooth learning pipeline.
 

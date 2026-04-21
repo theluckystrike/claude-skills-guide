@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
+robots: "noindex, nofollow"
+sitemap: false
 ---
 ## Chrome Web Vitals Optimization: A Practical Guide for Developers
 

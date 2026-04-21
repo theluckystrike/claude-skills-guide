@@ -12,6 +12,8 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
+robots: "noindex, nofollow"
+sitemap: false
 ---
 
 # Browser Memory Comparison 2026: A Developer and Power User Guide

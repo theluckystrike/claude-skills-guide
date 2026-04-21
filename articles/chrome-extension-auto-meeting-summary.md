@@ -12,6 +12,7 @@ reviewed: true
 score: 8
 geo_optimized: true
 sitemap: false
+robots: "noindex, nofollow"
 ---
 Chrome extensions have transformed how we capture and process information from web-based meeting platforms. Building an auto meeting summary extension requires understanding browser APIs, content scripts, and message passing between different extension components. This guide walks you through creating a functional Chrome extension that captures meeting transcripts and generates summaries automatically.
 

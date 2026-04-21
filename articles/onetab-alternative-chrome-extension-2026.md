@@ -33,8 +33,8 @@ The extensions below reduce Chrome memory usage by 40-80%, directly translating 
 
 **Related Claude Code guides:**
 - [Claude Code Context Window Management](/claude-code-context-window-full-in-large-codebase-fix/)
-- [Claude Code Performance Optimization](/claude-code-performance-optimization/)
-- [Claude Code Multi-Agent Setup](/claude-code-multi-agent-orchestration/)
+- [Claude Code Performance Optimization](/claude-code-nextjs-performance-optimization/)
+- [Claude Code Multi-Agent Setup](/claude-code-multi-agent-orchestration-patterns-guide/)
 
 ## Why Developers Seek OneTab Alternatives
 

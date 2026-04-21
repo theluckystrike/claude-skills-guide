@@ -12,6 +12,7 @@ categories: [guides]
 tags: [claude-code, claude-skills]
 geo_optimized: true
 sitemap: false
+robots: "noindex, nofollow"
 ---
 ## Chrome Extension Bookmark Manager for Students: A Practical Guide
 

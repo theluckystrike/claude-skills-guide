@@ -11,6 +11,8 @@ tags: [browser, performance, benchmarking, javascript]
 score: 7
 reviewed: true
 geo_optimized: true
+robots: "noindex, nofollow"
+sitemap: false
 ---
 # Browser Speed Benchmark 2026: A Practical Guide for Developers
 

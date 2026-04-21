@@ -11,6 +11,8 @@ score: 8
 categories: [guides]
 tags: [chrome, claude-skills]
 geo_optimized: true
+robots: "noindex, nofollow"
+sitemap: false
 ---
 Cryptomining scripts silently consume your CPU resources when you visit certain websites. These scripts run JavaScript-based miners that can significantly slow down your machine, increase power consumption, and degrade your browsing experience. As a developer or power user, you have several effective methods to block cryptomining in Chrome without sacrificing functionality.
 
