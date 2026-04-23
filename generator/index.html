@@ -1,1460 +1,1022 @@
 ---
 layout: null
 permalink: /generator/
-render_with_liquid: false
+sitemap: true
+title: "CLAUDE.md Generator — Build Custom Claude Code Guidelines (2026)"
+description: "Generate a production-ready CLAUDE.md file for your project. Select language, framework, coding style, and team size. Copy or download instantly."
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CLAUDE.md Generator — Build Your AI Config in 60 Seconds</title>
-<meta name="description" content="Generate a production-ready CLAUDE.md file for your project. 26 frameworks, all major languages. Claude Code stops guessing and starts engineering.">
-<meta property="og:title" content="CLAUDE.md Generator — Claude Code Guides">
-<meta property="og:description" content="Generate a production-ready CLAUDE.md in 60 seconds. 26 frameworks supported.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://claudecodeguides.com/generator/">
-<meta property="og:image" content="https://claudecodeguides.com/assets/og-generator.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="CLAUDE.md Generator — Claude Code Guides">
-<meta name="twitter:description" content="Generate a production-ready CLAUDE.md in 60 seconds.">
-<link rel="canonical" href="https://claudecodeguides.com/generator/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-/* ── Reset & Base ── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; scroll-behavior: smooth; }
-body {
-  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
-  background: #141413;
-  color: #faf9f5;
-  line-height: 1.6;
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-}
-a { color: #d97757; text-decoration: none; transition: opacity 0.2s; }
-a:hover { opacity: 0.85; }
-a:focus-visible, button:focus-visible, input:focus-visible,
-select:focus-visible, textarea:focus-visible {
-  outline: 2px solid #d97757;
-  outline-offset: 2px;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLAUDE.md Generator — Build Custom Claude Code Guidelines (2026)</title>
+  <meta name="description" content="Generate a production-ready CLAUDE.md file for your project. Select language, framework, coding style, and team size. Copy or download instantly.">
+  <link rel="canonical" href="https://claudecodeguides.com/generator/">
+  <meta property="og:title" content="CLAUDE.md Generator — Build Custom Claude Code Guidelines (2026)">
+  <meta property="og:description" content="Generate a production-ready CLAUDE.md file for your project. Select language, framework, coding style, and team size. Copy or download instantly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://claudecodeguides.com/generator/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CLAUDE.md Generator — Claude Code Guides">
+  <meta name="twitter:description" content="Generate a production-ready CLAUDE.md in 60 seconds. 13 languages, 30+ frameworks.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ── Layout ── */
-.container { max-width: 760px; margin: 0 auto; padding: 0 1.25rem; }
-.container-wide { max-width: 900px; margin: 0 auto; padding: 0 1.25rem; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
 
-/* ── Header ── */
-.site-header {
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(250,249,245,0.08);
-}
-.site-header .container-wide {
-  display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;
-}
-.site-logo {
-  font-size: 1.05rem; font-weight: 600; color: #faf9f5;
-  letter-spacing: -0.01em;
-}
-.site-nav {
-  display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center;
-}
-.site-nav a {
-  font-size: 0.8rem; color: rgba(250,249,245,0.6);
-  transition: color 0.2s; white-space: nowrap;
-}
-.site-nav a:hover { color: #faf9f5; opacity: 1; }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
 
-/* ── Hero ── */
-.hero {
-  text-align: center;
-  padding: 4rem 0 2.5rem;
-}
-.hero h1 {
-  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
-  margin-bottom: 1rem;
-}
-.hero h1 .accent { color: #d97757; }
-.hero .subhead {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  color: rgba(250,249,245,0.6);
-  max-width: 580px;
-  margin: 0 auto;
-  line-height: 1.5;
-}
+    /* Header nav */
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      padding: 16px;
+      border-bottom: 1px solid #21262d;
+      font-size: 14px;
+    }
+    .site-nav a { color: #8b949e; text-decoration: none; }
+    .site-nav a:hover { color: #c9d1d9; }
+    .site-nav .brand { color: #e6edf3; font-weight: 600; }
 
-/* ── Form ── */
-.gen-form {
-  background: rgba(250,249,245,0.03);
-  border: 1px solid rgba(250,249,245,0.08);
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-}
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-@media (max-width: 600px) {
-  .form-grid { grid-template-columns: 1fr; }
-}
-.form-group { display: flex; flex-direction: column; }
-.form-group.full-width { grid-column: 1 / -1; }
-.form-group label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: rgba(250,249,245,0.5);
-  margin-bottom: 0.5rem;
-}
-.form-group select,
-.form-group textarea {
-  background: rgba(250,249,245,0.06);
-  border: 1px solid rgba(250,249,245,0.12);
-  border-radius: 8px;
-  color: #faf9f5;
-  font-family: inherit;
-  font-size: 0.95rem;
-  padding: 0.65rem 0.85rem;
-  transition: border-color 0.2s;
-  appearance: none;
-}
-.form-group select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.85rem center;
-  padding-right: 2.25rem;
-}
-.form-group select:hover,
-.form-group textarea:hover {
-  border-color: rgba(250,249,245,0.25);
-}
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: #d97757;
-  outline: none;
-}
-.form-group textarea {
-  min-height: 90px;
-  resize: vertical;
-}
+    h1 {
+      font-size: 28px;
+      color: #e6edf3;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    h1 .accent { color: #6ee7b7; }
 
-/* ── Radio Groups ── */
-.radio-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-.radio-group input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.radio-group label.radio-pill {
-  display: inline-block;
-  padding: 0.4rem 0.85rem;
-  border-radius: 6px;
-  border: 1px solid rgba(250,249,245,0.12);
-  background: rgba(250,249,245,0.04);
-  font-size: 0.85rem;
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: 0;
-  color: rgba(250,249,245,0.7);
-  cursor: pointer;
-  transition: all 0.2s;
-  margin-bottom: 0;
-}
-.radio-group label.radio-pill:hover {
-  border-color: rgba(250,249,245,0.3);
-  color: #faf9f5;
-}
-.radio-group input[type="radio"]:checked + label.radio-pill {
-  background: rgba(217,119,87,0.15);
-  border-color: #d97757;
-  color: #d97757;
-  font-weight: 500;
-}
-.radio-group input[type="radio"]:focus-visible + label.radio-pill {
-  outline: 2px solid #d97757;
-  outline-offset: 2px;
-}
+    .subtitle {
+      color: #8b949e;
+      font-size: 15px;
+      margin-bottom: 32px;
+    }
 
-/* ── Generate Button ── */
-.btn-generate {
-  display: block;
-  width: 100%;
-  margin-top: 1.75rem;
-  padding: 0.9rem 2rem;
-  background: #d97757;
-  color: #141413;
-  font-family: inherit;
-  font-size: 1.05rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
-}
-.btn-generate:hover {
-  background: #e08a6c;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 20px rgba(217,119,87,0.3);
-}
-.btn-generate:active { transform: translateY(0); }
+    /* Form sections */
+    .input-section {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .input-section h3 {
+      font-size: 15px;
+      color: #e6edf3;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
 
-/* ── Output Section ── */
-.output-section {
-  display: none;
-  margin-top: 2.5rem;
-  animation: fadeUp 0.4s ease-out;
-}
-.output-section.visible { display: block; }
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.output-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-.output-header h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-.output-meta {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.8rem;
-  color: rgba(250,249,245,0.5);
-}
-.output-meta span { white-space: nowrap; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 500px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+    .form-group { display: flex; flex-direction: column; }
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #8b949e;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .form-group select {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      color: #c9d1d9;
+      font-size: 15px;
+      padding: 10px 12px;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238b949e' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 32px;
+      cursor: pointer;
+    }
+    .form-group select:focus {
+      border-color: #6ee7b7;
+      outline: none;
+    }
 
-.code-block {
-  background: #0d0d0c;
-  border: 1px solid rgba(250,249,245,0.08);
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-.code-block pre {
-  padding: 1.25rem;
-  overflow-x: auto;
-  font-family: 'DM Mono', 'SF Mono', 'Fira Code', monospace;
-  font-size: 0.82rem;
-  line-height: 1.65;
-  color: #d4d0c8;
-  tab-size: 2;
-  max-height: 600px;
-  overflow-y: auto;
-}
-/* Markdown syntax highlighting */
-.code-block .md-h1 { color: #d97757; font-weight: 700; }
-.code-block .md-h2 { color: #d97757; font-weight: 600; }
-.code-block .md-h3 { color: #e08a6c; font-weight: 600; }
-.code-block .md-bullet { color: #d97757; }
-.code-block .md-code { color: #7ec699; }
-.code-block .md-bold { color: #faf9f5; font-weight: 600; }
-.code-block .md-comment { color: rgba(250,249,245,0.35); }
+    /* Radio pill groups */
+    .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .radio-group input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0; height: 0;
+    }
+    .radio-group .pill {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      background: #0d1117;
+      font-size: 14px;
+      color: #8b949e;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .radio-group .pill:hover {
+      border-color: #6ee7b7;
+      color: #c9d1d9;
+    }
+    .radio-group input:checked + .pill {
+      background: rgba(110, 231, 183, 0.1);
+      border-color: #6ee7b7;
+      color: #6ee7b7;
+      font-weight: 600;
+    }
 
-.output-actions {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-.btn-action {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.25rem;
-  border-radius: 8px;
-  border: 1px solid rgba(250,249,245,0.15);
-  background: rgba(250,249,245,0.05);
-  color: #faf9f5;
-  font-family: inherit;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.btn-action:hover {
-  border-color: rgba(250,249,245,0.3);
-  background: rgba(250,249,245,0.08);
-}
-.btn-action.btn-primary {
-  background: #d97757;
-  border-color: #d97757;
-  color: #141413;
-}
-.btn-action.btn-primary:hover {
-  background: #e08a6c;
-  border-color: #e08a6c;
-}
-.btn-action .icon { font-size: 1rem; line-height: 1; }
-.copy-feedback {
-  font-size: 0.8rem;
-  color: #7ec699;
-  opacity: 0;
-  transition: opacity 0.3s;
-  align-self: center;
-}
-.copy-feedback.show { opacity: 1; }
+    /* Checkbox toggles */
+    .toggle-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 500px) {
+      .toggle-grid { grid-template-columns: 1fr; }
+    }
+    .toggle-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #c9d1d9;
+    }
+    .toggle-item input[type="checkbox"] {
+      width: 18px; height: 18px;
+      accent-color: #6ee7b7;
+      cursor: pointer;
+    }
 
-/* ── Email Capture ── */
-.email-banner {
-  display: none;
-  margin-top: 2.5rem;
-  padding: 1.5rem 2rem;
-  background: rgba(217,119,87,0.06);
-  border: 1px solid rgba(217,119,87,0.15);
-  border-radius: 10px;
-  animation: fadeUp 0.4s ease-out 0.2s both;
-}
-.email-banner.visible { display: block; }
-.email-banner p {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.75rem;
-}
-.email-banner .email-row {
-  display: flex;
-  gap: 0.5rem;
-}
-@media (max-width: 500px) {
-  .email-banner .email-row { flex-direction: column; }
-}
-.email-banner input[type="email"] {
-  flex: 1;
-  padding: 0.6rem 0.85rem;
-  background: rgba(250,249,245,0.06);
-  border: 1px solid rgba(250,249,245,0.15);
-  border-radius: 6px;
-  color: #faf9f5;
-  font-family: inherit;
-  font-size: 0.9rem;
-}
-.email-banner input[type="email"]:focus {
-  border-color: #d97757;
-  outline: none;
-}
-.email-banner button {
-  padding: 0.6rem 1.25rem;
-  background: #d97757;
-  color: #141413;
-  border: none;
-  border-radius: 6px;
-  font-family: inherit;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.2s;
-}
-.email-banner button:hover { background: #e08a6c; }
-.email-thanks {
-  display: none;
-  font-size: 0.9rem;
-  color: #7ec699;
-  padding-top: 0.5rem;
-}
+    /* Generate button */
+    .btn-generate {
+      display: block;
+      width: 100%;
+      padding: 14px 24px;
+      background: #6ee7b7;
+      color: #0d1117;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-generate:hover {
+      background: #5dd9a8;
+      transform: translateY(-1px);
+    }
+    .btn-generate:active { transform: translateY(0); }
 
-/* ── Upsell Cards ── */
-.upsell-section {
-  display: none;
-  margin-top: 3rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid rgba(250,249,245,0.08);
-  animation: fadeUp 0.4s ease-out 0.3s both;
-}
-.upsell-section.visible { display: block; }
-.upsell-section h2 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-.upsell-section .upsell-sub {
-  text-align: center;
-  color: rgba(250,249,245,0.5);
-  font-size: 0.95rem;
-  margin-bottom: 1.75rem;
-}
-.upsell-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-}
-@media (max-width: 640px) {
-  .upsell-grid { grid-template-columns: 1fr; }
-}
-.upsell-card {
-  background: rgba(250,249,245,0.03);
-  border: 1px solid rgba(250,249,245,0.1);
-  border-radius: 12px;
-  padding: 1.75rem;
-  position: relative;
-  transition: border-color 0.2s;
-}
-.upsell-card:hover { border-color: rgba(250,249,245,0.2); }
-.upsell-card.popular {
-  border-color: rgba(217,119,87,0.4);
-}
-.badge-popular {
-  position: absolute;
-  top: -10px;
-  right: 16px;
-  background: #d97757;
-  color: #141413;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 0.2rem 0.65rem;
-  border-radius: 4px;
-}
-.upsell-card h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-}
-.upsell-price {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #d97757;
-  margin-bottom: 1rem;
-}
-.upsell-price span {
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: rgba(250,249,245,0.5);
-}
-.upsell-card ul {
-  list-style: none;
-  margin-bottom: 1.5rem;
-}
-.upsell-card ul li {
-  position: relative;
-  padding-left: 1.3rem;
-  font-size: 0.88rem;
-  color: rgba(250,249,245,0.75);
-  margin-bottom: 0.45rem;
-  line-height: 1.4;
-}
-.upsell-card ul li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.45em;
-  width: 6px;
-  height: 6px;
-  background: #d97757;
-  border-radius: 50%;
-}
-.btn-upsell {
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 0.7rem 1.25rem;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 0.95rem;
-  font-weight: 600;
-  transition: all 0.2s;
-  border: none;
-  cursor: pointer;
-}
-.btn-upsell-community {
-  background: rgba(250,249,245,0.08);
-  color: #faf9f5;
-  border: 1px solid rgba(250,249,245,0.15);
-}
-.btn-upsell-community:hover {
-  background: rgba(250,249,245,0.12);
-  border-color: rgba(250,249,245,0.25);
-}
-.btn-upsell-lifetime {
-  background: #d97757;
-  color: #141413;
-}
-.btn-upsell-lifetime:hover {
-  background: #e08a6c;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 20px rgba(217,119,87,0.25);
-}
+    /* Output section */
+    .output-section {
+      display: none;
+      margin-top: 32px;
+      animation: fadeIn 0.4s ease-out;
+    }
+    .output-section.visible { display: block; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-/* ── Footer ── */
-.site-footer {
-  margin-top: 4rem;
-  padding: 2rem 0;
-  border-top: 1px solid rgba(250,249,245,0.06);
-  text-align: center;
-  font-size: 0.8rem;
-  color: rgba(250,249,245,0.35);
-}
+    .output-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .output-header h2 {
+      font-size: 20px;
+      color: #e6edf3;
+    }
+    .output-meta {
+      font-size: 13px;
+      color: #8b949e;
+    }
 
-/* ── Scrollbar ── */
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb {
-  background: rgba(250,249,245,0.15);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover { background: rgba(250,249,245,0.25); }
-</style>
+    .code-block {
+      background: #010409;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+    .code-block pre {
+      padding: 20px;
+      overflow-x: auto;
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #c9d1d9;
+      max-height: 500px;
+      overflow-y: auto;
+      tab-size: 2;
+    }
+    .code-block .md-h1 { color: #6ee7b7; font-weight: 700; }
+    .code-block .md-h2 { color: #6ee7b7; font-weight: 600; }
+    .code-block .md-h3 { color: #7ee8c0; font-weight: 600; }
+    .code-block .md-bullet { color: #6ee7b7; }
+    .code-block .md-code { color: #a5d6ff; }
+    .code-block .md-bold { color: #e6edf3; font-weight: 600; }
+    .code-block .md-comment { color: #484f58; }
+
+    .output-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+      background: #161b22;
+      color: #c9d1d9;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-action:hover {
+      border-color: #6ee7b7;
+      color: #e6edf3;
+    }
+    .btn-action.primary {
+      background: #6ee7b7;
+      border-color: #6ee7b7;
+      color: #0d1117;
+      font-weight: 700;
+    }
+    .btn-action.primary:hover {
+      background: #5dd9a8;
+    }
+    .copy-feedback {
+      font-size: 13px;
+      color: #6ee7b7;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .copy-feedback.show { opacity: 1; }
+
+    /* Blurred sections (paywall) */
+    .blurred {
+      filter: blur(6px);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Paywall overlay */
+    #paywall-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(10, 10, 15, 0.92);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .paywall-box {
+      max-width: 480px;
+      text-align: center;
+      padding: 40px 24px;
+    }
+    .paywall-box h2 {
+      color: #6ee7b7;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    .paywall-box p {
+      color: #c8ccd0;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .paywall-cta {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #6ee7b7;
+      color: #0a0a0f;
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.15s;
+    }
+    .paywall-cta:hover { background: #5dd9a8; }
+    .paywall-fine {
+      color: #666 !important;
+      font-size: 13px !important;
+      margin-top: 16px !important;
+    }
+
+    /* SEO content */
+    .seo-content {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid #30363d;
+    }
+    .seo-content h2 {
+      font-size: 22px;
+      color: #e6edf3;
+      margin: 32px 0 12px;
+    }
+    .seo-content h2:first-child { margin-top: 0; }
+    .seo-content p {
+      margin-bottom: 16px;
+      color: #c9d1d9;
+      line-height: 1.7;
+    }
+    .seo-content ul, .seo-content ol {
+      margin: 0 0 16px 24px;
+      color: #c9d1d9;
+    }
+    .seo-content li { margin-bottom: 6px; }
+    .seo-content details {
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+      background: #161b22;
+    }
+    .seo-content summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #e6edf3;
+      font-size: 15px;
+    }
+    .seo-content details p {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #8b949e;
+    }
+
+    .cta-banner {
+      background: rgba(110, 231, 183, 0.06);
+      border: 1px solid rgba(110, 231, 183, 0.2);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      margin: 32px 0;
+    }
+    .cta-banner p { margin-bottom: 16px; font-size: 15px; }
+    .cta-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #6ee7b7;
+      color: #0d1117;
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 15px;
+      transition: background 0.15s;
+    }
+    .cta-btn:hover { background: #5dd9a8; }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .related-link {
+      display: block;
+      padding: 14px 16px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      color: #c9d1d9;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: border-color 0.15s;
+    }
+    .related-link:hover { border-color: #6ee7b7; color: #e6edf3; }
+
+    /* Style comparison table */
+    .style-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 14px;
+    }
+    .style-table th, .style-table td {
+      padding: 10px 12px;
+      border: 1px solid #30363d;
+      text-align: left;
+    }
+    .style-table th {
+      background: #161b22;
+      color: #e6edf3;
+      font-weight: 600;
+    }
+    .style-table td { color: #c9d1d9; }
+
+    /* Footer */
+    .site-footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #484f58;
+      border-top: 1px solid #21262d;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #484f58; }
+  </style>
 </head>
 <body>
 
-<!-- ── Header ── -->
-<header class="site-header">
-  <div class="container-wide">
-    <a href="/" class="site-logo">Claude Code Guides</a>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/topics/getting-started/">Getting Started</a>
-      <a href="/topics/prompt-engineering/">Prompts</a>
-      <a href="/topics/api/">API</a>
-      <a href="/topics/agents/">Agents</a>
-      <a href="/topics/mcp/">MCP</a>
-      <a href="/topics/chrome-extensions/">Extensions</a>
-      <a href="/all-articles/">All Guides</a>
-      <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer">Community &#8599;</a>
-      <a href="https://zovo.one" target="_blank" rel="noopener noreferrer">Zovo &#8599;</a>
-    </nav>
-  </div>
-</header>
+<!-- Nav -->
+<nav class="site-nav" aria-label="Main navigation">
+  <a href="/" class="brand">Claude Code Guides</a>
+  <a href="/about/">About</a>
+  <a href="/topics/getting-started/">Getting Started</a>
+  <a href="/compare/">Comparisons</a>
+  <a href="/cost-optimization/">Cost Optimization</a>
+  <a href="/errors-atlas/">Error Atlas</a>
+  <a href="/workflows/">Workflows</a>
+  <a href="/calculator/">Calculator</a>
+  <a href="/skill-finder/">Skill Finder</a>
+  <a href="/all-articles/">All Guides</a>
+</nav>
 
-<!-- ── Hero ── -->
-<section class="hero">
-  <div class="container">
-    <h1>Generate a production-ready <span class="accent">CLAUDE.md</span> in 60 seconds</h1>
-    <p class="subhead">Drop it in your project root. Claude Code stops guessing your stack and starts engineering.</p>
-  </div>
-</section>
+<div class="container">
 
-<!-- ── Generator Form ── -->
-<main class="container">
-  <form class="gen-form" id="genForm" aria-label="CLAUDE.md generator form">
-    <div class="form-grid">
+  <h1>Generate a production-ready <span class="accent">CLAUDE.md</span> in 60 seconds</h1>
+  <p class="subtitle">Select your language, framework, coding style, and team size. Get a downloadable CLAUDE.md with real, battle-tested rules for your stack.</p>
 
-      <!-- Framework -->
+  <!-- Language & Framework -->
+  <div class="input-section">
+    <h3>Stack</h3>
+    <div class="form-row">
       <div class="form-group">
-        <label for="framework">Framework</label>
-        <select id="framework" required>
-          <option value="">Select framework...</option>
+        <label for="sel-language">Programming Language</label>
+        <select id="sel-language">
+          <option value="typescript">TypeScript</option>
+          <option value="javascript">JavaScript</option>
+          <option value="python">Python</option>
+          <option value="go">Go</option>
+          <option value="rust">Rust</option>
+          <option value="java">Java</option>
+          <option value="csharp">C#</option>
+          <option value="ruby">Ruby</option>
+          <option value="php">PHP</option>
+          <option value="elixir">Elixir</option>
+          <option value="swift">Swift</option>
+          <option value="kotlin">Kotlin</option>
+          <option value="dart">Dart</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="sel-framework">Framework</label>
+        <select id="sel-framework">
           <option value="nextjs">Next.js</option>
-          <option value="nuxt3">Nuxt 3</option>
-          <option value="sveltekit">SvelteKit</option>
-          <option value="astro">Astro</option>
-          <option value="remix">Remix</option>
-          <option value="gatsby">Gatsby</option>
-          <option value="django">Django</option>
-          <option value="flask">Flask</option>
-          <option value="fastapi">FastAPI</option>
-          <option value="rails">Rails</option>
-          <option value="laravel">Laravel</option>
-          <option value="springboot">Spring Boot</option>
+          <option value="react">React</option>
           <option value="nestjs">NestJS</option>
           <option value="express">Express</option>
-          <option value="fastify">Fastify</option>
-          <option value="hono">Hono</option>
-          <option value="reactnative">React Native</option>
-          <option value="flutter">Flutter</option>
-          <option value="gin">Gin</option>
-          <option value="axum">Axum</option>
-          <option value="terraform">Terraform</option>
-          <option value="awscdk">AWS CDK</option>
-          <option value="hugo">Hugo</option>
-          <option value="eleventy">Eleventy</option>
-          <option value="phoenix">Phoenix</option>
-          <option value="denofresh">Deno Fresh</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-
-      <!-- Database -->
-      <div class="form-group">
-        <label for="database">Database</label>
-        <select id="database">
           <option value="none">None</option>
-          <option value="postgresql">PostgreSQL</option>
-          <option value="mysql">MySQL</option>
-          <option value="sqlite">SQLite</option>
-          <option value="mongodb">MongoDB</option>
-          <option value="redis">Redis</option>
-          <option value="supabase">Supabase</option>
-          <option value="firebase">Firebase</option>
-          <option value="dynamodb">DynamoDB</option>
-          <option value="planetscale">PlanetScale</option>
         </select>
       </div>
-
-      <!-- Language -->
-      <div class="form-group">
-        <label id="lang-label">Language</label>
-        <div class="radio-group" role="radiogroup" aria-labelledby="lang-label">
-          <input type="radio" name="language" id="lang-ts" value="typescript" checked>
-          <label for="lang-ts" class="radio-pill">TypeScript</label>
-          <input type="radio" name="language" id="lang-js" value="javascript">
-          <label for="lang-js" class="radio-pill">JavaScript</label>
-          <input type="radio" name="language" id="lang-py" value="python">
-          <label for="lang-py" class="radio-pill">Python</label>
-          <input type="radio" name="language" id="lang-go" value="go">
-          <label for="lang-go" class="radio-pill">Go</label>
-          <input type="radio" name="language" id="lang-rs" value="rust">
-          <label for="lang-rs" class="radio-pill">Rust</label>
-          <input type="radio" name="language" id="lang-php" value="php">
-          <label for="lang-php" class="radio-pill">PHP</label>
-          <input type="radio" name="language" id="lang-rb" value="ruby">
-          <label for="lang-rb" class="radio-pill">Ruby</label>
-          <input type="radio" name="language" id="lang-java" value="java">
-          <label for="lang-java" class="radio-pill">Java</label>
-          <input type="radio" name="language" id="lang-kt" value="kotlin">
-          <label for="lang-kt" class="radio-pill">Kotlin</label>
-          <input type="radio" name="language" id="lang-sw" value="swift">
-          <label for="lang-sw" class="radio-pill">Swift</label>
-          <input type="radio" name="language" id="lang-cs" value="csharp">
-          <label for="lang-cs" class="radio-pill">C#</label>
-        </div>
-      </div>
-
-      <!-- Deployment -->
-      <div class="form-group">
-        <label id="deploy-label">Deployment</label>
-        <div class="radio-group" role="radiogroup" aria-labelledby="deploy-label">
-          <input type="radio" name="deployment" id="dep-docker" value="docker" checked>
-          <label for="dep-docker" class="radio-pill">Docker</label>
-          <input type="radio" name="deployment" id="dep-vercel" value="vercel">
-          <label for="dep-vercel" class="radio-pill">Vercel</label>
-          <input type="radio" name="deployment" id="dep-netlify" value="netlify">
-          <label for="dep-netlify" class="radio-pill">Netlify</label>
-          <input type="radio" name="deployment" id="dep-aws" value="aws">
-          <label for="dep-aws" class="radio-pill">AWS</label>
-          <input type="radio" name="deployment" id="dep-gcp" value="gcp">
-          <label for="dep-gcp" class="radio-pill">GCP</label>
-          <input type="radio" name="deployment" id="dep-railway" value="railway">
-          <label for="dep-railway" class="radio-pill">Railway</label>
-          <input type="radio" name="deployment" id="dep-fly" value="flyio">
-          <label for="dep-fly" class="radio-pill">Fly.io</label>
-          <input type="radio" name="deployment" id="dep-vps" value="vps">
-          <label for="dep-vps" class="radio-pill">VPS</label>
-          <input type="radio" name="deployment" id="dep-cf" value="cloudflare">
-          <label for="dep-cf" class="radio-pill">CF Workers</label>
-          <input type="radio" name="deployment" id="dep-other" value="other">
-          <label for="dep-other" class="radio-pill">Other</label>
-        </div>
-      </div>
-
-      <!-- Testing -->
-      <div class="form-group">
-        <label for="testing">Testing</label>
-        <select id="testing">
-          <option value="none">None</option>
-          <option value="jest">Jest</option>
-          <option value="vitest">Vitest</option>
-          <option value="pytest">Pytest</option>
-          <option value="rspec">RSpec</option>
-          <option value="gotest">Go testing</option>
-          <option value="junit">JUnit</option>
-          <option value="playwright">Playwright</option>
-          <option value="cypress">Cypress</option>
-        </select>
-      </div>
-
-      <!-- Conventions -->
-      <div class="form-group full-width">
-        <label for="conventions">Special Conventions <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
-        <textarea id="conventions" placeholder="e.g. We use Zustand for state, all API routes return { data, error } shape, commit messages follow Conventional Commits..."></textarea>
-      </div>
-
     </div>
+  </div>
 
-    <button type="submit" class="btn-generate" id="btnGenerate">Generate CLAUDE.md</button>
-  </form>
+  <!-- Coding Style -->
+  <div class="input-section">
+    <h3>Coding Style</h3>
+    <div class="radio-group" role="radiogroup" aria-label="Coding style">
+      <input type="radio" name="style" id="style-nasa" value="nasa">
+      <label for="style-nasa" class="pill">NASA Power of 10 (Strict)</label>
+      <input type="radio" name="style" id="style-karpathy" value="karpathy">
+      <label for="style-karpathy" class="pill">Karpathy 4 Principles</label>
+      <input type="radio" name="style" id="style-balanced" value="balanced" checked>
+      <label for="style-balanced" class="pill">Balanced</label>
+      <input type="radio" name="style" id="style-minimal" value="minimal">
+      <label for="style-minimal" class="pill">Minimal</label>
+    </div>
+  </div>
 
-  <!-- ── Output ── -->
+  <!-- Team Size -->
+  <div class="input-section">
+    <h3>Team Size</h3>
+    <div class="radio-group" role="radiogroup" aria-label="Team size">
+      <input type="radio" name="team" id="team-solo" value="solo" checked>
+      <label for="team-solo" class="pill">Solo</label>
+      <input type="radio" name="team" id="team-small" value="small">
+      <label for="team-small" class="pill">Small Team (2-10)</label>
+      <input type="radio" name="team" id="team-enterprise" value="enterprise">
+      <label for="team-enterprise" class="pill">Enterprise (50+)</label>
+    </div>
+  </div>
+
+  <!-- Optional Sections -->
+  <div class="input-section">
+    <h3>Optional Sections</h3>
+    <div class="toggle-grid">
+      <label class="toggle-item">
+        <input type="checkbox" id="chk-tests" checked> Include test rules
+      </label>
+      <label class="toggle-item">
+        <input type="checkbox" id="chk-git" checked> Include git rules
+      </label>
+      <label class="toggle-item">
+        <input type="checkbox" id="chk-docs"> Include documentation rules
+      </label>
+      <label class="toggle-item">
+        <input type="checkbox" id="chk-security"> Include security rules
+      </label>
+    </div>
+  </div>
+
+  <!-- Generate Button -->
+  <button class="btn-generate" id="btnGenerate" type="button">Generate CLAUDE.md</button>
+
+  <!-- Output -->
   <section class="output-section" id="outputSection" aria-live="polite">
     <div class="output-header">
       <h2>Your CLAUDE.md</h2>
-      <div class="output-meta">
-        <span id="lineCount"></span>
-        <span id="tokenSavings"></span>
-      </div>
+      <span class="output-meta" id="outputMeta"></span>
     </div>
     <div class="code-block">
       <pre id="codeOutput" tabindex="0"></pre>
     </div>
     <div class="output-actions">
-      <button class="btn-action btn-primary" id="btnDownload" type="button" aria-label="Download CLAUDE.md file">
-        <span class="icon" aria-hidden="true">&#8595;</span> Download .md
-      </button>
-      <button class="btn-action" id="btnCopy" type="button" aria-label="Copy to clipboard">
-        <span class="icon" aria-hidden="true">&#9776;</span> Copy to clipboard
-      </button>
-      <span class="copy-feedback" id="copyFeedback" aria-live="polite"></span>
+      <button class="btn-action primary" id="btnDownload" type="button">Download CLAUDE.md</button>
+      <button class="btn-action" id="btnCopy" type="button">Copy to Clipboard</button>
+      <span class="copy-feedback" id="copyFeedback"></span>
     </div>
   </section>
 
-  <!-- ── Email Capture ── -->
-  <div class="email-banner" id="emailBanner">
-    <p>Save your CLAUDE.md and get the 16-template pack by email</p>
-    <div class="email-row" id="emailRow">
-      <input type="email" id="emailInput" placeholder="you@example.com" aria-label="Email address" required>
-      <button type="button" id="btnEmail">Email me the file</button>
+  <!-- Paywall overlay -->
+  <div id="paywall-overlay">
+    <div class="paywall-box">
+      <h2>You've used your 2 free generations</h2>
+      <p>Unlock unlimited access to all 5 CCG tools + 200 production-ready CLAUDE.md templates, error fixes, and cost optimization configs.</p>
+      <a href="https://zovo.one/pricing" class="paywall-cta">Get Lifetime Access &mdash; $99</a>
+      <p class="paywall-fine">One-time payment. All tools. All templates. Forever.</p>
     </div>
-    <p class="email-thanks" id="emailThanks">Sent. Check your inbox in 60 seconds.</p>
   </div>
 
-  <!-- ── Upsell Section ── -->
-  <section class="upsell-section" id="upsellSection" aria-label="Premium plans">
-    <h2>Go further with premium templates</h2>
-    <p class="upsell-sub">Production-tested configs. Not generic boilerplate.</p>
-    <div class="upsell-grid">
+  <!-- SEO Content -->
+  <div class="seo-content">
+    <h2>What Is CLAUDE.md?</h2>
+    <p>CLAUDE.md is a project-level configuration file that gives Claude Code context about your codebase. When Claude Code opens a repository, it automatically reads the CLAUDE.md file from the project root and uses those instructions to guide its behavior throughout the entire session. Think of it as a persistent system prompt that travels with your code, not with your conversation.</p>
+    <p>Without a CLAUDE.md, Claude Code has to infer your coding standards from the files it reads. This leads to inconsistent style choices, wrong framework patterns, and wasted tokens on back-and-forth corrections. A well-written CLAUDE.md eliminates this guesswork by explicitly declaring your language conventions, testing requirements, architectural patterns, and deployment rules upfront.</p>
+    <p>The file uses standard Markdown and supports sections for project overview, directory structure, build commands, coding style, pitfalls to avoid, and example prompts. Most production CLAUDE.md files are between 80 and 200 lines. Shorter files leave too much to inference; longer files waste input tokens on every request.</p>
 
-      <!-- Community Card -->
-      <div class="upsell-card">
-        <h3>Community</h3>
-        <div class="upsell-price">$4.99<span> /mo</span></div>
-        <ul>
-          <li>16 framework templates (vs 1 free)</li>
-          <li>Private Discord access</li>
-          <li>Monthly live builder calls</li>
-          <li>Community CLAUDE.md library</li>
-        </ul>
-        <a href="https://zovo.one/community?utm_source=ccg&utm_medium=generator&utm_campaign=upsell" class="btn-upsell btn-upsell-community" target="_blank" rel="noopener">Start for $4.99 &rarr;</a>
-      </div>
+    <h2>Why Every Project Needs a CLAUDE.md</h2>
+    <p>Adding a CLAUDE.md to your repository delivers measurable improvements to Claude Code's output quality and cost efficiency. Here is what changes when you add one:</p>
+    <ul>
+      <li><strong>Fewer correction cycles.</strong> When Claude Code knows your conventions upfront, it generates code that matches your style on the first attempt. Teams report 30-50% fewer "fix this" follow-up prompts after adding a CLAUDE.md.</li>
+      <li><strong>Lower token costs.</strong> Each line of CLAUDE.md context saves roughly 20 tokens of back-and-forth explanation per session. A 100-line CLAUDE.md saves approximately 2,000 tokens per interaction, which compounds across hundreds of daily sessions.</li>
+      <li><strong>Consistent output across team members.</strong> When every developer on the team uses the same CLAUDE.md, Claude Code produces consistent code regardless of who is prompting it. This is critical for code review quality and reducing merge conflicts.</li>
+      <li><strong>Framework-specific guardrails.</strong> Generic AI coding assistants often mix up framework patterns. A CLAUDE.md that declares "This is a Next.js App Router project" prevents Claude from using Pages Router patterns, getServerSideProps, or other deprecated approaches.</li>
+      <li><strong>Onboarding acceleration.</strong> New team members can point Claude Code at the codebase and get framework-aware assistance from their first day, without needing to memorize every convention manually.</li>
+    </ul>
 
-      <!-- Lifetime Card -->
-      <div class="upsell-card popular">
-        <span class="badge-popular">MOST POPULAR</span>
-        <h3>Lifetime</h3>
-        <div class="upsell-price">$99<span> once</span></div>
-        <ul>
-          <li>Everything in Community</li>
-          <li>80+ tested prompts</li>
-          <li>Multi-agent orchestration configs</li>
-          <li>Extension Engine</li>
-          <li>All future resources</li>
-        </ul>
-        <a href="https://zovo.one/lifetime?utm_source=ccg&utm_medium=generator&utm_campaign=upsell" class="btn-upsell btn-upsell-lifetime" target="_blank" rel="noopener">Get Lifetime &rarr;</a>
-      </div>
+    <h2>Coding Style Comparison</h2>
+    <p>This generator supports four coding style presets. Each one produces a different set of rules in the generated CLAUDE.md. Here is how they compare:</p>
+    <table class="style-table">
+      <thead>
+        <tr>
+          <th>Style</th>
+          <th>Philosophy</th>
+          <th>Best For</th>
+          <th>Rules Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>NASA Power of 10</strong></td>
+          <td>Zero tolerance for ambiguity. Every function bounded, every return checked.</td>
+          <td>Safety-critical systems, fintech, infrastructure</td>
+          <td>10 core rules</td>
+        </tr>
+        <tr>
+          <td><strong>Karpathy 4 Principles</strong></td>
+          <td>Simplicity first. Readable code beats clever code. Ship fast, iterate.</td>
+          <td>ML/AI projects, prototyping, research</td>
+          <td>4 core principles</td>
+        </tr>
+        <tr>
+          <td><strong>Balanced</strong></td>
+          <td>Pragmatic mix of strictness and velocity. Reasonable defaults.</td>
+          <td>Most production web apps, SaaS, APIs</td>
+          <td>8 rules</td>
+        </tr>
+        <tr>
+          <td><strong>Minimal</strong></td>
+          <td>Just the essentials. Trust the developer, minimize process overhead.</td>
+          <td>Small scripts, hackathons, solo projects</td>
+          <td>4 rules</td>
+        </tr>
+      </tbody>
+    </table>
 
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>Where do I put the CLAUDE.md file?</summary>
+      <p>Place it in the root directory of your repository, at the same level as your package.json, Cargo.toml, or pyproject.toml. Claude Code reads it automatically when it opens the project. You can also place additional CLAUDE.md files in subdirectories for module-specific instructions that override or extend the root file.</p>
+    </details>
+
+    <details>
+      <summary>Does CLAUDE.md work with other AI tools like Cursor or Copilot?</summary>
+      <p>CLAUDE.md is specific to Claude Code (Anthropic's CLI agent). However, the concept translates well. Cursor uses .cursorrules files with a similar approach. Many teams maintain both a CLAUDE.md and a .cursorrules file that share the same core conventions. The rules themselves (coding style, framework patterns, testing requirements) are universal regardless of the tool.</p>
+    </details>
+
+    <details>
+      <summary>How long should my CLAUDE.md be?</summary>
+      <p>Aim for 80 to 200 lines. Under 80 lines and you are leaving too much to inference, leading to inconsistent output. Over 200 lines and you are consuming excessive input tokens on every request without proportional quality improvement. This generator produces files in that sweet spot based on your selections.</p>
+    </details>
+
+    <details>
+      <summary>Should I commit CLAUDE.md to version control?</summary>
+      <p>Yes, absolutely. CLAUDE.md should be treated like any other project configuration file such as .editorconfig, .eslintrc, or tsconfig.json. Committing it ensures every team member and every CI/CD pipeline gets the same Claude Code behavior. It also creates a versioned history of your coding standards as they evolve.</p>
+    </details>
+
+    <details>
+      <summary>Can I use multiple CLAUDE.md files in a monorepo?</summary>
+      <p>Yes. Claude Code reads the CLAUDE.md closest to the file being edited. In a monorepo with packages/frontend/ and packages/api/, you can place a root CLAUDE.md with shared conventions and additional CLAUDE.md files in each package with framework-specific rules. The package-level file supplements the root file.</p>
+    </details>
+
+    <details>
+      <summary>Does CLAUDE.md affect Claude Code's token costs?</summary>
+      <p>A CLAUDE.md file is read as input context on every interaction, so it consumes input tokens. A typical 150-line file costs approximately 500-800 input tokens per request. However, this upfront cost is recouped many times over by eliminating correction cycles, reducing output length (because Claude gets it right the first time), and avoiding wasted tokens on framework confusion. Net savings are typically 30-50% lower total token usage.</p>
+    </details>
+
+    <details>
+      <summary>What coding style should I choose?</summary>
+      <p>For most teams building production web applications, start with Balanced. It provides sensible defaults without being overly restrictive. Switch to NASA Power of 10 if you work in safety-critical domains (fintech, healthcare, infrastructure) where every edge case matters. Use Karpathy 4 Principles for ML/research projects where iteration speed matters more than strict convention. Use Minimal for personal projects, scripts, and hackathons.</p>
+    </details>
+
+    <details>
+      <summary>Can I customize the generated CLAUDE.md after downloading?</summary>
+      <p>Yes, and you should. This generator produces a solid starting point, but every project has unique conventions. After downloading, add your specific architectural decisions, custom linting rules, naming conventions, and any team-specific patterns that Claude should follow. The generated file includes clear section headers to make editing straightforward.</p>
+    </details>
+
+    <div class="cta-banner">
+      <p>This generator covers the basics. For 200 production-ready templates including framework-specific CLAUDE.md files, error patterns, and cost optimization configs:</p>
+      <a href="https://zovo.one/pricing" class="cta-btn">Get the Claude Code Playbook ($99 Lifetime)</a>
     </div>
-  </section>
 
-</main>
+    <h2>Related Guides</h2>
+    <div class="related-grid">
+      <a href="/playbook/" class="related-link">Claude Code Playbook</a>
+      <a href="/cost-optimization/" class="related-link">Cost Optimization</a>
+      <a href="/workflows/" class="related-link">Workflow Guides</a>
+      <a href="/errors-atlas/" class="related-link">Error Atlas</a>
+      <a href="/compare/" class="related-link">Tool Comparisons</a>
+      <a href="/skill-finder/" class="related-link">Skill Finder</a>
+      <a href="/model-selector/" class="related-link">Model Selector</a>
+      <a href="/calculator/" class="related-link">Cost Calculator</a>
+    </div>
+  </div>
 
-<!-- ── Footer ── -->
+</div>
+
 <footer class="site-footer">
-  <div class="container-wide">
-    <p>&copy; 2026 Claude Code Guides. Not affiliated with Anthropic.</p>
-  </div>
+  &copy; 2026 Claude Code Guides. Not affiliated with Anthropic.
 </footer>
 
 <script>
 /* ================================================================
-   CLAUDE.md Generator — Client-side Template Engine
-   NASA Power of 10: bounded loops, no complex flow, <60 line fns,
-   assertions, no heap after init, restrict pointers/scope
+   CLAUDE.md Generator
+   NASA Power of 10: bounded loops, <60 line fns, 2 assertions/fn
    ================================================================ */
-
 (function () {
-  "use strict";
+  'use strict';
 
-  /* ── Assertions (Power of 10 Rule 5) ── */
-  function assert(condition, message) {
-    if (!condition) {
-      console.error("Assertion failed: " + message);
+  function assert(cond, msg) {
+    if (!cond) console.error('Assertion failed: ' + msg);
+  }
+
+  /* ── Framework options keyed by language ── */
+  var FRAMEWORK_MAP = {
+    typescript: [['nextjs','Next.js'],['react','React'],['nestjs','NestJS'],['express','Express'],['none','None']],
+    javascript: [['react','React'],['vue','Vue'],['express','Express'],['nodejs','Node.js'],['none','None']],
+    python:     [['django','Django'],['fastapi','FastAPI'],['flask','Flask'],['none','None']],
+    go:         [['gin','Gin'],['echo','Echo'],['fiber','Fiber'],['none','None']],
+    rust:       [['axum','Axum'],['actix','Actix'],['rocket','Rocket'],['none','None']],
+    java:       [['springboot','Spring Boot'],['quarkus','Quarkus'],['none','None']],
+    csharp:     [['aspnet','ASP.NET'],['blazor','Blazor'],['none','None']],
+    ruby:       [['rails','Rails'],['sinatra','Sinatra'],['none','None']],
+    php:        [['laravel','Laravel'],['symfony','Symfony'],['none','None']],
+    elixir:     [['phoenix','Phoenix'],['none','None']],
+    swift:      [['swiftui','SwiftUI'],['uikit','UIKit'],['vapor','Vapor'],['none','None']],
+    kotlin:     [['ktor','Ktor'],['springboot','Spring Boot'],['jetpack','Jetpack Compose'],['none','None']],
+    dart:       [['flutter','Flutter'],['none','None']]
+  };
+
+  /* ── Coding style content blocks ── */
+  var STYLE_RULES = {
+    nasa: '## Code Quality Rules (NASA Power of 10)\n\n1. **No complex flow constructs** - no goto, no deep recursion, no switch fallthrough\n2. **All loops must have fixed upper bounds** - no while(true) without break ceiling\n3. **No dynamic memory allocation after initialization** - allocate at startup, reuse\n4. **Functions stay under 60 lines** - extract helpers aggressively\n5. **Minimum two assertions per function** - validate inputs and outputs\n6. **Restrict data scope** - no global mutable state, smallest possible visibility\n7. **Check every return value** - no unhandled errors, no ignored promises\n8. **Minimize preprocessor/build complexity** - simple, auditable build steps\n9. **No pointer/reference arithmetic** - use safe abstractions and bounds-checked access\n10. **Zero warnings policy** - all compiler and linter warnings are treated as bugs\n\n### Enforcement\n- Every PR must pass all lint rules with zero warnings\n- Functions exceeding 60 lines must be split before merge\n- Every function must have at least 2 assertions (input validation + output validation)\n- No exception: if a loop lacks an upper bound, it is rejected in code review',
+
+    karpathy: '## Code Quality Rules (Karpathy 4 Principles)\n\n1. **Keep it simple** - Write the simplest code that could possibly work. No premature abstraction, no design patterns for their own sake. If a function can be understood in 30 seconds, it is good.\n2. **Make it readable** - Code is read 10x more than it is written. Optimize for the reader. Use clear variable names, add comments for "why" not "what", and prefer explicit over clever.\n3. **Ship and iterate** - Working code today beats perfect code next month. Get it running, measure, then optimize. Premature optimization is the root of all evil.\n4. **Minimize dependencies** - Every dependency is a liability. If you can write it in 20 lines, do not install a package. Vendored code you understand beats black-box libraries.\n\n### Practical Guidelines\n- Prefer flat code over nested code - early returns reduce indentation\n- Avoid inheritance hierarchies deeper than 2 levels\n- Write functions that do one thing and do it well\n- If a module needs a README to explain its API, the API is too complex',
+
+    balanced: '## Code Quality Rules\n\n1. **Readability first** - Code should be self-documenting. Use descriptive names, keep functions focused, and add comments only for non-obvious decisions.\n2. **Single Responsibility** - Each function, class, and module should have one reason to change. If you cannot describe what a function does without "and", split it.\n3. **Explicit error handling** - Handle errors at the point where you have enough context to do something useful. Never silently swallow errors.\n4. **Immutability by default** - Use const/let over var, readonly properties, and immutable data structures where possible. Mutate only when performance requires it.\n5. **Test critical paths** - Focus testing effort on business logic and edge cases, not trivial getters. Aim for 80% coverage on core modules.\n6. **DRY but not prematurely** - Duplicate code twice before abstracting. Three occurrences justify a shared function; two might be coincidence.\n7. **Keep dependencies lean** - Audit every new dependency. Prefer well-maintained packages with small surface area.\n8. **Fail fast** - Validate inputs at function boundaries. Return early for invalid states. Do not let bad data propagate deep into the system.',
+
+    minimal: '## Code Quality Rules\n\n1. **Make it work, then make it right** - Correctness first. Get the feature working with tests before refactoring for elegance.\n2. **Keep functions short** - If a function scrolls past one screen, break it up.\n3. **Handle errors** - No empty catch blocks. Log or re-throw with context.\n4. **Use the language idioms** - Follow the conventions of your language and framework. Do not fight the tools.'
+  };
+
+  /* ── Language-specific rules ── */
+  var LANGUAGE_RULES = {
+    typescript: '## TypeScript Conventions\n\n- Strict mode enabled (`"strict": true` in tsconfig.json)\n- No `any` types - use `unknown` with type guards instead\n- Prefer `interface` over `type` for object shapes\n- Use `as const` for literal types\n- Exhaustive switch with `never` type for union narrowing\n- All function parameters and return types explicitly typed\n- Use named exports, not default exports\n- Prefer `const` over `let`; never use `var`',
+
+    javascript: '## JavaScript Conventions\n\n- Use ES modules (`import`/`export`), not CommonJS unless Node.js requires it\n- Prefer `const` over `let`; never use `var`\n- Use optional chaining (`?.`) and nullish coalescing (`??`)\n- Destructure function parameters for clarity\n- Add JSDoc comments for public functions with `@param` and `@returns`\n- Validate inputs at function boundaries\n- Use template literals over string concatenation',
+
+    python: '## Python Conventions\n\n- Follow PEP 8 and use type hints on all function signatures\n- Use dataclasses or Pydantic models, not raw dicts, for structured data\n- Prefer f-strings over `.format()` or `%` formatting\n- Use `pathlib.Path` over `os.path`\n- Use list comprehensions for simple transforms; for-loops for complex logic\n- Raise specific exceptions, not bare `Exception`\n- Use `if __name__ == "__main__":` guard in scripts\n- Prefer `logging` module over `print` for production code',
+
+    go: '## Go Conventions\n\n- Follow `gofmt` and `go vet` unconditionally\n- Return `error` as the last return value; always check errors immediately\n- Use short variable names in small scopes; descriptive names in larger scopes\n- Prefer composition over inheritance; embed interfaces and structs\n- Use `context.Context` as the first parameter for I/O functions\n- Write table-driven tests\n- Use `errgroup` for concurrent operations with error handling\n- Keep interfaces small (1-3 methods)',
+
+    rust: '## Rust Conventions\n\n- Use `clippy` lints - treat warnings as errors\n- Prefer `Result<T, E>` over `unwrap()`/`expect()` in library and handler code\n- Use `thiserror` for library errors, `anyhow` for application errors\n- Derive `Debug`, `Clone`, `PartialEq` on types when sensible\n- Prefer iterators and combinators over manual loops\n- Use `#[must_use]` on functions whose return values should not be ignored\n- Minimize `unsafe` blocks; document safety invariants when required',
+
+    java: '## Java Conventions\n\n- Follow Google Java Style Guide\n- Use `final` for variables that should not be reassigned\n- Prefer records for immutable data carriers (Java 16+)\n- Use Optional for nullable return types; never return null from public methods\n- Use streams for collection transformations\n- Always implement `equals()`, `hashCode()`, and `toString()` on value objects\n- Use constructor injection, not field injection',
+
+    csharp: '## C# Conventions\n\n- Follow Microsoft C# Coding Conventions\n- Use `var` when the type is obvious from the right side\n- Use nullable reference types (`?`) and enable nullable context\n- Prefer LINQ for collection operations\n- Use `async`/`await` consistently; never use `.Result` or `.Wait()`\n- Use records for immutable data transfer objects\n- Use dependency injection via constructor; register in DI container',
+
+    ruby: '## Ruby Conventions\n\n- Follow the Ruby Style Guide (rubocop defaults)\n- Use `frozen_string_literal: true` magic comment in all files\n- Prefer `Symbol` keys in hashes over strings\n- Use guard clauses for early returns\n- Prefer `each` over `for`; use `map`/`select`/`reduce` for transforms\n- Keep methods under 10 lines where possible\n- Use keyword arguments for methods with 3+ parameters',
+
+    php: '## PHP Conventions\n\n- Follow PSR-12 coding standard\n- Use strict types: `declare(strict_types=1)` in every file\n- Use type declarations for all function parameters and return types\n- Prefer named arguments for functions with multiple parameters\n- Use enums (PHP 8.1+) instead of class constants for fixed sets\n- Validate inputs early and return early to reduce nesting\n- Use Composer autoloading, not manual requires',
+
+    elixir: '## Elixir Conventions\n\n- Use pattern matching extensively for control flow\n- Prefer pipes (`|>`) for data transformation chains\n- Use typespecs (`@spec`) on all public functions\n- Organize modules by domain context, not by type (not controllers/models)\n- Use GenServer for stateful processes; keep state minimal\n- Handle all error tuples explicitly - no unmatched `{:error, _}` patterns\n- Write doctests for pure functions with clear inputs/outputs',
+
+    swift: '## Swift Conventions\n\n- Follow Swift API Design Guidelines\n- Use `let` over `var` wherever possible\n- Use value types (struct/enum) over reference types (class) by default\n- Use guard for early exits; avoid deep nesting\n- Use Swift concurrency (async/await) over completion handlers\n- Make types conform to `Codable` for serialization\n- Use access control: default to `private` and expose intentionally',
+
+    kotlin: '## Kotlin Conventions\n\n- Follow Kotlin Coding Conventions (ktlint)\n- Use data classes for value objects\n- Prefer `val` over `var`; use immutable collections by default\n- Use sealed classes for restricted hierarchies\n- Use extension functions to add behavior without inheritance\n- Use coroutines for async code, not callbacks or RxJava\n- Prefer `when` expressions over `if-else` chains',
+
+    dart: '## Dart Conventions\n\n- Follow Effective Dart guidelines\n- Use `final` for variables that will not be reassigned\n- Use named parameters for functions with 3+ parameters\n- Prefer immutable data classes with `@immutable` annotation\n- Use `async`/`await` over raw Futures\n- Use strong typing; avoid `dynamic` except when interfacing with JSON\n- Use `const` constructors where possible for widget performance'
+  };
+
+  /* ── Framework-specific rules ── */
+  var FRAMEWORK_RULES = {
+    nextjs: '## Framework Rules - Next.js\n\n- Use App Router (`app/` directory), not Pages Router\n- Server Components are the default; add `"use client"` only for browser APIs, event handlers, or React state\n- Never use `getServerSideProps` or `getStaticProps` - those are Pages Router patterns\n- Do not import server-only code in Client Components\n- Use `next/image` over `<img>` for automatic optimization\n- Add `loading.tsx` for route segments that fetch data\n- Never store secrets in `NEXT_PUBLIC_*` environment variables\n\n### Project Structure\n```\napp/           - Pages, layouts, and route handlers\ncomponents/    - Reusable UI components\nlib/           - Shared utilities and helpers\npublic/        - Static assets\n```\n\n### Commands\n```bash\npnpm dev       - Start dev server (port 3000)\npnpm build     - Production build\npnpm lint      - ESLint\npnpm test      - Run tests\n```',
+
+    react: '## Framework Rules - React\n\n- Use functional components with hooks exclusively; no class components\n- Lift state up only as far as necessary; prefer colocation\n- Use `useMemo` and `useCallback` only when you have measured a performance problem\n- Never mutate state directly; always use the setter from useState\n- Keep components under 150 lines; extract sub-components when they grow\n- Use React.lazy and Suspense for code-splitting heavy routes\n- Prefer controlled components for forms',
+
+    nestjs: '## Framework Rules - NestJS\n\n- Organize by feature modules, not by type (not controllers/services globally)\n- Always use DTOs with class-validator decorators for request validation\n- Use Guards for authorization, Pipes for validation, Interceptors for response transformation\n- Import services through module providers, not directly\n- Use ConfigService for environment variables, not `process.env`\n- Define response types with `@ApiResponse` decorators for Swagger docs\n\n### Project Structure\n```\nsrc/\n  modules/\n    feature/\n      feature.module.ts\n      feature.controller.ts\n      feature.service.ts\n      dto/\n      entities/\n```',
+
+    express: '## Framework Rules - Express\n\n- Organize routes in separate modules; use Express Router\n- Follow controller-service-repository pattern for clean separation\n- Always include error-handling middleware (4-argument function signature)\n- Validate all request input; never trust req.body directly\n- Use helmet and cors middleware in production\n- Never use synchronous file operations in request handlers\n- Handle promise rejections - unhandled rejections crash the server\n\n### Project Structure\n```\nsrc/\n  routes/          - Route definitions\n  controllers/     - Request handlers\n  services/        - Business logic\n  middleware/      - Custom middleware\n```',
+
+    vue: '## Framework Rules - Vue\n\n- Use Composition API with `<script setup>` exclusively\n- Use Pinia for state management, not Vuex\n- Keep components single-responsibility; use composables for shared logic\n- Use `defineProps` and `defineEmits` with TypeScript for type safety\n- Prefer `v-if` over `v-show` for conditional rendering unless toggling frequently\n- Use `provide`/`inject` sparingly; prefer explicit props and events',
+
+    nodejs: '## Framework Rules - Node.js\n\n- Use ES modules (`import`/`export`) with `"type": "module"` in package.json\n- Handle process signals (SIGTERM, SIGINT) for graceful shutdown\n- Use connection pooling for database connections\n- Never use synchronous I/O in server code paths\n- Use `node:` prefix for built-in modules (e.g., `node:fs`, `node:path`)\n- Set appropriate timeouts on HTTP clients and servers',
+
+    django: '## Framework Rules - Django\n\n- Follow MVT (Model-View-Template) pattern strictly\n- Never write raw SQL unless the ORM genuinely cannot express the query\n- Never put business logic in views; use model methods or service layers\n- Always create migrations when changing models; never edit the DB directly\n- Use `select_related()` and `prefetch_related()` to avoid N+1 queries\n- Never hardcode URLs; use `reverse()` or the url template tag\n\n### Commands\n```bash\npython manage.py runserver    - Start dev server\npython manage.py migrate      - Run migrations\npython manage.py test         - Run tests\n```',
+
+    fastapi: '## Framework Rules - FastAPI\n\n- Use Pydantic models for all request/response validation\n- Use async endpoints with async database drivers\n- Use `Depends()` for dependency injection (auth, DB sessions, pagination)\n- Define `response_model` on every endpoint for OpenAPI accuracy\n- Use `BackgroundTasks` for non-blocking work, not threading\n- Close database sessions properly with dependency teardown (yield)\n\n### Commands\n```bash\nuvicorn app.main:app --reload  - Start dev server\npytest                         - Run tests\nalembic upgrade head           - Run migrations\n```',
+
+    flask: '## Framework Rules - Flask\n\n- Use the app factory pattern (`create_app()`)\n- Organize routes with Blueprints, not a single routes file\n- Use `current_app` inside request context, not the app object directly\n- Never store state in module-level variables; use `g`, session, or the database\n- Never disable CSRF protection in production\n- Use Flask-Login or Flask-JWT-Extended for authentication',
+
+    gin: '## Framework Rules - Gin\n\n- Group handlers by domain using `router.Group()`\n- Use middleware for cross-cutting concerns (auth, logging, CORS)\n- Return proper HTTP status codes; use `c.JSON()` with struct responses\n- Use dependency injection via struct fields, not global variables\n- Use `context.Context` for cancellation and timeouts\n- Close resources with `defer`\n\n### Commands\n```bash\ngo run cmd/server/main.go  - Start server\ngo test ./...              - Run tests\ngolangci-lint run          - Lint\n```',
+
+    echo: '## Framework Rules - Echo\n\n- Use Echo groups for route namespacing and shared middleware\n- Bind and validate request bodies with Echo\'s Bind + Validate\n- Use custom error handler with `e.HTTPErrorHandler`\n- Return structured error responses, not plain strings\n- Use middleware for logging, recovery, and CORS',
+
+    fiber: '## Framework Rules - Fiber\n\n- Use Fiber groups for route organization\n- Use `c.BodyParser()` for request binding with struct validation\n- Return JSON responses with `c.JSON()` and proper status codes\n- Use Fiber middleware (cors, logger, recover) from the middleware package\n- Be aware: Fiber uses fasthttp, not net/http - some Go ecosystem tools may not work directly',
+
+    axum: '## Framework Rules - Axum\n\n- Use typed extractors for request parsing (Path, Query, Json)\n- Implement `IntoResponse` for custom error types\n- Use the State extractor for shared application state, not manual Arc cloning\n- Use tower middleware for cross-cutting concerns\n- Handle graceful shutdown with `tokio::signal`\n- Use sqlx compile-time query checking when possible\n\n### Commands\n```bash\ncargo run          - Start server\ncargo test         - Run tests\ncargo clippy       - Lint\n```',
+
+    actix: '## Framework Rules - Actix Web\n\n- Use extractors (web::Json, web::Path, web::Query) for typed request handling\n- Register services with `web::scope` for route grouping\n- Use `web::Data` for shared application state\n- Implement `ResponseError` trait for custom error types\n- Use actix middleware for logging, CORS, and authentication',
+
+    rocket: '## Framework Rules - Rocket\n\n- Use request guards for authentication and authorization\n- Use Rocket\'s derive macros for request/response types\n- Use fairings for startup initialization and request/response hooks\n- Use `rocket::State` for managed application state\n- Configure through `Rocket.toml` or environment variables',
+
+    springboot: '## Framework Rules - Spring Boot\n\n- Follow layered architecture: Controller -> Service -> Repository\n- Inject dependencies via constructor, not field injection (@Autowired on fields)\n- Use DTOs for API request/response; never expose entity objects directly\n- Use `@Transactional` on service methods, not controllers\n- Catch specific exceptions, not generic `Exception`\n- Use Spring profiles for environment-specific config\n\n### Commands\n```bash\n./mvnw spring-boot:run  - Start app\n./mvnw test             - Run tests\n./mvnw package          - Build JAR\n```',
+
+    quarkus: '## Framework Rules - Quarkus\n\n- Use CDI for dependency injection with `@Inject` and `@ApplicationScoped`\n- Use Panache for simplified Hibernate ORM access\n- Prefer reactive endpoints with Mutiny (Uni, Multi) for non-blocking I/O\n- Use `@ConfigProperty` for configuration, not hardcoded values\n- Test with `@QuarkusTest` for full integration tests',
+
+    aspnet: '## Framework Rules - ASP.NET\n\n- Use minimal APIs for simple endpoints; controllers for complex ones\n- Use dependency injection via the built-in DI container\n- Configure middleware order carefully in `Program.cs`\n- Use `IOptions<T>` pattern for strongly-typed configuration\n- Use Entity Framework Core with migrations for database access\n- Use `[Authorize]` attribute for protected endpoints',
+
+    blazor: '## Framework Rules - Blazor\n\n- Use components as the primary building blocks\n- Keep component logic minimal; delegate to injected services\n- Use cascading parameters sparingly; prefer explicit parameter passing\n- Use `@inject` for dependency injection in components\n- Handle component lifecycle events properly (OnInitializedAsync, OnParametersSet)',
+
+    rails: '## Framework Rules - Rails\n\n- Follow convention over configuration; use generators (`rails generate`)\n- Never put business logic in controllers; extract to service objects\n- Use strong parameters in controllers for mass assignment protection\n- Use scopes for common query patterns; avoid complex where chains\n- Never modify schema.rb manually; always use migrations\n- Use `find_each` for batch processing, not `all.each`\n\n### Commands\n```bash\nrails server     - Start dev server\nrails db:migrate - Run migrations\nrails test       - Run tests\n```',
+
+    sinatra: '## Framework Rules - Sinatra\n\n- Use modular style (class inheriting Sinatra::Base) for production apps\n- Organize routes into separate files; use Sinatra::Namespace for grouping\n- Use before/after filters for cross-cutting concerns\n- Keep route handlers thin; delegate to service objects\n- Use Rack middleware for authentication and logging',
+
+    laravel: '## Framework Rules - Laravel\n\n- Use Form Requests for validation, not inline validation in controllers\n- Never put business logic in controllers; use Services or Actions\n- Use Eloquent relationships and eager loading to prevent N+1 queries\n- Never store secrets in config files; use `.env` and `config()` helper\n- Use `php artisan make:*` generators instead of creating files manually\n- Use queued Jobs for background processing\n\n### Commands\n```bash\nphp artisan serve      - Start dev server\nphp artisan migrate    - Run migrations\nphp artisan test       - Run tests\n```',
+
+    symfony: '## Framework Rules - Symfony\n\n- Use autowiring and autoconfiguration for dependency injection\n- Organize code by domain, not by type (not all controllers in one folder)\n- Use Doctrine migrations for schema changes\n- Use Symfony Forms for complex form handling with validation\n- Use Symfony Messenger for async processing and event handling\n- Configure services in `config/services.yaml`',
+
+    phoenix: '## Framework Rules - Phoenix\n\n- Organize business logic in Contexts, not controllers or LiveView modules\n- Use Ecto changesets for all data validation\n- Use LiveView for real-time interactive UIs; minimize client-side JavaScript\n- Use PubSub for real-time features, not polling\n- Handle all error cases with pattern matching, not try/catch\n\n### Commands\n```bash\nmix phx.server     - Start server\nmix ecto.migrate   - Run migrations\nmix test           - Run tests\n```',
+
+    swiftui: '## Framework Rules - SwiftUI\n\n- Use `@State` for view-local state; `@StateObject` for owned ObservableObjects\n- Use `@EnvironmentObject` for dependency injection across the view hierarchy\n- Keep views small; extract subviews for reuse and readability\n- Use `Task` modifier for async work on view appearance\n- Prefer value types (structs) for data models\n- Use `NavigationStack` (iOS 16+) instead of `NavigationView`',
+
+    uikit: '## Framework Rules - UIKit\n\n- Use Auto Layout programmatically or with Interface Builder; be consistent\n- Follow the Coordinator pattern for navigation flow\n- Use delegation and closures for communication, not NotificationCenter for local events\n- Dequeue and reuse cells in table/collection views\n- Handle memory management carefully; use `[weak self]` in closures',
+
+    vapor: '## Framework Rules - Vapor\n\n- Use Fluent ORM for database access with migrations\n- Organize routes with route groups and controllers\n- Use `Content` protocol for request/response serialization\n- Use middleware for authentication and error handling\n- Use `async`/`await` for all asynchronous operations',
+
+    ktor: '## Framework Rules - Ktor\n\n- Use the Ktor plugin system for modular feature installation\n- Configure serialization with kotlinx.serialization\n- Use routing DSL for organizing endpoints\n- Use Ktor client for HTTP requests with proper configuration\n- Handle errors with StatusPages plugin for consistent error responses',
+
+    jetpack: '## Framework Rules - Jetpack Compose\n\n- Use `remember` and `mutableStateOf` for local UI state\n- Use ViewModel with StateFlow for screen-level state management\n- Keep composables small and focused; extract reusable composables\n- Use `LazyColumn`/`LazyRow` for lists, never `Column` with `forEach`\n- Use `Modifier` parameter as the first optional parameter in composable functions\n- Use `collectAsState()` to observe StateFlow in composables',
+
+    flutter: '## Framework Rules - Flutter\n\n- Do not build massive widget trees in one `build()` method; extract widgets\n- Do not use `setState` for anything beyond local ephemeral state\n- Use `const` constructors where possible for performance\n- Never call async code in `build()` or `initState()` without proper handling\n- Use keys properly for lists and animated widgets\n\n### Commands\n```bash\nflutter run        - Run on connected device\nflutter test       - Run tests\nflutter analyze    - Static analysis\n```'
+  };
+
+  /* ── Team size rules ── */
+  var TEAM_RULES = {
+    solo: '## Team Conventions (Solo Developer)\n\n- Commit frequently with descriptive messages; future-you is your code reviewer\n- Use branches for experiments; merge or delete within a week\n- Write at least smoke tests for critical paths; skip unit tests for throwaway code\n- Keep a DECISIONS.md log for architectural choices so you remember why later\n- Automate deployment so you never forget a step',
+
+    small: '## Team Conventions (Small Team: 2-10)\n\n- All changes go through pull requests with at least one reviewer\n- Use Conventional Commits format: `feat:`, `fix:`, `refactor:`, `docs:`, `test:`\n- Maintain a shared coding standards document (this CLAUDE.md is a start)\n- Run CI on every PR: lint, type-check, test, build\n- Use feature branches; keep PRs under 400 lines of diff when possible\n- Rotate code review responsibility to spread knowledge\n- Tag releases with semantic versioning',
+
+    enterprise: '## Team Conventions (Enterprise: 50+)\n\n- All changes require PR approval from a code owner (CODEOWNERS file required)\n- Use Conventional Commits with scope: `feat(auth):`, `fix(payments):`\n- CI pipeline must include: lint, type-check, unit tests, integration tests, security scan, build\n- Use trunk-based development with short-lived feature branches (< 2 days)\n- Every module must have an owner documented in CODEOWNERS\n- Breaking changes require an RFC document and migration guide\n- Use semantic versioning with automated changelog generation\n- Security review required for: auth changes, payment logic, data model changes, dependency updates\n- On-call rotation must be documented; runbooks for all production services\n- Performance budgets enforced in CI (bundle size, load time, memory)'
+  };
+
+  /* ── Test rules by language ── */
+  var TEST_RULES = {
+    typescript: '## Testing Rules\n\n- Place tests as `*.test.ts` next to source files\n- Use `describe`/`it` blocks for grouping; one assertion per `it` block preferred\n- Mock external dependencies; never mock the module under test\n- Use factory functions for test data, not shared mutable fixtures\n- Run with coverage; enforce minimum 80% on critical modules\n- Test edge cases: empty inputs, null values, error paths, boundary conditions',
+
+    javascript: '## Testing Rules\n\n- Place tests as `*.test.js` next to source files\n- Use `describe`/`it` blocks with clear test names that describe expected behavior\n- Mock external dependencies; never mock the module under test\n- Use factory functions for test data\n- Test async code with `async`/`await`, not callbacks\n- Assert both success and error paths',
+
+    python: '## Testing Rules\n\n- Place tests in `tests/` directory mirroring the source structure\n- Name test files `test_*.py`; name test functions `test_*`\n- Use fixtures for setup; prefer factory fixtures over complex setup\n- Use `@pytest.mark.parametrize` for testing multiple inputs\n- Use `conftest.py` for shared fixtures across test modules\n- Measure coverage with `pytest-cov`; enforce thresholds in CI',
+
+    go: '## Testing Rules\n\n- Place tests in `*_test.go` files in the same package\n- Use table-driven tests for testing multiple scenarios\n- Use `t.Parallel()` for tests that can run concurrently\n- Use `httptest.NewServer` for testing HTTP handlers\n- Use interfaces and dependency injection to make code testable\n- Use `t.Helper()` in test helper functions for clear error locations',
+
+    rust: '## Testing Rules\n\n- Place unit tests in a `#[cfg(test)] mod tests` block in the same file\n- Place integration tests in `tests/` directory\n- Use `#[should_panic]` for testing expected panics\n- Use `proptest` or `quickcheck` for property-based testing on core logic\n- Test error variants explicitly; do not just assert `is_err()`',
+
+    java: '## Testing Rules\n\n- Use JUnit 5 with `@Test`, `@BeforeEach`, `@DisplayName`\n- Use `@ParameterizedTest` with `@MethodSource` for data-driven tests\n- Use Mockito for mocking dependencies\n- Follow Arrange-Act-Assert pattern in every test\n- Use AssertJ for fluent, readable assertions',
+
+    csharp: '## Testing Rules\n\n- Use xUnit or NUnit for unit tests\n- Use Moq or NSubstitute for mocking\n- Follow Arrange-Act-Assert pattern\n- Test both happy and error paths\n- Use `[Theory]` with `[InlineData]` for parameterized tests',
+
+    ruby: '## Testing Rules\n\n- Use RSpec with `describe`/`context`/`it` pattern\n- Use FactoryBot for test data, not fixtures\n- Use `shared_examples` for testing shared behavior\n- Mock external services; never hit real APIs in tests\n- Use `aggregate_failures` to see all failures in a single test',
+
+    php: '## Testing Rules\n\n- Use PHPUnit for unit and integration tests\n- Use data providers for parameterized tests\n- Mock dependencies with Mockery or PHPUnit mocks\n- Test both valid inputs and validation error responses\n- Use database transactions in tests to keep them isolated',
+
+    elixir: '## Testing Rules\n\n- Use ExUnit for all tests\n- Write doctests for pure functions with clear inputs/outputs\n- Use `setup` and `setup_all` callbacks for test fixtures\n- Use Mox for mocking external dependencies behind behaviours\n- Use `async: true` for tests that do not share state',
+
+    swift: '## Testing Rules\n\n- Use XCTest for unit tests\n- Use `XCTAssertEqual`, `XCTAssertThrowsError` for specific assertions\n- Test view models independently of views\n- Use protocol-based dependency injection for testability\n- Use async tests with `async` test methods',
+
+    kotlin: '## Testing Rules\n\n- Use JUnit 5 or KotlinTest for unit tests\n- Use MockK for mocking Kotlin-specific features (coroutines, extension functions)\n- Use `runTest` for testing coroutine code\n- Test data classes for correct equality and copy behavior\n- Use parameterized tests for multiple input scenarios',
+
+    dart: '## Testing Rules\n\n- Use `flutter_test` for widget tests and `test` for unit tests\n- Use `mockito` with code generation for mocking\n- Write widget tests for UI components with `testWidgets`\n- Use `setUp` and `tearDown` for test lifecycle\n- Test both success and error states for async operations'
+  };
+
+  /* ── Git rules ── */
+  var GIT_RULES = '## Git Workflow\n\n- Write commit messages in imperative mood: "Add feature" not "Added feature"\n- Keep commits atomic: one logical change per commit\n- Never commit generated files, build artifacts, or secrets\n- Use `.gitignore` to exclude: `node_modules/`, `dist/`, `.env`, `*.log`, IDE configs\n- Squash fixup commits before merging to main\n- Never force-push to shared branches (main, develop)\n- Tag releases with semantic versions: `v1.2.3`\n- Write meaningful PR descriptions that explain the "why"';
+
+  /* ── Documentation rules ── */
+  var DOC_RULES = '## Documentation Rules\n\n- Every public function must have a doc comment explaining its purpose, parameters, and return value\n- Keep a CHANGELOG.md updated with notable changes per version\n- Write ADRs (Architecture Decision Records) for significant technical decisions\n- README.md must include: project description, setup instructions, and contribution guidelines\n- Inline comments explain "why", not "what" - the code should explain "what"\n- API endpoints must be documented with request/response examples\n- Update documentation in the same PR that changes the code';
+
+  /* ── Security rules ── */
+  var SECURITY_RULES = '## Security Rules\n\n- Never commit secrets, API keys, tokens, or passwords to version control\n- Use environment variables or secret managers for all credentials\n- Validate and sanitize all user input at system boundaries\n- Use parameterized queries; never concatenate user input into SQL or commands\n- Set Content Security Policy (CSP) headers on web applications\n- Keep dependencies updated; run `npm audit` / `pip audit` / equivalent regularly\n- Use HTTPS everywhere; never serve anything over plain HTTP in production\n- Implement rate limiting on public API endpoints\n- Log security-relevant events (auth failures, permission denials, input validation errors)\n- Follow the principle of least privilege for all service accounts and IAM roles';
+
+  /* ── Generate CLAUDE.md content ── */
+  function generateClaudeMd(config) {
+    assert(config !== null, 'config is not null');
+    assert(typeof config.language === 'string', 'language is string');
+
+    var sections = [];
+    var langLabel = config.language.charAt(0).toUpperCase() + config.language.slice(1);
+    if (config.language === 'typescript') langLabel = 'TypeScript';
+    if (config.language === 'javascript') langLabel = 'JavaScript';
+    if (config.language === 'csharp') langLabel = 'C#';
+
+    var fwLabel = config.framework;
+    if (FRAMEWORK_RULES[config.framework]) {
+      /* Extract display name from the rule block title */
+      var fwMatch = FRAMEWORK_RULES[config.framework].match(/- (.+)/);
+      /* Use the framework map for display name */
+      var fwOptions = FRAMEWORK_MAP[config.language] || [];
+      for (var i = 0; i < fwOptions.length && i < 30; i++) {
+        if (fwOptions[i][0] === config.framework) {
+          fwLabel = fwOptions[i][1];
+          break;
+        }
+      }
     }
-  }
 
-  /* ── Sanitize user input ── */
-  function sanitize(str) {
-    assert(typeof str === "string", "sanitize expects string");
-    if (str.length > 2000) { str = str.slice(0, 2000); }
-    return str.replace(/[<>&]/g, function (c) {
-      var map = { "<": "&lt;", ">": "&gt;", "&": "&amp;" };
-      return map[c] || c;
-    });
-  }
-
-  /* ── Get selected radio value ── */
-  function getRadio(name) {
-    var radios = document.querySelectorAll('input[name="' + name + '"]');
-    assert(radios.length > 0, "radio group " + name + " exists");
-    for (var i = 0; i < radios.length && i < 50; i++) {
-      if (radios[i].checked) { return radios[i].value; }
-    }
-    return "";
-  }
-
-  /* ── Label Maps ── */
-  var FRAMEWORK_LABELS = {
-    nextjs: "Next.js", nuxt3: "Nuxt 3", sveltekit: "SvelteKit", astro: "Astro",
-    remix: "Remix", gatsby: "Gatsby", django: "Django", flask: "Flask",
-    fastapi: "FastAPI", rails: "Rails", laravel: "Laravel", springboot: "Spring Boot",
-    nestjs: "NestJS", express: "Express", fastify: "Fastify", hono: "Hono",
-    reactnative: "React Native", flutter: "Flutter", gin: "Gin", axum: "Axum",
-    terraform: "Terraform", awscdk: "AWS CDK", hugo: "Hugo", eleventy: "Eleventy",
-    phoenix: "Phoenix", denofresh: "Deno Fresh", other: "Custom Framework"
-  };
-
-  var LANG_LABELS = {
-    typescript: "TypeScript", javascript: "JavaScript", python: "Python",
-    go: "Go", rust: "Rust", php: "PHP", ruby: "Ruby", java: "Java",
-    kotlin: "Kotlin", swift: "Swift", csharp: "C#"
-  };
-
-  var DB_LABELS = {
-    none: "None", postgresql: "PostgreSQL", mysql: "MySQL", sqlite: "SQLite",
-    mongodb: "MongoDB", redis: "Redis", supabase: "Supabase", firebase: "Firebase",
-    dynamodb: "DynamoDB", planetscale: "PlanetScale"
-  };
-
-  var DEPLOY_LABELS = {
-    docker: "Docker", vercel: "Vercel", netlify: "Netlify", aws: "AWS",
-    gcp: "GCP", railway: "Railway", flyio: "Fly.io", vps: "VPS",
-    cloudflare: "Cloudflare Workers", other: "Custom"
-  };
-
-  var TEST_LABELS = {
-    none: "None", jest: "Jest", vitest: "Vitest", pytest: "Pytest",
-    rspec: "RSpec", gotest: "Go testing", junit: "JUnit",
-    playwright: "Playwright", cypress: "Cypress"
-  };
-
-  /* ── Framework Templates ── */
-  var TEMPLATES = {};
-
-  TEMPLATES.nextjs = {
-    overview: "This is a Next.js application using the App Router. All pages live in `app/` with file-based routing. Server Components are the default; use `\"use client\"` only when the component needs browser APIs, event handlers, or React state.",
-    structure: "app/           — Pages, layouts, and route handlers\ncomponents/    — Reusable UI components\nlib/           — Shared utilities and helpers\npublic/        — Static assets\nstyles/        — Global and module CSS",
-    commands: "pnpm dev       — Start dev server (port 3000)\npnpm build     — Production build\npnpm lint      — ESLint\npnpm test      — Run tests",
-    pitfalls: "- Do NOT use `getServerSideProps` or `getStaticProps` — those are Pages Router patterns\n- Do NOT import server-only code in Client Components\n- Do NOT use `useEffect` for data fetching; use Server Components or `use()` instead\n- Always add `loading.tsx` for route segments that fetch data\n- Prefer `next/image` over `<img>` — it handles optimization automatically\n- Never store secrets in `NEXT_PUBLIC_*` environment variables",
-    prompts: [
-      "Add a new API route at /api/users that returns paginated results from the database",
-      "Create a reusable data table component with sorting and filtering using Server Components",
-      "Set up middleware for authentication that redirects unauthenticated users to /login",
-      "Optimize the homepage for Core Web Vitals — audit images, fonts, and third-party scripts",
-      "Add error boundaries and loading states for the /dashboard route segment"
-    ]
-  };
-
-  TEMPLATES.nuxt3 = {
-    overview: "This is a Nuxt 3 application using the Composition API and auto-imports. Pages use file-based routing under `pages/`. Composables in `composables/` and utilities in `utils/` are auto-imported.",
-    structure: "pages/         — File-based routes\ncomponents/    — Auto-imported components\ncomposables/   — Auto-imported composable functions\nserver/        — Nitro server routes and middleware\npublic/        — Static assets",
-    commands: "pnpm dev       — Start dev server\npnpm build     — Production build\npnpm generate  — Static generation\npnpm lint      — Lint",
-    pitfalls: "- Do NOT manually import composables from `composables/` — they are auto-imported\n- Do NOT use Options API; use Composition API with `<script setup>`\n- Always use `useFetch` or `useAsyncData` for data fetching, not raw `fetch` in setup\n- Use `definePageMeta` for page-level middleware and layout assignments\n- Server routes go in `server/api/` not mixed with frontend code",
-    prompts: [
-      "Create a server API route in server/api/ that connects to the database and returns filtered results",
-      "Add a composable for managing authentication state with useState",
-      "Set up Nuxt middleware that checks auth tokens before rendering protected pages",
-      "Create a reusable component with defineProps and defineEmits using TypeScript",
-      "Configure Nitro to deploy to the selected hosting platform"
-    ]
-  };
-
-  TEMPLATES.sveltekit = {
-    overview: "This is a SvelteKit application. Pages live in `src/routes/` using file-based routing. Each route can have `+page.svelte`, `+page.server.ts` (server load), and `+page.ts` (universal load).",
-    structure: "src/routes/    — File-based pages and endpoints\nsrc/lib/       — Shared components and utilities ($lib alias)\nsrc/params/    — Parameter matchers\nstatic/        — Static assets",
-    commands: "pnpm dev       — Start dev server\npnpm build     — Production build\npnpm preview   — Preview production build\npnpm check     — Type checking",
-    pitfalls: "- Do NOT use `+page.ts` load functions for secret/database access; use `+page.server.ts`\n- Do NOT import `$env/static/private` in client-side code\n- Always return data from load functions; do not set stores directly\n- Use `+layout.svelte` for shared UI, not wrapper components\n- Form actions go in `+page.server.ts`, not API endpoints, when possible",
-    prompts: [
-      "Add a new protected route with a server-side load function that checks authentication",
-      "Create a form action in +page.server.ts that validates input and writes to the database",
-      "Build a reusable component in $lib with typed props and event dispatching",
-      "Set up hooks.server.ts for request logging and authentication checking",
-      "Add progressive enhancement to a form using use:enhance"
-    ]
-  };
-
-  TEMPLATES.astro = {
-    overview: "This is an Astro site focused on content and performance. Pages in `src/pages/` are static by default. Interactive islands use framework components with `client:*` directives.",
-    structure: "src/pages/     — File-based routes (.astro, .md, .mdx)\nsrc/components/— UI components (Astro + framework islands)\nsrc/layouts/   — Page layouts\nsrc/content/   — Content collections\npublic/        — Static assets",
-    commands: "pnpm dev       — Start dev server\npnpm build     — Build to dist/\npnpm preview   — Preview build",
-    pitfalls: "- Do NOT add `client:load` to every component — most should be zero-JS Astro components\n- Use `client:visible` or `client:idle` for below-fold interactive components\n- Content collections must be defined in `src/content/config.ts`\n- Astro components have no client-side state; use framework islands for interactivity\n- Always set image dimensions to avoid layout shift",
-    prompts: [
-      "Create a content collection for blog posts with Zod schema validation",
-      "Add a React island component for an interactive search widget with client:idle",
-      "Build a static page that pulls data at build time using Astro.glob",
-      "Set up dynamic routes with getStaticPaths for a blog category system",
-      "Optimize the site for performance — audit client: directives and image handling"
-    ]
-  };
-
-  TEMPLATES.remix = {
-    overview: "This is a Remix application using nested routing. Routes live in `app/routes/` with convention-based layouts. Data loading uses `loader` functions; mutations use `action` functions.",
-    structure: "app/routes/    — Nested file-based routes\napp/components/— Shared components\napp/models/    — Data models and database queries\napp/utils/     — Shared utilities\npublic/        — Static assets",
-    commands: "pnpm dev       — Start dev server\npnpm build     — Production build\npnpm start     — Start production server",
-    pitfalls: "- Do NOT use `useEffect` for data fetching; use `loader` functions\n- Do NOT throw generic errors in loaders; use `json()` with proper status codes\n- Always use `<Form>` over `<form>` for progressive enhancement\n- Return `redirect()` from actions, not manual navigation\n- Nested routes share parent layout — leverage this for shared UI",
-    prompts: [
-      "Add a resource route that returns JSON data for the API",
-      "Create a nested route with its own loader, action, and error boundary",
-      "Implement optimistic UI for a form submission using useFetcher",
-      "Set up session-based authentication with cookie storage",
-      "Add proper error boundaries and catch boundaries for a route tree"
-    ]
-  };
-
-  TEMPLATES.gatsby = {
-    overview: "This is a Gatsby site using GraphQL for data fetching at build time. Pages are in `src/pages/` with additional programmatic pages created in `gatsby-node.js`.",
-    structure: "src/pages/     — Static pages\nsrc/components/— React components\nsrc/templates/ — Templates for programmatic pages\ngatsby-node.js — Build-time page creation\ngatsby-config.js— Plugin configuration",
-    commands: "pnpm develop   — Start dev server\npnpm build     — Production build\npnpm serve     — Serve production build\npnpm clean     — Clear cache",
-    pitfalls: "- Do NOT use `fetch` in components for build-time data; use GraphQL page queries\n- Static queries (useStaticQuery) cannot use variables\n- Always run `gatsby clean` when changing GraphQL schema or plugins\n- Use gatsby-image/gatsby-plugin-image for all images\n- Dynamic pages must be created in gatsby-node.js createPages",
-    prompts: [
-      "Create a new page template with a GraphQL query for a blog post type",
-      "Add programmatic page creation in gatsby-node.js for a content type",
-      "Build a component using useStaticQuery for site metadata",
-      "Configure a new source plugin and create pages from the data",
-      "Optimize build performance — audit GraphQL queries and image processing"
-    ]
-  };
-
-  TEMPLATES.django = {
-    overview: "This is a Django application following the MVT (Model-View-Template) pattern. Apps are self-contained modules. All database access goes through the ORM.",
-    structure: "project/       — Project settings and root URL config\napps/          — Django apps (models, views, templates)\ntemplates/     — Global templates\nstatic/        — Static files\nmanage.py      — Django management CLI",
-    commands: "python manage.py runserver    — Start dev server\npython manage.py migrate      — Run migrations\npython manage.py makemigrations — Generate migrations\npython manage.py test         — Run tests\npython manage.py shell        — Interactive shell",
-    pitfalls: "- Do NOT write raw SQL unless the ORM genuinely cannot express the query\n- Do NOT put business logic in views; use model methods or service layers\n- Always create migrations when changing models; never edit the DB directly\n- Use `select_related()` and `prefetch_related()` to avoid N+1 queries\n- Never hardcode URLs; use `reverse()` or the url template tag\n- Keep secrets in environment variables, not settings.py",
-    prompts: [
-      "Create a new Django app with model, serializer, and API views",
-      "Add a custom management command that processes data in batches",
-      "Optimize a queryset that has N+1 problems using select_related/prefetch_related",
-      "Write a model with custom validators and a clean() method",
-      "Set up Django REST Framework viewsets with permission classes"
-    ]
-  };
-
-  TEMPLATES.flask = {
-    overview: "This is a Flask application. Routes are defined with decorators. The app follows a factory pattern using `create_app()` for configuration and extension initialization.",
-    structure: "app/           — Application package\napp/__init__.py— App factory (create_app)\napp/routes/    — Blueprint route modules\napp/models/    — Database models\napp/templates/ — Jinja2 templates\nconfig.py      — Configuration classes",
-    commands: "flask run      — Start dev server\nflask db upgrade — Run migrations\npytest         — Run tests",
-    pitfalls: "- Do NOT create the app object at module level; use the factory pattern\n- Do NOT store state in module-level variables; use `g`, session, or the database\n- Always use Blueprints for route organization, not a single routes file\n- Use `current_app` inside request context, not the app object directly\n- Never disable CSRF protection in production",
-    prompts: [
-      "Create a new Blueprint with routes, models, and templates",
-      "Add Flask-Login authentication with session management",
-      "Set up SQLAlchemy models with relationships and migrations",
-      "Build a RESTful API endpoint with request validation using Marshmallow",
-      "Add error handlers for 404, 500, and custom exception types"
-    ]
-  };
-
-  TEMPLATES.fastapi = {
-    overview: "This is a FastAPI application. Endpoints are async by default with automatic OpenAPI documentation. Use Pydantic models for request/response validation.",
-    structure: "app/           — Application package\napp/main.py    — FastAPI app instance and startup\napp/routers/   — API route modules\napp/models/    — Pydantic and ORM models\napp/schemas/   — Request/response schemas\napp/deps.py    — Dependency injection functions",
-    commands: "uvicorn app.main:app --reload  — Start dev server\npytest                         — Run tests\nalembic upgrade head           — Run migrations",
-    pitfalls: "- Do NOT use sync database drivers in async endpoints; use async drivers\n- Do NOT skip Pydantic validation by using raw dicts\n- Always use Depends() for shared logic like auth, DB sessions, and pagination\n- Define response_model on every endpoint for OpenAPI accuracy\n- Use BackgroundTasks for non-blocking work, not threading\n- Close database sessions properly with dependency teardown (yield)",
-    prompts: [
-      "Create a new router with CRUD endpoints and Pydantic schemas",
-      "Add JWT authentication as a reusable dependency",
-      "Set up async database access with SQLAlchemy 2.0 and connection pooling",
-      "Build a WebSocket endpoint for real-time updates",
-      "Add request validation with custom validators in Pydantic models"
-    ]
-  };
-
-  TEMPLATES.rails = {
-    overview: "This is a Ruby on Rails application following convention over configuration. MVC structure with RESTful routing. ActiveRecord handles all database operations.",
-    structure: "app/models/       — ActiveRecord models\napp/controllers/  — Request controllers\napp/views/        — ERB/HTML templates\napp/services/     — Service objects for business logic\nconfig/routes.rb  — Route definitions\ndb/migrate/       — Database migrations",
-    commands: "rails server     — Start dev server\nrails console    — Interactive console\nrails db:migrate — Run migrations\nrails test       — Run tests\nbundle install   — Install gems",
-    pitfalls: "- Do NOT put business logic in controllers; extract to service objects or model concerns\n- Do NOT use `update_attribute` — it skips validations; use `update` instead\n- Always use strong parameters in controllers\n- Use scopes and query objects instead of complex where chains\n- Never modify schema.rb manually; always use migrations\n- Use `find_each` for batch processing, not `all.each`",
-    prompts: [
-      "Generate a scaffold for a new resource with model, controller, and views",
-      "Create a service object that encapsulates complex business logic",
-      "Add a concern for shared model behavior across multiple models",
-      "Set up Active Job with a background worker for async processing",
-      "Build an API-only controller with serialization using jbuilder or active_model_serializers"
-    ]
-  };
-
-  TEMPLATES.laravel = {
-    overview: "This is a Laravel application using Eloquent ORM and Blade templates. Routes are in `routes/`, controllers in `app/Http/Controllers/`. Follow repository and service patterns for complex logic.",
-    structure: "app/Http/Controllers/ — Request handlers\napp/Models/           — Eloquent models\napp/Services/         — Business logic services\nresources/views/      — Blade templates\nroutes/web.php        — Web routes\nroutes/api.php        — API routes\ndatabase/migrations/  — Migrations",
-    commands: "php artisan serve      — Start dev server\nphp artisan migrate    — Run migrations\nphp artisan make:model — Generate model\nphp artisan test       — Run tests\ncomposer install       — Install dependencies",
-    pitfalls: "- Do NOT put business logic in controllers; use Services or Actions\n- Do NOT use raw queries when Eloquent can handle it\n- Always use Form Requests for validation, not inline validation in controllers\n- Use Eloquent relationships and eager loading to prevent N+1 queries\n- Never store secrets in config files; use `.env` and `config()` helper\n- Use `php artisan make:*` generators instead of creating files manually",
-    prompts: [
-      "Create a new resource with Model, Migration, Controller, Form Request, and Resource",
-      "Add a Service class that encapsulates complex business logic with proper error handling",
-      "Set up API authentication using Laravel Sanctum with token management",
-      "Build a queued Job for background processing with retry logic",
-      "Create a custom Artisan command for data maintenance tasks"
-    ]
-  };
-
-  TEMPLATES.springboot = {
-    overview: "This is a Spring Boot application using dependency injection and convention-based configuration. Follow layered architecture: Controller -> Service -> Repository.",
-    structure: "src/main/java/     — Application source\n  controller/      — REST controllers\n  service/         — Business logic\n  repository/      — Data access (JPA)\n  model/           — Entity classes\n  dto/             — Data transfer objects\n  config/          — Configuration classes\nsrc/main/resources/— Config files (application.yml)\nsrc/test/          — Test sources",
-    commands: "./mvnw spring-boot:run  — Start app\n./mvnw test             — Run tests\n./mvnw package          — Build JAR",
-    pitfalls: "- Do NOT inject concrete classes; always inject interfaces\n- Do NOT expose entity objects in API responses; use DTOs\n- Always use constructor injection, not field injection (@Autowired on fields)\n- Use @Transactional on service methods, not controllers\n- Never catch generic Exception; catch specific exceptions\n- Use Spring profiles for environment-specific config, not if-else blocks",
-    prompts: [
-      "Create a REST controller with DTO mapping, service layer, and JPA repository",
-      "Add global exception handling with @ControllerAdvice and custom error responses",
-      "Set up Spring Security with JWT authentication and role-based access",
-      "Write integration tests using @SpringBootTest with TestContainers for the database",
-      "Add pagination and sorting support to a repository and controller endpoint"
-    ]
-  };
-
-  TEMPLATES.nestjs = {
-    overview: "This is a NestJS application using decorators and dependency injection. Modules encapsulate features. Controllers handle requests, Services contain business logic, and Providers handle DI.",
-    structure: "src/\n  app.module.ts    — Root module\n  modules/         — Feature modules\n    feature/\n      feature.module.ts\n      feature.controller.ts\n      feature.service.ts\n      dto/\n      entities/",
-    commands: "pnpm start:dev   — Start with hot reload\npnpm build       — Compile to dist/\npnpm test        — Unit tests\npnpm test:e2e    — E2E tests",
-    pitfalls: "- Do NOT import services directly; always go through module providers\n- Do NOT use `any` type for DTOs; use class-validator decorators\n- Always define DTOs with validation decorators for every endpoint\n- Use Guards for authorization, not inline checks in controllers\n- Pipes handle validation; Interceptors handle response transformation\n- Use ConfigService for env variables, not process.env directly",
-    prompts: [
-      "Create a feature module with controller, service, DTOs, and entity",
-      "Add a Guard for role-based authentication with a custom decorator",
-      "Set up TypeORM entities with relations and a repository pattern",
-      "Build a custom Pipe for request validation and transformation",
-      "Add Swagger documentation using @nestjs/swagger decorators"
-    ]
-  };
-
-  TEMPLATES.express = {
-    overview: "This is an Express application. Routes are organized in separate modules. Middleware handles cross-cutting concerns. Follow controller-service-repository pattern for clean separation.",
-    structure: "src/\n  app.js           — Express app setup and middleware\n  routes/          — Route definitions\n  controllers/     — Request handlers\n  services/        — Business logic\n  middleware/      — Custom middleware\n  models/          — Data models",
-    commands: "npm run dev      — Start with nodemon\nnpm start        — Production start\nnpm test         — Run tests",
-    pitfalls: "- Do NOT put business logic in route handlers; extract to services\n- Do NOT skip error-handling middleware (4-arg function)\n- Always validate request input; never trust req.body directly\n- Use helmet and cors middleware in production\n- Never use synchronous file operations in request handlers\n- Handle promise rejections — unhandled rejections crash the server",
-    prompts: [
-      "Create a route module with controller and service for a new resource",
-      "Add centralized error handling middleware with proper HTTP status codes",
-      "Set up request validation middleware using Joi or Zod",
-      "Build an authentication middleware with JWT verification",
-      "Add rate limiting and security headers for production hardening"
-    ]
-  };
-
-  TEMPLATES.fastify = {
-    overview: "This is a Fastify application using the plugin system for modularity. Routes are registered as plugins. Schema-based validation is built in for requests and responses.",
-    structure: "src/\n  app.js           — Fastify instance and plugin registration\n  plugins/         — Reusable plugins\n  routes/          — Route modules (registered as plugins)\n  schemas/         — JSON schemas for validation\n  services/        — Business logic",
-    commands: "npm run dev      — Start dev server\nnpm start        — Production start\nnpm test         — Run tests",
-    pitfalls: "- Do NOT skip JSON Schema validation; define schemas for all routes\n- Do NOT use Express middleware directly; use fastify-express adapter or native equivalents\n- Always use the plugin system for encapsulation, not global state\n- Decorate the Fastify instance instead of using module-level variables\n- Use `reply.send()` explicitly; do not rely on implicit return in all cases\n- Register plugins with proper prefixes for route namespacing",
-    prompts: [
-      "Create a route plugin with JSON Schema validation for request and response",
-      "Add an authentication plugin using @fastify/jwt with hook-based verification",
-      "Set up database connection as a Fastify plugin with proper lifecycle hooks",
-      "Build a custom plugin with decorators for shared functionality",
-      "Add Swagger auto-documentation using @fastify/swagger"
-    ]
-  };
-
-  TEMPLATES.hono = {
-    overview: "This is a Hono application designed for edge runtimes. Routes use the chainable API. Middleware is composable. Keep handlers lean for fast cold starts.",
-    structure: "src/\n  index.ts         — App entry and route registration\n  routes/          — Route modules\n  middleware/      — Custom middleware\n  lib/             — Shared utilities",
-    commands: "pnpm dev         — Start dev server\npnpm build       — Build for production\npnpm deploy      — Deploy to edge",
-    pitfalls: "- Do NOT import Node.js-specific modules; Hono targets edge runtimes\n- Do NOT use heavy dependencies; bundle size matters on the edge\n- Always use c.env for environment variables, not process.env\n- Use Hono's built-in validator middleware for request validation\n- Keep handlers stateless; edge functions have no persistent memory\n- Use c.executionCtx.waitUntil() for background work",
-    prompts: [
-      "Create a route group with middleware and typed request validation",
-      "Add JWT authentication middleware using Hono's built-in jwt helper",
-      "Set up a KV or D1 database binding with proper typing",
-      "Build CORS and rate-limiting middleware for the API",
-      "Create an OpenAPI schema using @hono/zod-openapi"
-    ]
-  };
-
-  TEMPLATES.reactnative = {
-    overview: "This is a React Native application. Navigation uses React Navigation. Components should be platform-agnostic where possible, with `.ios.tsx` and `.android.tsx` for platform-specific code.",
-    structure: "src/\n  screens/         — Screen components\n  components/      — Reusable UI components\n  navigation/      — Navigation configuration\n  hooks/           — Custom hooks\n  services/        — API and business logic\n  store/           — State management",
-    commands: "npx react-native start     — Start Metro bundler\nnpx react-native run-ios   — Run on iOS simulator\nnpx react-native run-android — Run on Android emulator\nnpm test                   — Run tests",
-    pitfalls: "- Do NOT use web-specific CSS properties; use StyleSheet.create\n- Do NOT use `<div>` or `<span>`; use `<View>` and `<Text>`\n- Always handle keyboard avoidance for forms (KeyboardAvoidingView)\n- Use FlatList for long lists, never ScrollView with map\n- Test on both platforms; behavior can differ significantly\n- Handle deep linking configuration for navigation",
-    prompts: [
-      "Create a new screen with navigation integration and typed route params",
-      "Build a reusable form component with keyboard avoidance and validation",
-      "Set up a custom hook for API calls with loading and error states",
-      "Add push notification handling for both iOS and Android",
-      "Optimize a FlatList with proper keyExtractor, memoization, and item sizing"
-    ]
-  };
-
-  TEMPLATES.flutter = {
-    overview: "This is a Flutter application using Dart. State management follows the pattern defined below. Widgets are organized by feature. Keep widget trees shallow by extracting sub-widgets.",
-    structure: "lib/\n  main.dart         — App entry point\n  screens/          — Screen widgets\n  widgets/          — Reusable widgets\n  models/           — Data models\n  services/         — API and business logic\n  providers/        — State management",
-    commands: "flutter run        — Run on connected device\nflutter test       — Run tests\nflutter build apk  — Build Android\nflutter build ios   — Build iOS\nflutter analyze    — Static analysis",
-    pitfalls: "- Do NOT build massive widget trees in one build() method; extract widgets\n- Do NOT use setState for anything beyond local ephemeral state\n- Always use const constructors where possible for performance\n- Never call async code in build() or initState() without proper handling\n- Use keys properly for lists and animated widgets\n- Handle platform-specific code with Platform.isIOS / Platform.isAndroid",
-    prompts: [
-      "Create a new screen with routing and state management integration",
-      "Build a reusable widget with proper const constructors and theming",
-      "Set up a repository pattern for API calls with error handling",
-      "Add a state management solution for a feature using the project's pattern",
-      "Write widget tests and golden tests for a screen"
-    ]
-  };
-
-  TEMPLATES.gin = {
-    overview: "This is a Go application using the Gin web framework. Handlers are grouped by domain. Middleware handles auth and logging. Follow Go idioms: explicit error handling, interfaces for DI.",
-    structure: "cmd/server/      — Main entry point\ninternal/\n  handler/       — HTTP handlers\n  service/       — Business logic\n  repository/    — Data access\n  model/         — Domain types\n  middleware/    — HTTP middleware\npkg/             — Public library code",
-    commands: "go run cmd/server/main.go  — Start server\ngo test ./...              — Run tests\ngo build -o bin/app        — Build binary\ngolangci-lint run          — Lint",
-    pitfalls: "- Do NOT use panic for expected errors; return errors and handle them\n- Do NOT use global variables for dependencies; use dependency injection via structs\n- Always check and handle errors immediately after the call\n- Use context.Context for cancellation and request-scoped values\n- Close resources (DB connections, files, response bodies) with defer\n- Use table-driven tests for comprehensive test coverage",
-    prompts: [
-      "Create a handler group with service and repository for a new domain entity",
-      "Add middleware for JWT authentication with role-based access control",
-      "Set up database connection pooling and a repository with proper error handling",
-      "Write table-driven tests for a handler with mock dependencies",
-      "Add graceful shutdown handling and health check endpoints"
-    ]
-  };
-
-  TEMPLATES.axum = {
-    overview: "This is a Rust web application using Axum. Handlers are async functions. State is shared via Extension layer. Use extractors for typed request parsing.",
-    structure: "src/\n  main.rs          — Server setup and route registration\n  routes/          — Route handler modules\n  models/          — Domain types and DB models\n  services/        — Business logic\n  extractors/      — Custom Axum extractors\n  error.rs         — Error types and IntoResponse impls",
-    commands: "cargo run          — Start server\ncargo test         — Run tests\ncargo build --release — Release build\ncargo clippy       — Lint",
-    pitfalls: "- Do NOT use unwrap() in handler code; return proper error types\n- Do NOT clone Arc<State> unnecessarily; use Axum's State extractor\n- Always implement IntoResponse for custom error types\n- Use tower middleware for cross-cutting concerns\n- Handle graceful shutdown with tokio::signal\n- Use sqlx compile-time query checking when possible",
-    prompts: [
-      "Create a route module with typed extractors and proper error handling",
-      "Add authentication middleware using tower layers with JWT validation",
-      "Set up SQLx with compile-time checked queries and connection pooling",
-      "Build a custom extractor for pagination with validation",
-      "Write integration tests using axum::test helpers with a test database"
-    ]
-  };
-
-  TEMPLATES.terraform = {
-    overview: "This is a Terraform infrastructure-as-code project. Resources are organized by service/concern. State is managed remotely. All changes go through plan-review-apply cycle.",
-    structure: "environments/     — Per-environment configs (dev, staging, prod)\nmodules/          — Reusable Terraform modules\nmain.tf           — Root module resource declarations\nvariables.tf      — Input variable definitions\noutputs.tf        — Output value definitions\nbackend.tf        — State backend configuration",
-    commands: "terraform init     — Initialize and download providers\nterraform plan     — Preview changes\nterraform apply    — Apply changes\nterraform fmt      — Format files\nterraform validate — Validate configuration",
-    pitfalls: "- NEVER run `terraform apply` without reviewing `terraform plan` output first\n- Do NOT hardcode values; use variables and locals\n- Always use remote state with locking (S3+DynamoDB or Terraform Cloud)\n- Never store secrets in .tf files; use environment variables or secret managers\n- Use data sources to reference existing resources, not hardcoded IDs\n- Pin provider and module versions to avoid breaking changes",
-    prompts: [
-      "Create a reusable module for a common infrastructure pattern with proper variables and outputs",
-      "Add a new environment configuration that references shared modules",
-      "Set up remote state backend with locking and encryption",
-      "Import an existing resource into Terraform state and write the matching config",
-      "Add lifecycle rules and prevent_destroy for critical resources"
-    ]
-  };
-
-  TEMPLATES.awscdk = {
-    overview: "This is an AWS CDK infrastructure project. Stacks define cloud resources as code. Constructs are reusable infrastructure components. Follow L2/L3 construct patterns.",
-    structure: "lib/              — Stack and construct definitions\nbin/              — CDK app entry point\ntest/             — Infrastructure tests\ncdk.json          — CDK configuration",
-    commands: "cdk synth          — Synthesize CloudFormation template\ncdk diff           — Preview changes\ncdk deploy         — Deploy stack\ncdk destroy        — Tear down stack\nnpm test           — Run tests",
-    pitfalls: "- Do NOT use L1 constructs (Cfn*) when L2 constructs exist\n- Do NOT hardcode AWS account IDs or regions; use stack environment\n- Always use removal policies on stateful resources (databases, S3 buckets)\n- Never deploy without running `cdk diff` first\n- Use cdk.context.json for cached context values, not hardcoded lookups\n- Tag all resources with environment labels for cost tracking",
-    prompts: [
-      "Create a new stack with VPC, subnets, and security groups using L2 constructs",
-      "Build a reusable construct for a common service pattern (API + Lambda + DynamoDB)",
-      "Add proper IAM roles with least-privilege permissions for a service",
-      "Write snapshot tests and fine-grained assertion tests for a stack",
-      "Set up a CI/CD pipeline stack using CodePipeline"
-    ]
-  };
-
-  TEMPLATES.hugo = {
-    overview: "This is a Hugo static site. Content is in Markdown under `content/`. Layouts use Go templates. Taxonomies organize content. Shortcodes extend Markdown.",
-    structure: "content/          — Markdown content organized by section\nlayouts/          — Go template layouts and partials\nstatic/           — Static assets\nassets/            — Assets processed by Hugo Pipes\ndata/             — Data files (JSON, YAML, TOML)\narchetypes/       — Content templates\nconfig.toml       — Site configuration",
-    commands: "hugo server        — Start dev server with live reload\nhugo               — Build site to public/\nhugo new content/  — Create new content from archetype",
-    pitfalls: "- Do NOT mix content and layout logic; content goes in content/, display in layouts/\n- Do NOT reference assets with absolute file paths; use Hugo Pipes or relURL\n- Always use `.RelPermalink` instead of hardcoded URLs\n- Use Page Bundles for content that has associated images\n- Define front matter defaults in config to avoid repetition\n- Test with `hugo --gc --minify` to catch template errors",
-    prompts: [
-      "Create a new content type with archetype, list template, and single template",
-      "Build a shortcode for a reusable content pattern",
-      "Set up taxonomies for tagging and categorizing content",
-      "Add Hugo Pipes processing for SCSS/PostCSS and JavaScript bundling",
-      "Create a partial with caching for an expensive operation"
-    ]
-  };
-
-  TEMPLATES.eleventy = {
-    overview: "This is an Eleventy (11ty) static site. Content uses Markdown, Nunjucks, or Liquid templates. Data cascade provides flexible data merging. Collections organize content.",
-    structure: "src/              — Source files\n  _data/          — Global data files\n  _includes/      — Layouts and partials\n  posts/          — Content collections\n  pages/          — Static pages\n.eleventy.js      — Configuration",
-    commands: "npx @11ty/eleventy --serve  — Dev server\nnpx @11ty/eleventy          — Build to _site/",
-    pitfalls: "- Do NOT mix template languages unnecessarily; pick one and be consistent\n- Do NOT store computed values in content front matter; use computed data\n- Always use the data cascade; understand how data merges from global to local\n- Use pagination for generating pages from data, not manual duplication\n- Filters go in .eleventy.js config, not inline in templates",
-    prompts: [
-      "Create a new collection with pagination and layout template",
-      "Add a custom filter and shortcode in the Eleventy config",
-      "Set up the data cascade with global, directory, and computed data",
-      "Build a layout chain with base layout and page-specific overrides",
-      "Add asset pipeline for CSS and JS with proper cache busting"
-    ]
-  };
-
-  TEMPLATES.phoenix = {
-    overview: "This is a Phoenix application using Elixir. LiveView handles interactive UIs. Contexts organize business logic. Ecto manages database access.",
-    structure: "lib/app/          — Business logic contexts\nlib/app_web/      — Web layer (controllers, live views, templates)\nlib/app_web/router.ex — Route definitions\npriv/repo/migrations/ — Database migrations\ntest/             — Test files",
-    commands: "mix phx.server     — Start server\nmix ecto.migrate   — Run migrations\nmix test           — Run tests\niex -S mix         — Interactive shell",
-    pitfalls: "- Do NOT put business logic in controllers or LiveView modules; use Contexts\n- Do NOT query the database directly from views; go through Context functions\n- Always use Ecto changesets for data validation\n- LiveView: minimize assigns and use streams for large lists\n- Use PubSub for real-time features, not polling\n- Handle all error cases with pattern matching, not try/catch",
-    prompts: [
-      "Create a new Context with schema, changeset, and CRUD functions",
-      "Build a LiveView with real-time updates using PubSub",
-      "Add authentication using phx.gen.auth",
-      "Set up an Ecto migration with proper indexes and constraints",
-      "Write ExUnit tests for a Context module with fixtures"
-    ]
-  };
-
-  TEMPLATES.denofresh = {
-    overview: "This is a Deno Fresh application using islands architecture. Pages are server-rendered by default. Interactive components go in `islands/`. Uses Preact for UI.",
-    structure: "routes/           — File-based routes and API endpoints\nislands/          — Interactive client-side components\ncomponents/       — Server-rendered components (no JS)\nstatic/           — Static assets\nfresh.config.ts   — Fresh configuration",
-    commands: "deno task start    — Start dev server\ndeno task build    — Build for production\ndeno test          — Run tests",
-    pitfalls: "- Do NOT make all components islands; only use islands/ for truly interactive components\n- Do NOT import npm packages directly; use npm: specifier or deno.land/x\n- Always use the islands pattern — keep the client JS bundle minimal\n- Route handlers use Request/Response web standard APIs, not Node.js APIs\n- Use signals for state management in islands, not useState\n- Fresh is file-system routed; follow the naming conventions exactly",
-    prompts: [
-      "Create a route with server-side data loading and an interactive island",
-      "Build an island component with Preact signals for state management",
-      "Add an API endpoint in routes/api/ with proper request validation",
-      "Set up middleware for authentication and request logging",
-      "Create a shared component used by both server and island components"
-    ]
-  };
-
-  TEMPLATES.other = {
-    overview: "This project uses a custom or less common framework. The following conventions and rules apply to keep the codebase consistent and maintainable.",
-    structure: "src/              — Source code\ntests/            — Test files\nconfig/           — Configuration\ndocs/             — Documentation",
-    commands: "# Add your project commands here\n# npm start / python main.py / go run . / etc.",
-    pitfalls: "- Always follow established project patterns when adding new code\n- Keep dependencies minimal and well-justified\n- Document non-obvious architectural decisions\n- Write tests for all business logic\n- Never commit secrets or credentials",
-    prompts: [
-      "Add a new feature module following the existing project patterns",
-      "Refactor a complex function into smaller, testable units",
-      "Set up proper error handling across the application",
-      "Write comprehensive tests for the core business logic",
-      "Add input validation for all external-facing endpoints"
-    ]
-  };
-
-  /* ── Language-Specific Conventions ── */
-  function getLanguageConventions(lang) {
-    assert(typeof lang === "string", "lang is string");
-    var conventions = {
-      typescript: "## Code Style — TypeScript\n\n- Enable `strict: true` in tsconfig.json — no exceptions\n- Use `interface` for object shapes, `type` for unions/intersections\n- Never use `any`; use `unknown` and narrow with type guards\n- Prefer `const` over `let`; never use `var`\n- Use named exports, not default exports\n- Functions that can fail should return `Result<T, Error>` or throw typed errors\n- Keep types close to usage; avoid a single `types.ts` monolith",
-      javascript: "## Code Style — JavaScript\n\n- Use ES modules (`import`/`export`), not CommonJS (`require`) unless Node.js requires it\n- Prefer `const` over `let`; never use `var`\n- Use optional chaining (`?.`) and nullish coalescing (`??`)\n- Destructure function parameters for clarity\n- Add JSDoc comments for public functions with `@param` and `@returns`\n- Validate inputs at function boundaries",
-      python: "## Code Style — Python\n\n- Follow PEP 8 and use type hints on all function signatures\n- Use dataclasses or Pydantic models, not raw dicts, for structured data\n- Prefer f-strings over `.format()` or `%` formatting\n- Use `pathlib.Path` over `os.path`\n- Use list comprehensions for simple transforms; for-loops for complex logic\n- Raise specific exceptions, not bare `Exception`\n- Use `if __name__ == \"__main__\":` guard in scripts",
-      go: "## Code Style — Go\n\n- Follow `gofmt` and `go vet` unconditionally\n- Return `error` as the last return value; always check errors immediately\n- Use short variable names in small scopes; descriptive names in larger scopes\n- Prefer composition over inheritance; embed interfaces and structs\n- Use `context.Context` as the first parameter for functions that do I/O\n- Write table-driven tests\n- Use `errgroup` for concurrent operations with error handling",
-      rust: "## Code Style — Rust\n\n- Use `clippy` lints — treat warnings as errors\n- Prefer `Result<T, E>` over `unwrap()`/`expect()` in library and handler code\n- Use `thiserror` for library errors, `anyhow` for application errors\n- Derive `Debug`, `Clone`, `PartialEq` on types when sensible\n- Prefer iterators and combinators over manual loops\n- Use `#[must_use]` on functions whose return values should not be ignored\n- Minimize `unsafe` blocks; document safety invariants when required",
-      php: "## Code Style — PHP\n\n- Follow PSR-12 coding standard\n- Use strict types: `declare(strict_types=1)` in every file\n- Use type declarations for all function parameters and return types\n- Prefer named arguments for functions with multiple parameters\n- Use enums (PHP 8.1+) instead of class constants for fixed sets\n- Validate inputs early and return early to reduce nesting",
-      ruby: "## Code Style — Ruby\n\n- Follow the Ruby Style Guide (rubocop defaults)\n- Use `frozen_string_literal: true` magic comment in all files\n- Prefer `Symbol` keys in hashes over strings\n- Use guard clauses for early returns\n- Prefer `each` over `for`; use `map`/`select`/`reduce` for transforms\n- Keep methods under 10 lines where possible\n- Use keyword arguments for methods with 3+ parameters",
-      java: "## Code Style — Java\n\n- Follow Google Java Style Guide\n- Use `final` for variables that should not be reassigned\n- Prefer records for immutable data carriers (Java 16+)\n- Use Optional for nullable return types; never return null from public methods\n- Use streams for collection transformations\n- Always implement `equals()`, `hashCode()`, and `toString()` on value objects\n- Use constructor injection, not field injection",
-      kotlin: "## Code Style — Kotlin\n\n- Follow Kotlin Coding Conventions (ktlint)\n- Use data classes for value objects\n- Prefer `val` over `var`; use immutable collections by default\n- Use sealed classes for restricted hierarchies\n- Use extension functions to add behavior without inheritance\n- Use coroutines for async code, not callbacks or RxJava\n- Prefer `when` expressions over `if-else` chains",
-      swift: "## Code Style — Swift\n\n- Follow Swift API Design Guidelines\n- Use `let` over `var` wherever possible\n- Use value types (struct/enum) over reference types (class) by default\n- Use guard for early exits; avoid deep nesting\n- Use Swift concurrency (async/await) over completion handlers\n- Make types conform to `Codable` for serialization\n- Use access control: default to `private` and expose intentionally",
-      csharp: "## Code Style — C#\n\n- Follow Microsoft C# Coding Conventions\n- Use `var` when the type is obvious from the right side\n- Use nullable reference types (`?`) and enable nullable context\n- Prefer LINQ for collection operations\n- Use `async`/`await` consistently; never use `.Result` or `.Wait()`\n- Use records for immutable data transfer objects\n- Use dependency injection via constructor; register in DI container"
-    };
-    return conventions[lang] || conventions.javascript;
-  }
-
-  /* ── Database Patterns ── */
-  function getDatabasePatterns(db) {
-    assert(typeof db === "string", "db is string");
-    var patterns = {
-      none: "",
-      postgresql: "## Database — PostgreSQL\n\n- Use parameterized queries or an ORM — never concatenate SQL strings\n- Always create indexes for columns used in WHERE, JOIN, and ORDER BY\n- Use migrations for all schema changes; never alter production DB manually\n- Use transactions for multi-step operations\n- Use connection pooling in production (PgBouncer or built-in pool)\n- Name tables in snake_case plural (e.g., `user_accounts`)\n- Store timestamps as `TIMESTAMPTZ`, not `TIMESTAMP`",
-      mysql: "## Database — MySQL\n\n- Use parameterized queries — never concatenate user input into SQL\n- Use InnoDB engine for all tables (transactional support)\n- Create indexes for frequently queried columns\n- Use migrations for schema changes\n- Use `utf8mb4` charset, not `utf8` (which is incomplete)\n- Use connection pooling in production\n- Prefer `DATETIME` with explicit timezone handling",
-      sqlite: "## Database — SQLite\n\n- Enable WAL mode for concurrent read performance: `PRAGMA journal_mode=WAL`\n- Use parameterized queries; never interpolate values into SQL\n- SQLite is single-writer; design accordingly for write-heavy workloads\n- Use migrations; version the schema\n- Enable foreign keys: `PRAGMA foreign_keys = ON`\n- Use transactions for batch inserts (massive performance improvement)",
-      mongodb: "## Database — MongoDB\n\n- Define schemas/models even though MongoDB is schemaless (use Mongoose or equivalent)\n- Create indexes for query patterns; use `explain()` to verify usage\n- Use aggregation pipeline for complex queries, not application-side processing\n- Embed related data that is always read together; reference data that changes independently\n- Use transactions for multi-document updates that must be atomic\n- Validate documents at the application level before insertion",
-      redis: "## Database — Redis\n\n- Use Redis for caching, sessions, and queues — not as primary data store\n- Set TTL (expiration) on all cache keys to prevent unbounded memory growth\n- Use namespaced keys: `service:entity:id` pattern\n- Use pipelines for batch operations to reduce round trips\n- Use Lua scripts for atomic multi-step operations\n- Monitor memory usage; configure `maxmemory-policy` appropriately",
-      supabase: "## Database — Supabase\n\n- Use the Supabase client library; do not query PostgreSQL directly from the client\n- Use Row Level Security (RLS) policies for all tables\n- Define database types and generate TypeScript types from the schema\n- Use Supabase Auth for authentication; do not build custom auth\n- Use database functions for complex business logic\n- Use real-time subscriptions sparingly; filter to specific rows/tables",
-      firebase: "## Database — Firebase\n\n- Structure data for your query patterns — denormalization is expected\n- Use Security Rules to protect all collections; never leave rules open\n- Use batch writes for multi-document updates\n- Minimize document size; avoid storing arrays that grow unbounded\n- Use composite indexes for compound queries\n- Use Firebase Admin SDK on the server; client SDK on the frontend",
-      dynamodb: "## Database — DynamoDB\n\n- Design access patterns first, then model the table — single-table design preferred\n- Use partition key + sort key for flexible query patterns\n- Use GSIs sparingly; each GSI duplicates data and adds cost\n- Use DynamoDB Streams for event-driven processing\n- Use batch operations (BatchGetItem, BatchWriteItem) for bulk operations\n- Handle throttling with exponential backoff; use on-demand capacity for unpredictable workloads",
-      planetscale: "## Database — PlanetScale\n\n- Use the PlanetScale branching workflow: create a branch, make schema changes, create a deploy request\n- Foreign key constraints are not supported; enforce referential integrity in application code\n- Use the PlanetScale CLI or dashboard for schema changes, not raw DDL\n- Use connection pooling (PlanetScale provides built-in connection strings)\n- Use `@planetscale/database` serverless driver for edge deployments"
-    };
-    return patterns[db] || "";
-  }
-
-  /* ── Testing Standards ── */
-  function getTestingStandards(test) {
-    assert(typeof test === "string", "test is string");
-    var standards = {
-      none: "## Testing\n\n- Write tests for all business logic before considering it complete\n- Aim for high coverage on critical paths; do not chase 100% coverage on utilities\n- Use descriptive test names that explain the expected behavior\n- Keep tests independent — no test should depend on another test's output",
-      jest: "## Testing — Jest\n\n- Place tests in `__tests__/` directories or as `*.test.ts` files next to source\n- Use `describe` blocks to group related tests; `it` blocks for individual cases\n- Mock external dependencies with `jest.mock()`; never mock the module under test\n- Use `beforeEach` for setup; avoid `beforeAll` unless sharing expensive resources\n- Use snapshot tests sparingly — only for stable UI components\n- Run with `--coverage` in CI; set coverage thresholds in jest.config",
-      vitest: "## Testing — Vitest\n\n- Place tests as `*.test.ts` next to source files\n- Use `describe` and `it` blocks; leverage `expect` API for assertions\n- Use `vi.mock()` for module mocking; `vi.fn()` for function spies\n- Use `beforeEach` for setup; prefer test isolation\n- Use in-source testing (`if (import.meta.vitest)`) for utility functions\n- Configure coverage thresholds in vitest.config.ts",
-      pytest: "## Testing — Pytest\n\n- Place tests in `tests/` directory mirroring the source structure\n- Name test files `test_*.py`; name test functions `test_*`\n- Use fixtures for setup; prefer factory fixtures over complex setup\n- Use `@pytest.mark.parametrize` for testing multiple inputs\n- Use `conftest.py` for shared fixtures across test modules\n- Use `pytest-cov` for coverage; set minimum thresholds in pyproject.toml",
-      rspec: "## Testing — RSpec\n\n- Follow the `describe`/`context`/`it` pattern\n- Use `let` and `let!` for test data; `before` for setup\n- Use factories (FactoryBot) instead of fixtures for test data\n- Use `shared_examples` for testing shared behavior\n- Mock external services; never hit real APIs in tests\n- Use `aggregate_failures` to see all failures in a single test",
-      gotest: "## Testing — Go testing\n\n- Place tests in `*_test.go` files in the same package\n- Use table-driven tests for testing multiple scenarios\n- Use `testify/assert` or `testify/require` for readable assertions\n- Use `t.Parallel()` for tests that can run concurrently\n- Use `httptest.NewServer` for testing HTTP handlers\n- Use interfaces and dependency injection for testable code",
-      junit: "## Testing — JUnit\n\n- Use JUnit 5 (`@Test`, `@BeforeEach`, `@DisplayName`)\n- Use `@ParameterizedTest` with `@MethodSource` for data-driven tests\n- Use `@Nested` classes to group related tests\n- Use Mockito for mocking dependencies\n- Follow the Arrange-Act-Assert pattern in every test\n- Use AssertJ for fluent, readable assertions",
-      playwright: "## Testing — Playwright\n\n- Place tests in `tests/` or `e2e/` directory\n- Use Page Object Model for maintainable tests\n- Use `test.describe` for grouping related tests\n- Use locators (`getByRole`, `getByText`) over CSS selectors\n- Use `expect(locator).toBeVisible()` and similar auto-waiting assertions\n- Run tests in CI with multiple browsers; use `--project` for browser selection\n- Use `test.step` for documenting complex test flows",
-      cypress: "## Testing — Cypress\n\n- Place tests in `cypress/e2e/` directory\n- Use `cy.intercept()` for network mocking; do not hit real APIs\n- Use `data-cy` attributes for test selectors, not CSS classes\n- Use `cy.session()` for authentication caching across tests\n- Never use `cy.wait(timeout)`; use assertions that auto-retry\n- Use Cypress commands for reusable test actions\n- Run in headless mode in CI with video recording disabled for speed"
-    };
-    return standards[test] || standards.none;
-  }
-
-  /* ── Deployment Conventions ── */
-  function getDeploymentConventions(deploy) {
-    assert(typeof deploy === "string", "deploy is string");
-    var conventions = {
-      docker: "## Deployment — Docker\n\n- Use multi-stage builds to minimize image size\n- Pin base image versions (e.g., `node:20-alpine`, not `node:latest`)\n- Use `.dockerignore` to exclude node_modules, .git, and test files\n- Run as non-root user in the container\n- Use health checks in docker-compose and orchestration\n- Store secrets in environment variables or secret managers, not in the image",
-      vercel: "## Deployment — Vercel\n\n- Use `vercel.json` for configuration; do not rely on dashboard settings alone\n- Environment variables go in Vercel dashboard, not committed to repo\n- Use ISR (Incremental Static Regeneration) for frequently changing content\n- Serverless functions have a 10s default timeout (Pro: 60s)\n- Use Edge Functions for latency-sensitive endpoints\n- Preview deployments are automatic on PRs — use them for QA",
-      netlify: "## Deployment — Netlify\n\n- Use `netlify.toml` for build configuration and redirects\n- Environment variables go in Netlify dashboard\n- Use Netlify Functions for server-side logic (AWS Lambda under the hood)\n- Set up branch deploys for staging environments\n- Use `_redirects` or `netlify.toml` for SPA routing\n- Edge Functions run on Deno; different API from regular functions",
-      aws: "## Deployment — AWS\n\n- Use Infrastructure as Code (CDK, Terraform, or CloudFormation)\n- Follow least-privilege IAM policies for every service\n- Use environment-specific AWS accounts or at minimum separate IAM roles\n- Store secrets in AWS Secrets Manager or SSM Parameter Store\n- Use CloudWatch alarms for monitoring critical metrics\n- Enable access logging on all public-facing services",
-      gcp: "## Deployment — GCP\n\n- Use Infrastructure as Code (Terraform or Deployment Manager)\n- Follow least-privilege IAM with service accounts per service\n- Use Secret Manager for secrets; never environment variables for sensitive data\n- Use Cloud Build or GitHub Actions for CI/CD\n- Enable Cloud Monitoring and Cloud Logging\n- Use VPC for network isolation between services",
-      railway: "## Deployment — Railway\n\n- Use `railway.toml` or Nixpacks configuration for build settings\n- Environment variables are set per-service in the Railway dashboard\n- Use Railway's database plugins for managed databases\n- Set health check paths for proper deployment verification\n- Use preview environments from PRs for testing\n- Monitor resource usage; Railway bills by usage",
-      flyio: "## Deployment — Fly.io\n\n- Use `fly.toml` for configuration\n- Use `fly secrets set` for environment variables\n- Use Fly Volumes for persistent storage\n- Configure health checks for zero-downtime deploys\n- Use multi-region deployment for latency-sensitive apps\n- Use `fly ssh console` for debugging, not direct server access",
-      vps: "## Deployment — VPS\n\n- Use a process manager (PM2, systemd) to keep the app running\n- Set up Nginx or Caddy as a reverse proxy with TLS\n- Automate deployments with CI/CD (GitHub Actions, etc.)\n- Use fail2ban and UFW/iptables for server security\n- Set up automated backups for databases and critical data\n- Monitor with Prometheus + Grafana or a managed service",
-      cloudflare: "## Deployment — Cloudflare Workers\n\n- Use `wrangler.toml` for configuration\n- Workers have a 10ms CPU time limit (paid plan: 50ms); keep handlers fast\n- Use KV for read-heavy data; D1 for relational data; R2 for object storage\n- Use `wrangler dev` for local development\n- Environment variables and secrets go in wrangler.toml or `wrangler secret put`\n- Bundle size matters — minimize dependencies; no Node.js built-ins",
-      other: "## Deployment\n\n- Automate all deployments through CI/CD pipelines\n- Never deploy manually to production\n- Use environment variables for configuration\n- Store secrets in a dedicated secret manager\n- Set up monitoring, alerting, and log aggregation\n- Test deployments in staging before production"
-    };
-    return conventions[deploy] || conventions.other;
-  }
-
-  /* ── Build the CLAUDE.md output ── */
-  function generateClaudeMd(fw, lang, db, deploy, test, customs) {
-    assert(fw in TEMPLATES, "framework template exists");
-    var t = TEMPLATES[fw];
-    var fwLabel = FRAMEWORK_LABELS[fw] || fw;
-    var langLabel = LANG_LABELS[lang] || lang;
-    var dbLabel = DB_LABELS[db] || db;
-    var deployLabel = DEPLOY_LABELS[deploy] || deploy;
-    var testLabel = TEST_LABELS[test] || test;
-
-    var lines = [];
+    var styleLabel = config.style === 'nasa' ? 'NASA Power of 10' :
+                     config.style === 'karpathy' ? 'Karpathy 4 Principles' :
+                     config.style === 'balanced' ? 'Balanced' : 'Minimal';
+    var teamLabel = config.team === 'solo' ? 'Solo' :
+                    config.team === 'small' ? 'Small Team (2-10)' : 'Enterprise (50+)';
 
     /* Header */
-    lines.push("# CLAUDE.md");
-    lines.push("");
-    lines.push("This file provides context to Claude Code about this project.");
-    lines.push("It is read automatically when Claude Code opens the repository.");
-    lines.push("");
+    sections.push('# CLAUDE.md \u2014 ' + langLabel + (config.framework !== 'none' ? ' + ' + fwLabel : '') + ' Project Guidelines');
+    sections.push('');
+    sections.push('> Generated by [Claude Code Guides](https://claudecodeguides.com/generator/)');
+    sections.push('> Style: ' + styleLabel + ' | Team: ' + teamLabel);
+    sections.push('');
 
-    /* Project Overview */
-    lines.push("## Project Overview");
-    lines.push("");
-    lines.push(t.overview);
-    lines.push("");
+    /* Coding style section */
+    sections.push(STYLE_RULES[config.style] || STYLE_RULES.balanced);
+    sections.push('');
 
-    /* Tech Stack */
-    lines.push("## Tech Stack");
-    lines.push("");
-    lines.push("- **Framework:** " + fwLabel);
-    lines.push("- **Language:** " + langLabel);
-    if (db !== "none") {
-      lines.push("- **Database:** " + dbLabel);
-    }
-    lines.push("- **Deployment:** " + deployLabel);
-    if (test !== "none") {
-      lines.push("- **Testing:** " + testLabel);
-    }
-    lines.push("");
+    /* Language-specific rules */
+    sections.push(LANGUAGE_RULES[config.language] || '');
+    sections.push('');
 
-    /* Project Structure */
-    lines.push("## Project Structure");
-    lines.push("");
-    lines.push("```");
-    lines.push(t.structure);
-    lines.push("```");
-    lines.push("");
-
-    /* Commands */
-    lines.push("## Commands");
-    lines.push("");
-    lines.push("```bash");
-    lines.push(t.commands);
-    lines.push("```");
-    lines.push("");
-
-    /* Language conventions */
-    lines.push(getLanguageConventions(lang));
-    lines.push("");
-
-    /* Database patterns */
-    var dbPatterns = getDatabasePatterns(db);
-    if (dbPatterns.length > 0) {
-      lines.push(dbPatterns);
-      lines.push("");
+    /* Framework-specific rules */
+    if (config.framework !== 'none' && FRAMEWORK_RULES[config.framework]) {
+      sections.push(FRAMEWORK_RULES[config.framework]);
+      sections.push('');
     }
 
-    /* Testing standards */
-    lines.push(getTestingStandards(test));
-    lines.push("");
+    /* Team size rules */
+    sections.push(TEAM_RULES[config.team] || TEAM_RULES.solo);
+    sections.push('');
 
-    /* Deployment conventions */
-    lines.push(getDeploymentConventions(deploy));
-    lines.push("");
-
-    /* Custom conventions */
-    if (customs && customs.trim().length > 0) {
-      lines.push("## Project-Specific Conventions");
-      lines.push("");
-      lines.push(customs.trim());
-      lines.push("");
+    /* Optional sections */
+    if (config.includeTests) {
+      sections.push(TEST_RULES[config.language] || TEST_RULES.typescript);
+      sections.push('');
+    }
+    if (config.includeGit) {
+      sections.push(GIT_RULES);
+      sections.push('');
+    }
+    if (config.includeDocs) {
+      sections.push(DOC_RULES);
+      sections.push('');
+    }
+    if (config.includeSecurity) {
+      sections.push(SECURITY_RULES);
+      sections.push('');
     }
 
-    /* Common Pitfalls */
-    lines.push("## Common Pitfalls");
-    lines.push("");
-    lines.push(t.pitfalls);
-    lines.push("");
+    sections.push('---');
+    sections.push('');
+    sections.push('*Generated by [Claude Code Guides](https://claudecodeguides.com/generator/) \u2014 ' + langLabel + (config.framework !== 'none' ? ' + ' + fwLabel : '') + ' template.*');
 
-    /* Example Prompts */
-    lines.push("## Example Prompts");
-    lines.push("");
-    lines.push("These prompts are tailored to this stack. Use them as starting points:");
-    lines.push("");
-    for (var i = 0; i < t.prompts.length && i < 10; i++) {
-      lines.push("- `" + t.prompts[i] + "`");
-    }
-    lines.push("");
-
-    /* Footer */
-    lines.push("---");
-    lines.push("");
-    lines.push("*Generated by [Claude Code Guides](https://claudecodeguides.com/generator/) — " + fwLabel + " + " + langLabel + " template.*");
-
-    return lines.join("\n");
+    return sections.join('\n');
   }
 
-  /* ── Syntax Highlighting (simple markdown) ── */
-  function highlightMarkdown(raw) {
-    assert(typeof raw === "string", "highlight expects string");
-    var escaped = raw
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
-
-    var lines = escaped.split("\n");
-    var inCodeBlock = false;
+  /* ── Syntax highlighting for markdown ── */
+  function highlightMd(raw) {
+    assert(typeof raw === 'string', 'highlight expects string');
+    var escaped = raw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    var lines = escaped.split('\n');
+    var inCode = false;
     var result = [];
 
     for (var i = 0; i < lines.length && i < 2000; i++) {
       var line = lines[i];
-
-      /* Code block toggle */
       if (line.match(/^```/)) {
-        inCodeBlock = !inCodeBlock;
-        result.push('<span class="md-code">' + line + "</span>");
+        inCode = !inCode;
+        result.push('<span class="md-code">' + line + '</span>');
         continue;
       }
-
-      if (inCodeBlock) {
-        result.push('<span class="md-code">' + line + "</span>");
+      if (inCode) {
+        result.push('<span class="md-code">' + line + '</span>');
         continue;
       }
-
-      /* Headings */
-      if (line.match(/^# /)) {
-        result.push('<span class="md-h1">' + line + "</span>");
-      } else if (line.match(/^## /)) {
-        result.push('<span class="md-h2">' + line + "</span>");
-      } else if (line.match(/^### /)) {
-        result.push('<span class="md-h3">' + line + "</span>");
-      } else if (line.match(/^- /)) {
-        /* Bullet */
-        result.push('<span class="md-bullet">-</span>' + line.slice(1));
-      } else if (line.match(/^\*[^*]/)) {
-        /* Italic / comment-like */
-        result.push('<span class="md-comment">' + line + "</span>");
-      } else if (line.match(/^---$/)) {
-        result.push('<span class="md-comment">' + line + "</span>");
-      } else {
-        /* Bold markers */
-        var boldLine = line.replace(/\*\*([^*]+)\*\*/g, '<span class="md-bold">**$1**</span>');
-        /* Inline code */
-        boldLine = boldLine.replace(/`([^`]+)`/g, '<span class="md-code">`$1`</span>');
-        result.push(boldLine);
+      if (line.match(/^# /))       { result.push('<span class="md-h1">' + line + '</span>'); }
+      else if (line.match(/^## /))  { result.push('<span class="md-h2">' + line + '</span>'); }
+      else if (line.match(/^### /)) { result.push('<span class="md-h3">' + line + '</span>'); }
+      else if (line.match(/^- /))   { result.push('<span class="md-bullet">-</span>' + line.slice(1)); }
+      else if (line.match(/^\*[^*]/)) { result.push('<span class="md-comment">' + line + '</span>'); }
+      else if (line.match(/^---$/))   { result.push('<span class="md-comment">' + line + '</span>'); }
+      else if (line.match(/^>/))      { result.push('<span class="md-comment">' + line + '</span>'); }
+      else {
+        var l = line.replace(/\*\*([^*]+)\*\*/g, '<span class="md-bold">**$1**</span>');
+        l = l.replace(/`([^`]+)`/g, '<span class="md-code">`$1`</span>');
+        result.push(l);
       }
     }
-    return result.join("\n");
+    return result.join('\n');
   }
 
-  /* ── Download as .md file ── */
+  /* ── Download as file ── */
   function downloadFile(content, filename) {
-    assert(typeof content === "string", "content is string");
-    assert(typeof filename === "string", "filename is string");
-    var blob = new Blob([content], { type: "text/markdown;charset=utf-8" });
+    assert(typeof content === 'string', 'content is string');
+    var blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
     var url = URL.createObjectURL(blob);
-    var a = document.createElement("a");
+    var a = document.createElement('a');
     a.href = url;
     a.download = filename;
     document.body.appendChild(a);
@@ -1463,138 +1025,124 @@ select:focus-visible, textarea:focus-visible {
     URL.revokeObjectURL(url);
   }
 
-  /* ── Estimate token savings ── */
-  function estimateTokenSavings(lineCount) {
-    assert(typeof lineCount === "number", "lineCount is number");
-    /* Approx: each line of CLAUDE.md saves ~20 tokens of back-and-forth */
-    var saved = lineCount * 20;
-    if (saved > 1000) {
-      return Math.round(saved / 1000) + "K";
-    }
-    return String(saved);
+  /* ── Get radio value ── */
+  function getRadio(name) {
+    var el = document.querySelector('input[name="' + name + '"]:checked');
+    assert(el !== null, 'radio ' + name + ' has selection');
+    return el ? el.value : '';
   }
 
-  /* ── Email submission ── */
-  function submitEmail(email, framework, language) {
-    assert(typeof email === "string", "email is string");
-    var payload = {
-      email: email,
-      framework: framework,
-      language: language,
-      source: "generator"
-    };
+  /* ── Paywall state ── */
+  var PAYWALL_KEY = 'ccg_generator_uses';
+  var PAYWALL_LIMIT = 2;
 
-    fetch("https://zovo.one/api/capture-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    }).then(function (resp) {
-      if (!resp.ok) {
-        console.log("Email capture endpoint returned " + resp.status + " — gracefully handled.");
-      }
-    }).catch(function (err) {
-      console.log("Email capture unavailable: " + err.message);
-    });
+  function getUseCount() {
+    try { return parseInt(localStorage.getItem(PAYWALL_KEY), 10) || 0; }
+    catch (_) { return 0; }
+  }
+
+  function incrementUseCount() {
+    var count = getUseCount() + 1;
+    try { localStorage.setItem(PAYWALL_KEY, String(count)); }
+    catch (_) { /* storage blocked */ }
+    return count;
   }
 
   /* ── State ── */
-  var generatedContent = "";
+  var generatedContent = '';
 
   /* ── DOM Ready ── */
-  document.addEventListener("DOMContentLoaded", function () {
-    var form = document.getElementById("genForm");
-    var outputSection = document.getElementById("outputSection");
-    var codeOutput = document.getElementById("codeOutput");
-    var lineCountEl = document.getElementById("lineCount");
-    var tokenSavingsEl = document.getElementById("tokenSavings");
-    var btnDownload = document.getElementById("btnDownload");
-    var btnCopy = document.getElementById("btnCopy");
-    var copyFeedback = document.getElementById("copyFeedback");
-    var emailBanner = document.getElementById("emailBanner");
-    var upsellSection = document.getElementById("upsellSection");
-    var btnEmail = document.getElementById("btnEmail");
-    var emailInput = document.getElementById("emailInput");
-    var emailRow = document.getElementById("emailRow");
-    var emailThanks = document.getElementById("emailThanks");
+  document.addEventListener('DOMContentLoaded', function () {
+    var selLanguage   = document.getElementById('sel-language');
+    var selFramework  = document.getElementById('sel-framework');
+    var btnGenerate   = document.getElementById('btnGenerate');
+    var outputSection = document.getElementById('outputSection');
+    var codeOutput    = document.getElementById('codeOutput');
+    var outputMeta    = document.getElementById('outputMeta');
+    var btnDownload   = document.getElementById('btnDownload');
+    var btnCopy       = document.getElementById('btnCopy');
+    var copyFeedback  = document.getElementById('copyFeedback');
+    var paywallOverlay = document.getElementById('paywall-overlay');
 
-    assert(form !== null, "form exists");
-    assert(outputSection !== null, "output section exists");
+    assert(selLanguage !== null, 'language select exists');
+    assert(selFramework !== null, 'framework select exists');
 
-    /* ── Form Submit ── */
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      var framework = document.getElementById("framework").value;
-      var language = getRadio("language");
-      var database = document.getElementById("database").value;
-      var deployment = getRadio("deployment");
-      var testing = document.getElementById("testing").value;
-      var conventions = document.getElementById("conventions").value;
-
-      if (!framework) {
-        document.getElementById("framework").focus();
-        return;
+    /* ── Update framework dropdown when language changes ── */
+    function updateFrameworks() {
+      var lang = selLanguage.value;
+      var options = FRAMEWORK_MAP[lang] || [['none','None']];
+      selFramework.innerHTML = '';
+      for (var i = 0; i < options.length && i < 30; i++) {
+        var opt = document.createElement('option');
+        opt.value = options[i][0];
+        opt.textContent = options[i][1];
+        selFramework.appendChild(opt);
       }
+    }
 
-      /* Sanitize custom conventions */
-      var safeConventions = conventions ? sanitize(conventions) : "";
+    selLanguage.addEventListener('change', updateFrameworks);
+    updateFrameworks(); /* Initialize on load */
 
-      /* Generate */
-      generatedContent = generateClaudeMd(
-        framework, language, database, deployment, testing, safeConventions
-      );
+    /* ── Generate ── */
+    btnGenerate.addEventListener('click', function () {
+      var useCount = incrementUseCount();
 
-      /* Display */
-      codeOutput.innerHTML = highlightMarkdown(generatedContent);
-      var lineCount = generatedContent.split("\n").length;
-      lineCountEl.textContent = lineCount + " lines";
-      tokenSavingsEl.textContent = "~" + estimateTokenSavings(lineCount) + " tokens saved per session";
+      var config = {
+        language: selLanguage.value,
+        framework: selFramework.value,
+        style: getRadio('style'),
+        team: getRadio('team'),
+        includeTests: document.getElementById('chk-tests').checked,
+        includeGit: document.getElementById('chk-git').checked,
+        includeDocs: document.getElementById('chk-docs').checked,
+        includeSecurity: document.getElementById('chk-security').checked
+      };
 
-      outputSection.classList.add("visible");
-      emailBanner.classList.add("visible");
-      upsellSection.classList.add("visible");
+      generatedContent = generateClaudeMd(config);
+      var lineCount = generatedContent.split('\n').length;
+      outputMeta.textContent = lineCount + ' lines \u2022 ~' + (lineCount * 20) + ' tokens saved per session';
 
-      /* Scroll to output */
-      outputSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      codeOutput.innerHTML = highlightMd(generatedContent);
+      outputSection.classList.add('visible');
+      outputSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      /* Paywall after 2 free uses */
+      if (useCount > PAYWALL_LIMIT) {
+        codeOutput.classList.add('blurred');
+        paywallOverlay.style.display = 'flex';
+      } else {
+        codeOutput.classList.remove('blurred');
+        paywallOverlay.style.display = 'none';
+      }
     });
 
     /* ── Download ── */
-    btnDownload.addEventListener("click", function () {
+    btnDownload.addEventListener('click', function () {
+      if (getUseCount() > PAYWALL_LIMIT) {
+        paywallOverlay.style.display = 'flex';
+        return;
+      }
       if (generatedContent.length > 0) {
-        downloadFile(generatedContent, "CLAUDE.md");
+        downloadFile(generatedContent, 'CLAUDE.md');
       }
     });
 
     /* ── Copy ── */
-    btnCopy.addEventListener("click", function () {
-      if (generatedContent.length === 0) { return; }
-      navigator.clipboard.writeText(generatedContent).then(function () {
-        copyFeedback.textContent = "Copied!";
-        copyFeedback.classList.add("show");
-        setTimeout(function () {
-          copyFeedback.classList.remove("show");
-        }, 2000);
-      }).catch(function () {
-        copyFeedback.textContent = "Copy failed — select and copy manually.";
-        copyFeedback.classList.add("show");
-        setTimeout(function () {
-          copyFeedback.classList.remove("show");
-        }, 3000);
-      });
-    });
-
-    /* ── Email Submit ── */
-    btnEmail.addEventListener("click", function () {
-      var email = emailInput.value.trim();
-      if (!email || !email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-        emailInput.focus();
+    btnCopy.addEventListener('click', function () {
+      if (getUseCount() > PAYWALL_LIMIT) {
+        paywallOverlay.style.display = 'flex';
         return;
       }
-      var framework = document.getElementById("framework").value;
-      var language = getRadio("language");
-      submitEmail(email, framework, language);
-      emailRow.style.display = "none";
-      emailThanks.style.display = "block";
+      if (generatedContent.length === 0) return;
+      navigator.clipboard.writeText(generatedContent).then(function () {
+        copyFeedback.textContent = 'Copied!';
+        copyFeedback.classList.add('show');
+        setTimeout(function () { copyFeedback.classList.remove('show'); }, 2000);
+      }).catch(function () {
+        copyFeedback.textContent = 'Copy failed - select and copy manually.';
+        copyFeedback.classList.add('show');
+        setTimeout(function () { copyFeedback.classList.remove('show'); }, 3000);
+      });
     });
   });
 })();

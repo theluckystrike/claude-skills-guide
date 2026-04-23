@@ -1,0 +1,1251 @@
+---
+layout: null
+permalink: /model-selector/
+sitemap: true
+title: "Which Claude Model Should You Use? Interactive Selector (2026)"
+description: "Answer 5 questions to find the best Claude model for your project. Compare Sonnet 4.6, Opus 4.6, and Haiku 4.5 by task, budget, and team size."
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Which Claude Model Should You Use? Interactive Selector (2026)</title>
+<meta name="description" content="Answer 5 questions to find the best Claude model for your project. Compare Sonnet 4.6, Opus 4.6, and Haiku 4.5 by task, budget, and team size.">
+<meta property="og:title" content="Claude Model Selector — Claude Code Guides">
+<meta property="og:description" content="Answer 5 questions to find the best Claude model for your project.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://claudecodeguides.com/model-selector/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Model Selector — Claude Code Guides">
+<meta name="twitter:description" content="Answer 5 questions to find the best Claude model for your project.">
+<link rel="canonical" href="https://claudecodeguides.com/model-selector/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  background: #0d1117;
+  color: #c9d1d9;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: #6ee7b7; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.85; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #6ee7b7;
+  outline-offset: 2px;
+}
+
+/* ── Layout ── */
+.container { max-width: 760px; margin: 0 auto; padding: 0 1.25rem; }
+.container-wide { max-width: 900px; margin: 0 auto; padding: 0 1.25rem; }
+
+/* ── Header ── */
+.site-header {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(201,209,217,0.08);
+}
+.site-header .container-wide {
+  display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;
+}
+.site-logo {
+  font-size: 1.05rem; font-weight: 600; color: #c9d1d9;
+  letter-spacing: -0.01em;
+}
+.site-nav {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center;
+}
+.site-nav a {
+  font-size: 0.8rem; color: rgba(201,209,217,0.6);
+  transition: color 0.2s; white-space: nowrap;
+}
+.site-nav a:hover { color: #c9d1d9; opacity: 1; }
+
+/* ── Hero ── */
+.hero {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+.hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+  color: #e6edf3;
+}
+.hero h1 .accent { color: #6ee7b7; }
+.hero .subhead {
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  color: rgba(201,209,217,0.6);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ── Progress Bar ── */
+.progress-bar-wrap {
+  width: 100%;
+  height: 6px;
+  background: rgba(201,209,217,0.08);
+  border-radius: 3px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6ee7b7, #34d399);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+  width: 0%;
+}
+
+/* ── Wizard Card ── */
+.wizard-card {
+  background: rgba(201,209,217,0.03);
+  border: 1px solid rgba(201,209,217,0.08);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  min-height: 320px;
+  position: relative;
+}
+
+/* ── Question Step ── */
+.question-step {
+  display: none;
+  animation: fadeIn 0.35s ease;
+}
+.question-step.active { display: block; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.question-step h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e6edf3;
+  margin-bottom: 0.35rem;
+}
+.question-number {
+  font-size: 0.8rem;
+  color: #6ee7b7;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Option Buttons ── */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+.option-btn {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(201,209,217,0.04);
+  border: 1px solid rgba(201,209,217,0.12);
+  border-radius: 8px;
+  color: #c9d1d9;
+  font-size: 0.95rem;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.option-btn:hover {
+  background: rgba(110,231,183,0.08);
+  border-color: rgba(110,231,183,0.3);
+  color: #e6edf3;
+}
+.option-btn.selected {
+  background: rgba(110,231,183,0.12);
+  border-color: #6ee7b7;
+  color: #e6edf3;
+}
+
+/* ── Nav Buttons ── */
+.wizard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+.btn-back {
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid rgba(201,209,217,0.15);
+  border-radius: 6px;
+  color: rgba(201,209,217,0.6);
+  font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-back:hover {
+  border-color: rgba(201,209,217,0.3);
+  color: #c9d1d9;
+}
+
+/* ── Result Card ── */
+.result-section {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+.result-section.active { display: block; }
+
+.result-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.result-header .model-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+.badge-sonnet { background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
+.badge-opus { background: rgba(168,85,247,0.15); color: #c084fc; border: 1px solid rgba(168,85,247,0.3); }
+.badge-haiku { background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+
+.result-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e6edf3;
+  margin-bottom: 0.5rem;
+}
+.result-reasoning {
+  color: rgba(201,209,217,0.75);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+.also-consider {
+  background: rgba(201,209,217,0.04);
+  border: 1px solid rgba(201,209,217,0.08);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+.also-consider strong { color: #e6edf3; }
+
+/* ── Cost Table ── */
+.cost-table-wrap {
+  margin-bottom: 1.5rem;
+}
+.cost-table-wrap h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e6edf3;
+  margin-bottom: 0.75rem;
+}
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.cost-table th {
+  text-align: left;
+  padding: 10px 12px;
+  background: rgba(201,209,217,0.05);
+  color: rgba(201,209,217,0.7);
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid rgba(201,209,217,0.08);
+}
+.cost-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(201,209,217,0.06);
+  color: #c9d1d9;
+}
+.cost-table tr.highlight td {
+  color: #6ee7b7;
+  font-weight: 600;
+}
+
+/* ── Config Snippet ── */
+.config-snippet-wrap {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.config-snippet-wrap h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e6edf3;
+  margin-bottom: 0.75rem;
+}
+.config-snippet {
+  background: #161b22;
+  border: 1px solid rgba(201,209,217,0.1);
+  border-radius: 8px;
+  padding: 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: #c9d1d9;
+  white-space: pre-wrap;
+  word-break: break-word;
+  position: relative;
+}
+.btn-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.75rem;
+  padding: 8px 18px;
+  background: rgba(110,231,183,0.1);
+  border: 1px solid rgba(110,231,183,0.3);
+  border-radius: 6px;
+  color: #6ee7b7;
+  font-size: 0.82rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-copy:hover {
+  background: rgba(110,231,183,0.18);
+}
+.btn-copy.copied {
+  background: rgba(110,231,183,0.2);
+  color: #34d399;
+}
+
+.btn-restart {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 24px;
+  background: transparent;
+  border: 1px solid rgba(201,209,217,0.15);
+  border-radius: 6px;
+  color: rgba(201,209,217,0.6);
+  font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-restart:hover {
+  border-color: rgba(201,209,217,0.3);
+  color: #c9d1d9;
+}
+
+/* ── Blurred result ── */
+.result-blurred {
+  filter: blur(6px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── Paywall Overlay ── */
+#paywall-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(10,10,15,0.92);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#paywall-overlay.visible {
+  display: flex;
+}
+.paywall-inner {
+  max-width: 480px;
+  text-align: center;
+  padding: 40px 24px;
+}
+.paywall-inner h2 {
+  color: #6ee7b7;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.paywall-inner p {
+  color: #c8ccd0;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+.paywall-inner .btn-paywall {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #6ee7b7;
+  color: #0a0a0f;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.paywall-inner .btn-paywall:hover {
+  background: #5dd6a8;
+  opacity: 1;
+}
+.paywall-fine {
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 16px;
+}
+
+/* ── SEO Content ── */
+.seo-content {
+  padding: 3rem 0 2rem;
+  border-top: 1px solid rgba(201,209,217,0.06);
+  margin-top: 2rem;
+}
+.seo-content h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #e6edf3;
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+  letter-spacing: -0.01em;
+}
+.seo-content h2:first-child { margin-top: 0; }
+.seo-content p {
+  margin-bottom: 1rem;
+  color: rgba(201,209,217,0.8);
+  line-height: 1.7;
+}
+.seo-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e6edf3;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+/* ── Comparison Table ── */
+.comparison-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  min-width: 560px;
+}
+.comparison-table th {
+  text-align: left;
+  padding: 12px 14px;
+  background: rgba(201,209,217,0.05);
+  color: rgba(201,209,217,0.7);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(201,209,217,0.1);
+}
+.comparison-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(201,209,217,0.06);
+  color: #c9d1d9;
+}
+.comparison-table tbody tr:hover {
+  background: rgba(201,209,217,0.02);
+}
+
+/* ── FAQ ── */
+.faq-list { margin: 1rem 0 2rem; }
+.faq-list details {
+  border: 1px solid rgba(201,209,217,0.08);
+  border-radius: 8px;
+  margin-bottom: 0.65rem;
+  overflow: hidden;
+}
+.faq-list summary {
+  padding: 14px 18px;
+  font-weight: 600;
+  color: #e6edf3;
+  cursor: pointer;
+  font-size: 0.95rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s;
+}
+.faq-list summary:hover {
+  background: rgba(201,209,217,0.03);
+}
+.faq-list summary::before {
+  content: '+';
+  font-size: 1.1rem;
+  color: #6ee7b7;
+  font-weight: 400;
+  flex-shrink: 0;
+  width: 18px;
+  text-align: center;
+}
+.faq-list details[open] summary::before { content: '-'; }
+.faq-list .faq-body {
+  padding: 0 18px 16px 46px;
+  color: rgba(201,209,217,0.75);
+  line-height: 1.65;
+  font-size: 0.9rem;
+}
+
+/* ── CTA Banner ── */
+.cta-banner {
+  background: linear-gradient(135deg, rgba(110,231,183,0.08), rgba(52,211,153,0.04));
+  border: 1px solid rgba(110,231,183,0.15);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  margin: 2.5rem 0;
+}
+.cta-banner h3 {
+  color: #e6edf3;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+.cta-banner p {
+  color: rgba(201,209,217,0.65);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.cta-banner .btn-cta {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #6ee7b7;
+  color: #0a0a0f;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+.cta-banner .btn-cta:hover { background: #5dd6a8; opacity: 1; }
+
+/* ── Related Links ── */
+.related-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 2rem;
+}
+.related-links a {
+  display: block;
+  padding: 12px 16px;
+  background: rgba(201,209,217,0.03);
+  border: 1px solid rgba(201,209,217,0.08);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #6ee7b7;
+  transition: all 0.2s;
+}
+.related-links a:hover {
+  background: rgba(110,231,183,0.06);
+  border-color: rgba(110,231,183,0.2);
+  opacity: 1;
+}
+
+/* ── Footer ── */
+.site-footer {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(201,209,217,0.06);
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(201,209,217,0.35);
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .wizard-card { padding: 1.25rem; }
+  .hero { padding: 2rem 0 1.25rem; }
+  .option-btn { padding: 12px 14px; font-size: 0.9rem; }
+  .cost-table { font-size: 0.8rem; }
+  .cost-table th, .cost-table td { padding: 8px 8px; }
+  .comparison-table th, .comparison-table td { padding: 10px 10px; }
+  .cta-banner { padding: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header class="site-header">
+  <div class="container-wide">
+    <a href="/" class="site-logo">Claude Code Guides</a>
+    <nav class="site-nav">
+      <a href="/playbook/">Playbook</a>
+      <a href="/calculator/">Cost Calculator</a>
+      <a href="/generator/">Generator</a>
+      <a href="/model-selector/" style="color:#6ee7b7;">Model Selector</a>
+      <a href="/errors-atlas/">Errors Atlas</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="container">
+    <h1>Which Claude Model <span class="accent">Should You Use?</span></h1>
+    <p class="subhead">Answer 5 quick questions. Get a tailored recommendation with cost estimates and a ready-to-paste CLAUDE.md config.</p>
+  </div>
+</section>
+
+<!-- ── Wizard ── -->
+<div class="container">
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-fill" id="progressFill"></div>
+  </div>
+
+  <div class="wizard-card" id="wizardCard">
+
+    <!-- Q1 -->
+    <div class="question-step active" data-step="0">
+      <div class="question-number">Question 1 of 5</div>
+      <h2>What are you building?</h2>
+      <div class="options-list">
+        <button class="option-btn" data-key="task" data-value="script">Quick script or one-off task</button>
+        <button class="option-btn" data-key="task" data-value="feature">Single feature or bug fix</button>
+        <button class="option-btn" data-key="task" data-value="app">Full application or major feature</button>
+        <button class="option-btn" data-key="task" data-value="architecture">Architecture design or system refactor</button>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question-step" data-step="1">
+      <div class="question-number">Question 2 of 5</div>
+      <h2>How large is the codebase?</h2>
+      <div class="options-list">
+        <button class="option-btn" data-key="size" data-value="small">Small (&lt;5K lines)</button>
+        <button class="option-btn" data-key="size" data-value="medium">Medium (5K&ndash;50K lines)</button>
+        <button class="option-btn" data-key="size" data-value="large">Large (50K&ndash;200K lines)</button>
+        <button class="option-btn" data-key="size" data-value="xlarge">Very large (200K+ lines)</button>
+      </div>
+      <div class="wizard-nav">
+        <button class="btn-back" onclick="goBack()">Back</button>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question-step" data-step="2">
+      <div class="question-number">Question 3 of 5</div>
+      <h2>What matters most?</h2>
+      <div class="options-list">
+        <button class="option-btn" data-key="priority" data-value="speed">Speed &mdash; I want fast responses</button>
+        <button class="option-btn" data-key="priority" data-value="quality">Quality &mdash; I want the best output</button>
+        <button class="option-btn" data-key="priority" data-value="cost">Cost &mdash; I want to minimize spend</button>
+        <button class="option-btn" data-key="priority" data-value="context">Context &mdash; I need maximum context window</button>
+      </div>
+      <div class="wizard-nav">
+        <button class="btn-back" onclick="goBack()">Back</button>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question-step" data-step="3">
+      <div class="question-number">Question 4 of 5</div>
+      <h2>Solo or team?</h2>
+      <div class="options-list">
+        <button class="option-btn" data-key="team" data-value="solo">Solo developer</button>
+        <button class="option-btn" data-key="team" data-value="small">Small team (2&ndash;10)</button>
+        <button class="option-btn" data-key="team" data-value="enterprise">Enterprise (50+)</button>
+      </div>
+      <div class="wizard-nav">
+        <button class="btn-back" onclick="goBack()">Back</button>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question-step" data-step="4">
+      <div class="question-number">Question 5 of 5</div>
+      <h2>Budget sensitivity?</h2>
+      <div class="options-list">
+        <button class="option-btn" data-key="budget" data-value="minimize">Minimize cost at all costs</button>
+        <button class="option-btn" data-key="budget" data-value="balanced">Balanced &mdash; good value</button>
+        <button class="option-btn" data-key="budget" data-value="any">Quality at any price</button>
+      </div>
+      <div class="wizard-nav">
+        <button class="btn-back" onclick="goBack()">Back</button>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div class="result-section" id="resultSection">
+      <div id="resultContent">
+        <div class="result-header" id="resultHeader"></div>
+        <div class="result-reasoning" id="resultReasoning"></div>
+        <div class="also-consider" id="alsoConsider"></div>
+        <div class="cost-table-wrap" id="costTableWrap"></div>
+        <div class="config-snippet-wrap" id="configSnippetWrap"></div>
+      </div>
+      <div style="text-align:center;">
+        <button class="btn-restart" onclick="startOver()">Start Over</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── Paywall ── -->
+<div id="paywall-overlay">
+  <div class="paywall-inner">
+    <h2>You've used your 2 free selections</h2>
+    <p>Unlock unlimited access to all 5 CCG tools + 200 production-ready CLAUDE.md templates, error fixes, and cost optimization configs.</p>
+    <a href="https://zovo.one/pricing" class="btn-paywall">Get Lifetime Access &mdash; $99</a>
+    <p class="paywall-fine">One-time payment. All tools. All templates. Forever.</p>
+  </div>
+</div>
+
+<!-- ── SEO Content ── -->
+<div class="container seo-content">
+
+  <h2>Claude Model Comparison: Sonnet vs Opus vs Haiku (April 2026)</h2>
+  <p>Anthropic offers three distinct Claude model tiers, each engineered for different development scenarios. Choosing the right one saves money and improves output quality. Here is a side-by-side look at the current lineup.</p>
+
+  <div class="comparison-table-wrap">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Haiku 4.5</th>
+          <th>Sonnet 4.6</th>
+          <th>Opus 4.6</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Input price</td>
+          <td>$0.80 / 1M tokens</td>
+          <td>$3 / 1M tokens</td>
+          <td>$15 / 1M tokens</td>
+        </tr>
+        <tr>
+          <td>Output price</td>
+          <td>$4 / 1M tokens</td>
+          <td>$15 / 1M tokens</td>
+          <td>$75 / 1M tokens</td>
+        </tr>
+        <tr>
+          <td>Context window</td>
+          <td>200K tokens</td>
+          <td>200K tokens</td>
+          <td>200K tokens</td>
+        </tr>
+        <tr>
+          <td>Speed (tokens/sec)</td>
+          <td>Very fast</td>
+          <td>Fast</td>
+          <td>Moderate</td>
+        </tr>
+        <tr>
+          <td>Code quality</td>
+          <td>Good</td>
+          <td>Excellent</td>
+          <td>Best-in-class</td>
+        </tr>
+        <tr>
+          <td>Complex reasoning</td>
+          <td>Basic</td>
+          <td>Strong</td>
+          <td>State of the art</td>
+        </tr>
+        <tr>
+          <td>Best for</td>
+          <td>Autocomplete, quick lookups, test gen</td>
+          <td>Daily coding, features, bug fixes</td>
+          <td>Architecture, refactoring, system design</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Pricing is based on Anthropic's published API rates as of April 2026. If you use Claude Code via the Max subscription ($100/month or $200/month), token costs are bundled into your plan, but model selection still affects response speed and quality.</p>
+
+  <h2>When to Use Each Model</h2>
+
+  <h3>Haiku 4.5 &mdash; The Speed Specialist</h3>
+  <p>Haiku is Anthropic's fastest and most affordable model. It excels at tasks that require rapid iteration: autocomplete suggestions, quick file lookups, generating boilerplate tests, and answering simple factual questions about your codebase. If your workflow involves hundreds of small prompts per day, Haiku keeps costs below $5/month for most solo developers. The tradeoff is reduced reasoning depth. Haiku can miss subtle bugs in complex logic and may struggle with multi-file refactoring that requires understanding architectural patterns. Use it for volume, not for depth.</p>
+
+  <h3>Sonnet 4.6 &mdash; The Everyday Workhorse</h3>
+  <p>Sonnet sits in the sweet spot for most Claude Code users. It handles feature implementation, bug fixes, code review, and test writing with high accuracy and at a reasonable cost. Most teams find that Sonnet covers 80-90% of their daily development needs without breaking the budget. Sonnet 4.6 introduced meaningful improvements over 4.5 in multi-step reasoning and adherence to project conventions specified in CLAUDE.md. It reads and follows style guides, understands framework-specific patterns, and produces code that generally fits into existing codebases without heavy editing. For teams spending $20-60/month per developer, Sonnet delivers the best value.</p>
+
+  <h3>Opus 4.6 &mdash; The Deep Thinker</h3>
+  <p>Opus is the most capable model in the Claude lineup and commands a premium price. It shines in scenarios that demand deep reasoning: designing system architecture from scratch, refactoring tangled legacy code, debugging race conditions, and writing complex algorithms. The quality difference between Opus and Sonnet becomes apparent when tasks exceed 200 lines of interconnected code or require reasoning across more than five files simultaneously. Enterprise teams use Opus for architecture reviews and security audits where missing a subtle issue has outsized consequences. For cost-conscious developers, the best strategy is to use Sonnet for daily work and switch to Opus only when a task genuinely requires its reasoning depth.</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+
+    <details>
+      <summary>Is Opus worth the extra cost?</summary>
+      <div class="faq-body">For routine coding tasks, no. Sonnet handles the vast majority of feature work and bug fixes at one-fifth the cost. Opus becomes worth it for architecture decisions, complex refactoring across many files, and debugging subtle concurrency or security issues. Most teams save money by defaulting to Sonnet and switching to Opus selectively for high-stakes tasks.</div>
+    </details>
+
+    <details>
+      <summary>Can I mix models in one project?</summary>
+      <div class="faq-body">Yes, and you should. In your CLAUDE.md file, you can specify which model to use for different task types. For example, set Sonnet as your default, use Haiku for autocomplete and quick lookups, and switch to Opus for architecture reviews. Claude Code's <code>/model</code> command lets you switch models mid-session without losing context.</div>
+    </details>
+
+    <details>
+      <summary>Which model is fastest?</summary>
+      <div class="faq-body">Haiku 4.5 is the fastest by a significant margin, typically 2-3x faster than Sonnet for output generation. Sonnet 4.6 is fast enough for interactive coding sessions. Opus is noticeably slower, especially on long outputs, which is why it is best reserved for tasks where thoroughness matters more than speed.</div>
+    </details>
+
+    <details>
+      <summary>Which model is cheapest?</summary>
+      <div class="faq-body">Haiku 4.5 at $0.80 per million input tokens and $4 per million output tokens. A solo developer doing light work can stay under $5/month with Haiku. Sonnet costs roughly 4x more per token, and Opus costs roughly 19x more than Haiku for input. However, cheap tokens that produce wrong code cost more in debugging time, so consider quality alongside raw price.</div>
+    </details>
+
+    <details>
+      <summary>What changed from Sonnet 4.5 to 4.6?</summary>
+      <div class="faq-body">Sonnet 4.6 brought improved multi-step reasoning, better adherence to CLAUDE.md instructions, more reliable tool use (fewer hallucinated file paths), and stronger performance on long-context tasks. It also improved at understanding framework conventions and producing code that matches existing project style. For Claude Code users, the upgrade is meaningful for daily productivity.</div>
+    </details>
+
+    <details>
+      <summary>How do I switch models in Claude Code?</summary>
+      <div class="faq-body">Use the <code>/model</code> slash command within any Claude Code session to switch models instantly. You can also set a default model in your CLAUDE.md file by adding a "Model Configuration" section. When using the API directly, specify the model ID in your request: <code>claude-sonnet-4-6-20260401</code>, <code>claude-opus-4-6-20260401</code>, or <code>claude-haiku-4-5-20241022</code>.</div>
+    </details>
+
+    <details>
+      <summary>Do all models have the same context window?</summary>
+      <div class="faq-body">Yes, all three current models support a 200K token context window. The difference lies in how effectively each model utilizes that context. Opus tends to maintain better recall across the full window, while Haiku may lose accuracy on details placed early in very long contexts. For codebases exceeding 100K tokens, Sonnet or Opus will generally give more reliable answers about the full codebase.</div>
+    </details>
+
+    <details>
+      <summary>Should I use extended thinking with any model?</summary>
+      <div class="faq-body">Extended thinking is most valuable with Opus for complex architectural decisions and multi-file refactoring. It adds latency and cost but can catch issues that standard responses miss. With Sonnet, extended thinking helps for moderately complex tasks but offers diminishing returns compared to Opus. Haiku does not benefit meaningfully from extended thinking and the added cost is rarely justified.</div>
+    </details>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-banner">
+    <h3>Get model-optimized CLAUDE.md templates for every scenario</h3>
+    <p>200 production-ready configs tuned for Sonnet, Opus, and Haiku across 26 frameworks.</p>
+    <a href="https://zovo.one/pricing" class="btn-cta">Claude Code Playbook &mdash; $99 Lifetime</a>
+  </div>
+
+  <h2>Related Guides</h2>
+  <div class="related-links">
+    <a href="/cost-optimization/">Cost Optimization Guide</a>
+    <a href="/playbook/">Claude Code Playbook</a>
+    <a href="/compare/">Extension Comparisons</a>
+    <a href="/calculator/">Cost Calculator</a>
+    <a href="/errors-atlas/">Errors Atlas</a>
+    <a href="/workflows/">Workflow Guides</a>
+  </div>
+
+</div>
+
+<!-- ── Footer ── -->
+<footer class="site-footer">
+  <div class="container">
+    &copy; 2026 Claude Code Guides. Built for developers who ship.
+  </div>
+</footer>
+
+<script>
+/* ── State ── */
+var wizardState = {
+  step: 0,
+  answers: {},
+  totalSteps: 5
+};
+
+/* ── DOM refs ── */
+var steps = document.querySelectorAll('.question-step');
+var resultSection = document.getElementById('resultSection');
+var progressFill = document.getElementById('progressFill');
+
+/* ── Init: attach option listeners ── */
+function initOptionListeners() {
+  var buttons = document.querySelectorAll('.option-btn');
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', handleOptionClick);
+  }
+}
+
+/* ── Handle option click ── */
+function handleOptionClick(e) {
+  var btn = e.currentTarget;
+  var key = btn.getAttribute('data-key');
+  var value = btn.getAttribute('data-value');
+
+  wizardState.answers[key] = value;
+
+  /* Highlight selected */
+  var siblings = btn.parentElement.querySelectorAll('.option-btn');
+  for (var i = 0; i < siblings.length; i++) {
+    siblings[i].classList.remove('selected');
+  }
+  btn.classList.add('selected');
+
+  /* Advance after brief delay */
+  setTimeout(function() {
+    if (wizardState.step < wizardState.totalSteps - 1) {
+      wizardState.step++;
+      renderStep();
+    } else {
+      showResult();
+    }
+  }, 250);
+}
+
+/* ── Render current step ── */
+function renderStep() {
+  for (var i = 0; i < steps.length; i++) {
+    steps[i].classList.remove('active');
+  }
+  resultSection.classList.remove('active');
+
+  if (wizardState.step < steps.length) {
+    steps[wizardState.step].classList.add('active');
+  }
+
+  updateProgress();
+}
+
+/* ── Go back ── */
+function goBack() {
+  if (wizardState.step > 0) {
+    wizardState.step--;
+    renderStep();
+  }
+}
+
+/* ── Update progress bar ── */
+function updateProgress() {
+  var pct = (wizardState.step / wizardState.totalSteps) * 100;
+  progressFill.style.width = pct + '%';
+}
+
+/* ── Scoring engine ── */
+function getRecommendation(answers) {
+  var scores = { sonnet: 0, opus: 0, haiku: 0 };
+
+  /* Q1: Task complexity */
+  if (answers.task === 'script')       { scores.haiku += 3; scores.sonnet += 2; }
+  if (answers.task === 'feature')      { scores.sonnet += 3; scores.opus += 1; }
+  if (answers.task === 'app')          { scores.sonnet += 2; scores.opus += 3; }
+  if (answers.task === 'architecture') { scores.opus += 4; }
+
+  /* Q2: Codebase size */
+  if (answers.size === 'small')  { scores.haiku += 2; }
+  if (answers.size === 'medium') { scores.sonnet += 2; }
+  if (answers.size === 'large')  { scores.sonnet += 2; scores.opus += 2; }
+  if (answers.size === 'xlarge') { scores.opus += 3; }
+
+  /* Q3: Priority */
+  if (answers.priority === 'speed')   { scores.haiku += 3; scores.sonnet += 2; }
+  if (answers.priority === 'quality') { scores.opus += 4; }
+  if (answers.priority === 'cost')    { scores.haiku += 4; }
+  if (answers.priority === 'context') { scores.opus += 2; scores.sonnet += 2; }
+
+  /* Q4: Team */
+  if (answers.team === 'solo')       { scores.sonnet += 1; }
+  if (answers.team === 'small')      { scores.sonnet += 2; }
+  if (answers.team === 'enterprise') { scores.opus += 2; }
+
+  /* Q5: Budget */
+  if (answers.budget === 'minimize') { scores.haiku += 4; }
+  if (answers.budget === 'balanced') { scores.sonnet += 3; }
+  if (answers.budget === 'any')      { scores.opus += 3; }
+
+  return rankModels(scores);
+}
+
+/* ── Rank models by score ── */
+function rankModels(scores) {
+  var models = [
+    { name: 'sonnet', score: scores.sonnet },
+    { name: 'opus',   score: scores.opus },
+    { name: 'haiku',  score: scores.haiku }
+  ];
+  models.sort(function(a, b) { return b.score - a.score; });
+  return { primary: models[0].name, secondary: models[1].name, scores: scores };
+}
+
+/* ── Show result ── */
+function showResult() {
+  var rec = getRecommendation(wizardState.answers);
+  var useCount = incrementUseCount();
+
+  for (var i = 0; i < steps.length; i++) {
+    steps[i].classList.remove('active');
+  }
+
+  progressFill.style.width = '100%';
+  resultSection.classList.add('active');
+
+  renderResultHeader(rec);
+  renderReasoning(rec);
+  renderAlsoConsider(rec);
+  renderCostTable(rec);
+  renderConfigSnippet(rec);
+
+  /* Paywall after 2 uses */
+  if (useCount > 2) {
+    applyPaywall();
+  }
+}
+
+/* ── Render result header ── */
+function renderResultHeader(rec) {
+  var el = document.getElementById('resultHeader');
+  var info = getModelInfo(rec.primary);
+  el.innerHTML =
+    '<span class="model-badge badge-' + rec.primary + '">' + info.label + '</span>' +
+    '<h2>Use ' + info.label + ' for This Project</h2>';
+}
+
+/* ── Render reasoning ── */
+function renderReasoning(rec) {
+  var el = document.getElementById('resultReasoning');
+  el.textContent = buildReasoningText(rec);
+}
+
+/* ── Build reasoning text ── */
+function buildReasoningText(rec) {
+  var a = wizardState.answers;
+  var info = getModelInfo(rec.primary);
+  var lines = [];
+
+  lines.push(info.label + ' is the best match for your scenario.');
+
+  if (rec.primary === 'opus') {
+    lines.push('Your project demands deep reasoning and architectural understanding that only Opus delivers reliably.');
+  } else if (rec.primary === 'sonnet') {
+    lines.push('Sonnet delivers the best balance of quality and cost for everyday coding tasks.');
+  } else {
+    lines.push('Haiku keeps costs minimal while handling straightforward tasks quickly.');
+  }
+
+  if (a.task === 'architecture') {
+    lines.push('Architecture-level decisions benefit from the strongest reasoning model available.');
+  } else if (a.task === 'app') {
+    lines.push('Full application development requires a model that maintains coherence across many files.');
+  }
+
+  if (a.budget === 'minimize' && rec.primary !== 'haiku') {
+    lines.push('While you prefer lower costs, the complexity of your task justifies the investment in a more capable model.');
+  }
+
+  return lines.join(' ');
+}
+
+/* ── Render also-consider ── */
+function renderAlsoConsider(rec) {
+  var el = document.getElementById('alsoConsider');
+  var secondary = getModelInfo(rec.secondary);
+  var subtask = getSubtaskAdvice(rec.secondary);
+  el.innerHTML = '<strong>Also consider:</strong> Use ' + secondary.label + ' ' + subtask;
+}
+
+/* ── Subtask advice by model ── */
+function getSubtaskAdvice(model) {
+  if (model === 'haiku') {
+    return 'for autocomplete, quick file lookups, and generating boilerplate tests to keep costs low on simple tasks.';
+  }
+  if (model === 'sonnet') {
+    return 'for standard feature work and bug fixes where deep architectural reasoning is not required.';
+  }
+  return 'for architecture reviews, security audits, and complex refactoring sessions that demand maximum reasoning depth.';
+}
+
+/* ── Render cost table ── */
+function renderCostTable(rec) {
+  var el = document.getElementById('costTableWrap');
+  var costs = getCostEstimates(wizardState.answers);
+
+  var html = '<h3>Estimated Monthly Cost</h3>';
+  html += '<table class="cost-table">';
+  html += '<thead><tr><th>Model</th><th>API Cost</th><th>Max Plan</th></tr></thead>';
+  html += '<tbody>';
+
+  var models = ['haiku', 'sonnet', 'opus'];
+  for (var i = 0; i < models.length; i++) {
+    var m = models[i];
+    var info = getModelInfo(m);
+    var highlight = (m === rec.primary) ? ' class="highlight"' : '';
+    html += '<tr' + highlight + '>';
+    html += '<td>' + info.label + '</td>';
+    html += '<td>' + costs[m] + '</td>';
+    html += '<td>' + info.maxPlan + '</td>';
+    html += '</tr>';
+  }
+
+  html += '</tbody></table>';
+  el.innerHTML = html;
+}
+
+/* ── Get cost estimates based on answers ── */
+function getCostEstimates(answers) {
+  var base = { haiku: 5, sonnet: 25, opus: 120 };
+
+  if (answers.size === 'large' || answers.size === 'xlarge') {
+    base.haiku *= 2; base.sonnet *= 2; base.opus *= 1.5;
+  }
+  if (answers.team === 'small') {
+    base.haiku *= 4; base.sonnet *= 4; base.opus *= 4;
+  }
+  if (answers.team === 'enterprise') {
+    base.haiku *= 25; base.sonnet *= 25; base.opus *= 25;
+  }
+  if (answers.task === 'architecture' || answers.task === 'app') {
+    base.haiku *= 1.5; base.sonnet *= 1.5; base.opus *= 1.3;
+  }
+
+  return {
+    haiku:  '$' + Math.round(base.haiku) + '/mo',
+    sonnet: '$' + Math.round(base.sonnet) + '/mo',
+    opus:   '$' + Math.round(base.opus) + '/mo'
+  };
+}
+
+/* ── Render config snippet ── */
+function renderConfigSnippet(rec) {
+  var el = document.getElementById('configSnippetWrap');
+  var config = buildConfigText(rec);
+
+  var html = '<h3>CLAUDE.md Model Configuration</h3>';
+  html += '<div class="config-snippet" id="configText">' + escapeHtml(config) + '</div>';
+  html += '<button class="btn-copy" id="btnCopy" onclick="copyConfig()">Copy Configuration</button>';
+
+  el.innerHTML = html;
+}
+
+/* ── Build config text ── */
+function buildConfigText(rec) {
+  var lines = ['## Model Configuration'];
+
+  if (rec.primary === 'sonnet') {
+    lines.push('- Default: sonnet (4.6) for all coding tasks');
+    lines.push('- Use opus for architecture reviews and complex refactoring');
+    lines.push('- Use haiku for autocomplete, quick lookups, and test generation');
+  } else if (rec.primary === 'opus') {
+    lines.push('- Default: opus (4.6) for architecture and complex tasks');
+    lines.push('- Use sonnet for standard feature work and bug fixes');
+    lines.push('- Use haiku for autocomplete and boilerplate generation');
+  } else {
+    lines.push('- Default: haiku (4.5) for quick tasks and cost efficiency');
+    lines.push('- Use sonnet for features requiring deeper reasoning');
+    lines.push('- Use opus sparingly for architecture-critical decisions');
+  }
+
+  return lines.join('\n');
+}
+
+/* ── Copy config to clipboard ── */
+function copyConfig() {
+  var text = document.getElementById('configText').textContent;
+  var btn = document.getElementById('btnCopy');
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function() {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(function() {
+        btn.textContent = 'Copy Configuration';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  } else {
+    fallbackCopy(text, btn);
+  }
+}
+
+/* ── Fallback copy for older browsers ── */
+function fallbackCopy(text, btn) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.left = '-9999px';
+  document.body.appendChild(ta);
+  ta.select();
+  try {
+    document.execCommand('copy');
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() {
+      btn.textContent = 'Copy Configuration';
+      btn.classList.remove('copied');
+    }, 2000);
+  } catch (e) {
+    btn.textContent = 'Copy failed';
+  }
+  document.body.removeChild(ta);
+}
+
+/* ── Model info helper ── */
+function getModelInfo(name) {
+  var models = {
+    haiku:  { label: 'Haiku 4.5',  maxPlan: '$100/mo (5x)' },
+    sonnet: { label: 'Sonnet 4.6', maxPlan: '$100/mo (5x)' },
+    opus:   { label: 'Opus 4.6',   maxPlan: '$200/mo (20x)' }
+  };
+  return models[name] || models.sonnet;
+}
+
+/* ── Escape HTML ── */
+function escapeHtml(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+/* ── Start over ── */
+function startOver() {
+  wizardState.step = 0;
+  wizardState.answers = {};
+
+  resultSection.classList.remove('active');
+
+  /* Clear all selected states */
+  var allBtns = document.querySelectorAll('.option-btn');
+  for (var i = 0; i < allBtns.length; i++) {
+    allBtns[i].classList.remove('selected');
+  }
+
+  renderStep();
+}
+
+/* ── Use counter (localStorage) ── */
+function incrementUseCount() {
+  var key = 'ccg_modelselector_uses';
+  var count = parseInt(localStorage.getItem(key) || '0', 10);
+  count++;
+  localStorage.setItem(key, String(count));
+  return count;
+}
+
+/* ── Apply paywall blur ── */
+function applyPaywall() {
+  var content = document.getElementById('resultContent');
+  content.classList.add('result-blurred');
+
+  var overlay = document.getElementById('paywall-overlay');
+  overlay.classList.add('visible');
+}
+
+/* ── Init ── */
+initOptionListeners();
+updateProgress();
+</script>
+
+</body>
+</html>
