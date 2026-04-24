@@ -1,5 +1,5 @@
 ---
-title: "Shallow Clone Missing History for Blame"
+title: "Shallow Clone Missing History for Blame — Fix (2026)"
 permalink: /claude-code-shallow-clone-missing-history-blame-fix-2026/
 description: "Fix shallow clone missing history for git blame in Claude Code. Unshallow the repo or fetch additional depth to access full commit history."
 last_tested: "2026-04-22"

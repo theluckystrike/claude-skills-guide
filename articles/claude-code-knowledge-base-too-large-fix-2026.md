@@ -1,5 +1,5 @@
 ---
-title: "Knowledge Base Exceeds 512KB Maximum"
+title: "Knowledge Base Exceeds 512KB Maximum — Fix (2026)"
 permalink: /claude-code-knowledge-base-too-large-fix-2026/
 description: "Split your CLAUDE.md into focused sub-files under the .claude/docs/ directory. Resolves the 512KB project knowledge base maximum size limit error."
 last_tested: "2026-04-21"

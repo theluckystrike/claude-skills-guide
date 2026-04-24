@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Notebook Kernel Not Found"
+title: "Claude Code Notebook Kernel Not Found — Fix (2026)"
 permalink: /claude-code-notebook-kernel-not-found-fix-2026/
 description: "Install ipykernel in the active environment to fix kernel not found. Register the kernel with Jupyter so notebook cells can execute properly."
 last_tested: "2026-04-21"

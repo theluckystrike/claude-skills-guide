@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Search Index Corrupted"
+title: "Claude Code Search Index Corrupted — Fix (2026)"
 permalink: /claude-code-search-index-corrupted-fix-2026/
 description: "Delete .claude/cache/search-index files to fix corrupted index error. The index rebuilds automatically on the next Grep or Glob search operation."
 last_tested: "2026-04-21"

@@ -1,5 +1,5 @@
 ---
-title: "Output Channel Buffer Full Truncated"
+title: "Output Channel Buffer Full Truncated — Fix (2026)"
 permalink: /claude-code-output-channel-buffer-full-fix-2026/
 description: "Increase outputChannel.maxBuffer to 5MB in VS Code settings.json. Stops older message truncation in the Claude Code output channel during sessions."
 last_tested: "2026-04-21"

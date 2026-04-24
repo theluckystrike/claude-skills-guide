@@ -1,5 +1,5 @@
 ---
-title: "Claude API Key Organization Mismatch"
+title: "Claude API Key Organization Mismatch — Fix (2026)"
 permalink: /claude-code-api-key-organization-mismatch-fix-2026/
 description: "Set correct ANTHROPIC_ORG_ID matching your API key to fix organization mismatch. Remove conflicting environment variables from shell config."
 last_tested: "2026-04-21"

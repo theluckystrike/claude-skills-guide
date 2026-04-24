@@ -1,5 +1,5 @@
 ---
-title: "Tool Result Exceeds 100KB Truncating"
+title: "Tool Result Exceeds 100KB Truncating — Fix (2026)"
 permalink: /claude-code-tool-result-too-large-fix-2026/
 description: "Pipe command output through head or grep filters before execution in Claude Code. Prevents the 100KB tool result truncation that drops important data."
 last_tested: "2026-04-21"

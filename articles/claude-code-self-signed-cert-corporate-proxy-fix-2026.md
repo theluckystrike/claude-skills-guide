@@ -1,5 +1,5 @@
 ---
-title: "Self-Signed Cert in Corporate Proxy"
+title: "Self-Signed Cert in Corporate Proxy — Fix (2026)"
 permalink: /claude-code-self-signed-cert-corporate-proxy-fix-2026/
 description: "Fix SELF_SIGNED_CERT_IN_CHAIN error behind corporate proxy. Export proxy CA cert and set NODE_EXTRA_CA_CERTS."
 last_tested: "2026-04-22"

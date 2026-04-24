@@ -1,5 +1,5 @@
 ---
-title: "Stop Claude Code Touching Unrelated"
+title: "Stop Claude Code Touching Unrelated — Fix (2026)"
 description: "Add CLAUDE.md scope rules to prevent Claude Code from modifying files outside the task — scope declarations, read-vs-write separation, and diff audits."
 permalink: /claude-code-touches-unrelated-files-fix-2026/
 last_tested: "2026-04-22"

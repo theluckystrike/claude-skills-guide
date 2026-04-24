@@ -1,5 +1,5 @@
 ---
-title: "Locale LC_ALL Not Set Encoding Errors"
+title: "Locale LC_ALL Not Set Encoding Errors — Fix (2026)"
 permalink: /claude-code-locale-lc-all-not-set-encoding-errors-fix-2026/
 description: "Fix locale LC_ALL not set causing encoding errors in Claude Code. Set LC_ALL=en_US.UTF-8 to resolve character encoding issues in file operations."
 last_tested: "2026-04-22"

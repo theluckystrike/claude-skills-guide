@@ -1,5 +1,5 @@
 ---
-title: "Garbage Collection Pause Causing"
+title: "Garbage Collection Pause Causing — Fix (2026)"
 permalink: /claude-code-gc-pause-causing-timeout-fix-2026/
 description: "Fix garbage collection pauses causing timeouts in Claude Code. Tune Node.js GC flags and reduce memory pressure to prevent long stop-the-world pauses."
 last_tested: "2026-04-22"

@@ -1,5 +1,5 @@
 ---
-title: "Zombie Process From Killed Subagent Fix"
+title: "Zombie Process From Killed Subagent Fix — Fix (2026)"
 permalink: /claude-code-zombie-process-killed-subagent-fix-2026/
 description: "Fix zombie processes left by killed Claude Code subagents. Find and kill orphaned node processes to reclaim system resources and prevent port conflicts."
 last_tested: "2026-04-22"

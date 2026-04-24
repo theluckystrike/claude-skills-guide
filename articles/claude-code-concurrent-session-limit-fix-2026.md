@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Concurrent Sessions 5/5"
+title: "Claude Code Concurrent Sessions 5/5 — Fix (2026)"
 permalink: /claude-code-concurrent-session-limit-fix-2026/
 description: "Close idle sessions with claude sessions list and close commands. Frees connection slots immediately when hitting the 5-session concurrency limit."
 last_tested: "2026-04-21"

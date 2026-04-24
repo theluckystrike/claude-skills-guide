@@ -1,5 +1,5 @@
 ---
-title: "claude: command not found After Install"
+title: "claude: command not found After Install — Fix (2026)"
 permalink: /claude-code-binary-not-found-after-install-fix-2026/
 description: "Fix 'claude: command not found' after npm install. Add npm global bin directory to your PATH in .zshrc or .bashrc."
 last_tested: "2026-04-22"

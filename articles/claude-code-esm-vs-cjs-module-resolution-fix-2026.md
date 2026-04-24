@@ -1,5 +1,5 @@
 ---
-title: "ESM vs CJS Module Resolution Failure"
+title: "ESM vs CJS Module Resolution Failure — Fix (2026)"
 permalink: /claude-code-esm-vs-cjs-module-resolution-fix-2026/
 description: "Fix ERR_REQUIRE_ESM when Claude generates import/require mismatch. Align module format with package.json type field."
 last_tested: "2026-04-22"

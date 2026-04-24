@@ -1,5 +1,5 @@
 ---
-title: "Parallel Tool Calls Memory Exhaustion"
+title: "Parallel Tool Calls Memory Exhaustion — Fix (2026)"
 permalink: /claude-code-parallel-tool-calls-memory-exhaustion-fix-2026/
 description: "Fix memory exhaustion from parallel tool calls in Claude Code. Limit concurrent operations and reduce batch sizes to prevent heap overflow crashes."
 last_tested: "2026-04-22"

@@ -1,5 +1,5 @@
 ---
-title: "File Watcher EMFILE Too Many Open Files"
+title: "File Watcher EMFILE Too Many Open Files — Fix (2026)"
 permalink: /claude-code-file-watcher-emfile-too-many-open-files-fix-2026/
 description: "Fix EMFILE too many open files error from file watchers in Claude Code. Increase ulimit and exclude large directories to stay within OS limits."
 last_tested: "2026-04-22"

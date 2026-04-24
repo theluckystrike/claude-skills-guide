@@ -1,5 +1,5 @@
 ---
-title: "Neovim Plugin Socket Error Fix"
+title: "Neovim Plugin Socket Error Fix — Fix (2026)"
 permalink: /claude-code-neovim-plugin-socket-error-fix-2026/
 description: "Fix Neovim Claude Code plugin socket connection error. Set the correct socket path and restart the RPC server to restore editor communication."
 last_tested: "2026-04-22"

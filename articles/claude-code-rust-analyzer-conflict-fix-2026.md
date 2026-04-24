@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Rust-Analyzer Conflict"
+title: "Claude Code Rust-Analyzer Conflict — Fix (2026)"
 permalink: /claude-code-rust-analyzer-conflict-fix-2026/
 description: "Disable Claude Code inline completions for Rust files in VS Code settings.json. Eliminates duplicate completion suggestions from rust-analyzer conflict."
 last_tested: "2026-04-21"

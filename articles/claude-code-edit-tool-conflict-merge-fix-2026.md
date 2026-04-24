@@ -1,5 +1,5 @@
 ---
-title: "Claude Edit Tool File Modified"
+title: "Claude Edit Tool File Modified — Fix (2026)"
 permalink: /claude-code-edit-tool-conflict-merge-fix-2026/
 description: "Re-read the file before editing to fix external modification conflict. Resolves stale content checksum mismatch caused by formatters or watchers."
 last_tested: "2026-04-21"

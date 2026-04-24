@@ -1,5 +1,5 @@
 ---
-title: "SSL Certificate Chain Incomplete Error"
+title: "SSL Certificate Chain Incomplete Error — Fix (2026)"
 permalink: /claude-code-ssl-certificate-chain-incomplete-fix-2026/
 description: "Fix 'unable to verify the first certificate' SSL error. Add intermediate CA bundle or set NODE_EXTRA_CA_CERTS path."
 last_tested: "2026-04-22"

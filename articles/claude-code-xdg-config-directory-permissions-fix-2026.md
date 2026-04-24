@@ -1,5 +1,5 @@
 ---
-title: "XDG Config Directory Permissions Fix"
+title: "XDG Config Directory Permissions Fix — Fix (2026)"
 permalink: /claude-code-xdg-config-directory-permissions-fix-2026/
 description: "Fix XDG config directory permission denied error in Claude Code. Reset ownership and permissions on ~/.config/claude-code to restore configuration access."
 last_tested: "2026-04-22"

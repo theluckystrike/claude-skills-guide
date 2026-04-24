@@ -1,5 +1,5 @@
 ---
-title: "Pre-commit Hook Failed in Claude Code"
+title: "Pre-commit Hook Failed in Claude Code — Fix (2026)"
 permalink: /claude-code-git-hook-blocked-commit-fix-2026/
 description: "Fix the linting error flagged by the pre-commit hook, then re-stage and commit. Resolves hook exit code 1 failures blocking Claude Code commits."
 last_tested: "2026-04-21"

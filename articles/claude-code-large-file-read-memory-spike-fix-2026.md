@@ -1,5 +1,5 @@
 ---
-title: "Large File Read Memory Spike Fix"
+title: "Large File Read Memory Spike Fix — Fix (2026)"
 permalink: /claude-code-large-file-read-memory-spike-fix-2026/
 description: "Fix memory spike when Claude Code reads large files. Use line ranges and targeted reads to avoid loading entire files into the context window."
 last_tested: "2026-04-22"

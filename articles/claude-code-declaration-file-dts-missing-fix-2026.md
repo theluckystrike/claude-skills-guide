@@ -1,5 +1,5 @@
 ---
-title: "Declaration File .d.ts Missing Error"
+title: "Declaration File .d.ts Missing Error — Fix (2026)"
 permalink: /claude-code-declaration-file-dts-missing-fix-2026/
 description: "Fix 'Could not find declaration file' TypeScript error. Install @types package or create a custom .d.ts declaration."
 last_tested: "2026-04-22"

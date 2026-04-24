@@ -1,5 +1,5 @@
 ---
-title: "Context Window Exceeded"
+title: "Context Window Exceeded — Fix (2026)"
 permalink: /claude-code-context-window-exceeded-mid-conversation-fix-2026/
 description: "Run /compact to fix context window exceeded mid-conversation in Claude Code. Reduces token count and lets you continue without losing work."
 last_tested: "2026-04-22"
