@@ -267,3 +267,9 @@ Track false positives and add exclusion rules to CLAUDE.md: "In our codebase, X 
 No. CI review catches what developers miss. Local slash command reviews (`/review`) catch issues before push. The two are complementary.
 
 For API mode details, see the [API mode guide](/claude-code-api-mode-vs-interactive-2026/). For review automation patterns, read the [code review guide](/claude-code-code-review-automation-2026/). For security in automation, see the [threat model guide](/claude-code-security-threat-model-2026/).
+
+
+## Related
+
+- [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) and safer alternatives
+

@@ -17,11 +17,11 @@ geo_optimized: true
 
 Building Supervisor Worker Agent Architecture Tutorial
 
-The supervisor-worker agent architecture is one of the most powerful patterns for building sophisticated AI-powered development workflows. This architectural pattern, inspired by distributed systems concepts, enables you to coordinate multiple specialized AI agents under a central supervisor that manages task distribution, handles errors, and ensures coherent execution. In this tutorial, you'll learn how to implement this architecture effectively using Claude Code, with practical examples you can apply immediately to your projects.
+The supervisor-worker agent architecture is one of the most powerful patterns for organizing [Claude Agent SDK](/claude-agent-sdk-complete-guide/) agents under a central supervisor that manages task distribution, handles errors, and ensures coherent execution. In this tutorial, you'll learn how to implement this architecture effectively using Claude Code, with practical examples you can apply immediately to your projects.
 
 ## Understanding the Supervisor-Worker Pattern
 
-At its core, the supervisor-worker architecture consists of two primary components: a supervisor agent that coordinates and delegates tasks, and one or more worker agents that execute specific subtasks. The supervisor acts as an orchestrator, it receives high-level requests, breaks them into manageable pieces, assigns them to appropriate workers, aggregates results, and manages the overall workflow.
+At its core, the supervisor-worker architecture consists of two primary components: a supervisor agent that coordinates and delegates tasks, and one or more worker agents that execute specific subtasks. The supervisor acts as an orchestrator (see the [Claude Flow tool guide](/claude-flow-tool-guide/)), it receives high-level requests, breaks them into manageable pieces, assigns them to appropriate workers, aggregates results, and manages the overall workflow.
 
 This pattern shines in complex development scenarios where different tasks require different specialized skills. Imagine you're building a full-stack application: your supervisor can coordinate separate workers for backend API development, frontend UI implementation, database design, and testing. Each worker focuses on its domain while the supervisor ensures everything integrates properly.
 
@@ -265,5 +265,7 @@ Related Reading
 - [Supervisor-Agent Worker-Agent Pattern with Claude Code](/supervisor-agent-worker-agent-pattern-claude-code/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

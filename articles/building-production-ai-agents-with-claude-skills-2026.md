@@ -284,10 +284,15 @@ done
 
 Each worker claims jobs atomically by moving the file before processing. Multiple workers can run on separate containers pointing at the same shared volume without stepping on each other. The supermemory skill remains a single source of truth for customer history because all workers invoke it through the same API endpoint rather than maintaining local state.
 
+
+## Related
+
+- [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — Complete guide to building agents with the Claude Agent SDK
 ---
 
 ---
 
+- [Claude Flow tool guide](/claude-flow-tool-guide/) — How to use Claude Flow for multi-agent orchestration
 <div class="mastery-cta">
 
 This site was built by 5 autonomous agents running in tmux while I was in Bali. 2,500 articles. Zero manual work. 100% quality gate pass rate.
@@ -313,5 +318,7 @@ Related Reading
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *
+
+
 
 

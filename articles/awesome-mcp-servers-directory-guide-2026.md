@@ -126,7 +126,7 @@ Need: Send Slack notifications when deployments complete
 ## When To Use
 
 - **Any time Claude Code needs external system access** — databases, APIs, cloud services
-- **Replacing fragile bash scripts** — MCP tools handle auth, retries, and error formatting that raw curl commands don't
+- **Replacing fragile bash scripts** — MCP servers are more reliable (use [claude mcp list](/claude-mcp-list-command-guide/) to manage them)
 - **Team standardization** — agree on which MCP servers to use across projects
 - **Building custom workflows** — chain MCP tools for complex operations (query DB → format results → post to Slack)
 
@@ -168,3 +168,4 @@ Each MCP tool definition adds ~50-100 tokens to the context. With 3 servers expo
 - [MCP Setup Guide](/claude-code-mcp-setup-guide/) — step-by-step MCP configuration for Claude Code
 - [Claude Code Best Practices](/claude-code-best-practices-2026/) — patterns for effective MCP usage
 - [Claude Code Hooks Explained](/claude-code-hooks-explained/) — hooks can trigger MCP operations
+

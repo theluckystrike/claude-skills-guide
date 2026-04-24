@@ -111,12 +111,16 @@ console.error("Server starting...");
 
 ## Best Practices
 
-- **Always test MCP servers standalone first** before adding them to Claude Code configuration. Run the command manually and verify it produces valid JSON-RPC on stdout.
+- **Always test [claude mcp list command guide](/claude-mcp-list-command-guide/) manually and verify it produces valid JSON-RPC on stdout.
 - **Use the `--mcp-debug` flag** as your primary diagnostic tool. It shows every message exchanged and where the protocol breaks down.
 - **Keep `.mcp.json` in version control** so your team shares the same server configuration, but use environment variables for secrets rather than hardcoding them.
 - **Set up a health check in CLAUDE.md** that documents the expected MCP servers and how to verify each one is operational.
 - **Prefer project-level `.mcp.json`** over global config to avoid conflicts between different projects that need different server versions.
 
+
+## Related
+
+- [Claude Desktop config.json guide](/claude-desktop-config-json-guide/) — How to configure Claude Desktop with config.json
 ---
 
 ---
@@ -140,3 +144,5 @@ Related Reading
 - [Claude Code MCP Server Disconnected](/claude-code-mcp-server-disconnected/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+

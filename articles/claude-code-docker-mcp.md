@@ -28,7 +28,7 @@ When debugging containerized applications, you constantly switch between Claude 
 npm install -g @anthropic/docker-mcp-server
 ```
 
-2. Configure it in your project `.mcp.json`:
+2. [Claude Code MCP configuration guide](/claude-code-mcp-configuration-guide/).json`:
 
 ```json
 {
@@ -155,6 +155,10 @@ services:
 - **Document your service architecture in CLAUDE.md.** List each service, its port, its health check endpoint, and common failure patterns so Claude has context before querying containers.
 - **Never expose the Docker socket to production MCP servers.** The Docker socket provides root-level access to the host. Use it only in development environments.
 
+
+## Related
+
+- [Claude Desktop config.json guide](/claude-desktop-config-json-guide/) — How to configure Claude Desktop with config.json
 ---
 
 ---
@@ -178,3 +182,5 @@ Related Reading
 - [Claude Code Docker Build Failed Fix](/claude-code-docker-build-failed-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+

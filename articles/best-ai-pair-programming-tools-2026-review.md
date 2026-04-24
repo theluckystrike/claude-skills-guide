@@ -73,7 +73,7 @@ Zed's collaborative features complement its AI capabilities nicely. The ability 
 
 ## Cursor: IDE Evolution
 
-Cursor represents a purposeful fork of VS Code designed specifically around AI-assisted development. The interface redesign prioritizes AI interactions, placing the conversation history and agent capabilities at the foreground rather than as an afterthought.
+[Claude Code vs Cursor comparison](/claude-code-vs-cursor-definitive-comparison-2026/) represents a purposeful fork of VS Code designed specifically around AI-assisted development. The interface redesign prioritizes AI interactions, placing the conversation history and agent capabilities at the foreground rather than as an afterthought.
 
 The context understanding in Cursor has improved substantially. It can reference specific files, functions, and even historical conversations more naturally than earlier versions. This makes iterative development workflows more smooth, you can ask for modifications, receive them, then build upon those changes in subsequent requests without re-explaining context.
 
@@ -89,6 +89,10 @@ The best approach is to evaluate tools against your specific use cases. A team f
 
 The AI pair programming tool market has reached a point of meaningful differentiation. Rather than competing on basic code generation capability, where most tools perform adequately, the differentiators now center on workflow integration, extensibility, and specialized task handling. This maturation benefits developers, as tools have evolved from novelty assistants into genuine productivity partners capable of handling substantial portions of the development process.
 
+
+## Related
+
+- [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Guide to the claude-sonnet-4-20250514 model and features
 ---
 
 ---
@@ -112,5 +116,7 @@ Related Reading
 - [Bolt.new Review: AI Web App Builder 2026](/bolt-new-review-ai-web-app-builder-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

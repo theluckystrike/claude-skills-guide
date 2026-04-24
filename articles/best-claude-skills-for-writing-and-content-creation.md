@@ -51,7 +51,7 @@ The [`pdf` skill](/best-claude-skills-for-data-analysis/) creates and processes 
 /pdf merge cover-letter.pdf and portfolio.pdf into a single document in that order
 ```
 
-Content creators distributing finalized work as PDFs use this skill to produce properly formatted documents without desktop publishing software.
+Content creators distributing finalized work as PDFs use this skill to produce properly formatted documents without desktop publishing software. Adjust [temperature settings](/claude-temperature-settings-guide/) for more creative or more deterministic output.
 
 ## Presentation Creation with the pptx Skill
 
@@ -284,5 +284,6 @@ Related Reading
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *
+
 
 

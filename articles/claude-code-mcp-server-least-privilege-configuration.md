@@ -18,9 +18,9 @@ The Model Context Protocol (MCP) powers Claude Code's ability to connect with ex
 
 ## Understanding Least Privilege in MCP Context
 
-Least privilege means granting MCP servers only the permissions they absolutely need to function. Rather than providing broad access to your filesystem, environment variables, or network resources, you restrict capabilities to specific paths, commands, or scopes. This containment strategy protects against compromised servers and prevents accidental modifications to sensitive areas of your project.
+Least privilege means granting MCP servers only the minimum required permissions, commands, or scopes. Use [claude mcp list](/claude-mcp-list-command-guide/) to audit your active servers. This containment strategy protects against compromised servers and prevents accidental modifications to sensitive areas of your project.
 
-When Claude Code interacts with MCP servers, those servers operate with the permissions you've configured. A misconfigured server with excessive privileges could theoretically access credentials, modify production files, or exfiltrate sensitive data. Implementing least privilege creates defense in depth. even if one component is compromised, the damage remains contained.
+When Claude Code interacts with an MCP server (see the [MCP configuration guide](/claude-code-mcp-configuration-guide/)), a server with excessive privileges could theoretically access credentials, modify production files, or exfiltrate sensitive data. Implementing least privilege creates defense in depth. even if one component is compromised, the damage remains contained.
 
 The principle maps naturally to the concept of blast radius. If a server that only has read access to `/workspace/docs` is compromised, an attacker can exfiltrate documentation but cannot touch your database credentials, private keys, or source code. Compare that to a server with full home-directory access. the same compromise becomes catastrophic. Every permission you withhold is a capability an attacker cannot use.
 
@@ -365,5 +365,7 @@ Related Reading
 - [MCP Transport Layer Security TLS Configuration Guide](/mcp-transport-layer-security-tls-configuration/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

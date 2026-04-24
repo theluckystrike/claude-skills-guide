@@ -21,6 +21,16 @@ Error 429: Rate Limit Exceeded
 
 A rate exceeded error means you have hit one of Anthropic's usage limits. Your API key is valid and the service is operational, but you have sent too many requests or too many tokens within a time window. This is the single most common error developers encounter when scaling Claude API usage.
 
+<div id="err-match-429" style="background:#1a1a2e;border:1px solid #2a2a3a;border-radius:8px;padding:20px;margin:24px 0;font-family:system-ui,-apple-system,sans-serif;">
+<h3 style="color:#6ee7b7;margin:0 0 12px 0;font-size:18px;">Error Pattern Matcher</h3>
+<p style="color:#94a3b8;margin:0 0 12px 0;font-size:14px;">Paste your error message below to identify which rate limit you hit.</p>
+<textarea id="err-input-429" placeholder="Paste your full error message here..." style="width:100%;min-height:80px;padding:12px;background:#0f172a;color:#e2e8f0;border:1px solid #334155;border-radius:6px;font-family:monospace;font-size:13px;resize:vertical;box-sizing:border-box;"></textarea>
+<div id="err-out-429" style="margin-top:12px;display:none;background:#0f172a;padding:16px;border-radius:6px;color:#e2e8f0;font-size:14px;"></div>
+</div>
+<script>
+document.getElementById('err-input-429').addEventListener('input',function(){var t=this.value.toLowerCase(),o=document.getElementById('err-out-429'),m=[];if(!t){o.style.display='none';return;}if(/429|rate.limit/i.test(t))m.push('<strong style="color:#6ee7b7;">429 Rate Limit Error</strong><br>You have exceeded your API rate limit. Check the <code>retry-after</code> header for exact wait time. Implement exponential backoff with jitter.');if(/request.tokens|per-minute rate/i.test(t))m.push('<strong style="color:#6ee7b7;">Tokens Per Minute (TPM) Limit</strong><br>Your input/output tokens exceeded the per-minute cap. Reduce prompt size, add delays between requests, or upgrade your tier.');if(/too many requests/i.test(t))m.push('<strong style="color:#6ee7b7;">Requests Per Minute (RPM) Limit</strong><br>Too many API calls in 60 seconds. Add a rate limiter: queue requests and space them at <code>60/RPM_LIMIT</code> second intervals.');if(/concurrent/i.test(t))m.push('<strong style="color:#6ee7b7;">Concurrent Request Limit</strong><br>Too many in-flight requests. Use a semaphore: <code>asyncio.Semaphore(5)</code> in Python or <code>p-limit</code> in TypeScript.');if(/daily|per.day/i.test(t))m.push('<strong style="color:#6ee7b7;">Daily Token Limit (TPD)</strong><br>You have exhausted your daily token budget. The window resets ~24 hours from your first request of the day. Track usage with a daily counter.');if(/spend|billing|monthly/i.test(t))m.push('<strong style="color:#6ee7b7;">Monthly Spend Limit</strong><br>Organization spending cap reached. Go to console.anthropic.com > Settings > Billing to increase your limit or wait for the next billing cycle.');if(/overloaded|529/i.test(t))m.push('<strong style="color:#6ee7b7;">529 Overloaded (Not Rate Limit)</strong><br>This is a server capacity issue, not your rate limit. All users are affected. Wait 30-60s, retry with longer backoff, or fall back to a smaller model.');if(/quota/i.test(t))m.push('<strong style="color:#6ee7b7;">Quota Exceeded</strong><br>Your usage tier quota is reached. Check your tier at console.anthropic.com. Spending more automatically upgrades your tier within 24 hours.');if(m.length===0)m.push('<span style="color:#94a3b8;">No specific rate limit pattern matched. Check the <code>anthropic-ratelimit-*</code> response headers to identify which limit you hit (RPM, TPM, or TPD).</span>');o.innerHTML=m.join('<hr style="border:none;border-top:1px solid #334155;margin:12px 0;">');o.style.display='block';});
+</script>
+
 ## The 5 Types of Rate Limits
 
 Anthropic enforces five distinct rate limits. Each has different triggers, different headers, and different solutions.
@@ -443,6 +453,92 @@ for prompt in prompts:
     window.record(total_tokens)
 ```
 
+## Circuit Breaker Pattern for Production Systems
+
+Simple retry logic is not enough for production applications. When the API is persistently rate-limited, retrying every request wastes time and compute. A circuit breaker stops sending requests entirely when failure rates are high, then gradually resumes.
+
+```python
+import time
+import threading
+from enum import Enum
+
+class CircuitState(Enum):
+    CLOSED = "closed"        # Normal operation
+    OPEN = "open"            # Blocking all requests
+    HALF_OPEN = "half_open"  # Testing if API recovered
+
+class CircuitBreaker:
+    def __init__(self, failure_threshold=5, recovery_timeout=60):
+        self.failure_threshold = failure_threshold
+        self.recovery_timeout = recovery_timeout
+        self.state = CircuitState.CLOSED
+        self.failure_count = 0
+        self.last_failure_time = 0
+        self.lock = threading.Lock()
+
+    def can_execute(self) -> bool:
+        with self.lock:
+            if self.state == CircuitState.CLOSED:
+                return True
+            if self.state == CircuitState.OPEN:
+                if time.monotonic() - self.last_failure_time > self.recovery_timeout:
+                    self.state = CircuitState.HALF_OPEN
+                    return True
+                return False
+            # HALF_OPEN: allow one test request
+            return True
+
+    def record_success(self):
+        with self.lock:
+            self.failure_count = 0
+            self.state = CircuitState.CLOSED
+
+    def record_failure(self):
+        with self.lock:
+            self.failure_count += 1
+            self.last_failure_time = time.monotonic()
+            if self.failure_count >= self.failure_threshold:
+                self.state = CircuitState.OPEN
+
+# Usage with Anthropic SDK
+import anthropic
+
+client = anthropic.Anthropic()
+breaker = CircuitBreaker(failure_threshold=3, recovery_timeout=30)
+
+def call_with_circuit_breaker(messages, **kwargs):
+    if not breaker.can_execute():
+        raise RuntimeError("Circuit breaker OPEN — API rate limited, waiting for recovery")
+
+    try:
+        result = client.messages.create(messages=messages, **kwargs)
+        breaker.record_success()
+        return result
+    except anthropic.RateLimitError:
+        breaker.record_failure()
+        raise
+```
+
+The circuit breaker transitions through three states: CLOSED (normal), OPEN (all requests blocked), and HALF_OPEN (one test request allowed). This prevents your application from hammering a rate-limited API and gives the rate limit window time to reset.
+
+---
+
+*These diagnostic steps are from [The Claude Code Playbook](https://zovo.one/pricing) — 200 production-ready templates including error prevention rules and CLAUDE.md configs tested across 50+ project types.*
+
+## Cost of Rate Limiting vs Batching
+
+When you regularly hit rate limits, consider whether the Message Batches API is more cost-effective than real-time requests with retry logic.
+
+| Approach | Cost per 1M tokens (input) | Latency | Rate limit impact |
+|----------|---------------------------|---------|-------------------|
+| Real-time API | $3.00 (Sonnet) | 1-10 seconds | Counts against RPM and TPM |
+| Real-time + retries | $3.00 + wasted compute on failed attempts | Variable (retries add delay) | Exacerbates the problem |
+| Message Batches API | $1.50 (Sonnet, 50% discount) | Minutes to hours | Does not count against real-time limits |
+
+For workloads that do not need immediate responses (nightly code analysis, bulk data processing, report generation), batching is strictly better: half the cost and zero rate limit pressure on your real-time quota.
+
+For workloads that need responses within seconds (user-facing chat, interactive coding, CI pipeline steps), real-time with a circuit breaker is the right pattern.
+
 ## Upgrading Rate Limits
 
 ### Automatic Tier Progression
@@ -554,6 +650,14 @@ No. Streaming and non-streaming requests count equally against RPM and TPM limit
 
 Tool definitions count as input tokens. Each tool in your request schema adds tokens to the input count. If you define 20 tools, you may be sending 5,000-10,000 extra tokens per request. Prune unused tools to stay within TPM limits. See the [tool token cost guide](/claude-code-rate-limit-429-retry-after-fix/) for details.
 
+### Does prompt caching help with rate limits?
+
+Yes. Prompt caching reduces the number of input tokens counted against your TPM limit for cached content. When your system prompt and conversation history are cached, subsequent requests consume fewer tokens from your per-minute allowance, effectively increasing your throughput without upgrading your tier.
+
+### Can I use multiple API keys to bypass rate limits?
+
+No. Rate limits are enforced at the organization level, not per API key. Creating additional keys within the same organization shares the same limit pool. The correct approach is to upgrade your tier through increased spend or contact Anthropic sales for custom limits.
+
 ## Related Guides
 
 - [Fix Claude Code Rate Limit 429 Retry-After](/claude-code-rate-limit-429-retry-after-fix/)
@@ -565,3 +669,131 @@ Tool definitions count as input tokens. Each tool in your request schema adds to
 - [Fix Claude Code ETIMEOUT Corporate Proxy](/claude-code-etimeout-corporate-proxy-fix/)
 - [Fix Claude Code Docker Cannot Reach API Endpoint](/claude-code-docker-cannot-reach-api-endpoint-fix/)
 - [Fix Claude AI Rate Exceeded Error](/claude-ai-rate-exceeded-error-fix/)
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I check my current rate limit tier?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Log into the Anthropic Console at console.anthropic.com. Navigate to Settings > Plans to see your current tier. Alternatively, inspect the anthropic-ratelimit-requests-limit header from any successful API response."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do rate limits apply per API key or per organization?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rate limits apply at the organization level. Multiple API keys within the same organization share the same rate limit pool. Creating additional API keys does not increase your limits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the Anthropic Python SDK handle rate limits automatically?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The official SDK includes automatic retry logic with exponential backoff for 429 responses. However, the defaults may not suit your use case. For high-volume applications, implement custom retry logic."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I handle rate limits in a multi-user application?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Implement request queuing at the application level. Use a shared rate limiter (Redis-backed for distributed systems) that tracks usage across all users and delays requests that would exceed the limit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get higher rate limits without paying more?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Rate limits are tied to your spending tier. The only ways to increase them are to spend more (triggering automatic tier upgrades) or to contact Anthropic sales for a custom enterprise agreement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I hit the daily token limit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All API requests will return 429 until the 24-hour window resets. The reset time is based on when your first request of the day was made, not midnight UTC. Plan your workloads to spread token usage across the full day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are rate limits different for streaming vs non-streaming requests?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Streaming and non-streaming requests count equally against RPM and TPM limits. Streaming does not provide any rate limit advantage, though it can improve perceived latency."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do rate limits work with tool use and function calling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tool definitions count as input tokens. Each tool in your request schema adds tokens to the input count. If you define 20 tools, you may be sending 5,000-10,000 extra tokens per request. Prune unused tools to stay within TPM limits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does prompt caching help with rate limits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Prompt caching reduces the number of input tokens counted against your TPM limit for cached content. When your system prompt and conversation history are cached, subsequent requests consume fewer tokens from your per-minute allowance, effectively increasing your throughput without upgrading your tier."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use multiple API keys to bypass rate limits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Rate limits are enforced at the organization level, not per API key. Creating additional keys within the same organization shares the same limit pool. The correct approach is to upgrade your tier through increased spend or contact Anthropic sales for custom limits."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Fix Claude Rate Exceeded Error",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Identify the rate limit type",
+        "text": "Check the error message and response headers to determine which of the 5 rate limit types you hit: requests per minute (RPM), tokens per minute (TPM), tokens per day (TPD), concurrent requests, or monthly spend limits."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Implement exponential backoff",
+        "text": "Add retry logic with exponential backoff and jitter. Respect the retry-after header when present. Cap maximum delay at 120 seconds and limit retries to 8 attempts."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Add request queuing and rate limiting",
+        "text": "Implement a token bucket or sliding window rate limiter in your application. Track usage per minute using the rate limit response headers and throttle requests before they hit the limit."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Implement a circuit breaker for production",
+        "text": "Add a circuit breaker pattern that stops sending requests when failure rates are high, then gradually resumes. This prevents hammering a rate-limited API and gives the rate limit window time to reset."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Consider the Message Batches API",
+        "text": "For workloads that do not need immediate responses, switch to the Message Batches API which offers 50% cost savings and does not count against real-time rate limits."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Upgrade your rate limit tier",
+        "text": "If you consistently hit limits, increase your spending to trigger automatic tier upgrades, or contact Anthropic sales for custom enterprise limits."
+      }
+    ]
+  }
+]
+</script>

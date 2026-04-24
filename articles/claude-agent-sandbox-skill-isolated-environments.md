@@ -366,6 +366,10 @@ Start with the strictest isolation level that still allows your workflow to func
 
 The goal is not to prevent Claude from being useful. it is to make Claude useful within a defined, reviewable boundary. Well-configured sandboxing lets you run more ambitious automated workflows with confidence, because the blast radius of any unexpected behavior is bounded before the workflow starts.
 
+
+## Related
+
+- [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) — Understanding the --dangerously-skip-permissions CLI flag
 ---
 
 ---
@@ -393,5 +397,6 @@ Related Reading
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *
+
 
 

@@ -23,7 +23,7 @@ One of the most frustrating issues developers face when working with Claude Code
 
 Understanding the root causes of truncated output is the first step toward fixing the problem. Several factors can cause Claude Code to cut off its response prematurely.
 
-Token Limits and Context Window Constraints: Claude Code operates within a finite context window, typically around 200K tokens for extended thinking mode. When your conversation grows complex with multiple files, extensive codebases, or lengthy discussion history, the available space for new output shrinks. The model is forced to truncate its response to fit within remaining token limits.
+Token Limits and [upload limits](/claude-upload-limit-guide/) play a key role.
 
 Response Length Limits: Even when there's room in the context, Claude Code has internal limits on single response length. This prevents excessively long outputs that could degrade response quality or cause timeout issues. Complex code generation tasks can easily exceed these thresholds.
 
@@ -174,5 +174,6 @@ Related Reading
 - [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

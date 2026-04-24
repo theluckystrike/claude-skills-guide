@@ -18,7 +18,7 @@ When you're in the middle of a complex refactoring task or debugging session wit
 
 ## What the Resume Flag Does
 
-The `--resume` flag tells Claude Code to continue from a previous session by loading the conversation history and any relevant project context. It's particularly useful when working on multi-step tasks that span hours or days, or when you need to step away mid-task.
+The `--resume` flag tells Claude Code to continue from a previous session by loading the [save Claude Code conversations](/claude-code-save-conversation-guide/) and any relevant project context. It's particularly useful when working on multi-step tasks that span hours or days, or when you need to step away mid-task.
 
 ```bash
 claude --resume "session-id"
@@ -314,6 +314,10 @@ The `--resume` flag is an essential tool for developers working on complex, mult
 
 Used well, `--resume` turns Claude Code from a session-based assistant into something closer to a persistent collaborator, one that remembers what you were building, what decisions were made, and exactly where you left off. Combine it with good checkpoint practices, a well-maintained CLAUDE.md, and the supermemory skill for the most solid interrupted-task recovery workflow available in Claude Code today.
 
+
+## Related
+
+- [Claude shortcuts guide](/claude-shortcuts-complete-guide/) — Complete guide to Claude Code keyboard shortcuts and slash commands
 ---
 
 ---
@@ -337,5 +341,7 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

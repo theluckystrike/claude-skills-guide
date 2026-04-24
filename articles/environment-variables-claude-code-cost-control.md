@@ -251,3 +251,5 @@ When all four layers are active, the combined effect is multiplicative: environm
 - [Claude Code .claude/settings.json: Cost-Saving Configuration](/claude-code-settings-json-cost-saving-configuration/) -- project-level permissions
 - [Claude Code Sonnet vs Opus: Cost Per Task](/claude-code-sonnet-vs-opus-cost-per-task/) -- model selection guidance
 - [Cost Optimization Hub](/cost-optimization/) -- all cost optimization guides
+
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization

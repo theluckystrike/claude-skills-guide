@@ -402,6 +402,11 @@ Download the Complete Playbook -- Free with email signup.
 
 The public half (100 patterns) is also available as a [GitHub repository](https://github.com/theluckystrike/claude-code-playbook) you can star, fork, and contribute to.
 
+
+## Related
+
+- [Claude shortcuts guide](/claude-shortcuts-complete-guide/) — Complete guide to Claude Code keyboard shortcuts and slash commands
 ---
 
 *Last updated: April 2026. Curated from 3,000+ Claude Code articles by the Claude Skills Guide team.*
+

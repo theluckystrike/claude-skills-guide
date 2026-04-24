@@ -263,3 +263,5 @@ These mistakes are identifiable through `ccusage` analysis: look for sessions wh
 - [Claude Code Compact Command Guide](/claude-code-compact-command-guide/) -- deep dive on the compress lever
 - [Claude Code Subagent Management](/claude-code-subagent-management/) -- the isolate lever in practice
 - [Claude Code Skills Guide](/claude-code-skills-guide/) -- the write lever via skills
+
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization

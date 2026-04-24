@@ -158,6 +158,10 @@ The workflow triggers on pull requests, giving Claude access to the diff. You ca
 - **Cache the Claude Code installation** using `actions/cache` to speed up subsequent workflow runs.
 - **Post review results as PR comments** using the GitHub API so developers see Claude's feedback inline with the diff.
 
+
+## Related
+
+- [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) and safer alternatives
 ---
 
 ---
@@ -181,3 +185,5 @@ Related Reading
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+

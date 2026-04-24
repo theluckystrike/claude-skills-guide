@@ -94,6 +94,10 @@ The Anthropic API validates every incoming request against a strict schema. A 40
 
 4. **Validate CLAUDE.md after edits.** After changing your CLAUDE.md, run a simple test prompt to ensure it parses correctly before starting real work.
 
+
+## Related
+
+- [Claude internal server error fix](/claude-internal-server-error-fix/) — Fix Claude internal server error (500/overloaded)
 ---
 
 ---
@@ -117,3 +121,4 @@ Related Reading
 - [Best Way to Use Claude Code for Debugging Sessions](/best-way-to-use-claude-code-for-debugging-sessions/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+

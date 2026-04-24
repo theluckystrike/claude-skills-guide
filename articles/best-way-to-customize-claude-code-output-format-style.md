@@ -337,10 +337,15 @@ Customizing Claude Code's output format and style is essential for productive hu
 The best approach combines project-level configuration with skill-specific templates, allowing you to maintain consistent standards while retaining flexibility for specialized tasks. Start with basic formatting rules in CLAUDE.md, graduate to skill definitions when you find yourself repeating the same prompt preamble, and add machine-readable output structures only when automation requires it. Refine based on what your team actually finds useful. the goal is less friction, not more configuration.
 
 
+
+## Related
+
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude
 ---
 
 ---
 
+- [sequential thinking in Claude Code](/sequential-thinking-claude-code-guide/) — How to use sequential thinking and extended thinking in Claude Code
 <div class="mastery-cta">
 
 I'm a solo developer in Vietnam. 50K Chrome extension users. $500K+ on Upwork. 5 Claude Max subscriptions running agent fleets in parallel.
@@ -388,3 +393,5 @@ Setting response format preferences involves adding a dedicated output preferenc
 ### What is Defining Code Style Rules?
 
 Defining code style rules means specifying exact formatting rules in CLAUDE.md to ensure consistent code generation. For TypeScript, specify preferences like `interface` over `type` for public APIs, strict null checks, and `const` over `let`. For React, mandate functional components with hooks, proper key props, composition over inheritance, and maximum 200-line components. General rules include maximum line length (100 characters), meaningful variable names without single letters, and type annotations on all function parameters.
+
+

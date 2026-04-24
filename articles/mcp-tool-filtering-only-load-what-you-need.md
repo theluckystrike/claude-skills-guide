@@ -15,7 +15,7 @@ Every MCP tool definition loaded in Claude Code adds 500-2,000 tokens to the sys
 
 ## Installation / Setup
 
-Tool filtering is configured in Claude Code's MCP settings. No additional packages are required.
+Tool filtering is [Claude Code MCP configuration guide](/claude-code-mcp-configuration-guide/) settings. No additional packages are required.
 
 ```json
 // ~/.claude/settings.json or .claude/settings.json (project-level)
@@ -177,3 +177,6 @@ Filtered: 3 servers * ~2,500 tokens/turn * 20 turns = 150,000 tokens
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- complete MCP server configuration guide
 - [Supabase MCP Server Token Usage](/supabase-mcp-server-token-usage-what-gets-sent/) -- Supabase-specific MCP optimization
 - [Claude Code Tool Call Overhead](/claude-code-tool-call-overhead-tokens-per-mcp-call/) -- understanding per-call token costs
+
+- [claude mcp list command guide](/claude-mcp-list-command-guide/) — How to use the claude mcp list command to manage MCP servers
+

@@ -34,7 +34,7 @@ When you hit the Claude API rate limit, the API returns a 429 status code with a
 
 1. Check the `retry-after` response header for how long to wait.
 2. Enable the SDK's built-in retry mechanism (on by default with 2 retries).
-3. Monitor rate limit headers to throttle before hitting the limit.
+3. Monitor [Claude rate exceeded error fix](/claude-rate-exceeded-error-fix/) headers to throttle before hitting the limit.
 
 ## What Causes This
 
@@ -152,3 +152,6 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Claude SDK Timeout Configuration](/claude-sdk-timeout-configuration-customization/) -- configure timeouts alongside retry logic.
 
 
+
+
+- [Claude AI rate exceeded error fix](/claude-ai-rate-exceeded-error-fix/) — Fix the Claude AI rate exceeded error message

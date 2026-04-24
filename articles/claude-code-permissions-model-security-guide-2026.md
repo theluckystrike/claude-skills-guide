@@ -249,10 +249,15 @@ The permissions model in 2026 still has gaps that teams should be aware of:
 
 3. Settings files are not signed: A `.claude/settings.json` that gets modified by a compromised dependency or script will silently change Claude's behavior. Pin your settings files in version control and review diffs carefully.
 
+
+## Related
+
+- [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to --dangerously-skip-permissions and safer alternatives
 ---
 
 ---
 
+- [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) — Understanding the --dangerously-skip-permissions CLI flag
 <div class="mastery-cta">
 
 This took me 3 hours to figure out. I put it in a CLAUDE.md so I'd never figure it out again. Now Claude gets it right on the first try, every project.
@@ -280,5 +285,7 @@ Related Reading
 - [Claude Code Security Engineer Threat Modeling Workflow Tips](/claude-code-security-engineer-threat-modeling-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

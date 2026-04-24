@@ -219,10 +219,15 @@ Implementing effective localization automation requires establishing patterns fr
 
 Claude skills reduce the mechanical burden of localization management, allowing developers and translators to focus on translation quality rather than file manipulation. The combination of persistent context, structured file processing, and validation capabilities creates a powerful automation system for multilingual products.
 
+
+## Related
+
+- [Claude Code 安装指南 (Chinese Installation Guide)](/claude-code-anzhuang-installation-guide/) — Claude Code installation guide in Chinese (中文安装教程)
 ---
 
 ---
 
+- [Claude Code 国内使用指南 (China Usage Guide)](/claude-code-guonei-shiyong-china-usage-guide/) — Claude Code usage guide for China (中国使用教程)
 <div class="mastery-cta">
 
 This site was built by 5 autonomous agents running in tmux while I was in Bali. 2,500 articles. Zero manual work. 100% quality gate pass rate.
@@ -243,5 +248,7 @@ Related Reading
 - [Claude Skills by Use Case](/use-cases-hub/). Find additional Claude skills suited to your content and automation workflows.
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

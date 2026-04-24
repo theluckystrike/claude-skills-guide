@@ -15,7 +15,7 @@ geo_optimized: true
 
 # Apache Kafka MCP Server for Event Streaming Guide
 
-Event streaming has transformed how modern applications handle real-time data. Apache Kafka leads this space as a distributed event streaming platform capable of processing millions of messages per second. [When you combine Apache Kafka with an MCP server](/building-your-first-mcp-tool-integration-guide-2026/)ne Kafka with an MCP (Model Context Protocol) server, you create a powerful automation layer that can react to events, manage streaming pipelines, and coordinate complex workflows without manual oversight.
+Event streaming has transformed how modern applications handle real-time data. Apache Kafka leads this space as a distributed event streaming platform capable of processing millions of messages per second. [When you combine Apache Kafka with an MCP server](/building-your-first-mcp-tool-integration-guide-2026/) Kafka with an MCP (Model Context Protocol) server, you create a powerful automation layer that can react to events, manage streaming pipelines, and coordinate complex workflows without manual oversight.
 
 This [build and integrate an Apache Kafka MCP server for event streaming automation](/how-do-i-combine-two-claude-skills-in-one-workflow/) for event streaming automation. You'll find practical code examples and patterns that work well with Claude Code and other AI assistants.
 

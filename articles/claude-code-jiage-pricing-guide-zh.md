@@ -231,6 +231,10 @@ export CLAUDE_CODE_MAX_COST_PER_SESSION=10  # 单位：美元
 
 企业级使用需要考虑合规性、SLA和成本管理，Bedrock和Vertex提供了更完善的企业支持。
 
+---
+
+*这些配置模板来自 [Claude Code Playbook](https://zovo.one/pricing) — 包含200个生产就绪模板、权限配置和团队设置指南。*
+
 ## 总结
 
 Claude Code的定价提供了灵活的选择：
@@ -243,3 +247,158 @@ Claude Code的定价提供了灵活的选择：
 理解Token计费机制和善用成本优化策略，可以在保证使用体验的同时有效控制开支。建议从Pro计划开始，根据实际使用量再决定是否升级到Max或切换到API模式。
 
 如果你还没有开始使用Claude Code，可以先阅读[安装教程](/claude-code-anzhuang-installation-guide/)完成设置。已经在使用的用户，可以查看[温度参数设置指南](/claude-temperature-settings-guide/)和[MCP配置指南](/claude-code-mcp-configuration-guide/)来进一步优化使用体验。
+
+## 常见问题
+
+### Claude Code免费版有什么限制？
+
+免费版提供有限的每日使用额度，仅支持Claude Sonnet模型，高峰时段可能被限制访问。免费版适合评估和轻度使用，无法满足日常开发需求。如果你需要更多额度或使用Opus模型，建议升级到Pro计划。
+
+### Pro计划和Max计划有什么区别？
+
+Pro计划每月20美元，提供基础使用额度，适合轻度到中度使用。Max 5x每月100美元，提供Pro的5倍额度并支持后台Agent任务。Max 20x每月200美元，提供Pro的20倍额度和最高优先级。选择哪个计划取决于你的日常使用量。
+
+### API按量计费和订阅制哪个更划算？
+
+对于轻度到中度使用者，订阅制更经济。Pro计划每月20美元覆盖的使用量如果换成API计费可能需要30-60美元。但如果你使用量极不稳定或需要精确控制成本，API按量计费更灵活。重度Opus用户的API费用可达每月数千美元，此时Max 20x的200美元月费远比API便宜。
+
+### 输入Token和输出Token价格为什么不同？
+
+输出Token的价格通常是输入Token的3-5倍。这是因为生成输出需要更多的计算资源。对于Claude Code来说，代码生成和详细解释包含大量输出Token，因此输出成本往往占总费用的大部分。了解这个差异有助于优化使用方式。
+
+### 如何降低Claude Code的使用成本？
+
+有四个主要策略：第一，日常任务使用Sonnet而非Opus，可节省约80%费用。第二，使用/compact命令压缩对话历史，减少上下文Token。第三，在同一会话中连续工作以利用Prompt Caching。第四，使用.claudeignore排除不需要的文件，减少自动上下文的Token消耗。
+
+### 中国用户如何使用Claude Code最经济？
+
+中国用户可以通过Amazon Bedrock或Google Vertex AI接入Claude Code，价格与直接API基本一致。AWS和GCP都提供长期使用折扣。此外，通过云服务商接入可以使用人民币结算，避免外币信用卡手续费。具体配置方法请参考国内使用指南。
+
+### Claude Code的费用会超出预期吗？
+
+在API按量计费模式下，费用确实可能超出预期，特别是使用Opus处理大型代码库时。建议设置CLAUDE_CODE_MAX_COST_PER_SESSION环境变量限制单次会话花费。订阅制用户不会产生额外费用，但可能在达到额度上限后被限速。
+
+### 学生可以获得Claude Code优惠吗？
+
+Anthropic目前没有专门的学生折扣，但有替代方案。GitHub Education Pack可能包含相关优惠。部分大学通过AWS或GCP教育计划提供免费云额度，可用于Bedrock或Vertex接入Claude。免费版Claude也可以满足学习阶段的基本需求。
+
+### Prompt Caching如何帮助省钱？
+
+Prompt Caching让相同的上下文内容在缓存命中时只收取原价的10%。Claude Code会自动利用此功能。要最大化缓存效果，应在同一会话中连续工作，避免频繁重启会话，并保持项目上下文稳定。这对于重复读取大型代码文件的场景特别有效。
+
+### Claude Code和GitHub Copilot哪个性价比更高？
+
+GitHub Copilot Individual每月10美元，比Claude Code Pro的20美元便宜。但Claude Code支持终端原生操作、多文件编辑和MCP自定义工具，功能更强大。如果你只需要IDE内代码补全，Copilot更划算。如果你需要Agent模式、终端操作和复杂任务处理，Claude Code的额外费用值得投入。
+
+### Claude Code和Cursor的价格相同吗？
+
+两者Pro计划都是每月20美元。主要区别在于运行方式：Claude Code在终端运行，Cursor是IDE。Claude Code专注于Claude模型全系列并支持MCP，Cursor则支持多种模型。选择取决于你的工作流偏好而非价格差异。
+
+### 企业团队应该选择哪种付费方式？
+
+企业团队推荐使用API按量计费配合Bedrock或Vertex。这种方式提供更好的成本管理、合规支持和SLA保障。通过Bedrock或Vertex，企业可以将Claude Code费用整合到现有云服务账单中，使用已有的预算和审批流程。如果团队较小，也可以为每位开发者配备Max计划。
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Claude Code免费版有什么限制？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "免费版提供有限的每日使用额度，仅支持Claude Sonnet模型，高峰时段可能被限制访问。免费版适合评估和轻度使用，无法满足日常开发需求。如果需要更多额度或使用Opus模型，建议升级到Pro计划。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pro计划和Max计划有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pro计划每月20美元，提供基础使用额度。Max 5x每月100美元，提供Pro的5倍额度并支持后台Agent任务。Max 20x每月200美元，提供Pro的20倍额度和最高优先级。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "API按量计费和订阅制哪个更划算？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "对于轻度到中度使用者，订阅制更经济。Pro计划每月20美元覆盖的使用量如果换成API计费可能需要30-60美元。重度Opus用户的API费用可达每月数千美元，此时Max 20x的200美元月费远比API便宜。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "输入Token和输出Token价格为什么不同？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "输出Token的价格通常是输入Token的3-5倍，因为生成输出需要更多的计算资源。对于Claude Code来说，代码生成和详细解释包含大量输出Token，输出成本往往占总费用的大部分。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何降低Claude Code的使用成本？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "四个主要策略：日常任务使用Sonnet而非Opus可节省约80%费用；使用/compact命令压缩对话历史减少上下文Token；在同一会话中连续工作以利用Prompt Caching；使用.claudeignore排除不需要的文件减少自动上下文的Token消耗。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "中国用户如何使用Claude Code最经济？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "中国用户可以通过Amazon Bedrock或Google Vertex AI接入Claude Code，价格与直接API基本一致。AWS和GCP都提供长期使用折扣，通过云服务商接入可以使用人民币结算，避免外币信用卡手续费。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Claude Code的费用会超出预期吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "在API按量计费模式下，费用可能超出预期，特别是使用Opus处理大型代码库时。建议设置CLAUDE_CODE_MAX_COST_PER_SESSION环境变量限制单次会话花费。订阅制用户不会产生额外费用，但可能在达到额度上限后被限速。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "学生可以获得Claude Code优惠吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anthropic目前没有专门的学生折扣，但有替代方案。GitHub Education Pack可能包含相关优惠，部分大学通过AWS或GCP教育计划提供免费云额度。免费版Claude也可以满足学习阶段的基本需求。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Prompt Caching如何帮助省钱？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prompt Caching让相同的上下文内容在缓存命中时只收取原价的10%。Claude Code会自动利用此功能。要最大化缓存效果，应在同一会话中连续工作，避免频繁重启会话，并保持项目上下文稳定。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Claude Code和GitHub Copilot哪个性价比更高？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GitHub Copilot Individual每月10美元，比Claude Code Pro的20美元便宜。但Claude Code支持终端原生操作、多文件编辑和MCP自定义工具，功能更强大。如果只需要IDE内代码补全，Copilot更划算；如果需要Agent模式和复杂任务处理，Claude Code更值得。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Claude Code和Cursor的价格相同吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "两者Pro计划都是每月20美元。主要区别在于运行方式：Claude Code在终端运行，Cursor是IDE。选择取决于工作流偏好而非价格差异。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "企业团队应该选择哪种付费方式？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "企业团队推荐使用API按量计费配合Bedrock或Vertex，提供更好的成本管理、合规支持和SLA保障。通过Bedrock或Vertex可将Claude Code费用整合到现有云服务账单中。如果团队较小，也可以为每位开发者配备Max计划。"
+      }
+    }
+  ]
+}
+</script>

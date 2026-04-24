@@ -101,7 +101,7 @@ and what remains. Then continue with the next task."
 
 ## 6. Slash Command Library (Save 10+ Minutes Per Week)
 
-**The hack:** Create reusable slash commands for workflows you run frequently.
+**The hack:** Create reusable [Claude shortcuts](/claude-shortcuts-complete-guide/) and slash commands for workflows you run frequently.
 
 `.claude/commands/review.md`:
 ```markdown
@@ -253,3 +253,9 @@ Install these four in under 10 minutes for immediate productivity gains:
 Combined impact: 30-50% fewer wasted tokens, 40-60% fewer mistakes, 20-30% faster task completion.
 
 For the full list of ecosystem tools, see the [tools map](/claude-code-ecosystem-complete-map-2026/). For hook recipes, read the [hooks guide](/claude-code-hooks-explained-complete-guide-2026/). For cost optimization, see the [pricing guide](/claude-code-pricing-plans-comparison-2026/).
+
+
+
+## Related
+
+- [Claude Code router guide](/claude-code-router-guide/) — How Claude Code's model router selects between Haiku, Sonnet, and Opus

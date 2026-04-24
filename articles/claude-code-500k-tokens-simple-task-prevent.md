@@ -202,3 +202,7 @@ Any session exceeding the blowout threshold deserves investigation. The most com
 - [Claude Code --max-turns Flag: Prevent Runaway Sessions](/claude-code-max-turns-flag-prevent-runaway-sessions/) -- hard caps on session length
 - [Claude Code Context Window Management](/claude-code-context-window-management/) -- prevent context accumulation
 - [Cost Optimization Hub](/cost-optimization/) -- comprehensive cost reduction
+
+- [Claude rate exceeded error fix](/claude-rate-exceeded-error-fix/) — Fix Claude rate exceeded and rate limit errors
+
+- [Claude AI rate exceeded error fix](/claude-ai-rate-exceeded-error-fix/) — Fix the Claude AI rate exceeded error message

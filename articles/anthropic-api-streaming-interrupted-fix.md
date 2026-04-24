@@ -55,7 +55,7 @@ Streaming uses Server-Sent Events (SSE) over a long-lived HTTP connection. Three
 
 First, network instability or proxy timeouts. Corporate proxies, load balancers, and CDNs often have idle timeout settings shorter than the time it takes Claude to generate a long response. When no data flows for a period, the intermediary closes the connection.
 
-Second, API overload. When the Anthropic API is under heavy load, it may return a 529 status code mid-stream. This is different from a pre-request 429 rate limit because it happens after the response has started flowing.
+Second, API overload. When the Anthropic API is under heavy load, it may return a 529 status code mid-stream. This is different from a pre-request 429 [Claude rate exceeded error fix](/claude-rate-exceeded-error-fix/) because it happens after the response has started flowing.
 
 Third, client-side timeouts. The SDK has default timeout settings that is too short for long-running generations, especially with large `max_tokens` values.
 
@@ -166,7 +166,7 @@ for attempt in range(max_retries):
 
 ### Step 5: Handle 529 overloaded errors
 
-The 529 status means the API is temporarily overloaded. Implement exponential backoff:
+The 529 status means the API is temporarily [Claude internal server error fix](/claude-internal-server-error-fix/). Implement exponential backoff:
 
 ```python
 except anthropic.APIStatusError as e:
@@ -216,5 +216,7 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Anthropic SDK TypeError Terminated](/anthropic-sdk-typeerror-terminated/)
 - [Claude API Rate Limit Fix](/claude-api-rate-limit-fix/)
 - [Claude API Tool Use Function Calling Guide](/claude-api-tool-use-function-calling-deep-dive-guide/)
+
+
 
 

@@ -30,7 +30,7 @@ The tools below serve different points on this spectrum. Knowing where you want 
 
 Claude Code remains the core tool for vibe coding workflows. The CLI-based agent can execute commands, read and write files, and manage git operations autonomously. What sets Claude Code apart in 2026 is its extensive skill ecosystem. Skills like frontend-design enable rapid UI creation, while tdd helps maintain test coverage during rapid iteration.
 
-The `--dangerously-skip-permissions` flag has become essential for automated workflows:
+The `--dangerously-skip-permissions` flag (see the [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/)) has become essential for automated workflows:
 
 ```bash
 claude --dangerously-skip-permissions --print \
@@ -371,5 +371,6 @@ Related Reading
 - [Claude Code Managed Settings Enterprise Guide](/claude-code-managed-settings-enterprise-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

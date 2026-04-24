@@ -240,10 +240,15 @@ Advanced diagnostics:
 | [Claude Code Writes Code in Wrong Programming Language](/claude-code-writes-code-in-wrong-programming-language/) | Preventing language confusion in multi-language projects |
 | [How to Make Claude Code Make Smaller Focused Changes](/how-to-make-claude-code-make-smaller-focused-changes/) | Constraining Claude Code to produce scoped, reviewable diffs |
 
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
 ---
 
 ---
 
+- [Claude internal server error fix](/claude-internal-server-error-fix/) — Fix Claude internal server error (500/overloaded)
 <div class="mastery-cta">
 
 I'm a solo developer in Vietnam. 50K Chrome extension users. $500K+ on Upwork. 5 Claude Max subscriptions running agent fleets in parallel.
@@ -277,5 +282,7 @@ Related Reading
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *
+
+
 
 

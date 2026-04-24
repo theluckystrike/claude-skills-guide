@@ -109,7 +109,7 @@ Run this manually after establishing new skills, or schedule it daily with cron.
 
 Within an active Claude session, you can refresh skills without restarting. The exact mechanism depends on your Claude Code version, but typically creating or modifying a skill file triggers automatic reloading.
 
-For manual refresh, you can invoke a built-in command if available, or simply start a new session. [When you modify a skill like `tdd-workflow.md`](/claude-tdd-skill-test-driven-development-workflow/)iately:
+For manual refresh, you can invoke a built-in command if available, or simply start a new session. [When you modify a skill like `tdd-workflow.md`](/claude-tdd-skill-test-driven-development-workflow/):
 
 ```
 /tdd create user service

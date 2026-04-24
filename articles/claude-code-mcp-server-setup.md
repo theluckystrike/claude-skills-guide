@@ -23,7 +23,7 @@ You want to extend Claude Code with custom tools via the Model Context Protocol 
 Error: MCP server "my-server" failed to start
 ```
 
-Or tools from your MCP server are not appearing when you run `claude mcp list`.
+Or tools from your MCP server are not appearing when you run `claude [claude mcp list command guide](/claude-mcp-list-command-guide/)`.
 
 ## Why This Happens
 
@@ -192,6 +192,7 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 
 
+- [Claude Desktop config.json guide](/claude-desktop-config-json-guide/) — How to configure Claude Desktop with config.json
 ## Related Articles
 
 - [Claude Code Angular MCP Configuration](/claude-code-angular-mcp/)
@@ -202,3 +203,5 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Connect Claude Code to Remote MCP Servers](/claude-code-mcp-remote-http-server-setup/)
 - [Add MongoDB MCP to Claude Code](/claude-code-add-mongodb-mcp/)
 - [Claude Code Supabase MCP Setup Guide](/claude-code-supabase-mcp-setup/)
+
+

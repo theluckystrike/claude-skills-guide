@@ -499,6 +499,7 @@ This section lists every article in the guides cluster alphabetically for quick 
 
 ---
 
+- [Claude shortcuts guide](/claude-shortcuts-complete-guide/) — Complete guide to Claude Code keyboard shortcuts and slash commands
 Related Reading
 
 - [Claude Code for Beginners: Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/). Start here before the guides
@@ -515,5 +516,6 @@ Related Reading
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *
+
 
 

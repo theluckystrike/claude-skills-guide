@@ -56,3 +56,8 @@ claude --no-thinking "Generate the full component"
 # CLAUDE.md rule
 For code generation tasks, work one file at a time. Never generate more than 300 lines of code in a single turn. Use the Write tool for files over 100 lines.
 ```
+
+
+## Related
+
+- [Claude upload limit guide](/claude-upload-limit-guide/) — Understanding Claude file upload limits and workarounds

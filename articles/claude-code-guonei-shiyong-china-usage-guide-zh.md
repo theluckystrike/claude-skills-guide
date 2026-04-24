@@ -120,7 +120,7 @@ export AWS_PROFILE=你的配置文件名
 
 ### Bedrock的费用
 
-Bedrock采用按量付费模式，费用与直接使用Anthropic API类似。具体的价格对比可以参考[Claude Code费用指南](/claude-code-cost-complete-guide/)。
+Bedrock采用按量付费模式，费用与直接使用Anthropic API类似。具体的[Claude Code 价格指南](/claude-code-jiage-pricing-guide/)对比可以参考[Claude Code费用指南](/claude-code-cost-complete-guide/)。
 
 ### 优化Bedrock延迟
 
@@ -257,6 +257,10 @@ Error: 500 Internal Server Error
 
 这通常是服务端问题，与网络无关。可以参考[内部服务器错误修复指南](/claude-internal-server-error-fix/)了解详细排查步骤。
 
+---
+
+*这些配置模板来自 [Claude Code Playbook](https://zovo.one/pricing) — 包含200个生产就绪模板、权限配置和团队设置指南。*
+
 ## 安全注意事项
 
 在国内使用Claude Code时，请注意以下安全事项：
@@ -293,3 +297,75 @@ Error: 500 Internal Server Error
 国内使用Claude Code主要面临网络连通性的挑战。个人用户可以通过配置终端代理快速上手，企业用户建议使用Amazon Bedrock或Google Vertex AI获得更稳定的连接。无论选择哪种方式，正确的网络配置和合理的成本控制都是长期使用的关键。
 
 如果你还没有安装Claude Code，请先阅读[安装教程](/claude-code-anzhuang-installation-guide/)完成基础设置。安装完成后，可以参考[快捷键指南](/claude-shortcuts-complete-guide/)快速提升操作效率。
+
+
+## 常见问题
+
+### 国内直接访问Claude API可以吗？
+
+通常不可以直连。Anthropic的API服务器（api.anthropic.com）在中国大陆没有节点，直接访问可能超时或被重置。需要通过代理、VPN或Bedrock/Vertex等替代方案。
+
+### 哪种代理节点延迟最低？
+
+日本（东京）和新加坡节点通常延迟最低，约60-150ms。美国西海岸节点延迟约150-250ms。选择延迟最低且稳定的节点。
+
+### Bedrock和直接API哪个更适合国内用户？
+
+企业用户推荐Bedrock，因为AWS全球骨干网提供稳定连接，无需额外代理。个人用户如果已有稳定代理，直接API更简单。
+
+### 使用代理会影响API密钥安全吗？
+
+如果使用可信的加密代理，API密钥在传输中是安全的。避免使用公共免费代理，建议自建代理服务器或使用知名付费服务。
+
+### Claude Code在国内的响应速度如何？
+
+取决于网络方案。通过优质代理节点，延迟约200-500ms。通过Bedrock东京区域，延迟约100-200ms。本地开发体验基本流畅。
+
+### 需要为API流量付额外代理费用吗？
+
+是的。代理服务的流量费用是额外成本。Claude Code的API调用可能产生较大流量，建议选择不限流量的代理方案。
+
+### 国内企业使用Claude Code需要合规审批吗？
+
+这取决于你所在的企业和行业。部分企业对使用海外AI服务有数据合规要求。建议咨询企业IT安全部门。
+
+### TUN模式和手动代理配置哪个更好？
+
+TUN模式更方便，不需要单独配置终端代理。但手动配置更精确，可以只代理需要的流量。根据个人习惯选择。
+
+### Vertex AI在国内访问需要翻墙吗？
+
+Google Cloud的API在中国大陆同样需要代理访问。但GCP的亚太区域节点延迟较低。
+
+### 如何解决频繁的ECONNRESET错误？
+
+尝试切换代理协议（HTTP改SOCKS5），更换代理节点，或考虑使用Bedrock替代方案。确保代理支持长连接。
+
+### Claude Code的/compact命令对国内用户有什么特别意义？
+
+在高延迟网络下，减少每次请求的Token数量可以显著改善响应速度。定期使用/compact压缩对话历史是国内用户的重要优化手段。
+
+### 国内可以使用Claude Max订阅吗？
+
+Claude Max订阅需要通过claude.ai注册并付费。注册和支付过程可能需要海外网络环境和国际信用卡。
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "国内直接访问Claude API可以吗？", "acceptedAnswer": {"@type": "Answer", "text": "通常不可以直连。Anthropic的API服务器在中国大陆没有节点，直接访问可能超时或被重置。需要通过代理、VPN或Bedrock/Vertex等替代方案。"}},
+    {"@type": "Question", "name": "哪种代理节点延迟最低？", "acceptedAnswer": {"@type": "Answer", "text": "日本（东京）和新加坡节点通常延迟最低，约60-150ms。美国西海岸节点延迟约150-250ms。"}},
+    {"@type": "Question", "name": "Bedrock和直接API哪个更适合国内用户？", "acceptedAnswer": {"@type": "Answer", "text": "企业用户推荐Bedrock，因为AWS全球骨干网提供稳定连接。个人用户如果已有稳定代理，直接API更简单。"}},
+    {"@type": "Question", "name": "使用代理会影响API密钥安全吗？", "acceptedAnswer": {"@type": "Answer", "text": "如果使用可信的加密代理，API密钥在传输中是安全的。避免使用公共免费代理，建议自建代理服务器。"}},
+    {"@type": "Question", "name": "Claude Code在国内的响应速度如何？", "acceptedAnswer": {"@type": "Answer", "text": "取决于网络方案。通过优质代理节点延迟约200-500ms，通过Bedrock东京区域延迟约100-200ms。"}},
+    {"@type": "Question", "name": "需要为API流量付额外代理费用吗？", "acceptedAnswer": {"@type": "Answer", "text": "是的。代理服务的流量费用是额外成本。Claude Code的API调用可能产生较大流量，建议选择不限流量的方案。"}},
+    {"@type": "Question", "name": "国内企业使用Claude Code需要合规审批吗？", "acceptedAnswer": {"@type": "Answer", "text": "这取决于企业和行业。部分企业对使用海外AI服务有数据合规要求。建议咨询企业IT安全部门。"}},
+    {"@type": "Question", "name": "TUN模式和手动代理配置哪个更好？", "acceptedAnswer": {"@type": "Answer", "text": "TUN模式更方便，不需要单独配置终端代理。但手动配置更精确，可以只代理需要的流量。根据个人习惯选择。"}},
+    {"@type": "Question", "name": "如何解决频繁的ECONNRESET错误？", "acceptedAnswer": {"@type": "Answer", "text": "尝试切换代理协议（HTTP改SOCKS5），更换代理节点，或考虑使用Bedrock替代方案。确保代理支持长连接。"}},
+    {"@type": "Question", "name": "Claude Code的/compact命令对国内用户有什么特别意义？", "acceptedAnswer": {"@type": "Answer", "text": "在高延迟网络下，减少每次请求的Token数量可以显著改善响应速度。定期使用/compact压缩对话历史是国内用户的重要优化手段。"}},
+    {"@type": "Question", "name": "国内可以使用Claude Max订阅吗？", "acceptedAnswer": {"@type": "Answer", "text": "Claude Max订阅需要通过claude.ai注册并付费。注册和支付过程可能需要海外网络环境和国际信用卡。"}},
+    {"@type": "Question", "name": "Vertex AI在国内访问需要翻墙吗？", "acceptedAnswer": {"@type": "Answer", "text": "Google Cloud的API在中国大陆同样需要代理访问。但GCP的亚太区域节点延迟较低。"}}
+  ]
+}
+</script>

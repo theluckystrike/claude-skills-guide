@@ -17,7 +17,7 @@ geo_optimized: true
 
 ## The Error
 
-You have Claude Code running with `--dangerously-skip-permissions` and a PreToolUse hook configured to log and allow all tool calls. Everything works initially. Then, after a background task completes (or after an extended idle period), permission prompts start appearing:
+You have Claude Code running with `--dangerously-skip-permissions` (see the [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/)) and a PreToolUse hook configured to log and allow all tool calls. Everything works initially. Then, after a background task completes (or after an extended idle period), permission prompts start appearing:
 
 ```
 Permission rule **Bash** requires confirmation for this command
@@ -107,7 +107,7 @@ If you see permission prompts but no new log entries, the hook has been bypassed
 
 ### 2. Avoid Background Tasks in Permission-Critical Sessions
 
-If you need reliable `--dangerously-skip-permissions` behavior:
+If you need reliable [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) behavior:
 
 ```bash
 # Instead of background tasks within Claude Code,
@@ -203,5 +203,7 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 ## Tools That Help
 
 For developers running Claude Code in automation pipelines where permission integrity is critical, a dev tool extension can help monitor and debug the tool call flow in real time.
+
+
 
 

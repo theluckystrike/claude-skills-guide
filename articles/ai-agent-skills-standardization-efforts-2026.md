@@ -171,7 +171,7 @@ The trajectory points toward fuller standardization. Industry groups are negotia
 
 For now, adopt standards that reduce lock-in while maintaining flexibility. Build skills with portable core logic, use manifest formats that support multiple platforms, and distribute through registries that index across platforms. Skills you build following these principles will remain valuable regardless of how standardization evolves.
 
-The fragmentation problem won't solve itself, but the tools and patterns emerging in 2026 give developers real options for building portable AI agent capabilities.
+The fragmentation problem won't solve itself, but the tools and patterns emerging in 2026 give developers real options for [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) capabilities.
 
 One practical step available today: audit your existing skills for platform-specific dependencies. Any skill that references a specific tool by name (Read, Bash, Edit, etc.) contains implicit platform coupling. Refactor those references into a platform override block and keep the core prompts generic. This migration can happen incrementally. you do not need to rewrite everything at once. Skills that you refactor for portability become assets; skills that stay platform-specific become liabilities as the ecosystem diversifies.
 
@@ -209,5 +209,6 @@ Related Reading
 - [Claude Code Skill Versioning and Upgrades: What to Expect](/claude-code-skill-versioning-and-upgrades-what-to-expect/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

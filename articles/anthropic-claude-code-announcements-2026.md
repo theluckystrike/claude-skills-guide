@@ -261,10 +261,15 @@ Third, write one custom skill for the workflow where you find yourself repeating
 
 For teams adopting these new capabilities, start with one skill that addresses your biggest problem. whether that's testing with tdd, frontend work with frontend-design, or documentation with pdf. Gradually incorporate additional skills as your workflow matures.
 
+
+## Related
+
+- [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Guide to the claude-sonnet-4-5-20250929 model and its capabilities
 ---
 
 ---
 
+- [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Guide to the claude-sonnet-4-20250514 model and features
 <div class="mastery-cta">
 
 I'm a solo developer in Vietnam. 50K Chrome extension users. $500K+ on Upwork. 5 Claude Max subscriptions running agent fleets in parallel.
@@ -284,6 +289,8 @@ Related Reading
 - [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 
 

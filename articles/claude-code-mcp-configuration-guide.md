@@ -149,6 +149,24 @@ With the environment variables from `env` added to the process environment. The 
 
 ## Five Common MCP Server Configurations
 
+<div id="mcp-cfg-gen" style="background:#1a1a2e;border:1px solid #2a2a3a;border-radius:8px;padding:20px;margin:24px 0;font-family:system-ui,-apple-system,sans-serif;">
+<h3 style="color:#6ee7b7;margin:0 0 12px 0;font-size:18px;">MCP Config Generator</h3>
+<p style="color:#94a3b8;margin:0 0 16px 0;font-size:14px;">Select servers to generate a complete settings.json configuration.</p>
+<div style="display:grid;gap:8px;margin-bottom:16px;">
+<label style="display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;cursor:pointer;"><input type="checkbox" class="mcg-cb" data-name="filesystem" data-cmd="npx" data-args='["-y","@modelcontextprotocol/server-filesystem","/path/to/dir"]'> Filesystem (local directory access)</label>
+<label style="display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;cursor:pointer;"><input type="checkbox" class="mcg-cb" data-name="github" data-cmd="npx" data-args='["-y","@anthropic/mcp-server-github"]' data-env='{"GITHUB_TOKEN":"ghp_YOUR_TOKEN"}'> GitHub (repos, issues, PRs)</label>
+<label style="display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;cursor:pointer;"><input type="checkbox" class="mcg-cb" data-name="postgres" data-cmd="npx" data-args='["-y","@anthropic/mcp-server-postgres","postgresql://localhost:5432/mydb"]'> PostgreSQL (database queries)</label>
+<label style="display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;cursor:pointer;"><input type="checkbox" class="mcg-cb" data-name="slack" data-cmd="npx" data-args='["-y","@anthropic/mcp-server-slack"]' data-env='{"SLACK_BOT_TOKEN":"xoxb-YOUR_TOKEN","SLACK_TEAM_ID":"T01234567"}'> Slack (messaging)</label>
+<label style="display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;cursor:pointer;"><input type="checkbox" class="mcg-cb" data-name="brave-search" data-cmd="npx" data-args='["-y","@anthropic/mcp-server-brave-search"]' data-env='{"BRAVE_API_KEY":"BSA_YOUR_KEY"}'> Brave Search (web search)</label>
+<label style="display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;cursor:pointer;"><input type="checkbox" class="mcg-cb" data-name="memory" data-cmd="npx" data-args='["-y","@anthropic/mcp-server-memory"]'> Memory (persistent KV store)</label>
+</div>
+<pre id="mcg-out" style="background:#0f172a;padding:16px;border-radius:6px;color:#4ade80;font-size:13px;overflow-x:auto;white-space:pre;margin:0 0 12px 0;min-height:60px;">// Select servers above to generate settings.json</pre>
+<button onclick="navigator.clipboard.writeText(document.getElementById('mcg-out').textContent).then(function(){var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy to Clipboard'},2000)}.bind(this))" style="padding:8px 20px;background:#6ee7b7;color:#0f172a;border:none;border-radius:6px;font-weight:600;cursor:pointer;font-size:14px;">Copy to Clipboard</button>
+</div>
+<script>
+document.querySelectorAll('.mcg-cb').forEach(function(cb){cb.addEventListener('change',function(){var servers={};document.querySelectorAll('.mcg-cb:checked').forEach(function(c){var entry={command:c.getAttribute('data-cmd'),args:JSON.parse(c.getAttribute('data-args'))};var envStr=c.getAttribute('data-env');if(envStr)entry.env=JSON.parse(envStr);servers[c.getAttribute('data-name')]=entry;});var out=Object.keys(servers).length>0?JSON.stringify({mcpServers:servers},null,2):'// Select servers above to generate settings.json';document.getElementById('mcg-out').textContent=out;});});
+</script>
+
 ### 1. Filesystem Server
 
 Gives Claude Code access to directories outside the project root:
@@ -324,6 +342,10 @@ See the [MCP connection refused fix](/claude-code-mcp-server-connection-refused-
 
 See the [MCP stdio timeout fix](/claude-code-mcp-server-stdio-timeout-fix-2026/) for timeout-specific solutions.
 
+---
+
+*This configuration is one of 200 production-ready templates in [The Claude Code Playbook](https://zovo.one/pricing). Permission configs, model selection rules, MCP setups — all tested and ready to copy.*
+
 ### Authentication Failures
 
 **Symptom:** Server connects but API calls fail with 401/403 errors.
@@ -476,3 +498,38 @@ Claude Code supports the current MCP specification. Servers built with the offic
 - [Configuration Hierarchy Explained](/claude-code-configuration-hierarchy-explained-2026/) — settings precedence
 - [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive workflow reference
 - [Sequential Thinking in Claude Code](/sequential-thinking-claude-code-guide/) — structured problem solving with MCP
+
+### Can I use environment variables from my shell in the env field?
+
+No. The env field in settings.json accepts literal string values only. Shell variable expansion does not occur. You must hardcode the value or use a secrets management approach.
+
+### Do MCP servers slow down Claude Code startup?
+
+Each server adds startup time as it initializes. With npx, the first run downloads the package which can take several seconds. Pre-install packages globally to reduce startup delay.
+
+### Can I use MCP servers with Claude Code in API mode?
+
+Yes. MCP servers work in both interactive mode and API mode (claude -p). The servers are initialized at startup regardless of the execution mode.
+
+### What happens if two MCP servers provide tools with the same name?
+
+Claude Code will see both tools and may use either one. To avoid confusion, ensure server tools have unique names or only enable one server that provides a particular capability.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Can I use the same settings.json for Claude Code and Claude Desktop?", "acceptedAnswer": {"@type": "Answer", "text": "No. Claude Code uses .claude/settings.json while Claude Desktop uses claude_desktop_config.json in the OS-specific app data directory. They are separate files with the same mcpServers schema."}},
+    {"@type": "Question", "name": "How many MCP servers can I configure?", "acceptedAnswer": {"@type": "Answer", "text": "There is no hard limit. Practically, each server is a running process that consumes memory, and each server's tools consume tokens. More than 10 concurrent servers may affect performance."}},
+    {"@type": "Question", "name": "Can I configure remote MCP servers?", "acceptedAnswer": {"@type": "Answer", "text": "The standard configuration supports local stdio-based servers. For remote servers, you need an MCP server that supports HTTP/SSE transport."}},
+    {"@type": "Question", "name": "Do MCP servers persist across sessions?", "acceptedAnswer": {"@type": "Answer", "text": "The configuration persists as a file on disk. Servers are started fresh when Claude Code starts and stopped when Claude Code exits. They do not run as background daemons."}},
+    {"@type": "Question", "name": "Can I share project MCP configuration with my team?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Commit .claude/settings.json to your repository. Team members will automatically get the same MCP server configuration. Ensure no secrets are hardcoded."}},
+    {"@type": "Question", "name": "What MCP protocol version does Claude Code support?", "acceptedAnswer": {"@type": "Answer", "text": "Claude Code supports the current MCP specification. Servers built with the official MCP SDK are compatible."}},
+    {"@type": "Question", "name": "Can I use environment variables from my shell in the env field?", "acceptedAnswer": {"@type": "Answer", "text": "No. The env field in settings.json accepts literal string values only. Shell variable expansion does not occur. You must hardcode the value or use a secrets management approach."}},
+    {"@type": "Question", "name": "Do MCP servers slow down Claude Code startup?", "acceptedAnswer": {"@type": "Answer", "text": "Each server adds startup time as it initializes. With npx, the first run downloads the package which can take several seconds. Pre-install packages globally to reduce startup delay."}},
+    {"@type": "Question", "name": "Can I use MCP servers with Claude Code in API mode?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. MCP servers work in both interactive mode and API mode. The servers are initialized at startup regardless of the execution mode."}},
+    {"@type": "Question", "name": "What happens if two MCP servers provide tools with the same name?", "acceptedAnswer": {"@type": "Answer", "text": "Claude Code will see both tools and may use either one. To avoid confusion, ensure server tools have unique names or only enable one server that provides a particular capability."}}
+  ]
+}
+</script>

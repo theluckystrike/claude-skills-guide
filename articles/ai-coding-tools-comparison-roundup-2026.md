@@ -64,7 +64,7 @@ The AI coding tools market has split into three tiers: autocomplete tools ($0-12
 ### Windsurf
 **What it does:** IDE with AI agent ("Cascade") for multi-step coding tasks.
 **Pricing:** Free (limited), Pro $15/mo, Team $35/seat.
-**Strengths:** Cheaper than Cursor with similar capabilities. Cascade agent handles multi-file tasks.
+**Strengths:** Cheaper than [Claude Code vs Cursor comparison](/claude-code-vs-cursor-definitive-comparison-2026/) with similar capabilities. Cascade agent handles multi-file tasks.
 **Weaknesses:** Smaller community, less polished than Cursor, occasional context confusion.
 **Verdict:** Budget alternative to Cursor. Try it if $20/mo for Cursor feels steep.
 
@@ -99,7 +99,7 @@ The AI coding tools market has split into three tiers: autocomplete tools ($0-12
 **Verdict:** Best free agent for VS Code users. Closest to Claude Code at zero subscription cost.
 
 ### Aider (Open Source)
-**What it does:** Terminal agent with auto-git-commits, multi-model support, repository map.
+**What it does:** Terminal agent with [Claude Code router guide](/claude-code-router-guide/) support, repository map.
 **Pricing:** Free (OSS), uses your API key ($5-40/mo in API costs).
 **Strengths:** Model flexibility (any provider). Auto-commit per edit. Mature and well-maintained. Local model support.
 **Weaknesses:** No skills system, no MCP, less autonomous than Claude Code for complex tasks.
@@ -156,3 +156,10 @@ Related reading:
 - [AI Coding Tools Pricing Comparison 2026](/ai-coding-tools-pricing-comparison-2026/)
 - [Claude Code vs Cursor: Full Comparison 2026](/claude-code-vs-cursor-comparison-2026/)
 - [Best Free AI Coding Tools vs Claude Code 2026](/best-free-ai-coding-tools-alternatives-to-claude-code-2026/)
+
+
+
+
+## Related
+
+- [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Claude Sonnet 4.5 model details

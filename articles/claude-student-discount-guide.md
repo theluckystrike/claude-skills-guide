@@ -171,6 +171,10 @@ Not everything needs Claude. For students, consider:
 
 Reserve Claude Code for tasks where it adds unique value: complex debugging, multi-file refactoring, architecture advice.
 
+---
+
+*Need the complete toolkit? [The Claude Code Playbook](https://zovo.one/pricing) includes 200 production-ready templates, decision frameworks, and team setup guides for every Claude Code workflow.*
+
 ## How to Request a Student Program
 
 If enough students request it, Anthropic may introduce student pricing. Here is how to make your voice heard:
@@ -225,3 +229,39 @@ API calls will return an error. You will need to add a payment method or switch 
 - [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — better prompts cost less
 - [Pricing plans comparison](/claude-code-pricing-plans-comparison-2026/) — Pro vs Max vs API
 - [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive reference
+
+- [Claude Code 价格指南 (Chinese Pricing Guide)](/claude-code-jiage-pricing-guide/) — Claude Code pricing guide in Chinese
+### Is there a way to get free Claude API credits for academic research?
+
+Check Anthropic's research access programs. Some universities have direct agreements with Anthropic that include API credits for published research.
+
+### Can I use Claude Code on a university lab computer?
+
+Yes, if the lab computer has Node.js 18+ installed and internet access. Ask your department IT about installing global npm packages. Use your personal API key or department-provided credentials.
+
+### Is the free tier rate limit lower during peak hours?
+
+Yes. During high-demand periods, free tier users may experience lower message limits or temporary access restrictions. Pro and Max users get priority access.
+
+### Can multiple students share a Claude Max subscription?
+
+Anthropic's terms require individual accounts. Each student should have their own account. For shared access, ask your department about an enterprise or team plan.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Will Anthropic add student pricing?", "acceptedAnswer": {"@type": "Answer", "text": "No official announcement as of April 2026. Student pricing programs are increasingly common in the AI industry, so it is plausible but not confirmed."}},
+    {"@type": "Question", "name": "Can I use a .edu email for a discount?", "acceptedAnswer": {"@type": "Answer", "text": "No. Anthropic does not offer .edu-based discounts. Your .edu email works for account creation but provides no pricing benefit."}},
+    {"@type": "Question", "name": "Is the free tier enough for coursework?", "acceptedAnswer": {"@type": "Answer", "text": "For occasional questions and explanations, yes. For daily coding sessions, you will likely hit the limits and need Pro or API credits."}},
+    {"@type": "Question", "name": "Can I share an API key with classmates?", "acceptedAnswer": {"@type": "Answer", "text": "Anthropic's terms of service prohibit sharing API keys. Each student should use their own account. Ask your professor about department-level API access."}},
+    {"@type": "Question", "name": "Do hackathon or competition credits exist?", "acceptedAnswer": {"@type": "Answer", "text": "Some hackathons include AI API credits as sponsor benefits. Check event sponsor lists for Anthropic or partners like AWS."}},
+    {"@type": "Question", "name": "What happens when my free credits run out?", "acceptedAnswer": {"@type": "Answer", "text": "API calls will return an error. You will need to add a payment method or switch to the free chat tier. There is no negative balance or surprise billing."}},
+    {"@type": "Question", "name": "Is there a way to get free Claude API credits for academic research?", "acceptedAnswer": {"@type": "Answer", "text": "Check Anthropic's research access programs. Some universities have direct agreements with Anthropic that include API credits for published research."}},
+    {"@type": "Question", "name": "Can I use Claude Code on a university lab computer?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if the lab computer has Node.js 18+ installed and internet access. Ask your department IT about installing global npm packages."}},
+    {"@type": "Question", "name": "Is the free tier rate limit lower during peak hours?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. During high-demand periods, free tier users may experience lower message limits or temporary access restrictions. Pro and Max users get priority access."}},
+    {"@type": "Question", "name": "Can multiple students share a Claude Max subscription?", "acceptedAnswer": {"@type": "Answer", "text": "Anthropic's terms require individual accounts. Each student should have their own account. For shared access, ask your department about an enterprise or team plan."}}
+  ]
+}
+</script>

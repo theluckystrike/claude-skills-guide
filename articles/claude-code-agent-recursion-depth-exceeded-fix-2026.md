@@ -56,3 +56,8 @@ cat .claude/settings.json | grep -A5 "hooks"
 # CLAUDE.md rule
 Never delegate tasks to subagents that are broader than the original task. Always specify exact files and line numbers when possible. Use --max-turns 10 for automated pipelines.
 ```
+
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error

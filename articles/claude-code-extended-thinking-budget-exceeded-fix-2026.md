@@ -21,7 +21,7 @@ claude config set thinking_budget 32768
 
 ## Why This Works
 
-Extended thinking allows Claude to reason through complex problems before responding. When the allocated budget is too low, Claude hits the ceiling mid-reasoning and the request fails. Setting the budget to 32768 tokens gives sufficient room for multi-step reasoning while keeping costs predictable.
+[Sequential thinking in Claude Code](/sequential-thinking-claude-code-guide/) allows Claude to reason through complex problems before responding. When the allocated budget is too low, Claude hits the ceiling mid-reasoning and the request fails. Setting the budget to 32768 tokens gives sufficient room for multi-step reasoning while keeping costs predictable.
 
 ## If That Doesn't Work
 
@@ -40,3 +40,9 @@ Add to your CLAUDE.md:
 ```
 Extended thinking budget is set to 32768 tokens. For tasks requiring deep analysis (architecture decisions, complex refactors), use explicit step-by-step instructions to reduce reasoning depth needed.
 ```
+
+
+## Related
+
+- [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Guide to the claude-sonnet-4-5-20250929 model and its capabilities
+

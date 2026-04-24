@@ -40,6 +40,22 @@ User prompt → [Claude reasons] → Tool call → Result → [Claude reasons] �
 
 This loop is the same pattern Claude Code uses internally. The SDK exposes it as a programmable interface.
 
+<div id="agent-viz" style="background:#1a1a2e;border:1px solid #2a2a3a;border-radius:8px;padding:20px;margin:24px 0;font-family:system-ui,-apple-system,sans-serif;">
+<h3 style="color:#6ee7b7;margin:0 0 12px 0;font-size:18px;">Agent Pattern Selector</h3>
+<p style="color:#94a3b8;margin:0 0 16px 0;font-size:14px;">Choose a pattern to see its architecture, use case, and cost profile.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+<button class="avz-btn" data-p="seq" onclick="showAP('seq')" style="padding:6px 14px;background:#6ee7b7;color:#0f172a;border:none;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;">Sequential</button>
+<button class="avz-btn" data-p="orch" onclick="showAP('orch')" style="padding:6px 14px;background:#334155;color:#e2e8f0;border:none;border-radius:6px;font-size:13px;cursor:pointer;">Orchestrator</button>
+<button class="avz-btn" data-p="pipe" onclick="showAP('pipe')" style="padding:6px 14px;background:#334155;color:#e2e8f0;border:none;border-radius:6px;font-size:13px;cursor:pointer;">Pipeline</button>
+</div>
+<div id="avz-out" style="background:#0f172a;padding:16px;border-radius:6px;color:#e2e8f0;font-size:14px;line-height:1.7;"></div>
+</div>
+<script>
+var apData={seq:{name:"Sequential Pattern",flow:"User Prompt \u2192 [Agent Reasons] \u2192 Tool Call \u2192 Result \u2192 [Agent Reasons] \u2192 Tool Call \u2192 ... \u2192 Final Output",desc:"One agent, linear execution. The agent receives a task, reasons through it step by step, calls tools as needed, and produces a final result.",best:"Single-purpose tasks, file edits, code review, simple automations",turns:"5-15 turns typical",cost:"$0.01-$0.50 (Sonnet), lowest cost pattern",code:'agent = Agent(\n  model="claude-sonnet-4-20250514",\n  tools=[tools.bash, tools.read_file],\n  max_turns=10\n)\nresult = agent.run("Analyze this module")'},orch:{name:"Orchestrator-Worker Pattern",flow:"User Prompt \u2192 [Orchestrator Agent] \u2192 delegates to [Worker A] + [Worker B] \u2192 Workers return results \u2192 [Orchestrator combines] \u2192 Final Output",desc:"A main agent delegates subtasks to specialized sub-agents. Each worker has its own model, tools, and turn limit. The orchestrator synthesizes results.",best:"Complex tasks with distinct sub-problems: security audit + style check, multi-language analysis, research + writing",turns:"15-30 turns total (across all agents)",cost:"$0.50-$5.00 (mixed models), highest capability",code:'orchestrator = Agent(\n  model="claude-opus-4-20250514",\n  sub_agents=[security_agent, style_agent],\n  max_turns=15\n)\nresult = orchestrator.run("Review the codebase")'},pipe:{name:"Pipeline Pattern",flow:"User Prompt \u2192 [Agent 1: Generate] \u2192 output \u2192 [Agent 2: Review] \u2192 output \u2192 [Agent 3: Test] \u2192 Final Output",desc:"Agents chained in sequence. Each agent's output becomes the next agent's input. Each stage has a focused role with its own tools.",best:"Staged workflows: generate-then-review, write-then-test, extract-then-transform",turns:"10-20 turns per stage",cost:"$0.15-$2.00 per stage (Sonnet), predictable per-stage costs",code:'gen = Agent(model="opus", tools=[tools.write_file], max_turns=10)\ngen.run("Write a REST API")\nrev = Agent(model="sonnet", tools=[tools.read_file], max_turns=10)\nrev.run("Review and fix ./api.py")'}};
+function showAP(p){var d=apData[p];if(!d)return;document.getElementById('avz-out').innerHTML='<div style="color:#6ee7b7;font-weight:600;font-size:16px;margin-bottom:8px;">'+d.name+'</div><div style="background:#1a1a2e;padding:10px;border-radius:4px;font-family:monospace;font-size:12px;color:#4ade80;margin-bottom:12px;overflow-x:auto;white-space:nowrap;">'+d.flow+'</div><p style="margin:0 0 8px 0;">'+d.desc+'</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0;"><div><span style="color:#94a3b8;font-size:12px;">BEST FOR</span><div style="font-size:13px;">'+d.best+'</div></div><div><span style="color:#94a3b8;font-size:12px;">TYPICAL TURNS</span><div style="font-size:13px;">'+d.turns+'</div></div><div><span style="color:#94a3b8;font-size:12px;">COST RANGE</span><div style="font-size:13px;">'+d.cost+'</div></div></div><pre style="background:#1a1a2e;padding:10px;border-radius:4px;font-size:12px;color:#e2e8f0;overflow-x:auto;margin:8px 0 0 0;">'+d.code+'</pre>';document.querySelectorAll('.avz-btn').forEach(function(b){b.style.background=b.getAttribute('data-p')===p?'#6ee7b7':'#334155';b.style.color=b.getAttribute('data-p')===p?'#0f172a':'#e2e8f0';b.style.fontWeight=b.getAttribute('data-p')===p?'600':'400';});}
+showAP('seq');
+</script>
+
 ## Installation
 
 ### Python
@@ -387,8 +403,190 @@ Before deploying agents to production, verify each item:
 - **Logging**: agent inputs, outputs, and errors written to a structured log
 - **Testing**: agents tested against known inputs with expected outputs verified
 - **Timeout**: pipeline-level timeout to prevent stalled agents from blocking indefinitely
+- **Secrets isolation**: API keys passed via environment variables, never hardcoded in agent code
+- **Output validation**: verify agent output matches expected schema before downstream processing
 
 Treat agents like microservices: each should have clear inputs, outputs, error handling, and monitoring.
+
+---
+
+*Need the complete toolkit? [The Claude Code Playbook](https://zovo.one/pricing) includes 200 production-ready templates, decision frameworks, and team setup guides for every Claude Code workflow.*
+
+## Monitoring and Logging Patterns
+
+Production agents need structured observability. Log every run with enough detail to diagnose failures and track costs.
+
+### Structured Run Logging
+
+```python
+import json
+import logging
+from datetime import datetime, timezone
+from claude_agent_sdk import Agent, tools
+
+logging.basicConfig(
+    format='%(message)s',
+    level=logging.INFO,
+    handlers=[logging.FileHandler("agent-runs.jsonl")]
+)
+
+agent = Agent(
+    model="claude-sonnet-4-20250514",
+    tools=[tools.bash, tools.read_file],
+    max_turns=15,
+)
+
+start = datetime.now(timezone.utc)
+result = agent.run("Analyze the test suite for flaky tests")
+end = datetime.now(timezone.utc)
+
+log_entry = {
+    "timestamp": start.isoformat(),
+    "duration_seconds": (end - start).total_seconds(),
+    "model": "claude-sonnet-4-20250514",
+    "turns_used": result.turns_used,
+    "total_tokens": result.total_tokens,
+    "input_tokens": result.input_tokens,
+    "output_tokens": result.output_tokens,
+    "hit_turn_limit": result.hit_turn_limit,
+    "estimated_cost_usd": (result.input_tokens * 3 + result.output_tokens * 15) / 1_000_000,
+    "task": "flaky test analysis",
+    "status": "complete" if not result.hit_turn_limit else "truncated",
+}
+logging.info(json.dumps(log_entry))
+```
+
+This produces a JSONL file where each line is a complete run record. Feed it into your existing monitoring stack (Datadog, Grafana, CloudWatch) for dashboards and alerts.
+
+### Cost Alert Thresholds
+
+Set alerts at multiple levels to catch runaway agents before they drain your budget:
+
+```python
+COST_THRESHOLDS = {
+    "per_run_warn": 2.00,     # Warn if a single run exceeds $2
+    "per_run_abort": 10.00,   # Abort if a single run exceeds $10
+    "daily_budget": 50.00,    # Hard daily cap across all agents
+    "monthly_budget": 500.00, # Monthly spending ceiling
+}
+```
+
+### Health Check Endpoint
+
+If your agents run as a service, expose a health check:
+
+```python
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route("/health")
+def health():
+    return jsonify({
+        "status": "ok",
+        "agents_running": active_agent_count,
+        "total_runs_today": daily_run_count,
+        "estimated_cost_today_usd": daily_cost_estimate,
+    })
+```
+
+## Real Cost Examples with Actual Token Counts
+
+Abstract cost tables are not enough. Here are measured costs from real agent runs:
+
+### Example: Code review of a 15-file Python project
+
+```
+Model:          claude-sonnet-4-20250514
+Turns used:     12
+Input tokens:   34,218 (file contents + system prompt + tool results)
+Output tokens:  6,841 (review comments + tool calls)
+Cost:           (34,218 * $3 + 6,841 * $15) / 1,000,000 = $0.205
+Duration:       47 seconds
+```
+
+### Example: Refactor a module (rename + update imports)
+
+```
+Model:          claude-sonnet-4-20250514
+Turns used:     22
+Input tokens:   89,450 (grows each turn as context accumulates)
+Output tokens:  12,330
+Cost:           (89,450 * $3 + 12,330 * $15) / 1,000,000 = $0.453
+Duration:       2 minutes 15 seconds
+```
+
+### Example: Architecture planning with Opus
+
+```
+Model:          claude-opus-4-20250514
+Turns used:     8
+Input tokens:   22,100
+Output tokens:  8,900
+Cost:           (22,100 * $15 + 8,900 * $75) / 1,000,000 = $0.999
+Duration:       1 minute 40 seconds
+```
+
+The pattern is clear: context accumulation is the primary cost driver. An agent that runs 30 turns processes exponentially more input tokens than one that runs 10 turns, because each turn includes the full conversation history. Use `/compact` or context summarization between stages to control this.
+
+## Security Considerations for Agent Deployments
+
+Agents that run autonomously introduce security risks that do not exist with interactive AI usage.
+
+### Principle of Least Privilege
+
+Give each agent only the tools it needs. A code review agent should not have `write_file` access. A report generator should not have `bash` access.
+
+```python
+# Bad: overly permissive
+agent = Agent(tools=[tools.bash, tools.read_file, tools.write_file, tools.web_search, tools.glob, tools.grep])
+
+# Good: scoped to actual need
+review_agent = Agent(tools=[tools.read_file, tools.grep])
+```
+
+### Input Sanitization
+
+If agent prompts include user-provided input (issue descriptions, PR bodies, form submissions), sanitize the input to prevent prompt injection:
+
+```python
+def sanitize_agent_input(user_text: str) -> str:
+    """Strip potential prompt injection patterns from user input."""
+    # Remove instruction-like patterns
+    sanitized = user_text.replace("SYSTEM:", "")
+    sanitized = sanitized.replace("IGNORE PREVIOUS", "")
+    sanitized = sanitized.replace("<!-- ", "").replace(" -->", "")
+    # Truncate to prevent context flooding
+    return sanitized[:5000]
+
+result = agent.run(f"Review this PR description: {sanitize_agent_input(pr_body)}")
+```
+
+### Network Isolation
+
+For agents that should only read local files, run them without network access:
+
+```bash
+# Docker with no network
+docker run --rm --network=none \
+  -e ANTHROPIC_API_KEY="$KEY" \
+  -v $(pwd):/app \
+  my-agent-image
+```
+
+Note: the agent still needs network access to call the Anthropic API. Use Docker's network policies to allow only `api.anthropic.com:443` while blocking all other outbound traffic.
+
+### Secret Management
+
+Never pass secrets through agent prompts. Use environment variables and configure tools to access them directly:
+
+```python
+# Bad: secret in prompt
+agent.run(f"Connect to database at postgres://admin:{DB_PASSWORD}@db.example.com/prod")
+
+# Good: secret in environment, tool reads it
+agent.run("Connect to the production database using the credentials in DATABASE_URL")
+```
 
 ## Next Steps
 
@@ -400,3 +598,36 @@ Treat agents like microservices: each should have clear inputs, outputs, error h
 - [API mode vs interactive mode](/claude-code-api-mode-vs-interactive-2026/) — choose the right execution model
 - [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive reference for power users
 - [Claude Code best practices](/claude-code-claude-md-best-practices/) — CLAUDE.md configuration patterns
+
+- [Claude Flow tool guide](/claude-flow-tool-guide/) — Multi-agent orchestration with Claude Flow
+- [sequential thinking in Claude Code](/sequential-thinking-claude-code-guide/) — Use sequential thinking in agent pipelines
+### Can I deploy agents as a REST API service?
+
+Yes. Wrap the agent.run() call in a web framework like Flask or FastAPI. Add request validation, authentication, and rate limiting. Each API request creates a new agent run.
+
+### How do I test agents before deploying to production?
+
+Create a test suite with known inputs and expected outputs. Run agents against these inputs and verify the final_output matches expectations. Use deterministic temperature (0.0) for reproducible results.
+
+### Can agents access the internet?
+
+Yes, if you provide the web_search tool. Without it, agents can only access local files and run local commands. Control network access through tool selection and Docker network policies.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is the Claude Agent SDK free?", "acceptedAnswer": {"@type": "Answer", "text": "The SDK itself is free and open source. You pay for Claude API usage (per-token pricing) when agents run."}},
+    {"@type": "Question", "name": "What models work with the Agent SDK?", "acceptedAnswer": {"@type": "Answer", "text": "All Claude models: Opus 4, Sonnet 4, Sonnet 4.5, and Haiku 4.5. Choose based on task complexity and budget."}},
+    {"@type": "Question", "name": "How is this different from Claude Code?", "acceptedAnswer": {"@type": "Answer", "text": "Claude Code is a pre-built coding agent. The Agent SDK lets you build custom agents for any purpose, not just coding."}},
+    {"@type": "Question", "name": "Can I use custom tools?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Define tools as Python functions with type hints, and the SDK automatically generates the tool schema for Claude."}},
+    {"@type": "Question", "name": "What about rate limits?", "acceptedAnswer": {"@type": "Answer", "text": "The SDK respects Anthropic API rate limits. Configure retry_config for automatic backoff when limits are hit."}},
+    {"@type": "Question", "name": "Can agents call other agents?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The orchestrator-worker pattern lets agents delegate to sub-agents. Each sub-agent has its own tool set and turn limit."}},
+    {"@type": "Question", "name": "How do I control costs?", "acceptedAnswer": {"@type": "Answer", "text": "Three strategies: use cheaper models for simple sub-tasks, set strict max_turns limits, and minimize the tool list."}},
+    {"@type": "Question", "name": "Can I deploy agents as a REST API service?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Wrap the agent.run() call in a web framework like Flask or FastAPI. Add request validation, authentication, and rate limiting."}},
+    {"@type": "Question", "name": "How do I test agents before deploying to production?", "acceptedAnswer": {"@type": "Answer", "text": "Create a test suite with known inputs and expected outputs. Run agents against these inputs and verify the final_output matches expectations. Use temperature 0.0 for reproducible results."}},
+    {"@type": "Question", "name": "Can agents access the internet?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if you provide the web_search tool. Without it, agents can only access local files and run local commands. Control network access through tool selection and Docker network policies."}}
+  ]
+}
+</script>

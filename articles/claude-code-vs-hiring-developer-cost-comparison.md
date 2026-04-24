@@ -286,10 +286,15 @@ For enterprises with complex requirements, the hybrid approach offers the best e
 
 The key is matching your approach to your specific situation rather than defaulting to either extreme. Start with a pilot: pick one well-scoped feature, use Claude Code for everything it can handle, and measure the time savings against what you expected. Most teams see enough evidence in the first pilot to restructure how they allocate development work permanently.
 
+
+## Related
+
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization
 ---
 
 ---
 
+- [Claude student discount guide](/claude-student-discount-guide/) — How students can get Claude at reduced pricing
 <div class="mastery-cta">
 
 I've tried them all. Claude Code wins — but only if you set it up right.
@@ -309,5 +314,7 @@ Related Reading
 - [Claude Code Cost for Agencies and Consultancies: A.](/claude-code-cost-for-agencies-and-consultancies/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

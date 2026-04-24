@@ -269,7 +269,7 @@ A software development workflow might chain agents that analyze requirements, ge
 
 An automated reporting system could chain agents that gather data from multiple sources, perform statistical analysis, generate visualizations, compose narrative sections, and assemble everything into a final report document. The `xlsx` skill handles data work, while `pptx` or `pdf` skills produce the final output.
 
-Customer service automation benefits from chaining agents that classify incoming requests, retrieve relevant knowledge base articles, generate response drafts, apply brand voice guidelines, and queue approved responses for delivery.
+A customer support chain built with the [Claude Agent SDK](/claude-agent-sdk-complete-guide/) can classify incoming requests, retrieve relevant knowledge base articles, generate response drafts, apply brand voice guidelines, and queue approved responses for delivery.
 
 A documentation generation workflow chains agents that read source code, extract public API signatures, generate usage examples, write explanatory prose, and assemble everything into a documentation site. Running this chain after every major release keeps documentation synchronized with the codebase without manual authoring effort.
 
@@ -296,6 +296,10 @@ The key is treating each agent as a focused specialist, passing clear outputs be
 This pattern unlocks automation scenarios that go far beyond what any single AI assistant could achieve alone, and it scales cleanly as your workflows grow more complex.
 
 
+
+## Related
+
+- [sequential thinking in Claude Code](/sequential-thinking-claude-code-guide/) — How to use sequential thinking and extended thinking in Claude Code
 ---
 
 ---
@@ -327,5 +331,7 @@ Related Reading
 - [Claude Code Impact on Developer Happiness](/claude-code-impact-on-developer-happiness/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

@@ -299,6 +299,10 @@ The pdf skill then takes this extracted JSON and generates formatted reports, su
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+
+## Related
+
+- [Claude upload limit guide](/claude-upload-limit-guide/) — Understanding Claude file upload limits and workarounds
 ---
 
 ---
@@ -321,5 +325,6 @@ Related Reading
 - [Claude Frontend Design Skill: Review and Tutorial](/claude-frontend-design-skill-review-and-tutorial/). Go deeper on the frontend-design skill's code generation capabilities for visual layouts and components
 - [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/). Discover how document and spreadsheet skills complement multimedia processing in data-heavy workflows
 - [Claude Skills: Getting Started Hub](/getting-started-hub/). Explore the full ecosystem of Claude skills and how they extend Claude's native capabilities
+
 
 

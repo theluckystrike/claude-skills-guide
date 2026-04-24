@@ -27,7 +27,7 @@ Before diving into specific techniques, it's essential to understand that effect
 
 ## Chain-of-Thought Prompting
 
-Chain-of-thought (CoT) prompting encourages Claude to break down complex problems into logical steps. This technique significantly improves reasoning quality for multi-step tasks.
+[sequential thinking in Claude Code](/sequential-thinking-claude-code-guide/) (CoT) prompting encourages Claude to break down complex problems into logical steps. This technique significantly improves reasoning quality for multi-step tasks.
 
 Basic CoT Example:
 
@@ -233,6 +233,10 @@ Prompt engineering with Claude Code in 2026 requires a systematic approach combi
 
 The key is treating prompts as first-class code: version-controlled, tested, and refined through systematic iteration. As Claude's capabilities expand, these foundational skills will remain essential for building sophisticated AI systems.
 
+
+## Related
+
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude
 ---
 
 Next Steps: Explore integrating these techniques with Claude Code's tool-use capabilities for fully autonomous workflows that can execute code, call APIs, and interact with your development environment.
@@ -259,5 +263,7 @@ Related Reading
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
 {% endraw %}
+
+
 
 

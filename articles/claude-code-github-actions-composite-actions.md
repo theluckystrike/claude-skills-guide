@@ -19,7 +19,7 @@ geo_optimized: true
 
 ## Why Composite Actions Matter for Claude Integration
 
-Standard GitHub Actions workflows often repeat the same Claude invocation steps across multiple repositories. You might need to run a `tdd` skill to analyze test coverage on every pull request, [use `pdf` skill to generate formatted reports](/best-claude-code-skills-to-install-first-2026/)e reports, or invoke `frontend-design` skill to check accessibility. Composite actions eliminate this duplication by letting you define the Claude invocation once and reuse it anywhere.
+Standard GitHub Actions workflows often repeat the same Claude invocation steps across multiple repositories. You might need to run a `tdd` skill to analyze test coverage on every pull request, [use `pdf` skill to generate formatted reports](/best-claude-code-skills-to-install-first-2026/) reports, or invoke `frontend-design` skill to check accessibility. Composite actions eliminate this duplication by letting you define the Claude invocation once and reuse it anywhere.
 
 Composite actions also solve the parameterization challenge. Different projects may need different Claude models, different skill configurations, or different file filters. A well-designed composite action accepts these as inputs, making your automation portable across teams and repositories.
 

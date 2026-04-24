@@ -205,6 +205,10 @@ Current per-token pricing (as of April 2026):
 
 Routing Haiku for simple tasks and Sonnet for the rest can cut your bill by 30-50% with no quality loss. See our [cost optimization guide](/claude-code-costs-too-much-reduce-spend-2026/) for additional strategies.
 
+---
+
+*Need the complete toolkit? [The Claude Code Playbook](https://zovo.one/pricing) includes 200 production-ready templates, decision frameworks, and team setup guides for every Claude Code workflow.*
+
 ## Router Configuration in Settings
 
 Claude Code's settings file (`.claude/settings.json`) supports model preferences:
@@ -289,3 +293,40 @@ Prompt caching works across all models. Cached inputs cost 90% less. This means 
 - [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — get better results from any model
 - [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive configuration reference
 - [Parallel subagents best practices](/parallel-subagents-claude-code-best-practices-2026/) — multi-model parallelism
+
+- [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Sonnet 4.5 capabilities and features
+- [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Sonnet 4 capabilities and features
+### Does model routing affect prompt caching?
+
+Prompt caching works within the same model. Switching models between requests means the cache from the previous model is not reused. For maximum cache benefit, batch requests by model.
+
+### Can I set up automatic routing based on task complexity?
+
+Not natively in Claude Code. You can build this into scripts that analyze the task description and select the model accordingly before passing it to Claude Code.
+
+### Is there a cost difference between using the model alias and the full model ID?
+
+No. The alias (like sonnet) resolves to the same model as the full ID (claude-sonnet-4-20250514) and is billed identically.
+
+### How do I know if Sonnet is good enough or if I need Opus?
+
+Start with Sonnet. If the output quality is insufficient — missed edge cases, incorrect logic, or shallow analysis — escalate to Opus for that specific task. Most daily development tasks do not need Opus.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Does Claude Code automatically route to cheaper models?", "acceptedAnswer": {"@type": "Answer", "text": "Not by default. Claude Code uses the model you specify or your account default. You must configure routing manually via CLI flags, CLAUDE.md rules, or scripts."}},
+    {"@type": "Question", "name": "Can I switch models mid-session?", "acceptedAnswer": {"@type": "Answer", "text": "Not within a single session. Each Claude Code session uses one primary model. To use a different model, start a new session with the --model flag."}},
+    {"@type": "Question", "name": "What happens if I use Haiku for a task that needs Opus?", "acceptedAnswer": {"@type": "Answer", "text": "The task will still run, but the output may be lower quality. There is no automatic escalation."}},
+    {"@type": "Question", "name": "Is routing worth the complexity?", "acceptedAnswer": {"@type": "Answer", "text": "For individual developers, simple manual selection is fine. For teams spending more than $500/month, routing strategies can cut costs by 30-50%."}},
+    {"@type": "Question", "name": "Can I route based on file type?", "acceptedAnswer": {"@type": "Answer", "text": "Not natively. You can build this into scripts: use Opus for security-sensitive files, Sonnet for everything else."}},
+    {"@type": "Question", "name": "How does prompt caching interact with routing?", "acceptedAnswer": {"@type": "Answer", "text": "Prompt caching works across all models. Cached inputs cost 90% less. The cost gap between models narrows for repeated operations on the same files."}},
+    {"@type": "Question", "name": "Does model routing affect prompt caching?", "acceptedAnswer": {"@type": "Answer", "text": "Prompt caching works within the same model. Switching models between requests means the cache from the previous model is not reused. Batch requests by model for maximum cache benefit."}},
+    {"@type": "Question", "name": "Can I set up automatic routing based on task complexity?", "acceptedAnswer": {"@type": "Answer", "text": "Not natively in Claude Code. You can build this into scripts that analyze the task description and select the model accordingly."}},
+    {"@type": "Question", "name": "Is there a cost difference between using the model alias and the full model ID?", "acceptedAnswer": {"@type": "Answer", "text": "No. The alias resolves to the same model as the full ID and is billed identically."}},
+    {"@type": "Question", "name": "How do I know if Sonnet is good enough or if I need Opus?", "acceptedAnswer": {"@type": "Answer", "text": "Start with Sonnet. If the output quality is insufficient — missed edge cases, incorrect logic, or shallow analysis — escalate to Opus for that specific task."}}
+  ]
+}
+</script>

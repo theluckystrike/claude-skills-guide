@@ -252,6 +252,10 @@ The investment in well-engineered system prompts pays dividends through improved
 Remember: your system prompt is the foundation of every conversation. Build it carefully, test it thoroughly, and maintain it proactively.
 
 
+
+## Related
+
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude
 ---
 
 ---
@@ -276,5 +280,6 @@ Related Reading
 - [Prompt Compression Techniques for Claude API](/prompt-compression-techniques-claude-api/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

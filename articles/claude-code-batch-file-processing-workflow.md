@@ -189,6 +189,10 @@ Claude Code transforms file processing from tedious manual work into an automate
 
 Start with simple batch operations and gradually build more complex workflows as you become comfortable with Claude's capabilities. The skills you build for one project often transfer directly to the next one, compounding the time savings over time.
 
+
+## Related
+
+- [Claude upload limit guide](/claude-upload-limit-guide/) — Understanding Claude file upload limits and workarounds
 ---
 
 ---
@@ -212,5 +216,6 @@ Related Reading
 - [Claude Code Reporting Automation Workflow](/claude-code-reporting-automation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

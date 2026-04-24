@@ -12,7 +12,7 @@ MCP (Model Context Protocol) servers give Claude Code access to external service
 
 ## How MCP Servers Work
 
-MCP servers run as separate processes that Claude Code communicates with. They expose tools (functions Claude Code can call) and resources (data Claude Code can read). Configuration lives in `.claude/settings.json`.
+[MCP configuration](/claude-code-mcp-configuration-guide/) lives in `.claude/settings.json`.
 
 For the full setup guide, see our [MCP servers setup guide](/mcp-servers-claude-code-complete-setup-2026/).
 
@@ -261,3 +261,9 @@ Yes. MCP is an open standard. Servers work with any MCP-compatible client. The [
 Claude Code continues working but loses access to that server's tools. Restart Claude Code to reconnect.
 
 For setup instructions, see the [MCP setup guide](/mcp-servers-claude-code-complete-setup-2026/). For the full ecosystem, read the [tools map](/claude-code-ecosystem-complete-map-2026/). For security, see the [threat model guide](/claude-code-security-threat-model-2026/).
+
+
+## Related
+
+- [claude mcp list command guide](/claude-mcp-list-command-guide/) — How to use the claude mcp list command to manage MCP servers
+

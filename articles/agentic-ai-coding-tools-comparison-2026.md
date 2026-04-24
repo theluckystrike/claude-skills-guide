@@ -27,7 +27,7 @@ The agentic AI coding market has fragmented into terminal agents, IDE agents, an
 
 ## Where Claude Code Wins
 
-**Deep autonomous execution.** Claude Code plans multi-step tasks, reads files on demand, runs shell commands, executes tests, and iterates on failures without human intervention. No other tool matches the depth of its agentic loop -- Cursor and Windsurf require more manual guidance, Cline requires approval at each step, and Aider does not execute commands at all.
+**Deep autonomous execution.** Claude Code plans multi-step tasks, reads files on demand, runs shell commands, executes tests, and iterates on failures without human intervention. No other tool matches the depth of its agentic loop -- [Claude Code vs Cursor comparison](/claude-code-vs-cursor-definitive-comparison-2026/) and Windsurf require more manual guidance, Cline requires approval at each step, and Aider does not execute commands at all.
 
 **Skills and extensibility ecosystem.** Reusable skill definitions, MCP server integrations, and hooks for pre/post tool-use automation give Claude Code a customization layer that no competitor offers. A team can encode its conventions into skills that run identically for every developer.
 
@@ -90,3 +90,9 @@ Claude Code excels at this -- you can run a code review skill against a PR diff 
 ## When To Use Neither
 
 If your work is primarily data science in Jupyter notebooks, none of these coding agents integrate well with notebook workflows. Use Jupyter AI or GitHub Copilot's notebook support instead. If you write fewer than 200 lines of code per week, the setup cost and learning curve of any agentic tool exceeds the time saved -- a simple AI chat interface (Claude.ai, ChatGPT) provides sufficient assistance for occasional coding questions.
+
+
+
+## Related
+
+- [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Guide to the claude-sonnet-4-20250514 model and features

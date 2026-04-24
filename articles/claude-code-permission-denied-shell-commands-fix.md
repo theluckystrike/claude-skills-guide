@@ -86,3 +86,8 @@ Pre-approve common commands (git, npm, npx, pnpm) in ~/.claude/settings.json per
 ```
 
 **Related articles:** [Permission Denied Sandbox Fix](/claude-code-permission-denied-sandbox-mode-fix-2026/), [Config File Location](/claude-code-config-file-location/), [Troubleshooting Hub](/troubleshooting-hub/)
+
+
+## Related
+
+- [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to --dangerously-skip-permissions and safer alternatives

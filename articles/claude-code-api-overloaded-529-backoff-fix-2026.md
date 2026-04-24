@@ -13,7 +13,7 @@ Error 529: API is temporarily overloaded. Please retry after 30 seconds.
 Retry-After: 30
 ```
 
-This error means Anthropic's servers are at capacity. Unlike 429 (rate limit), 529 indicates server-side load, not per-account limits. It typically occurs during peak usage hours.
+This error means Anthropic's servers are at capacity. Unlike [Claude rate exceeded error fix](/claude-rate-exceeded-error-fix/) (rate limit), 529 indicates server-side load, not per-account limits. It typically occurs during peak usage hours.
 
 ## The Fix
 
@@ -68,3 +68,9 @@ Add this to your `CLAUDE.md`:
 - For batch workloads, use the Message Batches API instead of synchronous calls.
 - Schedule heavy API usage outside US business hours (9 AM - 5 PM PT).
 ```
+
+
+## Related
+
+- [Claude internal server error fix](/claude-internal-server-error-fix/) — Fix Claude internal server error (500/overloaded)
+

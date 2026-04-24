@@ -212,6 +212,10 @@ For model routing strategies, see our [router guide](/claude-code-router-guide/)
 
 **Use Haiku** for: typo fixes, formatting, boilerplate generation, tab completion, and any task where speed matters more than depth. At 75% less cost than Sonnet, Haiku is the right choice for simple operations.
 
+---
+
+*Need the complete toolkit? [The Claude Code Playbook](https://zovo.one/pricing) includes 200 production-ready templates, decision frameworks, and team setup guides for every Claude Code workflow.*
+
 ## Best Practices
 
 ### When to Use Sonnet 4
@@ -267,3 +271,39 @@ Sonnet 4 is competitive with GPT-4o on coding benchmarks and generally stronger 
 - [Cost tracking with ccusage](/ccusage-claude-code-cost-tracking-guide-2026/) — monitor spend per model
 - [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — optimize prompts for Sonnet
 - [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive reference
+
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — Configure temperature for Sonnet 4
+### Can I use Sonnet 4 with extended thinking and tool use simultaneously?
+
+Yes. Extended thinking and tool use work together. The model can think through a problem before deciding which tools to call.
+
+### Is Sonnet 4 available on Amazon Bedrock and Google Vertex AI?
+
+Yes. Sonnet 4 is available through both cloud providers. Check their documentation for the exact model ID format used on each platform.
+
+### Does Sonnet 4 support image input in Claude Code?
+
+Claude Code does not currently pass images to the model. Image input is available through the API and Claude.ai web interface.
+
+### How often does Anthropic update the Sonnet model?
+
+Anthropic releases new model versions periodically. Always use the full model ID with date suffix in production to avoid unexpected changes when defaults are updated.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is Sonnet 4 the same as Sonnet 4.5?", "acceptedAnswer": {"@type": "Answer", "text": "No. Despite the version numbers, Sonnet 4 is the newer model. Sonnet 4 is generally better at instruction following and coding tasks."}},
+    {"@type": "Question", "name": "Should I always use the full model ID?", "acceptedAnswer": {"@type": "Answer", "text": "In production code, yes. Use claude-sonnet-4-20250514 to ensure consistent behavior. In interactive sessions, the shorthand sonnet is fine."}},
+    {"@type": "Question", "name": "Does Sonnet 4 support streaming?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Both the API and Claude Code support streaming responses from Sonnet 4."}},
+    {"@type": "Question", "name": "What are the rate limits?", "acceptedAnswer": {"@type": "Answer", "text": "Rate limits depend on your API tier, not the model. Check console.anthropic.com for your current limits."}},
+    {"@type": "Question", "name": "Can Sonnet 4 handle a 200K-token input?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Sonnet 4 supports the full 200K context window. Performance remains strong across the full window."}},
+    {"@type": "Question", "name": "How does Sonnet 4 compare to GPT-4o or Gemini?", "acceptedAnswer": {"@type": "Answer", "text": "Sonnet 4 is competitive with GPT-4o on coding benchmarks and generally stronger at instruction following. Direct comparisons depend on the specific task."}},
+    {"@type": "Question", "name": "Can I use Sonnet 4 with extended thinking and tool use simultaneously?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Extended thinking and tool use work together. The model can think through a problem before deciding which tools to call."}},
+    {"@type": "Question", "name": "Is Sonnet 4 available on Amazon Bedrock and Google Vertex AI?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Sonnet 4 is available through both cloud providers. Check their documentation for the exact model ID format."}},
+    {"@type": "Question", "name": "Does Sonnet 4 support image input in Claude Code?", "acceptedAnswer": {"@type": "Answer", "text": "Claude Code does not currently pass images to the model. Image input is available through the API and Claude.ai web interface."}},
+    {"@type": "Question", "name": "How often does Anthropic update the Sonnet model?", "acceptedAnswer": {"@type": "Answer", "text": "Anthropic releases new model versions periodically. Always use the full model ID with date suffix in production to avoid unexpected changes."}}
+  ]
+}
+</script>

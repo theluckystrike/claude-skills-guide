@@ -222,6 +222,40 @@ git diff > /tmp/claude-changes.patch
 
 Review the patch before committing or merging.
 
+## Hooks: Hard Limits Even With Permissions Skipped
+
+The `--dangerously-skip-permissions` flag disables interactive prompts, but it does not disable hooks. [Claude Code hooks](/claude-code-hooks-explained/) run deterministic scripts before or after tool calls, and they execute regardless of permission mode. This makes hooks the strongest safety mechanism for automated environments.
+
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "script": "python3 .claude/validate-command.py \"$TOOL_INPUT\""
+      }
+    ]
+  }
+}
+```
+
+The validation script can block specific commands (like `rm -rf /`, `curl`, or `git push --force`) programmatically. Even if Claude decides to run a blocked command, the hook prevents execution. See the [full permissions guide](/claude-code-dangerously-skip-permissions-guide/) for a complete hook-based security setup.
+
+---
+
+*This configuration is one of 200 production-ready templates in [The Claude Code Playbook](https://zovo.one/pricing). Permission configs, model selection rules, MCP setups — all tested and ready to copy.*
+
+## Quick Reference: Flag Combinations
+
+| Command | Behavior |
+|---------|----------|
+| `claude` | Interactive, all prompts enabled |
+| `claude --dangerously-skip-permissions` | Interactive, no prompts |
+| `claude -p "task" --dangerously-skip-permissions` | Headless, no prompts (CI/CD) |
+| `claude -p "task" --dangerously-skip-permissions --max-turns 10` | Headless, bounded execution |
+| `claude -p "task" --dangerously-skip-permissions --output-format json` | Headless, structured output for parsing |
+| `claude --allowedTools "Bash(npm test)" "Read"` | Interactive, scoped permissions (safer alternative) |
+
 ## FAQ
 
 ### Can I use an allowlist instead of skipping all permissions?
@@ -236,6 +270,34 @@ Claude Code outputs its actions to the terminal. Redirect stdout and stderr to a
 
 Generally no. During local development, the permission prompts protect you from accidental file deletions, unintended git operations, and runaway shell commands. Reserve the flag for automated, sandboxed, or disposable environments.
 
+### What is the difference between --dangerously-skip-permissions and --permission-mode auto?
+
+`--permission-mode auto` automatically approves standard operations but may still prompt for unusual ones. `--dangerously-skip-permissions` removes all prompts unconditionally. For CI/CD where any prompt would cause a hang, use `--dangerously-skip-permissions`. For local automation where you want fewer interruptions but still want safeguards on unusual actions, use `--permission-mode auto`.
+
+### Can I enable this flag mid-session?
+
+No. The flag must be passed at startup when launching Claude Code. You cannot enable or disable it during an active session.
+
+### Does this flag disable CLAUDE.md rule enforcement?
+
+No. Claude Code still reads and follows instructions in your CLAUDE.md file even when permissions are skipped. CLAUDE.md rules provide a practical safety layer for automated environments.
+
+### What is the maximum number of turns I should set with this flag?
+
+Use --max-turns to bound execution. For well-defined tasks, 10-15 turns is sufficient. For complex multi-file operations, 25-30 turns may be needed. Never run without a turn limit in automated environments.
+
+### Can hooks block dangerous commands even with this flag?
+
+Yes. Claude Code hooks run deterministic scripts before or after tool calls, and they execute regardless of permission mode. A PreToolUse hook can programmatically block specific commands like rm -rf or git push --force.
+
+### Is it safe to use this flag in a Docker container?
+
+Yes, Docker containers are the recommended environment for this flag. The container isolates the filesystem so Claude Code cannot affect files outside the container. Use read-only mounts for source directories that should not be modified.
+
+### Does this flag affect API authentication or rate limits?
+
+No. The flag only skips interactive permission prompts. API authentication, rate limit enforcement, model availability checks, and CLAUDE.md instruction parsing all work normally.
+
 ## Related Guides
 
 - [Full --dangerously-skip-permissions Guide](/claude-code-dangerously-skip-permissions-guide/)
@@ -246,3 +308,122 @@ Generally no. During local development, the permission prompts protect you from 
 - [Fix Claude Code Docker Cannot Reach API Endpoint](/claude-code-docker-cannot-reach-api-endpoint-fix/)
 - [Fix Claude Rate Exceeded Error](/claude-rate-exceeded-error-fix/)
 - [Fix Claude Code Model Not Available in Region](/claude-code-model-not-available-region-fix/)
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Cost impact of permission settings
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I use an allowlist instead of skipping all permissions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Claude Code supports settings.json configuration with allowedTools that lets you approve specific tools while still prompting for others. This is safer than the blanket skip flag."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a way to log what actions Claude Code takes when permissions are skipped?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Claude Code outputs its actions to the terminal. Redirect stdout and stderr to a log file to capture a full audit trail. For structured output, use --output-format json."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use this flag during local development?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Generally no. During local development, the permission prompts protect you from accidental file deletions, unintended git operations, and runaway shell commands. Reserve the flag for automated, sandboxed, or disposable environments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between --dangerously-skip-permissions and --permission-mode auto?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "--permission-mode auto automatically approves standard operations but may still prompt for unusual ones. --dangerously-skip-permissions removes all prompts unconditionally. For CI/CD where any prompt would cause a hang, use --dangerously-skip-permissions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I enable this flag mid-session?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The flag must be passed at startup when launching Claude Code. You cannot enable or disable it during an active session."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this flag disable CLAUDE.md rule enforcement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Claude Code still reads and follows instructions in your CLAUDE.md file even when permissions are skipped. CLAUDE.md rules provide a practical safety layer for automated environments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the maximum number of turns I should set with this flag?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use --max-turns to bound execution. For well-defined tasks, 10-15 turns is sufficient. For complex multi-file operations, 25-30 turns may be needed. Never run without a turn limit in automated environments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can hooks block dangerous commands even with this flag?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Claude Code hooks run deterministic scripts before or after tool calls, and they execute regardless of permission mode. A PreToolUse hook can programmatically block specific commands like rm -rf or git push --force."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it safe to use this flag in a Docker container?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Docker containers are the recommended environment for this flag. The container isolates the filesystem so Claude Code cannot affect files outside the container. Use read-only mounts for source directories."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this flag affect API authentication or rate limits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The flag only skips interactive permission prompts. API authentication, rate limit enforcement, model availability checks, and CLAUDE.md instruction parsing all work normally."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Use the Claude --dangerously-skip-permissions Flag Safely",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Set up a sandboxed environment",
+        "text": "Run Claude Code inside a Docker container to isolate the filesystem. Use read-only mounts for source directories that should not be modified."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Configure CLAUDE.md safety rules",
+        "text": "Add rules to CLAUDE.md that constrain behavior, such as never modifying config directories, never running git push, and only modifying specific file patterns."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Launch with the flag and bounds",
+        "text": "Run claude -p your-task --dangerously-skip-permissions --max-turns 15 to skip prompts while bounding execution."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Review changes via git diff",
+        "text": "After the run completes, use git diff to review exactly what changed. Review the patch before committing or merging any automated changes."
+      }
+    ]
+  }
+]
+</script>

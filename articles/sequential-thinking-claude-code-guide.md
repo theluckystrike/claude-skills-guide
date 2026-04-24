@@ -263,6 +263,10 @@ which sequential-thinking
 # Use the full path in the configuration
 ```
 
+---
+
+*This configuration is one of 200 production-ready templates in [The Claude Code Playbook](https://zovo.one/pricing). Permission configs, model selection rules, MCP setups — all tested and ready to copy.*
+
 ## Combining with Other MCP Servers
 
 Sequential thinking works alongside other MCP servers. Claude Code can use the `think` tool to reason about a problem, then use other tools to implement the solution.
@@ -382,3 +386,41 @@ Yes. The MCP protocol is open. You can build a custom server that provides a dif
 - [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive workflow reference
 - [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
 - [Configuration Hierarchy Explained](/claude-code-configuration-hierarchy-explained-2026/) — settings precedence
+
+- [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — Build agents that use sequential thinking
+- [Claude Flow tool guide](/claude-flow-tool-guide/) — Orchestrate thinking across agents
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — Temperature interacts with thinking behavior
+### Does sequential thinking increase API costs?
+
+Yes. Each thinking step consumes input and output tokens. A 6-step thinking process can add 1,000-3,000 tokens of overhead. For expensive models like Opus, this adds up across many requests.
+
+### Can I use sequential thinking with Claude Haiku?
+
+Yes, but Haiku's thinking steps may be more abbreviated and less thorough than Opus or Sonnet. For tasks that truly benefit from structured reasoning, Sonnet or Opus will produce better results.
+
+### Does sequential thinking work in Claude Code API mode?
+
+Yes. When the MCP server is configured, sequential thinking is available in both interactive mode and API mode (claude -p).
+
+### Can I combine sequential thinking with extended thinking?
+
+Yes. These are complementary features. Extended thinking is a model-level capability while sequential thinking is an MCP tool. They can work together for maximum reasoning depth.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Does sequential thinking make Claude smarter?", "acceptedAnswer": {"@type": "Answer", "text": "It does not change the model's capabilities. It gives the model a structured space to use its existing reasoning abilities more methodically. The result is often better for complex tasks."}},
+    {"@type": "Question", "name": "Can I see the thinking steps?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The thinking steps appear in Claude Code's output as tool calls. You can see each step's content as it happens, giving you visibility into Claude's reasoning process."}},
+    {"@type": "Question", "name": "Does it work with all Claude models?", "acceptedAnswer": {"@type": "Answer", "text": "Sequential thinking works with any model that supports MCP tool use — Opus, Sonnet, and Haiku. The quality of reasoning varies by model capability."}},
+    {"@type": "Question", "name": "Can I control how many thinking steps Claude uses?", "acceptedAnswer": {"@type": "Answer", "text": "Not directly. Claude determines the number of steps based on problem complexity. You can influence this by being explicit in your prompt."}},
+    {"@type": "Question", "name": "Is sequential thinking the same as chain-of-thought prompting?", "acceptedAnswer": {"@type": "Answer", "text": "Related but different. Chain-of-thought asks the model to show reasoning in response text. Sequential thinking provides a separate tool for structured reasoning distinct from the final response."}},
+    {"@type": "Question", "name": "Can I build my own thinking MCP server?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The MCP protocol is open. You can build a custom server that provides a different structured thinking interface. The official server is a reference implementation."}},
+    {"@type": "Question", "name": "Does sequential thinking increase API costs?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Each thinking step consumes input and output tokens. A 6-step thinking process can add 1,000-3,000 tokens of overhead."}},
+    {"@type": "Question", "name": "Can I use sequential thinking with Claude Haiku?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, but Haiku's thinking steps may be more abbreviated. For tasks that truly benefit from structured reasoning, Sonnet or Opus will produce better results."}},
+    {"@type": "Question", "name": "Does sequential thinking work in Claude Code API mode?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. When the MCP server is configured, sequential thinking is available in both interactive mode and API mode."}},
+    {"@type": "Question", "name": "Can I combine sequential thinking with extended thinking?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. These are complementary features. Extended thinking is a model-level capability while sequential thinking is an MCP tool. They can work together for maximum reasoning depth."}}
+  ]
+}
+</script>

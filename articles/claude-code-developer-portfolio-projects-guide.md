@@ -239,7 +239,7 @@ For each project, include:
 - GitHub repository
 - Key technical challenges solved
 
-The live demo link deserves special attention. A portfolio project that works in screenshots but cannot be visited in a browser is half a project. Deploy everything, Vercel for frontends, Railway or Render for backends, PlanetScale or Supabase for databases. The free tiers of these services are sufficient for demo purposes. Having working links signals that you can ship software, not just write it.
+The live demo link deserves special attention. A portfolio project should use free hosting like PlanetScale or Supabase for databases (students can also check the [Claude student discount guide](/claude-student-discount-guide/) for reduced pricing). The free tiers of these services are sufficient for demo purposes. Having working links signals that you can ship software, not just write it.
 
 One underused technique: a short screen recording (90 seconds or less) showing the project in use. Embed it in your README as an animated GIF or link to a Loom recording. This lets reviewers evaluate the UX without clicking through to a live deployment, and it ensures they see the features you are most proud of rather than stumbling around confused.
 
@@ -308,6 +308,7 @@ Related Reading
 - [MCP Tool Description Injection Attack Explained](/mcp-tool-description-injection-attack-explained/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 
 

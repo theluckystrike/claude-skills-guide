@@ -356,6 +356,10 @@ Windows uses backslashes, but JSON requires escaping them.
 }
 ```
 
+---
+
+*This configuration is one of 200 production-ready templates in [The Claude Code Playbook](https://zovo.one/pricing). Permission configs, model selection rules, MCP setups — all tested and ready to copy.*
+
 ### 3. Missing Environment Variables
 
 If a server requires an API key via environment variable and you do not set it in `env`, the server will start but fail to authenticate.
@@ -503,3 +507,30 @@ Yes, by giving them different names:
 - [Configuration Hierarchy Explained](/claude-code-configuration-hierarchy-explained-2026/) — understand config precedence
 - [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive workflow reference
 - [Claude MCP List Command Guide](/claude-mcp-list-command-guide/) — CLI command reference for MCP management
+
+### How do I debug why my MCP server is not starting?
+
+Run the server command directly in your terminal to see error output. For example: npx -y @modelcontextprotocol/server-filesystem --help. If this fails, the server will not start from Claude Desktop either.
+
+### Can I use relative paths in claude_desktop_config.json?
+
+No. Always use absolute paths. JSON values are literal strings and shell expansions like ~ or $HOME do not work. Use the full path like /Users/you/Documents.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Do I need to restart Claude Desktop after editing the config?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Claude Desktop reads the configuration file at startup. After making changes, quit and relaunch the application."}},
+    {"@type": "Question", "name": "Can I use comments in claude_desktop_config.json?", "acceptedAnswer": {"@type": "Answer", "text": "No. JSON does not support comments. If you need to document your configuration, maintain a separate notes file alongside it."}},
+    {"@type": "Question", "name": "What happens if the config file has a syntax error?", "acceptedAnswer": {"@type": "Answer", "text": "Claude Desktop will start but MCP servers will not be loaded. Check the developer console (Help > Toggle Developer Tools) for error messages."}},
+    {"@type": "Question", "name": "Can I use environment variables like $HOME in the config?", "acceptedAnswer": {"@type": "Answer", "text": "No. JSON values are literal strings. Use the full expanded path rather than shell variables or tilde."}},
+    {"@type": "Question", "name": "Where can I find MCP server package names?", "acceptedAnswer": {"@type": "Answer", "text": "The Awesome MCP Servers directory maintains a comprehensive list. The official Anthropic servers use the @anthropic/mcp-server-* naming convention on npm."}},
+    {"@type": "Question", "name": "Can I run MCP servers on a remote machine?", "acceptedAnswer": {"@type": "Answer", "text": "The standard configuration runs servers locally via stdio. For remote servers, you need an MCP server that supports HTTP transport, or you can use SSH tunneling."}},
+    {"@type": "Question", "name": "Is claude_desktop_config.json synced across devices?", "acceptedAnswer": {"@type": "Answer", "text": "No. The file is local to each machine. You need to manually copy it to configure multiple computers identically."}},
+    {"@type": "Question", "name": "Can I configure multiple instances of the same MCP server?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, by giving them different names. For example, postgres-dev and postgres-staging can each point to different database connection strings."}},
+    {"@type": "Question", "name": "How do I debug why my MCP server is not starting?", "acceptedAnswer": {"@type": "Answer", "text": "Run the server command directly in your terminal to see error output. If the command fails in the terminal, it will not start from Claude Desktop either."}},
+    {"@type": "Question", "name": "Can I use relative paths in claude_desktop_config.json?", "acceptedAnswer": {"@type": "Answer", "text": "No. Always use absolute paths. JSON values are literal strings and shell expansions like ~ or $HOME do not work. Use the full path."}}
+  ]
+}
+</script>

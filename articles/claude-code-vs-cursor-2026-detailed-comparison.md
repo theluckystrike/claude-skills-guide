@@ -8,7 +8,7 @@ render_with_liquid: false
 
 ## Quick Verdict
 
-Choose Cursor if you want AI tightly integrated into a visual editor with inline autocomplete, visual diffs, and predictable $20/month pricing. Choose Claude Code if you need autonomous multi-step execution, terminal-native workflows, and an agent that chains complex tasks across your entire codebase and infrastructure. Many developers use both — Cursor for editing flow, Claude Code for heavy autonomous work. They complement each other well.
+Choose [Claude Code vs Cursor comparison](/claude-code-vs-cursor-definitive-comparison-2026/) if you want AI tightly integrated into a visual editor with inline autocomplete, visual diffs, and predictable $20/month pricing. Choose Claude Code if you need autonomous multi-step execution, terminal-native workflows, and an agent that chains complex tasks across your entire codebase and infrastructure. Many developers use both — Cursor for editing flow, Claude Code for heavy autonomous work. They complement each other well.
 
 ## Feature Comparison
 
@@ -105,3 +105,4 @@ For most active developers, yes. Cursor Pro at $20/month provides inline autocom
 ## The Bottom Line
 
 Cursor is the best AI-enhanced code editor available — inline autocomplete, visual diffs, and model flexibility in a familiar VS Code interface at a predictable price. Claude Code is the best autonomous coding agent available — unrestricted system access, parallel subagents, and headless operation for complex development workflows. They solve different problems and work together naturally. The combination of Cursor for editing flow and Claude Code for autonomous heavy-lifting is arguably the most powerful developer setup in 2026.
+

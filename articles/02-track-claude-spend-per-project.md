@@ -195,3 +195,5 @@ The tracker itself costs nothing in API overhead (it only reads the usage object
 - [Claude Code Enterprise Seat Management and Usage Monitoring](/claude-code-enterprise-seat-management-and-usage-monitoring/)
 - [Cost Allocation and Chargebacks for Enterprise Claude Code](/cost-allocation-and-chargebacks-for-enterprise-claude-code/)
 - [Claude Code for Cost Optimization Monitoring Guide](/claude-code-for-cost-optimization-monitoring-guide/)
+
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization

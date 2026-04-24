@@ -352,6 +352,26 @@ cp .claude/settings.ci.json .claude/settings.json
 cp .claude/settings.prod.json .claude/settings.json
 ```
 
+<div id="perm-config" style="background:#1a1a2e;border:1px solid #2a2a3a;border-radius:8px;padding:20px;margin:24px 0;font-family:system-ui,-apple-system,sans-serif;">
+<h3 style="color:#6ee7b7;margin:0 0 12px 0;font-size:18px;">Permission Configurator</h3>
+<p style="color:#94a3b8;margin:0 0 16px 0;font-size:14px;">Select tools to auto-approve. Get your settings.json config instantly.</p>
+<div style="display:grid;gap:8px;margin-bottom:16px;">
+<label style="display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;cursor:pointer;"><input type="checkbox" class="pc-cb" value="Edit"> File editing (Edit)</label>
+<label style="display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;cursor:pointer;"><input type="checkbox" class="pc-cb" value="Write"> File creation (Write)</label>
+<label style="display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;cursor:pointer;"><input type="checkbox" class="pc-cb" value="Read"> File reading (Read)</label>
+<label style="display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;cursor:pointer;"><input type="checkbox" class="pc-cb" value="Bash(npm *)"> npm commands</label>
+<label style="display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;cursor:pointer;"><input type="checkbox" class="pc-cb" value="Bash(git *)"> git commands</label>
+<label style="display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;cursor:pointer;"><input type="checkbox" class="pc-cb" value="Bash(npx *)"> npx commands</label>
+<label style="display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;cursor:pointer;"><input type="checkbox" class="pc-cb" value="Bash(python* *)"> Python commands</label>
+<label style="display:flex;align-items:center;gap:8px;color:#e2e8f0;font-size:14px;cursor:pointer;"><input type="checkbox" class="pc-cb" value="Bash(docker *)"> Docker commands</label>
+</div>
+<pre id="pc-out" style="background:#0f172a;padding:16px;border-radius:6px;color:#4ade80;font-size:13px;overflow-x:auto;white-space:pre;margin:0 0 12px 0;min-height:60px;">// Select permissions above to generate config</pre>
+<button onclick="navigator.clipboard.writeText(document.getElementById('pc-out').textContent).then(function(){var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy to Clipboard'},2000)}.bind(this))" style="padding:8px 20px;background:#6ee7b7;color:#0f172a;border:none;border-radius:6px;font-weight:600;cursor:pointer;font-size:14px;">Copy to Clipboard</button>
+</div>
+<script>
+document.querySelectorAll('.pc-cb').forEach(function(cb){cb.addEventListener('change',function(){var s=[].slice.call(document.querySelectorAll('.pc-cb:checked')).map(function(c){return c.value});var o={permissions:{allow:s.length?s:["Read"],deny:["Bash(rm -rf *)","Bash(sudo *)","Bash(chmod 777 *)"]}};document.getElementById('pc-out').textContent=JSON.stringify(o,null,2)})});
+</script>
+
 ## Complete Permission Configuration Reference
 
 ### Settings File Locations
@@ -529,6 +549,10 @@ Balanced permissions for team environments where multiple developers share a con
 ```
 
 Notice `Write` is denied (no new files) while `Edit` is allowed (modify existing files). This prevents Claude from creating unexpected files while still allowing it to fix code.
+
+---
+
+*This configuration is one of 200 production-ready templates in [The Claude Code Playbook](https://zovo.one/pricing). Permission configs, model selection rules, MCP setups — all tested and ready to copy.*
 
 ### Docker Container (Automated Tasks)
 
@@ -733,3 +757,98 @@ This gives the development team full productivity while maintaining audit-friend
 | `--dangerously-skip-permissions` + hooks | Medium | Highest | Production automation |
 
 The right choice is almost always the most restrictive option that still lets you work without friction. Start with `settings.json` and only escalate to `--dangerously-skip-permissions` when there is no TTY and no human in the loop.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is --dangerously-skip-permissions safe to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends entirely on the environment. In an ephemeral CI runner processing your own trusted code, it is a reasonable choice. On your development machine pointing at an unfamiliar repository, it is genuinely dangerous. The flag removes the last line of human oversight. Use the alternatives (settings.json, --allowedTools, hooks) when possible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does --dangerously-skip-permissions work inside Docker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and Docker is one of the best places to use it. The container provides filesystem and network isolation that compensates for the removed permission prompts. Combine it with --read-only filesystem mounts and network restrictions for defense in depth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I limit which commands Claude runs while using --dangerously-skip-permissions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, through hooks. Hooks execute before every tool call and can block specific commands programmatically. Unlike the permission system (which --dangerously-skip-permissions disables), hooks run regardless of permission mode."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about MCP tools — does the flag affect those too?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "--dangerously-skip-permissions skips permission prompts for all tools, including MCP server tools. If you have an MCP server connected that can write to a database, deploy to production, or modify cloud infrastructure, Claude will call those tools without asking. This is particularly dangerous because MCP tools often have side effects outside your local machine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does CLAUDE.md still work with --dangerously-skip-permissions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. CLAUDE.md instructions are always loaded and followed regardless of permission mode. The difference is that CLAUDE.md provides behavioral guidance (Claude chooses to follow it), while permissions provide enforcement (Claude is prevented from acting). Both should be used together in automated environments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use --dangerously-skip-permissions for pair programming?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, this defeats the purpose. For interactive development, use settings.json to pre-approve common operations (test running, file editing, git commands) so you get fewer prompts while keeping oversight on unusual operations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does --dangerously-skip-permissions interact with --max-turns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are independent flags. --max-turns limits how many agent turns Claude takes before stopping, regardless of permission mode. Always set --max-turns when using --dangerously-skip-permissions to prevent runaway execution. Without --max-turns, Claude could loop indefinitely trying to solve a problem."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the risk of prompt injection with --dangerously-skip-permissions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Significant in any scenario where Claude processes untrusted text. If a PR description, issue body, file content, or any other input contains adversarial instructions, and Claude is running with all permissions skipped, those instructions could cause Claude to execute harmful commands. Mitigate this with hooks that block dangerous command patterns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use --dangerously-skip-permissions or --permission-mode auto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "--permission-mode auto automatically accepts standard tool calls but may still prompt for certain operations. --dangerously-skip-permissions removes all prompts unconditionally. For CI/CD, --dangerously-skip-permissions is more predictable because it guarantees no hangs. For local automation scripts, --permission-mode auto provides a middle ground."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My company's security team wants to ban --dangerously-skip-permissions. What should I recommend instead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Recommend a combination of project-level .claude/settings.json with explicit allow/deny lists (committed to the repo), hooks that enforce security invariants programmatically, --allowedTools flags in CI scripts for scoped permissions, and container isolation for automated runs. This gives the development team full productivity while maintaining audit-friendly security controls."
+      }
+    }
+  ]
+}
+</script>
+
+
+## Related
+
+- [--dangerously-skip-permissions flag reference](/claude-dangerously-skip-permissions-flag/) — Detailed flag reference and behavior
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — How permission modes affect token costs

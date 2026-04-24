@@ -170,7 +170,7 @@ Build your MCP server with declared permissions: If you're building custom MCP s
 | Session "yes to all" | Session-wide | Session only | One-off broad sessions |
 | `--dangerously-skip-permissions` | Everything | Session only | Automated pipelines, CI |
 
-The `--dangerously-skip-permissions` flag is listed last because it should be reserved for specific scenarios: automated pipelines where you've already reviewed what Claude will do, CI environments running pre-defined tasks, or sandboxed containers where there are no sensitive files to protect. Using it during interactive development removes the safety net that catches accidental operations.
+The `--dangerously-skip-permissions` flag (see the full [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/)) is listed last because it should be reserved for specific scenarios: automated pipelines where you've already reviewed what Claude will do, CI environments running pre-defined tasks, or sandboxed containers where there are no sensitive files to protect. Using it during interactive development removes the safety net that catches accidental operations.
 
 ## When Repeated Prompts Indicate a Problem
 
@@ -223,5 +223,6 @@ Related Reading
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). See also
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

@@ -256,3 +256,5 @@ $99 once. Yours forever. I keep adding templates monthly.
 *Last verified: 2026-04-15. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*
 
 
+
+- [Claude Desktop config.json guide](/claude-desktop-config-json-guide/) — How to configure Claude Desktop with config.json

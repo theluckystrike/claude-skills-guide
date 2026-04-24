@@ -18,7 +18,7 @@ When working with Claude Code, you might sometimes want deterministic, repeatabl
 
 ## Understanding Claude Code's Determinism
 
-Claude Code, like other LLMs, uses probabilistic sampling when generating responses. This means that even with the same prompt, you might get slightly different outputs each time. The model selects the next token based on a probability distribution. even at low temperatures, the output space is not completely fixed.
+Claude Code, like other LLMs, uses probabilistic sampling when generating responses. This means that even with the same prompt, you might get slightly different outputs each time. The model selects the next token based on a probability distribution. even at low [temperature settings](/claude-temperature-settings-guide/), the output space is not completely fixed.
 
 However, determinism in practice is less about achieving byte-for-byte identical outputs and more about achieving functionally identical outputs: code that solves the same problem the same way, formatted the same way, with the same structure and variable names. That goal is fully achievable.
 
@@ -448,6 +448,10 @@ Achieving repeatable, deterministic output from Claude Code requires a combinati
 By implementing these techniques, you can build reliable, reproducible workflows with Claude Code for testing, automation, and consistent code generation. Remember that while byte-for-byte identical output is not always achievable with LLMs, functionally identical output. code that behaves the same way every time. is a realistic and attainable goal.
 
 
+
+## Related
+
+- [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Guide to the claude-sonnet-4-5-20250929 model and its capabilities
 ---
 
 ---
@@ -471,5 +475,7 @@ Related Reading
 - [Best Way to Customize Claude Code Output Format Style](/best-way-to-customize-claude-code-output-format-style/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

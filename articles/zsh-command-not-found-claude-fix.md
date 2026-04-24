@@ -322,6 +322,10 @@ ls -la ~/.zshrc ~/.bashrc ~/.bash_profile 2>/dev/null
 
 This script tells you exactly which cause applies to your situation. Fix the identified issue using the corresponding section above.
 
+---
+
+*These diagnostic steps are from [The Claude Code Playbook](https://zovo.one/pricing) — 200 production-ready templates including error prevention rules and CLAUDE.md configs tested across 50+ project types.*
+
 ## Verifying the Fix
 
 After applying any fix, run this verification sequence:
@@ -368,6 +372,22 @@ Not necessarily. As long as `which claude` returns a valid path and `claude --ve
 
 `ENOENT` means a file or directory was not found during the install process. This usually indicates a corrupted npm cache. Fix it with: `npm cache clean --force && npm install -g @anthropic-ai/claude-code`.
 
+### Can I install Claude Code with yarn or pnpm instead of npm?
+
+Yes, but the binary will be in a different location. You need to ensure that package manager's global bin directory is in your PATH. For consistency, npm is recommended. If you already installed with yarn or pnpm, uninstall and reinstall with npm.
+
+### Why does the error come back after restarting my computer?
+
+You likely added the PATH export to the current session but not to your shell configuration file (~/.zshrc or ~/.bashrc). Add the export line to your config file so it loads automatically on every new shell session.
+
+### Does Claude Code work in fish shell?
+
+Yes. Fish uses a different syntax for PATH configuration. Use `set -Ux fish_user_paths (npm config get prefix)/bin $fish_user_paths` to add the npm bin directory to your PATH permanently.
+
+### I installed Node.js with Homebrew but claude command is not found. What should I do?
+
+Homebrew installs Node.js in /opt/homebrew/bin on Apple Silicon Macs or /usr/local/bin on Intel Macs. Verify the path with `npm config get prefix` and ensure the resulting bin directory is in your PATH. Run `brew link node` if the symlinks are missing.
+
 ## Related Guides
 
 - [The Claude Code Playbook](/the-claude-code-playbook/)
@@ -378,3 +398,126 @@ Not necessarily. As long as `which claude` returns a valid path and `claude --ve
 - [Fix Claude Code Model Not Available in Region](/claude-code-model-not-available-region-fix/)
 - [Fix Claude API 503 Service Unavailable](/claude-api-503-service-unavailable-fix/)
 - [Fix Claude Rate Exceeded Error](/claude-rate-exceeded-error-fix/)
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "I installed Claude Code but it only works in one terminal window. Why?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You added the PATH export to the current session with export PATH=... but did not add it to your shell configuration file (~/.zshrc or ~/.bashrc). The fix applies only to the terminal where you ran it. Add the export line to your config file and source it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use sudo to install Claude Code globally?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Using sudo npm install -g creates root-owned files that break future installs. Instead, change your npm prefix to a user-owned directory."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I use nvm and the error comes back after switching Node versions.",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "nvm installs global packages per Node version. When you switch versions with nvm use, you lose packages installed under the previous version. Reinstall after switching: nvm use 22 && npm install -g @anthropic-ai/claude-code."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Claude Code work on Windows?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Claude Code requires macOS or Linux (including WSL on Windows). It does not run natively on Windows outside of WSL. In WSL, the error would show as bash: claude: command not found and the same PATH fixes apply."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "The install succeeded but which claude shows a different path than expected. Is that a problem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not necessarily. As long as which claude returns a valid path and claude --version outputs a version number, the installation is correct. Different paths occur depending on whether you use nvm, Homebrew, or a custom npm prefix."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I see ENOENT errors during installation. What does that mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ENOENT means a file or directory was not found during the install process. This usually indicates a corrupted npm cache. Fix it with: npm cache clean --force && npm install -g @anthropic-ai/claude-code."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I install Claude Code with yarn or pnpm instead of npm?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but the binary will be in a different location. You need to ensure that package manager's global bin directory is in your PATH. For consistency, npm is recommended."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does the error come back after restarting my computer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You likely added the PATH export to the current session but not to your shell configuration file (~/.zshrc or ~/.bashrc). Add the export line to your config file so it loads automatically on every new shell session."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Claude Code work in fish shell?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Fish uses a different syntax for PATH configuration. Use set -Ux fish_user_paths (npm config get prefix)/bin $fish_user_paths to add the npm bin directory permanently."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I installed Node.js with Homebrew but claude command is not found. What should I do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Homebrew installs Node.js in /opt/homebrew/bin on Apple Silicon Macs or /usr/local/bin on Intel Macs. Verify the path with npm config get prefix and ensure the resulting bin directory is in your PATH. Run brew link node if the symlinks are missing."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Fix zsh: command not found: claude",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Verify Claude Code is installed",
+        "text": "Run npm list -g @anthropic-ai/claude-code to check if Claude Code is installed globally. If not, install it with npm install -g @anthropic-ai/claude-code."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Check your Node.js version",
+        "text": "Run node --version to verify you have Node.js 18 or later. If the version is too old, upgrade with nvm install 22 or brew upgrade node."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Find the npm global bin directory",
+        "text": "Run npm config get prefix to find where npm installs global binaries. The claude binary should be in that directory's bin/ subfolder."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Add the bin directory to your PATH",
+        "text": "Add export PATH=$(npm config get prefix)/bin:$PATH to your ~/.zshrc or ~/.bashrc file, then run source ~/.zshrc to apply the change."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Verify the fix",
+        "text": "Run which claude to confirm the binary is found, then run claude --version to verify it works correctly."
+      }
+    ]
+  }
+]
+</script>

@@ -18,7 +18,7 @@ The answer depends on three factors: whether the task needs main conversation co
 
 **Skills** are SKILL.md files that load instructions into the current conversation. Once invoked, the content stays in context for the session and survives compaction (up to 5,000 tokens per skill, 25,000 total budget). Skills share the main context window with the conversation.
 
-**Subagents** are spawned via `context: fork` in a skill's frontmatter or through custom agent definitions in `.claude/agents/`. A forked subagent gets its own context window, receives the skill content as its driving prompt, loads the project's CLAUDE.md, and returns a summary to the main conversation. The subagent's full context is discarded after it finishes.
+**Subagents** are spawned via `context: fork` in a skill's frontmatter or through [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/)'s full context is discarded after it finishes.
 
 **Combined pattern**: A skill uses `context: fork` and `agent: Explore` (or `Plan`, or a custom agent) to run in isolation. The skill provides the instructions; the subagent provides the execution environment.
 
@@ -121,8 +121,11 @@ Subagents spawned via `context: fork` cannot invoke other skills from the main p
 - [How to Combine Multiple Claude Skills](/how-to-combine-multiple-claude-skills/) -- multi-skill workflows
 - [Claude Skills Performance Optimization](/claude-skills-performance-optimization/) -- token budget management
 
+- [Claude Flow tool guide](/claude-flow-tool-guide/) — How to use Claude Flow for multi-agent orchestration
 ## Related Articles
 
 - [Claude Skills vs Subagents — Inline Instructions vs Isolated Execution — 2026](/claude-skills-vs-subagents-comparison/)
 - [What Are Claude Skills And How — Complete Developer Guide](/what-are-claude-skills-and-how-to-use-them/)
 - [Claude Code Permission Denied: Fix Skill Commands (2026)](/claude-code-permission-denied-when-executing-skill-commands/)
+
+

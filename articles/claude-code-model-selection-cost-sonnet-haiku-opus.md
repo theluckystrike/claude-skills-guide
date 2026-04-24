@@ -49,7 +49,7 @@ Opus is 5x Sonnet and 18.75x Haiku per 100K tokens.
 
 ### Strategy 2: Task-Based Model Routing
 
-Encode model routing decisions in CLAUDE.md so the choice is made before work begins, not after tokens are spent.
+Encode [Claude Code router guide](/claude-code-router-guide/) decisions in CLAUDE.md so the choice is made before work begins, not after tokens are spent.
 
 ```yaml
 # CLAUDE.md -- model routing policy
@@ -193,3 +193,6 @@ ccusage --days 7 --format table
 - [Claude Code Max Subscription vs API](/claude-code-max-vs-api-cheaper-2026-calculator/) -- fixed vs variable pricing comparison
 - [Claude Code Extended Thinking: Cost Implications](/claude-code-extended-thinking-cost-when-disable/) -- when extended thinking justifies premium model costs
 - [How to Reduce Claude Code Token Usage by 3x](/reduce-claude-code-token-usage-3x-guide-2026/) -- complementary reduction strategies
+
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude
+

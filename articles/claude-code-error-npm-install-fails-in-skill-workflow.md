@@ -355,6 +355,10 @@ node -e "require('child_process').exec('python3 --version', console.log)"
 
 Most npm install failures in Claude Code skill workflows resolve with cache clearing, permission fixes, or network adjustments. The skills ecosystem continues to mature, and community-maintained skills frequently update to address compatibility issues with newer Node.js versions. Working through the diagnostic checklist at the top of this guide systematically is faster than trying solutions at random.
 
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
 ---
 
 ---
@@ -387,5 +391,6 @@ Related Reading
 - [Fix 'command not found: claude' After Install](/claude-code-command-not-found-after-install-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

@@ -176,3 +176,5 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Best Way to Set Up Claude Code for a New Project](/best-way-to-set-up-claude-code-for-new-project/)
 
 
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error

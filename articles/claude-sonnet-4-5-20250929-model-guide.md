@@ -175,6 +175,10 @@ Sonnet 4.5 costs one-fifth of Opus 4. For most coding tasks, Sonnet 4.5 produces
 
 For cost optimization strategies across models, see our [cost reduction guide](/claude-code-costs-too-much-reduce-spend-2026/).
 
+---
+
+*Need the complete toolkit? [The Claude Code Playbook](https://zovo.one/pricing) includes 200 production-ready templates, decision frameworks, and team setup guides for every Claude Code workflow.*
+
 ## Model ID History and Versioning
 
 Anthropic's Sonnet model history:
@@ -224,3 +228,35 @@ With a 200,000-token context window, Sonnet 4.5 handles large codebases and exte
 - [Cost tracking with ccusage](/ccusage-claude-code-cost-tracking-guide-2026/) — monitor per-model spend
 - [API mode vs interactive](/claude-code-api-mode-vs-interactive-2026/) — model selection in different modes
 - [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive Claude Code reference
+
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — Configure temperature for Sonnet 4.5
+### Can I use Sonnet 4.5 with the Claude Agent SDK?
+
+Yes. Pass the model ID claude-sonnet-4-5-20250929 as the model parameter when constructing an agent. All Agent SDK features work with Sonnet 4.5.
+
+### Is Sonnet 4.5 cheaper than Opus for the same task?
+
+Yes. Sonnet 4.5 costs one-fifth of Opus per token. For most coding and analysis tasks, Sonnet 4.5 produces good results at significantly lower cost.
+
+### Does Sonnet 4.5 support batch processing?
+
+Yes. You can use Sonnet 4.5 with the Message Batches API for 50% cost savings on non-urgent workloads.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is Sonnet 4.5 still available?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Anthropic maintains older model versions for backward compatibility. You can continue using claude-sonnet-4-5-20250929 in both the API and Claude Code."}},
+    {"@type": "Question", "name": "Should I migrate from Sonnet 4.5 to Sonnet 4?", "acceptedAnswer": {"@type": "Answer", "text": "For most workloads, yes. Sonnet 4 offers better instruction following at the same price. Test both on your specific tasks before migrating production systems."}},
+    {"@type": "Question", "name": "Can I use Sonnet 4.5 with Claude Code?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Pass --model claude-sonnet-4-5-20250929 when launching Claude Code."}},
+    {"@type": "Question", "name": "What is the rate limit for Sonnet 4.5?", "acceptedAnswer": {"@type": "Answer", "text": "Rate limits depend on your API tier, not the specific model. Check your account dashboard at console.anthropic.com for current limits."}},
+    {"@type": "Question", "name": "Does Sonnet 4.5 support tool use?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Full tool use (function calling) support, compatible with the Claude Agent SDK and all Claude Code tools."}},
+    {"@type": "Question", "name": "Will Sonnet 4.5 be deprecated?", "acceptedAnswer": {"@type": "Answer", "text": "Anthropic typically provides advance notice before deprecating models. Monitor the Anthropic changelog for deprecation announcements."}},
+    {"@type": "Question", "name": "How does Sonnet 4.5 handle long context workloads?", "acceptedAnswer": {"@type": "Answer", "text": "With a 200,000-token context window, Sonnet 4.5 handles large codebases and extended conversations well. Performance remains consistent through the full window."}},
+    {"@type": "Question", "name": "Can I use Sonnet 4.5 with the Claude Agent SDK?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Pass the model ID claude-sonnet-4-5-20250929 as the model parameter when constructing an agent. All Agent SDK features work with Sonnet 4.5."}},
+    {"@type": "Question", "name": "Is Sonnet 4.5 cheaper than Opus for the same task?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Sonnet 4.5 costs one-fifth of Opus per token. For most coding and analysis tasks, Sonnet 4.5 produces good results at significantly lower cost."}},
+    {"@type": "Question", "name": "Does Sonnet 4.5 support batch processing?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can use Sonnet 4.5 with the Message Batches API for 50% cost savings on non-urgent workloads."}}
+  ]
+}
+</script>

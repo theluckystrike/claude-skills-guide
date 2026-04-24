@@ -241,6 +241,10 @@ Open VS Code's Keyboard Shortcuts editor:
 2. Search for "Claude"
 3. Click the pencil icon next to any command to rebind it
 
+---
+
+*This configuration is one of 200 production-ready templates in [The Claude Code Playbook](https://zovo.one/pricing). Permission configs, model selection rules, MCP setups — all tested and ready to copy.*
+
 ## Tips for Efficient Shortcuts Usage
 
 ### Learn These Three First
@@ -308,3 +312,39 @@ The default input mode uses Emacs-style readline keybindings (`Ctrl + A`, `Ctrl 
 - [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — extend capabilities
 - [Claude Code Security Best Practices](/claude-code-security-best-practices-2026/) — secure your workflow
 - [Claude MCP List Command Guide](/claude-mcp-list-command-guide/) — MCP CLI command reference
+
+- [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Permission shortcuts and auto-mode
+### Can I remap the Escape key in Claude Code?
+
+Claude Code uses standard terminal keybindings. The Escape key behavior is built into the application. You can use terminal emulator-level key remapping if needed, but Claude Code itself does not expose shortcut customization beyond vim mode.
+
+### Does Ctrl+C lose my conversation in Claude Code?
+
+No. Ctrl+C interrupts the current operation but does not end the session or lose conversation history. Your conversation is automatically saved to disk as it happens.
+
+### Are there keyboard shortcuts for switching between Claude models?
+
+Not a direct keyboard shortcut. Use the /model slash command to switch models during a session, for example /model sonnet or /model opus.
+
+### Can I use keyboard shortcuts in the Claude mobile app?
+
+The Claude iOS and Android apps support basic system keyboard shortcuts when using an external keyboard, but do not have Claude-specific shortcuts beyond standard text editing.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Can I create custom keyboard shortcuts for Claude.ai?", "acceptedAnswer": {"@type": "Answer", "text": "Not directly within Claude.ai. You can use browser extensions like Vimium or custom scripts to add additional shortcuts, but Claude.ai does not expose a shortcut configuration interface."}},
+    {"@type": "Question", "name": "Do Claude Code shortcuts work over SSH?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Claude Code runs in your terminal, so the shortcuts work in any SSH session just as they do locally. Terminal-specific shortcuts like Cmd+K in iTerm2 will not work over SSH."}},
+    {"@type": "Question", "name": "How do I disable the global shortcut in Claude Desktop?", "acceptedAnswer": {"@type": "Answer", "text": "Remove the globalShortcut field from your claude_desktop_config.json file and restart Claude Desktop."}},
+    {"@type": "Question", "name": "Can I use Claude Code with screen or tmux?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Claude Code works inside tmux and screen sessions. Be aware that tmux captures Ctrl+A by default, so you may need to press it twice or rebind your tmux prefix."}},
+    {"@type": "Question", "name": "Is there a shortcut to switch between conversations?", "acceptedAnswer": {"@type": "Answer", "text": "In Claude.ai, use Cmd/Ctrl+Shift+S to open the sidebar, then click a conversation. There is no keyboard shortcut for directly switching between specific conversations."}},
+    {"@type": "Question", "name": "Does Claude Code support Emacs keybindings?", "acceptedAnswer": {"@type": "Answer", "text": "The default input mode uses Emacs-style readline keybindings (Ctrl+A, Ctrl+E, Ctrl+K, etc.). These work out of the box without any configuration."}},
+    {"@type": "Question", "name": "Can I remap the Escape key in Claude Code?", "acceptedAnswer": {"@type": "Answer", "text": "Claude Code uses standard terminal keybindings. The Escape key behavior is built into the application. You can use terminal emulator-level key remapping if needed."}},
+    {"@type": "Question", "name": "Does Ctrl+C lose my conversation in Claude Code?", "acceptedAnswer": {"@type": "Answer", "text": "No. Ctrl+C interrupts the current operation but does not end the session or lose conversation history. Your conversation is automatically saved to disk."}},
+    {"@type": "Question", "name": "Are there keyboard shortcuts for switching between Claude models?", "acceptedAnswer": {"@type": "Answer", "text": "Not a direct keyboard shortcut. Use the /model slash command to switch models during a session, for example /model sonnet or /model opus."}},
+    {"@type": "Question", "name": "Can I use keyboard shortcuts in the Claude mobile app?", "acceptedAnswer": {"@type": "Answer", "text": "The Claude iOS and Android apps support basic system keyboard shortcuts when using an external keyboard, but do not have Claude-specific shortcuts beyond standard text editing."}}
+  ]
+}
+</script>

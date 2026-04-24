@@ -29,7 +29,7 @@ For example, [when using the `pdf` skill to work with PDF documents](/best-claud
 
 The allow list approach explicitly specifies which tools are permitted. This is the recommended approach for security-sensitive environments because it follows the principle of least privilege, you only get access to exactly what you need.
 
-Add the `allowedTools` field to your MCP server configuration in `claude.settings.json`:
+Add the `allowedTools` field to your [MCP configuration](/claude-code-mcp-configuration-guide/) in `claude.settings.json`:
 
 ```json
 {
@@ -50,7 +50,7 @@ Add the `allowedTools` field to your MCP server configuration in `claude.setting
 
 In this configuration, the filesystem MCP server can only read and write files within the specified directory, while the database server can only execute queries. Claude Code will refuse to call any tool not explicitly listed, even if the MCP server offers it.
 
-This pattern works exceptionally well when combined with specialized skills. When using the `tdd` skill for test-driven development, you might configure your MCP servers to only allow test execution and code reading tools, preventing any accidental file deletions or system command executions.
+This pattern works exceptionally well when combined with specialized skills. When using the `tdd` skill for test-driven development, you might configure your [claude mcp list command guide](/claude-mcp-list-command-guide/) executions.
 
 ## Configuring Deny Lists
 
@@ -175,5 +175,7 @@ Related Reading
 - [Claude Code MCP Tool Categories and Use Cases Guide](/claude-code-mcp-tool-categories-use-cases-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

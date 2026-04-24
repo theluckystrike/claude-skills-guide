@@ -378,8 +378,14 @@ then continue with implementing refresh token rotation.
 
 This approach eliminates the friction of re-establishing context and ensures continuity even if you work on the feature across multiple days or switch between tasks.
 
+
+## Related
+
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude
+- [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Choose the right Sonnet 4 model variant
 ---
 
+- [Claude upload limit guide](/claude-upload-limit-guide/) — Understanding Claude file upload limits and workarounds
 These tips represent patterns that working developers use daily. Start with one or two that match your current workflow, then gradually incorporate more as they become natural. The goal is not to use every feature, but to identify which capabilities genuinely improve your productivity and eliminate the friction that slows you down.
 
 ---
@@ -405,6 +411,8 @@ Related Reading
 - [AI Screen Reader Chrome Extension: A Complete Guide for Developers](/ai-screen-reader-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 
 

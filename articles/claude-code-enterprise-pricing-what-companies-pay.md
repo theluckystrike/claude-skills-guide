@@ -284,3 +284,7 @@ Pricing last verified: April 2026.
 - [Claude Code Max Subscription Guide](/claude-code-max-subscription-guide/) -- detailed individual and team plan analysis
 - [Claude Code vs Cursor: Monthly Cost Comparison](/claude-code-vs-cursor-monthly-cost-comparison-2026/) -- individual tool comparison
 - [Cost Optimization Hub](/cost-optimization/) -- reduce per-developer costs
+
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization
+
+- [Claude student discount guide](/claude-student-discount-guide/) — How students can get Claude at reduced pricing

@@ -184,6 +184,10 @@ Preventing data exfiltration through Claude Code MCP servers requires a defense-
 
 The convenience of MCP-powered skills shouldn't come at the cost of security. Take time to configure access controls properly, and your development workflow will remain both productive and secure.
 
+
+## Related
+
+- [claude mcp list command guide](/claude-mcp-list-command-guide/) — How to use the claude mcp list command to manage MCP servers
 ---
 
 ---
@@ -209,5 +213,6 @@ Related Reading
 - [Advanced Claude Skills Hub](/advanced-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

@@ -187,7 +187,7 @@ if [ $failed -gt 0 ]; then
 fi
 ```
 
-The `[supermemory` skill can log which parallel tasks](/building-stateful-agents-with-claude-skills-guide/), creating an audit trail that helps diagnose issues in complex pipelines.
+The `supermemory` skill can log which parallel tasks complete, creating an audit trail that helps diagnose issues in complex pipelines.
 
 ## Practical Example: Document Generation Pipeline
 
@@ -247,8 +247,13 @@ Choosing between sequential and parallel pipeline execution in Claude Code depen
 
 Start with sequential execution when building new workflows, then identify opportunities to parallelize independent steps. Monitor performance and adjust worker counts based on your task characteristics and system resources.
 
+
+## Related
+
+- [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — Complete guide to building agents with the Claude Agent SDK
 ---
 
+- [Claude Flow tool guide](/claude-flow-tool-guide/) — How to use Claude Flow for multi-agent orchestration
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ---
@@ -307,3 +312,5 @@ Claude Code lacks built-in parallel execution primitives, so parallelism is achi
 ### What is Method 1: Background Processes?
 
 Background processes use bash's `&` operator to launch multiple `claude --print` invocations concurrently, followed by `wait` to block until all complete. For example, three independent tdd test runs on auth, database, and API modules execute simultaneously: `claude --print "Use tdd to test auth module" &` repeated for each module, then `wait`. Error handling tracks failures with a counter variable incremented on non-zero exit codes, reporting the total failed tasks after all processes complete.
+
+

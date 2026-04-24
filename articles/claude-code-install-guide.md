@@ -223,6 +223,10 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 
 
+- [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to --dangerously-skip-permissions and safer alternatives
+- [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) — Understanding the --dangerously-skip-permissions CLI flag
 ## Related Articles
 
 - [Claude Code Bun Install Setup Guide](/claude-code-bun-install/)
+
+

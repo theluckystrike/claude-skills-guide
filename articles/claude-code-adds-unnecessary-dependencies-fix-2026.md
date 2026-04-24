@@ -97,3 +97,8 @@ git diff --exit-code pnpm-lock.yaml
 Use the [ccusage](https://github.com/ryoppippi/ccusage) tool to track if sessions are adding packages, and audit them weekly.
 
 For more on managing your project setup, see [The Claude Code Playbook](/the-claude-code-playbook/). For CI enforcement of dependency rules, read the [CI/CD integration guide](/claude-code-ci-cd-integration-guide-2026/). For approved dependency lists in CLAUDE.md, see the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/).
+
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error

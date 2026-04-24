@@ -29,7 +29,7 @@ Claude Code's [extended thinking](/claude-opus-orchestrator-sonnet-worker-archit
 
 ## Using /supermemory for Persistent Context
 
-One limitation of extended thinking is that each session starts fresh. The `/supermemory` skill addresses this by giving Claude a way to store and retrieve project context across sessions.
+One limitation of [sequential thinking in Claude Code](/sequential-thinking-claude-code-guide/) is that each session starts fresh. The `/supermemory` skill addresses this by giving Claude a way to store and retrieve project context across sessions.
 
 To activate the skill, type in Claude Code:
 
@@ -212,5 +212,6 @@ Related Reading
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

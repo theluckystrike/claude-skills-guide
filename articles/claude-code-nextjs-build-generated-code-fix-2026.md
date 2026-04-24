@@ -81,3 +81,8 @@ Add this to your `CLAUDE.md`:
 - Split pages: server logic in page.tsx, interactive parts in ClientComponent.tsx.
 - Run npx next build after every change to catch boundary errors.
 ```
+
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error

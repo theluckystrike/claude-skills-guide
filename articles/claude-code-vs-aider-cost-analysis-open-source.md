@@ -188,7 +188,7 @@ Step 3: Compare
 
 ### Decision Framework for Teams
 
-Teams evaluating Claude Code vs Aider should consider:
+Teams evaluating [Claude Code vs Cursor comparison](/claude-code-vs-cursor-definitive-comparison-2026/) Aider should consider:
 
 1. **Do developers need agentic multi-file capabilities?** If yes, Claude Code's built-in tools (Edit, Glob, Grep) provide better token efficiency for complex workflows.
 2. **Is open-source a requirement?** If organizational policy mandates open-source tools, Aider is the clear choice regardless of cost.
@@ -206,3 +206,4 @@ Pricing last verified: April 2026.
 - [Claude Code vs Cursor: Monthly Cost Comparison](/claude-code-vs-cursor-monthly-cost-comparison-2026/) -- comparison with Cursor
 - [Cost Optimization Hub](/cost-optimization/) -- reduce API costs regardless of tool choice
 - [Comparisons Hub](/compare/) -- all tool comparisons
+

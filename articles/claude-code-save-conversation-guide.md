@@ -248,6 +248,10 @@ script -q session-recording.txt claude
 
 For team settings, the `.claude/settings.json` file (project-level configuration) can be committed to version control, but conversation JSONL files should not be — they may contain sensitive data and are not designed for version control.
 
+---
+
+*This configuration is one of 200 production-ready templates in [The Claude Code Playbook](https://zovo.one/pricing). Permission configs, model selection rules, MCP setups — all tested and ready to copy.*
+
 ## Storage and Privacy
 
 ### What Is Stored Locally
@@ -315,3 +319,39 @@ No. Compaction summarizes context that is sent to the model, but the original JS
 - [Claude Code Getting Started](/claude-code-getting-started-terminal-setup/) — initial CLI setup
 - [Claude Code Git Workflow Best Practices](/claude-code-git-workflow-best-practices-guide/) — version control integration
 - [Claude Temperature Settings](/claude-temperature-settings-guide/) — control output behavior
+
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Understand conversation costs before saving
+### Can I back up my Claude Code sessions to the cloud?
+
+There is no built-in cloud sync. You can manually copy the ~/.claude/projects/ directory to a cloud storage service or back it up with a scheduled script.
+
+### How do I find the session ID of a past conversation?
+
+Session IDs are displayed in the Claude Code startup banner. You can also browse the JSONL files in ~/.claude/projects/ to find sessions by timestamp or content.
+
+### Can I merge two separate sessions into one?
+
+Not directly. You can start a new session and reference content from both previous sessions by pasting relevant context.
+
+### Does Claude Code save tool call outputs in the session file?
+
+Yes. Every tool call and its result is recorded in the JSONL session file, including file reads, edits, bash commands, and search results.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Can I search across all past conversations?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, using standard text search tools on the JSONL files. Run grep -r search-term ~/.claude/projects/ to search across all projects and sessions."}},
+    {"@type": "Question", "name": "Do conversations sync across devices?", "acceptedAnswer": {"@type": "Answer", "text": "No. Conversations are stored locally on each machine. There is no built-in cloud sync for Claude Code session data."}},
+    {"@type": "Question", "name": "How much disk space do conversations use?", "acceptedAnswer": {"@type": "Answer", "text": "A typical 30-minute session produces 100 KB to 2 MB of JSONL data. Over months of daily use, this can grow to several hundred megabytes."}},
+    {"@type": "Question", "name": "Can I import a conversation into a new session?", "acceptedAnswer": {"@type": "Answer", "text": "Not directly. You can start a new session and paste relevant context from a previous conversation, or use --resume to continue an existing session."}},
+    {"@type": "Question", "name": "What happens to conversations when I update Claude Code?", "acceptedAnswer": {"@type": "Answer", "text": "Session files are preserved across Claude Code updates. The storage format is stable, and new versions can read sessions created by older versions."}},
+    {"@type": "Question", "name": "Does /compact delete information permanently?", "acceptedAnswer": {"@type": "Answer", "text": "No. Compaction summarizes context sent to the model, but the original JSONL file on disk retains the full conversation. You lose nothing from compaction."}},
+    {"@type": "Question", "name": "Can I back up my Claude Code sessions to the cloud?", "acceptedAnswer": {"@type": "Answer", "text": "There is no built-in cloud sync. You can manually copy the ~/.claude/projects/ directory to cloud storage or back it up with a scheduled script."}},
+    {"@type": "Question", "name": "How do I find the session ID of a past conversation?", "acceptedAnswer": {"@type": "Answer", "text": "Session IDs are displayed in the Claude Code startup banner. You can also browse the JSONL files in ~/.claude/projects/ to find sessions by timestamp or content."}},
+    {"@type": "Question", "name": "Can I merge two separate sessions into one?", "acceptedAnswer": {"@type": "Answer", "text": "Not directly. You can start a new session and reference content from both previous sessions by pasting relevant context."}},
+    {"@type": "Question", "name": "Does Claude Code save tool call outputs in the session file?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every tool call and its result is recorded in the JSONL session file, including file reads, edits, bash commands, and search results."}}
+  ]
+}
+</script>

@@ -76,3 +76,8 @@ Ensure ssh-agent is running and keys are loaded before starting Claude Code sess
 ```
 
 **Related articles:** [Claude Code Command Not Found Fix](/claude-code-command-not-found-after-install-fix/), [Claude Code Not Responding Fix](/claude-code-not-responding-terminal-hangs-fix/), [GitHub Actions Setup](/claude-code-github-actions-setup-guide/)
+
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error

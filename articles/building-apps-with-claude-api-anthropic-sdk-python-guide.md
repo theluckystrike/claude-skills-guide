@@ -95,7 +95,7 @@ This pattern scales well for building chatbots, customer support assistants, and
 
 ## Implementing Function Calling
 
-One of the most powerful features of the Claude API is function calling (tool use), which allows Claude to request specific actions from your application. This is essential for building agents that can interact with external systems:
+One of the most powerful features of the Claude API is function calling (tool use), which allows Claude to request specific actions from your application. This is essential for building agents with the [Claude Agent SDK](/claude-agent-sdk-complete-guide/) that can interact with external systems:
 
 ```python
 from anthropic import Anthropic
@@ -257,6 +257,10 @@ Remember to monitor your token usage, implement proper error handling, and take 
 
 
 
+
+## Related
+
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude
 ---
 
 ---
@@ -281,5 +285,7 @@ Related Reading
 - [Claude Code FastAPI Async Python Guide](/claude-code-fastapi-async-python-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

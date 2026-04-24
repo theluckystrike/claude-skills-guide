@@ -248,6 +248,11 @@ For developers building custom integrations, the updated API provides hooks for 
 
 The focus on skill interoperability signals a shift toward treating Claude Code as an extensible development environment rather than a simple assistant. This approach empowers teams to build personalized workflows that match their specific project requirements. Rather than adapting your workflow to what Claude Code supports, you can now build Claude Code into the workflow you already have.
 
+
+## Related
+
+- [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Guide to the claude-sonnet-4-20250514 model and features
+- [save Claude Code conversations](/claude-code-save-conversation-guide/) — How to save and resume conversations
 ---
 
 ---
@@ -271,5 +276,6 @@ Related Reading
 - [AI Screen Reader Chrome Extension: A Complete Guide for Developers](/ai-screen-reader-chrome-extension/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

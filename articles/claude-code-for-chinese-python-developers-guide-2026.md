@@ -269,7 +269,7 @@ class TestCalculateDiscount:
  calculate_discount(-10, "standard")
 ```
 
-Notice that when you request Chinese-language error messages, the test assertions also verify the Chinese message text. This keeps your tests aligned with what users will actually see.
+Notice that you can follow the [Claude Code 国内使用指南](/claude-code-guonei-shiyong-china-usage-guide/) for region-specific setup details.
 
 ## Integrating Claude Skills into Your Workflow
 
@@ -399,6 +399,11 @@ Assume PCI DSS compliance is required.
 
 This level of detail produces code that handles the security requirements correctly from the first generation, rather than requiring multiple rounds of review and revision.
 
+
+## Related
+
+- [Claude Code 安装指南 (Chinese Installation Guide)](/claude-code-anzhuang-installation-guide/) — Claude Code installation guide in Chinese (中文安装教程)
+- [Claude Code 价格指南](/claude-code-jiage-pricing-guide/) — Claude Code pricing guide in Chinese (中文定价指南)
 ---
 
 ---
@@ -450,3 +455,5 @@ Essential Claude skills for Python developers include the `/tdd` skill for test-
 ### What is TDD Skill?
 
 The `/tdd` skill transforms Python development by enforcing a red-green-refactor cycle. When activated with `/tdd` followed by a description, Claude generates pytest test cases first, then implements the module to make those tests pass. The key difference from simply asking Claude to write code is that tests document the module's exact intended behavior and the implementation is specifically written to satisfy them. Generated tests also verify Chinese-language error messages when bilingual output is requested.
+
+

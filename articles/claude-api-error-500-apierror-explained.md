@@ -37,7 +37,7 @@ The 500 `api_error` indicates an unexpected internal error in Anthropic's system
 
 ## What Causes This
 
-A 500 error means something went wrong on Anthropic's servers. You did nothing wrong. The request format is valid, but the server encountered an unexpected condition while processing it.
+A [Claude internal server error fix](/claude-internal-server-error-fix/) means something went wrong on Anthropic's servers. You did nothing wrong. The request format is valid, but the server encountered an unexpected condition while processing it.
 
 Note: When streaming via SSE, it is possible to receive a 500-class error after the server has already returned a 200 status code, since the initial HTTP response was sent before the error occurred.
 
@@ -186,3 +186,4 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 - [Fix: Anthropic API 500 Error with strict: true Tools](/anthropic-sdk-strict-true-500-error/)
 - [Fix Claude API Error 500 — Internal Server Error](/claude-api-error-500-fix/)
+

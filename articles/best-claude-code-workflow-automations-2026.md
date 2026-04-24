@@ -230,3 +230,8 @@ git clone https://github.com/ericbuess/claude-code-docs.git .claude-docs
 Start with **andrej-karpathy-skills** (behavioral foundation) and **hook-based auto-lint** (immediate error catching). Add **claude-task-master** when your projects have structured requirements. Add **SuperClaude** when you want maximum automation. Add **ccusage** when you want to track spending.
 
 For more on each tool category, see the [ecosystem tools map](/claude-code-ecosystem-complete-map-2026/). For comparing extension types, read the [skills vs hooks vs commands guide](/claude-code-skills-vs-hooks-vs-commands-2026/). For building your own automations, see the [skill building guide](/how-to-build-your-own-claude-code-skill-2026/).
+
+
+## Related
+
+- [Claude Flow tool guide](/claude-flow-tool-guide/) — How to use Claude Flow for multi-agent orchestration

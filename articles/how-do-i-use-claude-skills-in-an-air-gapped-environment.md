@@ -17,7 +17,7 @@ geo_optimized: true
 
 Air-gapped environments, systems physically isolated from the internet, present unique challenges for developers who want to use AI assistance. Whether you're working in cybersecurity research, government systems, or facilities with strict data policies, you might wonder whether Claude skills can function without external connectivity. The answer is yes, with the right setup and understanding of the constraints.
 
-This guide walks you through the process of using Claude skills in [air-gapped environment](/how-do-i-set-environment-variables-for-a-claude-skill/)s, from initial setup to practical workflows you can implement today.
+This guide walks you through the process of using Claude skills in [air-gapped environment](/how-do-i-set-environment-variables-for-a-claude-skill/), from initial setup to practical workflows you can implement today.
 
 ## Understanding Air-Gapped Constraints
 

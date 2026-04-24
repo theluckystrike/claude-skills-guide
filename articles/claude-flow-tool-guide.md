@@ -250,6 +250,10 @@ timeout: 3600                # pipeline timeout in seconds
   retry: 2                   # retry count on failure
 ```
 
+---
+
+*Need the complete toolkit? [The Claude Code Playbook](https://zovo.one/pricing) includes 200 production-ready templates, decision frameworks, and team setup guides for every Claude Code workflow.*
+
 ## Comparison with Alternatives
 
 | Feature | Claude Flow | Manual Scripts | Claude Task Master | SuperClaude |
@@ -318,3 +322,40 @@ Claude Flow passes the tools configuration to Claude Code. Any tool available in
 - [Cost-efficient multi-agent workflows](/claude-cost-cost-efficient-multi-agent-coding-workflows/) — minimize spend
 - [How to build a Claude Code agent](/how-to-build-claude-code-agent-2026/) — foundational agent-building guide
 - [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive Claude Code reference
+
+- [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — Build custom agents with the Agent SDK
+- [sequential thinking in Claude Code](/sequential-thinking-claude-code-guide/) — Use thinking for complex orchestration steps
+### Can I use Claude Flow with the Claude Agent SDK?
+
+Claude Flow orchestrates Claude Code CLI sessions. The Agent SDK is a separate programmatic interface. They solve similar problems differently. Use Claude Flow for YAML-defined pipelines and the Agent SDK for code-defined agent workflows.
+
+### Does Claude Flow support environment variables in YAML?
+
+Yes. You can reference environment variables in your pipeline YAML using standard shell variable syntax. They are expanded at runtime when Claude Flow launches each step.
+
+### Can I run Claude Flow on a CI/CD server?
+
+Yes. Install Claude Flow and Claude Code on the CI server, set the ANTHROPIC_API_KEY environment variable, and run claude-flow run pipeline.yaml as a CI step. Add appropriate timeouts.
+
+### How do I debug a failing pipeline step?
+
+Check the individual agent log output for the failing step. Run the step's prompt manually with Claude Code to reproduce the issue. Set fail_fast to false to see if subsequent steps succeed independently.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is Claude Flow an Anthropic product?", "acceptedAnswer": {"@type": "Answer", "text": "No. Claude Flow is a community-built open-source tool. It uses the Claude Code CLI under the hood but is not officially maintained by Anthropic."}},
+    {"@type": "Question", "name": "Does it work with Claude Max?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Claude Flow launches Claude Code sessions, which work with both Claude Max subscriptions and API-based billing."}},
+    {"@type": "Question", "name": "Can I mix models in a pipeline?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Each step can specify a different model. Use Opus for critical reasoning steps and Haiku for simple checks."}},
+    {"@type": "Question", "name": "How does it handle failures?", "acceptedAnswer": {"@type": "Answer", "text": "By default, fail_fast: true stops the pipeline on the first failure. Set it to false to continue running remaining steps."}},
+    {"@type": "Question", "name": "What is the maximum number of parallel agents?", "acceptedAnswer": {"@type": "Answer", "text": "There is no hard limit in Claude Flow itself, but Anthropic API rate limits apply. Most accounts can run 3-5 parallel agents without hitting rate limits."}},
+    {"@type": "Question", "name": "Can I use custom tools?", "acceptedAnswer": {"@type": "Answer", "text": "Claude Flow passes the tools configuration to Claude Code. Any tool available in Claude Code is available in Claude Flow steps."}},
+    {"@type": "Question", "name": "Can I use Claude Flow with the Claude Agent SDK?", "acceptedAnswer": {"@type": "Answer", "text": "Claude Flow orchestrates Claude Code CLI sessions. The Agent SDK is a separate programmatic interface. They solve similar problems differently."}},
+    {"@type": "Question", "name": "Does Claude Flow support environment variables in YAML?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can reference environment variables in your pipeline YAML using standard shell variable syntax. They are expanded at runtime."}},
+    {"@type": "Question", "name": "Can I run Claude Flow on a CI/CD server?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Install Claude Flow and Claude Code on the CI server, set the ANTHROPIC_API_KEY environment variable, and run claude-flow run pipeline.yaml as a CI step."}},
+    {"@type": "Question", "name": "How do I debug a failing pipeline step?", "acceptedAnswer": {"@type": "Answer", "text": "Check the individual agent log output for the failing step. Run the step's prompt manually with Claude Code to reproduce the issue."}}
+  ]
+}
+</script>

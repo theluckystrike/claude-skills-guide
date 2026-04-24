@@ -18,7 +18,7 @@ Send a Claude API request with `tools: []` and your input token count jumps by 3
 
 ## The Setup
 
-When you pass a `tools` parameter in your API request, Claude adds an internal system prompt that explains to the model how to format tool calls. The size depends on the `tool_choice` setting: `auto` or `none` adds 346 tokens, while `any` or a specific tool name adds 313 tokens. This overhead exists on every request regardless of whether a tool is actually invoked. It's billed at the standard input token rate for whatever model you're using. The overhead is separate from and additive to the tokens consumed by individual tool definitions (names, descriptions, and JSON schemas).
+When you pass a `tools` parameter in your API request, Claude adds an internal system prompt that explains to the model how to format tool calls. The size depends on the `tool_choice` setting and which [Claude Code router guide](/claude-code-router-guide/) model you're using. The overhead is separate from and additive to the tokens consumed by individual tool definitions (names, descriptions, and JSON schemas).
 
 ## The Math
 
@@ -143,3 +143,6 @@ Track two metrics: average input tokens per request on the tool path vs. the non
 - [Claude API Tool Use Function Calling Deep Dive](/claude-api-tool-use-function-calling-deep-dive-guide/)
 - [Claude Skills Token Optimization Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
 - [Advanced Claude Skills with Tool Use](/advanced-claude-skills-with-tool-use-and-function-calling/)
+
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization
+

@@ -18,7 +18,7 @@ The "Bun has crashed" message in Claude Code means the Bun runtime hit a fatal e
 
 ## The Problem
 
-You are working in Claude Code and suddenly see `Bun has crashed. Report this as a bug:` followed by a crash report with a stack trace. The process exits immediately, and you lose your current conversation context. This is different from a handled error — Bun itself has terminated due to an unrecoverable condition.
+You are working in Claude Code and suddenly see `Bun has crashed. Report this as a bug:` followed by a crash report with a stack trace. The process exits immediately (see the [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) for similar issues), and you lose your current conversation context. This is different from a handled error — Bun itself has terminated due to an unrecoverable condition.
 
 ## Quick Solution
 
@@ -139,3 +139,4 @@ Related Reading
 - [Best Way to Use Claude Code for Debugging Sessions](/best-way-to-use-claude-code-for-debugging-sessions/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+

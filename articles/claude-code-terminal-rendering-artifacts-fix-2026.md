@@ -63,3 +63,8 @@ brew install --cask alacritty
 # CLAUDE.md rule
 If terminal output becomes garbled, run 'reset' and restart Claude Code. Use iTerm2 or Alacritty for best rendering compatibility. Set NO_COLOR=1 if you do not need colored output.
 ```
+
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error

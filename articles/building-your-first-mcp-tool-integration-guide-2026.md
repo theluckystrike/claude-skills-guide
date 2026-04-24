@@ -21,7 +21,7 @@ The Model Context Protocol (MCP) has become the standard for connecting Claude C
 
 MCP serves as a bridge between Claude Code and external systems. Unlike traditional API integrations that require custom code for each connection, MCP provides a standardized protocol that Claude Code understands natively. This means you can connect to databases, file systems, GitHub, Slack, and hundreds of other services without writing boilerplate code.
 
-The protocol works through a client-server architecture. Claude Code acts as the MCP client, connecting to servers that expose specific tools and resources. When you configure an MCP server, Claude gains access to new capabilities automatically, without needing to install additional packages or configure complex authentication flows.
+The protocol works through a client-server architecture. Claude Code acts as the MCP client, connecting to servers you configure (see the [MCP configuration guide](/claude-code-mcp-configuration-guide/) for setup details).
 
 ## Prerequisites for Building Your First Integration
 
@@ -311,6 +311,7 @@ Timeout Issues: For long-running operations, implement async handling and consid
 
 ## Next Steps for Your Integration
 
+- [claude mcp list command guide](/claude-mcp-list-command-guide/) — How to use the claude mcp list command to manage MCP servers
 Now that you've built your first MCP integration, explore these advanced topics:
 
 - Custom Resources: Expose data beyond tools using MCP's resource system
@@ -345,5 +346,7 @@ Related Reading
 - [Claude Code MCP Tool Categories and Use Cases Guide](/claude-code-mcp-tool-categories-use-cases-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

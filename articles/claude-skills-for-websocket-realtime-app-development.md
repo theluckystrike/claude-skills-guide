@@ -28,7 +28,7 @@ Claude skills encapsulate best practices for these patterns. Rather than researc
 
 ## Essential Skills for WebSocket Projects
 
-Several Claude skills prove particularly valuable when building [real-time app](/claude-code-skills-for-backend-developers-node-and-python/)lications. Each addresses a specific aspect of the development workflow.
+Several Claude skills prove particularly valuable when building [real-time app](/claude-code-skills-for-backend-developers-node-and-python/). Each addresses a specific aspect of the development workflow.
 
 frontend-design for UI Components
 

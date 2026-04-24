@@ -323,6 +323,10 @@ A data retention policy for Claude Code prevents unbounded storage growth while 
 
 The key is automation, set up scheduled runs and let the system manage itself. Your future self will appreciate clean storage and searchable archives when you need to reference decisions from last month.
 
+
+## Related
+
+- [save Claude Code conversations](/claude-code-save-conversation-guide/) — How to save and export conversation history
 ---
 
 ---

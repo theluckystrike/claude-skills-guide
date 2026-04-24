@@ -74,3 +74,13 @@ Add this to your `CLAUDE.md`:
 - Check plan tier before switching models in config.
 - Pin model version in CLAUDE.md to avoid surprises after upgrades.
 ```
+
+
+## Related
+
+- [Claude rate exceeded error fix](/claude-rate-exceeded-error-fix/) — Fix Claude rate exceeded and rate limit errors
+
+- [Claude AI rate exceeded error fix](/claude-ai-rate-exceeded-error-fix/) — Fix the Claude AI rate exceeded error message
+
+- [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Sonnet 4.5 model capabilities and requirements
+- [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Sonnet 4 model capabilities and requirements

@@ -50,7 +50,7 @@ claude --dangerously-skip-permissions "Run the full deploy pipeline"
 ls -la /path/to/blocked/resource
 ```
 
-The `--dangerously-skip-permissions` flag bypasses all permission checks. Use only in trusted, local development environments.
+The `--dangerously-skip-permissions` flag bypasses all permission checks (see the [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/)). Use only in trusted, local development environments.
 
 ## Prevention
 
@@ -58,3 +58,4 @@ Add to your CLAUDE.md:
 ```
 Pre-approve all known build and test commands in .claude/settings.json under permissions.allow. Use glob patterns for command families (e.g., "Bash(npm *)"). Never use --dangerously-skip-permissions in shared or production environments.
 ```
+

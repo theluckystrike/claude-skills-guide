@@ -213,6 +213,10 @@ However, these are last resorts. Don't rely on them to fix poorly designed skill
 Here's a template that avoids call stack issues:
 
 ```markdown
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
 ---
 name: safe-data-processor
 description: "Process data with bounded operations"
@@ -280,5 +284,6 @@ Related Reading
 - [Claude Code Troubleshooting Hub](/troubleshooting-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

@@ -217,6 +217,10 @@ While updates to Claude Code can temporarily disrupt your workflow, most issues 
 
 Keeping your skills modular, well-documented, and using environment-aware path handling will make future updates much smoother. The investment in making your skills resilient to change pays off in reduced downtime and more reliable automation.
 
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
 ---
 
 ---
@@ -249,5 +253,6 @@ Related Reading
 - [Fix Claude Code OAuth Login Paste Not Working — Quick Guide](/claude-code-oauth-login-paste-not-working/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

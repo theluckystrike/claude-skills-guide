@@ -251,6 +251,10 @@ with open('report.txt', 'w') as f:
 
 The resulting `.txt` file is usually 10-100x smaller than the PDF.
 
+---
+
+*This configuration is one of 200 production-ready templates in [The Claude Code Playbook](https://zovo.one/pricing). Permission configs, model selection rules, MCP setups — all tested and ready to copy.*
+
 ### Compress Images Before Upload
 
 Reduce image file size while preserving enough quality for Claude's vision:
@@ -342,3 +346,40 @@ Not on Claude.ai. The API has slightly higher limits (32 MB for PDFs). For truly
 - [Claude Code Configuration Hierarchy](/claude-code-configuration-hierarchy-explained-2026/) — understand settings precedence
 - [Claude Code Security Best Practices](/claude-code-security-best-practices-2026/) — secure your workflow
 - [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — extend capabilities with external tools
+
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Large uploads affect token costs
+- [save Claude Code conversations](/claude-code-save-conversation-guide/) — Save conversations with uploaded files
+### Can Claude Code process video or audio files?
+
+No. Neither Claude Code nor the API natively processes video or audio files. You would need to extract frames from video or transcribe audio before sending content to Claude.
+
+### Is there a way to increase the 30 MB upload limit on Claude.ai?
+
+No. The limit is fixed for the web interface. The API has slightly higher limits (32 MB for PDFs). For truly large files, Claude Code reads directly from your filesystem with no upload size limit.
+
+### How many tokens does a typical image consume?
+
+A typical image consumes approximately 1,600 tokens. High-resolution images that are downscaled to 1568x1568 pixels consume roughly the same amount regardless of original resolution.
+
+### Can I upload multiple file types in the same message on Claude.ai?
+
+Yes, you can mix file types in a single message, up to 5 files total. For example, you can upload a PDF and two images in the same message.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Can I upload ZIP files to Claude?", "acceptedAnswer": {"@type": "Answer", "text": "Not directly. Claude.ai and the API do not process archive files. Extract the contents first and upload individual files. In Claude Code, you can ask it to run unzip or tar commands."}},
+    {"@type": "Question", "name": "What happens if I upload a file larger than 30 MB on Claude.ai?", "acceptedAnswer": {"@type": "Answer", "text": "The upload is rejected with an error before the file is sent. You will need to reduce the file size or switch to Claude Code."}},
+    {"@type": "Question", "name": "Does Claude count uploaded files against my usage limits?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. File content is tokenized and counts toward your plan's token usage, the same as typed text. Large files consume proportionally more tokens."}},
+    {"@type": "Question", "name": "Can I upload multiple PDFs and ask Claude to compare them?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, up to 5 files per message on Claude.ai. Upload both PDFs in the same message and ask for a comparison."}},
+    {"@type": "Question", "name": "Why does my PDF upload fail even though it is under 30 MB?", "acceptedAnswer": {"@type": "Answer", "text": "The PDF may exceed the page limit for your plan, or the combined token count of the PDF plus your message may exceed the context window."}},
+    {"@type": "Question", "name": "Is there a way to increase the upload limit?", "acceptedAnswer": {"@type": "Answer", "text": "Not on Claude.ai. The API has slightly higher limits (32 MB for PDFs). For truly large files, Claude Code reads directly from your filesystem with no upload ceiling."}},
+    {"@type": "Question", "name": "Can Claude Code process video or audio files?", "acceptedAnswer": {"@type": "Answer", "text": "No. Neither Claude Code nor the API natively processes video or audio files. You would need to extract frames from video or transcribe audio before sending content to Claude."}},
+    {"@type": "Question", "name": "Is there a way to increase the 30 MB upload limit on Claude.ai?", "acceptedAnswer": {"@type": "Answer", "text": "No. The limit is fixed for the web interface. The API has slightly higher limits. For truly large files, Claude Code reads directly from your filesystem with no upload size limit."}},
+    {"@type": "Question", "name": "How many tokens does a typical image consume?", "acceptedAnswer": {"@type": "Answer", "text": "A typical image consumes approximately 1,600 tokens. High-resolution images that are downscaled to 1568x1568 pixels consume roughly the same amount regardless of original resolution."}},
+    {"@type": "Question", "name": "Can I upload multiple file types in the same message on Claude.ai?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, you can mix file types in a single message, up to 5 files total. For example, you can upload a PDF and two images in the same message."}}
+  ]
+}
+</script>

@@ -58,3 +58,10 @@ npm install -g @anthropic-ai/claude-code
 # CLAUDE.md rule
 Use /clear between major tasks to prevent unbounded conversation growth. Start new sessions for unrelated work instead of continuing long-running conversations.
 ```
+
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
+
+- [Claude upload limit guide](/claude-upload-limit-guide/) — Understanding Claude file upload limits and workarounds

@@ -333,6 +333,10 @@ The key insight is that these skills are not about replacing your expertise. the
 
 For new freelancers, start with `/supermemory` and `/pdf`. The context problem is universal and the document processing problem appears in almost every engagement. For experienced freelancers looking to scale, `/xlsx` and `/pptx` automation compounds across many clients simultaneously.
 
+
+## Related
+
+- [save Claude Code conversations](/claude-code-save-conversation-guide/) — How to save, export, and resume Claude Code conversations
 ---
 
 ---
@@ -356,5 +360,6 @@ Related Reading
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

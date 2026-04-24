@@ -302,6 +302,10 @@ By following this troubleshooting guide, you can diagnose and fix spawn errors i
 
 With these fixes, your Node.js-powered Claude Code skills should run smoothly without mysterious spawn errors.
 
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
 ---
 
 ---
@@ -325,5 +329,6 @@ Related Reading
 - [Claude Code Error: npm install Fails in Skill Workflow](/claude-code-error-npm-install-fails-in-skill-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

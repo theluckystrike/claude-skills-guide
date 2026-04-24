@@ -214,3 +214,6 @@ Docker isolation guarantees Claude Code cannot access files outside your mounted
 - [Claude Code for Docker Image Publishing Workflow](/claude-code-for-docker-image-publishing-workflow-guide/)
 - [Claude Code for Colima Docker Workflow Guide](/claude-code-for-colima-docker-workflow-guide/)
 - [Best Way to Set Up Claude Code for a New Project](/best-way-to-set-up-claude-code-for-new-project/)
+
+- [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) and safer alternatives
+

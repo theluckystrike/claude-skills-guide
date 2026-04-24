@@ -115,6 +115,10 @@ Remember that Claude Code works best when it has comprehensive context about you
 
 
 
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
 ---
 
 ---
@@ -138,5 +142,6 @@ Related Reading
 - [Claude Code ESM Module Not Found Import Error Fix](/claude-code-esm-module-not-found-import-error-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

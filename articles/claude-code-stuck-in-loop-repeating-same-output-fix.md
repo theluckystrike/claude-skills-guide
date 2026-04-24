@@ -165,6 +165,10 @@ Claude Code loops typically stem from ambiguous prompts, missing context, or ove
 
 For persistent problems, examine your project configuration and skill definitions for hidden conflicts. With proper scoping and clear requirements, Claude Code produces focused, accurate outputs without getting trapped in repetitive cycles.
 
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
 ---
 
 ---
@@ -190,5 +194,6 @@ Related Reading
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). See also
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

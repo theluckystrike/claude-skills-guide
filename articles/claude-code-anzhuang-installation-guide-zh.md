@@ -205,7 +205,7 @@ nvm use --lts
 npm ERR! network timeout
 ```
 
-如果你在国内网络环境下安装，可能需要配置npm镜像或使用代理：
+如果你在[Claude Code 国内使用指南](/claude-code-guonei-shiyong-china-usage-guide/)网络环境下安装，可能需要配置npm镜像或使用代理：
 
 ```bash
 # 使用淘宝镜像
@@ -270,6 +270,10 @@ claude --help
 ```
 
 这会显示所有可用的命令行选项和功能。
+
+---
+
+*这些配置模板来自 [Claude Code Playbook](https://zovo.one/pricing) — 包含200个生产就绪模板、权限配置和团队设置指南。*
 
 ## 在不同环境中安装
 
@@ -339,3 +343,80 @@ rm -rf ~/.claude
 Claude Code的安装过程相对简单：确保Node.js 18+环境就绪，通过npm全局安装，配置API密钥即可开始使用。遇到问题时，大多数错误都与Node.js版本、网络连接或权限配置有关，按照上述解决方案逐一排查即可。
 
 安装完成后，你可以阅读我们的[快捷键指南](/claude-shortcuts-complete-guide/)来提高使用效率，或者查看[MCP配置指南](/claude-code-mcp-configuration-guide/)来扩展Claude Code的功能。
+
+
+
+## Related
+
+- [Claude Code 价格指南 (Chinese Pricing Guide)](/claude-code-jiage-pricing-guide/) — Claude Code pricing guide in Chinese (中文价格教程)
+
+## 常见问题
+
+### Claude Code支持Windows吗？
+
+Claude Code不支持原生Windows环境。Windows用户需要先安装WSL2（Windows Subsystem for Linux），然后在WSL2中安装Claude Code。
+
+### 安装时可以使用sudo吗？
+
+不建议使用sudo安装。使用sudo npm install -g会创建root权限的文件，导致后续安装出现权限问题。正确做法是修改npm全局目录到用户目录下。
+
+### Claude Code需要多少磁盘空间？
+
+Claude Code本身占用约100-200MB。加上Node.js和npm依赖，总共需要约500MB的可用磁盘空间。
+
+### 可以离线使用Claude Code吗？
+
+不可以。Claude Code需要连接到Anthropic API服务器才能工作。每次使用都需要网络连接。
+
+### 安装后如何更新到最新版本？
+
+运行 npm update -g @anthropic-ai/claude-code 即可更新。建议定期更新以获取最新功能和修复。
+
+### Claude Code和Claude Desktop是同一个东西吗？
+
+不是。Claude Code是命令行工具，在终端中使用。Claude Desktop是图形界面应用程序。两者独立安装和配置。
+
+### 一台电脑可以安装多个版本的Claude Code吗？
+
+不建议这样做。npm全局只能安装一个版本。如果需要测试不同版本，可以使用npx指定版本号运行。
+
+### 安装过程中遇到ETIMEOUT错误怎么办？
+
+这通常是网络问题。检查代理设置是否正确，或尝试使用npm镜像源。详细的网络配置请参考国内使用指南。
+
+### pnpm或yarn可以安装Claude Code吗？
+
+可以，但推荐使用npm以确保一致性。如果使用其他包管理器，需要确保其全局bin目录在PATH中。
+
+### 安装成功但claude命令无法运行怎么办？
+
+这是PATH配置问题。运行npm bin -g查看全局bin目录，然后将该目录添加到PATH环境变量中。
+
+### API密钥存储在哪里？
+
+API密钥通过环境变量ANTHROPIC_API_KEY提供。建议将其添加到shell配置文件中（如~/.zshrc或~/.bashrc），不要硬编码在代码中。
+
+### 安装需要管理员权限吗？
+
+如果使用推荐的npm prefix配置方法，不需要管理员权限。只有在默认的/usr/local目录下安装时才可能需要权限调整。
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Claude Code支持Windows吗？", "acceptedAnswer": {"@type": "Answer", "text": "Claude Code不支持原生Windows环境。Windows用户需要先安装WSL2（Windows Subsystem for Linux），然后在WSL2中安装Claude Code。"}},
+    {"@type": "Question", "name": "安装时可以使用sudo吗？", "acceptedAnswer": {"@type": "Answer", "text": "不建议使用sudo安装。使用sudo npm install -g会创建root权限的文件，导致后续安装出现权限问题。正确做法是修改npm全局目录到用户目录下。"}},
+    {"@type": "Question", "name": "Claude Code需要多少磁盘空间？", "acceptedAnswer": {"@type": "Answer", "text": "Claude Code本身占用约100-200MB。加上Node.js和npm依赖，总共需要约500MB的可用磁盘空间。"}},
+    {"@type": "Question", "name": "可以离线使用Claude Code吗？", "acceptedAnswer": {"@type": "Answer", "text": "不可以。Claude Code需要连接到Anthropic API服务器才能工作。每次使用都需要网络连接。"}},
+    {"@type": "Question", "name": "安装后如何更新到最新版本？", "acceptedAnswer": {"@type": "Answer", "text": "运行 npm update -g @anthropic-ai/claude-code 即可更新。建议定期更新以获取最新功能和修复。"}},
+    {"@type": "Question", "name": "Claude Code和Claude Desktop是同一个东西吗？", "acceptedAnswer": {"@type": "Answer", "text": "不是。Claude Code是命令行工具，在终端中使用。Claude Desktop是图形界面应用程序。两者独立安装和配置。"}},
+    {"@type": "Question", "name": "一台电脑可以安装多个版本的Claude Code吗？", "acceptedAnswer": {"@type": "Answer", "text": "不建议这样做。npm全局只能安装一个版本。如果需要测试不同版本，可以使用npx指定版本号运行。"}},
+    {"@type": "Question", "name": "安装过程中遇到ETIMEOUT错误怎么办？", "acceptedAnswer": {"@type": "Answer", "text": "这通常是网络问题。检查代理设置是否正确，或尝试使用npm镜像源。详细的网络配置请参考国内使用指南。"}},
+    {"@type": "Question", "name": "pnpm或yarn可以安装Claude Code吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以，但推荐使用npm以确保一致性。如果使用其他包管理器，需要确保其全局bin目录在PATH中。"}},
+    {"@type": "Question", "name": "安装成功但claude命令无法运行怎么办？", "acceptedAnswer": {"@type": "Answer", "text": "这是PATH配置问题。运行npm bin -g查看全局bin目录，然后将该目录添加到PATH环境变量中。"}},
+    {"@type": "Question", "name": "API密钥存储在哪里？", "acceptedAnswer": {"@type": "Answer", "text": "API密钥通过环境变量ANTHROPIC_API_KEY提供。建议将其添加到shell配置文件中，不要硬编码在代码中。"}},
+    {"@type": "Question", "name": "安装需要管理员权限吗？", "acceptedAnswer": {"@type": "Answer", "text": "如果使用推荐的npm prefix配置方法，不需要管理员权限。只有在默认的/usr/local目录下安装时才可能需要权限调整。"}}
+  ]
+}
+</script>

@@ -252,7 +252,7 @@ When a task reaches "complete" or "cancelled" status:
 
 ## Common State Management Abstractions
 
-For agents that track multi-turn conversations, a dedicated conversation state class keeps history bounded and queryable:
+For agents that track multi-turn [save Claude Code conversations](/claude-code-save-conversation-guide/) bounded and queryable:
 
 ```python
 class ConversationState:
@@ -286,6 +286,10 @@ Unbounded task size: Do not design a skill that tries to complete an entire code
 
 No failure handling in state: If you only track successful completions, failed files will be silently retried on every invocation. Always record failures with their error context.
 
+
+## Related
+
+- [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — Complete guide to building agents with the Claude Agent SDK
 ---
 
 ---
@@ -311,5 +315,7 @@ Related Reading
 - [How AI Agents Use Tools and Skills Explained](/how-ai-agents-use-tools-and-skills-explained/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

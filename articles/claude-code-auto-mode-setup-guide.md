@@ -30,7 +30,7 @@ Claude Code's permission system is tiered. In the default mode, Claude pauses an
 
 Auto mode eliminates these prompts by running background safety checks that verify each action aligns with your request. It auto-approves tool calls that pass the safety classifier, while still blocking actions that appear dangerous or misaligned. This mode is currently a research preview.
 
-Auto mode sits between `acceptEdits` (which only auto-approves file edits) and `bypassPermissions` (which skips all checks). It provides the best balance for trusted development work.
+Auto mode sits between `acceptEdits` (which only auto-approves file edits) and `bypassPermissions` (which skips all checks, see the [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/)). It provides the best balance for trusted development work.
 
 ## Step-by-Step Fix
 
@@ -114,7 +114,7 @@ Deny rules always take precedence, even in auto mode.
 
 ### Step 5: Use in VS Code
 
-In VS Code, click the mode indicator at the bottom of the prompt box and select "Auto mode." You may need to enable "Allow dangerously skip permissions" in the extension settings first for auto mode to appear.
+In VS Code, click the mode indicator at the bottom of the prompt box and select "Auto mode." You may need to enable "Allow [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) permissions" in the extension settings first for auto mode to appear.
 
 ### Step 6: Use in non-interactive scripts
 
@@ -202,5 +202,7 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Claude Code 2026 New Features Skills and Hooks Roundup](/claude-code-2026-new-features-skills-and-hooks-roundup/)
 - [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/)
 - [Claude Code Cost Per Project Estimation Guide](/claude-code-cost-per-project-estimation-calculator-guide/)
+
+
 
 

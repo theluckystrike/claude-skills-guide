@@ -70,3 +70,8 @@ git commit -m "Revert erroneous amend"
 # CLAUDE.md rule
 NEVER use 'git commit --amend'. Always create new commits. After a pre-commit hook failure, fix the issue and run 'git commit' (not --amend). The failed commit never existed — there is nothing to amend.
 ```
+
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error

@@ -131,7 +131,7 @@ Review the recent code changes in this project.
 - Cannot enforce rules passively
 - Limited to markdown instructions (no code execution)
 
-The [SuperClaude Framework](https://github.com/SuperClaude-Org/SuperClaude_Framework) (22K+ stars) provides 30 pre-built slash commands covering project management, implementation, testing, deployment, and more.
+The [SuperClaude Framework](https://github.com/SuperClaude-Org/SuperClaude_Framework) (22K+ stars) provides 30 pre-built [Claude shortcuts](/claude-shortcuts-complete-guide/) covering project management, implementation, testing, deployment, and more.
 
 ## Decision Framework
 
@@ -198,3 +198,4 @@ A skill saying "use single quotes" and a hook that enforces double quotes will f
 Start with 5-10 skills, 2-3 hooks, and 1-2 commands. Add more based on pain points. The [awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) catalogs common configurations.
 
 For building your own extensions, see the [skill building guide](/how-to-build-your-own-claude-code-skill-2026/). For hook recipes, read the [hooks guide](/claude-code-hooks-explained-complete-guide-2026/). For the full ecosystem, see the [tools map](/claude-code-ecosystem-complete-map-2026/).
+

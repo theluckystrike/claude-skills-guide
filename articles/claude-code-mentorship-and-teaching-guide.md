@@ -21,7 +21,7 @@ Claude Code represents a paradigm shift in how developers learn and grow their t
 
 The traditional mentorship model relies on senior developers patiently guiding juniors through code reviews, architecture decisions, and problem-solving approaches. Claude Code augments this relationship by providing instant feedback, explaining concepts in multiple ways, and adapting to the learner's pace. Unlike static documentation, Claude Code engages in dialogue, answering follow-up questions and providing context-specific guidance.
 
-When teaching with Claude Code, encourage learners to treat the AI as a collaborative partner rather than a code-generating machine. This mindset shift transforms passive consumption into active learning. Students should explain their reasoning aloud, challenge the AI's suggestions, and understand the "why" behind each recommendation.
+When teaching with Claude Code, encourage learners to treat the AI as a collaborative partner rather than a code-generating machine. This mindset shift transforms passive consumption into active learning. Students (see the [Claude student discount guide](/claude-student-discount-guide/) for pricing) should explain their reasoning aloud, challenge the AI's suggestions, and understand the "why" behind each recommendation.
 
 The distinction matters more than it might seem. A junior developer who asks "write me a function to sort users by last name" gets code. A junior developer who asks "I need to sort a list of user objects by last name. what are the tradeoffs between different approaches?" gets an education. The second question opens a conversation about time complexity, readability, locale-aware string comparison, and when to reach for a library versus rolling your own. That conversation is where learning actually happens.
 
@@ -51,7 +51,7 @@ Effective mentorship with Claude Code requires structured sessions that combine 
 
 ## Pair Programming Sessions
 
-One powerful method involves "cognitive pairing" where a human developer and Claude Code collaborate on solving problems. The human explains their thinking process while Claude Code provides real-time suggestions. This creates a visible model of expert problem-solving that learners can internalize.
+One powerful method involves "cognitive pairing" where a human developer and Claude Code collaborate on solving problems. The human explains their reasoning using [sequential thinking](/sequential-thinking-claude-code-guide/) to model expert problem-solving that learners can internalize.
 
 For example, when building a REST API, ask Claude Code to explain each endpoint's design decisions. Request comparisons between different authentication strategies. Challenge the AI to justify its architectural choices against specific requirements.
 
@@ -205,6 +205,8 @@ Related Reading
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 
 

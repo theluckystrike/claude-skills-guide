@@ -119,7 +119,7 @@ After identifying unused tools, remove them from your tools array. Store the ful
 
 Pruning too aggressively can break edge cases. A tool invoked once per 10,000 requests might seem unused in a 1,000-request sample. Use at least 24 hours of production traffic before making pruning decisions. Keep removed tool definitions in version control so they can be restored quickly. Also consider seasonal patterns -- a `generate_tax_report` tool might only be used in Q1 but still needs to be available.
 
-The savings multiply when you combine pruning with model selection. Removing 5 tools at 500 tokens each saves 2,500 tokens per request. On Haiku 4.5 at $1.00/MTok, that saves $0.0025 per request. On Opus 4.7 at $5.00/MTok, the same pruning saves $0.0125 per request -- 5x more. If you are already routing simple requests to Haiku, focus your pruning efforts on the Opus request path where each saved token is worth 5x more. At 10,000 Opus requests/day, pruning 5 tools saves $3,750/month. The same pruning applied only to Haiku requests saves $750/month. Prioritize accordingly.
+The savings multiply when you combine pruning with [model routing](/claude-code-router-guide/). Removing 5 tools at 500 tokens each saves 2,500 tokens per request. On Haiku 4.5 at $1.00/MTok, that saves $0.0025 per request. On Opus 4.7 at $5.00/MTok, the same pruning saves $0.0125 per request -- 5x more. If you are already routing simple requests to Haiku, focus your pruning efforts on the Opus request path where each saved token is worth 5x more. At 10,000 Opus requests/day, pruning 5 tools saves $3,750/month. The same pruning applied only to Haiku requests saves $750/month. Prioritize accordingly.
 
 ## Implementation Checklist
 
@@ -140,3 +140,6 @@ Compare `usage.input_tokens` averages from the week before pruning to the week a
 - [Claude API Tool Use Function Calling Deep Dive](/claude-api-tool-use-function-calling-deep-dive-guide/)
 - [Claude Skills Token Optimization Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
 - [Advanced Claude Skills with Tool Use](/advanced-claude-skills-with-tool-use-and-function-calling/)
+
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization
+

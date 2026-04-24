@@ -232,7 +232,7 @@ Each request draws on multiple memory types, and Claude coordinates them smoothl
 
 Understanding AI agent memory types helps you work more effectively with Claude Code. Short-term memory handles immediate processing needs, context memory maintains conversation flow, session memory preserves state within a session, long-term memory retains project knowledge, knowledge memory provides trained capabilities, and tool memory manages tool awareness.
 
-By structuring your interactions to work with these memory systems, keeping requests focused, providing clear context, and maintaining consistent project patterns, you can build more reliable and sophisticated AI-powered workflows. Claude Code's memory management is designed to be largely invisible, but knowing how it works helps you become a more effective developer working with AI agents.
+By structuring your interactions to work with these memory systems, keeping requests focused, providing clear context, and maintaining consistent project patterns, you can build more effective agents. See the [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) to get started.
 
 Related guides: [Claude Code Agent Task Queue Architecture Detailed look](/claude-code-agent-task-queue-architecture-deep-dive/)
 
@@ -262,5 +262,6 @@ Related Reading
 - [Claude Code as a Debugging Agent](/claude-code-debugging-agent/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

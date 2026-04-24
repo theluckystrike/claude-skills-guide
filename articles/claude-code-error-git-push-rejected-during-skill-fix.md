@@ -198,6 +198,10 @@ Git push rejections during Claude skill fixes are common but solvable. The key i
 
 For power users managing multiple skills like `mcp-builder`, `skill-creator`, and domain-specific skills, establishing a consistent Git workflow prevents these interruptions. Remember to document skill dependencies when multiple skills share templates or configurations.
 
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
 ---
 
 ---
@@ -222,5 +226,6 @@ Related Reading
 - [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

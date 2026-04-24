@@ -238,6 +238,10 @@ Start applying these strategies on your next extended workflow, and you'll find 
 
 Related guides: [Building Supervisor Worker Agent Architecture Tutorial](/building-supervisor-worker-agent-architecture-tutorial/)
 
+
+## Related
+
+- [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — Complete guide to building agents with the Claude Agent SDK
 ---
 
 ---
@@ -263,5 +267,6 @@ Related Reading
 - [Claude Code Notification Setup for Long Tasks](/claude-code-notification-setup-for-long-tasks/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

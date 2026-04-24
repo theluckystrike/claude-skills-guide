@@ -282,10 +282,15 @@ This approach combines the consistency of few-shot prompting with Claude Code's 
 
 Start implementing few-shot prompting in your Claude Code workflows today, the improvements in output quality and consistency will be immediately noticeable.
 
+
+## Related
+
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude
 ---
 
 ---
 
+- [sequential thinking in Claude Code](/sequential-thinking-claude-code-guide/) — How to use sequential thinking and extended thinking in Claude Code
 <div class="mastery-cta">
 
 This site was built by 5 autonomous agents running in tmux while I was in Bali. 2,500 articles. Zero manual work. 100% quality gate pass rate.
@@ -304,5 +309,7 @@ Related Reading
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)
 {% endraw %}
+
+
 
 

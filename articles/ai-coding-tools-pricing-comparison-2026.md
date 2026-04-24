@@ -43,7 +43,7 @@ Five major AI coding tools compete for developer budgets in 2026, each with diff
 
 ## Where Claude Code Wins on Price
 
-- **Predictable billing with no overages.** Claude Code's subscription includes all usage within rate limits. You never receive a surprise bill for $0.04/request overages. Cursor and Copilot both charge per premium request beyond the included allotment, which can add $50-200/month for heavy users. A developer making 100 premium requests/day on Cursor adds $120/month in overages on top of the $20 subscription.
+- **Predictable billing with no overages.** Claude Code's subscription includes all usage within rate limits. You never receive a surprise bill for $0.04/request overages. [Claude Code vs Cursor comparison](/claude-code-vs-cursor-definitive-comparison-2026/) and Copilot both charge per premium request beyond the included allotment, which can add $50-200/month for heavy users. A developer making 100 premium requests/day on Cursor adds $120/month in overages on top of the $20 subscription.
 
 - **Best value at the Max 5x tier for heavy users.** At $100/month, Claude Code Max 5x provides 5x the Pro rate limits with access to Opus 4.6 -- Anthropic's most capable model. Equivalent Opus-level usage through API keys (Kilo Code BYO) would cost $150-300/month depending on volume. The subscription bundles a significant discount on high-end model access.
 
@@ -108,7 +108,7 @@ Claude Code Teams Premium includes access to Claude Opus 4.6, Anthropic's most c
 Yes, and many developers do. A common stack: GitHub Copilot ($10/month) for autocomplete, Claude Code Pro ($20/month) for agentic tasks. Total: $30/month for comprehensive AI coverage. This beats Cursor Pro ($20/month) + overages and gives you both inline completion and terminal-based agentic coding.
 
 ### Do any of these tools offer annual billing discounts?
-Copilot Pro offers annual billing at $100/year ($8.33/month, saving $20/year). Cursor and Claude Code currently offer monthly billing only at the individual level. Team and enterprise plans from all vendors typically offer annual billing with 10-20% discounts.
+Copilot and other vendors typically offer annual billing with 10-20% discounts. Check the [Claude student discount guide](/claude-student-discount-guide/) for education pricing.
 
 ### Which tool has the most transparent pricing?
 GitHub Copilot publishes exact per-seat pricing with clear overage rates. Claude Code publishes subscription tiers with rate limits instead of overages. Cursor's pricing is transparent but overage costs are harder to predict. Kilo Code's BYO-key model is the most transparent at the API level but hardest to estimate in advance.
@@ -119,3 +119,5 @@ A junior developer costs $4,000-7,000/month fully loaded (salary + benefits + eq
 ## When To Use Neither
 
 If your organization operates in an air-gapped environment with no internet access (defense, classified government work, certain financial institutions), none of these cloud-dependent tools work. All five require API calls to remote model providers. For air-gapped environments, evaluate self-hosted solutions: Ollama with local models, Tabby (open-source Copilot alternative), or Continue.dev with a locally deployed model. The quality gap between cloud models and local models is significant, but regulatory requirements override capability preferences.
+
+

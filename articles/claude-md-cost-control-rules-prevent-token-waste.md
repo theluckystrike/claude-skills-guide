@@ -156,3 +156,5 @@ The complete cost-optimized CLAUDE.md template:
 - [How to Reduce Claude Code Token Usage by 3x](/reduce-claude-code-token-usage-3x-guide-2026/) -- comprehensive cost reduction strategies
 - [Context Engineering for Claude Code](/context-engineering-claude-code-complete-guide-2026/) -- the framework that CLAUDE.md cost control is built on
 - [Claude Code Hooks for Token Budget Enforcement](/claude-code-hooks-token-budget-enforcement/) -- automated enforcement beyond CLAUDE.md rules
+
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization

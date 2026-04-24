@@ -189,3 +189,10 @@ For a typical web development project, start with these three:
 Add more as needed. Each server adds latency and context, so only install what you actively use.
 
 For installation details, see the [MCP setup guide](/claude-code-mcp-setup-guide/). To discover more servers, browse [Awesome MCP Servers](/how-to-browse-awesome-mcp-servers-2026/). For combining MCP servers with other tools, check the [Claude Code hooks guide](/claude-code-hooks-explained/) and the [Claude Code playbook](/the-claude-code-playbook/).
+
+
+## Related
+
+- [claude mcp list command guide](/claude-mcp-list-command-guide/) — How to use the claude mcp list command to manage MCP servers
+
+- [Claude Desktop config.json guide](/claude-desktop-config-json-guide/) — How to configure Claude Desktop with config.json

@@ -255,10 +255,15 @@ Use it
 cat ~/.claude/prompts/explain-code.txt src/utils.js | claude
 ```
 
+
+## Related
+
+- [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to --dangerously-skip-permissions and safer alternatives
 ---
 
 ---
 
+- [Claude Desktop config.json guide](/claude-desktop-config-json-guide/) — How to configure Claude Desktop with config.json
 <div class="mastery-cta">
 
 This took me 3 hours to figure out. I put it in a CLAUDE.md so I'd never figure it out again. Now Claude gets it right on the first try, every project.
@@ -287,5 +292,7 @@ Related Reading
 - [Claude Code Typesense Full Text Search Setup Tutorial](/claude-code-typesense-full-text-search-setup-tutorial/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

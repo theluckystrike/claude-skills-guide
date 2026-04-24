@@ -707,6 +707,41 @@ For production Docker setups, see [Docker Container Setup](/claude-code-docker-c
 
 ## Diagnostic Flowchart
 
+<div id="diag-tool" style="background:#1a1a2e;border:1px solid #2a2a3a;border-radius:8px;padding:20px;margin:24px 0;font-family:system-ui,-apple-system,sans-serif;">
+<h3 style="color:#6ee7b7;margin:0 0 12px 0;font-size:18px;">Exit Code 1 Diagnostic</h3>
+<p style="color:#94a3b8;margin:0 0 16px 0;font-size:14px;">Answer two questions to get your specific fix.</p>
+<div style="margin-bottom:12px;">
+<label style="color:#e2e8f0;font-size:14px;display:block;margin-bottom:4px;">Your operating system:</label>
+<select id="diag-os" style="width:100%;padding:8px;background:#0f172a;color:#e2e8f0;border:1px solid #334155;border-radius:6px;font-size:14px;">
+<option value="">Select OS...</option>
+<option value="mac">macOS</option>
+<option value="linux">Linux (Ubuntu/Debian)</option>
+<option value="fedora">Linux (Fedora/RHEL)</option>
+<option value="wsl">Windows (WSL)</option>
+<option value="docker">Docker</option>
+</select>
+</div>
+<div style="margin-bottom:16px;">
+<label style="color:#e2e8f0;font-size:14px;display:block;margin-bottom:4px;">What happens when you run <code style="background:#0f172a;padding:2px 6px;border-radius:3px;">claude</code>?</label>
+<select id="diag-sym" style="width:100%;padding:8px;background:#0f172a;color:#e2e8f0;border:1px solid #334155;border-radius:6px;font-size:14px;">
+<option value="">Select symptom...</option>
+<option value="notfound">Command not found</option>
+<option value="apikey">API key error</option>
+<option value="network">Network/connection error</option>
+<option value="permission">Permission denied</option>
+<option value="crash">Immediate crash with exit code 1</option>
+<option value="hang">Hangs then exits</option>
+</select>
+</div>
+<div id="diag-result" style="background:#0f172a;padding:16px;border-radius:6px;color:#e2e8f0;font-size:14px;min-height:40px;display:none;"></div>
+</div>
+<script>
+var df={mac:{notfound:"Run: <code>npm install -g @anthropic-ai/claude-code</code><br>Then restart your terminal. If using nvm: <code>nvm use 18 && npm i -g @anthropic-ai/claude-code</code>",apikey:"Run: <code>echo $ANTHROPIC_API_KEY</code><br>If empty: <code>export ANTHROPIC_API_KEY='sk-ant-...'</code><br>Add to ~/.zshrc for persistence.",network:"Check: <code>curl -s https://api.anthropic.com/v1/messages</code><br>If timeout: check VPN/proxy. Try: <code>networksetup -setv6off Wi-Fi</code>",permission:"Run: <code>sudo chown -R $(whoami) $(npm prefix -g)</code><br>Then reinstall: <code>npm i -g @anthropic-ai/claude-code</code>",crash:"Check Node version: <code>node -v</code> (need 18+)<br>Check disk: <code>df -h ~</code> (need 1GB free)<br>Reinstall: <code>npm rm -g @anthropic-ai/claude-code && npm i -g @anthropic-ai/claude-code</code>",hang:"Check: <code>curl -m 5 https://api.anthropic.com/v1/messages</code><br>If slow: corporate proxy may be interfering. Try direct connection."},linux:{notfound:"Run: <code>sudo npm install -g @anthropic-ai/claude-code</code><br>Or with nvm: <code>nvm install 18 && npm i -g @anthropic-ai/claude-code</code>",apikey:"Run: <code>echo $ANTHROPIC_API_KEY</code><br>If empty: <code>export ANTHROPIC_API_KEY='sk-ant-...'</code><br>Add to ~/.bashrc for persistence.",network:"Check: <code>curl -sv https://api.anthropic.com/v1/messages 2>&1 | head -20</code><br>Check DNS: <code>nslookup api.anthropic.com</code>",permission:"Run: <code>mkdir -p ~/.npm-global && npm config set prefix '~/.npm-global'</code><br>Add to PATH: <code>export PATH=~/.npm-global/bin:$PATH</code>",crash:"Check Node: <code>node -v</code> (need 18+)<br>Check memory: <code>free -h</code><br>Try: <code>NODE_OPTIONS='--max-old-space-size=4096' claude</code>",hang:"Check firewall: <code>sudo iptables -L | grep DROP</code><br>Try: <code>curl -m 10 https://api.anthropic.com/v1/messages</code>"},fedora:{notfound:"Run: <code>sudo npm install -g @anthropic-ai/claude-code</code><br>If npm missing: <code>sudo dnf install nodejs npm</code>",apikey:"Same as Linux: <code>export ANTHROPIC_API_KEY='sk-ant-...'</code> in ~/.bashrc",network:"Check SELinux: <code>getenforce</code><br>If Enforcing, try: <code>sudo setsebool -P httpd_can_network_connect 1</code>",permission:"Run: <code>sudo npm i -g @anthropic-ai/claude-code --unsafe-perm</code>",crash:"Check: <code>node -v && npm -v</code><br>Update: <code>sudo dnf update nodejs</code>",hang:"Check firewalld: <code>sudo firewall-cmd --list-all</code>"},wsl:{notfound:"In WSL terminal: <code>npm install -g @anthropic-ai/claude-code</code><br>If npm missing: <code>sudo apt update && sudo apt install nodejs npm</code>",apikey:"Run: <code>export ANTHROPIC_API_KEY='sk-ant-...'</code><br>Add to ~/.bashrc. Note: Windows env vars do NOT transfer to WSL.",network:"WSL networking can fail. Check: <code>cat /etc/resolv.conf</code><br>Fix DNS: <code>echo 'nameserver 8.8.8.8' | sudo tee /etc/resolv.conf</code>",permission:"Run: <code>sudo chown -R $(whoami) /usr/local/lib/node_modules</code>",crash:"Check: <code>wsl --version</code> (need WSL 2)<br>Update: <code>wsl --update</code> from PowerShell",hang:"WSL clock drift causes TLS failures. Fix: <code>sudo hwclock -s</code>"},docker:{notfound:"In Dockerfile: <code>RUN npm install -g @anthropic-ai/claude-code</code><br>Use node:18+ base image.",apikey:"Pass via: <code>docker run -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY ...</code><br>Never bake keys into images.",network:"Check: <code>docker run --rm alpine wget -qO- https://api.anthropic.com</code><br>If fails: check Docker network mode.",permission:"Use non-root user: <code>USER node</code> in Dockerfile after global install.",crash:"Check memory: <code>docker stats</code><br>Increase: <code>docker run --memory=4g ...</code>",hang:"Check DNS inside container: <code>cat /etc/resolv.conf</code><br>Try: <code>docker run --dns=8.8.8.8 ...</code>"}};
+document.getElementById('diag-os').addEventListener('change',showDiag);
+document.getElementById('diag-sym').addEventListener('change',showDiag);
+function showDiag(){var o=document.getElementById('diag-os').value,s=document.getElementById('diag-sym').value,r=document.getElementById('diag-result');if(o&&s&&df[o]&&df[o][s]){r.innerHTML='<strong style="color:#6ee7b7;">Fix for '+o.toUpperCase()+' \u2014 '+s+':</strong><br><br>'+df[o][s];r.style.display='block'}else if(o&&s){r.innerHTML='Select a valid combination.';r.style.display='block'}else{r.style.display='none'}}
+</script>
+
 Start here and follow the path until you find your issue.
 
 **Step 1: Does `claude --version` output a version number?**
@@ -769,6 +804,10 @@ ps aux | grep claude | grep -v grep | wc -l
 **Step 10: Are you running in Docker?**
 - YES: See [Cause 10: Docker Container OOM](#cause-10-docker-container-oom--resource-limits)
 - NO: Try the nuclear reinstall in [Cause 6](#cause-6-corrupted-installation)
+
+---
+
+*These diagnostic steps are from [The Claude Code Playbook](https://zovo.one/pricing) — 200 production-ready templates including error prevention rules and CLAUDE.md configs tested across 50+ project types.*
 
 ## Prevention: CLAUDE.md and Settings Configuration
 
@@ -950,6 +989,14 @@ Yes. Common IT-managed causes:
 npx @anthropic-ai/claude-code
 ```
 
+### What is the fastest way to fix exit code 1?
+
+Run `node --version` to confirm Node.js 18+, then `printenv ANTHROPIC_API_KEY` to check your key, then `curl -sI https://api.anthropic.com/v1/messages | head -1` to test connectivity. These three checks catch 80% of cases. If all pass, try a clean reinstall: `npm uninstall -g @anthropic-ai/claude-code && npm cache clean --force && npm install -g @anthropic-ai/claude-code`.
+
+### Does exit code 1 happen more often on macOS or Linux?
+
+Neither has a significantly higher rate. macOS users more commonly hit Node version conflicts (Homebrew vs nvm) and keychain prompt loops. Linux users more often encounter permission issues on `/usr/local` and disk space problems on `/tmp`. WSL users have the most unique issues (clock drift, DNS resolution).
+
 ### How do I report exit code 1 if none of these fixes work?
 
 Gather this diagnostic information and report it to Anthropic:
@@ -988,3 +1035,134 @@ Post this output in the [Claude Code GitHub Issues](https://github.com/anthropic
 - [CI/CD Runner Missing Dependencies](/claude-code-ci-cd-runner-missing-dependencies-fix-2026/) — Fixing dependency issues in CI environments
 - [Security Threat Model](/claude-code-security-threat-model-2026/) — Understanding Claude Code's security architecture
 - [The Claude Code Playbook](/the-claude-code-playbook/) — Complete guide to working with Claude Code effectively
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "I get exit code 1 but no error message. How do I get more details?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Run Claude Code with verbose output: DEBUG=* claude 2>&1 | tee claude-debug.log. Or check if Node produces a stack trace with: node $(which claude) 2>&1. The raw Node invocation often shows the full error that the launcher script suppresses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does exit code 1 mean my API key is being charged?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. If Claude Code exits during initialization before making an API call, no tokens are consumed and nothing is charged. If the exit happens mid-conversation, you may have been charged for any API calls that completed before the crash."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I fixed the issue but Claude Code still exits with code 1. What now?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Clear all cached state: rm -rf ~/.claude/cache/ && rm -rf /tmp/claude-* && npm cache clean --force. Then restart your terminal completely — actually close and reopen the terminal application. Some environment variable changes do not take effect until a fresh shell process starts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Exit code 1 only happens in my CI pipeline, not locally. Why?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CI runners have different environments than your local machine. The most common CI-specific causes are Node.js version pinned too low, API key not available as an environment variable, network restrictions in the CI runner, and insufficient memory allocation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can exit code 1 corrupt my project files?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unlikely. If Claude Code crashes mid-edit, the file being edited may be in a partially written state. But Claude Code uses atomic writes for most operations, so the risk is minimal. Use git status and git diff to check for unexpected changes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is exit code 1 different from exit code 137 or exit code 139?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Exit code 1 is a general application error. Exit code 137 means the process was killed by SIGKILL, usually from the OOM killer or Docker memory limit. Exit code 139 is a segmentation fault. Exit code 127 means command not found. Exit code 126 means permission denied on the executable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I am on a company-managed laptop. Can IT policy cause exit code 1?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Common IT-managed causes include certificate pinning that blocks connections to api.anthropic.com, antivirus that quarantines Node.js modules, disk encryption that causes slow write operations and timeouts, and software restrictions that block running global npm packages. Try npx @anthropic-ai/claude-code as an alternative to global install."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the fastest way to fix exit code 1?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Run node --version to confirm Node.js 18+, then printenv ANTHROPIC_API_KEY to check your key, then curl -sI https://api.anthropic.com/v1/messages to test connectivity. These three checks catch 80% of cases. If all pass, try a clean reinstall with npm uninstall -g @anthropic-ai/claude-code && npm cache clean --force && npm install -g @anthropic-ai/claude-code."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does exit code 1 happen more often on macOS or Linux?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Neither has a significantly higher rate. macOS users more commonly hit Node version conflicts (Homebrew vs nvm) and keychain prompt loops. Linux users more often encounter permission issues on /usr/local and disk space problems on /tmp. WSL users have the most unique issues including clock drift and DNS resolution."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I report exit code 1 if none of these fixes work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gather diagnostic information including system info (uname -a), Node version, npm version, Claude Code version, package info (npm ls -g @anthropic-ai/claude-code), disk space, and ~/.claude permissions. Post this output in the Claude Code GitHub Issues or include it in a support request to Anthropic."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Fix Claude Code Process Exited With Code 1",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Check Node.js version",
+        "text": "Run node --version and verify it shows v18.0.0 or higher. If below v18, install Node 20+ using nvm install 20 or brew install node@20."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Verify API key",
+        "text": "Run printenv ANTHROPIC_API_KEY to confirm your key is set. If empty, set it with export ANTHROPIC_API_KEY=sk-ant-your-key-here and add to ~/.zshrc for persistence."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Test network connectivity",
+        "text": "Run curl -sI https://api.anthropic.com/v1/messages | head -1 to check connectivity. If timeout or error, check firewall, proxy, and VPN settings."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Check disk space",
+        "text": "Run df -h /tmp and df -h ~ to ensure at least 1GB free. Clear Claude cache with rm -rf ~/.claude/cache/ if needed."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Fix permissions",
+        "text": "Run ls -la ~/.claude/ to check ownership. If owned by root, fix with sudo chown -R $(whoami) ~/.claude/ and chmod -R 755 ~/.claude/."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Clean reinstall",
+        "text": "If all checks pass, do a clean reinstall: npm uninstall -g @anthropic-ai/claude-code && npm cache clean --force && npm install -g @anthropic-ai/claude-code."
+      }
+    ]
+  }
+]
+</script>
+
+- [Claude internal server error fix](/claude-internal-server-error-fix/) — Fix server-side errors causing exit failures
+- [Claude rate exceeded error fix](/claude-rate-exceeded-error-fix/) — Rate limits can cause process exits

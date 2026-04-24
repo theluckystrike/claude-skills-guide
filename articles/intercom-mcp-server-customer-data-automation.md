@@ -21,7 +21,7 @@ What is an Intercom MCP Server?
 
 A Model Context Protocol (MCP) server for Intercom exposes Intercom's API capabilities as tools that Claude can invoke. This means you can automate customer data operations, creating users, updating attributes, managing segments, and retrieving conversation history, without leaving your coding environment or writing custom API wrappers each time.
 
-The MCP approach differs from traditional integrations because it treats Intercom as a context source that Claude can query and manipulate programmatically. [You gain conversational control over your customer data workflows](/how-do-i-combine-two-claude-skills-in-one-workflow/)ustomer data while maintaining the auditability and error handling you'd expect from API-based automation.
+The MCP approach differs from traditional integrations because it treats Intercom as a context source that Claude can query and manipulate programmatically. [You gain conversational control over your customer data workflows](/how-do-i-combine-two-claude-skills-in-one-workflow/) data while maintaining the auditability and error handling you'd expect from API-based automation.
 
 ## Core Capabilities
 

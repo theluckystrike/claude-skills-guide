@@ -290,3 +290,5 @@ Run this audit monthly. Each MCP server found in global settings represents 500-
 
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- configuring MCP servers at the right scope
 - [Progressive Disclosure in CLAUDE.md: Load Only What You Need](/progressive-disclosure-claude-md-load-only-needed/) -- same scoping principle for instructions
+
+- [Claude Desktop config.json guide](/claude-desktop-config-json-guide/) — How to configure Claude Desktop with config.json

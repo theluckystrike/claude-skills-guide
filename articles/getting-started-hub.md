@@ -693,6 +693,10 @@ Once you have the basics down, the rest of the library is organized by topic:
 - [Integrations Hub](/integrations-hub/). connecting Claude Code to your existing tools and services
 - [Comparisons Hub](/comparisons-hub/). Claude Code vs GitHub Copilot, Cursor, Devin, and other AI coding tools
 
+
+## Related
+
+- [Claude shortcuts guide](/claude-shortcuts-complete-guide/) — Complete guide to Claude Code keyboard shortcuts and slash commands
 ---
 
 ---
@@ -726,5 +730,6 @@ Related Reading
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)
 *
+
 
 

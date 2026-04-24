@@ -36,6 +36,24 @@ render_with_liquid: false
 | **Sub-Agents** | Yes (parallel task delegation) | No |
 | **Hooks System** | Yes (pre/post tool execution) | No equivalent |
 
+<div id="cc-vs-cursor" style="background:#1a1a2e;border:1px solid #2a2a3a;border-radius:8px;padding:20px;margin:24px 0;font-family:system-ui,-apple-system,sans-serif;">
+<h3 style="color:#6ee7b7;margin:0 0 12px 0;font-size:18px;">Feature Comparison Viewer</h3>
+<p style="color:#94a3b8;margin:0 0 16px 0;font-size:14px;">Toggle categories to compare Claude Code and Cursor head-to-head.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+<button class="cvc-btn" data-cat="coding" onclick="showCat('coding')" style="padding:6px 14px;background:#6ee7b7;color:#0f172a;border:none;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;">Coding</button>
+<button class="cvc-btn" data-cat="terminal" onclick="showCat('terminal')" style="padding:6px 14px;background:#334155;color:#e2e8f0;border:none;border-radius:6px;font-size:13px;cursor:pointer;">Terminal</button>
+<button class="cvc-btn" data-cat="pricing" onclick="showCat('pricing')" style="padding:6px 14px;background:#334155;color:#e2e8f0;border:none;border-radius:6px;font-size:13px;cursor:pointer;">Pricing</button>
+<button class="cvc-btn" data-cat="team" onclick="showCat('team')" style="padding:6px 14px;background:#334155;color:#e2e8f0;border:none;border-radius:6px;font-size:13px;cursor:pointer;">Team</button>
+<button class="cvc-btn" data-cat="extensions" onclick="showCat('extensions')" style="padding:6px 14px;background:#334155;color:#e2e8f0;border:none;border-radius:6px;font-size:13px;cursor:pointer;">Extensions</button>
+</div>
+<div id="cvc-out" style="background:#0f172a;padding:16px;border-radius:6px;color:#e2e8f0;font-size:14px;line-height:1.7;"></div>
+</div>
+<script>
+var cvcData={coding:{title:"Coding Capabilities",rows:[["Multi-file editing","Autonomous plan+execute+verify","Composer: proposes diffs for review"],["Autocomplete","IDE extension (not core focus)","Core feature: fast Tab completions"],["Agent mode","Always on (default behavior)","Opt-in Composer Agent mode"],["Code generation","Full functions/files in conversation","Inline suggestions + Composer"],["Refactoring","30+ file autonomous refactors","Visual diff review per file"]]},terminal:{title:"Terminal & Shell",rows:[["Shell access","Native first-class tool","Integrated VS Code terminal"],["Command chaining","Reads output, decides next step","Limited AI terminal control"],["CI/CD mode","Built-in headless mode","Not available"],["Docker integration","Full (build, run, debug)","Basic terminal only"],["Git operations","Full (commit, branch, PR)","VS Code git UI"]]},pricing:{title:"Pricing (April 2026)",rows:[["Free tier","$5 API credit","2,000 completions/mo"],["Entry plan","Pro $20/mo (limited)","Pro $20/mo"],["Power plan","Max $100/mo (heavy use)","Business $40/mo/user"],["API option","Pay-per-token","500 fast requests/mo (Pro)"],["Heavy usage cost","$100-200/mo flat","$20/mo + slow fallback"]]},team:{title:"Team & Enterprise",rows:[["Shared config","CLAUDE.md (committed to repo)","cursorrules files"],["Audit logging","Every tool invocation logged","Usage analytics"],["SSO","SAML + OIDC","Business plan+"],["Admin controls","Hooks + permission enforcement","Admin console"],["Code review CI","Built-in pipeline integration","Not available"]]},extensions:{title:"Extensions & Ecosystem",rows:[["Plugin system","MCP servers + hooks + skills","VS Code marketplace (full)"],["Custom tools","MCP protocol (any language)","VS Code extensions"],["Automation","Hooks (pre/post tool calls)","No equivalent"],["Sub-agents","Built-in parallel delegation","Not available"],["Community size","Growing (MCP ecosystem)","Massive (VS Code ecosystem)"]]}};
+function showCat(cat){var d=cvcData[cat];if(!d)return;var h='<div style="color:#6ee7b7;font-weight:600;margin-bottom:12px;">'+d.title+'</div><table style="width:100%;border-collapse:collapse;font-size:13px;"><tr style="border-bottom:1px solid #334155;"><th style="text-align:left;padding:6px 8px;color:#94a3b8;">Feature</th><th style="text-align:left;padding:6px 8px;color:#60a5fa;">Claude Code</th><th style="text-align:left;padding:6px 8px;color:#f472b6;">Cursor</th></tr>';for(var i=0;i<d.rows.length;i++){var r=d.rows[i];h+='<tr style="border-bottom:1px solid #1e293b;"><td style="padding:6px 8px;color:#e2e8f0;">'+r[0]+'</td><td style="padding:6px 8px;color:#60a5fa;">'+r[1]+'</td><td style="padding:6px 8px;color:#f472b6;">'+r[2]+'</td></tr>';}h+='</table>';document.getElementById('cvc-out').innerHTML=h;document.querySelectorAll('.cvc-btn').forEach(function(b){b.style.background=b.getAttribute('data-cat')===cat?'#6ee7b7':'#334155';b.style.color=b.getAttribute('data-cat')===cat?'#0f172a':'#e2e8f0';b.style.fontWeight=b.getAttribute('data-cat')===cat?'600':'400';});}
+showCat('coding');
+</script>
+
 ## Deep Comparison
 
 ### 1. Architecture and Philosophy
@@ -254,6 +272,10 @@ Claude Code and Cursor are not competitors in practice. Many developers use both
 
 The Claude Code VS Code extension even runs inside the Cursor editor (since Cursor is a VS Code fork), so you can use both tools in the same window.
 
+---
+
+*This configuration is one of 200 production-ready templates in [The Claude Code Playbook](https://zovo.one/pricing). Permission configs, model selection rules, MCP setups — all tested and ready to copy.*
+
 ## Migration Guide: Moving From Cursor to Claude Code
 
 If you are a Cursor user exploring Claude Code, here is what translates and what changes.
@@ -356,3 +378,98 @@ Claude Code and Cursor represent two different visions of AI-assisted developmen
 | Extension marketplace | | Yes |
 | MCP integrations | Yes | |
 | Learning curve | | Yes (gentler) |
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I use Claude Code and Cursor simultaneously?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Many developers do. Cursor provides the IDE and autocomplete. Claude Code runs in a terminal panel or separate window for agentic tasks. The Claude Code VS Code extension also works inside Cursor. There is no conflict."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which tool is cheaper for typical daily use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cursor Pro at $20/month is cheaper for developers who primarily use autocomplete and occasional chat. Claude Code on the Max $100/month plan is more cost-effective for developers who run heavy agentic workflows (multi-file refactoring, automated testing, CI/CD tasks). If you make fewer than 20 AI requests per day, Cursor is cheaper."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is better for Python development?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both handle Python well. Cursor has a slight edge for inline completions. Claude Code has an edge for Python projects involving terminal workflows — running pytest, managing virtual environments, debugging import issues, working with Docker and deployment scripts. For data science notebooks, Cursor is smoother. For backend Python services, Claude Code is more valuable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is better for JavaScript/TypeScript?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cursor wins on inline completion speed, Claude Code wins on project-level operations. For React/Next.js development, Claude Code excels at multi-step work that spans many files. Cursor excels at the moment-to-moment typing experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Cursor use Claude as its AI model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Cursor supports Claude models (Sonnet, Opus) as options alongside GPT-4o and Gemini. When you select Claude in Cursor, you get the same base model capabilities. The difference is that Claude Code has exclusive access to Claude features like extended thinking and specialized tool-use training optimized for the agentic workflow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which has better code review capabilities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code. It can read entire PRs, run the code, check test coverage, and provide detailed reviews with file-specific comments. It integrates into CI/CD for automated review. Cursor's review capability is limited to asking the chat about code in the current editor view."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Cursor do what Claude Code does in CI/CD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Cursor is a desktop IDE and has no headless/CLI mode. It cannot run in CI/CD pipelines, GitHub Actions, or automated scripts. This is exclusively a Claude Code capability. If you need AI-powered automation in your build pipeline, Claude Code is the only option among these two."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which tool has the better extension/plugin ecosystem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cursor, through the VS Code marketplace with thousands of extensions. Claude Code's ecosystem focuses on MCP servers (external tool integrations) and hooks (automation scripts). The ecosystems are complementary rather than comparable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the learning curve for Claude Code steep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Moderate. If you are comfortable with the terminal, the basics take 30 minutes to learn. The agentic mindset — trusting Claude to execute multi-step plans — takes a few days to develop. The advanced features (hooks, skills, sub-agents, MCP) take a week or two to explore. Cursor's learning curve is gentler because it feels like VS Code with extra features."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "If I had to pick only one tool, which should it be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you primarily write new code and value fast autocomplete: Cursor. If you primarily modify existing codebases, debug issues, run builds, and want AI that can operate autonomously: Claude Code. If forced to pick one for a professional software engineering workflow, Claude Code covers more ground — it can do everything Cursor does (with the IDE extension) and adds terminal automation, CI/CD, and agentic capabilities."
+      }
+    }
+  ]
+}
+</script>
+
+
+## Related
+
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Detailed cost comparison and optimization
+- [Claude Code router guide](/claude-code-router-guide/) — How model routing affects performance

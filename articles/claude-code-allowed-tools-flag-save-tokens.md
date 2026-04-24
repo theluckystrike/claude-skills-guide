@@ -204,3 +204,5 @@ Assumes Sonnet 4.6 rates, 20 working days, 5 sessions/day. The `--allowedTools` 
 - [Claude Code Max Turns Flag: Prevent Runaway Sessions](/claude-code-max-turns-flag-prevent-runaway-sessions/) -- pair with --allowedTools for maximum cost control
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- understand which MCP tools contribute to overhead
 - [Cost Optimization Hub](/cost-optimization/) -- complete guide to reducing Claude Code costs
+
+- [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to --dangerously-skip-permissions and safer alternatives

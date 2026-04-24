@@ -217,6 +217,10 @@ Claude Code can be a powerful offline coding assistant with the right setup. By 
 Start by installing Ollama and pulling a model, then create a few offline-ready skills for your common tasks. Once you've established your offline workflow, you'll wonder how you ever worked without it.
 
 
+
+## Related
+
+- [Claude Code 国内使用指南 (China Usage Guide)](/claude-code-guonei-shiyong-china-usage-guide/) — Claude Code usage guide for China (中国使用教程)
 ---
 
 ---
@@ -243,5 +247,6 @@ Related Reading
 - [Claude Code Beta Features: How to Access and Use Them](/claude-code-beta-features-how-to-access/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

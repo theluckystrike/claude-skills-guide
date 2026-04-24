@@ -202,3 +202,9 @@ Compare against: value of better first-attempt success rates
 - [Claude Code Model Selection for Cost](/claude-code-model-selection-cost-sonnet-haiku-opus/) -- model routing to complement extended thinking decisions
 - [Why Smarter Models Cost MORE](/smarter-models-cost-more-sonnet-token-paradox/) -- the output verbosity paradox that extended thinking amplifies
 - [Claude Code Context Window Management](/claude-code-context-window-management/) -- managing context when thinking tokens add bulk
+
+- [Claude AI rate exceeded error fix](/claude-ai-rate-exceeded-error-fix/) — Fix the Claude AI rate exceeded error message
+
+- [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Guide to the claude-sonnet-4-5-20250929 model and its capabilities
+
+- [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Sonnet 4 extended thinking capabilities

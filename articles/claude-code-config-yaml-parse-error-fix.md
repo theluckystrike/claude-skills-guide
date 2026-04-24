@@ -83,3 +83,8 @@ Use spaces not tabs in all config files. Validate JSON with python3 -c "import j
 ```
 
 **Related articles:** [Claude Code Config File Location](/claude-code-config-file-location/), [YAML Frontmatter Parse Error Fix](/claude-code-skill-yaml-frontmatter-parse-error-fix-2026/), [Troubleshooting Hub](/troubleshooting-hub/)
+
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error

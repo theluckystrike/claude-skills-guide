@@ -286,3 +286,7 @@ If the session cost $20 and ran fewer than 40 turns, the model was almost certai
 - [Claude Code --max-turns Flag: Prevent Runaway Sessions](/claude-code-max-turns-flag-prevent-runaway-sessions/) -- hard cost caps
 - [Claude Code Opus Accidentally Used Instead of Sonnet](/claude-code-opus-accidentally-used-instead-sonnet/) -- model switching guide
 - [Cost Optimization Hub](/cost-optimization/) -- comprehensive cost reduction
+
+- [Claude AI rate exceeded error fix](/claude-ai-rate-exceeded-error-fix/) — Fix the Claude AI rate exceeded error message
+
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization

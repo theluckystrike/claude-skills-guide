@@ -76,7 +76,7 @@ Claude Code sees the available AWS tools (list-buckets, describe-instances, invo
 
 **Authentication failures**: If you see `ExpiredTokenError` or `InvalidClientTokenId`, refresh your credentials. For SSO users, run `aws sso login --profile your-profile` before starting Claude Code.
 
-**Region mismatch**: Resources not found usually means the MCP server region does not match where your resources live. Set `AWS_REGION` explicitly in the MCP config or pass it per-request.
+**Region mismatch**: Resources not found usually means the [Claude Code MCP configuration guide](/claude-code-mcp-configuration-guide/) or pass it per-request.
 
 **Permission denied on specific services**: The IAM user or role attached to your credentials needs permissions for the services you want Claude Code to access. Start with `ReadOnlyAccess` policy for safety, then add write permissions for specific services as needed.
 
@@ -134,3 +134,4 @@ Related Reading
 - [Claude Code MCP Server Disconnected Fix](/claude-code-mcp-server-disconnected/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+

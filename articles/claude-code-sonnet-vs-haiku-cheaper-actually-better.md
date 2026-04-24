@@ -131,7 +131,7 @@ claude --allowedTools "Read,Glob,Grep" \
 | Simple generation | **Haiku** | 30 | 5K | **$0.24** |
 | **Total** | | **160** | | **$29.23** |
 
-**Monthly savings: $3.59 (11%)** from model routing alone. Combined with other optimizations (context engineering, --max-turns), total savings reach $15-$40/month.
+**Monthly savings: $3.59 (11%)** from [Claude Code router guide](/claude-code-router-guide/) alone. Combined with other optimizations (context engineering, --max-turns), total savings reach $15-$40/month.
 
 ## Hidden Costs
 
@@ -264,3 +264,6 @@ Automated CI tasks benefit from Haiku because they run frequently, have well-def
 - [Claude Code vs Cursor: Monthly Cost Comparison](/claude-code-vs-cursor-monthly-cost-comparison-2026/) -- broader cost comparison
 - [Cost Optimization Hub](/cost-optimization/) -- all cost reduction strategies
 - [Claude Code Max Subscription Guide](/claude-code-max-subscription-guide/) -- when unlimited pricing beats per-token
+
+
+- [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Guide to the claude-sonnet-4-5-20250929 model and its capabilities

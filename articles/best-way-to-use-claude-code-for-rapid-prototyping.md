@@ -137,6 +137,10 @@ Finally, don't skip the context setup. The few minutes spent writing a comprehen
 
 Effective rapid prototyping with Claude Code follows a workflow: establish context through `CLAUDE.md`, select relevant skills for your domain, use progressive refinement in your prompts, and maintain quality through built-in testing capabilities. The combination of clear context, iterative refinement, and strategic skill usage transforms Claude Code from a code generator into a genuine prototyping partner.
 
+
+## Related
+
+- [Claude upload limit guide](/claude-upload-limit-guide/) — Understanding Claude file upload limits and workarounds
 ---
 
 ---
@@ -169,5 +173,6 @@ Related Reading
 - [How Designers Use Claude Code for Prototyping](/how-designers-use-claude-code-for-prototyping/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

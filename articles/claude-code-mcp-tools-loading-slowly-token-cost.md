@@ -15,8 +15,8 @@ MCP servers that take 5-30 seconds to initialize still load their full tool defi
 
 ## Quick Fix (2 Minutes)
 
-1. **Remove unused MCP servers**: `claude mcp remove <server-name>` for any server not used in the past week.
-2. **Check server health**: `claude mcp list` to verify all configured servers.
+1. **Remove unused MCP servers**: `claude mcp remove <server-name>` for any server not used in the past week. See the [claude mcp list command guide](/claude-mcp-list-command-guide/) for details.
+2. **Check server health**: review your [Claude Code MCP configuration](/claude-code-mcp-configuration-guide/) for misconfigured servers.
 3. **Use `--allowedTools` to bypass slow servers**:
    ```bash
    claude --allowedTools "Read,Glob,Grep,Edit,Write,Bash" -p "your prompt"
@@ -237,3 +237,5 @@ The audit takes 15 minutes and typically removes 2-3 unused servers, saving 2,00
 - [Claude Code MCP Server Token Usage: How to Measure and Reduce](/claude-code-mcp-server-token-usage-measure-reduce/) -- measure and reduce overhead
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- proper MCP configuration
 - [Errors Atlas](/errors-atlas/) -- troubleshoot MCP connection errors
+
+

@@ -36,7 +36,7 @@ This can happen sporadically or consistently for specific request shapes. Some u
 
 HTTP 500 is a server-side error — it means Anthropic's infrastructure failed to process your request. Learn more in [Fix Claude API Rate Limit Errors (HTTP 429)](/claude-api-rate-limit-fix/). Common triggers include:
 
-- **Overloaded model infrastructure** during peak usage periods
+- **[Claude internal server error fix](/claude-internal-server-error-fix/) model infrastructure** during peak usage periods
 - **Malformed request payloads** that pass initial validation but fail during processing (e.g., conflicting parameters)
 - **Large or complex requests** that exceed internal processing limits (very long conversations, deeply nested tool use)
 - **Temporary infrastructure issues** during deployments or maintenance
@@ -182,3 +182,6 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 *Last verified: 2026-04-14. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*
 
 
+
+
+- [Claude rate exceeded error fix](/claude-rate-exceeded-error-fix/) — Fix Claude rate exceeded and rate limit errors

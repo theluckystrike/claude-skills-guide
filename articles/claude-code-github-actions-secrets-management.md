@@ -168,6 +168,10 @@ For Claude Code specifically, ensure your CLAUDE.md or skill configurations don'
 
 Proper secrets management in GitHub Actions workflows enables secure automation without sacrificing the productivity benefits Claude Code provides. By using GitHub's built-in encryption, environment-specific secrets, and organizational secret management, you can build solid CI/CD pipelines that keep credentials protected. Remember to rotate secrets regularly, audit access patterns, and follow the principle of least privilege when granting secret access to workflows.
 
+
+## Related
+
+- [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to --dangerously-skip-permissions and safer alternatives
 ---
 
 ---
@@ -193,5 +197,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
+
 
 

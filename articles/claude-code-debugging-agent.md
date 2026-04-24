@@ -127,6 +127,10 @@ Hooks extend this further. Post-command hooks can capture output, format logs, o
 - **Break complex bugs into phases.** Instead of "fix the checkout bug," start with "identify where the 500 error originates" and then follow up with "implement a fix for the null pointer in payment.ts."
 - **Review agent-proposed fixes before accepting.** Even in autonomous mode, review the diff before letting Claude Code commit. Use `git diff` to verify the changes make sense.
 
+
+## Related
+
+- [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — Complete guide to building agents with the Claude Agent SDK
 ---
 
 ---
@@ -150,3 +154,4 @@ Related Reading
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+

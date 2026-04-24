@@ -16,7 +16,7 @@ geo_optimized: true
 
 ## The Error
 
-When using `strict: true` with the structured outputs beta, the API returns a 500 Internal Server Error for tool schemas with complex nested structures:
+When using `strict: true` with the structured outputs beta, the API returns a 500 [Claude internal server error fix](/claude-internal-server-error-fix/) for tool schemas with complex nested structures:
 
 ```json
 {
@@ -298,5 +298,6 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 ## Tools That Help
 
 When debugging complex API integrations with structured outputs, a dev tool extension can help you inspect request/response payloads and identify which schema patterns trigger server-side failures.
+
 
 

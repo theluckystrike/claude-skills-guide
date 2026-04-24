@@ -168,6 +168,10 @@ A Claude MD file is a skill definition document that combines YAML configuration
 
 This simple format underlies the entire Claude skills ecosystem, from basic helpers like `pdf` to complex workflows involving `tdd`, `supermemory`, and `frontend-design`. Understanding how MD files work gives you the foundation to create, customize, and extend Claude's capabilities for your specific needs.
 
+
+## Related
+
+- [Claude Desktop config.json guide](/claude-desktop-config-json-guide/) — How to configure Claude Desktop with config.json
 ---
 
 ---
@@ -196,5 +200,6 @@ Related Reading
 - [Senior Engineer CLAUDE.md Template — Production-Ready Config (2026)](/senior-engineer-claude-md-template/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

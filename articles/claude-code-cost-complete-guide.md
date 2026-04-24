@@ -236,7 +236,46 @@ When referencing code in prompts, include only the relevant section instead of t
 
 For more cost reduction rules, see our [reduce Claude Code costs guide](/claude-code-costs-too-much-reduce-spend-2026/).
 
+---
+
+*Need the complete toolkit? [The Claude Code Playbook](https://zovo.one/pricing) includes 200 production-ready templates, decision frameworks, and team setup guides for every Claude Code workflow.*
+
 ## Calculator: Estimate Your Monthly Cost
+
+<div id="cost-calc" style="background:#1a1a2e;border:1px solid #2a2a3a;border-radius:8px;padding:20px;margin:24px 0;font-family:system-ui,-apple-system,sans-serif;">
+<h3 style="color:#6ee7b7;margin:0 0 12px 0;font-size:18px;">Claude Code Cost Calculator</h3>
+<p style="color:#94a3b8;margin:0 0 16px 0;font-size:14px;">Estimate your monthly Claude Code spend.</p>
+<div style="margin-bottom:16px;">
+<label style="color:#e2e8f0;font-size:14px;">Hours per day: <strong id="hrs-val">4</strong></label>
+<input type="range" id="hrs" min="1" max="12" value="4" style="width:100%;accent-color:#6ee7b7;" oninput="calcCost()">
+</div>
+<div style="margin-bottom:16px;">
+<label style="color:#e2e8f0;font-size:14px;">Primary model:</label>
+<select id="model-sel" style="width:100%;padding:8px;background:#0f172a;color:#e2e8f0;border:1px solid #334155;border-radius:6px;font-size:14px;" onchange="calcCost()">
+<option value="opus">Claude Opus 4 ($15/$75 per M tokens)</option>
+<option value="sonnet" selected>Claude Sonnet 4 ($3/$15 per M tokens)</option>
+<option value="haiku">Claude Haiku 4.5 ($0.80/$4 per M tokens)</option>
+</select>
+</div>
+<div style="margin-bottom:16px;">
+<label style="color:#e2e8f0;font-size:14px;">Plan:</label>
+<select id="plan-sel" style="width:100%;padding:8px;background:#0f172a;color:#e2e8f0;border:1px solid #334155;border-radius:6px;font-size:14px;" onchange="calcCost()">
+<option value="api" selected>API pay-per-token (no subscription)</option>
+<option value="max5">Claude Max ($100/mo, 5x usage)</option>
+<option value="max20">Claude Max ($200/mo, 20x usage)</option>
+</select>
+</div>
+<div id="cost-result" style="background:#0f172a;padding:16px;border-radius:6px;margin-top:8px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+<div><span style="color:#94a3b8;font-size:12px;">MONTHLY ESTIMATE</span><div id="cost-mo" style="color:#6ee7b7;font-size:28px;font-weight:700;">$0</div></div>
+<div><span style="color:#94a3b8;font-size:12px;">DAILY AVERAGE</span><div id="cost-day" style="color:#e2e8f0;font-size:28px;font-weight:700;">$0</div></div>
+</div>
+<p id="cost-note" style="color:#94a3b8;font-size:13px;margin:12px 0 0 0;"></p>
+</div>
+</div>
+<script>
+function calcCost(){var h=parseInt(document.getElementById('hrs').value),m=document.getElementById('model-sel').value,p=document.getElementById('plan-sel').value;document.getElementById('hrs-val').textContent=h;var tph={opus:150000,sonnet:200000,haiku:350000}[m];var cpi={opus:15,sonnet:3,haiku:0.8}[m];var cpo={opus:75,sonnet:15,haiku:4}[m];var tin=tph*h*0.7/1e6,tout=tph*h*0.3/1e6;var daily=tin*cpi+tout*cpo;var monthly=daily*22;var note='';if(p==='max5'){monthly=100;daily=monthly/22;note='Max $100/mo plan includes '+{opus:'moderate',sonnet:'heavy',haiku:'very heavy'}[m]+' usage. You may hit limits with '+h+'h/day of '+m+'.';}else if(p==='max20'){monthly=200;daily=monthly/22;note='Max $200/mo plan includes 20x usage. Sufficient for most workflows.';}else{note='API pricing: $'+cpi+'/M input + $'+cpo+'/M output. ~'+Math.round(tph*h/1000)+'K tokens/day.';}document.getElementById('cost-mo').textContent='$'+Math.round(monthly);document.getElementById('cost-day').textContent='$'+Math.round(daily);document.getElementById('cost-note').textContent=note;}calcCost();
+</script>
 
 Use this formula to estimate monthly Claude Code spend on API pricing:
 
@@ -303,3 +342,36 @@ Use Haiku for simple tasks, Sonnet for moderate tasks, and avoid Opus unless the
 - [Model routing guide](/claude-code-router-guide/) — match models to tasks for cost savings
 - [Claude Sonnet 4 guide](/claude-sonnet-4-20250514-model-guide/) — the cost-effective default model
 - [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive reference
+
+- [Claude AI rate exceeded error fix](/claude-ai-rate-exceeded-error-fix/) — Fix the Claude AI rate exceeded error message
+
+- [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Guide to the claude-sonnet-4-5-20250929 model and its capabilities
+
+- [Claude student discount guide](/claude-student-discount-guide/) — Student pricing and education discounts
+- [Claude Code 价格指南 (Chinese Pricing Guide)](/claude-code-jiage-pricing-guide/) — Claude Code pricing guide in Chinese
+### Does using /compact actually save money?
+
+Yes. Compacting reduces the token count sent with each subsequent request. In a long session, this can reduce per-message input costs by 30-50% compared to uncompacted conversations.
+
+### Are there volume discounts for high API usage?
+
+Anthropic does not publish volume discounts for standard API usage. For enterprise-level spend, contact Anthropic sales about custom pricing through Scale or Enterprise tiers.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "How much does the average developer spend on Claude Code?", "acceptedAnswer": {"@type": "Answer", "text": "Based on community reports, $50-200/month on API pricing for moderate daily use with Sonnet. Heavy users spend $300-500+ unless they switch to Max."}},
+    {"@type": "Question", "name": "Is Claude Max worth it?", "acceptedAnswer": {"@type": "Answer", "text": "If you use Claude Code more than 4-5 sessions per day using Sonnet, Max saves money. If you use Opus frequently, Max is almost always cheaper."}},
+    {"@type": "Question", "name": "Do I get charged for failed tool calls?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every API call that sends tokens to Claude incurs costs, even if the resulting tool call fails."}},
+    {"@type": "Question", "name": "How does extended thinking affect costs?", "acceptedAnswer": {"@type": "Answer", "text": "Thinking tokens are charged as output tokens. A 10,000-token thinking budget adds $0.15 per request with Sonnet or $0.75 with Opus."}},
+    {"@type": "Question", "name": "Can I set a hard spending limit?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Configure spending limits in the Anthropic console. When the limit is reached, API calls fail rather than continuing to charge."}},
+    {"@type": "Question", "name": "Does prompt caching work across sessions?", "acceptedAnswer": {"@type": "Answer", "text": "Prompt caching has a short TTL of about 5 minutes. It works well within a session but does not persist across separate sessions."}},
+    {"@type": "Question", "name": "How do I track costs per project?", "acceptedAnswer": {"@type": "Answer", "text": "Use ccusage with the --project flag, or organize your work into separate API keys per project."}},
+    {"@type": "Question", "name": "What is the cheapest way to use Claude Code?", "acceptedAnswer": {"@type": "Answer", "text": "Use Haiku for simple tasks, Sonnet for moderate tasks, and avoid Opus unless the task demands it. Add token-efficiency rules to CLAUDE.md and use /compact in long sessions."}},
+    {"@type": "Question", "name": "Does using /compact actually save money?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Compacting reduces the token count sent with each subsequent request. In a long session, this can reduce per-message input costs by 30-50%."}},
+    {"@type": "Question", "name": "Are there volume discounts for high API usage?", "acceptedAnswer": {"@type": "Answer", "text": "Anthropic does not publish volume discounts for standard API usage. For enterprise-level spend, contact Anthropic sales about custom pricing through Scale or Enterprise tiers."}}
+  ]
+}
+</script>

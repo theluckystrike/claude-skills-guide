@@ -74,3 +74,8 @@ Add this to your `CLAUDE.md`:
 - If EACCES appears, fix with: sudo chown -R $(whoami) ~/.npm
 - Use npm config set prefix ~/.npm-global to avoid system directories.
 ```
+
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error

@@ -98,3 +98,8 @@ As of April 2026, Codex CLI officially supports macOS and Linux. Windows support
 ## The Bottom Line
 
 Claude Code and Codex CLI are the two strongest terminal-native AI coding agents in 2026 — but they make different architectural bets. Claude Code bets on capability: give the agent full system access with human-gated permissions, and it can solve any problem that spans code, infrastructure, and operations. Codex CLI bets on safety: restrict the agent at the kernel level by default, and developers can trust autonomous operation without worrying about unintended side effects. Both approaches are valid. Your choice depends on whether your bottleneck is capability (choose Claude Code) or trust (choose Codex CLI). The tools will likely converge over time as both add the other's strengths.
+
+
+## Related
+
+- [Claude Code vs Cursor comparison](/claude-code-vs-cursor-definitive-comparison-2026/) — Definitive Claude Code vs Cursor comparison for 2026

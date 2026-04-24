@@ -19,7 +19,7 @@ What Is Goal Decomposition in AI Agents?
 
 Goal decomposition is a cognitive strategy adapted for AI systems where a complex, high-level objective gets systematically broken into smaller, more manageable tasks. Think of it as creating a roadmap for your AI assistant: instead of asking it to "build a complete web application," you decompose that into research, design, implementation, testing, and deployment phases.
 
-This approach mirrors how humans naturally tackle overwhelming projects. When faced with building an entire application, experienced developers don't try to hold every detail in their heads at once. Instead, they break the work into iterations, each with specific deliverables. AI agents benefit from the same structured approach.
+This approach mirrors how humans naturally tackle overwhelming projects. AI agents built with the [Claude Agent SDK](/claude-agent-sdk-complete-guide/) benefit from the same structured approach.
 
 Claude Code implements goal decomposition through its sophisticated skill system and task execution framework. When you provide a complex request, Claude Code analyzes the objective, identifies dependencies between tasks, and creates an execution plan that addresses each component systematically.
 
@@ -129,6 +129,10 @@ Goal decomposition transforms overwhelming AI requests into manageable, trackabl
 
 By embracing this structured approach, you use the full potential of AI agents, achieving results that would be impossible through undifferentiated, monolithic task execution. The next time you have a complex project, remember: break it down, and let Claude Code handle each piece systematically.
 
+
+## Related
+
+- [Claude Flow tool guide](/claude-flow-tool-guide/) — How to use Claude Flow for multi-agent orchestration
 ---
 
 ---
@@ -154,5 +158,7 @@ Related Reading
 - [What Is An AI Agent Loop Explained Simply — Developer Guide](/what-is-an-ai-agent-loop-explained-simply/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

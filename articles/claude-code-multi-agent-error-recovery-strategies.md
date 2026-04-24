@@ -20,7 +20,7 @@ geo_optimized: true
 
 ## Understanding Multi-Agent Failure Modes
 
-Multi-agent setups in Claude Code typically involve orchestration where one agent delegates subtasks to specialized agents or skills. Failure can occur at several points:
+Multi-agent setups in Claude Code typically involve [orchestration with Claude Flow](/claude-flow-tool-guide/) where one agent delegates subtasks to specialized agents or skills. Failure can occur at several points:
 
 - Skill invocation failures: The requested skill produces an error
 - Tool execution failures: File operations, API calls, or shell commands fail
@@ -336,7 +336,7 @@ This complements external monitoring. see [Monitoring and Logging Claude Code Mu
 
 ## Test Your Error Paths
 
-Do not only test the happy path. Build test cases that simulate network failures, API timeouts, corrupted files, and invalid inputs to confirm your error handling works correctly before deploying a multi-agent workflow to production.
+Do not only test the happy path. [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) workflow to production.
 
 ## Conclusion
 
@@ -369,5 +369,7 @@ Related Reading
 - [How to Test and Debug Multi Agent Workflows](/how-to-test-and-debug-multi-agent-workflows/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

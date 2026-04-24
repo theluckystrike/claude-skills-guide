@@ -231,3 +231,5 @@ The right learning path saves 20-40 hours of trial-and-error. Developers who inv
 - [Claude Code Setup on Mac Step by Step](/claude-code-setup-on-mac-step-by-step/)
 - [Claude Code Common Beginner Mistakes to Avoid](/claude-code-common-beginner-mistakes-to-avoid/)
 - [Best Claude Code Newsletters and Blogs 2026](/best-claude-code-newsletters-and-blogs-2026/)
+
+- [Claude student discount guide](/claude-student-discount-guide/) — How students can get Claude at reduced pricing

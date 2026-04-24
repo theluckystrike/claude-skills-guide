@@ -16,7 +16,7 @@ geo_optimized: true
 
 ## The Error
 
-When using the Claude Agent SDK (Python) with in-process MCP servers and permission approval callbacks, all MCP tools receive empty `{}` arguments:
+When using the Claude [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) (Python) with in-process MCP servers and permission approval callbacks, all MCP tools receive empty `{}` arguments:
 
 ```
 [DEBUG] Request body: {"action":"call_tool","server":"my-tools","tool_name":"read","arguments":{}}
@@ -209,3 +209,4 @@ When debugging MCP server interactions and permission flows, a dev tool extensio
 - [Fix Anthropic SDK IndexError When Streaming](/anthropic-sdk-indexerror-streaming-fix/)
 - [Fix: Anthropic SDK toolRunner Drops Headers](/anthropic-sdk-toolrunner-drops-headers/)
 - [Fix: Structured Output + Thinking + Tool Use Bugs](/anthropic-sdk-structured-output-thinking-tool-use-bug/)
+

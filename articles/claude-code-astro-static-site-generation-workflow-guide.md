@@ -22,7 +22,7 @@ This is a focused treatment of astro static site generation with Claude Code. It
 
 ## Why Astro with Claude Code
 
-Astro's zero-JavaScript-by-default architecture makes it ideal for content-focused sites, blogs, and documentation. When paired with Claude Code, you get [AI assistance throughout the development process](/claude-skill-md-format-complete-specification-guide/)ss, from initial scaffolding to final deployment.
+Astro's zero-JavaScript-by-default architecture makes it ideal for content-focused sites, blogs, and documentation. When paired with Claude Code, you get [AI assistance throughout the development process](/claude-skill-md-format-complete-specification-guide/), from initial scaffolding to final deployment.
 
 The workflow uses Claude skills like `/frontend-design` for component creation, `/tdd` for test coverage, and `/supermemory` for context retention across sessions. Each skill adds capabilities without requiring additional infrastructure.
 

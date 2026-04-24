@@ -89,7 +89,7 @@ The 529 status code signals that the specific model you requested is at capacity
 ## If That Doesn't Work
 
 - **Alternative 1:** Reduce `max_tokens` — smaller response budgets free capacity faster on the server
-- **Alternative 2:** Spread requests over time with a rate limiter: `time.sleep(1)` between calls
+- **Alternative 2:** Spread requests over time with a [Claude rate exceeded error fix](/claude-rate-exceeded-error-fix/): `time.sleep(1)` between calls
 - **Check:** Monitor `https://status.anthropic.com` for ongoing capacity incidents
 
 ## Prevention
@@ -100,3 +100,9 @@ Always implement a model fallback chain for production API calls: Sonnet -> Haik
 ```
 
 **Related articles:** [Claude API 529 Overloaded Explained](/claude-api-error-529-overloadederror-explained/), [Claude API Rate Limit Fix](/claude-api-rate-limit-fix/), [Claude API 503 Fix](/claude-api-503-service-unavailable-fix/)
+
+
+## Related
+
+- [Claude internal server error fix](/claude-internal-server-error-fix/) — Fix Claude internal server error (500/overloaded)
+

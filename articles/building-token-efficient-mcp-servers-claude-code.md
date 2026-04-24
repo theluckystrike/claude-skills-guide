@@ -394,3 +394,7 @@ Before deploying an MCP server for team use:
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- server installation and configuration
 - [Reducing Claude Code MCP Round-Trips: Batch Operations Pattern](/reducing-claude-code-mcp-round-trips-batch-pattern/) -- batch pattern in depth
 - [Claude Code MCP Server Token Usage: How to Measure and Reduce](/claude-code-mcp-server-token-usage-measure-reduce/) -- measurement techniques
+
+- [claude mcp list command guide](/claude-mcp-list-command-guide/) — How to use the claude mcp list command to manage MCP servers
+
+- [Claude Code MCP configuration guide](/claude-code-mcp-configuration-guide/) — Complete guide to configuring MCP servers in Claude Code

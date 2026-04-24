@@ -81,7 +81,7 @@ const message = await client.messages.create({
 
 ### Implement Model Fallback
 
-When Opus is overloaded, fall back to Sonnet or Haiku:
+When Opus is [Claude internal server error fix](/claude-internal-server-error-fix/), fall back to Sonnet or Haiku:
 
 ```python
 import anthropic
@@ -181,5 +181,6 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Claude Streaming API Guide](/claude-streaming-api-guide/) -- streaming keeps connections alive and improves resilience.
 - [Claude Prompt Caching Pricing Guide](/claude-prompt-caching-pricing-and-cost-savings/) -- reduce costs while the Batch API handles overload scenarios.
 - [Claude SDK Timeout Configuration](/claude-sdk-timeout-configuration-customization/) -- tune timeout settings alongside retry logic.
+
 
 

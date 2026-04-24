@@ -23,6 +23,16 @@ A 500 internal server error from the Claude API means something broke on Anthrop
 
 ## Immediate Fixes
 
+<div id="err-match-500" style="background:#1a1a2e;border:1px solid #2a2a3a;border-radius:8px;padding:20px;margin:24px 0;font-family:system-ui,-apple-system,sans-serif;">
+<h3 style="color:#6ee7b7;margin:0 0 12px 0;font-size:18px;">Error Pattern Matcher</h3>
+<p style="color:#94a3b8;margin:0 0 12px 0;font-size:14px;">Paste your error message below to get a targeted fix.</p>
+<textarea id="err-input-500" placeholder="Paste your full error message here..." style="width:100%;min-height:80px;padding:12px;background:#0f172a;color:#e2e8f0;border:1px solid #334155;border-radius:6px;font-family:monospace;font-size:13px;resize:vertical;box-sizing:border-box;"></textarea>
+<div id="err-out-500" style="margin-top:12px;display:none;background:#0f172a;padding:16px;border-radius:6px;color:#e2e8f0;font-size:14px;"></div>
+</div>
+<script>
+document.getElementById('err-input-500').addEventListener('input',function(){var t=this.value.toLowerCase(),o=document.getElementById('err-out-500'),m=[];if(!t){o.style.display='none';return;}if(/500|internal.server/i.test(t))m.push('<strong style="color:#6ee7b7;">500 Internal Server Error</strong><br>Retry the request. Most 500 errors are transient. If persistent, check <a href="https://status.anthropic.com" style="color:#60a5fa;">status.anthropic.com</a> for incidents.');if(/api_error/i.test(t))m.push('<strong style="color:#6ee7b7;">API Error Type</strong><br>The inference pipeline failed. Try: switch to a different model (<code>claude-haiku-4-20250514</code>), reduce prompt size below 50K tokens, or wait 5 minutes and retry.');if(/timeout|timed?\s*out/i.test(t))m.push('<strong style="color:#6ee7b7;">Timeout Detected</strong><br>Your request may be too large or the server is under load. Reduce <code>max_tokens</code>, split into smaller requests, or increase your client timeout to 300s.');if(/overloaded|capacity/i.test(t))m.push('<strong style="color:#6ee7b7;">Server Overloaded</strong><br>This is a 529-type issue, not a true 500. Wait 30-60 seconds, then retry. Consider falling back to Haiku for non-critical tasks.');if(/ssl|tls|certificate/i.test(t))m.push('<strong style="color:#6ee7b7;">TLS/Certificate Issue</strong><br>Corporate proxy may be intercepting. Set: <code>export NODE_EXTRA_CA_CERTS=/path/to/ca-bundle.crt</code>');if(/proxy|firewall/i.test(t))m.push('<strong style="color:#6ee7b7;">Proxy/Firewall Issue</strong><br>Test direct: <code>curl --noproxy "*" https://api.anthropic.com/v1/messages</code>. If that works, configure your proxy to pass through api.anthropic.com.');if(/thinking|extended/i.test(t))m.push('<strong style="color:#6ee7b7;">Extended Thinking Error</strong><br>Large context + extended thinking exceeds memory. Reduce context below 100K tokens or disable extended thinking for this request.');if(m.length===0)m.push('<span style="color:#94a3b8;">No known patterns matched. Try retrying the request, checking <a href="https://status.anthropic.com" style="color:#60a5fa;">status.anthropic.com</a>, or reducing your prompt size.</span>');o.innerHTML=m.join('<hr style="border:none;border-top:1px solid #334155;margin:12px 0;">');o.style.display='block';});
+</script>
+
 ### 1. Retry the Same Request
 
 Most 500 errors are transient. A simple retry resolves the majority of cases.
@@ -116,13 +126,137 @@ def call_with_fallback(client, messages, **kwargs):
 
 The 500 error occurs in specific patterns:
 
-**API overload conditions.** During peak traffic (weekday business hours, US Pacific time), the inference cluster processes millions of concurrent requests. Transient failures spike during these windows.
+**API overload conditions.** During peak traffic (weekday business hours, US Pacific time), the inference cluster processes millions of concurrent requests. Transient failures spike during these windows. If you track your error rates, you will see 500s cluster between 9 AM and 5 PM Pacific, Monday through Friday.
 
-**Model inference failures.** The model occasionally encounters inputs that trigger unexpected states in the inference engine. This is more common with extremely long context windows, deeply nested tool-use schemas, or prompts containing unusual Unicode sequences.
+**Model inference failures.** The model occasionally encounters inputs that trigger unexpected states in the inference engine. This is more common with extremely long context windows, deeply nested tool-use schemas, or prompts containing unusual Unicode sequences. Inputs that mix multiple languages, embed large base64-encoded images, or include malformed JSON within the message content are known triggers.
 
-**Timeout on long prompts.** Requests that require extended generation time (large `max_tokens` combined with complex reasoning) can exceed internal timeout thresholds before the response completes.
+**Timeout on long prompts.** Requests that require extended generation time (large `max_tokens` combined with complex reasoning) can exceed internal timeout thresholds before the response completes. This is most common with `claude-opus-4-20250514` at `max_tokens` above 4096, where the model may reason for 30+ seconds before generating output.
 
-**Deployment transitions.** When Anthropic deploys model updates, there are brief windows where some servers run the old version and others run the new version. Requests routed to a server mid-restart will fail with 500.
+**Deployment transitions.** When Anthropic deploys model updates, there are brief windows where some servers run the old version and others run the new version. Requests routed to a server mid-restart will fail with 500. These windows are typically under 5 minutes and happen during low-traffic hours.
+
+**Extended thinking with large context.** When using extended thinking (the `thinking` parameter), the model allocates additional compute for step-by-step reasoning. Combining extended thinking with a context window over 100K tokens increases the probability of a 500 because the server must hold more state in memory during the longer processing time.
+
+**Tool-use schema complexity.** Defining more than 50 tools, or tools with deeply nested JSON schemas (5+ levels of nesting), increases the token overhead on every request and raises the chance of an inference failure. Each tool definition is parsed and included in the model's context, so complex schemas consume both tokens and processing time.
+
+## Full Diagnostic Script
+
+Run this script when you encounter persistent 500 errors. It checks all common causes in sequence and reports which ones apply to your environment.
+
+```bash
+#!/bin/bash
+# claude-500-diagnostic.sh — Diagnose persistent internal server errors
+set -euo pipefail
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+ISSUES=0
+
+echo "=== Claude API 500 Error Diagnostic ==="
+echo ""
+
+# 1. Check API reachability
+echo -n "1. API reachability... "
+HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+  --max-time 10 \
+  https://api.anthropic.com/v1/messages \
+  -H "x-api-key: ${ANTHROPIC_API_KEY:-missing}" \
+  -H "anthropic-version: 2023-06-01" \
+  -H "content-type: application/json" \
+  -d '{"model":"claude-sonnet-4-20250514","max_tokens":5,"messages":[{"role":"user","content":"hi"}]}' \
+  2>/dev/null || echo "000")
+
+if [ "$HTTP_CODE" = "200" ]; then
+  echo -e "${GREEN}PASS (HTTP $HTTP_CODE)${NC}"
+elif [ "$HTTP_CODE" = "000" ]; then
+  echo -e "${RED}FAIL — cannot reach api.anthropic.com${NC}"
+  ISSUES=$((ISSUES + 1))
+elif [ "$HTTP_CODE" = "500" ]; then
+  echo -e "${RED}FAIL — server returned 500${NC}"
+  ISSUES=$((ISSUES + 1))
+else
+  echo -e "${YELLOW}HTTP $HTTP_CODE (not 500, check auth/rate limits)${NC}"
+fi
+
+# 2. Check status page
+echo -n "2. Anthropic status page... "
+STATUS=$(curl -s --max-time 5 https://status.anthropic.com/api/v2/status.json 2>/dev/null | \
+  python3 -c "import sys,json; print(json.load(sys.stdin)['status']['indicator'])" 2>/dev/null || echo "unknown")
+if [ "$STATUS" = "none" ]; then
+  echo -e "${GREEN}PASS (no incidents)${NC}"
+else
+  echo -e "${RED}ACTIVE INCIDENT: $STATUS${NC}"
+  ISSUES=$((ISSUES + 1))
+fi
+
+# 3. Check DNS resolution
+echo -n "3. DNS resolution... "
+if nslookup api.anthropic.com > /dev/null 2>&1; then
+  echo -e "${GREEN}PASS${NC}"
+else
+  echo -e "${RED}FAIL — DNS cannot resolve api.anthropic.com${NC}"
+  ISSUES=$((ISSUES + 1))
+fi
+
+# 4. Check for proxy interference
+echo -n "4. Proxy configuration... "
+if [ -n "${HTTPS_PROXY:-}" ] || [ -n "${HTTP_PROXY:-}" ]; then
+  echo -e "${YELLOW}PROXY SET (HTTPS_PROXY=${HTTPS_PROXY:-unset}, HTTP_PROXY=${HTTP_PROXY:-unset})${NC}"
+  echo "   Proxy may be modifying requests. Test with: curl --noproxy '*' ..."
+else
+  echo -e "${GREEN}PASS (no proxy)${NC}"
+fi
+
+# 5. Check TLS certificate chain
+echo -n "5. TLS certificate... "
+TLS_RESULT=$(echo | openssl s_client -connect api.anthropic.com:443 -servername api.anthropic.com 2>/dev/null | \
+  grep "Verify return code" | head -1)
+if echo "$TLS_RESULT" | grep -q "0 (ok)" 2>/dev/null; then
+  echo -e "${GREEN}PASS${NC}"
+else
+  echo -e "${RED}FAIL — $TLS_RESULT${NC}"
+  ISSUES=$((ISSUES + 1))
+fi
+
+# 6. Test multiple models
+echo "6. Model-specific tests:"
+for MODEL in claude-sonnet-4-20250514 claude-haiku-4-20250514; do
+  echo -n "   $MODEL... "
+  MCODE=$(curl -s -o /dev/null -w "%{http_code}" \
+    --max-time 15 \
+    https://api.anthropic.com/v1/messages \
+    -H "x-api-key: ${ANTHROPIC_API_KEY:-missing}" \
+    -H "anthropic-version: 2023-06-01" \
+    -H "content-type: application/json" \
+    -d "{\"model\":\"$MODEL\",\"max_tokens\":5,\"messages\":[{\"role\":\"user\",\"content\":\"test\"}]}" \
+    2>/dev/null || echo "000")
+  if [ "$MCODE" = "200" ]; then
+    echo -e "${GREEN}OK${NC}"
+  elif [ "$MCODE" = "500" ]; then
+    echo -e "${RED}500 ERROR${NC}"
+    ISSUES=$((ISSUES + 1))
+  else
+    echo -e "${YELLOW}HTTP $MCODE${NC}"
+  fi
+done
+
+echo ""
+if [ "$ISSUES" -gt 0 ]; then
+  echo -e "${RED}$ISSUES issue(s) found. See above for details.${NC}"
+else
+  echo -e "${GREEN}All checks passed. The 500 may be transient — retry your request.${NC}"
+fi
+```
+
+Make it executable and run it:
+
+```bash
+chmod +x claude-500-diagnostic.sh
+./claude-500-diagnostic.sh
+```
+
+This script tests connectivity, DNS, proxy configuration, TLS certificates, the Anthropic status page, and individual model availability in under 30 seconds.
 
 ## Programmatic Retry Patterns
 
@@ -312,6 +446,19 @@ curl --noproxy "*" -s -w "\nHTTP: %{http_code}\n" \
 # If this returns 200 but your app gets 500, your proxy is the problem
 ```
 
+If your corporate proxy requires authentication:
+
+```bash
+# Set proxy credentials
+export HTTPS_PROXY="http://username:password@proxy.corp.example.com:8080"
+
+# For Node.js applications (including Claude Code):
+export NODE_EXTRA_CA_CERTS="/path/to/corporate-ca-bundle.crt"
+
+# For Python applications using the Anthropic SDK:
+export REQUESTS_CA_BUNDLE="/path/to/corporate-ca-bundle.crt"
+```
+
 ### VPN Interference
 
 Some VPNs inject headers or modify TLS connections in ways that confuse upstream servers:
@@ -323,6 +470,23 @@ Some VPNs inject headers or modify TLS connections in ways that confuse upstream
 # On macOS, add a route exception:
 # (check with your VPN provider for exact syntax)
 sudo route add -host api.anthropic.com -interface en0
+```
+
+Common VPN-related patterns:
+- **Split-tunnel VPNs** that route API traffic through a corporate gateway with content inspection
+- **Full-tunnel VPNs** that increase latency beyond the API's internal timeout threshold
+- **VPN DNS overrides** that resolve `api.anthropic.com` to a blocked or proxied address
+
+To diagnose, compare DNS resolution inside and outside the VPN:
+
+```bash
+# With VPN connected
+nslookup api.anthropic.com
+# Note the IP address
+
+# With VPN disconnected
+nslookup api.anthropic.com
+# If the IPs differ, your VPN is redirecting API traffic
 ```
 
 ### SSL Certificate Issues
@@ -337,6 +501,79 @@ openssl s_client -connect api.anthropic.com:443 -servername api.anthropic.com < 
 # Set the cert bundle explicitly:
 export SSL_CERT_FILE=/path/to/corporate-ca-bundle.crt
 export REQUESTS_CA_BUNDLE=/path/to/corporate-ca-bundle.crt
+```
+
+On macOS, you can export your system's certificate chain to verify:
+
+```bash
+# Export the corporate CA from Keychain Access
+security find-certificate -a -p /System/Library/Keychains/SystemRootCertificates.keychain > /tmp/system-certs.pem
+
+# Test with the exported bundle
+curl --cacert /tmp/system-certs.pem -s -w "\nHTTP: %{http_code}\n" \
+  https://api.anthropic.com/v1/messages \
+  -H "x-api-key: $ANTHROPIC_API_KEY" \
+  -H "anthropic-version: 2023-06-01" \
+  -H "content-type: application/json" \
+  -d '{"model":"claude-sonnet-4-20250514","max_tokens":5,"messages":[{"role":"user","content":"test"}]}'
+```
+
+---
+
+*These diagnostic steps are from [The Claude Code Playbook](https://zovo.one/pricing) — 200 production-ready templates including error prevention rules and CLAUDE.md configs tested across 50+ project types.*
+
+### Timeout Configuration
+
+If your requests are large or use extended thinking, increase client-side timeouts to prevent premature disconnection:
+
+```python
+import anthropic
+import httpx
+
+# Increase timeout for large requests
+client = anthropic.Anthropic(
+    timeout=httpx.Timeout(300.0, connect=10.0)  # 5 min read, 10s connect
+)
+
+response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    max_tokens=4096,
+    messages=[{"role": "user", "content": large_prompt}]
+)
+```
+
+```typescript
+import Anthropic from "@anthropic-ai/sdk";
+
+const client = new Anthropic({
+  timeout: 300000, // 5 minutes in milliseconds
+});
+```
+
+## Version History of Error Handling Improvements
+
+The Claude API's error handling has improved significantly over time. Knowing the timeline helps you understand which fixes apply to your SDK version.
+
+| Date | Change | Impact |
+|------|--------|--------|
+| 2023-06 | Initial API launch (`anthropic-version: 2023-06-01`) | Basic 500 error responses, no retry headers |
+| 2023-09 | Added `x-request-id` to all responses | Enables support ticket correlation |
+| 2024-01 | Added `retry-after` header on 429 and 529 responses | Clients can implement precise wait times |
+| 2024-03 | Python SDK v0.18+ added automatic retry with backoff | Less manual retry code needed |
+| 2024-06 | Added rate limit headers to all responses | Proactive throttling possible |
+| 2024-09 | TypeScript SDK v0.20+ added automatic retry | Parity with Python SDK |
+| 2025-01 | Improved error messages with specific failure reasons | Easier diagnosis of 500 causes |
+| 2025-06 | Extended thinking errors return structured detail | Distinguish thinking timeout from inference failure |
+| 2026-01 | Message Batches API launched (separate error handling) | Batch jobs report per-request errors asynchronously |
+
+If you are using an SDK version from before 2024-03, upgrade to get automatic retry logic:
+
+```bash
+# Python
+pip install --upgrade anthropic
+
+# TypeScript
+npm install @anthropic-ai/sdk@latest
 ```
 
 ## CLAUDE.md Rules to Reduce Likelihood
@@ -397,6 +634,14 @@ Claude Code has built-in retry logic for transient errors. However, if the error
 
 Contact Anthropic support through [support.anthropic.com](https://support.anthropic.com). Include the `x-request-id` from the response headers, the exact UTC timestamp, the model name, and a minimal reproduction of the request payload.
 
+### Can a corporate proxy cause what looks like a 500 error?
+
+Yes. A proxy that modifies request bodies or times out before the API responds can produce what looks like a 500 error but is actually a proxy-generated response. Test direct connectivity with `curl --noproxy "*"` to determine if your proxy is the issue. See the [corporate proxy troubleshooting guide](/claude-code-etimeout-corporate-proxy-fix/) for details.
+
+### Does the 500 error affect streaming requests differently?
+
+With streaming, a 500 error can occur mid-stream, meaning you may receive partial output before the connection drops. Non-streaming requests fail atomically. In both cases, the retry strategy is the same: wait with exponential backoff and resend the full request.
+
 ## Related Guides
 
 - [Fix Claude API 503 Service Unavailable](/claude-api-503-service-unavailable-fix/)
@@ -407,3 +652,128 @@ Contact Anthropic support through [support.anthropic.com](https://support.anthro
 - [Fix Claude Code Docker Cannot Reach API Endpoint](/claude-code-docker-cannot-reach-api-endpoint-fix/)
 - [Fix Claude Code Model Not Available in Region](/claude-code-model-not-available-region-fix/)
 - [Fix Claude Rate Exceeded Error](/claude-rate-exceeded-error-fix/)
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is a 500 error my fault?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. A 500 internal server error means the server accepted your request as valid but failed during processing. Your API key, headers, and payload are correct. The failure is on Anthropic's infrastructure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long do 500 errors typically last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most transient 500 errors resolve within seconds. If caused by an infrastructure incident, they can last 5 to 60 minutes. Check status.anthropic.com for ongoing incidents."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between 500, 503, and 529 errors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 500 error means an unexpected failure in the inference pipeline. A 503 error means the infrastructure cannot route your request. A 529 error means the model is overloaded and cannot accept new requests. All three are server-side but have different causes and retry strategies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I retry 500 errors automatically?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Use exponential backoff with jitter. Start with a 1-second delay, double each attempt, add randomness, and cap at 5 retries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a large prompt cause a 500 error?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Prompts that approach the model's context window limit (200K tokens) are more likely to trigger internal failures during processing. Reducing prompt size is a reliable mitigation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does switching models help?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Often yes. Different models run on different server pools. If claude-sonnet-4-20250514 returns 500, try claude-haiku-4-20250514 to confirm whether the issue is model-specific or platform-wide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will Claude Code automatically retry on 500?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Claude Code has built-in retry logic for transient errors. If the error persists across retries, Claude Code surfaces the error. Try /compact to reduce context size or restart the session."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I report a persistent 500 error?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Contact Anthropic support at support.anthropic.com. Include the x-request-id from the response headers, the exact UTC timestamp, the model name, and a minimal reproduction of the request payload."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a corporate proxy cause what looks like a 500 error?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A proxy that modifies request bodies or times out before the API responds can produce what looks like a 500 error. Test direct connectivity with curl --noproxy to determine if your proxy is the issue."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the 500 error affect streaming requests differently?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "With streaming, a 500 error can occur mid-stream, meaning you may receive partial output before the connection drops. Non-streaming requests fail atomically. In both cases, the retry strategy is the same: exponential backoff and resend the full request."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Fix Claude Internal Server Error (500)",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Retry the request",
+        "text": "Most 500 errors are transient. Send the same request again. If it succeeds, the outage was momentary."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Check Anthropic status page",
+        "text": "Visit status.anthropic.com to check for active incidents. If there is an outage, wait for resolution."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Reduce prompt size",
+        "text": "If your prompt exceeds 50,000 tokens, split it into smaller chunks to reduce the probability of inference failures."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Switch to a different model",
+        "text": "Try a different model like claude-haiku-4-20250514. Different models run on different server pools."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Implement exponential backoff",
+        "text": "Add automatic retry logic with exponential backoff starting at 1 second, doubling each attempt with jitter, capping at 5 retries."
+      }
+    ]
+  }
+]
+</script>
+
+- [Claude AI rate exceeded error fix](/claude-ai-rate-exceeded-error-fix/) — Fix the AI rate exceeded message

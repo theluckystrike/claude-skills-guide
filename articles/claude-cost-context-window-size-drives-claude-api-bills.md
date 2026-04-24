@@ -241,3 +241,5 @@ The primary metric is average context size per request, tracked weekly. Secondar
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — the original analysis of context-driven costs
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/) — tactical context management strategies
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — understanding context limits
+
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization

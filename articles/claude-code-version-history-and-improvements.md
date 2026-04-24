@@ -228,6 +228,11 @@ Claude Code continues to evolve with regular improvements to model capabilities,
 
 Understanding this evolution helps developers use Claude Code effectively. The skills you write today will continue working while benefiting from underlying improvements to the platform. The teams that get the most from the platform are those that revisit their skill libraries periodically. not to rewrite from scratch, but to remove constraints that made sense under older limitations and add structured metadata that current versions actually use.
 
+
+## Related
+
+- [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Guide to the claude-sonnet-4-20250514 model and features
+- [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Sonnet 4.5 model capabilities
 ---
 
 ---
@@ -251,6 +256,7 @@ Related Reading
 - [Claude 4 Skills: New Features and Improvements Guide](/claude-4-skills-improvements-and-new-features/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 
 

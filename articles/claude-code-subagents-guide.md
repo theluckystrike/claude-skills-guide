@@ -18,7 +18,7 @@ Your Claude Code sessions become bloated with search results, file contents, and
 
 ## Quick Fix
 
-Claude Code has built-in subagents that handle common tasks in their own context window. For custom needs, create a subagent file at `.claude/agents/code-reviewer.md`:
+Claude Code has built-in subagents that handle common tasks in their own context window (see the [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) for building custom agents). Create a file at `.claude/skills/code-reviewer.md`:
 
 ```markdown
 ---
@@ -232,6 +232,9 @@ $99 once. Free forever. 47/500 founding spots left.
 
 
 
+- [Claude Flow tool guide](/claude-flow-tool-guide/) — How to use Claude Flow for multi-agent orchestration
 ## Related Articles
 
 - [Passing Context Between Claude Code Subagents Guide](/passing-context-between-claude-code-subagents-guide/)
+
+

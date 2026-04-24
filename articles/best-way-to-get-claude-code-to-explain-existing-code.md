@@ -163,6 +163,10 @@ Getting Claude Code to explain existing code effectively comes down to providing
 
 With these techniques, Claude Code becomes an invaluable partner for understanding unfamiliar codebases quickly and thoroughly.
 
+
+## Related
+
+- [Claude upload limit guide](/claude-upload-limit-guide/) — Understanding Claude file upload limits and workarounds
 ---
 
 ---
@@ -186,5 +190,6 @@ Related Reading
 - [Claude Code for Technical Documentation Workflow Guide](/claude-code-for-technical-documentation-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

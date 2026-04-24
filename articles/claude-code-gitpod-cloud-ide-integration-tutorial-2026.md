@@ -16,7 +16,7 @@ last_tested: "2026-04-21"
 
 # Claude Code Gitpod Cloud IDE Integration Tutorial (2026)
 
-Gitpod provides cloud-based [development environment configuration](/how-do-i-set-environment-variables-for-a-claude-skill/)s that spin up in seconds. Combining Gitpod with Claude Code gives you AI-powered development sessions that run entirely in your browser or connect to local Claude CLI. This tutorial walks through integrating Claude Code with Gitpod for a powerful remote development setup. See also [Claude Code for gRPC Service Development Workflow](/claude-code-for-grpc-service-development-workflow/) for more on this topic.
+Gitpod provides cloud-based [development environment configuration](/how-do-i-set-environment-variables-for-a-claude-skill/) that spin up in seconds. Combining Gitpod with Claude Code gives you AI-powered development sessions that run entirely in your browser or connect to local Claude CLI. This tutorial walks through integrating Claude Code with Gitpod for a powerful remote development setup. See also [Claude Code for gRPC Service Development Workflow](/claude-code-for-grpc-service-development-workflow/) for more on this topic.
 
 ## Why Cloud IDEs Matter for AI-Assisted Development
 

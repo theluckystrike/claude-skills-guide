@@ -326,6 +326,7 @@ Claude Code also supports reading from stdin, which makes it composable with sta
 
 ## Next Steps
 
+- [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) and safer alternatives
 With your first project complete, explore more advanced capabilities:
 
 - Multi-file generation: Ask Claude Code to scaffold entire features with multiple related files
@@ -363,5 +364,7 @@ Related Reading
 - [Getting Started Hub](/getting-started-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

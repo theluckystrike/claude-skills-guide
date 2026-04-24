@@ -340,8 +340,13 @@ diff baseline.log updated.log
 
 The diff output shows exactly how your skill modification changed model behavior, making it easy to validate improvements and catch unintended regressions.
 
+
+## Related
+
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude
 ---
 
+- [Claude shortcuts guide](/claude-shortcuts-complete-guide/) — Complete guide to Claude Code keyboard shortcuts and slash commands
 Mastering Claude Code's verbose mode transforms debugging from guesswork into systematic analysis. By understanding what happens inside the "black box," you gain control over your AI-assisted development workflow and can build more reliable, predictable skill integrations.
 
 ---
@@ -368,5 +373,7 @@ Related Reading
 - [Troubleshooting Hub](/troubleshooting-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

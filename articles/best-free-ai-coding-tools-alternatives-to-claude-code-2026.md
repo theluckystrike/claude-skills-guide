@@ -84,7 +84,7 @@ Aider with a mid-tier model (GPT-4o or Claude Sonnet via API) is the closest to 
 GitHub Copilot Free for everyone (covers daily completions), plus Cline or Aider for the 1-2 developers doing complex architectural work. Total cost: $0-40/mo in API keys for the heavy users.
 
 ### Enterprise (50+ developers)
-Free tools lack audit logging, SSO, admin controls, and compliance guarantees. For enterprise, the "free alternative" is GitHub Copilot Individual at $10/seat — cheap enough to be nearly free while providing proper enterprise support. For agent capabilities at enterprise scale, Claude Code Teams or Cursor Business are worth the investment.
+Free tools lack audit logging, SSO, admin controls, and compliance guarantees. For enterprise, the "free alternative" is GitHub Copilot Individual at $10/seat — cheap enough to be nearly free while providing proper enterprise support. For agent capabilities at enterprise scale, Claude Code Teams or [Claude Code vs Cursor comparison](/claude-code-vs-cursor-definitive-comparison-2026/) Business are worth the investment.
 
 ## Pricing Breakdown (April 2026)
 
@@ -105,3 +105,9 @@ Related reading:
 - [Claude Code vs Aider: Full Comparison](/claude-code-vs-free-aider-open-source/)
 - [AI Coding Tools Pricing Comparison 2026](/ai-coding-tools-pricing-comparison-2026/)
 - [Claude Code Subscription: Is It Worth It?](/claude-code-subscription-worth-it-honest-review/)
+
+
+
+## Related
+
+- [Claude student discount guide](/claude-student-discount-guide/) — How students can get Claude at reduced pricing

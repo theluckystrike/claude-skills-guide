@@ -64,3 +64,8 @@ Never use sudo for npm install -g. Set npm prefix to ~/.npm-global. Use nvm or v
 ```
 
 **Related articles:** [Claude Code Command Not Found Fix](/claude-code-command-not-found-after-install-fix/), [NPM Install EACCES Fix](/claude-code-npm-install-eacces-permission-fix/), [Troubleshooting Hub](/troubleshooting-hub/)
+
+
+## Related
+
+- [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error

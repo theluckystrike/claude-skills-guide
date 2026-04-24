@@ -378,6 +378,10 @@ For teams working with sensitive data, consider the `canvas-design` skill for ge
 
 The key insight: AI coding tools significantly boost productivity, but treating them as trusted internal systems without proper security controls creates unacceptable risk. Start at Level 1 this week, commit to Level 2 within a month, and iterate toward Level 3 as your team's AI usage scales. Implement these mitigations before your team adopts AI assistants widely. retrofitting security into an established workflow is significantly harder than building it in from the start.
 
+
+## Related
+
+- [Claude upload limit guide](/claude-upload-limit-guide/) — Understanding Claude file upload limits and workarounds
 ---
 
 ---
@@ -404,5 +408,6 @@ Related Reading
 - [Claude Code for WorkOS AuthKit — Workflow Guide](/claude-code-for-workos-authkit-workflow-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

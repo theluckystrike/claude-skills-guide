@@ -331,10 +331,15 @@ The `/add` command, output formatting instructions, parallel task execution, and
 
 Experiment with these capabilities gradually. Start with one feature. the CLAUDE.md system or a single MCP server. and expand as you become comfortable. The productivity gains compound quickly once you integrate these tools into daily workflows. Developers who invest a few hours learning these hidden features typically report saving multiple hours per week within the first month.
 
+
+## Related
+
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude
 ---
 
 ---
 
+- [Claude shortcuts guide](/claude-shortcuts-complete-guide/) — Complete guide to Claude Code keyboard shortcuts and slash commands
 <div class="mastery-cta">
 
 I'm a solo developer in Vietnam. 50K Chrome extension users. $500K+ on Upwork. 5 Claude Max subscriptions running agent fleets in parallel.
@@ -354,5 +359,7 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

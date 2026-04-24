@@ -31,6 +31,25 @@ Each line includes:
 - **Scope** — `user` (global) or `project` (local to repository)
 - **Command and arguments** — the exact process Claude Code will launch
 
+<div id="mcp-finder" style="background:#1a1a2e;border:1px solid #2a2a3a;border-radius:8px;padding:20px;margin:24px 0;font-family:system-ui,-apple-system,sans-serif;">
+<h3 style="color:#6ee7b7;margin:0 0 12px 0;font-size:18px;">MCP Server Finder</h3>
+<p style="color:#94a3b8;margin:0 0 12px 0;font-size:14px;">Filter by category to find the right MCP server and get the install command.</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;">
+<button class="mf-btn" data-c="all" onclick="filterMCP('all')" style="padding:5px 12px;background:#6ee7b7;color:#0f172a;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;">All</button>
+<button class="mf-btn" data-c="data" onclick="filterMCP('data')" style="padding:5px 12px;background:#334155;color:#e2e8f0;border:none;border-radius:6px;font-size:12px;cursor:pointer;">Databases</button>
+<button class="mf-btn" data-c="dev" onclick="filterMCP('dev')" style="padding:5px 12px;background:#334155;color:#e2e8f0;border:none;border-radius:6px;font-size:12px;cursor:pointer;">Dev Tools</button>
+<button class="mf-btn" data-c="comm" onclick="filterMCP('comm')" style="padding:5px 12px;background:#334155;color:#e2e8f0;border:none;border-radius:6px;font-size:12px;cursor:pointer;">Communication</button>
+<button class="mf-btn" data-c="file" onclick="filterMCP('file')" style="padding:5px 12px;background:#334155;color:#e2e8f0;border:none;border-radius:6px;font-size:12px;cursor:pointer;">Filesystem</button>
+<button class="mf-btn" data-c="search" onclick="filterMCP('search')" style="padding:5px 12px;background:#334155;color:#e2e8f0;border:none;border-radius:6px;font-size:12px;cursor:pointer;">Search</button>
+</div>
+<div id="mf-list" style="display:grid;gap:8px;max-height:400px;overflow-y:auto;"></div>
+</div>
+<script>
+var mcpServers=[{n:"PostgreSQL",c:"data",d:"Query databases, inspect schemas, run SQL",cmd:"claude mcp add postgres -- npx -y @anthropic/mcp-server-postgres postgresql://localhost:5432/mydb"},{n:"SQLite",c:"data",d:"Read and query local SQLite databases",cmd:"claude mcp add sqlite -- npx -y @anthropic/mcp-server-sqlite /path/to/database.db"},{n:"GitHub",c:"dev",d:"Repos, issues, PRs, code search",cmd:"claude mcp add github --scope user -- npx -y @anthropic/mcp-server-github"},{n:"GitLab",c:"dev",d:"GitLab repos, merge requests, CI/CD",cmd:"claude mcp add gitlab -e GITLAB_TOKEN=glpat-xxx -- npx -y @anthropic/mcp-server-gitlab"},{n:"Linear",c:"dev",d:"Issue tracking, project management",cmd:"claude mcp add linear -e LINEAR_API_KEY=lin_api_xxx -- npx -y @anthropic/mcp-server-linear"},{n:"Sentry",c:"dev",d:"Error tracking, issue monitoring",cmd:"claude mcp add sentry -e SENTRY_AUTH_TOKEN=xxx -- npx -y @anthropic/mcp-server-sentry"},{n:"Slack",c:"comm",d:"Read channels, send messages",cmd:"claude mcp add slack -e SLACK_TOKEN=xoxb-xxx -- npx -y @anthropic/mcp-server-slack"},{n:"Google Drive",c:"file",d:"Read and search Google Drive files",cmd:"claude mcp add gdrive -- npx -y @anthropic/mcp-server-gdrive"},{n:"Filesystem",c:"file",d:"Controlled access to local directories",cmd:"claude mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem /path/to/dir"},{n:"Memory",c:"file",d:"Persistent key-value memory across sessions",cmd:"claude mcp add memory -- npx -y @anthropic/mcp-server-memory"},{n:"Brave Search",c:"search",d:"Web search via Brave Search API",cmd:"claude mcp add brave -e BRAVE_API_KEY=BSA_xxx -- npx -y @anthropic/mcp-server-brave-search"},{n:"Puppeteer",c:"dev",d:"Browser automation, screenshots, scraping",cmd:"claude mcp add puppeteer -- npx -y @anthropic/mcp-server-puppeteer"}];
+function filterMCP(cat){var html='';mcpServers.forEach(function(s){if(cat!=='all'&&s.c!==cat)return;html+='<div style="background:#0f172a;padding:12px;border-radius:6px;"><div style="display:flex;justify-content:space-between;align-items:center;"><strong style="color:#e2e8f0;font-size:14px;">'+s.n+'</strong><span style="color:#64748b;font-size:11px;background:#1e293b;padding:2px 8px;border-radius:3px;">'+s.c+'</span></div><p style="color:#94a3b8;font-size:13px;margin:4px 0 8px 0;">'+s.d+'</p><div style="display:flex;gap:8px;align-items:center;"><code style="flex:1;background:#1a1a2e;padding:6px 8px;border-radius:4px;font-size:11px;color:#4ade80;overflow-x:auto;white-space:nowrap;">'+s.cmd+'</code><button onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent).then(function(){}.bind(this))" style="padding:4px 10px;background:#334155;color:#e2e8f0;border:none;border-radius:4px;font-size:11px;cursor:pointer;white-space:nowrap;">Copy</button></div></div>';});document.getElementById('mf-list').innerHTML=html||'<div style="color:#94a3b8;padding:12px;">No servers in this category.</div>';document.querySelectorAll('.mf-btn').forEach(function(b){b.style.background=b.getAttribute('data-c')===cat?'#6ee7b7':'#334155';b.style.color=b.getAttribute('data-c')===cat?'#0f172a':'#e2e8f0';b.style.fontWeight=b.getAttribute('data-c')===cat?'600':'400';});}
+filterMCP('all');
+</script>
+
 ## Complete MCP CLI Command Reference
 
 Claude Code provides five MCP subcommands. Here is every one of them with full syntax.
@@ -233,6 +252,10 @@ claude mcp list
 - sqlite (project): npx -y @anthropic/mcp-server-sqlite /path/to/database.db
 ```
 
+---
+
+*This configuration is one of 200 production-ready templates in [The Claude Code Playbook](https://zovo.one/pricing). Permission configs, model selection rules, MCP setups — all tested and ready to copy.*
+
 ## Troubleshooting: MCP Server Not Showing in List
 
 If you added a server but it does not appear in `claude mcp list`, check these causes in order.
@@ -333,6 +356,14 @@ There is no hard limit, but each server is a running process. Performance may de
 
 Yes. The command reads local configuration files only. It does not contact any remote service.
 
+### Can I filter `claude mcp list` to show only user or project scope servers?
+
+No. The command shows all servers from both scopes in a single list. Each entry is labeled with its scope (user or project) so you can distinguish them visually.
+
+### What happens if I run `claude mcp add` with a server name that already exists?
+
+The new configuration replaces the existing one at the same scope. If the existing server is at user scope and you add at project scope, both will exist but the project-scoped version takes precedence.
+
 ## Related Guides
 
 - [How to Add an MCP Server to Claude Code](/how-to-add-mcp-server-claude-code-2026/) — step-by-step installation walkthrough
@@ -344,3 +375,23 @@ Yes. The command reads local configuration files only. It does not contact any r
 - [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your Claude Code setup
 - [Configuration Hierarchy Explained](/claude-code-configuration-hierarchy-explained-2026/) — how user, project, and system configs interact
 - [Claude Code MCP Configuration Guide](/claude-code-mcp-configuration-guide/) — full MCP setup reference
+- [Claude Desktop config.json guide](/claude-desktop-config-json-guide/) — Configure MCP in Claude Desktop
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Does claude mcp list show servers from both scopes?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The output includes servers from both ~/.claude/settings.json (user scope) and .claude/settings.json (project scope), with scope labels next to each entry."}},
+    {"@type": "Question", "name": "Can I have the same server name in both scopes?", "acceptedAnswer": {"@type": "Answer", "text": "Technically yes, but the project-scoped version takes precedence. The user-scoped version will be hidden for that project."}},
+    {"@type": "Question", "name": "How do I see which tools a server provides?", "acceptedAnswer": {"@type": "Answer", "text": "Start Claude Code and ask it to list available MCP tools, or check the server's documentation. The claude mcp list command shows servers, not individual tools."}},
+    {"@type": "Question", "name": "Can I add an MCP server that uses Docker?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Pass the Docker command after the double dash: claude mcp add my-server -- docker run -i my-mcp-server:latest. The server must communicate via stdio."}},
+    {"@type": "Question", "name": "What happens if an MCP server crashes after startup?", "acceptedAnswer": {"@type": "Answer", "text": "Claude Code will show a disconnection warning. The server will not be available until you restart Claude Code or run claude mcp reset."}},
+    {"@type": "Question", "name": "Can I temporarily disable a server without removing it?", "acceptedAnswer": {"@type": "Answer", "text": "There is no built-in disable flag. The simplest approach is to comment out the server in the JSON config file or temporarily remove it with claude mcp remove and re-add it later."}},
+    {"@type": "Question", "name": "How many MCP servers can I run simultaneously?", "acceptedAnswer": {"@type": "Answer", "text": "There is no hard limit, but each server is a running process. Performance may degrade with more than 10 concurrent servers due to memory overhead and tool list size affecting Claude's context window."}},
+    {"@type": "Question", "name": "Does claude mcp list work without an internet connection?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The command reads local configuration files only. It does not contact any remote service."}},
+    {"@type": "Question", "name": "Can I filter claude mcp list to show only user or project scope servers?", "acceptedAnswer": {"@type": "Answer", "text": "No. The command shows all servers from both scopes in a single list. Each entry is labeled with its scope so you can distinguish them visually."}},
+    {"@type": "Question", "name": "What happens if I run claude mcp add with a server name that already exists?", "acceptedAnswer": {"@type": "Answer", "text": "The new configuration replaces the existing one at the same scope. If the existing server is at user scope and you add at project scope, both will exist but the project-scoped version takes precedence."}}
+  ]
+}
+</script>

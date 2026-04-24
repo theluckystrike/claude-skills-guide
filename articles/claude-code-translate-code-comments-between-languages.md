@@ -240,10 +240,15 @@ For quick translations, direct interaction works best. For ongoing projects, cre
 
 Start with a single file to establish your translation pattern, then scale to entire codebases. The key is consistency, establish conventions for technical terms, maintain comment positions, and flag ambiguous translations for human review.
 
+
+## Related
+
+- [Claude Code 安装指南 (Chinese Installation Guide)](/claude-code-anzhuang-installation-guide/) — Claude Code installation guide in Chinese (中文安装教程)
 ---
 
 ---
 
+- [Claude Code 国内使用指南 (China Usage Guide)](/claude-code-guonei-shiyong-china-usage-guide/) — Claude Code usage guide for China (中国使用教程)
 <div class="mastery-cta">
 
 I'm a solo developer in Vietnam. 50K Chrome extension users. $500K+ on Upwork. 5 Claude Max subscriptions running agent fleets in parallel.
@@ -264,5 +269,7 @@ Related Reading
 - [Claude Code Hooks System: Complete Guide](/understanding-claude-code-hooks-system-complete-guide/). automate comment translation using pre-commit hooks
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
 
 

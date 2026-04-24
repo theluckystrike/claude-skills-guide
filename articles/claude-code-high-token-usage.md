@@ -159,3 +159,9 @@ $99 once. Pays for itself in saved tokens within a week.
 - [Fix: Claude Code Timeout 2m Bash Command Limit](/claude-code-timeout-2m-fix/)
 
 
+
+- [Claude rate exceeded error fix](/claude-rate-exceeded-error-fix/) — Fix Claude rate exceeded and rate limit errors
+
+- [Claude AI rate exceeded error fix](/claude-ai-rate-exceeded-error-fix/) — Fix the Claude AI rate exceeded error message
+
+- [Claude Code router guide](/claude-code-router-guide/) — How model routing affects token costs

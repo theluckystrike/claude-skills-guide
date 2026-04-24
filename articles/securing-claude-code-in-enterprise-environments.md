@@ -114,6 +114,10 @@ Start with restrictive defaults, expand deliberately, and maintain comprehensive
 
 Remember that security configurations require regular review as your organization and the AI platform evolve. The patterns outlined here provide a foundation, but your specific implementation should reflect your unique risk profile and compliance requirements.
 
+
+## Related
+
+- [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) — Understanding the --dangerously-skip-permissions CLI flag
 ---
 
 ---
@@ -139,5 +143,6 @@ Related Reading
 - [Advanced Claude Skills Hub](/advanced-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

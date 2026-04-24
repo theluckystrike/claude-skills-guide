@@ -195,6 +195,10 @@ for any project-overriding restrictions applied during onboarding.
 
 This documentation surfaces in every Claude Code session because CLAUDE.md is read automatically at session start. Developers working in the project know upfront which capabilities are available rather than discovering restrictions through error messages during active work.
 
+
+## Related
+
+- [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to --dangerously-skip-permissions and safer alternatives
 ---
 
 ---
@@ -227,5 +231,6 @@ Related Reading
 - [Claude Code Security Engineer Vulnerability Triage Workflow](/claude-code-security-engineer-vulnerability-triage-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
 
 

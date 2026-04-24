@@ -199,7 +199,9 @@ $99 once. Free forever. 47/500 founding spots left.
 
 
 
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude
 ## Related Articles
 
 - [Message Batches API Tutorial with Cost Examples](/message-batches-api-tutorial-cost-examples/)
 - [Claude Code for Claude Batch API: Anthropic Workflow Guide](/claude-code-for-claude-batch-api-anthropic-workflow-guide/)
+
