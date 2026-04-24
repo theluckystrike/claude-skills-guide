@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Make Claude Code Handle Async Errors Properly"
+title: "How to Make Claude Code Handle Async"
 description: "Practical techniques for developers to get Claude Code to handle asynchronous errors effectively. Learn prompt patterns, skill usage, and workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17

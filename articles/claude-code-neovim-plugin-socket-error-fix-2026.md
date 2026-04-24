@@ -68,3 +68,35 @@ Update the plugin to the latest version:
 # CLAUDE.md rule
 When using Neovim integration, always start Claude Code from within Neovim's :terminal buffer. Never run Claude Code in an external terminal and expect Neovim plugin features to work. Add socket_path to your plugin config for reliability.
 ```
+
+## See Also
+
+- [Claude Code + Neovim Terminal Integration 2026](/claude-code-neovim-terminal-integration-2026/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `ECONNRESET: connection reset by peer`
+- `ECONNREFUSED: connection refused`
+- `EPIPE: broken pipe`
+- `Error reading configuration file`
+- `JSON parse error in config`
+
+## Frequently Asked Questions
+
+### Why does Claude Code lose connection during long operations?
+
+Long-running operations can exceed keep-alive timeouts on intermediate proxies and load balancers. If a proxy closes an idle connection after 60 seconds and Claude Code's request takes 90 seconds, the connection is severed before the response arrives.
+
+### How do I diagnose intermittent connection failures?
+
+Enable verbose logging with `claude --verbose` or set `CLAUDE_LOG_LEVEL=debug`. Check the timestamps of failed requests against your network monitoring tools to correlate with proxy restarts, DNS changes, or ISP issues.
+
+### Does Claude Code automatically retry failed connections?
+
+Yes. Claude Code retries transient failures (HTTP 429, 502, 503) with exponential backoff. Connection resets (ECONNRESET) and refused connections (ECONNREFUSED) are also retried up to 3 times. Persistent failures after retries indicate a systemic network issue.
+
+### Where does Claude Code store its configuration?
+
+Configuration is stored in `~/.claude/config.json` for global settings and `.claude/config.json` in the project root for project-specific settings. Project settings override global settings for any overlapping keys.

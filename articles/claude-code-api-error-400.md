@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code API Error 400 Bad Request"
+title: "Fix Claude Code API Error 400 Bad"
 description: "Diagnose and fix Claude Code API error 400 caused by malformed requests, context overflow, or invalid parameters with concrete solutions."
 date: 2026-04-17
 last_modified_at: 2026-04-17

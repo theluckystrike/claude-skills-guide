@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Chrome DevTools: Debugging Approaches"
+title: "Claude Code vs Chrome DevTools"
 description: "Comparing Claude Code's AI debugging with Chrome DevTools' runtime inspection — different strengths for different types of bugs."
 date: 2026-04-21
 permalink: /claude-code-vs-chrome-devtools-debugging/

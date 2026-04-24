@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Wrong Language Output (2026)"
+title: "Fix Claude Code Wrong Language Output"
 description: "Stop Claude Code from generating code in the wrong language. Set project context, configure language preferences, and use skill-based language pinning."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -327,4 +327,10 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [nvm Switching to Wrong Node Version — Fix (2026)](/claude-code-nvm-switching-wrong-node-fix-2026/)
+- [Claude Amending Wrong Commit Fix](/claude-code-amending-wrong-commit-fix-2026/)
+- [Stop Claude Code Writing Excessive Code (2026)](/claude-code-writes-too-much-code-fix-2026/)
+- [Claude Code Wrong Environment Deploy: Prevent Mistakes](/claude-code-deploying-wrong-environment-prevent-mistakes/)
+- [Fix Claude Code Wrong Abstraction Level (2026)](/claude-code-wrong-abstraction-level-fix-2026/)

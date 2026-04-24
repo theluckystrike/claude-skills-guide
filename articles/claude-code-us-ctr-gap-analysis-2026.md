@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "The US CTR Problem: Why Americans Skip Results"
+title: "The US CTR Problem"
 description: "Data analysis of 52K impressions across 185 countries reveals US developers click 4x less than the rest of the world on Claude Code content."
 date: 2026-04-18
 author: "Claude Skills Guide"

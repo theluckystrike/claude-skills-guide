@@ -56,3 +56,37 @@ curl -s https://api.anthropic.com/v1/usage \
 # CLAUDE.md rule
 Keep tool definitions minimal. Disable unused MCP servers. Check console.anthropic.com/usage after large sessions to verify actual cost against estimates.
 ```
+
+## See Also
+
+- [Embedding Dimension Mismatch Error — Fix (2026)](/claude-code-embedding-dimension-mismatch-fix-2026/)
+- [esbuild Target Mismatch Error — Fix (2026)](/claude-code-esbuild-target-mismatch-fix-2026/)
+- [Keep-Alive Timeout Mismatch Error — Fix (2026)](/claude-code-keep-alive-timeout-mismatch-fix-2026/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `ETIMEDOUT: connection timed out`
+- `RequestTimeout: request took longer than 120000ms`
+- `ESOCKETTIMEDOUT`
+- `MCP server connection refused`
+- `MCP protocol version incompatible`
+
+## Frequently Asked Questions
+
+### What is the default timeout for Claude Code API requests?
+
+The default timeout is 120 seconds (120000ms). For complex operations involving large codebases or multi-file edits, this may be insufficient. Increase it with `claude config set api_timeout 300000` for a 5-minute timeout.
+
+### Can network latency cause timeouts?
+
+Yes. Corporate proxies, VPNs, and DNS filtering services add round-trip latency. Measure your baseline latency with `curl -o /dev/null -s -w '%{time_total}' https://api.anthropic.com/v1/messages`. If it exceeds 5 seconds, route API traffic outside the proxy.
+
+### Do timeouts consume API credits?
+
+Partially. If the server began processing your request before the client timed out, the input tokens are consumed even though you never received a response. Long timeouts reduce wasted credits by allowing the response to complete.
+
+### What is MCP in Claude Code?
+
+MCP (Model Context Protocol) is a standard protocol that lets Claude Code communicate with external tool servers. MCP servers expose custom tools (databases, APIs, file systems) that Claude Code can invoke during a session. Configuration is stored in `.claude/mcp.json`.

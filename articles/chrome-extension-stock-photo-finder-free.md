@@ -1,7 +1,8 @@
 ---
+render_with_liquid: false
 
 layout: default
-title: "Chrome Extension Stock Photo Finder Free"
+title: "Chrome Extension Stock Photo Finder"
 description: "Discover how to build or use a free Chrome extension stock photo finder for your development workflow. Practical implementation guide with code."
 date: 2026-03-15
 last_modified_at: 2026-04-17

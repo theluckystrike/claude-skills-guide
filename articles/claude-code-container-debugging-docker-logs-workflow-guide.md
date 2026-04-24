@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Container Debugging: Docker Logs Workflow Guide"
+title: "Claude Code Container Debugging"
 description: "A practical workflow guide for debugging Docker containers using Claude Code and Docker logs. Real commands, scripts, and patterns for developers."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -324,4 +324,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Colima Docker — Workflow Guide](/claude-code-for-colima-docker-workflow-guide/)

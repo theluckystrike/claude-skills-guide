@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Ultimate Guide: 271 Questions (2026)"
+title: "Claude Code Guide: 271 Questions"
 description: "Review the claude-code-ultimate-guide — 22K+ lines, 271 quiz questions, 225 templates, 41 Mermaid diagrams, and a 655-entry malicious skills DB."
 permalink: /claude-code-ultimate-guide-271-questions-2026/
 last_tested: "2026-04-22"
@@ -183,3 +183,7 @@ Regex patterns matched against skill file contents. Run the scanner script again
 - [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — complement the guide's secure templates
 - [Best Claude Skills for Developers](/best-claude-skills-for-developers-2026/) — vetted skill recommendations
 - [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — security patterns for daily use
+
+## See Also
+
+- [Take the Claude Code 271-Question Quiz (2026)](/how-to-take-claude-code-ultimate-guide-quiz-2026/)

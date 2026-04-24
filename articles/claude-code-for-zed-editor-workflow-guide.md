@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Zed Editor — Workflow Guide"
+title: "Claude Code for Zed Editor"
 description: "Pair Claude Code with Zed editor for fast coding. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-zed-editor-workflow-guide/
@@ -76,3 +76,4 @@ After Claude Code makes changes, Zed automatically reloads the modified files, s
 ## Related Articles
 
 - [Claude Code for Helix Editor — Workflow Guide](/claude-code-for-helix-editor-workflow-guide/)
+- [Claude Code vs Zed AI: Terminal Agent vs Speed Editor (2026)](/claude-code-vs-zed-ai-editor-comparison-2026/)

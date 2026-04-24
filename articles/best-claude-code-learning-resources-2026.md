@@ -1,5 +1,5 @@
 ---
-title: "Best Claude Code Learning Resources (2026)"
+title: "Best Claude Code Learning Resources"
 description: "The best free resources for learning Claude Code in 2026, ranked by skill level. Visual guides, quizzes, system prompts, and community catalogs."
 permalink: /best-claude-code-learning-resources-2026/
 last_tested: "2026-04-22"

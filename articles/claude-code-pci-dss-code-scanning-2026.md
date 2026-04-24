@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for PCI-DSS Code Scanning (2026)"
+title: "Claude Code for PCI-DSS Code Scanning"
 description: "PCI-DSS code scanning automation with Claude Code. Detect cardholder data exposure and insecure crypto in codebases."
 permalink: /claude-code-pci-dss-code-scanning-2026/
 last_tested: "2026-04-21"
@@ -330,3 +330,4 @@ with open('reports/pci_scan_report.json', 'w') as f:
 - [Claude Code for FDA 21 CFR Part 11](/claude-code-fda-21-cfr-part-11-validation-2026/)
 - [Claude Code for HIPAA Development](/claude-code-hipaa-compliant-development-workflow-guide/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for PCI-DSS Security Scanning (2026)](/claude-code-pci-dss-security-scanning-2026/)

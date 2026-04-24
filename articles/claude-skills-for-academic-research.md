@@ -1,6 +1,6 @@
 ---
-title: "Claude Skills for Academic Research — Automate Literature Review, Citation Extraction, and Statistical Validation — 2026"
-description: "Build a Claude Code skill that extracts citations from BibTeX/RIS files, cross-references DOIs, validates statistical claims, and generates literature review matrices."
+title: "Claude Skills for Academic Research"
+description: "Build a Claude Code skill that extracts citations from BibTeX/RIS files, cross-references DOIs, validates statistical claims, and generates literature."
 permalink: /claude-skills-for-academic-research/
 render_with_liquid: false
 categories: [skills, 2026]
@@ -175,3 +175,7 @@ Full-text PDFs from publishers are copyrighted. Your extraction pipeline should 
 - [Claude Skills for Medical Records Processing](/claude-skills-for-medical-records-processing/) -- clinical research data extraction
 - [Claude Skills for Financial Analysis](/claude-skills-for-financial-analysis/) -- quantitative research methodology
 - [Claude Skills vs Subagents: When to Use Each](/claude-skills-vs-subagents-when-to-use/) -- forked context for paper analysis
+
+## See Also
+
+- [Claude Skills for Manufacturing QA — Automate SPC Chart Analysis, NCR Processing, and CAPA Workflow — 2026](/claude-skills-for-manufacturing-qa/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Enterprise Blocked Chrome Extension Guide (2026)"
+title: "Enterprise Blocked Chrome Extension"
 description: "Understand how Chrome Enterprise manages extension blocking, configure policies for your organization, and work around restrictions effectively."
 date: 2026-03-15
 last_modified_at: 2026-04-17

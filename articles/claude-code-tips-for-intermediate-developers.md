@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Tips for Intermediate Developers"
+title: "Claude Code Tips for Intermediate"
 description: "Level up your Claude Code workflow with practical tips for power users. Learn skill selection, prompt engineering, and automation patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -383,6 +383,11 @@ This approach eliminates the friction of re-establishing context and ensures con
 
 - [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude
 - [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Choose the right Sonnet 4 model variant
+- [Claude Code hooks](/claude-code-hooks-complete-guide/) — automate pre and post tool actions
+- [Claude Code spec workflow](/claude-code-spec-workflow-guide/) — write specs before implementation
+- [CLAUDE.md best practices](/claude-md-best-practices-definitive-guide/) — definitive configuration guide
+- [Super Claude Code framework](/super-claude-code-framework-guide/) — structured prompting framework
+- [Claude Code status line](/claude-code-statusline-guide/) — decode the status bar indicators
 ---
 
 - [Claude upload limit guide](/claude-upload-limit-guide/) — Understanding Claude file upload limits and workarounds

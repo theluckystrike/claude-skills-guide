@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CI/CD Pipeline Optimization with Claude Code"
+title: "CI/CD Pipeline Optimization with Claude"
 description: "Optimize CI/CD pipelines with Claude Code. Reduce build times, parallelize jobs, cache dependencies, and fix flaky tests in GitHub Actions."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -369,3 +369,4 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Claude Code Azure DevOps Pipeline Automation](/claude-code-azure-devops-pipeline-automation/)
 - [Claude Code DevOps Engineer CI — Complete Developer Guide](/claude-code-devops-engineer-ci-cd-pipeline-daily-workflow/)
 - [Claude Code Next.js Deployment — Developer Guide](/claude-code-nextjs-deployment-optimization/)
+- [CI/CD Runner Missing Dependencies Fix](/claude-code-ci-cd-runner-missing-dependencies-fix-2026/)

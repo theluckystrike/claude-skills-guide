@@ -1,5 +1,5 @@
 ---
-title: "How to Measure Context Efficiency in Claude Code Sessions"
+title: "How to Measure Context Efficiency"
 description: "Measure context efficiency in Claude Code sessions using token-per-task ratios, waste metrics, and /cost data to identify and eliminate hidden token drains."
 permalink: /measure-context-efficiency-claude-code-sessions/
 date: 2026-04-22

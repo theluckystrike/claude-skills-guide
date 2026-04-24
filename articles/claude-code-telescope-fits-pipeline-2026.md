@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Telescope FITS Data Pipeline (2026)"
+title: "Claude Code for Telescope FITS Data"
 permalink: /claude-code-telescope-fits-pipeline-2026/
 description: "Telescope data pipeline with Claude Code and FITS. Automate image stacking, astrometry, and catalog cross-matching."
 last_tested: "2026-04-22"
@@ -310,3 +310,4 @@ print('FITS pipeline verification: PASS')
 - [Claude Code for Astrophysics Data Reduction](/claude-code-astrophysics-data-reduction-2026/)
 - [Claude Code for Climate Model Data Processing](/claude-code-climate-model-netcdf-processing-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for Genomics GWAS Analysis (2026)](/claude-code-genomics-gwas-pipeline-2026/)

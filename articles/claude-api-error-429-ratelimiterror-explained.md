@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude API Error 429 rate_limit_error Fix"
+title: "Claude API Error 429 rate_limit_error"
 description: "Fix Claude API 429 rate_limit_error with retry logic, backoff strategies, and rate limit header monitoring. Includes Python and TypeScript examples."
 date: 2026-04-15
 last_modified_at: 2026-04-17

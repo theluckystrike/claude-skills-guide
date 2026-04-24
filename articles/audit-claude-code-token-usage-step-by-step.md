@@ -1,5 +1,5 @@
 ---
-title: "How to Audit Your Claude Code Token Usage (Step-by-Step)"
+title: "How to Audit Your Claude Code Token"
 description: "Audit Claude Code token usage with step-by-step instructions using /cost, ccusage, and session logs to identify waste and cut spending by 30-50%."
 permalink: /audit-claude-code-token-usage-step-by-step/
 date: 2026-04-22
@@ -260,3 +260,7 @@ Use all four in combination: /cost for real-time awareness, ccusage for historic
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization
 
 - [Claude Code router guide](/claude-code-router-guide/) — How Claude Code's model router selects between Haiku, Sonnet, and Opus
+
+## See Also
+
+- [Monitoring Claude Code Token Usage with Custom Hooks](/monitoring-claude-code-token-usage-custom-hooks/)

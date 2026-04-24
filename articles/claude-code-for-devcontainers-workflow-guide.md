@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Devcontainers — Workflow Guide"
+title: "Claude Code for Devcontainers"
 description: "Run Claude Code in Dev Containers for consistent envs. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-devcontainers-workflow-guide/

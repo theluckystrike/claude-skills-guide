@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Reporting Connector Enterprise: Implementation Guide"
+title: "Chrome Reporting Connector Enterprise"
 description: "A practical guide to building and deploying Chrome reporting connectors for enterprise environments. Learn API integration patterns, authentication."
 date: 2026-03-15
 last_modified_at: 2026-04-17

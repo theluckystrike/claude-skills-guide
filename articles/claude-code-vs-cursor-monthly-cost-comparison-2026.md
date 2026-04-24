@@ -252,3 +252,11 @@ The switching cost (1-2 days of workflow adjustment, 4-8 hours of CLAUDE.md setu
 - [Claude Code vs Cursor Comparison (Full Feature Review)](/claude-code-vs-cursor-comparison-2026/) -- feature-by-feature comparison beyond cost
 - [Cost Optimization Hub](/cost-optimization/) -- reduce Claude Code API costs
 - [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- detailed Max plan analysis
+
+## See Also
+
+- [Claude Code Teams vs Cursor Teams for Enterprise](/claude-code-teams-vs-cursor-teams-enterprise-2026/)
+- [Claude Code vs Cursor: Multi-File Editing in 2026](/claude-code-vs-cursor-multi-file-editing-2026/)
+- [Claude Code vs Cursor: Autocomplete and Code Completion](/claude-code-vs-cursor-autocomplete-comparison/)
+- [Claude Projects vs Cursor Composer: Project Context Compared](/claude-projects-vs-cursor-composer-comparison/)
+- [Claude Code vs Cursor: Plugin Ecosystems (2026)](/claude-code-vs-cursor-plugin-ecosystem-2026/)

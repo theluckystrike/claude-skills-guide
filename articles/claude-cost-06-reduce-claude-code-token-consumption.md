@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Reduce Claude Code Token Consumption by 60%"
+title: "Reduce Claude Code Token Consumption"
 description: "Five techniques cut Claude Code token usage by 60%: targeted reads, compact, session splitting, lean CLAUDE.md, and filtered outputs."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -210,3 +210,8 @@ Measure your before/after token consumption by tracking session length and inter
 - [Why Is Claude Code Expensive Large Context Tokens](/why-is-claude-code-expensive-large-context-tokens/)
 - [Claude Code Monthly Cost Breakdown Realistic Usage](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/)
 - [Is Claude Code Worth the Cost for Small Startups](/is-claude-code-worth-the-cost-for-small-startups-2026/)
+
+## See Also
+
+- [Build a Claude Cost Attribution System](/claude-cost-06-build-cost-attribution-system/)
+- [How to Reduce Claude API Token Usage by 50%](/claude-cost-reduce-claude-api-token-usage-50-percent/)

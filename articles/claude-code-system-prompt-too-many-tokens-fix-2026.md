@@ -1,5 +1,5 @@
 ---
-title: "System Prompt Exceeds Token Limit — Fix (2026)"
+title: "System Prompt Exceeds Token Limit — Fix"
 permalink: /claude-code-system-prompt-too-many-tokens-fix-2026/
 description: "Fix 'system prompt exceeds maximum token count' error. Reduce system prompt size or move context to first user message."
 last_tested: "2026-04-22"
@@ -71,3 +71,11 @@ Add this to your `CLAUDE.md`:
 - Put reference data in user messages, not system prompt.
 - Use prompt caching for repeated large contexts.
 ```
+
+## See Also
+
+- [Why Your Claude Prompts Use Too Many Tokens](/claude-cost-why-claude-prompts-use-too-many-tokens/)
+- [Claude API System Prompt Too Long Error — Fix (2026)](/claude-api-system-prompt-too-long-error-fix/)
+- [File Watcher EMFILE Too Many Open Files Fix](/claude-code-file-watcher-emfile-too-many-open-files-fix-2026/)
+- [Claude Code System Prompts Explained (2026)](/claude-code-system-prompts-guide-2026/)
+- [Claude Code subagent spawning too many agents — cost control](/claude-code-subagent-spawning-too-many-cost-control/)

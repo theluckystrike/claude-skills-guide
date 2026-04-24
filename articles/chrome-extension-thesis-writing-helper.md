@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build a Thesis Writing Chrome Extension (2026)"
+title: "Build a Thesis Writing Chrome Extension"
 description: "Build a Chrome extension for thesis writing with auto-save, citation management, word count tracking, and reference integration. Full implementation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

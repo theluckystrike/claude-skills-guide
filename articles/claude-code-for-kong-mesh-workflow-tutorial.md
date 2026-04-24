@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Kong Mesh Service Mesh (2026)"
+title: "Claude Code for Kong Mesh Service Mesh"
 description: "Configure Kong Mesh with Claude Code for service mesh management. Covers traffic routing, mTLS policies, rate limiting, and observability setup."
 date: 2026-03-15
 last_modified_at: 2026-04-17

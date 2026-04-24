@@ -1,6 +1,6 @@
 ---
-title: "Claude Skills for Medical Records Processing — Automate CPT Code Mapping, FHIR Validation, and Clinical Note Parsing — 2026"
-description: "Build a Claude Code skill that maps procedures to CPT/ICD-10 codes, validates FHIR R4 resources, parses HL7 v2 messages, and enforces HIPAA-safe output patterns."
+title: "Claude Skills for Medical Records"
+description: "Build a Claude Code skill that maps procedures to CPT/ICD-10 codes, validates FHIR R4 resources, parses HL7 v2 messages, and enforces HIPAA-safe output."
 permalink: /claude-skills-for-medical-records-processing/
 render_with_liquid: false
 categories: [skills, 2026]

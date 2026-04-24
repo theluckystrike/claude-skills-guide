@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills Distribution: Git, Plugins, and Managed Settings Compared — 2026"
+title: "Claude Skills Distribution"
 description: "Detailed comparison of three SKILL.md distribution methods including setup steps, tradeoffs, and which to use for teams of 5, 50, and 500 people."
 permalink: /claude-skills-distribution-methods/
 render_with_liquid: false

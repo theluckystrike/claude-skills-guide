@@ -86,3 +86,4 @@ Claude Code should create a server endpoint that returns HTML partial containing
 - [Claude Code Git Lfs Large Files — Complete Developer Guide](/claude-code-git-lfs-large-files-workflow/)
 - [Claude Code for Astro Integrations Workflow Guide](/claude-code-for-astro-integrations-workflow-guide/)
 - [Claude Code for ARIA Live Regions Workflow Guide](/claude-code-for-aria-live-regions-workflow-guide/)
+- [Claude Code for Waku React Framework — Guide](/claude-code-for-waku-react-framework-workflow-guide/)

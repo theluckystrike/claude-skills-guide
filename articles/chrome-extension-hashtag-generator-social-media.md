@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Chrome Extension Hashtag Generator for Social Media"
+title: "Chrome Extension Hashtag Generator"
 description: "Learn how to build and use chrome extension hashtag generator tools for social media automation, featuring practical code examples and implementation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

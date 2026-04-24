@@ -86,3 +86,7 @@ Use the official Claude Code GitHub Action if available:
 CI pipelines must install Claude Code explicitly. Add ANTHROPIC_API_KEY to CI secrets. Use --print flag for non-interactive CI usage. Cache npm global installs for faster CI runs.
 ```
 {% endraw %}
+
+## See Also
+
+- [Stop Claude Code Adding Extra Dependencies (2026)](/claude-code-adds-unnecessary-dependencies-fix-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Next.js App Router — Complete Developer Guide"
+title: "Claude Code Next.js App Router"
 description: "A practical guide for developers migrating from Next.js Pages Router to App Router using Claude Code. Includes code examples, common pitfalls, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Peer Dependency Conflict npm Error — Fix (2026)"
+title: "Peer Dependency Conflict npm Error"
 permalink: /claude-code-peer-dependency-conflict-fix-2026/
 description: "Fix npm ERESOLVE peer dependency conflict. Use --legacy-peer-deps or align versions to resolve conflicting requirements."
 last_tested: "2026-04-22"
@@ -88,3 +88,8 @@ Add this to your `CLAUDE.md`:
 - Prefer packages that support our React/Next.js version.
 - Run npm ls after every install to catch conflicts early.
 ```
+
+## See Also
+
+- [Connection Reset by Peer Error — Fix (2026)](/claude-code-connection-reset-by-peer-fix-2026/)
+- [Homebrew vs System Python Conflict Fix](/claude-code-homebrew-vs-system-python-conflict-fix-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Runbook Automation Workflow Guide (2026)"
+title: "Claude Code for Runbook Automation"
 description: "Learn how to use Claude Code to automate runbook workflows, reduce manual intervention, and build reliable operational automation for your infrastructure."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -258,6 +258,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
-
+- [Claude Code for Runbook Testing Workflow Tutorial](/claude-code-for-runbook-testing-workflow-tutorial/)
+- [Claude Code for n8n Automation — Workflow Guide](/claude-code-for-n8n-automation-workflow-guide/)

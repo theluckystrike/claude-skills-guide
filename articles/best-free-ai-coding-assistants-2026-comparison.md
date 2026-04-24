@@ -1,5 +1,5 @@
 ---
-title: "Best Free AI Coding Assistants 2026 Comparison"
+title: "Best Free AI Coding Assistants 2026"
 description: "A practical comparison of the best free AI coding assistants available in 2026. Learn which tools deliver real value for developers without a subscription."
 permalink: /best-free-ai-coding-assistants-2026-comparison/
 last_tested: "2026-04-21"

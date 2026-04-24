@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Build a Price Match Finder Extension (2026)"
+title: "Build a Price Match Finder Extension"
 description: "Build a Chrome extension that finds lower prices across retailers using Manifest V3, content scripts, and cross-origin messaging. Full source code."
 date: 2026-03-15
 last_modified_at: 2026-04-17

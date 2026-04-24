@@ -1,5 +1,5 @@
 ---
-title: "Claude Task Master vs Manual Tasks (2026)"
+title: "Claude Task Master vs Manual Tasks"
 description: "Claude Task Master parses PRDs into structured tasks automatically. See how it compares to manual task tracking with plain files and checklists."
 permalink: /claude-task-master-vs-manual-task-management-2026/
 last_tested: "2026-04-22"
@@ -90,3 +90,8 @@ Task Master scales to hundreds of tasks because dependencies are tracked in a gr
 ## Final Recommendation
 
 Start manual. Seriously. A `tasks.md` file works for most projects and keeps you close to the work. When you hit the point where you are spending more time organizing tasks than completing them — that is when Task Master's automation becomes worth the setup cost. Install it, feed it your PRD, and let the AI handle the decomposition. The two approaches can also coexist: use Task Master for the structured project plan and keep a `quick-tasks.md` for ad-hoc items that do not need dependency tracking.
+
+## See Also
+
+- [ccusage vs Manual Token Counting (2026)](/ccusage-vs-manual-token-counting-2026/)
+- [Claude Task Master vs Linear and Jira (2026)](/claude-task-master-vs-linear-jira-2026/)

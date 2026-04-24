@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code $200 Max Plan: Is It Worth the Cost"
+title: "Claude Code $200 Max Plan"
 description: "Max 20x at $200/month provides 20x Pro throughput. For developers billing $100+/hr, the ROI is 10x from eliminated wait time alone."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -162,3 +162,9 @@ After upgrading to Max, track two metrics daily: rate limit encounters (should d
 - [Why Is Claude Code Expensive Large Context Tokens](/why-is-claude-code-expensive-large-context-tokens/)
 - [Claude Code Monthly Cost Breakdown Realistic Usage](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/)
 - [Is Claude Code Worth the Cost for Small Startups](/is-claude-code-worth-the-cost-for-small-startups-2026/)
+
+## See Also
+
+- [Text Editor Tool: 700 Token Overhead Explained](/claude-cost-05-text-editor-tool-700-token-overhead/)
+- [Claude Code Max vs Pro: Which Plan Saves More](/claude-cost-01-claude-code-max-vs-pro-savings/)
+- [Claude Workspace Spend Limits Configuration](/claude-cost-05-claude-workspace-spend-limits/)

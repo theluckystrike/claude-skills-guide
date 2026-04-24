@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Materials Science VASP/LAMMPS (2026)"
+title: "Claude Code for Materials Science"
 permalink: /claude-code-materials-science-vasp-lammps-2026/
 description: "Materials science simulation with Claude Code. Automate VASP input files, LAMMPS scripts, and property calculations."
 last_tested: "2026-04-22"

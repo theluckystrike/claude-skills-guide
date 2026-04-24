@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Claude AI Streaming Response: Workflow (2026)"
+title: "How to Use Claude AI Streaming Response"
 description: "Implement Claude AI streaming responses for faster output. Practical patterns and code examples to reduce response time for complex queries."
 date: 2026-03-15
 last_modified_at: 2026-04-17

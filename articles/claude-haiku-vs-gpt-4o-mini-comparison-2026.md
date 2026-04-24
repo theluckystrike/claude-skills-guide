@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Haiku 4.5 vs GPT-4o Mini: Budget AI Coding"
+title: "Claude Haiku 4.5 vs GPT-4o Mini"
 description: "Comparing the cheapest AI coding models — Claude Haiku 4.5 vs GPT-4o Mini on price, speed, and code quality for budget workflows."
 date: 2026-04-21
 last_tested: "2026-04-21"
@@ -103,3 +103,7 @@ Both are suitable for junior developer workloads since the tasks are typically s
 ## When To Use Neither
 
 For tasks where correctness is critical and reasoning is required — security-sensitive code, financial calculations, concurrency logic — neither budget model is appropriate. Their cost savings disappear when you factor in developer time reviewing and fixing subtle bugs. Spend the extra $0.50-1.00 per task to use Sonnet 4.6 or GPT-4o and get it right the first time. For latency-critical autocomplete where even these budget models feel too slow, consider local models like DeepSeek Coder running on-device through Ollama, which eliminates network round-trips entirely at the cost of reduced accuracy. For a deeper dive, see [Claude Sonnet 4.6 vs Codestral: Code Generation Face-Off](/claude-sonnet-vs-codestral-comparison/).
+
+## See Also
+
+- [Claude Opus 4.6 vs GPT-4o: Reasoning and Complex Tasks](/claude-opus-vs-gpt-4o-reasoning-comparison/)

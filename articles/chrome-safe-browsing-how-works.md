@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Safe Browsing How Works — Developer Guide"
+title: "Chrome Safe Browsing How Works"
 description: "A technical deep-dive into Chrome Safe Browsing mechanisms. Learn how the feature detects threats, its API endpoints, and how developers can integrate."
 date: 2026-03-15
 last_modified_at: 2026-04-17

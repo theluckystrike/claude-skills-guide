@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for AeroSpace Tiling — Workflow Guide"
+title: "Claude Code for AeroSpace Tiling"
 description: "Configure AeroSpace tiling WM with Claude Code for macOS. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-aerospace-tiling-workflow-guide/

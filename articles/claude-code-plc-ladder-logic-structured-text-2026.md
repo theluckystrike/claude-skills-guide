@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for PLC Ladder Logic to ST (2026)"
+title: "Claude Code for PLC Ladder Logic to ST"
 description: "PLC ladder logic to structured text conversion with Claude Code. Migrate legacy Allen-Bradley and Siemens programs."
 permalink: /claude-code-plc-ladder-logic-structured-text-2026/
 last_tested: "2026-04-21"

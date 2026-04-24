@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Kestra Workflow Orchestration Guide (2026)"
+title: "Claude Code for Kestra Workflow"
 description: "Learn how to use Claude Code to build, manage, and optimize Kestra workflow orchestrations with practical examples and actionable advice. Updated for 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17

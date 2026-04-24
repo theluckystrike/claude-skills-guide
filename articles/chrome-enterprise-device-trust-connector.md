@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Device Trust Connector — Developer Guide"
+title: "Chrome Enterprise Device Trust"
 description: "Learn how to implement Chrome Enterprise Device Trust Connector for secure endpoint verification. Practical examples for developers integrating device."
 date: 2026-03-15
 last_modified_at: 2026-04-17

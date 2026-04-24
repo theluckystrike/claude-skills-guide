@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Delivery Date Estimator Chrome Extension Guide (2026)"
+title: "Delivery Date Estimator Chrome"
 description: "Learn how to build or use a chrome extension delivery date estimator for your projects. Practical examples and code snippets for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

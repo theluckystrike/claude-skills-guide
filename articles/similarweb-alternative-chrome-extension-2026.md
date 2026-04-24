@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Best SimilarWeb Alternatives for Chrome 2026"
+title: "Best SimilarWeb Alternatives for Chrome"
 description: "Top SimilarWeb alternative extensions for Chrome in 2026. Traffic analysis, competitor research, and SEO tools compared side-by-side. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

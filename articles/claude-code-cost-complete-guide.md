@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Cost: Pricing Breakdown (2026)"
+title: "Claude Code Cost: Pricing Breakdown"
 description: "Complete Claude Code pricing guide. Max subscription, API token costs, real usage examples, cost tracking tools, and strategies that cut spend."
 permalink: /claude-code-cost-complete-guide/
 last_tested: "2026-04-24"
@@ -349,6 +349,11 @@ Use Haiku for simple tasks, Sonnet for moderate tasks, and avoid Opus unless the
 
 - [Claude student discount guide](/claude-student-discount-guide/) — Student pricing and education discounts
 - [Claude Code 价格指南 (Chinese Pricing Guide)](/claude-code-jiage-pricing-guide/) — Claude Code pricing guide in Chinese
+- [Claude API pricing](/claude-api-pricing-complete-guide/) — every plan and model priced
+- [Claude extra usage cost](/claude-extra-usage-cost-guide/) — what you actually pay for overages
+- [Claude Pro subscription price](/claude-pro-subscription-price-guide/) — Pro plan features and pricing
+- [Claude 5-hour usage limit](/claude-5-hour-usage-limit-guide/) — understand the rolling usage window
+- [OpenRouter setup for Claude Code](/claude-code-openrouter-setup-guide/) — alternative model access and pricing
 ### Does using /compact actually save money?
 
 Yes. Compacting reduces the token count sent with each subsequent request. In a long session, this can reduce per-message input costs by 30-50% compared to uncompacted conversations.

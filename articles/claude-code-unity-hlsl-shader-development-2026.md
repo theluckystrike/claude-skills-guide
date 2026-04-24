@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Unity HLSL Shader Development (2026)"
+title: "Claude Code for Unity HLSL Shader"
 description: "Unity shader development with Claude Code and HLSL. Write custom URP/HDRP shaders with proper lighting models."
 permalink: /claude-code-unity-hlsl-shader-development-2026/
 last_tested: "2026-04-21"
@@ -313,3 +313,4 @@ public class SetupDissolveMaterial : MonoBehaviour
 - [Claude Code for Blender Python Scripting](/claude-code-blender-python-scripting-2026/)
 - [Claude Code for Unity Game Development](/claude-skills-for-unity-game-development-workflow/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for Godot GDScript Development (2026)](/claude-code-godot-gdscript-development-2026/)

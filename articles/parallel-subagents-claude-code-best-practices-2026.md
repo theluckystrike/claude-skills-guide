@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Parallel Subagents Guide (2026)"
+title: "Claude Code Parallel Subagents Guide"
 description: "Run parallel subagents in Claude Code to cut workflow time by 5x. Execution patterns, optimization strategies, and real-world examples for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17

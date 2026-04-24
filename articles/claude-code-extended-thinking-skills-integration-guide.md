@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Extended Thinking + Claude Skills: Integration Guide"
+title: "Extended Thinking + Claude Skills"
 description: "Combine Claude Code skills with extended thinking to tackle complex workflows. Practical patterns for /supermemory, /tdd, /pdf, and /xlsx in 2026."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -213,5 +213,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
+- [Extended Thinking Budget Exceeded — Fix (2026)](/claude-code-extended-thinking-budget-exceeded-fix-2026/)

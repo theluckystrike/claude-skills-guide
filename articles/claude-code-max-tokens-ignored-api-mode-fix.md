@@ -1,5 +1,5 @@
 ---
-title: "Claude Code max_tokens Ignored in API Mode — Fix (2026)"
+title: "Claude Code max_tokens Ignored in API"
 description: "Fix Claude Code max_tokens parameter being ignored in API mode. Use the correct parameter name and placement. Step-by-step solution."
 permalink: /claude-code-max-tokens-ignored-api-mode-fix/
 last_tested: "2026-04-21"
@@ -99,3 +99,9 @@ Always set max_tokens explicitly in API calls — it is a required parameter. Ch
 ```
 
 **Related articles:** [Claude API Error 400 Fix](/claude-api-error-400-invalidrequesterror-explained/), [Context Window Management](/claude-code-context-window-management-guide/), [Claude API Error Handling](/claude-code-api-error-handling-standards/)
+
+## See Also
+
+- [File Descriptor Leak in Watch Mode Fix](/claude-code-file-descriptor-leak-watch-mode-fix-2026/)
+- [Claude Code Workspace Trust Blocks Headless — Fix (2026)](/claude-code-workspace-trust-blocks-headless-mode-fix/)
+- [Response Truncation Max Tokens Hit Fix](/claude-code-response-truncation-max-tokens-fix-2026/)

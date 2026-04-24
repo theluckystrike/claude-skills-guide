@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Drizzle ORM — Workflow Guide"
+title: "Claude Code for Drizzle ORM"
 description: "Write type-safe database queries with Drizzle ORM and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-drizzle-orm-workflow-guide/

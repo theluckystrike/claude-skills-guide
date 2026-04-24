@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Verified Access Enterprise — Developer Guide"
+title: "Chrome Verified Access Enterprise"
 description: "Learn how Chrome Verified Access Enterprise works, its API capabilities, and how to integrate device verification into your enterprise applications for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

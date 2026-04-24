@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Employee Recognition Tool Chrome Extension Guide (2026)"
+title: "Employee Recognition Tool Chrome"
 description: "Learn how to build a custom Chrome extension for employee recognition. Practical code examples, architecture patterns, and implementation strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude.md for API Design Standards Guide"
+title: "Claude.md for API Design Standards"
 description: "Learn how to use Claude.md and Claude Code to create, maintain, and enforce consistent API design standards across your projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -420,4 +420,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Fix Claude Code Inconsistent API Design (2026)](/claude-code-inconsistent-api-design-fix-2026/)
+- [CLAUDE.md for API Design — Consistent Endpoints, Responses, and Versioning (2026)](/claude-md-for-api-design-patterns/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Devtools Memory Leak Debugging — Developer (2026)"
+title: "Chrome Devtools Memory Leak Debugging"
 description: "Learn how to identify, analyze, and fix memory leaks in web applications using Chrome DevTools memory profiler with practical code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -252,4 +252,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs Chrome DevTools: Debugging Approaches](/claude-code-vs-chrome-devtools-debugging/)

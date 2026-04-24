@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Bolt.new Review: AI Web App Builder 2026"
+title: "Bolt.new Review"
 description: "A comprehensive review of Bolt.new as an AI-powered web app builder in 2026, with practical examples of using Claude Code skills to enhance your."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -214,4 +214,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs v0 by Vercel (2026): AI Builders](/claude-code-vs-v0-vercel-ai-builder-2026/)

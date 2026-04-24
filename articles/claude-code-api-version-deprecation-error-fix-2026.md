@@ -1,5 +1,5 @@
 ---
-title: "API Version Deprecated Error — Fix (2026)"
+title: "API Version Deprecated Error — Fix"
 permalink: /claude-code-api-version-deprecation-error-fix-2026/
 description: "Fix 'API version deprecated' error by updating anthropic-version header. Upgrade SDK to get the latest supported version."
 last_tested: "2026-04-22"
@@ -73,3 +73,31 @@ Add this to your `CLAUDE.md`:
 - Never hardcode anthropic-version header — let the SDK manage it.
 - Pin SDK major version only (e.g., ^1.0.0), allow minor/patch updates.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `npm ERR! code EACCES`
+- `npm ERR! code ERESOLVE`
+- `npm ERR! peer dep missing`
+- `TokenLimitExceeded: max tokens reached`
+- `Error: output truncated at max_tokens`
+
+## Frequently Asked Questions
+
+### Should I use npm or pnpm with Claude Code?
+
+Claude Code works with any Node.js package manager. If your project uses pnpm, add `Use pnpm instead of npm for all package operations` to your CLAUDE.md so Claude Code respects your toolchain choice.
+
+### Why does Claude Code sometimes run npm commands that fail?
+
+Claude Code infers the package manager from lock files. If both `package-lock.json` and `pnpm-lock.yaml` exist, it may pick the wrong one. Delete the unused lock file or add an explicit instruction in CLAUDE.md.
+
+### How do I verify my npm installation is working?
+
+Run `npm doctor` to check your npm environment. It validates the registry connection, permissions, cache integrity, and Node.js compatibility in one command.
+
+### What causes token count mismatches?
+
+Token counts are estimated before sending a request and precisely calculated on the server. The estimation uses a fast local tokenizer that may differ slightly from the server's tokenizer. Small discrepancies (1-3%) are normal and do not affect functionality.

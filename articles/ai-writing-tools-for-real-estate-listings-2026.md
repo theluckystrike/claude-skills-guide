@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Writing Tools For Real Estate Listings — Developer Guide"
+title: "AI Writing Tools For Real Estate"
 description: "Explore the best AI writing tools for real estate listings in 2026. Learn how to integrate these tools into your property platform with practical code."
 date: 2026-03-15
 last_modified_at: 2026-04-17

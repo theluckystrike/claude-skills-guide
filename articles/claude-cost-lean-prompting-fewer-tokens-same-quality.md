@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Lean Prompting: Fewer Tokens, Same Quality"
+title: "Lean Prompting"
 description: "Write Claude prompts that use 50% fewer tokens without sacrificing output quality — save $3,750/month on 1K daily Opus requests."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -204,3 +204,7 @@ Track average prompt token count per request type over time. Plot a weekly trend
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — token reduction across your entire workflow
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — precise prompts that avoid wasted retries
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — find which skills consume the most tokens
+
+## See Also
+
+- [Async Claude Processing: Half Price Same Quality](/claude-cost-async-claude-processing-half-price-same-quality/)

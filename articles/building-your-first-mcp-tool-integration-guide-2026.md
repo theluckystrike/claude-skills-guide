@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Building Your First MCP Tool Integration Guide 2026"
+title: "Building Your First MCP Tool"
 description: "A practical guide to building your first MCP tool integration with Claude Code in 2026. Learn how to connect external tools, create custom skills, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

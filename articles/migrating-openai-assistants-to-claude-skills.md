@@ -1,5 +1,5 @@
 ---
-title: "Migrating OpenAI Assistants to Claude Skills — Step-by-Step Conversion Guide — 2026"
+title: "Migrating OpenAI Assistants to Claude"
 description: "Convert OpenAI Assistants (instructions, tools, file search) to Claude Code SKILL.md files. Covers instruction mapping, tool equivalents, and feature gaps."
 permalink: /migrating-openai-assistants-to-claude-skills/
 render_with_liquid: false
@@ -140,3 +140,7 @@ Skills follow the agentskills.io open standard, which means your migrated skills
 - [Claude Skills vs OpenAI Assistants API](/claude-skills-vs-openai-assistants-api/) -- detailed capability comparison
 - [Claude Skills vs MCP Servers](/claude-skills-vs-mcp-servers-comparison/) -- replacing function calling with MCP
 - [Hybrid Patterns: Skills, MCP, and Custom Tools](/hybrid-patterns-skills-mcp-custom-tools/) -- combining tools for complex migrations
+
+## See Also
+
+- [Claude Skills vs OpenAI Assistants API Compared (2026)](/claude-skills-vs-openai-assistants-api-2026/)

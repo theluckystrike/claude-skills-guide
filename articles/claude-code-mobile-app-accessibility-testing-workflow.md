@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Mobile App Accessibility Testing Workflow"
+title: "Claude Code Mobile App Accessibility"
 description: "A comprehensive guide to implementing accessibility testing workflows for mobile apps using Claude Code. Learn practical techniques for automated."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -464,4 +464,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for WCAG Accessibility Testing (2026)](/claude-code-wcag-accessibility-testing-2026/)

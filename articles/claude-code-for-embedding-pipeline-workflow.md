@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Embedding Pipeline Workflow"
+title: "Claude Code for Embedding Pipeline"
 description: "Master embedding pipeline workflows with Claude Code. Learn how to build efficient text embedding pipelines for semantic search, RAG systems, and AI."
 date: 2026-03-15
 last_modified_at: 2026-04-17

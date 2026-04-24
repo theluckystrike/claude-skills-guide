@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Self-Consistency Prompting in Claude Code (2026)"
+title: "Self-Consistency Prompting in Claude"
 description: "Improve Claude Code output reliability with self-consistency prompting. Generate multiple solutions, compare approaches, and select the best answer."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -263,4 +263,6 @@ Related Reading
 - [How to Use Tree of Thought Prompting with Claude Code (2026)](/claude-code-for-tree-of-thought-prompting-workflow-guide/)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Coolify — Workflow Guide](/claude-code-for-coolify-self-hosting-workflow-guide/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Do I Test A Claude Skill Before — Developer Guide"
+title: "How Do I Test A Claude Skill Before"
 description: "A practical guide to testing Claude skills before team deployment. Learn validation techniques, local testing workflows, and quality assurance patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

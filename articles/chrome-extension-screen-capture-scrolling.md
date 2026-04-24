@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Scrolling Screen Capture Chrome Extension (2026)"
+title: "Scrolling Screen Capture Chrome"
 description: "Capture full-page scrolling screenshots in Chrome with automatic stitching. Build the extension using canvas API, scrollTo, and image concatenation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

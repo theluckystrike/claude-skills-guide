@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Keyboard Navigation Testing Guide (2026)"
+title: "Claude Code Keyboard Navigation Testing"
 description: "A practical guide to testing keyboard navigation in Claude Code projects. Learn automation patterns, test strategies, and tooling for accessibility."
 date: 2026-04-19
 last_modified_at: 2026-04-19

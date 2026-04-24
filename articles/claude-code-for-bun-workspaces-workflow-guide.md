@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Bun Workspaces — Workflow Guide"
+title: "Claude Code for Bun Workspaces"
 description: "Manage monorepos with Bun workspaces and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-bun-workspaces-workflow-guide/
@@ -84,3 +84,4 @@ Claude Code should create `packages/ui/package.json` with proper `"exports"` and
 - [Claude Code for Nomad Container Scheduling Workflow](/claude-code-for-nomad-container-scheduling-workflow/)
 - [Claude Code For Step Ca Pki — Complete Developer Guide](/claude-code-for-step-ca-pki-workflow-guide/)
 - [How to Use Ripgrep: Search Workflow (2026)](/claude-code-with-ripgrep-and-grep-workflow-tips/)
+- [Claude Code for Bun Runtime — Workflow Guide](/claude-code-for-bun-runtime-workflow-guide/)

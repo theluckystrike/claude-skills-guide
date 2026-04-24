@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills for Hardware Description Language VHDL"
+title: "Claude Code Skills for Hardware"
 description: "A practical guide to using Claude Code skills for VHDL development. Use AI-assisted workflows for hardware design, simulation testing, and documentation."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -448,4 +448,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for VHDL Synthesis and Simulation (2026)](/claude-code-vhdl-synthesis-simulation-2026/)

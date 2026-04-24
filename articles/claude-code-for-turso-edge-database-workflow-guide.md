@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Turso Database — Workflow Guide"
+title: "Claude Code for Turso Database"
 description: "Use Turso edge SQLite with Claude Code for low-latency data. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-turso-edge-database-workflow-guide/
@@ -80,3 +80,4 @@ Claude Code should create the libSQL client with `createClient({ url: 'file:loca
 - [Claude Code NextAuth Database Adapter Setup Guide](/claude-code-nextauth-database-adapter-setup-guide/)
 - [Claude Code for Neon DB Branching — Guide](/claude-code-for-neon-database-branching-workflow-guide/)
 - [Claude Code for Xata Database — Workflow Guide](/claude-code-for-xata-database-workflow-guide/)
+- [Claude Code for Supabase Edge Functions — Guide](/claude-code-for-supabase-edge-functions-workflow-guide/)

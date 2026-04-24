@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for SystemVerilog Testbenches (2026)"
+title: "Claude Code for SystemVerilog"
 description: "SystemVerilog testbench generation with Claude Code. Build constrained-random UVM tests in minutes, not days."
 permalink: /claude-code-systemverilog-testbench-gen-2026/
 last_tested: "2026-04-21"

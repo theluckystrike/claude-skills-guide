@@ -1,6 +1,6 @@
 ---
-title: "Claude Auto-Memory vs Supermemory Skill — Built-In Persistence vs External Knowledge Base — 2026"
-description: "Compare Claude Code's native auto-memory (MEMORY.md, 200-line limit) with Supermemory-style skills for persistent knowledge. 3 situations where each approach wins."
+title: "Claude Auto-Memory vs Supermemory Skill"
+description: "Compare Claude Code's native auto-memory (MEMORY.md, 200-line limit) with Supermemory-style skills for persistent knowledge."
 permalink: /claude-memory-vs-supermemory-skill/
 render_with_liquid: false
 categories: [skills, 2026]
@@ -125,6 +125,35 @@ Custom memory skill (project, .claude/data/):
 
 **Conflicting memories.** Auto-memory says "use 2-space indentation" but a custom memory entry says "this project uses 4-space indentation." The custom project memory should take precedence. Document this hierarchy in the skill's instructions.
 
+## Claude-Mem: The Memory Command and Shorthand
+
+The term "claude-mem" refers to Claude Code's `/memory` command and the MEMORY.md file system that powers it. When developers search for "claude-mem," they are looking for how to manage Claude's persistent memory from the command line.
+
+The `/memory` command (or `claude-mem` as it is commonly abbreviated in developer shorthand) does three things:
+
+1. **View current memories** — running `/memory` displays what Claude has stored about your project and preferences
+2. **Toggle auto-memory** — enables or disables automatic memory capture during sessions
+3. **Edit memories** — opens the MEMORY.md file for manual editing
+
+The MEMORY.md file lives at `~/.claude/projects/<project-hash>/memory/MEMORY.md`. Claude reads it at the start of every session. You can also create topic-specific memory files in the same directory (e.g., `deployment.md`, `testing.md`), and Claude loads them on demand when the topic is relevant.
+
+Common `claude-mem` workflows:
+
+```bash
+# View what Claude remembers about this project
+/memory
+
+# Manually add a memory
+echo "Always use pnpm, never npm" >> ~/.claude/projects/$(pwd | md5sum | cut -c1-8)/memory/MEMORY.md
+
+# Reset project memories
+rm ~/.claude/projects/$(pwd | md5sum | cut -c1-8)/memory/MEMORY.md
+```
+
+The `claude-mem` system is distinct from CLAUDE.md project files. CLAUDE.md provides instructions that Claude follows. MEMORY.md stores observations Claude has made about your behavior and preferences. Both are loaded at session start, but they serve different purposes: CLAUDE.md is prescriptive (rules), MEMORY.md is descriptive (learned patterns).
+
+For a guide on writing effective CLAUDE.md files, see our [CLAUDE.md best practices guide](/claude-md-best-practices-definitive-guide/).
+
 ## Production Gotchas
 
 Auto-memory's storage path (`~/.claude/projects/<project>/memory/`) is based on the project directory hash. If you move your project to a different path, auto-memory starts fresh because the hash changes. Your accumulated knowledge is still at the old path -- you can manually copy MEMORY.md files.
@@ -144,3 +173,7 @@ Custom memory skills have a cold-start problem. On the first session with a new 
 - [Claude Skills vs Raw Prompts with Tools](/claude-skills-vs-raw-prompts-with-tools/) -- when persistence matters
 - [Claude Skills vs Claude AI Projects](/claude-skills-vs-claude-ai-projects/) -- project-level persistence comparison
 - [Claude Skills vs MCP Servers](/claude-skills-vs-mcp-servers-comparison/) -- MCP memory server integration
+
+## See Also
+
+- [Claude Memory (claude-memory) vs Supermemory: AI Memory Tools Compared](/claude-memory-vs-supermemory-comparison/)

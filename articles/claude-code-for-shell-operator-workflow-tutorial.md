@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Shell Operator Workflow Tutorial"
+title: "Claude Code for Shell Operator Workflow"
 description: "Learn how to use Claude Code to build, debug, and automate shell operator workflows. A comprehensive guide for developers working with Kubernetes."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -305,4 +305,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Fish Shell — Workflow Guide](/claude-code-for-fish-shell-workflow-guide/)

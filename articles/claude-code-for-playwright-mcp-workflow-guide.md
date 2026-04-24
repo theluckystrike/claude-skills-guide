@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Playwright MCP — Workflow Guide"
+title: "Claude Code for Playwright MCP"
 description: "Use Playwright MCP server for browser testing with Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-playwright-mcp-workflow-guide/

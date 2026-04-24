@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Error: npm install Fails in Skill Workflow 2026"
+title: "Claude Code Error: npm Install Fails in Skill Workflow"
 last_tested: "2026-04-22"
 description: "Troubleshooting npm install failures when using Claude Code skills. Practical solutions for dependency issues with pdf, xlsx, tdd, frontend-design and."
 date: 2026-03-14
@@ -391,6 +391,4 @@ Related Reading
 - [Fix 'command not found: claude' After Install](/claude-code-command-not-found-after-install-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
-
+- [EACCES npm Cache Permission Error — Fix (2026)](/claude-code-eacces-npm-cache-fix-2026/)

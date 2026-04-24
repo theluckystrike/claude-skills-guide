@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Keeps Suggesting The Same — Developer Guide"
+title: "Claude Code Keeps Suggesting The Same"
 description: "Learn why Claude Code gets stuck in repetitive solution loops and how to break free with practical techniques and skill design patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -198,4 +198,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Fix Claude Code Suggesting Wrong Framework (2026)](/claude-code-keeps-suggesting-wrong-framework-2026/)

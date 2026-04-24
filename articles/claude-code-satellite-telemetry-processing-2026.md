@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Satellite Telemetry (2026)"
+title: "Claude Code for Satellite Telemetry"
 permalink: /claude-code-satellite-telemetry-processing-2026/
 description: "Satellite telemetry processing with Claude Code. Parse CCSDS packets, decode housekeeping data, and build ground station pipelines."
 last_tested: "2026-04-22"
@@ -227,3 +227,4 @@ print('Parse: PASS')
 - [Claude Code for Industrial IoT Protocol Implementation](/claude-code-industrial-iot-protocol-2026/)
 - [Claude Code for Telescope Data Pipeline (FITS)](/claude-code-telescope-fits-pipeline-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for Sonar Array Processing (2026)](/claude-code-sonar-array-processing-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Does Claude Have Code Interpreter? Guide (2026)"
+title: "Does Claude Have Code Interpreter?"
 description: "Claude Code has code interpreter capabilities built-in. Compare it to ChatGPT Code Interpreter with real benchmarks and use cases side-by-side."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -285,4 +285,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude MCP vs ChatGPT Plugins: Extension Systems Compared](/claude-mcp-vs-chatgpt-plugins-comparison/)

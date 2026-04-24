@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Monorepo: Best Setup Guide (2026)"
+title: "Claude Code Monorepo: Best Setup Guide"
 description: "Configure Claude Code for monorepos with per-package CLAUDE.md files, scoped tool permissions, and workspace-aware dependency management rules."
 permalink: /claude-code-monorepo-best-setup-2026/
 last_tested: "2026-04-22"
@@ -95,3 +95,11 @@ Add a date formatting utility to the shared package
 **Good:** creates the utility in `packages/shared/src/utils/`, runs `pnpm add date-fns --filter @myorg/shared`, verifies no downstream breaks
 
 Related: [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) | [Karpathy Don't Assume Examples](/karpathy-dont-assume-examples-real-projects-2026/)
+
+## See Also
+
+- [Claude Code Monorepo Workspace Resolution Failure — Fix (2026)](/claude-code-monorepo-workspace-resolution-failure-fix/)
+- [Monorepo Workspace Package Resolution — Fix (2026)](/claude-code-monorepo-workspace-package-resolution-fix-2026/)
+- [Make Claude Code Write Tests First (TDD) (2026)](/claude-code-write-tests-first-tdd-setup-2026/)
+- [Claude Code Tab Completion Setup Guide 2026](/claude-code-tab-completion-setup-2026/)
+- [How to Set Up Claude Code in Ghostty Terminal 2026](/claude-code-ghostty-terminal-setup-2026/)

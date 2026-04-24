@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for WASI Workflow Tutorial Guide"
+title: "Claude Code for WASI Workflow Tutorial"
 description: "Learn how to use Claude Code to streamline your WebAssembly System Interface (WASI) development workflow. This comprehensive guide covers practical."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Computer Use Token Cost Breakdown"
+title: "Claude Computer Use Token Cost"
 description: "Computer use sessions cost $1.12+ in tool overhead per 100 screenshots. Full breakdown of the 735-token per-call cost structure."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -189,3 +189,10 @@ Track three metrics per session: total steps, screenshots taken, and total cost 
 - [Claude API Tool Use Function Calling Deep Dive](/claude-api-tool-use-function-calling-deep-dive-guide/)
 - [Advanced Claude Skills with Tool Use](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Claude Skills Token Optimization Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
+
+## See Also
+
+- [Claude Cost Anomaly Detection Setup Guide](/claude-cost-09-claude-cost-anomaly-detection/)
+- [Claude Code Cost Per Project Estimation Guide](/claude-cost-09-claude-code-cost-per-project/)
+- [Token-Efficient Few-Shot Examples for Claude](/claude-cost-token-efficient-few-shot-examples-claude/)
+- [InsForge vs Supabase: Claude Code Token Cost (2026)](/insforge-vs-supabase-claude-code-token-cost-2026/)

@@ -174,4 +174,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs GitHub Copilot Workspace (2026)](/claude-code-vs-github-copilot-workspace-agent-2026/)
+- [Claude Code vs Copilot Workspace (2026): Agents](/claude-code-vs-copilot-workspace-agent-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Pr Diff Analysis — Complete Developer Guide"
+title: "Claude Code For Pr Diff Analysis"
 description: "Learn how to build a Claude Code skill for analyzing pull request diffs, automating code reviews, and streamlining your development workflow with."
 date: 2026-03-15
 last_modified_at: 2026-04-17

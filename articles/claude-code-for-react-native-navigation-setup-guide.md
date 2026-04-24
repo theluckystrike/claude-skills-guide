@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for React Native Navigation Setup Guide"
+title: "Claude Code for React Native Navigation"
 description: "Learn how to set up React Native navigation with Claude Code. A practical guide covering stack, tab, and drawer navigation with code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

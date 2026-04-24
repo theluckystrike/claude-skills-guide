@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Migrating Real-Time Claude Calls to Batch API"
+title: "Migrating Real-Time Claude Calls"
 description: "Move eligible Claude API calls to batch mode with this migration guide. Save $1,400/month on a typical 3-service architecture."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -239,3 +239,5 @@ Track migration health with these metrics:
 ## Related Articles
 
 - [Real-Time Claude Token Monitoring Pipeline](/real-time-claude-token-monitoring-pipeline/)
+- [When to Use Claude Batch vs Real-Time API](/claude-cost-when-to-use-claude-batch-vs-real-time-api/)
+- [Real-Time Claude Token Monitoring Pipeline](/claude-cost-08-real-time-token-monitoring-pipeline/)

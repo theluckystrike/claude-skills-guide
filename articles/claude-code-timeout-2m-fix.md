@@ -147,4 +147,6 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Fix: Claude Code Slow Response and Performance](/claude-code-slow-fix/)
 - [Before and After Switching to Claude Code Workflow](/before-and-after-switching-to-claude-code-workflow/)
 
+## See Also
 
+- [Claude Code Bash Command Timeout 120s — Fix (2026)](/claude-code-bash-command-timeout-120s-fix-2026/)

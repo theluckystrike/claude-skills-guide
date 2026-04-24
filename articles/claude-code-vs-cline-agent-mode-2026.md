@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs Cline: High Autonomy vs Approval Gates (2026)"
+title: "Claude Code vs Cline: Agent Mode Comparison (2026)"
 permalink: /claude-code-vs-cline-agent-mode-2026/
 description: "Claude Code defaults to autonomous execution with configurable guardrails. Cline asks before every action. Agent mode compared for speed, cost, and safety."
 last_tested: "2026-04-21"
@@ -84,3 +84,5 @@ Claude Code and Cline represent two valid philosophies about AI agent autonomy. 
 ## Related
 
 - [Claude Code vs Cursor comparison](/claude-code-vs-cursor-definitive-comparison-2026/) — Definitive Claude Code vs Cursor comparison for 2026
+- [Claude Code vs Cline: Token Efficiency Comparison](/claude-code-vs-cline-token-efficiency/)
+- [Claude Code vs Cline: Setup and Configuration](/claude-code-vs-cline-setup-comparison/)

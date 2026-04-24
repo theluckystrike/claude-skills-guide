@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Free vs Pro Plan — Comparison 2026"
+title: "Claude Code Free vs Pro Plan"
 description: "Claude Code free tier vs Pro plan compared for 2026. Features, limits, pricing, and which plan is worth it for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -246,6 +246,10 @@ Related Reading
 - [Best AI Code Completion Tools vs Claude Code](/best-ai-code-completion-tools-vs-claude-code/). Compare Claude Code against other AI completion tools before choosing a plan
 - [Claude Code vs Free Supermaven — Developer Comparison 2026](/claude-code-vs-free-supermaven-tier-enough/)
 - [Free vs Pro vs Max: Claude Code Plan Calculator](/free-vs-pro-vs-max-claude-code-plan-calculator/)
+- [Claude Pro subscription price](/claude-pro-subscription-price-guide/) — Pro plan features and pricing
+- [Claude extra usage cost](/claude-extra-usage-cost-guide/) — what overages actually cost
+- [Claude 5-hour usage limit](/claude-5-hour-usage-limit-guide/) — rolling limit explained
+- [Claude API pricing](/claude-api-pricing-complete-guide/) — every plan and model priced
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

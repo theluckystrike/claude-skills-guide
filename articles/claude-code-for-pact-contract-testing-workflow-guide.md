@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Pact Contract Testing Workflow Guide"
+title: "Claude Code for Pact Contract Testing"
 description: "Learn how to integrate Claude Code into your Pact contract testing workflow. This guide covers practical strategies for writing, managing, and maintaining."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -235,4 +235,8 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Spike Testing Workflow Tutorial Guide (2026)](/claude-code-for-spike-testing-workflow-tutorial-guide/)
+- [Claude Code + Percy Visual Testing (2026)](/claude-code-for-percy-visual-testing-workflow-guide/)
+- [Claude Code for Soak Testing Workflow Tutorial Guide](/claude-code-for-soak-testing-workflow-tutorial-guide/)

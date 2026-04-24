@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for SuperTokens Auth — Guide"
+title: "Claude Code for SuperTokens Auth"
 description: "Add self-hosted auth with SuperTokens and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-supertokens-auth-workflow-guide/

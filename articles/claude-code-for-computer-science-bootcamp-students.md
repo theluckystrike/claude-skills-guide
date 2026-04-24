@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Computer Science Bootcamp Students"
+title: "Claude Code for Computer Science"
 description: "A comprehensive guide for computer science bootcamp students learning to use Claude Code effectively. Master AI-assisted coding, skills, and workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -257,4 +257,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Materials Science VASP/LAMMPS (2026)](/claude-code-materials-science-vasp-lammps-2026/)

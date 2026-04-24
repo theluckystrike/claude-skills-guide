@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md as Cost Control: Rules That Prevent Token Waste"
+title: "CLAUDE.md as Cost Control"
 description: "Transform CLAUDE.md into a cost control instrument with rules that prevent retry spirals, cap file reads, and enforce model routing -- saving $50-200/month."
 permalink: /claude-md-cost-control-rules-prevent-token-waste/
 date: 2026-04-22
@@ -158,3 +158,7 @@ The complete cost-optimized CLAUDE.md template:
 - [Claude Code Hooks for Token Budget Enforcement](/claude-code-hooks-token-budget-enforcement/) -- automated enforcement beyond CLAUDE.md rules
 
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization
+
+## See Also
+
+- [Installing and Managing Claude Code Skills for Cost Control](/installing-managing-claude-code-skills-cost-control/)

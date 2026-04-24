@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Config File Location and Settings"
+title: "Claude Code Config File Location"
 description: "Find and configure Claude Code settings files — global settings.json, project settings, MCP config, and environment variables."
 date: 2026-04-14
 last_modified_at: 2026-04-17
@@ -258,3 +258,9 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 
 - [Claude Desktop config.json guide](/claude-desktop-config-json-guide/) — How to configure Claude Desktop with config.json
+
+## See Also
+
+- [Claude Code Config YAML Parse Error — Fix (2026)](/claude-code-config-yaml-parse-error-fix/)
+- [Config File JSON Parse Error — Fix (2026)](/claude-code-config-json-corrupted-parse-error-fix-2026/)
+- [XDG Config Directory Permissions Fix](/claude-code-xdg-config-directory-permissions-fix-2026/)

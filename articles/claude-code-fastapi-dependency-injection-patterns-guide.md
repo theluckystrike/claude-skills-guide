@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code FastAPI Dependency Injection Patterns Guide"
+title: "Claude Code FastAPI Dependency"
 description: "A comprehensive guide to implementing dependency injection in FastAPI using Claude Code. Learn practical patterns, code examples, and best practices."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -66,3 +66,7 @@ eval "$(pyenv init -)"
 # CLAUDE.md rule
 Use /opt/homebrew/bin/python3 for all Python commands on macOS. Or use the project virtualenv: source .venv/bin/activate. Never rely on bare 'python3' resolving to the correct installation.
 ```
+
+## See Also
+
+- [Homebrew Formula Outdated Error — Fix (2026)](/claude-code-homebrew-formula-outdated-fix-2026/)

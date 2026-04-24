@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Enterprise Announcements — Developer Guide"
+title: "Claude Code Enterprise Announcements"
 description: "Explore the latest Claude Code enterprise features announced in 2026. Learn about new security controls, team collaboration tools, skill ecosystem."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -449,4 +449,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs Augment Code (2026): Enterprise AI](/claude-code-vs-augment-code-enterprise-2026/)
+- [Claude Code Enterprise Pricing: What Companies Actually Pay](/claude-code-enterprise-pricing-what-companies-pay/)

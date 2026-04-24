@@ -1,7 +1,8 @@
 ---
+render_with_liquid: false
 
 layout: default
-title: "How to Make Claude Code Write Secure Code Always"
+title: "How to Make Claude Code Write Secure"
 description: "A practical guide to configuring Claude Code for secure coding practices. Learn to use security-focused skills, define security constraints, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -409,4 +410,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Write Path Outside Workspace — Fix (2026)](/claude-code-write-tool-path-outside-workspace-fix-2026/)

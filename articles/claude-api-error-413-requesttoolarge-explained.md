@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude API Error 413 request_too_large Fix (2026)"
+title: "Fix: Claude API Error 413"
 description: "Fix Claude API 413 request_too_large error. Covers request size limits for Messages, Batch, and Files endpoints with solutions for large payloads."
 date: 2026-04-15
 last_modified_at: 2026-04-17

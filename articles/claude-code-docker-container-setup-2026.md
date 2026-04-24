@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Run Claude Code in Docker Container 2026"
+title: "How to Run Claude Code in Docker"
 description: "Run Claude Code in Docker with isolated environments, volume mounts for project files, and Dockerfile examples for reproducible AI development."
 permalink: /claude-code-docker-container-setup-2026/
 date: 2026-04-21
@@ -217,3 +217,6 @@ Docker isolation guarantees Claude Code cannot access files outside your mounted
 
 - [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) and safer alternatives
 
+## See Also
+
+- [Docker Container Missing Tools Fix](/claude-code-docker-container-missing-tools-fix-2026/)

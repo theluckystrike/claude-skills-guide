@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Enterprise Extension Management API Chrome Extension (2026)"
+title: "Enterprise Extension Management API"
 description: "Learn how to programmatically manage Chrome extensions in enterprise environments using the Chrome Enterprise Extension Management API with code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Next.js Image — Complete Developer Guide (2026)"
+title: "Claude Code Next.js Image"
 last_tested: "2026-04-22"
 description: "Learn how to use Claude Code CLI with Next.js image optimization. Practical examples for developers using the frontend-design skill and modern image."
 date: 2026-03-14
@@ -383,4 +383,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Next.js Build Fails With Generated Code — Fix (2026)](/claude-code-nextjs-build-generated-code-fix-2026/)

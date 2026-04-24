@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for NVIDIA NeMo Framework (2026)"
+title: "Claude Code for NVIDIA NeMo Framework"
 description: "Build and deploy generative AI models with NVIDIA NeMo and Claude Code. Training configs, model optimization, and inference deployment workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -408,4 +408,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Waku React Framework — Guide](/claude-code-for-waku-react-framework-workflow-guide/)
+- [Claude Code for HTMX — Workflow Guide](/claude-code-for-htmx-framework-workflow-guide/)

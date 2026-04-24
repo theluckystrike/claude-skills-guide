@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md For Open Source — Complete Developer Guide"
+title: "Claude Md For Open Source"
 description: "Comprehensive guide to using Claude Code and Claude MD files effectively in open source projects. Learn how to create claude-md files that help."
 date: 2026-03-14
 last_modified_at: 2026-04-17

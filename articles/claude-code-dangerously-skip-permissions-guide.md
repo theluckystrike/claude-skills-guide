@@ -1,5 +1,5 @@
 ---
-title: "Claude Code --dangerously-skip-permissions Guide (2026)"
+title: "Claude Code --dangerously-skip-permissions Guide"
 description: "What --dangerously-skip-permissions does, when you actually need it, the real security risks, and the safer scoped alternatives you should use instead."
 permalink: /claude-code-dangerously-skip-permissions-guide/
 last_tested: "2026-04-24"
@@ -688,6 +688,137 @@ docker run --rm \
 ```
 
 Read-only root filesystem. Writable tmpfs for temp files. Source mounted read-only. Output directory is the only writable volume. Memory capped. Claude runs with maximum autonomy inside a maximum-security box. For enterprise deployment patterns, see [Enterprise Setup Guide](/claude-code-enterprise-setup-guide-2026/).
+
+## Permission Audit Log
+
+When you run `--dangerously-skip-permissions`, Claude operates without guardrails. But that does not mean you should operate without visibility. Every tool call Claude makes can be logged to a structured audit file that you review after the session ends. This turns a blind-trust workflow into a trust-but-verify workflow.
+
+### CLAUDE.md Rule for Automatic Audit Logging
+
+Add this to your project's CLAUDE.md. It instructs Claude to log every action it takes during a `--dangerously-skip-permissions` session:
+
+```markdown
+# Audit Trail
+
+Before executing any tool call (Bash, Edit, Write, or any MCP tool), append
+a one-line JSON entry to `.claude/audit-log.jsonl` with the following fields:
+- timestamp (ISO 8601)
+- tool (the tool name)
+- action (the command or file path)
+- reason (one-sentence justification for the action)
+
+Never skip the audit log entry. Log BEFORE executing the action.
+```
+
+Claude follows this instruction reliably. After a session, `.claude/audit-log.jsonl` contains a machine-readable record of every action taken.
+
+### Post-Session Audit Review Script
+
+Save this as `claude-audit-review.sh` and run it after any `--dangerously-skip-permissions` session:
+
+```bash
+#!/bin/bash
+# claude-audit-review.sh — Review what Claude did during an autonomous session
+set -euo pipefail
+
+AUDIT_FILE="${1:-.claude/audit-log.jsonl}"
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+if [ ! -f "$AUDIT_FILE" ]; then
+  echo "No audit log found at $AUDIT_FILE"
+  exit 1
+fi
+
+TOTAL=$(wc -l < "$AUDIT_FILE")
+BASH_CMDS=$(grep '"tool":"Bash"' "$AUDIT_FILE" | wc -l)
+FILE_EDITS=$(grep '"tool":"Edit"\|"tool":"Write"' "$AUDIT_FILE" | wc -l)
+DELETES=$(grep -i '"action":"rm \|"action":"del\|"action":"unlink' "$AUDIT_FILE" | wc -l)
+NETWORK=$(grep -i '"action":"curl \|"action":"wget \|"action":"fetch' "$AUDIT_FILE" | wc -l)
+
+echo "=== Claude Audit Report ==="
+echo "Log file: $AUDIT_FILE"
+echo "Total actions: $TOTAL"
+echo ""
+echo "Breakdown:"
+echo -e "  Shell commands:  $BASH_CMDS"
+echo -e "  File edits:      $FILE_EDITS"
+
+if [ "$DELETES" -gt 0 ]; then
+  echo -e "  ${RED}Deletions:       $DELETES${NC}"
+else
+  echo -e "  ${GREEN}Deletions:       0${NC}"
+fi
+
+if [ "$NETWORK" -gt 0 ]; then
+  echo -e "  ${YELLOW}Network calls:   $NETWORK${NC}"
+else
+  echo -e "  ${GREEN}Network calls:   0${NC}"
+fi
+
+echo ""
+echo "=== Flagged Actions ==="
+# Flag any destructive or suspicious commands
+grep -n -i '"rm -rf\|"sudo \|"chmod 777\|"curl.*POST\|"git push --force' \
+  "$AUDIT_FILE" 2>/dev/null && true
+
+if [ $? -ne 0 ] && [ "$DELETES" -eq 0 ] && [ "$NETWORK" -eq 0 ]; then
+  echo -e "${GREEN}No suspicious actions detected.${NC}"
+fi
+
+echo ""
+echo "=== Last 10 Actions ==="
+tail -10 "$AUDIT_FILE" | python3 -c "
+import sys, json
+for line in sys.stdin:
+    line = line.strip()
+    if not line:
+        continue
+    try:
+        entry = json.loads(line)
+        ts = entry.get('timestamp', '?')[:19]
+        tool = entry.get('tool', '?')
+        action = entry.get('action', '?')[:60]
+        print(f'  {ts}  [{tool:6s}]  {action}')
+    except json.JSONDecodeError:
+        print(f'  [malformed] {line[:80]}')
+" 2>/dev/null || tail -10 "$AUDIT_FILE"
+```
+
+### Example Audit Log Output
+
+After a typical autonomous session, the log looks like this:
+
+```jsonl
+{"timestamp":"2026-04-24T14:22:01Z","tool":"Bash","action":"npm test","reason":"Running test suite before making changes"}
+{"timestamp":"2026-04-24T14:22:18Z","tool":"Read","action":"src/auth/middleware.ts","reason":"Reading auth middleware to understand current implementation"}
+{"timestamp":"2026-04-24T14:22:19Z","tool":"Edit","action":"src/auth/middleware.ts","reason":"Adding JWT validation to replace session check"}
+{"timestamp":"2026-04-24T14:22:20Z","tool":"Edit","action":"src/auth/types.ts","reason":"Adding JWTPayload interface"}
+{"timestamp":"2026-04-24T14:22:21Z","tool":"Bash","action":"npm test","reason":"Verifying changes pass all tests"}
+{"timestamp":"2026-04-24T14:22:35Z","tool":"Bash","action":"git add src/auth/","reason":"Staging modified auth files"}
+{"timestamp":"2026-04-24T14:22:36Z","tool":"Bash","action":"git commit -m 'refactor: replace session auth with JWT'","reason":"Committing completed refactor"}
+```
+
+And the review script output:
+
+```
+=== Claude Audit Report ===
+Log file: .claude/audit-log.jsonl
+Total actions: 7
+
+Breakdown:
+  Shell commands:  3
+  File edits:      2
+  Deletions:       0
+  Network calls:   0
+
+=== Flagged Actions ===
+No suspicious actions detected.
+```
+
+This approach gives you a complete paper trail without sacrificing the autonomous workflow. For CI/CD pipelines, pipe the audit log to your centralized logging system (Datadog, CloudWatch, Splunk) so every automated Claude session is traceable. For enterprise environments that require compliance records, this audit log satisfies the "what did the AI do" question with timestamped, machine-parseable evidence.
 
 ## Frequently Asked Questions
 

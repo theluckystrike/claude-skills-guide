@@ -246,7 +246,7 @@ Claude Code的定价提供了灵活的选择：
 
 理解Token计费机制和善用成本优化策略，可以在保证使用体验的同时有效控制开支。建议从Pro计划开始，根据实际使用量再决定是否升级到Max或切换到API模式。
 
-如果你还没有开始使用Claude Code，可以先阅读[安装教程](/claude-code-anzhuang-installation-guide/)完成设置。已经在使用的用户，可以查看[温度参数设置指南](/claude-temperature-settings-guide/)和[MCP配置指南](/claude-code-mcp-configuration-guide/)来进一步优化使用体验。
+如果你还没有开始使用Claude Code，可以先阅读[安装教程](/claude-code-anzhuang-installation-guide/)完成设置，然后参考[Claude Code使用教程](/claude-code-shiyong-jiaocheng-tutorial/)系统学习。关于多人共享和拼车方案的风险分析，请查看[Claude Code拼车指南](/claude-code-pinche-group-sharing/)。已经在使用的用户，可以查看[温度参数设置指南](/claude-temperature-settings-guide/)和[MCP配置指南](/claude-code-mcp-configuration-guide/)来进一步优化使用体验。更多中文资源请访问[Claude Code中文指南合集](/claude-code-zhongwen-guide/)。
 
 ## 常见问题
 
@@ -402,3 +402,11 @@ GitHub Copilot Individual每月10美元，比Claude Code Pro的20美元便宜。
   ]
 }
 </script>
+
+## See Also
+
+- [Claude Code拼车指南：合租与共享方案 (2026)](/claude-code-pinche-group-sharing-zh/)
+- [Claude Code使用教程：从入门到精通 (2026)](/claude-code-shiyong-jiaocheng-tutorial-zh/)
+- [Claude Code安装教程：完整指南 (2026)](/claude-code-anzhuang-installation-guide-zh/)
+- [Claude Code国内使用指南 (2026)](/claude-code-guonei-shiyong-china-usage-guide-zh/)
+- [Claude Code中文指南合集 (2026)](/claude-code-zhongwen-guide-zh/)

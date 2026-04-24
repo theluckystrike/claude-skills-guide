@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Codeium SQL — Developer Comparison 2026"
+title: "Claude Code vs Codeium SQL"
 description: "A comprehensive comparison of AI-powered SQL query generation capabilities, focusing on Claude Code's advanced features, context awareness, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

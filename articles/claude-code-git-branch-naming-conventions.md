@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Git Branch Naming Conventions (2026)"
+title: "Claude Code Git Branch Naming"
 description: "Master git branch naming conventions that work smoothly with Claude Code. Learn patterns, prefixes, and workflows to organize your development."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -364,4 +364,8 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Branch Protection Bypass Attempt Fix](/claude-code-branch-protection-bypass-attempt-fix-2026/)
+- [Git Credentials Expired Mid-Session Fix](/claude-code-git-credentials-expired-mid-session-fix-2026/)
+- [Pre-commit Hook Failed in Claude Code — Fix (2026)](/claude-code-git-hook-blocked-commit-fix-2026/)

@@ -1,5 +1,5 @@
 ---
-title: "Awesome Claude Code vs Awesome Toolkit (2026)"
+title: "Awesome Claude Code vs Awesome Toolkit"
 description: "Awesome Claude Code has 40K stars and covers the full ecosystem. Awesome Toolkit has 1.4K stars with deeper plugin coverage. Here's the difference."
 permalink: /awesome-claude-code-vs-awesome-toolkit-2026/
 last_tested: "2026-04-22"
@@ -106,3 +106,11 @@ Contributing to both maximizes visibility, but if you can only submit one PR, Aw
 ## Final Recommendation
 
 Bookmark both. Use Awesome Claude Code as your starting point and ecosystem map. When you need to go deep on plugins or framework-specific agents, switch to Awesome Toolkit for its broader catalog. Between the two, you will find every meaningful Claude Code community resource available. Cross-reference with the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional context on the most popular entries.
+
+## See Also
+
+- [Install Awesome Claude Code Toolkit (2026)](/how-to-install-awesome-claude-code-toolkit-2026/)
+- [Awesome Claude Code vs Docs Mirror (2026)](/awesome-claude-code-vs-claude-code-docs-2026/)
+- [Claude Code Templates vs Awesome Toolkit (2026)](/claude-code-templates-vs-awesome-toolkit-2026/)
+- [Awesome Claude Code: Master Resource Index (2026)](/awesome-claude-code-master-index-guide-2026/)
+- [Awesome Claude Code Toolkit: 135 Agents (2026)](/awesome-claude-code-toolkit-135-agents-2026/)

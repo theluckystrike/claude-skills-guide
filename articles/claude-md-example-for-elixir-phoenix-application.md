@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude MD Example for Elixir Phoenix Apps (2026)"
+title: "Claude MD Example for Elixir Phoenix"
 description: "Claude MD skill examples for Elixir Phoenix applications. Ecto patterns, LiveView components, and Phoenix convention configurations included."
 date: 2026-03-14
 last_modified_at: 2026-04-17

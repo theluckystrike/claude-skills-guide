@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Knowledge Sharing Workflow Tutorial"
+title: "Claude Code for Knowledge Sharing"
 description: "Learn how to build efficient knowledge sharing workflows with Claude Code. This tutorial covers skill-based knowledge capture, automated documentation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

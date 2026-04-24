@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Docker Build Failures When Using Claude Code (2026)"
+title: "Fix Docker Build Failures When Using"
 description: "Resolve Docker build failures with Claude Code. Fix multi-stage build errors, missing dependencies, layer caching issues, and platform mismatches."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -331,3 +331,4 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Fix Claude Code Failed to Authenticate](/claude-code-failed-to-authenticate/)
 - [Fix Prisma Migration Failures with Claude Code](/claude-code-prisma-migration-failed-fix/)
 - [Fix WebSocket Connection Failures in Claude Code](/claude-code-websocket-connection-failed-fix/)
+- [Request Body Validation Failed — Fix (2026)](/claude-code-request-body-validation-failed-fix-2026/)

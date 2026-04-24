@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Semantic HTML Accessibility with Claude Code (2026)"
+title: "Fix Semantic HTML Accessibility"
 description: "Improve web accessibility by fixing semantic HTML with Claude Code. Covers ARIA roles, landmark regions, heading hierarchy, and screen reader testing."
 date: 2026-03-13
 last_modified_at: 2026-04-17

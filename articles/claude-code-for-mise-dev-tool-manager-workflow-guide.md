@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Mise — Workflow Guide (2026)"
+title: "Claude Code for Mise — Workflow Guide"
 description: "Claude Code for Mise — Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified for 2026."
 date: 2026-04-18
 permalink: /claude-code-for-mise-dev-tool-manager-workflow-guide/
@@ -78,3 +78,4 @@ Claude Code should create `.mise.toml` with `[tools]` section listing `node = "2
 ## Related Articles
 
 - [Pieces for Developers AI Review Workflow Tool](/pieces-for-developers-ai-review-workflow-tool/)
+- [Claude Code for fnm Node Manager — Guide](/claude-code-for-fnm-node-manager-workflow-guide/)

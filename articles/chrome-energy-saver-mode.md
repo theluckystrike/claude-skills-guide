@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Energy Saver Mode — Developer Guide (2026)"
+title: "Chrome Energy Saver Mode"
 description: "Learn how Chrome Energy Saver Mode works, its impact on browser performance, and practical configurations for developers who need to balance power."
 date: 2026-03-15
 last_modified_at: 2026-04-17

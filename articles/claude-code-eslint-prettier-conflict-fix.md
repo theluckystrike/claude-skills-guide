@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix ESLint and Prettier Conflicts in Claude Code (2026)"
+title: "Fix ESLint and Prettier Conflicts"
 description: "Resolve ESLint and Prettier Conflicts in Claude Code issues with tested solutions, step-by-step debugging, and production-ready code examples verified..."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -274,4 +274,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Claude Code CLAUDE.md Best Practices](/claude-code-claude-md-best-practices/)
 - [Claude Code Workflow Optimization Tips 2026](/claude-code-workflow-optimization-tips-2026/)
 
+## See Also
 
+- [Claude Code ESLint Plugin Crashes on Custom Rule — Fix (2026)](/claude-code-eslint-plugin-crashes-custom-rule-fix/)
+- [Claude Code Prettier Format Conflict — Fix (2026)](/claude-code-prettier-format-conflict-fix/)
+- [Claude Code vs ESLint + Prettier: Code Quality Tools](/claude-code-vs-eslint-prettier-comparison/)

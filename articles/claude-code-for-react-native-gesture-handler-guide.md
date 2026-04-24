@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for React Native Gesture Handler Guide"
+title: "Claude Code for React Native Gesture"
 description: "Master gesture handling in React Native with Claude Code. Learn practical patterns for implementing pan, pinch, rotation, and tap gestures with."
 date: 2026-03-15
 last_modified_at: 2026-04-17

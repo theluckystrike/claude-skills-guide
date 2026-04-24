@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Chrome Extension HTML Email P — Honest Review 2026"
+title: "Chrome Extension HTML Email P"
 description: "Learn how to build a Chrome extension for HTML email preview. Practical code examples, API usage, and techniques for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

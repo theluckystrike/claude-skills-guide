@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Code Review Process — Reviewing AI-Generated Code Against Rules (2026)"
+title: "CLAUDE.md Code Review Process"
 description: "How to use CLAUDE.md as a code review checklist, automate rule verification, and build a review workflow for Claude Code output."
 permalink: /claude-md-code-review-process/
 render_with_liquid: false

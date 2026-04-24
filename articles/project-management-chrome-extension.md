@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Project Management Chrome Extension Guide (2026)"
+title: "Project Management Chrome Extension"
 description: "A practical guide to project management Chrome extensions for developers and power users. Learn how to integrate task management directly into your."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md For Frontend Projects Best — Honest Review 2026"
+title: "Claude Md For Frontend Projects Best"
 description: "Master Claude MD files for frontend development. Practical patterns, skill examples, and workflow optimization for React, Vue, and Svelte projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -233,4 +233,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [CLAUDE.md for Frontend Projects — React, Component, and State Rules (2026)](/claude-md-for-frontend-projects/)

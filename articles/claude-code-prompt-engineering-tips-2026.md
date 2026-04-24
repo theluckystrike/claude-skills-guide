@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Prompt Engineering Tips (2026)"
+title: "Claude Code Prompt Engineering Tips"
 description: "Practical prompt engineering tips for Claude Code including task scoping, file references, acceptance criteria, and common anti-patterns."
 permalink: /claude-code-prompt-engineering-tips-2026/
 last_tested: "2026-04-22"
@@ -230,3 +230,7 @@ Minimally. A well-structured 200-word prompt costs ~260 tokens. A vague 20-word 
 Yes. Use slash commands (`.claude/commands/`) to save reusable prompt templates. See the [skills vs hooks vs commands guide](/claude-code-skills-vs-hooks-vs-commands-2026/).
 
 For more on getting better results from Claude Code, see [The Claude Code Playbook](/playbook/). For managing context across prompts, read the [context window guide](/claude-code-context-window-management-2026/). For team-wide prompt standards, see the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).
+
+- [Super Claude Code framework](/super-claude-code-framework-guide/) — structured prompting framework for advanced users
+- [CLAUDE.md best practices](/claude-md-best-practices-definitive-guide/) — project-level prompt configuration
+- [Claude Code spec workflow](/claude-code-spec-workflow-guide/) — write specs before implementation for better prompts

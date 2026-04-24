@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Claude Code Changed My — Complete Developer Guide"
+title: "How Claude Code Changed My"
 description: "A developer shares practical insights on how Claude Code transformed their daily coding routines, from automated testing with tdd skill to document."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Cost-Efficient Multi-Agent Coding Workflows"
+title: "Cost-Efficient Multi-Agent Coding"
 description: "Build multi-agent coding workflows that cost $9/sprint instead of $25. Proven patterns from a 2,816-article production fleet."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -227,3 +227,8 @@ Track workflow economics:
 - [Claude Opus Orchestrator Sonnet Worker Architecture](/claude-opus-orchestrator-sonnet-worker-architecture/)
 - [Parallel Subagents Claude Code Best Practices](/parallel-subagents-claude-code-best-practices-2026/)
 - [Monitoring and Logging Claude Code Multi-Agent Systems](/monitoring-and-logging-claude-code-multi-agent-systems/)
+
+## See Also
+
+- [Optimal Context Size for Cost-Efficient Claude](/claude-cost-optimal-context-size-cost-efficient-claude/)
+- [Multi-Agent Claude Fleet Cost Architecture Guide](/claude-cost-multi-agent-claude-fleet-cost-architecture/)

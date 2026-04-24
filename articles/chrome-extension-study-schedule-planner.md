@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Study Schedule Planner Chrome Extension Guide (2026)"
+title: "Study Schedule Planner Chrome Extension"
 description: "Learn how to create a chrome extension study schedule planner for managing study sessions, tracking progress, and automating reminders."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Stop Claude Code Breaking CI Pipelines (2026)"
+title: "Stop Claude Code Breaking CI Pipelines"
 description: "Prevent Claude Code from breaking CI by adding pre-commit checks, test requirements, and pipeline-aware rules to your CLAUDE.md."
 permalink: /claude-code-breaks-ci-pipeline-fix-2026/
 last_tested: "2026-04-22"
@@ -109,3 +109,7 @@ Add a [post-tool-use hook](/understanding-claude-code-hooks-system-complete-guid
 The [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) index lists CI integration skills that validate changes against your pipeline before committing.
 
 For CI/CD integration patterns, see the [CI/CD integration guide](/claude-code-ci-cd-integration-guide-2026/). For hook configuration details, read the [hooks guide](/understanding-claude-code-hooks-system-complete-guide/). For team workflow setup, see the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).
+
+## See Also
+
+- [Stop Claude Code Breaking Working Features (2026)](/claude-code-breaks-working-features-fix-2026/)

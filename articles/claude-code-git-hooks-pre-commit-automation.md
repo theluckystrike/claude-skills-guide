@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Git Hooks: Automate Your Pre-Commit Workflow"
+title: "Claude Code Git Hooks"
 description: "Learn how to integrate Claude Code with git hooks for automated code quality checks, linting, and pre-commit validation in your development workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -417,4 +417,8 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Pre-Commit Hook Failure on Claude Changes Fix](/claude-code-pre-commit-hook-failure-fix-2026/)
+- [Pre-commit Hook Failed in Claude Code — Fix (2026)](/claude-code-git-hook-blocked-commit-fix-2026/)
+- [Claude Code Git Hook Pre-commit Conflict — Fix (2026)](/claude-code-git-hook-pre-commit-conflict-fix/)

@@ -62,3 +62,11 @@ claude "Rewrite the entire Header.tsx file with the updated version"
 # CLAUDE.md rule
 Before making edits, save all open editor files. Do not edit files in the IDE while Claude Code is working on them. Use VS Code auto-save with a short delay (1 second) to minimize conflicts.
 ```
+
+## See Also
+
+- [Windows WSL Path Conflict Error — Fix (2026)](/claude-code-windows-wsl-path-conflict-fix-2026/)
+- [Certificate Pinning Conflict Error — Fix (2026)](/claude-code-certificate-pinning-conflict-fix-2026/)
+- [Git Worktree Lock Conflict Fix](/claude-code-worktree-lock-conflict-fix-2026/)
+- [Claude Edit Tool File Modified Externally — Fix (2026)](/claude-code-edit-tool-conflict-merge-fix-2026/)
+- [Peer Dependency Conflict npm Error — Fix (2026)](/claude-code-peer-dependency-conflict-fix-2026/)

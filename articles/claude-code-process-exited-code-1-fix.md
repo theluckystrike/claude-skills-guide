@@ -1,5 +1,5 @@
 ---
-title: "Fix: Claude Code Process Exited With Code 1 (2026)"
+title: "Fix: Claude Code Process Exited"
 description: "Diagnose and fix Claude Code exit code 1 errors. 10 specific causes with step-by-step tested fixes for macOS, Linux, Windows WSL, and Docker."
 permalink: /claude-code-process-exited-code-1-fix/
 last_tested: "2026-04-24"
@@ -906,6 +906,151 @@ chmod +x scripts/verify-environment.sh
 ```
 
 For team environments, run this as a git hook or CI step. See [Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) for integrating this into your Claude Code workflow.
+
+## Automated Recovery Script
+
+Instead of manually diagnosing exit code 1 every time, use this script as a pre-session check that catches the most common causes and attempts automatic repair. Save it as `claude-preflight.sh` and run it before starting any Claude Code session, or integrate it into your shell profile so it runs automatically.
+
+```bash
+#!/bin/bash
+# claude-preflight.sh — Diagnose and auto-fix Claude Code exit code 1 causes
+# Run before every Claude Code session to prevent crashes
+set -uo pipefail
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+FIXED=0
+FAILED=0
+
+echo "=== Claude Code Pre-Session Health Check ==="
+echo ""
+
+# 1. Check Node.js version
+echo -n "1. Node.js version... "
+if ! command -v node &>/dev/null; then
+  echo -e "${RED}NOT INSTALLED${NC}"
+  echo "   Attempting fix: installing Node.js 22 via nvm..."
+  if command -v nvm &>/dev/null; then
+    nvm install 22 && nvm use 22 && FIXED=$((FIXED + 1))
+  else
+    echo -e "   ${RED}nvm not found. Install Node.js 18+ manually.${NC}"
+    FAILED=$((FAILED + 1))
+  fi
+else
+  NODE_MAJOR=$(node --version | sed 's/v//' | cut -d. -f1)
+  if [ "$NODE_MAJOR" -lt 18 ]; then
+    echo -e "${YELLOW}v$(node --version) — too old (need 18+)${NC}"
+    if command -v nvm &>/dev/null; then
+      echo "   Auto-fixing: upgrading to Node.js 22..."
+      nvm install 22 && nvm use 22 && FIXED=$((FIXED + 1))
+    else
+      FAILED=$((FAILED + 1))
+    fi
+  else
+    echo -e "${GREEN}$(node --version)${NC}"
+  fi
+fi
+
+# 2. Check API key
+echo -n "2. API key... "
+if [ -z "${ANTHROPIC_API_KEY:-}" ]; then
+  echo -e "${RED}NOT SET${NC}"
+  # Check common locations for the key
+  if [ -f ~/.config/anthropic/api_key ]; then
+    export ANTHROPIC_API_KEY=$(cat ~/.config/anthropic/api_key)
+    echo -e "   ${GREEN}Auto-loaded from ~/.config/anthropic/api_key${NC}"
+    FIXED=$((FIXED + 1))
+  elif [ -f .env ] && grep -q "ANTHROPIC_API_KEY" .env 2>/dev/null; then
+    export ANTHROPIC_API_KEY=$(grep "ANTHROPIC_API_KEY" .env | cut -d= -f2 | tr -d '"' | tr -d "'")
+    echo -e "   ${GREEN}Auto-loaded from .env${NC}"
+    FIXED=$((FIXED + 1))
+  else
+    echo -e "   ${RED}Set ANTHROPIC_API_KEY in your environment${NC}"
+    FAILED=$((FAILED + 1))
+  fi
+elif [[ ! "${ANTHROPIC_API_KEY}" =~ ^sk-ant- ]]; then
+  echo -e "${YELLOW}SET but format looks wrong (expected sk-ant-...)${NC}"
+else
+  echo -e "${GREEN}SET (${ANTHROPIC_API_KEY:0:12}...)${NC}"
+fi
+
+# 3. Check disk space
+echo -n "3. Disk space... "
+FREE_MB=$(df -m /tmp 2>/dev/null | tail -1 | awk '{print $4}')
+if [ -n "$FREE_MB" ] && [ "$FREE_MB" -lt 500 ]; then
+  echo -e "${YELLOW}${FREE_MB}MB free on /tmp — low${NC}"
+  echo "   Auto-cleaning: removing old Claude cache files..."
+  rm -rf /tmp/claude-* 2>/dev/null
+  rm -rf ~/.claude/cache/* 2>/dev/null
+  NEW_FREE=$(df -m /tmp 2>/dev/null | tail -1 | awk '{print $4}')
+  echo -e "   ${GREEN}Freed $((NEW_FREE - FREE_MB))MB. Now ${NEW_FREE}MB available.${NC}"
+  FIXED=$((FIXED + 1))
+else
+  echo -e "${GREEN}${FREE_MB}MB free${NC}"
+fi
+
+# 4. Check permissions on ~/.claude
+echo -n "4. Config directory permissions... "
+if [ -d ~/.claude ] && [ ! -w ~/.claude ]; then
+  echo -e "${RED}NOT WRITABLE${NC}"
+  echo "   Auto-fixing: resetting ownership..."
+  sudo chown -R "$(whoami)" ~/.claude 2>/dev/null && FIXED=$((FIXED + 1)) || FAILED=$((FAILED + 1))
+else
+  echo -e "${GREEN}OK${NC}"
+fi
+
+# 5. Check network connectivity
+echo -n "5. API connectivity... "
+HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 5 \
+  https://api.anthropic.com/v1/messages 2>/dev/null || echo "000")
+if [ "$HTTP_CODE" = "000" ]; then
+  echo -e "${RED}UNREACHABLE${NC}"
+  echo "   Check your network, VPN, or proxy settings."
+  FAILED=$((FAILED + 1))
+elif [ "$HTTP_CODE" = "401" ] || [ "$HTTP_CODE" = "400" ]; then
+  echo -e "${GREEN}REACHABLE (HTTP $HTTP_CODE — auth expected)${NC}"
+else
+  echo -e "${GREEN}REACHABLE (HTTP $HTTP_CODE)${NC}"
+fi
+
+# 6. Check for stale processes
+echo -n "6. Stale Claude processes... "
+STALE=$(ps aux 2>/dev/null | grep "[c]laude" | grep -v "claude-preflight" | wc -l | tr -d ' ')
+if [ "$STALE" -gt 0 ]; then
+  echo -e "${YELLOW}$STALE found${NC}"
+  echo "   Auto-fixing: killing stale processes..."
+  pkill -f "claude" 2>/dev/null || true
+  FIXED=$((FIXED + 1))
+else
+  echo -e "${GREEN}NONE${NC}"
+fi
+
+# Summary
+echo ""
+echo "=== Results ==="
+if [ "$FAILED" -gt 0 ]; then
+  echo -e "${RED}$FAILED issue(s) need manual attention.${NC}"
+  echo -e "${GREEN}$FIXED issue(s) auto-fixed.${NC}"
+  exit 1
+elif [ "$FIXED" -gt 0 ]; then
+  echo -e "${GREEN}$FIXED issue(s) auto-fixed. Claude Code is ready.${NC}"
+else
+  echo -e "${GREEN}All checks passed. Claude Code is ready.${NC}"
+fi
+```
+
+### Adding It as a Pre-Session Check
+
+To run this automatically before every Claude Code session, add an alias to your shell configuration:
+
+```bash
+# Add to ~/.zshrc or ~/.bashrc
+alias claude='bash ~/scripts/claude-preflight.sh && command claude'
+```
+
+This runs the health check before launching Claude Code. If any check fails that cannot be auto-repaired, it stops before Claude starts, preventing the cryptic exit code 1 error entirely. For CI/CD pipelines, add the preflight script as a step before any Claude Code invocation to catch environment issues before they waste pipeline minutes.
 
 ## Frequently Asked Questions
 

@@ -1,9 +1,11 @@
 ---
 layout: default
-title: "Claude Code for Drizzle ORM — Workflow Guide"
+title: "Claude Code for Drizzle ORM"
 description: "Master Drizzle ORM migrations and queries with Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-drizzle-orm-workflow-workflow-guide/
+canonical_url: /claude-code-for-drizzle-orm-workflow-guide/
+sitemap: false
 render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, drizzle-orm, workflow]
@@ -79,3 +81,4 @@ Claude Code should add the `comments` pgTable with `references(() => users.id)` 
 ## Related Articles
 
 - [Claude Code Laravel Eloquent Orm — Complete Developer Guide](/claude-code-laravel-eloquent-orm-guide/)
+- [Claude Code for Drizzle ORM — Workflow Guide](/claude-code-for-drizzle-orm-workflow-guide/)

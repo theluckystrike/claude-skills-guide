@@ -78,3 +78,5 @@ Claude Code should verify the template has Node.js installed, check `coder gitau
 - [Claude Code for Windmill Dev — Workflow Guide](/claude-code-for-windmill-dev-workflow-guide/)
 - [Claude Code for GitHub Codespaces — Guide](/claude-code-for-codespaces-dev-environments-workflow-guide/)
 - [Claude Code for Bazel Remote Cache Workflow](/claude-code-for-bazel-remote-cache-workflow/)
+- [SSH Remote Session Drops Fix](/claude-code-ssh-remote-session-drops-fix-2026/)
+- [Claude Code for Encore Dev — Workflow Guide](/claude-code-for-encore-dev-workflow-guide/)

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code --max-turns Flag: Prevent Runaway Sessions"
+title: "Claude Code --max-turns Flag"
 description: "The --max-turns flag caps Claude Code session length, preventing runaway sessions that consume 200K+ tokens and cost over $0.60 per incident on Sonnet 4.6."
 permalink: /claude-code-max-turns-flag-prevent-runaway-sessions/
 date: 2026-04-22
@@ -207,3 +207,10 @@ Best practice: combine `--max-turns` with `--allowedTools` for defense-in-depth 
 - [Cost Optimization Hub](/cost-optimization/) -- all cost control techniques
 
 - [Claude Flow tool guide](/claude-flow-tool-guide/) — How to use Claude Flow for multi-agent orchestration
+
+## See Also
+
+- [Claude Code Maximum Turns Exceeded Loop — Fix (2026)](/claude-code-max-turns-exceeded-fix-2026/)
+- [File Exceeds 10MB Limit in Claude Code — Fix (2026)](/claude-code-max-file-size-exceeded-fix-2026/)
+- [Claude Code used 500K tokens for a simple task — how to prevent](/claude-code-500k-tokens-simple-task-prevent/)
+- [How to Resume Claude Code Sessions 2026](/claude-code-resume-sessions-guide-2026/)

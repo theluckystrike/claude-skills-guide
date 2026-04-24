@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code + Linear MCP Integration Guide 2026"
+title: "Claude Code + Linear MCP Integration"
 description: "Connect Claude Code to Linear via MCP for automated issue management, sprint planning, and PR-to-issue linking with working config examples."
 permalink: /claude-code-linear-mcp-integration-2026/
 date: 2026-04-21
@@ -207,3 +207,10 @@ Developers using Linear + Claude Code MCP integration report closing issues 25% 
 - [MCP Integration Guide for Claude Code Beginners](/mcp-integration-guide-for-claude-code-beginners/)
 - [GitHub MCP Server Advanced Workflow Automation](/github-mcp-server-advanced-workflow-automation/)
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)
+
+## See Also
+
+- [Claude Code vs Zed AI (2026): Editor Integration](/claude-code-vs-zed-ai-editor-integration-2026/)
+- [Claude Code for DeFi Protocol Integration (2026)](/claude-code-defi-protocol-integration-2026/)
+- [Claude Code + Neovim Terminal Integration 2026](/claude-code-neovim-terminal-integration-2026/)
+- [How to Use Claude Code in IntelliJ IDEA 2026](/claude-code-intellij-idea-integration-2026/)

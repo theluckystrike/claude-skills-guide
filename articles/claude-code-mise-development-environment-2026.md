@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for mise Development Environment Setup (2026)"
+title: "Claude Code for mise Development"
 permalink: /claude-code-mise-development-environment-2026/
 description: "Set up polyglot dev environments with mise and Claude Code. Manage tool versions, environment variables, and project-scoped tasks in one config."
 last_tested: "2026-04-22"

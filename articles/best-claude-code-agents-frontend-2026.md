@@ -1,5 +1,5 @@
 ---
-title: "Best Claude Code Agents for Frontend Dev (2026)"
+title: "Best Claude Code Agents for Frontend"
 description: "7 Claude Code agents built for frontend development. React, accessibility, CSS architecture, performance, and testing agents with install instructions."
 permalink: /best-claude-code-agents-frontend-2026/
 last_tested: "2026-04-22"
@@ -171,3 +171,6 @@ Start with the agents that match your biggest pain points:
 Add the CLAUDE.md sections to your project and test with a real task. Adjust the rules based on your team's standards.
 
 For building custom agents from scratch, see the [agent building guide](/how-to-build-claude-code-agent-2026/). For more agent options, browse [Claude Code Templates](/how-to-install-claude-code-templates-cli-2026/) and the [skills directory](/claude-skills-directory-where-to-find-skills/). For the complete setup, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).
+
+- [Claude Code frontend design plugin](/claude-code-frontend-design-plugin-guide/) — design system integration for frontend agents
+- [Codex vs Claude Code](/codex-vs-claude-code-comparison-2026/) — how Claude Code compares for frontend work

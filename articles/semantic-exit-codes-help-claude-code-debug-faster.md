@@ -1,5 +1,5 @@
 ---
-title: "Semantic Exit Codes: How to Help Claude Code Debug Faster"
+title: "Semantic Exit Codes"
 description: "Implement semantic exit codes to help Claude Code debug 40% faster with categorized error signals that reduce unnecessary token-expensive investigation."
 permalink: /semantic-exit-codes-help-claude-code-debug-faster/
 date: 2026-04-22

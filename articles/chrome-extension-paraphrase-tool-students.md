@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Paraphrase Tool Students Chrome Extension Guide (2026)"
+title: "Paraphrase Tool Students Chrome"
 description: "Learn how to build a Chrome extension for paraphrasing text. Practical code examples, APIs, and implementation patterns for developers building."
 date: 2026-03-15
 last_modified_at: 2026-04-17

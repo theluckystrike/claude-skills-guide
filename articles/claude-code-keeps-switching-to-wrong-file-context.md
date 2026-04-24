@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix Claude Code Wrong File Context Switching (2026)"
+title: "Fix Claude Code Wrong File Context"
 description: "Fix Claude Code jumping to the wrong file during multi-file edits. Covers context anchoring, explicit file references, and skill scoping strategies."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -172,4 +172,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [nvm Switching to Wrong Node Version — Fix (2026)](/claude-code-nvm-switching-wrong-node-fix-2026/)
+- [Fix Claude Code Suggesting Wrong Framework (2026)](/claude-code-keeps-suggesting-wrong-framework-2026/)

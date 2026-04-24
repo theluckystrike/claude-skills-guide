@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Godot GDScript Development (2026)"
+title: "Claude Code for Godot GDScript"
 permalink: /claude-code-godot-gdscript-development-2026/
 description: "Build Godot 4 games with GDScript and Claude Code. Implement state machines, physics systems, and shader effects with Godot-native patterns."
 last_tested: "2026-04-22"
@@ -265,3 +265,5 @@ godot --headless --path ~/my-game --check-only
 - [Claude Code for Unreal Blueprint to C++ Conversion](/claude-code-unreal-blueprint-to-cpp-2026/)
 - [Claude Code for Unity Shader Development](/claude-code-unity-hlsl-shader-development-2026/)
 - [Claude Code for Processing and p5.js Creative Coding](/claude-code-processing-p5js-creative-coding-2026/)
+- [Claude Code for ESP32 Firmware with ESP-IDF (2026)](/claude-code-esp32-firmware-development-2026/)
+- [Claude Code for VBA Macro Development 2026](/claude-code-vba-macro-development-2026/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Debug Configuration Workflow"
+title: "Claude Code Debug Configuration"
 description: "Master the debug configuration workflow in Claude Code. Learn to set breakpoints, inspect variables, and troubleshoot skill behavior effectively."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -192,4 +192,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code Verbose Mode: Debug Output Guide 2026](/claude-code-verbose-mode-debug-output-2026/)

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Search Index Corrupted Error — Fix (2026)"
+title: "Claude Code Search Index Corrupted"
 permalink: /claude-code-search-index-corrupted-fix-2026/
 description: "Delete .claude/cache/search-index files to fix corrupted index error. The index rebuilds automatically on the next Grep or Glob search operation."
 last_tested: "2026-04-21"
@@ -52,3 +52,31 @@ Add to your CLAUDE.md:
 ```
 If search operations produce stale or incorrect results, delete .claude/cache/search-index* before continuing. Maintain at least 500MB free disk space in the workspace partition for index operations.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `Error: workspace root not detected`
+- `WorkspaceTrustError: restricted mode`
+- `Cannot access workspace files`
+- `Error: glob pattern matched too many files (>10000)`
+- `GlobError: pattern too broad`
+
+## Frequently Asked Questions
+
+### What defines a Claude Code workspace?
+
+The workspace is the directory where you launch Claude Code. It uses git repository boundaries if available, otherwise the current working directory. All relative file paths are resolved against this root.
+
+### Why does VS Code ask to trust the workspace?
+
+VS Code's Workspace Trust feature restricts extensions in untrusted folders. Claude Code requires a trusted workspace to execute code and modify files. Click 'Trust Folder and Enable All Features' when prompted, or add the folder to your trusted list in VS Code settings.
+
+### Can I work with multiple workspaces?
+
+Claude Code operates in one workspace per session. To work across multiple projects, open separate terminal windows or VS Code instances, each with its own Claude Code session pointed at a different workspace.
+
+### What glob patterns does Claude Code support?
+
+Claude Code supports standard glob patterns: `*` (any characters in a segment), `**` (any depth of directories), `?` (single character), and `{a,b}` (alternatives). Example: `src/**/*.ts` matches all TypeScript files under `src/`.

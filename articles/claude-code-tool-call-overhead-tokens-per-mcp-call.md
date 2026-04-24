@@ -1,5 +1,5 @@
 ---
-title: "Claude Code tool call overhead -- how many tokens per MCP call"
+title: "Claude Code tool call overhead --"
 description: "Every Claude Code tool call costs 150-2,000+ tokens in overhead before any work happens -- understand the per-tool breakdown to minimize wasted tokens."
 permalink: /claude-code-tool-call-overhead-tokens-per-mcp-call/
 date: 2026-04-22
@@ -152,3 +152,10 @@ Prevention ROI:
 - [MCP Tool Filtering: Only Load What You Need](/mcp-tool-filtering-only-load-what-you-need/) -- reducing MCP definition overhead
 - [Supabase MCP Server Token Usage](/supabase-mcp-server-token-usage-what-gets-sent/) -- specific MCP overhead analysis
 - [How to Reduce Claude Code Token Usage by 3x](/reduce-claude-code-token-usage-3x-guide-2026/) -- comprehensive cost reduction strategies
+
+## See Also
+
+- [Anthropic Rate Limit Tokens Per Minute — Fix (2026)](/claude-code-anthropic-rate-limit-tokens-per-minute-fix-2026/)
+- [Claude Bash Tool Costs 245 Tokens Per Call](/04-bash-tool-costs-245-tokens/)
+- [Claude Code Tool Calling and Parallel Execution 2026](/claude-code-tool-calling-parallel-execution-2026/)
+- [How Tool Definitions Add 346 Tokens Per Call](/02-tool-definitions-add-346-tokens/)

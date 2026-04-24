@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Outline Notes Organizer Chrome Extension Guide (2026)"
+title: "Outline Notes Organizer Chrome"
 description: "Learn how to build a Chrome extension for organizing outlines and notes. Practical code examples, API usage, and implementation patterns for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Hybrid Patterns: Claude Skills + MCP Servers + Custom Tools — When to Combine All Three — 2026"
+title: "Hybrid Patterns"
 description: "Design hybrid architectures combining Claude Code skills (instructions), MCP servers (external access), and custom tools (scripts). With 3 production patterns."
 permalink: /hybrid-patterns-skills-mcp-custom-tools/
 render_with_liquid: false

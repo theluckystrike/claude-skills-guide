@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code OpenAPI to Zod Client Workflow (2026)"
+title: "Claude Code OpenAPI to Zod Client"
 description: "Generate type-safe Zod clients from OpenAPI specs with Claude Code. Automate schema validation, client generation, and runtime type checking."
 date: 2026-03-15
 last_modified_at: 2026-04-17

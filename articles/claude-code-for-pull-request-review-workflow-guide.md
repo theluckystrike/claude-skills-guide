@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Pull Request Review Workflow Guide"
+title: "Claude Code for Pull Request Review"
 description: "Master pull request reviews with Claude Code: automate code analysis, generate review comments, and streamline your PR workflow with practical examples."
 date: 2026-04-19
 last_modified_at: 2026-04-19

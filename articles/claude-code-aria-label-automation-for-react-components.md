@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code ARIA Label Automation for React Components"
+title: "Claude Code ARIA Label Automation"
 description: "Learn how to automate ARIA label implementation in React components using Claude Code skills, reducing manual accessibility work while ensuring WCAG."
 date: 2026-03-14
 last_modified_at: 2026-04-17

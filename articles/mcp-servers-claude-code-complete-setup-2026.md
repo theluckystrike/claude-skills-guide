@@ -1,5 +1,5 @@
 ---
-title: "MCP Servers for Claude Code: Setup Guide (2026)"
+title: "MCP Servers for Claude Code"
 description: "Set up MCP servers for Claude Code with step-by-step configuration for databases, APIs, file systems, and cloud service integrations."
 permalink: /mcp-servers-claude-code-complete-setup-2026/
 last_tested: "2026-04-22"

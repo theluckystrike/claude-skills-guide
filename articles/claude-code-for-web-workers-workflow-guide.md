@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Web Workers Workflow Guide"
+title: "Claude Code for Web Workers Workflow"
 description: "Master web workers development with Claude Code. Learn practical workflows for creating, debugging, and optimizing web workers using Claude's CLI and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

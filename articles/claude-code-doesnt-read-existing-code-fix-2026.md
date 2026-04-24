@@ -1,5 +1,5 @@
 ---
-title: "Make Claude Code Read Existing Code First (2026)"
+title: "Make Claude Code Read Existing Code"
 description: "Force Claude Code to read existing files before writing new code — CLAUDE.md rules for mandatory context loading and pattern matching."
 permalink: /claude-code-doesnt-read-existing-code-fix-2026/
 last_tested: "2026-04-22"
@@ -62,3 +62,11 @@ Add email validation to the signup form
 **After reading:** finds `src/utils/validation.ts` already has `validateEmail()` using Zod, reuses it
 
 Related: [Fix Ignoring Project Context](/claude-code-ignores-project-context-fix-2026/) | [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)
+
+## See Also
+
+- [Fix Claude Code Not Understanding Codebase (2026)](/claude-code-doesnt-understand-codebase-fix-2026/)
+- [Make Claude Code Explain Its Changes (2026)](/claude-code-doesnt-explain-changes-fix-2026/)
+- [Make Claude Code Write Documentation (2026)](/claude-code-doesnt-write-docs-fix-2026/)
+- [Make Claude Code Handle Edge Cases (2026)](/claude-code-doesnt-handle-edge-cases-fix-2026/)
+- [Make Claude Code Match Team Conventions (2026)](/claude-code-doesnt-match-team-conventions-fix-2026/)

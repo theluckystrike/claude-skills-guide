@@ -1,5 +1,5 @@
 ---
-title: "SOCKS Proxy Not Supported Error — Fix (2026)"
+title: "SOCKS Proxy Not Supported Error — Fix"
 permalink: /claude-code-socks-proxy-not-supported-fix-2026/
 description: "Fix 'SOCKS proxy not supported' in Claude Code. Install socks-proxy-agent or switch to HTTP proxy for API connections."
 last_tested: "2026-04-22"

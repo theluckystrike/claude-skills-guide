@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Enterprise Claude Cost Chargebacks by Team"
+title: "Enterprise Claude Cost Chargebacks"
 description: "Implement per-team cost chargebacks for Claude API. Teams that see their own spend optimize 30% faster than those on shared budgets."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -240,3 +240,8 @@ Compare total Claude spend in the 3 months before chargebacks to the 3 months af
 - [Claude Code Enterprise Seat Management and Usage Monitoring](/claude-code-enterprise-seat-management-and-usage-monitoring/)
 - [Cost Allocation and Chargebacks for Enterprise Claude Code](/cost-allocation-and-chargebacks-for-enterprise-claude-code/)
 - [Claude Code for Cost Optimization Monitoring Guide](/claude-code-for-cost-optimization-monitoring-guide/)
+
+## See Also
+
+- [Free vs Pro vs Max: Claude Code Plan Calculator](/claude-cost-10-free-pro-max-plan-calculator/)
+- [Tool Use vs Direct Prompting Cost Comparison](/claude-cost-10-tool-use-vs-direct-prompting-cost/)

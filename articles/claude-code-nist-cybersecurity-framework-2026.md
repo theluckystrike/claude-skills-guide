@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for NIST Cybersecurity Framework (2026)"
+title: "Claude Code for NIST Cybersecurity"
 permalink: /claude-code-nist-cybersecurity-framework-2026/
 description: "Implement NIST CSF 2.0 controls with Claude Code. Automate Identify, Protect, Detect, Respond, and Recover function evidence collection."
 last_tested: "2026-04-22"

@@ -1,5 +1,5 @@
 ---
-title: "Claude API 529 Overloaded Error Handling — Fix (2026)"
+title: "Claude API 529 Overloaded Error"
 description: "Fix Claude API 529 overloaded_error with queue-based retry and model fallback chain. Step-by-step solution with working code."
 permalink: /claude-api-529-overloaded-error-handling-fix/
 last_tested: "2026-04-21"
@@ -105,4 +105,4 @@ Always implement a model fallback chain for production API calls: Sonnet -> Haik
 ## Related
 
 - [Claude internal server error fix](/claude-internal-server-error-fix/) — Fix Claude internal server error (500/overloaded)
-
+- [Make Claude Code Add Error Handling (2026)](/claude-code-skips-error-handling-fix-2026/)

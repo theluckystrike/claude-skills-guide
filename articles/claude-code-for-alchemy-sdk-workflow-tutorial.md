@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Alchemy SDK Workflow Tutorial"
+title: "Claude Code for Alchemy SDK Workflow"
 description: "Learn how to integrate Claude Code with Alchemy SDK to streamline blockchain development workflows, automate smart contract interactions, and build."
 date: 2026-03-15
 last_modified_at: 2026-04-17

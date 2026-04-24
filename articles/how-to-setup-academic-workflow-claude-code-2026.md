@@ -1,5 +1,5 @@
 ---
-title: "Set Up Academic Workflow in Claude Code (2026)"
+title: "Set Up Academic Workflow in Claude Code"
 description: "Configure Claude Code for academic work using the claude-code-my-workflow repo's 28 skills and 14 agents. LaTeX, R, citations, and paper writing."
 permalink: /how-to-setup-academic-workflow-claude-code-2026/
 last_tested: "2026-04-22"
@@ -137,3 +137,8 @@ The default configuration is tuned for economics and social sciences (the mainta
 - Explore [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) for automating LaTeX compilation
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional academic tools
 - Check [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for general optimization
+
+## See Also
+
+- [Set Up Claude Code Docs for Offline Use (2026)](/how-to-setup-claude-code-docs-offline-2026/)
+- [Claude Code Academic Workflow Guide (2026)](/claude-code-academic-workflow-guide-2026/)

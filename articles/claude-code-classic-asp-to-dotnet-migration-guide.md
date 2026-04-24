@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Classic Asp To — Complete Developer Guide"
+title: "Claude Code Classic Asp"
 description: "A comprehensive guide to migrating Classic ASP applications to .NET using Claude Code, featuring practical examples and expert techniques."
 date: 2026-03-14
 last_modified_at: 2026-04-17

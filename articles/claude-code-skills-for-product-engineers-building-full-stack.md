@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills for Product Engineers Building Full Stack"
+title: "Claude Code Skills for Product"
 description: "A practical guide to Claude Code skills that accelerate full-stack development for product engineers, covering frontend, backend, testing, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

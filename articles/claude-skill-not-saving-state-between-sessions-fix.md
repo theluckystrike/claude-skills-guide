@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Skill Not Saving State Between — Quick (2026)"
+title: "Fix Claude Skill Not Saving State"
 description: "Fix Claude Code skills losing state between sessions. Covers supermemory, CLAUDE.md context, file-based persistence, and pitfalls. Updated for 2026."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -217,4 +217,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Fix Claude Code Losing Context in Sessions (2026)](/claude-code-loses-context-long-sessions-fix-2026/)

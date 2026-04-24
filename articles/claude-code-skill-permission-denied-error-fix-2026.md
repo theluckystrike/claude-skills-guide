@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skill Permission Denied Error Fix 2026"
+title: "Claude Code Skill Permission Denied"
 description: "Fix the permission denied error in Claude Code skills. Step-by-step solutions for file permissions, sandbox settings, and skill configuration."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -219,4 +219,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [EACCES Permission Denied Config Dir — Fix (2026)](/claude-code-config-dir-permission-denied-fix-2026/)

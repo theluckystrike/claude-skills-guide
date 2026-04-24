@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Learning Claude Code In 30 Days Challenge — (2026)"
+title: "Learning Claude Code In 30 Days"
 description: "Master Claude Code skills in 30 days with this practical developer challenge. Build automation workflows, integrate APIs, and become a power user."
 date: 2026-03-14
 last_modified_at: 2026-04-17

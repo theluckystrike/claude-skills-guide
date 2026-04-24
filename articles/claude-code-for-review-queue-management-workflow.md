@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Review Queue Management Workflow"
+title: "Claude Code for Review Queue Management"
 description: "Master the art of building review queue management workflows with Claude Code. Learn practical patterns for prioritizing, assigning, and processing code."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -236,6 +236,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
-
+- [Claude Code for Order Management Systems (2026)](/claude-code-order-management-system-2026/)
+- [Claude Code for PCB Layout Review with KiCad (2026)](/claude-code-pcb-layout-review-kicad-2026/)

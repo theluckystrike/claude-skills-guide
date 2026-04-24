@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code AppSec: Developer Secure Coding Workflow Tips"
+title: "Claude Code AppSec"
 description: "Learn how to use Claude Code for secure coding practices, from threat modeling to automated security scanning in your development workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -463,4 +463,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Make Claude Code Follow Coding Standards (2026)](/claude-code-wont-follow-coding-standards-fix-2026/)

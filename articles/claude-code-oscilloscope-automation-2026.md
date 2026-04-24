@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Oscilloscope Automation (2026)"
+title: "Claude Code for Oscilloscope Automation"
 permalink: /claude-code-oscilloscope-automation-2026/
 description: "Oscilloscope automation scripts with Claude Code. Control Rigol, Keysight, and Tektronix scopes via SCPI and PyVISA."
 last_tested: "2026-04-22"
@@ -268,3 +268,5 @@ print('Setup verification: PASS')
 - [Claude Code for PCB Layout Review (KiCad)](/claude-code-pcb-layout-review-kicad-2026/)
 - [Claude Code for STM32 Firmware Development](/claude-code-stm32-firmware-development-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Build N8N Workflows with Claude Code 2026](/claude-code-n8n-workflow-automation-2026/)
+- [Claude Code vs Sweep AI (2026): PR Automation](/claude-code-vs-sweep-ai-pr-automation-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Pipeline: Sequential vs Parallel (2026)"
+title: "Claude Code Pipeline"
 description: "Choose between sequential and parallel agent pipeline execution in Claude Code. Patterns, benchmarks, and decision framework for max productivity."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -290,6 +290,7 @@ Related Reading
 
 
 ---
+- [Agent Recursion Depth Exceeded Fix](/claude-code-agent-recursion-depth-exceeded-fix-2026/)
 
 ## Frequently Asked Questions
 

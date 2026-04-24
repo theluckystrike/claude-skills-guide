@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Vercel Deployment — Complete Developer Guide"
+title: "Claude Code Vercel Deployment"
 description: "Claude Code Vercel deployment guide for Next.js. Automate previews, production builds, environment management, and CI/CD pipelines."
 date: 2026-04-19
 last_modified_at: 2026-04-19

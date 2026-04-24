@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Optimizing Tool Schemas to Cut Token Count"
+title: "Optimizing Tool Schemas to Cut Token"
 description: "Trim verbose tool schemas by 50% and save $50 per 10,000 Opus requests. Practical techniques for leaner JSON definitions."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -183,3 +183,11 @@ Measure `usage.input_tokens` before and after schema optimization on identical r
 - [Claude API Tool Use Function Calling Deep Dive](/claude-api-tool-use-function-calling-deep-dive-guide/)
 - [Advanced Claude Skills with Tool Use](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Claude Skills Token Optimization Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
+
+## See Also
+
+- [Claude Code /compact Saves Thousands of Tokens](/claude-cost-02-claude-code-compact-saves-tokens/)
+- [Claude Bash Tool Costs 245 Tokens Per Call](/04-bash-tool-costs-245-tokens/)
+- [Real-Time Claude Token Monitoring Pipeline](/claude-cost-08-real-time-token-monitoring-pipeline/)
+- [Lean Prompting: Fewer Tokens, Same Quality](/claude-cost-lean-prompting-fewer-tokens-same-quality/)
+- [Claude Code Expensive? Here Are 7 Fixes](/claude-cost-08-claude-code-expensive-fixes/)

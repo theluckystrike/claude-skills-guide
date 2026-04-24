@@ -1,5 +1,5 @@
 ---
-title: "Edge Function Debugging: Prevent 8-Retry Token Spirals"
+title: "Edge Function Debugging"
 description: "Prevent Claude Code from burning 50K-200K tokens retrying edge function deployments by adding structured error handling and retry limits to CLAUDE.md."
 permalink: /edge-function-debugging-prevent-retry-token-spirals/
 date: 2026-04-22

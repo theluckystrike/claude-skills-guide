@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Clerk Auth — Workflow Guide"
+title: "Claude Code for Clerk Auth"
 description: "Add authentication with Clerk and Claude Code in minutes. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-clerk-auth-workflow-guide/

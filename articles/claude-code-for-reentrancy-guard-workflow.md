@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Reentrancy Guard Workflow"
+title: "Claude Code for Reentrancy Guard"
 description: "Learn how to implement reentrancy guard patterns using Claude Code to prevent duplicate executions, circular calls, and race conditions in your."
 date: 2026-03-15
 last_modified_at: 2026-04-17

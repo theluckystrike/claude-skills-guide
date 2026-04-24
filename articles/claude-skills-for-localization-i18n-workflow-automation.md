@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Localization i18n Workflow Automation"
+title: "Claude Skills for Localization i18n"
 description: "Practical guide to automating localization and i18n workflows using Claude Code skills. Includes code examples for translation management, locale file p..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -246,6 +246,7 @@ Related Reading
 - [Claude Skills for SEO Content Generation: 2026 Guide](/claude-skills-for-seo-content-generation-workflow/). Apply similar automation patterns to multilingual SEO content generation workflows.
 - [Claude Skills with GitHub Actions CI/CD Pipeline 2026](/claude-skills-with-github-actions-ci-cd-pipeline/). Automate your locale file sync and translation validation as part of your CI/CD pipeline.
 - [Claude Skills by Use Case](/use-cases-hub/). Find additional Claude skills suited to your content and automation workflows.
+- [Claude Code中文指南合集](/claude-code-zhongwen-guide/) — Chinese language Claude Code guides
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 

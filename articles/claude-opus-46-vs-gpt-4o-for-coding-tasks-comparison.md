@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Opus 4.6 vs GPT-4o for Coding Tasks: 2026 Comparison"
+title: "Claude Opus 4.6 vs GPT-4o for Coding"
 description: "Claude Opus 4.6 vs GPT-4o for coding tasks (2026): code quality, reasoning, context handling, tool use, and which model developers should choose."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -135,4 +135,9 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Opus 4.6 vs GPT-4o: Reasoning and Complex Tasks](/claude-opus-vs-gpt-4o-reasoning-comparison/)
+- [Claude Haiku 4.5 vs GPT-4o Mini: Budget AI Coding](/claude-haiku-vs-gpt-4o-mini-comparison-2026/)
+- [Claude Sonnet 4.6 vs GPT-4o for Coding in 2026](/claude-sonnet-vs-gpt-4o-coding-comparison-2026/)
+- [Claude Sonnet 4.6 vs Opus 4.6 for Coding Tasks](/claude-sonnet-vs-opus-for-coding-tasks-2026/)

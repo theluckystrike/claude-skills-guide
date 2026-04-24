@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Next.js Deployment Optimization (2026)"
+title: "Claude Code Next.js Deployment"
 description: "Optimize Next.js deployments with Claude Code for build caching, ISR tuning, and CI/CD pipeline config. Reduce build times and improve performance."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -632,4 +632,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Next.js Build Fails With Generated Code — Fix (2026)](/claude-code-nextjs-build-generated-code-fix-2026/)

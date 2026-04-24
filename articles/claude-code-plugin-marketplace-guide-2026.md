@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Plugin Marketplace Guide (2026)"
+title: "Claude Code Plugin Marketplace Guide"
 description: "Navigate the Claude Code plugin ecosystem with this guide to finding, evaluating, and installing skills, hooks, and MCP integrations."
 permalink: /claude-code-plugin-marketplace-guide-2026/
 last_tested: "2026-04-22"
@@ -179,3 +179,7 @@ The ecosystem is currently open source. Some repos accept sponsorships but all f
 File an issue on the plugin's GitHub repository. Include your Claude Code version, the error message, and steps to reproduce.
 
 For more on specific plugin types, see our [skills vs hooks vs commands comparison](/claude-code-skills-vs-hooks-vs-commands-2026/). For MCP server setup, read the [MCP setup guide](/mcp-servers-claude-code-complete-setup-2026/). For building your own plugins, see our [skill building guide](/how-to-build-your-own-claude-code-skill-2026/).
+
+## See Also
+
+- [Plugin Load Failure Error — Fix (2026)](/claude-code-plugin-load-failure-fix-2026/)

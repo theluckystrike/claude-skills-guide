@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Claude Skills for Solo Developers and Freelancers"
+title: "Best Claude Skills for Solo Developers"
 description: "Top Claude Code skills for solo developers and freelancers: PDF processing, invoicing, TDD, and knowledge management across client projects."
 date: 2026-03-13
 last_modified_at: 2026-04-17

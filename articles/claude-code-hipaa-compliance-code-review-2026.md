@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for HIPAA Compliance Code Review (2026)"
+title: "Claude Code for HIPAA Compliance Code"
 permalink: /claude-code-hipaa-compliance-code-review-2026/
 description: "Automate HIPAA compliance code reviews with Claude Code. Detect PHI exposure, audit encryption, and validate access controls systematically."
 last_tested: "2026-04-22"
@@ -245,3 +245,4 @@ for sev in ['CRITICAL', 'HIGH', 'MEDIUM']:
 - [Claude Code for SOX Audit Automation](/claude-code-sox-audit-automation-2026/)
 - [Claude Code for GDPR Data Mapping](/claude-code-gdpr-data-mapping-2026/)
 - [Claude Code for FDA 21 CFR Part 11 Validation](/claude-code-fda-21-cfr-part-11-validation-2026/)
+- [Claude Code for ITAR Compliance Code Review (2026)](/claude-code-itar-compliance-code-review-2026/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Automate PR Reviews with Claude Code (2026)"
+title: "Automate PR Reviews with Claude Code"
 description: "Build automated pull request review workflows with Claude Code skills for code quality checks, security scans, and feedback generation pipelines."
 date: 2026-04-19
 last_modified_at: 2026-04-19

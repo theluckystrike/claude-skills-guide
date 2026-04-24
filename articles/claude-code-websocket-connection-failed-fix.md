@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix WebSocket Connection Failures in Claude Code (2026)"
+title: "Fix WebSocket Connection Failures"
 description: "Resolve WebSocket connection failed errors in Claude Code projects. Debug WS handshake failures, proxy issues, and CORS configuration problems."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -304,4 +304,7 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Claude Code Error Connection Timeout During Task Fix](/claude-code-error-connection-timeout-during-task-fix/)
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/)
 
+## See Also
 
+- [WebSocket Upgrade Rejected Error — Fix (2026)](/claude-code-websocket-upgrade-rejected-fix-2026/)
+- [HTTP/2 Stream Error During Request -- Fix (2026)](/claude-code-http2-stream-error-fix-2026/)

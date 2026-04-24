@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Wrong Abstraction Level (2026)"
+title: "Fix Claude Code Wrong Abstraction Level"
 description: "Correct Claude Code's abstraction choices — too abstract for simple tasks, too concrete for reusable code. CLAUDE.md rules for calibrated design."
 permalink: /claude-code-wrong-abstraction-level-fix-2026/
 last_tested: "2026-04-22"
@@ -72,3 +72,7 @@ If <3 callers, or the abstraction is more complex, don't abstract.
 - Correct: suggests extracting to `src/utils/validation.ts` and refactoring the 5 existing uses
 
 Related: [Karpathy Simplicity First](/karpathy-simplicity-first-principle-claude-code-2026/) | [Fix Overcomplicating](/claude-code-overcomplicates-simplicity-fix-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)
+
+## See Also
+
+- [Wrong Node.js Version in PATH Fix](/claude-code-wrong-node-version-in-path-fix-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Flutter State Management (2026)"
+title: "Claude Code for Flutter State"
 description: "Master Flutter state management with Claude Code. Covers Riverpod, Bloc, Provider, and GetX patterns with practical code generation and testing tips."
 date: 2026-03-14
 last_modified_at: 2026-04-17

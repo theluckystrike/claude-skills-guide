@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Rust Axum — Workflow Guide"
+title: "Claude Code for Rust Axum"
 description: "Build async web APIs with Axum and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-rust-axum-workflow-guide/

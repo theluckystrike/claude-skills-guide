@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Lazy Loading Implementation Workflow"
+title: "Claude Code for Lazy Loading"
 description: "Learn how to use Claude Code to implement lazy loading in your projects with practical examples, code snippets, and actionable workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

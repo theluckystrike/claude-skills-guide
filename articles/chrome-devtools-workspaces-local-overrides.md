@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Devtools Workspaces Local Overrides — Developer Guide"
+title: "Chrome Devtools Workspaces Local"
 description: "Learn how to use Chrome DevTools Workspaces and Local Overrides to edit files directly in the browser and persist changes to your local filesystem."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -157,4 +157,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs Chrome DevTools: Debugging Approaches](/claude-code-vs-chrome-devtools-debugging/)

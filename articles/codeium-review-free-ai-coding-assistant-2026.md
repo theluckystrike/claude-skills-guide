@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Codeium Review: Free AI Coding Assistant 2026"
+title: "Codeium Review"
 description: "A comprehensive review of Codeium, the free AI coding assistant in 2026. Explore its features, capabilities, and how it compares to Claude Code skills."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -203,4 +203,8 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs JetBrains AI Compared (2026)](/claude-code-vs-jetbrains-ai-assistant-2026/)
+- [Continue Dev Review: Open Source AI Coding in 2026](/continue-dev-review-open-source-ai-coding-2026/)
+- [Best Free AI Coding Assistants 2026 Comparison](/best-free-ai-coding-assistants-2026-comparison/)

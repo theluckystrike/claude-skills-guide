@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Ml Engineer Feature — Complete Developer Guide"
+title: "Claude Code Ml Engineer Feature"
 description: "Master Claude Code for ML feature store development with practical daily workflow tips. Learn to create features, validate data, automate."
 date: 2026-03-14
 last_modified_at: 2026-04-17

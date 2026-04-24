@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md for Database Conventions — Schema, Queries, and Migration Rules (2026)"
+title: "CLAUDE.md for Database Conventions"
 description: "How to write CLAUDE.md rules for database naming, query patterns, migration safety, and ORM usage that Claude Code follows consistently."
 permalink: /claude-md-database-conventions/
 render_with_liquid: false
@@ -151,3 +151,7 @@ Add a CLAUDE.md rule that Claude includes schema validation when generating migr
 This ensures Claude generates complete migration workflows, not just the SQL change.
 
 For error handling patterns that complement database conventions, see the [error handling guide](/claude-md-error-handling-patterns/). For the overall approach to encoding project rules, see the [CLAUDE.md best practices](/claude-code-claude-md-best-practices/). For architecture rules that govern how database code fits into your layers, see the [architecture decisions guide](/claude-md-for-architecture-decisions/).
+
+## See Also
+
+- [CLAUDE.md for Testing Conventions — Generate Tests That Actually Catch Bugs (2026)](/claude-md-for-testing-conventions/)

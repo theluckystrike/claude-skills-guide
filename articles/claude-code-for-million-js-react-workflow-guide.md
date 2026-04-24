@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Million.js — Workflow Guide"
+title: "Claude Code for Million.js"
 description: "Speed up React rendering with Million.js and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-million-js-react-workflow-guide/

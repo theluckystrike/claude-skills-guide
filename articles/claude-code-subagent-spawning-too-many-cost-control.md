@@ -1,5 +1,5 @@
 ---
-title: "Claude Code subagent spawning too many agents — cost control"
+title: "Claude Code subagent spawning too many"
 description: "Control Claude Code subagent spawning that wastes 50K-200K tokens per incident with CLAUDE.md caps, delegation rules, and single-agent alternatives."
 permalink: /claude-code-subagent-spawning-too-many-cost-control/
 date: 2026-04-22
@@ -221,3 +221,10 @@ A healthy ratio for most projects is 0.5-1.5 subagents per task on average. Abov
 - [Multi-Agent Token Budgeting](/multi-agent-token-budgeting-allocate-subagents/) -- advanced subagent budget allocation
 - [Claude Code Subagent Management](/claude-code-multi-agent-subagent-communication-guide/) -- complete subagent reference
 - [Cost Optimization Hub](/cost-optimization/) -- all optimization techniques
+
+## See Also
+
+- [Claude Code Subagent Spawn Limit Reached — Fix (2026)](/claude-code-subagent-spawn-limit-fix-2026/)
+- [System Prompt Exceeds Token Limit — Fix (2026)](/claude-code-system-prompt-too-many-tokens-fix-2026/)
+- [File Watcher EMFILE Too Many Open Files Fix](/claude-code-file-watcher-emfile-too-many-open-files-fix-2026/)
+- [Installing and Managing Claude Code Skills for Cost Control](/installing-managing-claude-code-skills-cost-control/)

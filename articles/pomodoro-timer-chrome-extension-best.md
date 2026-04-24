@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Best Pomodoro Timer Chrome Extensions (2026)"
+title: "Best Pomodoro Timer Chrome Extensions"
 description: "Best Pomodoro timer Chrome extensions for developers in 2026. Feature comparison, integration capabilities, and customization for technical work."
 date: 2026-03-15
 last_modified_at: 2026-04-17

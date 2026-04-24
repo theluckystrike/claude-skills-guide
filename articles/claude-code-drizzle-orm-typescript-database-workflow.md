@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Drizzle Orm — Complete Developer Guide"
+title: "Claude Code Drizzle Orm"
 description: "Master Drizzle ORM with TypeScript for type-safe database operations. Learn practical workflows for queries, migrations, and building solid data layers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -495,4 +495,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Drizzle ORM — Workflow Guide](/claude-code-for-drizzle-orm-workflow-guide/)

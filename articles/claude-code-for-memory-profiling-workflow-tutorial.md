@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Memory Profiling Workflow (2026)"
+title: "Claude Code Memory Profiling Workflow"
 description: "Profile memory usage with Claude Code across Python, Node.js, and Go. Identify leaks, optimize allocation, and automate profiling workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

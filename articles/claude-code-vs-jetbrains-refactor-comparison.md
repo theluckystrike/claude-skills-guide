@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs JetBrains Refactoring: AI vs IDE Native"
+title: "Claude Code vs JetBrains Refactoring"
 description: "Comparing Claude Code's AI refactoring with JetBrains' deterministic IDE refactoring — when to use each approach for safer code changes."
 date: 2026-04-21
 last_tested: "2026-04-21"
@@ -100,3 +100,7 @@ JetBrains' refactoring menu teaches developers what refactoring operations exist
 ## When To Use Neither
 
 For refactoring that requires deep domain knowledge (financial regulations, medical protocols, legal compliance), neither automated tool is appropriate as the primary decision-maker. These refactorings must be driven by domain experts who understand the business implications of structural changes. Use both tools as assistants to execute the expert's plan, but never let either tool decide what to refactor in regulated domains.
+
+## See Also
+
+- [Claude Code vs JetBrains AI Compared (2026)](/claude-code-vs-jetbrains-ai-assistant-2026/)

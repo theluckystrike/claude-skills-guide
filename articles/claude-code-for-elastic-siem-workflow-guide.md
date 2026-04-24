@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Elastic SIEM Workflows (2026)"
+title: "Claude Code for Elastic SIEM Workflows"
 description: "Automate Elastic SIEM security monitoring with Claude Code for threat detection rules, incident response playbooks, and alert triage. Config examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

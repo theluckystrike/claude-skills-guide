@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Twitter Analytics Chrome Extension Guide (2026)"
+title: "Twitter Analytics Chrome Extension"
 description: "Learn how to build a Twitter analytics Chrome extension from scratch. Practical code examples, API integration, and implementation patterns for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

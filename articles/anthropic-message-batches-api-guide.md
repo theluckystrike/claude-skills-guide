@@ -204,4 +204,4 @@ $99 once. Free forever. 47/500 founding spots left.
 
 - [Message Batches API Tutorial with Cost Examples](/message-batches-api-tutorial-cost-examples/)
 - [Claude Code for Claude Batch API: Anthropic Workflow Guide](/claude-code-for-claude-batch-api-anthropic-workflow-guide/)
-
+- [Message Batches API Tutorial with Cost Examples](/claude-cost-message-batches-api-tutorial-cost-examples/)

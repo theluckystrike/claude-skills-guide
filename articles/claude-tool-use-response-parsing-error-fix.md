@@ -1,5 +1,5 @@
 ---
-title: "Claude tool_use Response Parsing Error — Fix (2026)"
+title: "Claude tool_use Response Parsing Error"
 description: "Fix Claude tool_use response parsing errors. Handle mixed content blocks and validate tool input schema. Step-by-step solution."
 permalink: /claude-tool-use-response-parsing-error-fix/
 last_tested: "2026-04-21"
@@ -94,3 +94,7 @@ Always iterate response.content blocks and check block.type before accessing .te
 ```
 
 **Related articles:** [Claude API Error 400 Fix](/claude-api-error-400-invalidrequesterror-explained/), [Claude API Error Handling](/claude-code-api-error-handling-standards/), [Errors Atlas](/errors-atlas/)
+
+## See Also
+
+- [Claude Tool Use Hidden Token Costs Explained](/01-claude-tool-use-hidden-token-costs/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code vs Cursor for Debugging (2026)"
+title: "Claude Code vs Cursor for Debugging"
 description: "Claude Code vs Cursor compared for debugging runtime errors. Test results on stack traces, memory leaks, and async bugs across both AI coding tools."
 date: 2026-03-14
 last_modified_at: 2026-04-17

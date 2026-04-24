@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chunking Strategies to Cut Claude Context Costs"
+title: "Chunking Strategies to Cut Claude"
 description: "Split documents into chunks and send only relevant pieces to Claude — reduce 500K context to 30K and save $70.50 per 50 Opus requests."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -313,3 +313,7 @@ Compare average context size per request before and after implementing chunking.
 ## Related Articles
 
 - [System Prompt Optimization to Cut Claude Costs](/system-prompt-optimization-cut-claude-costs/)
+- [Shrink Claude Context Without Losing Quality](/claude-cost-shrink-claude-context-without-losing-quality/)
+- [System Prompt Optimization to Cut Claude Costs](/claude-cost-system-prompt-optimization-cut-claude-costs/)
+- [Model Routing by Task Cuts Claude API Bills](/claude-cost-model-routing-cut-claude-api-bills/)
+- [When Full Context Costs More Than a RAG Pipeline](/claude-cost-when-full-context-costs-more-than-rag/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Permission Denied: Fix Skill Commands (2026)"
+title: "Claude Code Permission Denied"
 description: "Fix Claude Code permission denied errors in skill commands. Resolve file permissions, sandbox restrictions, and execution policy issues fast."
 date: 2026-03-14
 last_modified_at: 2026-04-17

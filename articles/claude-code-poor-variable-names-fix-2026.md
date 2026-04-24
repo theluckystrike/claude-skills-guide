@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Poor Variable Naming (2026)"
+title: "Fix Claude Code Poor Variable Naming"
 description: "Fix Claude Code generating vague variable names like 'data' and 'result' by adding naming rules and domain vocabulary to CLAUDE.md."
 permalink: /claude-code-poor-variable-names-fix-2026/
 last_tested: "2026-04-22"
@@ -107,3 +107,7 @@ rules: {
 The [claude-code-templates](https://github.com/davila7/claude-code-templates) library includes naming convention templates for different domains.
 
 For broader code quality rules, see our [Claude Code best practices guide](/karpathy-skills-vs-claude-code-best-practices-2026/). For team-wide convention enforcement, read the [team conventions fix](/claude-code-doesnt-match-team-conventions-fix-2026/). Browse domain-specific skills in the [skills directory](/claude-skills-directory-where-to-find-skills/).
+
+## See Also
+
+- [Fix Claude Code Poor Commit Messages (2026)](/claude-code-poor-commit-messages-fix-2026/)

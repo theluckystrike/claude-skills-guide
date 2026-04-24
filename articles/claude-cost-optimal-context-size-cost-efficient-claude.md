@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Optimal Context Size for Cost-Efficient Claude"
+title: "Optimal Context Size for Cost-Efficient"
 description: "The sweet spot for Claude API context is 20-50K tokens — 95% cheaper than 1M full context with comparable answer quality on most tasks."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -233,3 +233,7 @@ Plot a cost-accuracy curve for your workload: x-axis is context size, y-axis is 
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — the economics of context-driven costs
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/) — managing context in practice
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — design philosophy behind context limits
+
+## See Also
+
+- [Cost-Efficient Multi-Agent Coding Workflows](/claude-cost-cost-efficient-multi-agent-coding-workflows/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Opus Orchestrator with Haiku Workers Pattern"
+title: "Opus Orchestrator with Haiku Workers"
 description: "Haiku workers cost $1/$5 per MTok vs Opus at $5/$25. Use the 5x cost gap to build fleets where workers handle 80% of tokens."
 date: 2026-04-19
 author: "Claude Skills Guide"

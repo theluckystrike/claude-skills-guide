@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Inner Loop Optimization Workflow"
+title: "Claude Code for Inner Loop Optimization"
 description: "Learn how to optimize your inner development loop with Claude Code. Practical techniques for faster builds, instant feedback, and streamlined debugging."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -306,4 +306,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Login Auth Redirect Loop Error — Fix (2026)](/claude-code-login-auth-redirect-loop-fix-2026/)

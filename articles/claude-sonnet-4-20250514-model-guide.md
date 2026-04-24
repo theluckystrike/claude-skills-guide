@@ -1,5 +1,5 @@
 ---
-title: "Claude Sonnet 4 (20250514): Model Guide (2026)"
+title: "Claude Sonnet 4 (20250514): Model Guide"
 description: "Claude Sonnet 4 is Anthropic's recommended mid-tier model. API usage, Claude Code setup, pricing, and comparisons with Opus 4 and Haiku 4.5 explained."
 permalink: /claude-sonnet-4-20250514-model-guide/
 last_tested: "2026-04-24"
@@ -261,18 +261,6 @@ Yes. Sonnet 4 supports the full 200K context window. Performance remains strong 
 **How does Sonnet 4 compare to GPT-4o or Gemini?**
 Sonnet 4 is competitive with GPT-4o on coding benchmarks and generally stronger at instruction following. Direct comparisons depend on the specific task. Test on your own workloads.
 
-## Related Guides
-
-- [Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — predecessor model comparison
-- [Claude Code cost breakdown](/claude-code-cost-complete-guide/) — pricing across all models
-- [Model routing strategies](/claude-code-router-guide/) — when to use which model
-- [Reduce Claude Code costs](/claude-code-costs-too-much-reduce-spend-2026/) — save money without losing quality
-- [Claude Agent SDK](/claude-agent-sdk-complete-guide/) — build agents on Sonnet 4
-- [Cost tracking with ccusage](/ccusage-claude-code-cost-tracking-guide-2026/) — monitor spend per model
-- [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — optimize prompts for Sonnet
-- [The Claude Code Playbook](/playbook/) — comprehensive reference
-
-- [Claude temperature settings guide](/claude-temperature-settings-guide/) — Configure temperature for Sonnet 4
 ### Can I use Sonnet 4 with extended thinking and tool use simultaneously?
 
 Yes. Extended thinking and tool use work together. The model can think through a problem before deciding which tools to call.
@@ -288,6 +276,87 @@ Claude Code does not currently pass images to the model. Image input is availabl
 ### How often does Anthropic update the Sonnet model?
 
 Anthropic releases new model versions periodically. Always use the full model ID with date suffix in production to avoid unexpected changes when defaults are updated.
+
+## Claude Opus 4.1 (20250805) with Thinking-16K
+
+The model ID `claude-opus-4-1-20250805-thinking-16k` refers to Claude Opus 4.1 with a 16,000-token extended thinking budget. This is a specialized configuration of the Opus model family designed for tasks requiring deep, multi-step reasoning within a constrained thinking window.
+
+### What the Model ID Means
+
+```
+claude-opus-4-1-20250805-thinking-16k
+│      │     │ │         │
+│      │     │ │         └── Extended thinking budget: 16K tokens
+│      │     │ └──────────── Release date: August 5, 2025
+│      │     └────────────── Version: 4.1
+│      └──────────────────── Tier: Opus (highest capability)
+└─────────────────────────── Family: Claude
+```
+
+The `-thinking-16k` suffix indicates this model variant has a 16,000-token budget for extended thinking (chain-of-thought reasoning). The model uses this budget to "think through" complex problems before producing its final answer.
+
+### When to Use Opus 4.1 Thinking-16K
+
+This model variant is optimal for:
+
+- **Complex architecture decisions** requiring analysis of multiple interacting systems
+- **Security audits** where the model must trace data flow across multiple files and identify subtle vulnerabilities
+- **Mathematical proofs and formal reasoning** that benefit from step-by-step derivation
+- **Multi-constraint optimization** problems where the model must balance competing requirements
+- **Debugging distributed systems** where root cause analysis requires tracing events across services
+
+### Pricing and Cost Considerations
+
+Opus 4.1 with thinking-16k costs more per request than standard Opus because the thinking tokens count toward output token billing:
+
+| Component | Cost |
+|-----------|------|
+| Input tokens | $15 per million |
+| Output tokens (including thinking) | $75 per million |
+| 16K thinking tokens per request | ~$1.20 in thinking output alone |
+
+The thinking budget is a maximum, not a fixed cost. Simple questions may use only 2K-5K thinking tokens. The full 16K is consumed only on genuinely complex problems.
+
+### API Usage
+
+```python
+import anthropic
+
+client = anthropic.Anthropic()
+
+response = client.messages.create(
+    model="claude-opus-4-1-20250805",
+    max_tokens=16000,
+    thinking={
+        "type": "enabled",
+        "budget_tokens": 16000
+    },
+    messages=[{"role": "user", "content": "Analyze this distributed system for race conditions..."}]
+)
+```
+
+### Comparison with Sonnet 4 Extended Thinking
+
+| Aspect | Opus 4.1 Thinking-16K | Sonnet 4 Extended Thinking |
+|--------|----------------------|---------------------------|
+| Reasoning depth | Deepest | Strong |
+| Cost per request | ~$1.20+ thinking alone | ~$0.25 thinking |
+| Speed | Slower | Faster |
+| Best for | Research, architecture, proofs | Daily coding, implementation |
+
+For most development tasks, Sonnet 4 with extended thinking provides sufficient reasoning depth at a fraction of the cost. Reserve Opus 4.1 thinking-16k for problems where Sonnet's reasoning falls short. See our [Claude Code router guide](/claude-code-router-guide/) for routing strategies between these models.
+
+## Related Guides
+
+- [Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — predecessor model comparison
+- [Claude Code cost breakdown](/claude-code-cost-complete-guide/) — pricing across all models
+- [Model routing strategies](/claude-code-router-guide/) — when to use which model
+- [Reduce Claude Code costs](/claude-code-costs-too-much-reduce-spend-2026/) — save money without losing quality
+- [Claude Agent SDK](/claude-agent-sdk-complete-guide/) — build agents on Sonnet 4
+- [Cost tracking with ccusage](/ccusage-claude-code-cost-tracking-guide-2026/) — monitor spend per model
+- [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — optimize prompts for Sonnet
+- [The Claude Code Playbook](/playbook/) — comprehensive reference
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — Configure temperature for Sonnet 4
 
 <script type="application/ld+json">
 {

@@ -1,5 +1,5 @@
 ---
-title: "Docker Multi-Stage Build Cache Miss — Fix (2026)"
+title: "Docker Multi-Stage Build Cache Miss"
 permalink: /claude-code-docker-multi-stage-cache-invalidation-fix-2026/
 description: "Fix Docker build cache invalidation in multi-stage builds. Order COPY commands correctly and separate dependency install layer."
 last_tested: "2026-04-22"
@@ -89,3 +89,7 @@ Add this to your `CLAUDE.md`:
 - Add .dockerignore to exclude node_modules, .git, *.md.
 - Use npm ci (not npm install) in Docker for reproducible builds.
 ```
+
+## See Also
+
+- [Claude Code Docker Multi-Stage Builds (2026)](/claude-code-docker-multi-stage-builds-guide/)

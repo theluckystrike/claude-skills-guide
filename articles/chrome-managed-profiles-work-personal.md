@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Managed Profiles: Work and Personal Browsing"
+title: "Chrome Managed Profiles"
 description: "Learn how to use Chrome managed profiles to cleanly separate work and personal browsing. Includes setup instructions, shortcuts, and advanced."
 date: 2026-03-15
 last_modified_at: 2026-04-17

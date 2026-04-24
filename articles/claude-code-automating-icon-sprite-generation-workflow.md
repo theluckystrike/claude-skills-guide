@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Automating Icon Sprite Generation Workflow with Claude Code"
+title: "Automating Icon Sprite Generation"
 description: "Learn how to use Claude Code skills and automation to streamline your icon sprite generation workflow, reducing manual effort and improving."
 date: 2026-04-19
 last_modified_at: 2026-04-19

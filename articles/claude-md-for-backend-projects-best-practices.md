@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md For Backend Projects Best — Honest Review 2026"
+title: "Claude Md For Backend Projects Best"
 description: "Master Claude.md for backend development. Practical patterns for API design, database migrations, and server-side workflows using Claude Code skills."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -266,4 +266,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [CLAUDE.md for Frontend Projects — React, Component, and State Rules (2026)](/claude-md-for-frontend-projects/)

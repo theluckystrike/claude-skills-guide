@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Window Resizer Testing Chrome Extension Guide (2026)"
+title: "Window Resizer Testing Chrome Extension"
 description: "Master chrome extension window resizer testing with practical code examples. Learn methods for testing window sizing APIs, handling resize events, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

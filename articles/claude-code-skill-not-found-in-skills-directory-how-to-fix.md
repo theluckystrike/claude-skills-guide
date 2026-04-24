@@ -244,3 +244,8 @@ Skill invocation depends on the filename without the `.md` extension. A file nam
 ### What is Cause 3: Missing Skill File Extension?
 
 Every Claude Code skill must be a Markdown file with the `.md` extension. If the file was saved as plain text without an extension, Claude Code will not recognize it. Verify with `ls -la ~/.claude/skills/*.md` to list all properly named skill files. If you find a file without the `.md` extension, rename it with `mv ~/.claude/skills/xlsx ~/.claude/skills/xlsx.md`. Files downloaded from some sources may lose their extension during transfer, especially on Windows systems.
+
+## See Also
+
+- [Claude Code Notebook Kernel Not Found — Fix (2026)](/claude-code-notebook-kernel-not-found-fix-2026/)
+- [Claude Code Skill Progressive Disclosure: Implementation Guide](/claude-code-skill-progressive-disclosure-implementation/)

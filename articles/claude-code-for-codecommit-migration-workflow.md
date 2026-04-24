@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Codecommit — Complete Developer Guide"
+title: "Claude Code For Codecommit"
 description: "Learn how to use Claude Code to automate and streamline your AWS CodeCommit repository migration workflow. Practical examples, migration strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17

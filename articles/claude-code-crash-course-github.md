@@ -163,3 +163,8 @@ Related Reading
 - [Best Way to Use Claude Code for Debugging Sessions](/best-way-to-use-claude-code-for-debugging-sessions/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+## See Also
+
+- [VS Code Extension Host Crash Fix](/claude-code-extension-host-crash-fix-2026/)
+- [Apple Silicon Rosetta Crash Error — Fix (2026)](/claude-code-apple-silicon-rosetta-crash-fix-2026/)

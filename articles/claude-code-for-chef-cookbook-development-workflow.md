@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Chef Cookbook Development Workflow"
+title: "Claude Code for Chef Cookbook"
 description: "Learn how to use Claude Code to streamline your Chef cookbook development, from initial setup to testing and deployment automation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Chrome Extension Size Chart Converter: Unit Tools"
+title: "Chrome Extension Size Chart Converter"
 description: "Discover the best Chrome extensions for size chart conversions. Compare popular options for clothing, shoe, and ring size conversions with practical."
 date: 2026-03-15
 last_modified_at: 2026-04-17

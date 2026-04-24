@@ -1,5 +1,5 @@
 ---
-title: "Claude Code pnpm Lock File Out of Sync — Fix (2026)"
+title: "Claude Code pnpm Lock File Out of Sync"
 description: "Fix Claude Code pnpm lock file out of sync error. Regenerate pnpm-lock.yaml and resolve version conflicts. Step-by-step solution."
 permalink: /claude-code-pnpm-lock-file-out-of-sync-fix/
 last_tested: "2026-04-21"

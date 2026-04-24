@@ -233,6 +233,10 @@ $99 once. Free forever. 47/500 founding spots left.
 
 
 - [Claude Flow tool guide](/claude-flow-tool-guide/) — How to use Claude Flow for multi-agent orchestration
+- [Claude Code hooks](/claude-code-hooks-complete-guide/) — hook into subagent tool execution
+- [Claude Agent SDK](/claude-agent-sdk-complete-guide/) — build custom subagent architectures with the SDK
+- [Claude Code spec workflow](/claude-code-spec-workflow-guide/) — spec-driven subagent tasks
+
 ## Related Articles
 
 - [Passing Context Between Claude Code Subagents Guide](/passing-context-between-claude-code-subagents-guide/)

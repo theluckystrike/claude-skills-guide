@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Twistlock Prisma Cloud Workflow Tutorial"
+title: "Claude Code for Twistlock Prisma Cloud"
 description: "Learn how to integrate Claude Code with Twistlock Prisma Cloud for automated security scanning, vulnerability management, and compliance workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19

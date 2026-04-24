@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Critical CSS Optimization (2026)"
+title: "Claude Code for Critical CSS"
 description: "Extract and inline critical CSS automatically with Claude Code. Improve Largest Contentful Paint scores by eliminating render-blocking stylesheets."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -300,4 +300,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Lightning CSS — Workflow Guide](/claude-code-for-lightning-css-workflow-guide/)

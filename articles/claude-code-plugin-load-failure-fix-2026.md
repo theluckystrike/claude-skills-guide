@@ -79,3 +79,11 @@ Add this to your `CLAUDE.md`:
 - Test plugins after every Node.js version upgrade.
 - Keep plugins list minimal — each plugin adds startup time and failure risk.
 ```
+
+## See Also
+
+- [Claude Code ESLint Plugin Crashes on Custom Rule — Fix (2026)](/claude-code-eslint-plugin-crashes-custom-rule-fix/)
+- [IPv6 Fallback Failure Error — Fix (2026)](/claude-code-ipv6-fallback-failure-fix-2026/)
+- [Neovim Plugin Socket Error Fix](/claude-code-neovim-plugin-socket-error-fix-2026/)
+- [TLS Version Negotiation Failure — Fix (2026)](/claude-code-tls-version-negotiation-failure-fix-2026/)
+- [Pre-Commit Hook Failure on Claude Changes Fix](/claude-code-pre-commit-hook-failure-fix-2026/)

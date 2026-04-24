@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for SOC 2 Evidence Collection (2026)"
+title: "Claude Code for SOC 2 Evidence"
 description: "SOC 2 evidence collection automation with Claude Code. Generate audit artifacts from Git, CI/CD, and cloud APIs."
 permalink: /claude-code-soc2-evidence-collection-2026/
 last_tested: "2026-04-21"

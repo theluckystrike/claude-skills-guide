@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Reducing Agent Fleet Costs with Model Routing"
+title: "Reducing Agent Fleet Costs with Model"
 description: "Route 70% of agent tasks to Haiku ($1/$5 MTok) instead of Opus ($5/$25 MTok). Save $16/sprint with intelligent model selection."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -218,3 +218,9 @@ Track routing effectiveness:
 - [Claude Opus Orchestrator Sonnet Worker Architecture](/claude-opus-orchestrator-sonnet-worker-architecture/)
 - [Parallel Subagents Claude Code Best Practices](/parallel-subagents-claude-code-best-practices-2026/)
 - [Monitoring and Logging Claude Code Multi-Agent Systems](/monitoring-and-logging-claude-code-multi-agent-systems/)
+
+## See Also
+
+- [Model Routing by Task Cuts Claude API Bills](/claude-cost-model-routing-cut-claude-api-bills/)
+- [Multi-Agent Claude Fleet Cost Architecture Guide](/claude-cost-multi-agent-claude-fleet-cost-architecture/)
+- [Cost-Efficient Multi-Agent Coding Workflows](/claude-cost-cost-efficient-multi-agent-coding-workflows/)

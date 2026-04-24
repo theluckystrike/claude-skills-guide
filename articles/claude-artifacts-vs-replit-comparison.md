@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Artifacts vs Replit: Code Generation Platforms"
+title: "Claude Artifacts vs Replit"
 description: "Compare Claude Artifacts and Replit for code generation and execution. In-chat rendering vs full cloud IDE, capabilities and limitations."
 date: 2026-04-21
 permalink: /claude-artifacts-vs-replit-comparison/

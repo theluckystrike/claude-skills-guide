@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code for Perl to Python Migration 2026"
+title: "Claude Code for Perl to Python"
 description: "Migrate Perl scripts to Python with Claude Code. Automated translation, regex conversion, module mapping, and test generation workflow."
 permalink: /claude-code-perl-to-python-migration-2026/
 date: 2026-04-21

@@ -1,4 +1,5 @@
 ---
+render_with_liquid: false
 layout: default
 title: "Chrome Extension PubMed Search Helper"
 description: "A practical guide to building and using Chrome extensions for PubMed search. Learn how to create custom search helpers, automate literature reviews, and."

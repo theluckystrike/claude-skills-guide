@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "MCP Zero Trust Architecture Implementation: Practical Guide"
+title: "MCP Zero Trust Architecture"
 description: "Implement zero trust security for Model Context Protocol servers. Learn authentication, authorization, and isolation strategies for Claude Code MCP."
 date: 2026-03-14
 last_modified_at: 2026-04-17

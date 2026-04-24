@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Multilingual — Complete Developer Guide (2026)"
+title: "Claude Code Multilingual"
 last_tested: "2026-04-22"
 description: "A practical guide to managing multilingual codebases with Claude Code. Learn how to handle i18n, translation workflows, and localized content using skills."
 date: 2026-03-14

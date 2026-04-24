@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Xata Database — Workflow Guide"
+title: "Claude Code for Xata Database"
 description: "Build with Xata serverless database and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-xata-database-workflow-guide/
@@ -74,3 +74,7 @@ Claude Code should define the schema via Xata CLI, run `xata codegen` to generat
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
 - [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
+
+## See Also
+
+- [Claude Code for Turso Database — Workflow Guide](/claude-code-for-turso-edge-database-workflow-guide/)

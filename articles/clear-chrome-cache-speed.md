@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Clear Chrome Cache for Faster Browsing (2026)"
+title: "How to Clear Chrome Cache for Faster"
 description: "Learn multiple methods to clear Chrome cache, including keyboard shortcuts, command-line tools, and automation scripts for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

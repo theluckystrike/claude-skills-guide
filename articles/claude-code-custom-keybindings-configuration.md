@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Custom Keybindings Configuration (2026)"
+title: "Claude Code Custom Keybindings"
 description: "Configure custom keybindings in Claude Code. Set up shortcuts, key mappings, and keyboard-driven workflows for faster development."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -523,4 +523,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Custom Slash Command Not Found — Fix (2026)](/claude-code-custom-slash-command-not-recognized-fix/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Lead Generator Chrome Extension Guide (2026)"
+title: "AI Lead Generator Chrome Extension"
 description: "Learn how to build and integrate AI lead generator chrome extensions for automated prospecting and data extraction."
 date: 2026-03-15
 last_modified_at: 2026-04-17

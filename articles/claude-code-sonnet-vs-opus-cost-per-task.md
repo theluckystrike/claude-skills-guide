@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Sonnet vs Opus: Cost Per Task Comparison"
+title: "Claude Code Sonnet vs Opus"
 description: "Compare Claude Code Sonnet 4.6 vs Opus 4.6 cost per task with real token measurements showing when each model delivers better ROI for development work."
 permalink: /claude-code-sonnet-vs-opus-cost-per-task/
 date: 2026-04-22
@@ -231,3 +231,8 @@ The transition consistently shows that developers overestimate the quality gap b
 - [Claude Code API Cost Calculator](/claude-code-api-cost-calculator-estimate-before-build/) -- detailed estimation tools
 - [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- when to switch to Max
 - [Cost Optimization Hub](/cost-optimization/) -- reduce per-task costs further
+
+## See Also
+
+- [Claude Code vs Windsurf: Cost-Per-Feature Breakdown](/claude-code-vs-windsurf-cost-per-feature/)
+- [How Much Does Claude Code Cost Per PR? (Real Data)](/claude-code-cost-per-pr-real-data/)

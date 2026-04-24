@@ -600,6 +600,131 @@ File a support ticket if:
 
 Include the `x-request-id` header value, the exact timestamp (UTC), and the model you were targeting.
 
+## Outage Patterns and Uptime Monitoring
+
+Understanding when 500 errors are most likely to occur helps you design resilient workflows. Based on publicly reported incidents and developer community data, Claude API outages follow predictable patterns.
+
+### Historical Outage Patterns
+
+| Time Window (US Pacific) | Error Frequency | Reason |
+|--------------------------|----------------|--------|
+| Mon-Fri 9 AM - 12 PM | Highest | Peak US business hours, maximum concurrent requests |
+| Mon-Fri 12 PM - 2 PM | Moderate-High | Continued heavy load, European afternoon overlap |
+| Mon-Fri 2 PM - 6 PM | Moderate | Sustained traffic from Americas |
+| Mon-Fri 6 PM - 9 AM | Low | Off-peak hours, maintenance windows |
+| Weekends | Lowest | Significantly reduced enterprise traffic |
+| Model launch days | Spike | New model deployments cause temporary instability |
+| Quarter-end weeks | Elevated | Enterprise batch processing surges |
+
+The worst window for reliability is Tuesday through Thursday, 9 AM to noon Pacific. If your workflow tolerates scheduling flexibility, run batch jobs during off-peak hours (weekends or 10 PM - 6 AM Pacific) to minimize exposure to transient 500 errors.
+
+### Automated Monitoring Script
+
+This script checks the Claude API every 5 minutes and logs response status. When it detects 3 consecutive failures, it sends an alert. Save it as `claude-monitor.sh`:
+
+```bash
+#!/bin/bash
+# claude-monitor.sh — Monitor Claude API health and alert on outages
+set -uo pipefail
+
+LOG_FILE="${HOME}/.claude/api-health.log"
+FAIL_COUNT=0
+FAIL_THRESHOLD=3
+CHECK_INTERVAL=300  # 5 minutes
+
+mkdir -p "$(dirname "$LOG_FILE")"
+
+alert() {
+  local message="$1"
+  echo "[ALERT] $message"
+  # macOS notification
+  if command -v osascript &>/dev/null; then
+    osascript -e "display notification \"$message\" with title \"Claude API Alert\""
+  fi
+  # Linux notification
+  if command -v notify-send &>/dev/null; then
+    notify-send "Claude API Alert" "$message"
+  fi
+}
+
+while true; do
+  TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+  HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 \
+    https://api.anthropic.com/v1/messages \
+    -H "x-api-key: ${ANTHROPIC_API_KEY:-missing}" \
+    -H "anthropic-version: 2023-06-01" \
+    -H "content-type: application/json" \
+    -d '{"model":"claude-sonnet-4-20250514","max_tokens":5,"messages":[{"role":"user","content":"ping"}]}' \
+    2>/dev/null || echo "000")
+
+  LATENCY=$(curl -s -o /dev/null -w "%{time_total}" --max-time 10 \
+    https://api.anthropic.com/v1/messages \
+    -H "x-api-key: ${ANTHROPIC_API_KEY:-missing}" \
+    -H "anthropic-version: 2023-06-01" \
+    -H "content-type: application/json" \
+    -d '{"model":"claude-sonnet-4-20250514","max_tokens":5,"messages":[{"role":"user","content":"ping"}]}' \
+    2>/dev/null || echo "0")
+
+  echo "$TIMESTAMP  HTTP=$HTTP_CODE  LATENCY=${LATENCY}s" >> "$LOG_FILE"
+
+  if [ "$HTTP_CODE" = "200" ]; then
+    if [ "$FAIL_COUNT" -ge "$FAIL_THRESHOLD" ]; then
+      alert "Claude API recovered after $FAIL_COUNT consecutive failures"
+    fi
+    FAIL_COUNT=0
+  else
+    FAIL_COUNT=$((FAIL_COUNT + 1))
+    echo "$TIMESTAMP  FAIL #$FAIL_COUNT (HTTP $HTTP_CODE)" >> "$LOG_FILE"
+    if [ "$FAIL_COUNT" -eq "$FAIL_THRESHOLD" ]; then
+      alert "Claude API down: $FAIL_COUNT consecutive 500 errors"
+    fi
+  fi
+
+  sleep "$CHECK_INTERVAL"
+done
+```
+
+### Running the Monitor as a Background Service
+
+On macOS, run it with a launchd plist or simply background it:
+
+```bash
+chmod +x claude-monitor.sh
+nohup ./claude-monitor.sh > /dev/null 2>&1 &
+```
+
+For cron-based monitoring (simpler, checks every 5 minutes):
+
+```bash
+# Add to crontab: crontab -e
+*/5 * * * * curl -sf --max-time 10 -o /dev/null \
+  -H "x-api-key: $ANTHROPIC_API_KEY" \
+  -H "anthropic-version: 2023-06-01" \
+  -H "content-type: application/json" \
+  -d '{"model":"claude-sonnet-4-20250514","max_tokens":5,"messages":[{"role":"user","content":"ping"}]}' \
+  https://api.anthropic.com/v1/messages \
+  || echo "$(date -u) CLAUDE API FAILURE" >> ~/.claude/api-health.log
+```
+
+### Understanding status.anthropic.com
+
+The [Anthropic status page](https://status.anthropic.com) reports four states:
+
+| Status | Meaning | Your Action |
+|--------|---------|-------------|
+| **Operational** | All systems working normally | No action needed. If you still see 500s, the issue is specific to your request (prompt size, model, or edge case). |
+| **Degraded Performance** | The API is slower or partially failing | Expect higher latency and occasional 500s. Switch to Haiku for non-critical tasks. Enable longer retry timeouts. |
+| **Partial Outage** | One or more models are unavailable | Check which model is affected. Fall back to an unaffected model. Monitor the incident updates for estimated resolution. |
+| **Major Outage** | The API is broadly unreachable | Stop retrying to avoid wasting resources. Queue requests locally for replay when service resumes. Subscribe to status page updates for restoration notification. |
+
+Subscribe to status page updates at `https://status.anthropic.com/subscribe` to receive email, SMS, or webhook notifications before and during incidents. For production systems, integrate the status page API into your monitoring dashboard:
+
+```bash
+# Check programmatically
+curl -s https://status.anthropic.com/api/v2/status.json | \
+  python3 -c "import sys,json; d=json.load(sys.stdin); print(d['status']['description'])"
+```
+
 ## FAQ
 
 ### Is a 500 error my fault?
@@ -652,6 +777,8 @@ With streaming, a 500 error can occur mid-stream, meaning you may receive partia
 - [Fix Claude Code Docker Cannot Reach API Endpoint](/claude-code-docker-cannot-reach-api-endpoint-fix/)
 - [Fix Claude Code Model Not Available in Region](/claude-code-model-not-available-region-fix/)
 - [Fix Claude Rate Exceeded Error](/claude-rate-exceeded-error-fix/)
+- [Claude not working right now fix](/claude-not-working-right-now-fix/) — troubleshoot outages and downtime
+- [Claude Code OpenRouter setup](/claude-code-openrouter-setup-guide/) — alternative API endpoint when Anthropic is down
 
 <script type="application/ld+json">
 [

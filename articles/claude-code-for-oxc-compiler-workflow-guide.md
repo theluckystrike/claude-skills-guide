@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Oxc Compiler — Workflow Guide"
+title: "Claude Code for Oxc Compiler"
 description: "Use the Oxc JavaScript toolchain with Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-oxc-compiler-workflow-guide/

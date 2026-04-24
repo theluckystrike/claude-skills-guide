@@ -1,5 +1,5 @@
 ---
-title: "Claude Code API Cost Calculator: Estimate Before You Build"
+title: "Claude Code API Cost Calculator"
 description: "Estimate Claude Code API costs before starting a project with this calculator covering model selection, task budgets, and monthly spend projections."
 permalink: /claude-code-api-cost-calculator-estimate-before-build/
 date: 2026-04-22
@@ -302,3 +302,7 @@ The accuracy of pre-project estimates improves significantly after one month of 
 - [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- subscription details and optimization
 - [Claude Code Sonnet vs Opus: Cost Per Task](/claude-code-sonnet-vs-opus-cost-per-task/) -- model selection guidance
 - [Cost Optimization Hub](/cost-optimization/) -- reduce the numbers this calculator produces
+
+## See Also
+
+- [Batch API Cost Calculator for Claude Models](/claude-cost-batch-api-cost-calculator-claude-models/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Docker Compose Production Setup (2026)"
+title: "Claude Code Docker Compose Production"
 description: "Set up Claude Code with Docker Compose for production environments. Includes multi-service configs, health checks, and deployment strategies."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -446,4 +446,7 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [How to Use Docker Volumes Persistence (2026)](/claude-code-docker-volumes-persistence-guide/)
+- [Claude Code + Docker: Cost-Controlled Isolated Testing](/claude-code-docker-isolated-cost-controlled-testing/)

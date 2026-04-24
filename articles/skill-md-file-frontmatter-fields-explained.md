@@ -1,5 +1,5 @@
 ---
-title: "Every SKILL.md Frontmatter Field Explained with Examples — 2026"
+title: "Every SKILL.md Frontmatter Field"
 description: "Complete reference for all 14 SKILL.md YAML frontmatter fields including name, description, allowed-tools, paths, effort, and context."
 permalink: /skill-md-file-frontmatter-fields-explained/
 render_with_liquid: false

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "MCP Servers vs Claude Skills — Developer Comparison 2026"
+title: "MCP Servers vs Claude Skills"
 description: "MCP servers vs Claude skills explained: what each does, how they relate, and when to use one vs the other for AI-powered developer workflows."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -216,4 +216,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Awesome MCP vs Templates MCP Directory (2026)](/awesome-mcp-servers-vs-claude-code-templates-mcp-2026/)

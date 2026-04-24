@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code with Pulumi Python for IaC (2026)"
+title: "Claude Code with Pulumi Python for IaC"
 description: "Provision cloud infrastructure with Pulumi and Python using Claude Code. Covers AWS, GCP, and Azure resource definitions with type-safe automation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

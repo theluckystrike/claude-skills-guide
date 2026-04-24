@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills vs ChatGPT Custom GPTs — Developer Workflow Comparison — 2026"
+title: "Claude Skills vs ChatGPT Custom GPTs"
 description: "Compare Claude Code skills (file-based, version-controlled, open standard) with ChatGPT Custom GPTs (web-based, proprietary). Honest breakdown with 4 GPT wins."
 permalink: /claude-skills-vs-chatgpt-custom-gpts/
 render_with_liquid: false
@@ -132,3 +132,4 @@ GPTs have a 128K context window but load all instructions and knowledge file con
 ## Related Articles
 
 - [Why Claude Skill Not Recognized Custom Name (2026)](/why-does-claude-code-not-recognize-my-custom-skill-name/)
+- [Claude MCP vs ChatGPT Plugins: Extension Systems Compared](/claude-mcp-vs-chatgpt-plugins-comparison/)

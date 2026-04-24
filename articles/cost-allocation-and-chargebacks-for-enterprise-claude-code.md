@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Cost Allocation and Chargebacks for Enterprise Claude Code"
+title: "Cost Allocation and Chargebacks"
 description: "A practical guide to implementing cost allocation and chargeback strategies for Claude Code in enterprise environments. Learn how to track usage."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -318,4 +318,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Enterprise Claude Cost Chargebacks by Team](/claude-cost-10-enterprise-claude-cost-chargebacks/)

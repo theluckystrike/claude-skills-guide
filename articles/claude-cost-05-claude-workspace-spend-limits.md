@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Workspace Spend Limits Configuration"
+title: "Claude Workspace Spend Limits"
 description: "Configure workspace spend limits in the Claude Console to cap monthly costs. Batches may exceed limits slightly due to concurrent processing."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -178,3 +178,8 @@ The spend limit's value is measured in prevented overages. Track the number of m
 - [Claude Code Enterprise Seat Management and Usage Monitoring](/claude-code-enterprise-seat-management-and-usage-monitoring/)
 - [Claude Code for Cost Optimization Monitoring Guide](/claude-code-for-cost-optimization-monitoring-guide/)
 - [Cost Allocation and Chargebacks for Enterprise Claude Code](/cost-allocation-and-chargebacks-for-enterprise-claude-code/)
+
+## See Also
+
+- [Text Editor Tool: 700 Token Overhead Explained](/claude-cost-05-text-editor-tool-700-token-overhead/)
+- [Claude Code $200 Max Plan: Is It Worth the Cost](/claude-cost-05-claude-code-max-200-worth-it/)

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for CFD with OpenFOAM (2026)"
+title: "Claude Code for CFD with OpenFOAM"
 permalink: /claude-code-cfd-openfoam-2026/
 description: "Computational fluid dynamics with Claude Code and OpenFOAM. Automate mesh generation, solver setup, and post-processing."
 last_tested: "2026-04-22"

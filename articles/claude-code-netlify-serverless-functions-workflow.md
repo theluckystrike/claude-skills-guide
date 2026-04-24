@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Netlify Functions Workflow (2026)"
+title: "Claude Code Netlify Functions Workflow"
 description: "Build and deploy Netlify serverless functions with Claude Code for API endpoints, background jobs, and edge functions. Working deployment examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -527,4 +527,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Supabase Edge Functions — Guide](/claude-code-for-supabase-edge-functions-workflow-guide/)

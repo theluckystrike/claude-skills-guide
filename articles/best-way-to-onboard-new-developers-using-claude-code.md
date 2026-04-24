@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Way To Onboard New Developers — Honest Review 2026"
+title: "Best Way To Onboard New Developers"
 description: "A practical guide for engineering leaders on using Claude Code skills to accelerate developer onboarding. Includes skill recommendations, setup."
 date: 2026-03-14
 last_modified_at: 2026-04-17

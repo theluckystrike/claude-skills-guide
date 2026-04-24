@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Build Hybrid Apps with Claude Code + Capacitor (2026)"
+title: "Build Hybrid Apps with Claude Code +"
 description: "Build hybrid mobile apps with Claude Code and Capacitor. Native features, plugin integration, and cross-platform deployment workflows explained."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -378,4 +378,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Go Module Development — Complete Developer Guide](/claude-code-go-module-development-guide/)
+- [Claude Code Rust Crate Development Guide (2026)](/claude-code-rust-crate-development-guide/)

@@ -1,5 +1,5 @@
 ---
-title: "Skills as Context Engineering: Zero-Round-Trip Knowledge Loading"
+title: "Skills as Context Engineering"
 description: "Use Claude Code skills as context engineering tools to eliminate exploratory file reads and save 20K-80K tokens per task with zero-round-trip loading."
 permalink: /skills-context-engineering-zero-round-trip-loading/
 date: 2026-04-22
@@ -231,3 +231,4 @@ If skills are not producing expected savings, check:
 - [Claude Code Skills Guide](/skills/) -- complete skills reference
 - [Context Engineering vs Prompt Engineering](/context-engineering-vs-prompt-engineering-agents/) -- the theoretical framework
 - [CLAUDE.md Token Optimization](/claude-md-token-optimization-rules-save-money/) -- optimizing the always-loaded context
+- [Karpathy Context Engineering + NASA P10: CCG Framework](/karpathy-context-engineering-nasa-p10-ccg-framework/)

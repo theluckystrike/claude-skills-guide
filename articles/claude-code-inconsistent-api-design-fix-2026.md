@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Inconsistent API Design (2026)"
+title: "Fix Claude Code Inconsistent API Design"
 description: "Fix inconsistent API design from Claude Code by defining response shapes, naming patterns, and error formats in your CLAUDE.md file."
 permalink: /claude-code-inconsistent-api-design-fix-2026/
 last_tested: "2026-04-22"
@@ -117,3 +117,7 @@ expect(apiResponseSchema.safeParse(response.body).success).toBe(true);
 The [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) index lists API design skills that validate consistency across endpoints.
 
 For more API patterns, see [The Claude Code Playbook](/playbook/). For type-safe API contracts, read the [type system guide](/claude-code-ignores-type-system-fix-2026/). For testing API consistency, see our [best practices guide](/karpathy-skills-vs-claude-code-best-practices-2026/).
+
+## See Also
+
+- [Fix Claude Code Inconsistent Code Style (2026)](/claude-code-inconsistent-style-fix-2026/)

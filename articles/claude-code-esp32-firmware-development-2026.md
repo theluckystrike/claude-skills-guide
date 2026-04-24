@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for ESP32 Firmware with ESP-IDF (2026)"
+title: "Claude Code for ESP32 Firmware"
 description: "ESP32 firmware development with Claude Code and ESP-IDF. Build BLE, WiFi, and sensor drivers with FreeRTOS tasks."
 permalink: /claude-code-esp32-firmware-development-2026/
 last_tested: "2026-04-21"
@@ -246,3 +246,5 @@ idf.py partition-table
 - [Claude Code for STM32 Firmware](/claude-code-stm32-firmware-development-2026/)
 - [Claude Code for Embedded Systems](/claude-skills-for-embedded-systems-iot-firmware/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for 3D Printer Firmware (2026)](/claude-code-3d-printer-firmware-customization-2026/)
+- [Claude Code for Medical Device IEC 62304 (2026)](/claude-code-medical-device-firmware-iec62304-2026/)

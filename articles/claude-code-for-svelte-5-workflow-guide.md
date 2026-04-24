@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Svelte 5 — Workflow Guide (2026)"
+title: "Claude Code for Svelte 5"
 description: "Claude Code for Svelte 5 — Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified for..."
 date: 2026-04-18
 permalink: /claude-code-for-svelte-5-workflow-guide/

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Memory Optimization Guide (2026)"
+title: "Claude Code Memory Optimization Guide"
 description: "Optimize memory allocation with Claude Code for large codebases. Reduce usage, prevent leaks, and improve performance with practical strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17

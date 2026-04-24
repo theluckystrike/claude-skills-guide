@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills for Git, Docker, and Testing Workflows — 2026"
+title: "Claude Skills for Git, Docker,"
 description: "Three production-ready SKILL.md files for git commit workflows, Docker container management, and test runner automation with allowed-tools."
 permalink: /claude-skills-for-git-docker-testing/
 render_with_liquid: false

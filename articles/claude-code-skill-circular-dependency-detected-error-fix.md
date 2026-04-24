@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skill Circular Dependency Detected Error (2026)"
+title: "Claude Code Skill Circular Dependency"
 description: "Resolve the circular dependency detected error in Claude Code skills with practical solutions, code examples, and prevention strategies. Updated for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -330,4 +330,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Circular Dependency Detected in Build — Fix (2026)](/claude-code-circular-dependency-detected-build-fix-2026/)

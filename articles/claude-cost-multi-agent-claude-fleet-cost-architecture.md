@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Multi-Agent Claude Fleet Cost Architecture Guide"
+title: "Multi-Agent Claude Fleet Cost"
 description: "Run a 5-agent Claude fleet for $1,000/month on Max 20x subscriptions. Real production data from a 2,816-article content operation."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -208,3 +208,5 @@ Track fleet economics across sprints:
 ## Related Articles
 
 - [Reducing Agent Fleet Costs with Model Routing](/reducing-agent-fleet-costs-model-routing/)
+- [Reducing Agent Fleet Costs with Model Routing](/claude-cost-reducing-agent-fleet-costs-model-routing/)
+- [Cost-Efficient Multi-Agent Coding Workflows](/claude-cost-cost-efficient-multi-agent-coding-workflows/)

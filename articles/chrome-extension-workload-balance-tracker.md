@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Workload Balance Tracker Chrome Extension Guide (2026)"
+title: "Workload Balance Tracker Chrome"
 description: "Learn how to build and use chrome extension workload balance trackers to manage tasks, time, and productivity across projects."
 date: 2026-03-15
 last_modified_at: 2026-04-17

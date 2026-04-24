@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Traefik Ingress Kubernetes Workflow Guide"
+title: "Claude Code for Traefik Ingress"
 description: "Master the workflow of managing Traefik Ingress in Kubernetes using Claude Code. Learn to automate deployments, configure routes, and manage certificates."
 date: 2026-03-20
 last_modified_at: 2026-04-17

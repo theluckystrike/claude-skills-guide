@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Storybook Test — Workflow Guide"
+title: "Claude Code for Storybook Test"
 description: "Test UI components with Storybook and Claude Code setup. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-storybook-test-workflow-guide/

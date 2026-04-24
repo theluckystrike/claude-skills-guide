@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Monorepos: Scoping Context to Reduce Costs"
+title: "Claude Code for Monorepos"
 description: "Reduce Claude Code costs in monorepos by 50-70% with context scoping techniques including nested CLAUDE.md, package boundaries, and targeted file access."
 permalink: /claude-code-monorepos-scoping-context-reduce-costs/
 date: 2026-04-22

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Git Submodules Management Guide (2026)"
+title: "Claude Code Git Submodules Management"
 last_tested: "2026-04-22"
 description: "Learn how to manage Git submodules effectively with Claude Code. Practical workflows for adding, updating, cloning, and troubleshooting submodules in."
 date: 2026-03-14
@@ -189,4 +189,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Git Submodule Not Initialized Error Fix](/claude-code-submodule-not-initialized-fix-2026/)

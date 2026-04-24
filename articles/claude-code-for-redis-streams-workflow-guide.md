@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Redis Streams Workflow Guide"
+title: "Claude Code for Redis Streams Workflow"
 description: "A comprehensive guide to building Redis Streams workflows with Claude Code, featuring practical examples, code patterns, and production-ready."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -345,4 +345,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Upstash Redis — Workflow Guide](/claude-code-for-upstash-redis-workflow-guide/)

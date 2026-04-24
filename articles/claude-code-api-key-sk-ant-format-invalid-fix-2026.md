@@ -1,5 +1,5 @@
 ---
-title: "Invalid API Key Format sk-ant — Fix (2026)"
+title: "Invalid API Key Format sk-ant — Fix"
 permalink: /claude-code-api-key-sk-ant-format-invalid-fix-2026/
 description: "Fix 'Invalid API key format' by regenerating your sk-ant key. Claude expects sk-ant-api03 prefix since March 2026."
 last_tested: "2026-04-22"
@@ -71,3 +71,10 @@ Add this to your `CLAUDE.md`:
 - Verify key prefix matches sk-ant-api03 before deployment.
 - Store keys in a secrets manager, not in .env files committed to git.
 ```
+
+## See Also
+
+- [Claude API Invalid API Key Format Error — Fix (2026)](/claude-api-invalid-api-key-format-error-fix/)
+- [Claude API Key Organization Mismatch — Fix (2026)](/claude-code-api-key-organization-mismatch-fix-2026/)
+- [ANTHROPIC_API_KEY Not Set in Subprocess Fix](/claude-code-anthropic-api-key-not-set-subprocess-fix-2026/)
+- [API Key Region Mismatch eu-west-1 — Fix (2026)](/claude-code-anthropic-api-key-region-mismatch-fix-2026/)

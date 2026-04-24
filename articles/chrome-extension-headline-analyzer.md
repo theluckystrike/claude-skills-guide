@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Headline Analyzer Chrome Extension Guide (2026)"
+title: "Headline Analyzer Chrome Extension"
 description: "Learn how to build and use a chrome extension headline analyzer to optimize your headlines for better click-through rates and engagement."
 date: 2026-03-15
 last_modified_at: 2026-04-17

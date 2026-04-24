@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Developer Advocate Demo Content Workflow Tips"
+title: "Claude Code Developer Advocate Demo"
 description: "Master the art of creating compelling demos and content using Claude Code. Learn practical workflow strategies for developer advocates."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -158,4 +158,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Content Filter Triggered Refusal — Fix (2026)](/claude-code-content-filter-triggered-fix-2026/)

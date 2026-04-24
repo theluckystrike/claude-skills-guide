@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code vs Cursor: Multi-File Refactoring (2026)"
+title: "Claude Code vs Cursor: Multi-File Refactoring"
 description: "Compare Claude Code and Cursor for multi-file refactoring. CLI vs IDE approach benchmarked across rename, extract, and restructure operations."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -245,4 +245,10 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [.env File Not Loaded by Claude Fix](/claude-code-env-file-not-loaded-fix-2026/)
+- [Cursor Conflict With Claude Code CLI Fix](/claude-code-cursor-conflict-cli-fix-2026/)
+- [Declaration File .d.ts Missing Error — Fix (2026)](/claude-code-declaration-file-dts-missing-fix-2026/)
+- [Claude Code Teams vs Cursor Teams for Enterprise](/claude-code-teams-vs-cursor-teams-enterprise-2026/)
+- [Claude Code vs Cursor: Multi-File Editing in 2026](/claude-code-vs-cursor-multi-file-editing-2026/)

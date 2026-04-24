@@ -202,3 +202,9 @@ Claude Code handles all major programming languages. For niche languages, add sy
 Typical PR reviews consume 10,000-50,000 tokens, costing $0.10-0.50 per review depending on diff size.
 
 For CI/CD integration patterns, see the [CI/CD guide](/claude-code-ci-cd-integration-guide-2026/). For prompt engineering in reviews, read the [prompt tips guide](/claude-code-prompt-engineering-tips-2026/). For security-specific reviews, see the [security tools roundup](/best-claude-code-security-tools-2026/).
+
+## See Also
+
+- [Claude Code for Oscilloscope Automation (2026)](/claude-code-oscilloscope-automation-2026/)
+- [Build N8N Workflows with Claude Code 2026](/claude-code-n8n-workflow-automation-2026/)
+- [Claude Code vs Sweep AI (2026): PR Automation](/claude-code-vs-sweep-ai-pr-automation-2026/)

@@ -1,7 +1,8 @@
 ---
+render_with_liquid: false
 
 layout: default
-title: "Building a Chrome Extension for Standup Meeting Notes"
+title: "Building a Chrome Extension for Standup"
 description: "Learn how to create a Chrome extension to capture, organize, and export your daily standup meeting notes efficiently."
 date: 2026-03-15
 last_modified_at: 2026-04-17

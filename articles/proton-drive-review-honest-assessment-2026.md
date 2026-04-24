@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Proton Drive Review 2026 — Honest Assessment"
+title: "Proton Drive Review 2026"
 description: "Proton Drive reviewed honestly for 2026. Privacy, pricing, sync speed, and limitations vs Google Drive and iCloud compared. Tested and working in 2026."
 date: 2026-03-16
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Generate GraphQL Schemas with Claude Code"
+title: "Generate GraphQL Schemas with Claude"
 description: "Use Claude Code to design and generate GraphQL schemas. Type definitions, resolvers, input validation, pagination, and code-first vs schema-first."
 date: 2026-04-15
 last_modified_at: 2026-04-17

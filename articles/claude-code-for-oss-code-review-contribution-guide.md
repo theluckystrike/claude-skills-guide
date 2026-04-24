@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Oss Code Review — Complete Developer Guide"
+title: "Claude Code For Oss Code Review"
 description: "Learn how to use Claude Code to contribute effective code reviews to open source projects. Practical examples, workflows, and actionable advice for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Claude Skill Not Recognized Custom Name (2026)"
+title: "Why Claude Skill Not Recognized Custom"
 description: "Fix Claude Code not recognizing custom skill names. Debug file naming, directory placement, registration issues, and skill loading failures."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -204,4 +204,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Why Does Claude Code Break My Existing — Developer Guide](/why-does-claude-code-break-my-existing-tests-unexpectedly/)

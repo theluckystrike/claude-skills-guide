@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Multi-Agent Orchestration Patterns Guide"
+title: "Claude Code Multi-Agent Orchestration"
 description: "Patterns for orchestrating multiple Claude Code agents across complex workflows. Covers parallel execution, task delegation, and coordination strategies."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -309,4 +309,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Multi-Cursor Edit Conflict Fix](/claude-code-multi-cursor-edit-conflict-fix-2026/)

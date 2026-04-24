@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude 4 Skills: New Features and Changes (2026)"
+title: "Claude 4 Skills"
 description: "Claude 4 brings better PDF extraction, smarter TDD detection, semantic search with Supermemory, and enhanced webapp-testing skill capabilities."
 date: 2026-03-13
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "What 1,024 Queries Reveal About Claude Code Users"
+title: "What 1,024 Queries Reveal About Claude"
 description: "Analysis of 1,000 search queries for Claude Code content. 97% produce zero clicks. Error queries dominate. Here is what developers actually search for."
 date: 2026-04-18
 author: "Claude Skills Guide"
@@ -195,3 +195,9 @@ The search queries are a direct signal from developers telling us what they need
 ---
 
 *Methodology: Data covers 28 days of Google Search Console query data for claudecodeguides.com, exported April 2026. Analysis includes the top 1,000 queries by impression count. Intent classification uses keyword pattern matching across query text. Some queries truncated in tables for readability. Full query text preserved in analysis.*
+
+## See Also
+
+- [Claude Code Search Index Corrupted Error — Fix (2026)](/claude-code-search-index-corrupted-fix-2026/)
+- [Claude Code for Seismology Waveform Analysis (2026)](/claude-code-seismology-waveform-analysis-2026/)
+- [Claude Code for Market Microstructure (2026)](/claude-code-market-microstructure-analysis-2026/)

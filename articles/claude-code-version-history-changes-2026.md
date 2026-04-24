@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Version History and Changes (2026)"
+title: "Claude Code Version History and Changes"
 description: "Track Claude Code version changes in 2026 including new features, breaking changes, and ecosystem compatibility updates."
 permalink: /claude-code-version-history-changes-2026/
 last_tested: "2026-04-22"
@@ -143,3 +143,7 @@ Check Anthropic's documentation for version pinning options. Enterprise customer
 Report to Anthropic for core Claude Code issues. Report to the specific ecosystem repo for community tool incompatibilities.
 
 For the full ecosystem overview, see the [tools map](/claude-code-ecosystem-complete-map-2026/). For configuration that survives updates, read the [configuration hierarchy guide](/claude-code-configuration-hierarchy-explained-2026/). For CLAUDE.md patterns that are update-resilient, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).
+
+## See Also
+
+- [Shallow Clone Missing History for Blame Fix](/claude-code-shallow-clone-missing-history-blame-fix-2026/)

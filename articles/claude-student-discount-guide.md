@@ -1,5 +1,5 @@
 ---
-title: "Claude Student Discount: How to Get It (2026)"
+title: "Claude Student Discount: How to Get It"
 description: "Anthropic does not offer a Claude student discount in 2026. Here are real alternatives: free tiers, API credits, university programs, and tips."
 permalink: /claude-student-discount-guide/
 last_tested: "2026-04-24"
@@ -219,18 +219,6 @@ Some hackathons include AI API credits as sponsor benefits. Check event sponsor 
 **What happens when my free credits run out?**
 API calls will return an error. You will need to add a payment method or switch to the free chat tier. There is no negative balance or surprise billing.
 
-## Related Guides
-
-- [Claude Code cost breakdown](/claude-code-cost-complete-guide/) — understand what you would pay
-- [Reduce Claude Code costs](/claude-code-costs-too-much-reduce-spend-2026/) — spend less per session
-- [ccusage cost tracking](/ccusage-claude-code-cost-tracking-guide-2026/) — monitor your spend
-- [Model routing for cost savings](/claude-code-router-guide/) — use cheaper models strategically
-- [Best cost-saving tools](/best-claude-code-cost-saving-tools-2026/) — third-party cost tools
-- [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — better prompts cost less
-- [Pricing plans comparison](/claude-code-pricing-plans-comparison-2026/) — Pro vs Max vs API
-- [The Claude Code Playbook](/playbook/) — comprehensive reference
-
-- [Claude Code 价格指南 (Chinese Pricing Guide)](/claude-code-jiage-pricing-guide/) — Claude Code pricing guide in Chinese
 ### Is there a way to get free Claude API credits for academic research?
 
 Check Anthropic's research access programs. Some universities have direct agreements with Anthropic that include API credits for published research.
@@ -246,6 +234,22 @@ Yes. During high-demand periods, free tier users may experience lower message li
 ### Can multiple students share a Claude Max subscription?
 
 Anthropic's terms require individual accounts. Each student should have their own account. For shared access, ask your department about an enterprise or team plan.
+
+## Related Guides
+
+- [Claude Code cost breakdown](/claude-code-cost-complete-guide/) — understand what you would pay
+- [Reduce Claude Code costs](/claude-code-costs-too-much-reduce-spend-2026/) — spend less per session
+- [ccusage cost tracking](/ccusage-claude-code-cost-tracking-guide-2026/) — monitor your spend
+- [Model routing for cost savings](/claude-code-router-guide/) — use cheaper models strategically
+- [Best cost-saving tools](/best-claude-code-cost-saving-tools-2026/) — third-party cost tools
+- [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — better prompts cost less
+- [Pricing plans comparison](/claude-code-pricing-plans-comparison-2026/) — Pro vs Max vs API
+- [The Claude Code Playbook](/playbook/) — comprehensive reference
+- [Claude Code 价格指南 (Chinese Pricing Guide)](/claude-code-jiage-pricing-guide/) — Claude Code pricing guide in Chinese
+- [Claude Pro subscription price](/claude-pro-subscription-price-guide/) — Pro plan features and what you get
+- [Claude extra usage cost](/claude-extra-usage-cost-guide/) — understand overage charges
+- [Claude API pricing](/claude-api-pricing-complete-guide/) — every model and plan priced
+- [Claude 5-hour usage limit](/claude-5-hour-usage-limit-guide/) — rolling limit on free and paid tiers
 
 <script type="application/ld+json">
 {

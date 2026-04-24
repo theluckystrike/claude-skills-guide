@@ -1,5 +1,5 @@
 ---
-title: "Claude Skill Registry Pattern for Teams — Centralized Discovery, Versioning, and Distribution — 2026"
+title: "Claude Skill Registry Pattern for Teams"
 description: "Build a skill registry that gives teams centralized discovery, version tracking, and controlled distribution of Claude Code skills across projects."
 permalink: /claude-skill-registry-pattern-for-teams/
 render_with_liquid: false

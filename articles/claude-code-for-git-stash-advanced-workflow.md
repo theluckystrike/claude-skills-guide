@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Advanced Git Stash (2026)"
+title: "Claude Code for Advanced Git Stash"
 description: "Master advanced git stash workflows with Claude Code. Covers partial stashing, stash branching, conflict resolution, and automated stash management."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -268,4 +268,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Stash Pop Conflict After Claude Edits Fix](/claude-code-stash-pop-conflict-after-edits-fix-2026/)
+- [Claude Code Pytest Parametrize Advanced Workflow Patterns](/claude-code-pytest-parametrize-advanced-workflow-patterns/)

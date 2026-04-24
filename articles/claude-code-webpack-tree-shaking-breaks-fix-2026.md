@@ -1,5 +1,5 @@
 ---
-title: "Webpack Tree-Shaking Breaks Build — Fix (2026)"
+title: "Webpack Tree-Shaking Breaks Build — Fix"
 permalink: /claude-code-webpack-tree-shaking-breaks-fix-2026/
 description: "Fix webpack tree-shaking removing needed code. Add sideEffects field to package.json and mark imports correctly."
 last_tested: "2026-04-22"
@@ -90,3 +90,7 @@ Add this to your `CLAUDE.md`:
 - Mark files with side effects in package.json sideEffects array.
 - Test production builds after every code change: npx webpack --mode production.
 ```
+
+## See Also
+
+- [Stop Claude Code Breaking Working Features (2026)](/claude-code-breaks-working-features-fix-2026/)

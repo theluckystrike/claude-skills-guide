@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Context Window Optimization Workflow Guide"
+title: "Claude Code for Context Window"
 description: "A comprehensive guide to optimizing context window usage in Claude Code CLI for developers. Learn practical strategies, code examples, and actionable tips."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -236,6 +236,6 @@ Related Reading
 - [When Full Context Costs More Than a RAG Pipeline](/when-full-context-costs-more-than-rag/)
 - [Claude Orchestrator-Worker Cost Optimization](/claude-orchestrator-worker-cost-optimization/)
 
+## See Also
 
-
-
+- [Context Window Budgeting: How to Allocate Tokens Across Tasks](/context-window-budgeting-allocate-tokens-tasks/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Color Contrast and Accessibility with Claude Code"
+title: "Fix Color Contrast and Accessibility"
 description: "Practical workflow for identifying and fixing color contrast and accessibility issues using Claude Code skills and automated tooling."
 date: 2026-03-13
 last_modified_at: 2026-04-17

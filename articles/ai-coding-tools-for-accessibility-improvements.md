@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "AI Coding Tools for Accessibility Improvements"
+title: "AI Coding Tools for Accessibility"
 description: "Discover how AI coding tools can help developers build more accessible web applications, with practical examples and real-world techniques."
 date: 2026-03-14
 last_modified_at: 2026-04-17

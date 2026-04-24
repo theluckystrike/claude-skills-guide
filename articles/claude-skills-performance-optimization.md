@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills Performance Optimization — Token Budgets, Compaction Survival, and Load Time Reduction — 2026"
+title: "Claude Skills Performance Optimization"
 description: "Reduce skill token usage by 60% with progressive disclosure, front-loaded descriptions, compaction-aware design, and reference file offloading."
 permalink: /claude-skills-performance-optimization/
 render_with_liquid: false

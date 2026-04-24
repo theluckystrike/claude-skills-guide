@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Pants Build System Workflow Guide (2026)"
+title: "Claude Code for Pants Build System"
 last_tested: "2026-04-22"
 description: "A comprehensive guide to integrating Claude Code into your Pants build system workflow for efficient Python and multi-language project development."
 date: 2026-03-15

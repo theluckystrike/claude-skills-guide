@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Out Of Memory Heap Allocation — Developer (2026)"
+title: "Claude Code Out Of Memory Heap"
 description: "Claude Code Out Of Memory Heap Allocation — Developer. Practical guide with working examples for developers. Includes code examples and fixes."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -411,4 +411,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code ENOMEM Out of Memory Large Repos — Fix (2026)](/claude-code-enomem-out-of-memory-large-repos-fix/)
+- [Claude Code pnpm Lock File Out of Sync — Fix (2026)](/claude-code-pnpm-lock-file-out-of-sync-fix/)

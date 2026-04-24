@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "AI Content Repurposer Chrome Extension Guide (2026)"
+title: "AI Content Repurposer Chrome Extension"
 description: "Learn how to build an AI-powered content repurposing Chrome extension. Practical code examples, APIs, and implementation patterns for developers and power."
 date: 2026-03-15
 last_modified_at: 2026-04-17

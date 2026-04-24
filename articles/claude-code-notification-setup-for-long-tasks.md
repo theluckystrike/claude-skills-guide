@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Notification Setup for Long Tasks"
+title: "Claude Code Notification Setup for Long"
 description: "Learn how to configure notifications in Claude Code to stay informed during long-running operations. Practical examples and code snippets for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -510,5 +510,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
+- [Claude Code EPIPE Broken Pipe Error — Fix (2026)](/claude-code-epipe-broken-pipe-long-operations-fix/)
+- [SIGTERM During Long Operation Fix](/claude-code-sigterm-during-long-operation-fix-2026/)

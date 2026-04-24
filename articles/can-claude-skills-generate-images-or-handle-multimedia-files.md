@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Can Claude Skills Generate Images Or — Developer Guide"
+title: "Can Claude Skills Generate Images"
 description: "Learn how Claude skills work with multimedia through tools, APIs, and specialized skills for images, audio, video, and documents."
 date: 2026-03-14
 last_modified_at: 2026-04-17

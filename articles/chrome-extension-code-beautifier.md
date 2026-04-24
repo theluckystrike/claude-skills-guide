@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Code Beautifier Chrome Extension Guide (2026)"
+title: "Code Beautifier Chrome Extension Guide"
 description: "Discover the best Chrome extensions for beautifying and formatting code directly in your browser. Practical examples and tips for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

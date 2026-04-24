@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Multi-Language Project Navigation (2026)"
+title: "Claude Code Multi-Language Project"
 description: "Navigate multi-language codebases efficiently with Claude Code for cross-file search, dependency tracing, and polyglot project management patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -314,6 +314,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
-
+- [Claude Code for ROS2 Nav2 Stack Development (2026)](/claude-code-ros2-navigation-stack-2026/)

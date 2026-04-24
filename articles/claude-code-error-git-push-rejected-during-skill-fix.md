@@ -226,6 +226,4 @@ Related Reading
 - [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
-
+- [Push Rejected After Claude Rebase Fix](/claude-code-push-rejected-after-rebase-fix-2026/)

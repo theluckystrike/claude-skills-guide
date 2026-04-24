@@ -1,5 +1,5 @@
 ---
-title: "Awesome Claude Code: Master Resource Index (2026)"
+title: "Awesome Claude Code"
 description: "Navigate the awesome-claude-code repo — 40K stars of curated skills, hooks, slash-commands, agent orchestrators, and plugins for Claude Code developers."
 permalink: /awesome-claude-code-master-index-guide-2026/
 last_tested: "2026-04-22"
@@ -130,3 +130,7 @@ The [toolkit repo](/awesome-claude-code-toolkit-135-agents-2026/) focuses specif
 - [Claude Skills Directory](/claude-skills-directory-where-to-find-skills/) — where to find and install skills
 - [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — patterns that complement these tools
 - [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — deep dive on one of the listed categories
+
+## See Also
+
+- [Awesome Claude Code vs Docs Mirror (2026)](/awesome-claude-code-vs-claude-code-docs-2026/)

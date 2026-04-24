@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Axolotl QLoRA Training Script Workflow"
+title: "Claude Code Axolotl QLoRA Training"
 description: "Learn how to use Claude Code skills to streamline Axolotl QLoRA fine-tuning workflows. Practical examples for configuring, running, and monitoring."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -613,4 +613,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Hook Script Not Executable — Fix (2026)](/claude-code-hook-script-not-executable-fix-2026/)

@@ -1,5 +1,5 @@
 ---
-title: "Agent-First Architecture: Backends That Don't Waste Tokens"
+title: "Agent-First Architecture"
 description: "Design backend systems for AI agent consumption with structured endpoints, metadata APIs, and bounded responses that cut Claude Code token waste by 40-60%."
 permalink: /agent-first-architecture-backends-dont-waste-tokens/
 date: 2026-04-22

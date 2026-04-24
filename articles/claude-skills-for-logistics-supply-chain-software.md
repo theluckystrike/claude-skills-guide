@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Logistics Supply Chain (2026)"
+title: "Claude Code for Logistics Supply Chain"
 description: "Automate logistics workflows, inventory management, and supply chain operations with Claude Code skills. Practical code examples and patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -241,3 +241,8 @@ Warehouse operations automation uses Claude skills to generate pick lists, bin t
 ### What is Integration with Transportation Management Systems?
 
 Claude skills serve as the integration layer between ERPs, WMS, TMS, carrier portals, and customer-facing tracking systems. They translate between data formats and trigger downstream actions through webhook handlers that process carrier status updates. When a carrier webhook arrives, skills parse the payload using JSON processing, update shipment tracking spreadsheets with mapped status codes and delivery estimates, and send Slack notifications to the logistics operations channel when exception statuses are detected.
+
+## See Also
+
+- [Claude Skills for Academic Research — Automate Literature Review, Citation Extraction, and Statistical Validation — 2026](/claude-skills-for-academic-research/)
+- [Claude Skills for Manufacturing QA — Automate SPC Chart Analysis, NCR Processing, and CAPA Workflow — 2026](/claude-skills-for-manufacturing-qa/)

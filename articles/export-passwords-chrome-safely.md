@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Export Passwords from Chrome Safely (2026)"
+title: "How to Export Passwords from Chrome"
 description: "Learn the official methods and best practices for exporting your Chrome passwords securely. Includes command-line tools, encryption details, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

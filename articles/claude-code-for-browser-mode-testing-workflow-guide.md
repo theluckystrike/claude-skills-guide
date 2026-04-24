@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Browser Mode Testing — Guide"
+title: "Claude Code for Browser Mode Testing"
 description: "Run Vitest browser mode tests with Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-browser-mode-testing-workflow-guide/
@@ -74,3 +74,11 @@ Claude Code should configure the browser test with `import { page } from '@vites
 - [Claude Code Integration Testing Strategy Guide](/claude-code-integration-testing-strategy-guide/)
 - [Claude Code for Playwright MCP Workflow Guide](/claude-code-for-playwright-mcp-workflow-guide/)
 - [Claude Code for Storybook Test Workflow Guide](/claude-code-for-storybook-test-workflow-guide/)
+
+## See Also
+
+- [Claude Code for Storybook Component Testing Workflow](/claude-code-for-storybook-component-testing-workflow/)
+- [Claude Code for Spike Testing Workflow Tutorial Guide (2026)](/claude-code-for-spike-testing-workflow-tutorial-guide/)
+- [Claude Code + Percy Visual Testing (2026)](/claude-code-for-percy-visual-testing-workflow-guide/)
+- [Claude Code Verbose Mode: Debug Output Guide 2026](/claude-code-verbose-mode-debug-output-2026/)
+- [Claude Code for Runbook Testing Workflow Tutorial](/claude-code-for-runbook-testing-workflow-tutorial/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Playwright API Testing Workflow Tutorial"
+title: "Claude Code Playwright API Testing"
 description: "Learn how to build a powerful API testing workflow using Claude Code and Playwright. This comprehensive guide covers setup, test creation, and best."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -352,4 +352,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Playwright Visual Testing (2026)](/claude-code-playwright-visual-regression-testing-guide/)
+- [Claude Code for Supertest API Testing (2026)](/claude-code-supertest-api-testing-workflow/)

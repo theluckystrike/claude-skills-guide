@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for FDA 21 CFR Part 11 Validation (2026)"
+title: "Claude Code for FDA 21 CFR Part 11"
 description: "FDA 21 CFR Part 11 validation scripts with Claude Code. Automate electronic signature and audit trail compliance."
 permalink: /claude-code-fda-21-cfr-part-11-validation-2026/
 last_tested: "2026-04-21"

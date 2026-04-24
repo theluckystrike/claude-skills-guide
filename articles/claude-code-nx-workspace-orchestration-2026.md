@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Nx Workspace Orchestration (2026)"
+title: "Claude Code for Nx Workspace"
 permalink: /claude-code-nx-workspace-orchestration-2026/
 description: "Orchestrate large monorepos with Nx and Claude Code. Build custom generators, configure task runners, and enforce module boundaries at scale."
 last_tested: "2026-04-22"
@@ -226,3 +226,4 @@ nx show projects --affected
 - [Claude Code for Turborepo Monorepo Management](/claude-code-turborepo-monorepo-management-2026/)
 - [Claude Code for Bazel Build System](/claude-code-bazel-build-system-2026/)
 - [Claude Code for Biome Formatter Setup](/claude-code-biome-formatter-setup-2026/)
+- [Workspace Trust Blocking Execution Fix](/claude-code-workspace-trust-blocking-execution-fix-2026/)

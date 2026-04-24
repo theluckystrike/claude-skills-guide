@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Performance Data Analysis Workflow"
+title: "Claude Code for Performance Data"
 description: "Master performance data analysis with Claude Code. Learn to build automated workflows, process metrics, and generate actionable insights using Claude."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -217,4 +217,7 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Make Claude Code Consider Performance (2026)](/claude-code-ignores-performance-fix-2026/)
+- [Claude Code for Performance SLO Workflows (2026)](/claude-code-for-performance-slo-workflow-tutorial/)

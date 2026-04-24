@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Where The Claude Code Skill Ecosystem Is — Developer Guide"
+title: "Where The Claude Code Skill Ecosystem"
 description: "Explore the future of Claude Code skills in 2027: AI-driven skill generation, cross-platform integration, enterprise governance, and emerging."
 date: 2026-03-14
 last_modified_at: 2026-04-17

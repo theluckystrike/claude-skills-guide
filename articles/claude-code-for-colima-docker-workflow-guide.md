@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Colima Docker — Workflow Guide"
+title: "Claude Code for Colima Docker"
 description: "Run Docker with Colima on macOS and Claude Code setup. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-colima-docker-workflow-guide/

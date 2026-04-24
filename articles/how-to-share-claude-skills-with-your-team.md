@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Share Claude Skills with Your Team (2026)"
+title: "How to Share Claude Skills with Your"
 description: "Share Claude Code skills across your team via Git repos, naming conventions, and managed distribution. Three methods with step-by-step setup."
 date: 2026-03-13
 last_modified_at: 2026-04-17

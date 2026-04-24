@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Site Audit Tool Chrome Extension Guide (2026)"
+title: "Site Audit Tool Chrome Extension Guide"
 description: "Learn how to build and use Chrome extensions for website auditing. Practical examples, code snippets, and techniques for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

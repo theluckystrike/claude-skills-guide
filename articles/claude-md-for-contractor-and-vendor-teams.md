@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md For Contractor And Vendor Teams — Developer Guide"
+title: "Claude Md For Contractor And Vendor"
 description: "A practical guide for developer teams working with external contractors and vendors using Claude Code skills. Learn how to standardize workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -241,4 +241,10 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [CLAUDE.md Not Loading in Claude Code — Fix Guide (2026)](/claude-md-not-loading-in-claude-code/)
+- [CLAUDE.md for Security Rules — Prevent Vulnerabilities at Generation Time (2026)](/claude-md-for-security-rules/)
+- [Share and Reuse CLAUDE.md Patterns Across Teams and Projects (2026)](/share-reuse-claude-md-patterns-across-teams/)
+- [CLAUDE.md for Database Conventions — Schema, Queries, and Migration Rules (2026)](/claude-md-for-database-conventions/)
+- [CLAUDE.md for Testing Conventions — Generate Tests That Actually Catch Bugs (2026)](/claude-md-for-testing-conventions/)

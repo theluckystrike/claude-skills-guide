@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Gleam Language — Workflow Guide"
+title: "Claude Code for Gleam Language"
 description: "Write type-safe BEAM code with Gleam and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-gleam-language-workflow-guide/
@@ -86,3 +86,4 @@ Claude Code should define a `User` custom type, a `ValidationError` type, write 
 - [Claude Code For Zig Programming — Complete Developer Guide](/claude-code-for-zig-programming-language-workflow/)
 - [Claude Code for BentoML Workflow Tutorial](/claude-code-for-bentoml-workflow-tutorial/)
 - [Claude Code For Ant Design — Complete Developer Guide](/claude-code-for-ant-design-workflow-guide/)
+- [Claude Code for Mojo Language — Workflow Guide](/claude-code-for-mojo-language-workflow-guide/)

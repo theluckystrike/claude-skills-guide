@@ -195,3 +195,11 @@ Run the calculator before any optimization to establish a baseline, then after e
 - [Claude API Tool Use Function Calling Deep Dive](/claude-api-tool-use-function-calling-deep-dive-guide/)
 - [Claude Skills Token Optimization Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
 - [Advanced Claude Skills with Tool Use](/advanced-claude-skills-with-tool-use-and-function-calling/)
+
+## See Also
+
+- [Tool Use vs Direct Prompting Cost Comparison](/claude-cost-10-tool-use-vs-direct-prompting-cost/)
+- [Batch API Cost Calculator for Claude Models](/claude-cost-batch-api-cost-calculator-claude-models/)
+- [Claude Code Pro vs API: Cost Comparison Guide](/claude-cost-07-claude-code-pro-vs-api-cost/)
+- [Claude API Usage Metrics Every Team Needs](/claude-cost-07-claude-api-usage-metrics-teams/)
+- [Tool Use Schema Validation Error — Fix (2026)](/claude-code-tool-use-schema-validation-error-fix-2026/)

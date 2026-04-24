@@ -1,5 +1,5 @@
 ---
-title: "Fix zsh: command not found: claude (2026)"
+title: "Fix zsh: command not found: claude"
 description: "Fix the zsh command not found claude error. Six causes with step-by-step PATH, Node.js, and permission fixes for macOS, Linux, and WSL shells."
 permalink: /zsh-command-not-found-claude-fix/
 last_tested: "2026-04-24"
@@ -325,6 +325,161 @@ This script tells you exactly which cause applies to your situation. Fix the ide
 ---
 
 *These diagnostic steps are from [The Claude Code Playbook](https://zovo.one/pricing) — 200 production-ready templates including error prevention rules and CLAUDE.md configs tested across 50+ project types.*
+
+## Universal Shell Installer Script
+
+Instead of manually adapting installation steps for your specific shell, use this script that detects your shell type, installs Claude Code, configures PATH, and verifies everything works. It handles zsh, bash, and fish on macOS and Linux.
+
+```bash
+#!/bin/bash
+# install-claude-code.sh — Universal Claude Code installer for any shell
+# Works on: macOS (zsh/bash), Linux (bash/zsh/fish), WSL (bash)
+set -uo pipefail
+
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+echo "=== Claude Code Universal Installer ==="
+echo ""
+
+# 1. Detect current shell
+CURRENT_SHELL=$(basename "$SHELL")
+echo -e "Detected shell: ${GREEN}$CURRENT_SHELL${NC}"
+
+# 2. Check Node.js
+echo -n "Checking Node.js... "
+if ! command -v node &>/dev/null; then
+  echo -e "${RED}NOT FOUND${NC}"
+  echo "Installing Node.js via nvm..."
+  if ! command -v nvm &>/dev/null; then
+    curl -so- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+  fi
+  nvm install 22
+  nvm use 22
+  nvm alias default 22
+  echo -e "${GREEN}Node.js $(node --version) installed${NC}"
+else
+  NODE_MAJOR=$(node --version | sed 's/v//' | cut -d. -f1)
+  if [ "$NODE_MAJOR" -lt 18 ]; then
+    echo -e "${YELLOW}$(node --version) — upgrading to 22${NC}"
+    if command -v nvm &>/dev/null; then
+      nvm install 22 && nvm use 22 && nvm alias default 22
+    else
+      echo -e "${RED}Node.js 18+ required. Install nvm or upgrade Node manually.${NC}"
+      exit 1
+    fi
+  else
+    echo -e "${GREEN}$(node --version)${NC}"
+  fi
+fi
+
+# 3. Configure npm prefix to avoid permission issues
+echo -n "Configuring npm prefix... "
+NPM_PREFIX=$(npm config get prefix 2>/dev/null)
+if [ "$NPM_PREFIX" = "/usr/local" ] || [ "$NPM_PREFIX" = "/usr" ]; then
+  mkdir -p "$HOME/.npm-global"
+  npm config set prefix "$HOME/.npm-global"
+  NPM_PREFIX="$HOME/.npm-global"
+  echo -e "${GREEN}Set to $NPM_PREFIX (avoids sudo)${NC}"
+else
+  echo -e "${GREEN}$NPM_PREFIX${NC}"
+fi
+
+NPM_BIN="$NPM_PREFIX/bin"
+
+# 4. Install Claude Code
+echo -n "Installing Claude Code... "
+if npm install -g @anthropic-ai/claude-code 2>/dev/null; then
+  echo -e "${GREEN}DONE${NC}"
+else
+  echo -e "${RED}FAILED${NC}"
+  echo "Trying with clean cache..."
+  npm cache clean --force 2>/dev/null
+  npm install -g @anthropic-ai/claude-code
+fi
+
+# 5. Add to PATH based on detected shell
+echo -n "Configuring PATH for $CURRENT_SHELL... "
+
+add_to_path() {
+  local config_file="$1"
+  local path_line="$2"
+  if [ -f "$config_file" ] && grep -qF "$NPM_BIN" "$config_file" 2>/dev/null; then
+    echo -e "${GREEN}Already configured in $config_file${NC}"
+  else
+    echo "" >> "$config_file"
+    echo "$path_line" >> "$config_file"
+    echo -e "${GREEN}Added to $config_file${NC}"
+  fi
+}
+
+case "$CURRENT_SHELL" in
+  zsh)
+    add_to_path "$HOME/.zshrc" "export PATH=\"$NPM_BIN:\$PATH\""
+    export PATH="$NPM_BIN:$PATH"
+    ;;
+  bash)
+    # macOS uses .bash_profile, Linux uses .bashrc
+    if [ "$(uname)" = "Darwin" ]; then
+      add_to_path "$HOME/.bash_profile" "export PATH=\"$NPM_BIN:\$PATH\""
+    else
+      add_to_path "$HOME/.bashrc" "export PATH=\"$NPM_BIN:\$PATH\""
+    fi
+    export PATH="$NPM_BIN:$PATH"
+    ;;
+  fish)
+    FISH_CONFIG="$HOME/.config/fish/config.fish"
+    mkdir -p "$(dirname "$FISH_CONFIG")"
+    if [ -f "$FISH_CONFIG" ] && grep -qF "$NPM_BIN" "$FISH_CONFIG" 2>/dev/null; then
+      echo -e "${GREEN}Already configured in $FISH_CONFIG${NC}"
+    else
+      echo "" >> "$FISH_CONFIG"
+      echo "set -gx PATH $NPM_BIN \$PATH" >> "$FISH_CONFIG"
+      echo -e "${GREEN}Added to $FISH_CONFIG${NC}"
+    fi
+    export PATH="$NPM_BIN:$PATH"
+    ;;
+  *)
+    echo -e "${YELLOW}Unknown shell: $CURRENT_SHELL${NC}"
+    echo "   Manually add $NPM_BIN to your PATH"
+    export PATH="$NPM_BIN:$PATH"
+    ;;
+esac
+
+# 6. Verify installation
+echo ""
+echo "=== Verification ==="
+
+echo -n "claude binary: "
+if CLAUDE_PATH=$(which claude 2>/dev/null); then
+  echo -e "${GREEN}$CLAUDE_PATH${NC}"
+else
+  echo -e "${RED}NOT FOUND — open a new terminal and try again${NC}"
+  exit 1
+fi
+
+echo -n "claude version: "
+if CLAUDE_VER=$(claude --version 2>/dev/null); then
+  echo -e "${GREEN}$CLAUDE_VER${NC}"
+else
+  echo -e "${RED}FAILED TO RUN${NC}"
+  exit 1
+fi
+
+echo ""
+echo -e "${GREEN}Claude Code installed successfully.${NC}"
+echo ""
+echo "Next steps:"
+echo "  1. Open a new terminal window (or run: source ~/.${CURRENT_SHELL}rc)"
+echo "  2. Set your API key: export ANTHROPIC_API_KEY='sk-ant-...'"
+echo "  3. Run: claude"
+```
+
+Save this script as `install-claude-code.sh`, make it executable with `chmod +x install-claude-code.sh`, and run it. The script handles every shell-specific difference automatically: zsh users get their `~/.zshrc` updated, bash users get `~/.bashrc` or `~/.bash_profile` (depending on OS), and fish users get `~/.config/fish/config.fish` configured. The script also sets the npm prefix to a user-owned directory to prevent the permission issues that cause the majority of "command not found" errors after installation.
 
 ## Verifying the Fix
 

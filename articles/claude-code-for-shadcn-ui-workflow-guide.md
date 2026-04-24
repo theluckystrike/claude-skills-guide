@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for shadcn/ui — Workflow Guide"
+title: "Claude Code for shadcn/ui"
 description: "Add and customize shadcn/ui components with Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-shadcn-ui-workflow-guide/
@@ -73,3 +73,9 @@ Claude Code should edit `src/components/ui/button.tsx` directly, adding an `icon
 - [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/)
 - [Claude Code Figma to Code Component Workflow](/claude-code-figma-to-code-component-workflow/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
+
+## See Also
+
+- [Claude Code for Park UI — Workflow Guide](/claude-code-for-park-ui-workflow-guide/)
+- [Claude Code for Radix UI — Workflow Guide](/claude-code-for-radix-ui-workflow-guide/)
+- [Claude Code for Ark UI — Workflow Guide](/claude-code-for-ark-ui-workflow-guide/)

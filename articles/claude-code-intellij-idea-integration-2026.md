@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Use Claude Code in IntelliJ IDEA 2026"
+title: "How to Use Claude Code in IntelliJ IDEA"
 description: "Set up Claude Code in IntelliJ IDEA and JetBrains IDEs. Terminal integration, keybindings, and workflow tips for Java and Kotlin developers."
 permalink: /claude-code-intellij-idea-integration-2026/
 date: 2026-04-21

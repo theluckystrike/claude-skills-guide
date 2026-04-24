@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for MQTT IoT Messaging Workflow"
+title: "Claude Code for MQTT IoT Messaging"
 description: "Learn how to use Claude Code CLI to streamline MQTT IoT messaging workflows, with practical examples and implementation guides for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

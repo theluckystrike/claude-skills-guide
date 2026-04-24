@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Docs Offline Mirror Guide (2026)"
+title: "Claude Code Docs Offline Mirror Guide"
 description: "Set up claude-code-docs for offline documentation access with auto-update hooks — never lose docs access when the network drops."
 permalink: /claude-code-docs-offline-mirror-guide-2026/
 last_tested: "2026-04-22"
@@ -168,3 +168,7 @@ Your local clone persists regardless. You lose future updates but keep the curre
 - [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — optimizing Claude Code's knowledge access
 - [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — how the auto-update hook works
 - [Claude Skills Directory](/claude-skills-directory-where-to-find-skills/) — other tools for enhancing Claude Code
+
+## See Also
+
+- [Set Up Claude Code Docs for Offline Use (2026)](/how-to-setup-claude-code-docs-offline-2026/)

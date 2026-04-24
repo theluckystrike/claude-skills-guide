@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Chromatic Visual Test — Guide (2026)"
+title: "Claude Code for Chromatic Visual Test"
 description: "Claude Code for Chromatic Visual Test — Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified..."
 date: 2026-04-18
 permalink: /claude-code-for-chromatic-visual-test-workflow-guide/

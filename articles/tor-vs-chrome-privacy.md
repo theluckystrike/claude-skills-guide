@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Tor vs Chrome Privacy — Developer Comparison 2026"
+title: "Tor vs Chrome Privacy"
 description: "A practical analysis of Tor Browser and Chrome privacy mechanisms, with code examples for testing fingerprinting and network-level privacy."
 date: 2026-03-15
 last_modified_at: 2026-04-17

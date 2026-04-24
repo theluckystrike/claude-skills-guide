@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Build Multi-Account Container Chrome Extension (2026)"
+title: "Build Multi-Account Container Chrome"
 description: "Build Chrome extensions for multi-account container management. Architecture patterns, cookie isolation, and identity switching implementation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

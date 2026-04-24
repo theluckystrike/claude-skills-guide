@@ -1,5 +1,5 @@
 ---
-title: "Make Claude Code Explain Its Changes (2026)"
+title: "Make Claude Code Explain Its Changes"
 description: "Add CLAUDE.md rules that force Claude Code to explain the reasoning behind code changes — what changed, why, what alternatives were considered."
 permalink: /claude-code-doesnt-explain-changes-fix-2026/
 last_tested: "2026-04-22"
@@ -69,3 +69,11 @@ Fix the race condition in the checkout process
 **With explanation:** "Added a mutex lock around the payment processing step. Alternatives considered: optimistic concurrency (would require schema changes) and idempotency keys (Stripe supports this but would need endpoint restructuring). Chose mutex because it's the smallest change and the checkout handler is already single-threaded per user session."
 
 Related: [Karpathy Surface Tradeoffs](/karpathy-claude-code-skills-complete-guide-2026/) | [Review PRs Efficiently](/claude-code-review-prs-efficiently-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)
+
+## See Also
+
+- [Fix Claude Code Not Understanding Codebase (2026)](/claude-code-doesnt-understand-codebase-fix-2026/)
+- [Make Claude Code Write Documentation (2026)](/claude-code-doesnt-write-docs-fix-2026/)
+- [Make Claude Code Read Existing Code First (2026)](/claude-code-doesnt-read-existing-code-fix-2026/)
+- [Make Claude Code Match Team Conventions (2026)](/claude-code-doesnt-match-team-conventions-fix-2026/)
+- [Make Claude Code Follow DRY Principle (2026)](/claude-code-doesnt-follow-dry-principle-fix-2026/)

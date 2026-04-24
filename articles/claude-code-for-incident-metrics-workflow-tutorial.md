@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Incident Metrics Workflow Tutorial"
+title: "Claude Code for Incident Metrics"
 description: "Learn how to use Claude Code to automate incident metrics tracking, analysis, and reporting workflows. A practical guide for developers."
 date: 2026-04-19
 last_modified_at: 2026-04-19

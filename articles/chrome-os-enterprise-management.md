@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Os Enterprise Management — Developer Guide"
+title: "Chrome Os Enterprise Management"
 description: "Learn how to manage Chrome OS devices in enterprise environments using Google Admin Console, Chrome Enterprise policies, and APIs. Includes code."
 date: 2026-03-15
 last_modified_at: 2026-04-17

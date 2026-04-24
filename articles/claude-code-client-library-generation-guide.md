@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Client Library Generation Guide"
+title: "Claude Code Client Library Generation"
 description: "Learn how to generate client libraries from Claude Code using skill-based workflows. Practical examples for API integration, code generation, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

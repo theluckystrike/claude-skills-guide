@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Open Box Deal Tracker Chrome Extension Guide (2026)"
+title: "Open Box Deal Tracker Chrome Extension"
 description: "Learn how to build a chrome extension that tracks open box deals and price drops. Complete guide for developers and power users with practical code."
 date: 2026-03-15
 last_modified_at: 2026-04-17

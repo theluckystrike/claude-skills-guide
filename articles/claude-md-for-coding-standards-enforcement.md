@@ -1,5 +1,5 @@
 ---
-title: "Enforce Coding Standards with CLAUDE.md — Patterns That Work (2026)"
+title: "Enforce Coding Standards with CLAUDE.md"
 description: "How to write CLAUDE.md rules that Claude Code actually follows for coding standards: naming, formatting, import ordering, and type safety."
 permalink: /claude-md-for-coding-standards-enforcement/
 render_with_liquid: false
@@ -140,3 +140,4 @@ For the complete writing guide to CLAUDE.md instructions, see the [best practice
 
 - [Claude.md for API Design Standards Guide](/claude-md-for-api-design-standards-guide/)
 - [How Claude Code Eliminated Boilerplate Coding](/how-claude-code-eliminated-boilerplate-coding/)
+- [Make Claude Code Follow Coding Standards (2026)](/claude-code-wont-follow-coding-standards-fix-2026/)

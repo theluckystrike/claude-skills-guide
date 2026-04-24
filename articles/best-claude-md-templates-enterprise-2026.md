@@ -1,5 +1,5 @@
 ---
-title: "Best CLAUDE.md Templates for Teams (2026)"
+title: "Best CLAUDE.md Templates for Teams"
 description: "The best CLAUDE.md templates for engineering teams ranked by adoption and effectiveness. From Karpathy's principles to enterprise security configs."
 permalink: /best-claude-md-templates-enterprise-2026/
 last_tested: "2026-04-22"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Git Tags Release Management — Developer Guide"
+title: "Claude Code Git Tags Release Management"
 description: "Learn how to use git tags and release management workflows with Claude Code for automated versioning and deployment pipelines."
 date: 2026-03-14
 last_modified_at: 2026-04-17

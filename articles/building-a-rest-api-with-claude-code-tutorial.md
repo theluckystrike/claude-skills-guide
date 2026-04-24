@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Building a REST API with Claude Code Tutorial"
+title: "Building a REST API with Claude Code"
 description: "A practical guide to building REST APIs using Claude Code. Learn to scaffold, test, and document your API with Claude skills and MCP servers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

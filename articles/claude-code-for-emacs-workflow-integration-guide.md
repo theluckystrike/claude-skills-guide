@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Emacs Workflow Integration Guide"
+title: "Claude Code for Emacs Workflow"
 description: "Learn how to integrate Claude Code into your Emacs workflow for enhanced coding assistance, automated refactoring, and intelligent code completion."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -222,4 +222,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code + Emacs Integration Guide 2026](/claude-code-emacs-integration-guide-2026/)

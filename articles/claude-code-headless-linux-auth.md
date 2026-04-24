@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude Code Auth Fails on Headless Linux"
+title: "Fix: Claude Code Auth Fails on Headless"
 description: "Claude Code OAuth token refresh blocked by Cloudflare WAF on headless Linux. Fix the permanent lockout after 1 hour with these workarounds."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -176,3 +176,4 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Claude Code for Ory Auth — Workflow Guide](/claude-code-for-ory-auth-workflow-guide/)
 - [Claude Code for Lucia Auth — Workflow Guide](/claude-code-for-lucia-auth-workflow-workflow-guide/)
 - [Claude Code for Hanko Auth — Workflow Guide](/claude-code-for-hanko-auth-workflow-guide/)
+- [Linux AppArmor Restricting Access Fix](/claude-code-linux-apparmor-restricting-access-fix-2026/)

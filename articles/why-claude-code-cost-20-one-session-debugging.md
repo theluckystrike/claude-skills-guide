@@ -1,5 +1,5 @@
 ---
-title: "Why did Claude Code cost $20 for one session? (Debugging guide)"
+title: "Why did Claude Code cost $20 for one"
 description: "A $20 Claude Code session means 3-4 million tokens were consumed, likely from Opus 4.6 usage or an unbounded session. Diagnose the cause and prevent recurrence."
 permalink: /why-claude-code-cost-20-one-session-debugging/
 date: 2026-04-22
@@ -290,3 +290,7 @@ If the session cost $20 and ran fewer than 40 turns, the model was almost certai
 - [Claude AI rate exceeded error fix](/claude-ai-rate-exceeded-error-fix/) — Fix the Claude AI rate exceeded error message
 
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization
+
+## See Also
+
+- [Why Claude Code 4.6 uses more tokens than 4.5 (and what to do)](/why-claude-code-46-uses-more-tokens-than-45/)

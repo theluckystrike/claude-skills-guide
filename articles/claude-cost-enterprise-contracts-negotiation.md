@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Enterprise LLM Contracts: Claude vs OpenAI"
+title: "Enterprise LLM Contracts"
 description: "Enterprise Claude vs OpenAI pricing from $3,600 to $18,000/year per team. Negotiation strategies."
 date: 2026-04-19
 author: "Claude Skills Guide"

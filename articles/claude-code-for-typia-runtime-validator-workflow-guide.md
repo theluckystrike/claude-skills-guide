@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Typia Validator — Workflow Guide"
+title: "Claude Code for Typia Validator"
 description: "Generate runtime validators from TypeScript types with Typia. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-typia-runtime-validator-workflow-guide/
@@ -78,3 +78,4 @@ Claude Code should define a TypeScript interface with JSDoc constraints: `/** @m
 ## Related Articles
 
 - [Claude Code for Wasmtime Runtime Workflow Guide](/claude-code-for-wasmtime-runtime-workflow-guide/)
+- [Claude Code for ArkType — Workflow Guide](/claude-code-for-arktype-validator-workflow-guide/)

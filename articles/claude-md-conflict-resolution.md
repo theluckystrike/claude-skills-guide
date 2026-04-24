@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Conflict Resolution — When Instructions Contradict Each Other (2026)"
+title: "CLAUDE.md Conflict Resolution"
 description: "How Claude Code handles conflicting instructions across CLAUDE.md, CLAUDE.local.md, rules files, and managed policies. Diagnosis and resolution steps."
 permalink: /claude-md-conflict-resolution/
 render_with_liquid: false

@@ -65,3 +65,35 @@ Add this to your `CLAUDE.md`:
 - Never set NODE_TLS_REJECT_UNAUTHORIZED=0 to work around cert errors.
 - Report misconfigured proxy certs to IT — they need to fix the TLS inspection.
 ```
+
+## See Also
+
+- [SOCKS Proxy Not Supported Error — Fix (2026)](/claude-code-socks-proxy-not-supported-fix-2026/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `ECONNREFUSED: connection refused through proxy`
+- `Error: unable to verify the first certificate`
+- `SELF_SIGNED_CERT_IN_CHAIN`
+- `UNABLE_TO_VERIFY_LEAF_SIGNATURE`
+- `CERT_HAS_EXPIRED`
+
+## Frequently Asked Questions
+
+### How do I configure Claude Code to use a corporate proxy?
+
+Set the `HTTPS_PROXY` environment variable: `export HTTPS_PROXY=http://proxy.corp.com:8080`. Claude Code respects standard proxy environment variables. Add this to your shell profile for persistence.
+
+### Why does my proxy cause SSL errors?
+
+Corporate proxies often perform TLS inspection by re-signing certificates with an internal CA. Node.js does not trust these CAs by default. Set `NODE_EXTRA_CA_CERTS=/path/to/corporate-ca.pem` to add your proxy's CA certificate to the trust chain.
+
+### Can I bypass the proxy for Anthropic endpoints only?
+
+Yes. Set `NO_PROXY=api.anthropic.com` to route Anthropic API traffic directly while keeping the proxy for other traffic. This avoids TLS inspection issues specific to the API connection.
+
+### What does 'unable to verify the first certificate' mean?
+
+This error means Node.js cannot build a complete certificate chain from the server certificate to a trusted root CA. The most common cause is a corporate proxy performing TLS inspection with a self-signed CA certificate that Node.js does not trust.

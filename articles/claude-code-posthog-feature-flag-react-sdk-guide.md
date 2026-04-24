@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code PostHog Feature Flag React SDK Guide"
+title: "Claude Code PostHog Feature Flag React"
 description: "Learn how to use Claude Code to build, test, and integrate PostHog feature flags in React applications. Practical examples for modern feature management."
 date: 2026-03-14
 last_modified_at: 2026-04-17

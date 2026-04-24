@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude vs Gemini Cost Per Capability 2026"
+title: "Claude vs Gemini Cost Per Capability"
 description: "Claude Sonnet at $3/$15 vs Gemini 2.5 Pro at $1.25/$10 per MTok. Real cost-per-task analysis."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -117,3 +117,8 @@ Choosing between Claude and Gemini requires mapping your workload to each provid
 - [Claude vs GPT-4o Honest Cost Breakdown](/claude-cost-claude-vs-gpt4-honest-cost-breakdown/)
 - [The Hybrid Stack: Claude for X, GPT for Y, Gemini for Z](/claude-cost-hybrid-stack-claude-gpt-gemini/)
 - [Open Source LLMs as Cost Floor](/claude-cost-open-source-llm-cost-floor/)
+
+## See Also
+
+- [Claude Agent Loop Cost: Tokens Per Iteration](/claude-cost-claude-agent-loop-cost-tokens-per-iteration/)
+- [How 5 Parallel Claude Agents Cost $1,000/Month](/claude-cost-5-parallel-claude-agents-1000-per-month/)

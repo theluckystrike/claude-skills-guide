@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Bitwarden vs Lastpass — Developer Comparison 2026"
+title: "Bitwarden vs Lastpass"
 description: "A practical comparison of Bitwarden and LastPass Chrome extensions for developers in 2026. Compare CLI tools, security architecture, team features, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

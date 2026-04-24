@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for GraphQL Federation Workflow Guide"
+title: "Claude Code for GraphQL Federation"
 description: "Learn how to use Claude Code to streamline GraphQL Federation development, from schema design to subgraph configuration and federated query testing."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -474,4 +474,10 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for GraphQL Directives Workflow](/claude-code-for-graphql-directives-workflow/)
+- [Claude Code for GraphQL Mutation Workflow Tutorial](/claude-code-for-graphql-mutation-workflow-tutorial/)
+- [Claude Code for Strawberry GraphQL Workflow Guide (2026)](/claude-code-for-strawberry-graphql-workflow-guide/)
+- [Claude Code for GraphQL DataLoader Workflow Guide](/claude-code-for-graphql-dataloader-workflow-guide/)
+- [Claude Code for GraphQL Persisted Queries Workflow](/claude-code-for-graphql-persisted-queries-workflow/)

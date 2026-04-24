@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "PagerDuty MCP Server Incident Management Guide"
+title: "PagerDuty MCP Server Incident"
 description: "Learn how to automate PagerDuty incident management using MCP servers with Claude for streamlined DevOps workflows and faster response times."
 date: 2026-03-14
 last_modified_at: 2026-04-17

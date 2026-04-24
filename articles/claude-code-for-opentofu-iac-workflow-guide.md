@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for OpenTofu IaC — Workflow Guide"
+title: "Claude Code for OpenTofu IaC"
 description: "Write infrastructure as code with OpenTofu and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-opentofu-iac-workflow-guide/

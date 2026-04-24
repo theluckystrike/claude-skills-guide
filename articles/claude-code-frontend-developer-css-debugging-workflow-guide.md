@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Frontend Developer CSS Debugging Workflow Guide"
+title: "Claude Code Frontend Developer CSS"
 description: "Master CSS debugging with Claude Code: learn systematic approaches, practical techniques, and real-world examples for frontend developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -133,10 +133,13 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+- [Claude Code frontend design plugin](/claude-code-frontend-design-plugin-guide/) — design system integration for frontend workflows
 - [Claude Code Data Engineer ETL Debugging Daily Workflow](/claude-code-data-engineer-etl-debugging-daily-workflow/)
 - [AI Tools for Incident Debugging and Postmortems](/ai-tools-for-incident-debugging-and-postmortems/)
 - [Chrome DevTools Memory Leak Debugging: Find and Fix.](/chrome-devtools-memory-leak-debugging/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Frontend Developer Cross Browser Testing Guide](/claude-code-frontend-developer-cross-browser-testing-guide/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Lsp Server — Complete Developer Guide"
+title: "Claude Code For Lsp Server"
 description: "Learn how to use Claude Code to streamline the implementation of Language Server Protocol (LSP) servers. A practical workflow guide with code."
 date: 2026-03-15
 last_modified_at: 2026-04-17

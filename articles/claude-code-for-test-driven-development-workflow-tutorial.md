@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Test Driven Development Workflow Tutorial"
+title: "Claude Code for Test Driven Development"
 description: "Learn how to integrate Claude Code into your test-driven development workflow. Practical examples and actionable advice for developers."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -248,6 +248,7 @@ Related Reading
 - [Claude Code for Load Test Scenario Workflow Tutorial](/claude-code-for-load-test-scenario-workflow-tutorial/)
 - [Claude Code Inngest Event Driven Function Workflow Tutorial](/claude-code-inngest-event-driven-function-workflow-tutorial/)
 
+## See Also
 
-
-
+- [Career Change to Software Development with AI](/claude-code-for-career-changers-into-software-development/)
+- [Claude Code Plus Perplexity for Research-Driven Development](/claude-code-plus-perplexity-for-research-driven-development/)

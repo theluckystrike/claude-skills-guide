@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for DBeaver — Workflow Guide"
+title: "Claude Code for DBeaver"
 description: "Manage databases with DBeaver and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-dbeaver-workflow-guide/

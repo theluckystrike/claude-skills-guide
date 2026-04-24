@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Radix UI — Workflow Guide"
+title: "Claude Code for Radix UI"
 description: "Build accessible components with Radix UI and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-radix-ui-workflow-guide/

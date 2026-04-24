@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Total Cost of Ownership: Claude vs OpenAI vs Gemini"
+title: "Total Cost of Ownership"
 description: "Hidden costs add 20-40% to LLM API spend. Full TCO analysis from $3,600 to $120,000/year."
 date: 2026-04-19
 author: "Claude Skills Guide"

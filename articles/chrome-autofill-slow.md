@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Autofill Slow: Causes and Solutions for Developers"
+title: "Chrome Autofill Slow"
 description: "Troubleshooting slow Chrome autofill performance. Learn why browser autofill lags and how to fix it with practical solutions for power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

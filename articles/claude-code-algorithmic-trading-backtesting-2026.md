@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Algo Trading Backtesting (2026)"
+title: "Claude Code for Algo Trading"
 description: "Algorithmic trading backtesting with Claude Code. Build strategy pipelines with vectorbt and proper walk-forward validation."
 permalink: /claude-code-algorithmic-trading-backtesting-2026/
 last_tested: "2026-04-21"
@@ -227,3 +227,5 @@ python3 trading/strategies/mean_reversion.py
 - [Claude Code for Options Pricing](/claude-code-options-pricing-black-scholes-2026/)
 - [Claude Code for FIX Protocol](/claude-code-fix-protocol-message-handling-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for Quant Research Backtesting (2026)](/claude-code-quant-research-backtesting-2026/)
+- [Claude Code for Trading System Backtesting (2026)](/claude-code-trading-system-backtesting-2026/)

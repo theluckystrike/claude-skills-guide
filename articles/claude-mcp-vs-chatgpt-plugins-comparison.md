@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude MCP vs ChatGPT Plugins: Extension Systems Compared"
+title: "Claude MCP vs ChatGPT Plugins"
 description: "Compare Claude's Model Context Protocol with ChatGPT's plugin and GPT system. Architecture, developer experience, and ecosystem maturity."
 date: 2026-04-21
 last_tested: "2026-04-21"
@@ -96,3 +96,7 @@ Yes. Any REST API that a GPT Action connects to can also be accessed by an MCP s
 ## When To Use Neither
 
 If your extension needs are simple (e.g., asking AI about a specific document or dataset), uploading files directly to Claude or ChatGPT is simpler than building either an MCP server or a GPT. Both extension systems are designed for recurring, complex integrations — not one-off file analysis. For occasional use, direct file upload or copy-paste remains the simplest approach. If your primary requirement is connecting AI to a single REST API without protocol overhead, a lightweight function-calling wrapper using the Vercel AI SDK or LangChain tool abstraction may be more practical than committing to either MCP or GPTs for a single integration point.
+
+## See Also
+
+- [MCP vs CLI for Claude Code: When Each Saves More Tokens](/mcp-vs-cli-claude-code-saves-more-tokens/)

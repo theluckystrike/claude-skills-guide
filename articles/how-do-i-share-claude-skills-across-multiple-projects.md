@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Do I Share Claude Skills Across — Developer Guide"
+title: "How Do I Share Claude Skills Across"
 description: "A practical guide to sharing Claude skills across projects. Learn version control strategies, repository patterns, and workflow optimization techniques."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -184,4 +184,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [How to Distribute Claude Skills Across Teams 2026](/distribute-claude-skills-across-teams-2026/)

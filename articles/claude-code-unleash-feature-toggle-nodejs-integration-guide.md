@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Unleash Feature — Complete Developer Guide"
+title: "Claude Code Unleash Feature"
 description: "Learn how to integrate Unleash feature toggles with Node.js using Claude Code. Master feature flag workflows, environment configuration, and best."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -433,4 +433,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code + Emacs Integration Guide 2026](/claude-code-emacs-integration-guide-2026/)

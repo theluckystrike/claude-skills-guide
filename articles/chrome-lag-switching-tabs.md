@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Lag Switching Tabs — Developer Guide"
+title: "Chrome Lag Switching Tabs"
 description: "experiencing chrome lag when switching tabs? this guide covers the technical causes and practical fixes for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

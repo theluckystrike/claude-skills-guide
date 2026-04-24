@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use For Lsp Document — Complete Developer (2026)"
+title: "How to Use For Lsp Document"
 description: "Learn how to use Claude Code with Language Server Protocol (LSP) document symbols to enhance your code navigation, refactoring, and development."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -753,4 +753,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for LaTeX Document Workflow 2026](/claude-code-latex-document-workflow-2026/)

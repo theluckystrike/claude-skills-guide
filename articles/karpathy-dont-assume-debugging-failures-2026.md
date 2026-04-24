@@ -1,5 +1,5 @@
 ---
-title: "Debug When Claude Code Assumes Wrong (2026)"
+title: "Debug When Claude Code Assumes Wrong"
 description: "Diagnose and fix Claude Code assumption failures — identify root causes, add targeted CLAUDE.md rules, and prevent repeat mistakes."
 permalink: /karpathy-dont-assume-debugging-failures-2026/
 last_tested: "2026-04-22"

@@ -1,5 +1,5 @@
 ---
-title: "Migrate CLAUDE.md Between Projects — Portable Patterns (2026)"
+title: "Migrate CLAUDE.md Between Projects"
 description: "How to extract, adapt, and apply CLAUDE.md patterns from one project to another. Covers universal rules, project-specific adaptation, and shared libraries."
 permalink: /migrating-claude-md-between-projects/
 render_with_liquid: false

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Changelog: What Changed This Week"
+title: "Claude Code Changelog"
 description: "A weekly roundup of Claude Code updates, new skills, and feature changes. Stay current with the latest Claude Code enhancements and skill additions."
 date: 2026-03-14
 last_modified_at: 2026-04-17

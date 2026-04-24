@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Harden Chrome Privacy in 2026: Developer Guide"
+title: "Harden Chrome Privacy in 2026"
 description: "Harden Chrome privacy with flags, policies, and extensions. Step-by-step guide to reducing tracking without breaking your developer workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

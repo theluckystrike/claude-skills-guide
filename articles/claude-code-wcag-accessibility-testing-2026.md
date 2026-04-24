@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for WCAG Accessibility Testing (2026)"
+title: "Claude Code for WCAG Accessibility"
 permalink: /claude-code-wcag-accessibility-testing-2026/
 description: "Automate WCAG 2.2 accessibility testing with Claude Code. Build CI pipeline checks for Level AA compliance with axe-core and Pa11y integration."
 last_tested: "2026-04-22"

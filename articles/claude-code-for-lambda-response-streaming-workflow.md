@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Lambda Response Streaming Workflow"
+title: "Claude Code for Lambda Response"
 description: "Learn how to implement streaming responses in AWS Lambda using Claude Code. Practical examples, code snippets, and actionable advice for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -287,4 +287,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Streaming Buffer Overflow Error Fix](/claude-code-streaming-buffer-overflow-fix-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills for Golang Microservices"
+title: "Claude Code Skills for Golang"
 description: "Use Claude Code skills for Golang microservices development. Practical examples for API handlers, service layer patterns, and Docker container workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

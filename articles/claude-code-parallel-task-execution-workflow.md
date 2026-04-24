@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Parallel Task Execution Workflow"
+title: "Claude Code Parallel Task Execution"
 description: "Learn how to execute multiple Claude Code tasks simultaneously using parallel workflows, subagents, and batch processing techniques for maximum."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -162,4 +162,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Parallel Tool Calls Memory Exhaustion Fix](/claude-code-parallel-tool-calls-memory-exhaustion-fix-2026/)

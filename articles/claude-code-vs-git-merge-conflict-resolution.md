@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Git Merge Conflict Resolution Tools"
+title: "Claude Code vs Git Merge Conflict"
 description: "Comparing Claude Code's AI conflict resolution with traditional git merge tools — when AI understanding beats mechanical three-way merge."
 date: 2026-04-21
 last_tested: "2026-04-21"
@@ -96,3 +96,7 @@ No. Binary files (images, compiled assets, data files) require manual decisions 
 ## When To Use Neither
 
 For preventing merge conflicts in the first place, use trunk-based development with short-lived feature branches (merged within 1-2 days). The best merge conflict resolution is avoiding conflicts entirely through development workflow design. Teams that merge daily experience 90% fewer conflicts than teams with week-long branches, making both AI resolution and manual tools unnecessary for most merges. For teams practicing mob programming or real-time pair programming via Tuple or VS Code Live Share, conflicts are resolved conversationally before they reach git, eliminating the need for any resolution tool.
+
+## See Also
+
+- [Merge Conflict in Claude-Edited Files Fix](/claude-code-merge-conflict-edited-files-fix-2026/)

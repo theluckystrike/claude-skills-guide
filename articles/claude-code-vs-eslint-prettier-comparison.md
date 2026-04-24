@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs ESLint + Prettier: Code Quality Tools"
+title: "Claude Code vs ESLint + Prettier"
 description: "Claude Code AI analysis vs ESLint + Prettier rule-based tools — comparing approaches to code quality, formatting, and consistency."
 date: 2026-04-21
 permalink: /claude-code-vs-eslint-prettier-comparison/

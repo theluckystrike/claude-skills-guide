@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Automated Pr — Complete Developer Guide"
+title: "Claude Code For Automated Pr"
 description: "Learn how to build automated pull request check workflows with Claude Code. This tutorial covers CI/CD integration, custom validation rules, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19

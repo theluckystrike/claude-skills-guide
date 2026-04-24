@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Redux DevTools Chrome Tutorial: Debug State Like a Pro"
+title: "Redux DevTools Chrome Tutorial"
 description: "A comprehensive guide to using Redux DevTools in Chrome for debugging Redux applications. Learn time-travel debugging, action inspection, and state."
 date: 2026-03-15
 last_modified_at: 2026-04-17

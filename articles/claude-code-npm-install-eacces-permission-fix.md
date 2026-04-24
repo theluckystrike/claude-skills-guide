@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code NPM Install Eacces Permission — (2026)"
+title: "Fix Claude Code NPM Install Eacces"
 description: "Resolve npm EACCES permission denied errors when Claude Code runs npm install. Fix global installs, node_modules ownership, and cache issues."
 last_tested: "2026-04-22"
 date: 2026-04-15
@@ -252,4 +252,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/)
 - [Claude Code Setup on Mac Step by Step](/claude-code-setup-on-mac-step-by-step/)
 
+## See Also
 
+- [npm Global Install Permission Denied — Fix (2026)](/claude-code-npm-global-install-permission-denied-fix-2026/)
+- [Claude Code EACCES Permission Denied Global Install — Fix (2026)](/claude-code-eacces-permission-denied-npm-global-install-fix/)
+- [EACCES npm Cache Permission Error — Fix (2026)](/claude-code-eacces-npm-cache-fix-2026/)

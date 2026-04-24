@@ -69,3 +69,7 @@ rm -rf ~/.cache/JetBrains/IntelliJIdea*/plugins/claude-code
 # CLAUDE.md rule
 Keep JetBrains IDE updated to the latest stable release. Check plugin compatibility before updating the Claude Code plugin. If the plugin fails, use Claude Code CLI in the terminal tab as a fallback.
 ```
+
+## See Also
+
+- [Claude Code vs JetBrains Refactoring: AI vs IDE Native](/claude-code-vs-jetbrains-refactor-comparison/)

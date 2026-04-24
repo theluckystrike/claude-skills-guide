@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Atuin Shell History Workflow"
+title: "Claude Code for Atuin Shell History"
 description: "Master the combination of Claude Code and Atuin for enhanced shell history management. Learn practical workflows to search, analyze, and use your."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -198,4 +198,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Fish Shell — Workflow Guide](/claude-code-for-fish-shell-workflow-guide/)

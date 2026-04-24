@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Node.js Event — Complete Developer (2026)"
+title: "Claude Code For Node.js Event"
 last_tested: "2026-04-22"
 description: "Master Node.js event loop concepts with Claude Code. Learn practical patterns for async operations, timers, callbacks, and performance optimization."
 date: 2026-04-19

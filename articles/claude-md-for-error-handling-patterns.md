@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md for Error Handling — Patterns That Prevent Silent Failures (2026)"
+title: "CLAUDE.md for Error Handling"
 description: "Encode error handling rules in CLAUDE.md to stop Claude Code from generating try-catch-ignore blocks, untyped errors, and missing error boundaries."
 permalink: /claude-md-error-handling-patterns/
 render_with_liquid: false

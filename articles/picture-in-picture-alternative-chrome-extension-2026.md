@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Picture in Picture Alternative Chrome Extension in 2026"
+title: "Picture in Picture Alternative Chrome"
 description: "Explore the best picture in picture alternatives for Chrome extensions in 2026. Learn implementation methods, custom solutions, and developer-focused."
 date: 2026-03-15
 last_modified_at: 2026-04-17

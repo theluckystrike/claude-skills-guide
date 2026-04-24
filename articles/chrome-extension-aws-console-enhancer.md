@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AWS Console Enhancer Chrome Extension Guide (2026)"
+title: "AWS Console Enhancer Chrome Extension"
 description: "Discover the best Chrome extensions that enhance the AWS Console experience. Learn how to improve navigation, resource management, and productivity in AWS."
 date: 2026-03-15
 last_modified_at: 2026-04-17

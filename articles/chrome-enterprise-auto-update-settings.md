@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Auto Update Settings — Developer Guide"
+title: "Chrome Enterprise Auto Update Settings"
 description: "Master Chrome Enterprise auto update settings for controlled browser deployments. Learn policy configuration, update channels, and deployment strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17

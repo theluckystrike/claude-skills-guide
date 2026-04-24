@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Pr Automation — Complete Developer Guide"
+title: "Claude Code For Pr Automation"
 description: "Learn how to use Claude Code with GitHub Actions to automate pull request workflows, including automated reviews, testing, and code quality checks."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -252,4 +252,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code vs Sweep AI (2026): PR Automation](/claude-code-vs-sweep-ai-pr-automation-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Haiku vs Sonnet vs Opus Cost Breakdown 2026"
+title: "Claude Haiku vs Sonnet vs Opus Cost"
 description: "Compare Claude API costs per million tokens across Haiku ($1), Sonnet ($3), and Opus ($5) to pick the right model for your budget."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -139,3 +139,7 @@ Compare your Anthropic API bill before and after implementing model routing. Tra
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — understand the token economics behind Claude costs
 - [Claude Code Monthly Cost Breakdown](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/) — realistic usage estimates for development workflows
 - [Claude Opus 4.6 vs GPT-4o Comparison](/claude-opus-46-vs-gpt-4o-for-coding-tasks-comparison/) — cross-provider cost comparison for coding tasks
+
+## See Also
+
+- [Claude Haiku 4.5 vs GPT-4o Mini: Budget AI Coding](/claude-haiku-vs-gpt-4o-mini-comparison-2026/)

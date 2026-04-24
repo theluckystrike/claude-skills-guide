@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Cyclomatic Complexity — Developer Guide"
+title: "Claude Code Cyclomatic Complexity"
 description: "Learn how to reduce cyclomatic complexity in your code using Claude Code skills and techniques. Practical examples and actionable strategies for."
 date: 2026-03-14
 last_modified_at: 2026-04-17

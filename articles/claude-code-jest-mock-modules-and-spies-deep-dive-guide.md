@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Jest Mock Modules and Spies Deep Dive Guide"
+title: "Claude Code Jest Mock Modules and Spies"
 description: "Master Jest mocking techniques with Claude Code. Learn mock modules, spies, and advanced testing patterns for solid JavaScript/TypeScript applications."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -304,4 +304,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Jest Test Runner Mock Conflict — Fix (2026)](/claude-code-jest-runner-mock-conflict-fix/)

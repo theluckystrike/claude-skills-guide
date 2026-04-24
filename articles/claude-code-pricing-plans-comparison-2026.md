@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Pricing and Plans Compared (2026)"
+title: "Claude Code Pricing and Plans Compared"
 description: "Compare Claude Code pricing tiers, token costs, and cost optimization strategies for individuals, teams, and enterprise users in 2026."
 permalink: /claude-code-pricing-plans-comparison-2026/
 last_tested: "2026-04-22"

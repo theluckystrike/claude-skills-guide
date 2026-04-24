@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Earthly CI Pipeline Development (2026)"
+title: "Claude Code for Earthly CI Pipeline"
 permalink: /claude-code-earthly-ci-pipeline-2026/
 description: "Build reproducible CI pipelines with Earthly and Claude Code. Write Earthfiles, cache dependencies, and run identical builds locally and in CI."
 last_tested: "2026-04-22"
@@ -226,3 +226,5 @@ earthly --verbose +frontend-deps 2>&1 | grep -i cache
 - [Claude Code for Turborepo Monorepo Management](/claude-code-turborepo-monorepo-management-2026/)
 - [Claude Code for Pulumi Infrastructure as Code](/claude-code-pulumi-infrastructure-as-code-2026/)
 {% endraw %}
+- [Stop Claude Code Breaking CI Pipelines (2026)](/claude-code-breaks-ci-pipeline-fix-2026/)
+- [Claude Code for Genomics GWAS Analysis (2026)](/claude-code-genomics-gwas-pipeline-2026/)

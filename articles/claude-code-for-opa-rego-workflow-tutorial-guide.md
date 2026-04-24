@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Opa Rego — Complete Developer Guide (2026)"
+title: "Claude Code For Opa Rego"
 description: "Learn how to use Claude Code CLI to streamline Open Policy Agent (OPA) policy development with Rego. Includes practical examples, debugging strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17

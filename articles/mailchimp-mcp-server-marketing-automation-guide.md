@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Mailchimp MCP Server Marketing Automation Guide"
+title: "Mailchimp MCP Server Marketing"
 description: "Integrate Mailchimp MCP server for marketing automation with Claude Code. API workflows and automation patterns for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

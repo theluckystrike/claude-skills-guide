@@ -1,5 +1,5 @@
 ---
-title: "Help Claude Code Work With Legacy Code (2026)"
+title: "Help Claude Code Work With Legacy Code"
 description: "Help Claude Code work with legacy codebases by documenting quirks, deprecated patterns, and migration boundaries in CLAUDE.md."
 permalink: /claude-code-cant-handle-legacy-code-fix-2026/
 last_tested: "2026-04-22"

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Best Readability Alternatives for Chrome 2026"
+title: "Best Readability Alternatives"
 description: "Top Readability alternative extensions for Chrome in 2026. Content tools for accessibility, reader mode, and clean reading compared. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

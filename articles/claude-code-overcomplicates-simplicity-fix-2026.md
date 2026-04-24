@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Overcomplicating Solutions (2026)"
+title: "Fix Claude Code Overcomplicating"
 description: "Stop Claude Code from generating over-abstracted code with factories, builders, and patterns you don't need — Simplicity First CLAUDE.md rules."
 permalink: /claude-code-overcomplicates-simplicity-fix-2026/
 last_tested: "2026-04-22"
@@ -55,3 +55,31 @@ Add a function that sends welcome emails to new users
 **Simple:** one `sendWelcomeEmail(email, name)` function → 1 file
 
 Related: [Karpathy Simplicity First](/karpathy-simplicity-first-principle-claude-code-2026/) | [Before/After Examples](/karpathy-simplicity-first-examples-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `ModelNotFoundError: model 'claude-3-opus' not available`
+- `Error: specified model is deprecated`
+- `InvalidModelError: check model ID`
+- `Error reading configuration file`
+- `JSON parse error in config`
+
+## Frequently Asked Questions
+
+### Which model does Claude Code use by default?
+
+Claude Code uses the latest Claude model available on your account. You can override the model with `claude --model claude-sonnet-4-20250514` or set a default in your configuration with `claude config set model claude-sonnet-4-20250514`.
+
+### Can I switch models mid-conversation?
+
+No. The model is set when the conversation starts and cannot be changed within a session. Start a new conversation to use a different model. Different models have different capabilities, context window sizes, and pricing.
+
+### Why does the model version in the error not match my configuration?
+
+Claude Code maps shorthand model names to versioned model IDs. If you set `model: claude-3-opus` but the server expects `claude-3-opus-20240229`, the resolution may fail during API deprecation windows. Always use the full model ID for stability.
+
+### Where does Claude Code store its configuration?
+
+Configuration is stored in `~/.claude/config.json` for global settings and `.claude/config.json` in the project root for project-specific settings. Project settings override global settings for any overlapping keys.

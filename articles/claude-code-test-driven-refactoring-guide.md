@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Test Driven Refactoring Guide"
+title: "Claude Code Test Driven Refactoring"
 description: "Master test-driven refactoring with Claude Code. Learn practical workflows, skill patterns, and real-world examples for safely improving legacy codebases."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -149,4 +149,6 @@ Related Reading
 
 Built by theluckystrike. More at [https://zovo.one](https://zovo.one)
 
+## See Also
 
+- [Improve Claude Code Refactoring Quality (2026)](/claude-code-bad-at-refactoring-fix-2026/)

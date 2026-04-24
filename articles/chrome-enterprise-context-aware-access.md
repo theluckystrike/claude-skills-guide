@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Enterprise Context-Aware Access: Implementation Guide"
+title: "Chrome Enterprise Context-Aware Access"
 description: "Learn how Chrome Enterprise context-aware access works, fromBeyondCorp implementation patterns to zero trust browser security for developers and IT."
 date: 2026-03-15
 last_modified_at: 2026-04-17

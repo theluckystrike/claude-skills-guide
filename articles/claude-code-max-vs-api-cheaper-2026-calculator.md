@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Max vs API: Which Is Cheaper? (2026)"
+title: "Claude Code Max vs API"
 description: "Calculate whether Claude Code Max at $100/month or pay-per-token API pricing saves more money based on actual usage patterns and token volumes."
 permalink: /claude-code-max-vs-api-cheaper-2026-calculator/
 date: 2026-04-22
@@ -181,3 +181,9 @@ ccusage --days 90 --format json > quarterly-usage.json
 - [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- full Max subscription features and setup
 - [Claude Code Model Selection for Cost: Sonnet vs Haiku vs Opus](/claude-code-model-selection-cost-sonnet-haiku-opus/) -- choosing the right model for each task
 - [Is Claude Code Worth $100/month?](/is-claude-code-worth-100-month-roi-calculator/) -- ROI analysis beyond raw token costs
+
+## See Also
+
+- [Claude Code Maximum Turns Exceeded Loop — Fix (2026)](/claude-code-max-turns-exceeded-fix-2026/)
+- [Claude Code max_tokens Ignored in API Mode — Fix (2026)](/claude-code-max-tokens-ignored-api-mode-fix/)
+- [File Exceeds 10MB Limit in Claude Code — Fix (2026)](/claude-code-max-file-size-exceeded-fix-2026/)

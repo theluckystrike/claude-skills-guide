@@ -1,5 +1,5 @@
 ---
-title: "SuperClaude vs Karpathy: Workflow Approach (2026)"
+title: "SuperClaude vs Karpathy"
 description: "SuperClaude uses 30 commands and modes for structured workflows. Karpathy Skills uses 4 behavioral principles. Compare workflow philosophies."
 permalink: /superclaude-vs-karpathy-skills-workflow-2026/
 last_tested: "2026-04-22"
@@ -93,3 +93,7 @@ See how to combine them practically in the guide on [combining Karpathy and Supe
 ## Final Recommendation
 
 Start with Karpathy Skills for the behavioral foundation — it works from minute one. Add SuperClaude when you identify specific tasks where structured commands would help. Most developers settle into a hybrid: Karpathy principles always active, SuperClaude commands for specific workflows like code review and architecture design. This gives you the best of both approaches with manageable complexity. Reference the [Claude Code playbook](/playbook/) for patterns that integrate both into your daily routine.
+
+## See Also
+
+- [SuperClaude vs Claude Code Templates (2026)](/superclaude-vs-claude-code-templates-2026/)

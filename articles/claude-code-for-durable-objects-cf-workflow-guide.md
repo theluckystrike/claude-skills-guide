@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Durable Objects — Workflow Guide"
+title: "Claude Code for Durable Objects"
 description: "Build stateful edge apps with CF Durable Objects and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-durable-objects-cf-workflow-guide/

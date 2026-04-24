@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Scaling Claude Code Usage Across Multiple (2026)"
+title: "Scaling Claude Code Usage Across"
 description: "A practical guide to implementing and scaling Claude Code across multiple engineering teams. Learn strategies for standardization, collaboration, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

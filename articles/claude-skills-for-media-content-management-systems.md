@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Media Content Management Systems"
+title: "Claude Skills for Media Content"
 description: "Learn how to use Claude skills to automate media asset management, generate content reports, and streamline workflows in media CMS platforms."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -325,4 +325,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Skills for SEO Content Generation — Automate Keyword Clustering, Meta Tags, and Internal Linking — 2026](/claude-skills-for-seo-content-generation/)

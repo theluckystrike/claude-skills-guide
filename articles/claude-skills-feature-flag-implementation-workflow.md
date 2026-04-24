@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Feature Flag Implementation Workflow"
+title: "Claude Skills Feature Flag"
 description: "Learn how to implement feature flags in Claude skills for controlled rollouts, A/B testing, and safe deployments. Practical code examples and workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17

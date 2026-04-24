@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code API Pagination: Best Practices (2026)"
+title: "Claude Code API Pagination"
 description: "Claude Code API Pagination: Best Practices compared side-by-side with real features, pricing, performance benchmarks, and user experience reviewed for..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

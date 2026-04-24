@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Jest Test Runner Mock Conflict — Fix (2026)"
+title: "Claude Code Jest Test Runner Mock"
 description: "Fix Claude Code Jest test runner mock conflicts. Reset mock state and fix module resolution ordering. Step-by-step solution."
 permalink: /claude-code-jest-runner-mock-conflict-fix/
 last_tested: "2026-04-21"
@@ -95,3 +95,7 @@ Place all jest.mock() calls at the file's top level, before imports. Use jest.mo
 ```
 
 **Related articles:** [Jest Unit Testing Guide](/claude-code-jest-unit-testing-workflow-guide/), [Claude Code Breaks Tests Fix](/claude-code-breaks-existing-tests-after-changes-fix/), [Debugging Skills](/claude-code-debugging-skill/)
+
+## See Also
+
+- [Claude Code Jest Mock Modules and Spies Deep Dive Guide](/claude-code-jest-mock-modules-and-spies-deep-dive-guide/)

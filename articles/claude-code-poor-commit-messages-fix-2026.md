@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Poor Commit Messages (2026)"
+title: "Fix Claude Code Poor Commit Messages"
 description: "Improve Claude Code commit messages with CLAUDE.md templates that enforce conventional commits, scope tagging, and why-not-what descriptions."
 permalink: /claude-code-poor-commit-messages-fix-2026/
 last_tested: "2026-04-22"
@@ -74,3 +74,7 @@ After Claude Code makes changes and commits:
 - Could someone understand the change purpose from the message alone, without reading the diff?
 
 Related: [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) | [The Claude Code Playbook](/playbook/) | [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/)
+
+## See Also
+
+- [Fix Claude Code Poor Variable Naming (2026)](/claude-code-poor-variable-names-fix-2026/)

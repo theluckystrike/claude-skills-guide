@@ -1,5 +1,5 @@
 ---
-title: "Should CLAUDE.md Be in .gitignore? When to Commit vs Ignore (2026)"
+title: "Should CLAUDE.md Be in .gitignore? When"
 description: "The definitive answer on whether CLAUDE.md belongs in version control, .gitignore, or both. Covers CLAUDE.local.md, team standards, and personal preferences."
 permalink: /should-claude-md-be-in-gitignore/
 render_with_liquid: false

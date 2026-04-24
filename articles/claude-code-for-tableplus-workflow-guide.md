@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for TablePlus — Workflow Guide"
+title: "Claude Code for TablePlus"
 description: "Manage databases with TablePlus GUI and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-tableplus-workflow-guide/

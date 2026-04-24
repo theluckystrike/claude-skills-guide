@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Codestory Aide (2026): Comparison"
+title: "Claude Code vs Codestory Aide (2026)"
 description: "Claude Code vs Codestory Aide compared for AI pair programming. Open-source editor vs premium CLI agent — features and tradeoffs for 2026."
 permalink: /claude-code-vs-codestory-aide-comparison-2026/
 date: 2026-04-21

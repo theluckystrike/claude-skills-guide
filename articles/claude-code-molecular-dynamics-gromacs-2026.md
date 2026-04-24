@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Molecular Dynamics with GROMACS (2026)"
+title: "Claude Code for Molecular Dynamics"
 description: "Molecular dynamics simulation setup with Claude Code and GROMACS. Automate topology, MDP files, and analysis."
 permalink: /claude-code-molecular-dynamics-gromacs-2026/
 last_tested: "2026-04-21"

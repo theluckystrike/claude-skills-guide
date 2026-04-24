@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Do I Combine Two Claude — Complete Developer Guide"
+title: "How Do I Combine Two Claude"
 description: "Learn to chain and combine Claude skills for powerful multi-step workflows. Practical patterns for developers combining skills in workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Karpathy Skills vs Ultimate Guide (2026)"
+title: "Karpathy Skills vs Guide"
 description: "Karpathy Skills is a 4-rule CLAUDE.md behavior file. Claude Code Ultimate Guide is 22K lines of documentation and quizzes. Here's when to use each."
 permalink: /karpathy-skills-vs-claude-code-ultimate-guide-2026/
 last_tested: "2026-04-22"
@@ -85,3 +85,10 @@ The Ultimate Guide requires investment. You cannot just hand a developer 22K lin
 ## Final Recommendation
 
 Install Karpathy Skills right now — it takes 30 seconds and works immediately. Then bookmark the Ultimate Guide and work through it over the next week. Use the quiz questions to verify your understanding. The combination gives you both improved Claude behavior and improved personal knowledge, which compound together. Also explore the [Claude Code playbook](/playbook/) for workflow patterns that bridge the gap between behavioral rules and deep knowledge.
+
+## See Also
+
+- [Claude Code Ultimate Guide: 271 Questions (2026)](/claude-code-ultimate-guide-271-questions-2026/)
+- [Take the Claude Code 271-Question Quiz (2026)](/how-to-take-claude-code-ultimate-guide-quiz-2026/)
+- [Karpathy Skills vs SuperClaude Framework (2026)](/karpathy-skills-vs-superclaude-framework-2026/)
+- [Karpathy Skills vs Custom CLAUDE.md (2026)](/karpathy-skills-vs-custom-claude-md-2026/)

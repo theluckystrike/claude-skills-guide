@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Use Claude Code with WSL2 on Windows 2026"
+title: "How to Use Claude Code with WSL2"
 description: "Install and configure Claude Code in WSL2 on Windows. Path resolution, SSH keys, proxy settings, and VS Code remote integration covered."
 permalink: /claude-code-wsl2-windows-setup-2026/
 date: 2026-04-21

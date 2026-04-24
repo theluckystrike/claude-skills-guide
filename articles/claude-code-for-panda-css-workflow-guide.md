@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Panda CSS — Workflow Guide"
+title: "Claude Code for Panda CSS"
 description: "Build type-safe styles with Panda CSS and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-panda-css-workflow-guide/
@@ -79,3 +79,4 @@ Claude Code should define a `buttonRecipe` using `cva()` from `styled-system/css
 
 - [Claude Code For Critical CSS — Complete Developer Guide](/claude-code-for-critical-css-workflow-tutorial/)
 - [Optimize Tailwind CSS with Claude Code](/claude-code-tailwind-css-optimization-guide/)
+- [Claude Code for Lightning CSS — Workflow Guide](/claude-code-for-lightning-css-workflow-guide/)

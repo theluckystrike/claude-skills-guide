@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Learn Programming Languages with Claude Code (2026)"
+title: "Learn Programming Languages with Claude"
 description: "Use Claude Code to learn new programming languages faster with interactive coding assistance, real-time feedback, and skill-guided practice projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -162,3 +162,8 @@ Claude skills extend language learning through the /tdd skill (guides test-drive
 ### What is Structured Learning Workflows?
 
 Structured learning workflows use three phases per project: discuss design and architecture in your target language, write code with Claude providing feedback and explanations, then review together to explore alternative approaches and optimizations. Set clear milestones -- basic syntax in week one, simple projects by month one, production-quality code by month three. Claude adapts its explanations as your proficiency grows, providing more sophisticated guidance over time. Treat Claude as a learning partner, not a code generator.
+
+## See Also
+
+- [Learn Claude Code with Claude Howto Guide (2026)](/how-to-learn-claude-code-with-howto-guide-2026/)
+- [Learn Programming Languages with Claude Code 2026](/learn-programming-languages-claude-code-2026/)

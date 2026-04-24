@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Cost Anomaly Detection Setup Guide"
+title: "Claude Cost Anomaly Detection Setup"
 description: "Detect cost anomalies using standard deviation thresholds. Catch a 10x token spike in 5 minutes instead of discovering it on next month's bill."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -243,3 +243,8 @@ Track anomaly detection rate (anomalies caught / total anomalies), false positiv
 - [Claude Code Enterprise Seat Management and Usage Monitoring](/claude-code-enterprise-seat-management-and-usage-monitoring/)
 - [Claude Code for Cost Optimization Monitoring Guide](/claude-code-for-cost-optimization-monitoring-guide/)
 - [Cost Allocation and Chargebacks for Enterprise Claude Code](/cost-allocation-and-chargebacks-for-enterprise-claude-code/)
+
+## See Also
+
+- [Claude Computer Use Token Cost Breakdown](/claude-cost-09-computer-use-token-cost-breakdown/)
+- [Claude Code Cost Per Project Estimation Guide](/claude-cost-09-claude-code-cost-per-project/)

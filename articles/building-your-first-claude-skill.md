@@ -1,5 +1,5 @@
 ---
-title: "Build Your First Claude Code Skill in 5 Minutes — 2026"
+title: "Build Your First Claude Code Skill in 5"
 description: "Create a working SKILL.md file from scratch with frontmatter, description, and body instructions that Claude loads automatically."
 permalink: /building-your-first-claude-skill/
 render_with_liquid: false

@@ -1,5 +1,5 @@
 ---
-title: "Claude API Invalid API Key Format Error — Fix (2026)"
+title: "Claude API Invalid API Key Format Error"
 description: "Fix Claude API invalid_api_key format error. Verify key prefix and remove hidden whitespace characters. Step-by-step solution."
 permalink: /claude-api-invalid-api-key-format-error-fix/
 last_tested: "2026-04-21"
@@ -70,3 +70,7 @@ Store API keys in .env files with no trailing whitespace. Always validate key fo
 ```
 
 **Related articles:** [Claude API 401 Auth Error](/claude-api-error-401-authenticationerror-explained/), [Invalid API Key After Rotation](/claude-code-error-invalid-api-key-after-rotation-fix/), [Claude Code Config File Location](/claude-code-config-file-location/)
+
+## See Also
+
+- [Invalid API Key Format sk-ant — Fix (2026)](/claude-code-api-key-sk-ant-format-invalid-fix-2026/)

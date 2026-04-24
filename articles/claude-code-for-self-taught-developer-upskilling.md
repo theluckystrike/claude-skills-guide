@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Self-Taught Developer Upskilling"
+title: "Claude Code for Self-Taught Developer"
 description: "Learn how self-taught developers can use Claude Code and its skills ecosystem to accelerate upskilling, build production-ready projects, and bridge the."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -198,4 +198,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Coolify — Workflow Guide](/claude-code-for-coolify-self-hosting-workflow-guide/)

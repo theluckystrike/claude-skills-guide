@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for ASIC Design Verification (2026)"
+title: "Claude Code for ASIC Design"
 description: "ASIC design verification workflow with Claude Code. Generate UVM testbenches and coverage models faster."
 permalink: /claude-code-asic-design-verification-2026/
 last_tested: "2026-04-21"

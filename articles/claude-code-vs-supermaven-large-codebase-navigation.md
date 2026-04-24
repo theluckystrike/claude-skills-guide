@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Supermaven Large — Developer Comparison 2026"
+title: "Claude Code vs Supermaven Large"
 description: "A comprehensive comparison of Claude Code and Supermaven for navigating and understanding large codebases, with practical examples and use cases."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -234,4 +234,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs Supermaven (2026): Speed Comparison](/claude-code-vs-supermaven-speed-comparison-2026/)

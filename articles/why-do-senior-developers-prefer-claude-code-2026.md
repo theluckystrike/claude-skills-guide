@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Senior Developers Prefer Claude Code (2026)"
+title: "Why Senior Developers Prefer Claude"
 description: "Why senior developers prefer Claude Code over GUI tools. Skills system, CLI workflows, and productivity advantages that matter for experienced devs."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Qodo (2026): Testing-First AI"
+title: "Claude Code vs Qodo (2026)"
 description: "Claude Code vs Qodo (formerly CodiumAI) compared for test generation. Which AI tool writes better tests and finds more edge cases in 2026?"
 permalink: /claude-code-vs-qodo-testing-first-ai-2026/
 date: 2026-04-21
@@ -126,3 +126,7 @@ Claude Code produces fewer edge cases initially but responds well to "add more e
 - [Claude Code vs Aider: CLI Coding Compared](/claude-code-vs-aider-for-test-driven-development/)
 - [Claude Code vs Sourcery AI: Code Quality](/claude-code-vs-sourcery-ai-code-quality-2026/)
 - [Best AI Code Review Tools](/best-ai-code-review-tools-2026-guide/)
+
+## See Also
+
+- [Claude Code vs Augment Code: AI Coding Compared (2026)](/claude-code-vs-augment-code-ai-2026/)

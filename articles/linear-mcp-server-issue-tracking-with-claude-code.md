@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Linear MCP Server: Issue Tracking with Claude Code (2026)"
+title: "Linear MCP Server"
 description: "Linear MCP Server: Issue Tracking with Claude Code. Practical guide with working examples for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -199,4 +199,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code + Linear MCP Integration Guide 2026](/claude-code-linear-mcp-integration-2026/)

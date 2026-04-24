@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code GitHub Actions Environment Protection"
+title: "Claude Code GitHub Actions Environment"
 description: "A practical guide to securing your GitHub Actions workflows with Claude Code. Learn environment variable protection, secrets management, and security."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -297,4 +297,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Branch Protection Bypass Attempt Fix](/claude-code-branch-protection-bypass-attempt-fix-2026/)

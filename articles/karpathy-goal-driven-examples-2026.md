@@ -1,5 +1,5 @@
 ---
-title: "Goal-Driven Execution: Project Examples (2026)"
+title: "Goal-Driven Execution: Project Examples"
 description: "Four project scenarios showing Karpathy's Goal-Driven Execution in practice — API fixes, React features, CLI tools, and database migrations."
 permalink: /karpathy-goal-driven-examples-2026/
 last_tested: "2026-04-22"

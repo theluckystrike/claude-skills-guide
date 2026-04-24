@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Building a Chrome Extension for Senior Discounts"
+title: "Building a Chrome Extension for Senior"
 description: "Learn how to build a Chrome extension that helps users discover and apply senior discounts. Includes code examples, API integration patterns, and best."
 date: 2026-03-15
 last_modified_at: 2026-04-17

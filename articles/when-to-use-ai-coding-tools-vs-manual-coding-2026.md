@@ -1,5 +1,5 @@
 ---
-title: "AI Coding Tools vs Manual Coding: When to Use Each (2026)"
+title: "AI Coding Tools vs Manual Coding"
 permalink: /when-to-use-ai-coding-tools-vs-manual-coding-2026/
 description: "AI coding tools save hours on boilerplate but hurt you on novel algorithms. A practical framework for when to use AI vs write code yourself in 2026."
 last_tested: "2026-04-21"
@@ -108,3 +108,7 @@ Related reading:
 - [AI Coding Tools Roundup: 14 Tools Compared 2026](/ai-coding-tools-comparison-roundup-2026/)
 - [Claude Code for Beginners: Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Claude Code Subscription: Is It Worth It?](/claude-code-subscription-worth-it-honest-review/)
+
+## See Also
+
+- [Continue Dev Review: Open Source AI Coding in 2026](/continue-dev-review-open-source-ai-coding-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Openclaw Security Review Is It Safe — Honest Review 2026"
+title: "Openclaw Security Review Is It Safe"
 description: "A technical security analysis of OpenCLAW for developers and power users. Examine the codebase, sandboxing, and best practices for safe usage."
 date: 2026-03-14
 last_modified_at: 2026-04-17

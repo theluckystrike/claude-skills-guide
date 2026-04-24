@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "GraphQL Playground Chrome Extension Guide (2026)"
+title: "GraphQL Playground Chrome Extension"
 description: "Discover how to use Chrome extensions to test GraphQL APIs directly in your browser. A practical guide for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

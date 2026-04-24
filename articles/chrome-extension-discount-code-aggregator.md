@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Chrome Extension Discount Code Aggregator"
+title: "Chrome Extension Discount Code"
 description: "Learn how to build a Chrome extension that aggregates discount codes from multiple sources. Practical implementation guide with code examples for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

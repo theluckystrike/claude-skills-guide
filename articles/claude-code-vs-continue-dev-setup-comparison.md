@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Continue.dev: Setup and Configuration"
+title: "Claude Code vs Continue.dev: Setup Comparison"
 description: "Compare setting up Claude Code CLI and Continue.dev extension. API keys, model config, and getting productive with each tool."
 date: 2026-04-21
 last_tested: "2026-04-21"
@@ -87,3 +87,7 @@ Continue.dev has a lower barrier because it lives inside VS Code where developer
 ## When To Use Neither
 
 If you only need autocomplete and nothing else, GitHub Copilot at $10/month or Codeium's free tier provides tab completion without any configuration of API keys or model endpoints. Both Claude Code and Continue.dev are designed for developers who want more control over their AI tooling, which comes with more setup responsibility. If you just want it to work with zero configuration, a managed service is simpler.
+
+## See Also
+
+- [Claude Code vs Cline: Setup and Configuration](/claude-code-vs-cline-setup-comparison/)

@@ -75,3 +75,7 @@ Disable extensions per-workspace to avoid blanket disabling:
 # CLAUDE.md rule
 Keep VS Code extension count under 20 for best performance. Use per-workspace extension profiles to load only what you need. If the extension host crashes, check Process Explorer for memory usage and disable the heaviest extensions.
 ```
+
+## See Also
+
+- [Apple Silicon Rosetta Crash Error — Fix (2026)](/claude-code-apple-silicon-rosetta-crash-fix-2026/)

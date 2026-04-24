@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Bundle Size Reduction: Webpack to Vite 2026 Guide"
+title: "Bundle Size Reduction"
 description: "Reduce JavaScript bundle sizes migrating from Webpack to Vite with Claude Code. Tree-shaking, code splitting, and optimization strategies included."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -305,4 +305,8 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Vite Prebundle Dependency Error — Fix (2026)](/claude-code-vite-prebundle-error-fix-2026/)
+- [Webpack Tree-Shaking Breaks Build — Fix (2026)](/claude-code-webpack-tree-shaking-breaks-fix-2026/)
+- [How to Use Claude Docker Image Size: Reduction (2026)](/claude-code-docker-image-size-reduction-guide/)

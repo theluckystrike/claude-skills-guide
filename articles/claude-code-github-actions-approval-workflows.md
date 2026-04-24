@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code GitHub Actions Approval Workflows"
+title: "Claude Code GitHub Actions Approval"
 description: "Learn how to implement manual approval gates in GitHub Actions workflows with Claude Code. Practical examples for production deployments, environment."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -291,4 +291,7 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code GitHub Actions Secret Missing in Fork — Fix (2026)](/claude-code-github-actions-secret-not-available-forked-pr-fix/)
+- [How to Build Claude Code GitHub Actions 2026](/claude-code-github-actions-workflow-2026/)

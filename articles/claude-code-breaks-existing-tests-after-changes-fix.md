@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Breaks Existing Tests After Changes Fix"
+title: "Claude Code Breaks Existing Tests After"
 description: "When Claude Code modifies your codebase, existing tests may fail. Learn the root causes and practical solutions to prevent and fix test breaks during."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -370,4 +370,8 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Detached HEAD After Claude Checkout Fix](/claude-code-detached-head-after-checkout-fix-2026/)
+- [Stop Claude Code Breaking Working Features (2026)](/claude-code-breaks-working-features-fix-2026/)
+- [Stop Claude Code Breaking CI Pipelines (2026)](/claude-code-breaks-ci-pipeline-fix-2026/)

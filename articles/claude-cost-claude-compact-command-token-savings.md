@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude /compact Command Token Savings Guide"
+title: "Claude /compact Command Token Savings"
 description: "The /compact command reduces Claude Code context by 50-70%, saving $0.60 per session on Opus 4.7 — here is when and how to use it."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -213,3 +213,9 @@ Track three metrics: average context size per interaction (should decrease 40-60
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — the context growth problem that /compact solves
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — complementary token reduction strategies
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — cleaner context produces fewer hallucinations
+
+## See Also
+
+- [Claude Cache Minimum Token Requirements 2026](/claude-cost-claude-cache-minimum-token-requirements-2026/)
+- [Claude Token Counter: Measure Before You Optimize](/claude-cost-claude-token-counter-measure-before-optimize/)
+- [Claude Batch Plus Caching for 95% Cost Savings](/claude-cost-claude-batch-plus-caching-95-percent-cost-savings/)

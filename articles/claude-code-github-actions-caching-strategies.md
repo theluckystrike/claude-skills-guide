@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code GitHub Actions Caching Strategies (2026)"
+title: "Claude Code GitHub Actions Caching"
 description: "Claude Code GitHub Actions Caching Strategies. Practical guide with working examples for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Multi-Agent Subagent Communication Guide"
+title: "Claude Code Multi-Agent Subagent"
 description: "Design multi-agent workflows with Claude Code: spawn subagents, pass context between agents, and coordinate parallel work using print mode."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -406,4 +406,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Multi-Cursor Edit Conflict Fix](/claude-code-multi-cursor-edit-conflict-fix-2026/)

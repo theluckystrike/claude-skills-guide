@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Seismology Waveform Analysis (2026)"
+title: "Claude Code for Seismology Waveform"
 permalink: /claude-code-seismology-waveform-analysis-2026/
 description: "Seismology waveform analysis with Claude Code and ObsPy. Automate event detection, phase picking, and focal mechanisms."
 last_tested: "2026-04-22"
@@ -304,3 +304,4 @@ print('Seismology pipeline: PASS')
 - [Claude Code for DSP Pipeline Development](/claude-code-dsp-pipeline-development-2026/)
 - [Claude Code for Astrophysics Data Reduction](/claude-code-astrophysics-data-reduction-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for Market Microstructure (2026)](/claude-code-market-microstructure-analysis-2026/)

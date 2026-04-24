@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Electric SQL Sync Workflow Guide"
+title: "Claude Code for Electric SQL Sync"
 description: "A comprehensive guide for developers on using Claude Code to streamline Electric SQL sync workflows, manage local-first databases, and build reactive."
 date: 2026-03-15
 last_modified_at: 2026-04-17

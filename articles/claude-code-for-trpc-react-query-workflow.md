@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for tRPC React Query Workflow"
+title: "Claude Code for tRPC React Query"
 description: "Learn how to use Claude Code to streamline your tRPC and React Query development workflow. Practical examples and actionable advice for modern."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -302,4 +302,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Kysely — Workflow Guide](/claude-code-for-kysely-query-builder-workflow-guide/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How To Make Claude Code Document — Complete Developer Guide"
+title: "How To Make Claude Code Document"
 description: "Learn proven strategies for automating function documentation with Claude Code. Practical techniques for developers and power users to maintain."
 date: 2026-03-14
 last_modified_at: 2026-04-17

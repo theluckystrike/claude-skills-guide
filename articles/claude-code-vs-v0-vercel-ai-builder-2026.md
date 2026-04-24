@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs v0 by Vercel (2026): AI Builders"
+title: "Claude Code vs v0 by Vercel (2026)"
 description: "Claude Code vs v0 by Vercel compared for frontend development. Full-stack CLI agent vs visual UI builder — which ships faster in 2026?"
 permalink: /claude-code-vs-v0-vercel-ai-builder-2026/
 date: 2026-04-21

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Difftastic — Workflow Guide"
+title: "Claude Code for Difftastic"
 description: "Use structural diffs with Difftastic and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-difftastic-workflow-guide/

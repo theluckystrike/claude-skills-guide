@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Wake Smart Contract Workflow"
+title: "Claude Code for Wake Smart Contract"
 description: "Learn how to integrate Claude Code with Wake, a powerful Python smart contract development framework. Set up automated workflows, write tests, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -454,4 +454,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```
 
+## See Also
 
+- [Claude Code for Solidity Smart Contracts (2026)](/claude-code-solidity-smart-contract-dev-2026/)

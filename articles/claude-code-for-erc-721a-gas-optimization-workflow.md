@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Erc 721A Gas — Complete Developer Guide"
+title: "Claude Code For Erc 721A Gas"
 description: "Learn how to use Claude Code CLI to streamline your ERC-721A NFT smart contract development with gas optimization best practices and practical."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -250,4 +250,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for CNC G-Code Optimization (2026)](/claude-code-cnc-gcode-optimization-2026/)

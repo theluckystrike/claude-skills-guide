@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Supabase Auth and RLS (2026)"
+title: "Claude Code for Supabase Auth and RLS"
 description: "Implement Supabase authentication with Row Level Security using Claude Code. Covers policy creation, JWT claims, role-based access, and testing RLS."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -417,4 +417,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Login Auth Redirect Loop Error — Fix (2026)](/claude-code-login-auth-redirect-loop-fix-2026/)
+- [Fix Claude Code Wrong Abstraction Level (2026)](/claude-code-wrong-abstraction-level-fix-2026/)

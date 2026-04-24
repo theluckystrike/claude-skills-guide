@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Set Up Docker MCP Server for Claude Code (2026)"
+title: "Set Up Docker MCP Server for Claude"
 description: "Give Claude Code direct Docker access via MCP. Manage containers, images, and compose stacks with a Docker MCP server configuration. Updated for 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17
@@ -182,5 +182,4 @@ Related Reading
 - [Claude Code Docker Build Failed Fix](/claude-code-docker-build-failed-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
+- [How to Use Docker Volumes Persistence (2026)](/claude-code-docker-volumes-persistence-guide/)

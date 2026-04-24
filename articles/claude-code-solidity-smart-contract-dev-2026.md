@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Solidity Smart Contracts (2026)"
+title: "Claude Code for Solidity Smart"
 permalink: /claude-code-solidity-smart-contract-dev-2026/
 description: "Solidity smart contract development with Claude Code and Foundry. Build, test, and audit ERC-20/721 contracts securely."
 last_tested: "2026-04-22"

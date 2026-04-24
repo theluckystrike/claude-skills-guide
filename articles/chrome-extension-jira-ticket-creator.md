@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Jira Ticket Creator Chrome Extension Guide (2026)"
+title: "Jira Ticket Creator Chrome Extension"
 description: "Learn how to build a Chrome extension that creates Jira tickets directly from your browser. Includes code examples, API integration patterns, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

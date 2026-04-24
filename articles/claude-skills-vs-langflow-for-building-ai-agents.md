@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills vs Langflow for AI Agents (2026)"
+title: "Claude Skills vs Langflow for AI Agents"
 description: "Claude skills vs Langflow for building AI agents. File-based vs visual drag-and-drop pipelines compared with strengths, weaknesses, and use cases."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -153,4 +153,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs Smol Developer (2026): AI Agents](/claude-code-vs-smol-developer-ai-agents-2026/)
+- [Claude Skills vs LangChain Agents Compared (2026)](/claude-skills-vs-langchain-agents-comparison-2026/)

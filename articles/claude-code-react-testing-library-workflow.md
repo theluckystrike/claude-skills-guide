@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code React Testing Library Workflow"
+title: "Claude Code React Testing Library"
 description: "Master the React Testing Library workflow with Claude Code. Learn practical strategies for writing component tests, mocking dependencies, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

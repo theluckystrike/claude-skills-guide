@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Agent Goal Decomposition Explained (2026)"
+title: "AI Agent Goal Decomposition Explained"
 description: "Understand how AI agents decompose complex tasks into sub-goals using planning algorithms. Claude Code skill examples show real decomposition patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude MD Character Limit and Optimization (2026)"
+title: "Claude MD Character Limit"
 description: "Work within Claude MD character limits using practical optimization techniques. Exact ceiling, overflow behavior, and compression strategies."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -349,3 +349,7 @@ Claude skills provide specialized tools for working efficiently within character
 ### What is PDF Skill for Document Processing?
 
 The pdf skill extracts and summarizes content from lengthy documents before bringing it into Claude's context, particularly useful for technical specifications and large documentation sets. A 40-page technical specification as raw text consumes 15,000-20,000 tokens, but after extraction and summarization via the pdf skill, relevant requirements compress to 2,000-3,000 tokens. This leaves significantly more context budget for actual implementation work, making it practical to reference large spec documents during coding sessions.
+
+## See Also
+
+- [CLAUDE.md Length Optimization — Why 200 Lines Is the Hard Ceiling (2026)](/claude-md-length-optimization-300-lines/)

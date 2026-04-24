@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Batch API: Reduce API Calls by 70% (2026)"
+title: "Claude Batch API"
 description: "Use the Claude batch API to reduce API calls by 70%. Practical examples with skills, hooks, and batching strategies that cut costs immediately."
 date: 2026-03-14
 last_modified_at: 2026-04-17

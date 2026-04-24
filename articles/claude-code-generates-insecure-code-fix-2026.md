@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Generating Insecure Code (2026)"
+title: "Fix Claude Code Generating Insecure"
 description: "Prevent Claude Code from generating SQL injection, XSS, and auth vulnerabilities by adding security rules to your CLAUDE.md file."
 permalink: /claude-code-generates-insecure-code-fix-2026/
 last_tested: "2026-04-22"
@@ -98,3 +98,7 @@ Before completing any feature that handles user data:
 Add security linting to your CI pipeline. The [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) index lists security-focused skills and MCP servers that can scan Claude Code output for vulnerabilities in real time.
 
 For more on securing your Claude Code workflow, see the [security threat model guide](/claude-code-security-threat-model-2026/). Review [best security tools for Claude Code](/best-claude-code-security-tools-2026/) for automated scanning options. Learn about CI integration in our [CI/CD guide](/claude-code-ci-cd-integration-guide-2026/).
+
+## See Also
+
+- [Fix Claude Code Using Outdated Patterns (2026)](/claude-code-generates-outdated-patterns-fix-2026/)

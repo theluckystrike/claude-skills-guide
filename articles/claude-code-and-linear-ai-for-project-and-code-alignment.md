@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code and Linear AI for Project and Code Alignment"
+title: "Claude Code and Linear AI for Project"
 description: "Discover how Claude Code skills combined with Linear AI can help development teams align code with project goals, automate issue management, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

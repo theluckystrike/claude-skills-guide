@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Md Not Being Read By Claude Code — Quick Guide"
+title: "Fix Claude Md Not Being Read By Claude"
 description: "Troubleshoot and fix CLAUDE.md files not being read by Claude Code. Practical solutions for developers and power users dealing with ignored project."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -224,4 +224,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [CLAUDE.md Not Loading in Claude Code — Fix Guide (2026)](/claude-md-not-loading-in-claude-code/)
+- [Claude Code CLAUDE.md Not Found Fix (2026)](/claude-code-claude-md-not-found-parent-directories-fix/)

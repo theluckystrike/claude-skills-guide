@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Quizlet Helper Chrome Extension: Developer Guide (2026)"
+title: "Quizlet Helper Chrome Extension"
 description: "Build Quizlet helper Chrome extensions for enhanced flashcard study. DOM interaction patterns, API integration, and spaced repetition features."
 date: 2026-03-15
 last_modified_at: 2026-04-17

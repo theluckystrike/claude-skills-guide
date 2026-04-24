@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Performance Monitor Chrome Extension Guide (2026)"
+title: "Performance Monitor Chrome Extension"
 description: "Learn how to monitor and optimize Chrome extension performance with built-in tools, debugging techniques, and practical code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

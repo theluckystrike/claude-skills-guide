@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Pro vs API: Cost Comparison Guide"
+title: "Claude Code Pro vs API"
 description: "Pro at $20/month beats API pricing for solo devs doing 50 sessions/month. API wins above 200 sessions when you need model flexibility."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -200,3 +200,8 @@ Track cost-per-task (not cost-per-session) as the primary comparison metric. A t
 - [Why Is Claude Code Expensive Large Context Tokens](/why-is-claude-code-expensive-large-context-tokens/)
 - [Claude Code Monthly Cost Breakdown Realistic Usage](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/)
 - [Is Claude Code Worth the Cost for Small Startups](/is-claude-code-worth-the-cost-for-small-startups-2026/)
+
+## See Also
+
+- [Claude Tool Use Cost Calculator Guide](/claude-cost-07-tool-use-cost-calculator/)
+- [Claude API Usage Metrics Every Team Needs](/claude-cost-07-claude-api-usage-metrics-teams/)

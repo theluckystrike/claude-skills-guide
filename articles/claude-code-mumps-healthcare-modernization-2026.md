@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for MUMPS Healthcare Modernization (2026)"
+title: "Claude Code for MUMPS Healthcare"
 description: "MUMPS/M healthcare system modernization with Claude Code. Extract business logic from VistA and Epic globals."
 permalink: /claude-code-mumps-healthcare-modernization-2026/
 last_tested: "2026-04-21"
@@ -291,3 +291,6 @@ python3 mumps_migration/parse_mumps.py routines/DGPT.m
 - [Claude Code for COBOL to Java](/claude-code-cobol-to-java-migration-2026/)
 - [Claude Code for HIPAA Development](/claude-code-hipaa-compliant-development-workflow-guide/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for PowerBuilder Modernization (2026)](/claude-code-powerbuilder-modernization-2026/)
+- [Claude Code for SCADA Modernization (2026)](/claude-code-scada-modernization-2026/)
+- [Claude Code for RPG/AS400 to Modern API (2026)](/claude-code-rpg-as400-modernization-2026/)

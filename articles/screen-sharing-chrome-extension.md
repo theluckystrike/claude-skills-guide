@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build a Screen Sharing Chrome Extension (2026)"
+title: "Build a Screen Sharing Chrome Extension"
 description: "Build a screen sharing Chrome extension using the desktopCapture API. Handle permissions, stream encoding, and WebRTC peer connections securely."
 date: 2026-03-15
 last_modified_at: 2026-04-17

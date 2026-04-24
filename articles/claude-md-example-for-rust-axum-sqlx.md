@@ -1,6 +1,6 @@
 ---
-title: "CLAUDE.md Example for Rust + Axum + SQLx — Production Template (2026)"
-description: "Complete 310-line CLAUDE.md for Rust 1.83 with Axum 0.8 and SQLx. Covers Tower middleware, extractors, thiserror/anyhow patterns, and compile-time query checks. Tested on Axum 0.8.1."
+title: "CLAUDE.md Example for Rust + Axum +"
+description: "Complete 310-line CLAUDE.md for Rust 1.83 with Axum 0.8 and SQLx."
 permalink: /claude-md-example-for-rust-axum-sqlx/
 render_with_liquid: false
 categories: [claude-md, templates, 2026]
@@ -241,3 +241,7 @@ With this CLAUDE.md loaded, Claude Code generates Axum handlers with correct ext
 ## The Full 16-Template Pack
 
 This is one of 16 production CLAUDE.md templates available in the Lifetime pack. Includes templates for Go + Gin, Next.js + TypeScript, Django + PostgreSQL, Rails + Turbo, and 11 more stacks. Each template is 200-400 lines of production-tested configuration. Get all 16 at [claudecodeguides.com/generator/](https://claudecodeguides.com/generator/).
+
+## See Also
+
+- [Claude Code for Rust Axum — Workflow Guide](/claude-code-for-rust-axum-workflow-guide/)

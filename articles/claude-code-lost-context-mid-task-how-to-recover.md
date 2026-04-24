@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Lost Context Mid-Task (2026)"
+title: "Fix Claude Code Lost Context Mid-Task"
 description: "Recover lost context when Claude Code forgets your task mid-session. Five proven recovery commands and prevention techniques with real examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -389,4 +389,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code used 500K tokens for a simple task — how to prevent](/claude-code-500k-tokens-simple-task-prevent/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Skills In Wsl2 — Complete Developer (2026)"
+title: "How to Use Skills In Wsl2"
 description: "Run Claude Code skills in WSL2 Windows Subsystem for Linux. Step-by-step installation, path configuration, and skill invocation examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -287,4 +287,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Linux AppArmor Restricting Access Fix](/claude-code-linux-apparmor-restricting-access-fix-2026/)
+- [How to Use Claude Code with WSL2 on Windows 2026](/claude-code-wsl2-windows-setup-2026/)

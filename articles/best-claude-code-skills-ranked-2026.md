@@ -1,5 +1,5 @@
 ---
-title: "Best Claude Code Skills in 2026 (Ranked)"
+title: "Best Claude Code Skills in 2026"
 description: "The top Claude Code skills ranked by community adoption, star count, and practical impact. From Karpathy Skills to ccusage, with install commands."
 permalink: /best-claude-code-skills-ranked-2026/
 last_tested: "2026-04-22"

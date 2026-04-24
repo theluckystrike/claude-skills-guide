@@ -1,6 +1,6 @@
 ---
-title: "Claude Code vs GitHub Copilot: Token Cost Analysis"
-description: "Compare Claude Code and GitHub Copilot costs across real workflows -- Copilot is $10/month flat while Claude Code API ranges from $15-$300/month depending on usage."
+title: "Claude Code vs GitHub Copilot"
+description: "Compare Claude Code and GitHub Copilot costs across real workflows -- Copilot is $10/month flat while Claude Code API ranges from $15-$300/month depending."
 permalink: /claude-code-vs-github-copilot-token-cost-analysis/
 date: 2026-04-22
 last_tested: "2026-04-22"
@@ -166,3 +166,8 @@ Step 4: Compare against $100 (Max) and $10 (Copilot)
 - [Claude Code vs Cursor Comparison](/claude-code-vs-cursor-comparison-2026/) -- comparing Claude Code with another AI IDE
 - [Claude Code Max Subscription vs API](/claude-code-max-vs-api-cheaper-2026-calculator/) -- detailed Max vs API analysis
 - [Is Claude Code Worth $100/month?](/is-claude-code-worth-100-month-roi-calculator/) -- ROI analysis for Max subscribers
+
+## See Also
+
+- [Claude Code vs GitHub Copilot Workspace (2026)](/claude-code-vs-github-copilot-workspace-agent-2026/)
+- [Claude Code for Teams: Per-Seat Cost Analysis (2026)](/claude-code-teams-per-seat-cost-analysis-2026/)

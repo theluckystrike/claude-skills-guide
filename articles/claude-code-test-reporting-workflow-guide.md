@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Test Reporting Workflow Guide"
+title: "Claude Code Test Reporting Workflow"
 description: "Learn how to set up and optimize test reporting workflows with Claude Code. Comprehensive guide covering test automation, reporting tools, and best."
 keywords: "claude code test reporting workflow guide"
 date: 2024-01-01
@@ -464,4 +464,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for MiFID II Reporting (2026)](/claude-code-mifid-ii-regulatory-reporting-2026/)

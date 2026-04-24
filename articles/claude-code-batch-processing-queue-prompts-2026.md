@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code Batch Processing: Queue Prompts 2026"
+title: "Claude Code Batch Processing"
 description: "Queue and batch-process multiple prompts in Claude Code. Use shell scripts, task files, and parallel execution for automated multi-step workflows."
 permalink: /claude-code-batch-processing-queue-prompts-2026/
 date: 2026-04-21

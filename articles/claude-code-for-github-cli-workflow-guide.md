@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for GitHub CLI — Workflow Guide"
+title: "Claude Code for GitHub CLI"
 description: "Automate GitHub workflows with gh CLI and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-github-cli-workflow-guide/
@@ -73,3 +73,7 @@ Claude Code should run `gh pr create --title "..." --body "..." --label enhancem
 - [Claude Code Conventional Commits Enforcement Workflow](/claude-code-conventional-commits-enforcement-workflow/)
 - [Best Way to Validate Claude Code Output Before Committing](/best-way-to-validate-claude-code-output-before-committing/)
 - [AI-Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
+
+## See Also
+
+- [Claude Code for GitLab CLI glab — Guide](/claude-code-for-gitlab-cli-glab-workflow-guide/)

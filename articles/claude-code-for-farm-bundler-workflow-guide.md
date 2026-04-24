@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Farm Bundler — Workflow Guide"
+title: "Claude Code for Farm Bundler"
 description: "Build faster with Farm bundler and Claude Code configuration. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-farm-bundler-workflow-guide/
@@ -73,3 +73,7 @@ Claude Code should create `farm.config.ts` using `defineConfig` from `@farmfe/co
 - [Claude Code for Rspack Bundler Workflow Guide](/claude-code-for-rspack-bundler-workflow-guide/)
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)
 - [Claude Code CI/CD Pipeline Optimization Guide](/claude-code-ci-cd-pipeline-optimization-guide/)
+
+## See Also
+
+- [Claude Code for Rolldown — Workflow Guide](/claude-code-for-rolldown-bundler-workflow-guide/)

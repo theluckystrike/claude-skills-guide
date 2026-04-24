@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Use Claude Code with Other AI Models (2026)"
+title: "Use Claude Code with Other AI Models"
 description: "Run Claude Code alongside GPT-4, Gemini, and Cursor in multi-AI workflows. Practical integration patterns for developers using multiple models."
 date: 2026-03-14
 last_modified_at: 2026-04-17

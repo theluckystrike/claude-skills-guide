@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Dangerous Chrome Extensions 2026: Security Risks"
+title: "Dangerous Chrome Extensions 2026"
 description: "Dangerous Chrome extensions threatening developers in 2026. Identify credential harvesters, cryptojackers, and data exfiltration risks before install."
 date: 2026-03-15
 last_modified_at: 2026-04-17

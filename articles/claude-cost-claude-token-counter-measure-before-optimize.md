@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Token Counter: Measure Before You Optimize"
+title: "Claude Token Counter"
 description: "Use Anthropic's token counting API to find where your tokens go — most teams discover 40% waste in system prompts and tool defs."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -224,3 +224,8 @@ Before optimization: record average input tokens, average output tokens, and tot
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — apply optimizations after measuring
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — fewer hallucinations means fewer retries and tokens
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — per-skill token usage analysis
+
+## See Also
+
+- [Claude Cache Minimum Token Requirements 2026](/claude-cost-claude-cache-minimum-token-requirements-2026/)
+- [Claude /compact Command Token Savings Guide](/claude-cost-claude-compact-command-token-savings/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Rust Crate Development Guide (2026)"
+title: "Claude Code Rust Crate Development"
 last_tested: "2026-04-22"
 description: "A practical guide to developing Rust crates with Claude Code. Learn workflows, tooling, and skill integration for efficient Rust development."
 date: 2026-03-14
@@ -234,4 +234,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Rust-Analyzer Conflict — Fix (2026)](/claude-code-rust-analyzer-conflict-fix-2026/)

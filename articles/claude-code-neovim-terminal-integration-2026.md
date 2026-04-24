@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code + Neovim Terminal Integration 2026"
+title: "Claude Code + Neovim Terminal"
 description: "Use Claude Code inside Neovim terminal with toggleterm, custom Lua commands, and context-aware prompting. Full config examples included."
 permalink: /claude-code-neovim-terminal-integration-2026/
 date: 2026-04-21
@@ -230,3 +230,10 @@ Neovim users maintain their modal editing speed while gaining AI assistance. The
 - [Claude Code for Alacritty Workflow Guide](/claude-code-for-alacritty-workflow-guide/)
 - [Claude Code for Kitty Terminal Workflow Guide](/claude-code-for-kitty-terminal-workflow-guide/)
 - [Claude Code Tmux Session Management](/claude-code-tmux-session-management-multi-agent-workflow/)
+
+## See Also
+
+- [Neovim Plugin Socket Error Fix](/claude-code-neovim-plugin-socket-error-fix-2026/)
+- [Claude Code for DeFi Protocol Integration (2026)](/claude-code-defi-protocol-integration-2026/)
+- [Claude Code + Linear MCP Integration Guide 2026](/claude-code-linear-mcp-integration-2026/)
+- [How to Use Claude Code in IntelliJ IDEA 2026](/claude-code-intellij-idea-integration-2026/)

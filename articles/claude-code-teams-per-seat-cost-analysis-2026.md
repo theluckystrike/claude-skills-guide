@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Teams: Per-Seat Cost Analysis (2026)"
+title: "Claude Code for Teams"
 description: "Analyze Claude Code per-seat costs for teams in 2026 with Max vs API pricing, team size optimization, and break-even calculations for 3-50 developers."
 permalink: /claude-code-teams-per-seat-cost-analysis-2026/
 date: 2026-04-22
@@ -244,3 +244,9 @@ Build these patterns into the annual budget by adding a 15-20% buffer above the 
 - [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- subscription details
 - [Claude Code API Cost Calculator](/claude-code-api-cost-calculator-estimate-before-build/) -- per-developer estimation
 - [Production Claude Code Setup: Cost Guardrails](/production-claude-code-setup-cost-guardrails-teams/) -- team cost controls
+
+## See Also
+
+- [Claude Code for Seismology Waveform Analysis (2026)](/claude-code-seismology-waveform-analysis-2026/)
+- [Claude Code Teams vs Cursor Teams for Enterprise](/claude-code-teams-vs-cursor-teams-enterprise-2026/)
+- [Claude Code for Market Microstructure (2026)](/claude-code-market-microstructure-analysis-2026/)

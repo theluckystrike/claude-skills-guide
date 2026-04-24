@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for COBOL to Java Migration (2026)"
+title: "Claude Code for COBOL to Java Migration"
 description: "COBOL to Java migration workflow with Claude Code. Convert COPYBOOK layouts, batch programs, and CICS transactions."
 permalink: /claude-code-cobol-to-java-migration-2026/
 last_tested: "2026-04-21"
@@ -309,3 +309,4 @@ java -cp . com.migration.records.CustomerRecord < test_data/CUSTOMER.dat
 - [Claude Code for Delphi to C# Migration](/claude-code-delphi-to-csharp-migration-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
 {% endraw %}
+- [Claude Code for Lotus Notes Web Migration (2026)](/claude-code-lotus-notes-web-migration-2026/)

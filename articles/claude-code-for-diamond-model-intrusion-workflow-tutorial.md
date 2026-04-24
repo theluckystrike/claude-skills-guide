@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Diamond Model Intrusion Workflow Tutorial"
+title: "Claude Code for Diamond Model Intrusion"
 description: "Learn how to build Claude Code skills for Diamond Model intrusion analysis workflows. Create reusable skills to document and analyze cybersecurity."
 date: 2026-03-20
 last_modified_at: 2026-04-17

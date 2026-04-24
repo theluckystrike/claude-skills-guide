@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Tips from Experienced Users 2026"
+title: "Claude Code Tips from Experienced Users"
 description: "Practical Claude Code tips from developers and power users. Learn skill selection, prompt engineering, and workflow optimization for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -406,6 +406,11 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+- [Super Claude Code framework](/super-claude-code-framework-guide/) — structured prompting for power users
+- [Claude Code hooks](/claude-code-hooks-complete-guide/) — automate pre and post tool execution
+- [CLAUDE.md best practices](/claude-md-best-practices-definitive-guide/) — definitive project configuration
+- [Claude Code spec workflow](/claude-code-spec-workflow-guide/) — spec-driven development flow
+- [Claude Code frontend design plugin](/claude-code-frontend-design-plugin-guide/) — design system integration
 - [Chrome Speed Up Tips for Developers and Power Users in 2026](/chrome-speed-up-tips-2026/)
 - [Chrome DevTools Tips and Tricks for 2026](/chrome-devtools-tips-tricks-2026/)
 - [Chrome Extension Miro Whiteboard: A Complete Guide for Developers and Power Users](/chrome-extension-miro-whiteboard/)

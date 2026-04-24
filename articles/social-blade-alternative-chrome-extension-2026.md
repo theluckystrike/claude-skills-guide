@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Social Blade Alternative Chrome Extension in 2026"
+title: "Social Blade Alternative Chrome"
 description: "Find the best Social Blade alternatives with Chrome extensions for developers and power users. Track social media metrics, analyze growth, and build."
 date: 2026-03-15
 last_modified_at: 2026-04-17

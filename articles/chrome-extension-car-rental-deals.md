@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Car Rental Deals Chrome Extension Guide (2026)"
+title: "Car Rental Deals Chrome Extension Guide"
 description: "Learn how to build a Chrome extension that tracks car rental prices across multiple providers. Technical implementation guide with code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

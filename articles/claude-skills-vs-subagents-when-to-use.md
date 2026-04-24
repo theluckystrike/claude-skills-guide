@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills vs Subagents — When to Use Each and When to Combine Them — 2026"
+title: "Claude Skills vs Subagents: When to Use Which"
 description: "Understand when a SKILL.md solves the problem, when context: fork subagent delegation is needed, and how to combine both for complex workflows."
 permalink: /claude-skills-vs-subagents-when-to-use/
 render_with_liquid: false
@@ -127,5 +127,4 @@ Subagents spawned via `context: fork` cannot invoke other skills from the main p
 - [Claude Skills vs Subagents — Inline Instructions vs Isolated Execution — 2026](/claude-skills-vs-subagents-comparison/)
 - [What Are Claude Skills And How — Complete Developer Guide](/what-are-claude-skills-and-how-to-use-them/)
 - [Claude Code Permission Denied: Fix Skill Commands (2026)](/claude-code-permission-denied-when-executing-skill-commands/)
-
-
+- [Claude Skills vs LangChain Agents Compared (2026)](/claude-skills-vs-langchain-agents-comparison-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Ungoogled Chromium vs  — Developer Comparison 2026"
+title: "Ungoogled Chromium"
 description: "Compare Ungoogled Chromium and Google Chrome in terms of privacy, performance, extension compatibility, and developer tools. Learn which browser best."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Turborepo — Workflow Guide (2026)"
+title: "Claude Code for Turborepo"
 description: "Claude Code for Turborepo — Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified for..."
 date: 2026-04-18
 permalink: /claude-code-for-turborepo-workflow-guide/

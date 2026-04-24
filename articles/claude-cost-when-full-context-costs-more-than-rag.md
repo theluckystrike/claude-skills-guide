@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "When Full Context Costs More Than a RAG Pipeline"
+title: "When Full Context Costs More Than a RAG"
 description: "Full-context queries cost $1.00+ each on Opus. RAG drops that to $0.10. Here is the exact break-even point for switching."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -260,3 +260,8 @@ Track cost per query across your chosen approach. If using the hybrid strategy, 
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — context economics that drive this decision
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/) — practical context management techniques
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — understanding context design choices
+
+## See Also
+
+- [RAG vs Context Stuffing: Claude Cost Analysis](/claude-cost-rag-vs-context-stuffing-claude-cost-analysis/)
+- [Chunking Strategies to Cut Claude Context Costs](/claude-cost-chunking-strategies-cut-claude-context-costs/)

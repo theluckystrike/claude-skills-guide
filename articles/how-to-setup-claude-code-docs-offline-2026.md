@@ -1,5 +1,5 @@
 ---
-title: "Set Up Claude Code Docs for Offline Use (2026)"
+title: "Set Up Claude Code Docs for Offline Use"
 description: "Clone the Claude Code Docs mirror for offline access to official documentation. Configure auto-update hooks to stay current without manual syncing."
 permalink: /how-to-setup-claude-code-docs-offline-2026/
 last_tested: "2026-04-22"
@@ -169,3 +169,8 @@ The offline setup pays off in several scenarios beyond obvious ones:
 - Compare this with [Claude Howto](/claude-code-docs-vs-claude-howto-2026/) for different learning approaches
 - Explore the [Claude Code playbook](/playbook/) for workflow patterns
 - Set up [MCP servers](/mcp-servers-claude-code-complete-setup-2026/) using the configuration docs
+
+## See Also
+
+- [Set Up Academic Workflow in Claude Code (2026)](/how-to-setup-academic-workflow-claude-code-2026/)
+- [OAuth Setup with Claude Code: Avoid the Token-Expensive Mistakes](/oauth-setup-claude-code-avoid-token-expensive-mistakes/)

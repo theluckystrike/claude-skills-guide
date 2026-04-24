@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Prompt Compression Techniques for Claude API"
+title: "Prompt Compression Techniques"
 description: "Reduce Claude prompt token count by 30-60% using XML structure, abbreviation, and deduplication — save $75 per 10K Opus requests."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -214,3 +214,11 @@ Measure compression ratio: (original tokens - compressed tokens) / original toke
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — broader token optimization strategies
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — prompt writing techniques that reduce waste
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — identify which prompts consume the most tokens
+
+## See Also
+
+- [Prompt Caching Break-Even Calculator for Claude](/claude-cost-prompt-caching-break-even-calculator-claude/)
+- [Message Batches API Tutorial with Cost Examples](/claude-cost-message-batches-api-tutorial-cost-examples/)
+- [System Prompt Optimization to Cut Claude Costs](/claude-cost-system-prompt-optimization-cut-claude-costs/)
+- [Claude API Cost Dashboard Setup Guide 2026](/claude-cost-01-claude-api-cost-dashboard-setup/)
+- [Smart Context Pruning for Claude API Savings](/claude-cost-smart-context-pruning-claude-api-savings/)

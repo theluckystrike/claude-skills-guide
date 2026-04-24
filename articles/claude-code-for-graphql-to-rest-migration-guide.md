@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for GraphQL to REST Migration Guide"
+title: "Claude Code for GraphQL to REST"
 description: "A practical guide to migrating from GraphQL to REST APIs using Claude Code. Learn strategies, code examples, and best practices for a smooth transition."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -302,4 +302,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for GraphQL Directives Workflow](/claude-code-for-graphql-directives-workflow/)
+- [Claude Code for GraphQL Mutation Workflow Tutorial](/claude-code-for-graphql-mutation-workflow-tutorial/)

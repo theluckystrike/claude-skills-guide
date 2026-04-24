@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md Best Practices For Large — Honest Review 2026"
+title: "Claude Md Best Practices For Large"
 description: "Practical guide to writing effective Claude Code markdown files for large-scale projects. Includes patterns, examples, and skill integration tips."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -229,4 +229,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code CLAUDE.md Best Practices for Teams 2026](/claude-code-claude-md-best-practices-teams-2026/)

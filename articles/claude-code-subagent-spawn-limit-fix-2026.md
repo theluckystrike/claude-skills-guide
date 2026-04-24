@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Subagent Spawn Limit Reached — Fix (2026)"
+title: "Claude Code Subagent Spawn Limit"
 permalink: /claude-code-subagent-spawn-limit-fix-2026/
 description: "Reduce agent nesting depth to fix maximum spawn limit reached error. Restructure tasks as sequential operations to stay within the 3-level cap."
 last_tested: "2026-04-21"
@@ -43,3 +43,35 @@ Add to your CLAUDE.md:
 ```
 Never design workflows requiring more than 2 levels of agent nesting. Use sequential tool calls or break into separate top-level sessions instead of spawning deeply nested subagents.
 ```
+
+## See Also
+
+- [Claude Code Concurrent Sessions 5/5 — Fix (2026)](/claude-code-concurrent-session-limit-fix-2026/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `SyntaxError: Unexpected token in JSON at position 0`
+- `JSON.parse: unexpected character at line 1 column 1`
+- `Error: invalid JSON response from API`
+- `SessionError: session expired`
+- `Error: session state corrupted`
+
+## Frequently Asked Questions
+
+### Why does JSON parsing fail on API responses?
+
+JSON parse failures on API responses typically indicate a network issue where an intermediate proxy returned an HTML error page instead of JSON. Check the raw response by enabling debug logging with `CLAUDE_LOG_LEVEL=debug` to see the actual content received.
+
+### How do I fix corrupted JSON config files?
+
+Open the file in a text editor and look for common issues: trailing commas, missing quotes, or truncated content (from a crash during write). Use `python3 -m json.tool < file.json` to validate and identify the exact parse error location.
+
+### Can Claude Code handle JSON files with comments?
+
+Standard JSON does not support comments. If your project uses JSONC (JSON with Comments), Claude Code handles it when reading via tools. For configuration files like `tsconfig.json` that support JSONC, Claude Code strips comments before parsing.
+
+### How long do Claude Code sessions last?
+
+Sessions persist until you close the terminal, exit Claude Code, or hit the context window limit. There is no hard time limit, but very long sessions (more than 100 messages) may experience context compression that reduces earlier message detail.

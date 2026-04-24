@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude API Tool Use and Function Calling Deep Dive Guide"
+title: "Claude API Tool Use and Function"
 description: "Master Claude's API tool use and function calling capabilities. Learn how to integrate external tools, build reliable function-calling workflows, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -444,4 +444,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Jest Mock Modules and Spies Deep Dive Guide](/claude-code-jest-mock-modules-and-spies-deep-dive-guide/)

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for OpenAPI Spec Generation (2026)"
+title: "Claude Code for OpenAPI Spec Generation"
 description: "OpenAPI specification generation with Claude Code. Auto-generate 3.1 specs from existing codebases with validation."
 permalink: /claude-code-openapi-spec-generation-2026/
 last_tested: "2026-04-21"
@@ -359,3 +359,4 @@ redocly preview-docs output/openapi.yaml
 - [Claude Code for Beginners](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Claude Code for Code Review](/best-claude-skills-for-code-review-automation/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for FEA Mesh Generation (2026)](/claude-code-fea-mesh-generation-2026/)

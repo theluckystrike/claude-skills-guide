@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Devin AI Software Engineer — Honest Review 2026"
+title: "Devin AI Software Engineer"
 description: "A developer-focused review of Devin AI in 2026. Real examples, limitations, workflow integration, and how it compares to Claude Code and other AI."
 date: 2026-03-14
 last_modified_at: 2026-04-17

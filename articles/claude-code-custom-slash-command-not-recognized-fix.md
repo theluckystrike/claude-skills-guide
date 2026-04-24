@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Custom Slash Command Not Found — Fix (2026)"
+title: "Claude Code Custom Slash Command Not"
 description: "Fix Claude Code custom slash command not recognized error. Place command files in the correct .claude/commands/ directory. Step-by-step solution."
 permalink: /claude-code-custom-slash-command-not-recognized-fix/
 last_tested: "2026-04-21"
@@ -86,3 +86,7 @@ Store project slash commands in .claude/commands/ as .md files. Global commands 
 ```
 
 **Related articles:** [Claude Code Config File Location](/claude-code-config-file-location/), [Claude Code Debugging Skill](/claude-code-debugging-skill/), [Troubleshooting Hub](/troubleshooting-hub/)
+
+## See Also
+
+- [Create Custom Slash Commands for Claude (2026)](/how-to-create-custom-slash-command-claude-2026/)

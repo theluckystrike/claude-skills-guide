@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Configure Web App Manifest with Claude Code (2026)"
+title: "Configure Web App Manifest with Claude"
 description: "Configure web app manifests for PWA projects using Claude Code. Icons, display modes, start URL, and installability settings with code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

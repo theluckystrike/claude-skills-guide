@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Unsloth Fast Fine Tuning Workflow (2026)"
+title: "Claude Code for Unsloth Fast Fine"
 last_tested: "2026-04-22"
 description: "Learn how to use Claude Code with Unsloth for blazing-fast LLM fine-tuning. This comprehensive tutorial covers setup, workflow optimization, and..."
 date: 2026-04-19

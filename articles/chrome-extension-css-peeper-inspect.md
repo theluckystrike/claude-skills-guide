@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CSS Peeper Inspect Chrome Extension Guide (2026)"
+title: "CSS Peeper Inspect Chrome Extension"
 description: "Learn how to use Chrome extension CSS inspection tools for debugging and inspecting CSS in your web development workflow. Practical examples and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

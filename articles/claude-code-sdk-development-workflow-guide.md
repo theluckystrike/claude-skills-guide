@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code SDK Development Workflow Guide"
+title: "Claude Code SDK Development Workflow"
 description: "A practical guide to building applications with Claude Code SDK. Learn development workflows, skill integration, and best practices for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -511,4 +511,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code SDK Testing Workflow Guide](/claude-code-sdk-testing-workflow-guide/)

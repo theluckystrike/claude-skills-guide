@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Decision Log — Complete Developer (2026)"
+title: "Claude Code For Decision Log"
 description: "Learn how to create, manage, and automate decision logs using Claude Code. This guide covers practical workflows, code examples, and best practices for."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -290,5 +290,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
+- [Timezone Affecting Log Timestamps Fix](/claude-code-timezone-affecting-log-timestamps-fix-2026/)

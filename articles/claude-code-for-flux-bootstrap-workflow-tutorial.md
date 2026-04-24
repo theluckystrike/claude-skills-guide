@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Flux Bootstrap Workflow Tutorial"
+title: "Claude Code for Flux Bootstrap Workflow"
 description: "Learn how to use Claude Code to streamline Flux bootstrap workflows. This tutorial covers practical examples, automation patterns, and actionable."
 date: 2026-03-15
 last_modified_at: 2026-04-17

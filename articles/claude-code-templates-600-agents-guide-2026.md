@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Templates: 600+ Agents Guide (2026)"
+title: "Claude Code Templates"
 description: "Install and use claude-code-templates — 600+ agents, 200+ commands, 55+ MCPs, and 60+ settings via CLI or web UI at aitmpl.com."
 permalink: /claude-code-templates-600-agents-guide-2026/
 last_tested: "2026-04-22"
@@ -166,3 +166,7 @@ The configs include placeholder values for secrets (API keys, tokens). You must 
 - [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — understand the hooks these templates generate
 - [MCP Setup Guide](/mcp-servers-claude-code-complete-setup-2026/) — configure the MCP servers referenced in templates
 - [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — how to maintain the generated CLAUDE.md files
+
+## See Also
+
+- [Claude Code Templates vs Awesome Toolkit (2026)](/claude-code-templates-vs-awesome-toolkit-2026/)

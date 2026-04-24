@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How To Make Claude Code Not Add — Complete Developer Guide"
+title: "How To Make Claude Code Not Add"
 description: "Practical techniques to prevent Claude Code from adding unused imports, including CLAUDE.md settings, custom skills, and project configuration."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Difference Between AI Agent and AI Assistant Explained"
+title: "Difference Between AI Agent and AI"
 description: "Understand the key differences between AI agents and AI assistants, with practical examples using Claude Code skills and the agentic framework."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -179,4 +179,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs JetBrains AI Compared (2026)](/claude-code-vs-jetbrains-ai-assistant-2026/)

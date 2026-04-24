@@ -1,5 +1,5 @@
 ---
-title: "Claude Shortcuts: Every Keyboard Shortcut (2026)"
+title: "Claude Shortcuts"
 description: "Complete list of keyboard shortcuts for Claude.ai, Claude Desktop, and Claude Code CLI. Platform-specific keys, slash commands, and customization."
 permalink: /claude-shortcuts-complete-guide/
 last_tested: "2026-04-24"
@@ -301,19 +301,6 @@ In Claude.ai, use `Cmd/Ctrl + Shift + S` to open the sidebar, then click a conve
 
 The default input mode uses Emacs-style readline keybindings (`Ctrl + A`, `Ctrl + E`, `Ctrl + K`, etc.). These work out of the box without any configuration.
 
-## Related Guides
-
-- [claude_desktop_config.json Guide](/claude-desktop-config-json-guide/) — configure Claude Desktop settings
-- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
-- [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
-- [Claude Code Getting Started](/claude-code-getting-started-terminal-setup/) — initial CLI setup
-- [Claude Code Configuration Hierarchy](/claude-code-configuration-hierarchy-explained-2026/) — understand settings files
-- [Claude Code Save Conversation Guide](/claude-code-save-conversation-guide/) — manage session history
-- [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — extend capabilities
-- [Claude Code Security Best Practices](/claude-code-security-best-practices-2026/) — secure your workflow
-- [Claude MCP List Command Guide](/claude-mcp-list-command-guide/) — MCP CLI command reference
-
-- [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Permission shortcuts and auto-mode
 ### Can I remap the Escape key in Claude Code?
 
 Claude Code uses standard terminal keybindings. The Escape key behavior is built into the application. You can use terminal emulator-level key remapping if needed, but Claude Code itself does not expose shortcut customization beyond vim mode.
@@ -329,6 +316,19 @@ Not a direct keyboard shortcut. Use the /model slash command to switch models du
 ### Can I use keyboard shortcuts in the Claude mobile app?
 
 The Claude iOS and Android apps support basic system keyboard shortcuts when using an external keyboard, but do not have Claude-specific shortcuts beyond standard text editing.
+
+## Related Guides
+
+- [claude_desktop_config.json Guide](/claude-desktop-config-json-guide/) — configure Claude Desktop settings
+- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
+- [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
+- [Claude Code Getting Started](/claude-code-getting-started-terminal-setup/) — initial CLI setup
+- [Claude Code Configuration Hierarchy](/claude-code-configuration-hierarchy-explained-2026/) — understand settings files
+- [Claude Code Save Conversation Guide](/claude-code-save-conversation-guide/) — manage session history
+- [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — extend capabilities
+- [Claude Code Security Best Practices](/claude-code-security-best-practices-2026/) — secure your workflow
+- [Claude MCP List Command Guide](/claude-mcp-list-command-guide/) — MCP CLI command reference
+- [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Permission shortcuts and auto-mode
 
 <script type="application/ld+json">
 {

@@ -1,5 +1,5 @@
 ---
-title: "Source Map Generation Out of Memory — Fix (2026)"
+title: "Source Map Generation Out of Memory"
 permalink: /claude-code-source-map-generation-oom-fix-2026/
 description: "Fix OOM crash during source map generation. Increase Node heap size or switch to cheap-source-map for large bundles."
 last_tested: "2026-04-22"
@@ -85,3 +85,8 @@ Add this to your `CLAUDE.md`:
 - Set NODE_OPTIONS=--max-old-space-size=8192 in CI build scripts.
 - Split bundles to keep chunks under 500KB for manageable source maps.
 ```
+
+## See Also
+
+- [Conversation History OOM Crash Fix](/claude-code-conversation-history-oom-fix-2026/)
+- [Claude Code for FEA Mesh Generation (2026)](/claude-code-fea-mesh-generation-2026/)

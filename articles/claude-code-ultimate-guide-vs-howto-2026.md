@@ -1,5 +1,5 @@
 ---
-title: "Ultimate Guide vs Claude Howto: Which First? (2026)"
+title: "Guide vs Howto: Which First?"
 description: "The Ultimate Guide has 22K lines and 271 quizzes. Claude Howto has visual diagrams and templates. Here's which to study first based on your experience."
 permalink: /claude-code-ultimate-guide-vs-howto-2026/
 last_tested: "2026-04-22"
@@ -103,3 +103,8 @@ The non-overlapping content:
 ## Final Recommendation
 
 Beginners: clone Claude Howto and work through it this week. You will be productive with Claude Code in days rather than weeks. Experienced users: take the Ultimate Guide quiz to find your gaps, then study those sections. Everyone benefits from having both resources available — Howto as your quick reference and the Ultimate Guide as your deep reference. For practical workflow patterns that build on both, see the [Claude Code playbook](/playbook/).
+
+## See Also
+
+- [Claude Code Ultimate Guide: 271 Questions (2026)](/claude-code-ultimate-guide-271-questions-2026/)
+- [Take the Claude Code 271-Question Quiz (2026)](/how-to-take-claude-code-ultimate-guide-quiz-2026/)

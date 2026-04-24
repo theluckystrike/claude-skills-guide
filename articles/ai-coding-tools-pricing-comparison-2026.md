@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AI Coding Tools Pricing Comparison (April 2026)"
+title: "AI Coding Tools Pricing Comparison"
 description: "Break down real monthly costs for Claude Code, Cursor, Copilot, Windsurf, and Kilo Code across solo, team, and enterprise tiers."
 permalink: /ai-coding-tools-pricing-comparison-2026/
 date: 2026-04-21
@@ -119,5 +119,11 @@ A junior developer costs $4,000-7,000/month fully loaded (salary + benefits + eq
 ## When To Use Neither
 
 If your organization operates in an air-gapped environment with no internet access (defense, classified government work, certain financial institutions), none of these cloud-dependent tools work. All five require API calls to remote model providers. For air-gapped environments, evaluate self-hosted solutions: Ollama with local models, Tabby (open-source Copilot alternative), or Continue.dev with a locally deployed model. The quality gap between cloud models and local models is significant, but regulatory requirements override capability preferences.
+
+- [Claude API pricing](/claude-api-pricing-complete-guide/) — every Claude plan and model priced in detail
+- [Claude Pro subscription price](/claude-pro-subscription-price-guide/) — Pro plan deep dive
+- [Claude extra usage cost](/claude-extra-usage-cost-guide/) — what overages actually cost
+- [Claude 5-hour usage limit](/claude-5-hour-usage-limit-guide/) — rolling limit explained
+- [OpenRouter setup for Claude Code](/claude-code-openrouter-setup-guide/) — alternative pricing via OpenRouter
 
 

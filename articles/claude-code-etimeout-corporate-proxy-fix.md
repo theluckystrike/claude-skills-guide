@@ -1,5 +1,5 @@
 ---
-title: "Claude Code ETIMEOUT Corporate Proxy — Fix (2026)"
+title: "Claude Code ETIMEOUT Corporate Proxy"
 description: "Fix Claude Code ETIMEOUT connecting through corporate proxy. Configure HTTPS_PROXY and SSL certificates. Step-by-step solution."
 permalink: /claude-code-etimeout-corporate-proxy-fix/
 last_tested: "2026-04-21"
@@ -72,3 +72,8 @@ On corporate networks, always set HTTPS_PROXY, HTTP_PROXY, and NODE_EXTRA_CA_CER
 ```
 
 **Related articles:** [Claude Code TLS/SSL Proxy Fix](/claude-code-tls-ssl-connection-error-corporate-proxy-fix/), [Claude Code Network Proxy Config](/claude-code-network-proxy-configuration-for-enterprise/), [Troubleshooting Hub](/troubleshooting-hub/)
+
+## See Also
+
+- [Update Fails Behind Corporate Proxy — Fix (2026)](/claude-code-update-fails-behind-proxy-fix-2026/)
+- [Self-Signed Cert in Corporate Proxy — Fix (2026)](/claude-code-self-signed-cert-corporate-proxy-fix-2026/)

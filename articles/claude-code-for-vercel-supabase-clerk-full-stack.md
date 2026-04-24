@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Vercel + Supabase + Clerk: Full Stack (2026)"
+title: "Claude Code + Vercel + Supabase + Clerk"
 description: "Build full-stack apps with Claude Code, Vercel, Supabase, and Clerk. Practical workflows for auth, database, and deployment all in one guide."
 date: 2026-03-14
 last_modified_at: 2026-04-17

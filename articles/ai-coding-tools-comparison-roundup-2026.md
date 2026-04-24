@@ -1,5 +1,5 @@
 ---
-title: "AI Coding Tools Roundup: 14 Tools Compared (2026)"
+title: "AI Coding Tools Roundup"
 permalink: /ai-coding-tools-comparison-roundup-2026/
 description: "14 AI coding tools compared head-to-head on agent capability, pricing, and real-world fit. From Copilot to Devin, ranked for developers in 2026."
 last_tested: "2026-04-21"
@@ -162,4 +162,7 @@ Related reading:
 
 ## Related
 
+- [Codex vs Claude Code](/codex-vs-claude-code-comparison-2026/) — OpenAI Codex vs Claude Code head-to-head
+- [Claude API pricing](/claude-api-pricing-complete-guide/) — every plan and model priced
+- [Claude Pro subscription price](/claude-pro-subscription-price-guide/) — Pro plan features and pricing
 - [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Claude Sonnet 4.5 model details

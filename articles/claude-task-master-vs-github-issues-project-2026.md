@@ -1,5 +1,5 @@
 ---
-title: "Claude Task Master vs GitHub Issues (2026)"
+title: "Claude Task Master vs GitHub Issues"
 description: "Claude Task Master parses PRDs into tasks with AI. GitHub Issues tracks work with labels and boards. Compare automation vs ecosystem integration."
 permalink: /claude-task-master-vs-github-issues-project-2026/
 last_tested: "2026-04-22"
@@ -89,3 +89,9 @@ Task Master connects to Claude Code through MCP and that is about it. The CLI is
 ## Final Recommendation
 
 Use GitHub Issues as your system of record for project management. It is the standard for good reason. Layer Task Master on top for the AI-powered task decomposition when you have a spec document that needs breaking down. The generated tasks can be transferred to GitHub Issues for team coordination. This gives you the best of both: AI-powered planning and battle-tested collaboration. Check the [Claude Code playbook](/playbook/) for patterns that integrate both tools effectively.
+
+## See Also
+
+- [Claude Task Master vs Manual Tasks (2026)](/claude-task-master-vs-manual-task-management-2026/)
+- [Use Claude Task Master With Your Project (2026)](/how-to-use-claude-task-master-existing-project-2026/)
+- [Claude Task Master vs Linear and Jira (2026)](/claude-task-master-vs-linear-jira-2026/)

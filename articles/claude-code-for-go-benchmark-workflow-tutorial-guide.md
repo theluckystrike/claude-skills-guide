@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Go Benchmark — Complete Developer Guide"
+title: "Claude Code For Go Benchmark"
 description: "A practical tutorial on integrating Claude Code into your Go benchmarking workflow. Learn to write, run, and analyze benchmarks with AI assistance."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -234,4 +234,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Go Templ — Workflow Guide](/claude-code-for-go-templ-workflow-guide/)

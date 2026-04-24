@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Extended Thinking Not Working — Quick Guide"
+title: "Fix Claude Extended Thinking Not"
 description: "Fix Claude extended thinking errors. Covers budget_tokens validation, tool_choice conflicts, display options, and multi-turn thinking continuity."
 date: 2026-04-15
 last_modified_at: 2026-04-17

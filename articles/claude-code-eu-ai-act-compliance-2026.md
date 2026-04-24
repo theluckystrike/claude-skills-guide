@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for EU AI Act Compliance Checks (2026)"
+title: "Claude Code for EU AI Act Compliance"
 permalink: /claude-code-eu-ai-act-compliance-2026/
 description: "Implement EU AI Act compliance with Claude Code. Classify AI system risk levels, generate technical documentation, and build transparency logs."
 last_tested: "2026-04-22"

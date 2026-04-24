@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Use Claude Code with Warp Terminal 2026"
+title: "How to Use Claude Code with Warp"
 description: "Configure Warp terminal for Claude Code with AI command suggestions, blocks workflow, and session management for productive development. Updated for 2026."
 permalink: /claude-code-warp-terminal-workflow-2026/
 date: 2026-04-21
@@ -351,3 +351,8 @@ $99 once. Free forever. 47/500 founding spots left.
 </div>
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+## See Also
+
+- [Claude Code for Rio Terminal — Workflow Guide](/claude-code-for-rio-terminal-workflow-guide/)
+- [Claude Code vs Warp AI Terminal Compared (2026)](/claude-code-vs-warp-ai-terminal-2026/)

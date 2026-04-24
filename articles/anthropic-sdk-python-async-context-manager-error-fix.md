@@ -1,5 +1,5 @@
 ---
-title: "Anthropic SDK Python Async Context Manager — Fix (2026)"
+title: "Anthropic SDK Python Async Context"
 description: "Fix Anthropic SDK async context manager TypeError. Use AsyncAnthropic client instead of sync Anthropic. Step-by-step solution."
 permalink: /anthropic-sdk-python-async-context-manager-error-fix/
 last_tested: "2026-04-21"
@@ -89,3 +89,7 @@ Use AsyncAnthropic for all async/await code. Never mix sync Anthropic client wit
 ```
 
 **Related articles:** [Claude API Error Handling](/claude-code-api-error-handling-standards/), [Claude API Timeout Guide](/claude-code-timeout-fix/), [Errors Atlas](/errors-atlas/)
+
+## See Also
+
+- [Anthropic SDK TypeScript Tool Results Type Error — Fix (2026)](/anthropic-sdk-typescript-type-mismatch-tool-results-fix/)

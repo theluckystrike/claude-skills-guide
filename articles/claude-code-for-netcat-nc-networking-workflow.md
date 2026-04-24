@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Netcat Networking Workflows (2026)"
+title: "Claude Code for Netcat Networking"
 description: "Use Netcat with Claude Code for port scanning, file transfers, and network debugging. Practical nc command patterns with automated scripting workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

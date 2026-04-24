@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Learn Programming Languages with Claude Code 2026"
+title: "Claude Code as Programming Tutor"
 description: "Use Claude Code as a programming tutor with interactive exercises, real-time code explanation, project-based learning, and skill progression tracking."
 permalink: /learn-programming-languages-claude-code-2026/
 date: 2026-04-21

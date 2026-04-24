@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Calendar Assistant Chrome Extension Guide (2026)"
+title: "AI Calendar Assistant Chrome Extension"
 description: "Learn how to build and integrate AI-powered calendar assistants as Chrome extensions. Practical examples, code snippets, and architecture patterns for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

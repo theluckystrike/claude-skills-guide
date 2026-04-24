@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Setup Typesense Search with Claude Code (2026)"
+title: "Setup Typesense Search with Claude Code"
 description: "Set up Typesense full-text search with Claude Code. Server config, schema definition, indexing pipeline, and faceted search query code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

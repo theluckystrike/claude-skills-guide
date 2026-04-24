@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Tmux Session Management Multi Agent Workflow"
+title: "Claude Code Tmux Session Management"
 description: "Master tmux session management for Claude Code multi-agent workflows. Learn to orchestrate parallel AI agents, manage terminal sessions, and automate compl"
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -284,4 +284,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [tmux Session Not Detected Error Fix](/claude-code-tmux-session-not-detected-fix-2026/)

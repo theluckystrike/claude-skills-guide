@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Project vs Global Settings: Token Impact"
+title: "Claude Code Project vs Global Settings"
 description: "Project-level Claude Code settings load only in relevant directories, saving 200-800 tokens per session versus global settings that load everywhere."
 permalink: /claude-code-project-vs-global-settings-token-impact/
 date: 2026-04-22
@@ -292,3 +292,7 @@ Run this audit monthly. Each MCP server found in global settings represents 500-
 - [Progressive Disclosure in CLAUDE.md: Load Only What You Need](/progressive-disclosure-claude-md-load-only-needed/) -- same scoping principle for instructions
 
 - [Claude Desktop config.json guide](/claude-desktop-config-json-guide/) — How to configure Claude Desktop with config.json
+
+## See Also
+
+- [Project Scaffolding with Claude Code (2026)](/claude-code-project-scaffolding-guide-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Yjs CRDT — Workflow Guide"
+title: "Claude Code for Yjs CRDT"
 description: "Build collaborative apps with Yjs CRDT and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-yjs-crdt-workflow-guide/

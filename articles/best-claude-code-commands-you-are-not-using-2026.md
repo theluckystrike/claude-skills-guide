@@ -1,5 +1,5 @@
 ---
-title: "Best Claude Code Commands You're Missing (2026)"
+title: "Best Claude Code Commands You're"
 description: "10 Claude Code commands most developers overlook. From custom slash commands to built-in shortcuts, with examples showing what you are missing."
 permalink: /best-claude-code-commands-you-are-not-using-2026/
 last_tested: "2026-04-22"

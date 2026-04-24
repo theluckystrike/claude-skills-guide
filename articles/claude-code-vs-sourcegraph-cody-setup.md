@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Sourcegraph Cody: Setup and First Run"
+title: "Claude Code vs Sourcegraph Cody: Setup Comparison"
 description: "Compare initial setup of Claude Code and Sourcegraph Cody. Installation, authentication, codebase connection, and first query experience."
 date: 2026-04-21
 last_tested: "2026-04-21"
@@ -87,3 +87,7 @@ Cody with an existing Sourcegraph instance is significantly better for this scen
 ## When To Use Neither
 
 If your primary need is code search without AI generation (finding where something is defined, tracing dependencies, understanding call graphs), plain Sourcegraph search (without Cody's AI features) or GitHub's code search may be sufficient and free. Similarly, if you just need to read and understand local files, tools like `grep`, `ast-grep`, or your IDE's built-in search may be faster than invoking an AI for simple lookups.
+
+## See Also
+
+- [Claude Code vs Sourcegraph Cody: Codebase Search](/claude-code-vs-sourcegraph-cody-codebase-search/)

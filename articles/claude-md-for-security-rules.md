@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md for Security Rules — Prevent Vulnerabilities at Generation Time (2026)"
+title: "CLAUDE.md for Security Rules"
 description: "Encode security rules in CLAUDE.md to prevent Claude Code from generating SQL injection, XSS, insecure authentication, and other common vulnerabilities."
 permalink: /claude-md-security-rules/
 render_with_liquid: false

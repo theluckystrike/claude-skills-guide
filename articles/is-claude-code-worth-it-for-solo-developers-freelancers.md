@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Is Claude Code Worth It for Solo Developers? (2026)"
+title: "Is Claude Code Worth It for Solo"
 description: "Evaluate whether Claude Code is worth the cost for solo developers and freelancers. ROI analysis with real billing data and use case breakdown."
 date: 2026-03-14
 last_modified_at: 2026-04-17

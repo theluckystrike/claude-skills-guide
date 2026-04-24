@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "LaunchDarkly Gradual Rollout with Claude Code"
+title: "LaunchDarkly Gradual Rollout"
 description: "Set up gradual feature rollouts using LaunchDarkly and Claude Code. Covers percentage-based releases, targeting rules, monitoring, and flag cleanup."
 date: 2026-03-14
 last_modified_at: 2026-04-17

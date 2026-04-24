@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Medical Device IEC 62304 (2026)"
+title: "Claude Code for Medical Device IEC"
 permalink: /claude-code-medical-device-firmware-iec62304-2026/
 description: "Medical device firmware with Claude Code under IEC 62304. Risk-based testing, SOUP management, and Class C compliance."
 last_tested: "2026-04-22"

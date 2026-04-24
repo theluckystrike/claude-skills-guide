@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills for Real Estate Listing Platforms"
+title: "Claude Code Skills for Real Estate"
 description: "Practical Claude Code skills for building real estate listing platforms: property data management, map integrations, search filtering, and automated."
 date: 2026-03-14
 last_modified_at: 2026-04-17

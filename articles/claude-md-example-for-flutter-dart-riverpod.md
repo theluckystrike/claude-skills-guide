@@ -1,6 +1,6 @@
 ---
-title: "CLAUDE.md Example for Flutter + Dart + Riverpod — Production Template (2026)"
-description: "Complete 310-line CLAUDE.md for Flutter 3.27 with Riverpod 2.6. Covers provider patterns, freezed models, go_router navigation, and build_runner workflows. Tested on Dart 3.6."
+title: "CLAUDE.md Example for Flutter + Dart +"
+description: "Complete 310-line CLAUDE.md for Flutter 3.27 with Riverpod 2.6."
 permalink: /claude-md-example-for-flutter-dart-riverpod/
 render_with_liquid: false
 categories: [claude-md, templates, 2026]

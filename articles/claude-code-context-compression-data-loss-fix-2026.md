@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Context Compression Data Loss — Fix (2026)"
+title: "Claude Code Context Compression Data"
 permalink: /claude-code-context-compression-data-loss-fix-2026/
 description: "Re-read critical files after context compression warning appears. Store key decisions in CLAUDE.md so they persist across compression boundaries."
 last_tested: "2026-04-21"
@@ -52,3 +52,31 @@ Add to your CLAUDE.md:
 ```
 For multi-step tasks, record current progress and key decisions in CLAUDE.md after each major step. Keep sessions focused on single objectives. Start new sessions rather than extending conversations beyond 25-30 exchanges.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `ContextWindowExceeded: input exceeds maximum context length`
+- `Error: message content too large`
+- `TokenLimitExceeded: reduce input size`
+- `TokenLimitExceeded: max tokens reached`
+- `Error: output truncated at max_tokens`
+
+## Frequently Asked Questions
+
+### What is the context window limit?
+
+Claude's context window is 200,000 tokens. This includes system prompts, conversation history, file contents read during the session, and tool results. When the total exceeds this limit, Claude Code must compress or drop earlier context.
+
+### How does context compression work?
+
+When approaching the context limit, Claude Code summarizes earlier messages to free space for new content. This compression is lossy — specific code snippets and exact line numbers from early in the conversation may be approximated. Starting a fresh conversation avoids compression artifacts.
+
+### How do I work with large codebases without exceeding the context?
+
+Be specific about which files to read. Instead of asking Claude Code to 'understand the whole codebase,' point it to the specific files relevant to your task. Use the Glob and Grep tools to find relevant code before reading it.
+
+### What causes token count mismatches?
+
+Token counts are estimated before sending a request and precisely calculated on the server. The estimation uses a fast local tokenizer that may differ slightly from the server's tokenizer. Small discrepancies (1-3%) are normal and do not affect functionality.

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Automerge CRDT — Workflow Guide"
+title: "Claude Code for Automerge CRDT"
 description: "Build real-time collaboration with Automerge and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-automerge-crdt-workflow-guide/

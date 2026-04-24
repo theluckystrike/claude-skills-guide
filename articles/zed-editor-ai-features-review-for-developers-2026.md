@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Zed Editor Integration (2026)"
+title: "Claude Code + Zed Editor Integration"
 description: "Integrate Claude Code with Zed editor for fast AI-assisted coding. Setup instructions, keybindings, and workflow optimization tips. April 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -250,3 +250,7 @@ Zed's intelligent code completion goes beyond traditional autocomplete by analyz
 ### What is Example 2: AI-Driven Bug Detection?
 
 Zed's AI-driven bug detection identifies potential issues before runtime by analyzing code patterns. For example, it catches async functions without error handling for network failures, suggesting proper try/catch blocks with response.raise_for_status(), typed return values (Optional[UserData]), specific exception handling (aiohttp.ClientError), and structured error logging. It also spots unhandled promises, SQL injection vulnerabilities, memory leaks in async contexts, and type inconsistencies.
+
+## See Also
+
+- [Claude Code vs Zed AI: Terminal Agent vs Speed Editor (2026)](/claude-code-vs-zed-ai-editor-comparison-2026/)

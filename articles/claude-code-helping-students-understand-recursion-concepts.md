@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code: Helping Students Understand Recursion Concepts"
+title: "Claude Code for Teaching Recursion Concepts"
 description: "Discover how Claude Code can serve as an interactive teaching assistant to help students grasp recursion fundamentals through guided practice, visual."
 date: 2026-03-14
 last_modified_at: 2026-04-17

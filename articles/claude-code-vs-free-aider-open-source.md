@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs Aider: AI Agents Compared (2026)"
+title: "Claude Code vs Aider: Free Open Source Alternative"
 permalink: /claude-code-vs-free-aider-open-source/
 description: "Claude Code has skills and MCP integrations. Aider has multi-model support and auto-commits. Honest comparison for terminal-first developers in 2026."
 last_tested: "2026-04-21"
@@ -92,3 +92,7 @@ They solve different problems. Aider's repo map is auto-generated from your code
 ## When To Use Neither
 
 If your primary need is fast inline autocomplete while typing, both tools are wrong. Neither provides keystroke-level code completion in your editor. Use GitHub Copilot (free tier: 2K completions/mo) or Cursor for that use case. If you work exclusively in a browser-based IDE like Replit or Gitpod, neither terminal tool integrates with your environment -- use the built-in AI features of those platforms instead.
+
+## See Also
+
+- [Claude Code vs Aider: Cost Analysis for Open-Source Alternative](/claude-code-vs-aider-cost-analysis-open-source/)

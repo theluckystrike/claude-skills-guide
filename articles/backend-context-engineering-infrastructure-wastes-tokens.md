@@ -1,5 +1,5 @@
 ---
-title: "Backend Context Engineering: Stop Infrastructure Token Waste"
+title: "Backend Context Engineering"
 description: "Backend infrastructure decisions silently waste Claude Code tokens through verbose APIs, poor error messages, and missing metadata -- fix these patterns now."
 permalink: /backend-context-engineering-infrastructure-wastes-tokens/
 date: 2026-04-22
@@ -157,3 +157,4 @@ Backend context engineering represents the "supply side" of the context optimiza
 - [Context Engineering for Claude Code: Complete Guide](/context-engineering-claude-code-complete-guide-2026/) -- the full context engineering framework
 - [The Metadata-First Pattern](/metadata-first-pattern-npx-metadata-json/) -- structured metadata as an alternative to discovery queries
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- configuring MCP servers with minimal token overhead
+- [Karpathy Context Engineering + NASA P10: CCG Framework](/karpathy-context-engineering-nasa-p10-ccg-framework/)

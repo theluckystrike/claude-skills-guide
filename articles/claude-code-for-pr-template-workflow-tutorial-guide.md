@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Pr Template — Complete Developer Guide"
+title: "Claude Code For Pr Template"
 description: "Learn how to use Claude Code to create, manage, and automate PR template workflows for more efficient code reviews and better developer collaboration."
 date: 2026-03-15
 last_modified_at: 2026-04-17

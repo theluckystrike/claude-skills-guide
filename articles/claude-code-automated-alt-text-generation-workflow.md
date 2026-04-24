@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Automated Alt Text — Complete Developer Guide"
+title: "Claude Code Automated Alt Text"
 description: "Learn how to build automated alt text generation workflows with Claude Code. This guide covers image analysis skills, batch processing patterns, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19

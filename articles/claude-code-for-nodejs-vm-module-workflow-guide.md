@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Node.js VM Module — Complete Developer Guide"
+title: "Claude Code For Node.js VM Module"
 description: "Master Node.js vm module for code compilation and sandboxing with Claude Code. Learn practical workflows for secure code execution, template rendering."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -279,4 +279,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [ESM vs CJS Module Resolution Failure — Fix (2026)](/claude-code-esm-vs-cjs-module-resolution-fix-2026/)

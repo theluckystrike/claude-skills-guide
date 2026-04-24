@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Cost vs Manual Developer Time: Break-Even Calculator"
+title: "Claude Code Cost vs Manual Developer"
 description: "Calculate exactly when Claude Code costs less than manual development -- break-even analysis shows AI saves money at $50+/hour developer rates on most tasks."
 permalink: /claude-code-cost-vs-developer-time-break-even/
 date: 2026-04-22
@@ -164,3 +164,7 @@ Task: _______________
 - [Is Claude Code Worth $100/month?](/is-claude-code-worth-100-month-roi-calculator/) -- subscription-focused ROI analysis
 - [Claude Code Max Subscription vs API](/claude-code-max-vs-api-cheaper-2026-calculator/) -- choosing the right billing model
 - [How to Reduce Claude Code Token Usage by 3x](/reduce-claude-code-token-usage-3x-guide-2026/) -- maximize savings by minimizing waste
+
+## See Also
+
+- [The Claude Code Cost Spiral: Why Projects Get Expensive Over Time](/claude-code-cost-spiral-projects-expensive-over-time/)

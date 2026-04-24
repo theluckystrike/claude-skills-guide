@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Docker Dev Containers: Development Environments"
+title: "Claude Code vs Docker Dev Containers"
 description: "Comparing Claude Code's AI environment setup with Docker Dev Containers — reproducibility, speed, and when each approach fits your workflow."
 date: 2026-04-21
 permalink: /claude-code-vs-docker-dev-containers/
@@ -102,3 +102,8 @@ Document your current setup steps (every `brew install`, `apt-get`, `npm install
 ## When To Use Neither
 
 For projects that are a single static file (a script, a configuration, a Markdown document), neither Dev Containers nor Claude Code adds value for environment management. If your project has no dependencies and runs with a single system-installed interpreter, the environment is trivially simple and does not need management tools. Keep your tooling proportional to your project's complexity. A project with only a `package.json` and no native dependencies often works better with a simple `.nvmrc` file than a full container configuration.
+
+## See Also
+
+- [Claude Code for Colima Docker — Workflow Guide](/claude-code-for-colima-docker-workflow-guide/)
+- [Set Up Claude Code in Dev Containers 2026](/claude-code-dev-containers-setup-2026/)

@@ -1,5 +1,5 @@
 ---
-title: "Polyglot Claude Skills — Building Skills That Work Across TypeScript, Python, Rust, and Go — 2026"
+title: "Polyglot Claude Skills"
 description: "Design Claude Code skills that adapt to multiple programming languages using path-conditional activation, language-specific references, and runtime detection."
 permalink: /polyglot-claude-skills-multi-language/
 render_with_liquid: false

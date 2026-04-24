@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Data Science Analysis (2026)"
+title: "Claude Code for Data Science Analysis"
 description: "Data scientists use Claude Code for exploratory analysis, feature engineering, and visualization. Practical workflows with pandas, numpy, and sklearn."
 date: 2026-03-14
 last_modified_at: 2026-04-17

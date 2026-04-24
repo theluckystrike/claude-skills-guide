@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Basel III Risk Calculation (2026)"
+title: "Claude Code for Basel III Risk"
 permalink: /claude-code-basel-iii-risk-calculation-2026/
 description: "Implement Basel III risk calculations with Claude Code. Build CET1 capital ratio, credit risk RWA, and liquidity coverage ratio computations."
 last_tested: "2026-04-22"

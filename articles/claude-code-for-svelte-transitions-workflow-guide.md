@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Svelte Transitions Workflow Guide"
+title: "Claude Code for Svelte Transitions"
 description: "A practical guide to using Claude Code for building smooth Svelte transitions. Learn how to use AI assistance for creating fluid animations, page."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -281,4 +281,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Svelte 5 — Workflow Guide (2026)](/claude-code-for-svelte-5-workflow-guide/)

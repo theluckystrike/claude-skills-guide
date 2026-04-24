@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Canary vs Stable Speed: Which Version to Use?"
+title: "Chrome Canary vs Stable Speed"
 description: "Compare Chrome Canary vs Stable speed and performance. Learn which Chrome channel is best for developers and power users in 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17

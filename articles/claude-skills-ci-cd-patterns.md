@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills in CI/CD: Validation, Linting, and Automation Patterns — 2026"
+title: "Claude Skills in CI/CD"
 description: "How to validate SKILL.md files in CI pipelines, lint frontmatter, run skill-driven automation in GitHub Actions, and prevent broken skills from merging."
 permalink: /claude-skills-ci-cd-patterns/
 render_with_liquid: false

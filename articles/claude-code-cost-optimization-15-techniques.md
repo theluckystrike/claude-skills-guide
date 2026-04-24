@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Cost Optimization: 15 Techniques That Actually Work"
+title: "Claude Code Cost Optimization"
 description: "Cut Claude Code costs by 40-70% with 15 proven optimization techniques covering context management, model selection, and token-efficient workflows."
 permalink: /claude-code-cost-optimization-15-techniques/
 date: 2026-04-22
@@ -428,3 +428,8 @@ Running this script takes 30 seconds and captures the majority of savings availa
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- deep dive on context compression
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- understanding the token lifecycle
 - [Cost Optimization Hub](/cost-optimization/) -- all cost guides in one place
+
+## See Also
+
+- [Claude Code Cost Optimization Hub](/cost-optimization-hub/)
+- [Firebase + Claude Code: Cost Optimization Guide](/firebase-claude-code-cost-optimization-guide/)

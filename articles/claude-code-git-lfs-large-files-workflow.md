@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Git Lfs Large Files — Complete Developer Guide"
+title: "Claude Code Git Lfs Large Files"
 description: "A practical workflow for handling large binary files with Git LFS while using Claude Code for development. Includes configuration tips and common pitfalls."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -490,4 +490,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code git diff too large -- reducing context size](/claude-code-git-diff-too-large-reducing-context/)

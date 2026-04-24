@@ -1,5 +1,5 @@
 ---
-title: "Make Claude Code Write Documentation (2026)"
+title: "Make Claude Code Write Documentation"
 description: "Make Claude Code generate JSDoc, README sections, and inline documentation by adding documentation requirements to CLAUDE.md."
 permalink: /claude-code-doesnt-write-docs-fix-2026/
 last_tested: "2026-04-22"
@@ -116,3 +116,10 @@ Add ESLint rules enforcing JSDoc on exports:
 The [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) index includes documentation-generation skills that work alongside Claude Code.
 
 For documentation as part of your workflow, see [The Claude Code Playbook](/playbook/). For enforcing documentation via hooks, read the [hooks guide](/understanding-claude-code-hooks-system-complete-guide/). For team-wide documentation standards, check the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).
+
+## See Also
+
+- [Fix Claude Code Not Understanding Codebase (2026)](/claude-code-doesnt-understand-codebase-fix-2026/)
+- [Make Claude Code Explain Its Changes (2026)](/claude-code-doesnt-explain-changes-fix-2026/)
+- [Make Claude Code Read Existing Code First (2026)](/claude-code-doesnt-read-existing-code-fix-2026/)
+- [Make Claude Code Follow DRY Principle (2026)](/claude-code-doesnt-follow-dry-principle-fix-2026/)

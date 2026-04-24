@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Cold Fusion Modernization Workflow Guide"
+title: "Claude Code Cold Fusion Modernization"
 description: "A comprehensive guide to modernizing legacy ColdFusion applications using Claude Code skills, automated refactoring, and intelligent code analysis."
 date: 2026-03-14
 last_modified_at: 2026-04-17

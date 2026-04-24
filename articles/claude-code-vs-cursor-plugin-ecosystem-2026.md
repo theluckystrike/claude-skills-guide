@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs Cursor: Plugin Ecosystems (2026)"
+title: "Claude Code vs Cursor: Plugin Ecosystems Compared (2026)"
 description: "Compare Claude Code and Cursor plugin ecosystems across skills, extensions, MCP support, customization, and community size in 2026."
 permalink: /claude-code-vs-cursor-plugin-ecosystem-2026/
 last_tested: "2026-04-22"
@@ -132,3 +132,12 @@ Cursor has a flat subscription ($20/month Pro). Claude Code charges per API toke
 MCP is an open standard that both support. As MCP matures, the server ecosystem will be shared. Behavioral configuration (CLAUDE.md vs .cursorrules) remains tool-specific.
 
 For more on the Claude Code ecosystem, see our [tools map](/claude-code-ecosystem-complete-map-2026/). For plugin installation details, read the [plugin marketplace guide](/claude-code-plugin-marketplace-guide-2026/). For CLAUDE.md setup, see the [best practices guide](/claude-md-best-practices-10-templates-compared-2026/).
+
+## See Also
+
+- [Claude Code vs Cursor: Multi-File Editing in 2026](/claude-code-vs-cursor-multi-file-editing-2026/)
+- [Claude Code vs Cursor: Autocomplete and Code Completion](/claude-code-vs-cursor-autocomplete-comparison/)
+- [Claude Projects vs Cursor Composer: Project Context Compared](/claude-projects-vs-cursor-composer-comparison/)
+- [Claude Code vs Cursor Tab (2026): Autocomplete](/claude-code-vs-cursor-tab-autocomplete-2026/)
+- [Claude Code vs Cursor: Setup and First Experience Compared](/claude-code-vs-cursor-setup-first-experience/)
+- [Claude Code vs Codestory Aide (2026): Comparison](/claude-code-vs-codestory-aide-comparison-2026/)

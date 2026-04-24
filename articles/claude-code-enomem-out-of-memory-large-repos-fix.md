@@ -1,5 +1,5 @@
 ---
-title: "Claude Code ENOMEM Out of Memory Large Repos — Fix (2026)"
+title: "Claude Code ENOMEM Out of Memory Large"
 description: "Fix Claude Code ENOMEM out of memory on large repos. Increase Node.js heap and exclude heavy directories. Step-by-step solution."
 permalink: /claude-code-enomem-out-of-memory-large-repos-fix/
 last_tested: "2026-04-21"
@@ -73,3 +73,7 @@ Always create a .claudeignore excluding node_modules, .git/objects, dist, build,
 ```
 
 **Related articles:** [Claude Code Out of Memory Fix](/claude-code-error-out-of-memory-large-codebase-fix/), [Claude Code Slow Response Fix](/claude-code-slow-response-fix/), [Claude Code Not Responding Fix](/claude-code-not-responding-terminal-hangs-fix/)
+
+## See Also
+
+- [Claude Code pnpm Lock File Out of Sync — Fix (2026)](/claude-code-pnpm-lock-file-out-of-sync-fix/)

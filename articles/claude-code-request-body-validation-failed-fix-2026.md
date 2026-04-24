@@ -1,5 +1,5 @@
 ---
-title: "Request Body Validation Failed — Fix (2026)"
+title: "Request Body Validation Failed — Fix"
 permalink: /claude-code-request-body-validation-failed-fix-2026/
 description: "Fix 'request body validation failed' error. Check JSON structure, required fields, and type mismatches in your API call."
 last_tested: "2026-04-22"

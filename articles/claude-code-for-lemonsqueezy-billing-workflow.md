@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Lemonsqueezy — Complete Developer Guide"
+title: "Claude Code For Lemonsqueezy"
 description: "Learn how to use Claude Code to build, automate, and optimize LemonSqueezy billing workflows. Includes practical examples, code snippets, and actionable."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -254,4 +254,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Organization Billing Suspended Error — Fix (2026)](/claude-code-organization-billing-suspended-fix-2026/)

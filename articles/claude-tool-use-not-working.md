@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Tool Use Not Working — Quick Guide (2026)"
+title: "Fix Claude Tool Use Not Working"
 description: "Fix Claude tool use errors. Covers tool definition validation, tool_choice settings, strict mode, stop_reason handling, and multi-turn tool loops."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -255,3 +255,6 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 ## Related Articles
 
 - [Fix Claude Code Skill Tool Not Found Error — Quick Guide](/claude-code-skill-tool-not-found-error-solution/)
+- [Claude Tool Use Hidden Token Costs Explained](/01-claude-tool-use-hidden-token-costs/)
+- [Tool Use Schema Validation Error — Fix (2026)](/claude-code-tool-use-schema-validation-error-fix-2026/)
+- [Claude tool_use Response Parsing Error — Fix (2026)](/claude-tool-use-response-parsing-error-fix/)

@@ -1,5 +1,5 @@
 ---
-title: "TypeScript Strict Mode Breaks Claude Generated Code — Fix (2026)"
+title: "TypeScript Strict Mode Breaks Claude"
 description: "Fix TypeScript strict mode breaking Claude-generated code. Add null checks and explicit types to generated output. Step-by-step solution."
 permalink: /claude-code-typescript-strict-mode-breaks-generated-code-fix/
 last_tested: "2026-04-21"
@@ -76,3 +76,7 @@ This project uses TypeScript strict mode. All generated code MUST pass `npx tsc 
 ```
 
 **Related articles:** [TypeScript Strict Mode Errors Fix](/claude-code-typescript-strict-mode-errors-fix/), [Claude Code API Error Handling](/claude-code-api-error-handling-standards/), [Debugging Skills](/claude-code-debugging-skill/)
+
+## See Also
+
+- [TypeScript Strict Null Checks in Generated Code — Fix (2026)](/claude-code-typescript-strict-null-checks-generated-fix-2026/)

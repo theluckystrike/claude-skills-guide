@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Sigma Rules Detection (2026)"
+title: "Claude Code for Sigma Rules Detection"
 description: "Create, test, and deploy Sigma detection rules with Claude Code. Automate threat detection workflows for SOC analysts and security engineering teams."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -200,6 +200,6 @@ Related Reading
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
 
+## See Also
 
-
-
+- [MITM Proxy Detection Error — Fix (2026)](/claude-code-mitm-proxy-detection-error-fix-2026/)

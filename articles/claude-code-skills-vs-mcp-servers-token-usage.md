@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Skills vs MCP Servers: Which Uses Fewer Tokens?"
+title: "Claude Code Skills vs MCP Servers"
 description: "Skills use 60-80% fewer tokens than MCP servers for common Claude Code tasks. Compare overhead, latency, and cost to pick the right tool."
 permalink: /claude-code-skills-vs-mcp-servers-token-usage/
 date: 2026-04-22
@@ -327,3 +327,8 @@ The migration took 3 hours. The savings recur every month indefinitely.
 - [Claude Code Skills Guide](/skills/) -- full reference for creating and managing skills
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- MCP installation and configuration
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- broader context optimization strategies
+
+## See Also
+
+- [InsForge Setup Guide for Claude Code: Skills + CLI + MCP](/insforge-setup-guide-claude-code-skills-cli-mcp/)
+- [Claude Code Permission Modes: How They Affect Token Usage](/claude-code-permission-modes-affect-token-usage/)

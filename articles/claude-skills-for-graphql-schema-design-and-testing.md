@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for GraphQL Schema Design and Testing"
+title: "Claude Skills for GraphQL Schema Design"
 description: "Practical guide using Claude skills for GraphQL schema design, testing, and validation. AI-assisted workflows for building reliable GraphQL APIs."
 date: 2026-03-14
 last_modified_at: 2026-04-17

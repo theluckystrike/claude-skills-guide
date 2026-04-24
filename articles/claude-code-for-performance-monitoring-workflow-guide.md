@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Performance Monitoring Workflow (2026)"
+title: "Claude Code Performance Monitoring"
 description: "Set up performance monitoring with Claude Code for metrics collection, alerting, and dashboard creation. Catch regressions before users notice them."
 date: 2026-03-15
 last_modified_at: 2026-04-17

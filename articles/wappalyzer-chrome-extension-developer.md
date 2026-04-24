@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Wappalyzer Chrome Extension Developer Guide"
+title: "Wappalyzer Chrome Extension"
 description: "A practical guide for developers on using Wappalyzer Chrome extension. Learn how to detect web technologies, analyze competitors, and integrate."
 date: 2026-03-15
 last_modified_at: 2026-04-17

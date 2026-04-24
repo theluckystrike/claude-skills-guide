@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Delphi to C# Migration (2026)"
+title: "Claude Code for Delphi to C# Migration"
 description: "Delphi to C# conversion with Claude Code. Migrate Object Pascal forms, units, and database code to .NET 8."
 permalink: /claude-code-delphi-to-csharp-migration-2026/
 last_tested: "2026-04-21"

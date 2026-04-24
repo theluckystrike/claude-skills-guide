@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Coding Tools For Performance — Developer Guide"
+title: "AI Coding Tools For Performance"
 description: "Discover how AI coding tools can help you identify bottlenecks, optimize algorithms, and write faster code. Real examples using Claude skills and other."
 date: 2026-03-14
 last_modified_at: 2026-04-17

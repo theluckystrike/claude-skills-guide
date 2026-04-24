@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Prisma Migration Failures with Claude Code (2026)"
+title: "Fix Prisma Migration Failures"
 description: "Resolve Prisma migration errors using Claude Code. Fix drift detection, failed migrations, data loss warnings, and production rollback scenarios."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -287,4 +287,7 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Claude Code Database Test Fixtures Guide](/claude-code-database-test-fixtures-guide/)
 - [Claude Code Testcontainers Integration Testing](/claude-code-testcontainers-integration-testing/)
 
+## See Also
 
+- [Request Body Validation Failed — Fix (2026)](/claude-code-request-body-validation-failed-fix-2026/)
+- [Prisma Generate Failure After Schema Change — Fix (2026)](/claude-code-prisma-generate-failure-fix-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Prompt Manager Chrome Extension: Optimize Workflows"
+title: "AI Prompt Manager Chrome Extension"
 description: "Learn how to use an AI prompt manager Chrome extension to organize, categorize, and quickly access your best prompts across different AI tools and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

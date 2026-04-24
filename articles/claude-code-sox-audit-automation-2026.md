@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for SOX Audit Automation (2026)"
+title: "Claude Code for SOX Audit Automation"
 permalink: /claude-code-sox-audit-automation-2026/
 description: "Automate Sarbanes-Oxley IT audit evidence with Claude Code. Generate SOX Section 404 control matrices and change management documentation."
 last_tested: "2026-04-22"

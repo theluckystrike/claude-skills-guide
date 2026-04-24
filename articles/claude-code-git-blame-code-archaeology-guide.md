@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Git Blame Archaeology Guide (2026)"
+title: "Claude Code Git Blame Archaeology Guide"
 description: "Trace code history with git blame and Claude Code for ownership tracking, legacy code analysis, and understanding why decisions were made. Workflow tips."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -191,4 +191,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Shallow Clone Missing History for Blame Fix](/claude-code-shallow-clone-missing-history-blame-fix-2026/)

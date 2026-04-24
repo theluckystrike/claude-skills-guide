@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Fish Shell — Workflow Guide"
+title: "Claude Code for Fish Shell"
 description: "Run Claude Code in Fish shell with proper syntax. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-fish-shell-workflow-guide/
@@ -86,3 +86,4 @@ Claude Code should use `fish_add_path ./node_modules/.bin`, `abbr -a nr 'npm run
 - [Claude Code for Quantization with bitsandbytes Workflow](/claude-code-for-quantization-with-bitsandbytes-workflow/)
 - [Claude Code for Flux Bootstrap Workflow Tutorial](/claude-code-for-flux-bootstrap-workflow-tutorial/)
 - [Claude Code for Homebrew Bundle Workflow Tutorial](/claude-code-for-homebrew-bundle-workflow-tutorial/)
+- [Shell RC File Not Sourced Error — Fix (2026)](/claude-code-shell-rc-not-sourced-fix-2026/)

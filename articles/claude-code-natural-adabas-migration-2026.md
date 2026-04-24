@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Natural/ADABAS Migration (2026)"
+title: "Claude Code for Natural/ADABAS"
 permalink: /claude-code-natural-adabas-migration-2026/
 description: "Migrate Software AG Natural/ADABAS applications to modern stacks with Claude Code. Convert Natural programs, maps, and ADABAS DDMs."
 last_tested: "2026-04-22"
@@ -264,3 +264,4 @@ psql -d migrated_db -c "
 - [Claude Code for COBOL to Java Migration](/claude-code-cobol-to-java-migration-2026/)
 - [Claude Code for Mainframe REXX Modernization](/claude-code-mainframe-rexx-modernization-2026/)
 - [Claude Code for RPG AS/400 Modernization](/claude-code-rpg-as400-modernization-2026/)
+- [Claude Code for Lotus Notes Web Migration (2026)](/claude-code-lotus-notes-web-migration-2026/)

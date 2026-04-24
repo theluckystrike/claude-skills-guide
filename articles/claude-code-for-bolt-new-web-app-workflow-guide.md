@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code with Bolt.new: Web App Workflow (2026)"
+title: "Claude Code with Bolt.new"
 description: "Integrate Claude Code into your Bolt.new web app workflow for faster prototyping. Covers project scaffolding, component generation, and deployment."
 date: 2026-04-19
 last_modified_at: 2026-04-19

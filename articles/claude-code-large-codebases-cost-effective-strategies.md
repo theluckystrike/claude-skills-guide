@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Large Codebases: Cost-Effective Strategies"
+title: "Claude Code for Large Codebases"
 description: "Large codebases push Claude Code sessions past 200K tokens fast. These strategies cut exploration costs by 50-70% with structured context and targeted scoping."
 permalink: /claude-code-large-codebases-cost-effective-strategies/
 date: 2026-04-22
@@ -307,3 +307,9 @@ The combination of architecture maps, .claudeignore, task scoping, /compact, and
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- full guide to context optimization
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- detailed /compact usage
 - [Claude Code Subagent Management](/claude-code-multi-agent-subagent-communication-guide/) -- split large tasks across subagents for parallelism
+
+## See Also
+
+- [Large File Committed Exceeds GitHub Limit Fix](/claude-code-large-file-committed-github-limit-fix-2026/)
+- [Large File Read Memory Spike Fix](/claude-code-large-file-read-memory-spike-fix-2026/)
+- [Claude Code and large package.json — unnecessary context loading](/claude-code-large-package-json-unnecessary-context/)

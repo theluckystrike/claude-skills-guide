@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Climate Model Data Processing (2026)"
+title: "Claude Code for Climate Model Data"
 description: "Climate model NetCDF/HDF5 processing with Claude Code. Extract, regrid, and analyze CMIP6 data programmatically."
 permalink: /claude-code-climate-model-netcdf-processing-2026/
 last_tested: "2026-04-21"
@@ -213,3 +213,5 @@ ncdump -h output/tas_europe_ensemble.nc | head -20
 - [Claude Code for Computational Biology](/claude-skills-for-computational-biology-bioinformatics/)
 - [Claude Code for Molecular Dynamics](/claude-code-molecular-dynamics-gromacs-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for Satellite Telemetry (2026)](/claude-code-satellite-telemetry-processing-2026/)
+- [Claude Code for Sonar Array Processing (2026)](/claude-code-sonar-array-processing-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build WebSocket Apps with Claude Code Skills (2026)"
+title: "Build WebSocket Apps with Claude Code"
 description: "Build real-time WebSocket applications using Claude Code skills. Covers connection management, event handling, reconnection logic, and scaling patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

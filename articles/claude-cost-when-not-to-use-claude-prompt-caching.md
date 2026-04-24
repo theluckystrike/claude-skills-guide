@@ -136,3 +136,8 @@ If you suspect caching is costing you money:
 - [Claude Prompt Caching Pricing and Cost Savings](/claude-prompt-caching-pricing-and-cost-savings/)
 - [Claude API Prompt Caching Performance Optimization](/claude-api-prompt-caching-performance-optimization-guide/)
 - [Claude Code for Varnish Cache Workflow](/claude-code-for-varnish-cache-workflow-tutorial/)
+
+## See Also
+
+- [Prompt Caching Break-Even Calculator for Claude](/claude-cost-prompt-caching-break-even-calculator-claude/)
+- [When to Use Claude Batch vs Real-Time API](/claude-cost-when-to-use-claude-batch-vs-real-time-api/)

@@ -1,7 +1,8 @@
 ---
+render_with_liquid: false
 
 layout: default
-title: "Build SvelteKit Apps with Claude Code (2026)"
+title: "Build SvelteKit Apps with Claude Code"
 description: "Build full-stack SvelteKit applications faster with Claude Code. Covers server routes, form actions, load functions, and deployment configuration."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -610,4 +611,8 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for ROS2 Nav2 Stack Development (2026)](/claude-code-ros2-navigation-stack-2026/)
+- [Disk Space Full During Operation Fix](/claude-code-disk-space-full-during-operation-fix-2026/)
+- [Claude Code ENOSPC Disk Full Error — Fix (2026)](/claude-code-enospc-disk-full-fix/)

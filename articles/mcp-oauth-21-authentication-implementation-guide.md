@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "MCP OAuth 2.1 Authentication Implementation Guide"
+title: "MCP OAuth 2.1 Authentication"
 description: "A practical guide to implementing OAuth 2.1 authentication for Model Context Protocol servers. Code examples, security patterns, and integration tips."
 date: 2026-03-14
 last_modified_at: 2026-04-17

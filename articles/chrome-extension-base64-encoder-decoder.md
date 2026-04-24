@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Base64 Encoder Decoder Chrome Extension Guide (2026)"
+title: "Base64 Encoder Decoder Chrome Extension"
 description: "Learn how to build and use Chrome extensions for Base64 encoding and decoding. Includes code examples, implementation patterns, and practical use cases."
 date: 2026-03-15
 last_modified_at: 2026-04-17

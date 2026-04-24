@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs Gemini CLI: Full Comparison (2026)"
+title: "Claude Code vs Gemini CLI"
 permalink: /claude-code-vs-gemini-cli-for-developers-2026/
 description: "Claude Code delivers autonomous multi-step coding execution. Gemini CLI offers 1M token context and Google Cloud integration. Comparison for developers."
 last_tested: "2026-04-21"
@@ -83,3 +83,6 @@ Claude Code is the stronger autonomous coding agent — more reliable multi-step
 ## Related
 
 - [Claude Code vs Cursor comparison](/claude-code-vs-cursor-definitive-comparison-2026/) — Definitive Claude Code vs Cursor comparison for 2026
+- [Claude Code vs Phind (2026): AI Search for Devs](/claude-code-vs-phind-ai-search-developers-2026/)
+- [Claude Code vs Pieces for Developers (2026)](/claude-code-vs-pieces-for-developers-2026/)
+- [Claude Code for GitLab CLI glab — Guide](/claude-code-for-gitlab-cli-glab-workflow-guide/)

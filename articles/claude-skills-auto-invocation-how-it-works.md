@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Auto Invocation: How It Works (2026)"
+title: "Claude Skills Auto Invocation"
 description: "Trigger Claude skills automatically using TRIGGER conditions and keyword detection. Learn when auto-invocation beats explicit slash command invocation."
 date: 2026-03-13
 last_modified_at: 2026-04-17

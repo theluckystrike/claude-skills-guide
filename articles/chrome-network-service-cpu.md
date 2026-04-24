@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Network Service Cpu — Developer Guide"
+title: "Chrome Network Service Cpu"
 description: "Troubleshoot Chrome network service CPU spikes. Learn why Chrome uses high CPU for network tasks and fix performance issues with practical solutions."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Monitoring and Logging in Claude Code Multi-Agent Systems"
+title: "Monitoring and Logging in Claude Code"
 description: "Implement effective monitoring and logging for Claude Code multi-agent setups. Learn observability patterns, structured logging, and debugging strategies."
 date: 2026-03-14
 last_modified_at: 2026-04-17

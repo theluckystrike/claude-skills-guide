@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Setup Claude Code Project: Best Practices (2026)"
+title: "Setup Claude Code Project"
 description: "Initialize Claude Code projects with CLAUDE.md config, skill loading, and project structure setup. Production-ready patterns for new codebases."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -228,4 +228,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Project Scaffolding with Claude Code (2026)](/claude-code-project-scaffolding-guide-2026/)
+- [Claude Code Project vs Global Settings: Token Impact](/claude-code-project-vs-global-settings-token-impact/)

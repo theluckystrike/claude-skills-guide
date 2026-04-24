@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome vs Firefox Memory — Developer Comparison 2026"
+title: "Chrome vs Firefox Memory"
 description: "Compare Chrome and Firefox memory consumption in 2026. Learn practical techniques to reduce memory usage, optimize browser performance, and choose the."
 date: 2026-03-15
 last_modified_at: 2026-04-17

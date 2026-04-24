@@ -1,5 +1,5 @@
 ---
-title: "Claude Code MCP Server Token Usage: How to Measure and Reduce"
+title: "Claude Code MCP Server Token Usage"
 description: "MCP servers add 500-2,000 tokens per tool definition to every Claude Code session. Measure your overhead and apply these techniques to cut it by 50-70%."
 permalink: /claude-code-mcp-server-token-usage-measure-reduce/
 date: 2026-04-22
@@ -343,3 +343,9 @@ The weekly report surfaces trends: if MCP overhead is growing (more tools being 
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- MCP configuration reference
 - [Building Token-Efficient MCP Servers for Claude Code](/building-token-efficient-mcp-servers-claude-code/) -- design servers with minimal overhead
 - [CLI vs MCP for Agent Operations: Token Cost Comparison](/cli-vs-mcp-agent-operations-token-cost/) -- when to choose CLI over MCP
+
+## See Also
+
+- [MCP Server stdio Timeout 30000ms — Fix (2026)](/claude-code-mcp-server-stdio-timeout-fix-2026/)
+- [Claude Code Skills vs MCP Servers: Which Uses Fewer Tokens?](/claude-code-skills-vs-mcp-servers-token-usage/)
+- [Claude Code MCP tools loading slowly — token cost impact](/claude-code-mcp-tools-loading-slowly-token-cost/)

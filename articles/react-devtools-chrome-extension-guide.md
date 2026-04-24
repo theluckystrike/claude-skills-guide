@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "React Devtools Chrome Extension — Complete Developer Guide"
+title: "React Devtools Chrome Extension"
 description: "A practical guide to using React DevTools Chrome extension for debugging React applications. Learn component inspection, profiling, and advanced."
 date: 2026-03-15
 last_modified_at: 2026-04-17

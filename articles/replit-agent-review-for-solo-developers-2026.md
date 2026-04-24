@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Replit Agent Review for Solo Developers 2026"
+title: "Replit Agent Review for Solo Developers"
 description: "A comprehensive review of Replit Agent for solo developers in 2026, comparing its capabilities with Claude Code and exploring the best AI coding tools."
 date: 2026-03-14
 last_modified_at: 2026-04-17

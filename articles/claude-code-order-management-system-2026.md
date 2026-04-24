@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Order Management Systems (2026)"
+title: "Claude Code for Order Management"
 permalink: /claude-code-order-management-system-2026/
 description: "Order management system development with Claude Code. Build OMS with smart routing, compliance checks, and audit trails."
 last_tested: "2026-04-22"
@@ -366,3 +366,4 @@ print('OMS state machine: PASS')
 - [Claude Code for FIX Protocol Message Handling](/claude-code-fix-protocol-message-handling-2026/)
 - [Claude Code for Trading System Backtesting](/claude-code-trading-system-backtesting-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for Ada Legacy System Updates (2026)](/claude-code-ada-legacy-system-updates-2026/)

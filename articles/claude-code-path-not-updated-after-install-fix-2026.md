@@ -1,5 +1,5 @@
 ---
-title: "PATH Not Updated After Install — Fix (2026)"
+title: "PATH Not Updated After Install — Fix"
 permalink: /claude-code-path-not-updated-after-install-fix-2026/
 description: "Fix PATH not updated after Claude Code install. Source your shell rc file or open a new terminal to pick up PATH changes."
 last_tested: "2026-04-22"
@@ -77,3 +77,9 @@ Add this to your `CLAUDE.md`:
 - Keep PATH modifications in one file only (.zshrc for zsh, .bashrc for bash).
 - Test with: which claude — after any installation step.
 ```
+
+## See Also
+
+- [Push Rejected After Claude Rebase Fix](/claude-code-push-rejected-after-rebase-fix-2026/)
+- [Detached HEAD After Claude Checkout Fix](/claude-code-detached-head-after-checkout-fix-2026/)
+- [claude: command not found After Install — Fix (2026)](/claude-code-binary-not-found-after-install-fix-2026/)

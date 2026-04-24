@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Suggesting Wrong Framework (2026)"
+title: "Fix Claude Code Suggesting Wrong"
 description: "Stop Claude Code from suggesting Express when you use Fastify, or React when you use Vue, by pinning frameworks in CLAUDE.md."
 permalink: /claude-code-keeps-suggesting-wrong-framework-2026/
 last_tested: "2026-04-22"
@@ -100,3 +100,7 @@ npx claude-code-templates@latest
 Select your framework from the menu to get a pre-built configuration block.
 
 For more on structuring your CLAUDE.md, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). If you want Claude Code to automatically validate framework usage, explore [hooks](/understanding-claude-code-hooks-system-complete-guide/) that can lint generated code against your stack.
+
+## See Also
+
+- [Fix Claude Code Misunderstanding Requirements (2026)](/claude-code-misunderstands-requirements-fix-2026/)

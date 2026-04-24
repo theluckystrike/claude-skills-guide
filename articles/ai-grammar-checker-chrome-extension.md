@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Grammar Checker Chrome Extension Guide (2026)"
+title: "AI Grammar Checker Chrome Extension"
 description: "Learn how AI grammar checker Chrome extensions work under the hood, how to build one, and which APIs power real-time writing assistance."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Automatically Delete Cookies in Chrome"
+title: "How to Automatically Delete Cookies"
 description: "Learn multiple methods to automatically delete cookies in Chrome, from built-in settings to advanced automation scripts for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

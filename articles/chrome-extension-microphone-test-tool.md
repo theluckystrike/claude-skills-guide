@@ -1,7 +1,8 @@
 ---
+render_with_liquid: false
 
 layout: default
-title: "Chrome Extension Microphone Test Tool: Developer Guide"
+title: "Chrome Extension Microphone Test Tool"
 description: "Learn how to build and implement microphone test tools for Chrome extensions. Complete guide covering getUserMedia API, permission handling, and audio."
 date: 2026-03-15
 last_modified_at: 2026-04-17

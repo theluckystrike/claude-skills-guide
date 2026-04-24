@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Loom — Developer Comparison 2026"
+title: "Chrome Extension Loom"
 description: "Discover free Chrome extensions that replace Loom for screen recording. Compare features, self-hosted options, and developer-friendly alternatives."
 date: 2026-03-15
 last_modified_at: 2026-04-17

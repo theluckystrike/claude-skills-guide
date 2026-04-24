@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Git Rebase Interactive Workflow (2026)"
+title: "Claude Code Git Rebase Interactive"
 description: "Master git rebase interactive workflows with Claude Code. Practical examples and automation patterns for developers. Tested and working in 2026."
 last_tested: "2026-04-22"
 date: 2026-03-14
@@ -452,4 +452,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Interactive Rebase Unsupported Error Fix](/claude-code-interactive-rebase-unsupported-fix-2026/)

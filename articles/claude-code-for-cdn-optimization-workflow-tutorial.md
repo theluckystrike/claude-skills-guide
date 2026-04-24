@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code CDN Optimization Workflow (2026)"
+title: "Claude Code CDN Optimization Workflow"
 description: "Optimize CDN performance with Claude Code for cache headers, asset compression, edge rules, and origin shield configuration. Improve TTFB by 40%."
 date: 2026-03-15
 last_modified_at: 2026-04-17

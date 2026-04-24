@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Too Long? How to Split and Optimize for Context Window (2026)"
+title: "CLAUDE.md Too Long? How to Split"
 description: "Fix CLAUDE.md files that exceed 200 lines by splitting into imports, rules directories, and skills. Step-by-step optimization with before/after examples."
 permalink: /claude-md-too-long-fix/
 render_with_liquid: false

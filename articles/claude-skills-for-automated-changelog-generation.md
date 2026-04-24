@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Automated Changelog Generation"
+title: "Claude Skills for Automated Changelog"
 description: "Build automated changelog generation workflows using Claude skills. Practical examples and code snippets for developers automating release notes."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -255,4 +255,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Skills for SEO Content Generation — Automate Keyword Clustering, Meta Tags, and Internal Linking — 2026](/claude-skills-for-seo-content-generation/)

@@ -1,5 +1,5 @@
 ---
-title: "How to Share Claude Code Skills Across Your Engineering Team — 2026"
+title: "How to Share Claude Code Skills Across"
 description: "Three methods to distribute SKILL.md files to teammates: project-level git, plugin packaging, and enterprise managed settings with precedence rules."
 permalink: /how-to-share-claude-skills-with-team/
 render_with_liquid: false

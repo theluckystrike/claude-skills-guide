@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix Chrome Profile Too Large When Running Claude Code (2026)"
+title: "Fix Chrome Profile Too Large When"
 description: "Chrome profile eating gigabytes while running Claude Code? Shrink it with step-by-step commands. Reclaim disk space for AI coding workflows and stop it..."
 date: 2026-03-15
 last_modified_at: 2026-04-21

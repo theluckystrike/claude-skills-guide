@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Dropbox Quick Share Chrome Extension Guide (2026)"
+title: "Dropbox Quick Share Chrome Extension"
 description: "Learn how to build and use Chrome extensions for quick Dropbox file sharing. Practical code examples, API integration, and best practices for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Memory Saver Mode: Reducing Browser Memory (2026)"
+title: "Chrome Memory Saver Mode"
 last_tested: "2026-04-22"
 description: "Learn how Chrome's Memory Saver mode works, how to enable it programmatically, and practical tips for developers managing multiple browser tabs and."
 date: 2026-03-15

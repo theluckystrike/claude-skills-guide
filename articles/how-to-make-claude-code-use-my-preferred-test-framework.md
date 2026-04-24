@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How To Make Claude Code Use My — Complete Developer Guide"
+title: "How To Make Claude Code Use My"
 description: "Learn how to configure Claude Code to use your preferred testing framework with practical examples and custom skill configurations."
 date: 2026-03-14
 last_modified_at: 2026-04-17

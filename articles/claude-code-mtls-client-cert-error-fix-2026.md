@@ -1,5 +1,5 @@
 ---
-title: "mTLS Client Certificate Error — Fix (2026)"
+title: "mTLS Client Certificate Error — Fix"
 permalink: /claude-code-mtls-client-cert-error-fix-2026/
 description: "Fix mTLS client certificate required error. Configure Node.js with client cert and key for mutual TLS authentication."
 last_tested: "2026-04-22"

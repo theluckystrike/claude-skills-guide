@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Val Town — Workflow Guide"
+title: "Claude Code for Val Town"
 description: "Write and deploy serverless vals with Val Town and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-val-town-workflow-guide/

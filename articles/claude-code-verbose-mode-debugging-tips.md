@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Verbose Output — Debugging Guide (2026)"
+title: "Claude Code Verbose Output"
 description: "Use Claude Code verbose mode to trace tool execution and diagnose skill issues. Debug tips and output interpretation explained."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -373,7 +373,4 @@ Related Reading
 - [Troubleshooting Hub](/troubleshooting-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
-
-
+- [Claude Code Verbose Mode: Debug Output Guide 2026](/claude-code-verbose-mode-debug-output-2026/)

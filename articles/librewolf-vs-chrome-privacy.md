@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Librewolf vs Chrome Privacy — Developer Comparison 2026"
+title: "Librewolf vs Chrome Privacy"
 description: "A technical comparison of Librewolf and Chrome privacy features. Learn about hardening techniques, fingerprinting defense, data collection differences."
 date: 2026-03-15
 last_modified_at: 2026-04-17

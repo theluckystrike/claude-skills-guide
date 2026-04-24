@@ -66,3 +66,31 @@ xattr -l $(which claude)
 # CLAUDE.md rule
 After installing Claude Code on macOS, run 'xattr -d com.apple.quarantine $(which claude)' to remove Gatekeeper restrictions. Or install via Homebrew which handles code signing automatically.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `npm ERR! code EACCES`
+- `npm ERR! code ERESOLVE`
+- `npm ERR! peer dep missing`
+- `'claude' cannot be opened because it is from an unidentified developer`
+- `macOS blocked the app from running`
+
+## Frequently Asked Questions
+
+### Should I use npm or pnpm with Claude Code?
+
+Claude Code works with any Node.js package manager. If your project uses pnpm, add `Use pnpm instead of npm for all package operations` to your CLAUDE.md so Claude Code respects your toolchain choice.
+
+### Why does Claude Code sometimes run npm commands that fail?
+
+Claude Code infers the package manager from lock files. If both `package-lock.json` and `pnpm-lock.yaml` exist, it may pick the wrong one. Delete the unused lock file or add an explicit instruction in CLAUDE.md.
+
+### How do I verify my npm installation is working?
+
+Run `npm doctor` to check your npm environment. It validates the registry connection, permissions, cache integrity, and Node.js compatibility in one command.
+
+### Why does macOS block Claude Code?
+
+macOS Gatekeeper blocks applications that are not signed with an Apple Developer ID or downloaded from the App Store. Binaries installed via npm may not have the required code signature, triggering Gatekeeper restrictions.

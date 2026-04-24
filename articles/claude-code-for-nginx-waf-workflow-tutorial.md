@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Claude Code For Nginx Waf — Complete Developer Guide"
+title: "Claude Code For Nginx Waf"
 description: "Learn how to use Claude Code to streamline your NGINX WAF configuration and deployment workflow. Practical examples and actionable advice for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

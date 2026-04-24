@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Golden Path Developer Workflow"
+title: "Claude Code for Golden Path Developer"
 description: "Learn how to use Claude Code to implement golden path developer workflows. Practical guide with examples for building standardized, efficient."
 date: 2026-03-15
 last_modified_at: 2026-04-17

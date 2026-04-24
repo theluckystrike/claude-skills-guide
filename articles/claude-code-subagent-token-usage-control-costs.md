@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Subagent Token Usage: How to Control Costs"
+title: "Claude Code Subagent Token Usage"
 description: "Control Claude Code subagent token costs with spawn limits, scoped context, and task routing that prevent the 5,000-token base overhead from compounding."
 permalink: /claude-code-subagent-token-usage-control-costs/
 date: 2026-04-22
@@ -149,3 +149,9 @@ Track these metrics over two weeks:
 - [Claude Code Subagent Management](/claude-code-multi-agent-subagent-communication-guide/) -- comprehensive subagent orchestration guide
 - [Context Engineering for Multi-Agent Orchestration](/context-engineering-multi-agent-orchestration/) -- multi-agent context patterns
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- preventing context bloat in parent agents
+
+## See Also
+
+- [Claude Code Subagent Spawn Limit Reached — Fix (2026)](/claude-code-subagent-spawn-limit-fix-2026/)
+- [Claude Code subagent spawning too many agents — cost control](/claude-code-subagent-spawning-too-many-cost-control/)
+- [Claude Code Permission Modes: How They Affect Token Usage](/claude-code-permission-modes-affect-token-usage/)

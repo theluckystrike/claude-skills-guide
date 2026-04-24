@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Code Complexity Reduction Guide"
+title: "Claude Code Code Complexity Reduction"
 description: "A practical guide to reducing code complexity using Claude Code skills. Learn actionable techniques, skill recommendations, and real code examples for."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Benchmark Reporting Workflow Tutorial (2026)"
+title: "Claude Code for Benchmark Reporting"
 last_tested: "2026-04-22"
 description: "Learn how to build automated benchmark reporting workflows with Claude Code. This tutorial covers setting up recurring tests, generating performance."
 date: 2026-04-19

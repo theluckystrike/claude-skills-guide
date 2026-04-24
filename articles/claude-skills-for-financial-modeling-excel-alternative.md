@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Financial Modeling: Excel Alternative"
+title: "Claude Skills for Financial Modeling"
 description: "Replace Excel with Claude Code skills for financial modeling. Automate forecasts, scenario analysis, and reporting with Python, xlsx skill, and PDF exports"
 date: 2026-03-14
 last_modified_at: 2026-04-17

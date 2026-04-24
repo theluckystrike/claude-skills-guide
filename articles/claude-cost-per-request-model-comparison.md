@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Cost Per Request by Model Comparison"
+title: "Claude Cost Per Request by Model"
 description: "Each Claude API request costs $0.015 on Haiku, $0.045 on Sonnet, or $0.075 on Opus — here is how to calculate your exact spend."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -178,3 +178,10 @@ Review cost logs weekly. Key metrics: average cost per request (target: below $0
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — detailed breakdown of Claude's token-based pricing structure
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — reduce tokens to reduce per-request cost
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — measure token usage per workflow
+
+## See Also
+
+- [Per-Request Cost Tracking for Claude API](/claude-cost-04-per-request-cost-tracking/)
+- [Reducing Agent Fleet Costs with Model Routing](/claude-cost-reducing-agent-fleet-costs-model-routing/)
+- [Per-Agent Cost Attribution in Claude Systems](/claude-cost-per-agent-cost-attribution-claude-systems/)
+- [How 5 Parallel Claude Agents Cost $1,000/Month](/claude-cost-5-parallel-claude-agents-1000-per-month/)

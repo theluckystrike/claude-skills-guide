@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Competitive Analysis Chrome Extension"
+title: "AI Competitive Analysis Chrome"
 description: "Learn how to build and use AI-powered Chrome extensions for competitive analysis. Includes code examples, architecture patterns, and practical."
 date: 2026-03-15
 last_modified_at: 2026-04-17

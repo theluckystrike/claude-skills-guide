@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Anthropic SDK Grammar Too Large Error (2026)"
+title: "Fix: Anthropic SDK Grammar Too Large"
 description: "Fix the Anthropic API 'compiled grammar is too large' 400 error when using structured outputs with complex JSON schemas. Schema optimization strategies."
 date: 2026-04-14
 last_modified_at: 2026-04-17
@@ -287,4 +287,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 For developers building complex API integrations with structured outputs, a dev tool extension can help inspect and debug JSON Schema compilation issues by visualizing the schema structure.
 
+## See Also
 
+- [Anthropic SDK Python Async Context Manager — Fix (2026)](/anthropic-sdk-python-async-context-manager-error-fix/)
+- [Anthropic SDK TypeScript Tool Results Type Error — Fix (2026)](/anthropic-sdk-typescript-type-mismatch-tool-results-fix/)
+- [Anthropic SDK Streaming Connection Dropped — Fix (2026)](/anthropic-sdk-streaming-connection-dropped-fix/)

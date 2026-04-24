@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Ory Auth — Workflow Guide"
+title: "Claude Code for Ory Auth"
 description: "Add identity management with Ory and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-ory-auth-workflow-guide/
@@ -75,3 +75,7 @@ Claude Code should create a registration page that initiates a Kratos self-servi
 - [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)
 - [Claude Code for Better Auth Workflow Guide](/claude-code-for-better-auth-workflow-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
+
+## See Also
+
+- [Claude Code for Clerk Auth — Workflow Guide](/claude-code-for-clerk-auth-workflow-guide/)

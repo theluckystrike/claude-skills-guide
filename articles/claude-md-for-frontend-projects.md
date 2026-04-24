@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md for Frontend Projects — React, Component, and State Rules (2026)"
+title: "CLAUDE.md for Frontend Projects"
 description: "Write CLAUDE.md rules for React component structure, state management, styling conventions, and accessibility that Claude Code follows in frontend projects."
 permalink: /claude-md-frontend-projects/
 render_with_liquid: false

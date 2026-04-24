@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code CLAUDE.md Best Practices for Teams 2026"
+title: "Claude Code CLAUDE.md Best Practices"
 description: "Write effective CLAUDE.md files for team projects. Conventions, style guides, tool permissions, and shared context patterns that scale."
 permalink: /claude-code-claude-md-best-practices-teams-2026/
 date: 2026-04-21
@@ -181,3 +181,10 @@ A shared CLAUDE.md eliminates the "works on my machine" problem for AI-assisted 
 - [CLAUDE.md Length Optimization: 300 Lines](/claude-md-length-optimization/)
 - [CLAUDE.md Conflicting Instructions Resolution Guide](/claude-md-conflicting-instructions-resolution-guide/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
+- [CLAUDE.md best practices definitive guide](/claude-md-best-practices-definitive-guide/) — the definitive CLAUDE.md reference
+- [Claude Code hooks](/claude-code-hooks-complete-guide/) — enforce team rules with hooks
+
+## See Also
+
+- [Share and Reuse CLAUDE.md Patterns Across Teams and Projects (2026)](/share-reuse-claude-md-patterns-across-teams/)
+- [Claude Code CLAUDE.md Not Found Fix (2026)](/claude-code-claude-md-not-found-parent-directories-fix/)

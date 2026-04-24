@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Umami Analytics — Workflow Guide"
+title: "Claude Code for Umami Analytics"
 description: "Add privacy-first analytics with Umami and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-umami-analytics-workflow-guide/
@@ -79,3 +79,4 @@ Claude Code should add the Umami script tag to the root layout with the website 
 
 - [Claude Code for Pirsch Analytics — Guide](/claude-code-for-pirsch-analytics-workflow-guide/)
 - [Claude Code for Tinybird Analytics — Guide](/claude-code-for-tinybird-analytics-workflow-guide/)
+- [Claude Code for Mixpanel Analytics — Guide](/claude-code-for-mixpanel-analytics-workflow-guide/)

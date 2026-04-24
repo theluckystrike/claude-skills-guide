@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude XML Tags vs JSON for Token Efficiency"
+title: "Claude XML Tags vs JSON for Token"
 description: "XML tags use 30% fewer tokens than JSON in Claude prompts — switch formats and save $2,250/month on 1K daily Opus conversations."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -214,3 +214,8 @@ Compare token counts for identical requests in JSON vs XML format. Track the per
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — broader token optimization strategies
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — structured prompts reduce errors and retries
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — measure token usage by prompt type
+
+## See Also
+
+- [Claude Code vs Cline: Token Efficiency Comparison](/claude-code-vs-cline-token-efficiency/)
+- [MCPMark Benchmarks: What They Reveal About Token Efficiency](/mcpmark-benchmarks-token-efficiency-revealed/)

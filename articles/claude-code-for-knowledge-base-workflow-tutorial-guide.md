@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Projects Knowledge Base: Markdown (2026)"
+title: "Claude Projects Knowledge Base"
 description: "Add markdown files to Claude projects as knowledge base context. File structure, size limits, auto-indexing, and cross-reference linking setup."
 date: 2026-03-15
 last_modified_at: 2026-04-21

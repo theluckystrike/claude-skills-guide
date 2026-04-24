@@ -1,6 +1,6 @@
 ---
-title: "Claude Skills vs Langflow for Building AI Agents — CLI Precision vs Visual Workflow Builder — 2026"
-description: "Compare Claude Code skills (markdown-based, CLI-native, open standard) with Langflow (visual DAG builder, Python-based). Includes 3 scenarios where Langflow wins."
+title: "Claude Skills vs Langflow for Building"
+description: "Compare Claude Code skills (markdown-based, CLI-native, open standard) with Langflow (visual DAG builder, Python-based)."
 permalink: /claude-skills-vs-langflow-ai-agents/
 render_with_liquid: false
 categories: [skills, 2026]
@@ -125,3 +125,8 @@ Langflow flows that use the Claude API directly do not benefit from Claude Code'
 - [Claude Skills vs OpenAI Assistants API](/claude-skills-vs-openai-assistants-api/) -- another platform comparison
 - [Claude Skill Composition Patterns](/claude-skill-composition-patterns/) -- building multi-step workflows in skills
 - [Hybrid Patterns: Skills, MCP, and Custom Tools](/hybrid-patterns-skills-mcp-custom-tools/) -- combining different AI tool systems
+
+## See Also
+
+- [Claude Code vs Smol Developer (2026): AI Agents](/claude-code-vs-smol-developer-ai-agents-2026/)
+- [Claude Skills vs LangChain Agents Compared (2026)](/claude-skills-vs-langchain-agents-comparison-2026/)

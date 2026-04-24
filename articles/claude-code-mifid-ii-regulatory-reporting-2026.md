@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for MiFID II Reporting (2026)"
+title: "Claude Code for MiFID II Reporting"
 permalink: /claude-code-mifid-ii-regulatory-reporting-2026/
 description: "MiFID II regulatory reporting with Claude Code. Build transaction reports, best execution analysis, and RTS 25 compliance."
 last_tested: "2026-04-22"

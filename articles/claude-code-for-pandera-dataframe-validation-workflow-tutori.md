@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Pandera Dataframe Validation Workflow"
+title: "Claude Code for Pandera Dataframe"
 description: "Learn how to use Claude Code to create solid Pandera dataframe validation workflows for Python data pipelines. Practical examples and actionable advice."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -235,6 +235,6 @@ Related Reading
 - [Using Claude Code for Data Quality Validation Workflow](/claude-code-for-data-quality-validation-workflow/)
 - [Claude Code for Polars DataFrame Workflow Guide](/claude-code-for-polars-dataframe-workflow-guide/)
 
+## See Also
 
-
-
+- [Claude Code for Valibot — Workflow Guide](/claude-code-for-valibot-validation-workflow-guide/)

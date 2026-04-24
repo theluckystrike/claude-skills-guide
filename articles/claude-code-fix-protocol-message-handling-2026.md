@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for FIX Protocol Message Handling (2026)"
+title: "Claude Code for FIX Protocol Message"
 description: "FIX protocol message parsing and order routing with Claude Code. Build compliant FIX 4.4 engines and session logic."
 permalink: /claude-code-fix-protocol-message-handling-2026/
 last_tested: "2026-04-21"
@@ -242,3 +242,4 @@ python3 fix_engine/messages/order_builder.py
 - [Claude Code for Algo Trading](/claude-code-algorithmic-trading-backtesting-2026/)
 - [Claude Code for Options Pricing](/claude-code-options-pricing-black-scholes-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for CCPA Data Handling Implementation (2026)](/claude-code-ccpa-data-handling-2026/)

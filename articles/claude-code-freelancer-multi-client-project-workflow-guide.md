@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Freelancer Multi-Client Project Workflow Guide"
+title: "Claude Code Freelancer Multi-Client"
 description: "Master managing multiple client projects simultaneously with Claude Code. Learn workflow strategies, context isolation, and productivity tips for."
 date: 2026-03-14
 last_modified_at: 2026-04-17

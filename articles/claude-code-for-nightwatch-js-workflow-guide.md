@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Nightwatch.js Workflow Guide"
+title: "Claude Code for Nightwatch.js Workflow"
 description: "Learn how to integrate Claude Code into your Nightwatch.js testing workflow for smarter, more efficient automated browser testing."
 date: 2026-03-15
 last_modified_at: 2026-04-17

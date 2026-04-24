@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Quant Research Backtesting (2026)"
+title: "Claude Code for Quant Research"
 permalink: /claude-code-quant-research-backtesting-2026/
 description: "Quantitative research backtesting with Claude Code. Build factor models, cross-sectional regressions, and walk-forward validation."
 last_tested: "2026-04-22"
@@ -261,3 +261,4 @@ print('Quant research pipeline: PASS')
 - [Claude Code for Portfolio Optimization](/claude-code-portfolio-optimization-markowitz-2026/)
 - [Claude Code for Algo Trading Backtesting](/claude-code-algorithmic-trading-backtesting-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for Trading System Backtesting (2026)](/claude-code-trading-system-backtesting-2026/)

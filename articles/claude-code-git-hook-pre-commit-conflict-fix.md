@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Git Hook Pre-commit Conflict — Fix (2026)"
+title: "Claude Code Git Hook Pre-commit"
 description: "Fix Claude Code git hook pre-commit conflict blocking commits. Configure hooks to work with AI-generated code. Step-by-step solution."
 permalink: /claude-code-git-hook-pre-commit-conflict-fix/
 last_tested: "2026-04-21"
@@ -74,3 +74,8 @@ Before committing, run `npx lint-staged` to verify all staged files pass. Follow
 ```
 
 **Related articles:** [Claude Code Git Hook Blocked Commit](/claude-code-git-hook-blocked-commit-fix-2026/), [ESLint Prettier Conflict Fix](/claude-code-eslint-prettier-conflict-fix/), [Debugging Tips](/claude-code-verbose-mode-debugging-tips/)
+
+## See Also
+
+- [Pre-Commit Hook Failure on Claude Changes Fix](/claude-code-pre-commit-hook-failure-fix-2026/)
+- [Git Submodule Not Initialized Error Fix](/claude-code-submodule-not-initialized-fix-2026/)

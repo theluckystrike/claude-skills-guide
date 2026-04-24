@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Distribute Claude Skills Across Environments (2026)"
+title: "Distribute Claude Skills Across"
 description: "Deploy Claude skills across isolated client environments with versioning, packaging, and sync strategies. Maintain consistency across 10+ instances."
 date: 2026-03-14
 last_modified_at: 2026-04-17

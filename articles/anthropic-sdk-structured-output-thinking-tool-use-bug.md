@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Structured Output + Thinking + Tool Use Bugs (2026)"
+title: "Fix: Structured Output + Thinking +"
 description: "Fix bugs combining structured outputs, thinking, and tool use in the Anthropic API. Missing tool_use blocks and invalid JSON. Tested and working in 2026."
 last_tested: "2026-04-22"
 date: 2026-04-14
@@ -304,4 +304,6 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 For developers building multi-step AI agent pipelines, a dev tool extension can help debug the intermediate tool calls and responses, making it easier to identify where structured output generation breaks down.
 
+## See Also
 
+- [Anthropic SDK TypeScript Tool Results Type Error — Fix (2026)](/anthropic-sdk-typescript-type-mismatch-tool-results-fix/)

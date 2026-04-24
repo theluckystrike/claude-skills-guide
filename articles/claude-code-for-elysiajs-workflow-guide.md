@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for ElysiaJS — Workflow Guide"
+title: "Claude Code for ElysiaJS"
 description: "Build type-safe Bun APIs with ElysiaJS and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-elysiajs-workflow-guide/

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Worktrees and Skills Isolation Explained (2026)"
+title: "Claude Code Worktrees and Skills"
 description: "Claude Code Worktrees and Skills Isolation Explained. Practical guide with working examples for developers."
 date: 2026-03-13
 last_modified_at: 2026-04-17

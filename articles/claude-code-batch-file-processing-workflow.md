@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Batch File Processing Workflow"
+title: "Claude Code Batch File Processing"
 description: "Learn how to automate repetitive file operations with Claude Code. This guide covers batch processing patterns, skill composition, and practical."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -216,6 +216,4 @@ Related Reading
 - [Claude Code Reporting Automation Workflow](/claude-code-reporting-automation-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
-
+- [Batch API Job Failed Status — Fix (2026)](/claude-code-batch-api-job-failed-fix-2026/)

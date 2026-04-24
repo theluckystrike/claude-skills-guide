@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code MCP Server Least Privilege Configuration"
+title: "Claude Code MCP Server Least Privilege"
 description: "Learn how to configure least privilege principles for MCP servers in Claude Code. Practical examples and security best practices for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -366,6 +366,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
-
+- [MCP Server stdio Timeout 30000ms — Fix (2026)](/claude-code-mcp-server-stdio-timeout-fix-2026/)

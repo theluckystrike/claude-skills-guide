@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Freelancers: Scale with Claude Code (2026)"
+title: "Freelancers: Scale with Claude Code"
 description: "Take on 3x more clients using Claude Code for code generation, debugging, and project scaffolding. Real freelancer workflows that reduce delivery time."
 date: 2026-03-14
 last_modified_at: 2026-04-17

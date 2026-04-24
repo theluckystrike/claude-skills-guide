@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for K3s Kubernetes Management (2026)"
+title: "Claude Code for K3s Kubernetes"
 description: "Deploy and manage K3s lightweight Kubernetes clusters with Claude Code. Covers Helm charts, service mesh, monitoring, and resource optimization."
 date: 2026-03-15
 last_modified_at: 2026-04-17

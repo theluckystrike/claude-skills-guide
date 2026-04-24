@@ -1,5 +1,5 @@
 ---
-title: "Why Claude Code 4.6 uses more tokens than 4.5 (and what to do)"
+title: "Why Claude Code 4.6 uses more tokens"
 description: "Claude 4.6 models use 10-25% more tokens than 4.5 for the same tasks due to improved reasoning depth. Offset the increase with context engineering techniques."
 permalink: /why-claude-code-46-uses-more-tokens-than-45/
 date: 2026-04-22
@@ -233,3 +233,7 @@ The 12-15% budget increase accounts for 4.6's verbosity while maintaining cost c
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- aggressive compacting strategies
 - [Claude Code Sonnet vs Haiku: When Cheaper Is Actually Better](/claude-code-sonnet-vs-haiku-cheaper-actually-better/) -- model routing optimization
 - [Cost Optimization Hub](/cost-optimization/) -- comprehensive cost management
+
+## See Also
+
+- [MCP vs CLI for Claude Code: When Each Saves More Tokens](/mcp-vs-cli-claude-code-saves-more-tokens/)

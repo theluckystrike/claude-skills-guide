@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Insomnia API Testing Workflow"
+title: "Claude Code Insomnia API Testing"
 description: "Master API testing with Claude Code and Insomnia. Learn practical workflows for creating, organizing, and automating API tests with real-world examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -176,4 +176,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Supertest API Testing (2026)](/claude-code-supertest-api-testing-workflow/)

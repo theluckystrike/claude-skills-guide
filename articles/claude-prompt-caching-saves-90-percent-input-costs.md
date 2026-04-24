@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Prompt Caching Saves 90% on Input Costs"
+title: "Claude Prompt Caching Saves 90%"
 description: "Cut Claude API input token costs from $5.00 to $0.50 per million tokens with prompt caching. Real break-even math included."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -128,3 +128,7 @@ Track these metrics before and after enabling caching:
 - [Claude Prompt Caching Pricing and Cost Savings](/claude-prompt-caching-pricing-and-cost-savings/)
 - [Claude API Prompt Caching Performance Optimization](/claude-api-prompt-caching-performance-optimization-guide/)
 - [Claude Code for Varnish Cache Workflow](/claude-code-for-varnish-cache-workflow-tutorial/)
+
+## See Also
+
+- [Prompt Cache Stale Context Warning — Fix (2026)](/claude-code-prompt-caching-stale-context-fix-2026/)

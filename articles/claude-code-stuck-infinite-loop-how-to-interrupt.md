@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Infinite Loop — How to Interrupt (2026)"
+title: "Claude Code Infinite Loop"
 description: "Claude Code stuck in a loop? Interrupt it instantly with keyboard shortcuts, config fixes, and prevention strategies that stop future loops too."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -355,4 +355,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code stuck in planning mode — token drain prevention](/claude-code-stuck-planning-mode-token-drain/)

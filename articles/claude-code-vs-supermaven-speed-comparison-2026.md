@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Supermaven (2026): Speed Comparison"
+title: "Claude Code vs Supermaven (2026)"
 description: "Claude Code vs Supermaven compared for fast autocomplete. Latency, large file handling, and codebase navigation benchmarked for speed in 2026."
 permalink: /claude-code-vs-supermaven-speed-comparison-2026/
 date: 2026-04-21

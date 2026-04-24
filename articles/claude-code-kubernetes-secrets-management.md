@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Kubernetes Secrets Management — Developer Guide"
+title: "Claude Code Kubernetes Secrets"
 description: "Learn how to manage Kubernetes secrets effectively using Claude Code. This guide covers native methods, external secrets operators, and automation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Changelogs and Release Notes Automation"
+title: "Claude Code Changelogs and Release"
 description: "Learn how to automate changelogs and release notes generation using Claude Code skills, git history analysis, and practical workflows for development."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -416,4 +416,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Best Claude Code Workflow Automations (2026)](/best-claude-code-workflow-automations-2026/)

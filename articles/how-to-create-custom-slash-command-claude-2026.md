@@ -1,5 +1,5 @@
 ---
-title: "Create Custom Slash Commands for Claude (2026)"
+title: "Create Custom Slash Commands for Claude"
 description: "Build custom slash commands for Claude Code using markdown files in .claude/commands/. Step-by-step with argument handling and practical examples."
 permalink: /how-to-create-custom-slash-command-claude-2026/
 last_tested: "2026-04-22"
@@ -220,3 +220,7 @@ Format:
 - Add [hooks](/understanding-claude-code-hooks-system-complete-guide/) that trigger alongside your commands
 - Check the [skills directory](/claude-skills-directory-where-to-find-skills/) for community-shared commands
 - Read [CLAUDE.md best practices](/claude-md-best-practices-10-templates-compared-2026/) for complementary configuration
+
+## See Also
+
+- [Claude Code Custom Slash Command Not Found — Fix (2026)](/claude-code-custom-slash-command-not-recognized-fix/)

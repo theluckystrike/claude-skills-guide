@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Opus Used Instead of Sonnet: Cost Recovery"
+title: "Claude Code Opus Used Instead of Sonnet"
 description: "Accidentally running Claude Code on Opus 4.6 costs 5x more than Sonnet 4.6. Detect the mistake, set model defaults, and prevent it from recurring."
 permalink: /claude-code-opus-accidentally-used-instead-sonnet/
 date: 2026-04-22
@@ -216,3 +216,7 @@ Add this check to the team onboarding process. A single developer accidentally u
 - [Why Did Claude Code Cost $20 for One Session?](/why-claude-code-cost-20-one-session-debugging/) -- comprehensive session cost debugging
 - [Claude Code Sonnet vs Haiku: When Cheaper Is Actually Better](/claude-code-sonnet-vs-haiku-cheaper-actually-better/) -- model selection optimization
 - [Cost Optimization Hub](/cost-optimization/) -- all cost control techniques
+
+## See Also
+
+- [Stop Claude Code Rewriting Entire Files (2026)](/claude-code-rewrites-instead-of-editing-fix-2026/)

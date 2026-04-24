@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Daily Workflow for Frontend Devs (2026)"
+title: "Claude Code Daily Workflow for Frontend"
 description: "Integrate Claude Code into your daily frontend workflow. Covers component creation, CSS debugging, accessibility checks, and build optimization tasks."
 date: 2026-03-14
 last_modified_at: 2026-04-17

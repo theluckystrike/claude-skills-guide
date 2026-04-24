@@ -1,5 +1,5 @@
 ---
-title: "Onboarding New Developers to Your Team's Claude Skills — 2026"
+title: "Onboarding New Developers to Your"
 description: "Step-by-step onboarding checklist for new team members covering skill discovery, naming conventions, personal vs project scope, and common pitfalls."
 permalink: /claude-skills-onboarding-new-developers/
 render_with_liquid: false

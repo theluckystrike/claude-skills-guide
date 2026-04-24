@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Sonnet 4.6 vs GPT-4o for Coding in 2026"
+title: "Claude Sonnet 4.6 vs GPT-4o for Coding"
 description: "Head-to-head comparison of Claude Sonnet 4.6 and GPT-4o for coding tasks — pricing, quality, context, and real workflow differences."
 date: 2026-04-21
 last_tested: "2026-04-21"
@@ -96,3 +96,8 @@ Sonnet's consistent instruction following makes it more predictable across skill
 ## When To Use Neither
 
 For real-time autocomplete in your IDE (suggestions as you type), neither Sonnet nor GPT-4o is optimal. That use case demands sub-100ms latency, which requires a smaller, specialized model like Haiku 4.5 or GPT-4o Mini running locally or on a fast edge endpoint. Using a full reasoning model for keystroke-level completions wastes money and adds frustrating latency. At 200 autocomplete requests per hour (typical for active coding), Sonnet would cost $4.80/hour versus Haiku's $0.08/hour for the same typing-flow suggestions. Reserve mid-tier models for explicit code generation and reasoning tasks where the 1-3 second response time is acceptable.
+
+## See Also
+
+- [Claude Sonnet 4.6 vs Gemini 2.5 Pro for Coding](/claude-sonnet-vs-gemini-25-pro-coding/)
+- [Claude Sonnet 4.6 vs Opus 4.6 for Coding Tasks](/claude-sonnet-vs-opus-for-coding-tasks-2026/)

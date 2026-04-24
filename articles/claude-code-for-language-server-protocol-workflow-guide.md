@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Language Server Protocol Workflow Guide"
+title: "Claude Code for Language Server"
 description: "A comprehensive guide to integrating Claude Code with Language Server Protocol (LSP) for enhanced code intelligence, autocomplete, and intelligent."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -153,6 +153,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
-
+- [Claude Code for Nitro Server Engine — Guide](/claude-code-for-nitro-server-engine-workflow-guide/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for SharedArrayBuffer Workflow (2026)"
+title: "Claude Code for SharedArrayBuffer"
 description: "Learn how to use SharedArrayBuffer for high-performance parallel computing in JavaScript with practical examples and best practices. Updated for 2026."
 last_tested: "2026-04-22"
 date: 2026-03-15
@@ -563,4 +563,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Streaming Buffer Overflow Error Fix](/claude-code-streaming-buffer-overflow-fix-2026/)
+- [Claude Code for Sonar Array Processing (2026)](/claude-code-sonar-array-processing-2026/)

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for ROS2 Nav2 Stack Development (2026)"
+title: "Claude Code for ROS2 Nav2 Stack"
 description: "ROS2 Nav2 stack development with Claude Code. Build custom planners, costmap plugins, and behavior trees."
 permalink: /claude-code-ros2-navigation-stack-2026/
 last_tested: "2026-04-21"

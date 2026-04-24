@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Monorepo Setup — Complete Developer Guide (2026)"
+title: "Claude Code Monorepo Setup"
 description: "Configure Claude Code for monorepos using Turborepo, Nx, or pnpm workspaces. CLAUDE.md structure, context management, and multi-package workflows."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -344,4 +344,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/)
 - [Claude Code Subagents Guide](/claude-code-subagents-guide/)
 
+## See Also
 
+- [Claude Code Monorepo: Best Setup Guide (2026)](/claude-code-monorepo-best-setup-2026/)
+- [Claude Code Monorepo Workspace Resolution Failure — Fix (2026)](/claude-code-monorepo-workspace-resolution-failure-fix/)
+- [Monorepo Workspace Package Resolution — Fix (2026)](/claude-code-monorepo-workspace-package-resolution-fix-2026/)

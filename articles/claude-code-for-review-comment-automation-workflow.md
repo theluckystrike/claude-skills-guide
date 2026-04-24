@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Review Comment Automation Workflow"
+title: "Claude Code for Review Comment"
 description: "Learn how to build a review comment automation workflow with Claude Code to streamline code reviews, manage feedback, and maintain consistent quality."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -279,4 +279,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for n8n Automation — Workflow Guide](/claude-code-for-n8n-automation-workflow-guide/)

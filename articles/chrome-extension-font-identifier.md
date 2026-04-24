@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Font Identifier Chrome Extension Guide (2026)"
+title: "Font Identifier Chrome Extension Guide"
 description: "Learn how to identify fonts on any webpage using Chrome extensions. Compare the best font identifier tools for developers and designers, with practical."
 date: 2026-03-15
 last_modified_at: 2026-04-17

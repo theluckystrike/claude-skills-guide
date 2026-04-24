@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Use Tree-of-Thought Prompting in Claude Code (2026)"
+title: "Use Tree-of-Thought Prompting in Claude"
 description: "Explore multiple solution paths with tree-of-thought prompting in Claude Code. Systematic problem-solving strategies with branching and evaluation."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -233,6 +233,6 @@ Related Reading
 - [Claude Code for Self-Consistency Prompting Workflow Tutorial](/claude-code-for-self-consistency-prompting-workflow-tutorial/)
 - [Claude Code for Tree-sitter AST Traversal Workflow](/claude-code-for-tree-sitter-ast-traversal-workflow/)
 
+## See Also
 
-
-
+- [Webpack Tree-Shaking Breaks Build — Fix (2026)](/claude-code-webpack-tree-shaking-breaks-fix-2026/)

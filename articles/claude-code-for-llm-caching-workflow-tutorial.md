@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For LLM Caching — Complete Developer Guide"
+title: "Claude Code For LLM Caching"
 description: "Learn how to implement intelligent LLM response caching with Claude Code to reduce costs, improve latency, and optimize API usage with practical code."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -271,4 +271,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```
 
+## See Also
 
+- [Claude Code for Promptfoo — Workflow Guide](/claude-code-for-promptfoo-llm-eval-workflow-guide/)

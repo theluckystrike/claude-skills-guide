@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Bat (Cat Alternative) — Guide"
+title: "Claude Code for Bat (Cat Alternative)"
 description: "View files with syntax highlighting using Bat and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-bat-cat-alternative-workflow-guide/

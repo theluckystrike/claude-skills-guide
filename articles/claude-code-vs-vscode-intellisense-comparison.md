@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs VS Code IntelliSense: Completion Compared"
+title: "Claude Code vs VS Code IntelliSense"
 description: "Claude Code AI completions vs VS Code IntelliSense — comparing accuracy, speed, context awareness, and when each approach wins."
 date: 2026-04-21
 last_tested: "2026-04-21"
@@ -100,3 +100,7 @@ IntelliSense provides immediate value by showing every available method, propert
 ## When To Use Neither
 
 For configuration files with strict schemas (JSON Schema-validated configs, YAML with known structure, TOML files), neither AI completions nor IntelliSense provide the best experience. Schema-aware editors that validate against JSON Schema definitions give you autocomplete that is both instant and guaranteed valid. VS Code's built-in JSON schema support handles this better than either IntelliSense or Claude Code for files like package.json, tsconfig.json, and docker-compose.yml.
+
+## See Also
+
+- [Fix Claude Code Not Working VSCode — Quick Guide (2026)](/claude-code-not-working-vscode/)

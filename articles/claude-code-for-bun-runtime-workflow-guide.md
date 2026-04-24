@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Bun Runtime — Workflow Guide"
+title: "Claude Code for Bun Runtime"
 description: "Use Bun runtime features with Claude Code for faster dev. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-bun-runtime-workflow-guide/
@@ -75,3 +75,7 @@ Claude Code should use `Bun.serve({ fetch(req) { } })` with URL pattern matching
 - [Using Claude Code with Bun Runtime JavaScript Projects](/using-claude-code-with-bun-runtime-javascript-projects/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
+
+## See Also
+
+- [Claude Code for Bun Workspaces — Workflow Guide](/claude-code-for-bun-workspaces-workflow-guide/)

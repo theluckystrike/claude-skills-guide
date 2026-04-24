@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Caching: Don't Re-Discover What You Know"
+title: "Claude Code Caching"
 description: "Claude Code re-discovers project structure every session, wasting 5,000-15,000 tokens. Caching strategies using skills and CLAUDE.md eliminate repeat discovery."
 permalink: /claude-code-caching-strategies-dont-rediscover/
 date: 2026-04-22

@@ -1,5 +1,5 @@
 ---
-title: "Why Smarter Models Cost MORE (Sonnet 4.5 to 4.6 Token Paradox)"
+title: "Why Smarter Models Cost MORE (Sonnet"
 description: "Smarter Claude models generate longer, more detailed outputs that increase token costs 20-40% per generation -- learn to control output verbosity."
 permalink: /smarter-models-cost-more-sonnet-token-paradox/
 date: 2026-04-22

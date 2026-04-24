@@ -1,5 +1,5 @@
 ---
-title: "Claude Task Master vs Linear and Jira (2026)"
+title: "Claude Task Master vs Linear and Jira"
 description: "Claude Task Master automates task decomposition with AI. Linear and Jira are mature project management platforms. Compare for dev team workflows."
 permalink: /claude-task-master-vs-linear-jira-2026/
 last_tested: "2026-04-22"
@@ -103,3 +103,7 @@ For solo [Claude Code workflows](/karpathy-skills-vs-claude-code-best-practices-
 ## Final Recommendation
 
 Use Task Master as your planning accelerator, not your project management system. Let it parse PRDs and generate the initial task list, then move execution to whichever tracker your team uses. If you are solo, Task Master plus Claude Code's MCP integration might genuinely replace a separate tracker for short projects. For anything longer than a sprint or involving more than one person, use a real project management tool and keep Task Master in the planning phase. Explore the [Claude Code playbook](/playbook/) for more workflow patterns.
+
+## See Also
+
+- [Claude Task Master vs Manual Tasks (2026)](/claude-task-master-vs-manual-task-management-2026/)

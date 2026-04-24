@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Why Claude Code Is Terminal-Based, Not GUI (2026)"
+title: "Why Claude Code Is Terminal-Based, Not"
 description: "Why Claude Code runs in the terminal instead of a GUI. Developer workflow integration, automation, and productivity advantages explained."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -127,4 +127,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Terminal UTF-8 Garbled Output — Fix (2026)](/claude-code-terminal-encoding-utf8-garbled-fix/)
+- [Terminal Emulator Rendering Artifacts Fix](/claude-code-terminal-rendering-artifacts-fix-2026/)

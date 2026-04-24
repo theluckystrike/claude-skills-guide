@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Skills vs LangChain Agents Compared (2026)"
+title: "Claude Skills vs LangChain Agents"
 description: "Evaluate Claude Code's built-in skill system against LangChain's agent framework across setup time, cost, and production reliability."
 permalink: /claude-skills-vs-langchain-agents-comparison-2026/
 date: 2026-04-21

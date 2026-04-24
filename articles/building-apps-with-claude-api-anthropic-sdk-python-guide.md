@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Building Apps with Claude API: Anthropic SDK Python Guide"
+title: "Building Apps with Claude API"
 description: "A comprehensive guide to building powerful applications using Claude API and the Anthropic SDK for Python. Includes practical examples, code snippets."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -285,7 +285,4 @@ Related Reading
 - [Claude Code FastAPI Async Python Guide](/claude-code-fastapi-async-python-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
-
-
+- [Anthropic SDK Python Async Context Manager — Fix (2026)](/anthropic-sdk-python-async-context-manager-error-fix/)

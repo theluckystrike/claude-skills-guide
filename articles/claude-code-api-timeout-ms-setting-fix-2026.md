@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Request Timed Out 120000ms — Fix (2026)"
+title: "Claude Code Request Timed Out 120000ms"
 permalink: /claude-code-api-timeout-ms-setting-fix-2026/
 description: "Increase the api_timeout setting to 300000ms with claude config set. Prevents request timeout failures on complex multi-file code operations."
 last_tested: "2026-04-21"
@@ -40,3 +40,31 @@ Add to your CLAUDE.md:
 ```
 API timeout is set to 300000ms. If operations on files larger than 5000 lines are needed, break them into smaller chunks rather than processing in a single request.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `ETIMEDOUT: connection timed out`
+- `RequestTimeout: request took longer than 120000ms`
+- `ESOCKETTIMEDOUT`
+- `ECONNREFUSED: connection refused through proxy`
+- `Error: unable to verify the first certificate`
+
+## Frequently Asked Questions
+
+### What is the default timeout for Claude Code API requests?
+
+The default timeout is 120 seconds (120000ms). For complex operations involving large codebases or multi-file edits, this may be insufficient. Increase it with `claude config set api_timeout 300000` for a 5-minute timeout.
+
+### Can network latency cause timeouts?
+
+Yes. Corporate proxies, VPNs, and DNS filtering services add round-trip latency. Measure your baseline latency with `curl -o /dev/null -s -w '%{time_total}' https://api.anthropic.com/v1/messages`. If it exceeds 5 seconds, route API traffic outside the proxy.
+
+### Do timeouts consume API credits?
+
+Partially. If the server began processing your request before the client timed out, the input tokens are consumed even though you never received a response. Long timeouts reduce wasted credits by allowing the response to complete.
+
+### How do I configure Claude Code to use a corporate proxy?
+
+Set the `HTTPS_PROXY` environment variable: `export HTTPS_PROXY=http://proxy.corp.com:8080`. Claude Code respects standard proxy environment variables. Add this to your shell profile for persistence.

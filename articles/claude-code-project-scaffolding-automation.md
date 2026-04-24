@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Project Scaffolding Automation (2026)"
+title: "Claude Code Project Scaffolding"
 description: "Automate project scaffolding with Claude Code using skills, templates, and intelligent workflows. Set up new codebases in minutes, not hours."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -282,3 +282,8 @@ Multi-step scaffolding treats project initialization as a programmable workflow.
 ### What is Template-Based Scaffolding Patterns?
 
 Template-based scaffolding uses a reference project embodying your team's conventions -- standard directory layout with src/api, src/services, src/models, src/utils, tests, and scripts directories plus tsconfig.json, jest.config.js, and .eslintrc files. When starting a new project, reference this template and add customizations: "Create a new project using my standard TypeScript structure from /my-standards/, name it payment-service, add a Stripe integration module." Claude applies your patterns while incorporating the specific customization.
+
+## See Also
+
+- [Project Scaffolding with Claude Code (2026)](/claude-code-project-scaffolding-guide-2026/)
+- [Claude Code Project vs Global Settings: Token Impact](/claude-code-project-vs-global-settings-token-impact/)

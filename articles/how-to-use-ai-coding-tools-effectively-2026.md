@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use AI Coding Tools Effectively in 2026"
+title: "How to Use AI Coding Tools Effectively"
 description: "A practical guide for developers on maximizing productivity with AI coding tools. Learn prompt engineering, workflow integration, and skill selection."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -349,4 +349,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [AI Coding Tools vs Manual Coding: When to Use Each (2026)](/when-to-use-ai-coding-tools-vs-manual-coding-2026/)

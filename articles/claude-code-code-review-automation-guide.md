@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Automate Code Reviews with Claude Code"
+title: "Automate Code Reviews with Claude Code: Complete Guide"
 description: "Set up automated code review workflows with Claude Code. Custom review agents, PR analysis, security scanning, and review checklists."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -283,3 +283,4 @@ $99 once. Free forever. 47/500 founding spots left.
 - [Claude Code CMMC Compliance Checklist Automation](/claude-code-cmmc-compliance-checklist-automation/)
 - [Claude Code Postman Collection Automation Guide](/claude-code-postman-collection-automation/)
 - [Claude Code Cis Benchmark Hardening — Developer Guide](/claude-code-cis-benchmark-hardening-script-automation/)
+- [Automate Code Reviews with Claude Code (2026)](/claude-code-code-review-automation-2026/)

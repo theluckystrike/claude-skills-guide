@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Lottie Animation Workflow Tutorial (2026)"
+title: "Claude Code for Lottie Animation"
 description: "Learn how to integrate Claude Code into your Lottie animation workflow for efficient animation management and smooth web integration. Updated for 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17

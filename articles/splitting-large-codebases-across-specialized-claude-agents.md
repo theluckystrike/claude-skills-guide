@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Splitting Large Codebases Across Specialized Claude Agents"
+title: "Splitting Large Codebases Across"
 description: "Learn how to use Claude Code skills and multi-agent architectures to efficiently work with large, complex codebases. Discover practical strategies."
 date: 2026-03-14
 last_modified_at: 2026-04-17

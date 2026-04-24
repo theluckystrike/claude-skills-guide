@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Claude Code API Security Owasp — Complete Developer Guide"
+title: "Claude Code API Security Owasp"
 description: "Learn how to secure your Claude Code integrations against OWASP Top 10 vulnerabilities. Practical patterns for building safe AI agent APIs."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Editthiscookie Alternative — Developer Comparison 2026"
+title: "Editthiscookie Alternative"
 description: "Editthiscookie Alternative — Developer Comparison 2026. Practical guide with working examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

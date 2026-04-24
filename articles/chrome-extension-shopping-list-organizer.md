@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Shopping List Organizer Chrome Extension Guide (2026)"
+title: "Shopping List Organizer Chrome"
 description: "Learn how to build or customize a Chrome extension shopping list organizer for developers and power users. Includes code examples, architecture patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17

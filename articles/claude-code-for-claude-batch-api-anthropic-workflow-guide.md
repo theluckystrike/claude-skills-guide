@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Claude Batch API: Anthropic Workflow Guide"
+title: "Claude Code for Claude Batch API"
 description: "Learn how to use Claude Code with Anthropic's Batch API to efficiently process large volumes of prompts. This comprehensive guide covers setup,..."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -334,6 +334,6 @@ Related Reading
 - [Best Way to Batch Claude Code Requests to Reduce API Calls](/best-way-to-batch-claude-code-requests-reduce-api-calls/)
 - [Building Apps with Claude API: Anthropic SDK Python Guide](/building-apps-with-claude-api-anthropic-sdk-python-guide/)
 
+## See Also
 
-
-
+- [Batch API Job Failed Status — Fix (2026)](/claude-code-batch-api-job-failed-fix-2026/)

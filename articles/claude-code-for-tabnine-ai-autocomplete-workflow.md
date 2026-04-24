@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code with Tabnine AI Autocomplete (2026)"
+title: "Claude Code with Tabnine AI"
 description: "Combine Claude Code and Tabnine for faster coding. Use Tabnine for inline completions and Claude Code for complex refactoring and code generation."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -183,4 +183,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Dify AI Platform — Guide](/claude-code-for-dify-ai-platform-workflow-guide/)

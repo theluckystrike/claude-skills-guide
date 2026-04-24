@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Better Auth — Workflow Guide"
+title: "Claude Code for Better Auth"
 description: "Add framework-agnostic auth with Better Auth and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-better-auth-workflow-guide/
@@ -81,3 +81,4 @@ Claude Code should create `auth()` config with Drizzle adapter and Google social
 - [Claude Code for Ory Auth — Workflow Guide](/claude-code-for-ory-auth-workflow-guide/)
 - [Claude Code for Lucia Auth — Workflow Guide](/claude-code-for-lucia-auth-workflow-workflow-guide/)
 - [Claude Code for Hanko Auth — Workflow Guide](/claude-code-for-hanko-auth-workflow-guide/)
+- [Claude Code for Clerk Auth — Workflow Guide](/claude-code-for-clerk-auth-workflow-guide/)

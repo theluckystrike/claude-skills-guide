@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for GraphQL Client Codegen (2026)"
+title: "Claude Code for GraphQL Client Codegen"
 description: "Automate GraphQL client code generation using Claude Code. Covers TypeScript types, React hooks, Apollo setup, and schema-driven development patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -210,4 +210,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [mTLS Client Certificate Error — Fix (2026)](/claude-code-mtls-client-cert-error-fix-2026/)

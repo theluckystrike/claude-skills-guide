@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Example for Go + Gin + GORM — Production Template (2026)"
+title: "CLAUDE.md Example for Go + Gin + GORM"
 description: "Complete 300-line CLAUDE.md for Go 1.23 with Gin and GORM. Covers middleware chains, context propagation, error wrapping, and struct tags. Tested on Go 1.23.5."
 permalink: /claude-md-example-for-go-gin-gorm/
 render_with_liquid: false

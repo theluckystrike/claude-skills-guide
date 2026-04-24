@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Sourcegraph Cody (2026): Compared"
+title: "Claude Code vs Sourcegraph Cody (2026)"
 description: "Claude Code vs Sourcegraph Cody compared: pricing, context, features. 3-persona verdict for solo devs, teams, enterprise. Tested and working in 2026."
 permalink: /claude-code-vs-cody-comparison-2026/
 date: 2026-04-21
@@ -96,3 +96,7 @@ Adding Claude Code to a Cody workflow:
 - [Claude Code vs Amazon Q Developer 2026](/claude-code-vs-amazon-q-developer-full-2026/)
 - [Agentic AI Coding Tools Compared 2026](/agentic-ai-coding-tools-comparison-2026/)
 - [Claude Code vs Tabnine: Complete Comparison 2026](/claude-code-vs-tabnine-full-comparison-2026/)
+
+## See Also
+
+- [Claude Code vs Sourcegraph Cody: Codebase Search](/claude-code-vs-sourcegraph-cody-codebase-search/)

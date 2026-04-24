@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md Template For New — Complete Developer Guide"
+title: "Claude Md Template For New"
 description: "A practical guide to using Claude MD templates for new projects. Learn how to structure prompts and use Claude skills like tdd, pdf, frontend-design, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

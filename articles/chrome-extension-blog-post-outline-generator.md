@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Blog Post Outline Generator: Guide"
+title: "Chrome Extension Blog Post Outline"
 description: "Learn how to use Chrome extension blog post outline generators to streamline your content creation workflow. Practical examples and implementation tips."
 date: 2026-03-15
 last_modified_at: 2026-04-17

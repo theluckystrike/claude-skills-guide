@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best DNS Chrome Speed — Honest Review 2026"
+title: "Best DNS Chrome Speed"
 description: "Optimize Chrome DNS settings for faster page loads. Learn about DNS prefetching, secure DNS, and custom resolvers for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Batch API 50% Discount Complete Guide"
+title: "Claude Batch API 50% Discount Complete"
 description: "Every Claude model offers 50% off via the Batch API. Opus 4.7 drops from $5/$25 to $2.50/$12.50 per million tokens."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -176,3 +176,11 @@ Verify the 50% discount is applying correctly:
 - [Anthropic Message Batches API Guide](/anthropic-message-batches-api-guide/)
 - [Claude API Batch Processing Large Datasets](/claude-api-batch-processing-large-datasets-workflow-guide/)
 - [Claude Code for Batch Processing Optimization](/claude-code-for-batch-processing-optimization-workflow/)
+
+## See Also
+
+- [Claude Batch Processing 100K Requests Guide](/claude-cost-claude-batch-processing-100k-requests-guide/)
+- [Claude Max Subscription vs API for Agent Fleets](/claude-cost-claude-max-subscription-vs-api-agent-fleets/)
+- [When to Use Claude Batch vs Real-Time API](/claude-cost-when-to-use-claude-batch-vs-real-time-api/)
+- [Batch API Job Failed Status — Fix (2026)](/claude-code-batch-api-job-failed-fix-2026/)
+- [How to Reduce Claude API Token Usage by 50%](/claude-cost-reduce-claude-api-token-usage-50-percent/)

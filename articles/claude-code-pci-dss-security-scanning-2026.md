@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for PCI-DSS Security Scanning (2026)"
+title: "Claude Code for PCI-DSS Security"
 permalink: /claude-code-pci-dss-security-scanning-2026/
 description: "Implement PCI-DSS v4.0 security scanning with Claude Code. Detect cardholder data exposure, validate encryption, and audit access controls."
 last_tested: "2026-04-22"

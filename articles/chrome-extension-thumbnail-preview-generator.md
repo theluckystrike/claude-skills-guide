@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Thumbnail Preview Generator"
+title: "Chrome Extension Thumbnail Preview"
 description: "Learn how to build a Chrome extension that generates thumbnail previews for images, links, and media. Practical code examples and implementation patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17

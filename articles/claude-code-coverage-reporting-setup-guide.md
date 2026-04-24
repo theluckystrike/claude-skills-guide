@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Setup: Claude Code Coverage Reporting Setup Guide (2026)"
+title: "Setup: Claude Code Coverage Reporting"
 description: "Learn how to set up comprehensive code coverage reporting with Claude Code. This guide covers configuration, tools, and best practices for tracking test."
 date: 2026-03-18
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Implement Goal-Driven Execution in CLAUDE.md (2026)"
+title: "Implement Goal-Driven Execution"
 description: "Copy-paste CLAUDE.md rules that enforce Karpathy's Goal-Driven Execution — goal tracking, scope gates, and completion criteria for Claude Code."
 permalink: /karpathy-goal-driven-implementation-2026/
 last_tested: "2026-04-22"

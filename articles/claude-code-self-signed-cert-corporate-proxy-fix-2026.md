@@ -1,5 +1,5 @@
 ---
-title: "Self-Signed Cert in Corporate Proxy — Fix (2026)"
+title: "Self-Signed Cert in Corporate Proxy"
 permalink: /claude-code-self-signed-cert-corporate-proxy-fix-2026/
 description: "Fix SELF_SIGNED_CERT_IN_CHAIN error behind corporate proxy. Export proxy CA cert and set NODE_EXTRA_CA_CERTS."
 last_tested: "2026-04-22"
@@ -79,3 +79,36 @@ Add this to your `CLAUDE.md`:
 - Ask IT for the CA cert file if not in /Library/Keychains/System.keychain.
 - Test with: curl -v https://api.anthropic.com 2>&1 | grep "SSL certificate"
 ```
+
+## See Also
+
+- [Update Fails Behind Corporate Proxy — Fix (2026)](/claude-code-update-fails-behind-proxy-fix-2026/)
+- [mTLS Client Certificate Error — Fix (2026)](/claude-code-mtls-client-cert-error-fix-2026/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `npm ERR! code EACCES`
+- `npm ERR! code ERESOLVE`
+- `npm ERR! peer dep missing`
+- `ECONNREFUSED: connection refused through proxy`
+- `Error: unable to verify the first certificate`
+
+## Frequently Asked Questions
+
+### Should I use npm or pnpm with Claude Code?
+
+Claude Code works with any Node.js package manager. If your project uses pnpm, add `Use pnpm instead of npm for all package operations` to your CLAUDE.md so Claude Code respects your toolchain choice.
+
+### Why does Claude Code sometimes run npm commands that fail?
+
+Claude Code infers the package manager from lock files. If both `package-lock.json` and `pnpm-lock.yaml` exist, it may pick the wrong one. Delete the unused lock file or add an explicit instruction in CLAUDE.md.
+
+### How do I verify my npm installation is working?
+
+Run `npm doctor` to check your npm environment. It validates the registry connection, permissions, cache integrity, and Node.js compatibility in one command.
+
+### How do I configure Claude Code to use a corporate proxy?
+
+Set the `HTTPS_PROXY` environment variable: `export HTTPS_PROXY=http://proxy.corp.com:8080`. Claude Code respects standard proxy environment variables. Add this to your shell profile for persistence.

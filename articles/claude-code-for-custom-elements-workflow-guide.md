@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Custom Elements Workflow Guide"
+title: "Claude Code for Custom Elements"
 description: "Learn how to create custom elements in Claude Code, including MCP tools, custom skills, and reusable function-calling patterns for your development."
 date: 2026-03-15
 last_modified_at: 2026-04-17

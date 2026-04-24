@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Claude Code to Refactor Legacy JavaScript Code"
+title: "How to Use Claude Code to Refactor"
 description: "A practical guide to refactoring legacy JavaScript code using Claude Code and its specialized skills. Learn techniques for modernizing old codebases."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -244,4 +244,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [How To Use Claude Code To — Complete Developer Guide](/how-to-use-claude-code-to-understand-unfamiliar-codebase-qui/)
+- [Write Database Queries with Claude Code (2026)](/how-to-use-claude-code-to-write-database-queries-from-scratc/)

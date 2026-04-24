@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "GitHub Chrome Extension Code Review: Tools and Techniques"
+title: "GitHub Chrome Extension Code Review"
 description: "A practical guide to reviewing code in GitHub repository Chrome extensions. Learn methods, tools, and best practices for extension code analysis."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Engineering Manager Pull Request Review Workflow"
+title: "Claude Code Engineering Manager Pull"
 description: "Learn how to use Claude Code to streamline your pull request review process as an engineering manager."
 date: 2026-03-14
 last_modified_at: 2026-04-17

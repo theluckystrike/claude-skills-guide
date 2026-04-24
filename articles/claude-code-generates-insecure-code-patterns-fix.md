@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: How to Use Generates Insecure Code Patterns Fix (2026)"
+title: "Fix: How to Use Generates Insecure Code"
 description: "Generates Insecure Code Patterns Fix. Practical guide with working examples for developers. Updated for 2026."
 last_tested: "2026-04-22"
 date: 2026-03-14
@@ -593,4 +593,7 @@ Related Reading
 - [Fix Claude Code Login — Cannot Paste Auth Code](/claude-code-login-paste-fix/)
 {% endraw %}
 
+## See Also
 
+- [Fix Claude Code Using Outdated Patterns (2026)](/claude-code-generates-outdated-patterns-fix-2026/)
+- [Fix Claude Code Generating Insecure Code (2026)](/claude-code-generates-insecure-code-fix-2026/)

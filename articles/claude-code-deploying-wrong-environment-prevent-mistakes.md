@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Wrong Environment Deploy: Prevent Mistakes"
+title: "Claude Code Wrong Environment Deploy"
 description: "Claude Code deploying to production instead of staging wastes 10K-50K tokens in rollback and costs real business damage. Pre-flight checks prevent this."
 permalink: /claude-code-deploying-wrong-environment-prevent-mistakes/
 date: 2026-04-22

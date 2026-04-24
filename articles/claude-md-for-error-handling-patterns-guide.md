@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude MD Error Handling Patterns Guide (2026)"
+title: "Fix: Claude MD Error Handling Patterns"
 description: "Add error handling patterns to Claude MD skill files. Recovery logic, retry strategies, and graceful fallbacks for production-ready skill files."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -378,4 +378,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [CLAUDE.md for Error Handling — Patterns That Prevent Silent Failures (2026)](/claude-md-for-error-handling-patterns/)

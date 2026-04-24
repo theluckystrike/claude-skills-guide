@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use GitHub Actions Self-Hosted Runner (2026)"
+title: "How to Use GitHub Actions Self-Hosted"
 description: "Learn how to set up and configure Claude Code on GitHub Actions self-hosted runners for automated AI-assisted development workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -491,4 +491,7 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Coolify — Workflow Guide](/claude-code-for-coolify-self-hosting-workflow-guide/)
+- [Claude Code for GitHub CLI — Workflow Guide](/claude-code-for-github-cli-workflow-guide/)

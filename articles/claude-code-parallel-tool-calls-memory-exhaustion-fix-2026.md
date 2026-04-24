@@ -1,5 +1,5 @@
 ---
-title: "Parallel Tool Calls Memory Exhaustion Fix"
+title: "Parallel Tool Calls Memory Exhaustion"
 permalink: /claude-code-parallel-tool-calls-memory-exhaustion-fix-2026/
 description: "Fix memory exhaustion from parallel tool calls in Claude Code. Limit concurrent operations and reduce batch sizes to prevent heap overflow crashes."
 last_tested: "2026-04-22"
@@ -58,3 +58,31 @@ vm_stat | head -10
 # CLAUDE.md rule
 When processing more than 3 files, work sequentially. Never read more than 3 files in a single turn. Run /compact after processing every 5 files.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `Error: Claude Code requires Node.js 18 or later`
+- `SyntaxError: Unexpected token '??' — Node 14 detected`
+- `MODULE_NOT_FOUND: Cannot find module 'node:fs'`
+- `FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed`
+- `JavaScript heap out of memory`
+
+## Frequently Asked Questions
+
+### What Node.js version does Claude Code require?
+
+Claude Code requires Node.js 18 or later. Node.js 20 LTS is recommended for the best compatibility and performance. Check your version with `node --version`.
+
+### How do I manage multiple Node.js versions?
+
+Use nvm (Node Version Manager): `nvm install 20 && nvm use 20`. This lets you switch between Node.js versions per-project without affecting other applications. Add a `.nvmrc` file with `20` to your project root so nvm automatically selects the right version.
+
+### Why does Claude Code fail with the node:fs prefix?
+
+The `node:` prefix for built-in modules was introduced in Node.js 16. If you see errors about `node:fs` or `node:path`, you are running an older Node.js version that does not support this syntax. Upgrade to Node.js 18 or later.
+
+### How much memory does Claude Code use?
+
+Claude Code typically uses 200-500MB of RAM. Large file operations, parallel tool calls, and long conversation histories can push usage above 1GB. Monitor with `ps aux | grep claude` to see current memory usage.

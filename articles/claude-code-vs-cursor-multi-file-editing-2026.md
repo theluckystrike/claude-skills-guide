@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Cursor: Multi-File Editing in 2026"
+title: "Claude Code vs Cursor: Multi-File Editing (2026)"
 description: "Compare how Claude Code and Cursor handle editing multiple files simultaneously. Agent workflows, Composer, and real-world refactoring results."
 date: 2026-04-21
 permalink: /claude-code-vs-cursor-multi-file-editing-2026/
@@ -86,3 +86,7 @@ Cursor's visual diff preview makes it easier for developers unfamiliar with the 
 ## When To Use Neither
 
 For purely mechanical refactoring (renaming a symbol, changing an import path consistently), your IDE's built-in refactoring tools or command-line tools like `sed` or `ast-grep` are faster and more reliable than either AI tool. AI excels when changes require understanding semantics — modifying behavior, updating logic, adapting patterns — not when applying a deterministic transformation.
+
+## See Also
+
+- [Stop Claude Code Rewriting Entire Files (2026)](/claude-code-rewrites-instead-of-editing-fix-2026/)

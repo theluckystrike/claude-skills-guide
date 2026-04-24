@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Should I Use Claude Code For Writing — Developer Guide"
+title: "Should I Use Claude Code For Writing"
 description: "A practical guide for developers deciding whether Claude Code is right for your infrastructure automation scripts."
 date: 2026-03-14
 last_modified_at: 2026-04-17

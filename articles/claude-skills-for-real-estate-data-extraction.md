@@ -159,3 +159,7 @@ MLS data licensing typically prohibits storing listing photos beyond 48 hours af
 - [Claude Skills for Financial Analysis](/claude-skills-for-financial-analysis/) -- REIT and investment valuation
 - [Claude Skills for E-Commerce Platforms](/claude-skills-for-ecommerce-platforms/) -- listing marketplace patterns
 - [Claude Skills for Academic Research](/claude-skills-for-academic-research/) -- housing market data analysis
+
+## See Also
+
+- [Claude Code for Bloomberg Data Extraction (2026)](/claude-code-bloomberg-terminal-data-extraction-2026/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Git Branch Protection Rules (2026)"
+title: "Claude Code for Git Branch Protection"
 description: "Automate Git branch protection rules with Claude Code for safer deployments. Configure required reviews, status checks, and merge restrictions."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -387,4 +387,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Branch Protection Bypass Attempt Fix](/claude-code-branch-protection-bypass-attempt-fix-2026/)

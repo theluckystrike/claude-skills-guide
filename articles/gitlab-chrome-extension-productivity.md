@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "GitLab Productivity Chrome Extension Guide (2026)"
+title: "GitLab Productivity Chrome Extension"
 description: "Discover how GitLab Chrome extensions can transform your development workflow with merge request reviews, pipeline monitoring, and issue tracking."
 date: 2026-03-15
 last_modified_at: 2026-04-17

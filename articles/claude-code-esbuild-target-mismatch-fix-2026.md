@@ -1,5 +1,5 @@
 ---
-title: "esbuild Target Mismatch Error — Fix (2026)"
+title: "esbuild Target Mismatch Error — Fix"
 permalink: /claude-code-esbuild-target-mismatch-fix-2026/
 description: "Fix esbuild target mismatch transforming modern syntax. Set target to match your Node or browser minimum version."
 last_tested: "2026-04-22"
@@ -77,3 +77,31 @@ Add this to your `CLAUDE.md`:
 - Format: esm for new projects. Only use cjs for legacy compatibility.
 - Do not use top-level await in CJS output format.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `Error: Claude Code requires Node.js 18 or later`
+- `SyntaxError: Unexpected token '??' — Node 14 detected`
+- `MODULE_NOT_FOUND: Cannot find module 'node:fs'`
+- `Error reading configuration file`
+- `JSON parse error in config`
+
+## Frequently Asked Questions
+
+### What Node.js version does Claude Code require?
+
+Claude Code requires Node.js 18 or later. Node.js 20 LTS is recommended for the best compatibility and performance. Check your version with `node --version`.
+
+### How do I manage multiple Node.js versions?
+
+Use nvm (Node Version Manager): `nvm install 20 && nvm use 20`. This lets you switch between Node.js versions per-project without affecting other applications. Add a `.nvmrc` file with `20` to your project root so nvm automatically selects the right version.
+
+### Why does Claude Code fail with the node:fs prefix?
+
+The `node:` prefix for built-in modules was introduced in Node.js 16. If you see errors about `node:fs` or `node:path`, you are running an older Node.js version that does not support this syntax. Upgrade to Node.js 18 or later.
+
+### Where does Claude Code store its configuration?
+
+Configuration is stored in `~/.claude/config.json` for global settings and `.claude/config.json` in the project root for project-specific settings. Project settings override global settings for any overlapping keys.

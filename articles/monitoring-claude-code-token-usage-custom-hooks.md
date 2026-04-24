@@ -1,5 +1,5 @@
 ---
-title: "Monitoring Claude Code Token Usage with Custom Hooks"
+title: "Monitoring Claude Code Token Usage"
 description: "Build custom Claude Code hooks that log token usage per session and alert when costs exceed thresholds, enabling data-driven optimization worth $10-30/month."
 permalink: /monitoring-claude-code-token-usage-custom-hooks/
 date: 2026-04-22

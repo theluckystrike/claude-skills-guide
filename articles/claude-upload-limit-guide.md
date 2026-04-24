@@ -1,5 +1,5 @@
 ---
-title: "Claude Upload Limit: File Size and Types (2026)"
+title: "Claude Upload Limit"
 description: "Complete breakdown of Claude upload limits across web, API, and CLI. File sizes, supported types, page limits, and workarounds for large files."
 permalink: /claude-upload-limit-guide/
 last_tested: "2026-04-24"
@@ -336,19 +336,6 @@ The PDF may exceed the page limit for your plan, or the combined token count of 
 
 Not on Claude.ai. The API has slightly higher limits (32 MB for PDFs). For truly large files, Claude Code is the recommended approach since it reads directly from your filesystem with no upload ceiling.
 
-## Related Guides
-
-- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
-- [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
-- [Claude Code Getting Started](/claude-code-getting-started-terminal-setup/) — initial CLI setup
-- [Claude Temperature Settings Guide](/claude-temperature-settings-guide/) — control output behavior
-- [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — reduce token consumption
-- [Claude Code Configuration Hierarchy](/claude-code-configuration-hierarchy-explained-2026/) — understand settings precedence
-- [Claude Code Security Best Practices](/claude-code-security-best-practices-2026/) — secure your workflow
-- [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — extend capabilities with external tools
-
-- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Large uploads affect token costs
-- [save Claude Code conversations](/claude-code-save-conversation-guide/) — Save conversations with uploaded files
 ### Can Claude Code process video or audio files?
 
 No. Neither Claude Code nor the API natively processes video or audio files. You would need to extract frames from video or transcribe audio before sending content to Claude.
@@ -364,6 +351,19 @@ A typical image consumes approximately 1,600 tokens. High-resolution images that
 ### Can I upload multiple file types in the same message on Claude.ai?
 
 Yes, you can mix file types in a single message, up to 5 files total. For example, you can upload a PDF and two images in the same message.
+
+## Related Guides
+
+- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
+- [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
+- [Claude Code Getting Started](/claude-code-getting-started-terminal-setup/) — initial CLI setup
+- [Claude Temperature Settings Guide](/claude-temperature-settings-guide/) — control output behavior
+- [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — reduce token consumption
+- [Claude Code Configuration Hierarchy](/claude-code-configuration-hierarchy-explained-2026/) — understand settings precedence
+- [Claude Code Security Best Practices](/claude-code-security-best-practices-2026/) — secure your workflow
+- [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — extend capabilities with external tools
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Large uploads affect token costs
+- [save Claude Code conversations](/claude-code-save-conversation-guide/) — Save conversations with uploaded files
 
 <script type="application/ld+json">
 {

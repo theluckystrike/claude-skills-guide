@@ -1,5 +1,5 @@
 ---
-title: "OAuth Setup with Claude Code: Avoid the Token-Expensive Mistakes"
+title: "OAuth Setup with Claude Code"
 description: "OAuth implementation with Claude Code commonly wastes 30K-80K tokens on trial-and-error. Pre-staged configurations and clear specifications cut this by 60%."
 permalink: /oauth-setup-claude-code-avoid-token-expensive-mistakes/
 date: 2026-04-22

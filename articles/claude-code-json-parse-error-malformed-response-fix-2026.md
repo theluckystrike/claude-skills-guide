@@ -1,5 +1,5 @@
 ---
-title: "JSON Parse Error on Malformed Response Fix"
+title: "JSON Parse Error on Malformed Response"
 permalink: /claude-code-json-parse-error-malformed-response-fix-2026/
 description: "Fix JSON parse error on malformed API response in Claude Code. Retry the request or clear corrupted cache to resolve SyntaxError unexpected token."
 last_tested: "2026-04-22"
@@ -61,3 +61,8 @@ curl -v https://api.anthropic.com 2>&1 | grep "< HTTP"
 # CLAUDE.md rule
 If you see a JSON parse error, retry once before investigating. Report persistent parse errors — they indicate a network or proxy issue, not a code problem.
 ```
+
+## See Also
+
+- [Config File JSON Parse Error — Fix (2026)](/claude-code-config-json-corrupted-parse-error-fix-2026/)
+- [Response JSON Parse Failure — Fix (2026)](/claude-code-response-json-parse-failure-fix-2026/)

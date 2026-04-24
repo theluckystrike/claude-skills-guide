@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Token Budget: How to Set Limits and Track Spend"
+title: "Claude Code Token Budget"
 description: "Set token budgets and track Claude Code spending with built-in /cost, ccusage, and API console alerts to prevent runaway costs on every session."
 permalink: /claude-code-token-budget-set-limits-track-spend/
 date: 2026-04-22
@@ -145,3 +145,8 @@ ccusage --days 7 --format table
 - [How to Reduce Claude Code Token Usage by 3x](/reduce-claude-code-token-usage-3x-guide-2026/) -- comprehensive token reduction strategies
 - [Claude Code Cost Alerts: Set Up Notifications When Spend Exceeds Budget](/claude-code-cost-alerts-notifications-budget/) -- detailed alerting configuration
 - [Claude Code Hooks for Token Budget Enforcement](/claude-code-hooks-token-budget-enforcement/) -- automated enforcement with hooks
+
+## See Also
+
+- [Token Count Estimation Mismatch Fix](/claude-code-token-count-estimation-mismatch-fix-2026/)
+- [How to set a hard token budget per Claude Code session](/set-hard-token-budget-per-claude-code-session/)

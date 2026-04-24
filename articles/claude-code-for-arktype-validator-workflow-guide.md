@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for ArkType — Workflow Guide"
+title: "Claude Code for ArkType"
 description: "Add type-safe runtime validation with ArkType and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-arktype-validator-workflow-guide/

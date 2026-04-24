@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for MCP Prompt Server Workflow"
+title: "Claude Code for MCP Prompt Server"
 description: "Learn how to build an efficient MCP prompt server workflow with Claude Code. This guide covers practical patterns for creating, managing, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -228,4 +228,8 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code SSH Key Passphrase Blocking — Fix (2026)](/claude-code-ssh-key-passphrase-prompt-blocking-fix/)
+- [Claude Code for Nitro Server Engine — Guide](/claude-code-for-nitro-server-engine-workflow-guide/)
+- [Claude Code for Prompt Testing Evaluation Guide](/claude-code-for-prompt-testing-evaluation-guide/)

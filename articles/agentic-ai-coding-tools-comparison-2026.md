@@ -95,4 +95,7 @@ If your work is primarily data science in Jupyter notebooks, none of these codin
 
 ## Related
 
+- [Codex vs Claude Code comparison](/codex-vs-claude-code-comparison-2026/) — detailed OpenAI Codex vs Claude Code analysis
+- [How to use Claude Code](/how-to-use-claude-code-beginner-guide/) — beginner walkthrough if choosing Claude Code
+- [Claude API pricing](/claude-api-pricing-complete-guide/) — every plan and model priced
 - [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Guide to the claude-sonnet-4-20250514 model and features

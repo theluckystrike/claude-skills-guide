@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Memory Feature vs SuperMemory Skill"
+title: "Claude Memory Feature vs SuperMemory"
 description: "Claude's built-in session context vs the /supermemory skill: what each does, when to use each, and how they work together in Claude Code."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -235,4 +235,6 @@ Related Reading
 
 Built by theluckystrike - More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Memory (claude-memory) vs Supermemory: AI Memory Tools Compared](/claude-memory-vs-supermemory-comparison/)

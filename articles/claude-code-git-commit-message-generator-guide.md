@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Git Commit Message Generator Guide"
+title: "Claude Code Git Commit Message"
 description: "Learn how to create and use Claude Code skills to generate semantic git commit messages automatically. Includes setup instructions and practical examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -181,4 +181,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Fix Claude Code Poor Commit Messages (2026)](/claude-code-poor-commit-messages-fix-2026/)
+- [Pre-commit Hook Failed in Claude Code — Fix (2026)](/claude-code-git-hook-blocked-commit-fix-2026/)

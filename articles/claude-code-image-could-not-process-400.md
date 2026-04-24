@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude Code Image 400 Error Loop (2026)"
+title: "Fix: Claude Code Image 400 Error Loop"
 description: "Fix the unrecoverable 'Could not process image' API 400 error in Claude Code where attaching a PNG makes the entire session unusable. Updated for 2026."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -151,4 +151,6 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Claude API Error 429 Rate Limit Fix](/anthropic-api-error-429-rate-limit/)
 - [Claude API Error 413 Request Too Large Explained](/claude-api-error-413-requesttoolarge-explained/)
 
+## See Also
 
+- [Zombie Process From Killed Subagent Fix](/claude-code-zombie-process-killed-subagent-fix-2026/)

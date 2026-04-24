@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Literature Review Summarization Workflow (2026)"
+title: "Claude Code Literature Review"
 last_tested: "2026-04-22"
 description: "Learn how to build an efficient literature review summarization workflow using Claude Code. This guide covers practical examples, code snippets, and."
 date: 2026-03-14
@@ -268,4 +268,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for PCB Layout Review with KiCad (2026)](/claude-code-pcb-layout-review-kicad-2026/)

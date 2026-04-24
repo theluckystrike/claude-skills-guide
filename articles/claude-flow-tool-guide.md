@@ -1,5 +1,5 @@
 ---
-title: "Claude Flow: Multi-Agent Orchestration Tool (2026)"
+title: "Claude Flow"
 description: "Claude Flow orchestrates multiple Claude Code agents as YAML-defined pipelines. Sequential chains, parallel execution, and conditional branching."
 permalink: /claude-flow-tool-guide/
 last_tested: "2026-04-24"
@@ -312,19 +312,6 @@ There is no hard limit in Claude Flow itself, but Anthropic API rate limits appl
 **Can I use custom tools?**
 Claude Flow passes the tools configuration to Claude Code. Any tool available in Claude Code is available in Claude Flow steps.
 
-## Related Guides
-
-- [Multi-agent architecture patterns](/claude-code-multi-agent-architecture-guide-2026/) — design patterns for agent coordination
-- [Subagent communication](/claude-code-multi-agent-subagent-communication-guide/) — how agents share context
-- [Parallel subagents best practices](/parallel-subagents-claude-code-best-practices-2026/) — optimization techniques
-- [Multi-agent error recovery](/claude-code-multi-agent-error-recovery-strategies/) — handling failures gracefully
-- [Token budgeting for multi-agent](/multi-agent-token-budgeting-allocate-subagents/) — cost control strategies
-- [Cost-efficient multi-agent workflows](/claude-cost-cost-efficient-multi-agent-coding-workflows/) — minimize spend
-- [How to build a Claude Code agent](/how-to-build-claude-code-agent-2026/) — foundational agent-building guide
-- [The Claude Code Playbook](/playbook/) — comprehensive Claude Code reference
-
-- [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — Build custom agents with the Agent SDK
-- [sequential thinking in Claude Code](/sequential-thinking-claude-code-guide/) — Use thinking for complex orchestration steps
 ### Can I use Claude Flow with the Claude Agent SDK?
 
 Claude Flow orchestrates Claude Code CLI sessions. The Agent SDK is a separate programmatic interface. They solve similar problems differently. Use Claude Flow for YAML-defined pipelines and the Agent SDK for code-defined agent workflows.
@@ -340,6 +327,21 @@ Yes. Install Claude Flow and Claude Code on the CI server, set the ANTHROPIC_API
 ### How do I debug a failing pipeline step?
 
 Check the individual agent log output for the failing step. Run the step's prompt manually with Claude Code to reproduce the issue. Set fail_fast to false to see if subsequent steps succeed independently.
+
+## Related Guides
+
+- [Multi-agent architecture patterns](/claude-code-multi-agent-architecture-guide-2026/) — design patterns for agent coordination
+- [Subagent communication](/claude-code-multi-agent-subagent-communication-guide/) — how agents share context
+- [Parallel subagents best practices](/parallel-subagents-claude-code-best-practices-2026/) — optimization techniques
+- [Multi-agent error recovery](/claude-code-multi-agent-error-recovery-strategies/) — handling failures gracefully
+- [Token budgeting for multi-agent](/multi-agent-token-budgeting-allocate-subagents/) — cost control strategies
+- [Cost-efficient multi-agent workflows](/claude-cost-cost-efficient-multi-agent-coding-workflows/) — minimize spend
+- [How to build a Claude Code agent](/how-to-build-claude-code-agent-2026/) — foundational agent-building guide
+- [The Claude Code Playbook](/playbook/) — comprehensive Claude Code reference
+- [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — Build custom agents with the Agent SDK
+- [sequential thinking in Claude Code](/sequential-thinking-claude-code-guide/) — Use thinking for complex orchestration steps
+- [Claude Code hooks](/claude-code-hooks-complete-guide/) — hook into agent tool execution
+- [Super Claude Code framework](/super-claude-code-framework-guide/) — structured prompting for agents
 
 <script type="application/ld+json">
 {

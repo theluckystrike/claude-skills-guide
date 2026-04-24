@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Tab Groups Memory: Save RAM Guide (2026)"
+title: "Chrome Tab Groups Memory"
 description: "Chrome tab groups memory impact explained. Practical techniques to reduce RAM usage and optimize browser performance for heavy tab users. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Nix Flake Reproducible — Developer Guide"
+title: "Claude Code Nix Flake Reproducible"
 description: "Learn how to combine Claude Code with Nix Flakes to create fully reproducible, declarative development environments that work consistently across machines."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -336,4 +336,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for mise Development Environment Setup (2026)](/claude-code-mise-development-environment-2026/)

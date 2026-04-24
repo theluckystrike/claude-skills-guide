@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "JavaScript Profiler Chrome Extension Guide (2026)"
+title: "JavaScript Profiler Chrome Extension"
 description: "Learn how to profile JavaScript performance in Chrome extensions. Practical techniques for identifying bottlenecks, measuring execution time, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -56,3 +56,36 @@ echo "database-dump.sql" >> .claudeignore
 # CLAUDE.md rule
 Never read files larger than 500 lines in full. Use grep or head/tail to extract relevant sections. Add generated files, SQL dumps, and binary files to .claudeignore.
 ```
+
+## See Also
+
+- [Large File Committed Exceeds GitHub Limit Fix](/claude-code-large-file-committed-github-limit-fix-2026/)
+- [Claude Code and large package.json — unnecessary context loading](/claude-code-large-package-json-unnecessary-context/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `fatal: not a git repository`
+- `error: failed to push some refs`
+- `fatal: refusing to merge unrelated histories`
+- `TokenLimitExceeded: max tokens reached`
+- `Error: output truncated at max_tokens`
+
+## Frequently Asked Questions
+
+### Why does Claude Code require git?
+
+Claude Code uses git for several core operations: tracking file changes, creating commits, reading blame information, searching history with `git log`, and managing branches. Without git, these operations fail and Claude Code falls back to less efficient alternatives.
+
+### Can Claude Code work in a non-git directory?
+
+Yes, but with reduced functionality. File search and editing work normally, but version control operations (commit, diff, blame) are unavailable. Claude Code displays a warning when opened in a directory without git initialization.
+
+### How do I prevent Claude Code from making unwanted git operations?
+
+Add rules to your CLAUDE.md: `Do not create commits automatically. Do not run git push. Always ask before any git operation that modifies history.` Claude Code respects these constraints and asks for confirmation before proceeding.
+
+### What causes token count mismatches?
+
+Token counts are estimated before sending a request and precisely calculated on the server. The estimation uses a fast local tokenizer that may differ slightly from the server's tokenizer. Small discrepancies (1-3%) are normal and do not affect functionality.

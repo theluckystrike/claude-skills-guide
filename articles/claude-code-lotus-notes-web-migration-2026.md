@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Lotus Notes Web Migration (2026)"
+title: "Claude Code for Lotus Notes Web"
 permalink: /claude-code-lotus-notes-web-migration-2026/
 description: "Migrate Lotus Notes/Domino applications to modern web stacks with Claude Code. Convert NSF databases, LotusScript, and formula language."
 last_tested: "2026-04-22"
@@ -228,3 +228,4 @@ npm test -- --grep "migration parity"
 - [Claude Code for COBOL to Java Migration](/claude-code-cobol-to-java-migration-2026/)
 - [Claude Code for ColdFusion to Node.js Migration](/claude-code-coldfusion-to-nodejs-migration-2026/)
 - [Claude Code for Classic ASP to Modern Web Migration](/claude-code-classic-asp-to-modern-web-migration-2026/)
+- [Claude Code for Natural/ADABAS Migration (2026)](/claude-code-natural-adabas-migration-2026/)

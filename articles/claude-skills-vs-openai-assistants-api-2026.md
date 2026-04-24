@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills vs OpenAI Assistants API Compared (2026)"
+title: "Claude Skills vs OpenAI Assistants API (2026)"
 permalink: /claude-skills-vs-openai-assistants-api-2026/
 description: "Claude skills are zero-infrastructure markdown files. OpenAI Assistants need code and hosting. Compare architecture, cost, and production fit for 2026."
 last_tested: "2026-04-21"

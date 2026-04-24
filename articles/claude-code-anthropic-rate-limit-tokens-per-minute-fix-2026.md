@@ -1,5 +1,5 @@
 ---
-title: "Anthropic Rate Limit Tokens Per Minute — Fix (2026)"
+title: "Anthropic Rate Limit Tokens Per Minute"
 permalink: /claude-code-anthropic-rate-limit-tokens-per-minute-fix-2026/
 description: "Wait 60 seconds then retry to fix input token rate limit error. Reduce request size or upgrade your Anthropic API tier to prevent future hits."
 last_tested: "2026-04-21"
@@ -49,3 +49,35 @@ Add to your CLAUDE.md:
 ```
 Minimize input tokens by reading only files relevant to the current task. Avoid reading entire directories. Use Grep to locate specific content before reading full files. Space large operations across multiple sessions.
 ```
+
+## See Also
+
+- [Claude Code used 500K tokens for a simple task — how to prevent](/claude-code-500k-tokens-simple-task-prevent/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `429 Too Many Requests`
+- `RateLimitError: rate limit exceeded`
+- `Error: tokens_per_minute limit reached`
+- `TokenLimitExceeded: max tokens reached`
+- `Error: output truncated at max_tokens`
+
+## Frequently Asked Questions
+
+### What are the Claude API rate limits?
+
+Rate limits vary by plan tier and are measured in requests per minute (RPM) and tokens per minute (TPM). Free tier has lower limits than paid plans. Check your current limits at console.anthropic.com under your organization settings.
+
+### Does Claude Code handle rate limits automatically?
+
+Yes. Claude Code implements exponential backoff when it receives HTTP 429 responses. It waits and retries automatically, typically resolving within 30-60 seconds. You do not need to add retry logic in your prompts or workflow.
+
+### How can I reduce my token usage?
+
+Use shorter prompts, reference specific files instead of loading entire directories, and close conversations that have accumulated large context windows. Starting a fresh conversation resets the context and reduces per-request token consumption.
+
+### What causes token count mismatches?
+
+Token counts are estimated before sending a request and precisely calculated on the server. The estimation uses a fast local tokenizer that may differ slightly from the server's tokenizer. Small discrepancies (1-3%) are normal and do not affect functionality.

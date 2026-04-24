@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Model Compression and Quantization Guide (2026)"
+title: "Claude Code Model Compression"
 last_tested: "2026-04-22"
 description: "Learn how to use Claude Code for AI model compression and quantization. Practical techniques for reducing model size while maintaining performance."
 date: 2026-03-14
@@ -118,4 +118,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Model Not Available on Your Plan — Fix (2026)](/claude-code-model-not-available-your-plan-fix-2026/)
+- [MCP Protocol Version Mismatch in Claude — Fix (2026)](/claude-code-model-context-protocol-version-mismatch-fix-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Privacy Sandbox 2026 — Developer Guide"
+title: "Chrome Privacy Sandbox 2026"
 description: "Chrome Privacy Sandbox APIs for 2026: Topics API, Attribution Reporting, and Private Aggregation. Code examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

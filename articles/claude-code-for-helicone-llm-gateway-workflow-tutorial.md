@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Helicone LLM — Complete Developer Guide"
+title: "Claude Code For Helicone LLM"
 description: "Learn how to integrate Claude Code with Helicone's LLM gateway for enhanced observability, caching, and rate limiting in your AI applications."
 date: 2026-04-19
 last_modified_at: 2026-04-19

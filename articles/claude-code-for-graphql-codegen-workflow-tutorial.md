@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code GraphQL Codegen Workflow (2026)"
+title: "Claude Code GraphQL Codegen Workflow"
 description: "Automate GraphQL code generation with Claude Code for typed queries, resolver scaffolding, and schema-first development. Working codegen configs."
 date: 2026-04-19
 last_modified_at: 2026-04-19

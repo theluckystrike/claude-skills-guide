@@ -1,5 +1,5 @@
 ---
-title: "Claude Code git diff too large -- reducing context size"
+title: "Claude Code git diff too large --"
 description: "Reduce oversized git diff output in Claude Code from 10K-50K tokens to under 1K with --stat, file filtering, and targeted diff commands that save context."
 permalink: /claude-code-git-diff-too-large-reducing-context/
 date: 2026-04-22
@@ -144,3 +144,9 @@ Prevention: --stat first pattern
 - [Claude Code re-reading entire codebase every message](/claude-code-rereading-entire-codebase-every-message-fix/) -- reducing redundant file reads
 - [CLAUDE.md as Cost Control](/claude-md-cost-control-rules-prevent-token-waste/) -- comprehensive cost prevention rules
 - [The Compaction Strategy](/compaction-strategy-when-compact-when-not/) -- recovering from large context pollution
+
+## See Also
+
+- [Knowledge Base Exceeds 512KB Maximum — Fix (2026)](/claude-code-knowledge-base-too-large-fix-2026/)
+- [Tool Result Exceeds 100KB Truncating — Fix (2026)](/claude-code-tool-result-too-large-fix-2026/)
+- [Git Submodule Not Initialized Error Fix](/claude-code-submodule-not-initialized-fix-2026/)

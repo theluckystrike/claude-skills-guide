@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Connect Claude Skills to External APIs Guide"
+title: "How to Connect Claude Skills"
 description: "A practical guide to connecting Claude Code skills to external APIs, covering tool use patterns, authentication, rate limiting, and building reliable."
 date: 2026-03-13
 last_modified_at: 2026-04-17

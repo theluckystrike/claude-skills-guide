@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Test Environment Management Guide"
+title: "Claude Code Test Environment Management"
 description: "Learn how to manage test environments effectively using Claude Code skills. Practical examples for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

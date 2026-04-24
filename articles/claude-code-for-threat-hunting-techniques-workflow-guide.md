@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Threat Hunting with Claude Code: Detection Guide (2026)"
+title: "Threat Hunting with Claude Code"
 description: "Automate threat hunting with Claude Code. Covers log analysis, IOC correlation, detection rule generation, and incident investigation workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19

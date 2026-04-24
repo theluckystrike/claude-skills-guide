@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Router: Model Routing Guide (2026)"
+title: "Claude Code Router: Model Routing Guide"
 description: "Route tasks to the optimal Claude model automatically. Configure cost-aware model routing in Claude Code with Opus, Sonnet, and Haiku strategies."
 permalink: /claude-code-router-guide/
 last_tested: "2026-04-24"
@@ -283,19 +283,6 @@ Not natively. You can build this into scripts: use Opus for security-sensitive f
 **How does prompt caching interact with routing?**
 Prompt caching works across all models. Cached inputs cost 90% less. This means the cost gap between models narrows for repeated operations on the same files.
 
-## Related Guides
-
-- [Claude Code cost breakdown](/claude-code-cost-complete-guide/) — full pricing reference
-- [Reduce Claude Code spend](/claude-code-costs-too-much-reduce-spend-2026/) — cost optimization tactics
-- [Best cost-saving tools](/best-claude-code-cost-saving-tools-2026/) — third-party cost tools
-- [Multi-agent architecture](/claude-code-multi-agent-architecture-guide-2026/) — multi-model agent patterns
-- [API mode vs interactive](/claude-code-api-mode-vs-interactive-2026/) — programmatic model selection
-- [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — get better results from any model
-- [The Claude Code Playbook](/playbook/) — comprehensive configuration reference
-- [Parallel subagents best practices](/parallel-subagents-claude-code-best-practices-2026/) — multi-model parallelism
-
-- [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Sonnet 4.5 capabilities and features
-- [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Sonnet 4 capabilities and features
 ### Does model routing affect prompt caching?
 
 Prompt caching works within the same model. Switching models between requests means the cache from the previous model is not reused. For maximum cache benefit, batch requests by model.
@@ -311,6 +298,32 @@ No. The alias (like sonnet) resolves to the same model as the full ID (claude-so
 ### How do I know if Sonnet is good enough or if I need Opus?
 
 Start with Sonnet. If the output quality is insufficient — missed edge cases, incorrect logic, or shallow analysis — escalate to Opus for that specific task. Most daily development tasks do not need Opus.
+
+## Claude Code Router: Configuration Summary
+
+The Claude Code router is the system that determines which Claude model handles each request. Whether you use the built-in defaults, manual CLI flags, or CLAUDE.md routing rules, the router sits between your prompt and the model. Understanding how the Claude Code router works lets you optimize for cost, speed, and quality simultaneously.
+
+Key configuration points for the Claude Code router:
+
+1. **Default model** — set in `~/.claude/settings.json` under `"model"`, or pass `--model` at launch
+2. **Subagent model** — configure which model subagents use (can differ from the primary model)
+3. **Routing rules** — define in CLAUDE.md to route based on task type, file pattern, or complexity
+4. **Cost guardrails** — combine routing with spending alerts to prevent budget overruns
+
+The Claude Code router does not require any external dependencies or plugins. It is built into Claude Code and configurable through the standard settings and CLAUDE.md files. For OpenRouter-based model routing (accessing non-Anthropic models), see our [OpenRouter setup guide](/claude-code-openrouter-setup-guide/).
+
+## Related Guides
+
+- [Claude Code cost breakdown](/claude-code-cost-complete-guide/) — full pricing reference
+- [Reduce Claude Code spend](/claude-code-costs-too-much-reduce-spend-2026/) — cost optimization tactics
+- [Best cost-saving tools](/best-claude-code-cost-saving-tools-2026/) — third-party cost tools
+- [Multi-agent architecture](/claude-code-multi-agent-architecture-guide-2026/) — multi-model agent patterns
+- [API mode vs interactive](/claude-code-api-mode-vs-interactive-2026/) — programmatic model selection
+- [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — get better results from any model
+- [The Claude Code Playbook](/playbook/) — comprehensive configuration reference
+- [Parallel subagents best practices](/parallel-subagents-claude-code-best-practices-2026/) — multi-model parallelism
+- [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Sonnet 4.5 capabilities and features
+- [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Sonnet 4 capabilities and features
 
 <script type="application/ld+json">
 {

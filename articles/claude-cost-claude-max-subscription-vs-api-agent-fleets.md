@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Max Subscription vs API for Agent Fleets"
+title: "Claude Max Subscription vs API"
 description: "5 Claude Max subs cost $1,000/month flat. The equivalent API usage costs $457 for 2,816 articles. Here is when each wins."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -221,3 +221,11 @@ Track the cost-effectiveness of your chosen model:
 - [Claude Opus Orchestrator Sonnet Worker Architecture](/claude-opus-orchestrator-sonnet-worker-architecture/)
 - [Parallel Subagents Claude Code Best Practices](/parallel-subagents-claude-code-best-practices-2026/)
 - [Monitoring and Logging Claude Code Multi-Agent Systems](/monitoring-and-logging-claude-code-multi-agent-systems/)
+
+## See Also
+
+- [Claude Agent Token Budget Management Guide](/claude-cost-claude-agent-token-budget-management/)
+- [Message Batches API Tutorial with Cost Examples](/claude-cost-message-batches-api-tutorial-cost-examples/)
+- [Claude Token Counter: Measure Before You Optimize](/claude-cost-claude-token-counter-measure-before-optimize/)
+- [Claude Orchestrator-Worker Cost Optimization](/claude-cost-claude-orchestrator-worker-cost-optimization/)
+- [Claude Agent Loop Cost: Tokens Per Iteration](/claude-cost-claude-agent-loop-cost-tokens-per-iteration/)

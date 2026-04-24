@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Microbenchmarks: Setup Guide (2026)"
+title: "Claude Code for Microbenchmarks"
 description: "Run and analyze microbenchmarks 10x faster with Claude Code automation. Covers JMH, criterion, and hyperfine with reproducible benchmark pipelines."
 date: 2026-03-15
 last_modified_at: 2026-04-17

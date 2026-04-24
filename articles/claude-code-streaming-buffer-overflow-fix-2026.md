@@ -57,3 +57,35 @@ claude --print "List all routes" 2>&1 | less
 # CLAUDE.md rule
 For outputs longer than 200 lines, always write to a file using the Write tool instead of printing to terminal. Never generate large diffs inline.
 ```
+
+## See Also
+
+- [Streaming SSE Event Parse Error — Fix (2026)](/claude-code-streaming-sse-event-parse-error-fix-2026/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `TokenLimitExceeded: max tokens reached`
+- `Error: output truncated at max_tokens`
+- `Warning: response may be incomplete due to token limit`
+- `Error: Claude Code requires Node.js 18 or later`
+- `SyntaxError: Unexpected token '??' — Node 14 detected`
+
+## Frequently Asked Questions
+
+### What causes token count mismatches?
+
+Token counts are estimated before sending a request and precisely calculated on the server. The estimation uses a fast local tokenizer that may differ slightly from the server's tokenizer. Small discrepancies (1-3%) are normal and do not affect functionality.
+
+### How do I reduce token consumption in long sessions?
+
+Start new conversations for unrelated tasks. Each message in a conversation includes the full history, so long conversations consume exponentially more tokens. A 50-message conversation may use 10x the tokens of five 10-message conversations.
+
+### Can I see my token usage?
+
+Run `claude usage` to see your current billing period's token consumption broken down by model. The Anthropic console at console.anthropic.com provides detailed usage graphs and per-day breakdowns.
+
+### What Node.js version does Claude Code require?
+
+Claude Code requires Node.js 18 or later. Node.js 20 LTS is recommended for the best compatibility and performance. Check your version with `node --version`.

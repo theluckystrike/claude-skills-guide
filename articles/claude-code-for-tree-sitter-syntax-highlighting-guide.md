@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Tree-sitter Syntax Highlighting Setup (2026)"
+title: "Tree-sitter Syntax Highlighting Setup"
 description: "Configure Tree-sitter syntax highlighting with Claude Code for custom grammars, highlighting rules, and editor integration. Support 100+ languages."
 date: 2026-03-15
 last_modified_at: 2026-04-17

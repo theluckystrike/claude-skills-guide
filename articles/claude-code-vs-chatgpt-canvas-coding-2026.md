@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs ChatGPT Canvas for Coding (2026)"
+title: "Claude Code vs ChatGPT Canvas"
 description: "Compare Claude Code and ChatGPT Canvas side-by-side across pricing, workflow, and real coding tasks to pick the right tool for your stack."
 permalink: /claude-code-vs-chatgpt-canvas-coding-2026/
 date: 2026-04-21

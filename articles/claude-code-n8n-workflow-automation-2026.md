@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Build N8N Workflows with Claude Code 2026"
+title: "Build N8N Workflows with Claude Code"
 description: "Generate N8N workflow JSON with Claude Code. Automate node creation, credential setup, and webhook configuration for no-code automation pipelines."
 permalink: /claude-code-n8n-workflow-automation-2026/
 date: 2026-04-21
@@ -216,3 +216,7 @@ Version-controlled N8N workflows enable reproducible automation across environme
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)
 - [Claude Code Prompt Chaining Workflow 2026](/claude-code-prompt-chaining-workflow-2026/)
 {% endraw %}
+
+## See Also
+
+- [Claude Code for Oscilloscope Automation (2026)](/claude-code-oscilloscope-automation-2026/)

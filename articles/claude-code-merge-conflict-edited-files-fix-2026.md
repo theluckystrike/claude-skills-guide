@@ -1,5 +1,5 @@
 ---
-title: "Merge Conflict in Claude-Edited Files Fix"
+title: "Merge Conflict in Claude-Edited Files"
 permalink: /claude-code-merge-conflict-edited-files-fix-2026/
 description: "Fix merge conflicts in files edited by Claude Code. Use git mergetool or manual resolution to handle overlapping changes from AI and human edits."
 last_tested: "2026-04-22"
@@ -59,3 +59,35 @@ git rebase origin/main
 # CLAUDE.md rule
 Before making edits, always run 'git pull' to get the latest changes. Commit frequently in small batches to minimize conflict surface area. Never edit files that have uncommitted changes.
 ```
+
+## See Also
+
+- [Claude Edit Tool File Modified Externally — Fix (2026)](/claude-code-edit-tool-conflict-merge-fix-2026/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `fatal: not a git repository`
+- `error: failed to push some refs`
+- `fatal: refusing to merge unrelated histories`
+- `error: cannot rebase: you have unstaged changes`
+- `CONFLICT (content): Merge conflict in file.ts`
+
+## Frequently Asked Questions
+
+### Why does Claude Code require git?
+
+Claude Code uses git for several core operations: tracking file changes, creating commits, reading blame information, searching history with `git log`, and managing branches. Without git, these operations fail and Claude Code falls back to less efficient alternatives.
+
+### Can Claude Code work in a non-git directory?
+
+Yes, but with reduced functionality. File search and editing work normally, but version control operations (commit, diff, blame) are unavailable. Claude Code displays a warning when opened in a directory without git initialization.
+
+### How do I prevent Claude Code from making unwanted git operations?
+
+Add rules to your CLAUDE.md: `Do not create commits automatically. Do not run git push. Always ask before any git operation that modifies history.` Claude Code respects these constraints and asks for confirmation before proceeding.
+
+### Why does Claude Code's rebase fail?
+
+Claude Code cannot perform interactive rebases (`git rebase -i`) because it requires an interactive editor. Non-interactive rebases fail when there are unstaged changes or merge conflicts. Commit or stash changes before rebasing.

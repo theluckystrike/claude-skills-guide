@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "MCP Server Sandbox Isolation Security Guide (2026)"
+title: "MCP Server Sandbox Isolation Security"
 description: "A practical guide to implementing sandbox isolation for Model Context Protocol servers. Learn security patterns, configuration examples, and best."
 date: 2026-03-14
 last_modified_at: 2026-04-17

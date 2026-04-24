@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md for API Design — Consistent Endpoints, Responses, and Versioning (2026)"
+title: "CLAUDE.md for API Design"
 description: "Encode API design patterns in CLAUDE.md so Claude Code generates consistent REST endpoints, response envelopes, pagination, and error formats."
 permalink: /claude-md-api-design-patterns/
 render_with_liquid: false

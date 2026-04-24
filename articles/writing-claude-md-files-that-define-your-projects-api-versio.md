@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CLAUDE.md Files for API Versioning (2026)"
+title: "CLAUDE.md Files for API Versioning"
 description: "Define API versioning strategies in CLAUDE.md files for consistent version management across your project. Templates and patterns for teams of any size."
 date: 2026-03-16
 last_modified_at: 2026-04-17

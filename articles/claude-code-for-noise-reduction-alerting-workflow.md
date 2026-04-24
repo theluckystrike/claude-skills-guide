@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Noise Reduction Alerting Workflow"
+title: "Claude Code for Noise Reduction"
 description: "A practical guide to implementing noise reduction alerting workflows with Claude Code. Learn how to build intelligent alert systems that filter."
 date: 2026-03-15
 last_modified_at: 2026-04-17

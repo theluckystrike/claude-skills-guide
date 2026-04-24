@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Charm CLI Tool Workflows (2026)"
+title: "Claude Code for Charm CLI Tool"
 description: "Build elegant CLI tools with Charm libraries and Claude Code. Covers Bubble Tea TUIs, Lip Gloss styling, Huh forms, and Wish SSH app development."
 date: 2026-03-15
 last_modified_at: 2026-04-17

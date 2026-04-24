@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "TypeORM Entities and Migrations with Claude (2026)"
+title: "TypeORM Entities and Migrations"
 description: "Build TypeORM entities, define relationships, and manage database migrations using Claude Code skills with production-ready patterns and examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

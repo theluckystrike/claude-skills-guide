@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skill Metadata Header vs Full Body Loading"
+title: "Claude Skill Metadata Header vs Full"
 description: "Understand how Claude skills load metadata versus the full body, and when each component matters for performance and functionality."
 date: 2026-03-14
 last_modified_at: 2026-04-17

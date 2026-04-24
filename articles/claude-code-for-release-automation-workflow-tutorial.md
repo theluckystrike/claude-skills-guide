@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Release Automation Workflow Tutorial"
+title: "Claude Code for Release Automation"
 description: "Learn how to build automated release workflows with Claude Code. Master CI/CD integration, version management, and deployment automation for faster."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -334,4 +334,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for n8n Automation — Workflow Guide](/claude-code-for-n8n-automation-workflow-guide/)

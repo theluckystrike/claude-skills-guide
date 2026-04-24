@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code SDK Versioning and Release Guide (2026)"
+title: "Claude Code SDK Versioning and Release"
 last_tested: "2026-04-22"
 description: "A practical guide to versioning your custom Claude skills, managing releases, and maintaining backward compatibility for developers and power users."
 date: 2026-03-14
@@ -327,4 +327,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code SDK Testing Workflow Guide](/claude-code-sdk-testing-workflow-guide/)

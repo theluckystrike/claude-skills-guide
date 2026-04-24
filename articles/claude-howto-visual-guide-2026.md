@@ -1,5 +1,5 @@
 ---
-title: "Claude Howto: Visual Learning Guide (2026)"
+title: "Claude Howto: Visual Learning Guide"
 description: "Learn Claude Code with claude-howto's Mermaid diagrams, copy-paste templates, and structured 11-13 hour learning path. EPUB export included."
 permalink: /claude-howto-visual-guide-2026/
 last_tested: "2026-04-22"
@@ -181,3 +181,7 @@ The advanced section includes enterprise-specific topics like team-wide CLAUDE.m
 - [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — advanced CLAUDE.md patterns beyond the guide's templates
 - [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — deeper dive into the hook system
 - [Best Claude Skills for Developers](/best-claude-skills-for-developers-2026/) — tools to install after completing the learning path
+
+## See Also
+
+- [Claude Howto vs Official Docs for Learning (2026)](/claude-howto-vs-official-docs-learning-2026/)

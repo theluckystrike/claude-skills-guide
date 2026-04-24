@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Agent Token Budget Management Guide"
+title: "Claude Agent Token Budget Management"
 description: "Set per-agent token budgets to prevent runaway costs. A 5-agent fleet with 500K token caps stays under $25/sprint on Opus 4.7."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -231,3 +231,11 @@ Track budget effectiveness:
 - [Claude Opus Orchestrator Sonnet Worker Architecture](/claude-opus-orchestrator-sonnet-worker-architecture/)
 - [Parallel Subagents Claude Code Best Practices](/parallel-subagents-claude-code-best-practices-2026/)
 - [Monitoring and Logging Claude Code Multi-Agent Systems](/monitoring-and-logging-claude-code-multi-agent-systems/)
+
+## See Also
+
+- [Text Editor Tool: 700 Token Overhead Explained](/claude-cost-05-text-editor-tool-700-token-overhead/)
+- [Claude Max Subscription vs API for Agent Fleets](/claude-cost-claude-max-subscription-vs-api-agent-fleets/)
+- [Claude Context Management: Pay Less, Use More](/claude-cost-claude-context-management-pay-less-use-more/)
+- [Claude Cache Minimum Token Requirements 2026](/claude-cost-claude-cache-minimum-token-requirements-2026/)
+- [Claude Opus 4.7: Is It Worth the Extra Cost?](/claude-cost-claude-opus-47-is-it-worth-extra-cost/)

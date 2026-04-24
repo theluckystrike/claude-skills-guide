@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code International Date Format Handling Workflow"
+title: "Claude Code International Date Format"
 description: "A practical guide for developers handling international date formats with Claude Code skills and automation workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

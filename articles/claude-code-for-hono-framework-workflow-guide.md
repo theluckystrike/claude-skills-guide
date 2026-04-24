@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Hono Framework — Workflow Guide"
+title: "Claude Code for Hono Framework"
 description: "Build edge-first APIs with Hono and Claude Code setup. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-hono-framework-workflow-guide/

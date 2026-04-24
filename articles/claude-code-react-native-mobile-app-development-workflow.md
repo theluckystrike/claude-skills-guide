@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use React Native Mobile App Development (2026)"
+title: "How to Use React Native Mobile App"
 description: "Master React Native mobile app development with Claude Code. Learn practical workflows for building, testing, and deploying cross-platform mobile."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -327,4 +327,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for React Native Development 2026](/claude-code-react-native-development-2026/)

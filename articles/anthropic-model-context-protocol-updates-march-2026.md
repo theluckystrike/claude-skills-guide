@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "MCP Updates March 2026: What Developers Need to Know"
+title: "MCP Updates March 2026"
 description: "Claude Code MCP updates March 2026: enhanced tool discovery, improved state persistence, and OAuth 2.1 for developers."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -255,7 +255,11 @@ Related Reading
 - [Claude Code Announcements 2026: Complete Developer Overview](/anthropic-claude-code-announcements-2026/)
 - [Claude Code March 2026 Update: What Is New](/claude-code-march-2026-update-what-is-new/)
 - [Claude Code Model Compression and Quantization Guide](/claude-code-model-compression-quantization/)
+- [Claude Code + Supabase MCP setup](/claude-code-mcp-supabase-setup-guide/) — connect Supabase through MCP
+- [Claude Code hooks](/claude-code-hooks-complete-guide/) — hooks complement MCP servers
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [MCP Protocol Version Mismatch in Claude — Fix (2026)](/claude-code-model-context-protocol-version-mismatch-fix-2026/)

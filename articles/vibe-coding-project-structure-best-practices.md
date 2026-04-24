@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Project Structure Best Practices (2026)"
+title: "Claude Code Project Structure"
 description: "Organize your Claude Code project for maximum AI effectiveness. Directory layout, CLAUDE.md placement, and skill file conventions explained."
 date: 2026-03-14
 last_modified_at: 2026-04-17

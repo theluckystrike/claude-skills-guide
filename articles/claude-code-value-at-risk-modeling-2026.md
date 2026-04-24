@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Value-at-Risk Modeling (2026)"
+title: "Claude Code for Value-at-Risk Modeling"
 permalink: /claude-code-value-at-risk-modeling-2026/
 description: "Value-at-Risk modeling with Claude Code. Build parametric, historical, and Monte Carlo VaR with backtesting validation."
 last_tested: "2026-04-22"
@@ -280,3 +280,4 @@ print('VaR engine verification: PASS')
 - [Claude Code for Portfolio Optimization](/claude-code-portfolio-optimization-markowitz-2026/)
 - [Claude Code for Algo Trading Backtesting](/claude-code-algorithmic-trading-backtesting-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for Basel III Risk Calculation (2026)](/claude-code-basel-iii-risk-calculation-2026/)

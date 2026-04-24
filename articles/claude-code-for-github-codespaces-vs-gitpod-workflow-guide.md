@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For GitHub — Developer Comparison 2026"
+title: "Claude Code For GitHub"
 description: "A comprehensive comparison of using Claude Code with GitHub Codespaces versus Gitpod. Learn which cloud IDE best suits your development workflow and."
 date: 2026-03-21
 last_modified_at: 2026-04-17
@@ -200,4 +200,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for GitHub CLI — Workflow Guide](/claude-code-for-github-cli-workflow-guide/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Data Anonymization Workflow Guide"
+title: "Claude Code for Data Anonymization"
 description: "Learn how to use Claude Code to build automated data anonymization workflows that protect sensitive information while maintaining data utility."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -361,4 +361,7 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Bloomberg Data Extraction (2026)](/claude-code-bloomberg-terminal-data-extraction-2026/)
+- [Claude Code for CCPA Data Handling Implementation (2026)](/claude-code-ccpa-data-handling-2026/)

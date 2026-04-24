@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Bug Reporting Best — Honest Review 2026"
+title: "Claude Code Bug Reporting Best"
 description: "Master bug reporting for Claude Code projects. Learn to write effective issue reports with reproducible examples, logs, and context for faster resolution."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -218,4 +218,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for MiFID II Reporting (2026)](/claude-code-mifid-ii-regulatory-reporting-2026/)

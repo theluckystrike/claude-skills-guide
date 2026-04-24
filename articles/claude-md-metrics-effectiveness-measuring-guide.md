@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md Metrics Effectiveness — Complete Developer Guide"
+title: "Claude Md Metrics Effectiveness"
 description: "Learn how to measure and track Claude Code skill effectiveness with practical metrics, benchmarks, and evaluation frameworks for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

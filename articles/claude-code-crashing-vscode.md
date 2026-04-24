@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Crashing in VS Code (2026)"
+title: "Fix Claude Code Crashing in VS Code"
 description: "Stop Claude Code from crashing VS Code with fixes for memory limits, extension conflicts, and terminal configuration issues. Tested and working in 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17
@@ -150,3 +150,8 @@ Related Reading
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+## See Also
+
+- [Claude Code vs VS Code IntelliSense: Completion Compared](/claude-code-vs-vscode-intellisense-comparison/)
+- [Fix Claude Code Not Working VSCode — Quick Guide (2026)](/claude-code-not-working-vscode/)

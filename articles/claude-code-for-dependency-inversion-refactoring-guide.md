@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Dependency Inversion Refactoring Guide"
+title: "Claude Code for Dependency Inversion"
 description: "Learn how to use Claude Code CLI to refactor your codebase using the Dependency Inversion Principle. Practical examples, patterns, and actionable."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -275,6 +275,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
-
+- [Improve Claude Code Refactoring Quality (2026)](/claude-code-bad-at-refactoring-fix-2026/)

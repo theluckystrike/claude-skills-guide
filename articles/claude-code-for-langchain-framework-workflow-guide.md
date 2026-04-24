@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for LangChain — Workflow Guide"
+title: "Claude Code for LangChain"
 description: "Build AI chains with LangChain and Claude Code integration. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-langchain-framework-workflow-guide/
@@ -75,3 +75,8 @@ Claude Code should create a chain using `retriever.pipe(formatDocs).pipe(ragProm
 - [Claude Code for AI Agent Tool Calling](/claude-code-for-ai-agent-tool-calling-implementation/)
 - [Claude Code for Embedding Pipeline Workflow](/claude-code-for-embedding-pipeline-workflow/)
 - [Building Production AI Agents with Claude Skills 2026](/building-production-ai-agents-with-claude-skills-2026/)
+
+## See Also
+
+- [Claude Code for Waku React Framework — Guide](/claude-code-for-waku-react-framework-workflow-guide/)
+- [Claude Code for HTMX — Workflow Guide](/claude-code-for-htmx-framework-workflow-guide/)

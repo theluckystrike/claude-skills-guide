@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Go Pprof — Complete Developer Guide"
+title: "Claude Code For Go Pprof"
 description: "Learn how to integrate Claude Code into your Go pprof profiling workflow to efficiently identify performance bottlenecks, analyze heap allocations, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -649,4 +649,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Go Templ — Workflow Guide](/claude-code-for-go-templ-workflow-guide/)

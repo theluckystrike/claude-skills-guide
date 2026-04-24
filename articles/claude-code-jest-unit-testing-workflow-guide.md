@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Jest Unit Testing Workflow Guide"
+title: "Claude Code Jest Unit Testing Workflow"
 description: "A comprehensive guide to implementing efficient Jest unit testing workflows with Claude Code for developers and power users."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -258,5 +258,9 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
+- [Claude Code Jest Test Runner Mock Conflict — Fix (2026)](/claude-code-jest-runner-mock-conflict-fix/)
+- [How to Use Claude Code with Jest Testing](/claude-code-with-jest-testing-workflow/)
+- [Claude Code Jest Snapshot Testing Workflow Best Practices](/claude-code-jest-snapshot-testing-workflow-best-practices/)
+- [Claude Code for Supertest API Testing (2026)](/claude-code-supertest-api-testing-workflow/)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code Security Best Practices Guide 2026"
+title: "Claude Code Security Best Practices"
 description: "Secure Claude Code for enterprise use: permission controls, secrets management, allowedTools and disallowedTools config, and audit logging setup."
 permalink: /claude-code-security-best-practices-2026/
 date: 2026-04-21

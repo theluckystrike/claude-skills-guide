@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Announcements 2026: Complete Developer Overview"
+title: "Claude Code Announcements 2026"
 description: "Comprehensive guide to Claude Code announcements in 2026. Learn about new skills, MCP updates, and developer features rolling out this year."
 date: 2026-03-14
 last_modified_at: 2026-04-17

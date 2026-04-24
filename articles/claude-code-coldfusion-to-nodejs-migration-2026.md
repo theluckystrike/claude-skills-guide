@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for ColdFusion to Node.js Migration (2026)"
+title: "Claude Code for ColdFusion to Node.js"
 permalink: /claude-code-coldfusion-to-nodejs-migration-2026/
 description: "Migrate Adobe ColdFusion CFML applications to Node.js with Claude Code. Convert CFCs, custom tags, and cfquery to modern Express APIs."
 last_tested: "2026-04-22"
@@ -265,3 +265,5 @@ diff <(curl -s old-cf-app/api/users/1 | jq -S .) \
 - [Claude Code for Classic ASP to Modern Web Migration](/claude-code-classic-asp-to-modern-web-migration-2026/)
 - [Claude Code for Perl to Python Migration](/claude-code-perl-to-python-migration-2026/)
 - [Claude Code for Lotus Notes Web Migration](/claude-code-lotus-notes-web-migration-2026/)
+- [Claude Code for Natural/ADABAS Migration (2026)](/claude-code-natural-adabas-migration-2026/)
+- [Claude Code for PL/SQL to PostgreSQL Migration (2026)](/claude-code-plsql-to-postgresql-migration-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for GNU Stow Dotfiles Setup (2026)"
+title: "Claude Code for GNU Stow Dotfiles Setup"
 description: "Manage dotfiles with GNU Stow and Claude Code. Automate symlink creation, organize config files across machines, and version control your environment."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -185,6 +185,6 @@ Related Reading
 - [Claude Code for dbt Snapshot Workflow Tutorial](/claude-code-for-dbt-snapshot-workflow-tutorial/)
 - [Claude Code Engineering Manager Pull Request Review Workflow](/claude-code-engineering-manager-pull-request-review-workflow/)
 
+## See Also
 
-
-
+- [Claude Code for fnm Node Manager — Guide](/claude-code-for-fnm-node-manager-workflow-guide/)

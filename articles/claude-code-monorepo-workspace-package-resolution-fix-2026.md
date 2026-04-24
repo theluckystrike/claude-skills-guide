@@ -1,5 +1,5 @@
 ---
-title: "Monorepo Workspace Package Resolution — Fix (2026)"
+title: "Monorepo Workspace Package Resolution"
 permalink: /claude-code-monorepo-workspace-package-resolution-fix-2026/
 description: "Fix monorepo workspace package not found error. Configure workspace protocol and ensure packages are listed in root config."
 last_tested: "2026-04-22"
@@ -97,3 +97,9 @@ Add this to your `CLAUDE.md`:
 - Run pnpm install after any dependency change.
 - Add TypeScript paths for @myorg/* in root tsconfig.json.
 ```
+
+## See Also
+
+- [Claude Code Monorepo: Best Setup Guide (2026)](/claude-code-monorepo-best-setup-2026/)
+- [ESM vs CJS Module Resolution Failure — Fix (2026)](/claude-code-esm-vs-cjs-module-resolution-fix-2026/)
+- [Claude Code Monorepo Workspace Resolution Failure — Fix (2026)](/claude-code-monorepo-workspace-resolution-failure-fix/)

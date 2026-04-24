@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for FEA Mesh Generation (2026)"
+title: "Claude Code for FEA Mesh Generation"
 description: "Finite element mesh generation with Claude Code. Automate Gmsh meshing, quality checks, and solver input prep."
 permalink: /claude-code-fea-mesh-generation-2026/
 last_tested: "2026-04-21"
@@ -245,3 +245,4 @@ print(f'Quality check passed')
 - [Claude Code for Computational Chemistry](/claude-code-computational-chemistry-orca-2026/)
 - [Claude Code for CNC G-Code Optimization](/claude-code-cnc-gcode-optimization-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for OpenAPI Spec Generation (2026)](/claude-code-openapi-spec-generation-2026/)

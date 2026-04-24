@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Make Claude Code Follow Team Style Guide"
+title: "How to Make Claude Code Follow Team"
 description: "Learn practical techniques to ensure Claude Code generates code that matches your team's style guide. Includes configuration tips, skill patterns, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

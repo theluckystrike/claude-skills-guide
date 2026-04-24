@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Trading System Backtesting (2026)"
+title: "Claude Code for Trading System"
 permalink: /claude-code-trading-system-backtesting-2026/
 description: "Trading system backtesting framework with Claude Code. Build event-driven engines with fill simulation and risk controls."
 last_tested: "2026-04-22"
@@ -365,3 +365,4 @@ print('Backtest engine: PASS')
 - [Claude Code for Algo Trading Backtesting](/claude-code-algorithmic-trading-backtesting-2026/)
 - [Claude Code for Market Microstructure](/claude-code-market-microstructure-analysis-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for Quant Research Backtesting (2026)](/claude-code-quant-research-backtesting-2026/)

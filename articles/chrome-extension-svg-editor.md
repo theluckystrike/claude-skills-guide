@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Build an SVG Editor Chrome Extension (2026)"
+title: "Build an SVG Editor Chrome Extension"
 description: "Build a Chrome extension for editing SVGs in the browser. Covers DOM manipulation, path editing, Canvas API integration, and export functionality."
 date: 2026-03-15
 last_modified_at: 2026-04-17

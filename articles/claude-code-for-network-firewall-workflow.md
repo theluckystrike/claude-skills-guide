@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Network Firewall Workflow (2026)"
+title: "Claude Code for Network Firewall"
 last_tested: "2026-04-22"
 description: "Learn how to use Claude Code to streamline network firewall configuration, rule management, and security policy automation with practical examples."
 date: 2026-03-15

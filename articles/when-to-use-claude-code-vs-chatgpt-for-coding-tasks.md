@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs ChatGPT for Coding (2026)"
+title: "Claude Code vs ChatGPT for Coding"
 description: "Claude Code vs ChatGPT compared: pricing, context, features. 3-persona verdict for solo devs, teams, enterprise."
 permalink: /when-to-use-claude-code-vs-chatgpt-for-coding-tasks/
 date: 2026-04-21
@@ -116,3 +116,7 @@ For isolated code snippets (single functions, algorithms), both produce comparab
 - [GitHub Copilot vs Claude Code: Deep Comparison 2026](/github-copilot-vs-claude-code-deep-comparison-2026/)
 - [Claude Code vs Devin: AI Agent Comparison 2026](/claude-code-vs-devin-ai-agent-comparison-2026/)
 - [Claude Code vs Replit Agent: Which Is Better 2026](/claude-code-vs-replit-agent-which-is-better-2026/)
+
+## See Also
+
+- [AI Coding Tools vs Manual Coding: When to Use Each (2026)](/when-to-use-ai-coding-tools-vs-manual-coding-2026/)

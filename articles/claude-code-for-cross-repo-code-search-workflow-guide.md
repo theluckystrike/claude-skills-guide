@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Cross-Repo Code Search Workflow Guide"
+title: "Claude Code for Cross-Repo Code Search"
 description: "Learn how to build a powerful cross-repository code search workflow with Claude Code. Practical examples, configuration tips, and automation strategies."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -312,5 +312,6 @@ Related Reading
 
 Built by theluckystrike. More at https://zovo.one
 
+## See Also
 
-
+- [Claude Code Search Index Corrupted Error — Fix (2026)](/claude-code-search-index-corrupted-fix-2026/)

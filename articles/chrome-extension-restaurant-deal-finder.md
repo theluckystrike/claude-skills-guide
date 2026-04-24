@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Restaurant Deal Finder Chrome Extension Guide (2026)"
+title: "Restaurant Deal Finder Chrome Extension"
 description: "Learn how to build a Chrome extension for finding restaurant deals. Technical implementation guide with code examples for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

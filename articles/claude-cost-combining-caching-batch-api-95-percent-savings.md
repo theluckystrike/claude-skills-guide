@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Combining Caching with Batch API for 95% Savings"
+title: "Combining Caching with Batch API"
 description: "Stack Claude's 50% batch discount with 90% cache reads to pay just 5% of standard price. Opus 4.7 drops to $0.25/MTok."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -179,3 +179,8 @@ Validate the stacked discount is applying correctly:
 - [Claude Prompt Caching Pricing and Cost Savings](/claude-prompt-caching-pricing-and-cost-savings/)
 - [Anthropic Message Batches API Guide](/anthropic-message-batches-api-guide/)
 - [Claude API Batch Processing Large Datasets](/claude-api-batch-processing-large-datasets-workflow-guide/)
+
+## See Also
+
+- [Claude Batch Plus Caching for 95% Cost Savings](/claude-cost-claude-batch-plus-caching-95-percent-cost-savings/)
+- [Batch API Cost Calculator for Claude Models](/claude-cost-batch-api-cost-calculator-claude-models/)

@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Spending Tracker Chrome Extension Guide (2026)"
+title: "Spending Tracker Chrome Extension Guide"
 description: "Learn how to build a spending tracker Chrome extension from scratch. Practical code examples and architecture for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

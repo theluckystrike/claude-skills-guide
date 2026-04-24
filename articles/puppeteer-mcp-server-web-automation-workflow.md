@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Puppeteer MCP Server: Web Automation Guide (2026)"
+title: "Puppeteer MCP Server"
 description: "Automate browser testing and data extraction with the Puppeteer MCP server in Claude Code. Covers headless scraping, screenshots, and PDF generation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

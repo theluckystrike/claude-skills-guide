@@ -1,5 +1,5 @@
 ---
-title: "Claude Code reading too many files — how to scope context"
+title: "Claude Code reading too many files"
 description: "Fix Claude Code reading too many files by scoping context with .claudeignore, CLAUDE.md file budgets, and directory boundaries to save 50K+ tokens per task."
 permalink: /claude-code-reading-too-many-files-scope-context/
 date: 2026-04-22
@@ -261,3 +261,10 @@ Each level progressively reduces the searchable file tree. Level 1 alone typical
 - [Why Claude Code Gets Expensive on Large Projects](/why-claude-code-expensive-large-projects-fix/) -- comprehensive guide for large codebases
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- understanding context mechanics
 - [Cost Optimization Hub](/cost-optimization/) -- all cost reduction techniques
+
+## See Also
+
+- [System Prompt Exceeds Token Limit — Fix (2026)](/claude-code-system-prompt-too-many-tokens-fix-2026/)
+- [File Watcher EMFILE Too Many Open Files Fix](/claude-code-file-watcher-emfile-too-many-open-files-fix-2026/)
+- [Claude Code subagent spawning too many agents — cost control](/claude-code-subagent-spawning-too-many-cost-control/)
+- [Claude Code spending tokens on files I didn](/claude-code-spending-tokens-files-didnt-ask-about/)

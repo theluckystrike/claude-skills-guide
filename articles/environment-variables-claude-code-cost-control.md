@@ -1,5 +1,5 @@
 ---
-title: "Environment Variables for Claude Code Cost Control"
+title: "Environment Variables for Claude Code"
 description: "Control Claude Code costs with environment variables including model selection, turn limits, and token budgets that prevent runaway spending."
 permalink: /environment-variables-claude-code-cost-control/
 date: 2026-04-22
@@ -253,3 +253,7 @@ When all four layers are active, the combined effect is multiplicative: environm
 - [Cost Optimization Hub](/cost-optimization/) -- all cost optimization guides
 
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization
+
+## See Also
+
+- [Installing and Managing Claude Code Skills for Cost Control](/installing-managing-claude-code-skills-cost-control/)

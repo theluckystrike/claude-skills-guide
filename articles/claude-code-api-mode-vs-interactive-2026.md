@@ -1,5 +1,5 @@
 ---
-title: "Claude Code API Mode vs Interactive (2026)"
+title: "Claude Code API Mode vs Interactive"
 description: "Compare Claude Code API mode and interactive mode for CI/CD automation, batch processing, and when to use each for maximum efficiency."
 permalink: /claude-code-api-mode-vs-interactive-2026/
 last_tested: "2026-04-22"
@@ -197,4 +197,8 @@ For CI/CD integration patterns, see the [CI/CD guide](/claude-code-ci-cd-integra
 
 ## Related
 
+- [Claude Code hooks](/claude-code-hooks-complete-guide/) — hook into API mode tool execution
+- [Claude Code spec workflow](/claude-code-spec-workflow-guide/) — feed specs into API mode
+- [Claude Agent SDK](/claude-agent-sdk-complete-guide/) — build custom agents with the SDK
 - [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) — Understanding the --dangerously-skip-permissions CLI flag
+- [Interactive Rebase Unsupported Error Fix](/claude-code-interactive-rebase-unsupported-fix-2026/)

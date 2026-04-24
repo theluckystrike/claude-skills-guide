@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Tips For Absolute Beginners — Developer Guide"
+title: "Claude Code Tips For Absolute Beginners"
 description: "Learn essential Claude Code tips for absolute beginners in 2026. This practical guide covers setup, skills, and workflows to boost your productivity."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -482,6 +482,11 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+- [How to use Claude Code beginner guide](/how-to-use-claude-code-beginner-guide/) — step-by-step first session walkthrough
+- [CLAUDE.md best practices](/claude-md-best-practices-definitive-guide/) — configure your project for better results
+- [Claude Code status line guide](/claude-code-statusline-guide/) — understand what the status bar means
+- [Claude Code spec workflow](/claude-code-spec-workflow-guide/) — write specs first for reliable output
+- [Claude Code hooks](/claude-code-hooks-complete-guide/) — automate pre and post tool actions
 - [Chrome DevTools Tips and Tricks for 2026](/chrome-devtools-tips-tricks-2026/)
 - [Chrome Speed Up Tips for Developers and Power Users in 2026](/chrome-speed-up-tips-2026/)
 - [Claude Code Developer Advocate Demo Content Workflow Tips](/claude-code-developer-advocate-demo-content-workflow-tips/)

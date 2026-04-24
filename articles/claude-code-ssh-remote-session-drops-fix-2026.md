@@ -72,3 +72,8 @@ sudo systemctl restart sshd
 # CLAUDE.md rule
 Always run Claude Code inside tmux on remote servers. Configure SSH keepalive in ~/.ssh/config. Use 'tmux new -s claude' before starting Claude Code remotely. Never run long sessions over bare SSH.
 ```
+
+## See Also
+
+- [Claude Code SSH Key Passphrase Blocking — Fix (2026)](/claude-code-ssh-key-passphrase-prompt-blocking-fix/)
+- [tmux Session Not Detected Error Fix](/claude-code-tmux-session-not-detected-fix-2026/)

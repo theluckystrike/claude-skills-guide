@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code React Native Paper Mobile UI Guide"
+title: "Claude Code React Native Paper Mobile"
 description: "A practical guide to building mobile UIs with React Native and Paper using Claude Code. Learn how to use skills for component generation, testing, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -311,4 +311,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for React Native Development 2026](/claude-code-react-native-development-2026/)

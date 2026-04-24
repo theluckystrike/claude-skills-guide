@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Beekeeper Studio — Workflow Guide"
+title: "Claude Code for Beekeeper Studio"
 description: "Manage databases with Beekeeper Studio and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-beekeeper-studio-workflow-guide/

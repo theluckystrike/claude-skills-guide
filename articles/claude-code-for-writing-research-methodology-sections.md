@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Writing Research Methodology Sections"
+title: "Claude Code for Writing Research"
 description: "Learn how to use Claude Code to write comprehensive research methodology sections. Practical examples, code snippets, and actionable advice for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -255,3 +255,7 @@ For technical documentation methodology sections, Claude Code focuses on practic
 ### What is Documenting Experimental Setup?
 
 Documenting experimental setup involves providing Claude Code with specific configuration details like instance types (AWS c5.xlarge), benchmarking tools (wrk2), workload parameters (10,000 requests/second for 5 minutes), collected metrics (p50/p95/p99 latency, throughput, error rate), and experimental variables (cache sizes, eviction policies). Claude transforms these bullet points into professional prose suitable for academic or technical publication, with sufficient detail for reproducibility by other researchers.
+
+## See Also
+
+- [Data & Methodology: Claude Code Research](/data-methodology-claude-code-research/)

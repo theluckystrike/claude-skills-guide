@@ -1,5 +1,5 @@
 ---
-title: "Embedding Dimension Mismatch Error — Fix (2026)"
+title: "Embedding Dimension Mismatch Error"
 permalink: /claude-code-embedding-dimension-mismatch-fix-2026/
 description: "Fix embedding dimension mismatch when switching models. Rebuild vector index to match new embedding size (1024 vs 1536 vs 3072)."
 last_tested: "2026-04-22"
@@ -74,3 +74,8 @@ Add this to your `CLAUDE.md`:
 - Document the dimension in your schema: voyage-3 = 1024, voyage-3-large = 1536.
 - Add a dimension check assertion before inserting vectors.
 ```
+
+## See Also
+
+- [esbuild Target Mismatch Error — Fix (2026)](/claude-code-esbuild-target-mismatch-fix-2026/)
+- [Keep-Alive Timeout Mismatch Error — Fix (2026)](/claude-code-keep-alive-timeout-mismatch-fix-2026/)

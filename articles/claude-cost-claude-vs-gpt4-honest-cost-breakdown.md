@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude vs GPT-4o API Cost Breakdown 2026"
+title: "Claude vs GPT-4o API Cost Breakdown"
 description: "Honest Claude vs GPT-4o cost comparison with $4,500 vs $3,250 real API scenarios. Where each wins."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -128,4 +128,4 @@ Track these metrics weekly after choosing a provider:
 - [Claude Haiku vs Sonnet vs Opus Cost Breakdown 2026](/claude-haiku-vs-sonnet-vs-opus-cost-breakdown/)
 - [Claude Cost Per Request by Model Comparison](/claude-cost-per-request-model-comparison/)
 - [Claude Code $200 Max Plan: Is It Worth the Cost](/claude-code-200-max-plan-worth-the-cost/)
-
+- [Claude Computer Use Token Cost Breakdown](/claude-cost-09-computer-use-token-cost-breakdown/)

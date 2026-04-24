@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs OpenHands (2026): Open-Source Agent"
+title: "Claude Code vs OpenHands (2026)"
 description: "Claude Code vs OpenHands (formerly OpenDevin) compared. Commercial polish vs open-source flexibility for autonomous AI coding in 2026."
 permalink: /claude-code-vs-openhands-open-source-agent-2026/
 date: 2026-04-21
@@ -128,3 +128,7 @@ Expect 2-4 hours per month for updates, Docker image management, and model confi
 - [Claude Code vs Devin: AI Agent Comparison](/claude-code-vs-devin-ai-agent-comparison-2026/)
 - [Claude Code vs Cline: Agent Mode Compared](/claude-code-vs-cline-agent-mode-2026/)
 - [Agentic AI Coding Tools Compared](/agentic-ai-coding-tools-comparison-2026/)
+
+## See Also
+
+- [Claude Code vs Aider: Cost Analysis for Open-Source Alternative](/claude-code-vs-aider-cost-analysis-open-source/)

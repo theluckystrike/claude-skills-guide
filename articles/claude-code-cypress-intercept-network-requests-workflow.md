@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Cypress Network Interception (2026)"
+title: "Claude Code for Cypress Network"
 description: "Intercept and mock network requests in Cypress tests with Claude Code. Covers route matching, fixture generation, and dynamic response stubbing."
 date: 2026-03-14
 last_modified_at: 2026-04-17

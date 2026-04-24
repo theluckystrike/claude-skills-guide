@@ -191,5 +191,7 @@ Team agents should be versioned and reviewed like any other code. Changes to the
 
 - Browse [pre-built agents](/best-claude-code-agents-frontend-2026/) for inspiration
 - Explore [Claude Code Templates](/how-to-install-claude-code-templates-cli-2026/) for 600+ agent configurations
-- Learn about [hooks](/understanding-claude-code-hooks-system-complete-guide/) for more advanced agent automation
+- Learn about [Claude Code hooks](/claude-code-hooks-complete-guide/) for pre and post tool automation
+- Read the [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) for the official SDK
+- Try [Super Claude Code framework](/super-claude-code-framework-guide/) for structured agent prompting
 - Share your agent with the community via the [skills directory](/claude-skills-directory-where-to-find-skills/)

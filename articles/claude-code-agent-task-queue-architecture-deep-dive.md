@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Agent Task Queue Architecture Deep Dive"
+title: "Claude Code Agent Task Queue"
 description: "Explore how Claude Code's agent task queue works under the hood. Learn about task scheduling, skill-based routing, parallel execution, and practical."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -243,4 +243,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Agent Recursion Depth Exceeded Fix](/claude-code-agent-recursion-depth-exceeded-fix-2026/)

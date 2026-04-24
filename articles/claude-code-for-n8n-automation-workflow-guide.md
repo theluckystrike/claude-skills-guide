@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for n8n Automation — Workflow Guide"
+title: "Claude Code for n8n Automation"
 description: "Build n8n automation workflows with Claude Code nodes. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-n8n-automation-workflow-guide/

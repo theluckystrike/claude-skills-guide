@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Ray Serve LLM — Complete Developer (2026)"
+title: "Claude Code For Ray Serve LLM"
 description: "Learn how to use Claude Code with Ray Serve to build production-ready LLM workflows. This comprehensive guide covers deployment patterns, API..."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -246,6 +246,6 @@ Related Reading
 - [Claude Code for Streaming LLM Response Workflow](/claude-code-for-streaming-llm-response-workflow/)
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 
+## See Also
 
-
-
+- [Claude Code for Promptfoo — Workflow Guide](/claude-code-for-promptfoo-llm-eval-workflow-guide/)

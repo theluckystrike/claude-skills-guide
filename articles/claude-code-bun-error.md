@@ -140,3 +140,7 @@ Related Reading
 - [Best Way to Use Claude Code for Debugging Sessions](/best-way-to-use-claude-code-for-debugging-sessions/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+## See Also
+
+- [Claude Code for Bun Workspaces — Workflow Guide](/claude-code-for-bun-workspaces-workflow-guide/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Deleting Code Comments (2026)"
+title: "Fix Claude Code Deleting Code Comments"
 description: "Stop Claude Code from removing your code comments during edits. Configure comment preservation rules and use skill patterns to protect documentation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Render MCP Server Web Service Automation"
+title: "Render MCP Server Web Service"
 description: "Learn how to automate Render web service management using the Model Context Protocol server with Claude Code. Practical configuration, deployment."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -67,3 +67,31 @@ echo "* hard nofile 65536" | sudo tee -a /etc/security/limits.conf
 # CLAUDE.md rule
 Always maintain a .claudeignore file that excludes node_modules, dist, .git, and other large generated directories. Set ulimit -n 65536 in your shell profile.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `fatal: not a git repository`
+- `error: failed to push some refs`
+- `fatal: refusing to merge unrelated histories`
+- `Error: Claude Code requires Node.js 18 or later`
+- `SyntaxError: Unexpected token '??' — Node 14 detected`
+
+## Frequently Asked Questions
+
+### Why does Claude Code require git?
+
+Claude Code uses git for several core operations: tracking file changes, creating commits, reading blame information, searching history with `git log`, and managing branches. Without git, these operations fail and Claude Code falls back to less efficient alternatives.
+
+### Can Claude Code work in a non-git directory?
+
+Yes, but with reduced functionality. File search and editing work normally, but version control operations (commit, diff, blame) are unavailable. Claude Code displays a warning when opened in a directory without git initialization.
+
+### How do I prevent Claude Code from making unwanted git operations?
+
+Add rules to your CLAUDE.md: `Do not create commits automatically. Do not run git push. Always ask before any git operation that modifies history.` Claude Code respects these constraints and asks for confirmation before proceeding.
+
+### What Node.js version does Claude Code require?
+
+Claude Code requires Node.js 18 or later. Node.js 20 LTS is recommended for the best compatibility and performance. Check your version with `node --version`.

@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Resize Images Chrome Extension Guide (2026)"
+title: "Resize Images Chrome Extension Guide"
 description: "Learn how to build and use Chrome extensions for resizing images directly in your browser. Includes code examples, implementation patterns, and practical."
 date: 2026-03-15
 last_modified_at: 2026-04-17

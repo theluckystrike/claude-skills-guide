@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code TypeScript Strict Mode Workflow"
+title: "Claude Code TypeScript Strict Mode"
 description: "A practical guide to setting up and using TypeScript strict mode with Claude Code. Includes configuration examples, workflow patterns, and integration."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -212,4 +212,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [TypeScript Strict Mode Breaks Claude Generated Code — Fix (2026)](/claude-code-typescript-strict-mode-breaks-generated-code-fix/)
+- [TypeScript Strict Null Checks in Generated Code — Fix (2026)](/claude-code-typescript-strict-null-checks-generated-fix-2026/)

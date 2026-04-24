@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Invoice Generator Freelance Chrome Extension Guide (2026)"
+title: "Invoice Generator Freelance Chrome"
 description: "Learn how to create a Chrome extension that generates invoices directly from your browser. A practical guide for developers and freelancers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

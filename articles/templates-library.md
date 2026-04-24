@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CLAUDE.md Templates Library: Ready-to-Use Configurations"
+title: "CLAUDE.md Templates Library"
 description: "Complete library of CLAUDE.md templates for every project type. Copy-paste configurations for Claude Code."
 date: 2026-04-19
 permalink: /templates-library/

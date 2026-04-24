@@ -1,5 +1,5 @@
 ---
-title: "Make Claude Code Follow DRY Principle (2026)"
+title: "Make Claude Code Follow DRY Principle"
 description: "Make Claude Code follow DRY by mapping shared utilities, requiring reuse checks, and adding deduplication rules to your CLAUDE.md."
 permalink: /claude-code-doesnt-follow-dry-principle-fix-2026/
 last_tested: "2026-04-22"

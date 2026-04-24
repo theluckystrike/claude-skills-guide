@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Aider Open — Developer Comparison 2026"
+title: "Claude Code vs Aider Open"
 description: "Compare Claude Code and Aider for open source contributions. Learn practical workflows, skill advantages, and which tool best suits your OSS."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -344,4 +344,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs Aider: Git Integration Compared](/claude-code-vs-aider-git-integration/)
+- [Claude Code vs Aider: Cost Analysis for Open-Source Alternative](/claude-code-vs-aider-cost-analysis-open-source/)

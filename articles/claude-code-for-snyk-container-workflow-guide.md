@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Snyk Container Workflow Guide"
+title: "Claude Code for Snyk Container Workflow"
 description: "Learn how to integrate Claude Code with Snyk for automated container security scanning, vulnerability remediation, and secure deployment workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

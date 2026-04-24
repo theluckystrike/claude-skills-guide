@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code SQLAlchemy Alembic Migrations Deep Dive Guide"
+title: "Claude Code SQLAlchemy Alembic"
 description: "Master database migrations with Claude Code and SQLAlchemy. Learn practical workflows for generating, reviewing, and managing Alembic migrations."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -187,4 +187,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Jest Mock Modules and Spies Deep Dive Guide](/claude-code-jest-mock-modules-and-spies-deep-dive-guide/)

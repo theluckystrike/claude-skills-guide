@@ -1,5 +1,5 @@
 ---
-title: "Connection Reset by Peer Error — Fix (2026)"
+title: "Connection Reset by Peer Error — Fix"
 permalink: /claude-code-connection-reset-by-peer-fix-2026/
 description: "Fix ECONNRESET 'connection reset by peer' during API calls. Implement retry logic and check network stability."
 last_tested: "2026-04-22"
@@ -74,3 +74,31 @@ Add this to your `CLAUDE.md`:
 - If behind VPN, enable split tunneling for api.anthropic.com.
 - ECONNRESET is transient — retry before investigating.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `ETIMEDOUT: connection timed out`
+- `RequestTimeout: request took longer than 120000ms`
+- `ESOCKETTIMEDOUT`
+- `ERR_TLS_CERT_ALTNAME_INVALID`
+- `UNABLE_TO_VERIFY_LEAF_SIGNATURE`
+
+## Frequently Asked Questions
+
+### What is the default timeout for Claude Code API requests?
+
+The default timeout is 120 seconds (120000ms). For complex operations involving large codebases or multi-file edits, this may be insufficient. Increase it with `claude config set api_timeout 300000` for a 5-minute timeout.
+
+### Can network latency cause timeouts?
+
+Yes. Corporate proxies, VPNs, and DNS filtering services add round-trip latency. Measure your baseline latency with `curl -o /dev/null -s -w '%{time_total}' https://api.anthropic.com/v1/messages`. If it exceeds 5 seconds, route API traffic outside the proxy.
+
+### Do timeouts consume API credits?
+
+Partially. If the server began processing your request before the client timed out, the input tokens are consumed even though you never received a response. Long timeouts reduce wasted credits by allowing the response to complete.
+
+### What TLS version does Claude Code require?
+
+Claude Code requires TLS 1.2 or later. The Anthropic API endpoints do not support TLS 1.0 or 1.1. If your network or proxy forces an older TLS version, the connection fails during the handshake.

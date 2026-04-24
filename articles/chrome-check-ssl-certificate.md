@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Check SSL Certificate — Developer Guide"
+title: "Chrome Check SSL Certificate"
 description: "Learn how to check SSL certificates in Chrome for developers and power users. Covers DevTools, command-line tools, and practical verification techniques."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -381,5 +381,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
+- [SSL Certificate Chain Incomplete Error — Fix (2026)](/claude-code-ssl-certificate-chain-incomplete-fix-2026/)

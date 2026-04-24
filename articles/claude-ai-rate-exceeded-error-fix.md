@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude AI Rate Exceeded Error (2026)"
+title: "Fix Claude AI Rate Exceeded Error"
 description: "Fix claude.ai rate exceeded errors on Free, Pro, and Max subscription plans. Understand web app rate limits vs API limits and fix throttling."
 permalink: /claude-ai-rate-exceeded-error-fix/
 canonical_url: /claude-rate-exceeded-error-fix/

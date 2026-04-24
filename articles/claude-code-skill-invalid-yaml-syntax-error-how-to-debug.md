@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Skill Invalid YAML Syntax Error How to Debug (2026)"
+title: "Fix Skill Invalid YAML Syntax Error"
 description: "Learn how to diagnose and fix YAML syntax errors in Claude skills. Practical debugging techniques with real examples for developers. Updated for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -245,4 +245,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Skill YAML Frontmatter Parse Error in Claude — Fix (2026)](/claude-code-skill-yaml-frontmatter-parse-error-fix-2026/)

@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Misunderstanding Requirements (2026)"
+title: "Fix Claude Code Misunderstanding"
 description: "Fix Claude Code misunderstanding requirements by structuring prompts with acceptance criteria, examples, and constraint definitions."
 permalink: /claude-code-misunderstands-requirements-fix-2026/
 last_tested: "2026-04-22"

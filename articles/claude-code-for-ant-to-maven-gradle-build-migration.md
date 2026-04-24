@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Migrate Ant to Maven/Gradle with Claude Code (2026)"
+title: "Migrate Ant to Maven/Gradle with Claude"
 description: "Migrate Ant build.xml to Maven pom.xml or Gradle build.gradle using Claude Code automation. Convert dependencies, plugins, and build lifecycle steps."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -240,4 +240,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Circular Dependency Detected in Build — Fix (2026)](/claude-code-circular-dependency-detected-build-fix-2026/)

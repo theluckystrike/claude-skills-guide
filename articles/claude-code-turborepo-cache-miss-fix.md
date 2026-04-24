@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Turborepo Cache Miss — Fix (2026)"
+title: "Claude Code Turborepo Cache Miss — Fix"
 description: "Fix Turborepo cache miss on Claude-generated files. Configure turbo.json inputs and hash strategy correctly. Step-by-step solution."
 permalink: /claude-code-turborepo-cache-miss-fix/
 last_tested: "2026-04-21"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Railway Deploy — Workflow Guide"
+title: "Claude Code for Railway Deploy"
 description: "Deploy apps to Railway with Claude Code configuration. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-railway-deploy-workflow-guide/

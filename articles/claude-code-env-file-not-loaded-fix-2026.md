@@ -59,3 +59,7 @@ DATABASE_URL=postgres://localhost/mydb node migrate.js
 # CLAUDE.md rule
 Environment variables are in .env file. Before running any command that needs them, use: 'set -a && source .env && set +a && your_command'. Never hardcode secrets in commands — always reference .env.
 ```
+
+## See Also
+
+- [Claude Code .env File Not Loaded — Fix (2026)](/claude-code-env-file-not-loaded-project-scope-fix/)

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Astrophysics Data Reduction (2026)"
+title: "Claude Code for Astrophysics Data"
 permalink: /claude-code-astrophysics-data-reduction-2026/
 description: "Astrophysics data reduction with Claude Code. Automate CCD calibration, aperture photometry, and spectral extraction."
 last_tested: "2026-04-22"

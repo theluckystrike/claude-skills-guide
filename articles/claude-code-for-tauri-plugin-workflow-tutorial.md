@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Tauri Plugin Workflow Tutorial"
+title: "Claude Code for Tauri Plugin Workflow"
 description: "Learn how to use Claude Code to streamline your Tauri plugin development workflow. This tutorial covers practical patterns for building, testing, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

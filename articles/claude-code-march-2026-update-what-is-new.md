@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code March 2026 Update: What Is New"
+title: "Claude Code March 2026 Update"
 description: "Claude Code March 2026 update changelog. New skills, enhanced capabilities, and developer-focused improvements you need to know about."
 date: 2026-03-14
 last_modified_at: 2026-04-17

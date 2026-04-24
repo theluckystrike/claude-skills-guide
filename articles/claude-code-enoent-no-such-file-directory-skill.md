@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Enoent No Such File Directory — (2026)"
+title: "Claude Code Enoent No Such File"
 description: "Learn how to handle ENOENT (no such file or directory) errors in Claude Code skills with practical examples and best practices. Tested and working in 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17

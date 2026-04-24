@@ -1,5 +1,5 @@
 ---
-title: "Fix Malformed YAML Frontmatter in SKILL.md Files — 2026"
+title: "Fix Malformed YAML Frontmatter"
 description: "Debug and fix YAML parse errors in SKILL.md frontmatter including tabs vs spaces, unquoted colons, missing delimiters, and encoding issues."
 permalink: /fix-malformed-yaml-frontmatter-skill-md/
 render_with_liquid: false
@@ -232,3 +232,7 @@ Some editors auto-insert BOM (Byte Order Mark) characters at the beginning of UT
 - [SKILL.md Frontmatter Fields Explained](/skill-md-file-frontmatter-fields-explained/)
 - [Fix Unknown Skill Error in Claude Code](/fix-unknown-skill-error-claude-code/)
 - [Claude Skills CI/CD Patterns](/claude-skills-ci-cd-patterns/)
+
+## See Also
+
+- [Skill YAML Frontmatter Parse Error in Claude — Fix (2026)](/claude-code-skill-yaml-frontmatter-parse-error-fix-2026/)

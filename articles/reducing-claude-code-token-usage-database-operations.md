@@ -1,5 +1,5 @@
 ---
-title: "Reducing Claude Code token usage for database operations"
+title: "Reducing Claude Code token usage"
 description: "Reduce Claude Code token usage for database operations by 60-80% with schema skills, query templates, and structured migration patterns saving $30-80/month."
 permalink: /reducing-claude-code-token-usage-database-operations/
 date: 2026-04-22
@@ -262,3 +262,7 @@ This single skill (~400 tokens) replaces reading 4-8 files (20K-40K tokens). For
 - [RLS Policy Debugging with Claude Code](/rls-policy-debugging-claude-code-structured-approach/) -- Supabase-specific database patterns
 - [Claude Code Skills Guide](/skills/) -- creating database-specific skills
 - [Cost Optimization Hub](/cost-optimization/) -- all cost optimization guides
+
+## See Also
+
+- [Monitoring Claude Code Token Usage with Custom Hooks](/monitoring-claude-code-token-usage-custom-hooks/)

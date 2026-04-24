@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Pinecone vs Alternatives (2026)"
+title: "Claude Code for Pinecone"
 description: "Compare Pinecone, Weaviate, Qdrant, and Chroma with Claude Code workflows. Benchmark results, code examples, and migration patterns for vector search."
 date: 2026-03-20
 last_modified_at: 2026-04-17

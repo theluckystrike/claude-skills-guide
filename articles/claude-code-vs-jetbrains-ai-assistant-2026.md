@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs JetBrains AI Compared (2026)"
+title: "Claude Code vs JetBrains AI Compared"
 permalink: /claude-code-vs-jetbrains-ai-assistant-2026/
 description: "Claude Code delivers terminal-native autonomous agents. JetBrains AI bakes deep code intelligence into IntelliJ. Pricing, features, and verdict inside."
 last_tested: "2026-04-21"
@@ -80,3 +80,9 @@ Source: [anthropic.com/pricing](https://anthropic.com/pricing), [jetbrains.com/a
 ## The Bottom Line
 
 JetBrains AI is the smartest IDE-integrated AI assistant available — deep type awareness, structural refactoring, and Junie's agent mode make it compelling for developers already invested in the JetBrains ecosystem. Claude Code is the most capable autonomous terminal agent — unrestricted system access, MCP connectivity, and headless operation make it the choice for complex, cross-system workflows. The ideal setup for serious developers is both: JetBrains AI for in-editor intelligence and Claude Code for autonomous execution beyond the IDE's boundaries. Migration tip: if you currently use JetBrains AI alone and want to add Claude Code, start by creating a CLAUDE.md file that documents your project's module structure and build commands so the terminal agent can operate effectively from day one.
+
+## See Also
+
+- [JetBrains Plugin Incompatibility Fix](/claude-code-jetbrains-plugin-incompatibility-fix-2026/)
+- [Claude Code vs JetBrains Refactoring: AI vs IDE Native](/claude-code-vs-jetbrains-refactor-comparison/)
+- [Claude Code vs v0 by Vercel (2026): AI Builders](/claude-code-vs-v0-vercel-ai-builder-2026/)

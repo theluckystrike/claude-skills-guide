@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Bazel Build System Workflows (2026)"
+title: "Claude Code for Bazel Build System: Workflow Guide"
 description: "Integrate Claude Code into Bazel build workflows for C++ and multi-language projects. Covers BUILD files, rules, remote caching, and query analysis."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -187,4 +187,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Ada Legacy System Updates (2026)](/claude-code-ada-legacy-system-updates-2026/)
+- [Build a Loyalty Rewards System with Claude Code (2026)](/claude-code-for-loyalty-rewards-system-development/)

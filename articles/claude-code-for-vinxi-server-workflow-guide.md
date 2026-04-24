@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Vinxi Server — Workflow Guide"
+title: "Claude Code for Vinxi Server"
 description: "Build full-stack apps with Vinxi server SDK and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-vinxi-server-workflow-guide/

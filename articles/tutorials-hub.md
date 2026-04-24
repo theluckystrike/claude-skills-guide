@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Tutorials: Step-by-Step Library (2026)"
+title: "Claude Code Tutorials"
 description: "Browse 124 step-by-step Claude Code tutorials covering MCP servers, framework integrations, skill management, testing, and deployment workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

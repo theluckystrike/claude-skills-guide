@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skill State Machine Design Patterns"
+title: "Claude Skill State Machine Design"
 description: "Learn how to implement state machine design patterns in Claude skills for more predictable, maintainable, and controllable AI workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

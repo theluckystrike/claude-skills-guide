@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for VHDL Synthesis and Simulation (2026)"
+title: "Claude Code for VHDL Synthesis"
 description: "VHDL synthesis and simulation with Claude Code. Write synthesizable RTL and self-checking testbenches with GHDL."
 permalink: /claude-code-vhdl-synthesis-simulation-2026/
 last_tested: "2026-04-21"
@@ -295,3 +295,4 @@ yosys -m ghdl -p "ghdl --std=08 ../rtl/fifo.vhd -e sync_fifo; synth_ecp5; write_
 - [Claude Code for FPGA Development](/claude-code-for-fpga-development-workflow-tutorial/)
 - [Claude Code for SystemVerilog Testbenches](/claude-code-systemverilog-testbench-gen-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for RF Antenna Design Simulation (2026)](/claude-code-rf-antenna-design-simulation-2026/)

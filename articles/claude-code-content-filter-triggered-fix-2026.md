@@ -1,5 +1,5 @@
 ---
-title: "Content Filter Triggered Refusal — Fix (2026)"
+title: "Content Filter Triggered Refusal — Fix"
 permalink: /claude-code-content-filter-triggered-fix-2026/
 description: "Fix content filter refusal in Claude API. Rephrase prompt to remove flagged patterns. Check stop_reason for 'end_turn' vs 'content_filter'."
 last_tested: "2026-04-22"
@@ -61,3 +61,31 @@ Add this to your `CLAUDE.md`:
 - Prefix security-related requests with the legitimate use case.
 - If content filter triggers, rephrase — do not retry the same prompt.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `fatal: not a git repository`
+- `error: failed to push some refs`
+- `fatal: refusing to merge unrelated histories`
+- `TokenLimitExceeded: max tokens reached`
+- `Error: output truncated at max_tokens`
+
+## Frequently Asked Questions
+
+### Why does Claude Code require git?
+
+Claude Code uses git for several core operations: tracking file changes, creating commits, reading blame information, searching history with `git log`, and managing branches. Without git, these operations fail and Claude Code falls back to less efficient alternatives.
+
+### Can Claude Code work in a non-git directory?
+
+Yes, but with reduced functionality. File search and editing work normally, but version control operations (commit, diff, blame) are unavailable. Claude Code displays a warning when opened in a directory without git initialization.
+
+### How do I prevent Claude Code from making unwanted git operations?
+
+Add rules to your CLAUDE.md: `Do not create commits automatically. Do not run git push. Always ask before any git operation that modifies history.` Claude Code respects these constraints and asks for confirmation before proceeding.
+
+### What causes token count mismatches?
+
+Token counts are estimated before sending a request and precisely calculated on the server. The estimation uses a fast local tokenizer that may differ slightly from the server's tokenizer. Small discrepancies (1-3%) are normal and do not affect functionality.

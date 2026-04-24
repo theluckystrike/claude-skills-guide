@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Lucia Auth — Workflow Guide"
+title: "Claude Code for Lucia Auth"
 description: "Implement session auth with Lucia and Claude Code setup. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-lucia-auth-workflow-workflow-guide/

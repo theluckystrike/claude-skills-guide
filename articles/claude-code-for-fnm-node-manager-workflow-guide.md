@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for fnm Node Manager — Guide"
+title: "Claude Code for fnm Node Manager"
 description: "Manage Node.js versions with fnm and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-fnm-node-manager-workflow-guide/

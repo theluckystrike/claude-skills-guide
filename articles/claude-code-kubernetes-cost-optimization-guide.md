@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Kubernetes Cost Optimization (2026)"
+title: "Claude Code Kubernetes Cost"
 description: "Reduce Kubernetes costs with Claude Code automation. Right-sizing strategies, idle resource detection, and spot instance optimization workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -117,3 +117,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
+
+- [Claude Code Cost Optimization Hub](/cost-optimization-hub/)
+- [Firebase + Claude Code: Cost Optimization Guide](/firebase-claude-code-cost-optimization-guide/)

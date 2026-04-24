@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Infracost Cost Estimation (2026)"
+title: "Claude Code + Infracost Cost Estimation"
 description: "Estimate AWS, GCP, and Azure infrastructure costs from your terminal with Infracost and Claude Code. Get cost breakdowns before applying Terraform."
 date: 2026-03-14
 last_modified_at: 2026-04-17

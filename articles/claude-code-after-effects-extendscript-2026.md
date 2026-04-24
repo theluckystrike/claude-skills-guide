@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for After Effects ExtendScript (2026)"
+title: "Claude Code for After Effects"
 permalink: /claude-code-after-effects-extendscript-2026/
 description: "Automate After Effects with ExtendScript and Claude Code. Build motion graphics templates, batch render compositions, and script expression controllers."
 last_tested: "2026-04-22"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Warp Terminal — Workflow Guide"
+title: "Claude Code for Warp Terminal"
 description: "Optimize Claude Code inside Warp terminal with AI features. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-warp-ai-terminal-workflow-guide/
@@ -70,3 +70,10 @@ Claude Code should create git aliases with `--no-pager` flags, write a Warp work
 - [Claude Code for Ghostty Terminal Workflow](/claude-code-for-ghostty-terminal-workflow-tutorial/)
 - [Building a CLI Devtool with Claude Code Walkthrough](/building-a-cli-devtool-with-claude-code-walkthrough/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)
+
+## See Also
+
+- [Claude Code for Rio Terminal — Workflow Guide](/claude-code-for-rio-terminal-workflow-guide/)
+- [How to Use Claude Code with Warp Terminal 2026](/claude-code-for-warp-terminal-workflow-guide/)
+- [Claude Code for Dify AI Platform — Guide](/claude-code-for-dify-ai-platform-workflow-guide/)
+- [Claude Code vs Warp AI Terminal Compared (2026)](/claude-code-vs-warp-ai-terminal-2026/)

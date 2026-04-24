@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Radar Signal Processing (2026)"
+title: "Claude Code for Radar Signal Processing"
 permalink: /claude-code-radar-signal-processing-2026/
 description: "Radar signal processing with Claude Code. Build pulse compression, CFAR detection, and Doppler processing pipelines."
 last_tested: "2026-04-22"
@@ -243,3 +243,4 @@ print('Radar processing: PASS')
 - [Claude Code for DSP Pipeline Development](/claude-code-dsp-pipeline-development-2026/)
 - [Claude Code for Sonar Array Processing](/claude-code-sonar-array-processing-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for Satellite Telemetry (2026)](/claude-code-satellite-telemetry-processing-2026/)

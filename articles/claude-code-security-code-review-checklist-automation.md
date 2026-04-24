@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Automate Security Code Reviews with Claude (2026)"
+title: "Automate Security Code Reviews"
 description: "Automate security code review checklists with Claude Code skills. Find vulnerabilities, enforce OWASP checks, and standardize security workflows."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -260,4 +260,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Review Claude Code PRs Efficiently (2026)](/claude-code-review-prs-efficiently-2026/)
+- [Automate Code Reviews with Claude Code (2026)](/claude-code-code-review-automation-2026/)

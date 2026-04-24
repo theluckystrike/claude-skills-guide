@@ -1,5 +1,5 @@
 ---
-title: "Prisma with Claude Code: Reducing Schema Discovery Tokens"
+title: "Prisma with Claude Code"
 description: "Prisma schema files cost Claude Code 3,000-15,000 tokens to read and parse. Pre-computed schema summaries cut discovery cost by 70-85% per session."
 permalink: /prisma-claude-code-reducing-schema-discovery-tokens/
 date: 2026-04-22

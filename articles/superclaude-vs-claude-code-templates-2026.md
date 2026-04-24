@@ -1,5 +1,5 @@
 ---
-title: "SuperClaude vs Claude Code Templates (2026)"
+title: "SuperClaude vs Claude Code Templates"
 description: "SuperClaude offers 30 slash commands and 16 agents as a framework. Claude Code Templates provides 600+ installable configs via CLI. Full comparison."
 permalink: /superclaude-vs-claude-code-templates-2026/
 last_tested: "2026-04-22"
@@ -97,3 +97,7 @@ For [building team playbooks](/playbook/), Templates gives you more granular con
 ## Final Recommendation
 
 If you like frameworks that make decisions for you (Rails, Next.js), you will like SuperClaude. If you prefer libraries that let you compose your own solution (Express, Fastify), you will prefer Claude Code Templates. Neither is wrong — the choice depends on whether you value coherence or flexibility more. Start with whichever matches your temperament and switch if it does not fit.
+
+## See Also
+
+- [Awesome LLM Apps vs Claude Code Templates (2026)](/awesome-llm-apps-vs-claude-code-templates-2026/)

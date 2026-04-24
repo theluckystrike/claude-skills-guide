@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Free vs Pro vs Max: Claude Code Plan Calculator"
+title: "Free vs Pro vs Max"
 description: "Find your optimal Claude Code plan with this calculator. Most developers overpay by $80/month by choosing the wrong tier."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -243,3 +243,9 @@ The plan calculator's value is measured in monthly savings: the difference betwe
 - [Why Is Claude Code Expensive Large Context Tokens](/why-is-claude-code-expensive-large-context-tokens/)
 - [Claude Code Monthly Cost Breakdown Realistic Usage](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/)
 - [Is Claude Code Worth the Cost for Small Startups](/is-claude-code-worth-the-cost-for-small-startups-2026/)
+
+## See Also
+
+- [Tool Use vs Direct Prompting Cost Comparison](/claude-cost-10-tool-use-vs-direct-prompting-cost/)
+- [Claude Code Max vs Pro: Which Plan Saves More](/claude-cost-01-claude-code-max-vs-pro-savings/)
+- [Enterprise Claude Cost Chargebacks by Team](/claude-cost-10-enterprise-claude-cost-chargebacks/)

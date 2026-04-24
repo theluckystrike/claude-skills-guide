@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Neuroscience MNE-Python (2026)"
+title: "Claude Code for Neuroscience MNE-Python"
 permalink: /claude-code-neuroscience-mne-python-2026/
 description: "Neuroscience EEG/MEG analysis with Claude Code and MNE-Python. Automate preprocessing, ERPs, and source localization."
 last_tested: "2026-04-22"
@@ -274,3 +274,4 @@ print('MNE-Python pipeline: PASS')
 - [Claude Code for DSP Pipeline Development](/claude-code-dsp-pipeline-development-2026/)
 - [Claude Code for Epidemiology Modeling](/claude-code-epidemiology-sir-seir-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Best Claude Code Plugins for Python (2026)](/best-claude-code-plugins-python-2026/)

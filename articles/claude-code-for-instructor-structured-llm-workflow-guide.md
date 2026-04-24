@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Instructor Structured LLM — Guide"
+title: "Claude Code for Instructor Structured"
 description: "Get structured LLM output with Instructor and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-instructor-structured-llm-workflow-guide/
@@ -74,3 +74,7 @@ Claude Code should define a Pydantic `Product` model with typed fields, `Field(d
 - [Claude Code for LangChain Framework Workflow Guide](/claude-code-for-langchain-framework-workflow-guide/)
 - [Claude Code for Groq Inference Workflow Guide](/claude-code-for-groq-inference-workflow-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
+
+## See Also
+
+- [Claude Code for Promptfoo — Workflow Guide](/claude-code-for-promptfoo-llm-eval-workflow-guide/)

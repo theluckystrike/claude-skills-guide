@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Writing — Complete Developer Guide"
+title: "Claude Code For Writing"
 description: "Learn how to use Claude Code to create comprehensive CONTRIBUTING.md files that guide contributors through your project's workflow, coding standards."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -221,4 +221,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code spending tokens on files I didn](/claude-code-spending-tokens-files-didnt-ask-about/)

@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Notion Web Clipper Chrome Extension Guide (2026)"
+title: "Notion Web Clipper Chrome Extension"
 description: "Learn how to build and integrate Chrome extension Notion web clipper functionality for saving web content directly to your Notion workspace."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Slack Features Chrome Extension Guide (2026)"
+title: "Slack Features Chrome Extension Guide"
 description: "Slack Features Chrome Extension Guide. Practical guide with working examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

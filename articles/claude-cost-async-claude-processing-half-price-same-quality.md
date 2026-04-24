@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Async Claude Processing: Half Price Same Quality"
+title: "Async Claude Processing"
 description: "Claude batch API uses the same models at 50% off. Opus 4.7 batch output is identical to real-time at $12.50 vs $25.00/MTok."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -224,3 +224,5 @@ Confirm quality parity and cost savings simultaneously:
 ## Related Articles
 
 - [Lean Prompting: Fewer Tokens, Same Quality](/lean-prompting-fewer-tokens-same-quality/)
+- [Shrink Claude Context Without Losing Quality](/claude-cost-shrink-claude-context-without-losing-quality/)
+- [Lean Prompting: Fewer Tokens, Same Quality](/claude-cost-lean-prompting-fewer-tokens-same-quality/)

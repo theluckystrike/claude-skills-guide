@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Qdrant Vector DB — Guide"
+title: "Claude Code for Qdrant Vector DB"
 description: "Build vector search with Qdrant and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-qdrant-vector-db-workflow-guide/

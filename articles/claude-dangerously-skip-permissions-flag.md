@@ -1,5 +1,5 @@
 ---
-title: "Claude --dangerously-skip-permissions Flag (2026)"
+title: "Claude --dangerously-skip-permissions"
 description: "How to use the claude --dangerously-skip-permissions flag for unattended CI/CD, batch scripting, and headless automation. Syntax, use cases, and risks."
 permalink: /claude-dangerously-skip-permissions-flag/
 canonical_url: /claude-code-dangerously-skip-permissions-guide/

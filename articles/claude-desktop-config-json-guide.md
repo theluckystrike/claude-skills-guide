@@ -1,5 +1,5 @@
 ---
-title: "claude_desktop_config.json: Complete Guide (2026)"
+title: "claude_desktop_config.json Setup"
 description: "Full reference for claude_desktop_config.json. File location, every config field, MCP server setup, validation commands, and common mistakes fixed."
 permalink: /claude-desktop-config-json-guide/
 last_tested: "2026-04-24"

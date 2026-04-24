@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Distributed Tracing Workflow Tutorial"
+title: "Claude Code for Distributed Tracing"
 description: "Learn how to implement distributed tracing workflows using Claude Code. A practical tutorial for developers to debug and monitor microservices effectively."
 date: 2026-03-15
 last_modified_at: 2026-04-17

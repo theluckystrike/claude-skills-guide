@@ -1,5 +1,5 @@
 ---
-title: "Project Scaffolding with Claude Code (2026)"
+title: "Project Scaffolding with Claude Code"
 description: "Use Claude Code to scaffold new projects with proper structure, configuration, testing setup, and CI/CD from templates and slash commands."
 permalink: /claude-code-project-scaffolding-guide-2026/
 last_tested: "2026-04-22"
@@ -210,3 +210,7 @@ A basic project scaffold (structure + config + a few modules) takes 5-10 minutes
 Review the generated code before committing. Check that configs are correct, dependencies are intentional, and test patterns match your standards.
 
 For more on structuring Claude Code workflows, see [The Claude Code Playbook](/playbook/). For slash command creation, read the [skills vs hooks vs commands guide](/claude-code-skills-vs-hooks-vs-commands-2026/). For team-standard scaffolding, see the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).
+
+## See Also
+
+- [Claude Code Project vs Global Settings: Token Impact](/claude-code-project-vs-global-settings-token-impact/)

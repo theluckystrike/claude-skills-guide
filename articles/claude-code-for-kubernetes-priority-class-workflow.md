@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Using Claude Code for Kubernetes Priority Class (2026)"
+title: "Using Claude Code for Kubernetes"
 description: "Using Claude Code for Kubernetes Priority Class tutorial with real-world examples, working configurations, best practices, and deployment steps..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

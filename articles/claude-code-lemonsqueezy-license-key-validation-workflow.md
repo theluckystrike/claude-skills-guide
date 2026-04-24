@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code LemonSqueezy License Key Validation Workflow"
+title: "Claude Code LemonSqueezy License Key"
 description: "Learn how to build a solid license key validation workflow using Claude Code and LemonSqueezy's API. This guide covers practical patterns for software."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -458,4 +458,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Valibot — Workflow Guide](/claude-code-for-valibot-validation-workflow-guide/)

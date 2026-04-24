@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills vs OpenAI Assistants API: Comparison (2026)"
+title: "Claude Skills vs OpenAI Assistants API: Full Comparison"
 description: "Claude Skills vs OpenAI Assistants API compared for 2026. Architecture, cost, flexibility, and which is better for production AI workflow needs."
 permalink: /claude-skills-vs-openai-assistants-api-comparison/
 last_tested: "2026-04-21"
@@ -95,3 +95,7 @@ Claude Skills scale naturally through Git -- new team members clone the repo and
 ## When To Use Neither
 
 For simple, stateless AI interactions (ask a question, get an answer, no memory needed), both solutions are overengineered. Use the Claude API or OpenAI Chat Completions API directly -- a single API call with no skills, no assistants, no thread management. For workflow automation that does not involve AI reasoning (file moves, scheduled tasks, API polling), use standard tools like cron, Make, or Zapier instead.
+
+## See Also
+
+- [Claude Skills vs OpenAI Assistants API Compared (2026)](/claude-skills-vs-openai-assistants-api-2026/)

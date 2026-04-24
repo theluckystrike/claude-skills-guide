@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build a Shadow DOM Viewer Extension (2026)"
+title: "Build a Shadow DOM Viewer Extension"
 description: "Build a Chrome extension to inspect and debug Shadow DOM elements. Covers shadow root traversal, style isolation, and slot content inspection for devs."
 date: 2026-03-15
 last_modified_at: 2026-04-17

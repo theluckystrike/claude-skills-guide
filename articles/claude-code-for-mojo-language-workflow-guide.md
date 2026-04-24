@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Mojo Language — Workflow Guide"
+title: "Claude Code for Mojo Language"
 description: "Write high-performance AI code with Mojo and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-mojo-language-workflow-guide/
@@ -85,3 +85,4 @@ Claude Code should create a `fn matmul` with typed `Tensor` parameters, implemen
 - [Claude Code for SolidJS Resources Workflow Guide](/claude-code-for-solidjs-resources-workflow-guide/)
 - [Claude Code for Hive Metastore Workflow Guide](/claude-code-for-hive-metastore-workflow-guide/)
 - [Claude Code for Release Candidate Workflow Tutorial](/claude-code-for-release-candidate-workflow-tutorial/)
+- [Claude Code for Gleam Language — Workflow Guide](/claude-code-for-gleam-language-workflow-guide/)

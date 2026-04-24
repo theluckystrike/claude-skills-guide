@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude API Error 429 Rate Limit (2026)"
+title: "Fix: Claude API Error 429 Rate Limit"
 description: "Fix Anthropic API error 429 rate limit reached with proper backoff, SDK retries, and usage optimization strategies. Tested and working in 2026."
 last_tested: "2026-04-22"
 date: 2026-04-15
@@ -203,5 +203,4 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 - [Fix Claude Code API Rate Limit Reached Error](/claude-code-api-error-rate-limit-reached/)
 - [Fix Anthropic API Streaming Interrupted](/anthropic-api-streaming-interrupted-fix/)
-
-
+- [Anthropic Rate Limit Tokens Per Minute — Fix (2026)](/claude-code-anthropic-rate-limit-tokens-per-minute-fix-2026/)

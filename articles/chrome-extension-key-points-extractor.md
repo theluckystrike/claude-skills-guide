@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Key Points Extractor Chrome Extension Guide (2026)"
+title: "Key Points Extractor Chrome Extension"
 description: "Learn how to build a Chrome extension that extracts key points from any web page. Practical code examples, API integration patterns, and implementation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

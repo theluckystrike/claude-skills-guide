@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Oss Roadmap — Complete Developer Guide"
+title: "Claude Code For Oss Roadmap"
 description: "Learn how to use Claude Code to streamline open source software roadmap planning and management. Practical workflow automation for feature."
 date: 2026-03-15
 last_modified_at: 2026-04-17

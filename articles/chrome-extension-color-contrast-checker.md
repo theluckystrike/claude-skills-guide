@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Color Contrast Checker Chrome Extension Guide (2026)"
+title: "Color Contrast Checker Chrome Extension"
 description: "Discover the best Chrome extensions for checking color contrast ratios. Learn how to build accessible web interfaces with WCAG compliance tools."
 date: 2026-03-15
 last_modified_at: 2026-04-17

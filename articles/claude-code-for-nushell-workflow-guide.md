@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Nushell — Workflow Guide"
+title: "Claude Code for Nushell"
 description: "Run Claude Code in Nushell with structured data pipelines. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-nushell-workflow-guide/

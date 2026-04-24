@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Salesforce Apex Development"
+title: "Claude Skills for Salesforce Apex"
 description: "Use Claude Code skills for Salesforce Apex development: code generation, testing, debugging, and deployment automation."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -263,4 +263,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Skills for Academic Research — Automate Literature Review, Citation Extraction, and Statistical Validation — 2026](/claude-skills-for-academic-research/)
+- [Claude Skills for Manufacturing QA — Automate SPC Chart Analysis, NCR Processing, and CAPA Workflow — 2026](/claude-skills-for-manufacturing-qa/)

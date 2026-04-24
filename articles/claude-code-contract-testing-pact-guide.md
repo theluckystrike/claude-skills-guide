@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Contract Testing with Pact Guide (2026)"
+title: "Claude Code Contract Testing with Pact"
 description: "Claude Code Contract Testing with Pact Guide practical guide covering setup, configuration, common pitfalls, and advanced tips. All steps tested and..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

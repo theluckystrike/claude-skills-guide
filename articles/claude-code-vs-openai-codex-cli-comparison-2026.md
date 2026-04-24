@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs OpenAI Codex CLI Compared (2026)"
+title: "Claude Code vs OpenAI Codex CLI"
 permalink: /claude-code-vs-openai-codex-cli-comparison-2026/
 description: "Claude Code uses application-layer permissions. Codex CLI enforces kernel-level sandboxing. Two terminal agents, two security models. Full comparison."
 last_tested: "2026-04-21"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Salesforce MCP Server Data Integration Guide"
+title: "Salesforce MCP Server Data Integration"
 description: "Integrate Salesforce with MCP servers for automated data sync. Code examples, best practices, and workflow patterns for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

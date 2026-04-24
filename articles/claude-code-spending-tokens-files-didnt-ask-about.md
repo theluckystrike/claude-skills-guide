@@ -1,5 +1,5 @@
 ---
-title: "Claude Code spending tokens on files I didn't ask about"
+title: "Claude Code spending tokens on files I"
 description: "Stop Claude Code from spending tokens on irrelevant files with .claudeignore rules, CLAUDE.md boundaries, and scoped prompts that cut waste by 40-60%."
 permalink: /claude-code-spending-tokens-files-didnt-ask-about/
 date: 2026-04-22

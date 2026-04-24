@@ -1,5 +1,5 @@
 ---
-title: "Awesome Claude Code Toolkit: 135 Agents (2026)"
+title: "Awesome Claude Code Toolkit: 135 Agents"
 description: "Explore the awesome-claude-code-toolkit — 135 agents, 35 skills, 42 commands, 176+ plugins, and 20 hooks curated for Claude Code developers."
 permalink: /awesome-claude-code-toolkit-135-agents-2026/
 last_tested: "2026-04-22"
@@ -168,3 +168,8 @@ Agents are behavioral profiles (how Claude Code should act). Skills are rule set
 - [Claude Skills Directory](/claude-skills-directory-where-to-find-skills/) — where to find and install skills
 - [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — understanding the hook components
 - [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — integrating agents and skills into your config
+
+## See Also
+
+- [Install Awesome Claude Code Toolkit (2026)](/how-to-install-awesome-claude-code-toolkit-2026/)
+- [Awesome Claude Code vs Docs Mirror (2026)](/awesome-claude-code-vs-claude-code-docs-2026/)

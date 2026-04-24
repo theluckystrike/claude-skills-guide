@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for SCADA Modernization (2026)"
+title: "Claude Code for SCADA Modernization"
 permalink: /claude-code-scada-modernization-2026/
 description: "SCADA system modernization with Claude Code. Migrate legacy HMI, implement OPC UA, and harden ICS security."
 last_tested: "2026-04-22"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Sonnet 4.6 vs Opus 4.6 for Coding Tasks"
+title: "Claude Sonnet 4.6 vs Opus 4.6"
 description: "Comparing Claude Sonnet 4.6 and Opus 4.6 for coding — speed, cost, reasoning depth, and when each model is the right pick."
 date: 2026-04-21
 last_tested: "2026-04-21"
@@ -93,3 +93,8 @@ Sonnet is more practical for onboarding because new developers ask many explorat
 ## When To Use Neither
 
 If your coding tasks are pure boilerplate generation (scaffolding projects, generating config files, writing repetitive tests), Haiku 4.5 at $0.25/$1.25 per million tokens handles these perfectly well at 12x less than Sonnet. There is no reason to pay for Sonnet or Opus reasoning on tasks that require zero reasoning. Specifically, generating Kubernetes manifests, Terraform resource blocks, CI/CD pipeline YAML, and database migration skeletons are tasks where Haiku produces identical output to Sonnet or Opus because the correct answer is fully determined by the input specification with no ambiguity requiring judgment. For batch operations processing 500+ files (adding license headers, updating import paths, inserting logging statements), Haiku at $0.25/M input tokens processes an entire monorepo for under $2 — the same job on Opus would cost $120 with zero quality benefit.
+
+## See Also
+
+- [Claude Sonnet 4.6 vs Gemini 2.5 Pro for Coding](/claude-sonnet-vs-gemini-25-pro-coding/)
+- [Claude Sonnet 4.6 vs GPT-4o for Coding in 2026](/claude-sonnet-vs-gpt-4o-coding-comparison-2026/)

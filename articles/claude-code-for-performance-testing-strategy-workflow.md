@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Performance Testing Strategy Workflow"
+title: "Claude Code for Performance Testing"
 description: "Learn how to build a performance testing strategy workflow with Claude Code. Includes practical examples, skill configuration, and actionable advice for."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -250,4 +250,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Performance SLO Workflows (2026)](/claude-code-for-performance-slo-workflow-tutorial/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "What Is The Best Claude Skill — Complete Developer Guide"
+title: "What Is the Best Claude Skill for Python Data Workflows"
 description: "A practical guide to choosing the right Claude skill for your Python data pipelines, pandas workflows, and machine learning projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17

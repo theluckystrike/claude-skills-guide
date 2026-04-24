@@ -1,5 +1,5 @@
 ---
-title: "ANTHROPIC_API_KEY Not Set in Subprocess Fix"
+title: "ANTHROPIC_API_KEY Not Set in Subprocess"
 permalink: /claude-code-anthropic-api-key-not-set-subprocess-fix-2026/
 description: "Fix ANTHROPIC_API_KEY not set in subprocess spawned by Claude Code. Export the key in shell profile or pass it explicitly to child process environments."
 last_tested: "2026-04-22"
@@ -65,3 +65,8 @@ grep -r "ANTHROPIC_API_KEY" ~/.zshrc ~/.bashrc ~/.profile
 # CLAUDE.md rule
 Ensure ANTHROPIC_API_KEY is exported (not just set) in your shell profile. Verify with 'env | grep ANTHROPIC_API_KEY'. For Docker and CI, pass the key explicitly via -e flag or secrets.
 ```
+
+## See Also
+
+- [Locale LC_ALL Not Set Encoding Errors Fix](/claude-code-locale-lc-all-not-set-encoding-errors-fix-2026/)
+- [API Key Region Mismatch eu-west-1 — Fix (2026)](/claude-code-anthropic-api-key-region-mismatch-fix-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Built In Password Manager Safe — Developer Guide"
+title: "Chrome Built In Password Manager Safe"
 description: "A technical breakdown of Chrome's password manager security model, encryption methods, and how it compares to dedicated password managers for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

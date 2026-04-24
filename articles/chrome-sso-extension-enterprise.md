@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build a Chrome SSO Extension for Enterprise (2026)"
+title: "Build a Chrome SSO Extension"
 description: "Implement Chrome SSO extensions for enterprise with SAML, OAuth, and session management. Covers managed policies and identity provider integration."
 date: 2026-03-15
 last_modified_at: 2026-04-17

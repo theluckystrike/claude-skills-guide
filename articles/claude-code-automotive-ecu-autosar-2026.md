@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Automotive ECU AUTOSAR (2026)"
+title: "Claude Code for Automotive ECU AUTOSAR"
 permalink: /claude-code-automotive-ecu-autosar-2026/
 description: "Automotive ECU development with Claude Code and AUTOSAR. Generate SWC descriptions, RTE configs, and BSW modules."
 last_tested: "2026-04-22"

@@ -1,5 +1,5 @@
 ---
-title: "Claude Task Master: Setup and Review (2026)"
+title: "Claude Task Master: Setup and Review"
 description: "Set up claude-task-master to parse PRDs into structured task lists with dependency tracking, MCP integration, and AI-powered task breakdown."
 permalink: /claude-task-master-setup-guide-2026/
 last_tested: "2026-04-22"
@@ -202,3 +202,8 @@ Each `get_next_task` call adds ~200 tokens to the context. `complete_task` is ~5
 - [The Claude Code Playbook](/playbook/) — workflow patterns that pair well with task management
 - [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — session management techniques
 - [MCP Setup Guide](/mcp-servers-claude-code-complete-setup-2026/) — configuring the MCP server connection
+
+## See Also
+
+- [Claude Task Master vs Manual Tasks (2026)](/claude-task-master-vs-manual-task-management-2026/)
+- [Claude Task Master vs Linear and Jira (2026)](/claude-task-master-vs-linear-jira-2026/)

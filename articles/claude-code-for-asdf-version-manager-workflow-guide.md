@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for asdf Version Manager Workflow Guide"
+title: "Claude Code for asdf Version Manager"
 description: "Learn how to integrate Claude Code with asdf version manager for streamlined multi-language development. Practical examples, automation tips, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -251,4 +251,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for fnm Node Manager — Guide](/claude-code-for-fnm-node-manager-workflow-guide/)

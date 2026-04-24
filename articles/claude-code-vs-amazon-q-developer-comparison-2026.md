@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs Amazon Q Developer Compared (2026)"
+title: "Claude Code vs Amazon Q Developer: Quick Comparison (2026)"
 permalink: /claude-code-vs-amazon-q-developer-comparison-2026/
 description: "Amazon Q has the best free tier for AWS developers. Claude Code has the best autonomous agent. Compare features, pricing, and team fit for 2026."
 last_tested: "2026-04-21"
@@ -95,3 +95,7 @@ Amazon Q Developer has native JetBrains extensions (IntelliJ, PyCharm, WebStorm)
 ## When To Use Neither
 
 For infrastructure-only work where you are writing Terraform or CloudFormation with no application logic, specialized IaC linting tools (tflint, cfn-lint) combined with a simple AI chat (Claude.ai or ChatGPT) may be more effective than either agent tool. For multi-cloud Terraform with modules spanning AWS, GCP, and Azure, neither tool provides sufficiently deep cross-cloud knowledge -- consider Spacelift or env0 with their built-in AI features instead.
+
+## See Also
+
+- [Claude Code vs Amazon Q Developer (2026): Guide](/claude-code-vs-amazon-q-developer-full-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Password Manager Slow — Developer Guide"
+title: "Chrome Password Manager Slow"
 description: "Diagnose and resolve slow Chrome password manager performance with practical solutions for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

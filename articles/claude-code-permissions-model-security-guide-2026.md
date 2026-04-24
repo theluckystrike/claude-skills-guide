@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Permissions and Security Model (2026)"
+title: "Claude Code Permissions and Security"
 description: "Lock down Claude Code with permission boundaries, tool access controls, file system scoping, and security hooks. Protect your codebase effectively."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -285,7 +285,4 @@ Related Reading
 - [Claude Code Security Engineer Threat Modeling Workflow Tips](/claude-code-security-engineer-threat-modeling-workflow-tips/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
-
-
+- [XDG Config Directory Permissions Fix](/claude-code-xdg-config-directory-permissions-fix-2026/)

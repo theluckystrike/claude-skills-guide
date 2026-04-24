@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Lightest Browser Chromebook — Developer Guide (2026)"
+title: "Lightest Browser Chromebook"
 last_tested: "2026-04-22"
 description: "Find the lightest browser for Chromebook optimized for developers and power users. Compare resource usage, extensions, and performance benchmarks."
 date: 2026-03-15

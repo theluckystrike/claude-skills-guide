@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Setup Podman Containers with Claude Code (2026)"
+title: "Setup Podman Containers with Claude"
 description: "Set up and automate Podman container workflows using Claude Code for rootless containers, pod management, and CI/CD integration. Step-by-step guide."
 date: 2026-03-14
 last_modified_at: 2026-04-17

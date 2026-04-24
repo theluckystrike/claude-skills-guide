@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Continue.dev (2026): Compared"
+title: "Claude Code vs Continue.dev (2026)"
 description: "Claude Code vs Continue.dev compared: pricing, context, features. 3-persona verdict for solo devs, teams, enterprise."
 permalink: /claude-code-vs-continue-dev-features-2026/
 date: 2026-04-21
@@ -108,3 +108,7 @@ These are different capabilities. Continue.dev's autocomplete predicts your next
 - [Claude Code vs Aider: CLI Coding Compared 2026](/claude-code-vs-aider-for-test-driven-development/)
 - [Claude Code vs Cline: Agent Mode Compared 2026](/claude-code-vs-cline-agent-mode-2026/)
 - [GitHub Copilot vs Claude Code: Deep Comparison 2026](/github-copilot-vs-claude-code-deep-comparison-2026/)
+
+## See Also
+
+- [Claude Code vs Continue.dev: Setup and Configuration](/claude-code-vs-continue-dev-setup-comparison/)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Zed AI (2026): Editor Integration"
+title: "Claude Code vs Zed AI (2026)"
 description: "Claude Code vs Zed's built-in AI compared for developers. Terminal agent vs native editor AI — which approach is more productive in 2026?"
 permalink: /claude-code-vs-zed-ai-editor-integration-2026/
 date: 2026-04-21
@@ -104,3 +104,8 @@ Claude Code with its enterprise tier handles compliance, SSO, and audit requirem
 - [Claude Code vs Cursor for Coding](/claude-code-vs-cursor-2026-detailed-comparison/)
 - [Claude Code vs Windsurf: Full Comparison](/claude-code-vs-windsurf-full-comparison-2026/)
 - [Claude Code vs Cline: Agent Mode Compared](/claude-code-vs-cline-agent-mode-2026/)
+
+## See Also
+
+- [Claude Code vs Zed AI: Terminal Agent vs Speed Editor (2026)](/claude-code-vs-zed-ai-editor-comparison-2026/)
+- [Claude Code for DeFi Protocol Integration (2026)](/claude-code-defi-protocol-integration-2026/)

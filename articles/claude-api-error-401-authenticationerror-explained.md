@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude API Error 401 authentication_error Fix (2026)"
+title: "Fix: Claude API Error 401"
 description: "Fix Claude API 401 authentication_error. Covers invalid API keys, environment variable setup, and SDK authentication for Python and TypeScript."
 date: 2026-04-15
 last_modified_at: 2026-04-17

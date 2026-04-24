@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Stop Claude Code Modifying Unrelated Files (2026)"
+title: "Stop Claude Code Modifying Unrelated"
 description: "Prevent Claude Code from editing files outside your task scope. Configure file boundaries, use allowlists, and set permission hooks effectively."
 date: 2026-03-14
 last_modified_at: 2026-04-17

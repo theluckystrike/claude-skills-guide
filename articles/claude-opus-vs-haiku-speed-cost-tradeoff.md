@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Opus 4.6 vs Haiku 4.5: Speed and Cost Tradeoffs"
+title: "Claude Opus 4.6 vs Haiku 4.5"
 description: "Opus 4.6 vs Haiku 4.5 compared on speed, cost, and code quality — find where each model fits your coding workflow."
 date: 2026-04-21
 last_tested: "2026-04-21"
@@ -97,3 +97,8 @@ Haiku is ideal for junior developers because their questions tend to be straight
 ## When To Use Neither
 
 For tasks that require neither reasoning nor code generation — like reformatting JSON, sorting imports, or removing trailing whitespace — use your IDE's built-in tools or a simple script. Paying even Haiku's minimal cost for deterministic text transformations is wasteful when a regex or formatter handles it in milliseconds with zero API calls. Prettier for formatting, ESLint with --fix for style enforcement, and `isort` for Python imports all produce guaranteed-correct output in under 100ms. If your task has a deterministic answer that a tool can compute, skip the AI entirely regardless of how cheap the model is. For teams that need reasoning capability but cannot afford cloud API costs at all, running a local model like Llama 3 via Ollama provides free inference at the cost of reduced quality and slower speeds on consumer hardware. For a deeper dive, see [Claude Sonnet 4.6 vs Codestral: Code Generation Face-Off](/claude-sonnet-vs-codestral-comparison/).
+
+## See Also
+
+- [Claude Opus 4.6 vs GPT-4o: Reasoning and Complex Tasks](/claude-opus-vs-gpt-4o-reasoning-comparison/)
+- [Claude Opus 4.6 vs DeepSeek V3: Coding Comparison](/claude-opus-vs-deepseek-v3-comparison/)

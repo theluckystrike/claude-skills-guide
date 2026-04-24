@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Bloomberg Data Extraction (2026)"
+title: "Claude Code for Bloomberg Data"
 description: "Bloomberg terminal data extraction with Claude Code. Automate BQL queries, DAPI pulls, and Excel add-in workflows."
 permalink: /claude-code-bloomberg-terminal-data-extraction-2026/
 last_tested: "2026-04-21"

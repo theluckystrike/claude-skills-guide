@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Gitpod Cloud Dev — Guide"
+title: "Claude Code for Gitpod Cloud Dev"
 description: "Run Claude Code in Gitpod cloud environments. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-gitpod-cloud-dev-workflow-guide/
@@ -73,3 +73,7 @@ Claude Code should create `.gitpod.yml` with an `init` task that starts PostgreS
 - [Claude Code for Devcontainers Workflow Guide](/claude-code-for-devcontainers-workflow-guide/)
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
 - [Best Way to Set Up Claude Code for New Project](/best-way-to-set-up-claude-code-for-new-project/)
+
+## See Also
+
+- [Claude Code for Encore Dev — Workflow Guide](/claude-code-for-encore-dev-workflow-guide/)

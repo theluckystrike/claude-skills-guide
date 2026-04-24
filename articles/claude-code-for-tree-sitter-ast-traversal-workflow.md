@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Tree-Sitter AST Traversal with Claude Code (2026)"
+title: "Tree-Sitter AST Traversal with Claude"
 description: "Traverse tree-sitter ASTs with Claude Code to find import_statement nodes, analyze code structure, and automate refactoring patterns in projects."
 date: 2026-03-15
 last_modified_at: 2026-04-17

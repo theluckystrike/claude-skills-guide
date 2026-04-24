@@ -1,5 +1,5 @@
 ---
-title: "Speed Up Claude Code on Large Repositories (2026)"
+title: "Speed Up Claude Code on Large"
 description: "Speed up Claude Code on large repos by configuring .claudeignore, scoping sessions to subdirectories, and optimizing file discovery."
 permalink: /claude-code-slow-on-large-repos-fix-2026/
 last_tested: "2026-04-22"
@@ -122,3 +122,7 @@ Do not read packages/web/ or packages/mobile/ unless explicitly needed.
 Maintain your `.claudeignore` as your project grows. The [claude-code-docs](https://github.com/ericbuess/claude-code-docs) repo includes hooks that detect when your ignore file is stale.
 
 For more optimization techniques, see [The Claude Code Playbook](/playbook/). Learn about token cost tracking in our [productivity hacks roundup](/best-claude-code-productivity-hacks-2026/). For context management strategies, read the [context window guide](/claude-code-context-window-management-2026/).
+
+## See Also
+
+- [Claude Code ENOMEM Out of Memory Large Repos — Fix (2026)](/claude-code-enomem-out-of-memory-large-repos-fix/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code With Convex Backend Real-Time Data Setup"
+title: "Claude Code With Convex Backend"
 description: "Learn how to set up Convex as a backend for real-time data in your Claude Code projects. Practical code examples and integration patterns for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -516,4 +516,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Convex — Workflow Guide](/claude-code-for-convex-backend-workflow-guide/)

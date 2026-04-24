@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Beta Features: How to Access and Use Them (2026)"
+title: "Claude Code Beta Features"
 description: "A practical guide for developers and power users on accessing Claude Code beta features. Learn the setup process, configuration options, and practical."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -456,6 +456,9 @@ The beta ecosystem continues expanding with skills like pdf for document process
 
 ## Related
 
+- [Claude Code hooks](/claude-code-hooks-complete-guide/) — hooks system for tool automation
+- [Claude Code status line](/claude-code-statusline-guide/) — understand beta feature indicators in the status bar
+- [Claude Code + Supabase MCP](/claude-code-mcp-supabase-setup-guide/) — MCP server integration with Supabase
 - [save Claude Code conversations](/claude-code-save-conversation-guide/) — Save and export conversation history
 ---
 

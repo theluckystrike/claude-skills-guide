@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Fiber Go Web — Complete Developer Guide"
+title: "Claude Code For Fiber Go Web"
 description: "Learn how to integrate Claude Code into your Fiber Go web framework development workflow for enhanced productivity and efficient coding."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,4 +1,5 @@
 ---
+render_with_liquid: false
 
 layout: default
 title: "Build Dark Mode with Claude Code (2026)"

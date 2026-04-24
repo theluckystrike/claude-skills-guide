@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Azure Arc — Complete Developer Guide"
+title: "Claude Code For Azure Arc"
 description: "A practical guide to using Claude Code for managing Azure Arc-enabled Kubernetes clusters, including deployment automation, configuration management."
 date: 2026-03-15
 last_modified_at: 2026-04-17

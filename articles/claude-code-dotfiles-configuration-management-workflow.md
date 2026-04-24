@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Dotfiles Configuration Management (2026)"
+title: "Claude Code Dotfiles Configuration"
 last_tested: "2026-04-22"
 description: "Learn how to use Claude Code for efficient dotfiles management. Track configuration files across machines, automate symlinking, and maintain."
 date: 2026-03-14

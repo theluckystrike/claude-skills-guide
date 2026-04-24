@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Per-Request Cost Tracking for Claude API"
+title: "Per-Request Cost Tracking for Claude"
 description: "Calculate exact cost per API call using the usage object formula. Identify your $0.50+ requests that drive 80% of monthly spend."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -194,3 +194,8 @@ After one week of per-request tracking, generate a Pareto analysis. Typically, 1
 - [Claude Code Enterprise Seat Management and Usage Monitoring](/claude-code-enterprise-seat-management-and-usage-monitoring/)
 - [Claude Code for Cost Optimization Monitoring Guide](/claude-code-for-cost-optimization-monitoring-guide/)
 - [Cost Allocation and Chargebacks for Enterprise Claude Code](/cost-allocation-and-chargebacks-for-enterprise-claude-code/)
+
+## See Also
+
+- [Claude Code Context Management Cost Tips 2026](/claude-cost-04-claude-code-context-management-tips/)
+- [How 5 Parallel Claude Agents Cost $1,000/Month](/claude-cost-5-parallel-claude-agents-1000-per-month/)

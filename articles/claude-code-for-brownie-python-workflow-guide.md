@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Brownie Python Workflow (2026)"
+title: "How to Use Brownie Python Workflow"
 description: "A comprehensive guide to integrating Claude Code CLI with Brownie for efficient smart contract development, testing, and deployment workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -615,4 +615,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Python Virtualenv Not Activated Fix](/claude-code-python-virtualenv-not-activated-fix-2026/)

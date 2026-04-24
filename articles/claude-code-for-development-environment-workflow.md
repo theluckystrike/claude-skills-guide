@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Development Environment Workflow"
+title: "Claude Code for Development Environment"
 description: "A practical guide to integrating Claude Code into your development environment workflow. Learn setup, configuration, and real-world usage patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -210,4 +210,8 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Career Change to Software Development with AI](/claude-code-for-career-changers-into-software-development/)
+- [Claude Code Wrong Environment Deploy: Prevent Mistakes](/claude-code-deploying-wrong-environment-prevent-mistakes/)
+- [Claude Code for mise Development Environment Setup (2026)](/claude-code-mise-development-environment-2026/)

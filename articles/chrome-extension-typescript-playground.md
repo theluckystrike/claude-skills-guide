@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "TypeScript Playground Chrome Extension Guide (2026)"
+title: "TypeScript Playground Chrome Extension"
 description: "Learn how to set up a TypeScript playground for building, testing, and debugging Chrome extensions with modern tooling and best practices."
 date: 2026-03-15
 last_modified_at: 2026-04-17

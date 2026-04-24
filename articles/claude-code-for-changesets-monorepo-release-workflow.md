@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Changesets Monorepo Releases (2026)"
+title: "Claude Code for Changesets Monorepo"
 description: "Automate monorepo versioning and releases with Claude Code and Changesets. Streamline changelogs, version bumps, and npm publishing across packages."
 date: 2026-03-15
 last_modified_at: 2026-04-17

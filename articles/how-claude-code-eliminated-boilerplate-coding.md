@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How Claude Code Eliminated Boilerplate Coding"
+title: "How Claude Code Eliminated Boilerplate"
 description: "Discover how Claude Code and its skill ecosystem automate repetitive coding tasks, from boilerplate generation to test scaffolding, freeing developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

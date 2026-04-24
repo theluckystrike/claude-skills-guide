@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "When to Use Claude Haiku Instead of Opus"
+title: "When to Use Claude Haiku Instead"
 description: "Route classification and extraction tasks to Haiku 4.5 at $1/MTok instead of Opus at $5/MTok — save $1,800/month on 30K daily requests."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -156,3 +156,7 @@ Track these metrics weekly: agreement rate between Haiku and Opus outputs on a h
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — the context window economics that drive API bills
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — reduce token consumption across all models
 - [Claude Code Monthly Cost Breakdown](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/) — real-world spending patterns for Claude API users
+
+## See Also
+
+- [Stop Claude Code Rewriting Entire Files (2026)](/claude-code-rewrites-instead-of-editing-fix-2026/)

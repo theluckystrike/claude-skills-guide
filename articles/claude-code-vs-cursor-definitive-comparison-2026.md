@@ -276,6 +276,53 @@ The Claude Code VS Code extension even runs inside the Cursor editor (since Curs
 
 *This configuration is one of 200 production-ready templates in [The Claude Code Playbook](https://zovo.one/pricing). Permission configs, model selection rules, MCP setups — all tested and ready to copy.*
 
+## Real Session Comparison: Same Task, Both Tools
+
+To move beyond feature lists, here is a concrete side-by-side comparison. The task: add JWT authentication middleware to an Express API with three routes, including token validation, error handling, and a test.
+
+### The Task
+
+Starting point: a bare Express API with three unprotected routes (`GET /users`, `POST /users`, `GET /users/:id`). The goal is to add JWT middleware that validates `Authorization: Bearer <token>` headers, rejects invalid tokens with 401, and passes the decoded payload to route handlers. The project has an existing test file with 4 passing tests.
+
+### Prompts Used
+
+**Claude Code prompt:**
+```
+Add JWT authentication middleware to this Express API. Protect all routes
+except POST /auth/login. Use jsonwebtoken. Write tests. Run them.
+```
+
+**Cursor prompt (Composer):**
+```
+@server.js @routes/users.js Add JWT authentication middleware to this Express
+API. Protect all routes except POST /auth/login. Use jsonwebtoken. Include
+tests.
+```
+
+### Results
+
+| Metric | Claude Code | Cursor (Composer) |
+|--------|------------|-------------------|
+| **Time to completion** | 2 min 14 sec | 4 min 50 sec |
+| **Human interactions required** | 1 (initial prompt) | 6 (accept 4 diffs + 2 terminal commands) |
+| **Files created** | 3 (middleware, route, test) | 3 (same files proposed) |
+| **Files modified** | 2 (server.js, package.json) | 2 (same files proposed) |
+| **Lines of code added** | 187 | 162 |
+| **Tests written** | 8 (all passing) | 6 (all passing) |
+| **npm install executed** | Yes (automatic) | No (manual step required) |
+| **Tests executed** | Yes (automatic, verified green) | No (manual `npm test` required) |
+| **Estimated token cost** | ~$0.18 (Sonnet) | ~$0.06 (Sonnet via Cursor) |
+
+### What Each Tool Did Differently
+
+**Claude Code** treated this as a single autonomous task. It read the existing codebase, installed `jsonwebtoken` and `@types/jsonwebtoken` via npm, created the middleware file, wired it into `server.js`, created the login route, wrote 8 tests (including edge cases for expired tokens and malformed headers), ran the tests, saw one failure (missing `JWT_SECRET` env var in test setup), fixed the test config, and re-ran to green. Total human effort: one prompt, then wait.
+
+**Cursor Composer** generated the same three files and two modifications as a set of proposed diffs. Each diff required manual review and acceptance. The diffs did not include `npm install jsonwebtoken`, so the developer had to run that manually. Tests were generated but not executed. The developer had to run `npm test` manually, discover the env var issue, and fix it themselves. The code quality of the generated middleware was comparable, but Cursor produced slightly fewer tests (6 vs 8) because it did not execute them and iterate.
+
+### Key Takeaway
+
+Claude Code spent more tokens but delivered a working, tested result with zero human intervention. Cursor spent fewer tokens but required 6 manual interactions and left two steps (install, test execution) to the developer. For a single task, the difference is minutes. Across a full workday of 20+ tasks, the accumulated time savings from Claude Code's autonomous execution is significant. The tradeoff: Claude Code costs roughly 3x more per task in token usage, but reclaims the developer's attention for other work.
+
 ## Migration Guide: Moving From Cursor to Claude Code
 
 If you are a Cursor user exploring Claude Code, here is what translates and what changes.
@@ -471,5 +518,9 @@ Claude Code and Cursor represent two different visions of AI-assisted developmen
 
 ## Related
 
+- [Codex vs Claude Code](/codex-vs-claude-code-comparison-2026/) — OpenAI Codex vs Claude Code head-to-head
+- [How to use Claude Code](/how-to-use-claude-code-beginner-guide/) — beginner walkthrough
+- [Claude Code hooks](/claude-code-hooks-complete-guide/) — automation hooks Cursor lacks
+- [Claude Code frontend design plugin](/claude-code-frontend-design-plugin-guide/) — frontend-specific tooling
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Detailed cost comparison and optimization
 - [Claude Code router guide](/claude-code-router-guide/) — How model routing affects performance

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Python Venv Not Detected (2026)"
+title: "Fix Claude Code Python Venv Not"
 description: "Fix Claude Code not detecting your Python virtual environment. Resolve venv activation, PATH issues, and interpreter mismatches in 5 minutes."
 date: 2026-03-14
 last_modified_at: 2026-04-17

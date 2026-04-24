@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Fly.io Deployment Automation Workflow"
+title: "Claude Code for Fly.io Deployment"
 description: "Learn how to automate Fly.io deployments using Claude Code. Streamline your container workflow, manage multi-region deployments, and automate health."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -292,4 +292,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Fly Machines — Workflow Guide](/claude-code-for-fly-machines-workflow-guide/)

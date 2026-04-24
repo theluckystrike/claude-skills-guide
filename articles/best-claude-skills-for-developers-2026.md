@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Claude Skills for Developers (2026)"
+title: "Best Claude Skills for Developers"
 description: "Best Claude Code skills for developers in 2026. Curated list covering productivity, testing, documentation, and workflow automation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

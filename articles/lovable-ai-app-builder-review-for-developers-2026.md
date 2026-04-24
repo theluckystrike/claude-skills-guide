@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Lovable AI App Builder Review for Developers 2026"
+title: "Lovable AI App Builder Review"
 description: "An in-depth review of Lovable AI app builder for developers in 2026. Learn how to use Claude Code skills to enhance your Lovable development workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17

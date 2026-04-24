@@ -1,5 +1,5 @@
 ---
-title: "The Retry Loop Tax: Error Handling and Token Cost"
+title: "The Retry Loop Tax"
 description: "Understand how error handling architecture creates a retry loop tax in Claude Code, costing 50K-300K wasted tokens per incident, and how to eliminate it."
 permalink: /retry-loop-tax-error-handling-token-cost/
 date: 2026-04-22
@@ -256,3 +256,4 @@ This compounding effect means that the first retry incident in a session is rela
 - [How to Stop Claude Code Retry Loops](/stop-claude-code-retry-loops-token-waste/) -- the operational fix
 - [Semantic Exit Codes: Help Claude Code Debug Faster](/semantic-exit-codes-help-claude-code-debug-faster/) -- detailed exit code patterns
 - [Errors Atlas](/errors-atlas/) -- structured error reference for Claude Code
+- [InsForge vs Supabase: Claude Code Token Cost (2026)](/insforge-vs-supabase-claude-code-token-cost-2026/)

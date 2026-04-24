@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Cloudflare Workers KV (2026)"
+title: "Claude Code for Cloudflare Workers KV"
 description: "Build and deploy Cloudflare Workers with KV storage using Claude Code. Covers bindings, caching patterns, and Wrangler CLI automation in one workflow."
 date: 2026-03-15
 last_modified_at: 2026-04-17

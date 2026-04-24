@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Effect-TS — Workflow Guide"
+title: "Claude Code for Effect-TS"
 description: "Write type-safe effectful code with Effect-TS and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-effect-ts-workflow-guide/

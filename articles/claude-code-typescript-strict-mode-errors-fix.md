@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix TypeScript Strict Mode Errors with Claude Code (2026)"
+title: "Fix TypeScript Strict Mode Errors"
 description: "Resolve TypeScript strict mode errors using Claude Code. Fix strictNullChecks, noImplicitAny, strictPropertyInitialization, and more. Updated for 2026."
 last_tested: "2026-04-22"
 date: 2026-04-15
@@ -295,4 +295,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Claude Code VS Copilot for TypeScript Refactoring](/claude-code-vs-copilot-for-typescript-refactoring/)
 - [Claude Code CLAUDE.md Best Practices](/claude-code-claude-md-best-practices/)
 
+## See Also
 
+- [Locale LC_ALL Not Set Encoding Errors Fix](/claude-code-locale-lc-all-not-set-encoding-errors-fix-2026/)
+- [TypeScript Strict Mode Breaks Claude Generated Code — Fix (2026)](/claude-code-typescript-strict-mode-breaks-generated-code-fix/)
+- [TypeScript Strict Null Checks in Generated Code — Fix (2026)](/claude-code-typescript-strict-null-checks-generated-fix-2026/)

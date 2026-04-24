@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Flask Blueprint Architecture (2026)"
+title: "Claude Code Flask Blueprint"
 description: "Structure Flask applications with blueprints using Claude Code. Scalable architecture patterns, modular organization, and factory app examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -420,4 +420,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Unreal Blueprint to C++ Conversion (2026)](/claude-code-unreal-blueprint-to-cpp-2026/)

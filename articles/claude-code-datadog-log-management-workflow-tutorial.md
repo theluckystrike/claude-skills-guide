@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Datadog Log Management Workflow Tutorial"
+title: "Claude Code Datadog Log Management"
 description: "Learn how to use Claude Code skills for efficient Datadog log management. This tutorial covers practical workflows for searching, filtering."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -189,4 +189,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Timezone Affecting Log Timestamps Fix](/claude-code-timezone-affecting-log-timestamps-fix-2026/)

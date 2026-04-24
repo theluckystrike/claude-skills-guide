@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Bazel Build System Configuration (2026)"
+title: "Claude Code for Bazel Build System (2026)"
 permalink: /claude-code-bazel-build-system-2026/
 description: "Configure Bazel builds with Claude Code. Write BUILD files, manage external dependencies with bzlmod, and optimize remote execution caching."
 last_tested: "2026-04-22"
@@ -249,3 +249,7 @@ bazel build //... --config=ci
 - [Claude Code for Earthly CI Pipeline](/claude-code-earthly-ci-pipeline-2026/)
 - [Claude Code for Nx Workspace Orchestration](/claude-code-nx-workspace-orchestration-2026/)
 - [Claude Code for Turborepo Monorepo Management](/claude-code-turborepo-monorepo-management-2026/)
+- [Claude Code for Order Management Systems (2026)](/claude-code-order-management-system-2026/)
+- [Circular Dependency Detected in Build — Fix (2026)](/claude-code-circular-dependency-detected-build-fix-2026/)
+- [Claude Code for Ada Legacy System Updates (2026)](/claude-code-ada-legacy-system-updates-2026/)
+- [Claude Code for Trading System Backtesting (2026)](/claude-code-trading-system-backtesting-2026/)

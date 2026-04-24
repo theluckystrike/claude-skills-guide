@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Docker Compose API Tutorial (2026)"
+title: "Claude Code Docker Compose API Tutorial"
 description: "Build APIs with Docker Compose and Claude Code for multi-container setups, service networking, and local development environments. Working configs."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -442,4 +442,8 @@ Related Reading
 - [Claude Code Docker Compose Test Setup Guide](/claude-code-docker-compose-test-setup-guide/)
 {% endraw %}
 
+## See Also
 
+- [How to Use Docker Volumes Persistence (2026)](/claude-code-docker-volumes-persistence-guide/)
+- [Claude Code + Docker: Cost-Controlled Isolated Testing](/claude-code-docker-isolated-cost-controlled-testing/)
+- [Claude Code Docker Multi-Stage Builds (2026)](/claude-code-docker-multi-stage-builds-guide/)

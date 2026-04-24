@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Sentry Error Tracking Source Maps Workflow"
+title: "Claude Code Sentry Error Tracking"
 description: "A practical guide to integrating Claude Code with Sentry for error tracking and source maps. Automate debugging workflows using the tdd skill and relate..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -318,4 +318,7 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Source Map Generation Out of Memory — Fix (2026)](/claude-code-source-map-generation-oom-fix-2026/)
+- [Claude Code for Sentry Errors — Workflow Guide](/claude-code-for-sentry-error-tracking-workflow-guide/)

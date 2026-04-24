@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Workspace Trust Blocks Headless — Fix (2026)"
+title: "Claude Code Workspace Trust Blocks"
 description: "Fix Claude Code workspace trust dialog blocking headless and CI mode. Pre-approve directories with settings.json. Step-by-step solution."
 permalink: /claude-code-workspace-trust-blocks-headless-mode-fix/
 last_tested: "2026-04-21"
@@ -74,3 +74,7 @@ In CI, always pass --trust --yes flags or set CLAUDE_CODE_TRUST_WORKSPACE=1. Add
 ```
 
 **Related articles:** [Workspace Trust Required Fix](/claude-code-workspace-trust-required-fix-2026/), [GitHub Actions Setup](/claude-code-github-actions-setup-guide/), [Config File Location](/claude-code-config-file-location/)
+
+## See Also
+
+- [Workspace Trust Blocking Execution Fix](/claude-code-workspace-trust-blocking-execution-fix-2026/)

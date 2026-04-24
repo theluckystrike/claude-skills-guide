@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Is Claude Code Good Enough For — Complete Developer Guide"
+title: "Is Claude Code Good Enough"
 description: "A practical evaluation of Claude Code for senior developer workflows: real-world testing, CI/CD integration, complex debugging, and skill ecosystem."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Fix Conflicting CLAUDE.md Instructions — Diagnosis and Resolution (2026)"
+title: "Fix Conflicting CLAUDE.md Instructions"
 description: "When CLAUDE.md files contradict each other, Claude picks arbitrarily. This guide shows how to find conflicts, understand loading order, and resolve them."
 permalink: /claude-md-conflicting-instructions-fix/
 render_with_liquid: false

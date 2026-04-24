@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Does Claude Code Work Better With — Developer Guide"
+title: "Why Does Claude Code Work Better"
 description: "Discover how Claude Code skills improve AI assistance through specialized knowledge, context management, and domain-specific tooling. Practical."
 date: 2026-03-14
 last_modified_at: 2026-04-17

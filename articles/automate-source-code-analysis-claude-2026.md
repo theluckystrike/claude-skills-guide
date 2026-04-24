@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Automate Source Code Analysis with Claude 2026"
+title: "Automate Source Code Analysis"
 description: "Use Claude Code for automated code analysis: complexity metrics, dependency mapping, dead code detection, and architecture visualization scripts."
 permalink: /automate-source-code-analysis-claude-2026/
 date: 2026-04-21

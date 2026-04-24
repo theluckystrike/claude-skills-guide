@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Printing Settings — Developer Guide (2026)"
+title: "Chrome Enterprise Printing Settings"
 last_tested: "2026-04-22"
 description: "Master Chrome Enterprise printing settings with practical examples, code snippets, and configuration strategies for developers and IT professionals."
 date: 2026-03-15

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Split Tunnel Browsing — Developer Guide"
+title: "Chrome Enterprise Split Tunnel Browsing"
 description: "Learn how Chrome Enterprise split tunnel browsing works, why it matters for developers, and how to configure it for optimal network performance."
 date: 2026-03-15
 last_modified_at: 2026-04-17

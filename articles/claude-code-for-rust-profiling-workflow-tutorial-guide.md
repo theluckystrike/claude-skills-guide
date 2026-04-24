@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Rust Profiling Workflow Tutorial Guide"
+title: "Claude Code for Rust Profiling Workflow"
 description: "Learn how to integrate Claude Code into your Rust profiling workflow for efficient performance optimization. This guide covers practical examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -378,4 +378,8 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Leptos Rust — Workflow Guide](/claude-code-for-leptos-rust-workflow-guide/)
+- [Claude Code for Rust Axum — Workflow Guide](/claude-code-for-rust-axum-workflow-guide/)
+- [Claude Code for Tonic gRPC Rust Services (2026)](/claude-code-for-tonic-grpc-rust-workflow-guide/)

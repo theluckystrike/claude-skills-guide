@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Tech Lead Cross-Team Alignment Workflow Tips"
+title: "Claude Code Tech Lead Cross-Team"
 description: "Practical strategies for using Claude Code to coordinate alignment across multiple engineering teams, manage shared conventions, and streamline."
 date: 2026-03-14
 last_modified_at: 2026-04-17

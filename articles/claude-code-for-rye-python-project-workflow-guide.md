@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Rye Python — Complete Developer Guide"
+title: "Claude Code For Rye Python"
 description: "A comprehensive guide to using Claude Code with Rye for efficient Python project management, including setup, workflows, and practical examples."
 date: 2026-04-19
 last_modified_at: 2026-04-19

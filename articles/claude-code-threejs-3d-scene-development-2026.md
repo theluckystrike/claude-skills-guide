@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Three.js 3D Scene Development (2026)"
+title: "Claude Code for Three.js 3D Scene"
 permalink: /claude-code-threejs-3d-scene-development-2026/
 description: "Build 3D web experiences with Three.js and Claude Code. Create scenes, materials, post-processing, and physics-based interactions for the browser."
 last_tested: "2026-04-22"
@@ -338,3 +338,4 @@ npx vite-bundle-visualizer
 - [Claude Code for Processing and p5.js Creative Coding](/claude-code-processing-p5js-creative-coding-2026/)
 - [Claude Code for Tone.js Web Audio Programming](/claude-code-tonejs-web-audio-programming-2026/)
 - [Claude Code for Blender Python Scripting](/claude-code-blender-python-scripting-2026/)
+- [Claude Code for 3D Printer Firmware (2026)](/claude-code-3d-printer-firmware-customization-2026/)

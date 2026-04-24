@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Context Management: Pay Less, Use More"
+title: "Claude Context Management"
 description: "Combine caching, pruning, and context budgets to cut Claude context costs by 78% — from $5.00 to $1.075 per 100K-token session."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -268,3 +268,11 @@ Three key metrics: cache hit rate (target above 80%), average context size after
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — why context management matters
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/) — additional context management techniques
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — the reasoning behind context constraints
+
+## See Also
+
+- [Claude Agent Token Budget Management Guide](/claude-cost-claude-agent-token-budget-management/)
+- [Claude 200K vs 1M Context Cost Comparison](/claude-cost-claude-200k-vs-1m-context-cost-comparison/)
+- [Claude 1M Context Window: What It Really Costs](/claude-cost-claude-1m-context-window-what-it-costs/)
+- [Shrink Claude Context Without Losing Quality](/claude-cost-shrink-claude-context-without-losing-quality/)
+- [Claude Orchestrator-Worker Cost Optimization](/claude-cost-claude-orchestrator-worker-cost-optimization/)

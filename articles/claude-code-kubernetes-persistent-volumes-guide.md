@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Kubernetes Persistent Volumes Guide (2026)"
+title: "Claude Code Kubernetes Persistent"
 description: "Learn how to manage Kubernetes persistent volumes effectively with Claude Code. Practical examples for PVCs, storage classes, and dynamic provisioning."
 last_tested: "2026-04-22"
 date: 2026-03-14

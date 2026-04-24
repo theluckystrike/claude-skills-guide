@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Build Claude Code GitHub Actions 2026"
+title: "How to Build Claude Code GitHub Actions"
 description: "Automate PR reviews, code generation, and testing with Claude Code in GitHub Actions. YAML templates and secret management included."
 permalink: /claude-code-github-actions-workflow-2026/
 date: 2026-04-21
@@ -271,3 +271,7 @@ Automated Claude Code in CI catches issues within minutes of pushing code, befor
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/)
 - [Claude Code Pull Request Review Skill Guide 2026](/claude-code-pull-request-review-skill-2026/)
 {% endraw %}
+
+## See Also
+
+- [Claude Code GitHub Actions Secret Missing in Fork — Fix (2026)](/claude-code-github-actions-secret-not-available-forked-pr-fix/)

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Biome Formatter Setup (2026)"
+title: "Claude Code for Biome Formatter Setup"
 permalink: /claude-code-biome-formatter-setup-2026/
 description: "Configure Biome for JavaScript/TypeScript projects with Claude Code. Replace ESLint and Prettier with a single Rust-powered tool running in milliseconds."
 last_tested: "2026-04-22"
@@ -247,3 +247,4 @@ npx biome check src/components/Button.tsx
 - [Claude Code for Ruff Python Linter Configuration](/claude-code-ruff-python-linter-configuration-2026/)
 - [Claude Code for Turborepo Monorepo Management](/claude-code-turborepo-monorepo-management-2026/)
 - [Claude Code for Nx Workspace Orchestration](/claude-code-nx-workspace-orchestration-2026/)
+- [Claude Code for Biome — Workflow Guide](/claude-code-for-biome-linter-formatter-workflow-guide/)

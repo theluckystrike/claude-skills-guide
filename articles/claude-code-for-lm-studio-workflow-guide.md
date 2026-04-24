@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for LM Studio — Workflow Guide"
+title: "Claude Code for LM Studio"
 description: "Run local LLMs with LM Studio and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-lm-studio-workflow-guide/

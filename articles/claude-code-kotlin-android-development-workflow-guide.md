@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Kotlin Android Development with Claude Code Guide"
+title: "Kotlin Android Development with Claude"
 description: "Practical guide to using Claude Code for Kotlin Android development. TDD workflows, code generation, and testing for Android projects."
 date: 2026-04-19
 last_modified_at: 2026-04-19

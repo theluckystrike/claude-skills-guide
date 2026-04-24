@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Coolify — Workflow Guide"
+title: "Claude Code for Coolify"
 description: "Self-host apps with Coolify and Claude Code deployment. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-coolify-self-hosting-workflow-guide/

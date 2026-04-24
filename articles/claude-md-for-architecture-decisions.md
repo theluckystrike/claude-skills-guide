@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md for Architecture Decisions — Encoding Design Intent (2026)"
+title: "CLAUDE.md for Architecture Decisions"
 description: "How to encode architectural decisions in CLAUDE.md so Claude Code enforces layer boundaries, dependency rules, and design patterns automatically."
 permalink: /claude-md-for-architecture-decisions/
 render_with_liquid: false

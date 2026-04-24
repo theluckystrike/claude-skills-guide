@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills vs OpenAI Assistants API — Architecture, Cost, and Capability Comparison — 2026"
+title: "Claude Skills vs OpenAI Assistants API: Overview"
 description: "Compare Claude Code skills (file-based, open standard) with OpenAI Assistants API (cloud-hosted, thread-based). Includes 3 scenarios where Assistants win."
 permalink: /claude-skills-vs-openai-assistants-api/
 render_with_liquid: false
@@ -145,3 +145,4 @@ Claude Code skills run with your local user permissions. An Assistants code inte
 ## Related Articles
 
 - [Claude Skills vs OpenAI Assistants API: Comparison (2026)](/claude-skills-vs-openai-assistants-api-comparison/)
+- [Claude Skills vs OpenAI Assistants API Compared (2026)](/claude-skills-vs-openai-assistants-api-2026/)

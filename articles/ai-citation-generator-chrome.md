@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "AI Citation Generator Chrome — Developer Guide"
+title: "AI Citation Generator Chrome"
 description: "Build and use AI-powered citation generators for Chrome. Practical implementation patterns, APIs, and code examples for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

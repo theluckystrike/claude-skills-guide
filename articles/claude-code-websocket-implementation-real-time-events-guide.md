@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code WebSocket Implementation (2026)"
+title: "Claude Code WebSocket Implementation"
 description: "Implement WebSocket connections with Claude Code for real-time events, server setup, client integration, and reconnection handling. Working code samples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -466,4 +466,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Codespaces WebSocket Disconnect Fix](/claude-code-codespaces-websocket-disconnect-fix-2026/)
+- [WebSocket Upgrade Rejected Error — Fix (2026)](/claude-code-websocket-upgrade-rejected-fix-2026/)

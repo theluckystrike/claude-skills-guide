@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Epidemiology SIR/SEIR Models (2026)"
+title: "Claude Code for Epidemiology SIR/SEIR"
 permalink: /claude-code-epidemiology-sir-seir-2026/
 description: "Epidemiology compartmental models with Claude Code. Build SIR, SEIR, and age-structured models with parameter fitting."
 last_tested: "2026-04-22"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "React Component Testing with Claude Code"
+title: "React Component Testing with Claude"
 description: "Build a complete React component testing workflow with Claude Code. Unit tests, interaction tests, accessibility checks, and snapshot testing."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -422,4 +422,6 @@ $99 once. Free forever. 47/500 founding spots left.
 - [Claude Code VS Copilot Writing Unit Tests Automatically](/claude-code-vs-copilot-writing-unit-tests-automatically/)
 - [Claude Code Test Driven Refactoring Guide](/claude-code-test-driven-refactoring-guide/)
 
+## See Also
 
+- [Claude Code for Storybook Component Testing Workflow](/claude-code-for-storybook-component-testing-workflow/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude API Streaming Responses Implementation Tutorial"
+title: "Claude API Streaming Responses"
 description: "Learn how to implement streaming responses with the Claude API. A practical guide with code examples for building real-time AI applications."
 date: 2026-03-14
 last_modified_at: 2026-04-17

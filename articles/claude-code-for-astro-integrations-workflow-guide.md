@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Astro Integrations Workflow Guide"
+title: "Claude Code for Astro Integrations"
 description: "Learn how to use Claude Code to build, test, and maintain Astro integrations efficiently. Practical workflow guide with code examples for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

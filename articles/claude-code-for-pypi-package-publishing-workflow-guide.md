@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for PyPI Package Publishing Workflow Guide"
+title: "Claude Code for PyPI Package Publishing"
 description: "A comprehensive guide to publishing Python packages to PyPI using Claude Code. Learn the complete workflow from setup to distribution."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Devtools Snippets — Complete Developer Guide"
+title: "Chrome Devtools Snippets"
 description: "Learn how to create, manage, and execute JavaScript snippets in Chrome DevTools to speed up debugging, testing, and repetitive development tasks."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -232,5 +232,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
+- [Claude Code vs Chrome DevTools: Debugging Approaches](/claude-code-vs-chrome-devtools-debugging/)

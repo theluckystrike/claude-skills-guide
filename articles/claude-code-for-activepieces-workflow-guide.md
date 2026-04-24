@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Activepieces — Workflow Guide"
+title: "Claude Code for Activepieces"
 description: "Build automation flows with Activepieces and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-activepieces-workflow-guide/

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Standard Version Workflow"
+title: "Claude Code for Standard Version"
 description: "Learn how to use Claude Code to implement standard version workflows including semantic versioning, changelog generation, and automated release management."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -230,4 +230,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Standard Schema — Workflow Guide](/claude-code-for-standard-schema-workflow-guide/)

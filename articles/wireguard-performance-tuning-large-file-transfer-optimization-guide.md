@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use WireGuard Performance Tuning — Speed (2026)"
+title: "How to Use WireGuard Performance Tuning"
 description: "Optimize WireGuard VPN for large file transfers. MTU tuning, kernel params, and throughput config with tested benchmarks. Tested and working in 2026."
 date: 2026-03-16
 last_modified_at: 2026-04-17

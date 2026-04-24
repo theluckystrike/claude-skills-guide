@@ -1,5 +1,5 @@
 ---
-title: "Install SuperClaude Framework Step by Step (2026)"
+title: "Install SuperClaude Framework Step"
 description: "Install SuperClaude with pipx in 5 minutes. Get 30 slash commands, 16 agents, and 7 behavioral modes for Claude Code. Full setup and verification."
 permalink: /how-to-install-superclaude-framework-2026/
 last_tested: "2026-04-22"
@@ -162,3 +162,8 @@ The other 20 commands cover more specialized tasks. Explore them as your needs a
 - Learn to [combine both tools](/how-to-combine-karpathy-superclaude-2026/) for maximum effect
 - Explore [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) that complement SuperClaude's commands
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional plugins
+
+## See Also
+
+- [Install Awesome Claude Code Toolkit (2026)](/how-to-install-awesome-claude-code-toolkit-2026/)
+- [Install Karpathy Skills in Claude Code (2026)](/how-to-install-karpathy-skills-claude-code-2026/)

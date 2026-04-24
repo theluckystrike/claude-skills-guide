@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Codium AI vs Claude Code Comparison 2026"
+title: "Codium AI vs Claude Code Comparison"
 description: "Compare Codium AI and Claude Code for developers in 2026. Test generation vs autonomous coding compared across real projects and daily workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

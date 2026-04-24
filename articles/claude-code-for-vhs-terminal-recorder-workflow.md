@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Vhs Terminal — Complete Developer Guide"
+title: "Claude Code For Vhs Terminal"
 description: "Learn how to integrate Claude Code with VHS for creating professional terminal recordings, GIFs, and demos for your projects."
 date: 2026-03-15
 last_modified_at: 2026-04-17

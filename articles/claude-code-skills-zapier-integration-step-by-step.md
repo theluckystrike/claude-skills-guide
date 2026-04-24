@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills + Zapier: Step-by-Step"
+title: "Claude Code Skills + Zapier"
 description: "Connect Claude Code skills to Zapier using webhooks. Practical guide with real examples for automating workflows triggered by skill output."
 date: 2026-03-13
 last_modified_at: 2026-04-17

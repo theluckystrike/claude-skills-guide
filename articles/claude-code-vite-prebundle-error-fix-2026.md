@@ -1,5 +1,5 @@
 ---
-title: "Vite Prebundle Dependency Error — Fix (2026)"
+title: "Vite Prebundle Dependency Error — Fix"
 permalink: /claude-code-vite-prebundle-error-fix-2026/
 description: "Fix Vite prebundle errors on new dependencies. Clear .vite cache and add missing deps to optimizeDeps.include in config."
 last_tested: "2026-04-22"
@@ -94,3 +94,31 @@ Add this to your `CLAUDE.md`:
 - Add Node-dependent packages to optimizeDeps.include in vite.config.ts.
 - Never import Node.js built-in modules in frontend code.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `npm ERR! code EACCES`
+- `npm ERR! code ERESOLVE`
+- `npm ERR! peer dep missing`
+- `Error: Claude Code requires Node.js 18 or later`
+- `SyntaxError: Unexpected token '??' — Node 14 detected`
+
+## Frequently Asked Questions
+
+### Should I use npm or pnpm with Claude Code?
+
+Claude Code works with any Node.js package manager. If your project uses pnpm, add `Use pnpm instead of npm for all package operations` to your CLAUDE.md so Claude Code respects your toolchain choice.
+
+### Why does Claude Code sometimes run npm commands that fail?
+
+Claude Code infers the package manager from lock files. If both `package-lock.json` and `pnpm-lock.yaml` exist, it may pick the wrong one. Delete the unused lock file or add an explicit instruction in CLAUDE.md.
+
+### How do I verify my npm installation is working?
+
+Run `npm doctor` to check your npm environment. It validates the registry connection, permissions, cache integrity, and Node.js compatibility in one command.
+
+### What Node.js version does Claude Code require?
+
+Claude Code requires Node.js 18 or later. Node.js 20 LTS is recommended for the best compatibility and performance. Check your version with `node --version`.

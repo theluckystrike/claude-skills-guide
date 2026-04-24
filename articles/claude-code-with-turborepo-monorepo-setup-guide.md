@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code with Turborepo Monorepo Setup Guide"
+title: "Claude Code with Turborepo Monorepo"
 description: "Learn how to integrate Claude Code with Turborepo monorepo projects for efficient development workflows and AI-assisted coding."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -164,4 +164,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Turborepo — Workflow Guide (2026)](/claude-code-for-turborepo-workflow-guide/)

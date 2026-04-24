@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Genomics GWAS Analysis (2026)"
+title: "Claude Code for Genomics GWAS Analysis"
 description: "GWAS analysis pipeline with Claude Code and PLINK2. Automate QC, association testing, and Manhattan plot generation."
 permalink: /claude-code-genomics-gwas-pipeline-2026/
 last_tested: "2026-04-21"

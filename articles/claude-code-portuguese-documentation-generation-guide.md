@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Generate Portuguese Docs with Claude Code (2026)"
+title: "Generate Portuguese Docs with Claude"
 description: "Generate Portuguese documentation for your codebase with Claude Code. Configure language settings, translate API docs, and maintain bilingual projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17

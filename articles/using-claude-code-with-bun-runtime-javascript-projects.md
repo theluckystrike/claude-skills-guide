@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Using Claude Code with Bun Runtime for JavaScript Projects"
+title: "Using Claude Code with Bun Runtime"
 description: "A practical guide to integrating Claude Code with Bun runtime for faster JavaScript development. Learn setup, configuration, and real-world workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -204,4 +204,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Bun Runtime — Workflow Guide](/claude-code-for-bun-runtime-workflow-guide/)

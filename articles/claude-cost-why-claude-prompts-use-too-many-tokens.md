@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Your Claude Prompts Use Too Many Tokens"
+title: "Why Your Claude Prompts Use Too Many"
 description: "Five hidden token drains in Claude API prompts — tool overhead alone adds 1,680 tokens per request, costing $8.40 per 1K Opus calls."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -202,3 +202,11 @@ Track average input tokens per request broken down by component (system, tools, 
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — comprehensive optimization guide
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — clearer prompts waste fewer tokens
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — identify per-skill token waste
+
+## See Also
+
+- [Claude Cost Anomaly Detection Setup Guide](/claude-cost-09-claude-cost-anomaly-detection/)
+- [Claude Code /compact Saves Thousands of Tokens](/claude-cost-02-claude-code-compact-saves-tokens/)
+- [Automatic vs Manual Cache Breakpoints Guide](/claude-cost-automatic-vs-manual-cache-breakpoints-guide/)
+- [Optimizing Tool Schemas to Cut Token Count](/claude-cost-08-optimizing-tool-schemas-reduce-tokens/)
+- [Why Large Context Makes Claude Code Expensive](/claude-cost-why-large-context-makes-claude-code-expensive/)

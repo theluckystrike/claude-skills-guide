@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Java Library Development Guide"
+title: "Claude Code Java Library Development"
 description: "Build production-ready Java libraries with Claude Code. Set up projects, implement core features, write tests with TDD patterns, and publish to Maven."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -550,4 +550,8 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code Go Module Development — Complete Developer Guide](/claude-code-go-module-development-guide/)
+- [Claude Code Rust Crate Development Guide (2026)](/claude-code-rust-crate-development-guide/)
+- [Claude Code for mise Development Environment Setup (2026)](/claude-code-mise-development-environment-2026/)

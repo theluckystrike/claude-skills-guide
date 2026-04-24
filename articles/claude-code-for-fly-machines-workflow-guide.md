@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Fly Machines — Workflow Guide"
+title: "Claude Code for Fly Machines"
 description: "Deploy to Fly.io Machines with Claude Code setup. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-fly-machines-workflow-guide/

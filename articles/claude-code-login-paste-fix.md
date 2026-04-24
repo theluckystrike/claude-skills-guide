@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Login — Cannot Paste Auth Code"
+title: "Fix Claude Code Login"
 description: "Resolve the Claude Code CLI login issue where pasting the auth code from the browser fails. Linux, WSL, and paste bracketing fixes."
 date: 2026-04-14
 last_modified_at: 2026-04-17
@@ -136,4 +136,6 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 *Last verified: 2026-04-14. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*
 
+## See Also
 
+- [Login Auth Redirect Loop Error — Fix (2026)](/claude-code-login-auth-redirect-loop-fix-2026/)

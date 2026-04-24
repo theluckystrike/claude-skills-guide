@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code with RTX Tool Version Manager (2026)"
+title: "Claude Code with RTX Tool Version"
 description: "Manage tool versions with RTX and Claude Code. Automate Node, Python, and Go version switching with reproducible development environment configuration."
 date: 2026-03-15
 last_modified_at: 2026-04-17

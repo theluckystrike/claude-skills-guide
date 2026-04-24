@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Ghostty Terminal for Claude Code: Workflow (2026)"
+title: "How to Use Ghostty Terminal for Claude"
 description: "Set up Ghostty terminal for Claude Code with optimal configuration. A faster, GPU-accelerated terminal workflow for AI-assisted development."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -231,4 +231,8 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Rio Terminal — Workflow Guide](/claude-code-for-rio-terminal-workflow-guide/)
+- [How to Use Claude Code with Warp Terminal 2026](/claude-code-for-warp-terminal-workflow-guide/)
+- [How to Set Up Claude Code in Ghostty Terminal 2026](/claude-code-ghostty-terminal-setup-2026/)

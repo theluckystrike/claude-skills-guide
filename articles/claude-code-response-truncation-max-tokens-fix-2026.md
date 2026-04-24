@@ -61,3 +61,5 @@ For code generation tasks, work one file at a time. Never generate more than 300
 ## Related
 
 - [Claude upload limit guide](/claude-upload-limit-guide/) — Understanding Claude file upload limits and workarounds
+- [Claude Code max_tokens Ignored in API Mode — Fix (2026)](/claude-code-max-tokens-ignored-api-mode-fix/)
+- [Response JSON Parse Failure — Fix (2026)](/claude-code-response-json-parse-failure-fix-2026/)

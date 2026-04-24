@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "The Future of AI Agent Skills Beyond Claude Code in 2026"
+title: "The Future of AI Agent Skills Beyond"
 description: "Explore how AI agent skills are evolving in 2026, including autonomous workflows, cross-platform integration, and the shift toward specialized domain ex..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

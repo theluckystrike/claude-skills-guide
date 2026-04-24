@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Prettier Code Formatting Guide"
+title: "Claude Code Prettier Code Formatting"
 description: "A practical guide to using Prettier with Claude Code for automated code formatting. Learn configuration, integration patterns, and best practices for."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -227,4 +227,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Prettier Format Conflict — Fix (2026)](/claude-code-prettier-format-conflict-fix/)

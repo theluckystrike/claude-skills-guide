@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for WebDriverIO Automation Workflow"
+title: "Claude Code for WebDriverIO Automation"
 description: "Master AI-assisted browser automation with Claude Code and WebDriverIO. Learn practical patterns for writing, debugging, and maintaining solid test."
 date: 2026-03-15
 last_modified_at: 2026-04-17

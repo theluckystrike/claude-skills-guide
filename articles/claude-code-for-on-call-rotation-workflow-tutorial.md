@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for On-Call Rotation Automation (2026)"
+title: "Claude Code for On-Call Rotation"
 description: "Automate on-call rotations with Claude Code. Covers schedule generation, incident triage scripts, PagerDuty integration, and MTTR reduction workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

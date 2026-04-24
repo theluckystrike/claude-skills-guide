@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Using Claude Code to Learn Algorithms and Data (2026)"
+title: "Using Claude Code to Learn Algorithms"
 description: "Discover how Claude Code can serve as your personal algorithms tutor - from understanding Big O notation to implementing trees, graphs, and sorting."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -174,4 +174,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Learn Claude Code with Claude Howto Guide (2026)](/how-to-learn-claude-code-with-howto-guide-2026/)

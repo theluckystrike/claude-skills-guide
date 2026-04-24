@@ -63,3 +63,31 @@ git submodule add <url> lib/shared-utils
 # CLAUDE.md rule
 After cloning this repo, always run 'git submodule update --init --recursive'. Submodule directories: lib/shared-utils, vendor/third-party. These must be initialized before editing.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `fatal: not a git repository`
+- `error: failed to push some refs`
+- `fatal: refusing to merge unrelated histories`
+- `Error: ENOENT: no such file or directory`
+- `Cannot resolve path outside workspace`
+
+## Frequently Asked Questions
+
+### Why does Claude Code require git?
+
+Claude Code uses git for several core operations: tracking file changes, creating commits, reading blame information, searching history with `git log`, and managing branches. Without git, these operations fail and Claude Code falls back to less efficient alternatives.
+
+### Can Claude Code work in a non-git directory?
+
+Yes, but with reduced functionality. File search and editing work normally, but version control operations (commit, diff, blame) are unavailable. Claude Code displays a warning when opened in a directory without git initialization.
+
+### How do I prevent Claude Code from making unwanted git operations?
+
+Add rules to your CLAUDE.md: `Do not create commits automatically. Do not run git push. Always ask before any git operation that modifies history.` Claude Code respects these constraints and asks for confirmation before proceeding.
+
+### Why does Claude Code reject paths outside the workspace?
+
+Claude Code sandboxes file operations to the current workspace directory for security. Writing to paths outside the project root (like `/etc/` or `~/`) is blocked by default. This prevents accidental modification of system files or other projects.

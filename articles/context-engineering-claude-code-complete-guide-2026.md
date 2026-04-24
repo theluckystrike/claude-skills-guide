@@ -1,5 +1,5 @@
 ---
-title: "Context Engineering for Claude Code: Complete Guide (2026)"
+title: "Context Engineering for Claude Code"
 description: "Master context engineering for Claude Code to cut token costs by 60-80% with structured CLAUDE.md files, precision reads, and compaction strategies."
 permalink: /context-engineering-claude-code-complete-guide-2026/
 date: 2026-04-22
@@ -161,3 +161,7 @@ A well-executed context engineering practice should show a 50-70% reduction in w
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- detailed compaction mechanics
 - [CLAUDE.md as Cost Control: Rules That Prevent Token Waste](/claude-md-cost-control-rules-prevent-token-waste/) -- CLAUDE.md patterns for cost reduction
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- staying within context limits under pressure
+
+## See Also
+
+- [How Context Engineering Reduces Claude Code Costs: The Mechanism](/context-engineering-reduces-claude-code-costs-mechanism/)

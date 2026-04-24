@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Mob Programming — Complete Developer Guide"
+title: "Claude Code For Mob Programming"
 description: "Learn how to integrate Claude Code into mob programming sessions for enhanced collaboration, knowledge sharing, and productivity. Practical examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

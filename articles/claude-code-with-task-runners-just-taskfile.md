@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code with Just Taskfile Runner (2026)"
+title: "Claude Code with Just Taskfile Runner"
 description: "Integrate Just task runner with Claude Code to automate development workflows. Covers Justfile syntax, task chaining, and AI-powered build automation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

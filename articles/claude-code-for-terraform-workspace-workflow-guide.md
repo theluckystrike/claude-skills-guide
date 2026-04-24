@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Terraform Workspace Workflow Guide"
+title: "Claude Code for Terraform Workspace"
 description: "Master Terraform workspace management with Claude Code. Learn practical workflows for organizing, deploying, and managing infrastructure across."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -301,4 +301,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Terraform with Claude Code: Setup and Workflow](/claude-code-for-terraform-workflow-tutorial-guide/)

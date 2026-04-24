@@ -1,5 +1,5 @@
 ---
-title: "Awesome MCP Servers: Directory Guide (2026)"
+title: "Awesome MCP Servers: Directory Guide"
 description: "Browse 200+ MCP servers across 30+ categories in the awesome-mcp-servers repo (85K stars) — the definitive directory at mcpservers.org."
 permalink: /awesome-mcp-servers-directory-guide-2026/
 last_tested: "2026-04-22"
@@ -169,3 +169,6 @@ Each MCP tool definition adds ~50-100 tokens to the context. With 3 servers expo
 - [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — patterns for effective MCP usage
 - [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — hooks can trigger MCP operations
 
+## See Also
+
+- [Awesome MCP vs Templates MCP Directory (2026)](/awesome-mcp-servers-vs-claude-code-templates-mcp-2026/)

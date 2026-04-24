@@ -1,5 +1,5 @@
 ---
-title: "Claude Skill Naming Conventions That Prevent Conflicts — 2026"
+title: "Claude Skill Naming Conventions"
 description: "Naming rules for SKILL.md name field, directory names, and plugin namespaces with examples of what works and what breaks."
 permalink: /claude-skill-naming-conventions/
 render_with_liquid: false

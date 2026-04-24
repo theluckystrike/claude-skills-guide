@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Tabnine — Developer Comparison 2026"
+title: "Claude Code vs Tabnine"
 description: "A comprehensive comparison of Claude Code and Tabnine Enterprise for building and maintaining Python monorepos. Learn which AI coding assistant best."
 date: 2026-03-14
 last_modified_at: 2026-04-17

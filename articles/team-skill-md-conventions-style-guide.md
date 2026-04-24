@@ -1,5 +1,5 @@
 ---
-title: "Team SKILL.md Conventions: A Style Guide for Consistent Skills — 2026"
+title: "Team SKILL.md Conventions"
 description: "Writing standards for team-shared SKILL.md files covering description triggers, body structure, naming, and progressive disclosure patterns."
 permalink: /team-skill-md-conventions-style-guide/
 render_with_liquid: false

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Opus 4.6 vs GPT-4o: Reasoning and Complex Tasks"
+title: "Claude Opus 4.6 vs GPT-4o"
 description: "Deep comparison of Claude Opus 4.6 and GPT-4o on reasoning, complex coding, and multi-step problem solving for developers."
 date: 2026-04-21
 permalink: /claude-opus-vs-gpt-4o-reasoning-comparison/
@@ -95,3 +95,10 @@ GPT-4o's faster responses and lower cost make it better for exploratory question
 ## When To Use Neither
 
 For mathematical reasoning and formal verification tasks (proving algorithm correctness, analyzing computational complexity, formal specification checking), neither model is reliable enough to trust without verification. These tasks require deterministic tools — proof assistants like Lean or Coq, model checkers, or formal verification frameworks. AI models can assist in drafting proofs but should never be the sole authority on correctness. Similarly, for real-time systems where latency budgets are under 200ms per response, direct API calls to either model are too slow for inline use.
+
+## See Also
+
+- [Claude Opus 4.6 vs DeepSeek V3: Coding Comparison](/claude-opus-vs-deepseek-v3-comparison/)
+- [Claude Opus 4.6 vs Haiku 4.5: Speed and Cost Tradeoffs](/claude-opus-vs-haiku-speed-cost-tradeoff/)
+- [Claude Haiku 4.5 vs GPT-4o Mini: Budget AI Coding](/claude-haiku-vs-gpt-4o-mini-comparison-2026/)
+- [Claude Sonnet 4.6 vs GPT-4o for Coding in 2026](/claude-sonnet-vs-gpt-4o-coding-comparison-2026/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for ESLint Custom Plugin Workflow Tutorial"
+title: "Claude Code for ESLint Custom Plugin"
 description: "Learn how to create, test, and publish custom ESLint plugins using Claude Code. A practical guide covering plugin structure, rule development, testing."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -257,6 +257,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
-
+- [Claude Code ESLint Plugin Crashes on Custom Rule — Fix (2026)](/claude-code-eslint-plugin-crashes-custom-rule-fix/)

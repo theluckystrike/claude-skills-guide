@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Automate Claude Code Environment Setup (2026)"
+title: "Automate Claude Code Environment Setup"
 description: "Automate your Claude Code environment setup with skills, hooks, and custom scripts. Save hours on configuration with reproducible dev environments."
 date: 2026-03-14
 last_modified_at: 2026-04-17

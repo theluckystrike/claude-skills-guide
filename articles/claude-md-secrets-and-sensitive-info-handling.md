@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md Secrets And Sensitive Info — Developer Guide"
+title: "Claude Md Secrets And Sensitive Info"
 description: "Learn how to securely handle API keys, credentials, and sensitive data when creating and using Claude Code skills. Practical patterns for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

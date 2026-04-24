@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Translate Slow: Fix Performance Issues"
+title: "Chrome Translate Slow"
 description: "Experiencing Chrome translate slow performance? This guide covers diagnostic steps, extension conflicts, and workarounds to speed up Google Translate in."
 date: 2026-03-15
 last_modified_at: 2026-04-17

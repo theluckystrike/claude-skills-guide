@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Pricing: Plans and Costs Guide (2026)"
+title: "Claude Code Pricing"
 description: "Claude code pricing breakdown: API costs, token rates, and plan comparison vs Cursor and Copilot. Find the most cost-effective option."
 date: 2026-03-14
 last_modified_at: 2026-04-17

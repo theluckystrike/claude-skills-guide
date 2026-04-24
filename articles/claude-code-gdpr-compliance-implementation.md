@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code GDPR Compliance Implementation Guide"
+title: "Claude Code GDPR Compliance"
 description: "A practical guide for developers implementing GDPR compliance using Claude Code. Includes code examples, automation patterns, and skill recommendations."
 date: 2026-03-14
 last_modified_at: 2026-04-17

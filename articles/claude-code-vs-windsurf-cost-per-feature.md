@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs Windsurf: Cost-Per-Feature Breakdown"
+title: "Claude Code vs Windsurf: Cost Per Feature Analysis"
 description: "Compare Claude Code and Windsurf costs per feature -- Windsurf at $15/month vs Claude Code Max at $100/month with detailed capability-cost analysis."
 permalink: /claude-code-vs-windsurf-cost-per-feature/
 date: 2026-04-22
@@ -168,3 +168,7 @@ Claude Code API estimate:
 - [Claude Code vs Cursor Comparison](/claude-code-vs-cursor-comparison-2026/) -- comparing Claude Code with Cursor
 - [Is Claude Code Worth $100/month?](/is-claude-code-worth-100-month-roi-calculator/) -- ROI analysis for the Max subscription
 - [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- full guide to the Max plan
+
+## See Also
+
+- [How Much Does Claude Code Cost Per PR? (Real Data)](/claude-code-cost-per-pr-real-data/)

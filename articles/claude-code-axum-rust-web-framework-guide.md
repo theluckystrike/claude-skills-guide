@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Axum Rust Web Framework Guide"
+title: "Claude Code Axum Rust Web Framework"
 description: "Build modern web APIs with Axum and Rust using Claude Code. Practical examples, skill integration, and workflow tips for developers building."
 date: 2026-03-14
 last_modified_at: 2026-04-17

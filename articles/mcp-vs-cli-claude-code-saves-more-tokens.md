@@ -1,5 +1,5 @@
 ---
-title: "MCP vs CLI for Claude Code: When Each Saves More Tokens"
+title: "MCP vs CLI for Claude Code"
 description: "Compare MCP servers and CLI tools for Claude Code to determine when each approach saves more tokens, with per-operation measurements and cost analysis."
 permalink: /mcp-vs-cli-claude-code-saves-more-tokens/
 date: 2026-04-22

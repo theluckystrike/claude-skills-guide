@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Downloads Slow: Fixing Download Performance"
+title: "Chrome Downloads Slow"
 description: "Troubleshoot and fix slow Chrome downloads with these developer-focused solutions. Includes network diagnostics, browser flags, and CLI alternatives."
 date: 2026-03-15
 last_modified_at: 2026-04-17

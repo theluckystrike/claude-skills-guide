@@ -1,5 +1,5 @@
 ---
-title: "Workspace Trust Required for Claude Code — Fix (2026)"
+title: "Workspace Trust Required for Claude"
 permalink: /claude-code-workspace-trust-required-fix-2026/
 description: "Grant workspace trust via the VS Code Manage Workspace Trust command palette option. Enables Claude Code operations in restricted workspace folders."
 last_tested: "2026-04-21"
@@ -53,3 +53,37 @@ Add to your CLAUDE.md:
 ```
 Always open project folders as trusted workspaces. If cloning new repositories, grant trust on first open to avoid extension initialization failures.
 ```
+
+## See Also
+
+- [Claude Code Workspace Trust Blocks Headless — Fix (2026)](/claude-code-workspace-trust-blocks-headless-mode-fix/)
+- [Node 18+ Required Version Error — Fix (2026)](/claude-code-node-version-18-required-fix-2026/)
+- [Workspace Trust Blocking Execution Fix](/claude-code-workspace-trust-blocking-execution-fix-2026/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `Error: Claude Code requires Node.js 18 or later`
+- `SyntaxError: Unexpected token '??' — Node 14 detected`
+- `MODULE_NOT_FOUND: Cannot find module 'node:fs'`
+- `Error reading configuration file`
+- `JSON parse error in config`
+
+## Frequently Asked Questions
+
+### What Node.js version does Claude Code require?
+
+Claude Code requires Node.js 18 or later. Node.js 20 LTS is recommended for the best compatibility and performance. Check your version with `node --version`.
+
+### How do I manage multiple Node.js versions?
+
+Use nvm (Node Version Manager): `nvm install 20 && nvm use 20`. This lets you switch between Node.js versions per-project without affecting other applications. Add a `.nvmrc` file with `20` to your project root so nvm automatically selects the right version.
+
+### Why does Claude Code fail with the node:fs prefix?
+
+The `node:` prefix for built-in modules was introduced in Node.js 16. If you see errors about `node:fs` or `node:path`, you are running an older Node.js version that does not support this syntax. Upgrade to Node.js 18 or later.
+
+### Where does Claude Code store its configuration?
+
+Configuration is stored in `~/.claude/config.json` for global settings and `.claude/config.json` in the project root for project-specific settings. Project settings override global settings for any overlapping keys.

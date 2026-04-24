@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Startup Founders and Solopreneurs"
+title: "Claude Skills for Startup Founders"
 description: "Top Claude Code skills for startup founders and solopreneurs: automate docs, build frontends, write tests, and track finances without bottlenecks."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -223,4 +223,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Building Startup MVPs with Claude Code](/claude-code-for-startup-mvp-development/)

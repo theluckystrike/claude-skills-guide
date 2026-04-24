@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Grafana Plugin Development Workflow"
+title: "Claude Code for Grafana Plugin"
 description: "Learn how to use Claude Code to streamline Grafana plugin development, from scaffolding to testing, with practical examples and actionable workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

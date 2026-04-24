@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Conversation Too Long: Fresh vs /compact"
+title: "Claude Code Conversation Too Long"
 description: "Decide whether to /compact or start a fresh Claude Code session when conversations grow too long -- compact saves 60-80% but fresh sessions reset at zero cost."
 permalink: /claude-code-conversation-too-long-fresh-vs-compact/
 date: 2026-04-22
@@ -144,3 +144,8 @@ The break-even: if re-establishing context costs less than $5.25 in tokens (abou
 - [The Compaction Strategy: When to /compact and When Not To](/compaction-strategy-when-compact-when-not/) -- detailed compaction timing guide
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- full /compact reference
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- preventing oversized contexts in the first place
+
+## See Also
+
+- [CLAUDE.md Too Long? How to Split and Optimize for Context Window (2026)](/claude-md-too-long-split-and-optimize-fix/)
+- [Conversation History OOM Crash Fix](/claude-code-conversation-history-oom-fix-2026/)

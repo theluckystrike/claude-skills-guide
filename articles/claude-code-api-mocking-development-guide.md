@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code API Mocking Development Guide"
+title: "Claude Code API Mocking Development"
 description: "A practical guide to API mocking with Claude Code. Learn how to stub HTTP responses, test error scenarios, and integrate mocking into your development."
 date: 2026-03-14
 last_modified_at: 2026-04-17

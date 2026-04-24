@@ -1,5 +1,5 @@
 ---
-title: "Stop Claude Code Breaking Working Features (2026)"
+title: "Stop Claude Code Breaking Working"
 description: "Prevent Claude Code from introducing regressions — add test-before-change rules, rollback protocols, and scope guards to your CLAUDE.md."
 permalink: /claude-code-breaks-working-features-fix-2026/
 last_tested: "2026-04-22"

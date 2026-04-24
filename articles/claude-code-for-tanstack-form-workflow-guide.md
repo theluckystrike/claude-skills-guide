@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for TanStack Form — Workflow Guide"
+title: "Claude Code for TanStack Form"
 description: "Build type-safe forms with TanStack Form and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-tanstack-form-workflow-guide/

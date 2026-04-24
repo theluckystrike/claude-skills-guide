@@ -1,5 +1,5 @@
 ---
-title: "Awesome LLM Apps: Agent Templates Guide (2026)"
+title: "Awesome LLM Apps: Agent Templates Guide"
 description: "Browse 100+ runnable agent and RAG templates in awesome-llm-apps (107K stars) — Apache-2.0 licensed, production-ready reference implementations."
 permalink: /awesome-llm-apps-agent-templates-guide-2026/
 last_tested: "2026-04-22"
@@ -177,3 +177,8 @@ Yes. Apache-2.0 allows commercial use, modification, and distribution with attri
 - [Claude Code Templates: 600+ Agents](/claude-code-templates-600-agents-guide-2026/) — Claude Code-specific templates
 - [The Claude Code Playbook](/playbook/) — workflow patterns inspired by these templates
 - [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — applying agent patterns to daily work
+
+## See Also
+
+- [Use Awesome LLM Apps Templates with Claude (2026)](/how-to-use-awesome-llm-apps-with-claude-2026/)
+- [Awesome LLM Apps vs Claude Code Templates (2026)](/awesome-llm-apps-vs-claude-code-templates-2026/)

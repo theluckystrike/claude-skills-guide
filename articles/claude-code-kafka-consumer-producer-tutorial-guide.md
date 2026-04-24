@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Kafka Producer and Consumer (2026)"
+title: "Claude Code for Kafka Producer"
 description: "Build Kafka consumers and producers with Claude Code. Covers topic setup, serialization, consumer groups, offset management, and error handling code."
 date: 2026-03-20
 last_modified_at: 2026-04-17

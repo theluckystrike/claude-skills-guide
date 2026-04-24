@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Blender Python Scripting (2026)"
+title: "Claude Code for Blender Python"
 description: "Blender Python scripting workflow with Claude Code. Automate 3D asset pipelines, procedural generation, and batch rendering."
 permalink: /claude-code-blender-python-scripting-2026/
 last_tested: "2026-04-21"

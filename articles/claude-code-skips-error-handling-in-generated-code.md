@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skips Error Handling in Generated Code"
+title: "Claude Code Skips Error Handling"
 description: "Understanding why Claude Code sometimes generates code without proper error handling, and how to work around this limitation effectively."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -364,4 +364,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Make Claude Code Add Error Handling (2026)](/claude-code-skips-error-handling-fix-2026/)

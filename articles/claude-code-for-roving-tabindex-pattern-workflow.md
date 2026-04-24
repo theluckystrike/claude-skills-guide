@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Roving Tabindex Pattern Workflow"
+title: "Claude Code for Roving Tabindex Pattern"
 description: "Learn how to use Claude Code to implement the roving tabindex pattern for accessible keyboard navigation in web components. Practical examples and."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -283,4 +283,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Glob Pattern Too Broad Error — Fix (2026)](/claude-code-glob-pattern-too-broad-fix-2026/)
+- [Claude Code for ts-pattern — Workflow Guide](/claude-code-for-ts-pattern-matching-workflow-guide/)

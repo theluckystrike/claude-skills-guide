@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Refactor to SOLID Principles with Claude Code (2026)"
+title: "Refactor to SOLID Principles"
 description: "Refactor codebases to follow SOLID principles using Claude Code. Covers single responsibility extraction, interface segregation, and dependency fixes."
 date: 2026-03-15
 last_modified_at: 2026-04-17

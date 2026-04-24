@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Express to Fastify Migration with Claude Code (2026)"
+title: "Express to Fastify Migration"
 description: "Migrate Express.js applications to Fastify using Claude Code. Step-by-step process, code conversion patterns, and automated migration workflows."
 date: 2026-03-13
 last_modified_at: 2026-04-17

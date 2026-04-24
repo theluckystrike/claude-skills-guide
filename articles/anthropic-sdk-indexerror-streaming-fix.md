@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Anthropic SDK IndexError When Streaming (2026)"
+title: "Fix Anthropic SDK IndexError When"
 description: "Resolve IndexError in the Anthropic Python SDK when streaming responses with tool use, thinking, or empty content blocks. Tested and working in 2026."
 date: 2026-04-15
 permalink: /anthropic-sdk-indexerror-streaming-fix/
@@ -186,4 +186,6 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Anthropic SDK Structured Output Thinking Tool Use Bug](/anthropic-sdk-structured-output-thinking-tool-use-bug/)
 - [Claude API Tool Use Function Calling Guide](/claude-api-tool-use-function-calling-deep-dive-guide/)
 
+## See Also
 
+- [Anthropic SDK Streaming Connection Dropped — Fix (2026)](/anthropic-sdk-streaming-connection-dropped-fix/)

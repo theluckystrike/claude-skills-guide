@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Prompt Caching Break-Even Calculator for Claude"
+title: "Prompt Caching Break-Even Calculator"
 description: "Calculate exactly when Claude prompt caching pays off. 5-min cache breaks even after 1 read, 1-hour after 2 reads. Full formulas inside."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -170,3 +170,10 @@ Validate your calculator predictions against reality:
 - [Claude Prompt Caching Pricing and Cost Savings](/claude-prompt-caching-pricing-and-cost-savings/)
 - [Claude API Prompt Caching Performance Optimization](/claude-api-prompt-caching-performance-optimization-guide/)
 - [Claude Code for Varnish Cache Workflow](/claude-code-for-varnish-cache-workflow-tutorial/)
+
+## See Also
+
+- [Prompt Compression Techniques for Claude API](/claude-cost-prompt-compression-techniques-claude-api/)
+- [Prompt Cache Stale Context Warning — Fix (2026)](/claude-code-prompt-caching-stale-context-fix-2026/)
+- [When NOT to Use Claude Prompt Caching](/claude-cost-when-not-to-use-claude-prompt-caching/)
+- [Claude Code Cost vs Manual Developer Time: Break-Even Calculator](/claude-code-cost-vs-developer-time-break-even/)

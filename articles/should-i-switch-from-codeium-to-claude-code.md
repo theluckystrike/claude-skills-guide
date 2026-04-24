@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Should I Switch From Codeium To Claude — Developer Guide"
+title: "Should I Switch From Codeium To Claude"
 description: "A practical comparison of Codeium and Claude Code for developers considering switching AI coding assistants. Learn about Claude Code's unique skills."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -151,4 +151,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Should I Switch From Supermaven To Claude — Developer Guide](/should-i-switch-from-supermaven-to-claude-code/)

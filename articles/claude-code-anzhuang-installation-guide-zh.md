@@ -342,13 +342,20 @@ rm -rf ~/.claude
 
 Claude Code的安装过程相对简单：确保Node.js 18+环境就绪，通过npm全局安装，配置API密钥即可开始使用。遇到问题时，大多数错误都与Node.js版本、网络连接或权限配置有关，按照上述解决方案逐一排查即可。
 
-安装完成后，你可以阅读我们的[快捷键指南](/claude-shortcuts-complete-guide/)来提高使用效率，或者查看[MCP配置指南](/claude-code-mcp-configuration-guide/)来扩展Claude Code的功能。
+安装完成后，你可以阅读我们的[Claude Code使用教程](/claude-code-shiyong-jiaocheng-tutorial/)来系统学习如何使用Claude Code，或者查看[快捷键指南](/claude-shortcuts-complete-guide/)来提高使用效率。需要扩展功能的话，请参考[MCP配置指南](/claude-code-mcp-configuration-guide/)。更多中文资源请访问[Claude Code中文指南合集](/claude-code-zhongwen-guide/)。
 
 
 
 ## Related
 
-- [Claude Code 价格指南 (Chinese Pricing Guide)](/claude-code-jiage-pricing-guide/) — Claude Code pricing guide in Chinese (中文价格教程)
+- [Claude Code使用教程 (Chinese Tutorial)](/claude-code-shiyong-jiaocheng-tutorial/) — Claude Code complete tutorial in Chinese (中文使用教程)
+- [Claude Code价格指南 (Chinese Pricing Guide)](/claude-code-jiage-pricing-guide/) — Claude Code pricing guide in Chinese (中文价格教程)
+- [Claude Code拼车指南 (Chinese Group Sharing Guide)](/claude-code-pinche-group-sharing/) — Claude Code group sharing and cost optimization in Chinese (中文拼车指南)
+- [Claude Code中文指南合集 (Chinese Guide Index)](/claude-code-zhongwen-guide/) — All Chinese guides in one place (中文指南合集)
+- [Claude Code价格和费用完整指南 (2026)](/claude-code-jiage-pricing-guide-zh/)
+- [Claude Code拼车指南：合租与共享方案 (2026)](/claude-code-pinche-group-sharing-zh/)
+- [Claude Code国内使用指南 (2026)](/claude-code-guonei-shiyong-china-usage-guide-zh/)
+- [Claude Code中文指南合集 (2026)](/claude-code-zhongwen-guide-zh/)
 
 ## 常见问题
 

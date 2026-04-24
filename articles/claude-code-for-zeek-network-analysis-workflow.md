@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Zeek Network Analysis (2026)"
+title: "Claude Code for Zeek Network Analysis"
 description: "Streamline Zeek network analysis with Claude Code CLI. Automate log processing, build security monitoring workflows, and speed up investigations."
 date: 2026-03-15
 last_modified_at: 2026-04-17

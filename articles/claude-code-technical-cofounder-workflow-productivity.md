@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Technical Cofounder — Complete Developer Guide"
+title: "Claude Code Technical Cofounder"
 description: "Learn how to use Claude Code as a technical co-founder to accelerate development workflows, make better architectural decisions, and ship products."
 date: 2026-03-15
 last_modified_at: 2026-04-17

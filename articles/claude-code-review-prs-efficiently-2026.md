@@ -1,5 +1,5 @@
 ---
-title: "Review Claude Code PRs Efficiently (2026)"
+title: "Review Claude Code PRs Efficiently"
 description: "Speed up Claude Code PR reviews with structured diff audits, scope verification checklists, and automated review commands."
 permalink: /claude-code-review-prs-efficiently-2026/
 last_tested: "2026-04-22"
@@ -81,3 +81,8 @@ Review the current PR diff. For each file changed:
 Generate a PR, then review it against the checklist. If more than 20% of the diff is non-essential, your surgical change rules need tightening.
 
 Related: [Karpathy Surgical Changes](/karpathy-surgical-changes-principle-2026/) | [The Claude Code Playbook](/playbook/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)
+
+## See Also
+
+- [Claude Code for PCB Layout Review with KiCad (2026)](/claude-code-pcb-layout-review-kicad-2026/)
+- [Claude Code for ITAR Compliance Code Review (2026)](/claude-code-itar-compliance-code-review-2026/)

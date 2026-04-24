@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Anthropic SDK MCP Tools Get Empty Arguments"
+title: "Fix: Anthropic SDK MCP Tools Get Empty"
 description: "Fix the bug where MCP tools receive empty {} arguments when using the Claude Agent SDK permission approval flow. Root cause and workaround."
 date: 2026-04-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
-title: "Claude Skills vs Claude AI Projects — When to Use Code Skills vs Web-Based Project Instructions — 2026"
-description: "Compare Claude Code skills (file-based, CLI, developer workflows) with Claude.ai Projects (web-based, knowledge-heavy, team conversations). 3 scenarios each wins."
+title: "Claude Skills vs Claude AI Projects"
+description: "Compare Claude Code skills (file-based, CLI, developer workflows) with Claude.ai Projects (web-based, knowledge-heavy, team conversations)."
 permalink: /claude-skills-vs-claude-ai-projects/
 render_with_liquid: false
 categories: [skills, 2026]

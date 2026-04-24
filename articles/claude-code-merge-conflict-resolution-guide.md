@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Merge Conflict Resolution Guide"
+title: "Claude Code Merge Conflict Resolution"
 description: "A practical guide to resolving git merge conflicts when working with Claude Code. Learn strategies, commands, and workflows for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -310,4 +310,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Merge Conflict in Claude-Edited Files Fix](/claude-code-merge-conflict-edited-files-fix-2026/)

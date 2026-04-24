@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Travel Deal Alert Chrome Extension Guide (2026)"
+title: "Travel Deal Alert Chrome Extension"
 description: "Learn how to build and integrate Chrome extensions for travel deal alerts, including practical code examples and architecture patterns for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

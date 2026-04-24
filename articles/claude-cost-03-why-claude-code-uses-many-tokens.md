@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Claude Code Uses So Many Tokens Explained"
+title: "Why Claude Code Uses So Many Tokens"
 description: "Claude Code sessions consume 100K-250K tokens because every file read and tool result stays in context. Here are the 5 biggest token sinks."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -160,3 +160,6 @@ On subscription plans, reducing token consumption means hitting rate limits less
 
 - [Why Your Claude Prompts Use Too Many Tokens](/why-claude-prompts-use-too-many-tokens/)
 - [Lean Prompting: Fewer Tokens, Same Quality](/lean-prompting-fewer-tokens-same-quality/)
+- [Why Your Claude Prompts Use Too Many Tokens](/claude-cost-why-claude-prompts-use-too-many-tokens/)
+- [Claude Usage Alerts to Prevent Cost Overruns](/claude-cost-03-claude-usage-alerts-prevent-overruns/)
+- [Why Claude Code 4.6 uses more tokens than 4.5 (and what to do)](/why-claude-code-46-uses-more-tokens-than-45/)

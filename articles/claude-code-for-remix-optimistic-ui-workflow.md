@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Remix Optimistic UI (2026)"
+title: "Claude Code for Remix Optimistic UI"
 description: "Build responsive Remix apps with optimistic UI patterns using Claude Code. Implement instant feedback, pending states, and error rollback strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -546,4 +546,8 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Park UI — Workflow Guide](/claude-code-for-park-ui-workflow-guide/)
+- [Claude Code for Radix UI — Workflow Guide](/claude-code-for-radix-ui-workflow-guide/)
+- [Claude Code for Ark UI — Workflow Guide](/claude-code-for-ark-ui-workflow-guide/)

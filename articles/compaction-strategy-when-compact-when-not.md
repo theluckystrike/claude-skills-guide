@@ -1,5 +1,5 @@
 ---
-title: "The Compaction Strategy: When to /compact and When Not To"
+title: "The Compaction Strategy"
 description: "Master Claude Code /compact timing to reduce context by 60-80% without losing critical information -- includes decision rules and compaction cadence formulas."
 permalink: /compaction-strategy-when-compact-when-not/
 date: 2026-04-22

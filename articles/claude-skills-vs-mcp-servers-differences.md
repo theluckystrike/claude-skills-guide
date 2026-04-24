@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills vs MCP Servers: When to Use Each — 2026"
+title: "Claude Skills vs MCP Servers: Key Differences"
 description: "Concrete comparison of SKILL.md files and MCP servers covering use cases, architecture differences, and when to combine them in Claude Code."
 permalink: /claude-skills-vs-mcp-servers-differences/
 render_with_liquid: false
@@ -144,3 +144,7 @@ Skills are limited by what Claude can do with its existing tools. If Bash, Read,
 - [Build Your First Claude Code Skill](/building-your-first-claude-skill/)
 - [Claude Skills with Embedded Scripts](/claude-skills-with-embedded-scripts/)
 - [Fix Skill Conflicts with MCP Server](/fix-skill-conflicts-with-mcp-server/)
+
+## See Also
+
+- [Claude Code Skills vs MCP Servers: Which Uses Fewer Tokens?](/claude-code-skills-vs-mcp-servers-token-usage/)

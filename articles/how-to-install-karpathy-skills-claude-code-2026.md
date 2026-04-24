@@ -1,5 +1,5 @@
 ---
-title: "Install Karpathy Skills in Claude Code (2026)"
+title: "Install Karpathy Skills in Claude Code"
 description: "Install Karpathy's 4-principle CLAUDE.md in under 60 seconds. Step-by-step guide with curl command, verification, and customization tips."
 permalink: /how-to-install-karpathy-skills-claude-code-2026/
 last_tested: "2026-04-22"
@@ -140,3 +140,7 @@ Most developers report a noticeable difference within the first session. The imp
 - Explore [combining Karpathy Skills with SuperClaude](/how-to-combine-karpathy-superclaude-2026/) for maximum coverage
 - Check the [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for workflow optimization
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional behavioral plugins
+
+## See Also
+
+- [Install SuperClaude Framework Step by Step (2026)](/how-to-install-superclaude-framework-2026/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Wing Cloud Language Workflow"
+title: "Claude Code for Wing Cloud Language"
 description: "Learn how to integrate Claude Code into your Wing cloud language development workflow for faster infrastructure coding, testing, and deployment."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -361,4 +361,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Gleam Language — Workflow Guide](/claude-code-for-gleam-language-workflow-guide/)
+- [Claude Code for Mojo Language — Workflow Guide](/claude-code-for-mojo-language-workflow-guide/)

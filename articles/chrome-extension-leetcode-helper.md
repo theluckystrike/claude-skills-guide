@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Leetcode Helper Chrome Extension Guide (2026)"
+title: "Leetcode Helper Chrome Extension Guide"
 description: "Discover how Chrome extensions can accelerate your LeetCode practice. Explore features like solution hints, timer tracking, problem categorization, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

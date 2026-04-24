@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Output Formatting Issues (2026)"
+title: "Fix Claude Code Output Formatting"
 description: "Fix broken markdown rendering, code block display, and verbose output in Claude Code. Resolve formatting differences between terminal and IDE modes."
 date: 2026-03-13
 last_modified_at: 2026-04-17

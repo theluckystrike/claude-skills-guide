@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Rails API Mode Full Stack Workflow"
+title: "Claude Code Rails API Mode Full Stack"
 description: "A comprehensive guide to building full stack Rails applications with API mode using Claude Code. Includes practical examples, skill recommendations."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -227,4 +227,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code max_tokens Ignored in API Mode — Fix (2026)](/claude-code-max-tokens-ignored-api-mode-fix/)

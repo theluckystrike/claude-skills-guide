@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for fd (Find Alternative) — Guide"
+title: "Claude Code for fd (Find Alternative)"
 description: "Find files faster with fd and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-fd-find-alternative-workflow-guide/

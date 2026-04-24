@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Claude Code with Jest Testing"
+title: "How to Use Claude Code with Jest"
 description: "Use Claude Code to write, run, debug, and fix Jest tests automatically. TDD workflow, hook integration, and error analysis tips."
 date: 2026-04-15
 permalink: /claude-code-with-jest-testing-workflow/
@@ -225,4 +225,6 @@ $99 once. Free forever. 47/500 founding spots left.
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
 - [Claude Code for Batch Processing Optimization](/claude-code-for-batch-processing-optimization-workflow/)
 
+## See Also
 
+- [Claude Code Jest Snapshot Testing Workflow Best Practices](/claude-code-jest-snapshot-testing-workflow-best-practices/)

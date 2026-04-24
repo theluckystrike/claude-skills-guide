@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code ARIA Labels Implementation Guide (2026)"
+title: "Claude Code ARIA Labels Implementation"
 description: "A practical guide to implementing ARIA labels in your projects using Claude Code and related skills for accessible web development. Updated for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17

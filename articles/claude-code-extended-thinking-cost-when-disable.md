@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Extended Thinking: Cost and When to Disable"
+title: "Claude Code Extended Thinking"
 description: "Extended thinking in Claude Code multiplies output tokens 2-5x, adding $0.50-$5.00 per use -- learn when to enable it and when the cost is not justified."
 permalink: /claude-code-extended-thinking-cost-when-disable/
 date: 2026-04-22
@@ -208,3 +208,7 @@ Compare against: value of better first-attempt success rates
 - [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Guide to the claude-sonnet-4-5-20250929 model and its capabilities
 
 - [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Sonnet 4 extended thinking capabilities
+
+## See Also
+
+- [Extended Thinking Budget Exceeded — Fix (2026)](/claude-code-extended-thinking-budget-exceeded-fix-2026/)

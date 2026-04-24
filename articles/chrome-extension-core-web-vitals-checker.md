@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Chrome Extension Core Web Vitals Checker: Developer Guide"
+title: "Chrome Extension Core Web Vitals"
 description: "Build a Chrome extension to measure Core Web Vitals directly in your browser. Practical code examples, APIs, and implementation patterns for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

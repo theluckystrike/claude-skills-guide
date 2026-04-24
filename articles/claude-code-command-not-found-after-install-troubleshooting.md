@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Command Not Found After Install (2026)"
+title: "Fix Claude Command Not Found After"
 description: "Fix zsh/bash 'claude: command not found' after install. Step-by-step PATH fix with copy-paste commands. Works in 2 minutes."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -429,4 +429,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [PATH Not Updated After Install — Fix (2026)](/claude-code-path-not-updated-after-install-fix-2026/)
+- [claude: command not found After Install — Fix (2026)](/claude-code-binary-not-found-after-install-fix-2026/)

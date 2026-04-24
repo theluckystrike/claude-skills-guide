@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Switching From Android Studio — Complete Developer Guide"
+title: "Switching From Android Studio"
 description: "Move your Android development from Android Studio to Claude Code with AI-assisted workflows. Practical examples for building apps faster with less."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -443,4 +443,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Switching From Xcode To Claude — Complete Developer Guide](/switching-from-xcode-to-claude-code-guide/)

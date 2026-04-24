@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Integration Testing Strategy (2026)"
+title: "Claude Code Integration Testing"
 description: "Build integration test suites for Claude Code skills with test patterns, mock strategies, and CI pipeline automation. Catch regressions before deploy."
 date: 2026-03-14
 last_modified_at: 2026-04-17

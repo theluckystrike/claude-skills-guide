@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Upstash QStash Scheduled Tasks Setup Guide"
+title: "Claude Code Upstash QStash Scheduled"
 description: "Learn how to set up scheduled tasks using Upstash QStash with Claude Code. A practical guide to building reliable cron jobs and event-driven workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -430,4 +430,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Upstash Redis — Workflow Guide](/claude-code-for-upstash-redis-workflow-guide/)

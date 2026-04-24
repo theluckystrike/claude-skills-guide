@@ -1,5 +1,5 @@
 ---
-title: "Senior Engineer CLAUDE.md Template — Production-Ready Config (2026)"
+title: "Senior Engineer CLAUDE.md Template"
 description: "A battle-tested CLAUDE.md template used by senior engineers to enforce code quality, architecture patterns, and review standards in Claude Code."
 permalink: /senior-engineer-claude-md-template/
 render_with_liquid: false

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Prometheus Remote Write Workflow"
+title: "Claude Code for Prometheus Remote Write"
 description: "Learn how to integrate Claude Code with Prometheus Remote Write for building solid monitoring and observability pipelines. Practical examples and best."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -363,4 +363,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [SSH Remote Session Drops Fix](/claude-code-ssh-remote-session-drops-fix-2026/)

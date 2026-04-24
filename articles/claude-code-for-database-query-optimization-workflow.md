@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Database Query Optimization Workflow"
+title: "Claude Code for Database Query"
 description: "Learn how to use Claude Code and AI-assisted workflows to optimize database queries. Practical examples, code snippets, and actionable advice for."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -231,6 +231,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
-
+- [Claude Code for Kysely — Workflow Guide](/claude-code-for-kysely-query-builder-workflow-guide/)

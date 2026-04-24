@@ -1,5 +1,5 @@
 ---
-title: "Make Claude Code Handle Edge Cases (2026)"
+title: "Make Claude Code Handle Edge Cases"
 description: "Make Claude Code handle null values, empty arrays, race conditions, and boundary inputs by adding edge case checklists to CLAUDE.md."
 permalink: /claude-code-doesnt-handle-edge-cases-fix-2026/
 last_tested: "2026-04-22"

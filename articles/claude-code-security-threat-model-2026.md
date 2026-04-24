@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Security: Threat Model Guide (2026)"
+title: "Claude Code Security"
 description: "Threat model for Claude Code covering supply chain risks, prompt injection, data leakage, MCP server vulnerabilities, and mitigations."
 permalink: /claude-code-security-threat-model-2026/
 last_tested: "2026-04-22"
@@ -177,3 +177,7 @@ Evaluate your organization's data classification policy. Many enterprises use Cl
 Session logs are stored in `~/.claude/projects/` as JSONL files. The [ccusage](https://github.com/ryoppippi/ccusage) tool can parse these for review.
 
 For enterprise setup details, see the [enterprise guide](/claude-code-enterprise-setup-guide-2026/). For code-level security rules, read the [insecure code fix guide](/claude-code-generates-insecure-code-fix-2026/). For best security tools, see our [security tools roundup](/best-claude-code-security-tools-2026/).
+
+## See Also
+
+- [Claude Code for Credit Scoring Models (2026)](/claude-code-credit-scoring-model-2026/)

@@ -1,5 +1,5 @@
 ---
-title: "Daily Token Limit Exceeded Error — Fix (2026)"
+title: "Daily Token Limit Exceeded Error — Fix"
 permalink: /claude-code-rate-limit-tokens-per-day-fix-2026/
 description: "Fix 'daily token limit exceeded' error. Monitor usage, reduce token consumption, or upgrade plan for higher daily limits."
 last_tested: "2026-04-22"
@@ -70,3 +70,7 @@ Add this to your `CLAUDE.md`:
 - Enable prompt caching for repeated large contexts.
 - Use Haiku for simple tasks, reserve Sonnet/Opus for complex work.
 ```
+
+## See Also
+
+- [Anthropic Rate Limit Tokens Per Minute — Fix (2026)](/claude-code-anthropic-rate-limit-tokens-per-minute-fix-2026/)

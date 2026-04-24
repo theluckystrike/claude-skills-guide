@@ -1,5 +1,5 @@
 ---
-title: "Organization Billing Suspended Error — Fix (2026)"
+title: "Organization Billing Suspended Error"
 permalink: /claude-code-organization-billing-suspended-fix-2026/
 description: "Fix 'organization billing suspended' API error. Update payment method in Anthropic Console to restore access immediately."
 last_tested: "2026-04-22"
@@ -66,3 +66,31 @@ Add this to your `CLAUDE.md`:
 - Keep a backup payment method on file.
 - Monitor usage weekly: console.anthropic.com/settings/usage
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `AuthenticationError: invalid x-api-key`
+- `Error: API key not found in environment`
+- `401 Unauthorized: invalid_api_key`
+- `Warning: stale cache detected, clearing`
+- `CacheError: unable to read cache file`
+
+## Frequently Asked Questions
+
+### Where should I store my Anthropic API key?
+
+Store it in the `ANTHROPIC_API_KEY` environment variable in your shell profile (`~/.bashrc`, `~/.zshrc`). Never hardcode API keys in source code or commit them to version control. For CI/CD, use your platform's secrets manager.
+
+### How do I rotate my API key?
+
+Generate a new key at console.anthropic.com, update the `ANTHROPIC_API_KEY` environment variable, then reload your shell with `source ~/.zshrc`. The old key is revoked when you delete it from the console. Active sessions using the old key will fail after the key is deleted.
+
+### Can I use different API keys for different projects?
+
+Yes. Set the `ANTHROPIC_API_KEY` in a project-level `.env` file or use direnv to automatically load project-specific environment variables when you enter a directory. Claude Code reads the key from the environment, so per-directory env files work seamlessly.
+
+### What does Claude Code cache?
+
+Claude Code caches search indexes, file metadata, and session state in `.claude/cache/` within the project directory and `~/.claude/cache/` globally. Caches speed up repeated operations but can become stale after external changes.

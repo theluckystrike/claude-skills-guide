@@ -134,3 +134,8 @@ Related Reading
 - [Claude Code ECONNREFUSED MCP Fix](/claude-code-econnrefused-mcp-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+## See Also
+
+- [VS Code Extension Host Crash Fix](/claude-code-extension-host-crash-fix-2026/)
+- [Apple Silicon Rosetta Crash Error — Fix (2026)](/claude-code-apple-silicon-rosetta-crash-fix-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Terraform Module Development Guide"
+title: "Claude Code Terraform Module"
 description: "Master Terraform module development with Claude Code. Learn practical workflows for creating reusable, well-documented infrastructure modules."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -254,4 +254,7 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Terraform Drift Detection (2026)](/claude-code-terraform-drift-detection-2026/)
+- [Claude Code Go Module Development — Complete Developer Guide](/claude-code-go-module-development-guide/)

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Model Selection for Cost: Sonnet vs Haiku vs Opus"
+title: "Claude Code Model Selection for Cost"
 description: "Choose the right Claude Code model for each task type using cost-per-token analysis showing Haiku at $0.48, Sonnet at $1.80, and Opus at $9.00 per 100K tokens."
 permalink: /claude-code-model-selection-cost-sonnet-haiku-opus/
 date: 2026-04-22
@@ -196,3 +196,6 @@ ccusage --days 7 --format table
 
 - [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude
 
+## See Also
+
+- [Smart Model Selection Saves 80% on Claude API](/claude-cost-smart-model-selection-saves-80-percent-claude/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Claude Code Context Window Cost (2026)"
+title: "Why Claude Code Context Window Cost"
 description: "Claude Code too expensive? Reduce context token costs with these strategies. Cut your bill by 50% on large codebases."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -153,3 +153,7 @@ Key strategies include chunking your codebase to provide only relevant files rat
 ### What is Chunk Your Codebase?
 
 Chunking your codebase means providing only the specific files or modules Claude needs instead of dumping entire repositories into context. Instead of running `cat src/**/*.ts` to load everything, reference individual files like `cat src/components/Button.ts`. When using /frontend-design for components, provide only the relevant component files. This focused approach dramatically reduces token usage and keeps per-session costs predictable while maintaining the quality of Claude's output.
+
+## See Also
+
+- [Why Large Context Makes Claude Code Expensive](/claude-cost-why-large-context-makes-claude-code-expensive/)

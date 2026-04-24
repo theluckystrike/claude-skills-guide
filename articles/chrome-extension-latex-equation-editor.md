@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Latex Equation Editor Chrome Extension Guide (2026)"
+title: "Latex Equation Editor Chrome Extension"
 description: "Discover the best Chrome extensions for writing LaTeX equations. Compare features, learn integration methods, and find the right tool for your workflow."
 date: 2026-03-15
 last_modified_at: 2026-04-17

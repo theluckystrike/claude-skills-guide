@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build Arabic RTL Interfaces with Claude Code (2026)"
+title: "Build Arabic RTL Interfaces with Claude"
 description: "Build Arabic RTL interfaces with Claude Code using specialized skills for bilingual development, text processing, and layout management in 2026."
 date: 2026-04-19
 last_modified_at: 2026-04-19

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Kubernetes Logging Stack Guide (2026)"
+title: "Claude Code Kubernetes Logging Stack"
 last_tested: "2026-04-22"
 description: "A practical guide to building a Kubernetes logging stack with Claude Code. Learn how to configure Fluent Bit, Loki, and Grafana while leveraging Claude."
 date: 2026-03-14
@@ -224,5 +224,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
+- [Claude Code for ROS2 Nav2 Stack Development (2026)](/claude-code-ros2-navigation-stack-2026/)

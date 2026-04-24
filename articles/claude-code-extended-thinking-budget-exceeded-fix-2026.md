@@ -1,5 +1,5 @@
 ---
-title: "Extended Thinking Budget Exceeded — Fix (2026)"
+title: "Extended Thinking Budget Exceeded — Fix"
 permalink: /claude-code-extended-thinking-budget-exceeded-fix-2026/
 description: "Increase thinking_budget in settings to 32768 tokens with claude config set. Fixes the extended thinking token allocation mismatch error cleanly."
 last_tested: "2026-04-21"
@@ -46,3 +46,30 @@ Extended thinking budget is set to 32768 tokens. For tasks requiring deep analys
 
 - [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Guide to the claude-sonnet-4-5-20250929 model and its capabilities
 
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `TokenLimitExceeded: max tokens reached`
+- `Error: output truncated at max_tokens`
+- `Warning: response may be incomplete due to token limit`
+- `ModelNotFoundError: model 'claude-3-opus' not available`
+- `Error: specified model is deprecated`
+
+## Frequently Asked Questions
+
+### What causes token count mismatches?
+
+Token counts are estimated before sending a request and precisely calculated on the server. The estimation uses a fast local tokenizer that may differ slightly from the server's tokenizer. Small discrepancies (1-3%) are normal and do not affect functionality.
+
+### How do I reduce token consumption in long sessions?
+
+Start new conversations for unrelated tasks. Each message in a conversation includes the full history, so long conversations consume exponentially more tokens. A 50-message conversation may use 10x the tokens of five 10-message conversations.
+
+### Can I see my token usage?
+
+Run `claude usage` to see your current billing period's token consumption broken down by model. The Anthropic console at console.anthropic.com provides detailed usage graphs and per-day breakdowns.
+
+### Which model does Claude Code use by default?
+
+Claude Code uses the latest Claude model available on your account. You can override the model with `claude --model claude-sonnet-4-20250514` or set a default in your configuration with `claude config set model claude-sonnet-4-20250514`.

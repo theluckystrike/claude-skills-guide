@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Does Anthropic Limit Claude Code — Developer Guide"
+title: "Why Does Anthropic Limit Claude Code"
 description: "A technical deep-dive into Claude Code's context window limitations, the engineering trade-offs, and practical strategies for developers working with."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -138,4 +138,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [How to limit Claude Code to specific directories (cost savings)](/limit-claude-code-specific-directories-cost-savings/)

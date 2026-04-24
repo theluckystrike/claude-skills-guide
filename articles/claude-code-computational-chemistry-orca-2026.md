@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Computational Chemistry with ORCA (2026)"
+title: "Claude Code for Computational Chemistry"
 description: "Computational chemistry input file generation with Claude Code and ORCA. Automate DFT, geometry optimization, and NMR."
 permalink: /claude-code-computational-chemistry-orca-2026/
 last_tested: "2026-04-21"

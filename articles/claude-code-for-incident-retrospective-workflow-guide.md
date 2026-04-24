@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Incident Retrospective Workflow Guide"
+title: "Claude Code for Incident Retrospective"
 description: "Learn how to use Claude Code to streamline incident retrospectives, automate documentation, and create actionable follow-up workflows for your."
 date: 2026-03-15
 last_modified_at: 2026-04-17

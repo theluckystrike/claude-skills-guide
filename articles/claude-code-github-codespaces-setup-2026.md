@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Use Claude Code with GitHub Codespaces 2026"
+title: "Use Claude Code with GitHub Codespaces"
 description: "Run Claude Code inside GitHub Codespaces with devcontainer config, SSH tunnels, and remote development best practices for cloud workflows."
 permalink: /claude-code-github-codespaces-setup-2026/
 date: 2026-04-21
@@ -208,3 +208,11 @@ Codespaces eliminate "works on my machine" issues for teams using Claude Code. E
 - [Claude Code for Gitpod Cloud Dev Workflow Guide](/claude-code-for-gitpod-cloud-dev-workflow-guide/)
 - [Best Way to Set Up Claude Code for a New Project](/best-way-to-set-up-claude-code-for-new-project/)
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)
+
+## See Also
+
+- [Codespaces WebSocket Disconnect Fix](/claude-code-codespaces-websocket-disconnect-fix-2026/)
+- [Make Claude Code Write Tests First (TDD) (2026)](/claude-code-write-tests-first-tdd-setup-2026/)
+- [Claude Code Tab Completion Setup Guide 2026](/claude-code-tab-completion-setup-2026/)
+- [Claude Code + WebStorm JetBrains Setup 2026](/claude-code-webstorm-jetbrains-setup-2026/)
+- [How to Use Claude Code with WSL2 on Windows 2026](/claude-code-wsl2-windows-setup-2026/)

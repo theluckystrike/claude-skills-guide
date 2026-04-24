@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Maximum Turns Exceeded Loop — Fix (2026)"
+title: "Claude Code Maximum Turns Exceeded Loop"
 permalink: /claude-code-max-turns-exceeded-fix-2026/
 description: "Increase the --max-turns flag or decompose task to fix agent turn limit. Break large multi-file operations into focused sequential subtasks."
 last_tested: "2026-04-21"
@@ -47,3 +47,35 @@ Add to your CLAUDE.md:
 ```
 Decompose tasks requiring more than 30 file operations into sequential subtasks. Each subtask should target a single module or concern. Use explicit step numbering (step 1, step 2) to maintain progress across sessions.
 ```
+
+## See Also
+
+- [File Exceeds 10MB Limit in Claude Code — Fix (2026)](/claude-code-max-file-size-exceeded-fix-2026/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `fatal: not a git repository`
+- `error: failed to push some refs`
+- `fatal: refusing to merge unrelated histories`
+- `TokenLimitExceeded: max tokens reached`
+- `Error: output truncated at max_tokens`
+
+## Frequently Asked Questions
+
+### Why does Claude Code require git?
+
+Claude Code uses git for several core operations: tracking file changes, creating commits, reading blame information, searching history with `git log`, and managing branches. Without git, these operations fail and Claude Code falls back to less efficient alternatives.
+
+### Can Claude Code work in a non-git directory?
+
+Yes, but with reduced functionality. File search and editing work normally, but version control operations (commit, diff, blame) are unavailable. Claude Code displays a warning when opened in a directory without git initialization.
+
+### How do I prevent Claude Code from making unwanted git operations?
+
+Add rules to your CLAUDE.md: `Do not create commits automatically. Do not run git push. Always ask before any git operation that modifies history.` Claude Code respects these constraints and asks for confirmation before proceeding.
+
+### What causes token count mismatches?
+
+Token counts are estimated before sending a request and precisely calculated on the server. The estimation uses a fast local tokenizer that may differ slightly from the server's tokenizer. Small discrepancies (1-3%) are normal and do not affect functionality.

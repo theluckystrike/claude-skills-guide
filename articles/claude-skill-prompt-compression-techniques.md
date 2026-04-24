@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skill Prompt Compression Techniques"
+title: "Claude Skill Prompt Compression"
 description: "Reduce token usage and improve response speed with these practical prompt compression strategies for Claude skills."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -225,4 +225,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Prompt Compression Techniques for Claude API](/claude-cost-prompt-compression-techniques-claude-api/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Best Free VPN for Chrome + Always-On Android Guide (2026)"
+title: "Best Free VPN for Chrome + Always-On"
 description: "Set up always-on VPN on Android with best free VPN extension for Chrome. Technical guide for persistent VPN protection and kill switch config."
 date: 2026-03-18
 last_modified_at: 2026-04-17

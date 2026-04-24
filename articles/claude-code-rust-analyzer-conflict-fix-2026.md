@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Rust-Analyzer Conflict — Fix (2026)"
+title: "Claude Code Rust-Analyzer Conflict"
 permalink: /claude-code-rust-analyzer-conflict-fix-2026/
 description: "Disable Claude Code inline completions for Rust files in VS Code settings.json. Eliminates duplicate completion suggestions from rust-analyzer conflict."
 last_tested: "2026-04-21"
@@ -51,3 +51,35 @@ Add to your CLAUDE.md:
 ```
 Claude Code inline completions are disabled for Rust files. Use Claude Code for chat-based assistance and refactoring in Rust projects, not inline completions.
 ```
+
+## See Also
+
+- [Claude Code Rust Crate Development Guide (2026)](/claude-code-rust-crate-development-guide/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `Error reading configuration file`
+- `JSON parse error in config`
+- `Config key not recognized`
+- `SyntaxError: Unexpected token in JSON at position 0`
+- `JSON.parse: unexpected character at line 1 column 1`
+
+## Frequently Asked Questions
+
+### Where does Claude Code store its configuration?
+
+Configuration is stored in `~/.claude/config.json` for global settings and `.claude/config.json` in the project root for project-specific settings. Project settings override global settings for any overlapping keys.
+
+### How do I reset Claude Code configuration?
+
+Delete the configuration file and restart Claude Code: `rm ~/.claude/config.json && claude`. Claude Code recreates the file with default values on next startup. Back up the file first if you have custom settings you want to preserve.
+
+### Can I share configuration across a team?
+
+Yes. The project-level `.claude/config.json` and `CLAUDE.md` files can be committed to version control. Team members get consistent Claude Code behavior when they check out the repository. Keep API keys and personal preferences in the global config only.
+
+### Why does JSON parsing fail on API responses?
+
+JSON parse failures on API responses typically indicate a network issue where an intermediate proxy returned an HTML error page instead of JSON. Check the raw response by enabling debug logging with `CLAUDE_LOG_LEVEL=debug` to see the actual content received.

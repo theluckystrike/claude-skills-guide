@@ -1,5 +1,5 @@
 ---
-title: "Terminal Emulator Rendering Artifacts Fix"
+title: "Terminal Emulator Rendering Artifacts"
 permalink: /claude-code-terminal-rendering-artifacts-fix-2026/
 description: "Fix terminal rendering artifacts in Claude Code. Reset ANSI state and switch terminal emulator to resolve garbled output, broken prompts, and ghost text."
 last_tested: "2026-04-22"
@@ -68,3 +68,32 @@ If terminal output becomes garbled, run 'reset' and restart Claude Code. Use iTe
 ## Related
 
 - [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
+- [Claude Code Terminal UTF-8 Garbled Output — Fix (2026)](/claude-code-terminal-encoding-utf8-garbled-fix/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `UnicodeDecodeError: 'utf-8' codec can't decode byte`
+- `Error: invalid byte sequence in UTF-8`
+- `Buffer encoding not recognized`
+- `npm ERR! code ENOENT`
+- `Error: Cannot find module '@anthropic-ai/claude-code'`
+
+## Frequently Asked Questions
+
+### Why does Claude Code produce encoding errors?
+
+Claude Code assumes UTF-8 encoding for all text files. Files saved with other encodings (Latin-1, Windows-1252, Shift-JIS) contain byte sequences that are invalid in UTF-8. Convert files to UTF-8 before editing: `iconv -f WINDOWS-1252 -t UTF-8 file.txt > file_utf8.txt`.
+
+### How do I check a file's encoding?
+
+Run `file -bi filename` on Linux or `file -I filename` on macOS. The output includes the charset. If it shows anything other than `utf-8` or `us-ascii`, the file may cause encoding errors in Claude Code.
+
+### Can Claude Code handle binary files?
+
+Claude Code can read binary files like images (it is multimodal) but cannot edit them as text. Attempting to open a binary file as text produces garbled output or encoding errors. Use appropriate tools (ImageMagick, ffmpeg) for binary file manipulation.
+
+### What is the recommended way to install Claude Code?
+
+Install globally with npm: `npm install -g @anthropic-ai/claude-code`. This adds the `claude` command to your PATH. Verify the installation with `claude --version`. Requires Node.js 18 or later.

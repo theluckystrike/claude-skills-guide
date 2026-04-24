@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CSS Peeper Alternative Chrome — Developer Comparison 2026"
+title: "CSS Peeper Alternative Chrome"
 description: "Discover powerful Chrome extensions that serve as CSS Peeper alternatives. Compare features, performance, and find the perfect tool for inspecting and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

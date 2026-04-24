@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Developer Productivity Gains from Using Claude Code"
+title: "Developer Productivity Gains from Using"
 description: "Discover how Claude Code transforms developer workflows with practical examples, time savings, and skill-based automation for modern development teams."
 date: 2026-03-14
 last_modified_at: 2026-04-17

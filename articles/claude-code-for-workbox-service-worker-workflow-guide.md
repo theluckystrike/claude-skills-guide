@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Workbox Service Worker Workflow Guide"
+title: "Claude Code for Workbox Service Worker"
 description: "Master the art of using Claude Code with Workbox to build powerful service worker workflows for Progressive Web Apps. Learn practical implementation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

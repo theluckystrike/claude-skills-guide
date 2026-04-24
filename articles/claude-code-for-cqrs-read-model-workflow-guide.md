@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for CQRS Read Model Workflow Guide"
+title: "Claude Code for CQRS Read Model"
 description: "Learn how to use Claude Code to build, maintain, and optimize CQRS read models with practical workflows and code examples."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -669,4 +669,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Credit Scoring Models (2026)](/claude-code-credit-scoring-model-2026/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Rspack Webpack Compatible Workflow"
+title: "Claude Code for Rspack Webpack"
 description: "Learn how to use Claude Code to create a Rspack and Webpack compatible build workflow. Practical examples, code snippets, and actionable advice for."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -298,4 +298,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Webpack Tree-Shaking Breaks Build — Fix (2026)](/claude-code-webpack-tree-shaking-breaks-fix-2026/)

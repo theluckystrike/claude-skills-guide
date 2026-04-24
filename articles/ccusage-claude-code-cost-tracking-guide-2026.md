@@ -1,5 +1,5 @@
 ---
-title: "ccusage: Claude Code Cost Tracking Guide (2026)"
+title: "ccusage: Claude Code Cost Tracking"
 description: "Track Claude Code session costs with ccusage — parse JSONL logs for daily, monthly, and per-session spend breakdowns via CLI."
 permalink: /ccusage-claude-code-cost-tracking-guide-2026/
 last_tested: "2026-04-22"
@@ -163,3 +163,5 @@ As far back as your log files exist. Claude Code retains logs indefinitely by de
 - [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — patterns that reduce token usage
 - [The Claude Code Playbook](/playbook/) — workflows optimized for cost efficiency
 - [Best Claude Skills for Developers](/best-claude-skills-for-developers-2026/) — tools that complement cost tracking
+- [Claude API pricing](/claude-api-pricing-complete-guide/) — every plan and model priced
+- [Claude extra usage cost](/claude-extra-usage-cost-guide/) — understand what overages cost

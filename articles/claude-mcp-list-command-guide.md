@@ -1,5 +1,5 @@
 ---
-title: "Claude MCP List Command: Full Reference (2026)"
+title: "Claude MCP List Command: Full Reference"
 description: "Complete reference for claude mcp list and all MCP CLI commands. Syntax, output format, scope options, config locations, and troubleshooting."
 permalink: /claude-mcp-list-command-guide/
 last_tested: "2026-04-24"
@@ -395,3 +395,7 @@ The new configuration replaces the existing one at the same scope. If the existi
   ]
 }
 </script>
+
+## See Also
+
+- [Claude MCP vs ChatGPT Plugins: Extension Systems Compared](/claude-mcp-vs-chatgpt-plugins-comparison/)

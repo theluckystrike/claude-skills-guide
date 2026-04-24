@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Open Source Claude Skills Ecosystem Outlook 2026"
+title: "Open Source Claude Skills Ecosystem"
 description: "The open source Claude skills ecosystem in 2026: how community .md skills work, where to find them, and how /tdd, /pdf, /supermemory fit in."
 date: 2026-03-14
 last_modified_at: 2026-04-17

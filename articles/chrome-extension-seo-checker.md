@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "SEO Checker Chrome Extension Guide (2026)"
+title: "SEO Checker Chrome Extension Guide"
 description: "Learn how to build and integrate a chrome extension SEO checker for analyzing web page optimization directly in your browser."
 date: 2026-03-15
 last_modified_at: 2026-04-17

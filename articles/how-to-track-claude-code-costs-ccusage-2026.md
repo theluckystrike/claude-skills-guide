@@ -1,5 +1,5 @@
 ---
-title: "Track Claude Code Costs With ccusage (2026)"
+title: "Track Claude Code Costs With ccusage"
 description: "Run npx ccusage to see per-session Claude Code costs from local logs. Step-by-step setup, filtering, and export for cost tracking and optimization."
 permalink: /how-to-track-claude-code-costs-ccusage-2026/
 last_tested: "2026-04-22"
@@ -146,3 +146,7 @@ ccusage
 - Compare ccusage with [the Claude Max dashboard](/ccusage-vs-claude-max-dashboard-cost-tracking-2026/)
 - Use [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) to log additional cost-relevant data
 - Review [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for token optimization
+
+## See Also
+
+- [Track Claude Token Spend Per Project and Team](/02-track-claude-spend-per-project/)

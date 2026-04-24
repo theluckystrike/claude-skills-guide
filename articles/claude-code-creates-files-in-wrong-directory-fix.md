@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Creates Files in Wrong Directory Fix"
+title: "Claude Code Creates Files in Wrong"
 description: "A practical guide to fixing file path issues when Claude Code skills create files in unexpected directories. Includes troubleshooting steps and code."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -405,4 +405,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Stop Claude Code Creating Duplicate Code (2026)](/claude-code-creates-duplicate-code-fix-2026/)

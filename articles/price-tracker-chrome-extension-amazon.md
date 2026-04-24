@@ -1,7 +1,8 @@
 ---
+render_with_liquid: false
 
 layout: default
-title: "Amazon Price Tracker Chrome Extension — Guide (2026)"
+title: "Amazon Price Tracker Chrome Extension"
 description: "Build or use a price tracker Chrome extension for Amazon. Web scraping, price monitoring, and alert system implementation explained. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

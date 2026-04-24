@@ -1,5 +1,5 @@
 ---
-title: "Windows WSL Path Conflict Error — Fix (2026)"
+title: "Windows WSL Path Conflict Error — Fix"
 permalink: /claude-code-windows-wsl-path-conflict-fix-2026/
 description: "Fix Claude Code path conflicts between Windows and WSL. Use WSL-native node, not Windows node accessible via /mnt/c/."
 last_tested: "2026-04-22"
@@ -80,3 +80,11 @@ Add this to your `CLAUDE.md`:
 - Install Node.js via nvm inside WSL, not from Windows.
 - Always verify: file $(which node) shows ELF, not PE32+.
 ```
+
+## See Also
+
+- [Devcontainer Claude Code Path Missing Fix](/claude-code-devcontainer-path-missing-fix-2026/)
+- [Certificate Pinning Conflict Error — Fix (2026)](/claude-code-certificate-pinning-conflict-fix-2026/)
+- [Git Worktree Lock Conflict Fix](/claude-code-worktree-lock-conflict-fix-2026/)
+- [Peer Dependency Conflict npm Error — Fix (2026)](/claude-code-peer-dependency-conflict-fix-2026/)
+- [Claude Code Prettier Format Conflict — Fix (2026)](/claude-code-prettier-format-conflict-fix/)

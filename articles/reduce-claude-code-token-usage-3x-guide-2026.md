@@ -1,5 +1,5 @@
 ---
-title: "How to Reduce Claude Code Token Usage by 3x (2026 Guide)"
+title: "How to Reduce Claude Code Token Usage"
 description: "Reduce Claude Code token usage by 3x with proven strategies covering context control, model routing, and CLAUDE.md rules that cut API costs immediately."
 permalink: /reduce-claude-code-token-usage-3x-guide-2026/
 date: 2026-04-22
@@ -146,3 +146,8 @@ For a team of five engineers, multiply the solo figures by 5 for a monthly savin
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- deep dive on compaction mechanics and timing
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- strategies for staying within context limits
 - [Claude Code Model Selection for Cost: Sonnet vs Haiku vs Opus](/claude-code-model-selection-cost-sonnet-haiku-opus/) -- full model routing decision framework
+
+## See Also
+
+- [Reduce Claude Code Token Consumption by 60%](/claude-cost-06-reduce-claude-code-token-consumption/)
+- [Monitoring Claude Code Token Usage with Custom Hooks](/monitoring-claude-code-token-usage-custom-hooks/)

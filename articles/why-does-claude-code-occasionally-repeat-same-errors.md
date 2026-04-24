@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix Claude Code Repeating Same Errors (2026)"
+title: "Fix Claude Code Repeating Same Errors"
 description: "Stop Claude Code from repeating the same errors in a loop. Break the error cycle with context resets, prompt adjustments, and session management."
 date: 2026-03-14
 last_modified_at: 2026-04-17

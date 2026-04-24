@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Copilot Workspace (2026): Agents"
+title: "Claude Code vs Copilot Workspace: Agent Mode (2026)"
 description: "Claude Code vs GitHub Copilot Workspace compared as coding agents. Issue-to-PR automation, multi-file planning, and execution quality in 2026."
 permalink: /claude-code-vs-copilot-workspace-agent-2026/
 date: 2026-04-21
@@ -124,6 +124,11 @@ Teams reporting the highest productivity gains assign tools based on task classi
 
 ## Related Comparisons
 
+- [Codex vs Claude Code](/codex-vs-claude-code-comparison-2026/) — OpenAI Codex vs Claude Code
 - [GitHub Copilot vs Claude Code: Deep Comparison](/github-copilot-vs-claude-code-deep-comparison-2026/)
 - [Claude Code vs Devin: AI Agent Comparison](/claude-code-vs-devin-ai-agent-comparison-2026/)
 - [Claude Code vs Sweep AI: PR Automation](/claude-code-vs-sweep-ai-pr-automation-2026/)
+
+## See Also
+
+- [Claude Code vs GitHub Copilot Workspace (2026)](/claude-code-vs-github-copilot-workspace-agent-2026/)

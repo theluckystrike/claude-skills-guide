@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Automate RFP Responses with Claude Code (2026)"
+title: "Automate RFP Responses with Claude Code"
 description: "Automate RFP response workflows with Claude Code. Draft proposals, review compliance, and optimize submission quality with AI-powered assistance."
 date: 2026-03-20
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Anthropic API 500 Error with strict: true Tools"
+title: "Fix: Anthropic API 500 Error"
 description: "Fix the 500 Internal Server Error when using strict: true with complex nested tool schemas in the Anthropic API."
 date: 2026-04-14
 last_modified_at: 2026-04-17

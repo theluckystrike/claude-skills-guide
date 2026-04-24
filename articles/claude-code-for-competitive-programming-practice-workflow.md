@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Competitive Programming Practice Workflow"
+title: "Claude Code for Competitive Programming"
 description: "Master competitive programming with Claude Code: automated problem solving, template generation, solution testing, and efficient practice workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

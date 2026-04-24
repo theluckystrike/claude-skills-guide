@@ -1,5 +1,5 @@
 ---
-title: "Anthropic SDK TypeScript Tool Results Type Error — Fix (2026)"
+title: "Anthropic SDK TypeScript Tool Results"
 description: "Fix Anthropic SDK TypeScript type mismatch on tool_result content blocks. Correct the ToolResultBlockParam type. Step-by-step solution."
 permalink: /anthropic-sdk-typescript-type-mismatch-tool-results-fix/
 last_tested: "2026-04-21"
@@ -100,3 +100,7 @@ Always include type: "tool_result" in tool result content blocks. Tool results m
 ```
 
 **Related articles:** [Claude API Error 400 Fix](/claude-api-error-400-invalidrequesterror-explained/), [Claude API Error Handling](/claude-code-api-error-handling-standards/), [Claude tool_use Parsing Fix](/claude-tool-use-response-parsing-error-fix/)
+
+## See Also
+
+- [Anthropic SDK Python Async Context Manager — Fix (2026)](/anthropic-sdk-python-async-context-manager-error-fix/)

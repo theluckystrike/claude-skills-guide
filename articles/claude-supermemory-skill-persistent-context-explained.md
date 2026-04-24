@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude SuperMemory Skill: Persistent Context Guide 2026"
+title: "Claude SuperMemory Skill"
 description: "Claude SuperMemory Skill: Persistent Context Guide 2026. Practical guide with working examples for developers."
 date: 2026-03-13
 last_modified_at: 2026-04-17

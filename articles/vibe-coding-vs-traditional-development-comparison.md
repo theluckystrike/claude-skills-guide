@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Vibe Coding vs Traditional — Developer Comparison 2026"
+title: "Vibe Coding vs Traditional"
 description: "A comprehensive comparison of vibe coding versus traditional development approaches. Learn when AI-assisted coding shines and when manual development."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -156,4 +156,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs Traditional IDE — Developer Comparison 2026](/claude-code-vs-traditional-ide-productivity-study/)

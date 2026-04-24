@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Make Claude Code Respect Your ESLint Config"
+title: "How to Make Claude Code Respect Your"
 description: "A practical guide to ensuring Claude Code follows your ESLint configuration when writing and editing code. Learn the key techniques and configurations."
 date: 2026-03-14
 last_modified_at: 2026-04-17

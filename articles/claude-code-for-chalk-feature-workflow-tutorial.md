@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Chalk Terminal Styling (2026)"
+title: "Claude Code for Chalk Terminal Styling"
 description: "Style terminal output with Chalk and Claude Code for colored logs, progress bars, and formatted CLI interfaces. Node.js implementation examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

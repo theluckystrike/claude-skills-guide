@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Enterprise Disaster Recovery Workflow Planning"
+title: "Claude Code Enterprise Disaster"
 description: "A comprehensive guide to building disaster recovery workflows for enterprise systems using Claude Code, with practical examples and actionable advice."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -769,4 +769,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs Augment Code (2026): Enterprise AI](/claude-code-vs-augment-code-enterprise-2026/)
+- [Claude Code Enterprise Pricing: What Companies Actually Pay](/claude-code-enterprise-pricing-what-companies-pay/)

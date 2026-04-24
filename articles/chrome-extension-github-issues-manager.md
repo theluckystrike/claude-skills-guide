@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension GitHub Issues Manager Guide"
+title: "Chrome Extension GitHub Issues Manager"
 description: "A practical guide to Chrome extensions for managing GitHub issues. Learn how to efficiently track, organize, and handle issues directly from your browser."
 date: 2026-03-15
 last_modified_at: 2026-04-17

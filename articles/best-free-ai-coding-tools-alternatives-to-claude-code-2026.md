@@ -1,5 +1,5 @@
 ---
-title: "Best Free AI Coding Tools vs Claude Code (2026)"
+title: "Best Free AI Coding Tools vs Claude"
 permalink: /best-free-ai-coding-tools-alternatives-to-claude-code-2026/
 description: "7 free AI coding tools compared to Claude Code. Aider, Cline, Copilot free tier, and more — with real capabilities and honest tradeoffs for 2026."
 last_tested: "2026-04-21"
@@ -110,4 +110,12 @@ Related reading:
 
 ## Related
 
+- [Codex vs Claude Code](/codex-vs-claude-code-comparison-2026/) — OpenAI Codex vs Claude Code comparison
+- [Claude API pricing](/claude-api-pricing-complete-guide/) — every Claude plan and model priced
+- [How to use Claude Code](/how-to-use-claude-code-beginner-guide/) — beginner walkthrough if choosing Claude Code
+- [OpenRouter setup for Claude Code](/claude-code-openrouter-setup-guide/) — alternative model access
 - [Claude student discount guide](/claude-student-discount-guide/) — How students can get Claude at reduced pricing
+- [Best AI Coding Tools for JavaScript (2026): Ranked](/best-ai-coding-tools-javascript-comparison-2026/)
+- [Best Free Claude Code Resources on GitHub (2026)](/best-free-claude-code-github-resources-2026/)
+- [Best AI Coding Tools for Python (2026): Compared](/best-ai-coding-tools-python-comparison-2026/)
+- [Best Free AI Coding Assistants 2026 Comparison](/best-free-ai-coding-assistants-2026-comparison/)

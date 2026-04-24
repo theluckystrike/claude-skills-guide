@@ -1,5 +1,5 @@
 ---
-title: "Circular Dependency Detected in Build — Fix (2026)"
+title: "Circular Dependency Detected in Build"
 permalink: /claude-code-circular-dependency-detected-build-fix-2026/
 description: "Fix circular dependency errors in builds. Use madge to detect cycles and refactor shared types into a separate module."
 last_tested: "2026-04-22"
@@ -79,3 +79,7 @@ Add this to your `CLAUDE.md`:
 - Shared types go in src/types/. Services import from types, not from each other.
 - Use dependency injection for cross-service communication.
 ```
+
+## See Also
+
+- [tmux Session Not Detected Error Fix](/claude-code-tmux-session-not-detected-fix-2026/)

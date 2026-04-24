@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Mullvad vs Chrome Privacy — Developer Comparison 2026"
+title: "Mullvad vs Chrome Privacy"
 description: "Compare Mullvad Browser and Chrome privacy features. Learn how each handles fingerprinting, tracking, and network-level surveillance for secure."
 date: 2026-03-15
 last_modified_at: 2026-04-17

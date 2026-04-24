@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Opus Orchestrator + Sonnet Worker Pattern (2026)"
+title: "Opus Orchestrator + Sonnet Worker"
 description: "Design multi-agent systems with Opus as orchestrator and Sonnet workers for parallel task execution. Architecture patterns with cost optimization."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -161,4 +161,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Opus 4.6 vs DeepSeek V3: Coding Comparison](/claude-opus-vs-deepseek-v3-comparison/)

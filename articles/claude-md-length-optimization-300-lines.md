@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Length Optimization — Why 200 Lines Is the Hard Ceiling (2026)"
+title: "CLAUDE.md Length Optimization"
 description: "How to keep your CLAUDE.md under 200 lines using imports, rules directories, and skills. Data-backed guidance on what happens when you exceed the limit."
 permalink: /claude-md-length-optimization/
 render_with_liquid: false

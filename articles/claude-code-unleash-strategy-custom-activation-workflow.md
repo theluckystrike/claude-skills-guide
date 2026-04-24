@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Unleash Strategy: Custom Activation Workflow"
+title: "Claude Code Unleash Strategy"
 description: "Master the art of creating custom activation workflows in Claude Code to speed up your AI-assisted development workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code GitHub Actions Workflow Matrix Strategy Guide"
+title: "Claude Code GitHub Actions Workflow"
 description: "Master GitHub Actions matrix workflows with Claude Code. Learn to run parallel CI/CD jobs across multiple Node versions, Python versions, OS platforms."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -349,4 +349,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [How to Build Claude Code GitHub Actions 2026](/claude-code-github-actions-workflow-2026/)

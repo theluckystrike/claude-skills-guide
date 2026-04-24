@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for MLflow Experiment Tracking Workflow"
+title: "Claude Code for MLflow Experiment"
 description: "Learn how to use Claude Code to streamline your MLflow experiment tracking workflow with practical examples and actionable advice for MLOps teams."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -243,4 +243,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Sentry Errors — Workflow Guide](/claude-code-for-sentry-error-tracking-workflow-guide/)

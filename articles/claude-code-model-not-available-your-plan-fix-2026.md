@@ -1,5 +1,5 @@
 ---
-title: "Model Not Available on Your Plan — Fix (2026)"
+title: "Model Not Available on Your Plan — Fix"
 permalink: /claude-code-model-not-available-your-plan-fix-2026/
 description: "Fix 'model not available on your plan' error. Upgrade to the correct tier or switch to an available model in Claude Code."
 last_tested: "2026-04-22"

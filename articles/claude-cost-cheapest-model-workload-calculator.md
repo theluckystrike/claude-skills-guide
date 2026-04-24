@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Cheapest LLM Model for Your Workload Guide"
+title: "Cheapest LLM Model for Your Workload"
 description: "Find the cheapest model from $0.15 to $25 per MTok. Decision tree for 6 workload types."
 date: 2026-04-19
 author: "Claude Skills Guide"

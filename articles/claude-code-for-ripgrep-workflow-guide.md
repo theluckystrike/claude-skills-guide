@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Ripgrep — Workflow Guide"
+title: "Claude Code for Ripgrep"
 description: "Search codebases faster with Ripgrep and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-ripgrep-workflow-guide/

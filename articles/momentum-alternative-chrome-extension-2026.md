@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Momentum Alternative Chrome — Developer Comparison 2026"
+title: "Momentum Alternative Chrome"
 description: "Discover the top Momentum alternative Chrome extensions for 2026. Compare features, performance, and customization options for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

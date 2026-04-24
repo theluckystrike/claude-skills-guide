@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Options Pricing Models (2026)"
+title: "Claude Code for Options Pricing Models"
 description: "Options pricing with Claude Code. Implement Black-Scholes, Greeks, and volatility surface calibration in Python."
 permalink: /claude-code-options-pricing-black-scholes-2026/
 last_tested: "2026-04-21"
@@ -254,3 +254,4 @@ import QuantLib as ql
 - [Claude Code for Algo Trading](/claude-code-algorithmic-trading-backtesting-2026/)
 - [Claude Code for FIX Protocol](/claude-code-fix-protocol-message-handling-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code + OpenRouter: Alternative Pricing Strategies](/claude-code-openrouter-alternative-pricing/)

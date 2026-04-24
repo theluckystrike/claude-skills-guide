@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Dify AI Platform — Guide"
+title: "Claude Code for Dify AI Platform"
 description: "Build AI apps with Dify's visual workflow and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-dify-ai-platform-workflow-guide/
@@ -75,3 +75,7 @@ Claude Code should create a Next.js API route that sends POST requests to `${DIF
 - [Claude Code for LangChain Framework Workflow Guide](/claude-code-for-langchain-framework-workflow-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
 - [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)
+
+## See Also
+
+- [Claude Code Spacelift Platform Guide](/claude-code-spacelift-platform-guide/)

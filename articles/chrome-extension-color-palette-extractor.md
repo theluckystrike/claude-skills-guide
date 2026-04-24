@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Color Palette Extractor"
+title: "Chrome Extension Color Palette"
 description: "Learn how to use Chrome extensions for extracting color palettes from any website. Discover the best tools for designers and developers to capture."
 date: 2026-03-15
 last_modified_at: 2026-04-17

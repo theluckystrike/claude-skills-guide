@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How To Make Claude Code Explain — Complete Developer (2026)"
+title: "How To Make Claude Code Explain"
 last_tested: "2026-04-22"
 description: "Learn techniques to get Claude Code to reveal its thought process, from explicit prompting strategies to skill-based approaches for transparent AI."
 date: 2026-03-14

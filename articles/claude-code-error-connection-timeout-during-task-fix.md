@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix Claude Code Request Timed Out Error (2026)"
+title: "Fix Claude Code Request Timed Out Error"
 description: "Fix 'request timed out' in Claude Code with copy-paste config. Covers API timeouts, MCP connection drops, and retry settings that actually work."
 date: 2026-03-14
 last_modified_at: 2026-04-21

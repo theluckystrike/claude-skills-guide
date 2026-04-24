@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Pytest Fixtures Parametrize Workflow Tutorial 20"
+title: "Claude Code Pytest Fixtures Parametrize"
 description: "Master pytest fixtures and parametrize decorators. Practical patterns for test parametrization, fixture composition, and efficient pytest workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -215,4 +215,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Pytest Async Testing — Complete Developer Guide](/claude-code-pytest-async-testing-with-asyncio-workflow/)
+- [Claude Code Pytest Parametrize Advanced Workflow Patterns](/claude-code-pytest-parametrize-advanced-workflow-patterns/)

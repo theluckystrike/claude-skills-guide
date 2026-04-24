@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Sweep AI (2026): PR Automation"
+title: "Claude Code vs Sweep AI (2026)"
 description: "Claude Code vs Sweep AI compared for automated pull requests. Which AI tool handles GitHub issues to working PRs better in 2026?"
 permalink: /claude-code-vs-sweep-ai-pr-automation-2026/
 date: 2026-04-21
@@ -125,3 +125,7 @@ Not every GitHub issue is suitable for automated handling. Here is a practical c
 - [Claude Code vs Copilot Workspace: Agents](/claude-code-vs-copilot-workspace-agent-2026/)
 - [Claude Code vs Devin: AI Agent Comparison](/claude-code-vs-devin-ai-agent-comparison-2026/)
 - [Claude Code vs OpenHands: Open-Source Agent](/claude-code-vs-openhands-open-source-agent-2026/)
+
+## See Also
+
+- [Claude Code for Oscilloscope Automation (2026)](/claude-code-oscilloscope-automation-2026/)

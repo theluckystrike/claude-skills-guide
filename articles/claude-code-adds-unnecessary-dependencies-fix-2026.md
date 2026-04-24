@@ -1,5 +1,5 @@
 ---
-title: "Stop Claude Code Adding Extra Dependencies (2026)"
+title: "Stop Claude Code Adding Extra"
 description: "Prevent Claude Code from adding unnecessary npm packages by defining approved dependency lists and native-first rules in CLAUDE.md."
 permalink: /claude-code-adds-unnecessary-dependencies-fix-2026/
 last_tested: "2026-04-22"

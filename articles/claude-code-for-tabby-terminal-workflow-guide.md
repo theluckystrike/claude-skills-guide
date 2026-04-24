@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Tabby Terminal — Workflow Guide"
+title: "Claude Code for Tabby Terminal"
 description: "Configure Tabby terminal for Claude Code workflows. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-tabby-terminal-workflow-guide/

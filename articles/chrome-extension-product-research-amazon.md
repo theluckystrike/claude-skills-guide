@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build an Amazon Research Chrome Extension (2026)"
+title: "Build an Amazon Research Chrome"
 description: "Build a Chrome extension for Amazon product research. Covers price history tracking, review analysis, competitor comparison, and sales rank monitoring."
 date: 2026-03-15
 last_modified_at: 2026-04-17

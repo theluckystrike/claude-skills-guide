@@ -425,4 +425,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [.gitignore Not Respected by Claude Fix](/claude-code-gitignore-not-respected-fix-2026/)

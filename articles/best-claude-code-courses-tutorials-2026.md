@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Best Claude Code Courses and Tutorials 2026"
+title: "Best Claude Code Courses and Tutorials"
 description: "Curated list of Claude Code courses, tutorials, and learning paths for 2026. Free and paid options for beginners to advanced developers."
 permalink: /best-claude-code-courses-tutorials-2026/
 date: 2026-04-21

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Enterprise Onboarding Checklist for Dev Teams"
+title: "Claude Code Enterprise Onboarding"
 description: "A comprehensive checklist for integrating Claude Code into your enterprise development workflow. Set up authentication, configure workspaces, establish."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -321,4 +321,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Enterprise Pricing: What Companies Actually Pay](/claude-code-enterprise-pricing-what-companies-pay/)

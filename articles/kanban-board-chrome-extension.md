@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Kanban Board Chrome Extension Guide (2026)"
+title: "Kanban Board Chrome Extension Guide"
 description: "Learn how to build and customize kanban board chrome extensions for task management. Practical examples and code snippets for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

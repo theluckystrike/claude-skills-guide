@@ -281,4 +281,6 @@ $99 once. Free forever. 47/500 founding spots left.
 - [Claude Streaming API Guide](/claude-streaming-api-guide/) -- stream thinking output in real time.
 - [Claude API Error 400 invalid_request_error Fix](/claude-api-error-400-invalidrequesterror-explained/) -- the error returned for invalid thinking parameters.
 
+## See Also
 
+- [Extended Thinking Budget Exceeded — Fix (2026)](/claude-code-extended-thinking-budget-exceeded-fix-2026/)

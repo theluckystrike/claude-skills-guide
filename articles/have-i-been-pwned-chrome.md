@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Have I Been Pwned Chrome Extension Guide"
+title: "Have I Been Pwned Chrome Extension"
 description: "Learn how to check if your credentials have been exposed in data breaches using Have I Been Pwned. Explore browser extensions, API integration, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

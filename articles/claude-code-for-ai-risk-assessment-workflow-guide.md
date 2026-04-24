@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for AI Risk Assessment Workflow Guide (2026)"
+title: "Claude Code for AI Risk Assessment"
 description: "Learn how to build automated AI risk assessment workflows using Claude Code. Practical examples for evaluating model outputs, detecting bias, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -233,4 +233,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Basel III Risk Calculation (2026)](/claude-code-basel-iii-risk-calculation-2026/)

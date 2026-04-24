@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome DevTools Responsive Design Mode Guide (2026)"
+title: "Chrome DevTools Responsive Design Mode"
 description: "Chrome DevTools Responsive Design Mode Guide. Practical guide with working examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

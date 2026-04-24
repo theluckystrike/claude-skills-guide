@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Triggerdev Scheduled — Complete Developer Guide"
+title: "Claude Code Triggerdev Scheduled"
 description: "Learn how to automate recurring tasks using Claude Code and TriggerDev cron jobs. A practical guide with real-world examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

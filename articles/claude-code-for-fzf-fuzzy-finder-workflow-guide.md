@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Fzf Fuzzy Finder — Complete (2026)"
+title: "Claude Code For Fzf Fuzzy Finder"
 description: "Master the FZF fuzzy finder workflow with Claude Code. Learn practical examples, code snippets, and actionable tips to boost your command-line."
 date: 2026-03-15
 last_modified_at: 2026-04-17

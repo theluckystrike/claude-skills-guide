@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Modernizing Legacy Codebases with Claude Code"
+title: "Modernizing Legacy Codebases"
 description: "Use Claude Code to modernize legacy code. Refactor jQuery to React, upgrade Node.js versions, add TypeScript, replace callbacks with async/await."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -312,4 +312,6 @@ $99 once. Free forever. 47/500 founding spots left.
 - [Claude Code Test Driven Refactoring Guide](/claude-code-test-driven-refactoring-guide/)
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)
 
+## See Also
 
+- [Help Claude Code Work With Legacy Code (2026)](/claude-code-cant-handle-legacy-code-fix-2026/)

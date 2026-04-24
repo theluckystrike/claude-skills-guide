@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Does Claude Code Reject My Skill — Developer Guide"
+title: "Why Does Claude Code Reject My Skill"
 description: "Troubleshoot skill instruction block rejections in Claude Code: syntax errors, YAML formatting issues, character limits, and practical solutions."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -213,4 +213,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Why Does Claude Code Break My Existing — Developer Guide](/why-does-claude-code-break-my-existing-tests-unexpectedly/)

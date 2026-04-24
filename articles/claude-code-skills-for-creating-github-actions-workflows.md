@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills for Creating GitHub Actions Workflows"
+title: "Claude Code Skills for Creating GitHub"
 description: "Build Claude skills that generate, validate, and manage GitHub Actions workflows. Practical patterns for CI/CD automation with real code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

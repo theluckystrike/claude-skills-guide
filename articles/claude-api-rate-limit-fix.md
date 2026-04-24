@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude API Rate Limit Errors (HTTP 429)"
+title: "Fix Claude API Rate Limit Errors (HTTP"
 description: "Resolve Claude API rate limit errors with exponential backoff, request batching, and tier upgrades. Includes Python and TypeScript examples."
 date: 2026-04-14
 last_modified_at: 2026-04-17
@@ -229,5 +229,4 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [CLAUDE.md Character Limit — What the 200-Line Ceiling Means and How to Work Within It (2026)](/claude-md-character-limit-errors/)
 - [Fix Anthropic API Streaming Interrupted](/anthropic-api-streaming-interrupted-fix/)
 - [Fixing Claude Code Deprecated API Methods](/claude-code-uses-deprecated-api-methods-fix/)
-
-
+- [Claude Code Concurrent Sessions 5/5 — Fix (2026)](/claude-code-concurrent-session-limit-fix-2026/)

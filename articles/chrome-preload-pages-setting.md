@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Chrome Preload Pages Setting — Developer Guide (2026)"
+title: "Chrome Preload Pages Setting"
 description: "Learn how Chrome preload pages setting works, how to configure it, and optimize browser performance for your development workflow. Updated for 2026."
 last_tested: "2026-04-22"
 date: 2026-03-15

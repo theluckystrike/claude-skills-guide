@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code OWASP Top 10 Security Scanning Workflow"
+title: "Claude Code OWASP Top 10 Security"
 description: "Build an automated security scanning workflow with Claude Code to identify and fix OWASP Top 10 vulnerabilities in your apps."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -263,4 +263,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for PCI-DSS Security Scanning (2026)](/claude-code-pci-dss-security-scanning-2026/)

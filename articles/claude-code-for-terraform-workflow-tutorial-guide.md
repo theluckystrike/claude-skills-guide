@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Terraform with Claude Code: Setup and Workflow"
+title: "Terraform with Claude Code"
 description: "Use Claude Code to write, review, and debug Terraform configurations. Covers module generation, plan analysis, state management, and CI/CD integration."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -288,6 +288,6 @@ Related Reading
 - [Claude Code for Terraform Backend Migration Workflow](/claude-code-for-terraform-backend-migration-workflow/)
 - [Claude Code for Terraform Cloud Run Workflow Guide](/claude-code-for-terraform-cloud-run-workflow-guide/)
 
+## See Also
 
-
-
+- [Claude Code for Terraform Workspace Workflow Guide](/claude-code-for-terraform-workspace-workflow-guide/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Migrate Terraform Backends with Claude Code (2026)"
+title: "Migrate Terraform Backends with Claude"
 description: "Migrate Terraform state backends safely with Claude Code. Covers S3 to GCS moves, state locking, encryption changes, and zero-downtime transitions."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -275,4 +275,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Convex — Workflow Guide](/claude-code-for-convex-backend-workflow-guide/)

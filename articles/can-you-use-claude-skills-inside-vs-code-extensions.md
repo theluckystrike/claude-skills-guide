@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Can You Use Claude Skills — Developer Comparison 2026"
+title: "Can You Use Claude Skills"
 description: "A practical guide to integrating Claude Code skills into VS Code extensions. Learn the technical approaches, limitations, and real-world implementation pat"
 date: 2026-03-14
 last_modified_at: 2026-04-17

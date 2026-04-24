@@ -1,6 +1,6 @@
 ---
-title: "CLAUDE.md Example for Elixir + Phoenix + LiveView — Production Template (2026)"
-description: "Complete 320-line CLAUDE.md for Elixir 1.17 with Phoenix 1.7 and LiveView 1.0. Covers LiveView lifecycle, Ecto changesets, GenServer patterns, PubSub, and Oban jobs. Tested on Phoenix 1.7.18."
+title: "CLAUDE.md Example for Elixir + Phoenix"
+description: "Complete 320-line CLAUDE.md for Elixir 1.17 with Phoenix 1.7 and LiveView 1.0."
 permalink: /claude-md-example-for-elixir-phoenix-liveview/
 render_with_liquid: false
 categories: [claude-md, templates, 2026]

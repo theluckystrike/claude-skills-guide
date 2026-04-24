@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Building AI Coding Culture in Engineering Teams"
+title: "Building AI Coding Culture"
 description: "A practical guide for developers and engineering leaders on creating a sustainable AI coding culture. Learn how to integrate AI tools like Claude Code."
 date: 2026-03-14
 last_modified_at: 2026-04-17

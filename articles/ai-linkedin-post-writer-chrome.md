@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "AI LinkedIn Post Writer Chrome: Tools and Techniques"
+title: "AI LinkedIn Post Writer Chrome"
 description: "Explore approaches to building and using AI-powered tools for writing LinkedIn posts directly in Chrome. Practical implementation patterns, code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

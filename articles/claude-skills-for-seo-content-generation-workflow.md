@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for SEO Content Generation: 2026 Guide"
+title: "Claude Skills for SEO Content Generation: Workflow"
 description: "Build an SEO content workflow using Claude Code skills. Practical examples with xlsx, pdf, docx, and supermemory for keyword research, briefs, and."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -364,3 +364,7 @@ The /docx skill generates structured content briefs as formatted Word documents.
 ### What is Document Processing for Research?
 
 The /pdf skill processes industry reports, whitepapers, competitor content, and academic papers in bulk by extracting statistics, data points, and quotes relevant to your topic. Practical SEO uses include extracting citable statistics from analyst reports to earn backlinks, analyzing competitor content structure and claims, summarizing academic papers for primary research references, and parsing product documentation for accurate technical how-to guides. It saves hours of manual reading per article when topics require multiple source documents.
+
+## See Also
+
+- [Claude Skills for SEO Content Generation — Automate Keyword Clustering, Meta Tags, and Internal Linking — 2026](/claude-skills-for-seo-content-generation/)

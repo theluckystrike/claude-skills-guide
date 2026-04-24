@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Open Source vs Proprietary Claude Skills (2026)"
+title: "Open Source vs Proprietary Claude"
 description: "Compare open source and proprietary Claude skills for cost, quality, and community support. Future outlook on skill marketplaces and standardization."
 date: 2026-03-14
 last_modified_at: 2026-04-17

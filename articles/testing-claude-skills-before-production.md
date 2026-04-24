@@ -1,5 +1,5 @@
 ---
-title: "How to Test Claude Code Skills Before Deploying to Your Team — 2026"
+title: "How to Test Claude Code Skills Before"
 description: "Step-by-step testing workflow for SKILL.md files including trigger testing, permission validation, compaction survival, and edge case checks."
 permalink: /testing-claude-skills-before-production/
 render_with_liquid: false

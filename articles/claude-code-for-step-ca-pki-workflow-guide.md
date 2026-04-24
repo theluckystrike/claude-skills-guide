@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Step Ca Pki — Complete Developer Guide"
+title: "Claude Code For Step Ca Pki"
 description: "Learn how to use Claude Code to automate and manage step-ca certificate authority workflows. Practical examples for developers implementing PKI."
 date: 2026-03-15
 last_modified_at: 2026-04-17

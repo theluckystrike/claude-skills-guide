@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome vs Arc Browser — Developer Comparison 2026"
+title: "Chrome vs Arc Browser"
 description: "A technical comparison of Chrome and Arc browser performance, with benchmarks, architecture insights, and optimization strategies for developers and power."
 date: 2026-03-15
 last_modified_at: 2026-04-17

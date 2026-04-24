@@ -170,3 +170,7 @@ Targeted fixes for specific cost problems: runaway sessions, unexpected token us
 ---
 
 For a broader guide to Claude Code workflows beyond cost optimization, see the [Claude Code Playbook](/playbook/).
+
+## See Also
+
+- [Claude Cost Reduction Guide 2026](/cost-reduction-hub-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Intercom MCP Server: Automating Customer Data Workflows"
+title: "Intercom MCP Server"
 description: "Learn how to build an Intercom MCP server to automate customer data operations, sync user profiles, and streamline support workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

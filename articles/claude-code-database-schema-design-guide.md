@@ -321,3 +321,4 @@ $99 once. Free forever. 47/500 founding spots left.
 - [Claude Code for Xata Database — Workflow Guide](/claude-code-for-xata-database-workflow-guide/)
 - [Claude Code with PlanetScale Database Workflow Guide](/claude-code-with-planetscale-database-workflow-guide/)
 - [Claude Code with Firebase Realtime Database Workflow](/claude-code-with-firebase-realtime-database-workflow/)
+- [Claude Code for RF Antenna Design Simulation (2026)](/claude-code-rf-antenna-design-simulation-2026/)

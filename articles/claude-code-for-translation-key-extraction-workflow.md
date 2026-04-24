@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Translation Key Extraction Workflow"
+title: "Claude Code for Translation Key"
 description: "Learn how to use Claude Code to efficiently extract and manage translation keys from your codebase. This guide covers automated key extraction."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Make Claude Code Respect Module Boundaries"
+title: "How to Make Claude Code Respect Module"
 description: "Practical techniques for controlling Claude Code's context awareness across module boundaries in multi-file projects. Learn to scope Claude's knowledge."
 date: 2026-03-14
 last_modified_at: 2026-04-17

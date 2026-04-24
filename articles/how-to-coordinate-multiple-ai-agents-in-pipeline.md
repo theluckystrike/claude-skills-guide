@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Coordinate Multiple AI Agents in Pipeline"
+title: "How to Coordinate Multiple AI Agents"
 description: "Learn how to coordinate multiple AI agents in pipeline workflows using Claude Code. Discover practical techniques, best practices, and real-world examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -205,4 +205,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs Smol Developer (2026): AI Agents](/claude-code-vs-smol-developer-ai-agents-2026/)

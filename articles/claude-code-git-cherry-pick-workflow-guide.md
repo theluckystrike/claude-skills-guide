@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Git Cherry-Pick Workflow Guide (2026)"
+title: "Claude Code Git Cherry-Pick Workflow"
 last_tested: "2026-04-22"
 description: "Master git cherry-pick workflows with Claude Code CLI. Learn to select specific commits, handle merge conflicts, and automate backporting with."
 date: 2026-03-14

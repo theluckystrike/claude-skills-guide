@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code DevOps Engineer CI — Complete Developer Guide"
+title: "Claude Code DevOps Engineer CI"
 description: "Learn how Claude Code transforms DevOps daily workflows with practical examples for CI/CD pipeline management, incident response, and infrastructure."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -184,4 +184,7 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Genomics GWAS Analysis (2026)](/claude-code-genomics-gwas-pipeline-2026/)
+- [CI/CD Runner Missing Dependencies Fix](/claude-code-ci-cd-runner-missing-dependencies-fix-2026/)

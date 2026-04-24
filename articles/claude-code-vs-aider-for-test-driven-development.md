@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Aider (2026): CLI Coding Compared"
+title: "Claude Code vs Aider (2026)"
 description: "Claude Code vs Aider compared: pricing, context, features. 3-persona verdict for solo devs, teams, enterprise. Includes code examples and fixes."
 last_tested: "2026-04-22"
 permalink: /claude-code-vs-aider-for-test-driven-development/
@@ -100,3 +100,8 @@ Switching from Aider to Claude Code:
 - [Claude Code vs Cline: Agent Mode Compared 2026](/claude-code-vs-cline-agent-mode-2026/)
 - [Claude Code vs Gemini CLI for Developers 2026](/claude-code-vs-gemini-cli-for-developers-2026/)
 - [Agentic AI Coding Tools Compared 2026](/agentic-ai-coding-tools-comparison-2026/)
+
+## See Also
+
+- [Claude Code Plus Perplexity for Research-Driven Development](/claude-code-plus-perplexity-for-research-driven-development/)
+- [Claude Code vs Aider: Git Integration Compared](/claude-code-vs-aider-git-integration/)

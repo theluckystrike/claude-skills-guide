@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for CSS Performance Optimization Workflow"
+title: "Claude Code for CSS Performance"
 description: "Learn how to use Claude Code for efficient CSS performance optimization. This guide covers automated analysis, best practices, and practical."
 date: 2026-04-19
 last_modified_at: 2026-04-19

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code API Error 401 Authentication (2026)"
+title: "Fix Claude Code API Error 401"
 description: "Resolve Claude Code 'failed to authenticate api error 401' with step-by-step API key validation, environment config, and troubleshooting. Updated for 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17

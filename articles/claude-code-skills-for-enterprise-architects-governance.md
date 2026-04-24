@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills for Enterprise Architects Governance"
+title: "Claude Code Skills for Enterprise"
 description: "Practical guide to Claude Code skills that help enterprise architects implement governance, compliance, and standards enforcement across development teams."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Zero-Click Crisis: 26,619 Wasted Impressions"
+title: "Zero-Click Crisis"
 description: "Data study of 1,000 Claude Code pages reveals 744 with zero clicks despite 26,619 impressions. What the impression trap means for AI content."
 date: 2026-04-18
 author: "Claude Skills Guide"

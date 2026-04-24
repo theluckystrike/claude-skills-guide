@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs Aider: Cost Analysis for Open-Source Alternative"
+title: "Claude Code vs Aider: Cost Analysis for Open Source"
 description: "Aider is free but uses the same API tokens as Claude Code. Real cost comparison shows Aider saves $0-20/month on tooling but similar API spend."
 permalink: /claude-code-vs-aider-cost-analysis-open-source/
 date: 2026-04-22
@@ -207,3 +207,6 @@ Pricing last verified: April 2026.
 - [Cost Optimization Hub](/cost-optimization/) -- reduce API costs regardless of tool choice
 - [Comparisons Hub](/compare/) -- all tool comparisons
 
+## See Also
+
+- [Claude Code for Teams: Per-Seat Cost Analysis (2026)](/claude-code-teams-per-seat-cost-analysis-2026/)

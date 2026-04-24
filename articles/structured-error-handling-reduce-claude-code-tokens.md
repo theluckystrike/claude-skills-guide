@@ -1,5 +1,5 @@
 ---
-title: "Structured Error Handling to Reduce Claude Code Token Waste"
+title: "Structured Error Handling to Reduce"
 description: "Structured error handling cuts Claude Code retry loops by 70%, saving 20K-80K tokens per debugging session with predictable error formats."
 permalink: /structured-error-handling-reduce-claude-code-tokens/
 date: 2026-04-22

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Find References Workflow Tutorial (2026)"
+title: "Claude Code for Find References"
 last_tested: "2026-04-22"
 description: "Learn how to use Claude Code to efficiently find references in your codebase, track function usages, and navigate complex code relationships."
 date: 2026-03-15
@@ -180,4 +180,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for fd (Find Alternative) — Guide](/claude-code-for-fd-find-alternative-workflow-guide/)

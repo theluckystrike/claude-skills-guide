@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Kamal Deploy — Workflow Guide"
+title: "Claude Code for Kamal Deploy"
 description: "Deploy with zero-downtime using Kamal and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-kamal-deploy-workflow-guide/
@@ -80,3 +80,4 @@ Claude Code should create `config/deploy.yml` with the server IP, Docker registr
 
 - [Deploy to Vercel with Claude Code](/claude-code-deploy-to-vercel/)
 - [Deploy to AWS with Claude Code](/claude-code-deploy-to-aws/)
+- [Claude Code for Railway Deploy — Workflow Guide](/claude-code-for-railway-deploy-workflow-guide/)

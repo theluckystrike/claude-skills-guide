@@ -1,5 +1,5 @@
 ---
-title: "Update Shared Claude Skills Without Breaking Team Workflows — 2026"
+title: "Update Shared Claude Skills Without"
 description: "Safe skill update patterns including parallel versions, PR-based reviews, gradual rollouts, and rollback strategies for team-shared SKILL.md files."
 permalink: /updating-shared-claude-skills-without-breaking-workflows/
 render_with_liquid: false

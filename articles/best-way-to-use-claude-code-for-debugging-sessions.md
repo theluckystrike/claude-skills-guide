@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Way To Use Claude Code For — Honest Review 2026"
+title: "Claude Code for Debugging Sessions"
 description: "A practical guide for developers on using Claude Code effectively during debugging sessions. Learn prompt patterns, skill combinations, and real-world."
 date: 2026-03-14
 last_modified_at: 2026-04-17

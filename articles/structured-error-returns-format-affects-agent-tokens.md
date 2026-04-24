@@ -1,5 +1,5 @@
 ---
-title: "Structured Error Returns: Format Affects Agent Tokens"
+title: "Structured Error Returns"
 description: "Reduce Claude Code token waste by 90% on error handling with structured error returns that replace verbose stack traces with agent-optimized output."
 permalink: /structured-error-returns-format-affects-agent-tokens/
 date: 2026-04-22

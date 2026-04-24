@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Permission Modes Explained (2026)"
+title: "Claude Code Permission Modes Explained"
 last_tested: "2026-04-22"
 description: "Understand and configure Claude Code permission modes — default, allowEdits, bypassPermissions. Includes settings.json examples and hook-based automation."
 date: 2026-04-14
@@ -197,5 +197,4 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 - [Why Claude Code Keeps Asking Permission (2026)](/why-does-claude-code-keep-asking-for-permission-repeatedly/)
 - [Claude Code Permission Rules in settings.json](/claude-code-permission-rules-settings-json-guide/)
-
-
+- [Claude Code Permission Modes: How They Affect Token Usage](/claude-code-permission-modes-affect-token-usage/)

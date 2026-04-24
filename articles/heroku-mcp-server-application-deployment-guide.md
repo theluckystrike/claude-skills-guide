@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Heroku MCP Server Application Deployment Guide"
+title: "Heroku MCP Server Application"
 description: "A comprehensive guide to deploying MCP servers on Heroku for developers building AI-powered applications."
 date: 2026-03-14
 last_modified_at: 2026-04-17

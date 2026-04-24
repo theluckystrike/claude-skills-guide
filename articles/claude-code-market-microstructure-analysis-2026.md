@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Market Microstructure (2026)"
+title: "Claude Code for Market Microstructure"
 permalink: /claude-code-market-microstructure-analysis-2026/
 description: "Market microstructure analysis with Claude Code. Build order book reconstruction, trade classification, and price impact models."
 last_tested: "2026-04-22"
@@ -276,3 +276,4 @@ print('LOB reconstruction: PASS')
 - [Claude Code for FIX Protocol Message Handling](/claude-code-fix-protocol-message-handling-2026/)
 - [Claude Code for Algo Trading Backtesting](/claude-code-algorithmic-trading-backtesting-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for Seismology Waveform Analysis (2026)](/claude-code-seismology-waveform-analysis-2026/)

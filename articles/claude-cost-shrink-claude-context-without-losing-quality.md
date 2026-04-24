@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Shrink Claude Context Without Losing Quality"
+title: "Shrink Claude Context Without Losing"
 description: "Reduce Claude conversation context from 180K to 60K tokens using smart pruning — save $0.60 per compaction, $1,800/month at scale."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -221,3 +221,8 @@ Track context size per interaction over time. Plot the growth curve with and wit
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — comprehensive token management strategies
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — how context growth drives costs
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — identify which workflows grow context fastest
+
+## See Also
+
+- [Async Claude Processing: Half Price Same Quality](/claude-cost-async-claude-processing-half-price-same-quality/)
+- [Chunking Strategies to Cut Claude Context Costs](/claude-cost-chunking-strategies-cut-claude-context-costs/)

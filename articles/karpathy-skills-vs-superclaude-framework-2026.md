@@ -1,5 +1,5 @@
 ---
-title: "Karpathy Skills vs SuperClaude Framework (2026)"
+title: "Karpathy Skills vs SuperClaude"
 description: "Karpathy Skills offers 4 behavioral principles while SuperClaude provides 30 commands and 16 agents. Here's which to pick for your workflow."
 permalink: /karpathy-skills-vs-superclaude-framework-2026/
 last_tested: "2026-04-22"
@@ -85,3 +85,9 @@ SuperClaude requires each team member to install the CLI. The upside is consiste
 ## Final Recommendation
 
 Start with Karpathy Skills. It takes 30 seconds to set up and the improvements are immediate. After a week, evaluate whether you need the structured commands that SuperClaude provides. Many developers find that Karpathy's principles plus a few custom slash commands cover 90% of their needs without the overhead of a full framework. But if you find yourself repeatedly wishing for specialized agent modes or built-in review workflows, SuperClaude fills that gap well.
+
+## See Also
+
+- [Karpathy Skills vs Ultimate Guide (2026)](/karpathy-skills-vs-claude-code-ultimate-guide-2026/)
+- [Karpathy Skills vs Custom CLAUDE.md (2026)](/karpathy-skills-vs-custom-claude-md-2026/)
+- [Install SuperClaude Framework Step by Step (2026)](/how-to-install-superclaude-framework-2026/)

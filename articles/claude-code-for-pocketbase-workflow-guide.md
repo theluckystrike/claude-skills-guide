@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for PocketBase — Workflow Guide"
+title: "Claude Code for PocketBase"
 description: "Build backends fast with PocketBase and Claude Code setup. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-pocketbase-workflow-guide/

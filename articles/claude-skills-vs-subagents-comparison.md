@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills vs Subagents — Inline Instructions vs Isolated Execution — 2026"
+title: "Claude Skills vs Subagents: Comparison Guide"
 description: "Compare inline Claude Code skills with context-forked subagents. When to keep instructions in the main context vs delegate to isolated agents."
 permalink: /claude-skills-vs-subagents-comparison/
 render_with_liquid: false

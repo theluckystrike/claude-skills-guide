@@ -1,5 +1,5 @@
 ---
-title: "Why Claude Code Gets Expensive on Large Projects (Fix)"
+title: "Why Claude Code Gets Expensive on Large"
 description: "Discover why Claude Code costs spike on large projects and apply 7 targeted fixes to cut token usage by 50-70% on codebases with 1,000+ files."
 permalink: /why-claude-code-expensive-large-projects-fix/
 date: 2026-04-22
@@ -299,3 +299,7 @@ Track these metrics weekly to verify that large-project optimizations are workin
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- understanding how context grows
 - [Claude Code Monorepos: Scoping Context to Reduce Costs](/claude-code-monorepos-scoping-context-reduce-costs/) -- monorepo-specific strategies
 - [Cost Optimization Hub](/cost-optimization/) -- complete cost optimization guide index
+
+## See Also
+
+- [Why Claude Code 4.6 uses more tokens than 4.5 (and what to do)](/why-claude-code-46-uses-more-tokens-than-45/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Aider: Git Integration Compared"
+title: "Claude Code vs Aider: Git Integration Comparison"
 description: "Compare how Claude Code and Aider handle git operations. Auto-commits, branch management, diff workflows, and repository awareness."
 date: 2026-04-21
 last_tested: "2026-04-21"

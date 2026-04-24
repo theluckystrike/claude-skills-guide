@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Remix Error Boundary Workflow Guide"
+title: "Claude Code for Remix Error Boundary"
 description: "Learn how to use Claude Code to build solid error boundary workflows in Remix. Practical examples and actionable advice for handling errors."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Turborepo Monorepo Management (2026)"
+title: "Claude Code for Turborepo Monorepo"
 permalink: /claude-code-turborepo-monorepo-management-2026/
 description: "Manage JavaScript/TypeScript monorepos with Turborepo and Claude Code. Configure task pipelines, remote caching, and boundary enforcement."
 last_tested: "2026-04-22"
@@ -205,3 +205,6 @@ turbo build --graph=graph.html
 - [Claude Code for Biome Formatter Setup](/claude-code-biome-formatter-setup-2026/)
 - [Claude Code for Earthly CI Pipeline](/claude-code-earthly-ci-pipeline-2026/)
 {% endraw %}
+- [Claude Code Turborepo Cache Miss — Fix (2026)](/claude-code-turborepo-cache-miss-fix/)
+- [Claude Code for Buf Protobuf Schema Management (2026)](/claude-code-buf-protobuf-schema-management-2026/)
+- [Claude Code for Turborepo — Workflow Guide (2026)](/claude-code-for-turborepo-workflow-guide/)

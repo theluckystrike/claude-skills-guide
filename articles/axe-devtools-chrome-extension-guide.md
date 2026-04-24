@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Axe Devtools Chrome Extension — Complete Developer (2026)"
+title: "Axe Devtools Chrome Extension"
 description: "Learn how to use axe DevTools Chrome extension for automated accessibility testing. Practical examples, code snippets, and best practices for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Multi-Language Comment and Docstring Workflow"
+title: "Claude Code Multi-Language Comment"
 description: "Learn how to use Claude Code for managing comments and docstrings across multiple programming languages with practical examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -230,4 +230,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Multi-Cursor Edit Conflict Fix](/claude-code-multi-cursor-edit-conflict-fix-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Unexpected Token in JSON — Claude Code (2026)"
+title: "Fix Unexpected Token in JSON"
 description: "Fix the unexpected token in JSON error in Claude Code with 4 practical solutions covering malformed responses, encoding, and streaming issues."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -354,4 +354,7 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [JSON Parse Error on Malformed Response Fix](/claude-code-json-parse-error-malformed-response-fix-2026/)
+- [Claude Code stuck in planning mode — token drain prevention](/claude-code-stuck-planning-mode-token-drain/)

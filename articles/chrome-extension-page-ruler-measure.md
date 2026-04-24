@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Page Ruler Chrome Extension: Developer Measure Tool (2026)"
+title: "Page Ruler Chrome Extension"
 description: "Page Ruler Chrome Extension: Developer Measure Tool. Practical guide with working examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

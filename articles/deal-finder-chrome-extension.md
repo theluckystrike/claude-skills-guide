@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Deal Finder Chrome Extension: Building Price Trackers"
+title: "Deal Finder Chrome Extension"
 description: "Learn how to build a deal finder Chrome extension from scratch. This guide covers architecture, implementation patterns, and code examples for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

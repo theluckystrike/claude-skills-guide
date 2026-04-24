@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Over Engineers Simple Solution — Quick Guide"
+title: "Fix Claude Code Over Engineers Simple"
 description: "A practical guide to fixing common Claude Code issues quickly without requiring a full engineering team. Learn quick fixes, CLI optimizations, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -319,4 +319,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Stop Claude Code Over-Relying on Comments (2026)](/claude-code-over-relies-on-comments-fix-2026/)

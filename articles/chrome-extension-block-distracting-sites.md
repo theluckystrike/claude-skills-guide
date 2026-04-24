@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Block Distracting Sites Chrome Extension Guide (2026)"
+title: "Block Distracting Sites Chrome"
 description: "Learn how to build a chrome extension to block distracting sites using Manifest V3, custom blocklists, and programmatic controls."
 date: 2026-03-15
 last_modified_at: 2026-04-17

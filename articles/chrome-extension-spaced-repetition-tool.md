@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Spaced Repetition Tool Chrome Extension Guide (2026)"
+title: "Spaced Repetition Tool Chrome Extension"
 description: "Learn how to build a Chrome extension spaced repetition tool for memorizing programming concepts, API documentation, and technical vocabulary."
 date: 2026-03-15
 last_modified_at: 2026-04-17

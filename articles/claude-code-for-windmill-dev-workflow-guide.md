@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Windmill Dev — Workflow Guide"
+title: "Claude Code for Windmill Dev"
 description: "Build internal tools and workflows with Windmill and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-windmill-dev-workflow-guide/
@@ -80,3 +80,4 @@ Claude Code should create four Windmill TypeScript scripts: a Shopify fetch scri
 - [Claude Code for Coder — Workflow Guide](/claude-code-for-coder-remote-dev-workflow-guide/)
 - [Claude Code for GitHub Codespaces — Guide](/claude-code-for-codespaces-dev-environments-workflow-guide/)
 - [Claude Code for Mise — Workflow Guide](/claude-code-for-mise-dev-tool-manager-workflow-guide/)
+- [Claude Code for Encore Dev — Workflow Guide](/claude-code-for-encore-dev-workflow-guide/)

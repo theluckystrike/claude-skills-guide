@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for OpenLineage Workflow Tutorial Guide"
+title: "Claude Code for OpenLineage Workflow"
 description: "Learn how to use Claude Code to streamline your OpenLineage workflow implementation with practical examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

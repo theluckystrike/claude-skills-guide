@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Homebrew Formula — Complete Developer Guide"
+title: "Claude Code For Homebrew Formula"
 description: "Learn how to use Claude Code to streamline Homebrew formula creation, testing, and submission workflows. A practical guide for developers distributing."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -208,5 +208,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
+- [Homebrew Formula Outdated Error — Fix (2026)](/claude-code-homebrew-formula-outdated-fix-2026/)

@@ -1,5 +1,5 @@
 ---
-title: "Make Claude Code Respect Your Type System (2026)"
+title: "Make Claude Code Respect Your Type"
 description: "Force Claude Code to use your TypeScript types, Zod schemas, and interfaces instead of generating untyped or loosely-typed code."
 permalink: /claude-code-ignores-type-system-fix-2026/
 last_tested: "2026-04-22"
@@ -99,3 +99,7 @@ Configure your hooks in `.claude/settings.json`:
 ```
 
 For more on configuring Claude Code behavior, see [The Claude Code Playbook](/playbook/). Browse TypeScript-specific skills in our [skills directory](/claude-skills-directory-where-to-find-skills/).
+
+## See Also
+
+- [Make Claude Code Consider Performance (2026)](/claude-code-ignores-performance-fix-2026/)

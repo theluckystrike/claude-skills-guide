@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Clerk Organization — Complete Developer (2026)"
+title: "Claude Code Clerk Organization"
 last_tested: "2026-04-22"
 description: "Master the clerk workflow in Claude Code. Learn how to manage organization roles, configure permissions, and build efficient approval workflows."
 date: 2026-03-14

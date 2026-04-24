@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Prompt Chaining Workflows Tutorial Guide"
+title: "Claude Code for Prompt Chaining: Tutorial Guide"
 description: "Master prompt chaining with Claude Code skills. Learn to build powerful multi-step AI workflows that transform how you write code, process documents,..."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -327,6 +327,6 @@ Related Reading
 - [How to Use Starship Prompt + Claude Code: Workflow (2026)](/claude-code-for-starship-prompt-workflow/)
 - [How to Use PWA Install Prompt Workflow (2026)](/claude-code-for-pwa-install-prompt-workflow-guide/)
 
+## See Also
 
-
-
+- [Claude Code for Prompt Testing Evaluation Guide](/claude-code-for-prompt-testing-evaluation-guide/)

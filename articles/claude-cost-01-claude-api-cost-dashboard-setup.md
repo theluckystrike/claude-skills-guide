@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude API Cost Dashboard Setup Guide 2026"
+title: "Claude API Cost Dashboard Setup Guide"
 description: "Build a real-time Claude cost dashboard that tracks spend per model. Teams save $2,400/month just from visibility into usage patterns."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -207,3 +207,7 @@ The dashboard itself doesn't save money -- the insights it surfaces do. Track tw
 - [Claude Code Enterprise Seat Management and Usage Monitoring](/claude-code-enterprise-seat-management-and-usage-monitoring/)
 - [Claude Code for Cost Optimization Monitoring Guide](/claude-code-for-cost-optimization-monitoring-guide/)
 - [Cost Allocation and Chargebacks for Enterprise Claude Code](/cost-allocation-and-chargebacks-for-enterprise-claude-code/)
+
+## See Also
+
+- [Claude Code Max vs Pro: Which Plan Saves More](/claude-cost-01-claude-code-max-vs-pro-savings/)

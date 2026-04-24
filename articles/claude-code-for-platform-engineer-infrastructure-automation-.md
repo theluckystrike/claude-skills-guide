@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Platform Engineers (2026)"
+title: "Claude Code for Platform Engineers"
 description: "Automate infrastructure tasks with Claude Code. Kubernetes management, Terraform generation, and DevOps workflow automation for platform engineers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -246,4 +246,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code Spacelift Platform Guide](/claude-code-spacelift-platform-guide/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Do I See Claude Skill Usage And Token — Developer Guide"
+title: "How Do I See Claude Skill Usage"
 description: "A practical guide for developers and power users to track Claude skill usage, monitor token consumption, and understand cost attribution across differen..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

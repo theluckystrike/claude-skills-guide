@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code DevOps Engineer Docker Container Workflow Tips"
+title: "Claude Code DevOps Engineer Docker"
 description: "Practical tips for DevOps engineers using Claude Code to streamline Docker container workflows, from Dockerfile optimization to multi-container."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -288,4 +288,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Docker Container Missing Tools Fix](/claude-code-docker-container-missing-tools-fix-2026/)

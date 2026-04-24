@@ -183,3 +183,8 @@ The most visible metric on subscription plans is rate limit frequency. Track how
 - [Why Is Claude Code Expensive Large Context Tokens](/why-is-claude-code-expensive-large-context-tokens/)
 - [Claude Code Monthly Cost Breakdown Realistic Usage](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/)
 - [Is Claude Code Worth the Cost for Small Startups](/is-claude-code-worth-the-cost-for-small-startups-2026/)
+
+## See Also
+
+- [Optimizing Tool Schemas to Cut Token Count](/claude-cost-08-optimizing-tool-schemas-reduce-tokens/)
+- [Why Large Context Makes Claude Code Expensive](/claude-cost-why-large-context-makes-claude-code-expensive/)

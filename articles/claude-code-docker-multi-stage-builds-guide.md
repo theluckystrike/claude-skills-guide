@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Docker Multi-Stage Builds (2026)"
+title: "Claude Code Docker Multi-Stage Builds"
 description: "Create efficient Docker multi-stage builds with Claude Code for smaller images, faster builds, and secure production containers. Working Dockerfiles."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -503,5 +503,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
+- [Docker Multi-Stage Build Cache Miss — Fix (2026)](/claude-code-docker-multi-stage-cache-invalidation-fix-2026/)

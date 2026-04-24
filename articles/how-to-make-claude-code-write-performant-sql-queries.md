@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Make Claude Code Write Performant SQL Queries"
+title: "How to Make Claude Code Write"
 description: "Learn techniques to guide Claude when writing SQL queries that perform well. Optimize indexes, avoid N+1 queries, and use database-specific features."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -235,3 +235,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
+
+- [Claude Code Write Path Outside Workspace — Fix (2026)](/claude-code-write-tool-path-outside-workspace-fix-2026/)

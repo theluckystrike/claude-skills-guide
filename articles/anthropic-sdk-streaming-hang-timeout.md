@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Stream Idle Timeout in Claude Code (2026)"
+title: "Fix Stream Idle Timeout in Claude Code"
 description: "Fix the API stream idle timeout error when Claude returns a partial response. Working idle timeout detection code for the Anthropic SDK in 2026."
 date: 2026-04-15
 last_tested: "2026-04-21"
@@ -250,3 +250,4 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Fix Anthropic API Streaming Interrupted](/anthropic-api-streaming-interrupted-fix/)
 - [Fix Anthropic SDK IndexError When Streaming](/anthropic-sdk-indexerror-streaming-fix/)
 - [Fix: Anthropic SDK toolRunner Drops Headers](/anthropic-sdk-toolrunner-drops-headers/)
+- [Anthropic SDK Streaming Connection Dropped — Fix (2026)](/anthropic-sdk-streaming-connection-dropped-fix/)

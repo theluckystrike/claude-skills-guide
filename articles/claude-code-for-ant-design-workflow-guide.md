@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code + Ant Design React Workflow (2026)"
+title: "Claude Code + Ant Design React Workflow"
 description: "Accelerate Ant Design React component development with Claude Code. Practical workflows for theming, form generation, and table configuration."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -317,3 +317,7 @@ Ant Design's Table component requires extensive configuration for sorting, filte
 ### What is Data Table with CRUD Operations?
 
 A CRUD data table implementation combines Ant Design's Table with Modal forms for editing, Popconfirm for delete confirmation, and state management for the data array. Claude Code generates the complete implementation including columns with render functions for action buttons, modal forms pre-populated with selected row data, create/update/delete handlers that modify state, and row selection with selectedRowKeys for bulk operations like batch delete or status updates.
+
+## See Also
+
+- [Claude Code for RF Antenna Design Simulation (2026)](/claude-code-rf-antenna-design-simulation-2026/)

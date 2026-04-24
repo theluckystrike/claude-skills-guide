@@ -1,5 +1,5 @@
 ---
-title: "CLI vs MCP for Agent Operations: Token Cost Comparison"
+title: "CLI vs MCP for Agent Operations"
 description: "CLI Bash calls cost 245 tokens overhead versus 500-2,000 tokens for MCP tool definitions. Compare token costs to choose the cheaper agent operation path."
 permalink: /cli-vs-mcp-agent-operations-token-cost/
 date: 2026-04-22
@@ -205,3 +205,5 @@ Each removed MCP server saves its full tool definition overhead on every session
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- when MCP is the right choice
 - [Claude Code Skills Guide](/skills/) -- an even cheaper alternative to both CLI and MCP for static knowledge
 - [Reducing Claude Code MCP Round-Trips: Batch Operations Pattern](/reducing-claude-code-mcp-round-trips-batch-pattern/) -- optimize MCP when it is needed
+- [InsForge vs Supabase: Claude Code Token Cost (2026)](/insforge-vs-supabase-claude-code-token-cost-2026/)
+- [Claude Code MCP tools loading slowly — token cost impact](/claude-code-mcp-tools-loading-slowly-token-cost/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Setup on Mac: Step-by-Step Guide for Developers"
+title: "Claude Code Setup on Mac"
 description: "A practical walkthrough for setting up Claude Code on macOS. Install CLI, configure authentication, and start using Claude as your terminal assistant."
 date: 2026-03-14
 last_modified_at: 2026-04-17

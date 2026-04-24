@@ -1,5 +1,5 @@
 ---
-title: "DNS Resolution Timeout Error — Fix (2026)"
+title: "DNS Resolution Timeout Error — Fix"
 permalink: /claude-code-dns-resolution-timeout-fix-2026/
 description: "Fix DNS resolution timeout for api.anthropic.com. Switch to reliable DNS (1.1.1.1 or 8.8.8.8) and flush DNS cache."
 last_tested: "2026-04-22"
@@ -84,3 +84,35 @@ Add this to your `CLAUDE.md`:
 - If DNS fails, flush cache: sudo dscacheutil -flushcache
 - Test DNS before debugging API issues: dig api.anthropic.com
 ```
+
+## See Also
+
+- [Garbage Collection Pause Causing Timeout Fix](/claude-code-gc-pause-causing-timeout-fix-2026/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `ETIMEDOUT: connection timed out`
+- `RequestTimeout: request took longer than 120000ms`
+- `ESOCKETTIMEDOUT`
+- `ECONNRESET: connection reset by peer`
+- `ECONNREFUSED: connection refused`
+
+## Frequently Asked Questions
+
+### What is the default timeout for Claude Code API requests?
+
+The default timeout is 120 seconds (120000ms). For complex operations involving large codebases or multi-file edits, this may be insufficient. Increase it with `claude config set api_timeout 300000` for a 5-minute timeout.
+
+### Can network latency cause timeouts?
+
+Yes. Corporate proxies, VPNs, and DNS filtering services add round-trip latency. Measure your baseline latency with `curl -o /dev/null -s -w '%{time_total}' https://api.anthropic.com/v1/messages`. If it exceeds 5 seconds, route API traffic outside the proxy.
+
+### Do timeouts consume API credits?
+
+Partially. If the server began processing your request before the client timed out, the input tokens are consumed even though you never received a response. Long timeouts reduce wasted credits by allowing the response to complete.
+
+### Why does Claude Code lose connection during long operations?
+
+Long-running operations can exceed keep-alive timeouts on intermediate proxies and load balancers. If a proxy closes an idle connection after 60 seconds and Claude Code's request takes 90 seconds, the connection is severed before the response arrives.

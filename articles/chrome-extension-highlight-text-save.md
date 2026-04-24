@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Build a Text Highlighter Chrome Extension (2026)"
+title: "Build a Text Highlighter Chrome"
 description: "Build a Chrome extension that highlights and saves text from any page. Covers selection API, IndexedDB storage, tagging, and cross-device sync."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Multi-Agent Architecture (2026)"
+title: "Claude Code Multi-Agent Architecture"
 description: "Guide to Claude Code multi-agent patterns including sub-agent spawning, parallel execution, task delegation, and orchestration strategies."
 permalink: /claude-code-multi-agent-architecture-guide-2026/
 last_tested: "2026-04-22"
@@ -183,3 +183,12 @@ No. Each sub-agent starts with a fresh context. The orchestrator must pass relev
 Not directly. Sub-agents read the same CLAUDE.md. You can include role-specific sections that only apply when the agent is operating in that role.
 
 For the full ecosystem overview, see the [tools map](/claude-code-ecosystem-complete-map-2026/). For cost tracking in multi-agent sessions, read about [productivity optimization](/best-claude-code-productivity-hacks-2026/). For task decomposition strategies, see [The Claude Code Playbook](/playbook/).
+
+- [Claude Code hooks](/claude-code-hooks-complete-guide/) — hook into agent tool execution
+- [Claude Agent SDK](/claude-agent-sdk-complete-guide/) — build custom agent architectures
+- [Super Claude Code framework](/super-claude-code-framework-guide/) — structured prompting for multi-agent setups
+- [Claude Code spec workflow](/claude-code-spec-workflow-guide/) — spec-driven agent tasks
+
+## See Also
+
+- [Multi-Agent Claude Fleet Cost Architecture Guide](/claude-cost-multi-agent-claude-fleet-cost-architecture/)

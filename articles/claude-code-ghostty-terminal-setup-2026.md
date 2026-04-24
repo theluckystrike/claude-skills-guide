@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Set Up Claude Code in Ghostty Terminal 2026"
+title: "How to Set Up Claude Code in Ghostty"
 description: "Configure Ghostty terminal for Claude Code with GPU-accelerated rendering, custom fonts, keybindings, and split panes. Full config included."
 permalink: /claude-code-ghostty-terminal-setup-2026/
 date: 2026-04-21

@@ -1,5 +1,5 @@
 ---
-title: "Fix Skill Conflicts with MCP Servers in Claude Code — 2026"
+title: "Fix Skill Conflicts with MCP Servers"
 description: "Resolve conflicts when SKILL.md instructions and MCP server tools overlap, producing duplicate actions, inconsistent behavior, or tool confusion."
 permalink: /fix-skill-conflicts-with-mcp-server/
 render_with_liquid: false

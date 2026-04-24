@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Kilo Code: Which AI Agent Wins?"
+title: "Claude Code vs Kilo Code"
 description: "Compare Claude Code's terminal agent against Kilo Code's open-source VS Code extension on cost, model flexibility, and coding quality."
 permalink: /claude-code-vs-kilo-code-comparison-2026/
 date: 2026-04-21

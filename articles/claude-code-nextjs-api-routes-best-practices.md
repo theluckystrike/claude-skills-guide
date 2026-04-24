@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Next.js API Routes Best — Honest Review 2026"
+title: "Claude Code Next.js API Routes Best"
 description: "Claude Code Next.js API Routes Best — Honest Review 2026. Practical guide with working examples for developers. Tested on Next.js. Updated for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -567,4 +567,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Next.js Build Fails With Generated Code — Fix (2026)](/claude-code-nextjs-build-generated-code-fix-2026/)

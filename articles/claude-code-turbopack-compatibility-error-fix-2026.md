@@ -1,5 +1,5 @@
 ---
-title: "Turbopack Compatibility Error — Fix (2026)"
+title: "Turbopack Compatibility Error — Fix"
 permalink: /claude-code-turbopack-compatibility-error-fix-2026/
 description: "Fix Turbopack build errors with unsupported webpack plugins. Fall back to webpack or replace incompatible plugins."
 last_tested: "2026-04-22"
@@ -90,3 +90,31 @@ Add this to your `CLAUDE.md`:
 - Do not add webpack plugins to next.config.js without checking Turbopack support.
 - Use Next.js built-in features (env, redirects, rewrites) instead of webpack plugins.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `Error reading configuration file`
+- `JSON parse error in config`
+- `Config key not recognized`
+- `Module not found: Error: Can't resolve`
+- `webpack compiled with 1 error`
+
+## Frequently Asked Questions
+
+### Where does Claude Code store its configuration?
+
+Configuration is stored in `~/.claude/config.json` for global settings and `.claude/config.json` in the project root for project-specific settings. Project settings override global settings for any overlapping keys.
+
+### How do I reset Claude Code configuration?
+
+Delete the configuration file and restart Claude Code: `rm ~/.claude/config.json && claude`. Claude Code recreates the file with default values on next startup. Back up the file first if you have custom settings you want to preserve.
+
+### Can I share configuration across a team?
+
+Yes. The project-level `.claude/config.json` and `CLAUDE.md` files can be committed to version control. Team members get consistent Claude Code behavior when they check out the repository. Keep API keys and personal preferences in the global config only.
+
+### Why does Claude Code's generated code break webpack builds?
+
+Claude Code may generate import statements that do not match your webpack alias configuration or use Node.js built-in modules that webpack cannot bundle. Add your webpack aliases and resolve configuration to CLAUDE.md so Claude Code generates compatible imports.

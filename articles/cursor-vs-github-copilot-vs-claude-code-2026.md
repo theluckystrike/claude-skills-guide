@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cursor vs Copilot vs Claude Code (2026): 3-Way"
+title: "Cursor vs Copilot vs Claude Code (2026)"
 description: "Cursor vs GitHub Copilot vs Claude Code compared: pricing, context, features. 3-persona verdict for solo devs, teams, enterprise."
 permalink: /cursor-vs-github-copilot-vs-claude-code-2026/
 date: 2026-04-21

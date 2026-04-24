@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Rio Terminal — Workflow Guide"
+title: "Claude Code for Rio Terminal"
 description: "Configure Rio terminal for Claude Code workflows. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-rio-terminal-workflow-guide/
@@ -85,3 +85,7 @@ Claude Code should create `~/.config/rio/config.toml` with `[fonts]` section for
 - [Claude Code for SolidJS Resources Workflow Guide](/claude-code-for-solidjs-resources-workflow-guide/)
 - [Claude Code for Hive Metastore Workflow Guide](/claude-code-for-hive-metastore-workflow-guide/)
 - [Claude Code for Release Candidate Workflow Tutorial](/claude-code-for-release-candidate-workflow-tutorial/)
+- [How to Use Claude Code with Warp Terminal 2026](/claude-code-for-warp-terminal-workflow-guide/)
+- [Claude Code Terminal UTF-8 Garbled Output — Fix (2026)](/claude-code-terminal-encoding-utf8-garbled-fix/)
+- [Claude Code for Bloomberg Data Extraction (2026)](/claude-code-bloomberg-terminal-data-extraction-2026/)
+- [Terminal Emulator Rendering Artifacts Fix](/claude-code-terminal-rendering-artifacts-fix-2026/)

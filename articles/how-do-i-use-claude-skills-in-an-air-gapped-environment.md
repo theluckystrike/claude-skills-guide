@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Use Claude Skills in Air-Gapped Environments (2026)"
+title: "Use Claude Skills in Air-Gapped"
 description: "Run Claude AI skills offline in air-gapped or secure environments. Setup guide for government, defense, and restricted network deployment scenarios."
 date: 2026-03-14
 last_modified_at: 2026-04-17

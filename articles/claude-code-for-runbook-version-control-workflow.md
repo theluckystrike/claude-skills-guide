@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Runbook Version Control Workflow"
+title: "Claude Code for Runbook Version Control"
 description: "Master runbook version control with Claude Code. Learn practical workflows for tracking, branching, and managing operational procedures with Git."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -258,4 +258,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Runbook Testing Workflow Tutorial](/claude-code-for-runbook-testing-workflow-tutorial/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Not Working After Update How — Quick Guide"
+title: "Fix Claude Code Not Working After"
 description: "Fix Claude Code issues after updates. Solutions for skill failures, path errors, and configuration problems."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -220,6 +220,8 @@ Keeping your skills modular, well-documented, and using environment-aware path h
 
 ## Related
 
+- [Claude not working right now fix](/claude-not-working-right-now-fix/) — troubleshoot when Claude is completely down
+- [Claude Code hooks](/claude-code-hooks-complete-guide/) — hooks that may break after updates
 - [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
 ---
 

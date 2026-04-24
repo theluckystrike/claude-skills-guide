@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Tool Use vs Direct Prompting Cost Comparison"
+title: "Tool Use vs Direct Prompting Cost"
 description: "Tool use adds 1,500+ tokens overhead per request. When direct prompting handles the task, you save $0.0075 per call on Opus 4.7."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -170,3 +170,11 @@ Compare `usage.input_tokens` for identical tasks processed via both paths. The t
 - [Claude API Tool Use Function Calling Deep Dive](/claude-api-tool-use-function-calling-deep-dive-guide/)
 - [Claude Skills Token Optimization Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
 - [Advanced Claude Skills with Tool Use](/advanced-claude-skills-with-tool-use-and-function-calling/)
+
+## See Also
+
+- [Free vs Pro vs Max: Claude Code Plan Calculator](/claude-cost-10-free-pro-max-plan-calculator/)
+- [Claude Tool Use Cost Calculator Guide](/claude-cost-07-tool-use-cost-calculator/)
+- [Claude Tool Use Hidden Token Costs Explained](/01-claude-tool-use-hidden-token-costs/)
+- [Enterprise Claude Cost Chargebacks by Team](/claude-cost-10-enterprise-claude-cost-chargebacks/)
+- [Tool Use Schema Validation Error — Fix (2026)](/claude-code-tool-use-schema-validation-error-fix-2026/)

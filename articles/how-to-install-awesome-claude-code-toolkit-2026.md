@@ -1,5 +1,5 @@
 ---
-title: "Install Awesome Claude Code Toolkit (2026)"
+title: "Install Awesome Claude Code Toolkit"
 description: "Browse and install tools from the Awesome Claude Code Toolkit's 135 agents, 35 skills, 42 commands, and 176+ plugins. Structured evaluation guide."
 permalink: /how-to-install-awesome-claude-code-toolkit-2026/
 last_tested: "2026-04-22"
@@ -143,3 +143,11 @@ If a tool passes all five checks, it is worth trying. If it fails two or more, m
 - Learn about [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) to complement your installed tools
 - Build your [CLAUDE.md](/claude-md-best-practices-10-templates-compared-2026/) to work well with your chosen agents
 - Explore the [best Claude Code skills](/best-claude-skills-for-developers-2026/) ranked by community adoption
+
+## See Also
+
+- [Claude Code Templates vs Awesome Toolkit (2026)](/claude-code-templates-vs-awesome-toolkit-2026/)
+- [Awesome Claude Code: Master Resource Index (2026)](/awesome-claude-code-master-index-guide-2026/)
+- [Install SuperClaude Framework Step by Step (2026)](/how-to-install-superclaude-framework-2026/)
+- [Install Karpathy Skills in Claude Code (2026)](/how-to-install-karpathy-skills-claude-code-2026/)
+- [Awesome Claude Code Toolkit: 135 Agents (2026)](/awesome-claude-code-toolkit-135-agents-2026/)

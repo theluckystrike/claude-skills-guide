@@ -1,5 +1,5 @@
 ---
-title: "Claude Code VS Code Extension Fails to Activate — Fix (2026)"
+title: "Claude Code VS Code Extension Fails"
 description: "Fix Claude Code VS Code extension fails to activate. Clear extension cache and reinstall from marketplace. Step-by-step solution."
 permalink: /claude-code-vscode-extension-fails-to-activate-fix/
 last_tested: "2026-04-21"
@@ -68,3 +68,8 @@ Keep VS Code updated to the latest stable release. Disable auto-update for exten
 ```
 
 **Related articles:** [Claude Code Crashing VS Code](/claude-code-crashing-vscode/), [VS Code Connection Lost Fix](/claude-code-vscode-connection-lost-fix-2026/), [Claude Code Not Working in VS Code](/claude-code-not-working-in-vscode/)
+
+## See Also
+
+- [VS Code Extension Connection Timeout Fix](/claude-code-vscode-extension-connection-timeout-fix-2026/)
+- [VS Code Extension Consuming Excessive CPU Fix](/claude-code-vscode-extension-excessive-cpu-fix-2026/)

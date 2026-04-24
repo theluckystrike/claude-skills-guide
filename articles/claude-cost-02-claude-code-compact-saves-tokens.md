@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code /compact Saves Thousands of Tokens"
+title: "Claude Code /compact Saves Thousands"
 description: "The /compact command reduces Claude Code context by 50-70%. At 180K tokens, that saves $1.80 per session on API equivalent costs."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -166,3 +166,10 @@ On subscription plans (Pro $20, Max $100-$200), cost savings from `/compact` don
 - [Why Is Claude Code Expensive Large Context Tokens](/why-is-claude-code-expensive-large-context-tokens/)
 - [Claude Code Monthly Cost Breakdown Realistic Usage](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/)
 - [Is Claude Code Worth the Cost for Small Startups](/is-claude-code-worth-the-cost-for-small-startups-2026/)
+
+## See Also
+
+- [Smart Model Selection Saves 80% on Claude API](/claude-cost-smart-model-selection-saves-80-percent-claude/)
+- [Lean Prompting: Fewer Tokens, Same Quality](/claude-cost-lean-prompting-fewer-tokens-same-quality/)
+- [Why Claude Code Uses So Many Tokens Explained](/claude-cost-03-why-claude-code-uses-many-tokens/)
+- [How Tool Definitions Add 346 Tokens Per Call](/02-tool-definitions-add-346-tokens/)

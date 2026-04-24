@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Pruning Unused Claude Tools Saves Real Money"
+title: "Pruning Unused Claude Tools Saves Real"
 description: "Remove 5 unused tool definitions and save $125 per 10,000 Opus requests. A step-by-step guide to tool inventory auditing."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -143,3 +143,6 @@ Compare `usage.input_tokens` averages from the week before pruning to the week a
 
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization
 
+## See Also
+
+- [Web Search Costs $10 per 1,000 Searches](/06-web-search-costs-10-per-thousand/)

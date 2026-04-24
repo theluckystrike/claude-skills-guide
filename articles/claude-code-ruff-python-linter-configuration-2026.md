@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Ruff Python Linter Configuration (2026)"
+title: "Claude Code for Ruff Python Linter"
 permalink: /claude-code-ruff-python-linter-configuration-2026/
 description: "Configure Ruff for Python projects with Claude Code. Replace Flake8, isort, and Black with a single Rust-powered linter that runs in milliseconds."
 last_tested: "2026-04-22"
@@ -230,3 +230,4 @@ ruff format --diff .
 - [Claude Code for Biome Formatter Setup](/claude-code-biome-formatter-setup-2026/)
 - [Claude Code for Pkl Configuration Language](/claude-code-pkl-configuration-language-2026/)
 - [Claude Code for mise Development Environment](/claude-code-mise-development-environment-2026/)
+- [Claude Code for Biome — Workflow Guide](/claude-code-for-biome-linter-formatter-workflow-guide/)

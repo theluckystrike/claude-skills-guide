@@ -1,5 +1,5 @@
 ---
-title: "Large File Committed Exceeds GitHub Limit Fix"
+title: "Large File Committed Exceeds GitHub"
 permalink: /claude-code-large-file-committed-github-limit-fix-2026/
 description: "Fix large file committed exceeding GitHub 100MB limit. Remove the file from git history with git filter-repo or use Git LFS for legitimate large files."
 last_tested: "2026-04-22"
@@ -68,3 +68,11 @@ git commit -m "Commit without large file"
 # CLAUDE.md rule
 Never commit files larger than 50MB. Add *.csv, *.sqlite, *.bin, *.tar.gz to .gitignore. For legitimate large files, use Git LFS. Always check file size before staging.
 ```
+
+## See Also
+
+- [.env File Not Loaded by Claude Fix](/claude-code-env-file-not-loaded-fix-2026/)
+- [Large File Read Memory Spike Fix](/claude-code-large-file-read-memory-spike-fix-2026/)
+- [Declaration File .d.ts Missing Error — Fix (2026)](/claude-code-declaration-file-dts-missing-fix-2026/)
+- [Claude Code Concurrent Sessions 5/5 — Fix (2026)](/claude-code-concurrent-session-limit-fix-2026/)
+- [Claude Code Subagent Spawn Limit Reached — Fix (2026)](/claude-code-subagent-spawn-limit-fix-2026/)

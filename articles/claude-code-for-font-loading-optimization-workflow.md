@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Font Loading Optimization Workflow"
+title: "Claude Code for Font Loading"
 description: "Learn how to build an automated font loading optimization workflow using Claude Code. Practical examples for analyzing, testing, and optimizing web."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -350,4 +350,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for CNC G-Code Optimization (2026)](/claude-code-cnc-gcode-optimization-2026/)

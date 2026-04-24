@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Config YAML Parse Error — Fix (2026)"
+title: "Claude Code Config YAML Parse Error"
 description: "Fix Claude Code config file YAML parse error. Validate syntax and fix common indentation mistakes. Step-by-step solution."
 permalink: /claude-code-config-yaml-parse-error-fix/
 last_tested: "2026-04-21"
@@ -88,3 +88,6 @@ Use spaces not tabs in all config files. Validate JSON with python3 -c "import j
 ## Related
 
 - [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
+- [Streaming SSE Event Parse Error — Fix (2026)](/claude-code-streaming-sse-event-parse-error-fix-2026/)
+- [Config File JSON Parse Error — Fix (2026)](/claude-code-config-json-corrupted-parse-error-fix-2026/)
+- [XDG Config Directory Permissions Fix](/claude-code-xdg-config-directory-permissions-fix-2026/)

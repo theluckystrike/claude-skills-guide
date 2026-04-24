@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Share Claude Skills Across Monorepo Packages (2026)"
+title: "Share Claude Skills Across Monorepo"
 description: "Share Claude Code skills across monorepo packages without duplication. Directory layouts, symlinks, and inheritance patterns for large TypeScript teams."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -255,4 +255,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [How to Distribute Claude Skills Across Teams 2026](/distribute-claude-skills-across-teams-2026/)

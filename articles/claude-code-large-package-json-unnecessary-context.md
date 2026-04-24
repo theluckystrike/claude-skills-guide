@@ -1,5 +1,5 @@
 ---
-title: "Claude Code and large package.json — unnecessary context loading"
+title: "Claude Code and large package.json"
 description: "A large package.json costs Claude Code 2,000-8,000 tokens when read unnecessarily. Prevent automatic loading and create a lean dependency summary instead."
 permalink: /claude-code-large-package-json-unnecessary-context/
 date: 2026-04-22
@@ -228,3 +228,9 @@ For each large configuration file, ask: "Does Claude Code need to read this file
 - [Claude Code for Large Codebases: Cost-Effective Strategies](/claude-code-large-codebases-cost-effective-strategies/) -- broader large-project optimization
 - [Claude Code Caching Strategies: Don't Re-Discover What You Already Know](/claude-code-caching-strategies-dont-rediscover/) -- cache project knowledge
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- prevent context bloat from large files
+
+## See Also
+
+- [Large File Committed Exceeds GitHub Limit Fix](/claude-code-large-file-committed-github-limit-fix-2026/)
+- [Large File Read Memory Spike Fix](/claude-code-large-file-read-memory-spike-fix-2026/)
+- [Stop Claude Code Adding Extra Dependencies (2026)](/claude-code-adds-unnecessary-dependencies-fix-2026/)

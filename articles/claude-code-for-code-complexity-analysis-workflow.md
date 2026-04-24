@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Code Complexity Analysis Workflow (2026)"
+title: "Claude Code for Code Complexity"
 description: "Learn how to use Claude Code for automated code complexity analysis, maintainability metrics, and actionable insights to keep your codebase healthy."
 date: 2026-03-15
 last_modified_at: 2026-04-17

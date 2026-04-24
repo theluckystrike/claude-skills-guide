@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Setup: Neovim AI Coding Setup with Claude 2026"
+title: "Setup: Neovim AI Coding Setup"
 last_tested: "2026-04-22"
 description: "Learn how to set up Neovim with Claude Code for AI-powered coding in 2026. Configure plugins, integrate skills, and boost your development workflow."
 date: 2026-03-14

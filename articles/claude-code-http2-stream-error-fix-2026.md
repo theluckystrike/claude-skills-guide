@@ -1,5 +1,5 @@
 ---
-title: "HTTP/2 Stream Error During Request — Fix (2026)"
+title: "HTTP/2 Stream Error During Request"
 permalink: /claude-code-http2-stream-error-fix-2026/
 description: "Fix HTTP/2 stream error (NGHTTP2_INTERNAL_ERROR). Force HTTP/1.1 or increase stream limits to resolve multiplexing issues."
 last_tested: "2026-04-22"
@@ -83,3 +83,31 @@ Add this to your `CLAUDE.md`:
 - HTTP/2 stream errors are usually proxy issues, not API issues.
 - Test with curl --http2 to verify HTTP/2 support before enabling.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `ECONNREFUSED: connection refused through proxy`
+- `Error: unable to verify the first certificate`
+- `SELF_SIGNED_CERT_IN_CHAIN`
+- `ECONNRESET: connection reset by peer`
+- `ECONNREFUSED: connection refused`
+
+## Frequently Asked Questions
+
+### How do I configure Claude Code to use a corporate proxy?
+
+Set the `HTTPS_PROXY` environment variable: `export HTTPS_PROXY=http://proxy.corp.com:8080`. Claude Code respects standard proxy environment variables. Add this to your shell profile for persistence.
+
+### Why does my proxy cause SSL errors?
+
+Corporate proxies often perform TLS inspection by re-signing certificates with an internal CA. Node.js does not trust these CAs by default. Set `NODE_EXTRA_CA_CERTS=/path/to/corporate-ca.pem` to add your proxy's CA certificate to the trust chain.
+
+### Can I bypass the proxy for Anthropic endpoints only?
+
+Yes. Set `NO_PROXY=api.anthropic.com` to route Anthropic API traffic directly while keeping the proxy for other traffic. This avoids TLS inspection issues specific to the API connection.
+
+### Why does Claude Code lose connection during long operations?
+
+Long-running operations can exceed keep-alive timeouts on intermediate proxies and load balancers. If a proxy closes an idle connection after 60 seconds and Claude Code's request takes 90 seconds, the connection is severed before the response arrives.

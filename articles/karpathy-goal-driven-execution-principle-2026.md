@@ -1,5 +1,5 @@
 ---
-title: "Karpathy Goal-Driven Execution Explained (2026)"
+title: "Karpathy Goal-Driven Execution"
 description: "Apply Karpathy's Goal-Driven Execution to keep Claude Code focused on the stated objective — no scope creep, no tangents, no forgotten goals."
 permalink: /karpathy-goal-driven-execution-principle-2026/
 last_tested: "2026-04-22"

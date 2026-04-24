@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Warp AI Terminal Compared (2026)"
+title: "Claude Code vs Warp AI Terminal"
 description: "Measure Claude Code against Warp's AI terminal across agentic coding, command generation, pricing, and daily developer workflow."
 permalink: /claude-code-vs-warp-ai-terminal-2026/
 date: 2026-04-21

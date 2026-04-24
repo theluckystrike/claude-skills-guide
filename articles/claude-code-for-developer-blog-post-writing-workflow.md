@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Developer Blog Post Writing Workflow"
+title: "Claude Code for Developer Blog Post"
 description: "A comprehensive guide to using Claude Code for writing developer blog posts. Includes practical examples, workflow templates, and actionable advice for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

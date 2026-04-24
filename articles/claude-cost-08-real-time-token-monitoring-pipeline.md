@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Real-Time Claude Token Monitoring Pipeline"
+title: "Real-Time Claude Token Monitoring"
 description: "Build a streaming token monitor that catches cost anomalies in under 60 seconds. Prevent $250+ cache miss incidents with instant detection."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -238,3 +238,6 @@ Measure mean-time-to-detection (MTTD) for cost anomalies before and after deploy
 ## Related Articles
 
 - [Migrating Real-Time Claude Calls to Batch API](/migrating-real-time-claude-calls-to-batch/)
+- [Optimizing Tool Schemas to Cut Token Count](/claude-cost-08-optimizing-tool-schemas-reduce-tokens/)
+- [Migrating Real-Time Claude Calls to Batch API](/claude-cost-migrating-real-time-claude-calls-to-batch/)
+- [Claude Code Expensive? Here Are 7 Fixes](/claude-cost-08-claude-code-expensive-fixes/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Install Killed on Linux (2026)"
+title: "Fix Claude Code Install Killed on Linux"
 description: "Resolve the 'Killed' error during Claude Code installation on low-memory Linux servers and VPS instances by adding swap space. Tested and working in 2026."
 last_tested: "2026-04-22"
 date: 2026-04-15
@@ -178,3 +178,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 
 - [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
+
+## See Also
+
+- [Zombie Process From Killed Subagent Fix](/claude-code-zombie-process-killed-subagent-fix-2026/)
+- [Linux AppArmor Restricting Access Fix](/claude-code-linux-apparmor-restricting-access-fix-2026/)

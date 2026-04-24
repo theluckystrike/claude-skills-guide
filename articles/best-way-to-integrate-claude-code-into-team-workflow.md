@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Way To Integrate Claude — Complete Developer Guide"
+title: "Best Way To Integrate Claude"
 description: "A practical guide for developers and power users looking to integrate Claude Code into their team workflow, with real-world examples and implementation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Translate Code Comments Between Languages"
+title: "Claude Code Translate Code Comments"
 description: "Learn how to use Claude Code to translate code comments between programming languages. Practical examples, workflow patterns, and skill recommendations."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -269,7 +269,4 @@ Related Reading
 - [Claude Code Hooks System: Complete Guide](/understanding-claude-code-hooks-system-complete-guide/). automate comment translation using pre-commit hooks
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
-
-
+- [Stop Claude Code Over-Relying on Comments (2026)](/claude-code-over-relies-on-comments-fix-2026/)

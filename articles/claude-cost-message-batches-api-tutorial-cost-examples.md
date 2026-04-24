@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Message Batches API Tutorial with Cost Examples"
+title: "Message Batches API Tutorial with Cost"
 description: "Process 10,000 support tickets for $37 using Claude Batch API. Step-by-step code with real Haiku 4.5 cost breakdowns."
 date: 2026-04-19
 author: "Claude Skills Guide"

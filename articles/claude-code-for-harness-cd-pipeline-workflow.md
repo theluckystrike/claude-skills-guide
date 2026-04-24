@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Harness CD Pipelines (2026)"
+title: "Claude Code for Harness CD Pipelines"
 description: "Integrate Claude Code with Harness CD for intelligent deployment automation, pipeline generation, and canary release management. Working YAML configs."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Claude Code MCP Server Penetration Testing Guide"
+title: "Claude Code MCP Server Penetration"
 description: "A practical guide to penetration testing your Model Context Protocol servers. Learn to identify vulnerabilities in MCP server implementations using."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -307,4 +308,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [MCP Server stdio Timeout 30000ms — Fix (2026)](/claude-code-mcp-server-stdio-timeout-fix-2026/)

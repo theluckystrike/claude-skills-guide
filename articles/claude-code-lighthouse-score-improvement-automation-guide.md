@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Lighthouse Score Improvement Automation Guide"
+title: "Claude Code Lighthouse Score"
 description: "Practical automation strategies for improving Lighthouse scores using Claude Code skills, with code examples and workflows for developers."
 date: 2026-03-13
 last_modified_at: 2026-04-17

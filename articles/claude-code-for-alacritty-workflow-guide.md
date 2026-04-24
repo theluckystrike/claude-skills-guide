@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Alacritty — Workflow Guide"
+title: "Claude Code for Alacritty"
 description: "Configure Alacritty terminal for Claude Code workflows. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-alacritty-workflow-guide/

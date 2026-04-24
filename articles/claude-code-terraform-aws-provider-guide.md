@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Terraform AWS Provider (2026)"
+title: "Claude Code for Terraform AWS Provider"
 description: "Automate AWS infrastructure with Terraform and Claude Code. Covers resource definitions, module creation, state management, and drift detection skills."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -218,4 +218,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Terraform Drift Detection (2026)](/claude-code-terraform-drift-detection-2026/)

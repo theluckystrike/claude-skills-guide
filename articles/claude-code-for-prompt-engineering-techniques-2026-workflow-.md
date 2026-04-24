@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Prompt Engineering Techniques: 2026"
+title: "Claude Code for Prompt Engineering"
 description: "Master prompt engineering with Claude Code using structured workflows, chain-of-thought techniques, and iterative refinement strategies for..."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -263,7 +263,4 @@ Related Reading
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
 {% endraw %}
-
-
-
-
+- [Claude Code for Prompt Testing Evaluation Guide](/claude-code-for-prompt-testing-evaluation-guide/)

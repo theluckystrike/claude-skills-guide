@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Docker Compose Development Workflow"
+title: "Claude Code Docker Compose Development"
 description: "A practical guide to integrating Claude Code with Docker Compose for streamlined local development, testing, and deployment workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

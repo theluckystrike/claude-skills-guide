@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Devtools Network Throttling — Developer Guide"
+title: "Chrome Devtools Network Throttling"
 description: "Learn how to use Chrome DevTools network throttling to test your web applications under slow network conditions. Includes practical examples and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

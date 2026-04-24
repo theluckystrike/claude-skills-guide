@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for VB6 to .NET Migration (2026)"
+title: "Claude Code for VB6 to .NET Migration"
 description: "Visual Basic 6 to .NET migration with Claude Code. Convert forms, COM objects, and ADO data access to modern C#."
 permalink: /claude-code-vb6-to-dotnet-migration-2026/
 last_tested: "2026-04-21"

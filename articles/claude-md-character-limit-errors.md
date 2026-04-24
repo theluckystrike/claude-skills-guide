@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Character Limit — What the 200-Line Ceiling Means and How to Work Within It (2026)"
+title: "CLAUDE.md Character Limit"
 description: "The exact CLAUDE.md size recommendation, what happens when you exceed it, and techniques for keeping instructions within the effective limit."
 permalink: /claude-md-character-limit-errors/
 render_with_liquid: false

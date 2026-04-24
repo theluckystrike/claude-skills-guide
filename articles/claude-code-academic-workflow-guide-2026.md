@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Academic Workflow Guide (2026)"
+title: "Claude Code Academic Workflow Guide"
 description: "Set up claude-code-my-workflow for academic LaTeX and R projects — 28 skills, 14 agents, 24 rules battle-tested on PhD courses at Emory."
 permalink: /claude-code-academic-workflow-guide-2026/
 last_tested: "2026-04-22"
@@ -207,3 +207,7 @@ Yes, with supervision. The rules enforce good practices but can't replace unders
 - [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — general configuration patterns that complement academic rules
 - [Karpathy Don't Assume Principle](/karpathy-dont-assume-principle-claude-code-2026/) — the behavioral principle behind the academic workflow's clarifying questions
 - [The Claude Code Playbook](/playbook/) — workflow patterns that apply across domains
+
+## See Also
+
+- [Set Up Academic Workflow in Claude Code (2026)](/how-to-setup-academic-workflow-claude-code-2026/)

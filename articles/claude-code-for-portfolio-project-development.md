@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Portfolio Project Development"
+title: "Claude Code for Portfolio Project"
 description: "A practical guide to using Claude Code for building professional portfolio projects, with code examples and skill recommendations."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -448,4 +448,8 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Career Change to Software Development with AI](/claude-code-for-career-changers-into-software-development/)
+- [Build a Loyalty Rewards System with Claude Code (2026)](/claude-code-for-loyalty-rewards-system-development/)
+- [Building Startup MVPs with Claude Code](/claude-code-for-startup-mvp-development/)

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Industrial IoT Protocols (2026)"
+title: "Claude Code for Industrial IoT"
 permalink: /claude-code-industrial-iot-protocol-2026/
 description: "Industrial IoT protocol implementation with Claude Code. Build Modbus, OPC UA, and MQTT Sparkplug B gateways."
 last_tested: "2026-04-22"

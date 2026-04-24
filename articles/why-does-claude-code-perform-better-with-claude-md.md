@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Does Claude Code Perform Better With — Developer Guide"
+title: "Why Does Claude Code Perform Better"
 description: "Learn how Claude MD files dramatically improve Claude Code's output quality through structured context, domain-specific guidance, and persistent."
 date: 2026-03-14
 last_modified_at: 2026-04-17

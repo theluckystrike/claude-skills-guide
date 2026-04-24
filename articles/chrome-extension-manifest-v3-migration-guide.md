@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Manifest V3 — Complete Developer Guide"
+title: "Chrome Extension Manifest V3"
 description: "A comprehensive migration guide for developers transitioning Chrome extensions from Manifest V2 to V3. Covers service workers, breaking changes, code."
 date: 2026-03-15
 last_modified_at: 2026-04-17

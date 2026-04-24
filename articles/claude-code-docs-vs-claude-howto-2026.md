@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Docs Mirror vs Claude Howto (2026)"
+title: "Claude Code Docs Mirror vs Claude Howto"
 description: "Claude Code Docs auto-syncs official docs for offline use. Claude Howto provides visual guides with Mermaid diagrams. Compare both learning tools."
 permalink: /claude-code-docs-vs-claude-howto-2026/
 last_tested: "2026-04-22"
@@ -116,3 +116,8 @@ This pattern — Howto for onboarding, Docs for reference — applies to every C
 ## Final Recommendation
 
 Clone both repos. Keep Claude Code Docs as your offline reference — set up the auto-update hook and it maintains itself. Use Claude Howto as your learning companion — the visual diagrams and templates accelerate understanding significantly. Between the two, you have both authoritative reference material and accessible learning content, available offline. For ongoing Claude Code mastery, complement both with the [Claude Code playbook](/playbook/) for workflow patterns.
+
+## See Also
+
+- [Set Up Claude Code Docs for Offline Use (2026)](/how-to-setup-claude-code-docs-offline-2026/)
+- [Claude Howto vs Official Docs for Learning (2026)](/claude-howto-vs-official-docs-learning-2026/)

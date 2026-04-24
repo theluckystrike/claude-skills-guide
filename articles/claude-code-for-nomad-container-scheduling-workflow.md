@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Nomad Container Scheduling Workflow"
+title: "Claude Code for Nomad Container"
 description: "Learn how to use Claude Code to automate Nomad container scheduling workflows. This guide provides practical examples for creating skills that."
 date: 2026-03-15
 last_modified_at: 2026-04-17

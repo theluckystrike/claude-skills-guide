@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code for Confluence Documentation 2026"
+title: "Claude Code for Confluence"
 description: "Sync code documentation to Confluence with Claude Code. Auto-generate pages, update API docs, and maintain living documentation workflows."
 permalink: /claude-code-confluence-documentation-workflow-2026/
 date: 2026-04-21

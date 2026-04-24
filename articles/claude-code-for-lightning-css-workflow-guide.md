@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Lightning CSS — Workflow Guide"
+title: "Claude Code for Lightning CSS"
 description: "Use Lightning CSS for fast transforms with Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-lightning-css-workflow-guide/

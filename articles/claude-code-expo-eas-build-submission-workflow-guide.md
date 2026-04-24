@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Expo Eas Build — Complete Developer Guide"
+title: "Claude Code Expo Eas Build"
 description: "Master the complete workflow for building and submitting Expo apps using EAS Build with Claude Code. From project setup to App Store submission."
 date: 2026-04-19
 last_modified_at: 2026-04-19

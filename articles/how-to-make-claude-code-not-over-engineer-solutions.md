@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Stop Claude Code From Over-Engineering (2026)"
+title: "Stop Claude Code From Over-Engineering"
 description: "Prevent Claude Code from building overly complex solutions. Set clear boundaries, scope prompts tightly, and use constraints that keep output simple."
 date: 2026-03-14
 last_modified_at: 2026-04-17

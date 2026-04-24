@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Build an AI Sentiment Analyzer Extension (2026)"
+title: "Build an AI Sentiment Analyzer"
 description: "Build a Chrome extension for real-time sentiment analysis using AI. Detect positive, negative, and neutral tone in any text on any webpage instantly."
 date: 2026-03-15
 last_modified_at: 2026-04-17

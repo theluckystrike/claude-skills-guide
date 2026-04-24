@@ -1,5 +1,5 @@
 ---
-title: "Awesome MCP vs Templates MCP Directory (2026)"
+title: "Awesome MCP vs Templates MCP Directory"
 description: "Awesome MCP Servers lists 200+ servers across 30 categories. Claude Code Templates bundles 55+ MCP configs. Compare discovery vs installation."
 permalink: /awesome-mcp-servers-vs-claude-code-templates-mcp-2026/
 last_tested: "2026-04-22"
@@ -107,3 +107,8 @@ If you build an MCP server and want maximum adoption, list it in Awesome for dis
 ## Final Recommendation
 
 Bookmark Awesome MCP Servers as your reference catalog. Use Templates as your installation tool. When the two overlap, prefer Templates for the tested config. When they do not, follow Awesome's link to the server repo and configure it manually. Also check the [hooks guide](/understanding-claude-code-hooks-system-complete-guide/) for patterns that combine MCP servers with pre/post-command hooks for even more powerful integrations.
+
+## See Also
+
+- [Awesome LLM Apps: Agent Templates Guide (2026)](/awesome-llm-apps-agent-templates-guide-2026/)
+- [Awesome LLM Apps vs Claude Code Templates (2026)](/awesome-llm-apps-vs-claude-code-templates-2026/)

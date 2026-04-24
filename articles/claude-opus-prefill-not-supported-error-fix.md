@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Opus Prefill Not Supported Error — Quick (2026)"
+title: "Fix Claude Opus Prefill Not Supported"
 description: "Fix Claude Opus 4.6 prefill not supported error. Use structured outputs, system prompts, or output_config.format instead of assistant prefilling."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -213,4 +213,6 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Claude Python SDK Getting Started](/claude-python-sdk-getting-started-example/) -- basic SDK setup.
 - [Claude TypeScript SDK Installation Guide](/claude-typescript-sdk-installation-guide/) -- TypeScript SDK setup for structured outputs.
 
+## See Also
 
+- [SOCKS Proxy Not Supported Error — Fix (2026)](/claude-code-socks-proxy-not-supported-fix-2026/)

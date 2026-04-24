@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Team Coding Standards Enforcement Workflow"
+title: "Claude Code Team Coding Standards"
 description: "A comprehensive guide to implementing and enforcing coding standards across your development team using Claude Code. Learn practical workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -274,4 +274,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Make Claude Code Follow Coding Standards (2026)](/claude-code-wont-follow-coding-standards-fix-2026/)

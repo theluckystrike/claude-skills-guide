@@ -221,4 +221,6 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 - [Claude Code 2026 New Features Skills and Hooks Roundup](/claude-code-2026-new-features-skills-and-hooks-roundup/)
 - [Best Way to Validate Claude Code Output Before Committing](/best-way-to-validate-claude-code-output-before-committing/)
 
+## See Also
 
+- [Claude Code vs ESLint + Prettier: Code Quality Tools](/claude-code-vs-eslint-prettier-comparison/)

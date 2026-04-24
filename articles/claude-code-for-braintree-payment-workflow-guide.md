@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Braintree Payments (2026)"
+title: "Claude Code for Braintree Payments"
 description: "Build Braintree payment workflows with Claude Code for checkout integration, subscription billing, and webhook handling. Working code examples included."
 date: 2026-03-15
 last_modified_at: 2026-04-17

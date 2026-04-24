@@ -1,5 +1,5 @@
 ---
-title: "VS Code Extension Connection Timeout Fix"
+title: "VS Code Extension Connection Timeout"
 permalink: /claude-code-vscode-extension-connection-timeout-fix-2026/
 description: "Fix VS Code extension connection timeout for Claude Code. Restart the extension host and check WebSocket port to restore the editor integration."
 last_tested: "2026-04-22"
@@ -59,3 +59,11 @@ code --install-extension anthropic.claude-code
 # CLAUDE.md rule
 If the VS Code extension shows "Disconnected", restart the extension host first. If that fails, restart Claude Code in the terminal. Keep the Claude Code extension updated to the latest version.
 ```
+
+## See Also
+
+- [Connection Reset by Peer Error — Fix (2026)](/claude-code-connection-reset-by-peer-fix-2026/)
+- [Garbage Collection Pause Causing Timeout Fix](/claude-code-gc-pause-causing-timeout-fix-2026/)
+- [DNS Resolution Timeout Error — Fix (2026)](/claude-code-dns-resolution-timeout-fix-2026/)
+- [Claude Code vs VS Code IntelliSense: Completion Compared](/claude-code-vs-vscode-intellisense-comparison/)
+- [Claude Code VS Code Extension Fails to Activate — Fix (2026)](/claude-code-vscode-extension-fails-to-activate-fix/)

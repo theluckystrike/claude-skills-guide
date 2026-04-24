@@ -1,5 +1,5 @@
 ---
-title: "Agent-First Backend Design: Principles for Token Efficiency"
+title: "Agent-First Backend Design"
 description: "Agent-first backend design reduces Claude Code token usage by 50-70% through self-describing APIs, state inspection endpoints, and structured error responses."
 permalink: /agent-first-backend-design-token-efficiency/
 date: 2026-04-22
@@ -359,3 +359,4 @@ Not all agent-first elements deliver equal value. The priority order based on to
 - [State Inspection Pattern: Give Agents Full Backend State in One Call](/state-inspection-pattern-agents-full-state-one-call/) -- deep dive on the inspection endpoint
 - [Structured Error Handling to Reduce Claude Code Token Waste](/structured-error-handling-reduce-claude-code-tokens/) -- error communication patterns
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- complementary context optimization
+- [MCPMark Benchmarks: What They Reveal About Token Efficiency](/mcpmark-benchmarks-token-efficiency-revealed/)

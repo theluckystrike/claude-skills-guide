@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use GitHub Actions OIDC Workflow (2026)"
+title: "How to Use GitHub Actions OIDC Workflow"
 description: "Learn how to securely authenticate with cloud providers using OpenID Connect (OIDC) in your GitHub Actions workflows, eliminating the need for."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -332,4 +332,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for GitHub CLI — Workflow Guide](/claude-code-for-github-cli-workflow-guide/)

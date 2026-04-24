@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Benchmark CI Integration Workflow"
+title: "Claude Code for Benchmark CI"
 description: "Learn how to integrate Claude Code into your CI/CD pipeline for automated benchmarking. Practical examples, code snippets, and actionable advice for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

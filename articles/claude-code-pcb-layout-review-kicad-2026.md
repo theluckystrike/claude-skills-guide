@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for PCB Layout Review with KiCad (2026)"
+title: "Claude Code for PCB Layout Review"
 description: "PCB layout review workflow with Claude Code and KiCad. Catch DRC errors and net mismatches before fabrication."
 permalink: /claude-code-pcb-layout-review-kicad-2026/
 last_tested: "2026-04-21"

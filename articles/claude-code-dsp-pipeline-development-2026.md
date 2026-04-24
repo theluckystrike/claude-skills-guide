@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for DSP Pipeline Development (2026)"
+title: "Claude Code for DSP Pipeline"
 permalink: /claude-code-dsp-pipeline-development-2026/
 description: "Digital signal processing pipelines with Claude Code. Build FFT, FIR filters, and real-time audio chains in Python and C."
 last_tested: "2026-04-22"

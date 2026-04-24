@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Permission Denied Shell Commands — Fix (2026)"
+title: "Claude Code Permission Denied Shell"
 description: "Fix Claude Code permission denied running shell commands. Update permissions allow-list in settings.json. Step-by-step solution."
 permalink: /claude-code-permission-denied-shell-commands-fix/
 last_tested: "2026-04-21"

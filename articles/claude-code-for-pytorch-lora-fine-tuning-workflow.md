@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code PyTorch LoRA Fine-Tuning (2026)"
+title: "Claude Code PyTorch LoRA Fine-Tuning"
 description: "Fine-tune models with PyTorch LoRA and Claude Code for dataset prep, rank selection, and training optimization. Reduce VRAM usage by 75% or more."
 date: 2026-03-14
 last_modified_at: 2026-04-17

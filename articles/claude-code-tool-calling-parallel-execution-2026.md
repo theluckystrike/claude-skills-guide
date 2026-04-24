@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code Tool Calling and Parallel Execution 2026"
+title: "Claude Code Tool Calling and Parallel"
 description: "Master Claude Code tool calling: parallel tool use, custom tool definitions, execution strategies, and error handling for complex workflows."
 permalink: /claude-code-tool-calling-parallel-execution-2026/
 date: 2026-04-21
@@ -262,3 +262,7 @@ Parallel tool execution cuts workflow time by 60-80% for independent operations.
 - [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/)
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Claude Skills vs MCP Servers Differences](/claude-skills-vs-mcp-servers-differences/)
+
+## See Also
+
+- [Parallel Tool Calls Memory Exhaustion Fix](/claude-code-parallel-tool-calls-memory-exhaustion-fix-2026/)

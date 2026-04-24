@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code OpenAPI Client Generation Guide"
+title: "Claude Code OpenAPI Client Generation"
 description: "Learn how to use Claude Code with OpenAPI specifications to generate type-safe API clients. Practical examples, workflow patterns, and integration tips."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -345,4 +345,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [mTLS Client Certificate Error — Fix (2026)](/claude-code-mtls-client-cert-error-fix-2026/)
+- [Claude Code for OpenAPI Spec Generation (2026)](/claude-code-openapi-spec-generation-2026/)

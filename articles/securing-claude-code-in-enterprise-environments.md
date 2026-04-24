@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Securing Claude Code in Enterprise Environments"
+title: "Securing Claude Code in Enterprise"
 description: "Security best practices for Claude Code in enterprise environments. Permission controls, skill isolation, audit logging, and network restrictions."
 date: 2026-03-14
 last_modified_at: 2026-04-17

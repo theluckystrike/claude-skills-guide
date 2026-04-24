@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Python Reflex — Workflow Guide"
+title: "Claude Code for Python Reflex"
 description: "Build full-stack web apps in Python with Reflex and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-python-reflex-workflow-guide/
@@ -78,3 +78,4 @@ Claude Code should create a `DashboardState(rx.State)` with `orders`, `search_qu
 ## Related Articles
 
 - [Claude Code for Plotly Dash Python Workflow](/claude-code-for-plotly-dash-python-workflow/)
+- [Python Virtualenv Not Activated Fix](/claude-code-python-virtualenv-not-activated-fix-2026/)

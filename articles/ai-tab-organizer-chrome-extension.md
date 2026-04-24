@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Tab Organizer Chrome Extension Guide (2026)"
+title: "AI Tab Organizer Chrome Extension Guide"
 description: "Learn how AI-powered tab organizers transform browser workflow for developers. Explore practical implementations, code examples, and power user strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17

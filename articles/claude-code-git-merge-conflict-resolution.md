@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Claude Code Resolves Git Merge Conflicts"
+title: "How Claude Code Resolves Git Merge"
 description: "Use Claude Code to automatically detect, understand, and resolve git merge conflicts. Complete workflow with examples for complex conflicts."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -212,4 +212,8 @@ $99 once. Free forever. 47/500 founding spots left.
 - [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/)
 - [Claude Code Workflow Optimization Tips 2026](/claude-code-workflow-optimization-tips-2026/)
 
+## See Also
 
+- [Claude Edit Tool File Modified Externally — Fix (2026)](/claude-code-edit-tool-conflict-merge-fix-2026/)
+- [Merge Conflict in Claude-Edited Files Fix](/claude-code-merge-conflict-edited-files-fix-2026/)
+- [Git Credentials Expired Mid-Session Fix](/claude-code-git-credentials-expired-mid-session-fix-2026/)

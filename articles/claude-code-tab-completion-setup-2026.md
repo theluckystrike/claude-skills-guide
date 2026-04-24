@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code Tab Completion Setup Guide 2026"
+title: "Claude Code Tab Completion Setup Guide"
 description: "Enable tab completion for Claude Code commands in bash, zsh, and fish shells. Installation steps and custom completion scripts included."
 permalink: /claude-code-tab-completion-setup-2026/
 date: 2026-04-21
@@ -246,3 +246,8 @@ Tab completion reduces typos and eliminates the need to check `--help` output. D
 - [Claude Code for Nushell Workflow Guide](/claude-code-for-nushell-workflow-guide/)
 - [Claude Code for Alacritty Workflow Guide](/claude-code-for-alacritty-workflow-guide/)
 - [Claude Code Common Beginner Mistakes to Avoid](/claude-code-common-beginner-mistakes-to-avoid/)
+
+## See Also
+
+- [Claude Code + WebStorm JetBrains Setup 2026](/claude-code-webstorm-jetbrains-setup-2026/)
+- [How to Use Claude Code with WSL2 on Windows 2026](/claude-code-wsl2-windows-setup-2026/)

@@ -1,5 +1,5 @@
 ---
-title: "Sequential Thinking in Claude Code: Guide (2026)"
+title: "Sequential Thinking in Claude Code"
 description: "How to install and use the sequential thinking MCP server in Claude Code. Step-by-step setup, when it helps, real examples, and configuration options."
 permalink: /sequential-thinking-claude-code-guide/
 last_tested: "2026-04-24"
@@ -375,21 +375,6 @@ Related but different. Chain-of-thought prompting asks the model to show its rea
 
 Yes. The MCP protocol is open. You can build a custom server that provides a different structured thinking interface. The official `@anthropic/sequential-thinking` server is a reference implementation. See the [MCP integration guide](/mcp-integration-guide-for-claude-code-beginners/) for building custom servers.
 
-## Related Guides
-
-- [Claude Code MCP Configuration](/claude-code-mcp-configuration-guide/) — full MCP setup reference
-- [Claude MCP List Command Reference](/claude-mcp-list-command-guide/) — CLI command details
-- [How to Add an MCP Server](/how-to-add-mcp-server-claude-code-2026/) — step-by-step installation
-- [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — curated server list
-- [MCP Servers Complete Setup](/mcp-servers-claude-code-complete-setup-2026/) — end-to-end walkthrough
-- [Awesome MCP Servers Directory](/awesome-mcp-servers-directory-guide-2026/) — community directory
-- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
-- [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
-- [Configuration Hierarchy Explained](/claude-code-configuration-hierarchy-explained-2026/) — settings precedence
-
-- [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — Build agents that use sequential thinking
-- [Claude Flow tool guide](/claude-flow-tool-guide/) — Orchestrate thinking across agents
-- [Claude temperature settings guide](/claude-temperature-settings-guide/) — Temperature interacts with thinking behavior
 ### Does sequential thinking increase API costs?
 
 Yes. Each thinking step consumes input and output tokens. A 6-step thinking process can add 1,000-3,000 tokens of overhead. For expensive models like Opus, this adds up across many requests.
@@ -405,6 +390,23 @@ Yes. When the MCP server is configured, sequential thinking is available in both
 ### Can I combine sequential thinking with extended thinking?
 
 Yes. These are complementary features. Extended thinking is a model-level capability while sequential thinking is an MCP tool. They can work together for maximum reasoning depth.
+
+## Related Guides
+
+- [Claude Code MCP Configuration](/claude-code-mcp-configuration-guide/) — full MCP setup reference
+- [Claude MCP List Command Reference](/claude-mcp-list-command-guide/) — CLI command details
+- [How to Add an MCP Server](/how-to-add-mcp-server-claude-code-2026/) — step-by-step installation
+- [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — curated server list
+- [MCP Servers Complete Setup](/mcp-servers-claude-code-complete-setup-2026/) — end-to-end walkthrough
+- [Awesome MCP Servers Directory](/awesome-mcp-servers-directory-guide-2026/) — community directory
+- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
+- [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
+- [Configuration Hierarchy Explained](/claude-code-configuration-hierarchy-explained-2026/) — settings precedence
+- [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — Build agents that use sequential thinking
+- [Claude Flow tool guide](/claude-flow-tool-guide/) — Orchestrate thinking across agents
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — Temperature interacts with thinking behavior
+- [Claude Code + Supabase MCP](/claude-code-mcp-supabase-setup-guide/) — MCP with Supabase databases
+- [Super Claude Code framework](/super-claude-code-framework-guide/) — structured reasoning framework
 
 <script type="application/ld+json">
 {

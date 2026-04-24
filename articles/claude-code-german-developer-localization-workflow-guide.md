@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code German Localization Workflow (2026)"
+title: "Claude Code German Localization"
 description: "Streamline German localization with Claude Code for translation management, i18n setup, and multilingual app builds. Practical workflow for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

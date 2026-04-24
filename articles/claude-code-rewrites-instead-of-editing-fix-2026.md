@@ -1,5 +1,5 @@
 ---
-title: "Stop Claude Code Rewriting Entire Files (2026)"
+title: "Stop Claude Code Rewriting Entire Files"
 description: "Stop Claude Code from rewriting entire files when you ask for small edits by adding surgical edit rules and diff-size limits to CLAUDE.md."
 permalink: /claude-code-rewrites-instead-of-editing-fix-2026/
 last_tested: "2026-04-22"

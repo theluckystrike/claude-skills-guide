@@ -1,5 +1,5 @@
 ---
-title: "Audit Claude Code Costs Monthly (ccusage) (2026)"
+title: "Audit Claude Code Costs Monthly"
 description: "Set up a monthly Claude Code cost audit using ccusage. Automate reports, identify expensive sessions, and track spending trends over time."
 permalink: /how-to-audit-claude-code-costs-monthly-2026/
 last_tested: "2026-04-22"

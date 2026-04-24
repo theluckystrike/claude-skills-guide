@@ -1,5 +1,5 @@
 ---
-title: "Karpathy Skills vs Generic Best Practices (2026)"
+title: "Karpathy Skills vs Generic"
 description: "Karpathy Skills gives Claude 4 specific behavioral rules. Generic best practices offer broad advice. Compare focused principles vs general guidance."
 permalink: /karpathy-skills-vs-claude-code-best-practices-2026/
 last_tested: "2026-04-22"
@@ -109,3 +109,9 @@ Karpathy Skills does not replace learning how to use Claude Code. It replaces th
 ## Final Recommendation
 
 Install Karpathy Skills as your behavioral foundation. Then layer project-specific [best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) on top for coding standards and conventions. The four principles do what generic advice cannot: they change Claude's behavior in specific, verifiable, consistently positive ways. That is worth more than any list of tips.
+
+## See Also
+
+- [Karpathy Skills vs Ultimate Guide (2026)](/karpathy-skills-vs-claude-code-ultimate-guide-2026/)
+- [Karpathy Skills vs SuperClaude Framework (2026)](/karpathy-skills-vs-superclaude-framework-2026/)
+- [Karpathy Skills vs Custom CLAUDE.md (2026)](/karpathy-skills-vs-custom-claude-md-2026/)

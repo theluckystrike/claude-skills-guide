@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills For Restaurant Pos System — Developer (2026)"
+title: "Claude Skills For Restaurant Pos System"
 description: "Practical guide to building restaurant POS systems using Claude Code skills: spreadsheet automation, PDF invoicing, document generation, and testing."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -379,4 +379,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Build a Loyalty Rewards System with Claude Code (2026)](/claude-code-for-loyalty-rewards-system-development/)

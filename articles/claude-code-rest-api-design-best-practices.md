@@ -486,4 +486,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Fix Claude Code Inconsistent API Design (2026)](/claude-code-inconsistent-api-design-fix-2026/)

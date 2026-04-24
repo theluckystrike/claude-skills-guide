@@ -66,3 +66,7 @@ gh codespace edit --idle-timeout 0  # Disable auto-stop (paid feature)
 # CLAUDE.md rule
 In Codespaces, always run Claude Code inside tmux. Set idle timeout to maximum (240 minutes) in GitHub settings. Keep a second terminal tab open with periodic activity to prevent auto-stop.
 ```
+
+## See Also
+
+- [WebSocket Upgrade Rejected Error — Fix (2026)](/claude-code-websocket-upgrade-rejected-fix-2026/)

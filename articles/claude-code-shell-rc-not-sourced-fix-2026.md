@@ -1,5 +1,5 @@
 ---
-title: "Shell RC File Not Sourced Error — Fix (2026)"
+title: "Shell RC File Not Sourced Error — Fix"
 permalink: /claude-code-shell-rc-not-sourced-fix-2026/
 description: "Fix Claude Code env vars not loading because .zshrc is not sourced. Add source line to .zprofile for login shells."
 last_tested: "2026-04-22"
@@ -78,3 +78,31 @@ Add this to your `CLAUDE.md`:
 - Alternatively, use direnv with a .envrc file per project.
 - Test with: echo $ANTHROPIC_API_KEY — in every new shell before starting work.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `AuthenticationError: invalid x-api-key`
+- `Error: API key not found in environment`
+- `401 Unauthorized: invalid_api_key`
+- `bash: command not found: claude`
+- `zsh: command not found: claude`
+
+## Frequently Asked Questions
+
+### Where should I store my Anthropic API key?
+
+Store it in the `ANTHROPIC_API_KEY` environment variable in your shell profile (`~/.bashrc`, `~/.zshrc`). Never hardcode API keys in source code or commit them to version control. For CI/CD, use your platform's secrets manager.
+
+### How do I rotate my API key?
+
+Generate a new key at console.anthropic.com, update the `ANTHROPIC_API_KEY` environment variable, then reload your shell with `source ~/.zshrc`. The old key is revoked when you delete it from the console. Active sessions using the old key will fail after the key is deleted.
+
+### Can I use different API keys for different projects?
+
+Yes. Set the `ANTHROPIC_API_KEY` in a project-level `.env` file or use direnv to automatically load project-specific environment variables when you enter a directory. Claude Code reads the key from the environment, so per-directory env files work seamlessly.
+
+### Why is the claude command not found after installation?
+
+The installation directory is not in your PATH. Run `which claude` to check if it is accessible. If not, add the npm global bin directory to your PATH: `export PATH=$(npm bin -g):$PATH` and add this line to your shell profile (`~/.bashrc` or `~/.zshrc`).

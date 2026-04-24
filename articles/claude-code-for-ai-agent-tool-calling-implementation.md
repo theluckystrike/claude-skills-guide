@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for AI Agent Tool Calling Implementation (2026)"
+title: "Claude Code for AI Agent Tool Calling"
 description: "Learn how to implement tool calling in AI agents using Claude Code. This guide covers practical patterns, code examples, and best practices for."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -348,4 +348,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs Manus AI Agent Compared (2026)](/claude-code-vs-manus-ai-agent-2026/)
+- [Claude Code Tool Calling and Parallel Execution 2026](/claude-code-tool-calling-parallel-execution-2026/)

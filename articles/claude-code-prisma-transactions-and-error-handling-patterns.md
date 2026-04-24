@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix: Claude Code Prisma Error Handling Patterns (2026)"
+title: "Fix: Claude Code Prisma Error Handling"
 description: "Resolve Claude Code Prisma Error Handling Patterns issues with tested solutions, step-by-step debugging, and production-ready code examples verified..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -368,4 +368,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Prisma Generate Failure After Schema Change — Fix (2026)](/claude-code-prisma-generate-failure-fix-2026/)

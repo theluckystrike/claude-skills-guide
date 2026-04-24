@@ -271,6 +271,108 @@ curl -s -D - https://api.anthropic.com/v1/messages \
   2>&1 | grep "anthropic-ratelimit"
 ```
 
+## Rate Limit Tiers by Plan: Complete Reference
+
+Anthropic enforces different rate limits depending on your subscription plan (Claude.ai) or your API spending tier. This table consolidates every known limit across all access methods.
+
+### Claude.ai and Claude Code Subscription Plans
+
+| Plan | Monthly Cost | Claude Code Access | Messages/Day (Estimate) | Throttle Behavior |
+|------|-------------|-------------------|------------------------|-------------------|
+| Free | $0 | No | ~30 messages | Hard cutoff, resets daily |
+| Pro | $20 | Limited | ~100-150 messages | Soft throttle, slower responses after limit |
+| Max 5x | $100 | Full (heavy) | ~500+ messages | 5x Pro rate, extended thinking included |
+| Max 20x | $200 | Full (very heavy) | ~2,000+ messages | 20x Pro rate, priority during peak |
+| Team | $30/user | Full (team) | ~150/user | Per-seat limits, admin controls |
+| Enterprise | Custom | Full (managed) | Custom | SLA-backed, dedicated capacity |
+
+Note: Claude.ai message limits are approximate and vary by model and message complexity. Anthropic does not publish exact per-message quotas for subscription plans.
+
+### API Tier Limits (Detailed)
+
+| Tier | Unlock Spend | RPM | Input TPM | Output TPM | Max Concurrent | Daily Token Cap |
+|------|-------------|-----|-----------|------------|----------------|-----------------|
+| Free | $0 | 5 | 20,000 | 4,000 | 1 | 300,000 |
+| Tier 1 | $5 | 50 | 40,000 | 8,000 | 5 | 1,000,000 |
+| Tier 2 | $40 | 1,000 | 80,000 | 16,000 | 10 | 2,500,000 |
+| Tier 3 | $200 | 2,000 | 160,000 | 32,000 | 20 | 5,000,000 |
+| Tier 4 | $1,000 | 4,000 | 400,000 | 80,000 | 50 | Unlimited |
+| Scale | Contact sales | Custom | Custom | Custom | Custom | Custom |
+
+These limits apply to `claude-sonnet-4-20250514`. Different models have different limits:
+
+| Model | RPM Modifier | TPM Modifier |
+|-------|-------------|-------------|
+| Claude Opus 4 | 0.5x (half the RPM) | 0.5x |
+| Claude Sonnet 4 | 1x (baseline) | 1x |
+| Claude Haiku 4.5 | 2x (double the RPM) | 2x |
+
+So if your tier allows 1,000 RPM for Sonnet, you get ~500 RPM for Opus and ~2,000 RPM for Haiku.
+
+### How to Check Your Current Tier and Remaining Quota
+
+**Method 1: Anthropic Console**
+Log into [console.anthropic.com](https://console.anthropic.com), go to Settings > Plans. Your current tier and usage are displayed.
+
+**Method 2: API Response Headers**
+Every successful API response includes your current limits and remaining quota:
+
+```bash
+curl -s -D - https://api.anthropic.com/v1/messages \
+  -H "x-api-key: $ANTHROPIC_API_KEY" \
+  -H "anthropic-version: 2023-06-01" \
+  -H "content-type: application/json" \
+  -d '{"model":"claude-sonnet-4-20250514","max_tokens":5,"messages":[{"role":"user","content":"test"}]}' \
+  2>&1 | grep "anthropic-ratelimit"
+```
+
+Output:
+```
+anthropic-ratelimit-requests-limit: 1000
+anthropic-ratelimit-requests-remaining: 998
+anthropic-ratelimit-requests-reset: 2026-04-24T15:01:00Z
+anthropic-ratelimit-tokens-limit: 80000
+anthropic-ratelimit-tokens-remaining: 79200
+anthropic-ratelimit-tokens-reset: 2026-04-24T15:01:00Z
+```
+
+**Method 3: Programmatic Tier Detection**
+
+```python
+import anthropic
+
+client = anthropic.Anthropic()
+response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    max_tokens=5,
+    messages=[{"role": "user", "content": "test"}]
+)
+
+headers = response._response.headers
+rpm_limit = int(headers.get("anthropic-ratelimit-requests-limit", 0))
+
+tier_map = {5: "Free", 50: "Tier 1", 1000: "Tier 2", 2000: "Tier 3", 4000: "Tier 4"}
+current_tier = tier_map.get(rpm_limit, f"Custom ({rpm_limit} RPM)")
+remaining_rpm = headers.get("anthropic-ratelimit-requests-remaining")
+reset_time = headers.get("anthropic-ratelimit-requests-reset")
+
+print(f"Current tier: {current_tier}")
+print(f"RPM remaining: {remaining_rpm}")
+print(f"Resets at: {reset_time}")
+```
+
+### When Rate Limits Reset
+
+| Limit Type | Reset Window | Reset Behavior |
+|-----------|-------------|----------------|
+| RPM (Requests/Min) | 60 seconds | Rolling window from your first request in the period |
+| TPM (Tokens/Min) | 60 seconds | Rolling window, input + output tokens combined |
+| TPD (Tokens/Day) | ~24 hours | Resets approximately 24 hours from your first request of the day |
+| Concurrent | Immediate | Frees up as soon as an in-flight request completes |
+| Monthly Spend | Billing cycle | Resets on your billing renewal date |
+
+The per-minute windows are rolling, not fixed. This means sending 50 requests at 2:00:00 PM does not guarantee 50 more requests at 2:01:00 PM. The window tracks the trailing 60 seconds continuously. Space requests evenly to avoid bursting against the limit.
+
 ## Rate Limit Response Headers
 
 Every successful API response includes rate limit headers. Parse them to build proactive throttling:
@@ -669,6 +771,9 @@ No. Rate limits are enforced at the organization level, not per API key. Creatin
 - [Fix Claude Code ETIMEOUT Corporate Proxy](/claude-code-etimeout-corporate-proxy-fix/)
 - [Fix Claude Code Docker Cannot Reach API Endpoint](/claude-code-docker-cannot-reach-api-endpoint-fix/)
 - [Fix Claude AI Rate Exceeded Error](/claude-ai-rate-exceeded-error-fix/)
+- [Claude not working right now fix](/claude-not-working-right-now-fix/) — troubleshoot when Claude is down
+- [Claude 5-hour usage limit](/claude-5-hour-usage-limit-guide/) — understand rolling usage windows
+- [Claude extra usage cost](/claude-extra-usage-cost-guide/) — what overages actually cost
 
 <script type="application/ld+json">
 [

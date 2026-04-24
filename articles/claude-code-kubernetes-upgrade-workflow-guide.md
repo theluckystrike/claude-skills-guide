@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Kubernetes Upgrade Workflow (2026)"
+title: "Claude Code Kubernetes Upgrade Workflow"
 description: "Upgrade Kubernetes clusters safely with Claude Code for version planning, compatibility checks, and rolling node updates. Zero-downtime upgrade guide."
 date: 2026-04-19
 last_modified_at: 2026-04-19

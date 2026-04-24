@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Auto Summarize Articles Chrome Extension Guide (2026)"
+title: "Auto Summarize Articles Chrome"
 description: "Learn how to build and use Chrome extensions that automatically summarize articles using JavaScript APIs and text processing techniques."
 date: 2026-03-15
 last_modified_at: 2026-04-17

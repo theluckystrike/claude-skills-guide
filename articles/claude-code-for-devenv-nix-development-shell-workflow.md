@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Devenv Nix — Complete Developer Guide"
+title: "Claude Code For Devenv Nix"
 description: "A practical guide to using Claude Code with devenv for streamlined Nix-based development shell workflows. Learn how to configure, automate, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -208,4 +208,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Shell RC File Not Sourced Error — Fix (2026)](/claude-code-shell-rc-not-sourced-fix-2026/)
+- [Claude Code for Fish Shell — Workflow Guide](/claude-code-for-fish-shell-workflow-guide/)

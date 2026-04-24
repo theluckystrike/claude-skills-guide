@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Rust Trait Objects Workflow Guide"
+title: "Claude Code for Rust Trait Objects"
 description: "A comprehensive guide to working with Rust trait objects using Claude Code. Learn practical workflows, dynamic dispatch patterns, and actionable."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -341,4 +341,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Rust Axum — Workflow Guide](/claude-code-for-rust-axum-workflow-guide/)

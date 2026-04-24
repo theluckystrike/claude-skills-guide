@@ -1,5 +1,5 @@
 ---
-title: "nvm Switching to Wrong Node Version — Fix (2026)"
+title: "nvm Switching to Wrong Node Version"
 permalink: /claude-code-nvm-switching-wrong-node-fix-2026/
 description: "Fix nvm using wrong Node version for Claude Code. Set default alias and add .nvmrc to auto-switch on directory change."
 last_tested: "2026-04-22"
@@ -77,3 +77,8 @@ Add this to your `CLAUDE.md`:
 - Update .nvmrc to 22 in all active projects.
 - If you must use Node 16 for a project, install Claude Code on that version too.
 ```
+
+## See Also
+
+- [Wrong Node.js Version in PATH Fix](/claude-code-wrong-node-version-in-path-fix-2026/)
+- [Claude Amending Wrong Commit Fix](/claude-code-amending-wrong-commit-fix-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Model Routing by Task Cuts Claude API Bills"
+title: "Model Routing by Task Cuts Claude API"
 description: "Implement automatic model routing to cut Claude API costs by 56% — from $75,000 to $33,000/month at enterprise scale."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -201,3 +201,9 @@ Track three dashboards: (1) cost per request by model tier — verify the expect
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — understand the pricing model that makes routing valuable
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — complement routing with token reduction
 - [Claude Code Monthly Cost Breakdown](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/) — baseline your costs before implementing routing
+
+## See Also
+
+- [How Context Window Size Drives Claude API Bills](/claude-cost-context-window-size-drives-claude-api-bills/)
+- [Reducing Agent Fleet Costs with Model Routing](/claude-cost-reducing-agent-fleet-costs-model-routing/)
+- [System Prompt Optimization to Cut Claude Costs](/claude-cost-system-prompt-optimization-cut-claude-costs/)

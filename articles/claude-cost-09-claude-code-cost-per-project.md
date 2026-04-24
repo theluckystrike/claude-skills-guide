@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Cost Per Project Estimation Guide"
+title: "Claude Code Cost Per Project Estimation"
 description: "Estimate Claude Code costs per project: a CRUD feature runs $2-5 on API, a full-stack app runs $50-200. Calculator included."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -188,3 +188,8 @@ Compare estimated cost to actual cost at project completion. Track the estimatio
 ## Related Articles
 
 - [Claude vs Gemini Cost Per Capability 2026](/claude-cost-claude-vs-gemini-cost-per-capability/)
+- [Claude Cost Anomaly Detection Setup Guide](/claude-cost-09-claude-cost-anomaly-detection/)
+- [Per-Request Cost Tracking for Claude API](/claude-cost-04-per-request-cost-tracking/)
+- [Claude Computer Use Token Cost Breakdown](/claude-cost-09-computer-use-token-cost-breakdown/)
+- [Track Claude Token Spend Per Project and Team](/02-track-claude-spend-per-project/)
+- [Per-Agent Cost Attribution in Claude Systems](/claude-cost-per-agent-cost-attribution-claude-systems/)

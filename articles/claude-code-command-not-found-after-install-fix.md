@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix 'command not found: claude' After Install"
+title: "Fix 'command not found"
 description: "Resolve the 'command not found: claude' error after installing Claude Code on macOS, Linux, and Windows with PATH fixes."
 date: 2026-04-15
 permalink: /claude-code-command-not-found-after-install-fix/
@@ -216,4 +216,9 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Claude Code Dev Containers Setup Guide](/claude-code-dev-containers-devcontainer-json-setup-guide/)
 - [Best Way to Set Up Claude Code for a New Project](/best-way-to-set-up-claude-code-for-new-project/)
 
+## See Also
 
+- [Claude Code Notebook Kernel Not Found — Fix (2026)](/claude-code-notebook-kernel-not-found-fix-2026/)
+- [PATH Not Updated After Install — Fix (2026)](/claude-code-path-not-updated-after-install-fix-2026/)
+- [Claude Code Custom Slash Command Not Found — Fix (2026)](/claude-code-custom-slash-command-not-recognized-fix/)
+- [claude: command not found After Install — Fix (2026)](/claude-code-binary-not-found-after-install-fix-2026/)

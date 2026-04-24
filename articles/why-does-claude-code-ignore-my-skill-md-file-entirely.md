@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Ignoring Skill .md File (2026)"
+title: "Fix Claude Code Ignoring Skill .md File"
 description: "Fix Claude Code silently ignoring your skill .md file. Common causes include wrong directory, bad YAML, encoding issues, and file permissions."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -144,4 +144,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Why Does Claude Code Break My Existing — Developer Guide](/why-does-claude-code-break-my-existing-tests-unexpectedly/)

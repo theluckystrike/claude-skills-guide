@@ -1,5 +1,5 @@
 ---
-title: "Implement Karpathy Don't Assume in CLAUDE.md (2026)"
+title: "Implement Karpathy Don't Assume"
 description: "Copy-paste CLAUDE.md rules that enforce Karpathy's Don't Assume principle — with severity levels, exception handling, and team customization."
 permalink: /karpathy-dont-assume-implementation-claude-md-2026/
 last_tested: "2026-04-22"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Stuck in Loop Repeating Same Output Fix"
+title: "Claude Code Stuck in Loop Repeating"
 description: "Practical solutions for fixing Claude Code stuck in loop issues. Learn how to break repetitive output patterns and get Claude Code unstuck."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -194,6 +194,5 @@ Related Reading
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/). See also
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
-
+- [Unicode Encoding Errors in Code Output Fix](/claude-code-unicode-encoding-errors-code-output-fix-2026/)
+- [Claude Code stuck in planning mode — token drain prevention](/claude-code-stuck-planning-mode-token-drain/)

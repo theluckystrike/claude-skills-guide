@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code AWS S3 Multipart Upload Workflow Guide"
+title: "Claude Code AWS S3 Multipart Upload"
 description: "Learn how to use Claude Code to automate AWS S3 multipart uploads with practical examples and best practices for handling large file transfers."
 date: 2026-04-19
 last_modified_at: 2026-04-19

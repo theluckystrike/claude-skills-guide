@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code WCAG Accessibility Audit Workflow"
+title: "Claude Code WCAG Accessibility Audit"
 description: "Build a practical WCAG accessibility audit workflow using Claude Code skills. Practical examples, automated checks, and remediation guidance for."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -293,4 +293,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for WCAG Accessibility Testing (2026)](/claude-code-wcag-accessibility-testing-2026/)

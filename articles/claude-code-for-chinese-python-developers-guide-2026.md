@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Python Developers Guide (2026)"
+title: "Claude Code for Python Developers Guide"
 description: "Claude Code guide for Python developers covering setup, essential skills, and real-world workflows for productive AI-assisted Python coding."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -404,6 +404,9 @@ This level of detail produces code that handles the security requirements correc
 
 - [Claude Code 安装指南 (Chinese Installation Guide)](/claude-code-anzhuang-installation-guide/) — Claude Code installation guide in Chinese (中文安装教程)
 - [Claude Code 价格指南](/claude-code-jiage-pricing-guide/) — Claude Code pricing guide in Chinese (中文定价指南)
+- [Claude Code使用教程](/claude-code-shiyong-jiaocheng-tutorial/) — comprehensive Claude Code tutorial in Chinese
+- [Claude Code拼车指南](/claude-code-pinche-group-sharing/) — group sharing and cost optimization in Chinese
+- [Claude Code中文指南合集](/claude-code-zhongwen-guide/) — all Chinese guides in one place
 ---
 
 ---

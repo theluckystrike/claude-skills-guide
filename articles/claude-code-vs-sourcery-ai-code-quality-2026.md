@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Sourcery AI (2026): Code Quality"
+title: "Claude Code vs Sourcery AI (2026)"
 description: "Claude Code vs Sourcery AI compared for code quality improvements. Refactoring suggestions, code review automation, and Python excellence in 2026."
 permalink: /claude-code-vs-sourcery-ai-code-quality-2026/
 date: 2026-04-21

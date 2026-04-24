@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Agent Swarm Coordination Strategies"
+title: "Claude Code Agent Swarm Coordination"
 description: "Practical strategies for coordinating multiple Claude Code agents in parallel. Learn about fan-out/fan-in patterns, message routing, and state."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -196,4 +196,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Agent Recursion Depth Exceeded Fix](/claude-code-agent-recursion-depth-exceeded-fix-2026/)

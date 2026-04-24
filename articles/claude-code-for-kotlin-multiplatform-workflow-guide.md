@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Kotlin Multiplatform — Guide"
+title: "Claude Code for Kotlin Multiplatform"
 description: "Share code across platforms with KMP and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-kotlin-multiplatform-workflow-guide/

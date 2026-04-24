@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code REST API Versioning Strategy Workflow Tips"
+title: "Claude Code REST API Versioning"
 description: "Master REST API versioning strategies with Claude Code. Learn practical workflows for URL path, header, and query parameter versioning in your projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17

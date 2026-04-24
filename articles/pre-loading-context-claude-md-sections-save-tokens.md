@@ -1,5 +1,5 @@
 ---
-title: "Pre-Loading Context: CLAUDE.md Sections That Save 50%+ Tokens"
+title: "Pre-Loading Context"
 description: "Pre-load context in CLAUDE.md sections to save 50%+ tokens per Claude Code session with project maps, error protocols, and architecture summaries."
 permalink: /pre-loading-context-claude-md-sections-save-tokens/
 date: 2026-04-22
@@ -281,3 +281,7 @@ The before/after pattern demonstrates the core value proposition of pre-loading:
 - [CLAUDE.md Token Optimization](/claude-md-token-optimization-rules-save-money/) -- minimizing CLAUDE.md token cost
 - [Progressive Disclosure Pattern](/progressive-disclosure-pattern-claude-code-skills/) -- layered context loading
 - [Context Engineering vs Prompt Engineering](/context-engineering-vs-prompt-engineering-agents/) -- the theoretical foundation
+
+## See Also
+
+- [Best CLAUDE.md Templates for Teams (2026)](/best-claude-md-templates-enterprise-2026/)

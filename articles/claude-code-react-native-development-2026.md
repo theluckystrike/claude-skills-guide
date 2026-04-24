@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code for React Native Development 2026"
+title: "Claude Code for React Native"
 description: "Use Claude Code for React Native: component generation, navigation setup, native module bridging, and cross-platform testing workflows."
 permalink: /claude-code-react-native-development-2026/
 date: 2026-04-21
@@ -292,3 +292,9 @@ React Native projects have significant boilerplate per screen. Claude Code gener
 - [Claude Code for React Native Push Notifications Guide](/claude-code-for-react-native-push-notifications-guide/)
 - [How to Create React Components Faster with Claude Code](/how-to-create-react-components-faster-with-claude-code/)
 {% endraw %}
+
+## See Also
+
+- [Claude Code for ESP32 Firmware with ESP-IDF (2026)](/claude-code-esp32-firmware-development-2026/)
+- [Claude Code for Godot GDScript Development (2026)](/claude-code-godot-gdscript-development-2026/)
+- [Claude Code for VBA Macro Development 2026](/claude-code-vba-macro-development-2026/)

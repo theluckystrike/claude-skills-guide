@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Zola Rust Static Site Workflow"
+title: "Claude Code for Zola Rust Static Site"
 description: "Learn how to use Claude Code to streamline your Zola static site development workflow. Practical examples and actionable advice for developers building."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -470,4 +470,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Leptos Rust — Workflow Guide](/claude-code-for-leptos-rust-workflow-guide/)

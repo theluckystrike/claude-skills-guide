@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Kubernetes Deployment Workflow (2026)"
+title: "Claude Code Kubernetes Deployment"
 description: "Deploy to Kubernetes with Claude Code for manifest generation, rolling updates, and config management. Automate your entire K8s deployment pipeline."
 date: 2026-03-14
 last_modified_at: 2026-04-17

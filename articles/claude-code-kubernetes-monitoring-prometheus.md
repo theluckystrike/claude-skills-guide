@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code K8s Monitoring with Prometheus (2026)"
+title: "Claude Code K8s Monitoring"
 description: "Set up Kubernetes monitoring with Prometheus and Claude Code for custom dashboards, Alertmanager rules, and PromQL queries. Production-ready configs."
 date: 2026-03-14
 last_modified_at: 2026-04-17

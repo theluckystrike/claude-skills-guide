@@ -1,5 +1,5 @@
 ---
-title: "Reduce Claude Code Costs with ccusage (2026)"
+title: "Reduce Claude Code Costs with ccusage"
 description: "Cut Claude Code spending by tracking sessions with ccusage, identifying token waste, and applying CLAUDE.md rules that reduce unnecessary tool calls."
 permalink: /claude-code-costs-too-much-reduce-spend-2026/
 last_tested: "2026-04-22"
@@ -81,3 +81,13 @@ Run `npx ccusage session` before and after adding rules. Compare:
 Expect a 20-40% reduction in per-session cost with these rules active.
 
 Related: [ccusage Cost Tracking Guide](/ccusage-claude-code-cost-tracking-guide-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) | [The Claude Code Playbook](/playbook/)
+
+- [Claude API pricing](/claude-api-pricing-complete-guide/) — every plan and model priced
+- [Claude extra usage cost](/claude-extra-usage-cost-guide/) — what overages actually cost
+- [Claude 5-hour usage limit](/claude-5-hour-usage-limit-guide/) — understand the rolling limit
+- [OpenRouter setup for Claude Code](/claude-code-openrouter-setup-guide/) — alternative pricing via OpenRouter
+- [Claude Pro subscription price](/claude-pro-subscription-price-guide/) — when Pro saves money
+
+## See Also
+
+- [Stop Claude Code Writing Excessive Code (2026)](/claude-code-writes-too-much-code-fix-2026/)

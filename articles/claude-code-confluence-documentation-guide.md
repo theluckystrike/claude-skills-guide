@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Confluence Documentation (2026)"
+title: "Claude Code + Confluence Documentation"
 description: "Integrate Claude Code with Confluence for automated documentation workflows. Generate, update, and sync wiki pages from your codebase directly."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -232,3 +232,7 @@ Generating technical documentation uses the `pdf` skill for formatted PDF output
 ### What is Automating the Documentation Pipeline?
 
 Automating the documentation pipeline uses Git hooks or CI triggers to regenerate documentation when code changes. A post-commit hook runs `claude --print` to generate markdown API documentation, then a Node.js script pushes it to Confluence with the correct page title and space. The `supermemory` skill remembers documentation preferences across sessions. Version conflict handling fetches the current page version, increments it, and skips updates when content has not changed to prevent overwriting manual edits.
+
+## See Also
+
+- [Claude Code for Confluence Documentation 2026](/claude-code-confluence-documentation-workflow-2026/)

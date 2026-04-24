@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills Shared Dependencies — Managing Common Scripts, Templates, and Reference Data Across Skills — 2026"
+title: "Claude Skills Shared Dependencies"
 description: "Structure shared scripts, templates, and config files across multiple Claude Code skills without duplication using symlinks, references, and plugin patterns."
 permalink: /claude-skills-shared-dependencies/
 render_with_liquid: false

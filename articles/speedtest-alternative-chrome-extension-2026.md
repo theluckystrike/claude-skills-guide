@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Speedtest Alternative Chrome — Developer Comparison 2026"
+title: "Speedtest Alternative Chrome"
 description: "Explore Chrome extensions that serve as speedtest alternatives in 2026. Compare features, APIs, and implementation approaches for developers and power."
 date: 2026-03-15
 last_modified_at: 2026-04-17

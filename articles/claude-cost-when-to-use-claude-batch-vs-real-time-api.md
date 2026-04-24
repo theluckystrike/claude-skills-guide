@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "When to Use Claude Batch vs Real-Time API"
+title: "When to Use Claude Batch vs Real-Time"
 description: "Batch API saves 50% but adds up to 1 hour latency. Use this decision framework to pick the right mode for each workload."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -185,3 +185,11 @@ Track per-workload metrics after migration:
 - [Anthropic Message Batches API Guide](/anthropic-message-batches-api-guide/)
 - [Claude API Batch Processing Large Datasets](/claude-api-batch-processing-large-datasets-workflow-guide/)
 - [Claude Code for Batch Processing Optimization](/claude-code-for-batch-processing-optimization-workflow/)
+
+## See Also
+
+- [Real-Time Claude Token Monitoring Pipeline](/claude-cost-08-real-time-token-monitoring-pipeline/)
+- [Combining Caching with Batch API for 95% Savings](/claude-cost-combining-caching-batch-api-95-percent-savings/)
+- [Claude Batch Processing Limits and Best Practices](/claude-cost-claude-batch-processing-limits-best-practices/)
+- [Migrating Real-Time Claude Calls to Batch API](/claude-cost-migrating-real-time-claude-calls-to-batch/)
+- [When Full Context Costs More Than a RAG Pipeline](/claude-cost-when-full-context-costs-more-than-rag/)

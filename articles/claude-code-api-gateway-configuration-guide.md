@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code API Gateway Configuration Guide"
+title: "Claude Code API Gateway Configuration"
 description: "Learn how to configure API gateways for Claude Code with practical examples and best practices for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

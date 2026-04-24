@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Container Environment Variables in Claude Code"
+title: "Container Environment Variables"
 description: "Set up and manage environment variables in Claude Code containers. Covers secrets, config injection, Docker Compose, and production-ready patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -550,4 +550,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Wrong Environment Deploy: Prevent Mistakes](/claude-code-deploying-wrong-environment-prevent-mistakes/)

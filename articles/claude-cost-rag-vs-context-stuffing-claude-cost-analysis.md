@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "RAG vs Context Stuffing: Claude Cost Analysis"
+title: "RAG vs Context Stuffing"
 description: "Context stuffing 200K tokens costs $1.00/request on Opus. RAG retrieval with 20K tokens costs $0.10/request — 90% cheaper per query."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -229,3 +229,7 @@ Track cost per query across your chosen approach. For RAG: monitor retrieval rec
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — context size as the primary cost driver
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/) — managing context for cost efficiency
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — why context limits exist
+
+## See Also
+
+- [Claude Code for Teams: Per-Seat Cost Analysis (2026)](/claude-code-teams-per-seat-cost-analysis-2026/)

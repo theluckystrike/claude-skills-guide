@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Container Security Scanning Workflow Guide"
+title: "Claude Code Container Security Scanning"
 description: "Master container security scanning workflows with Claude Code skills. Learn to integrate security tools, automate vulnerability detection, and build."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -275,4 +275,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for PCI-DSS Security Scanning (2026)](/claude-code-pci-dss-security-scanning-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Anti-Fingerprinting Chrome Extensions (2026)"
+title: "Best Anti-Fingerprinting Chrome"
 description: "Best anti-fingerprinting Chrome extensions and techniques for 2026. Practical solutions for developers who want enhanced browser privacy. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

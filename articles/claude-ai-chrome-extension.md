@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude AI Chrome Extension — Setup Guide (2026)"
+title: "Claude AI Chrome Extension"
 description: "Set up Claude AI in Chrome with extensions and userscripts. Integration methods, workflow automation, and productivity tips included. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

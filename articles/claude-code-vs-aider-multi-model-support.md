@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Aider: Multi-Model Support"
+title: "Claude Code vs Aider: Multi-Model Support Comparison"
 description: "Compare model flexibility in Claude Code and Aider. Single-provider vs 20+ model support, routing strategies, and cost optimization."
 date: 2026-04-21
 permalink: /claude-code-vs-aider-multi-model-support/
@@ -93,3 +93,7 @@ Claude Code's single-model simplicity means fewer decisions during initial adopt
 ## When To Use Neither
 
 If your model needs are simple and you just want chat with code context, the providers' direct interfaces (Claude.ai, ChatGPT) or lightweight IDE extensions may be more appropriate. The multi-model and tool-use overhead of both Aider and Claude Code is unnecessary if you are primarily copy-pasting code snippets from a chat conversation. For teams spending less than $20/month on AI assistance, the optimization Aider provides is not worth the additional complexity.
+
+## See Also
+
+- [Claude Code vs Aider: Git Integration Compared](/claude-code-vs-aider-git-integration/)

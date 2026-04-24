@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude API Error 401 — Authentication Failed"
+title: "Fix Claude API Error 401"
 description: "Resolve Claude API 401 unauthorized errors. Covers API key validation, environment variable setup, and common authentication mistakes."
 date: 2026-04-14
 last_modified_at: 2026-04-17

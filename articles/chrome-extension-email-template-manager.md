@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Email Template Manager Chrome Extension Guide (2026)"
+title: "Email Template Manager Chrome Extension"
 description: "Learn how Chrome extension email template managers streamline workflow for developers and power users. Discover features, implementation, and practical."
 date: 2026-03-15
 last_modified_at: 2026-04-17

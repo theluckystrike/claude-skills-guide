@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for GDPR Data Mapping Implementation (2026)"
+title: "Claude Code for GDPR Data Mapping"
 permalink: /claude-code-gdpr-data-mapping-2026/
 description: "Implement GDPR Article 30 data mapping with Claude Code. Auto-discover personal data flows, generate processing records, and map retention policies."
 last_tested: "2026-04-22"

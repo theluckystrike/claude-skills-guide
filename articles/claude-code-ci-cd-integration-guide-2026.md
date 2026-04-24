@@ -1,5 +1,5 @@
 ---
-title: "Claude Code CI/CD Integration Guide (2026)"
+title: "Claude Code CI/CD Integration Guide"
 description: "Integrate Claude Code into CI/CD pipelines for automated code review, test generation, documentation, and quality gates using API mode."
 permalink: /claude-code-ci-cd-integration-guide-2026/
 last_tested: "2026-04-22"
@@ -272,4 +272,4 @@ For API mode details, see the [API mode guide](/claude-code-api-mode-vs-interact
 ## Related
 
 - [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) and safer alternatives
-
+- [CI/CD Runner Missing Dependencies Fix](/claude-code-ci-cd-runner-missing-dependencies-fix-2026/)

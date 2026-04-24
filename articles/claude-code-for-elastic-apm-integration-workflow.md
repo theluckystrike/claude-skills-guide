@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Elastic Apm — Complete Developer Guide"
+title: "Claude Code For Elastic Apm"
 description: "Learn how to integrate Claude Code with Elastic APM for automated observability monitoring, error tracking, and performance optimization workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

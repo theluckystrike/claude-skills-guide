@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Guides: Complete Collection (2026)"
+title: "Claude Code Guides: Complete Collection"
 description: "Complete Claude Code collection: 50 error fixes, 25 CLAUDE.md templates, 15 orchestration configs, and 100 proven prompts. Tested April 2026."
 date: 2026-04-19
 last_tested: "2026-04-21"

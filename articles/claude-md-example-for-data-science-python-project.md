@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude.md Example for Data Science Python (2026)"
+title: "Claude.md Example for Data Science"
 description: "Configure Claude Code for data science with real CLAUDE.md examples. Covers pandas workflows, ML pipelines, Jupyter integration, and analysis patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

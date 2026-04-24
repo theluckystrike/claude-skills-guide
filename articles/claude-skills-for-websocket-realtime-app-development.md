@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for WebSocket Realtime Apps (2026)"
+title: "Claude Code for WebSocket Realtime Apps"
 description: "Build real-time WebSocket applications with Claude Code skills. Connection handling, state management, and Redis scaling patterns all included."
 date: 2026-03-14
 last_modified_at: 2026-04-17

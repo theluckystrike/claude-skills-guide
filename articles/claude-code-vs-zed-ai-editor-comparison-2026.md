@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs Zed AI: Terminal Agent vs Speed Editor (2026)"
+title: "Claude Code vs Zed AI"
 permalink: /claude-code-vs-zed-ai-editor-comparison-2026/
 description: "Claude Code runs autonomous multi-file tasks from your terminal. Zed AI edits at 120fps with inline predictions. Which fits your dev workflow?"
 last_tested: "2026-04-21"
@@ -82,3 +82,7 @@ Source: [anthropic.com/pricing](https://anthropic.com/pricing), [zed.dev/pricing
 ## The Bottom Line
 
 Zed AI is the best pure editor for developers who prioritize speed, minimalism, and collaborative editing with AI augmentation. Claude Code is the best autonomous coding agent for developers who need multi-step task execution without manual orchestration. They solve different problems — Zed replaces your editor, Claude Code replaces your workflow orchestration. Many developers will use Zed as their editor and Claude Code as their agent, running both simultaneously for the strongest development setup available in 2026.
+
+## See Also
+
+- [Claude Code vs Zed AI (2026): Editor Integration](/claude-code-vs-zed-ai-editor-integration-2026/)

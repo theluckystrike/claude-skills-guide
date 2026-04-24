@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Arabic Speaking Developer Teams"
+title: "Claude Code for Arabic Speaking"
 description: "A practical guide for Arabic speaking developer teams using Claude Code. Setup, skills, localization, and team collaboration workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

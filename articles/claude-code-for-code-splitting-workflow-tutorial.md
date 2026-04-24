@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Code Splitting Workflow Tutorial"
+title: "Claude Code for Code Splitting Workflow"
 description: "Learn how to use Claude Code to automate and optimize your code splitting workflow with practical examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

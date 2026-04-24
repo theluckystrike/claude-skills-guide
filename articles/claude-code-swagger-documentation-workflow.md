@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Swagger API Documentation (2026)"
+title: "Claude Code for Swagger API"
 description: "Generate OpenAPI specs and Swagger docs automatically with Claude Code. Covers schema extraction, endpoint documentation, and interactive API testing."
 date: 2026-03-14
 last_modified_at: 2026-04-17

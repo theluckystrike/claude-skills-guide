@@ -1,5 +1,5 @@
 ---
-title: "Context Engineering vs Prompt Engineering for Agents"
+title: "Context Engineering vs Prompt"
 description: "Context engineering outperforms prompt engineering for Claude Code agents by reducing token waste 40-60% through structured knowledge loading and scoping."
 permalink: /context-engineering-vs-prompt-engineering-agents/
 date: 2026-04-22
@@ -185,6 +185,7 @@ For teams currently using prompt engineering only:
 - [Skills as Context Engineering: Zero-Round-Trip Knowledge Loading](/skills-context-engineering-zero-round-trip-loading/) -- skills as a pre-loading mechanism
 - Andrej Karpathy on context engineering (2025) -- the original framing
 - Avi Chawla on structured context delivery -- practical frameworks
+- [How Context Engineering Reduces Claude Code Costs: The Mechanism](/context-engineering-reduces-claude-code-costs-mechanism/)
 
 ## Appendix: Context Engineering Terminology
 

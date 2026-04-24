@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code --resume Flag — How to Use It (2026)"
+title: "Claude Code --resume Flag"
 description: "Use Claude Code --resume to continue interrupted sessions. Recover work in progress and manage long-running tasks effectively."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -341,7 +341,4 @@ Related Reading
 - [Claude Skills Guides Hub](/guides-hub/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
-
-
+- [How to Resume Claude Code Sessions 2026](/claude-code-resume-sessions-guide-2026/)

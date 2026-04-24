@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for OpenSSL Certificate Workflow Guide"
+title: "Claude Code for OpenSSL Certificate"
 description: "Learn how to use Claude Code to automate OpenSSL certificate workflows including generation, validation, renewal, and management of SSL/TLS certificates."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -283,4 +283,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [SSL Certificate Chain Incomplete Error — Fix (2026)](/claude-code-ssl-certificate-chain-incomplete-fix-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code MCP Tools Excessive Context — Quick Guide"
+title: "Fix Claude Code MCP Tools Excessive"
 description: "Reduce MCP server context overhead in Claude Code by deferring tool definitions, disabling unused servers, and preferring CLI tools."
 date: 2026-04-15
 permalink: /claude-code-mcp-tools-excessive-context-fix/
@@ -162,4 +162,6 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Claude Code Cost Per Project Estimation Guide](/claude-code-cost-per-project-estimation-calculator-guide/)
 - [Anthropic SDK MCP Empty Arguments Bug](/anthropic-sdk-mcp-empty-arguments-bug/)
 
+## See Also
 
+- [Claude Code MCP tools loading slowly — token cost impact](/claude-code-mcp-tools-loading-slowly-token-cost/)

@@ -1,5 +1,5 @@
 ---
-title: "What Is Context Engineering? Karpathy + Claude Code"
+title: "What Is Context Engineering? Karpathy +"
 description: "Context engineering -- Andrej Karpathy's term for controlling what an LLM sees -- applied to Claude Code to reduce token costs by 50-70% per session."
 permalink: /what-is-context-engineering-karpathy-claude-code/
 date: 2026-04-22
@@ -134,3 +134,4 @@ The CCG framework applies context engineering across three timescales: per-turn 
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- technical mechanics of the context window
 - Andrej Karpathy -- "Context Engineering" concept (introduced via social media and talks, 2025)
 - Avi Chawla -- practical context engineering frameworks and taxonomies
+- [Karpathy Context Engineering + NASA P10: CCG Framework](/karpathy-context-engineering-nasa-p10-ccg-framework/)

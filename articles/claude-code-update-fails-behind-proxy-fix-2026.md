@@ -1,5 +1,5 @@
 ---
-title: "Update Fails Behind Corporate Proxy — Fix (2026)"
+title: "Update Fails Behind Corporate Proxy"
 permalink: /claude-code-update-fails-behind-proxy-fix-2026/
 description: "Fix Claude Code update failing behind proxy. Configure npm proxy settings and registry mirror for corporate networks."
 last_tested: "2026-04-22"
@@ -84,3 +84,9 @@ Add this to your `CLAUDE.md`:
 - Add corporate CA cert: npm config set cafile /path/to/ca.crt
 - Document proxy URL in project README for new team members.
 ```
+
+## See Also
+
+- [MITM Proxy Detection Error — Fix (2026)](/claude-code-mitm-proxy-detection-error-fix-2026/)
+- [Self-Signed Cert in Corporate Proxy — Fix (2026)](/claude-code-self-signed-cert-corporate-proxy-fix-2026/)
+- [SOCKS Proxy Not Supported Error — Fix (2026)](/claude-code-socks-proxy-not-supported-fix-2026/)

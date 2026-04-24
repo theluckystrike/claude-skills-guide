@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for GitLab CI Workflow Optimization"
+title: "Claude Code for GitLab CI Workflow"
 description: "Master GitLab CI workflow optimization with Claude Code. Learn practical strategies to speed up pipelines, reduce costs, and improve deployment."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -230,4 +230,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Dagger CI — Workflow Guide](/claude-code-for-dagger-ci-workflow-guide/)
+- [Claude Code for GitLab CLI glab — Guide](/claude-code-for-gitlab-cli-glab-workflow-guide/)

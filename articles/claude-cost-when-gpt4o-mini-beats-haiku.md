@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "When GPT-4o Mini Beats Claude Haiku on Cost"
+title: "When GPT-4o Mini Beats Claude Haiku"
 description: "GPT-4o mini at $0.15/$0.60 beats Haiku's $1/$5 in 4 specific scenarios. Save $258 per 1M calls."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -126,3 +126,6 @@ The 5% quality gap matters when errors are expensive. If a wrong classification 
 - [Reduce Claude Code Token Consumption by 60%](/reduce-claude-code-token-consumption-60-percent/)
 - [Claude Haiku 4.5 Budget-Friendly Coding Guide](/claude-haiku-45-budget-friendly-coding/)
 - [Text Editor Tool: 700 Token Overhead Explained](/claude-text-editor-tool-700-token-overhead/)
+- [Opus Orchestrator with Haiku Workers Pattern](/claude-cost-opus-orchestrator-haiku-workers-pattern/)
+- [When Full Context Costs More Than a RAG Pipeline](/claude-cost-when-full-context-costs-more-than-rag/)
+- [When NOT to Use Claude Prompt Caching](/claude-cost-when-not-to-use-claude-prompt-caching/)

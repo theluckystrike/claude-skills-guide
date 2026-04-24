@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code FastAPI OpenAPI Schema Generation Workflow"
+title: "Claude Code FastAPI OpenAPI Schema"
 description: "A practical guide to generating OpenAPI schemas from FastAPI applications using Claude Code. Includes code examples, workflow patterns, and actionable."
 date: 2026-03-14
 last_modified_at: 2026-04-17

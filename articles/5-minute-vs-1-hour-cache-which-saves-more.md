@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "5-Minute vs 1-Hour Cache: Which Saves More"
+title: "5-Minute vs 1-Hour Cache"
 description: "Claude's 5-minute cache costs 1.25x per write, 1-hour costs 2x. See break-even analysis to pick the right TTL for your workload."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -143,3 +143,7 @@ To quantify the exact cost of cache misses, calculate the re-write penalty for y
 - [Claude Prompt Caching Pricing and Cost Savings](/claude-prompt-caching-pricing-and-cost-savings/)
 - [Claude API Prompt Caching Performance Optimization](/claude-api-prompt-caching-performance-optimization-guide/)
 - [Claude Code for Varnish Cache Workflow](/claude-code-for-varnish-cache-workflow-tutorial/)
+
+## See Also
+
+- [MCP vs CLI for Claude Code: When Each Saves More Tokens](/mcp-vs-cli-claude-code-saves-more-tokens/)

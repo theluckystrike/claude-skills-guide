@@ -1,5 +1,5 @@
 ---
-title: "Prisma Generate Failure After Schema Change — Fix (2026)"
+title: "Prisma Generate Failure After Schema"
 permalink: /claude-code-prisma-generate-failure-fix-2026/
 description: "Fix prisma generate failure after Claude edits schema. Run prisma format, then generate, then migrate to sync database."
 last_tested: "2026-04-22"

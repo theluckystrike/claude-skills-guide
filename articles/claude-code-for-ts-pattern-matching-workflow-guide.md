@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for ts-pattern — Workflow Guide"
+title: "Claude Code for ts-pattern"
 description: "Add exhaustive pattern matching with ts-pattern and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-ts-pattern-matching-workflow-guide/
@@ -83,3 +83,4 @@ Claude Code should use `match(response).with({ status: 'success' }, ({ data }) =
 - [Claude Code for Quantization with bitsandbytes Workflow](/claude-code-for-quantization-with-bitsandbytes-workflow/)
 - [Claude Code for Flux Bootstrap Workflow Tutorial](/claude-code-for-flux-bootstrap-workflow-tutorial/)
 - [Claude Code for Homebrew Bundle Workflow Tutorial](/claude-code-for-homebrew-bundle-workflow-tutorial/)
+- [Claude Code for Effect-TS — Workflow Guide](/claude-code-for-effect-ts-workflow-guide/)

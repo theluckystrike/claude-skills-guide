@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code German Enterprise Compliance Workflow Tips"
+title: "Claude Code German Enterprise"
 description: "Practical strategies for implementing Claude Code in German enterprise compliance workflows. Includes code examples, skill recommendations, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19

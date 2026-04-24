@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Suricata Ids — Complete Developer Guide"
+title: "Claude Code For Suricata Ids"
 description: "A comprehensive guide to using Claude Code for developing, testing, and managing Suricata IDS rules and workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

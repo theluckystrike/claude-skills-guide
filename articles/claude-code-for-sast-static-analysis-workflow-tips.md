@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for SAST Static Analysis Workflow Tips"
+title: "Claude Code for SAST Static Analysis"
 description: "Master static application security testing (SAST) workflows with Claude Code. Learn practical tips to integrate security scanning into your development."
 date: 2026-03-15
 last_modified_at: 2026-04-17

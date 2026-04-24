@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Java Spring Boot Workflows (2026)"
+title: "Claude Code for Java Spring Boot"
 description: "Speed up Spring Boot development with Claude Code. Covers project setup, dependency injection, REST controllers, JPA queries, and testing workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19

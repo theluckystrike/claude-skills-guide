@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Not Understanding Codebase (2026)"
+title: "Fix Claude Code Not Understanding"
 description: "Fix Claude Code not understanding your codebase by configuring CLAUDE.md with architecture maps, key file paths, and project conventions."
 permalink: /claude-code-doesnt-understand-codebase-fix-2026/
 last_tested: "2026-04-22"
@@ -111,3 +111,12 @@ Add a quarterly review to your sprint cycle:
 - Update convention rules that have changed
 
 For a deeper look at CLAUDE.md patterns, see our [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). For the full ecosystem of tools that improve Claude Code's project awareness, check the [Claude Code best practices overview](/karpathy-skills-vs-claude-code-best-practices-2026/). You can also browse available [skills and plugins](/claude-skills-directory-where-to-find-skills/) that add persistent project memory.
+
+## See Also
+
+- [Make Claude Code Explain Its Changes (2026)](/claude-code-doesnt-explain-changes-fix-2026/)
+- [Make Claude Code Write Documentation (2026)](/claude-code-doesnt-write-docs-fix-2026/)
+- [Make Claude Code Handle Edge Cases (2026)](/claude-code-doesnt-handle-edge-cases-fix-2026/)
+- [Make Claude Code Read Existing Code First (2026)](/claude-code-doesnt-read-existing-code-fix-2026/)
+- [Make Claude Code Match Team Conventions (2026)](/claude-code-doesnt-match-team-conventions-fix-2026/)
+- [Fix Claude Code Misunderstanding Requirements (2026)](/claude-code-misunderstands-requirements-fix-2026/)

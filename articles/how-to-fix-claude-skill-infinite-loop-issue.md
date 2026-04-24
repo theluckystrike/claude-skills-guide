@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Infinite Loop in Skills (2026)"
+title: "Fix Claude Code Infinite Loop in Skills"
 description: "Fix Claude Code infinite loop issues by diagnosing exit conditions, tool re-invocation cycles, and recursive bash calls with proven solutions."
 date: 2026-03-13
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Block Phishing Chrome Extension Guide (2026)"
+title: "Block Phishing Chrome Extension Guide"
 description: "Learn how Chrome block phishing extension technology works under the hood. This guide covers the Chrome Web Store, extension APIs, phishing detection."
 date: 2026-03-15
 last_modified_at: 2026-04-17

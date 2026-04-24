@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Lm Studio Local — Complete Developer (2026)"
+title: "How to Use Lm Studio Local"
 description: "Learn how to integrate Claude Code with LM Studio for local model skill integration. Practical examples and code snippets for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -156,4 +156,7 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Credit Scoring Models (2026)](/claude-code-credit-scoring-model-2026/)
+- [Claude Code + Emacs Integration Guide 2026](/claude-code-emacs-integration-guide-2026/)

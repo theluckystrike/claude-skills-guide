@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Aider AI Review 2026: Honest Pair Programming Take"
+title: "Aider AI Review 2026"
 description: "Aider AI pair programming review for 2026. Real-world usage, strengths, limitations, and honest comparison to Claude Code for daily coding tasks."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -190,6 +190,4 @@ Related Reading
 - [Claude Code Pair Programming for Beginner Developers](/claude-code-pair-programming-for-beginner-developers/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
-
+- [Claude Code Pair Programming Guide (2026)](/claude-code-pair-programming-guide-2026/)

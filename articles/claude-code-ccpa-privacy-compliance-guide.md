@@ -257,4 +257,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for CCPA Data Handling Implementation (2026)](/claude-code-ccpa-data-handling-2026/)

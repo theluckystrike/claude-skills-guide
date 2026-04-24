@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Smart Context Pruning for Claude API Savings"
+title: "Smart Context Pruning for Claude API"
 description: "Remove noise, deduplicate code, and prune history to cut Claude context by 60% — save $4,500/month on Opus 4.7 at 100 req/day."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -274,3 +274,8 @@ Measure average context size per interaction with and without pruning. Target a 
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — context as the primary cost driver
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/) — complementary management strategies
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — understanding context design decisions
+
+## See Also
+
+- [Smart Model Selection Saves 80% on Claude API](/claude-cost-smart-model-selection-saves-80-percent-claude/)
+- [How Context Window Size Drives Claude API Bills](/claude-cost-context-window-size-drives-claude-api-bills/)

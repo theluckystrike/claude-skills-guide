@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills For Site Reliability — Developer Guide"
+title: "Claude Skills For Site Reliability"
 description: "Practical guide to Claude Code skills that help SREs automate incident response, analyze logs, build monitoring dashboards, and manage on-call workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

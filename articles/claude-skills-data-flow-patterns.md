@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills Data Flow Patterns — File Interfaces, Context Passing, and Output Routing — 2026"
+title: "Claude Skills Data Flow Patterns"
 description: "Design data flow between Claude Code skills using file-based interfaces, argument passing, dynamic injection, and structured output routing patterns."
 permalink: /claude-skills-data-flow-patterns/
 render_with_liquid: false

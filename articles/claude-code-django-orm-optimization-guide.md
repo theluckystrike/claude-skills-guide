@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Django Orm — Complete Developer Guide"
+title: "Claude Code Django Orm"
 description: "Master Django ORM optimization with Claude Code. Learn practical techniques for querysets, select_related, prefetch_related, and database performance."
 date: 2026-03-14
 last_modified_at: 2026-04-17

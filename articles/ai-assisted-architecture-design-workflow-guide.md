@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "AI Assisted Architecture Design Workflow Guide"
+title: "AI Assisted Architecture Design"
 description: "Learn how to use AI tools for architecture design workflows. Practical guide for developers leveraging Claude skills to design scalable systems."
 date: 2026-03-14
 last_modified_at: 2026-04-17

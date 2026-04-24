@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Codesearch — Complete Developer Guide"
+title: "Claude Code For Codesearch"
 description: "A comprehensive guide to integrating Claude Code with CodeSearch workflows for enhanced developer productivity and code discovery."
 date: 2026-03-15
 last_modified_at: 2026-04-17

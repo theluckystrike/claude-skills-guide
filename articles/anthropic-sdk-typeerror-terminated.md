@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: SDK TypeError: terminated Streaming"
+title: "Fix: SDK TypeError: terminated"
 description: "Fix intermittent TypeError: terminated failures in the Anthropic TypeScript SDK when streaming large inputs with undici."
 date: 2026-04-15
 last_modified_at: 2026-04-17

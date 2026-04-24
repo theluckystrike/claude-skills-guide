@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Docker Image Publishing Workflow Guide"
+title: "Claude Code for Docker Image Publishing"
 description: "A comprehensive guide to using Claude Code for automating Docker image building, tagging, and publishing workflows. Learn practical techniques for."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -393,4 +393,7 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Colima Docker — Workflow Guide](/claude-code-for-colima-docker-workflow-guide/)
+- [How to Use Claude Docker Image Size: Reduction (2026)](/claude-code-docker-image-size-reduction-guide/)

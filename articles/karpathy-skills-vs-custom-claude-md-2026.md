@@ -1,5 +1,5 @@
 ---
-title: "Karpathy Skills vs Custom CLAUDE.md (2026)"
+title: "Karpathy Skills vs Custom CLAUDE.md"
 description: "Should you use Karpathy's proven 4-principle CLAUDE.md or write your own from scratch? Compare both approaches with concrete examples."
 permalink: /karpathy-skills-vs-custom-claude-md-2026/
 last_tested: "2026-04-22"
@@ -110,3 +110,8 @@ The combined approach means maintaining both: pulling Karpathy updates and keepi
 ## Final Recommendation
 
 Copy Karpathy Skills into your CLAUDE.md, add your project-specific rules below it, and move on. You get 72K stars worth of community validation plus your domain knowledge. Revisit and refine monthly. The 80/20 outcome requires less than 5 minutes of setup, and your [Claude Code sessions](/karpathy-skills-vs-claude-code-best-practices-2026/) will improve immediately.
+
+## See Also
+
+- [Karpathy Skills vs Ultimate Guide (2026)](/karpathy-skills-vs-claude-code-ultimate-guide-2026/)
+- [Karpathy Skills vs SuperClaude Framework (2026)](/karpathy-skills-vs-superclaude-framework-2026/)

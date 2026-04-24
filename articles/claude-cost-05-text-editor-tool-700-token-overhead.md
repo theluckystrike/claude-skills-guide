@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Text Editor Tool: 700 Token Overhead Explained"
+title: "Text Editor Tool"
 description: "Claude's text editor tool adds 700 tokens per turn. Learn how phase-based tool loading cuts editor overhead by 60% in agent workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -160,3 +160,10 @@ Compare total input tokens per session before and after deploying adaptive tool 
 - [Claude API Tool Use Function Calling Deep Dive](/claude-api-tool-use-function-calling-deep-dive-guide/)
 - [Advanced Claude Skills with Tool Use](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Claude Skills Token Optimization Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
+
+## See Also
+
+- [Token-Efficient Few-Shot Examples for Claude](/claude-cost-token-efficient-few-shot-examples-claude/)
+- [Claude Code $200 Max Plan: Is It Worth the Cost](/claude-cost-05-claude-code-max-200-worth-it/)
+- [Reduce Claude Code Token Consumption by 60%](/claude-cost-06-reduce-claude-code-token-consumption/)
+- [Claude Workspace Spend Limits Configuration](/claude-cost-05-claude-workspace-spend-limits/)

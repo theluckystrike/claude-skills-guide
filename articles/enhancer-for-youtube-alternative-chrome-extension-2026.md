@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Enhancer for YouTube Alternative for Chrome (2026)"
+title: "Enhancer for YouTube Alternative"
 description: "Enhancer for YouTube Alternative for Chrome compared side-by-side with real features, pricing, performance benchmarks, and user experience reviewed for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

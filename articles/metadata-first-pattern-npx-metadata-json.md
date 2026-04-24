@@ -1,5 +1,5 @@
 ---
-title: "Metadata-First Pattern: npx metadata --json First"
+title: "Metadata-First Pattern"
 description: "The metadata-first pattern uses pre-computed project metadata to eliminate 3,000-15,000 discovery tokens per Claude Code session through structured lookups."
 permalink: /metadata-first-pattern-npx-metadata-json/
 date: 2026-04-22

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use AI Code Optimization: Claude Token Usage (2026)"
+title: "How to Use AI Code Optimization"
 description: "Optimize AI code token usage in Claude Code. Practical strategies for prompt structuring, context management, and reducing API costs by 50%."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -244,4 +244,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Token Count Estimation Mismatch Fix](/claude-code-token-count-estimation-mismatch-fix-2026/)

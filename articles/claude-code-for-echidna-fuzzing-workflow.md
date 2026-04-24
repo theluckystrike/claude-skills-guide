@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Echidna Fuzzing Workflow"
+title: "Claude Code for Echidna Fuzzing"
 description: "Master smart contract security testing with Claude Code and Echidna. Learn to create automated fuzzing workflows, write property-based tests, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code .claude/settings.json: Cost-Saving Configuration"
+title: "Claude Code .claude/settings.json"
 description: "Configure Claude Code .claude/settings.json for cost savings with permission controls, tool restrictions, and directory scoping that reduce token waste."
 permalink: /claude-code-settings-json-cost-saving-configuration/
 date: 2026-04-22

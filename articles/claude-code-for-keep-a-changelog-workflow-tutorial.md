@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Keep a Changelog Workflow (2026)"
+title: "Claude Code for Keep a Changelog"
 description: "Automate changelog management with Claude Code and the Keep a Changelog format. Generate entries from commits, PRs, and conventional commit messages."
 date: 2026-03-15
 last_modified_at: 2026-04-17

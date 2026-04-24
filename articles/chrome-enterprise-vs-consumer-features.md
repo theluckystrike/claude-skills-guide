@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise vs Consumer: Feature Comparison (2026)"
+title: "Chrome Enterprise vs Consumer"
 description: "Chrome Enterprise vs Consumer features compared. See which capabilities matter for developers and IT admins managing browser deployments. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

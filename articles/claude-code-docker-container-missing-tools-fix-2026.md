@@ -72,3 +72,31 @@ docker exec -it my-container bash -c "which git curl jq rg"
 # CLAUDE.md rule
 When running in Docker, ensure the container has: git, curl, jq, ripgrep, and bash installed. Use the full node:20 base image, not node:20-slim or alpine, for best Claude Code compatibility.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `npm ERR! code EACCES`
+- `npm ERR! code ERESOLVE`
+- `npm ERR! peer dep missing`
+- `fatal: not a git repository`
+- `error: failed to push some refs`
+
+## Frequently Asked Questions
+
+### Should I use npm or pnpm with Claude Code?
+
+Claude Code works with any Node.js package manager. If your project uses pnpm, add `Use pnpm instead of npm for all package operations` to your CLAUDE.md so Claude Code respects your toolchain choice.
+
+### Why does Claude Code sometimes run npm commands that fail?
+
+Claude Code infers the package manager from lock files. If both `package-lock.json` and `pnpm-lock.yaml` exist, it may pick the wrong one. Delete the unused lock file or add an explicit instruction in CLAUDE.md.
+
+### How do I verify my npm installation is working?
+
+Run `npm doctor` to check your npm environment. It validates the registry connection, permissions, cache integrity, and Node.js compatibility in one command.
+
+### Why does Claude Code require git?
+
+Claude Code uses git for several core operations: tracking file changes, creating commits, reading blame information, searching history with `git log`, and managing branches. Without git, these operations fail and Claude Code falls back to less efficient alternatives.

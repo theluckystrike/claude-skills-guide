@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Permission Modes: How They Affect Token Usage"
+title: "Claude Code Permission Modes"
 description: "Claude Code permission prompts add 200-500 tokens per interaction -- understand how permission modes affect token costs and when to use auto-accept."
 permalink: /claude-code-permission-modes-affect-token-usage/
 date: 2026-04-22

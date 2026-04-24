@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude API Usage Metrics Every Team Needs"
+title: "Claude API Usage Metrics Every Team"
 description: "Track these 7 metrics to control Claude API costs: cost per request, cache hit rate, model distribution, and 4 more with code examples."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -208,3 +208,10 @@ Compare your month-1 baselines to month-3 actuals. The metrics themselves cost n
 - [Claude Code Enterprise Seat Management and Usage Monitoring](/claude-code-enterprise-seat-management-and-usage-monitoring/)
 - [Claude Code for Cost Optimization Monitoring Guide](/claude-code-for-cost-optimization-monitoring-guide/)
 - [Cost Allocation and Chargebacks for Enterprise Claude Code](/cost-allocation-and-chargebacks-for-enterprise-claude-code/)
+
+## See Also
+
+- [Claude Tool Use Cost Calculator Guide](/claude-cost-07-tool-use-cost-calculator/)
+- [How to Reduce Claude API Token Usage by 50%](/claude-cost-reduce-claude-api-token-usage-50-percent/)
+- [Claude Usage Alerts to Prevent Cost Overruns](/claude-cost-03-claude-usage-alerts-prevent-overruns/)
+- [Claude Code Pro vs API: Cost Comparison Guide](/claude-cost-07-claude-code-pro-vs-api-cost/)

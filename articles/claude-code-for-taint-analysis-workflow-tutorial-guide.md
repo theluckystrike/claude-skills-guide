@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Taint Analysis Workflows (2026)"
+title: "Claude Code for Taint Analysis"
 description: "Trace untrusted data flows through your codebase with Claude Code taint analysis. Find injection vulnerabilities and sanitization gaps automatically."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Pair Programming for Beginner Developers"
+title: "Claude Code Pair Programming"
 description: "Learn how to use Claude Code as your programming partner. A beginner-friendly guide to pair programming with AI, covering setup, workflows, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -217,4 +217,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Pair Programming Guide (2026)](/claude-code-pair-programming-guide-2026/)

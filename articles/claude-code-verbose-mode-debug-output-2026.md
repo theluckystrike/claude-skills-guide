@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code Verbose Mode: Debug Output Guide 2026"
+title: "Claude Code Verbose Mode"
 description: "Enable verbose mode in Claude Code for detailed API logs, token counts, and request tracing. Essential for debugging and cost optimization."
 permalink: /claude-code-verbose-mode-debug-output-2026/
 date: 2026-04-21

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Sre Toil — Complete Developer Guide"
+title: "Claude Code For Sre Toil"
 description: "Learn how to use Claude Code to automate repetitive SRE tasks and reduce operational toil with practical examples and actionable workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Spring WebFlux Workflow Tutorial"
+title: "Claude Code for Spring WebFlux Workflow"
 description: "Learn how to use Claude Code to build reactive Spring WebFlux applications. This tutorial covers practical examples, code snippets, and actionable."
 date: 2026-03-15
 last_modified_at: 2026-04-17

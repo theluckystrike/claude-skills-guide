@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Kitty Terminal — Workflow Guide"
+title: "Claude Code for Kitty Terminal"
 description: "Optimize Claude Code output in Kitty terminal. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-kitty-terminal-workflow-guide/

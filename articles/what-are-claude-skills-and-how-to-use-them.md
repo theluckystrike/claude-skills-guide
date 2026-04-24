@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "What Are Claude Skills And How — Complete Developer Guide"
+title: "What Are Claude Skills"
 description: "Learn what Claude skills are, how they work in Claude Code, and step-by-step instructions for using built-in and custom skills to automate your."
 date: 2026-03-14
 last_modified_at: 2026-04-17

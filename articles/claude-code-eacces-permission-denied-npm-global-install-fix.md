@@ -1,5 +1,5 @@
 ---
-title: "Claude Code EACCES Permission Denied Global Install — Fix (2026)"
+title: "Claude Code EACCES Permission Denied"
 description: "Fix Claude Code EACCES permission denied on npm global install. Change npm prefix to home directory. Step-by-step solution."
 permalink: /claude-code-eacces-permission-denied-npm-global-install-fix/
 last_tested: "2026-04-21"
@@ -69,3 +69,5 @@ Never use sudo for npm install -g. Set npm prefix to ~/.npm-global. Use nvm or v
 ## Related
 
 - [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
+- [npm Global Install Permission Denied — Fix (2026)](/claude-code-npm-global-install-permission-denied-fix-2026/)
+- [EACCES npm Cache Permission Error — Fix (2026)](/claude-code-eacces-npm-cache-fix-2026/)

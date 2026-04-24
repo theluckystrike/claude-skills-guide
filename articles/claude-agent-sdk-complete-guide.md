@@ -1,5 +1,5 @@
 ---
-title: "Claude Agent SDK: Complete Developer Guide (2026)"
+title: "Claude Agent SDK"
 description: "Build autonomous AI agents with the Claude Agent SDK. Installation, working examples, architecture patterns, cost analysis, and configuration reference."
 permalink: /claude-agent-sdk-complete-guide/
 last_tested: "2026-04-24"
@@ -412,6 +412,142 @@ Treat agents like microservices: each should have clear inputs, outputs, error h
 
 *Need the complete toolkit? [The Claude Code Playbook](https://zovo.one/pricing) includes 200 production-ready templates, decision frameworks, and team setup guides for every Claude Code workflow.*
 
+## Production Agent Architectures
+
+The three patterns above (sequential, orchestrator, pipeline) are starting points. Production deployments require deeper architecture decisions around parallelism, failure isolation, and cost governance. Here are three battle-tested patterns with their tradeoffs.
+
+### Pattern 1: Fan-Out (Parallel Workers)
+
+A coordinator dispatches the same task type to N workers running concurrently. Each worker processes an independent unit of work. The coordinator collects results when all workers finish.
+
+```
+                          ┌──── [Worker A] ──── Result A ────┐
+                          │                                    │
+User Task ── [Coordinator] ──── [Worker B] ──── Result B ──── [Merge] ── Final Output
+                          │                                    │
+                          └──── [Worker C] ──── Result C ────┘
+```
+
+```python
+import asyncio
+from claude_agent_sdk import Agent, tools
+
+async def fan_out_review(file_paths: list[str]):
+    """Review N files in parallel using independent agents."""
+    async def review_one(path: str):
+        agent = Agent(
+            model="claude-sonnet-4-20250514",
+            tools=[tools.read_file],
+            max_turns=8,
+            system_prompt=f"Review {path} for bugs. Output JSON with fields: file, issues[], severity.",
+        )
+        return await agent.arun(f"Review {path}")
+
+    results = await asyncio.gather(*[review_one(p) for p in file_paths])
+    return [r.final_output for r in results]
+```
+
+**Cost profile:** Linear with worker count. 10 files at $0.15 each = $1.50 total. All workers run simultaneously, so wall-clock time equals the slowest single worker.
+
+**Failure mode:** One worker failure does not affect others. Use `asyncio.gather(return_exceptions=True)` to collect partial results when some workers fail.
+
+**CLAUDE.md governance:** Add to each worker's system prompt: "You may only read files. Do not execute commands. Do not modify files. Report findings only."
+
+### Pattern 2: Pipeline (Sequential Stages)
+
+Each stage transforms input and passes output to the next. Stages can use different models optimized for their role.
+
+```
+[Stage 1: Generate]     [Stage 2: Validate]     [Stage 3: Test]
+ Opus ($$$)         ──▶  Haiku ($)           ──▶  Sonnet ($$)
+ Write code              Check types/lint         Run tests, fix
+ max_turns=15            max_turns=5              max_turns=20
+```
+
+```python
+# Stage 1: Generate with Opus (high capability)
+generator = Agent(
+    model="claude-opus-4-20250514",
+    tools=[tools.write_file],
+    max_turns=15,
+    system_prompt="Write production-quality code. Include docstrings and type hints.",
+)
+gen = generator.run("Implement a Redis-backed session store for FastAPI")
+
+# Stage 2: Validate with Haiku (fast, cheap)
+validator = Agent(
+    model="claude-haiku-4-5-20251001",
+    tools=[tools.read_file, tools.bash],
+    max_turns=5,
+    system_prompt="Run mypy and ruff on the generated code. Report any issues. Do not fix them.",
+)
+val = validator.run("Validate the code in ./session_store.py")
+
+# Stage 3: Fix and test with Sonnet (balanced)
+fixer = Agent(
+    model="claude-sonnet-4-20250514",
+    tools=[tools.read_file, tools.write_file, tools.bash],
+    max_turns=20,
+    system_prompt="Fix all issues from validation. Run pytest. Iterate until all tests pass.",
+)
+fix = fixer.run(f"Fix these issues in session_store.py: {val.final_output}")
+```
+
+**Cost profile:** $2-8 total. Opus for the creative work, Haiku for the cheap validation gate, Sonnet for the iterative fix loop. The validation gate prevents expensive Sonnet iterations on fundamentally flawed code.
+
+**Failure mode:** If Stage 2 validation finds catastrophic issues, abort early instead of passing garbage to Stage 3. Check `val.final_output` for critical errors before proceeding.
+
+**CLAUDE.md governance:** Stage 1 can only write files. Stage 2 can only read and lint. Stage 3 can read, write, and run tests. No stage has network access beyond the Anthropic API.
+
+### Pattern 3: Supervisor (Orchestrator + Specialists)
+
+A supervisor agent receives high-level goals, breaks them into subtasks, assigns each to the best specialist, monitors progress, and handles failures by reassigning or adjusting strategy.
+
+```
+                    ┌─ [Security Specialist] ─ tools: bash(semgrep), read
+                    │
+[Supervisor] ──────┼─ [Perf Specialist] ───── tools: bash(hyperfine, ab), read
+ Opus               │
+ Manages strategy   ├─ [Docs Specialist] ──── tools: read, write
+ max_turns=25       │
+                    └─ [Test Specialist] ──── tools: bash(pytest), read, write
+```
+
+```python
+security = Agent(
+    model="claude-sonnet-4-20250514",
+    tools=[tools.read_file, tools.bash],
+    max_turns=10,
+    system_prompt="You are a security auditor. Run SAST scans and review for OWASP Top 10.",
+)
+
+perf = Agent(
+    model="claude-sonnet-4-20250514",
+    tools=[tools.read_file, tools.bash],
+    max_turns=10,
+    system_prompt="You are a performance engineer. Profile code and identify bottlenecks.",
+)
+
+supervisor = Agent(
+    model="claude-opus-4-20250514",
+    sub_agents=[security, perf],
+    max_turns=25,
+    system_prompt="""You are a technical lead. Given a codebase:
+1. Dispatch security audit to the security specialist
+2. Dispatch performance analysis to the perf specialist
+3. Synthesize findings into a prioritized action plan
+4. If a specialist fails, retry once with a simplified scope""",
+)
+
+result = supervisor.run("Audit ./src/ for security and performance issues")
+```
+
+**Cost profile:** $5-15 depending on codebase size. The Opus supervisor is the main cost driver. Keep supervisor `max_turns` tight — it should delegate, not do the work itself.
+
+**Failure mode:** The supervisor can detect specialist failures and retry with adjusted parameters (fewer files, simpler scope). This self-healing behavior is the key advantage over static pipelines.
+
+**CLAUDE.md governance:** The supervisor cannot execute commands directly — it can only delegate to specialists. Each specialist has scoped tool access. No specialist can write to files outside its domain.
+
 ## Monitoring and Logging Patterns
 
 Production agents need structured observability. Log every run with enough detail to diagnose failures and track costs.
@@ -588,6 +724,52 @@ agent.run(f"Connect to database at postgres://admin:{DB_PASSWORD}@db.example.com
 agent.run("Connect to the production database using the credentials in DATABASE_URL")
 ```
 
+## Claude Code SDK: How It Relates to the Agent SDK
+
+Developers searching for "claude code sdk" are often looking for one of two things: the Claude Agent SDK (covered in this guide) or the programmatic interface to Claude Code itself. They are related but distinct.
+
+**Claude Agent SDK** is the library (`claude-agent-sdk` on PyPI, `@anthropic-ai/claude-agent-sdk` on npm) for building custom autonomous agents. You write agent code, define tools, set turn limits, and run agents programmatically. This is what you use when building your own agent from scratch.
+
+**Claude Code SDK** refers to using Claude Code in non-interactive (API/headless) mode. Instead of typing commands in a terminal, you invoke Claude Code programmatically from scripts:
+
+```bash
+# Claude Code SDK usage — run Claude Code as a subprocess
+claude -p "Refactor the auth module" --output-format json
+
+# Pipe output to another tool
+claude -p "List all TODO comments" --output-format json | jq '.result'
+
+# Use in a CI/CD pipeline
+claude -p "Review this diff for security issues: $(git diff HEAD~1)" --model claude-sonnet-4-20250514
+```
+
+```python
+# Python wrapper for Claude Code SDK
+import subprocess
+import json
+
+def run_claude_code(prompt: str, model: str = "claude-sonnet-4-20250514") -> dict:
+    result = subprocess.run(
+        ["claude", "-p", prompt, "--output-format", "json", "--model", model],
+        capture_output=True, text=True
+    )
+    return json.loads(result.stdout)
+
+output = run_claude_code("Analyze the test coverage in ./src/")
+```
+
+**When to use which:**
+
+| Need | Use |
+|------|-----|
+| Build a custom agent with custom tools | Claude Agent SDK |
+| Automate Claude Code in scripts/CI | Claude Code SDK (API mode) |
+| Interactive development | Claude Code CLI |
+| Maximum control over the agent loop | Claude Agent SDK |
+| Leverage Claude Code's built-in tools (Read, Edit, Bash) | Claude Code SDK (API mode) |
+
+The Claude Code SDK (API mode) is often the faster path when you want Claude Code's existing capabilities without writing custom agent logic. The Agent SDK is for when you need agents that do things Claude Code was not built for. See our [API mode guide](/claude-code-api-mode-vs-interactive-2026/) for detailed Claude Code SDK usage.
+
 ## Next Steps
 
 - [Build your first Claude Code agent](/how-to-build-claude-code-agent-2026/) — step-by-step walkthrough
@@ -631,3 +813,10 @@ Yes, if you provide the web_search tool. Without it, agents can only access loca
   ]
 }
 </script>
+
+## See Also
+
+- [Claude Code Hooks Complete Guide](/claude-code-hooks-complete-guide/)
+- [Claude Code Router Guide](/claude-code-router-guide/)
+- [Super Claude Code Framework Guide](/super-claude-code-framework-guide/)
+

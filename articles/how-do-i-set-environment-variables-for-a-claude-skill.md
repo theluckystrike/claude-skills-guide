@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Do I Set Environment Variables For A — Developer Guide"
+title: "How Do I Set Environment Variables"
 description: "A practical guide to configuring environment variables for Claude Code skills. Learn how to set up API keys, credentials, and custom configurations for ..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Group Policy Templates 2026: Complete Admin Guide"
+title: "Chrome Group Policy Templates 2026"
 description: "A practical guide to Chrome group policy templates in 2026. Learn about ADMX files, registry-based policies, Chrome Enterprise management, and deployment."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -326,4 +326,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [SuperClaude vs Claude Code Templates (2026)](/superclaude-vs-claude-code-templates-2026/)

@@ -1,5 +1,5 @@
 ---
-title: "Read Claude Code System Prompts Repo (2026)"
+title: "Read Claude Code System Prompts Repo"
 description: "Navigate the extracted Claude Code system prompts to understand internal behavior, tool definitions, and sub-agent prompts. Practical reading guide."
 permalink: /how-to-read-claude-code-system-prompts-2026/
 last_tested: "2026-04-22"
@@ -115,3 +115,7 @@ Keep this reference alongside your CLAUDE.md and update it when the system promp
 - Compare with [official docs](/claude-code-system-prompts-vs-official-docs-2026/) for different perspectives
 - Build better prompts using [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/)
 - Write [custom hooks](/understanding-claude-code-hooks-system-complete-guide/) informed by your understanding of the tool system
+
+## See Also
+
+- [Claude Code System Prompts Explained (2026)](/claude-code-system-prompts-guide-2026/)

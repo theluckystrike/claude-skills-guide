@@ -1,5 +1,5 @@
 ---
-title: "Best Claude Code Cost-Saving Tools (2026)"
+title: "Best Claude Code Cost-Saving Tools"
 description: "7 tools and techniques that reduce Claude Code costs. From ccusage tracking to CLAUDE.md optimization, context pruning, and caching strategies."
 permalink: /best-claude-code-cost-saving-tools-2026/
 last_tested: "2026-04-22"

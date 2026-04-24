@@ -1,5 +1,5 @@
 ---
-title: "Claude Code SSH Key Passphrase Blocking — Fix (2026)"
+title: "Claude Code SSH Key Passphrase Blocking"
 description: "Fix Claude Code SSH key passphrase prompt blocking automation. Configure ssh-agent or deploy key without passphrase. Step-by-step solution."
 permalink: /claude-code-ssh-key-passphrase-prompt-blocking-fix/
 last_tested: "2026-04-21"
@@ -81,3 +81,5 @@ Ensure ssh-agent is running and keys are loaded before starting Claude Code sess
 ## Related
 
 - [process exited with code 1 fix](/claude-code-process-exited-code-1-fix/) — How to fix Claude Code process exited with code 1 error
+- [SSH Remote Session Drops Fix](/claude-code-ssh-remote-session-drops-fix-2026/)
+- [macOS Gatekeeper Blocking Binary Fix](/claude-code-macos-gatekeeper-blocking-binary-fix-2026/)

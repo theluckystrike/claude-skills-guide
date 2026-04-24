@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for STM32 Firmware Development (2026)"
+title: "Claude Code for STM32 Firmware"
 description: "STM32 firmware development with Claude Code. Configure peripherals, write HAL drivers, and debug hard faults faster."
 permalink: /claude-code-stm32-firmware-development-2026/
 last_tested: "2026-04-21"
@@ -199,3 +199,6 @@ arm-none-eabi-gdb firmware.elf \
 - [Claude Code for Embedded Systems](/claude-skills-for-embedded-systems-iot-firmware/)
 - [Claude Code for FPGA Development](/claude-code-for-fpga-development-workflow-tutorial/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for 3D Printer Firmware (2026)](/claude-code-3d-printer-firmware-customization-2026/)
+- [Claude Code for ESP32 Firmware with ESP-IDF (2026)](/claude-code-esp32-firmware-development-2026/)
+- [Claude Code for Medical Device IEC 62304 (2026)](/claude-code-medical-device-firmware-iec62304-2026/)

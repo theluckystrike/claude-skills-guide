@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Keeps Rewriting Functions I — Developer Guide"
+title: "Claude Code Keeps Rewriting Functions I"
 description: "Understand why Claude Code rewrites functions you've asked to preserve, and learn practical strategies to prevent unwanted refactoring during your."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -307,4 +307,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Fix Claude Code Making Assumptions (2026)](/claude-code-keeps-making-assumptions-karpathy-fix-2026/)

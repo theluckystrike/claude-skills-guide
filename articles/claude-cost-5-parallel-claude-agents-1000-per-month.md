@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How 5 Parallel Claude Agents Cost $1,000/Month"
+title: "How 5 Parallel Claude Agents Cost"
 description: "Run 5 Claude Max 20x agents in parallel for $1,000/month flat. Produce 100+ articles per session with zero per-token billing."
 date: 2026-04-19
 author: "Claude Skills Guide"

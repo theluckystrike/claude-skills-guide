@@ -231,3 +231,8 @@ Yes. Every word consumes context window tokens. A 5,000-word CLAUDE.md uses roug
 Yes. It is part of your project configuration and should be version-controlled. Team members benefit from shared conventions.
 
 For more on CLAUDE.md patterns, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). For building your own skills to add to CLAUDE.md, read our [skill building guide](/how-to-build-your-own-claude-code-skill-2026/). For the full ecosystem overview, see the [tools map](/claude-code-ecosystem-complete-map-2026/).
+
+## See Also
+
+- [Claude Code CLAUDE.md Best Practices for Teams 2026](/claude-code-claude-md-best-practices-teams-2026/)
+- [Best CLAUDE.md Templates for Teams (2026)](/best-claude-md-templates-enterprise-2026/)

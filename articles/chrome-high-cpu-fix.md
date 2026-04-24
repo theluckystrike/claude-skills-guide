@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Chrome High CPU — Developer Solutions (2026)"
+title: "Fix Chrome High CPU"
 description: "Fix Chrome high CPU usage with practical developer solutions. Diagnose processes, disable extensions, and optimize browser performance fast."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -347,3 +347,7 @@ Clear accumulated cache through DevTools by right-clicking the reload button and
 ### What is Adjusting Chrome Flags for Performance?
 
 Access chrome://flags to enable performance-enhancing experimental features: parallel downloading for multi-threaded file transfers and back-forward cache for faster navigation without re-rendering. For automated testing environments, launch Chrome with --headless --disable-gpu --disable-extensions --disable-background-networking --memory-pressure-off to minimize resource consumption. Disable QUIC protocol at chrome://flags/#disable-quic if the Network Service process spikes, reverting to standard TCP connections.
+
+## See Also
+
+- [VS Code Extension Consuming Excessive CPU Fix](/claude-code-vscode-extension-excessive-cpu-fix-2026/)

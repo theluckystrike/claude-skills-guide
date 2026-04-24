@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code GitHub Actions Notification Setup"
+title: "Claude Code GitHub Actions Notification"
 description: "Learn how to configure GitHub Actions notifications for Claude Code workflows. Step-by-step guide for developers and power users."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -598,4 +598,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Use Claude Code with GitHub Codespaces 2026](/claude-code-github-codespaces-setup-2026/)

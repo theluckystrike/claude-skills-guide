@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Secret Scanning: Prevent Credential (2026)"
+title: "Claude Code Secret Scanning"
 description: "Implement secret scanning with Claude Code to prevent credential leaks and protect sensitive information in dev workflows. Tested and working in 2026."
 last_tested: "2026-04-22"
 date: 2026-03-13

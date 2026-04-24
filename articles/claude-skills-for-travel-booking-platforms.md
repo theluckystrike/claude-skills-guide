@@ -1,6 +1,6 @@
 ---
-title: "Claude Skills for Travel Booking Platforms — Automate GDS Parsing, Fare Rules, and PNR Validation — 2026"
-description: "Build a Claude Code skill that parses Amadeus/Sabre GDS responses, validates PNR structures, enforces fare rule constraints, and generates booking confirmations."
+title: "Claude Skills for Travel Booking"
+description: "Build a Claude Code skill that parses Amadeus/Sabre GDS responses, validates PNR structures, enforces fare rule constraints, and generates booking."
 permalink: /claude-skills-for-travel-booking-platforms/
 render_with_liquid: false
 categories: [skills, 2026]

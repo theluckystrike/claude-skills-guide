@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Reduce Chrome Memory Usage — Developer Guide (2026)"
+title: "Reduce Chrome Memory Usage"
 last_tested: "2026-04-22"
 description: "Learn practical techniques to reduce Chrome memory usage. Includes flags, extensions, process management, and automation scripts for power users and."
 date: 2026-03-15

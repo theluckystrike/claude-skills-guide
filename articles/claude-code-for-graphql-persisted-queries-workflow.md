@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for GraphQL Persisted Queries Workflow"
+title: "Claude Code for GraphQL Persisted"
 description: "Learn how to build an efficient GraphQL persisted queries workflow using Claude Code. Practical examples, automation strategies, and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

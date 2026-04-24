@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Way To Get Claude Code To Explain — Honest Review 2026"
+title: "Best Way To Get Claude Code To Explain"
 description: "Practical techniques for getting Claude Code to explain unfamiliar codebases effectively. Learn prompt strategies, skills to use, and how to extract."
 date: 2026-03-14
 last_modified_at: 2026-04-17

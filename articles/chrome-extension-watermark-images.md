@@ -1,7 +1,8 @@
 ---
+render_with_liquid: false
 
 layout: default
-title: "Build a Watermark Images Chrome Extension (2026)"
+title: "Build a Watermark Images Chrome"
 description: "Build a Chrome extension that adds watermarks to images before download. Covers Canvas API overlay, text positioning, opacity control, and batch mode."
 date: 2026-03-15
 last_modified_at: 2026-04-17

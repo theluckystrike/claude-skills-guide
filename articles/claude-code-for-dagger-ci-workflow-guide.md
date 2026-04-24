@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Dagger CI — Workflow Guide"
+title: "Claude Code for Dagger CI"
 description: "Write portable CI pipelines with Dagger and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-dagger-ci-workflow-guide/

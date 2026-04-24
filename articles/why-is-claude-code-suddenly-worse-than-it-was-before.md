@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Suddenly Worse Performance (2026)"
+title: "Fix Claude Code Suddenly Worse"
 description: "Diagnose why Claude Code quality dropped and fix it. Check model version, context window, skill configs, and API changes causing regression."
 date: 2026-03-14
 last_modified_at: 2026-04-17

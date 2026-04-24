@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for ITAR Compliance Code Review (2026)"
+title: "Claude Code for ITAR Compliance Code"
 permalink: /claude-code-itar-compliance-code-review-2026/
 description: "Enforce ITAR technical data controls with Claude Code. Detect export-controlled code patterns, validate access restrictions, and audit data flows."
 last_tested: "2026-04-22"
@@ -258,3 +258,4 @@ python3 ~/itar-review/report.py \
 - [Claude Code for FedRAMP Authorization Workflow](/claude-code-fedramp-authorization-workflow-2026/)
 - [Claude Code for NIST Cybersecurity Framework](/claude-code-nist-cybersecurity-framework-2026/)
 - [Claude Code for SOX Audit Automation](/claude-code-sox-audit-automation-2026/)
+- [Review Claude Code PRs Efficiently (2026)](/claude-code-review-prs-efficiently-2026/)

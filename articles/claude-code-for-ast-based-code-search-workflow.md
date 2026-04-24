@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for AST-Based Code Search Workflow"
+title: "Claude Code for AST-Based Code Search"
 description: "Master AST-based code search with Claude Code to find, analyze, and refactor code patterns across your entire codebase with precision and speed."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -249,6 +249,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
-
+- [Claude Code Search Index Corrupted Error — Fix (2026)](/claude-code-search-index-corrupted-fix-2026/)

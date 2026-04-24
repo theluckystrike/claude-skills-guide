@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for FPGA Development Workflow (2026)"
+title: "Claude Code for FPGA Development"
 description: "Use Claude Code for FPGA development from project setup to simulation and synthesis. Verilog and VHDL code generation with AI-assisted tooling."
 date: 2026-03-15
 last_modified_at: 2026-04-17

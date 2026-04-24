@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for AWS Config Rules Workflow"
+title: "Claude Code for AWS Config Rules"
 description: "Learn how to automate AWS Config Rules management using Claude Code. Practical workflow patterns, code examples, and actionable tips for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

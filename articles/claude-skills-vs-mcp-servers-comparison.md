@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills vs MCP Servers — What is the Difference and When to Use Each — 2026"
+title: "Claude Skills vs MCP Servers: When to Use Each"
 description: "Skills provide workflow instructions; MCP servers provide tool access. Understand the boundary, complementary patterns, and when to combine both."
 permalink: /claude-skills-vs-mcp-servers-comparison/
 render_with_liquid: false
@@ -135,3 +135,4 @@ Skills and MCP tools have different persistence models. Skill instructions persi
 ## Related Articles
 
 - [Claude Skills vs Subagents — Inline Instructions vs Isolated Execution — 2026](/claude-skills-vs-subagents-comparison/)
+- [Claude Code Skills vs MCP Servers: Which Uses Fewer Tokens?](/claude-code-skills-vs-mcp-servers-token-usage/)

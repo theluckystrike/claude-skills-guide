@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Build a Text-to-Speech Chrome Extension (2026)"
+title: "Build a Text-to-Speech Chrome Extension"
 description: "Build a Chrome extension with text-to-speech using Web Speech API. Covers voice selection, rate control, SSML support, and background audio playback."
 date: 2026-03-15
 last_modified_at: 2026-04-17

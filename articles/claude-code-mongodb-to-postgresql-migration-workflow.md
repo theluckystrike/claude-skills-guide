@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code MongoDB to PostgreSQL Migration Workflow"
+title: "Claude Code MongoDB to PostgreSQL"
 description: "A practical developer guide for migrating from MongoDB to PostgreSQL using Claude Code with code examples and workflow patterns."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -214,4 +214,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for PL/SQL to PostgreSQL Migration (2026)](/claude-code-plsql-to-postgresql-migration-2026/)

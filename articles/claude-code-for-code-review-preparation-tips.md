@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Code Review Preparation Tips"
+title: "Claude Code for Code Review Preparation"
 description: "Master code review preparation with Claude Code. Practical tips, skill combinations, and workflows to streamline your review process efficiently."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -185,4 +185,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Review Claude Code PRs Efficiently (2026)](/claude-code-review-prs-efficiently-2026/)
+- [Claude Code for ITAR Compliance Code Review (2026)](/claude-code-itar-compliance-code-review-2026/)

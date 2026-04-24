@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Apache Spark Ml — Complete Developer Guide"
+title: "Claude Code For Apache Spark Ml"
 description: "A comprehensive guide to using Claude Code for Apache Spark ML workflows, including practical examples, code snippets, and actionable advice for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

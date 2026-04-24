@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix Claude Code Changing Indentation Style (2026)"
+title: "Fix Claude Code Changing Indentation"
 description: "Stop Claude Code from changing your indentation style. Configure tab vs spaces, nesting depth, and formatting rules via CLAUDE.md and EditorConfig."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -172,4 +172,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Fix Claude Code Inconsistent Code Style (2026)](/claude-code-inconsistent-style-fix-2026/)

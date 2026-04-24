@@ -68,3 +68,9 @@ claude
 # CLAUDE.md rule
 Trust this workspace in VS Code before using Claude Code. If prompted about workspace trust, select "Trust" — Claude Code cannot function in restricted mode. Or run Claude Code from a standalone terminal.
 ```
+
+## See Also
+
+- [macOS Gatekeeper Blocking Binary Fix](/claude-code-macos-gatekeeper-blocking-binary-fix-2026/)
+- [Claude Code Workspace Trust Blocks Headless — Fix (2026)](/claude-code-workspace-trust-blocks-headless-mode-fix/)
+- [Workspace Trust Required for Claude Code — Fix (2026)](/claude-code-workspace-trust-required-fix-2026/)

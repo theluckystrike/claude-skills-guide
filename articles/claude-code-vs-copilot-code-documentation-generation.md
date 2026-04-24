@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Copilot Code — Developer Comparison 2026"
+title: "Claude Code vs Copilot Code"
 description: "Discover how Claude Code and GitHub Copilot approach automated code documentation. Learn practical techniques for generating comprehensive docs with."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -218,4 +218,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Codium AI vs Claude Code Comparison 2026](/codium-ai-vs-claude-code-comparison-2026/)

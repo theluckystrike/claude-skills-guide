@@ -1,5 +1,5 @@
 ---
-title: "Claude Code 429 Rate Limit with Retry-After — Fix (2026)"
+title: "Claude Code 429 Rate Limit"
 description: "Fix Claude Code 429 rate limit with retry-after header. Parse the header and implement proper backoff logic. Step-by-step solution."
 permalink: /claude-code-rate-limit-429-retry-after-fix/
 last_tested: "2026-04-21"

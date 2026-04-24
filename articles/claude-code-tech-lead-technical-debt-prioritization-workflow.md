@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Tech Lead Technical — Complete Developer Guide"
+title: "Claude Code Tech Lead Technical"
 description: "A practical workflow for tech leads to identify, categorize, and prioritize technical debt using Claude Code skills and automation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

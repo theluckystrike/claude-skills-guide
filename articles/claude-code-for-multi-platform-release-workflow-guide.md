@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Multi-Platform Release Workflow Guide"
+title: "Claude Code for Multi-Platform Release"
 description: "Learn how to use Claude Code CLI to automate and streamline multi-platform release workflows across iOS, Android, Web, and Desktop applications."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -362,4 +362,7 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Dify AI Platform — Guide](/claude-code-for-dify-ai-platform-workflow-guide/)
+- [Claude Code Spacelift Platform Guide](/claude-code-spacelift-platform-guide/)

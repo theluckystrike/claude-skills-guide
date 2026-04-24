@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md For Accessibility Requirements — Developer Guide"
+title: "Claude Md For Accessibility"
 description: "Learn how to use Claude Code skills to generate, audit, and maintain accessibility-compliant code. Practical examples for WCAG compliance, ARIA."
 date: 2026-03-14
 last_modified_at: 2026-04-17

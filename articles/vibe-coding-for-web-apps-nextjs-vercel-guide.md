@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Vibe Coding for Web Apps: NextJS + Vercel Guide"
+title: "Vibe Coding for Web Apps"
 description: "A practical guide to vibe coding NextJS web applications with Vercel deployment. Learn how to build, test, and ship full-stack apps using AI-assisted."
 date: 2026-03-14
 last_modified_at: 2026-04-17

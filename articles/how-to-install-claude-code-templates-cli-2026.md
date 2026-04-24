@@ -1,5 +1,5 @@
 ---
-title: "Install Claude Code Templates CLI Tool (2026)"
+title: "Install Claude Code Templates CLI Tool"
 description: "Install the Claude Code Templates CLI with npx to browse and install 600+ agents, 200+ commands, and 55+ MCP configs. Full walkthrough with examples."
 permalink: /how-to-install-claude-code-templates-cli-2026/
 last_tested: "2026-04-22"
@@ -130,3 +130,7 @@ Keep project-specific templates in the project and universal tools in your user 
 - Learn about [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) to complement your templates
 - Build a [custom CLAUDE.md](/claude-md-best-practices-10-templates-compared-2026/) that extends your installed agents
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional resources
+
+## See Also
+
+- [Install Karpathy Skills in Claude Code (2026)](/how-to-install-karpathy-skills-claude-code-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Integrate Claude Skills with Notion API Guide"
+title: "How to Integrate Claude Skills"
 description: "Connect Claude Code skills to Notion API for automated knowledge workflows. Patterns using /pdf, /tdd, and /supermemory with Node.js examples."
 date: 2026-03-13
 last_modified_at: 2026-04-17

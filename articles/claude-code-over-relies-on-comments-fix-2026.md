@@ -1,5 +1,5 @@
 ---
-title: "Stop Claude Code Over-Relying on Comments (2026)"
+title: "Stop Claude Code Over-Relying"
 description: "Stop Claude Code from treating stale comments as authoritative by configuring comment trust rules and code-first analysis in CLAUDE.md."
 permalink: /claude-code-over-relies-on-comments-fix-2026/
 last_tested: "2026-04-22"

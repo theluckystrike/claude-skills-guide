@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Advanced Prisma Migrations with Claude Code (2026)"
+title: "Advanced Prisma Migrations with Claude"
 description: "Master advanced Prisma schema migrations with Claude Code. Atomic migration patterns, data transforms, and zero-downtime deployment strategies."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -281,4 +281,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Prisma Generate Failure After Schema Change — Fix (2026)](/claude-code-prisma-generate-failure-fix-2026/)

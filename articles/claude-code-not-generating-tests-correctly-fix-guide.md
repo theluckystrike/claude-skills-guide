@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Test Generation Issues (2026)"
+title: "Fix Claude Code Test Generation Issues"
 description: "Fix Claude Code not generating tests correctly. Resolve incomplete coverage, wrong assertions, and failing test output with proven solutions."
 date: 2026-03-14
 last_modified_at: 2026-04-17

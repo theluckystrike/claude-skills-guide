@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills Versioning: Track Changes Without Breaking Workflows — 2026"
+title: "Claude Skills Versioning"
 description: "Version control strategies for SKILL.md files using git, semantic versioning in frontmatter, and safe rollback patterns for team skills."
 permalink: /claude-skills-versioning-strategies/
 render_with_liquid: false

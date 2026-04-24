@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Speed Up Chrome Low Ram — Developer Guide"
+title: "Speed Up Chrome Low Ram"
 description: "Practical techniques to reduce Chrome's memory footprint and improve performance on systems with limited RAM. Includes flags, extensions, and workflow."
 date: 2026-03-15
 last_modified_at: 2026-04-17

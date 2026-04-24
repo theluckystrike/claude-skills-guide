@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code French Developer Resources (2026)"
+title: "Claude Code French Developer Resources"
 description: "Find French Claude Code communities, Discord servers, forums, and localized documentation. Connect with francophone developers using AI coding tools."
 date: 2026-03-14
 last_modified_at: 2026-04-17

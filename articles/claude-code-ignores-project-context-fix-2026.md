@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Ignoring Project Context (2026)"
+title: "Fix Claude Code Ignoring Project"
 description: "Make Claude Code read your codebase before writing code — CLAUDE.md rules for mandatory context loading, reference files, and pattern matching."
 permalink: /claude-code-ignores-project-context-fix-2026/
 last_tested: "2026-04-22"
@@ -60,3 +60,7 @@ Create a new service for handling inventory
 **Using context:** reads `user-service.ts` first, matches its exact function pattern, naming, error types, and export style
 
 Related: [Karpathy Don't Assume Principle](/karpathy-dont-assume-principle-claude-code-2026/) | [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) | [Make Claude Code Read Existing Code](/claude-code-doesnt-read-existing-code-fix-2026/)
+
+## See Also
+
+- [Make Claude Code Consider Performance (2026)](/claude-code-ignores-performance-fix-2026/)

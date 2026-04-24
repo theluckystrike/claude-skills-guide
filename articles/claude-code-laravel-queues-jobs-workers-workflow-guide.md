@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Laravel Queues, Jobs, Workers & Workflow Guide"
+title: "Claude Code Laravel Queues, Jobs,"
 description: "Master Laravel queues, jobs, and workers with Claude Code. Learn to build asynchronous workflows, process background tasks, and handle job dispatching."
 date: 2026-03-14
 last_modified_at: 2026-04-17

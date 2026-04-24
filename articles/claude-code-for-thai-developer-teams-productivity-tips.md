@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Thai Developer Teams (2026)"
+title: "Claude Code for Thai Developer Teams"
 description: "Boost Thai developer team productivity with Claude Code. Covers localized workflows, Thai-language prompting tips, and team collaboration patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17

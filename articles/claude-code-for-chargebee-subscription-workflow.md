@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Chargebee — Complete Developer Guide (2026)"
+title: "Claude Code For Chargebee"
 description: "Learn how to use Claude Code to build, automate, and optimize Chargebee subscription workflows. Includes practical examples, code snippets, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

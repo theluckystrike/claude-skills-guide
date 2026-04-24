@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Managed Browser vs — Developer Comparison 2026"
+title: "Chrome Managed Browser"
 description: "Understand the differences between Chrome managed browsers and unmanaged installations. Learn about policies, extensions, sync, and when to choose each."
 date: 2026-03-15
 last_modified_at: 2026-04-17

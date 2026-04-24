@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Postman Collection Automation Guide"
+title: "Claude Code Postman Collection"
 description: "Learn how to automate Postman collections using Claude Code. Streamline API testing workflows, generate test scripts, and integrate with CI/CD pipelines."
 date: 2026-03-14
 last_modified_at: 2026-04-17

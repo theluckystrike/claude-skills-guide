@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Way To Feed Claude Code A Large — Honest Review 2026"
+title: "Best Way To Feed Claude Code A Large"
 description: "Learn the most effective strategies for providing Claude Code with large SQL schemas. Practical examples for database design, schema analysis, and SQL."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code MCP Configuration: Full Setup (2026)"
+title: "Claude Code MCP Configuration"
 description: "Complete guide to configuring MCP servers in Claude Code. Settings.json schema, scope precedence, CLI commands, 5 server examples, and troubleshooting."
 permalink: /claude-code-mcp-configuration-guide/
 last_tested: "2026-04-24"
@@ -498,6 +498,7 @@ Claude Code supports the current MCP specification. Servers built with the offic
 - [Configuration Hierarchy Explained](/claude-code-configuration-hierarchy-explained-2026/) — settings precedence
 - [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
 - [Sequential Thinking in Claude Code](/sequential-thinking-claude-code-guide/) — structured problem solving with MCP
+- [Claude Code + Supabase MCP](/claude-code-mcp-supabase-setup-guide/) — Supabase database through MCP
 
 ### Can I use environment variables from my shell in the env field?
 

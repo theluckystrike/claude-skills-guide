@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code CSS Animations Workflow Guide"
+title: "Claude Code CSS Animations Workflow"
 description: "Master CSS animations with Claude Code. A practical workflow guide for developers building smooth, performant animations using modern CSS techniques."
 date: 2026-04-19
 last_modified_at: 2026-04-19

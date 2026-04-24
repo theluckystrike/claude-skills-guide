@@ -1,5 +1,5 @@
 ---
-title: "Claude Code .env File Not Loaded — Fix (2026)"
+title: "Claude Code .env File Not Loaded — Fix"
 description: "Fix Claude Code .env file not loaded in project scope. Source the file or use direnv for automatic loading. Step-by-step solution."
 permalink: /claude-code-env-file-not-loaded-project-scope-fix/
 last_tested: "2026-04-21"
@@ -76,3 +76,7 @@ Use direnv with a .envrc file containing `dotenv` to auto-load .env variables. N
 ```
 
 **Related articles:** [Config File Location](/claude-code-config-file-location/), [Invalid API Key After Rotation](/claude-code-error-invalid-api-key-after-rotation-fix/), [Troubleshooting Hub](/troubleshooting-hub/)
+
+## See Also
+
+- [.env File Not Loaded by Claude Fix](/claude-code-env-file-not-loaded-fix-2026/)

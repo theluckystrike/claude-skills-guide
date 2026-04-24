@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Opus 4.7: Is It Worth the Extra Cost?"
+title: "Claude Opus 4.7"
 description: "Opus 4.7 costs 5x Haiku and 1.67x Sonnet. Here is when the premium pays off and when you are wasting $1,800/month."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -160,3 +160,11 @@ The key metric is cost-per-quality-point: divide your monthly API spend by your 
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — the economics that make Opus worth evaluating carefully
 - [Claude Code Monthly Cost Breakdown](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/) — real-world cost data from Claude API users
 - [Claude Opus 4.6 vs GPT-4o Comparison](/claude-opus-46-vs-gpt-4o-for-coding-tasks-comparison/) — cross-model value comparison
+
+## See Also
+
+- [Opus Orchestrator with Haiku Workers Pattern](/claude-cost-opus-orchestrator-haiku-workers-pattern/)
+- [Claude Haiku 4.5 Budget-Friendly Coding Guide](/claude-cost-claude-haiku-45-budget-friendly-coding/)
+- [Claude /compact Command Token Savings Guide](/claude-cost-claude-compact-command-token-savings/)
+- [Claude Batch Processing Limits and Best Practices](/claude-cost-claude-batch-processing-limits-best-practices/)
+- [Claude Opus 4.6 vs Haiku 4.5: Speed and Cost Tradeoffs](/claude-opus-vs-haiku-speed-cost-tradeoff/)

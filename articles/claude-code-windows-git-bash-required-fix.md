@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Windows Requires Git Bash (2026)"
+title: "Fix Claude Code Windows Requires Git"
 description: "Resolve the 'Claude Code on Windows requires git-bash' error by installing Git for Windows or setting the Git Bash path in settings. Updated for 2026."
 date: 2026-04-15
 permalink: /claude-code-windows-git-bash-required-fix/
@@ -156,4 +156,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 - [Claude Code Headless Linux Auth](/claude-code-headless-linux-auth/)
 - [Claude Code Slow Response Fix](/claude-code-slow-response-fix/)
 
+## See Also
 
+- [Windows WSL Path Conflict Error — Fix (2026)](/claude-code-windows-wsl-path-conflict-fix-2026/)
+- [Node 18+ Required Version Error — Fix (2026)](/claude-code-node-version-18-required-fix-2026/)
+- [Workspace Trust Required for Claude Code — Fix (2026)](/claude-code-workspace-trust-required-fix-2026/)

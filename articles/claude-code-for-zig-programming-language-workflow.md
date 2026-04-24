@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Zig Programming Workflow (2026)"
+title: "Claude Code for Zig Programming"
 description: "Use Claude Code for Zig systems programming. Project scaffolding, memory-safe code generation, debugging, and build system integration tips."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -264,3 +264,8 @@ Claude Code excels at generating Zig's comptime patterns, which are powerful but
 ### What is Generate a Comptime String Table?
 
 A comptime string table is a Zig pattern useful for parsers and interpreters that maps string keys to values at compile time. The implementation uses a struct with an init function accepting comptime pairs of []const u8 and u32, returning a type containing a get function that uses inline for to iterate over the compile-time data. This generates zero-overhead lookups since the compiler unrolls the loop, producing code equivalent to a series of if-else comparisons without runtime allocation.
+
+## See Also
+
+- [Claude Code for Gleam Language — Workflow Guide](/claude-code-for-gleam-language-workflow-guide/)
+- [Claude Code for Mojo Language — Workflow Guide](/claude-code-for-mojo-language-workflow-guide/)

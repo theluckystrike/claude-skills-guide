@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Firecrawl MCP Server: Web Scraping Automation with Claude"
+title: "Firecrawl MCP Server"
 description: "Learn how to integrate Firecrawl with Claude using the Model Context Protocol for powerful web scraping automation. Complete setup guide with practical."
 date: 2026-03-14
 last_modified_at: 2026-04-17

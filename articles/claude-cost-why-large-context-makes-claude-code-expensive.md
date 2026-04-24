@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Large Context Makes Claude Code Expensive"
+title: "Why Large Context Makes Claude Code"
 description: "Claude Code sessions grow to 150K+ tokens, costing $0.75+ per interaction on Opus 4.7. Here is exactly where the tokens go."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -230,3 +230,9 @@ Track daily Claude Code spend before and after adopting context management habit
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — the full analysis of Claude Code cost drivers
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/) — practical context management techniques
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — design decisions behind context limits
+
+## See Also
+
+- [Why Your Claude Prompts Use Too Many Tokens](/claude-cost-why-claude-prompts-use-too-many-tokens/)
+- [Claude Code Expensive? Here Are 7 Fixes](/claude-cost-08-claude-code-expensive-fixes/)
+- [Why Claude Code Uses So Many Tokens Explained](/claude-cost-03-why-claude-code-uses-many-tokens/)

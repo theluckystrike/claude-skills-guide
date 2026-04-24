@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Drone CI Workflow Automation"
+title: "Claude Code Drone CI Workflow"
 description: "Automate your Drone CI pipelines using Claude Code skills. Learn practical patterns for pipeline generation, testing, and maintenance with code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -486,4 +486,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Dagger CI — Workflow Guide](/claude-code-for-dagger-ci-workflow-guide/)

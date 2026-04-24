@@ -226,4 +226,6 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 {% endraw %}
 
+## See Also
 
+- [Use Claude Code with GitHub Codespaces 2026](/claude-code-github-codespaces-setup-2026/)

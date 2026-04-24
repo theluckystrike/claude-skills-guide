@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Waku React Framework — Guide"
+title: "Claude Code for Waku React Framework"
 description: "Build RSC-first apps with Waku and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-waku-react-framework-workflow-guide/
@@ -74,3 +74,7 @@ Claude Code should create `src/pages/_layout.tsx` as a server component with nav
 - [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
 - [Claude Code for TanStack Router Workflow Guide](/claude-code-for-tanstack-router-workflow-guide/)
+
+## See Also
+
+- [Claude Code for HTMX — Workflow Guide](/claude-code-for-htmx-framework-workflow-guide/)

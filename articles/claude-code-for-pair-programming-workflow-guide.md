@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Pair Programming Workflow Guide (2026)"
+title: "Claude Code for Pair Programming"
 last_tested: "2026-04-22"
 description: "Learn how to use Claude Code as your AI pair programming partner. This guide covers session setup, effective communication patterns, and practical."
 date: 2026-03-15
@@ -292,4 +292,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Pair Programming Guide (2026)](/claude-code-pair-programming-guide-2026/)

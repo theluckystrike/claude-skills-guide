@@ -1,5 +1,5 @@
 ---
-title: "Take the Claude Code 271-Question Quiz (2026)"
+title: "Take the Claude Code 271-Question Quiz"
 description: "Use the Claude Code Ultimate Guide's 271 quiz questions to find and fill gaps in your knowledge. Structured approach for self-assessment and team testing."
 permalink: /how-to-take-claude-code-ultimate-guide-quiz-2026/
 last_tested: "2026-04-22"
@@ -130,3 +130,7 @@ Fill in your scores as you complete each section. Reassess monthly. Scores below
 - Apply what you learned in your [CLAUDE.md](/claude-md-best-practices-10-templates-compared-2026/) configuration
 - Explore [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for practical application
 - Share quiz results with your team to align on knowledge levels
+
+## See Also
+
+- [Claude Code Ultimate Guide: 271 Questions (2026)](/claude-code-ultimate-guide-271-questions-2026/)

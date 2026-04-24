@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Ada Legacy System Updates (2026)"
+title: "Claude Code for Ada Legacy System"
 permalink: /claude-code-ada-legacy-system-updates-2026/
 description: "Maintain and update Ada legacy systems with Claude Code. Modernize Ada 83/95 code to Ada 2022 standards for defense and avionics."
 last_tested: "2026-04-22"
@@ -211,3 +211,4 @@ gprbuild -P my_system.gpr --target=arm-eabi --RTS=ravenscar-sfp
 - [Claude Code for COBOL to Java Migration](/claude-code-cobol-to-java-migration-2026/)
 - [Claude Code for Mainframe REXX Modernization](/claude-code-mainframe-rexx-modernization-2026/)
 - [Claude Code for MUMPS Healthcare Modernization](/claude-code-mumps-healthcare-modernization-2026/)
+- [Help Claude Code Work With Legacy Code (2026)](/claude-code-cant-handle-legacy-code-fix-2026/)

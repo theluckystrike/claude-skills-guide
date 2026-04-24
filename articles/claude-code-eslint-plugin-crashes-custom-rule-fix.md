@@ -1,5 +1,5 @@
 ---
-title: "Claude Code ESLint Plugin Crashes on Custom Rule — Fix (2026)"
+title: "Claude Code ESLint Plugin Crashes"
 description: "Fix Claude Code ESLint plugin crash on custom rules. Update rule schema and fix AST visitor conflicts. Step-by-step solution."
 permalink: /claude-code-eslint-plugin-crashes-custom-rule-fix/
 last_tested: "2026-04-21"
@@ -90,3 +90,9 @@ All ESLint custom rules must use the v9 API: context.sourceCode.getScope(node) i
 ```
 
 **Related articles:** [ESLint Prettier Conflict Fix](/claude-code-eslint-prettier-conflict-fix/), [Debugging Skills](/claude-code-debugging-skill/), [Errors Atlas](/errors-atlas/)
+
+## See Also
+
+- [JetBrains Plugin Incompatibility Fix](/claude-code-jetbrains-plugin-incompatibility-fix-2026/)
+- [Neovim Plugin Socket Error Fix](/claude-code-neovim-plugin-socket-error-fix-2026/)
+- [Claude Code vs ESLint + Prettier: Code Quality Tools](/claude-code-vs-eslint-prettier-comparison/)

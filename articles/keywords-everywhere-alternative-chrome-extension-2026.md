@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Keywords Everywhere Alternative Chrome Extension in 2026"
+title: "Keywords Everywhere Alternative Chrome"
 description: "Discover the best Keywords Everywhere alternatives for Chrome in 2026. Developer-friendly keyword research extensions that deliver powerful SEO."
 date: 2026-03-15
 last_modified_at: 2026-04-17

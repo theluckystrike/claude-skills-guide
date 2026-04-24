@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills for Manufacturing QA — Automate SPC Chart Analysis, NCR Processing, and CAPA Workflow — 2026"
+title: "Claude Skills for Manufacturing QA"
 description: "Build a Claude Code skill that analyzes SPC control charts, processes Non-Conformance Reports with root cause codes, and tracks CAPA corrective actions."
 permalink: /claude-skills-for-manufacturing-qa/
 render_with_liquid: false

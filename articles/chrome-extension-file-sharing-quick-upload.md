@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Build a Quick File Upload Extension (2026)"
+title: "Build a Quick File Upload Extension"
 description: "Build a Chrome extension for instant file sharing and uploads. Covers drag-and-drop, clipboard integration, cloud storage APIs, and link generation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

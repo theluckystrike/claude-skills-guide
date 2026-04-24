@@ -1,5 +1,5 @@
 ---
-title: "Config File JSON Parse Error — Fix (2026)"
+title: "Config File JSON Parse Error — Fix"
 permalink: /claude-code-config-json-corrupted-parse-error-fix-2026/
 description: "Fix 'unexpected token in JSON' config parse error. Reset corrupted Claude Code config file to defaults with one command."
 last_tested: "2026-04-22"
@@ -83,3 +83,8 @@ Add this to your `CLAUDE.md`:
 - Do not run multiple Claude Code instances that modify config simultaneously.
 - Back up config before major changes: cp ~/.claude/config.json ~/.claude/config.json.bak
 ```
+
+## See Also
+
+- [Claude Code Config YAML Parse Error — Fix (2026)](/claude-code-config-yaml-parse-error-fix/)
+- [JSON Parse Error on Malformed Response Fix](/claude-code-json-parse-error-malformed-response-fix-2026/)

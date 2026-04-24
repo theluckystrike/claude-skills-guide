@@ -1,5 +1,5 @@
 ---
-title: "Managing Claude Skills Across Team Members Without Conflicts — 2026"
+title: "Managing Claude Skills Across Team"
 description: "Prevent skill collisions between personal, project, and plugin scopes with precedence rules, naming conventions, and discovery debugging."
 permalink: /managing-claude-skills-across-team-members/
 render_with_liquid: false
@@ -149,3 +149,7 @@ When a legacy command exists at `.claude/commands/deploy.md` and a skill exists 
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-team/)
 - [Claude Skill Naming Conventions](/claude-skill-naming-conventions/)
 - [Fix Skill Name Already in Use Error](/fix-skill-name-already-in-use-error/)
+
+## See Also
+
+- [How to Distribute Claude Skills Across Teams 2026](/distribute-claude-skills-across-teams-2026/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Polars DataFrame Workflow Guide"
+title: "Claude Code for Polars DataFrame"
 description: "Learn how to use Claude Code CLI to streamline Polars DataFrame operations, automate data transformations, and build efficient data processing pipelines."
 date: 2026-04-19
 last_modified_at: 2026-04-19

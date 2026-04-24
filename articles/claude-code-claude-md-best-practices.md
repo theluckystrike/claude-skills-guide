@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CLAUDE.md Best Practices for Projects (2026)"
+title: "CLAUDE.md Best Practices for Projects"
 description: "Write effective CLAUDE.md files that Claude Code follows consistently. Scoping, structure, imports, and rules for team projects. Updated for 2026."
 last_tested: "2026-04-22"
 date: 2026-04-15
@@ -211,9 +211,15 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 ## Related Guides
 
+- [CLAUDE.md best practices definitive guide](/claude-md-best-practices-definitive-guide/) — the definitive CLAUDE.md reference
+- [Claude Code hooks](/claude-code-hooks-complete-guide/) — hook into tool execution
+- [Claude Code spec workflow](/claude-code-spec-workflow-guide/) — spec-first development patterns
+- [Super Claude Code framework](/super-claude-code-framework-guide/) — structured prompting on top of CLAUDE.md
 - [Best Way to Set Up Claude Code for a New Project](/best-way-to-set-up-claude-code-for-new-project/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
 - [Claude Code 2026 New Features Skills and Hooks Roundup](/claude-code-2026-new-features-skills-and-hooks-roundup/)
 - [Best Way to Give Claude Code Repeatable Output](/best-way-to-give-claude-code-repeatable-deterministic-output/)
 
+## See Also
 
+- [Claude Code CLAUDE.md Best Practices for Teams 2026](/claude-code-claude-md-best-practices-teams-2026/)

@@ -161,3 +161,8 @@ Related Reading
 - [Claude Code AWS Lambda Deployment Guide](/claude-code-aws-lambda-deployment-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+## See Also
+
+- [Claude Code GitHub Actions Secret Missing in Fork — Fix (2026)](/claude-code-github-actions-secret-not-available-forked-pr-fix/)
+- [How to Build Claude Code GitHub Actions 2026](/claude-code-github-actions-workflow-2026/)

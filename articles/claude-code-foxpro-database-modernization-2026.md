@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for FoxPro Database Modernization (2026)"
+title: "Claude Code for FoxPro Database"
 permalink: /claude-code-foxpro-database-modernization-2026/
 description: "Modernize Visual FoxPro databases with Claude Code. Convert DBF tables, PRG procedures, and SCX forms to modern web applications."
 last_tested: "2026-04-22"
@@ -223,3 +223,6 @@ python3 -m pytest tests/test_migration_parity.py -v
 - [Claude Code for Clipper to PostgreSQL Migration](/claude-code-clipper-to-postgresql-migration-2026/)
 - [Claude Code for Delphi to C# Conversion](/claude-code-delphi-to-csharp-migration-2026/)
 - [Claude Code for VB6 to .NET Migration](/claude-code-vb6-to-dotnet-migration-2026/)
+- [Claude Code for PowerBuilder Modernization (2026)](/claude-code-powerbuilder-modernization-2026/)
+- [Claude Code for SCADA Modernization (2026)](/claude-code-scada-modernization-2026/)
+- [Claude Code for RPG/AS400 to Modern API (2026)](/claude-code-rpg-as400-modernization-2026/)

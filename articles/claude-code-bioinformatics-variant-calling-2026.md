@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for FASTQ to Variant Calls (2026)"
+title: "Claude Code for FASTQ to Variant Calls"
 description: "Bioinformatics variant calling pipeline with Claude Code. Automate FASTQ QC through VCF annotation in one workflow."
 permalink: /claude-code-bioinformatics-variant-calling-2026/
 last_tested: "2026-04-21"

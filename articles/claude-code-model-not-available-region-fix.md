@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Model Not Available in Region — Fix (2026)"
+title: "Claude Code Model Not Available"
 description: "Fix Claude Code model not available in your region. Switch API endpoint or use an available model variant. Step-by-step solution."
 permalink: /claude-code-model-not-available-region-fix/
 last_tested: "2026-04-21"
@@ -73,3 +73,7 @@ Check model availability before switching models in production. Default to claud
 ```
 
 **Related articles:** [API Key Region Mismatch Fix](/claude-code-anthropic-api-key-region-mismatch-fix-2026/), [Claude API 401 Auth Error](/claude-api-error-401-authenticationerror-explained/), [Errors Atlas](/errors-atlas/)
+
+## See Also
+
+- [Model Not Available on Your Plan — Fix (2026)](/claude-code-model-not-available-your-plan-fix-2026/)

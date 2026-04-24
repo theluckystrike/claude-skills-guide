@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Continue Dev Review: Open Source AI Coding in 2026"
+title: "Continue Dev Review"
 description: "Explore how Continue.dev integrates with Claude Code and open source AI coding tools for enhanced developer productivity and code review workflows in 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -429,4 +429,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs Continue.dev: Setup and Configuration](/claude-code-vs-continue-dev-setup-comparison/)

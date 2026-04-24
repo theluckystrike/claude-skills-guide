@@ -1,5 +1,5 @@
 ---
-title: "Stop Claude Code from Modifying Unrelated Files — Fix Guide (2026)"
+title: "Stop Claude Code from Modifying"
 description: "Why Claude Code edits files you did not ask about and how to prevent it with CLAUDE.md rules, permissions, and scope constraints."
 permalink: /claude-code-stop-modifying-unrelated-files/
 render_with_liquid: false

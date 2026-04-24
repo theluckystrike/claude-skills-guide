@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Docker Cannot Reach API — Fix (2026)"
+title: "Claude Code Docker Cannot Reach API"
 description: "Fix Claude Code Docker container cannot reach API endpoint. Configure DNS and network settings for containers. Step-by-step solution."
 permalink: /claude-code-docker-cannot-reach-api-endpoint-fix/
 last_tested: "2026-04-21"

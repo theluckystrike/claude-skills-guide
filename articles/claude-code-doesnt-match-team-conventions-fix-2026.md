@@ -1,5 +1,5 @@
 ---
-title: "Make Claude Code Match Team Conventions (2026)"
+title: "Make Claude Code Match Team Conventions"
 description: "Configure Claude Code to follow your team's naming, file structure, and code style conventions using CLAUDE.md and linter integration."
 permalink: /claude-code-doesnt-match-team-conventions-fix-2026/
 last_tested: "2026-04-22"
@@ -112,3 +112,7 @@ Combine CLAUDE.md with enforced linting. Add to your configuration:
 The [claude-code-templates](https://github.com/davila7/claude-code-templates) library includes convention templates for popular team setups that you can customize.
 
 For more on team setup, see the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/). Review CLAUDE.md patterns in our [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). Learn about hooks-based enforcement in the [hooks guide](/understanding-claude-code-hooks-system-complete-guide/).
+
+## See Also
+
+- [Make Claude Code Follow DRY Principle (2026)](/claude-code-doesnt-follow-dry-principle-fix-2026/)

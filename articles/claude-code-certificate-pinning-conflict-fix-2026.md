@@ -1,5 +1,5 @@
 ---
-title: "Certificate Pinning Conflict Error — Fix (2026)"
+title: "Certificate Pinning Conflict Error"
 permalink: /claude-code-certificate-pinning-conflict-fix-2026/
 description: "Fix certificate pinning failure when proxy replaces certs. Disable pinning for dev or update pins to match proxy CA."
 last_tested: "2026-04-22"
@@ -69,3 +69,11 @@ Add this to your `CLAUDE.md`:
 - If pinning is required, pin the CA cert, not the leaf cert (survives rotation).
 - Use NO_PROXY to bypass TLS inspection proxies for trusted domains.
 ```
+
+## See Also
+
+- [Windows WSL Path Conflict Error — Fix (2026)](/claude-code-windows-wsl-path-conflict-fix-2026/)
+- [Git Worktree Lock Conflict Fix](/claude-code-worktree-lock-conflict-fix-2026/)
+- [Peer Dependency Conflict npm Error — Fix (2026)](/claude-code-peer-dependency-conflict-fix-2026/)
+- [Claude Code Rust-Analyzer Conflict — Fix (2026)](/claude-code-rust-analyzer-conflict-fix-2026/)
+- [Cursor Conflict With Claude Code CLI Fix](/claude-code-cursor-conflict-cli-fix-2026/)

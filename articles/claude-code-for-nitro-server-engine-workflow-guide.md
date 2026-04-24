@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Nitro Server Engine — Guide"
+title: "Claude Code for Nitro Server Engine"
 description: "Build universal servers with Nitro and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-nitro-server-engine-workflow-guide/

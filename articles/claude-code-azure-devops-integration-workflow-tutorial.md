@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Azure DevOps Integration (2026)"
+title: "Claude Code Azure DevOps Integration: Workflow Tutorial"
 description: "Integrate Claude Code with Azure DevOps for automated builds, release pipelines, and CI/CD workflows. YAML pipeline configs and practical examples."
 date: 2026-04-19
 last_modified_at: 2026-04-19

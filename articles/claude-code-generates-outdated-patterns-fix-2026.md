@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Using Outdated Patterns (2026)"
+title: "Fix Claude Code Using Outdated Patterns"
 description: "Stop Claude Code from generating deprecated APIs, old React patterns, and outdated library usage — add version pinning and pattern rules to CLAUDE.md."
 permalink: /claude-code-generates-outdated-patterns-fix-2026/
 last_tested: "2026-04-22"
@@ -67,3 +67,8 @@ Create a new page that fetches and displays user data
 **Current:** uses async Server Component, `await` data fetching, functional component
 
 Related: [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) | [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) | [Claude Code Docs Mirror](/claude-code-docs-offline-mirror-guide-2026/)
+
+## See Also
+
+- [Homebrew Formula Outdated Error — Fix (2026)](/claude-code-homebrew-formula-outdated-fix-2026/)
+- [Fix Claude Code Generating Insecure Code (2026)](/claude-code-generates-insecure-code-fix-2026/)

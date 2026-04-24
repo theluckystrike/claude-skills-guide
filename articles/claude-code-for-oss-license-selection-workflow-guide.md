@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Oss License — Complete Developer Guide"
+title: "Claude Code For Oss License"
 description: "Learn how to use Claude Code to systematically select the right open source license for your project. A practical workflow guide for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

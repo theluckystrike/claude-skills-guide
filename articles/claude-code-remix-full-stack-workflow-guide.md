@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Remix Full Stack Workflow Guide"
+title: "Claude Code Remix Full Stack Workflow"
 description: "Master the complete full stack development workflow with Claude Code. Learn to integrate frontend, backend, and deployment using Claude skills for."
 date: 2026-03-14
 last_modified_at: 2026-04-17

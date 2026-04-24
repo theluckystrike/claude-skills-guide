@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Pytest Parametrize Advanced Workflow Patterns"
+title: "Claude Code Pytest Parametrize Advanced"
 description: "Explore advanced pytest parametrize patterns for efficient test automation. Learn indirect parametrization, fixture-based generation, hooks."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -248,4 +248,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Pytest Async Testing — Complete Developer Guide](/claude-code-pytest-async-testing-with-asyncio-workflow/)

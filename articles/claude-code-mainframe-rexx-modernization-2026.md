@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Mainframe REXX Modernization (2026)"
+title: "Claude Code for Mainframe REXX"
 permalink: /claude-code-mainframe-rexx-modernization-2026/
 description: "Modernize mainframe REXX scripts with Claude Code. Convert ISPF panels, EXECIO file I/O, and TSO commands to Python automation."
 last_tested: "2026-04-22"
@@ -266,3 +266,6 @@ cd ~/rexx-migration/output && python3 -m pytest tests/ -v
 - [Claude Code for COBOL to Java Migration](/claude-code-cobol-to-java-migration-2026/)
 - [Claude Code for Natural/ADABAS Migration](/claude-code-natural-adabas-migration-2026/)
 - [Claude Code for Ada Legacy System Updates](/claude-code-ada-legacy-system-updates-2026/)
+- [Claude Code for PowerBuilder Modernization (2026)](/claude-code-powerbuilder-modernization-2026/)
+- [Claude Code for SCADA Modernization (2026)](/claude-code-scada-modernization-2026/)
+- [Claude Code for RPG/AS400 to Modern API (2026)](/claude-code-rpg-as400-modernization-2026/)

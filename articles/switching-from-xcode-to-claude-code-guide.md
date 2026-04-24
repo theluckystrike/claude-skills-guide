@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Switching From Xcode To Claude — Complete Developer Guide"
+title: "Switching From Xcode To Claude"
 description: "A comprehensive guide for developers moving from Xcode to Claude Code. Learn workflows, skill recommendations, and practical tips for the transition."
 date: 2026-03-14
 last_modified_at: 2026-04-17

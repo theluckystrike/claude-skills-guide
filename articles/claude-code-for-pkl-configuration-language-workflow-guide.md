@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Pkl Config Language — Guide"
+title: "Claude Code for Pkl Config Language"
 description: "Write type-safe configs with Apple's Pkl and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-pkl-configuration-language-workflow-guide/

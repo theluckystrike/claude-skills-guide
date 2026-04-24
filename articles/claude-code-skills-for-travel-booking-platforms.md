@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Travel Booking Platforms (2026)"
+title: "Claude Code for Travel Booking"
 description: "Build Claude skills for travel booking platforms with practical examples for flight search, hotel aggregation, price tracking, and itineraries."
 date: 2026-03-14
 last_modified_at: 2026-04-17

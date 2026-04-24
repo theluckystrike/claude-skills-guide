@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Marketplace — Complete Developer Guide"
+title: "Claude Skills Marketplace"
 description: "How publishers can use Claude Code skills to automate manuscript processing, editorial reviews, contract management, and sales material generation."
 date: 2026-03-13
 last_modified_at: 2026-04-17

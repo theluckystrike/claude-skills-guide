@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Cla Management — Complete Developer Guide"
+title: "Claude Code For Cla Management"
 description: "Learn how to automate Contributor License Agreement (CLA) management using Claude Code. This guide covers practical workflows, code examples, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

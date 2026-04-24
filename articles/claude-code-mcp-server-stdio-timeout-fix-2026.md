@@ -1,5 +1,5 @@
 ---
-title: "MCP Server stdio Timeout 30000ms — Fix (2026)"
+title: "MCP Server stdio Timeout 30000ms — Fix"
 permalink: /claude-code-mcp-server-stdio-timeout-fix-2026/
 description: "Increase timeout to 60000ms with claude mcp update command for your server entry. Fixes stdio transport initialization hangs on slow MCP servers."
 last_tested: "2026-04-21"
@@ -40,3 +40,36 @@ Add to your CLAUDE.md:
 ```
 MCP servers must respond to initialize within 60 seconds. Any server requiring database or network access at startup should implement a lazy connection pattern to avoid blocking the stdio handshake.
 ```
+
+## See Also
+
+- [Garbage Collection Pause Causing Timeout Fix](/claude-code-gc-pause-causing-timeout-fix-2026/)
+- [DNS Resolution Timeout Error — Fix (2026)](/claude-code-dns-resolution-timeout-fix-2026/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `npm ERR! code EACCES`
+- `npm ERR! code ERESOLVE`
+- `npm ERR! peer dep missing`
+- `ETIMEDOUT: connection timed out`
+- `RequestTimeout: request took longer than 120000ms`
+
+## Frequently Asked Questions
+
+### Should I use npm or pnpm with Claude Code?
+
+Claude Code works with any Node.js package manager. If your project uses pnpm, add `Use pnpm instead of npm for all package operations` to your CLAUDE.md so Claude Code respects your toolchain choice.
+
+### Why does Claude Code sometimes run npm commands that fail?
+
+Claude Code infers the package manager from lock files. If both `package-lock.json` and `pnpm-lock.yaml` exist, it may pick the wrong one. Delete the unused lock file or add an explicit instruction in CLAUDE.md.
+
+### How do I verify my npm installation is working?
+
+Run `npm doctor` to check your npm environment. It validates the registry connection, permissions, cache integrity, and Node.js compatibility in one command.
+
+### What is the default timeout for Claude Code API requests?
+
+The default timeout is 120 seconds (120000ms). For complex operations involving large codebases or multi-file edits, this may be insufficient. Increase it with `claude config set api_timeout 300000` for a 5-minute timeout.

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Zoom Slow: Fix Performance Issues (2026)"
+title: "Chrome Zoom Slow"
 description: "Fix Chrome zoom slow and laggy performance. Resolve page scaling issues, pinch-to-zoom lag, and keyboard shortcut slowdowns quickly. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

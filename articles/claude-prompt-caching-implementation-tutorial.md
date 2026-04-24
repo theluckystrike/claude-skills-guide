@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Prompt Caching Implementation Tutorial"
+title: "Claude Prompt Caching Implementation"
 description: "Step-by-step tutorial to enable Claude prompt caching. Cut a $4,500/month support bot to $455/month with 10 lines of code."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -202,3 +202,7 @@ Track these metrics starting from day one:
 - [Claude Prompt Caching Pricing and Cost Savings](/claude-prompt-caching-pricing-and-cost-savings/)
 - [Claude API Prompt Caching Performance Optimization](/claude-api-prompt-caching-performance-optimization-guide/)
 - [Claude Code for Varnish Cache Workflow](/claude-code-for-varnish-cache-workflow-tutorial/)
+
+## See Also
+
+- [Prompt Cache Stale Context Warning — Fix (2026)](/claude-code-prompt-caching-stale-context-fix-2026/)

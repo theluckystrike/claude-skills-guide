@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Stop Modifying Files: CLAUDE.md Fix (2026)"
+title: "Claude Code Stop Modifying Files"
 description: "Fix claude code stop modifying unrelated files with CLAUDE.md rules. Prevent markdown wrapping and get clean, paste-ready code output every time."
 date: 2026-03-14
 last_modified_at: 2026-04-17

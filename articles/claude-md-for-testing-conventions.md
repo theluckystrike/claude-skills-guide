@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md for Testing Conventions — Generate Tests That Actually Catch Bugs (2026)"
+title: "CLAUDE.md for Testing Conventions"
 description: "How to write CLAUDE.md rules for test structure, coverage requirements, mocking strategies, and assertion patterns that Claude Code follows consistently."
 permalink: /claude-md-testing-conventions/
 render_with_liquid: false
@@ -129,3 +129,7 @@ The most effective instruction for test quality is negative -- telling Claude wh
 When Claude generates a test, verify it against these rules. If it produces a test that only asserts `.toBeDefined()`, the rule was likely too far down in a file exceeding 200 lines.
 
 For general coding standards that complement testing conventions, see the [coding standards enforcement guide](/claude-md-for-coding-standards-enforcement/). For the error handling patterns your tests should verify, see the [error handling guide](/claude-md-error-handling-patterns/). For the complete CLAUDE.md writing guide, see the [best practices documentation](/claude-code-claude-md-best-practices/).
+
+## See Also
+
+- [CLAUDE.md for Database Conventions — Schema, Queries, and Migration Rules (2026)](/claude-md-for-database-conventions/)

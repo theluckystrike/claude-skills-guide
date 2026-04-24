@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "AI Search Enhancer Chrome Extension Guide (2026)"
+title: "AI Search Enhancer Chrome Extension"
 description: "Learn how AI search enhancer Chrome extensions can transform your search workflow. Practical implementation guide with code examples for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -413,5 +414,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
+- [Claude Code vs Phind (2026): AI Search for Devs](/claude-code-vs-phind-ai-search-developers-2026/)

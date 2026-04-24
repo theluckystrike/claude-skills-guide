@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for On-Call Runbook Workflow Tutorial"
+title: "Claude Code for On-Call Runbook"
 description: "Learn how to use Claude Code to automate and streamline your on-call runbook workflows. This comprehensive tutorial covers practical examples."
 date: 2026-04-19
 last_modified_at: 2026-04-19

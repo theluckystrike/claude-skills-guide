@@ -1,5 +1,5 @@
 ---
-title: "Use Awesome LLM Apps Templates with Claude (2026)"
+title: "Use Awesome LLM Apps Templates"
 description: "Clone and customize Awesome LLM Apps templates using Claude Code. Step-by-step for picking a template, adapting it, and deploying your AI application."
 permalink: /how-to-use-awesome-llm-apps-with-claude-2026/
 last_tested: "2026-04-22"
@@ -130,3 +130,7 @@ Community templates are starting points, not production-ready code. Before deplo
 - Compare Awesome LLM Apps with [Claude Code Templates](/awesome-llm-apps-vs-claude-code-templates-2026/)
 - Add [MCP servers](/mcp-servers-claude-code-complete-setup-2026/) to give Claude access to your application's data sources
 - Explore [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for efficient development
+
+## See Also
+
+- [Awesome LLM Apps: Agent Templates Guide (2026)](/awesome-llm-apps-agent-templates-guide-2026/)

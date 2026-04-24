@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills SendGrid Email Automation Setup"
+title: "Claude Code Skills SendGrid Email"
 description: "Set up SendGrid email automation using Claude Code skills. Build skills that connect to SendGrid API, send transactional emails, and manage email."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -278,4 +278,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [InsForge Setup Guide for Claude Code: Skills + CLI + MCP](/insforge-setup-guide-claude-code-skills-cli-mcp/)

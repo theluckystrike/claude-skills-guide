@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How To Make Claude Code Not — Complete Developer Guide"
+title: "How To Make Claude Code Not"
 description: "Learn practical strategies and best practices for working with Claude Code without accidentally breaking your TypeScript or type definition files."
 date: 2026-03-14
 last_modified_at: 2026-04-17

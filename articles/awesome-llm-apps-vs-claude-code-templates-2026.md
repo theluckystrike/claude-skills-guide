@@ -1,5 +1,5 @@
 ---
-title: "Awesome LLM Apps vs Claude Code Templates (2026)"
+title: "Awesome LLM Apps vs Claude Code"
 description: "Awesome LLM Apps offers 100+ runnable agent/RAG templates. Claude Code Templates provides 600+ Claude-specific configs. Here's how they differ."
 permalink: /awesome-llm-apps-vs-claude-code-templates-2026/
 last_tested: "2026-04-22"
@@ -106,3 +106,10 @@ The result: a well-built application (from the template) developed with high cod
 ## Final Recommendation
 
 These repos answer different questions. "How should I configure Claude Code?" leads to Templates. "What application should I build?" leads to Awesome LLM Apps. Most developers need both at different times. Bookmark Awesome LLM Apps for project inspiration and starting points. Install Claude Code Templates for your development setup. The combination of a well-configured tool and a solid starting template gets you to production faster. For finding more Claude-specific tools, check the [skills directory](/claude-skills-directory-where-to-find-skills/).
+
+## See Also
+
+- [SuperClaude vs Claude Code Templates (2026)](/superclaude-vs-claude-code-templates-2026/)
+- [Use Awesome LLM Apps Templates with Claude (2026)](/how-to-use-awesome-llm-apps-with-claude-2026/)
+- [Awesome LLM Apps: Agent Templates Guide (2026)](/awesome-llm-apps-agent-templates-guide-2026/)
+- [Awesome MCP vs Templates MCP Directory (2026)](/awesome-mcp-servers-vs-claude-code-templates-mcp-2026/)

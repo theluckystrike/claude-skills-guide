@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Augment Code AI Review for Enterprise Teams 2026"
+title: "Augment Code AI Review for Enterprise"
 description: "Discover how Claude Code skills enhance AI-powered code review for enterprise development teams. Learn practical implementations, security features."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -258,4 +258,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code vs Augment Code: AI Coding Compared (2026)](/claude-code-vs-augment-code-ai-2026/)

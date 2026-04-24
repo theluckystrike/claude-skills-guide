@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Chaos Engineering Testing Automation Guide"
+title: "Claude Code Chaos Engineering Testing"
 description: "Implement chaos engineering testing automation with Claude Code. Build resilient systems using Claude skills and automated testing workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

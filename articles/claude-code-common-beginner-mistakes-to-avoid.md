@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Common Beginner Mistakes to Avoid (2026)"
+title: "Claude Code Common Beginner Mistakes"
 description: "Avoid these common pitfalls when getting started with Claude Code. Learn practical solutions for skill installation, prompt writing, and workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -114,3 +114,7 @@ Related Reading
 - [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+## See Also
+
+- [OAuth Setup with Claude Code: Avoid the Token-Expensive Mistakes](/oauth-setup-claude-code-avoid-token-expensive-mistakes/)

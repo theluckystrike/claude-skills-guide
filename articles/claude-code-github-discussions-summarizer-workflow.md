@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code GitHub Discussions Summarizer Workflow"
+title: "Claude Code GitHub Discussions"
 description: "Learn how to build an automated workflow that uses Claude Code to summarize GitHub Discussions, saving time and helping teams stay informed."
 date: 2026-03-14
 last_modified_at: 2026-04-17

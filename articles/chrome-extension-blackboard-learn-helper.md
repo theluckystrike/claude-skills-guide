@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Blackboard Learn Helper Chrome Extension Guide (2026)"
+title: "Blackboard Learn Helper Chrome"
 description: "Learn how to build a Chrome extension to enhance Blackboard Learn. Practical code examples, API integrations, and techniques for developers and power."
 date: 2026-03-15
 last_modified_at: 2026-04-17

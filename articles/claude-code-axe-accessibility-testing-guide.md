@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Axe Accessibility — Complete Developer (2026)"
+title: "Claude Code Axe Accessibility"
 description: "Automate accessibility audits with axe-core and Claude Code. Fix common WCAG violations using Claude skills. Includes code examples and fixes."
 date: 2026-03-14
 last_modified_at: 2026-04-17

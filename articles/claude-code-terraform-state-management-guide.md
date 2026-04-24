@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Terraform State Management Guide"
+title: "Claude Code Terraform State Management"
 description: "Master Terraform state management with Claude Code. Learn practical techniques for handling state files, remote backends, and infrastructure tracking."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -195,3 +195,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
+
+- [Claude Code for Terraform Drift Detection (2026)](/claude-code-terraform-drift-detection-2026/)

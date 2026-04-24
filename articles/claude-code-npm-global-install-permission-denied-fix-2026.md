@@ -1,5 +1,5 @@
 ---
-title: "npm Global Install Permission Denied — Fix (2026)"
+title: "npm Global Install Permission Denied"
 permalink: /claude-code-npm-global-install-permission-denied-fix-2026/
 description: "Fix EACCES permission denied on npm install -g @anthropic-ai/claude-code. Use nvm or fix npm prefix to avoid sudo."
 last_tested: "2026-04-22"
@@ -82,3 +82,8 @@ Add this to your `CLAUDE.md`:
 - Minimum Node version: 18. Recommended: 22 LTS.
 - Global npm prefix should be in home directory, not /usr/local.
 ```
+
+## See Also
+
+- [EACCES Permission Denied Config Dir — Fix (2026)](/claude-code-config-dir-permission-denied-fix-2026/)
+- [Claude Code EACCES Permission Denied Global Install — Fix (2026)](/claude-code-eacces-permission-denied-npm-global-install-fix/)

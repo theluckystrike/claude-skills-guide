@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Node Version Mismatch — Fix (2026)"
+title: "Claude Code Node Version Mismatch — Fix"
 description: "Fix Claude Code node version mismatch error requiring Node 18+. Upgrade Node.js with nvm or volta. Step-by-step solution."
 permalink: /claude-code-node-version-mismatch-fix/
 last_tested: "2026-04-21"
@@ -78,3 +78,11 @@ This project requires Node.js >= 18. Use nvm or volta for version management. Pi
 ```
 
 **Related articles:** [Claude Code Command Not Found Fix](/claude-code-command-not-found-after-install-fix/), [Claude Code Not Working After Update](/claude-code-not-working-after-update-how-to-fix/), [Troubleshooting Hub](/troubleshooting-hub/)
+
+## See Also
+
+- [Claude Code Version History and Changes (2026)](/claude-code-version-history-changes-2026/)
+- [Token Count Estimation Mismatch Fix](/claude-code-token-count-estimation-mismatch-fix-2026/)
+- [Embedding Dimension Mismatch Error — Fix (2026)](/claude-code-embedding-dimension-mismatch-fix-2026/)
+- [MCP Protocol Version Mismatch in Claude — Fix (2026)](/claude-code-model-context-protocol-version-mismatch-fix-2026/)
+- [esbuild Target Mismatch Error — Fix (2026)](/claude-code-esbuild-target-mismatch-fix-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Audit MCP Server Permissions: Best Practices (2026)"
+title: "Audit MCP Server Permissions"
 description: "Secure your MCP server deployments by auditing tool permissions, restricting file access, and applying least-privilege policies for AI agent workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

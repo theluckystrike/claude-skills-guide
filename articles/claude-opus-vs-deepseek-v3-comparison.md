@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Opus 4.6 vs DeepSeek V3: Coding Comparison"
+title: "Claude Opus 4.6 vs DeepSeek V3"
 description: "Claude Opus 4.6 vs DeepSeek V3 for coding — comparing reasoning, cost, open-source flexibility, and real coding benchmarks."
 date: 2026-04-21
 permalink: /claude-opus-vs-deepseek-v3-comparison/
@@ -100,3 +100,7 @@ DeepSeek V3 handles exploratory questions ("what does this module do?", "how is 
 ## When To Use Neither
 
 For generating code that must meet formal correctness guarantees (safety-critical systems, cryptographic implementations, aerospace control software), neither AI model is appropriate as the primary author. Use formal methods, verified compilers, and mathematical proofs for correctness. AI models can assist in drafting and exploration, but the final code must be verified through rigorous non-AI processes.
+
+## See Also
+
+- [Claude Opus 4.6 vs Haiku 4.5: Speed and Cost Tradeoffs](/claude-opus-vs-haiku-speed-cost-tradeoff/)

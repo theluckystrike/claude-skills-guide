@@ -1,5 +1,5 @@
 ---
-title: "TypeScript Strict Null Checks in Generated Code — Fix (2026)"
+title: "TypeScript Strict Null Checks"
 permalink: /claude-code-typescript-strict-null-checks-generated-fix-2026/
 description: "Fix TypeScript strict null check errors in Claude-generated code. Add null guards and optional chaining to generated functions."
 last_tested: "2026-04-22"
@@ -75,3 +75,7 @@ Add this to your `CLAUDE.md`:
 - Use nullish coalescing (??) for default values, never || for booleans/numbers.
 - Run npx tsc --noEmit after every code change.
 ```
+
+## See Also
+
+- [TypeScript Strict Mode Breaks Claude Generated Code — Fix (2026)](/claude-code-typescript-strict-mode-breaks-generated-code-fix/)

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code CLAUDE.md Not Found Fix (2026)"
+title: "Claude Code CLAUDE.md Not Found Fix"
 description: "Fix Claude Code CLAUDE.md not found in parent directories. Create the file in the correct project root location. Step-by-step solution."
 permalink: /claude-code-claude-md-not-found-parent-directories-fix/
 last_tested: "2026-04-21"
@@ -83,3 +83,7 @@ This file should be at the git repository root, next to package.json. Always sta
 ```
 
 **Related articles:** [CLAUDE.md Not Being Read Fix](/claude-md-not-being-read-by-claude-code-fix/), [How to Fix Claude Ignoring CLAUDE.md](/how-to-fix-claude-code-ignoring-my-claude-md-file/), [Config File Location](/claude-code-config-file-location/)
+
+## See Also
+
+- [CLAUDE.md Not Loading in Claude Code — Fix Guide (2026)](/claude-md-not-loading-in-claude-code/)

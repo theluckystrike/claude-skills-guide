@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md For Enforcing Architecture — Developer Guide"
+title: "Claude Md For Enforcing Architecture"
 description: "Learn how to use Claude Code with custom skills to enforce architectural patterns consistently across your codebase. Practical examples and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -377,3 +377,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
+
+- [CLAUDE.md for API Design — Consistent Endpoints, Responses, and Versioning (2026)](/claude-md-for-api-design-patterns/)
+- [CLAUDE.md for Error Handling — Patterns That Prevent Silent Failures (2026)](/claude-md-for-error-handling-patterns/)

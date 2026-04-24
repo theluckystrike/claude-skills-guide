@@ -1,5 +1,5 @@
 ---
-title: "VS Code Extension Consuming Excessive CPU Fix"
+title: "VS Code Extension Consuming Excessive"
 permalink: /claude-code-vscode-extension-excessive-cpu-fix-2026/
 description: "Fix VS Code Claude Code extension consuming excessive CPU. Disable file watchers on large directories and limit workspace indexing to reduce CPU load."
 last_tested: "2026-04-22"
@@ -69,3 +69,9 @@ Help > Open Process Explorer
 # CLAUDE.md rule
 Always maintain a .claudeignore that excludes node_modules, dist, build, .git/objects, and any directory with more than 1,000 generated files. Open only the relevant subdirectory in VS Code for large monorepos.
 ```
+
+## See Also
+
+- [VS Code Extension Connection Timeout Fix](/claude-code-vscode-extension-connection-timeout-fix-2026/)
+- [Claude Code VS Code Extension Fails to Activate — Fix (2026)](/claude-code-vscode-extension-fails-to-activate-fix/)
+- [Claude Code VS Code Connection Lost — Fix (2026)](/claude-code-vscode-connection-lost-fix-2026/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Context Menu Search Alternative Chrome Extension in 2026"
+title: "Context Menu Search Alternative Chrome"
 description: "Discover the best context menu search alternatives for Chrome in 2026. Learn how to enhance your browser workflow with custom search capabilities."
 date: 2026-03-15
 last_modified_at: 2026-04-17

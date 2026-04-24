@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Next.js — Complete Developer Guide"
+title: "Claude Code For Next.js"
 description: "Learn how to build efficient Next.js middleware workflows using Claude Code. This tutorial covers practical examples for authentication, redirects, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19

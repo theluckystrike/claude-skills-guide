@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Csharp Source — Complete Developer Guide"
+title: "Claude Code For Csharp Source"
 description: "Learn how to use Claude Code to streamline your C# source generator development workflow. Practical examples and actionable advice for .NET."
 date: 2026-03-15
 last_modified_at: 2026-04-17

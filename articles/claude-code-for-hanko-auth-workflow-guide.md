@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Hanko Auth — Workflow Guide"
+title: "Claude Code for Hanko Auth"
 description: "Add passkey authentication with Hanko and Claude Code. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-hanko-auth-workflow-guide/
@@ -73,3 +73,7 @@ Claude Code should register Hanko elements in a client component, create a `/log
 - [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
+
+## See Also
+
+- [Claude Code for Clerk Auth — Workflow Guide](/claude-code-for-clerk-auth-workflow-guide/)

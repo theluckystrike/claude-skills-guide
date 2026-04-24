@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for RF Antenna Design Simulation (2026)"
+title: "Claude Code for RF Antenna Design"
 permalink: /claude-code-rf-antenna-design-simulation-2026/
 description: "RF antenna design simulation with Claude Code. Automate NEC2 modeling, S-parameter analysis, and radiation patterns."
 last_tested: "2026-04-22"
@@ -234,3 +234,4 @@ print('Antenna verification: PASS')
 - [Claude Code for DSP Pipeline Development](/claude-code-dsp-pipeline-development-2026/)
 - [Claude Code for Radar Signal Processing](/claude-code-radar-signal-processing-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for VHDL Synthesis and Simulation (2026)](/claude-code-vhdl-synthesis-simulation-2026/)

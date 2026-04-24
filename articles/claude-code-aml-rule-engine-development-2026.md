@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for AML Rule Engine Development (2026)"
+title: "Claude Code for AML Rule Engine"
 description: "Anti-money laundering rule engine with Claude Code. Build transaction monitoring rules with proper audit trails."
 permalink: /claude-code-aml-rule-engine-development-2026/
 last_tested: "2026-04-21"
@@ -331,3 +331,4 @@ python3 aml/rules/engine.py
 - [Claude Code for Algo Trading](/claude-code-algorithmic-trading-backtesting-2026/)
 - [Claude Code for FIX Protocol](/claude-code-fix-protocol-message-handling-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for Godot GDScript Development (2026)](/claude-code-godot-gdscript-development-2026/)

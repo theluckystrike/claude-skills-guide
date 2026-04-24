@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Version History and Improvements"
+title: "Claude Code Version History"
 description: "A comprehensive guide tracking Claude Code's evolution, major version releases, and key improvements that enhance developer productivity."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -256,7 +256,4 @@ Related Reading
 - [Claude 4 Skills: New Features and Improvements Guide](/claude-4-skills-improvements-and-new-features/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
-
-
-
-
+- [Claude Code Version History and Changes (2026)](/claude-code-version-history-changes-2026/)

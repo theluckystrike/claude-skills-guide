@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Jujutsu VCS — Workflow Guide"
+title: "Claude Code for Jujutsu VCS"
 description: "Use Jujutsu version control with Claude Code for better diffs. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-jujutsu-vcs-workflow-guide/

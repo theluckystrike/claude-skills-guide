@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Not Loading in Claude Code — Fix Guide (2026)"
+title: "CLAUDE.md Not Loading in Claude Code"
 description: "Step-by-step fix when Claude Code does not load your CLAUDE.md file. Covers file placement, naming, exclusions, subdirectory behavior, and --add-dir."
 permalink: /claude-md-not-loading-fix/
 render_with_liquid: false
@@ -156,3 +156,7 @@ Broken symlinks produce no error message -- the file simply does not appear in t
 In some cases, multiple causes compound. For example, you might have a correctly named CLAUDE.md in the project root (loads fine) but an exclusion pattern in settings that blocks it. Or the file loads but is immediately overshadowed by a longer managed CLAUDE.md that contradicts it. Work through each cause systematically and verify with `/memory` after each fix.
 
 For the complete CLAUDE.md loading specification, see the [CLAUDE.md complete guide](/claude-md-file-complete-guide-what-it-does/). For resolving conflicts between loaded files, see the [conflicting instructions fix guide](/claude-md-conflicting-instructions-fix/). For optimizing file size, see the [length optimization guide](/claude-md-length-optimization/).
+
+## See Also
+
+- [Claude Code CLAUDE.md Not Found Fix (2026)](/claude-code-claude-md-not-found-parent-directories-fix/)

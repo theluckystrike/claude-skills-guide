@@ -1,5 +1,5 @@
 ---
-title: "The Claude Code Cost Spiral: Why Projects Get Expensive Over Time"
+title: "The Claude Code Cost Spiral"
 description: "Understand why Claude Code costs spiral upward as projects grow, with the 5 compounding factors and systematic fixes that reverse the cost trajectory."
 permalink: /claude-code-cost-spiral-projects-expensive-over-time/
 date: 2026-04-22
@@ -304,3 +304,8 @@ The counter-measure is treating CLAUDE.md and skills updates as first-class PR r
 - [Why Claude Code Gets Expensive on Large Projects](/why-claude-code-expensive-large-projects-fix/) -- project-size specific fixes
 - [How to Audit Your Claude Code Token Usage](/audit-claude-code-token-usage-step-by-step/) -- the measurement foundation
 - [Cost Optimization Hub](/cost-optimization/) -- all optimization techniques
+
+## See Also
+
+- [Stop Claude Code Over-Relying on Comments (2026)](/claude-code-over-relies-on-comments-fix-2026/)
+- [Claude Code Cost vs Manual Developer Time: Break-Even Calculator](/claude-code-cost-vs-developer-time-break-even/)

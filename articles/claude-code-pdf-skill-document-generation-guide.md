@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude PDF Skill: Document Generation Guide"
+title: "Claude PDF Skill"
 description: "Complete guide to using the Claude Code PDF skill for document generation. Covers invoices, reports, technical specs, and automated document workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -274,4 +274,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for LaTeX Document Workflow 2026](/claude-code-latex-document-workflow-2026/)

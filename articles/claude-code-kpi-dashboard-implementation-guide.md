@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Kpi Dashboard — Complete Developer Guide"
+title: "Claude Code Kpi Dashboard"
 description: "Build a KPI dashboard with Claude Code. Step-by-step implementation using data aggregation, visualization skills, and automation for real-time metrics."
 date: 2026-03-14
 last_modified_at: 2026-04-17

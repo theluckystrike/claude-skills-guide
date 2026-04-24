@@ -1,5 +1,5 @@
 ---
-title: "Claude Sonnet 4.5 (20250929): Model Guide (2026)"
+title: "Claude Sonnet 4.5 (20250929)"
 description: "Claude Sonnet 4.5 model ID explained. Capabilities, pricing, API usage, and comparisons with Sonnet 4 and Opus 4 for coding and analysis tasks."
 permalink: /claude-sonnet-4-5-20250929-model-guide/
 last_tested: "2026-04-24"
@@ -218,18 +218,6 @@ Anthropic typically provides advance notice before deprecating models. Monitor t
 **How does Sonnet 4.5 handle long context workloads?**
 With a 200,000-token context window, Sonnet 4.5 handles large codebases and extended conversations well. Performance remains consistent through the full window, though costs scale linearly with input size. Use prompt caching to reduce costs when repeatedly sending the same context.
 
-## Related Guides
-
-- [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — the current recommended Sonnet model
-- [Claude Code cost breakdown](/claude-code-cost-complete-guide/) — pricing across all models
-- [Model routing strategies](/claude-code-router-guide/) — choosing the right model per task
-- [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — build agents with any model
-- [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — optimize prompts for Sonnet models
-- [Cost tracking with ccusage](/ccusage-claude-code-cost-tracking-guide-2026/) — monitor per-model spend
-- [API mode vs interactive](/claude-code-api-mode-vs-interactive-2026/) — model selection in different modes
-- [The Claude Code Playbook](/playbook/) — comprehensive Claude Code reference
-
-- [Claude temperature settings guide](/claude-temperature-settings-guide/) — Configure temperature for Sonnet 4.5
 ### Can I use Sonnet 4.5 with the Claude Agent SDK?
 
 Yes. Pass the model ID claude-sonnet-4-5-20250929 as the model parameter when constructing an agent. All Agent SDK features work with Sonnet 4.5.
@@ -241,6 +229,18 @@ Yes. Sonnet 4.5 costs one-fifth of Opus per token. For most coding and analysis 
 ### Does Sonnet 4.5 support batch processing?
 
 Yes. You can use Sonnet 4.5 with the Message Batches API for 50% cost savings on non-urgent workloads.
+
+## Related Guides
+
+- [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — the current recommended Sonnet model
+- [Claude Code cost breakdown](/claude-code-cost-complete-guide/) — pricing across all models
+- [Model routing strategies](/claude-code-router-guide/) — choosing the right model per task
+- [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — build agents with any model
+- [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — optimize prompts for Sonnet models
+- [Cost tracking with ccusage](/ccusage-claude-code-cost-tracking-guide-2026/) — monitor per-model spend
+- [API mode vs interactive](/claude-code-api-mode-vs-interactive-2026/) — model selection in different modes
+- [The Claude Code Playbook](/playbook/) — comprehensive Claude Code reference
+- [Claude temperature settings guide](/claude-temperature-settings-guide/) — Configure temperature for Sonnet 4.5
 
 <script type="application/ld+json">
 {

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Does Claude Skill Auto Invocation — Developer Guide"
+title: "Why Does Claude Skill Auto Invocation"
 description: "Understanding why Claude skills fail to auto-invoke unexpectedly. Common causes, debugging strategies, and practical solutions for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

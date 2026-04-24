@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Version Control — Branching, Review, and Change History (2026)"
+title: "CLAUDE.md Version Control Strategies"
 description: "How to version control CLAUDE.md effectively: branch strategies for rule changes, PR review workflows, and tracking instruction evolution over time."
 permalink: /claude-md-version-control-strategies/
 render_with_liquid: false

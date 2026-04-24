@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use LaTeX Document Writing Workflow (2026)"
+title: "How to Use LaTeX Document Writing"
 description: "Learn how to create professional LaTeX documents efficiently using Claude Code. This comprehensive tutorial covers setup, writing, compilation, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -523,4 +523,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for LaTeX Document Workflow 2026](/claude-code-latex-document-workflow-2026/)

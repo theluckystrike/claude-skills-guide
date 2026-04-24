@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Flink CEP Patterns (2026)"
+title: "Claude Code for Flink CEP Patterns"
 description: "Build Complex Event Processing patterns in Apache Flink with Claude Code. Pattern detection, alerting systems, and streaming data workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

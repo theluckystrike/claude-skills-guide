@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Way To Scope Claude Code To A — Honest Review 2026"
+title: "Best Way To Scope Claude Code"
 description: "Learn how to constrain Claude Code to work within a specific directory for better focus, security, and project isolation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Losing Context in Sessions (2026)"
+title: "Fix Claude Code Losing Context"
 description: "Prevent Claude Code from losing context in long sessions using checkpoints, CLAUDE.md state files, and session chunking strategies."
 permalink: /claude-code-loses-context-long-sessions-fix-2026/
 last_tested: "2026-04-22"
@@ -100,3 +100,10 @@ npx ccusage
 This shows exactly how much context each session consumed, helping you calibrate session length.
 
 For more strategies on managing Claude Code context, see our [context window management guide](/claude-code-context-window-management-2026/). Learn how hooks can automate checkpoint creation in the [hooks guide](/understanding-claude-code-hooks-system-complete-guide/). For the full playbook approach to multi-session work, read [The Claude Code Playbook](/playbook/).
+
+## See Also
+
+- [Claude Code EPIPE Broken Pipe Error — Fix (2026)](/claude-code-epipe-broken-pipe-long-operations-fix/)
+- [SIGTERM During Long Operation Fix](/claude-code-sigterm-during-long-operation-fix-2026/)
+- [How to Measure Context Efficiency in Claude Code Sessions](/measure-context-efficiency-claude-code-sessions/)
+- [How to Resume Claude Code Sessions 2026](/claude-code-resume-sessions-guide-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs GitHub Actions: Automation Approaches"
+title: "Claude Code vs GitHub Actions"
 description: "Comparing Claude Code's AI automation with GitHub Actions CI/CD — different tools for different automation layers in modern development."
 date: 2026-04-21
 permalink: /claude-code-vs-github-actions-ci-comparison/

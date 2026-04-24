@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Install Claude Code — All Platforms Guide"
+title: "Install Claude Code"
 description: "Install Claude Code CLI on macOS, Linux, Windows, WSL, and Docker. Includes npm setup, authentication, and verifying your installation works."
 date: 2026-04-14
 last_modified_at: 2026-04-17
@@ -227,6 +227,9 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) — Understanding the --dangerously-skip-permissions CLI flag
 ## Related Articles
 
+- [How to use Claude Code beginner guide](/how-to-use-claude-code-beginner-guide/) — what to do after installing
+- [Claude Code status line guide](/claude-code-statusline-guide/) — understand the status bar after first launch
+- [CLAUDE.md best practices](/claude-md-best-practices-definitive-guide/) — first configuration step after install
 - [Claude Code Bun Install Setup Guide](/claude-code-bun-install/)
 
 

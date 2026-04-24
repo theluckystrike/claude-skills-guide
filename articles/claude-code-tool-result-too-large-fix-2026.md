@@ -1,5 +1,5 @@
 ---
-title: "Tool Result Exceeds 100KB Truncating — Fix (2026)"
+title: "Tool Result Exceeds 100KB Truncating"
 permalink: /claude-code-tool-result-too-large-fix-2026/
 description: "Pipe command output through head or grep filters before execution in Claude Code. Prevents the 100KB tool result truncation that drops important data."
 last_tested: "2026-04-21"
@@ -48,3 +48,37 @@ Add to your CLAUDE.md:
 ```
 All shell commands must limit output: use head -100, tail -200, --oneline, or grep filters. Never run unbounded commands like find, cat, or git log without output limits. Write large results to /tmp/ and read sections.
 ```
+
+## See Also
+
+- [Knowledge Base Exceeds 512KB Maximum — Fix (2026)](/claude-code-knowledge-base-too-large-fix-2026/)
+- [Claude API 413 Request Payload Too Large — Fix (2026)](/claude-api-413-request-payload-too-large-fix/)
+- [Claude Code Tool Calling and Parallel Execution 2026](/claude-code-tool-calling-parallel-execution-2026/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `fatal: not a git repository`
+- `error: failed to push some refs`
+- `fatal: refusing to merge unrelated histories`
+- `ContextWindowExceeded: input exceeds maximum context length`
+- `Error: message content too large`
+
+## Frequently Asked Questions
+
+### Why does Claude Code require git?
+
+Claude Code uses git for several core operations: tracking file changes, creating commits, reading blame information, searching history with `git log`, and managing branches. Without git, these operations fail and Claude Code falls back to less efficient alternatives.
+
+### Can Claude Code work in a non-git directory?
+
+Yes, but with reduced functionality. File search and editing work normally, but version control operations (commit, diff, blame) are unavailable. Claude Code displays a warning when opened in a directory without git initialization.
+
+### How do I prevent Claude Code from making unwanted git operations?
+
+Add rules to your CLAUDE.md: `Do not create commits automatically. Do not run git push. Always ask before any git operation that modifies history.` Claude Code respects these constraints and asks for confirmation before proceeding.
+
+### What is the context window limit?
+
+Claude's context window is 200,000 tokens. This includes system prompts, conversation history, file contents read during the session, and tool results. When the total exceeds this limit, Claude Code must compress or drop earlier context.

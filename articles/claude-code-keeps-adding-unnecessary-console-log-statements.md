@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Keeps Adding Unnecessary — Developer Guide"
+title: "Claude Code Keeps Adding Unnecessary"
 description: "Learn why Claude Code frequently adds console.log statements to your code and discover practical solutions to prevent this behavior while maintaining."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -212,4 +212,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Timezone Affecting Log Timestamps Fix](/claude-code-timezone-affecting-log-timestamps-fix-2026/)
+- [Stop Claude Code Adding Extra Dependencies (2026)](/claude-code-adds-unnecessary-dependencies-fix-2026/)

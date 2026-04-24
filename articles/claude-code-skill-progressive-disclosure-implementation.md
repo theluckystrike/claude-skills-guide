@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Skill Progressive Disclosure: Implementation Guide"
+title: "Claude Code Skill Progressive"
 description: "Implement progressive disclosure in Claude Code skills to load instructions incrementally, reducing average session context by 40-60% and saving $5-15/month."
 permalink: /claude-code-skill-progressive-disclosure-implementation/
 date: 2026-04-22
@@ -293,3 +293,7 @@ Run this script after adding or modifying skills to verify the library remains e
 - [Claude Code Skills Guide](/skills/) -- foundational skills documentation
 - [Progressive Disclosure in CLAUDE.md: Load Only What You Need](/progressive-disclosure-claude-md-load-only-needed/) -- same principle applied to CLAUDE.md
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- broader context strategies
+
+## See Also
+
+- [Skill YAML Frontmatter Parse Error in Claude — Fix (2026)](/claude-code-skill-yaml-frontmatter-parse-error-fix-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Claude Skills with n8n Automation Workflows"
+title: "How to Use Claude Skills with n8n"
 description: "Learn how to claude skills with n8n automation workflows. Step-by-step with working examples."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -206,4 +206,9 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Use Awesome LLM Apps Templates with Claude (2026)](/how-to-use-awesome-llm-apps-with-claude-2026/)
+- [How To Use Claude Code To — Complete Developer Guide](/how-to-use-claude-code-to-understand-unfamiliar-codebase-qui/)
+- [Write Database Queries with Claude Code (2026)](/how-to-use-claude-code-to-write-database-queries-from-scratc/)
+- [Use Claude Task Master With Your Project (2026)](/how-to-use-claude-task-master-existing-project-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Claude Error Handling Patterns (2026)"
+title: "How to Use Claude Error Handling"
 description: "A comprehensive guide to implementing error handling patterns in Claude Code workflows for developers."
 date: 2026-03-20
 last_modified_at: 2026-04-17
@@ -569,6 +569,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
-
+- [Make Claude Code Add Error Handling (2026)](/claude-code-skips-error-handling-fix-2026/)

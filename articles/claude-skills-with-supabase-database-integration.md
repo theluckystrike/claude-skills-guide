@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills with Supabase: Practical Workflows"
+title: "Claude Skills with Supabase"
 description: "How to use Claude Code skills alongside Supabase for database-backed projects. what works, what does not, and practical patterns."
 date: 2026-03-13
 last_modified_at: 2026-04-17

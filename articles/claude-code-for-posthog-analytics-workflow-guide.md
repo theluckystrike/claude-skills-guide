@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for PostHog — Workflow Guide"
+title: "Claude Code for PostHog"
 description: "Integrate PostHog analytics with Claude Code for product insights. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-posthog-analytics-workflow-guide/
@@ -72,3 +72,7 @@ Claude Code should add `posthog.capture('signup_page_viewed')` on mount, `postho
 - [Claude Code for Amplitude Analytics Workflow](/claude-code-for-amplitude-analytics-workflow/)
 - [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
+
+## See Also
+
+- [Claude Code for Mixpanel Analytics — Guide](/claude-code-for-mixpanel-analytics-workflow-guide/)

@@ -1,5 +1,5 @@
 ---
-title: "System Prompts Repo vs Official Docs (2026)"
+title: "System Prompts Repo vs Official Docs"
 description: "The System Prompts repo exposes Claude Code's internal instructions and 24 tool definitions. Official docs explain features. Here's why both matter."
 permalink: /claude-code-system-prompts-vs-official-docs-2026/
 last_tested: "2026-04-22"
@@ -86,3 +86,8 @@ The system prompts repo is a community project that extracts prompts through leg
 ## Final Recommendation
 
 Read the system prompts repo once to build your mental model of how Claude Code works internally. Then use official docs for day-to-day reference. Return to the system prompts repo when you encounter unexpected behavior or when you need to write a CLAUDE.md that works *with* the system prompt rather than against it. This combination of understanding creates a significant advantage in [Claude Code productivity](/karpathy-skills-vs-claude-code-best-practices-2026/).
+
+## See Also
+
+- [Claude Code System Prompts Explained (2026)](/claude-code-system-prompts-guide-2026/)
+- [Claude Howto vs Official Docs for Learning (2026)](/claude-howto-vs-official-docs-learning-2026/)

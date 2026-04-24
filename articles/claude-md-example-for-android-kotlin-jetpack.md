@@ -1,6 +1,6 @@
 ---
-title: "CLAUDE.md Example for Android + Kotlin + Jetpack Compose — Production Template (2026)"
-description: "Complete 320-line CLAUDE.md for Android with Kotlin 2.1 and Jetpack Compose. Covers Compose state, ViewModel patterns, Room database, Hilt DI, and coroutines. Tested on AGP 8.7."
+title: "CLAUDE.md Example for Android + Kotlin"
+description: "Complete 320-line CLAUDE.md for Android with Kotlin 2.1 and Jetpack Compose."
 permalink: /claude-md-example-for-android-kotlin-jetpack/
 render_with_liquid: false
 categories: [claude-md, templates, 2026]

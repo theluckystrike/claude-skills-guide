@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For CDK Nag Policy — Complete Developer (2026)"
+title: "Claude Code For CDK Nag Policy"
 last_tested: "2026-04-22"
 description: "Learn how to integrate Claude Code with AWS CDK Nag for automated infrastructure policy compliance, security scanning, and governance workflows."
 date: 2026-04-19

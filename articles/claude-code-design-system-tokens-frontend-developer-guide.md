@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Design System Tokens — Complete Developer Guide"
+title: "Claude Code Design System Tokens"
 description: "Learn how to use Claude Code's design system tokens for building consistent, professional user interfaces with the canvas-design skill."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -563,7 +563,10 @@ Related Reading
 - [Claude Code Accessibility Workflow for Frontend Engineers](/claude-code-accessibility-workflow-for-frontend-engineers/)
 - [Claude Code Daily Workflow for Frontend Developers Guide](/claude-code-daily-workflow-for-frontend-developers-guide/)
 - [Claude Code Generating CSS Variables from Design System](/claude-code-generating-css-variables-from-design-system/)
+- [Claude Code frontend design plugin](/claude-code-frontend-design-plugin-guide/) — design system integration plugin
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code Frontend Developer Cross Browser Testing Guide](/claude-code-frontend-developer-cross-browser-testing-guide/)

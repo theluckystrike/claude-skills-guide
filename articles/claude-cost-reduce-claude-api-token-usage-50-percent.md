@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Reduce Claude API Token Usage by 50%"
+title: "How to Reduce Claude API Token Usage"
 description: "Cut Claude API token consumption in half with system prompt compression, tool pruning, and output constraints — save $1,125/month."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -174,3 +174,11 @@ Compare average tokens per request before and after optimization. Track four met
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — comprehensive token optimization strategies
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — write better prompts that use fewer tokens
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — measure per-skill token consumption
+
+## See Also
+
+- [Claude Batch API 50% Discount Complete Guide](/claude-cost-claude-batch-api-50-percent-discount-guide/)
+- [Claude Usage Alerts to Prevent Cost Overruns](/claude-cost-03-claude-usage-alerts-prevent-overruns/)
+- [Claude API Cost Dashboard Setup Guide 2026](/claude-cost-01-claude-api-cost-dashboard-setup/)
+- [Claude API Usage Metrics Every Team Needs](/claude-cost-07-claude-api-usage-metrics-teams/)
+- [Smart Context Pruning for Claude API Savings](/claude-cost-smart-context-pruning-claude-api-savings/)

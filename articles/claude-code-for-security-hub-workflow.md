@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Security Hub — Complete Developer Guide"
+title: "Claude Code For Security Hub"
 description: "Learn how to integrate Claude Code into your AWS Security Hub workflow for automated security compliance, finding and fixing vulnerabilities, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

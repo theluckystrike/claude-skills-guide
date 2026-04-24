@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Debug React Native Expo with Claude Code (2026)"
+title: "Debug React Native Expo with Claude"
 description: "Fix React Native Expo runtime errors, native module crashes, and build failures using Claude Code debugging workflows. Tested solutions included."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -382,4 +382,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for React Native Development 2026](/claude-code-react-native-development-2026/)

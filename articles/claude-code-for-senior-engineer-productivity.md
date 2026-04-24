@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Senior Engineer Productivity (2026)"
+title: "Claude Code for Senior Engineer"
 description: "Senior engineers save 8+ hours weekly with Claude Code. Covers architecture reviews, code generation, PR feedback, and mentoring workflow automation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Terragrunt Modules Workflow (2026)"
+title: "Claude Code Terragrunt Modules Workflow"
 description: "Manage Terragrunt infrastructure modules with Claude Code for DRY Terraform configs, multi-environment promotion, and workspace-scale automation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

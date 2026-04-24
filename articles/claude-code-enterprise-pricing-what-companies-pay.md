@@ -1,6 +1,6 @@
 ---
-title: "Claude Code Enterprise Pricing: What Companies Actually Pay"
-description: "Enterprise Claude Code pricing starts at $200/seat/month for Max Team. API costs range from $50-200/developer/month depending on usage patterns and optimization."
+title: "Claude Code Enterprise Pricing"
+description: "Enterprise Claude Code pricing starts at $200/seat/month for Max Team."
 permalink: /claude-code-enterprise-pricing-what-companies-pay/
 date: 2026-04-22
 last_tested: "2026-04-22"
@@ -288,3 +288,7 @@ Pricing last verified: April 2026.
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization
 
 - [Claude student discount guide](/claude-student-discount-guide/) — How students can get Claude at reduced pricing
+
+## See Also
+
+- [Claude Code + OpenRouter: Alternative Pricing Strategies](/claude-code-openrouter-alternative-pricing/)

@@ -1,5 +1,5 @@
 ---
-title: "Make Claude Code Write Tests First (TDD) (2026)"
+title: "Make Claude Code Write Tests First"
 description: "Configure Claude Code for test-driven development with CLAUDE.md rules that enforce red-green-refactor and test-before-implementation ordering."
 permalink: /claude-code-write-tests-first-tdd-setup-2026/
 last_tested: "2026-04-22"
@@ -74,3 +74,11 @@ Add a function that calculates shipping cost based on weight and destination
 For a more robust TDD setup, consider [SuperClaude's TDD mode](/superclaude-framework-guide-2026/) which automates the cycle enforcement.
 
 Related: [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) | [The Claude Code Playbook](/playbook/) | [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/)
+
+## See Also
+
+- [Claude Code Write Path Outside Workspace — Fix (2026)](/claude-code-write-tool-path-outside-workspace-fix-2026/)
+- [Claude Code Tab Completion Setup Guide 2026](/claude-code-tab-completion-setup-2026/)
+- [How to Set Up Claude Code in Ghostty Terminal 2026](/claude-code-ghostty-terminal-setup-2026/)
+- [Set Up Claude Code in Dev Containers 2026](/claude-code-dev-containers-setup-2026/)
+- [Claude Code + WebStorm JetBrains Setup 2026](/claude-code-webstorm-jetbrains-setup-2026/)

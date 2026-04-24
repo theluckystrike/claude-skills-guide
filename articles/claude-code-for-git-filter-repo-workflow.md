@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Git Filter-Repo Workflow (2026)"
+title: "Claude Code for Git Filter-Repo"
 description: "Learn how to use Claude Code to automate and simplify git filter-repo workflows for cleaning up repository history, removing sensitive data, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -340,4 +340,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Content Filter Triggered Refusal — Fix (2026)](/claude-code-content-filter-triggered-fix-2026/)

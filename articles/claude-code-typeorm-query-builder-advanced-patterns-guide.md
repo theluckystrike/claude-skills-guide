@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "TypeORM Query Builder Patterns with Claude (2026)"
+title: "TypeORM Query Builder Patterns"
 description: "Build advanced TypeORM Query Builder patterns including subqueries, joins, conditional filtering, and dynamic queries. Code examples included."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -690,4 +690,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Kysely — Workflow Guide](/claude-code-for-kysely-query-builder-workflow-guide/)

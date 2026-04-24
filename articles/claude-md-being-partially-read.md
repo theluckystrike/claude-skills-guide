@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Being Partially Read — Why Rules at the Bottom Get Ignored (2026)"
+title: "CLAUDE.md Being Partially Read"
 description: "Fix the problem where Claude Code follows some CLAUDE.md rules but ignores others. Covers compaction behavior, file length, rule priority, and diagnostic steps."
 permalink: /claude-md-being-partially-read/
 render_with_liquid: false

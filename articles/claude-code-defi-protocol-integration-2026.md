@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for DeFi Protocol Integration (2026)"
+title: "Claude Code for DeFi Protocol"
 permalink: /claude-code-defi-protocol-integration-2026/
 description: "DeFi protocol integration with Claude Code. Build Uniswap, Aave, and Compound interactions with proper slippage and MEV protection."
 last_tested: "2026-04-22"
@@ -272,3 +272,7 @@ forge test --gas-report --fork-url https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY
 - [Claude Code for Solidity Smart Contracts](/claude-code-solidity-smart-contract-dev-2026/)
 - [Claude Code for Options Pricing](/claude-code-options-pricing-black-scholes-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code vs Zed AI (2026): Editor Integration](/claude-code-vs-zed-ai-editor-integration-2026/)
+- [Claude Code + Linear MCP Integration Guide 2026](/claude-code-linear-mcp-integration-2026/)
+- [Claude Code + Neovim Terminal Integration 2026](/claude-code-neovim-terminal-integration-2026/)
+- [How to Use Claude Code in IntelliJ IDEA 2026](/claude-code-intellij-idea-integration-2026/)

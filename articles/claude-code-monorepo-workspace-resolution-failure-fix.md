@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Monorepo Workspace Resolution Failure — Fix (2026)"
+title: "Claude Code Monorepo Workspace"
 description: "Fix Claude Code monorepo workspace resolution failure. Configure workspace protocols and package paths. Step-by-step solution."
 permalink: /claude-code-monorepo-workspace-resolution-failure-fix/
 last_tested: "2026-04-21"
@@ -81,3 +81,11 @@ This is a pnpm monorepo. Always use workspace:* protocol for local package depen
 ```
 
 **Related articles:** [Monorepo Setup Guide](/claude-code-monorepo-setup-guide/), [Claude Code Not Working After Update](/claude-code-not-working-after-update-how-to-fix/), [Troubleshooting Hub](/troubleshooting-hub/)
+
+## See Also
+
+- [Claude Code Monorepo: Best Setup Guide (2026)](/claude-code-monorepo-best-setup-2026/)
+- [Plugin Load Failure Error — Fix (2026)](/claude-code-plugin-load-failure-fix-2026/)
+- [IPv6 Fallback Failure Error — Fix (2026)](/claude-code-ipv6-fallback-failure-fix-2026/)
+- [TLS Version Negotiation Failure — Fix (2026)](/claude-code-tls-version-negotiation-failure-fix-2026/)
+- [Monorepo Workspace Package Resolution — Fix (2026)](/claude-code-monorepo-workspace-package-resolution-fix-2026/)

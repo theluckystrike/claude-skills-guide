@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Plus Perplexity for Research-Driven Development"
+title: "Claude Code Plus Perplexity"
 description: "Learn how combining Claude Code's AI coding capabilities with Perplexity's research features creates a powerful workflow for informed, evidence-based."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -155,4 +155,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for Quant Research Backtesting (2026)](/claude-code-quant-research-backtesting-2026/)

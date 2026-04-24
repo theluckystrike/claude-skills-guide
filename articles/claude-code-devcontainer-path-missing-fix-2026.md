@@ -1,5 +1,5 @@
 ---
-title: "Devcontainer Claude Code Path Missing Fix"
+title: "Devcontainer Claude Code Path Missing"
 permalink: /claude-code-devcontainer-path-missing-fix-2026/
 description: "Fix Claude Code not found in devcontainer PATH. Add Claude Code install to devcontainer.json features or postCreateCommand for container access."
 last_tested: "2026-04-22"
@@ -78,3 +78,36 @@ which claude
 # CLAUDE.md rule
 When using devcontainers, include Claude Code installation in devcontainer.json postCreateCommand. Always forward ANTHROPIC_API_KEY via remoteEnv. Test Claude Code access after every container rebuild.
 ```
+
+## See Also
+
+- [Shallow Clone Missing History for Blame Fix](/claude-code-shallow-clone-missing-history-blame-fix-2026/)
+- [Declaration File .d.ts Missing Error — Fix (2026)](/claude-code-declaration-file-dts-missing-fix-2026/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `npm ERR! code EACCES`
+- `npm ERR! code ERESOLVE`
+- `npm ERR! peer dep missing`
+- `Extension host terminated unexpectedly`
+- `Cannot connect to the Claude Code language server`
+
+## Frequently Asked Questions
+
+### Should I use npm or pnpm with Claude Code?
+
+Claude Code works with any Node.js package manager. If your project uses pnpm, add `Use pnpm instead of npm for all package operations` to your CLAUDE.md so Claude Code respects your toolchain choice.
+
+### Why does Claude Code sometimes run npm commands that fail?
+
+Claude Code infers the package manager from lock files. If both `package-lock.json` and `pnpm-lock.yaml` exist, it may pick the wrong one. Delete the unused lock file or add an explicit instruction in CLAUDE.md.
+
+### How do I verify my npm installation is working?
+
+Run `npm doctor` to check your npm environment. It validates the registry connection, permissions, cache integrity, and Node.js compatibility in one command.
+
+### What VS Code version does Claude Code require?
+
+Claude Code requires VS Code 1.85 or later. Earlier versions lack the extension API features needed for the Claude Code integration. Check your version with `code --version` and update through the VS Code built-in updater or your package manager.

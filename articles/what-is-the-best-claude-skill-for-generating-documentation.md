@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "What Is The Best Claude Skill For — Honest Review 2026"
+title: "What Is the Best Claude Skill for Generating Documentation"
 description: "A practical guide to Claude skills for documentation generation, comparing the best options for developers who need to create API docs, README files, an..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

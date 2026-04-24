@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Data & Methodology: Claude Code Research"
+title: "Data & Methodology"
 description: "How we collected and analyzed 50,000+ search impressions across 185 countries for our Claude Code developer research."
 date: 2026-04-18
 author: "Claude Skills Guide"

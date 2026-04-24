@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "SuperMaven Review: AI Code Completion (2026)"
+title: "SuperMaven Review: AI Code Completion"
 description: "SuperMaven delivers sub-100ms code completions with 300K token context. See how it compares to Claude Code and Copilot for real development workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

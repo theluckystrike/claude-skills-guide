@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Find Performance Bottlenecks with Claude Code (2026)"
+title: "Find Performance Bottlenecks"
 description: "Identify and fix performance bottlenecks using Claude Code. Profile skill execution, analyze tool call overhead, and optimize response latency issues."
 date: 2026-03-14
 last_modified_at: 2026-04-17

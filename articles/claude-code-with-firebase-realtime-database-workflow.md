@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code with Firebase Realtime Database Workflow"
+title: "Claude Code with Firebase Realtime"
 description: "Learn how to integrate Claude Code with Firebase Realtime Database for smooth real-time data synchronization in your applications."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -340,4 +340,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for PartyKit — Workflow Guide](/claude-code-for-partykit-realtime-workflow-guide/)

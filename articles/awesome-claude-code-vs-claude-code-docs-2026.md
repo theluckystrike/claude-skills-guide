@@ -1,5 +1,5 @@
 ---
-title: "Awesome Claude Code vs Docs Mirror (2026)"
+title: "Awesome Claude Code vs Docs Mirror"
 description: "Awesome Claude Code curates the ecosystem with 40K stars. Claude Code Docs mirrors official documentation offline. Compare discovery vs reference."
 permalink: /awesome-claude-code-vs-claude-code-docs-2026/
 last_tested: "2026-04-22"
@@ -99,3 +99,8 @@ If you want to be notified of changes to Awesome Claude Code, watch the repo on 
 ## Final Recommendation
 
 Bookmark Awesome Claude Code at awesomeclaude.ai for ongoing tool discovery. Clone Claude Code Docs locally if you ever work offline or want fast local documentation access. They complement each other perfectly — one tells you what exists, the other tells you how things work. Use both alongside the [Claude Code playbook](/playbook/) for a complete resource set.
+
+## See Also
+
+- [Awesome Claude Code: Master Resource Index (2026)](/awesome-claude-code-master-index-guide-2026/)
+- [Awesome Claude Code Toolkit: 135 Agents (2026)](/awesome-claude-code-toolkit-135-agents-2026/)

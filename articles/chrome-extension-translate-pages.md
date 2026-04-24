@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "Build a Page Translation Chrome Extension (2026)"
+title: "Build a Page Translation Chrome"
 description: "Build a Chrome extension that translates web pages in real time. Covers Google Translate API, DOM text extraction, and inline translation replacement."
 date: 2026-03-15
 last_modified_at: 2026-04-17

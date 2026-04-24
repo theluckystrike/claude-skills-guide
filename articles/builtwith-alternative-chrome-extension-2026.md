@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "BuiltWith Alternative Chrome Extension: Top Picks for 2026"
+title: "BuiltWith Alternative Chrome Extension"
 description: "Discover the best BuiltWith alternatives for Chrome. Compare features, pricing, and find the perfect technology profiler extension for your development."
 date: 2026-03-15
 last_modified_at: 2026-04-17

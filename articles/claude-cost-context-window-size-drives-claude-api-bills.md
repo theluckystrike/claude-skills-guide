@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Context Window Size Drives Claude API Bills"
+title: "How Context Window Size Drives Claude"
 description: "Every 100K tokens of context costs $0.50 on Opus 4.7. Learn why context size — not model choice — is your biggest cost lever."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -243,3 +243,11 @@ The primary metric is average context size per request, tracked weekly. Secondar
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — understanding context limits
 
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization
+
+## See Also
+
+- [Prompt Compression Techniques for Claude API](/claude-cost-prompt-compression-techniques-claude-api/)
+- [Claude 1M Context Window: What It Really Costs](/claude-cost-claude-1m-context-window-what-it-costs/)
+- [RAG vs Context Stuffing: Claude Cost Analysis](/claude-cost-rag-vs-context-stuffing-claude-cost-analysis/)
+- [Optimal Context Size for Cost-Efficient Claude](/claude-cost-optimal-context-size-cost-efficient-claude/)
+- [Claude Code Context Management Cost Tips 2026](/claude-cost-04-claude-code-context-management-tips/)

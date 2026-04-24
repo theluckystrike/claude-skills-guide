@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Process Manager Pattern Workflow"
+title: "Claude Code for Process Manager Pattern"
 description: "Learn how to implement the Process Manager pattern using Claude Code. Master workflow orchestration, state management, and compensation strategies for."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -296,4 +296,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code for ts-pattern — Workflow Guide](/claude-code-for-ts-pattern-matching-workflow-guide/)

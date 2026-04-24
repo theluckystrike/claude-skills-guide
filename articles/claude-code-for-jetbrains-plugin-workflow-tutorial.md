@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for JetBrains Plugin Workflow Tutorial"
+title: "Claude Code for JetBrains Plugin"
 description: "A comprehensive guide to using Claude Code for developing JetBrains plugins. Learn practical workflows, code examples, and actionable tips to."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -267,4 +267,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [JetBrains Plugin Incompatibility Fix](/claude-code-jetbrains-plugin-incompatibility-fix-2026/)

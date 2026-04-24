@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for 3D Printer Firmware (2026)"
+title: "Claude Code for 3D Printer Firmware"
 permalink: /claude-code-3d-printer-firmware-customization-2026/
 description: "Customize Marlin and Klipper 3D printer firmware with Claude Code. Tune motion, thermistors, and stepper config."
 last_tested: "2026-04-22"
@@ -185,3 +185,4 @@ print('Config validation: PASS')
 - [Claude Code for STM32 Firmware Development](/claude-code-stm32-firmware-development-2026/)
 - [Claude Code for FPGA Development](/claude-code-for-fpga-development-workflow-tutorial/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
+- [Claude Code for Medical Device IEC 62304 (2026)](/claude-code-medical-device-firmware-iec62304-2026/)

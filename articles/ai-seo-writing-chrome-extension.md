@@ -1,6 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
-title: "AI SEO Writing Chrome Extension Guide (2026)"
+title: "AI SEO Writing Chrome Extension Guide"
 description: "Learn how to build and use AI-powered SEO writing Chrome extensions. Practical code examples, API integrations, and implementation strategies for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Terraform Drift Detection (2026)"
+title: "Claude Code for Terraform Drift"
 description: "Terraform drift detection workflow with Claude Code. Automate plan analysis, state auditing, and remediation scripts."
 permalink: /claude-code-terraform-drift-detection-2026/
 last_tested: "2026-04-21"

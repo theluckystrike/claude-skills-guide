@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Make Claude Code Follow Naming Conventions (2026)"
+title: "Make Claude Code Follow Naming"
 description: "Force Claude Code to respect your naming conventions using .claude.json settings, skill patterns, and project-specific style rules. Working configs."
 date: 2026-03-14
 last_modified_at: 2026-04-17

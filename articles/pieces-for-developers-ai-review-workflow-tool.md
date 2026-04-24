@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Pieces for Developers AI Review Workflow Tool"
+title: "Pieces for Developers AI Review"
 description: "Learn how to integrate Pieces for Developers with Claude Code to build powerful AI-assisted code review workflows. Practical examples and real-world."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -154,4 +154,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs Pieces for Developers (2026)](/claude-code-vs-pieces-for-developers-2026/)

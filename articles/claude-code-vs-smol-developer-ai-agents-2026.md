@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Smol Developer (2026): AI Agents"
+title: "Claude Code vs Smol Developer (2026)"
 description: "Claude Code vs Smol Developer compared as AI coding agents. Commercial reliability vs lightweight open-source agent for automated coding in 2026."
 permalink: /claude-code-vs-smol-developer-ai-agents-2026/
 date: 2026-04-21

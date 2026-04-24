@@ -1,5 +1,5 @@
 ---
-title: "Save Claude Code Conversations: Full Guide (2026)"
+title: "Save Claude Code Conversations"
 description: "How Claude Code saves conversations automatically, where sessions are stored, how to resume them, export chat history, and manage your session data."
 permalink: /claude-code-save-conversation-guide/
 last_tested: "2026-04-24"
@@ -308,19 +308,6 @@ Session files are preserved across Claude Code updates. The storage format is st
 
 No. Compaction summarizes context that is sent to the model, but the original JSONL file on disk retains the full conversation. You lose nothing from compaction — it only affects the current session's working memory.
 
-## Related Guides
-
-- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
-- [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
-- [Claude Code Configuration Hierarchy](/claude-code-configuration-hierarchy-explained-2026/) — understand settings files
-- [Claude Shortcuts Guide](/claude-shortcuts-complete-guide/) — keyboard shortcuts for all Claude interfaces
-- [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — manage context window efficiently
-- [Claude Code Security Best Practices](/claude-code-security-best-practices-2026/) — secure your workflow
-- [Claude Code Getting Started](/claude-code-getting-started-terminal-setup/) — initial CLI setup
-- [Claude Code Git Workflow Best Practices](/claude-code-git-workflow-best-practices-guide/) — version control integration
-- [Claude Temperature Settings](/claude-temperature-settings-guide/) — control output behavior
-
-- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Understand conversation costs before saving
 ### Can I back up my Claude Code sessions to the cloud?
 
 There is no built-in cloud sync. You can manually copy the ~/.claude/projects/ directory to a cloud storage service or back it up with a scheduled script.
@@ -336,6 +323,19 @@ Not directly. You can start a new session and reference content from both previo
 ### Does Claude Code save tool call outputs in the session file?
 
 Yes. Every tool call and its result is recorded in the JSONL session file, including file reads, edits, bash commands, and search results.
+
+## Related Guides
+
+- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
+- [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
+- [Claude Code Configuration Hierarchy](/claude-code-configuration-hierarchy-explained-2026/) — understand settings files
+- [Claude Shortcuts Guide](/claude-shortcuts-complete-guide/) — keyboard shortcuts for all Claude interfaces
+- [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — manage context window efficiently
+- [Claude Code Security Best Practices](/claude-code-security-best-practices-2026/) — secure your workflow
+- [Claude Code Getting Started](/claude-code-getting-started-terminal-setup/) — initial CLI setup
+- [Claude Code Git Workflow Best Practices](/claude-code-git-workflow-best-practices-guide/) — version control integration
+- [Claude Temperature Settings](/claude-temperature-settings-guide/) — control output behavior
+- [Claude Code cost guide](/claude-code-cost-complete-guide/) — Understand conversation costs before saving
 
 <script type="application/ld+json">
 {

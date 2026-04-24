@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills for SEO Content Generation — Automate Keyword Clustering, Meta Tags, and Internal Linking — 2026"
+title: "Claude Skills for SEO Content Generation Guide"
 description: "Build a Claude Code skill that clusters keywords by search intent, generates meta descriptions under 155 chars, and maps internal links from your sitemap."
 permalink: /claude-skills-for-seo-content-generation/
 render_with_liquid: false

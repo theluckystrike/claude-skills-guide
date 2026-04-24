@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Upstash Redis Rate Limiting Workflow"
+title: "Claude Code Upstash Redis Rate Limiting"
 description: "Learn how to build a rate limiting workflow using Claude Code skills with Upstash Redis. Practical examples for API protection, request throttling, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -329,5 +329,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ```
 
+## See Also
 
-
+- [Claude Code for Upstash Redis — Workflow Guide](/claude-code-for-upstash-redis-workflow-guide/)

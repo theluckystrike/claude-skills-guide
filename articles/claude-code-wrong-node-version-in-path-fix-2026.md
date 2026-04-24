@@ -70,3 +70,10 @@ brew link --overwrite node@20
 # CLAUDE.md rule
 This project requires Node.js 20+. Run 'nvm use 20' or 'fnm use 20' before starting Claude Code. Add an .nvmrc file with '20' to the project root for automatic version switching.
 ```
+
+## See Also
+
+- [Claude Code Node Version Mismatch — Fix (2026)](/claude-code-node-version-mismatch-fix/)
+- [nvm Switching to Wrong Node Version — Fix (2026)](/claude-code-nvm-switching-wrong-node-fix-2026/)
+- [Node 18+ Required Version Error — Fix (2026)](/claude-code-node-version-18-required-fix-2026/)
+- [Fix Claude Code Wrong Abstraction Level (2026)](/claude-code-wrong-abstraction-level-fix-2026/)

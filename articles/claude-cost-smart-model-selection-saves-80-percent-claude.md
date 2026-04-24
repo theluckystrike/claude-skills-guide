@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Smart Model Selection Saves 80% on Claude API"
+title: "Smart Model Selection Saves 80%"
 description: "Combine model routing with batch processing and caching to cut Claude API costs from $75/day to $15/day — verified pricing math."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -214,3 +214,8 @@ Track the contribution of each optimization layer separately. Target savings: mo
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — the pricing dynamics that make stacked optimization effective
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — token reduction techniques that complement model routing
 - [Claude Code Monthly Cost Breakdown](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/) — baseline cost data for planning your optimization strategy
+
+## See Also
+
+- [Claude Code /compact Saves Thousands of Tokens](/claude-cost-02-claude-code-compact-saves-tokens/)
+- [Smart Context Pruning for Claude API Savings](/claude-cost-smart-context-pruning-claude-api-savings/)

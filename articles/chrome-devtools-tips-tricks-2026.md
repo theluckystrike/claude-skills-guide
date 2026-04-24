@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome DevTools Tips and Tricks for 2026"
+title: "Chrome DevTools Tips and Tricks"
 description: "Master Chrome DevTools with practical tips and tricks for debugging, performance optimization, and modern web development workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

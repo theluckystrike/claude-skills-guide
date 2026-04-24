@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Cursor Rules Workflow Tutorial"
+title: "Claude Code for Cursor Rules Workflow"
 description: "Learn how to use Claude Code to create powerful Cursor Rules that speed up your development workflow with AI-assisted productivity."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -629,4 +629,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Cursor Conflict With Claude Code CLI Fix](/claude-code-cursor-conflict-cli-fix-2026/)

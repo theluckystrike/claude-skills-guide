@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Formik Form — Complete Developer Guide"
+title: "Claude Code For Formik Form"
 description: "Learn how to use Claude Code to streamline your Formik form development workflow. This guide covers practical patterns, code generation, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

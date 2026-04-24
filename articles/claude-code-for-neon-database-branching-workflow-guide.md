@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Neon DB Branching — Guide"
+title: "Claude Code for Neon DB Branching"
 description: "Use Neon database branching with Claude Code workflows. Tested setup with copy-paste CLAUDE.md config."
 date: 2026-04-18
 permalink: /claude-code-for-neon-database-branching-workflow-guide/

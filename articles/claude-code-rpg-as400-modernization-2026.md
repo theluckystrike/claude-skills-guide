@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for RPG/AS400 to Modern API (2026)"
+title: "Claude Code for RPG/AS400 to Modern API"
 description: "RPG AS/400 modernization with Claude Code. Wrap legacy RPG programs as REST APIs with proper data mapping."
 permalink: /claude-code-rpg-as400-modernization-2026/
 last_tested: "2026-04-21"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Vibe Coding Testing Strategy How — Complete Developer Guide"
+title: "Vibe Coding Testing Strategy"
 description: "A practical testing strategy for vibe coding workflows. Learn how to validate AI-generated code with unit tests, integration tests, and Claude skills."
 date: 2026-03-14
 last_modified_at: 2026-04-17

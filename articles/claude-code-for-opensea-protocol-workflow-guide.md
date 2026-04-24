@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for OpenSea Protocol Development (2026)"
+title: "Claude Code for OpenSea Protocol"
 description: "Build NFT marketplace integrations with Claude Code and OpenSea protocol. Covers listing automation, collection management, and smart contract calls."
 date: 2026-03-15
 last_modified_at: 2026-04-17

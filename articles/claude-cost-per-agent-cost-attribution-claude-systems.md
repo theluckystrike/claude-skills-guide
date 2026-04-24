@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Per-Agent Cost Attribution in Claude Systems"
+title: "Per-Agent Cost Attribution in Claude"
 description: "Track costs per agent in multi-agent fleets. Identify which of your 5 agents consumes 40% of the $25/sprint budget."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -273,3 +273,4 @@ Use attribution data to drive optimization:
 ## Related Articles
 
 - [Build a Claude Cost Attribution System](/build-claude-cost-attribution-system/)
+- [Build a Claude Cost Attribution System](/claude-cost-06-build-cost-attribution-system/)

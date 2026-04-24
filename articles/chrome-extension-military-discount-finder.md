@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Military Discount Finder Chrome Extension Guide (2026)"
+title: "Military Discount Finder Chrome"
 description: "Build or integrate military discount discovery into your Chrome extension. Learn the architecture, APIs, and implementation patterns for creating."
 date: 2026-03-15
 last_modified_at: 2026-04-17

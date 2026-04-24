@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Git Worktree Parallel Development Workflow"
+title: "Claude Code Git Worktree Parallel"
 description: "Master parallel development with Git worktrees and Claude Code. Run multiple branches simultaneously without switching contexts."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -273,5 +273,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
+- [Git Credentials Expired Mid-Session Fix](/claude-code-git-credentials-expired-mid-session-fix-2026/)

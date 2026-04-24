@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Cloudwatch Rum — Complete Developer Guide"
+title: "Claude Code For Cloudwatch Rum"
 description: "Learn how to use Claude Code to set up, configure, and manage AWS CloudWatch RUM (Real User Monitoring) for your web applications. Practical examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

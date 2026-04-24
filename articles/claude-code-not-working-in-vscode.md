@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Not Working in VS Code (2026)"
+title: "Fix Claude Code Not Working in VS Code"
 description: "Resolve Claude Code extension failures in VS Code with tested fixes for authentication, PATH, and startup errors. Tested and working in 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17
@@ -158,3 +158,9 @@ Related Reading
 - [Claude Code ECONNREFUSED MCP Fix](/claude-code-econnrefused-mcp-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+## See Also
+
+- [Claude Code vs VS Code IntelliSense: Completion Compared](/claude-code-vs-vscode-intellisense-comparison/)
+- [Claude Code VS Code Connection Lost — Fix (2026)](/claude-code-vscode-connection-lost-fix-2026/)
+- [Fix Claude Code Not Working VSCode — Quick Guide (2026)](/claude-code-not-working-vscode/)

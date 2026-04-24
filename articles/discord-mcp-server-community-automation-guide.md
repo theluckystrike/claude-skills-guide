@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Discord MCP Server Community Automation Guide"
+title: "Discord MCP Server Community Automation"
 description: "Learn how to build Discord MCP server automation for community management. Includes practical code examples, Discord bot integration, and workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17

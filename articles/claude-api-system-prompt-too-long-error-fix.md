@@ -1,5 +1,5 @@
 ---
-title: "Claude API System Prompt Too Long Error — Fix (2026)"
+title: "Claude API System Prompt Too Long Error"
 description: "Fix Claude API system prompt too long error. Compress system instructions and split into cached blocks. Step-by-step solution."
 permalink: /claude-api-system-prompt-too-long-error-fix/
 last_tested: "2026-04-21"
@@ -91,3 +91,9 @@ Keep system prompts under 10K tokens. Move large reference material to user mess
 ```
 
 **Related articles:** [Context Window Management](/claude-code-context-window-management-guide/), [Claude API 400 Error](/claude-api-error-400-invalidrequesterror-explained/), [Errors Atlas](/errors-atlas/)
+
+## See Also
+
+- [CLAUDE.md Too Long? How to Split and Optimize for Context Window (2026)](/claude-md-too-long-split-and-optimize-fix/)
+- [Claude API 413 Request Payload Too Large — Fix (2026)](/claude-api-413-request-payload-too-large-fix/)
+- [System Prompt Exceeds Token Limit — Fix (2026)](/claude-code-system-prompt-too-many-tokens-fix-2026/)

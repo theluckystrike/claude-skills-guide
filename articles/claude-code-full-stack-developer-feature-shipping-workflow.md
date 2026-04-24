@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Full Stack Developer Feature Shipping Workflow"
+title: "Claude Code Full Stack Developer"
 description: "Master the complete feature shipping workflow with Claude Code as your full stack development partner. From ideation to deployment, learn practical."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -444,4 +444,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Claude Code vs Amazon Q Developer (2026): Guide](/claude-code-vs-amazon-q-developer-full-2026/)

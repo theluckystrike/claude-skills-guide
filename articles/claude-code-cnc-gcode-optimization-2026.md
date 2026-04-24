@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for CNC G-Code Optimization (2026)"
+title: "Claude Code for CNC G-Code Optimization"
 description: "CNC G-code optimization with Claude Code. Reduce cycle time and tool wear by analyzing toolpaths programmatically."
 permalink: /claude-code-cnc-gcode-optimization-2026/
 last_tested: "2026-04-21"

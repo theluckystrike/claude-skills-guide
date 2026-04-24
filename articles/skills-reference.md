@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills Reference: Complete Directory"
+title: "Claude Code Skills Reference"
 description: "Complete directory of Claude Code skills. Find, install, and configure skills for any development workflow."
 date: 2026-04-19
 permalink: /skills-reference/

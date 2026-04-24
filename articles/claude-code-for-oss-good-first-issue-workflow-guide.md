@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code For Oss Good First Issue — Quick Guide"
+title: "Fix Claude Code For Oss Good First"
 description: "A comprehensive guide to using Claude Code effectively for contributing to open source projects through good first issues. Learn practical workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

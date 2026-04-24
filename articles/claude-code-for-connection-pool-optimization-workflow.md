@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Optimize Connection Pools with Claude Code (2026)"
+title: "Optimize Connection Pools with Claude"
 description: "Tune database connection pools with Claude Code for optimal sizing, timeout settings, and leak detection. Reduce latency by 30% with tested configs."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -262,6 +262,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
-
-
+- [Connection Reset by Peer Error — Fix (2026)](/claude-code-connection-reset-by-peer-fix-2026/)
+- [Claude Code VS Code Connection Lost — Fix (2026)](/claude-code-vscode-connection-lost-fix-2026/)

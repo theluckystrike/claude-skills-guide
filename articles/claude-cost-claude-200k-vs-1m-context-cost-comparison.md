@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude 200K vs 1M Context Cost Comparison"
+title: "Claude 200K vs 1M Context Cost"
 description: "Claude Haiku at 200K context costs $0.20/request. Opus at 1M costs $5.00/request. Choose the right window for 25x savings."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -198,3 +198,11 @@ Track the distribution of context sizes across all requests. If 80%+ of requests
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — why context is the primary cost driver
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/) — practical context management
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — the design reasoning behind context limits
+
+## See Also
+
+- [Claude Context Management: Pay Less, Use More](/claude-cost-claude-context-management-pay-less-use-more/)
+- [Claude 1M Context Window: What It Really Costs](/claude-cost-claude-1m-context-window-what-it-costs/)
+- [Optimal Context Size for Cost-Efficient Claude](/claude-cost-optimal-context-size-cost-efficient-claude/)
+- [Claude Code Context Management Cost Tips 2026](/claude-cost-04-claude-code-context-management-tips/)
+- [Claude Haiku 4.5 Budget-Friendly Coding Guide](/claude-cost-claude-haiku-45-budget-friendly-coding/)

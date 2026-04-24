@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for HuggingFace Transformers Model Training"
+title: "Claude Code for HuggingFace"
 description: "Learn how to use Claude Code's AI-powered capabilities to streamline your HuggingFace Transformers model training workflow with practical examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

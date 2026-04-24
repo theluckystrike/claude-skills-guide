@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Stop Chrome Tracking Location — Honest Review 2026"
+title: "Stop Chrome Tracking Location"
 description: "A practical technical guide for developers and power users to disable Chrome location tracking, configure geolocation permissions, and understand the."
 date: 2026-03-15
 last_modified_at: 2026-04-17

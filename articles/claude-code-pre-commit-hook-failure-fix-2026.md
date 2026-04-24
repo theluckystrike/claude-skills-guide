@@ -1,5 +1,5 @@
 ---
-title: "Pre-Commit Hook Failure on Claude Changes Fix"
+title: "Pre-Commit Hook Failure on Claude"
 permalink: /claude-code-pre-commit-hook-failure-fix-2026/
 description: "Fix pre-commit hook failures on Claude Code changes. Run linters manually, fix violations, then re-commit to pass ESLint, Prettier, or type checks."
 last_tested: "2026-04-22"
@@ -61,3 +61,35 @@ git commit --no-verify -m "Emergency fix — lint cleanup follows"
 # CLAUDE.md rule
 All generated code must pass our ESLint config. Use explicit types, never 'any'. Run 'npx eslint --fix' before every commit. Check .eslintrc for project rules before writing code.
 ```
+
+## See Also
+
+- [Claude Code Git Hook Pre-commit Conflict — Fix (2026)](/claude-code-git-hook-pre-commit-conflict-fix/)
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `fatal: not a git repository`
+- `error: failed to push some refs`
+- `fatal: refusing to merge unrelated histories`
+- `Hook execution failed with exit code 1`
+- `pre-commit hook rejected the commit`
+
+## Frequently Asked Questions
+
+### Why does Claude Code require git?
+
+Claude Code uses git for several core operations: tracking file changes, creating commits, reading blame information, searching history with `git log`, and managing branches. Without git, these operations fail and Claude Code falls back to less efficient alternatives.
+
+### Can Claude Code work in a non-git directory?
+
+Yes, but with reduced functionality. File search and editing work normally, but version control operations (commit, diff, blame) are unavailable. Claude Code displays a warning when opened in a directory without git initialization.
+
+### How do I prevent Claude Code from making unwanted git operations?
+
+Add rules to your CLAUDE.md: `Do not create commits automatically. Do not run git push. Always ask before any git operation that modifies history.` Claude Code respects these constraints and asks for confirmation before proceeding.
+
+### What are Claude Code hooks?
+
+Claude Code hooks are user-defined scripts that run at specific lifecycle points: before/after file edits, before/after bash commands, and before/after commits. They are configured in `.claude/hooks/` or via the Claude Code settings file.

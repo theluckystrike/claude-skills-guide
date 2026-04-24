@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Stale Pr — Complete Developer Guide"
+title: "Claude Code For Stale Pr"
 description: "Learn how to use Claude Code CLI to automate and streamline stale pull request management with practical examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

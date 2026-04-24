@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Inline Code Documentation Workflow"
+title: "Claude Code for Inline Code"
 description: "Learn how to use Claude Code to automate and streamline inline code documentation, making your codebase more maintainable and accessible."
 date: 2026-03-15
 last_modified_at: 2026-04-17

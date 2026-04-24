@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code API Regression Testing Workflow Guide"
+title: "Claude Code API Regression Testing"
 description: "Master API regression testing with Claude Code. Learn workflows, tools integration, automated testing, and best practices for catching breaking changes."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -792,4 +792,10 @@ Related Reading
 Built by theluckystrike. More at zovo.one
 {% endraw %}
 
+## See Also
 
+- [API 529 Overloaded Retry Backoff — Fix (2026)](/claude-code-api-overloaded-529-backoff-fix-2026/)
+- [Claude Code Request Timed Out 120000ms — Fix (2026)](/claude-code-api-timeout-ms-setting-fix-2026/)
+- [API Version Deprecated Error — Fix (2026)](/claude-code-api-version-deprecation-error-fix-2026/)
+- [How to Use Claude Code with Jest Testing](/claude-code-with-jest-testing-workflow/)
+- [Claude Code for Playwright Visual Testing (2026)](/claude-code-playwright-visual-regression-testing-guide/)

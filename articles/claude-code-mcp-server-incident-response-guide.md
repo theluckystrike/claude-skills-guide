@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix MCP Server Issues in Claude Code (2026)"
+title: "Fix MCP Server Issues in Claude Code"
 description: "Troubleshoot MCP server failures in Claude Code with diagnostic commands, log analysis, and recovery procedures. Resolve connection and timeout errors."
 date: 2026-03-14
 last_modified_at: 2026-04-17

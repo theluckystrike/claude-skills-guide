@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Password Checkup — Developer Guide"
+title: "Chrome Password Checkup"
 description: "Learn how to use Chrome's built-in password checkup feature to identify compromised credentials, weak passwords, and security vulnerabilities across."
 date: 2026-03-15
 last_modified_at: 2026-04-17

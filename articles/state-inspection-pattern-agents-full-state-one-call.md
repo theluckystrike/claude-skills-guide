@@ -1,5 +1,5 @@
 ---
-title: "State Inspection Pattern: Full Backend State One Call"
+title: "State Inspection Pattern"
 description: "The state inspection pattern delivers complete backend state to Claude Code in one tool call, eliminating 5-10 discovery queries and saving 3,000-8,000 tokens."
 permalink: /state-inspection-pattern-agents-full-state-one-call/
 date: 2026-04-22

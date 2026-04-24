@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Forgetting Variable Names (2026)"
+title: "Fix Claude Code Forgetting Variable"
 description: "Stop Claude Code from losing track of variable names mid-session. Use context anchoring, explicit naming rules, and skill configs to maintain accuracy."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -208,4 +208,7 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+## See Also
 
+- [Fix Claude Code Making Assumptions (2026)](/claude-code-keeps-making-assumptions-karpathy-fix-2026/)
+- [Fix Claude Code Poor Variable Naming (2026)](/claude-code-poor-variable-names-fix-2026/)

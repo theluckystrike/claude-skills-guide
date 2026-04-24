@@ -63,3 +63,31 @@ npm install -g @anthropic-ai/claude-code
 # CLAUDE.md rule
 Never install Claude Code with sudo. Use npm prefix or nvm to avoid root-owned directories. If you see EACCES errors, fix ownership with chown before proceeding. Check directory permissions after any sudo operation.
 ```
+
+## Related Error Messages
+
+This fix also applies if you see these related error messages:
+
+- `EACCES: permission denied, open '/path/to/file'`
+- `Error: EPERM: operation not permitted`
+- `sudo: a terminal is required to read the password`
+- `EACCES: permission denied, mkdir '/usr/local/lib/node_modules'`
+- `npm ERR! Error: EACCES: permission denied, rename`
+
+## Frequently Asked Questions
+
+### Should I run Claude Code with sudo?
+
+No. Running Claude Code with sudo is strongly discouraged because it changes the ownership of cached files and configuration to root, which causes permission failures in subsequent non-sudo sessions. Instead, fix the underlying permission issue on the specific file or directory.
+
+### How do I check file ownership?
+
+Run `ls -la /path/to/file` to see the owner and group. If the file is owned by root but you run Claude Code as a regular user, run `sudo chown $(whoami) /path/to/file` to reclaim ownership.
+
+### Does this affect CI/CD environments?
+
+Yes. Docker containers and CI runners often execute as root, which creates files that a non-root user cannot modify later. Set `USER node` in your Dockerfile or use `--user $(id -u):$(id -g)` with `docker run` to match the host user.
+
+### Why does npm need special permissions?
+
+When Node.js is installed via system package managers, the global `node_modules` directory is owned by root. Running `npm install -g` as a regular user fails because the user lacks write access. Use `nvm` or configure npm to use a user-owned prefix directory to avoid this.

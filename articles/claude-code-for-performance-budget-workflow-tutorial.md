@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Performance Budget Workflow Tutorial"
+title: "Claude Code for Performance Budget"
 description: "Learn how to set up automated performance budgets using Claude Code CLI. This tutorial covers creating skills, integrating Lighthouse, and enforcing."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -270,4 +270,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+## See Also
 
+- [Claude Code for Performance SLO Workflows (2026)](/claude-code-for-performance-slo-workflow-tutorial/)

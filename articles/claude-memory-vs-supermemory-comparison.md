@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Memory (claude-memory) vs Supermemory: AI Memory Tools Compared"
+title: "Claude Memory (claude-memory)"
 description: "Compare Claude's built-in memory system with Supermemory for persistent AI context. Features, privacy, storage, and practical use cases."
 date: 2026-04-21
 permalink: /claude-memory-vs-supermemory-comparison/

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Dart and Flutter Development (2026)"
+title: "Claude Code for Dart and Flutter"
 description: "Build cross-platform apps with Dart and Flutter using Claude Code skills. Covers widget generation, state management, and platform-specific adapters."
 date: 2026-04-19
 last_modified_at: 2026-04-19

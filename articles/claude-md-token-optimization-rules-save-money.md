@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Token Optimization: Write Rules That Save Money"
+title: "CLAUDE.md Token Optimization"
 description: "Optimize CLAUDE.md files to reduce Claude Code token usage by 40-60% with precise rules, scoped instructions, and token-efficient formatting patterns."
 permalink: /claude-md-token-optimization-rules-save-money/
 date: 2026-04-22
@@ -290,3 +290,7 @@ Stack: {lang}, {framework}, {DB}, {test framework}
 - [Pre-Loading Context: CLAUDE.md Sections That Save 50%+ Tokens](/pre-loading-context-claude-md-sections-save-tokens/) -- what to put in CLAUDE.md
 - [Claude Code Skills Guide](/skills/) -- moving knowledge to on-demand skills
 - [Cost Optimization Hub](/cost-optimization/) -- complete cost guide index
+
+## See Also
+
+- [CLAUDE.md Length Optimization — Why 200 Lines Is the Hard Ceiling (2026)](/claude-md-length-optimization-300-lines/)

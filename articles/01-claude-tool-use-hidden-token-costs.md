@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Tool Use Hidden Token Costs Explained"
+title: "Claude Tool Use Hidden Token Costs"
 description: "Every Claude API tool call adds 346 hidden tokens. Learn exactly where tool use costs come from and how to cut them by 50%."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -147,3 +147,9 @@ Log `usage.input_tokens` from every API response before and after implementing c
 - [Claude Skills Token Optimization Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/)
 
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization
+
+## See Also
+
+- [Claude Bash Tool Costs 245 Tokens Per Call](/04-bash-tool-costs-245-tokens/)
+- [Claude tool_use Response Parsing Error — Fix (2026)](/claude-tool-use-response-parsing-error-fix/)
+- [Web Search Costs $10 per 1,000 Searches](/06-web-search-costs-10-per-thousand/)

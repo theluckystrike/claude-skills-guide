@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Pkl Configuration Language (2026)"
+title: "Claude Code for Pkl Configuration"
 permalink: /claude-code-pkl-configuration-language-2026/
 description: "Write type-safe configurations with Pkl and Claude Code. Define schemas, validate configs at build time, and generate YAML/JSON from Pkl modules."
 last_tested: "2026-04-22"

@@ -1,5 +1,5 @@
 ---
-title: "Best Free Claude Code Resources on GitHub (2026)"
+title: "Best Free Claude Code Resources"
 description: "14 free GitHub repositories that improve your Claude Code workflow. Skills, templates, guides, cost tracking, and task management — all open source."
 permalink: /best-free-claude-code-github-resources-2026/
 last_tested: "2026-04-22"
@@ -215,3 +215,7 @@ The Claude Code ecosystem evolves weekly. To stay current without spending hours
 - **Weekly**: Review ccusage data to optimize costs
 
 This cadence keeps you informed without becoming a full-time activity.
+
+## See Also
+
+- [Best Claude Code Learning Resources (2026)](/best-claude-code-learning-resources-2026/)

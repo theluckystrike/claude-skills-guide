@@ -94,3 +94,7 @@ For more strategies on reducing Claude Code costs, see the guide on [Claude Code
 ## Final Recommendation
 
 Install ccusage today. It takes 10 seconds (`npx ccusage`), requires no configuration, and immediately shows you data you cannot get anywhere else. Use it weekly to review your spending patterns. Keep using the Claude Max dashboard for billing management. The two tools answer different questions — ccusage tells you *where* your tokens go, the dashboard tells you *what you owe*. Both answers matter.
+
+## See Also
+
+- [ccusage vs Manual Token Counting (2026)](/ccusage-vs-manual-token-counting-2026/)

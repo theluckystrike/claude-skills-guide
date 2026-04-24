@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude API Timeout: Retry Logic Guide (2026)"
+title: "Fix Claude API Timeout"
 description: "Handle Claude API timeout errors with retry logic, exponential backoff, and per-request timeout configuration. Tested with production apps in 2026."
 date: 2026-04-01
 last_modified_at: 2026-04-17

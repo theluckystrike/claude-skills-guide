@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Markdown Best Practices (2026)"
+title: "Claude Code Markdown Best Practices"
 description: "Claude Code markdown best practices: formatting conventions, CLAUDE.md structure, and documentation patterns that improve AI responses. Tested 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
