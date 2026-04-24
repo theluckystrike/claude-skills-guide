@@ -439,7 +439,7 @@ For most use cases, temperature is simpler and more intuitive. Use top_p when yo
 
 ## Related Guides
 
-- [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive workflow reference
+- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
 - [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
 - [Claude Code Configuration Hierarchy](/claude-code-configuration-hierarchy-explained-2026/) — understand settings files
 - [Claude Upload Limit Guide](/claude-upload-limit-guide/) — file size and type limits

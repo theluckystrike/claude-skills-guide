@@ -217,6 +217,6 @@ Format:
 ## Next Steps
 
 - Browse [Claude Code Templates](/how-to-install-claude-code-templates-cli-2026/) for pre-built commands
-- Add [hooks](/claude-code-hooks-explained/) that trigger alongside your commands
+- Add [hooks](/understanding-claude-code-hooks-system-complete-guide/) that trigger alongside your commands
 - Check the [skills directory](/claude-skills-directory-where-to-find-skills/) for community-shared commands
-- Read [CLAUDE.md best practices](/claude-md-file-best-practices-guide/) for complementary configuration
+- Read [CLAUDE.md best practices](/claude-md-best-practices-10-templates-compared-2026/) for complementary configuration

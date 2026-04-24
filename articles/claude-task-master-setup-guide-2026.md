@@ -199,6 +199,6 @@ Each `get_next_task` call adds ~200 tokens to the context. `complete_task` is ~5
 
 ## Related Resources
 
-- [The Claude Code Playbook](/the-claude-code-playbook/) — workflow patterns that pair well with task management
-- [Claude Code Best Practices](/claude-code-best-practices-2026/) — session management techniques
-- [MCP Setup Guide](/claude-code-mcp-setup-guide/) — configuring the MCP server connection
+- [The Claude Code Playbook](/playbook/) — workflow patterns that pair well with task management
+- [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — session management techniques
+- [MCP Setup Guide](/mcp-servers-claude-code-complete-setup-2026/) — configuring the MCP server connection

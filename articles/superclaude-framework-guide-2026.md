@@ -191,5 +191,5 @@ The active mode/agent profile adds 200-400 tokens per message. Slash commands ad
 ## Related Resources
 
 - [Best Claude Skills for Developers](/best-claude-skills-for-developers-2026/) — how SuperClaude compares to other frameworks
-- [Claude Code Hooks Explained](/claude-code-hooks-explained/) — the hook system SuperClaude builds on
-- [The Claude Code Playbook](/the-claude-code-playbook/) — workflow patterns to combine with SuperClaude commands
+- [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — the hook system SuperClaude builds on
+- [The Claude Code Playbook](/playbook/) — workflow patterns to combine with SuperClaude commands

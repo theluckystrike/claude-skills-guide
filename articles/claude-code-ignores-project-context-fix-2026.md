@@ -59,4 +59,4 @@ Create a new service for handling inventory
 **Ignoring context:** creates a class-based service when the project uses functions, uses different error handling
 **Using context:** reads `user-service.ts` first, matches its exact function pattern, naming, error types, and export style
 
-Related: [Karpathy Don't Assume Principle](/karpathy-dont-assume-principle-claude-code-2026/) | [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) | [Make Claude Code Read Existing Code](/claude-code-doesnt-read-existing-code-fix-2026/)
+Related: [Karpathy Don't Assume Principle](/karpathy-dont-assume-principle-claude-code-2026/) | [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) | [Make Claude Code Read Existing Code](/claude-code-doesnt-read-existing-code-fix-2026/)

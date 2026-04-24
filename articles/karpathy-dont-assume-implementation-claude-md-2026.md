@@ -147,4 +147,4 @@ Also need to confirm:
 - [Don't Assume: Real Project Examples](/karpathy-dont-assume-examples-real-projects-2026/) — see these rules in action
 - [Debug When Claude Code Assumes Wrong](/karpathy-dont-assume-debugging-failures-2026/) — diagnose assumption failures
 - [Karpathy Skills Complete Guide](/karpathy-claude-code-skills-complete-guide-2026/) — all four principles
-- [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) — structuring your full CLAUDE.md
+- [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — structuring your full CLAUDE.md

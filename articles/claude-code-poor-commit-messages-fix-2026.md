@@ -73,4 +73,4 @@ After Claude Code makes changes and commits:
 - Does the body explain why, not what?
 - Could someone understand the change purpose from the message alone, without reading the diff?
 
-Related: [Claude Code Best Practices](/claude-code-best-practices-2026/) | [The Claude Code Playbook](/the-claude-code-playbook/) | [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/)
+Related: [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) | [The Claude Code Playbook](/playbook/) | [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/)

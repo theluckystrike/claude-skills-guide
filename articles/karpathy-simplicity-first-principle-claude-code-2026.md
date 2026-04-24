@@ -109,4 +109,4 @@ Same functionality, 5 lines instead of 30+, 1 file instead of 4+.
 - **Goal-Driven Execution** — the goal is to solve the stated problem, not to build an architecture
 - [Full Karpathy Skills Guide](/karpathy-claude-code-skills-complete-guide-2026/)
 - [Implement Simplicity First in CLAUDE.md](/karpathy-simplicity-first-implementation-2026/)
-- [Claude Code Best Practices](/claude-code-best-practices-2026/)
+- [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)

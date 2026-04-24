@@ -390,7 +390,7 @@ Homebrew installs Node.js in /opt/homebrew/bin on Apple Silicon Macs or /usr/loc
 
 ## Related Guides
 
-- [The Claude Code Playbook](/the-claude-code-playbook/)
+- [The Claude Code Playbook](/playbook/)
 - [Fix Claude Code ETIMEOUT Corporate Proxy](/claude-code-etimeout-corporate-proxy-fix/)
 - [Fix Claude Internal Server Error](/claude-internal-server-error-fix/)
 - [Fix Claude Code Rate Limit 429 Error](/claude-code-rate-limit-429-retry-after-fix/)

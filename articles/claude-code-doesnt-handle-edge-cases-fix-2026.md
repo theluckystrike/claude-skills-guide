@@ -116,4 +116,4 @@ pnpm add -D fast-check
 
 The [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) index lists testing skills that generate edge case tests automatically during Claude Code sessions.
 
-For more testing patterns, see [The Claude Code Playbook](/the-claude-code-playbook/). For type-level edge case prevention, read the [type system guide](/claude-code-ignores-type-system-fix-2026/). For CI integration of edge case tests, see the [CI/CD guide](/claude-code-ci-cd-integration-guide-2026/).
+For more testing patterns, see [The Claude Code Playbook](/playbook/). For type-level edge case prevention, read the [type system guide](/claude-code-ignores-type-system-fix-2026/). For CI integration of edge case tests, see the [CI/CD guide](/claude-code-ci-cd-integration-guide-2026/).

@@ -68,4 +68,4 @@ Fix the race condition in the checkout process
 **Without explanation:** changes 3 lines, no context
 **With explanation:** "Added a mutex lock around the payment processing step. Alternatives considered: optimistic concurrency (would require schema changes) and idempotency keys (Stripe supports this but would need endpoint restructuring). Chose mutex because it's the smallest change and the checkout handler is already single-threaded per user session."
 
-Related: [Karpathy Surface Tradeoffs](/karpathy-claude-code-skills-complete-guide-2026/) | [Review PRs Efficiently](/claude-code-review-prs-efficiently-2026/) | [Claude Code Best Practices](/claude-code-best-practices-2026/)
+Related: [Karpathy Surface Tradeoffs](/karpathy-claude-code-skills-complete-guide-2026/) | [Review PRs Efficiently](/claude-code-review-prs-efficiently-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)

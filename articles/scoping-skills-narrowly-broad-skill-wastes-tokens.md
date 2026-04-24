@@ -158,5 +158,5 @@ While $2.92 seems small in isolation, it combines with other optimizations and t
 ## Related Guides
 
 - [Best Claude Code Skills for Token Reduction](/best-claude-code-skills-token-reduction-2026-ranked/) -- which skills save the most tokens
-- [Claude Code Skills Guide](/claude-code-skills-guide/) -- complete skills authoring reference
+- [Claude Code Skills Guide](/skills/) -- complete skills authoring reference
 - [CLAUDE.md as Cost Control](/claude-md-cost-control-rules-prevent-token-waste/) -- choosing between CLAUDE.md rules and skills

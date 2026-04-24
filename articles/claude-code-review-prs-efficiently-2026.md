@@ -80,4 +80,4 @@ Review the current PR diff. For each file changed:
 
 Generate a PR, then review it against the checklist. If more than 20% of the diff is non-essential, your surgical change rules need tightening.
 
-Related: [Karpathy Surgical Changes](/karpathy-surgical-changes-principle-2026/) | [The Claude Code Playbook](/the-claude-code-playbook/) | [Claude Code Best Practices](/claude-code-best-practices-2026/)
+Related: [Karpathy Surgical Changes](/karpathy-surgical-changes-principle-2026/) | [The Claude Code Playbook](/playbook/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)

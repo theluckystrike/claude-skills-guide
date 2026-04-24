@@ -161,5 +161,5 @@ The recommended approach for cost-conscious developers is the allowlist mode, wh
 
 ## Related Guides
 
-- [Claude Code Hooks Guide](/claude-code-hooks-guide/) -- hooks-based permission control for advanced validation
+- [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- hooks-based permission control for advanced validation
 - [Claude Code Token Budget: How to Set Limits](/claude-code-token-budget-set-limits-track-spend/) -- budget controls that complement permission settings

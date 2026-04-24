@@ -272,6 +272,6 @@ Keep each skill within these budgets. A skill that exceeds its budget should be 
 
 ## Related Guides
 
-- [Claude Code Skills Guide](/claude-code-skills-guide/) -- complete skills reference and API
+- [Claude Code Skills Guide](/skills/) -- complete skills reference and API
 - [Skills as Context Engineering](/skills-context-engineering-zero-round-trip-loading/) -- the theory behind skills-as-context
 - [CLAUDE.md Token Optimization](/claude-md-token-optimization-rules-save-money/) -- optimizing the always-loaded context layer

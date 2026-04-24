@@ -54,4 +54,4 @@ Add a function that sends welcome emails to new users
 **Overcomplicated:** NotificationService → EmailProvider interface → WelcomeEmailTemplate → TemplateRenderer → 5 files
 **Simple:** one `sendWelcomeEmail(email, name)` function → 1 file
 
-Related: [Karpathy Simplicity First](/karpathy-simplicity-first-principle-claude-code-2026/) | [Before/After Examples](/karpathy-simplicity-first-examples-2026/) | [Claude Code Best Practices](/claude-code-best-practices-2026/)
+Related: [Karpathy Simplicity First](/karpathy-simplicity-first-principle-claude-code-2026/) | [Before/After Examples](/karpathy-simplicity-first-examples-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)

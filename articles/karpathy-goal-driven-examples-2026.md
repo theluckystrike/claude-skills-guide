@@ -217,4 +217,4 @@ export const users = pgTable('users', {
 
 - [Implement Goal-Driven Execution](/karpathy-goal-driven-implementation-2026/) — CLAUDE.md rules
 - [Fix Claude Code Losing Track](/karpathy-goal-driven-debugging-2026/) — debugging drift
-- [Claude Code Best Practices](/claude-code-best-practices-2026/) — broader patterns
+- [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — broader patterns

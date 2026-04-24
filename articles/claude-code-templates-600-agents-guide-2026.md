@@ -163,6 +163,6 @@ The configs include placeholder values for secrets (API keys, tokens). You must 
 
 ## Related Resources
 
-- [Claude Code Hooks Explained](/claude-code-hooks-explained/) — understand the hooks these templates generate
-- [MCP Setup Guide](/claude-code-mcp-setup-guide/) — configure the MCP servers referenced in templates
-- [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) — how to maintain the generated CLAUDE.md files
+- [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — understand the hooks these templates generate
+- [MCP Setup Guide](/mcp-servers-claude-code-complete-setup-2026/) — configure the MCP servers referenced in templates
+- [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — how to maintain the generated CLAUDE.md files

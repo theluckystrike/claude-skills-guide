@@ -80,4 +80,4 @@ Run `npx ccusage session` before and after adding rules. Compare:
 
 Expect a 20-40% reduction in per-session cost with these rules active.
 
-Related: [ccusage Cost Tracking Guide](/ccusage-claude-code-cost-tracking-guide-2026/) | [Claude Code Best Practices](/claude-code-best-practices-2026/) | [The Claude Code Playbook](/the-claude-code-playbook/)
+Related: [ccusage Cost Tracking Guide](/ccusage-claude-code-cost-tracking-guide-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) | [The Claude Code Playbook](/playbook/)

@@ -265,5 +265,5 @@ The combination of CLAUDE.md retry limits, structured error wrappers, and automa
 ## Related Guides
 
 - [The Retry Loop Tax: How Error Handling Architecture Affects Token Cost](/retry-loop-tax-error-handling-token-cost/) -- architectural perspective on retry loops
-- [Claude Code Compact Command Guide](/claude-code-compact-command-guide/) -- recover from context bloat after a loop
+- [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- recover from context bloat after a loop
 - [Errors Atlas](/errors-atlas/) -- structured error reference for Claude Code

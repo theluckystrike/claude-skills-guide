@@ -45,7 +45,7 @@ Claude Code doesn't automatically scan your entire codebase for conventions. It 
 
 ### 2. Add a Pre-Commit Hook
 
-Use a [hook](/claude-code-hooks-explained/) that runs your linter:
+Use a [hook](/understanding-claude-code-hooks-system-complete-guide/) that runs your linter:
 
 ```bash
 #!/bin/bash
@@ -83,4 +83,4 @@ Create a new service for handling product inventory
 
 **Compliant:** matches the exact pattern from `user-service.ts` — same file structure, same naming, same error handling
 
-Related: [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) | [Claude Code Best Practices](/claude-code-best-practices-2026/) | [Fix Inconsistent Style](/claude-code-inconsistent-style-fix-2026/)
+Related: [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) | [Fix Inconsistent Style](/claude-code-inconsistent-style-fix-2026/)

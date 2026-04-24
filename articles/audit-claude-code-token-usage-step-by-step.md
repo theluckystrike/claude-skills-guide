@@ -254,7 +254,7 @@ Use all four in combination: /cost for real-time awareness, ccusage for historic
 ## Related Guides
 
 - [Claude Code Cost Optimization: 15 Techniques That Actually Work](/claude-code-cost-optimization-15-techniques/) -- apply findings from audit
-- [Claude Code Compact Command Guide](/claude-code-compact-command-guide/) -- the top fix for context accumulation
+- [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- the top fix for context accumulation
 - [Cost Optimization Hub](/cost-optimization/) -- all cost guides
 
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization

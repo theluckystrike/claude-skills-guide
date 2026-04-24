@@ -111,4 +111,4 @@ Combine CLAUDE.md with enforced linting. Add to your configuration:
 
 The [claude-code-templates](https://github.com/davila7/claude-code-templates) library includes convention templates for popular team setups that you can customize.
 
-For more on team setup, see the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/). Review CLAUDE.md patterns in our [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/). Learn about hooks-based enforcement in the [hooks guide](/claude-code-hooks-explained/).
+For more on team setup, see the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/). Review CLAUDE.md patterns in our [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). Learn about hooks-based enforcement in the [hooks guide](/understanding-claude-code-hooks-system-complete-guide/).

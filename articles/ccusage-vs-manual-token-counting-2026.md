@@ -80,7 +80,7 @@ There are legitimate reasons to parse logs manually:
 
 **Learning** — Parsing the JSONL files yourself teaches you how Claude Code works internally. You see the message structure, tool call patterns, and token distribution. Educational, even if ccusage is more practical.
 
-For most developers tracking [Claude Code costs](/claude-code-best-practices-2026/), ccusage covers 95% of needs without any custom code.
+For most developers tracking [Claude Code costs](/karpathy-skills-vs-claude-code-best-practices-2026/), ccusage covers 95% of needs without any custom code.
 
 ## Accuracy Comparison
 
@@ -104,4 +104,4 @@ ccusage applies the correct rates for each model and token type. It stays update
 
 ## Final Recommendation
 
-Install ccusage and use it for all standard cost tracking. If you later need custom analysis that ccusage does not support, write targeted scripts for those specific metrics while keeping ccusage for the routine work. The time investment difference is enormous: 10 seconds vs a full day, with ccusage being more accurate and maintainable. See also the [hooks guide](/claude-code-hooks-explained/) for patterns that can log additional cost-relevant data during sessions.
+Install ccusage and use it for all standard cost tracking. If you later need custom analysis that ccusage does not support, write targeted scripts for those specific metrics while keeping ccusage for the routine work. The time investment difference is enormous: 10 seconds vs a full day, with ccusage being more accurate and maintainable. See also the [hooks guide](/understanding-claude-code-hooks-system-complete-guide/) for patterns that can log additional cost-relevant data during sessions.

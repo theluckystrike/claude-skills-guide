@@ -596,7 +596,7 @@ agent.run("Connect to the production database using the credentials in DATABASE_
 - [Best Claude Code agents for frontend](/best-claude-code-agents-frontend-2026/) — domain-specific agent examples
 - [Cost tracking with ccusage](/ccusage-claude-code-cost-tracking-guide-2026/) — monitor agent spend
 - [API mode vs interactive mode](/claude-code-api-mode-vs-interactive-2026/) — choose the right execution model
-- [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive reference for power users
+- [The Claude Code Playbook](/playbook/) — comprehensive reference for power users
 - [Claude Code best practices](/claude-code-claude-md-best-practices/) — CLAUDE.md configuration patterns
 
 - [Claude Flow tool guide](/claude-flow-tool-guide/) — Multi-agent orchestration with Claude Flow

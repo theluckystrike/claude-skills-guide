@@ -133,7 +133,7 @@ The default configuration is tuned for economics and social sciences (the mainta
 
 ## Next Steps
 
-- Read the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/) to further customize your academic setup
-- Explore [Claude Code hooks](/claude-code-hooks-explained/) for automating LaTeX compilation
+- Read the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/) to further customize your academic setup
+- Explore [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) for automating LaTeX compilation
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional academic tools
-- Check [Claude Code best practices](/claude-code-best-practices-2026/) for general optimization
+- Check [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for general optimization

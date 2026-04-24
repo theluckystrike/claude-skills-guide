@@ -160,6 +160,6 @@ As far back as your log files exist. Claude Code retains logs indefinitely by de
 
 ## Related Resources
 
-- [Claude Code Best Practices](/claude-code-best-practices-2026/) — patterns that reduce token usage
-- [The Claude Code Playbook](/the-claude-code-playbook/) — workflows optimized for cost efficiency
+- [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — patterns that reduce token usage
+- [The Claude Code Playbook](/playbook/) — workflows optimized for cost efficiency
 - [Best Claude Skills for Developers](/best-claude-skills-for-developers-2026/) — tools that complement cost tracking

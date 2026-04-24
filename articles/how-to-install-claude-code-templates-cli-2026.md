@@ -127,6 +127,6 @@ Keep project-specific templates in the project and universal tools in your user 
 ## Next Steps
 
 - Compare Templates with [Awesome Toolkit](/claude-code-templates-vs-awesome-toolkit-2026/) for coverage differences
-- Learn about [Claude Code hooks](/claude-code-hooks-explained/) to complement your templates
-- Build a [custom CLAUDE.md](/claude-md-file-best-practices-guide/) that extends your installed agents
+- Learn about [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) to complement your templates
+- Build a [custom CLAUDE.md](/claude-md-best-practices-10-templates-compared-2026/) that extends your installed agents
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional resources

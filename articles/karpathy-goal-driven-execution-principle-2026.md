@@ -121,4 +121,4 @@ The first response changed 120 lines across 4 files. The second changed 1 line i
 - **Simplicity First** — the simplest path to the goal is usually correct
 - [Implement Goal-Driven Execution](/karpathy-goal-driven-implementation-2026/)
 - [Goal-Driven Examples](/karpathy-goal-driven-examples-2026/)
-- [Claude Code Best Practices](/claude-code-best-practices-2026/)
+- [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)

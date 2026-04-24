@@ -208,4 +208,4 @@ For a Python project, start with these three:
 
 Install all three in under 10 minutes and your Python development with Claude Code improves immediately.
 
-For more hook patterns, see the [hooks guide](/claude-code-hooks-explained/). For building custom agents, see the [agent guide](/how-to-build-claude-code-agent-2026/). For the full toolkit, browse the [skills directory](/claude-skills-directory-where-to-find-skills/) and [Claude Code best practices](/claude-code-best-practices-2026/).
+For more hook patterns, see the [hooks guide](/understanding-claude-code-hooks-system-complete-guide/). For building custom agents, see the [agent guide](/how-to-build-claude-code-agent-2026/). For the full toolkit, browse the [skills directory](/claude-skills-directory-where-to-find-skills/) and [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/).

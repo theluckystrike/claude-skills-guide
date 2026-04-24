@@ -128,5 +128,5 @@ The [toolkit repo](/awesome-claude-code-toolkit-135-agents-2026/) focuses specif
 ## Related Resources
 
 - [Claude Skills Directory](/claude-skills-directory-where-to-find-skills/) — where to find and install skills
-- [Claude Code Best Practices](/claude-code-best-practices-2026/) — patterns that complement these tools
-- [Claude Code Hooks Explained](/claude-code-hooks-explained/) — deep dive on one of the listed categories
+- [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — patterns that complement these tools
+- [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — deep dive on one of the listed categories

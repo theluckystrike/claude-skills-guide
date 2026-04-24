@@ -152,4 +152,4 @@ For automated monthly auditing, see the [ccusage audit guide](/how-to-audit-clau
 
 Combined, these techniques can reduce Claude Code costs by 40-60% without reducing productivity. Start with the zero-effort techniques (specific prompts, `/compact`, session discipline) and add the others as time permits.
 
-For more optimization strategies, see [Claude Code best practices](/claude-code-best-practices-2026/) and the [Claude Code playbook](/the-claude-code-playbook/).
+For more optimization strategies, see [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) and the [Claude Code playbook](/playbook/).

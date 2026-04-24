@@ -161,5 +161,5 @@ Multi-agent orchestration is where context engineering failures are most expensi
 ## Further Reading
 
 - [Claude Code Subagent Token Usage: How to Control Costs](/claude-code-subagent-token-usage-control-costs/) -- subagent-specific cost controls
-- [Claude Code Subagent Management](/claude-code-subagent-management/) -- full subagent orchestration guide
+- [Claude Code Subagent Management](/claude-code-multi-agent-subagent-communication-guide/) -- full subagent orchestration guide
 - [Context Engineering for Claude Code: Complete Guide](/context-engineering-claude-code-complete-guide-2026/) -- the complete context engineering framework

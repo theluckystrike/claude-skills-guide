@@ -93,4 +93,4 @@ Check the diff. If files beyond the stated scope are modified, strengthen the ru
 
 - [Surgical Changes Principle](/karpathy-surgical-changes-principle-2026/) — the underlying principle
 - [Stop Claude Code Touching Unrelated Files](/claude-code-touches-unrelated-files-fix-2026/) — problem-specific guide
-- [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) — structuring scope rules
+- [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — structuring scope rules

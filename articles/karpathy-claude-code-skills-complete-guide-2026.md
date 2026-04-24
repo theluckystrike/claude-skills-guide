@@ -79,7 +79,7 @@ Claude Code should reference the four principles explicitly. If it doesn't, chec
 
 5. **Zero-Config Setup** — One file, no dependencies, no build step. Works with any language or framework.
 
-6. **Composable with Other Skills** — Stack it with [SuperClaude](/superclaude-framework-guide-2026/) commands or [custom hooks](/claude-code-hooks-explained/) without conflicts.
+6. **Composable with Other Skills** — Stack it with [SuperClaude](/superclaude-framework-guide-2026/) commands or [custom hooks](/understanding-claude-code-hooks-system-complete-guide/) without conflicts.
 
 7. **Community-Maintained** — Active contributor base keeps the guidelines aligned with Claude Code's evolving behavior across model updates.
 
@@ -182,6 +182,6 @@ The maintainers update the guidelines when Claude Code's behavior changes across
 
 ## Related Resources
 
-- [CLAUDE.md Best Practices Guide](/claude-md-file-best-practices-guide/) — structuring your full CLAUDE.md
+- [CLAUDE.md Best Practices Guide](/claude-md-best-practices-10-templates-compared-2026/) — structuring your full CLAUDE.md
 - [Best Claude Skills for Developers](/best-claude-skills-for-developers-2026/) — other high-value skill packages
-- [The Claude Code Playbook](/the-claude-code-playbook/) — end-to-end workflow patterns
+- [The Claude Code Playbook](/playbook/) — end-to-end workflow patterns

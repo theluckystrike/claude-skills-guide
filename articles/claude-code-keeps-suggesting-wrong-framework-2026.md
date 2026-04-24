@@ -99,4 +99,4 @@ npx claude-code-templates@latest
 
 Select your framework from the menu to get a pre-built configuration block.
 
-For more on structuring your CLAUDE.md, see the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/). If you want Claude Code to automatically validate framework usage, explore [hooks](/claude-code-hooks-explained/) that can lint generated code against your stack.
+For more on structuring your CLAUDE.md, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). If you want Claude Code to automatically validate framework usage, explore [hooks](/understanding-claude-code-hooks-system-complete-guide/) that can lint generated code against your stack.

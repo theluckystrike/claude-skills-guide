@@ -905,7 +905,7 @@ Make it executable:
 chmod +x scripts/verify-environment.sh
 ```
 
-For team environments, run this as a git hook or CI step. See [Hooks Guide](/claude-code-hooks-explained/) for integrating this into your Claude Code workflow.
+For team environments, run this as a git hook or CI step. See [Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) for integrating this into your Claude Code workflow.
 
 ## Frequently Asked Questions
 
@@ -1034,7 +1034,7 @@ Post this output in the [Claude Code GitHub Issues](https://github.com/anthropic
 - [CI/CD Integration Guide](/claude-code-ci-cd-integration-guide-2026/) — Setting up Claude Code in automated pipelines
 - [CI/CD Runner Missing Dependencies](/claude-code-ci-cd-runner-missing-dependencies-fix-2026/) — Fixing dependency issues in CI environments
 - [Security Threat Model](/claude-code-security-threat-model-2026/) — Understanding Claude Code's security architecture
-- [The Claude Code Playbook](/the-claude-code-playbook/) — Complete guide to working with Claude Code effectively
+- [The Claude Code Playbook](/playbook/) — Complete guide to working with Claude Code effectively
 
 <script type="application/ld+json">
 [

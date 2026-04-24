@@ -204,7 +204,7 @@ The rolling window system means your capacity recovers gradually as older messag
 - [Fix Claude Code Tokens Per Day Limit](/claude-code-rate-limit-tokens-per-day-fix-2026/)
 - [Fix Claude API 529 Overloaded Error](/claude-api-529-overloaded-error-handling-fix/)
 - [Fix Claude Internal Server Error](/claude-internal-server-error-fix/)
-- [The Claude Code Playbook](/the-claude-code-playbook/)
+- [The Claude Code Playbook](/playbook/)
 - [Fix Claude API 503 Service Unavailable](/claude-api-503-service-unavailable-fix/)
 - [Fix Claude Can't Open This Chat](/claude-cant-open-this-chat-fix/)
 

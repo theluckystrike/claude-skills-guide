@@ -203,7 +203,7 @@ Best practice: combine `--max-turns` with `--allowedTools` for defense-in-depth 
 ## Related Guides
 
 - [Claude Code --allowedTools Flag: Restrict Tool Calls to Save Tokens](/claude-code-allowed-tools-flag-save-tokens/) -- complementary cost control
-- [Claude Code Compact Command Guide](/claude-code-compact-command-guide/) -- mid-session context reduction
+- [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- mid-session context reduction
 - [Cost Optimization Hub](/cost-optimization/) -- all cost control techniques
 
 - [Claude Flow tool guide](/claude-flow-tool-guide/) — How to use Claude Flow for multi-agent orchestration

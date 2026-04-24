@@ -144,5 +144,5 @@ ccusage
 
 - Set up [monthly cost auditing](/how-to-audit-claude-code-costs-monthly-2026/) with ccusage
 - Compare ccusage with [the Claude Max dashboard](/ccusage-vs-claude-max-dashboard-cost-tracking-2026/)
-- Use [Claude Code hooks](/claude-code-hooks-explained/) to log additional cost-relevant data
-- Review [Claude Code best practices](/claude-code-best-practices-2026/) for token optimization
+- Use [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) to log additional cost-relevant data
+- Review [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for token optimization

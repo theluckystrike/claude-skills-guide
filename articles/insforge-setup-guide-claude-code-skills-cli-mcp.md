@@ -407,6 +407,6 @@ For small personal projects with 2-3 skill files and a lean CLAUDE.md, the InsFo
 
 ## Related Guides
 
-- [Claude Code Skills Guide](/claude-code-skills-guide/) -- foundational skills documentation
+- [Claude Code Skills Guide](/skills/) -- foundational skills documentation
 - [Progressive Disclosure in CLAUDE.md: Load Only What You Need](/progressive-disclosure-claude-md-load-only-needed/) -- the principle behind InsForge's architecture
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- MCP channel configuration

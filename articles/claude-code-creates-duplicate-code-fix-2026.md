@@ -99,4 +99,4 @@ npx jscpd src/ --threshold 5
 
 The [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) index lists several deduplication skills that integrate directly with Claude Code sessions.
 
-For more on enforcing code quality patterns, see our [Claude Code best practices guide](/claude-code-best-practices-2026/). Learn how to build custom skills that enforce reuse in [our skills guide](/claude-skills-directory-where-to-find-skills/). For DRY principle enforcement specifically, read our [DRY principle article](/claude-code-doesnt-follow-dry-principle-fix-2026/).
+For more on enforcing code quality patterns, see our [Claude Code best practices guide](/karpathy-skills-vs-claude-code-best-practices-2026/). Learn how to build custom skills that enforce reuse in [our skills guide](/claude-skills-directory-where-to-find-skills/). For DRY principle enforcement specifically, read our [DRY principle article](/claude-code-doesnt-follow-dry-principle-fix-2026/).

@@ -46,7 +46,7 @@ Reading these prompts explains things that official docs do not cover:
 
 Official documentation covers features, configuration, API usage, and best practices. It tells you what to do but not what happens under the hood. The docs explain that Claude can edit files but not the exact instructions Claude receives about how to edit files.
 
-For day-to-day usage, official docs are more practical. For optimizing your [CLAUDE.md](/claude-md-file-best-practices-guide/) and prompts, the system prompts repo is more valuable.
+For day-to-day usage, official docs are more practical. For optimizing your [CLAUDE.md](/claude-md-best-practices-10-templates-compared-2026/) and prompts, the system prompts repo is more valuable.
 
 ## Practical Applications
 
@@ -80,9 +80,9 @@ The system prompts repo is a community project that extracts prompts through leg
 
 **Use both when:**
 - You want to master Claude Code at the deepest level
-- You are building [custom hooks](/claude-code-hooks-explained/) or skills
+- You are building [custom hooks](/understanding-claude-code-hooks-system-complete-guide/) or skills
 - You are training a team and want to explain not just what but why
 
 ## Final Recommendation
 
-Read the system prompts repo once to build your mental model of how Claude Code works internally. Then use official docs for day-to-day reference. Return to the system prompts repo when you encounter unexpected behavior or when you need to write a CLAUDE.md that works *with* the system prompt rather than against it. This combination of understanding creates a significant advantage in [Claude Code productivity](/claude-code-best-practices-2026/).
+Read the system prompts repo once to build your mental model of how Claude Code works internally. Then use official docs for day-to-day reference. Return to the system prompts repo when you encounter unexpected behavior or when you need to write a CLAUDE.md that works *with* the system prompt rather than against it. This combination of understanding creates a significant advantage in [Claude Code productivity](/karpathy-skills-vs-claude-code-best-practices-2026/).

@@ -164,6 +164,6 @@ The system prompt loads first, then your CLAUDE.md content is injected into the 
 
 ## Related Resources
 
-- [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) — write rules that work with the system prompt
-- [Claude Code Best Practices](/claude-code-best-practices-2026/) — behavioral patterns informed by system prompt knowledge
+- [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — write rules that work with the system prompt
+- [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — behavioral patterns informed by system prompt knowledge
 - [Best Claude Skills for Developers](/best-claude-skills-for-developers-2026/) — skills designed around the system prompt's constraints

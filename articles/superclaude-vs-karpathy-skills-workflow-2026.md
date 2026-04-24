@@ -51,7 +51,7 @@ SuperClaude adds cognitive load. You need to know which of the 30 commands appli
 
 Karpathy Skills adds zero cognitive load. Install it and forget about it. Claude just behaves better. The four principles are simple enough to internalize from a single reading.
 
-For teams adopting [Claude Code best practices](/claude-code-best-practices-2026/), this cognitive load difference affects adoption speed significantly.
+For teams adopting [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/), this cognitive load difference affects adoption speed significantly.
 
 ## Output Quality
 
@@ -92,4 +92,4 @@ See how to combine them practically in the guide on [combining Karpathy and Supe
 
 ## Final Recommendation
 
-Start with Karpathy Skills for the behavioral foundation — it works from minute one. Add SuperClaude when you identify specific tasks where structured commands would help. Most developers settle into a hybrid: Karpathy principles always active, SuperClaude commands for specific workflows like code review and architecture design. This gives you the best of both approaches with manageable complexity. Reference the [Claude Code playbook](/the-claude-code-playbook/) for patterns that integrate both into your daily routine.
+Start with Karpathy Skills for the behavioral foundation — it works from minute one. Add SuperClaude when you identify specific tasks where structured commands would help. Most developers settle into a hybrid: Karpathy principles always active, SuperClaude commands for specific workflows like code review and architecture design. This gives you the best of both approaches with manageable complexity. Reference the [Claude Code playbook](/playbook/) for patterns that integrate both into your daily routine.

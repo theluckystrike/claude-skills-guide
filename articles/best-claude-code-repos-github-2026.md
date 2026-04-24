@@ -207,4 +207,4 @@ npx ccusage
 4. Browse [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) for integrations
 5. Evaluate [claude-task-master](https://github.com/eyaltoledano/claude-task-master) for task management
 
-For the full ecosystem map, see our [tools overview](/claude-code-ecosystem-complete-map-2026/). For comparing plugin types, read the [skills vs hooks vs commands guide](/claude-code-skills-vs-hooks-vs-commands-2026/). For CLAUDE.md setup, see the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/).
+For the full ecosystem map, see our [tools overview](/claude-code-ecosystem-complete-map-2026/). For comparing plugin types, read the [skills vs hooks vs commands guide](/claude-code-skills-vs-hooks-vs-commands-2026/). For CLAUDE.md setup, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).

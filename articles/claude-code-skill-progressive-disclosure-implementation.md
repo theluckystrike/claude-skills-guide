@@ -290,6 +290,6 @@ Run this script after adding or modifying skills to verify the library remains e
 
 ## Related Guides
 
-- [Claude Code Skills Guide](/claude-code-skills-guide/) -- foundational skills documentation
+- [Claude Code Skills Guide](/skills/) -- foundational skills documentation
 - [Progressive Disclosure in CLAUDE.md: Load Only What You Need](/progressive-disclosure-claude-md-load-only-needed/) -- same principle applied to CLAUDE.md
-- [Claude Code Context Window Management](/claude-code-context-window-management/) -- broader context strategies
+- [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- broader context strategies

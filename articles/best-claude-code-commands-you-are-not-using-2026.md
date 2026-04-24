@@ -163,7 +163,7 @@ Teams benefit even more. Ten developers each saving 2 minutes per review across 
 
 Pick the two commands that address your biggest pain points and set them up today. Most developers find custom slash commands (#1) and `/compact` (#3) give the highest immediate return.
 
-For more on building your command vocabulary, see the [custom commands guide](/how-to-create-custom-slash-command-claude-2026/), the [Claude Code playbook](/the-claude-code-playbook/), and the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/).
+For more on building your command vocabulary, see the [custom commands guide](/how-to-create-custom-slash-command-claude-2026/), the [Claude Code playbook](/playbook/), and the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).
 
 
 ## Related

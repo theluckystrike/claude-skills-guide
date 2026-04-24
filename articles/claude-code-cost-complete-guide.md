@@ -341,7 +341,7 @@ Use Haiku for simple tasks, Sonnet for moderate tasks, and avoid Opus unless the
 - [Pricing plans comparison](/claude-code-pricing-plans-comparison-2026/) — Max vs Pro vs API side by side
 - [Model routing guide](/claude-code-router-guide/) — match models to tasks for cost savings
 - [Claude Sonnet 4 guide](/claude-sonnet-4-20250514-model-guide/) — the cost-effective default model
-- [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive reference
+- [The Claude Code Playbook](/playbook/) — comprehensive reference
 
 - [Claude AI rate exceeded error fix](/claude-ai-rate-exceeded-error-fix/) — Fix the Claude AI rate exceeded error message
 

@@ -74,4 +74,4 @@ Give Claude Code a 5-step task. At step 4, check:
 
 If inconsistencies appear, add the specific decision to the session anchor.
 
-Related: [Goal-Driven Execution](/karpathy-goal-driven-execution-principle-2026/) | [Task Master Guide](/claude-task-master-setup-guide-2026/) | [Claude Code Best Practices](/claude-code-best-practices-2026/)
+Related: [Goal-Driven Execution](/karpathy-goal-driven-execution-principle-2026/) | [Task Master Guide](/claude-task-master-setup-guide-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)

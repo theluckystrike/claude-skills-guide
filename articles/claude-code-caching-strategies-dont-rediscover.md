@@ -286,4 +286,4 @@ A consistent refresh schedule prevents the most common caching failure: stale in
 
 - [Progressive Disclosure in CLAUDE.md: Load Only What You Need](/progressive-disclosure-claude-md-load-only-needed/) -- structure cached knowledge for efficient loading
 - [Claude Code for Large Codebases: Cost-Effective Strategies](/claude-code-large-codebases-cost-effective-strategies/) -- caching as part of large codebase strategy
-- [Claude Code Context Window Management](/claude-code-context-window-management/) -- broader context optimization
+- [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- broader context optimization

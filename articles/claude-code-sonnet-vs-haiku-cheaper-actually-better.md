@@ -263,7 +263,7 @@ Automated CI tasks benefit from Haiku because they run frequently, have well-def
 
 - [Claude Code vs Cursor: Monthly Cost Comparison](/claude-code-vs-cursor-monthly-cost-comparison-2026/) -- broader cost comparison
 - [Cost Optimization Hub](/cost-optimization/) -- all cost reduction strategies
-- [Claude Code Max Subscription Guide](/claude-code-max-subscription-guide/) -- when unlimited pricing beats per-token
+- [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- when unlimited pricing beats per-token
 
 
 - [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Guide to the claude-sonnet-4-5-20250929 model and its capabilities

@@ -87,4 +87,4 @@ For every refactoring request:
 
 Keep refactoring sessions separate from feature work. One session, one type of change. The [claude-task-master](https://github.com/eyaltoledano/claude-task-master) tool can help structure refactoring sprints into discrete, verifiable tasks.
 
-For more refactoring patterns, see our [Claude Code best practices guide](/claude-code-best-practices-2026/). Learn how to configure behavioral modes in the [skills directory](/claude-skills-directory-where-to-find-skills/). For preventing scope creep in edits, read about [stopping Claude Code from rewriting files](/claude-code-rewrites-instead-of-editing-fix-2026/).
+For more refactoring patterns, see our [Claude Code best practices guide](/karpathy-skills-vs-claude-code-best-practices-2026/). Learn how to configure behavioral modes in the [skills directory](/claude-skills-directory-where-to-find-skills/). For preventing scope creep in edits, read about [stopping Claude Code from rewriting files](/claude-code-rewrites-instead-of-editing-fix-2026/).

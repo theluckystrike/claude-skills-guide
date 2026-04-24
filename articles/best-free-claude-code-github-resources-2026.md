@@ -203,7 +203,7 @@ Install these three in order for maximum immediate impact:
 9. Set up offline docs if you work in environments without reliable internet
 10. Explore SuperClaude if you want a structured command framework
 
-Then explore the rest as your needs dictate. For the full recommended workflow, see the [Claude Code playbook](/the-claude-code-playbook/), the [skills directory](/claude-skills-directory-where-to-find-skills/), and [Claude Code best practices](/claude-code-best-practices-2026/).
+Then explore the rest as your needs dictate. For the full recommended workflow, see the [Claude Code playbook](/playbook/), the [skills directory](/claude-skills-directory-where-to-find-skills/), and [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/).
 
 ## Staying Current
 

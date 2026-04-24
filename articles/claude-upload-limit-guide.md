@@ -208,7 +208,7 @@ Search for "ERROR" in /path/to/large-file.log and show me the context
 Read the first 500 lines of data.csv, then the next 500, and summarize patterns
 ```
 
-This makes Claude Code the best option for working with large files. See the [Claude Code Playbook](/the-claude-code-playbook/) for more strategies.
+This makes Claude Code the best option for working with large files. See the [Claude Code Playbook](/playbook/) for more strategies.
 
 ## Workarounds for Large Files
 
@@ -338,7 +338,7 @@ Not on Claude.ai. The API has slightly higher limits (32 MB for PDFs). For truly
 
 ## Related Guides
 
-- [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive workflow reference
+- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
 - [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
 - [Claude Code Getting Started](/claude-code-getting-started-terminal-setup/) — initial CLI setup
 - [Claude Temperature Settings Guide](/claude-temperature-settings-guide/) — control output behavior

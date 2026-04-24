@@ -148,5 +148,5 @@ const DEBUG = process.env.DEBUG === 'true';
 
 - [Simplicity First: Before and After Code](/karpathy-simplicity-first-examples-2026/) — more examples
 - [Fix Claude Code Overengineering](/karpathy-simplicity-debugging-overengineered-2026/) — debugging complexity
-- [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) — where these rules fit in your CLAUDE.md
-- [The Claude Code Playbook](/the-claude-code-playbook/) — workflow integration
+- [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — where these rules fit in your CLAUDE.md
+- [The Claude Code Playbook](/playbook/) — workflow integration

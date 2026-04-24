@@ -71,7 +71,7 @@ The best strategy is not either/or. Use Karpathy's four principles as your CLAUD
 
 The Karpathy principles handle Claude's reasoning behavior. Your project-specific practices handle coding standards and conventions. Together they cover both dimensions.
 
-For guidance on structuring this file, see the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/).
+For guidance on structuring this file, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).
 
 ## Measuring the Difference
 
@@ -108,4 +108,4 @@ Karpathy Skills does not replace learning how to use Claude Code. It replaces th
 
 ## Final Recommendation
 
-Install Karpathy Skills as your behavioral foundation. Then layer project-specific [best practices](/claude-code-best-practices-2026/) on top for coding standards and conventions. The four principles do what generic advice cannot: they change Claude's behavior in specific, verifiable, consistently positive ways. That is worth more than any list of tips.
+Install Karpathy Skills as your behavioral foundation. Then layer project-specific [best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) on top for coding standards and conventions. The four principles do what generic advice cannot: they change Claude's behavior in specific, verifiable, consistently positive ways. That is worth more than any list of tips.

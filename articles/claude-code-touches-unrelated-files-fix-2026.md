@@ -57,4 +57,4 @@ Fix the null reference in src/services/order-service.ts line 87
 **Bad:** modifies `order-service.ts`, `types.ts`, `utils/format.ts`, `index.ts`
 **Good:** modifies only `order-service.ts`, lists others in "noticed but not fixed"
 
-Related: [Karpathy Surgical Changes](/karpathy-surgical-changes-principle-2026/) | [Diff-Minimizing Examples](/karpathy-surgical-changes-examples-2026/) | [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/)
+Related: [Karpathy Surgical Changes](/karpathy-surgical-changes-principle-2026/) | [Diff-Minimizing Examples](/karpathy-surgical-changes-examples-2026/) | [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/)

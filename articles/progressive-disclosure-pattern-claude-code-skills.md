@@ -139,7 +139,7 @@ Over a 30-turn session with progressive disclosure savings, the compounded reduc
 
 ## The CCG Framework Connection
 
-Progressive disclosure is the organizational pattern that connects CLAUDE.md optimization, skills authoring, and context window management. The [Claude Code Skills Guide](/claude-code-skills-guide/) covers skill creation mechanics. [CLAUDE.md Token Optimization](/claude-md-token-optimization-rules-save-money/) covers Tier 0 optimization. This article provides the architectural framework for deciding what goes where.
+Progressive disclosure is the organizational pattern that connects CLAUDE.md optimization, skills authoring, and context window management. The [Claude Code Skills Guide](/skills/) covers skill creation mechanics. [CLAUDE.md Token Optimization](/claude-md-token-optimization-rules-save-money/) covers Tier 0 optimization. This article provides the architectural framework for deciding what goes where.
 
 ## Anti-Patterns in Progressive Disclosure
 
@@ -208,6 +208,6 @@ The iteration cycle is where progressive disclosure transforms from a static pat
 
 ## Further Reading
 
-- [Claude Code Skills Guide](/claude-code-skills-guide/) -- creating and managing skills
+- [Claude Code Skills Guide](/skills/) -- creating and managing skills
 - [Context Engineering vs Prompt Engineering](/context-engineering-vs-prompt-engineering-agents/) -- theoretical foundation
-- [Claude Code Context Window Management](/claude-code-context-window-management/) -- mechanics of context growth across tiers
+- [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- mechanics of context growth across tiers

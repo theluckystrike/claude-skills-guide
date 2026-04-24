@@ -87,7 +87,7 @@ Then configure Claude Code to use it. Add to `.claude/settings.json`:
 }
 ```
 
-For detailed configuration, see the [MCP setup guide](/claude-code-mcp-setup-guide/).
+For detailed configuration, see the [MCP setup guide](/mcp-servers-claude-code-complete-setup-2026/).
 
 ## Step 5: Verify the Connection
 
@@ -153,4 +153,4 @@ Before installing any server from the directory, check these signals:
 - Learn to [add an MCP server to Claude Code](/how-to-add-mcp-server-claude-code-2026/) with detailed configuration
 - Compare the Awesome list with [Templates MCP section](/awesome-mcp-servers-vs-claude-code-templates-mcp-2026/)
 - Explore [best MCP servers for Claude Code](/best-mcp-servers-for-claude-code-2026/)
-- Set up [Claude Code hooks](/claude-code-hooks-explained/) that work alongside your MCP servers
+- Set up [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) that work alongside your MCP servers

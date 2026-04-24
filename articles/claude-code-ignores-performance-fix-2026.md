@@ -97,4 +97,4 @@ const orders = await db.orders.findMany({
 });
 ```
 
-Related: [Claude Code Best Practices](/claude-code-best-practices-2026/) | [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) | [Karpathy Simplicity First](/karpathy-simplicity-first-principle-claude-code-2026/)
+Related: [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) | [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) | [Karpathy Simplicity First](/karpathy-simplicity-first-principle-claude-code-2026/)

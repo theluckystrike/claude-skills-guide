@@ -206,4 +206,4 @@ Create a test project with known issues that the skill should catch. Run the ski
 ### Can I use skills in API mode?
 Yes. CLAUDE.md files are read in both interactive and API mode. Slash commands require interactive mode.
 
-For more on skills architecture, see the [skills vs hooks vs commands comparison](/claude-code-skills-vs-hooks-vs-commands-2026/). Browse existing skills at the [skills directory](/claude-skills-directory-where-to-find-skills/). For hook configuration details, read the [hooks guide](/claude-code-hooks-explained/).
+For more on skills architecture, see the [skills vs hooks vs commands comparison](/claude-code-skills-vs-hooks-vs-commands-2026/). Browse existing skills at the [skills directory](/claude-skills-directory-where-to-find-skills/). For hook configuration details, read the [hooks guide](/understanding-claude-code-hooks-system-complete-guide/).

@@ -128,5 +128,5 @@ Community templates are starting points, not production-ready code. Before deplo
 ## Next Steps
 
 - Compare Awesome LLM Apps with [Claude Code Templates](/awesome-llm-apps-vs-claude-code-templates-2026/)
-- Add [MCP servers](/claude-code-mcp-setup-guide/) to give Claude access to your application's data sources
-- Explore [Claude Code best practices](/claude-code-best-practices-2026/) for efficient development
+- Add [MCP servers](/mcp-servers-claude-code-complete-setup-2026/) to give Claude access to your application's data sources
+- Explore [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for efficient development

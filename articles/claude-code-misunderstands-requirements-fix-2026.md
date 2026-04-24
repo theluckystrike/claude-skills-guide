@@ -102,4 +102,4 @@ Keep a requirements glossary in your CLAUDE.md that grows over time. Every time 
 
 The [claude-howto](https://github.com/luongnv89/claude-howto) repo provides visual requirement templates with Mermaid diagrams that reduce ambiguity.
 
-For prompt engineering techniques, see the [prompt engineering guide](/claude-code-prompt-engineering-tips-2026/). For task breakdown strategies, read [The Claude Code Playbook](/the-claude-code-playbook/). For team-wide requirement standards, check the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).
+For prompt engineering techniques, see the [prompt engineering guide](/claude-code-prompt-engineering-tips-2026/). For task breakdown strategies, read [The Claude Code Playbook](/playbook/). For team-wide requirement standards, check the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).

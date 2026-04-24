@@ -72,7 +72,7 @@ The best strategy is both. Start with Karpathy Skills as section one of your CLA
 
 This gives you the validated behavioral foundation plus your project-specific context. Claude gets both the reasoning principles and the domain knowledge.
 
-For detailed guidance on structuring this file, see the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/).
+For detailed guidance on structuring this file, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).
 
 ## When Pure Custom Wins
 
@@ -104,9 +104,9 @@ The combined approach means maintaining both: pulling Karpathy updates and keepi
 
 **Choose the combined approach when:**
 - You want validated behavioral principles plus project-specific context
-- You are building a team [playbook](/the-claude-code-playbook/) and need a strong foundation
+- You are building a team [playbook](/playbook/) and need a strong foundation
 - You want the community's evolving best practices plus your own rules
 
 ## Final Recommendation
 
-Copy Karpathy Skills into your CLAUDE.md, add your project-specific rules below it, and move on. You get 72K stars worth of community validation plus your domain knowledge. Revisit and refine monthly. The 80/20 outcome requires less than 5 minutes of setup, and your [Claude Code sessions](/claude-code-best-practices-2026/) will improve immediately.
+Copy Karpathy Skills into your CLAUDE.md, add your project-specific rules below it, and move on. You get 72K stars worth of community validation plus your domain knowledge. Revisit and refine monthly. The 80/20 outcome requires less than 5 minutes of setup, and your [Claude Code sessions](/karpathy-skills-vs-claude-code-best-practices-2026/) will improve immediately.

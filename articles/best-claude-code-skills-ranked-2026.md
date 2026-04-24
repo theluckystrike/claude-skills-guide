@@ -30,7 +30,7 @@ Each skill is scored on four criteria:
 
 **Install**: Browse at github.com/punkpeye/awesome-mcp-servers, then install individual servers.
 
-**Limitation**: It is a directory, not a tool. You still need to install and configure each server individually. See the [MCP setup guide](/claude-code-mcp-setup-guide/) for help.
+**Limitation**: It is a directory, not a tool. You still need to install and configure each server individually. See the [MCP setup guide](/mcp-servers-claude-code-complete-setup-2026/) for help.
 
 ---
 
@@ -187,4 +187,4 @@ For maximum impact with minimum setup, install these three in order:
 2. **ccusage** — 10 seconds, cost visibility
 3. **Browse Awesome MCP Servers** — 10 minutes, pick the MCP servers your project needs
 
-Then gradually add from the rest of the list based on your needs. See the [Claude Code playbook](/the-claude-code-playbook/) for a structured approach to building your complete toolkit.
+Then gradually add from the rest of the list based on your needs. See the [Claude Code playbook](/playbook/) for a structured approach to building your complete toolkit.

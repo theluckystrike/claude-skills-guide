@@ -224,7 +224,7 @@ Review the patch before committing or merging.
 
 ## Hooks: Hard Limits Even With Permissions Skipped
 
-The `--dangerously-skip-permissions` flag disables interactive prompts, but it does not disable hooks. [Claude Code hooks](/claude-code-hooks-explained/) run deterministic scripts before or after tool calls, and they execute regardless of permission mode. This makes hooks the strongest safety mechanism for automated environments.
+The `--dangerously-skip-permissions` flag disables interactive prompts, but it does not disable hooks. [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) run deterministic scripts before or after tool calls, and they execute regardless of permission mode. This makes hooks the strongest safety mechanism for automated environments.
 
 ```json
 {
@@ -301,7 +301,7 @@ No. The flag only skips interactive permission prompts. API authentication, rate
 ## Related Guides
 
 - [Full --dangerously-skip-permissions Guide](/claude-code-dangerously-skip-permissions-guide/)
-- [The Claude Code Playbook](/the-claude-code-playbook/)
+- [The Claude Code Playbook](/playbook/)
 - [Fix Claude Code Rate Limit 429 Error](/claude-code-rate-limit-429-retry-after-fix/)
 - [Fix Claude Internal Server Error](/claude-internal-server-error-fix/)
 - [Fix Claude Code ETIMEOUT Corporate Proxy](/claude-code-etimeout-corporate-proxy-fix/)

@@ -505,7 +505,7 @@ Yes, by giving them different names:
 - [MCP Server Connection Refused Fix](/claude-code-mcp-server-connection-refused-fix/) — troubleshoot failed connections
 - [Awesome MCP Servers Directory](/awesome-mcp-servers-directory-guide-2026/) — find servers to install
 - [Configuration Hierarchy Explained](/claude-code-configuration-hierarchy-explained-2026/) — understand config precedence
-- [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive workflow reference
+- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
 - [Claude MCP List Command Guide](/claude-mcp-list-command-guide/) — CLI command reference for MCP management
 
 ### How do I debug why my MCP server is not starting?

@@ -110,4 +110,4 @@ Add a quarterly review to your sprint cycle:
 - Verify framework versions are current
 - Update convention rules that have changed
 
-For a deeper look at CLAUDE.md patterns, see our [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/). For the full ecosystem of tools that improve Claude Code's project awareness, check the [Claude Code best practices overview](/claude-code-best-practices-2026/). You can also browse available [skills and plugins](/claude-skills-directory-where-to-find-skills/) that add persistent project memory.
+For a deeper look at CLAUDE.md patterns, see our [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). For the full ecosystem of tools that improve Claude Code's project awareness, check the [Claude Code best practices overview](/karpathy-skills-vs-claude-code-best-practices-2026/). You can also browse available [skills and plugins](/claude-skills-directory-where-to-find-skills/) that add persistent project memory.

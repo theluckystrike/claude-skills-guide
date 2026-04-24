@@ -151,4 +151,4 @@ When a deployment does fail, analyze the error systematically instead of pattern
 
 - [Claude Code keeps retrying the same error -- cost fix](/claude-code-keeps-retrying-same-error-cost-fix/) -- general retry spiral prevention
 - [CLAUDE.md as Cost Control](/claude-md-cost-control-rules-prevent-token-waste/) -- CLAUDE.md rules for cost prevention
-- [Claude Code Hooks Guide](/claude-code-hooks-guide/) -- automating pre-deploy validation with hooks
+- [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- automating pre-deploy validation with hooks

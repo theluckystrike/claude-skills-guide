@@ -13,7 +13,7 @@ A Claude Code agent is a combination of behavioral rules (CLAUDE.md), slash comm
 ## Prerequisites
 
 - Claude Code installed
-- Understanding of CLAUDE.md basics (see the [best practices guide](/claude-md-file-best-practices-guide/))
+- Understanding of CLAUDE.md basics (see the [best practices guide](/claude-md-best-practices-10-templates-compared-2026/))
 - A clear idea of what your agent should specialize in
 
 ## Step 1: Define the Agent's Purpose
@@ -191,5 +191,5 @@ Team agents should be versioned and reviewed like any other code. Changes to the
 
 - Browse [pre-built agents](/best-claude-code-agents-frontend-2026/) for inspiration
 - Explore [Claude Code Templates](/how-to-install-claude-code-templates-cli-2026/) for 600+ agent configurations
-- Learn about [hooks](/claude-code-hooks-explained/) for more advanced agent automation
+- Learn about [hooks](/understanding-claude-code-hooks-system-complete-guide/) for more advanced agent automation
 - Share your agent with the community via the [skills directory](/claude-skills-directory-where-to-find-skills/)

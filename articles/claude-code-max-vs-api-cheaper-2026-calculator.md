@@ -178,6 +178,6 @@ ccusage --days 90 --format json > quarterly-usage.json
 
 ## Related Guides
 
-- [Claude Code Max Subscription Guide](/claude-code-max-subscription-guide/) -- full Max subscription features and setup
+- [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- full Max subscription features and setup
 - [Claude Code Model Selection for Cost: Sonnet vs Haiku vs Opus](/claude-code-model-selection-cost-sonnet-haiku-opus/) -- choosing the right model for each task
 - [Is Claude Code Worth $100/month?](/is-claude-code-worth-100-month-roi-calculator/) -- ROI analysis beyond raw token costs

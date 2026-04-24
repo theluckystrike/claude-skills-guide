@@ -91,4 +91,4 @@ app.post('/api/users', async (req, res) => {
 });
 ```
 
-Related: [Claude Code Best Practices](/claude-code-best-practices-2026/) | [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) | [Fix Claude Code Wrong Abstraction](/claude-code-wrong-abstraction-level-fix-2026/)
+Related: [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) | [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) | [Fix Claude Code Wrong Abstraction](/claude-code-wrong-abstraction-level-fix-2026/)

@@ -68,7 +68,7 @@ Use your understanding to improve your CLAUDE.md:
 
 **Leverage existing behavior** — If the system prompt makes Claude good at something, build your workflow around that strength rather than fighting against it.
 
-For detailed guidance on writing effective CLAUDE.md files, see the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/).
+For detailed guidance on writing effective CLAUDE.md files, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).
 
 ## Verification
 
@@ -113,5 +113,5 @@ Keep this reference alongside your CLAUDE.md and update it when the system promp
 ## Next Steps
 
 - Compare with [official docs](/claude-code-system-prompts-vs-official-docs-2026/) for different perspectives
-- Build better prompts using [Claude Code best practices](/claude-code-best-practices-2026/)
-- Write [custom hooks](/claude-code-hooks-explained/) informed by your understanding of the tool system
+- Build better prompts using [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/)
+- Write [custom hooks](/understanding-claude-code-hooks-system-complete-guide/) informed by your understanding of the tool system

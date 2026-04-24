@@ -199,5 +199,5 @@ Task Master does not automatically diff new and existing tasks. The reconciliati
 
 - Compare Task Master with [GitHub Issues](/claude-task-master-vs-github-issues-project-2026/) for team workflows
 - Compare with [Linear and Jira](/claude-task-master-vs-linear-jira-2026/) for enterprise contexts
-- Read the [Claude Code playbook](/the-claude-code-playbook/) for execution patterns
-- Explore [Claude Code best practices](/claude-code-best-practices-2026/) for efficient task execution
+- Read the [Claude Code playbook](/playbook/) for execution patterns
+- Explore [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for efficient task execution

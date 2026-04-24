@@ -259,9 +259,9 @@ These mistakes are identifiable through `ccusage` analysis: look for sessions wh
 
 ## Further Reading
 
-- [Claude Code Context Window Management](/claude-code-context-window-management/) -- practical context management techniques
-- [Claude Code Compact Command Guide](/claude-code-compact-command-guide/) -- deep dive on the compress lever
-- [Claude Code Subagent Management](/claude-code-subagent-management/) -- the isolate lever in practice
-- [Claude Code Skills Guide](/claude-code-skills-guide/) -- the write lever via skills
+- [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- practical context management techniques
+- [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- deep dive on the compress lever
+- [Claude Code Subagent Management](/claude-code-multi-agent-subagent-communication-guide/) -- the isolate lever in practice
+- [Claude Code Skills Guide](/skills/) -- the write lever via skills
 
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization

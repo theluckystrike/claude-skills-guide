@@ -589,7 +589,7 @@ Network commands are blocked to prevent data exfiltration. Everything else is al
 
 ## Using Hooks as Permission Guardrails
 
-[Claude Code hooks](/claude-code-hooks-explained/) provide another layer of control. Hooks run deterministic code before or after Claude's tool calls. Unlike CLAUDE.md instructions (which are behavioral), hooks enforce rules programmatically:
+[Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) provide another layer of control. Hooks run deterministic code before or after Claude's tool calls. Unlike CLAUDE.md instructions (which are behavioral), hooks enforce rules programmatically:
 
 ```json
 // .claude/hooks.json
@@ -701,7 +701,7 @@ Yes, and Docker is one of the best places to use it. The container provides file
 
 ### Can I limit which commands Claude runs while using --dangerously-skip-permissions?
 
-Yes, through hooks. Hooks execute before every tool call and can block specific commands programmatically. Unlike the permission system (which --dangerously-skip-permissions disables), hooks run regardless of permission mode. See the hooks section above or the full [Hooks Guide](/claude-code-hooks-explained/).
+Yes, through hooks. Hooks execute before every tool call and can block specific commands programmatically. Unlike the permission system (which --dangerously-skip-permissions disables), hooks run regardless of permission mode. See the hooks section above or the full [Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/).
 
 ### What about MCP tools — does the flag affect those too?
 
@@ -713,7 +713,7 @@ Yes. CLAUDE.md instructions are always loaded and followed regardless of permiss
 
 ### Can I use --dangerously-skip-permissions for pair programming?
 
-No, this defeats the purpose. For interactive development, use `settings.json` to pre-approve common operations (test running, file editing, git commands) so you get fewer prompts while keeping oversight on unusual operations. See [The Claude Code Playbook](/the-claude-code-playbook/) for optimal interactive workflow configuration.
+No, this defeats the purpose. For interactive development, use `settings.json` to pre-approve common operations (test running, file editing, git commands) so you get fewer prompts while keeping oversight on unusual operations. See [The Claude Code Playbook](/playbook/) for optimal interactive workflow configuration.
 
 ### How does --dangerously-skip-permissions interact with --max-turns?
 

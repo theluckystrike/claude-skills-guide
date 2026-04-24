@@ -182,4 +182,4 @@ No. Each sub-agent starts with a fresh context. The orchestrator must pass relev
 ### Can I specify different CLAUDE.md rules per sub-agent?
 Not directly. Sub-agents read the same CLAUDE.md. You can include role-specific sections that only apply when the agent is operating in that role.
 
-For the full ecosystem overview, see the [tools map](/claude-code-ecosystem-complete-map-2026/). For cost tracking in multi-agent sessions, read about [productivity optimization](/best-claude-code-productivity-hacks-2026/). For task decomposition strategies, see [The Claude Code Playbook](/the-claude-code-playbook/).
+For the full ecosystem overview, see the [tools map](/claude-code-ecosystem-complete-map-2026/). For cost tracking in multi-agent sessions, read about [productivity optimization](/best-claude-code-productivity-hacks-2026/). For task decomposition strategies, see [The Claude Code Playbook](/playbook/).

@@ -75,7 +75,7 @@ For a solo developer, Task Master might be all you need. Its MCP integration wit
 
 For teams of 2+, you need Linear or Jira. The collaboration features are not optional — team members need to see who is working on what, leave comments, and coordinate handoffs. Task Master has no concept of assignment or team visibility.
 
-For solo [Claude Code workflows](/claude-code-best-practices-2026/), Task Master's MCP integration is a genuine advantage that neither Linear nor Jira can match.
+For solo [Claude Code workflows](/karpathy-skills-vs-claude-code-best-practices-2026/), Task Master's MCP integration is a genuine advantage that neither Linear nor Jira can match.
 
 ## When To Use Each
 
@@ -102,4 +102,4 @@ For solo [Claude Code workflows](/claude-code-best-practices-2026/), Task Master
 
 ## Final Recommendation
 
-Use Task Master as your planning accelerator, not your project management system. Let it parse PRDs and generate the initial task list, then move execution to whichever tracker your team uses. If you are solo, Task Master plus Claude Code's MCP integration might genuinely replace a separate tracker for short projects. For anything longer than a sprint or involving more than one person, use a real project management tool and keep Task Master in the planning phase. Explore the [Claude Code playbook](/the-claude-code-playbook/) for more workflow patterns.
+Use Task Master as your planning accelerator, not your project management system. Let it parse PRDs and generate the initial task list, then move execution to whichever tracker your team uses. If you are solo, Task Master plus Claude Code's MCP integration might genuinely replace a separate tracker for short projects. For anything longer than a sprint or involving more than one person, use a real project management tool and keep Task Master in the planning phase. Explore the [Claude Code playbook](/playbook/) for more workflow patterns.

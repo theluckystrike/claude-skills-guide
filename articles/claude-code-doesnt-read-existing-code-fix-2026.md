@@ -61,4 +61,4 @@ Add email validation to the signup form
 **Without reading:** writes a new `isValidEmail()` regex function
 **After reading:** finds `src/utils/validation.ts` already has `validateEmail()` using Zod, reuses it
 
-Related: [Fix Ignoring Project Context](/claude-code-ignores-project-context-fix-2026/) | [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) | [Claude Code Best Practices](/claude-code-best-practices-2026/)
+Related: [Fix Ignoring Project Context](/claude-code-ignores-project-context-fix-2026/) | [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)

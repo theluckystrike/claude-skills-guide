@@ -161,10 +161,10 @@ Your local clone persists regardless. You lose future updates but keep the curre
 
 ## Our Take
 
-**7/10.** A niche but valuable tool for specific use cases. If you work offline regularly or operate in restricted environments, this is essential. For developers with reliable internet, the benefit is marginal — web fetches work fine most of the time. The auto-update hook is a nice touch that keeps maintenance near zero. Pairs well with [CLAUDE.md best practices](/claude-md-file-best-practices-guide/) for referencing the local docs in your project configuration.
+**7/10.** A niche but valuable tool for specific use cases. If you work offline regularly or operate in restricted environments, this is essential. For developers with reliable internet, the benefit is marginal — web fetches work fine most of the time. The auto-update hook is a nice touch that keeps maintenance near zero. Pairs well with [CLAUDE.md best practices](/claude-md-best-practices-10-templates-compared-2026/) for referencing the local docs in your project configuration.
 
 ## Related Resources
 
-- [Claude Code Best Practices](/claude-code-best-practices-2026/) — optimizing Claude Code's knowledge access
-- [Claude Code Hooks Explained](/claude-code-hooks-explained/) — how the auto-update hook works
+- [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — optimizing Claude Code's knowledge access
+- [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — how the auto-update hook works
 - [Claude Skills Directory](/claude-skills-directory-where-to-find-skills/) — other tools for enhancing Claude Code

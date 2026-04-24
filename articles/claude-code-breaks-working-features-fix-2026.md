@@ -66,4 +66,4 @@ Change the `formatDate` utility to use ISO format instead of locale format
 **Regression-prone:** changes `formatDate()` without checking that 12 components rely on locale formatting
 **Safe:** searches for all uses, lists them, and either updates each use or creates a new `formatDateISO()` instead of modifying the existing one
 
-Related: [Karpathy Surgical Changes](/karpathy-surgical-changes-principle-2026/) | [Claude Code Best Practices](/claude-code-best-practices-2026/) | [Make Claude Code Write Tests First](/claude-code-write-tests-first-tdd-setup-2026/)
+Related: [Karpathy Surgical Changes](/karpathy-surgical-changes-principle-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) | [Make Claude Code Write Tests First](/claude-code-write-tests-first-tdd-setup-2026/)

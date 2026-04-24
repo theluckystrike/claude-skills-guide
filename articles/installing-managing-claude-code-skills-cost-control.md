@@ -287,5 +287,5 @@ wc -w CLAUDE.md
 ## Related Guides
 
 - [How to Write Token-Efficient Claude Code Skills](/write-token-efficient-claude-code-skills/) -- authoring best practices
-- [Claude Code Skills Guide](/claude-code-skills-guide/) -- complete skills reference
+- [Claude Code Skills Guide](/skills/) -- complete skills reference
 - [Cost Optimization Hub](/cost-optimization/) -- all cost optimization guides

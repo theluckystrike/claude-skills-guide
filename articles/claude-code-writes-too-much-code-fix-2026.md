@@ -72,4 +72,4 @@ function formatUSD(cents: number): string {
 }
 ```
 
-Related: [Karpathy Simplicity First](/karpathy-simplicity-first-principle-claude-code-2026/) | [Fix Overcomplicating](/claude-code-overcomplicates-simplicity-fix-2026/) | [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/)
+Related: [Karpathy Simplicity First](/karpathy-simplicity-first-principle-claude-code-2026/) | [Fix Overcomplicating](/claude-code-overcomplicates-simplicity-fix-2026/) | [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/)

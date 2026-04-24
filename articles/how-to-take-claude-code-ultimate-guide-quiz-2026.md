@@ -127,6 +127,6 @@ Fill in your scores as you complete each section. Reassess monthly. Scores below
 ## Next Steps
 
 - Complement quiz knowledge with [Claude Howto's](/claude-code-ultimate-guide-vs-howto-2026/) visual learning approach
-- Apply what you learned in your [CLAUDE.md](/claude-md-file-best-practices-guide/) configuration
-- Explore [Claude Code best practices](/claude-code-best-practices-2026/) for practical application
+- Apply what you learned in your [CLAUDE.md](/claude-md-best-practices-10-templates-compared-2026/) configuration
+- Explore [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for practical application
 - Share quiz results with your team to align on knowledge levels

@@ -99,4 +99,4 @@ npx ccusage
 
 This shows exactly how much context each session consumed, helping you calibrate session length.
 
-For more strategies on managing Claude Code context, see our [context window management guide](/claude-code-context-window-management-2026/). Learn how hooks can automate checkpoint creation in the [hooks guide](/claude-code-hooks-explained/). For the full playbook approach to multi-session work, read [The Claude Code Playbook](/the-claude-code-playbook/).
+For more strategies on managing Claude Code context, see our [context window management guide](/claude-code-context-window-management-2026/). Learn how hooks can automate checkpoint creation in the [hooks guide](/understanding-claude-code-hooks-system-complete-guide/). For the full playbook approach to multi-session work, read [The Claude Code Playbook](/playbook/).

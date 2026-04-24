@@ -229,4 +229,4 @@ Minimally. A well-structured 200-word prompt costs ~260 tokens. A vague 20-word 
 ### Can I save prompt templates?
 Yes. Use slash commands (`.claude/commands/`) to save reusable prompt templates. See the [skills vs hooks vs commands guide](/claude-code-skills-vs-hooks-vs-commands-2026/).
 
-For more on getting better results from Claude Code, see [The Claude Code Playbook](/the-claude-code-playbook/). For managing context across prompts, read the [context window guide](/claude-code-context-window-management-2026/). For team-wide prompt standards, see the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).
+For more on getting better results from Claude Code, see [The Claude Code Playbook](/playbook/). For managing context across prompts, read the [context window guide](/claude-code-context-window-management-2026/). For team-wide prompt standards, see the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).

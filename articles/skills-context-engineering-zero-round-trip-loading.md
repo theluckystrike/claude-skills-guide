@@ -132,7 +132,7 @@ On Opus 4.6, multiply by 5x: **$237.60/month.**
 
 ## The CCG Framework Connection
 
-Skills are the primary pre-loading mechanism in the CCG context engineering framework. They sit between CLAUDE.md (always loaded, ultra-concise) and full file reads (on-demand, expensive). The [Skills Guide](/claude-code-skills-guide/) covers the full API and authoring patterns. This article focuses specifically on the cost engineering rationale: skills exist to eliminate exploration tokens, and their design should optimize for token density above all other concerns.
+Skills are the primary pre-loading mechanism in the CCG context engineering framework. They sit between CLAUDE.md (always loaded, ultra-concise) and full file reads (on-demand, expensive). The [Skills Guide](/skills/) covers the full API and authoring patterns. This article focuses specifically on the cost engineering rationale: skills exist to eliminate exploration tokens, and their design should optimize for token density above all other concerns.
 
 ## Skill Authoring Principles for Maximum Token Savings
 
@@ -228,6 +228,6 @@ If skills are not producing expected savings, check:
 
 ## Further Reading
 
-- [Claude Code Skills Guide](/claude-code-skills-guide/) -- complete skills reference
+- [Claude Code Skills Guide](/skills/) -- complete skills reference
 - [Context Engineering vs Prompt Engineering](/context-engineering-vs-prompt-engineering-agents/) -- the theoretical framework
 - [CLAUDE.md Token Optimization](/claude-md-token-optimization-rules-save-money/) -- optimizing the always-loaded context

@@ -145,5 +145,5 @@ Same goal. 1 file instead of 6.
 
 - [Goal-Driven Examples](/karpathy-goal-driven-examples-2026/) — real project scenarios
 - [Fix Claude Code Losing Track](/karpathy-goal-driven-debugging-2026/) — debugging goal drift
-- [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) — where goal rules fit
-- [The Claude Code Playbook](/the-claude-code-playbook/) — workflow patterns
+- [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — where goal rules fit
+- [The Claude Code Playbook](/playbook/) — workflow patterns

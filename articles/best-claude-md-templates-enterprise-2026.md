@@ -201,4 +201,4 @@ Common CLAUDE.md mistakes that reduce effectiveness:
 5. Commit to your repo and document in your team wiki
 6. Set a monthly review cadence
 
-For more on structuring this file, see the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/). For the full ecosystem of available tools, browse the [skills directory](/claude-skills-directory-where-to-find-skills/) and the [Claude Code playbook](/the-claude-code-playbook/).
+For more on structuring this file, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). For the full ecosystem of available tools, browse the [skills directory](/claude-skills-directory-where-to-find-skills/) and the [Claude Code playbook](/playbook/).

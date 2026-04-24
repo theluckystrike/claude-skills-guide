@@ -92,7 +92,7 @@ Add your project-specific rules below the Karpathy principles:
 - Max function length: 60 lines
 ```
 
-This gives you behavioral principles from Karpathy plus domain knowledge from your own experience. See the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/) for more customization patterns.
+This gives you behavioral principles from Karpathy plus domain knowledge from your own experience. See the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/) for more customization patterns.
 
 ## Verification Checklist
 
@@ -138,5 +138,5 @@ Most developers report a noticeable difference within the first session. The imp
 ## Next Steps
 
 - Explore [combining Karpathy Skills with SuperClaude](/how-to-combine-karpathy-superclaude-2026/) for maximum coverage
-- Check the [Claude Code best practices](/claude-code-best-practices-2026/) for workflow optimization
+- Check the [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for workflow optimization
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional behavioral plugins

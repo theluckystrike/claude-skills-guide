@@ -171,5 +171,5 @@ Adding Task Master to a project that is already underway requires some adjustmen
 
 - Learn to [convert a PRD to tasks](/how-to-convert-prd-to-tasks-claude-2026/) with detailed examples
 - Compare Task Master with [GitHub Issues](/claude-task-master-vs-github-issues-project-2026/) for team workflows
-- Add [Claude Code hooks](/claude-code-hooks-explained/) that trigger on task completion
-- Explore the [Claude Code playbook](/the-claude-code-playbook/) for workflow patterns
+- Add [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) that trigger on task completion
+- Explore the [Claude Code playbook](/playbook/) for workflow patterns

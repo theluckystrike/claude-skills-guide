@@ -161,4 +161,4 @@ curl https://api.example.com/meta
 
 - [Backend Context Engineering](/backend-context-engineering-infrastructure-wastes-tokens/) -- the theoretical framework behind agent-first architecture
 - [The Metadata-First Pattern](/metadata-first-pattern-npx-metadata-json/) -- structured metadata as an alternative to discovery queries
-- [Claude Code Context Window Management](/claude-code-context-window-management/) -- managing the context window where tool outputs accumulate
+- [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- managing the context window where tool outputs accumulate

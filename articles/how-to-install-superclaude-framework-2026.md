@@ -160,5 +160,5 @@ The other 20 commands cover more specialized tasks. Explore them as your needs a
 
 - Compare SuperClaude with [Karpathy Skills](/superclaude-vs-karpathy-skills-workflow-2026/) to understand the philosophical differences
 - Learn to [combine both tools](/how-to-combine-karpathy-superclaude-2026/) for maximum effect
-- Explore [Claude Code hooks](/claude-code-hooks-explained/) that complement SuperClaude's commands
+- Explore [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) that complement SuperClaude's commands
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional plugins

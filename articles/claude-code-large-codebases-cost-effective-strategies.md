@@ -304,6 +304,6 @@ The combination of architecture maps, .claudeignore, task scoping, /compact, and
 
 ## Related Guides
 
-- [Claude Code Context Window Management](/claude-code-context-window-management/) -- full guide to context optimization
-- [Claude Code Compact Command Guide](/claude-code-compact-command-guide/) -- detailed /compact usage
-- [Claude Code Subagent Management](/claude-code-subagent-management/) -- split large tasks across subagents for parallelism
+- [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- full guide to context optimization
+- [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- detailed /compact usage
+- [Claude Code Subagent Management](/claude-code-multi-agent-subagent-communication-guide/) -- split large tasks across subagents for parallelism

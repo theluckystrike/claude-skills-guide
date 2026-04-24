@@ -291,7 +291,7 @@ Prompt caching works across all models. Cached inputs cost 90% less. This means 
 - [Multi-agent architecture](/claude-code-multi-agent-architecture-guide-2026/) — multi-model agent patterns
 - [API mode vs interactive](/claude-code-api-mode-vs-interactive-2026/) — programmatic model selection
 - [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — get better results from any model
-- [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive configuration reference
+- [The Claude Code Playbook](/playbook/) — comprehensive configuration reference
 - [Parallel subagents best practices](/parallel-subagents-claude-code-best-practices-2026/) — multi-model parallelism
 
 - [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Sonnet 4.5 capabilities and features

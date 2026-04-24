@@ -72,4 +72,4 @@ Add caching to the API
 
 If it still assumes, add the specific assumption to the "Always Ask Before" list.
 
-Related: [Karpathy Don't Assume Principle](/karpathy-dont-assume-principle-claude-code-2026/) | [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) | [Claude Code Best Practices](/claude-code-best-practices-2026/)
+Related: [Karpathy Don't Assume Principle](/karpathy-dont-assume-principle-claude-code-2026/) | [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)

@@ -84,4 +84,4 @@ Review Claude Code's tool usage in your session. If you see write_file on an exi
 
 The [andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) "Goal-Driven Execution" principle reinforces this: do exactly what was asked, nothing more.
 
-For more on controlling Claude Code's editing behavior, see [The Claude Code Playbook](/the-claude-code-playbook/). For refactoring-specific scope control, read the [refactoring quality guide](/claude-code-bad-at-refactoring-fix-2026/). For overall code quality patterns, see our [best practices guide](/claude-code-best-practices-2026/).
+For more on controlling Claude Code's editing behavior, see [The Claude Code Playbook](/playbook/). For refactoring-specific scope control, read the [refactoring quality guide](/claude-code-bad-at-refactoring-fix-2026/). For overall code quality patterns, see our [best practices guide](/karpathy-skills-vs-claude-code-best-practices-2026/).

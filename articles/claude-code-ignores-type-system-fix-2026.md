@@ -83,7 +83,7 @@ If there are type errors, fix them before reporting the task as done.
 
 ## Prevention
 
-Add a [pre-commit hook](/claude-code-hooks-explained/) that runs `tsc --noEmit`. The [claude-code-templates](https://github.com/davila7/claude-code-templates) collection includes TypeScript-strict agent templates that enforce type safety by default.
+Add a [pre-commit hook](/understanding-claude-code-hooks-system-complete-guide/) that runs `tsc --noEmit`. The [claude-code-templates](https://github.com/davila7/claude-code-templates) collection includes TypeScript-strict agent templates that enforce type safety by default.
 
 Configure your hooks in `.claude/settings.json`:
 
@@ -98,4 +98,4 @@ Configure your hooks in `.claude/settings.json`:
 }
 ```
 
-For more on configuring Claude Code behavior, see [The Claude Code Playbook](/the-claude-code-playbook/). Browse TypeScript-specific skills in our [skills directory](/claude-skills-directory-where-to-find-skills/).
+For more on configuring Claude Code behavior, see [The Claude Code Playbook](/playbook/). Browse TypeScript-specific skills in our [skills directory](/claude-skills-directory-where-to-find-skills/).

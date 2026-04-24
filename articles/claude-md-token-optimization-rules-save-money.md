@@ -288,5 +288,5 @@ Stack: {lang}, {framework}, {DB}, {test framework}
 ## Related Guides
 
 - [Pre-Loading Context: CLAUDE.md Sections That Save 50%+ Tokens](/pre-loading-context-claude-md-sections-save-tokens/) -- what to put in CLAUDE.md
-- [Claude Code Skills Guide](/claude-code-skills-guide/) -- moving knowledge to on-demand skills
+- [Claude Code Skills Guide](/skills/) -- moving knowledge to on-demand skills
 - [Cost Optimization Hub](/cost-optimization/) -- complete cost guide index

@@ -209,4 +209,4 @@ A basic project scaffold (structure + config + a few modules) takes 5-10 minutes
 ### Should I commit scaffolded code without review?
 Review the generated code before committing. Check that configs are correct, dependencies are intentional, and test patterns match your standards.
 
-For more on structuring Claude Code workflows, see [The Claude Code Playbook](/the-claude-code-playbook/). For slash command creation, read the [skills vs hooks vs commands guide](/claude-code-skills-vs-hooks-vs-commands-2026/). For team-standard scaffolding, see the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).
+For more on structuring Claude Code workflows, see [The Claude Code Playbook](/playbook/). For slash command creation, read the [skills vs hooks vs commands guide](/claude-code-skills-vs-hooks-vs-commands-2026/). For team-standard scaffolding, see the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).

@@ -200,6 +200,6 @@ python3 -c "import json; json.load(open('.claude/settings.json'))"
 ## Next Steps
 
 - Browse the [Awesome MCP Servers directory](/how-to-browse-awesome-mcp-servers-2026/) for more servers
-- Learn about [Claude Code hooks](/claude-code-hooks-explained/) that complement MCP servers
-- See the [MCP setup guide](/claude-code-mcp-setup-guide/) for advanced configuration patterns
+- Learn about [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) that complement MCP servers
+- See the [MCP setup guide](/mcp-servers-claude-code-complete-setup-2026/) for advanced configuration patterns
 - Explore [best MCP servers for Claude Code](/best-mcp-servers-for-claude-code-2026/)

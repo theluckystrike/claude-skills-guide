@@ -41,7 +41,7 @@ npx ccusage
 
 This outputs a table showing each session's date, project, input tokens, output tokens, cache reads, cache writes, and estimated cost. You can filter by date range, project, or session ID.
 
-The per-session granularity is the key advantage. You can identify which sessions burned through tokens and why. A session that used 500K input tokens probably had large file reads. A session with high output tokens probably generated a lot of code. This data helps you optimize your [Claude Code workflow](/claude-code-best-practices-2026/).
+The per-session granularity is the key advantage. You can identify which sessions burned through tokens and why. A session that used 500K input tokens probably had large file reads. A session with high output tokens probably generated a lot of code. This data helps you optimize your [Claude Code workflow](/karpathy-skills-vs-claude-code-best-practices-2026/).
 
 ## How Claude Max Dashboard Works
 
@@ -71,7 +71,7 @@ The real value of ccusage is optimization. When you notice a session cost more t
 
 The dashboard cannot support this kind of analysis. It is a billing tool, not an optimization tool.
 
-For more strategies on reducing Claude Code costs, see the guide on [Claude Code hooks](/claude-code-hooks-explained/) which can automate cost-saving patterns.
+For more strategies on reducing Claude Code costs, see the guide on [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) which can automate cost-saving patterns.
 
 ## When To Use Each
 

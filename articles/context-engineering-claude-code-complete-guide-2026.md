@@ -158,6 +158,6 @@ A well-executed context engineering practice should show a 50-70% reduction in w
 ## Related Guides
 
 - [What Is Context Engineering? (Karpathy's Definition Applied to Claude Code)](/what-is-context-engineering-karpathy-claude-code/) -- the conceptual foundation behind these techniques
-- [Claude Code Compact Command Guide](/claude-code-compact-command-guide/) -- detailed compaction mechanics
+- [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- detailed compaction mechanics
 - [CLAUDE.md as Cost Control: Rules That Prevent Token Waste](/claude-md-cost-control-rules-prevent-token-waste/) -- CLAUDE.md patterns for cost reduction
-- [Claude Code Context Window Management](/claude-code-context-window-management/) -- staying within context limits under pressure
+- [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- staying within context limits under pressure

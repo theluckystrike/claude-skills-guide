@@ -371,7 +371,7 @@ The new configuration replaces the existing one at the same scope. If the existi
 - [MCP Servers Complete Setup Guide](/mcp-servers-claude-code-complete-setup-2026/) — end-to-end configuration from scratch
 - [MCP Server Connection Refused Fix](/claude-code-mcp-server-connection-refused-fix/) — troubleshoot servers that fail to start
 - [Awesome MCP Servers Directory](/awesome-mcp-servers-directory-guide-2026/) — community directory of available servers
-- [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive workflow reference
+- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
 - [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your Claude Code setup
 - [Configuration Hierarchy Explained](/claude-code-configuration-hierarchy-explained-2026/) — how user, project, and system configs interact
 - [Claude Code MCP Configuration Guide](/claude-code-mcp-configuration-guide/) — full MCP setup reference

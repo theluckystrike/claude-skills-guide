@@ -189,4 +189,4 @@ Both tools work with CLAUDE.md-style configuration. The team conventions still a
 ### How do we handle developers who over-rely on Claude Code?
 Set guidelines: Claude Code is a tool, not a replacement for understanding the code. Require code review for all AI-generated changes. Periodically review AI-assisted PRs for quality.
 
-For enterprise configuration, see the [enterprise setup guide](/claude-code-enterprise-setup-guide-2026/). For building team-specific skills, read the [skill building guide](/how-to-build-your-own-claude-code-skill-2026/). For the full CLAUDE.md reference, see the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/).
+For enterprise configuration, see the [enterprise setup guide](/claude-code-enterprise-setup-guide-2026/). For building team-specific skills, read the [skill building guide](/how-to-build-your-own-claude-code-skill-2026/). For the full CLAUDE.md reference, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).

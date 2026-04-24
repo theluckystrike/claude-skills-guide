@@ -43,7 +43,7 @@ Awesome MCP Servers relies on community curation. Pull requests go through revie
 
 Templates' 55+ entries have been tested with Claude Code specifically. The configurations are verified to work. If an MCP server's API changes, the template gets updated or removed. The smaller scope allows tighter quality control.
 
-For your first [MCP setup](/claude-code-mcp-setup-guide/), Templates' tested configurations reduce the chance of configuration headaches.
+For your first [MCP setup](/mcp-servers-claude-code-complete-setup-2026/), Templates' tested configurations reduce the chance of configuration headaches.
 
 ## Coverage Comparison
 
@@ -106,4 +106,4 @@ If you build an MCP server and want maximum adoption, list it in Awesome for dis
 
 ## Final Recommendation
 
-Bookmark Awesome MCP Servers as your reference catalog. Use Templates as your installation tool. When the two overlap, prefer Templates for the tested config. When they do not, follow Awesome's link to the server repo and configure it manually. Also check the [hooks guide](/claude-code-hooks-explained/) for patterns that combine MCP servers with pre/post-command hooks for even more powerful integrations.
+Bookmark Awesome MCP Servers as your reference catalog. Use Templates as your installation tool. When the two overlap, prefer Templates for the tested config. When they do not, follow Awesome's link to the server repo and configure it manually. Also check the [hooks guide](/understanding-claude-code-hooks-system-complete-guide/) for patterns that combine MCP servers with pre/post-command hooks for even more powerful integrations.

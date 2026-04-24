@@ -263,5 +263,5 @@ The token cost of this prevention: zero (hooks run as external processes). The t
 ## Related Guides
 
 - [The "Inspect Before Act" Pattern for Agent Cost Control](/inspect-before-act-pattern-agent-cost-control/) -- verify before executing
-- [Claude Code Hooks Guide](/claude-code-hooks-guide/) -- automate pre-deployment checks
+- [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- automate pre-deployment checks
 - [Errors Atlas](/errors-atlas/) -- troubleshoot deployment failures

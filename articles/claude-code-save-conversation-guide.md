@@ -310,7 +310,7 @@ No. Compaction summarizes context that is sent to the model, but the original JS
 
 ## Related Guides
 
-- [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive workflow reference
+- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
 - [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
 - [Claude Code Configuration Hierarchy](/claude-code-configuration-hierarchy-explained-2026/) — understand settings files
 - [Claude Shortcuts Guide](/claude-shortcuts-complete-guide/) — keyboard shortcuts for all Claude interfaces

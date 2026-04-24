@@ -91,4 +91,4 @@ npx eslint --rule '{"jsdoc/check-param-names": "error"}' src/
 
 The [awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) lists plugins that can validate comment accuracy during Claude Code sessions.
 
-For more on code analysis patterns, see [The Claude Code Playbook](/the-claude-code-playbook/). Learn about configuring trust hierarchies in the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/). For debugging workflows that avoid comment traps, read the [debugging guide](/claude-code-debugging-workflow-guide-2026/).
+For more on code analysis patterns, see [The Claude Code Playbook](/playbook/). Learn about configuring trust hierarchies in the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). For debugging workflows that avoid comment traps, read the [debugging guide](/claude-code-debugging-workflow-guide-2026/).

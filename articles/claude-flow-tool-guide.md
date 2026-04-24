@@ -321,7 +321,7 @@ Claude Flow passes the tools configuration to Claude Code. Any tool available in
 - [Token budgeting for multi-agent](/multi-agent-token-budgeting-allocate-subagents/) — cost control strategies
 - [Cost-efficient multi-agent workflows](/claude-cost-cost-efficient-multi-agent-coding-workflows/) — minimize spend
 - [How to build a Claude Code agent](/how-to-build-claude-code-agent-2026/) — foundational agent-building guide
-- [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive Claude Code reference
+- [The Claude Code Playbook](/playbook/) — comprehensive Claude Code reference
 
 - [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — Build custom agents with the Agent SDK
 - [sequential thinking in Claude Code](/sequential-thinking-claude-code-guide/) — Use thinking for complex orchestration steps

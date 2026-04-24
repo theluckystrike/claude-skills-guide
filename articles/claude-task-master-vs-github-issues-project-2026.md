@@ -60,7 +60,7 @@ This is where GitHub Issues dominates. Comments, @mentions, review requests, lin
 
 Task Master is a solo-developer or small-team tool. It stores tasks in local JSON files. Sharing task state between team members requires committing the `.task-master/` directory and managing merge conflicts. There is no comment system, no notification system, and no built-in collaboration features.
 
-For teams using [Claude Code in collaborative workflows](/claude-code-best-practices-2026/), GitHub Issues provides the coordination layer that Task Master lacks.
+For teams using [Claude Code in collaborative workflows](/karpathy-skills-vs-claude-code-best-practices-2026/), GitHub Issues provides the coordination layer that Task Master lacks.
 
 ## Ecosystem Integration
 
@@ -88,4 +88,4 @@ Task Master connects to Claude Code through MCP and that is about it. The CLI is
 
 ## Final Recommendation
 
-Use GitHub Issues as your system of record for project management. It is the standard for good reason. Layer Task Master on top for the AI-powered task decomposition when you have a spec document that needs breaking down. The generated tasks can be transferred to GitHub Issues for team coordination. This gives you the best of both: AI-powered planning and battle-tested collaboration. Check the [Claude Code playbook](/the-claude-code-playbook/) for patterns that integrate both tools effectively.
+Use GitHub Issues as your system of record for project management. It is the standard for good reason. Layer Task Master on top for the AI-powered task decomposition when you have a spec document that needs breaking down. The generated tasks can be transferred to GitHub Issues for team coordination. This gives you the best of both: AI-powered planning and battle-tested collaboration. Check the [Claude Code playbook](/playbook/) for patterns that integrate both tools effectively.

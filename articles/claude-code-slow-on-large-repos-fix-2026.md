@@ -121,4 +121,4 @@ Do not read packages/web/ or packages/mobile/ unless explicitly needed.
 
 Maintain your `.claudeignore` as your project grows. The [claude-code-docs](https://github.com/ericbuess/claude-code-docs) repo includes hooks that detect when your ignore file is stale.
 
-For more optimization techniques, see [The Claude Code Playbook](/the-claude-code-playbook/). Learn about token cost tracking in our [productivity hacks roundup](/best-claude-code-productivity-hacks-2026/). For context management strategies, read the [context window guide](/claude-code-context-window-management-2026/).
+For more optimization techniques, see [The Claude Code Playbook](/playbook/). Learn about token cost tracking in our [productivity hacks roundup](/best-claude-code-productivity-hacks-2026/). For context management strategies, read the [context window guide](/claude-code-context-window-management-2026/).

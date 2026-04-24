@@ -197,7 +197,7 @@ layout: compress
     <article class="article-body" itemscope itemtype="https://schema.org/TechArticle">
       <header class="article-header">
         <h1 class="article-title" itemprop="headline">{{ page.title }}</h1>
-        <div class="author-bar">
+        <aside class="author-bar">
           <span class="author-bar-avatar" aria-hidden="true">ML</span>
           <span class="author-bar-info">
             <span class="author-bar-name">Written by Michael Lip</span>
@@ -213,7 +213,7 @@ layout: compress
             <span class="author-bar-sep">&middot;</span>
             <a href="https://zovo.one" target="_blank" rel="noopener noreferrer"><svg class="ab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>More at zovo.one</a>
           </span>
-        </div>
+        </aside>
         <time class="date" datetime="{{ page.last_modified_at | default: page.date | date_to_xmlschema }}">Last updated: {{ page.last_modified_at | default: page.date | date: "%B %d, %Y" }}</time>
       </header>
       <section class="article-content" itemprop="articleBody">
@@ -221,18 +221,14 @@ layout: compress
       </section>
     </article>
     <section class="author-cta" aria-label="About the author">
-      <div class="author-cta-inner">
-        <div class="author-cta-text">
           <h2>About the Author</h2>
           <p>Michael Lip is a solo founder building Zovo &mdash; 20+ Chrome extensions used by 5,000+ developers. $400K+ earned on Upwork with 100% Job Success Score. 670+ open source contributions.</p>
           <p>These guides are part of the Zovo developer ecosystem. New guides ship daily. Extensions ship weekly.</p>
-        </div>
-        <div class="author-cta-actions">
+        <nav class="author-cta-actions" role="group" aria-label="Author links">
           <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="cta-btn-primary">Join Discord Community (Free) &rarr;</a>
           <a href="https://zovo.one" target="_blank" rel="noopener noreferrer" class="cta-btn-secondary">Explore Zovo Extensions &rarr;</a>
           <p class="cta-pro-note">Zovo Pro: All 20+ extensions &mdash; $4.99/mo or $99 lifetime</p>
-        </div>
-      </div>
+        </nav>
     </section>
     {% else %}
     <section class="page-body">
@@ -285,11 +281,9 @@ layout: compress
   <script>!function(){'use strict';var a=document.querySelector('.article-content');if(!a)return;var h=a.querySelectorAll(':scope > h2'),n=h.length;if(!n)return;var MAX=50,cnt=0;for(var i=n-1;i>=0&&cnt<MAX;i--){var s=document.createElement('section');a.insertBefore(s,h[i]);s.appendChild(h[i]);while(s.nextSibling&&s.nextSibling.tagName!=='H2'&&!s.nextSibling.classList.contains('author-cta')&&!s.nextSibling.classList.contains('incontent-cta')&&s.nextSibling.tagName!=='SECTION')s.appendChild(s.nextSibling);cnt++}}();</script>
   {% endif %}
   <aside class="cta-footer-bar" id="ctaFooterBar" aria-label="Community invitation">
-    <div class="cta-footer-bar-inner">
       <span class="cta-footer-bar-text">Generate a free CLAUDE.md for your stack. 27 frameworks. 60 seconds.</span>
       <a href="/generator/?utm_source=ccg&utm_medium=footer-bar&utm_campaign=sticky" class="cta-footer-bar-btn">Generate free CLAUDE.md &#8594;</a>
       <button type="button" class="cta-footer-bar-dismiss" id="ctaFooterDismiss" aria-label="Dismiss community banner">&#10005;</button>
-    </div>
   </aside>
   <script>!function(){'use strict';function gC(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?m[1]:null}if(gC('zovo_footer_dismissed')==='1')return;var b=document.getElementById('ctaFooterBar'),db=document.getElementById('ctaFooterDismiss');if(!b||!db)return;var sh=false,tm=null;function sB(){if(sh)return;sh=true;if(tm){clearTimeout(tm);tm=null}window.removeEventListener('scroll',oS);b.style.display='block';b.offsetHeight;b.classList.add('is-visible')}function dB(){b.classList.remove('is-visible');var ex=new Date();ex.setTime(ex.getTime()+604800000);document.cookie='zovo_footer_dismissed=1;expires='+ex.toUTCString()+';path=/;SameSite=Lax';setTimeout(function(){b.style.display='none'},350)}db.addEventListener('click',dB,{once:true});function oS(){var st=window.pageYOffset||document.documentElement.scrollTop,dh=document.documentElement.scrollHeight-window.innerHeight;if(dh>0&&(st/dh)>=0.3)sB()}window.addEventListener('scroll',oS,{passive:true});tm=setTimeout(sB,5000)}();</script>
 </body>

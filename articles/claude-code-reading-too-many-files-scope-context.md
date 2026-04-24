@@ -259,5 +259,5 @@ Each level progressively reduces the searchable file tree. Level 1 alone typical
 ## Related Guides
 
 - [Why Claude Code Gets Expensive on Large Projects](/why-claude-code-expensive-large-projects-fix/) -- comprehensive guide for large codebases
-- [Claude Code Context Window Management](/claude-code-context-window-management/) -- understanding context mechanics
+- [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- understanding context mechanics
 - [Cost Optimization Hub](/cost-optimization/) -- all cost reduction techniques

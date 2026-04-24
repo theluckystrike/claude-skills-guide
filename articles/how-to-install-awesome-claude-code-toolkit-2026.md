@@ -140,6 +140,6 @@ If a tool passes all five checks, it is worth trying. If it fails two or more, m
 ## Next Steps
 
 - Compare with [Awesome Claude Code](/awesome-claude-code-vs-awesome-toolkit-2026/) for a different curated perspective
-- Learn about [Claude Code hooks](/claude-code-hooks-explained/) to complement your installed tools
-- Build your [CLAUDE.md](/claude-md-file-best-practices-guide/) to work well with your chosen agents
+- Learn about [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) to complement your installed tools
+- Build your [CLAUDE.md](/claude-md-best-practices-10-templates-compared-2026/) to work well with your chosen agents
 - Explore the [best Claude Code skills](/best-claude-skills-for-developers-2026/) ranked by community adoption

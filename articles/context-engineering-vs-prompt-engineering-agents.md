@@ -181,7 +181,7 @@ For teams currently using prompt engineering only:
 ## Further Reading
 
 - [Pre-Loading Context: CLAUDE.md Sections That Save 50%+ Tokens](/pre-loading-context-claude-md-sections-save-tokens/) -- practical pre-loading implementation
-- [Claude Code Context Window Management](/claude-code-context-window-management/) -- the mechanics of context growth
+- [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- the mechanics of context growth
 - [Skills as Context Engineering: Zero-Round-Trip Knowledge Loading](/skills-context-engineering-zero-round-trip-loading/) -- skills as a pre-loading mechanism
 - Andrej Karpathy on context engineering (2025) -- the original framing
 - Avi Chawla on structured context delivery -- practical frameworks

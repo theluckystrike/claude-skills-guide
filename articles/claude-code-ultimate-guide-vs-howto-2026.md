@@ -69,7 +69,7 @@ The threat modeling section is unique to the Ultimate Guide. It analyzes securit
 3. Use Howto templates for quick implementation of what you learned
 4. Re-take quiz sections to verify understanding
 
-For building a solid foundation, also reference the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/).
+For building a solid foundation, also reference the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).
 
 ## Content Overlap
 
@@ -102,4 +102,4 @@ The non-overlapping content:
 
 ## Final Recommendation
 
-Beginners: clone Claude Howto and work through it this week. You will be productive with Claude Code in days rather than weeks. Experienced users: take the Ultimate Guide quiz to find your gaps, then study those sections. Everyone benefits from having both resources available — Howto as your quick reference and the Ultimate Guide as your deep reference. For practical workflow patterns that build on both, see the [Claude Code playbook](/the-claude-code-playbook/).
+Beginners: clone Claude Howto and work through it this week. You will be productive with Claude Code in days rather than weeks. Experienced users: take the Ultimate Guide quiz to find your gaps, then study those sections. Everyone benefits from having both resources available — Howto as your quick reference and the Ultimate Guide as your deep reference. For practical workflow patterns that build on both, see the [Claude Code playbook](/playbook/).

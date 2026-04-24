@@ -241,6 +241,6 @@ Well-calibrated budgets save 10-20% versus initial estimates because they elimin
 
 ## Further Reading
 
-- [Claude Code Context Window Management](/claude-code-context-window-management/) -- the full context management toolkit
-- [Claude Code Compact Command Guide](/claude-code-compact-command-guide/) -- the primary tool for staying within budget
+- [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- the full context management toolkit
+- [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- the primary tool for staying within budget
 - [Cost Optimization Hub](/cost-optimization/) -- all cost reduction techniques in one place

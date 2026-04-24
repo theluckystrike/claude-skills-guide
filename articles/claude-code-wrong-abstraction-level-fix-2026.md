@@ -71,4 +71,4 @@ If <3 callers, or the abstraction is more complex, don't abstract.
 - Under-abstracted: adds it inline again in a 6th place
 - Correct: suggests extracting to `src/utils/validation.ts` and refactoring the 5 existing uses
 
-Related: [Karpathy Simplicity First](/karpathy-simplicity-first-principle-claude-code-2026/) | [Fix Overcomplicating](/claude-code-overcomplicates-simplicity-fix-2026/) | [Claude Code Best Practices](/claude-code-best-practices-2026/)
+Related: [Karpathy Simplicity First](/karpathy-simplicity-first-principle-claude-code-2026/) | [Fix Overcomplicating](/claude-code-overcomplicates-simplicity-fix-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)

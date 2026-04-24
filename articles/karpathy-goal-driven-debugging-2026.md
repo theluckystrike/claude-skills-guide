@@ -125,4 +125,4 @@ as "Invalid Date" when the timezone is UTC.
 - [Goal-Driven Execution Principle](/karpathy-goal-driven-execution-principle-2026/) — the underlying principle
 - [Implement Goal-Driven Execution](/karpathy-goal-driven-implementation-2026/) — CLAUDE.md templates
 - [Fix Claude Code Forgetting Decisions](/claude-code-forgets-previous-decisions-fix-2026/) — related problem
-- [The Claude Code Playbook](/the-claude-code-playbook/) — session management patterns
+- [The Claude Code Playbook](/playbook/) — session management patterns

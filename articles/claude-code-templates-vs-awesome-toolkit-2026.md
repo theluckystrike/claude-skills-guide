@@ -34,7 +34,7 @@ Claude Code Templates gives you a polished CLI. Run `npx claude-code-templates@l
 
 Awesome Toolkit has no installation step at all. It is a README with links, descriptions, and categories. You browse, find what interests you, click through to the source repo, and follow that repo's install instructions. The value is in the curation, not the delivery mechanism.
 
-For developers building their first [Claude Code setup](/claude-code-best-practices-2026/), Templates gets you running faster. For experienced users refining an existing setup, Toolkit helps you discover tools you did not know existed.
+For developers building their first [Claude Code setup](/karpathy-skills-vs-claude-code-best-practices-2026/), Templates gets you running faster. For experienced users refining an existing setup, Toolkit helps you discover tools you did not know existed.
 
 ## Quality and Curation
 
@@ -52,7 +52,7 @@ Templates exclusively offers: pre-configured settings files, hook templates, MCP
 
 Toolkit exclusively offers: a broader catalog of niche plugins, community-contributed tools that have not been packaged into templates, and third-party integrations that fall outside the template format.
 
-If you are looking for [MCP servers](/claude-code-mcp-setup-guide/) specifically, neither is the best starting point — check the dedicated Awesome MCP Servers repo with its 200+ entries instead.
+If you are looking for [MCP servers](/mcp-servers-claude-code-complete-setup-2026/) specifically, neither is the best starting point — check the dedicated Awesome MCP Servers repo with its 200+ entries instead.
 
 ## Maintenance and Freshness
 

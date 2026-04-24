@@ -141,10 +141,10 @@ Claude Code workflow:
 **Claude Code** uses a layered customization system:
 
 - **CLAUDE.md files** — Project instructions loaded every session. Can be nested (root, subdirectory-level). Controls coding standards, forbidden patterns, preferred libraries, project-specific knowledge.
-- **Hooks** — Deterministic scripts that run before or after specific tool calls. Format code on every save. Block dangerous commands. Log all operations. See [Hooks Guide](/claude-code-hooks-explained/).
+- **Hooks** — Deterministic scripts that run before or after specific tool calls. Format code on every save. Block dangerous commands. Log all operations. See [Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/).
 - **Skills** — Reusable procedures (slash commands) that Claude can invoke. Custom workflows packaged as commands.
 - **Settings.json** — Permission allow/deny lists, tool configuration, behavioral preferences.
-- **MCP Servers** — External tool connections (databases, APIs, issue trackers). See [The Claude Code Playbook](/the-claude-code-playbook/) for full configuration details.
+- **MCP Servers** — External tool connections (databases, APIs, issue trackers). See [The Claude Code Playbook](/playbook/) for full configuration details.
 
 **Cursor** uses:
 
@@ -316,7 +316,7 @@ cp .cursorrules CLAUDE.md
 3. **Day 5:** Set up CLAUDE.md with your project's standards. Configure settings.json permissions. Try hooks for auto-formatting.
 4. **Week 2:** Use Claude Code for your most tedious task — the one you have been procrastinating. Migration scripts, test writing, documentation updates. This is where Claude Code shines.
 
-See [The Claude Code Playbook](/the-claude-code-playbook/) for the complete workflow guide.
+See [The Claude Code Playbook](/playbook/) for the complete workflow guide.
 
 ## Frequently Asked Questions
 

@@ -223,4 +223,4 @@ Minimum necessary diff. See the [full guide](/karpathy-surgical-changes-principl
 
 - [Fix Claude Code Touching Unrelated Files](/karpathy-surgical-changes-debugging-2026/) — when surgical rules fail
 - [Stop Claude Code Touching Unrelated Files](/claude-code-touches-unrelated-files-fix-2026/) — problem-specific fix
-- [Claude Code Best Practices](/claude-code-best-practices-2026/) — broader patterns
+- [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — broader patterns

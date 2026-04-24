@@ -41,7 +41,7 @@ Claude Code Docs gives you the same experience as the official website. The docu
 
 Claude Howto is structured for learning. Each topic starts with a visual diagram showing the workflow, followed by a template you can copy. The Mermaid diagrams are particularly effective for understanding how hooks chain together or how MCP servers interact with Claude Code. The 28K star count reflects how many developers find this learning approach effective.
 
-For building your first [CLAUDE.md](/claude-md-file-best-practices-guide/), Howto's templates get you started faster. For understanding every configuration option, the Docs mirror has the authoritative reference.
+For building your first [CLAUDE.md](/claude-md-best-practices-10-templates-compared-2026/), Howto's templates get you started faster. For understanding every configuration option, the Docs mirror has the authoritative reference.
 
 ## Maintenance and Freshness
 
@@ -115,4 +115,4 @@ This pattern — Howto for onboarding, Docs for reference — applies to every C
 
 ## Final Recommendation
 
-Clone both repos. Keep Claude Code Docs as your offline reference — set up the auto-update hook and it maintains itself. Use Claude Howto as your learning companion — the visual diagrams and templates accelerate understanding significantly. Between the two, you have both authoritative reference material and accessible learning content, available offline. For ongoing Claude Code mastery, complement both with the [Claude Code playbook](/the-claude-code-playbook/) for workflow patterns.
+Clone both repos. Keep Claude Code Docs as your offline reference — set up the auto-update hook and it maintains itself. Use Claude Howto as your learning companion — the visual diagrams and templates accelerate understanding significantly. Between the two, you have both authoritative reference material and accessible learning content, available offline. For ongoing Claude Code mastery, complement both with the [Claude Code playbook](/playbook/) for workflow patterns.

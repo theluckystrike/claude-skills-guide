@@ -220,7 +220,7 @@ python3 -c "import json; json.load(open('.claude/settings.json'))"
 
 ## Next Steps
 
-- Explore [Claude Code hooks](/claude-code-hooks-explained/) for advanced patterns
+- Explore [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) for advanced patterns
 - See [best hooks for code quality](/best-claude-code-hooks-code-quality-2026/) for proven configurations
 - Browse [Claude Code Templates](/how-to-install-claude-code-templates-cli-2026/) for pre-built hook templates
-- Read [Claude Code best practices](/claude-code-best-practices-2026/) for workflow integration
+- Read [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for workflow integration

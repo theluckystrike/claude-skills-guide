@@ -135,5 +135,5 @@ Claude Code correctly scopes dependencies to packages and uses workspace imports
 
 - [Implement Don't Assume in CLAUDE.md](/karpathy-dont-assume-implementation-claude-md-2026/) — the template for these rules
 - [Debug When Claude Code Assumes Wrong](/karpathy-dont-assume-debugging-failures-2026/) — fixing assumption failures
-- [Claude Code Best Practices](/claude-code-best-practices-2026/) — broader patterns
+- [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — broader patterns
 - [Karpathy Skills Complete Guide](/karpathy-claude-code-skills-complete-guide-2026/) — all four principles

@@ -131,4 +131,4 @@ Cursor has a flat subscription ($20/month Pro). Claude Code charges per API toke
 ### Will the ecosystems converge?
 MCP is an open standard that both support. As MCP matures, the server ecosystem will be shared. Behavioral configuration (CLAUDE.md vs .cursorrules) remains tool-specific.
 
-For more on the Claude Code ecosystem, see our [tools map](/claude-code-ecosystem-complete-map-2026/). For plugin installation details, read the [plugin marketplace guide](/claude-code-plugin-marketplace-guide-2026/). For CLAUDE.md setup, see the [best practices guide](/claude-md-file-best-practices-guide/).
+For more on the Claude Code ecosystem, see our [tools map](/claude-code-ecosystem-complete-map-2026/). For plugin installation details, read the [plugin marketplace guide](/claude-code-plugin-marketplace-guide-2026/). For CLAUDE.md setup, see the [best practices guide](/claude-md-best-practices-10-templates-compared-2026/).

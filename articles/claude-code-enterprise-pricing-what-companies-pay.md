@@ -281,7 +281,7 @@ Pricing last verified: April 2026.
 
 ## Related Guides
 
-- [Claude Code Max Subscription Guide](/claude-code-max-subscription-guide/) -- detailed individual and team plan analysis
+- [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- detailed individual and team plan analysis
 - [Claude Code vs Cursor: Monthly Cost Comparison](/claude-code-vs-cursor-monthly-cost-comparison-2026/) -- individual tool comparison
 - [Cost Optimization Hub](/cost-optimization/) -- reduce per-developer costs
 

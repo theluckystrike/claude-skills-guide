@@ -167,5 +167,5 @@ The offline setup pays off in several scenarios beyond obvious ones:
 ## Next Steps
 
 - Compare this with [Claude Howto](/claude-code-docs-vs-claude-howto-2026/) for different learning approaches
-- Explore the [Claude Code playbook](/the-claude-code-playbook/) for workflow patterns
-- Set up [MCP servers](/claude-code-mcp-setup-guide/) using the configuration docs
+- Explore the [Claude Code playbook](/playbook/) for workflow patterns
+- Set up [MCP servers](/mcp-servers-claude-code-complete-setup-2026/) using the configuration docs

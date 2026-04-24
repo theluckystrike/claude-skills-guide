@@ -129,4 +129,4 @@ Cost savings at Sonnet: $0.42-$8.10/month
 
 - [The Compaction Strategy: When to /compact and When Not To](/compaction-strategy-when-compact-when-not/) -- preventing post-compaction re-reads
 - [Structured Metadata vs Discovery Queries](/structured-metadata-vs-discovery-queries-token-gap/) -- pre-loading context to eliminate discovery reads
-- [Claude Code Context Window Management](/claude-code-context-window-management/) -- managing what stays in and what gets evicted
+- [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- managing what stays in and what gets evicted

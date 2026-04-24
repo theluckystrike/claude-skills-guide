@@ -110,4 +110,4 @@ npx jscpd src/ --threshold 3 --reporters console
 
 This flags any block of code that appears 3+ times. The [awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) includes deduplication plugins for ongoing monitoring.
 
-For more on code reuse, see the [duplicate code fix guide](/claude-code-creates-duplicate-code-fix-2026/). For utility organization patterns, read the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/). For team standards that prevent duplication, check the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).
+For more on code reuse, see the [duplicate code fix guide](/claude-code-creates-duplicate-code-fix-2026/). For utility organization patterns, read the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). For team standards that prevent duplication, check the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).

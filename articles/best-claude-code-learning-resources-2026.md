@@ -82,7 +82,7 @@ curl -o CLAUDE.md https://raw.githubusercontent.com/forrestchang/andrej-karpathy
 git clone https://github.com/Piebald-AI/claude-code-system-prompts.git
 ```
 
-**Why study it**: Understanding the system prompts gives you an unfair advantage. You learn why Claude behaves certain ways, what constraints it operates under, and how to write [CLAUDE.md files](/claude-md-file-best-practices-guide/) that work with (not against) the system prompt.
+**Why study it**: Understanding the system prompts gives you an unfair advantage. You learn why Claude behaves certain ways, what constraints it operates under, and how to write [CLAUDE.md files](/claude-md-best-practices-10-templates-compared-2026/) that work with (not against) the system prompt.
 
 **Time to value**: 2-3 hours of reading.
 
@@ -130,14 +130,14 @@ pipx install superclaude && superclaude install
 **Week 2 (Intermediate)**:
 1. Browse Awesome Claude Code for 30 minutes
 2. Read the system prompts repo
-3. Set up one MCP server using the [MCP guide](/claude-code-mcp-setup-guide/)
+3. Set up one MCP server using the [MCP guide](/mcp-servers-claude-code-complete-setup-2026/)
 4. Create your first custom slash command
 
 **Week 3+ (Advanced)**:
 1. Take the Ultimate Guide quiz
 2. Study sections where you scored poorly
 3. Install SuperClaude and learn the command vocabulary
-4. Write your first custom [hook](/claude-code-hooks-explained/)
+4. Write your first custom [hook](/understanding-claude-code-hooks-system-complete-guide/)
 
 **Ongoing**:
 - Monthly: browse Awesome Claude Code for new tools
@@ -150,4 +150,4 @@ pipx install superclaude && superclaude install
 
 The most valuable Claude Code learning is not about memorizing commands or configurations. It is about understanding how Claude thinks, what constraints it operates under, and how to shape its behavior through context. Every resource on this list contributes to that understanding from a different angle.
 
-For the complete workflow approach, see the [Claude Code playbook](/the-claude-code-playbook/) and [best practices](/claude-code-best-practices-2026/).
+For the complete workflow approach, see the [Claude Code playbook](/playbook/) and [best practices](/karpathy-skills-vs-claude-code-best-practices-2026/).

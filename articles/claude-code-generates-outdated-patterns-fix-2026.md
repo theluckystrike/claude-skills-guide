@@ -66,4 +66,4 @@ Create a new page that fetches and displays user data
 **Outdated:** uses `getServerSideProps`, `useEffect(() => fetch(...))`, class component
 **Current:** uses async Server Component, `await` data fetching, functional component
 
-Related: [Claude Code Best Practices](/claude-code-best-practices-2026/) | [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) | [Claude Code Docs Mirror](/claude-code-docs-offline-mirror-guide-2026/)
+Related: [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) | [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) | [Claude Code Docs Mirror](/claude-code-docs-offline-mirror-guide-2026/)

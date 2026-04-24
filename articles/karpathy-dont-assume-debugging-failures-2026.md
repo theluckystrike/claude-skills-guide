@@ -125,4 +125,4 @@ If Claude Code still assumes, strengthen the rules with more specific examples o
 - [Don't Assume Principle](/karpathy-dont-assume-principle-claude-code-2026/) — the underlying principle
 - [Implement Don't Assume in CLAUDE.md](/karpathy-dont-assume-implementation-claude-md-2026/) — template rules
 - [Fix Claude Code Ignoring Project Context](/claude-code-ignores-project-context-fix-2026/) — a related problem
-- [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) — structuring effective rules
+- [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — structuring effective rules

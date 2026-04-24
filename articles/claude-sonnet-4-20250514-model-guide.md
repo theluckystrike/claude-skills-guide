@@ -270,7 +270,7 @@ Sonnet 4 is competitive with GPT-4o on coding benchmarks and generally stronger 
 - [Claude Agent SDK](/claude-agent-sdk-complete-guide/) — build agents on Sonnet 4
 - [Cost tracking with ccusage](/ccusage-claude-code-cost-tracking-guide-2026/) — monitor spend per model
 - [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — optimize prompts for Sonnet
-- [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive reference
+- [The Claude Code Playbook](/playbook/) — comprehensive reference
 
 - [Claude temperature settings guide](/claude-temperature-settings-guide/) — Configure temperature for Sonnet 4
 ### Can I use Sonnet 4 with extended thinking and tool use simultaneously?

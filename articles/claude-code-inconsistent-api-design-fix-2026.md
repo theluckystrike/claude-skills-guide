@@ -116,4 +116,4 @@ expect(apiResponseSchema.safeParse(response.body).success).toBe(true);
 
 The [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) index lists API design skills that validate consistency across endpoints.
 
-For more API patterns, see [The Claude Code Playbook](/the-claude-code-playbook/). For type-safe API contracts, read the [type system guide](/claude-code-ignores-type-system-fix-2026/). For testing API consistency, see our [best practices guide](/claude-code-best-practices-2026/).
+For more API patterns, see [The Claude Code Playbook](/playbook/). For type-safe API contracts, read the [type system guide](/claude-code-ignores-type-system-fix-2026/). For testing API consistency, see our [best practices guide](/karpathy-skills-vs-claude-code-best-practices-2026/).

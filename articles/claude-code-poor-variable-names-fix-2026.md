@@ -106,4 +106,4 @@ rules: {
 
 The [claude-code-templates](https://github.com/davila7/claude-code-templates) library includes naming convention templates for different domains.
 
-For broader code quality rules, see our [Claude Code best practices guide](/claude-code-best-practices-2026/). For team-wide convention enforcement, read the [team conventions fix](/claude-code-doesnt-match-team-conventions-fix-2026/). Browse domain-specific skills in the [skills directory](/claude-skills-directory-where-to-find-skills/).
+For broader code quality rules, see our [Claude Code best practices guide](/karpathy-skills-vs-claude-code-best-practices-2026/). For team-wide convention enforcement, read the [team conventions fix](/claude-code-doesnt-match-team-conventions-fix-2026/). Browse domain-specific skills in the [skills directory](/claude-skills-directory-where-to-find-skills/).

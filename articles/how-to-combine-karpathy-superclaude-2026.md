@@ -155,6 +155,6 @@ The Karpathy principles enhance every SuperClaude command by improving the reaso
 ## Next Steps
 
 - Compare the [workflow approaches](/superclaude-vs-karpathy-skills-workflow-2026/) in detail
-- Add [custom hooks](/claude-code-hooks-explained/) that complement both tools
-- Explore the [Claude Code playbook](/the-claude-code-playbook/) for workflow patterns
+- Add [custom hooks](/understanding-claude-code-hooks-system-complete-guide/) that complement both tools
+- Explore the [Claude Code playbook](/playbook/) for workflow patterns
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional behavioral plugins

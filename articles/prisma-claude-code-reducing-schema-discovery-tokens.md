@@ -294,5 +294,5 @@ This multi-schema index (~200 tokens) prevents Claude Code from reading all thre
 ## Related Guides
 
 - [Database Schema Exposure: Complete State vs Discovery Queries](/database-schema-exposure-complete-state-vs-discovery/) -- broader schema optimization patterns
-- [Claude Code Skills Guide](/claude-code-skills-guide/) -- creating and managing skill files
+- [Claude Code Skills Guide](/skills/) -- creating and managing skill files
 - [Cost Optimization Hub](/cost-optimization/) -- all cost reduction strategies

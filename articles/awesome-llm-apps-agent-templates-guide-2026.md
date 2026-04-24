@@ -175,5 +175,5 @@ Yes. Apache-2.0 allows commercial use, modification, and distribution with attri
 ## Related Resources
 
 - [Claude Code Templates: 600+ Agents](/claude-code-templates-600-agents-guide-2026/) — Claude Code-specific templates
-- [The Claude Code Playbook](/the-claude-code-playbook/) — workflow patterns inspired by these templates
-- [Claude Code Best Practices](/claude-code-best-practices-2026/) — applying agent patterns to daily work
+- [The Claude Code Playbook](/playbook/) — workflow patterns inspired by these templates
+- [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — applying agent patterns to daily work

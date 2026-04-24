@@ -119,4 +119,4 @@ async function sendWelcomeEmail(email: string, name: string) {
 - [Simplicity First Principle](/karpathy-simplicity-first-principle-claude-code-2026/) — the underlying principle
 - [Before and After Code Examples](/karpathy-simplicity-first-examples-2026/) — 6 side-by-side comparisons
 - [Stop Claude Code Writing Excessive Code](/claude-code-writes-too-much-code-fix-2026/) — related problem
-- [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) — structuring rules
+- [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — structuring rules

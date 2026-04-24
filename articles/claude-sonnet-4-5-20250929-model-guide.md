@@ -227,7 +227,7 @@ With a 200,000-token context window, Sonnet 4.5 handles large codebases and exte
 - [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — optimize prompts for Sonnet models
 - [Cost tracking with ccusage](/ccusage-claude-code-cost-tracking-guide-2026/) — monitor per-model spend
 - [API mode vs interactive](/claude-code-api-mode-vs-interactive-2026/) — model selection in different modes
-- [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive Claude Code reference
+- [The Claude Code Playbook](/playbook/) — comprehensive Claude Code reference
 
 - [Claude temperature settings guide](/claude-temperature-settings-guide/) — Configure temperature for Sonnet 4.5
 ### Can I use Sonnet 4.5 with the Claude Agent SDK?

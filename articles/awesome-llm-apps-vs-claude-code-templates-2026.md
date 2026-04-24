@@ -53,7 +53,7 @@ Here is where the repos genuinely complement each other. You can use Claude Code
 
 This workflow combines the best of both: a well-configured development tool working on a solid application foundation.
 
-For more on this workflow, see the guide on [Claude Code best practices](/claude-code-best-practices-2026/).
+For more on this workflow, see the guide on [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/).
 
 ## Community and Maintenance
 

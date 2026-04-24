@@ -90,4 +90,4 @@ When creating a new file: use modern patterns.
 
 Use the [andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) "Don't Assume" principle as a reminder to read before writing. Legacy code has reasons for its patterns that are not always visible.
 
-For migration planning, see [The Claude Code Playbook](/the-claude-code-playbook/). Learn about scoping Claude Code sessions to specific directories in the [large repo guide](/claude-code-slow-on-large-repos-fix-2026/). For code quality patterns that respect existing style, see our [best practices guide](/claude-code-best-practices-2026/).
+For migration planning, see [The Claude Code Playbook](/playbook/). Learn about scoping Claude Code sessions to specific directories in the [large repo guide](/claude-code-slow-on-large-repos-fix-2026/). For code quality patterns that respect existing style, see our [best practices guide](/karpathy-skills-vs-claude-code-best-practices-2026/).

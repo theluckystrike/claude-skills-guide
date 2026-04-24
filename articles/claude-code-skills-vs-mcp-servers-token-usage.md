@@ -320,10 +320,10 @@ The migration took 3 hours. The savings recur every month indefinitely.
 
 ## Related Guides
 
-- [Claude Code Skills Guide](/claude-code-skills-guide/) -- full reference for creating and managing skills
+- [Claude Code Skills Guide](/skills/) -- full reference for creating and managing skills
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- MCP installation and configuration
-- [Claude Code Context Window Management](/claude-code-context-window-management/) -- broader context optimization strategies
+- [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- broader context optimization strategies
 
-- [Claude Code Skills Guide](/claude-code-skills-guide/) -- full reference for creating and managing skills
+- [Claude Code Skills Guide](/skills/) -- full reference for creating and managing skills
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- MCP installation and configuration
-- [Claude Code Context Window Management](/claude-code-context-window-management/) -- broader context optimization strategies
+- [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- broader context optimization strategies

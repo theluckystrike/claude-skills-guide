@@ -51,7 +51,7 @@ Karpathy Skills addresses Claude's knowledge gap: Claude does not inherently kno
 
 The Ultimate Guide addresses your knowledge gap: you may not know how Claude Code handles tool use, manages context windows, or processes system prompts. The guide fills that gap.
 
-For a complete foundation, pair Karpathy Skills with a solid understanding of [CLAUDE.md best practices](/claude-md-file-best-practices-guide/) from your own experience.
+For a complete foundation, pair Karpathy Skills with a solid understanding of [CLAUDE.md best practices](/claude-md-best-practices-10-templates-compared-2026/) from your own experience.
 
 ## Practical Impact
 
@@ -84,4 +84,4 @@ The Ultimate Guide requires investment. You cannot just hand a developer 22K lin
 
 ## Final Recommendation
 
-Install Karpathy Skills right now — it takes 30 seconds and works immediately. Then bookmark the Ultimate Guide and work through it over the next week. Use the quiz questions to verify your understanding. The combination gives you both improved Claude behavior and improved personal knowledge, which compound together. Also explore the [Claude Code playbook](/the-claude-code-playbook/) for workflow patterns that bridge the gap between behavioral rules and deep knowledge.
+Install Karpathy Skills right now — it takes 30 seconds and works immediately. Then bookmark the Ultimate Guide and work through it over the next week. Use the quiz questions to verify your understanding. The combination gives you both improved Claude behavior and improved personal knowledge, which compound together. Also explore the [Claude Code playbook](/playbook/) for workflow patterns that bridge the gap between behavioral rules and deep knowledge.

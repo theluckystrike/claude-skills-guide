@@ -96,7 +96,7 @@ git diff --exit-code pnpm-lock.yaml
 
 Use the [ccusage](https://github.com/ryoppippi/ccusage) tool to track if sessions are adding packages, and audit them weekly.
 
-For more on managing your project setup, see [The Claude Code Playbook](/the-claude-code-playbook/). For CI enforcement of dependency rules, read the [CI/CD integration guide](/claude-code-ci-cd-integration-guide-2026/). For approved dependency lists in CLAUDE.md, see the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/).
+For more on managing your project setup, see [The Claude Code Playbook](/playbook/). For CI enforcement of dependency rules, read the [CI/CD integration guide](/claude-code-ci-cd-integration-guide-2026/). For approved dependency lists in CLAUDE.md, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).
 
 
 ## Related

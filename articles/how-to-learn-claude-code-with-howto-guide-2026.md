@@ -123,5 +123,5 @@ Three features set Claude Howto apart from generic tutorials:
 
 - Deepen your knowledge with the [Claude Code Ultimate Guide](/claude-code-ultimate-guide-vs-howto-2026/)
 - Install [Karpathy Skills](/how-to-install-karpathy-skills-claude-code-2026/) for immediate behavioral improvements
-- Explore the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/) for advanced configuration
+- Explore the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/) for advanced configuration
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for tools to add to your setup

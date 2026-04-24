@@ -166,5 +166,5 @@ Agents are behavioral profiles (how Claude Code should act). Skills are rule set
 ## Related Resources
 
 - [Claude Skills Directory](/claude-skills-directory-where-to-find-skills/) — where to find and install skills
-- [Claude Code Hooks Explained](/claude-code-hooks-explained/) — understanding the hook components
-- [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) — integrating agents and skills into your config
+- [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — understanding the hook components
+- [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — integrating agents and skills into your config

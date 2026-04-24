@@ -74,7 +74,7 @@ Roughly 50% of Awesome Toolkit's entries appear in Awesome Claude Code. The uniq
 - You specifically need plugins and want extensive options
 - You need agents categorized by framework or language
 - You want maximum coverage even at the cost of some noise
-- You are building a [Claude Code setup](/claude-code-best-practices-2026/) and want to see every option
+- You are building a [Claude Code setup](/karpathy-skills-vs-claude-code-best-practices-2026/) and want to see every option
 
 ## Practical Decision Matrix
 

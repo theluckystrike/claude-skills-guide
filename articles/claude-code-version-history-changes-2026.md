@@ -142,4 +142,4 @@ Check Anthropic's documentation for version pinning options. Enterprise customer
 ### Where do I report breaking changes?
 Report to Anthropic for core Claude Code issues. Report to the specific ecosystem repo for community tool incompatibilities.
 
-For the full ecosystem overview, see the [tools map](/claude-code-ecosystem-complete-map-2026/). For configuration that survives updates, read the [configuration hierarchy guide](/claude-code-configuration-hierarchy-explained-2026/). For CLAUDE.md patterns that are update-resilient, see the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/).
+For the full ecosystem overview, see the [tools map](/claude-code-ecosystem-complete-map-2026/). For configuration that survives updates, read the [configuration hierarchy guide](/claude-code-configuration-hierarchy-explained-2026/). For CLAUDE.md patterns that are update-resilient, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).

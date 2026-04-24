@@ -228,7 +228,7 @@ API calls will return an error. You will need to add a payment method or switch 
 - [Best cost-saving tools](/best-claude-code-cost-saving-tools-2026/) — third-party cost tools
 - [Claude Code prompt engineering](/claude-code-prompt-engineering-tips-2026/) — better prompts cost less
 - [Pricing plans comparison](/claude-code-pricing-plans-comparison-2026/) — Pro vs Max vs API
-- [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive reference
+- [The Claude Code Playbook](/playbook/) — comprehensive reference
 
 - [Claude Code 价格指南 (Chinese Pricing Guide)](/claude-code-jiage-pricing-guide/) — Claude Code pricing guide in Chinese
 ### Is there a way to get free Claude API credits for academic research?

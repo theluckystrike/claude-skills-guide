@@ -383,7 +383,7 @@ Yes. The MCP protocol is open. You can build a custom server that provides a dif
 - [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — curated server list
 - [MCP Servers Complete Setup](/mcp-servers-claude-code-complete-setup-2026/) — end-to-end walkthrough
 - [Awesome MCP Servers Directory](/awesome-mcp-servers-directory-guide-2026/) — community directory
-- [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive workflow reference
+- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
 - [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
 - [Configuration Hierarchy Explained](/claude-code-configuration-hierarchy-explained-2026/) — settings precedence
 

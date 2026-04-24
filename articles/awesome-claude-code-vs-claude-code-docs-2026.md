@@ -68,7 +68,7 @@ Claude Code Docs uses an auto-update hook that syncs from the official source. N
 - You want to discover new tools for your Claude Code setup
 - You need to evaluate options in a category (hooks, MCPs, skills)
 - You want community-validated recommendations
-- You are building a [Claude Code toolkit](/claude-code-best-practices-2026/)
+- You are building a [Claude Code toolkit](/karpathy-skills-vs-claude-code-best-practices-2026/)
 
 **Choose Claude Code Docs when:**
 - You need offline access to official documentation
@@ -98,4 +98,4 @@ If you want to be notified of changes to Awesome Claude Code, watch the repo on 
 
 ## Final Recommendation
 
-Bookmark Awesome Claude Code at awesomeclaude.ai for ongoing tool discovery. Clone Claude Code Docs locally if you ever work offline or want fast local documentation access. They complement each other perfectly — one tells you what exists, the other tells you how things work. Use both alongside the [Claude Code playbook](/the-claude-code-playbook/) for a complete resource set.
+Bookmark Awesome Claude Code at awesomeclaude.ai for ongoing tool discovery. Clone Claude Code Docs locally if you ever work offline or want fast local documentation access. They complement each other perfectly — one tells you what exists, the other tells you how things work. Use both alongside the [Claude Code playbook](/playbook/) for a complete resource set.

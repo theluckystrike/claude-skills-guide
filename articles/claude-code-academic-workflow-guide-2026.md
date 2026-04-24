@@ -175,7 +175,7 @@ modelsummary(
 
 ## When NOT To Use
 
-- **Software development** — this is purely academic; use [general Claude Code practices](/claude-code-best-practices-2026/) for coding
+- **Software development** — this is purely academic; use [general Claude Code practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for coding
 - **Non-LaTeX writing** — the templates assume LaTeX; Google Docs or Word users need a different workflow
 - **Non-R statistical tools** — the agents target R specifically; Stata, Python (statsmodels), or Julia users need adaptation
 - **Quick drafts** — the rules add rigor that slows down exploratory writing
@@ -204,6 +204,6 @@ Yes, with supervision. The rules enforce good practices but can't replace unders
 
 ## Related Resources
 
-- [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) — general configuration patterns that complement academic rules
+- [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — general configuration patterns that complement academic rules
 - [Karpathy Don't Assume Principle](/karpathy-dont-assume-principle-claude-code-2026/) — the behavioral principle behind the academic workflow's clarifying questions
-- [The Claude Code Playbook](/the-claude-code-playbook/) — workflow patterns that apply across domains
+- [The Claude Code Playbook](/playbook/) — workflow patterns that apply across domains

@@ -115,4 +115,4 @@ Add ESLint rules enforcing JSDoc on exports:
 
 The [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) index includes documentation-generation skills that work alongside Claude Code.
 
-For documentation as part of your workflow, see [The Claude Code Playbook](/the-claude-code-playbook/). For enforcing documentation via hooks, read the [hooks guide](/claude-code-hooks-explained/). For team-wide documentation standards, check the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).
+For documentation as part of your workflow, see [The Claude Code Playbook](/playbook/). For enforcing documentation via hooks, read the [hooks guide](/understanding-claude-code-hooks-system-complete-guide/). For team-wide documentation standards, check the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).

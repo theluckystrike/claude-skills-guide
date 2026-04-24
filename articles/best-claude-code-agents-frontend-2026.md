@@ -170,4 +170,4 @@ Start with the agents that match your biggest pain points:
 
 Add the CLAUDE.md sections to your project and test with a real task. Adjust the rules based on your team's standards.
 
-For building custom agents from scratch, see the [agent building guide](/how-to-build-claude-code-agent-2026/). For more agent options, browse [Claude Code Templates](/how-to-install-claude-code-templates-cli-2026/) and the [skills directory](/claude-skills-directory-where-to-find-skills/). For the complete setup, see the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/).
+For building custom agents from scratch, see the [agent building guide](/how-to-build-claude-code-agent-2026/). For more agent options, browse [Claude Code Templates](/how-to-install-claude-code-templates-cli-2026/) and the [skills directory](/claude-skills-directory-where-to-find-skills/). For the complete setup, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).

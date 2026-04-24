@@ -336,6 +336,6 @@ This is the framework. Every other article in the CCG cost optimization series i
 ## Further Reading
 
 - [Cost Optimization Hub](/cost-optimization/) -- all cost techniques organized by category
-- [Claude Code Context Window Management](/claude-code-context-window-management/) -- context engineering in practice
-- [Claude Code Compact Command Guide](/claude-code-compact-command-guide/) -- the compress lever in detail
+- [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- context engineering in practice
+- [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- the compress lever in detail
 - [Playbook Hub](/playbook/) -- complete Claude Code production playbook

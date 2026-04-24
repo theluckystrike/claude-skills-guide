@@ -426,7 +426,7 @@ claude
 /compact
 ```
 
-**Check your CLAUDE.md for bloat.** An oversized [CLAUDE.md](/the-claude-code-playbook/) file adds tokens to every request. Keep it under 500 lines.
+**Check your CLAUDE.md for bloat.** An oversized [CLAUDE.md](/playbook/) file adds tokens to every request. Keep it under 500 lines.
 
 ## Environment Fixes
 
@@ -578,7 +578,7 @@ npm install @anthropic-ai/sdk@latest
 
 ## CLAUDE.md Rules to Reduce Likelihood
 
-Add these rules to your project's CLAUDE.md to minimize 500 errors in [Claude Code workflows](/the-claude-code-playbook/):
+Add these rules to your project's CLAUDE.md to minimize 500 errors in [Claude Code workflows](/playbook/):
 
 ```markdown
 # Error Resilience
@@ -648,7 +648,7 @@ With streaming, a 500 error can occur mid-stream, meaning you may receive partia
 - [Fix Claude API 529 Overloaded Error](/claude-api-529-overloaded-error-handling-fix/)
 - [Fix Claude Code Rate Limit 429 Error](/claude-code-rate-limit-429-retry-after-fix/)
 - [Fix Claude Code ETIMEOUT Corporate Proxy](/claude-code-etimeout-corporate-proxy-fix/)
-- [The Claude Code Playbook](/the-claude-code-playbook/)
+- [The Claude Code Playbook](/playbook/)
 - [Fix Claude Code Docker Cannot Reach API Endpoint](/claude-code-docker-cannot-reach-api-endpoint-fix/)
 - [Fix Claude Code Model Not Available in Region](/claude-code-model-not-available-region-fix/)
 - [Fix Claude Rate Exceeded Error](/claude-rate-exceeded-error-fix/)

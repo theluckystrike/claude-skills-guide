@@ -93,7 +93,7 @@ When writing code, assume it runs on a fresh Ubuntu container with:
 
 ## Prevention
 
-Add a [post-tool-use hook](/claude-code-hooks-explained/) that runs your CI checks after each file write:
+Add a [post-tool-use hook](/understanding-claude-code-hooks-system-complete-guide/) that runs your CI checks after each file write:
 
 ```json
 {
@@ -108,4 +108,4 @@ Add a [post-tool-use hook](/claude-code-hooks-explained/) that runs your CI chec
 
 The [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) index lists CI integration skills that validate changes against your pipeline before committing.
 
-For CI/CD integration patterns, see the [CI/CD integration guide](/claude-code-ci-cd-integration-guide-2026/). For hook configuration details, read the [hooks guide](/claude-code-hooks-explained/). For team workflow setup, see the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).
+For CI/CD integration patterns, see the [CI/CD integration guide](/claude-code-ci-cd-integration-guide-2026/). For hook configuration details, read the [hooks guide](/understanding-claude-code-hooks-system-complete-guide/). For team workflow setup, see the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).

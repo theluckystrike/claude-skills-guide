@@ -73,4 +73,4 @@ Add a function that calculates shipping cost based on weight and destination
 
 For a more robust TDD setup, consider [SuperClaude's TDD mode](/superclaude-framework-guide-2026/) which automates the cycle enforcement.
 
-Related: [Claude Code Best Practices](/claude-code-best-practices-2026/) | [The Claude Code Playbook](/the-claude-code-playbook/) | [Claude Code Hooks Explained](/claude-code-hooks-explained/)
+Related: [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) | [The Claude Code Playbook](/playbook/) | [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/)

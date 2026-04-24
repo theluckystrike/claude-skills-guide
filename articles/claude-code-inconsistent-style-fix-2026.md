@@ -57,7 +57,7 @@ Claude Code doesn't maintain state between sessions. Each session starts fresh. 
 - When in doubt about style, check the nearest existing file.
 ```
 
-Configure a [linting hook](/claude-code-hooks-explained/) for automatic enforcement:
+Configure a [linting hook](/understanding-claude-code-hooks-system-complete-guide/) for automatic enforcement:
 
 ```json
 {
@@ -75,4 +75,4 @@ Create 3 different files (a service, a route, a component) and check:
 - Same error handling pattern
 - Same export style
 
-Related: [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) | [Make Claude Code Follow Standards](/claude-code-wont-follow-coding-standards-fix-2026/) | [Claude Code Hooks Explained](/claude-code-hooks-explained/)
+Related: [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) | [Make Claude Code Follow Standards](/claude-code-wont-follow-coding-standards-fix-2026/) | [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/)

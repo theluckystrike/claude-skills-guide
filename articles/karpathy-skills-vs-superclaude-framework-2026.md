@@ -42,7 +42,7 @@ Karpathy's four principles produce surprisingly deep changes in Claude's output.
 
 SuperClaude's behavior changes are more granular but also more predictable. When you run `/review` in "careful" mode, you know exactly what kind of output to expect: line-by-line analysis with severity ratings. The 16 agent types each have documented behavior patterns.
 
-For [writing effective CLAUDE.md files](/claude-md-file-best-practices-guide/), Karpathy Skills serves as an excellent starting template that you can extend with project-specific rules.
+For [writing effective CLAUDE.md files](/claude-md-best-practices-10-templates-compared-2026/), Karpathy Skills serves as an excellent starting template that you can extend with project-specific rules.
 
 ## Integration and Compatibility
 
@@ -50,7 +50,7 @@ Karpathy Skills has zero integration concerns. It is a markdown file. It works w
 
 SuperClaude requires more care. Its slash commands can conflict with custom commands you have already defined. Its agent modes may override behavioral instructions from your own CLAUDE.md. The framework is well-designed, but you need to understand the precedence rules when combining it with other tools.
 
-If you are already using [Claude Code hooks](/claude-code-hooks-explained/) or custom skills from the [skills directory](/claude-skills-directory-where-to-find-skills/), test SuperClaude in a fresh project first to identify any conflicts.
+If you are already using [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) or custom skills from the [skills directory](/claude-skills-directory-where-to-find-skills/), test SuperClaude in a fresh project first to identify any conflicts.
 
 ## Maintenance Overhead
 
@@ -80,7 +80,7 @@ SuperClaude requires each team member to install the CLI. The upside is consiste
 
 **Use both when:**
 - You want the behavioral foundation from Karpathy combined with SuperClaude's tactical commands
-- You are building a sophisticated [Claude Code playbook](/the-claude-code-playbook/) for your team
+- You are building a sophisticated [Claude Code playbook](/playbook/) for your team
 
 ## Final Recommendation
 

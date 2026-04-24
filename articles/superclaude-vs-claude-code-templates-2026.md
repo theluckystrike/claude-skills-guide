@@ -78,7 +78,7 @@ SuperClaude works well for teams that want standardized tooling. Everyone instal
 
 Templates works well for teams that want curated tooling. A tech lead can select specific templates, commit them to the repo, and every developer gets the approved set without installing the CLI.
 
-For [building team playbooks](/the-claude-code-playbook/), Templates gives you more granular control over exactly which tools your team uses.
+For [building team playbooks](/playbook/), Templates gives you more granular control over exactly which tools your team uses.
 
 ## When To Use Each
 

@@ -334,7 +334,7 @@ Almost certainly not. Conversations are stored on Anthropic's servers. The error
 - [Fix Claude AI Rate Exceeded Error](/claude-ai-rate-exceeded-error-fix/)
 - [Fix Claude API 503 Service Unavailable](/claude-api-503-service-unavailable-fix/)
 - [Fix Claude API 529 Overloaded Error](/claude-api-529-overloaded-error-handling-fix/)
-- [The Claude Code Playbook](/the-claude-code-playbook/)
+- [The Claude Code Playbook](/playbook/)
 - [Fix Claude Code ETIMEOUT Corporate Proxy](/claude-code-etimeout-corporate-proxy-fix/)
 - [Fix Claude Code Model Not Available in Region](/claude-code-model-not-available-region-fix/)
 

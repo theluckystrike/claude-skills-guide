@@ -165,7 +165,7 @@ Each MCP tool definition adds ~50-100 tokens to the context. With 3 servers expo
 
 ## Related Resources
 
-- [MCP Setup Guide](/claude-code-mcp-setup-guide/) — step-by-step MCP configuration for Claude Code
-- [Claude Code Best Practices](/claude-code-best-practices-2026/) — patterns for effective MCP usage
-- [Claude Code Hooks Explained](/claude-code-hooks-explained/) — hooks can trigger MCP operations
+- [MCP Setup Guide](/mcp-servers-claude-code-complete-setup-2026/) — step-by-step MCP configuration for Claude Code
+- [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — patterns for effective MCP usage
+- [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — hooks can trigger MCP operations
 

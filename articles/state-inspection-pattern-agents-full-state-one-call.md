@@ -353,4 +353,4 @@ The version field allows CLAUDE.md rules to specify expectations: "Inspection en
 
 - [Agent-First Backend Design: Principles for Token Efficiency](/agent-first-backend-design-token-efficiency/) -- the broader architecture philosophy
 - [Reducing Claude Code MCP Round-Trips: Batch Operations Pattern](/reducing-claude-code-mcp-round-trips-batch-pattern/) -- batch pattern for MCP operations
-- [Claude Code Hooks Guide](/claude-code-hooks-guide/) -- automate state checks with hooks
+- [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- automate state checks with hooks

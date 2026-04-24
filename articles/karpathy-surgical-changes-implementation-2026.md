@@ -145,5 +145,5 @@ After making changes, verify:
 
 - [Surgical Changes: Diff-Minimizing Examples](/karpathy-surgical-changes-examples-2026/) — more before/after diffs
 - [Fix Claude Code Touching Unrelated Files](/karpathy-surgical-changes-debugging-2026/) — debugging scope creep
-- [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) — where surgical rules fit
-- [Claude Code Hooks Explained](/claude-code-hooks-explained/) — hooks can enforce diff size limits
+- [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — where surgical rules fit
+- [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — hooks can enforce diff size limits

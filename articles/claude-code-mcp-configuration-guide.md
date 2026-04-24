@@ -496,7 +496,7 @@ Claude Code supports the current MCP specification. Servers built with the offic
 - [Awesome MCP Servers Directory](/awesome-mcp-servers-directory-guide-2026/) — find servers to install
 - [claude_desktop_config.json Guide](/claude-desktop-config-json-guide/) — Desktop app configuration
 - [Configuration Hierarchy Explained](/claude-code-configuration-hierarchy-explained-2026/) — settings precedence
-- [The Claude Code Playbook](/the-claude-code-playbook/) — comprehensive workflow reference
+- [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
 - [Sequential Thinking in Claude Code](/sequential-thinking-claude-code-guide/) — structured problem solving with MCP
 
 ### Can I use environment variables from my shell in the env field?

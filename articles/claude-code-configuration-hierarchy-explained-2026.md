@@ -224,4 +224,4 @@ Commit it if it contains only project-relevant hooks and non-sensitive MCP confi
 ### How do I debug configuration issues?
 Check files in order: `~/.claude/CLAUDE.md` → `./CLAUDE.md` → `./.claude/settings.json`. The [claude-code-system-prompts](https://github.com/Piebald-AI/claude-code-system-prompts) repo helps you understand what Claude Code sees by default.
 
-For CLAUDE.md writing guides, see the [CLAUDE.md best practices guide](/claude-md-file-best-practices-guide/). For hook configuration, read the [hooks guide](/claude-code-hooks-explained-complete-guide-2026/). For enterprise setup with organization-level config, see the [enterprise guide](/claude-code-enterprise-setup-guide-2026/).
+For CLAUDE.md writing guides, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). For hook configuration, read the [hooks guide](/claude-code-hooks-explained-complete-guide-2026/). For enterprise setup with organization-level config, see the [enterprise guide](/claude-code-enterprise-setup-guide-2026/).

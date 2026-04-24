@@ -48,7 +48,7 @@ This is where Task Master earns its keep. Feed it a 2-page PRD and it generates 
 
 Manual decomposition depends entirely on your discipline. Most developers start with good intentions and a clean task list, then gradually let it decay as the project evolves. Tasks get vague ("fix the auth thing"), dependencies go untracked, and the list becomes a graveyard of half-finished items.
 
-For teams following [Claude Code best practices](/claude-code-best-practices-2026/), Task Master enforces the structure that manual tracking relies on your discipline to maintain.
+For teams following [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/), Task Master enforces the structure that manual tracking relies on your discipline to maintain.
 
 ## Integration With Claude Code
 
@@ -85,7 +85,7 @@ Task Master scales to hundreds of tasks because dependencies are tracked in a gr
 - You want Claude to autonomously select and execute tasks
 - Task dependencies are complex and hard to track manually
 - You are working with a team and need structured task tracking
-- You are building a [Claude Code playbook](/the-claude-code-playbook/) for repeatable project execution
+- You are building a [Claude Code playbook](/playbook/) for repeatable project execution
 
 ## Final Recommendation
 

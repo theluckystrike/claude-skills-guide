@@ -99,4 +99,4 @@ One line changed. The bug is fixed. Everything else stays put.
 - **Simplicity First** — surgical changes are simple by nature
 - [Implement Surgical Changes in CLAUDE.md](/karpathy-surgical-changes-implementation-2026/)
 - [Diff-Minimizing Examples](/karpathy-surgical-changes-examples-2026/)
-- [The Claude Code Playbook](/the-claude-code-playbook/)
+- [The Claude Code Playbook](/playbook/)

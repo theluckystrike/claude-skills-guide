@@ -64,7 +64,7 @@ Create `packages/api/CLAUDE.md`:
 
 ### 3. Workspace-Aware Commands
 
-Add to [commands](/claude-code-hooks-explained/):
+Add to [commands](/understanding-claude-code-hooks-system-complete-guide/):
 
 ```markdown
 # .claude/commands/add-dep.md
@@ -94,4 +94,4 @@ Add a date formatting utility to the shared package
 **Bad:** creates `packages/shared/src/utils/date.ts`, adds `date-fns` to root `package.json`
 **Good:** creates the utility in `packages/shared/src/utils/`, runs `pnpm add date-fns --filter @myorg/shared`, verifies no downstream breaks
 
-Related: [CLAUDE.md Best Practices](/claude-md-file-best-practices-guide/) | [Claude Code Best Practices](/claude-code-best-practices-2026/) | [Karpathy Don't Assume Examples](/karpathy-dont-assume-examples-real-projects-2026/)
+Related: [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) | [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) | [Karpathy Don't Assume Examples](/karpathy-dont-assume-examples-real-projects-2026/)

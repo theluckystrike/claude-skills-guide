@@ -44,7 +44,7 @@ The templates are community-tested, which means they work for common cases but m
 
 Official docs include code examples but they are reference examples, not copy-paste templates. They show the syntax and options but expect you to adapt them to your project. More educational, less immediately usable.
 
-For building your [CLAUDE.md file](/claude-md-file-best-practices-guide/), Howto's templates get you started faster while official docs help you understand every available option.
+For building your [CLAUDE.md file](/claude-md-best-practices-10-templates-compared-2026/), Howto's templates get you started faster while official docs help you understand every available option.
 
 ## Accuracy and Currency
 
@@ -79,4 +79,4 @@ Official docs are web-based. For offline access, you would need the [Claude Code
 
 ## Final Recommendation
 
-Clone Claude Howto on day one. The visual guides and templates accelerate your learning curve significantly. Bookmark the official docs and reference them when Howto does not cover your specific question or when you need to verify behavior. This two-resource strategy gives you both speed and accuracy. As you grow more experienced, you will naturally shift toward official docs for the details and use Howto mainly for its templates and diagrams. Also explore the [Claude Code playbook](/the-claude-code-playbook/) for workflow patterns that build on both resources.
+Clone Claude Howto on day one. The visual guides and templates accelerate your learning curve significantly. Bookmark the official docs and reference them when Howto does not cover your specific question or when you need to verify behavior. This two-resource strategy gives you both speed and accuracy. As you grow more experienced, you will naturally shift toward official docs for the details and use Howto mainly for its templates and diagrams. Also explore the [Claude Code playbook](/playbook/) for workflow patterns that build on both resources.
