@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Dark Reader Alternative for Chrome"
+title: "Dark Reader Alternative for Chrome (2026)"
 description: "Best Dark Reader alternatives for Chrome in 2026. Developer-focused dark mode extensions with custom CSS, API access, and automation support."
 date: 2026-03-15
 last_modified_at: 2026-04-17

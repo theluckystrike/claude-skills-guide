@@ -1,8 +1,7 @@
 ---
-title: "Fix Claude Skill Infinite Loop"
+title: "Fix Claude Skill Infinite Loop (2026)"
 description: "Diagnose and fix infinite loops caused by skill auto-invocation cycles, compaction re-triggering, and recursive script execution in Claude Code."
 permalink: /fix-claude-skill-infinite-loop/
-render_with_liquid: false
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, infinite-loop, recursion, troubleshooting]
 last_updated: 2026-04-19

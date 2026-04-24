@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Criterion Rust"
+title: "Claude Code for Criterion Rust (2026)"
 description: "Run Criterion benchmarks in Rust with Claude Code for statistical analysis, regression detection, and performance comparison. Workflow with examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

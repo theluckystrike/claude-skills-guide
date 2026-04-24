@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Pixie K8S"
+title: "Claude Code For Pixie K8S (2026)"
 description: "Learn how to use Claude Code with Pixie for powerful Kubernetes observability. This guide covers practical workflows, code examples, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

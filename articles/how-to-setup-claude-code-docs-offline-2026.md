@@ -1,9 +1,8 @@
 ---
-title: "Set Up Claude Code Docs for Offline Use"
+title: "Set Up Claude Code Docs for Offline Use (2026)"
 description: "Clone the Claude Code Docs mirror for offline access to official documentation. Configure auto-update hooks to stay current without manual syncing."
 permalink: /how-to-setup-claude-code-docs-offline-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Set Up Claude Code Docs for Offline Use (2026)

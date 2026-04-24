@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Version History and Changes"
+title: "Claude Code Version History and Changes (2026)"
 description: "Track Claude Code version changes in 2026 including new features, breaking changes, and ecosystem compatibility updates."
 permalink: /claude-code-version-history-changes-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Version History and Changes (2026)

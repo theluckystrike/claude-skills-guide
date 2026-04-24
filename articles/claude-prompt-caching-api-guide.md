@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Prompt Caching API Guide"
+title: "Claude Prompt Caching API Guide (2026)"
 description: "Implement Claude prompt caching to cut API costs by 90%. Covers automatic caching, explicit breakpoints, cache lifetime, and monitoring hit rates."
 date: 2026-04-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Structured Output + Thinking +"
+title: "Fix: Structured Output + Thinking + (2026)"
 description: "Fix bugs combining structured outputs, thinking, and tool use in the Anthropic API. Missing tool_use blocks and invalid JSON. Tested and working in 2026."
 last_tested: "2026-04-22"
 date: 2026-04-14

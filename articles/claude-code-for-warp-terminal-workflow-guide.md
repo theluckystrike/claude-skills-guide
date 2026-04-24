@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Use Claude Code with Warp"
+title: "How to Use Claude Code with Warp (2026)"
 description: "Configure Warp terminal for Claude Code with AI command suggestions, blocks workflow, and session management for productive development. Updated for 2026."
 permalink: /claude-code-warp-terminal-workflow-2026/
 date: 2026-04-21
@@ -11,7 +11,6 @@ tags: [claude-code, claude-skills]
 reviewed: true
 score: 8
 geo_optimized: true
-render_with_liquid: false
 ---
 
 The terminal is where developers spend significant time, and combining it with AI assistance creates a powerful productivity boost. Warp terminal, known for its modern interface and AI-powered features, pairs exceptionally well with Claude Code to streamline development workflows. This guide walks you through setting up and maximizing Claude Code within your Warp environment.

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Voice Typing Chrome Extension Guide"
+title: "AI Voice Typing Chrome Extension Guide (2026)"
 description: "Learn how AI voice typing Chrome extensions work, their implementation details, and how to build one. Covers Web Speech API, WebSocket streaming, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Total Cost of Ownership"
+title: "Claude Code Total Cost of Ownership (2026)"
 description: "A practical breakdown of the total cost of ownership for Claude Code in enterprise environments. Includes licensing, skill development, training, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

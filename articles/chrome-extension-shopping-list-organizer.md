@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Shopping List Organizer Chrome"
+title: "Shopping List Organizer Chrome (2026)"
 description: "Learn how to build or customize a Chrome extension shopping list organizer for developers and power users. Includes code examples, architecture patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -335,6 +334,7 @@ QRCode.toDataURL(JSON.stringify(currentList), { width: 200 }, (err, url) => {
 ```
 
 Price Threshold Alerts
+{% raw %}
 Store a budget cap per list and display a warning badge when the estimated total exceeds it. Pull unit prices from the page the user is browsing (Amazon, Walmart, Instacart) using a content script that reads structured product data from `window.__NEXT_DATA__` or JSON-LD `<script>` tags.
 
 ## Comparison with Existing Tools
@@ -393,3 +393,5 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
+
+{% endraw %}

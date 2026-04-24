@@ -1,9 +1,8 @@
 ---
-title: "Awesome LLM Apps: Agent Templates Guide"
+title: "Awesome LLM Apps: Agent Templates Guide (2026)"
 description: "Browse 100+ runnable agent and RAG templates in awesome-llm-apps (107K stars) — Apache-2.0 licensed, production-ready reference implementations."
 permalink: /awesome-llm-apps-agent-templates-guide-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Awesome LLM Apps: Agent Templates Guide (2026)
@@ -69,6 +68,9 @@ git checkout
 6. **Streaming Support** — chat and coding templates include streaming response handlers for real-time output.
 
 7. **Environment Templates** — `.env.example` files with every required variable documented. Copy, fill in your keys, run.
+
+For more on this topic, see [CLAUDE.md Templates Library](/templates-library/).
+
 
 8. **Complexity Gradient** — templates range from simple (single-agent chatbot) to advanced (multi-agent orchestration with human-in-the-loop). Pick your starting point.
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for T3 Stack (tRPC +"
+title: "Claude Code for T3 Stack (tRPC + (2026)"
 description: "Build type-safe T3 stack apps with Claude Code for tRPC routers, Next.js pages, and Prisma schemas. Full-stack TypeScript workflow examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

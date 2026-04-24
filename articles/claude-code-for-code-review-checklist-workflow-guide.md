@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Code Review Checklist"
+title: "Claude Code for Code Review Checklist (2026)"
 description: "Learn how to create an efficient code review checklist workflow using Claude Code. Automate your review process with practical examples and actionable."
 date: 2026-03-15
 last_modified_at: 2026-04-17

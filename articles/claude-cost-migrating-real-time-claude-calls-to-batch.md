@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Migrating Real-Time Claude Calls"
+title: "Migrating Real-Time Claude Calls (2026)"
 description: "Move eligible Claude API calls to batch mode with this migration guide. Save $1,400/month on a typical 3-service architecture."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, batch-api, migration]
-render_with_liquid: false
 ---
 
 # Migrating Real-Time Claude Calls to Batch API

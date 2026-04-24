@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "AI Blog Post Generator Chrome"
+title: "AI Blog Post Generator Chrome (2026)"
 description: "Discover how to use AI-powered blog post generators as Chrome extensions. Practical examples, APIs, and automation techniques for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

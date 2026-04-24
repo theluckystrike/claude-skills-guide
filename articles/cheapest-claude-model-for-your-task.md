@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Choose the Cheapest Claude Model"
+title: "How to Choose the Cheapest Claude Model (2026)"
 description: "Match each task type to the cheapest Claude model that delivers — save $42,000/month by routing 70% of requests to Haiku."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # How to Choose the Cheapest Claude Model for Your Task

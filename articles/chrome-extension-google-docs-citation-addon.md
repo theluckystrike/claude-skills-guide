@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Google Docs Citation"
+title: "Chrome Extension Google Docs Citation (2026)"
 description: "Learn how to build and integrate chrome extension Google Docs citation addons for automated bibliography management and academic writing."
 date: 2026-03-15
 last_modified_at: 2026-04-17

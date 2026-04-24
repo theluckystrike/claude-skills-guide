@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code RTL Layout Guide"
+title: "Claude Code RTL Layout Guide (2026)"
 description: "Build RTL layouts for Arabic, Hebrew, and Persian with Claude Code. Includes CLAUDE.md config, bidirectional text handling, and tested examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

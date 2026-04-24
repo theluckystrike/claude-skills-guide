@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Opus Prefill Not Supported"
+title: "Fix Claude Opus Prefill Not Supported (2026)"
 description: "Fix Claude Opus 4.6 prefill not supported error. Use structured outputs, system prompts, or output_config.format instead of assistant prefilling."
 date: 2026-04-15
 last_modified_at: 2026-04-17

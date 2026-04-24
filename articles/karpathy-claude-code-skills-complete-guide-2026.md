@@ -1,9 +1,8 @@
 ---
-title: "Karpathy Skills for Claude Code"
+title: "Karpathy Skills for Claude Code (2026)"
 description: "Install and configure Andrej Karpathy's CLAUDE.md behavioral skills that enforce Don't Assume, Surface Tradeoffs, and Goal-Driven Execution in Claude Code."
 permalink: /karpathy-claude-code-skills-complete-guide-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Karpathy Skills for Claude Code: Complete Guide (2026)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Jira MCP Server + Claude Code"
+title: "Jira MCP Server + Claude Code (2026)"
 description: "Connect Jira to Claude Code via MCP server for automated ticket management, sprint planning, and issue tracking. Configuration and examples included."
 date: 2026-03-14
 last_modified_at: 2026-04-17

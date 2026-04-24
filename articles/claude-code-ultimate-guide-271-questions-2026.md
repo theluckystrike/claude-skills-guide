@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Guide: 271 Questions"
+title: "Claude Code Guide: 271 Questions (2026)"
 description: "Review the claude-code-ultimate-guide — 22K+ lines, 271 quiz questions, 225 templates, 41 Mermaid diagrams, and a 655-entry malicious skills DB."
 permalink: /claude-code-ultimate-guide-271-questions-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Ultimate Guide: 271 Questions (2026)

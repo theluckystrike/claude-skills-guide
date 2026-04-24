@@ -1,10 +1,9 @@
 ---
-title: "Claude Code Sonnet vs Haiku"
+title: "Claude Code Sonnet vs Haiku (2026)"
 description: "Haiku 4.5 costs 73% less than Sonnet 4.6 per token and handles simple Claude Code tasks equally well. This guide identifies when to use each model by task type."
 permalink: /claude-code-sonnet-vs-haiku-cheaper-actually-better/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Sonnet vs Haiku: When Cheaper Is Actually Better

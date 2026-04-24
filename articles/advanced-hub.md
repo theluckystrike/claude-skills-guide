@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Advanced Claude Skills"
+title: "Advanced Claude Skills (2026)"
 description: "Advanced Claude skills guide covering token optimization, skill chaining strategies, and cost reduction for power users and engineering teams."
 date: 2026-03-13
 last_modified_at: 2026-04-17

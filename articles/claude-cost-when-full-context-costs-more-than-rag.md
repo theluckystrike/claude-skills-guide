@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "When Full Context Costs More Than a RAG"
+title: "When Full Context Costs More Than a RAG (2026)"
 description: "Full-context queries cost $1.00+ each on Opus. RAG drops that to $0.10. Here is the exact break-even point for switching."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # When Full Context Costs More Than a RAG Pipeline

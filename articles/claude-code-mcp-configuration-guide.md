@@ -1,9 +1,8 @@
 ---
-title: "Claude Code MCP Configuration"
+title: "Claude Code MCP Configuration (2026)"
 description: "Complete guide to configuring MCP servers in Claude Code. Settings.json schema, scope precedence, CLI commands, 5 server examples, and troubleshooting."
 permalink: /claude-code-mcp-configuration-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Code MCP Configuration: Full Setup (2026)
@@ -163,6 +162,7 @@ With the environment variables from `env` added to the process environment. The 
 <pre id="mcg-out" style="background:#0f172a;padding:16px;border-radius:6px;color:#4ade80;font-size:13px;overflow-x:auto;white-space:pre;margin:0 0 12px 0;min-height:60px;">// Select servers above to generate settings.json</pre>
 <button onclick="navigator.clipboard.writeText(document.getElementById('mcg-out').textContent).then(function(){var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy to Clipboard'},2000)}.bind(this))" style="padding:8px 20px;background:#6ee7b7;color:#0f172a;border:none;border-radius:6px;font-weight:600;cursor:pointer;font-size:14px;">Copy to Clipboard</button>
 </div>
+{% raw %}
 <script>
 document.querySelectorAll('.mcg-cb').forEach(function(cb){cb.addEventListener('change',function(){var servers={};document.querySelectorAll('.mcg-cb:checked').forEach(function(c){var entry={command:c.getAttribute('data-cmd'),args:JSON.parse(c.getAttribute('data-args'))};var envStr=c.getAttribute('data-env');if(envStr)entry.env=JSON.parse(envStr);servers[c.getAttribute('data-name')]=entry;});var out=Object.keys(servers).length>0?JSON.stringify({mcpServers:servers},null,2):'// Select servers above to generate settings.json';document.getElementById('mcg-out').textContent=out;});});
 </script>
@@ -534,3 +534,5 @@ Claude Code will see both tools and may use either one. To avoid confusion, ensu
   ]
 }
 </script>
+
+{% endraw %}

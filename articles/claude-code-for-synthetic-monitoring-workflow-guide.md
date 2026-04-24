@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Synthetic Monitoring"
+title: "Claude Code for Synthetic Monitoring (2026)"
 description: "Learn how to build intelligent synthetic monitoring workflows with Claude Code. This guide covers automation patterns, proactive alerting, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

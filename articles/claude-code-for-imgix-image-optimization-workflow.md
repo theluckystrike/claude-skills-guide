@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Imgix Image"
+title: "Claude Code for Imgix Image (2026)"
 description: "Learn how to build Claude Code skills that automate Imgix image optimization workflows. Practical examples for URL generation, responsive images, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Pulumi TypeScript Infra"
+title: "Claude Code Pulumi TypeScript Infra (2026)"
 description: "Use Claude Code with Pulumi and TypeScript to automate infrastructure provisioning. Practical patterns for building, testing, and managing cloud."
 date: 2026-03-14
 last_modified_at: 2026-04-17

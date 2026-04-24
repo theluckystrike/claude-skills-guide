@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Zellij: Terminal Workflow"
+title: "Claude Code + Zellij: Terminal Workflow (2026)"
 description: "Set up Claude Code with Zellij terminal multiplexer. Persistent sessions, split panes, and layout configs for productive coding. Tested 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17

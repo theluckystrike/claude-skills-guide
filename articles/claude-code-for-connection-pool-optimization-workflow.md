@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Optimize Connection Pools with Claude"
+title: "Optimize Connection Pools with Claude (2026)"
 description: "Tune database connection pools with Claude Code for optimal sizing, timeout settings, and leak detection. Reduce latency by 30% with tested configs."
 date: 2026-04-19
 last_modified_at: 2026-04-19

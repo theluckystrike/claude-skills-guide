@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Glow Markdown Viewer"
+title: "Claude Code + Glow Markdown Viewer (2026)"
 description: "Render markdown beautifully in your terminal with Glow and Claude Code. Preview docs, READMEs, and skill files with syntax highlighting and styling."
 date: 2026-03-15
 last_modified_at: 2026-04-17

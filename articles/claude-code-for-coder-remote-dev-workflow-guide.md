@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Coder — Workflow Guide"
-description: "Run Claude Code in Coder remote dev environments. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Coder — Workflow Guide (2026)"
+description: "Claude Code for Coder — Workflow Guide — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-coder-remote-dev-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, coder, workflow]
 ---

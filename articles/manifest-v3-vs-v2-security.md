@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Manifest V3 vs V2 Security Comparison"
+title: "Manifest V3 vs V2 Security Comparison (2026)"
 description: "Manifest V3 tightens Chrome extension security with declarativeNetRequest, service workers, and reduced permissions. See what breaks and how to migrate."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -283,6 +282,7 @@ Manifest V3 enforces a stricter default Content Security Policy for extension pa
 }
 ```
 
+{% raw %}
 Inline JavaScript in extension HTML pages (`onclick="..."`, `<script>` tags without hashes) is blocked by default. All event handlers must be attached programmatically from external `.js` files. This is a common migration problem for older extensions that used inline handlers extensively.
 
 ## Migration Strategies
@@ -397,3 +397,5 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
+
+{% endraw %}

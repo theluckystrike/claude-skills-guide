@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Setup Claude Code Project"
+title: "Setup Claude Code Project (2026)"
 description: "Initialize Claude Code projects with CLAUDE.md config, skill loading, and project structure setup. Production-ready patterns for new codebases."
 date: 2026-03-14
 last_modified_at: 2026-04-17

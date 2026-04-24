@@ -1,9 +1,8 @@
 ---
-title: "Awesome Claude Code"
+title: "Awesome Claude Code (2026)"
 description: "Navigate the awesome-claude-code repo — 40K stars of curated skills, hooks, slash-commands, agent orchestrators, and plugins for Claude Code developers."
 permalink: /awesome-claude-code-master-index-guide-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Awesome Claude Code: Master Resource Index (2026)
@@ -72,6 +71,15 @@ Say you need a cost-tracking solution. Instead of searching GitHub:
 1. Navigate to the **CLI Tools** section
 2. Find [ccusage](/ccusage-claude-code-cost-tracking-guide-2026/) — "CLI for session cost tracking, parses JSONL logs"
 3. Check the star count (13K+) and last-updated date
+
+For more on this topic, see [Claude Code for Hoppscotch](/claude-code-for-hoppscotch-workflow-guide/).
+
+For more on this topic, see [Claude Code for Automotive ECU AUTOSAR](/claude-code-automotive-ecu-autosar-2026/).
+
+
+For more on this topic, see [Claude Code for PocketBase](/claude-code-for-pocketbase-workflow-guide/).
+
+
 4. Click through to the repo and install
 
 Or you want behavioral guidelines:

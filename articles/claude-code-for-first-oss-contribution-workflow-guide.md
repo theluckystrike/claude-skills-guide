@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For First Oss"
+title: "Claude Code For First Oss (2026)"
 description: "A practical guide for developers making their first open source contribution using Claude Code. Learn the workflow, best practices, and how to navigate."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for SST — Workflow Guide"
-description: "Build serverless apps with SST v3 and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for SST — Workflow Guide (2026)"
+description: "Claude Code for SST — Workflow Guide — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-sst-serverless-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, sst, workflow]
 ---

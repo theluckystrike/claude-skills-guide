@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Status Line"
+title: "Claude Code Status Line (2026)"
 description: "What the Claude Code status line shows, how to customize it, configure display options, and fix missing or broken status line issues in your terminal."
 permalink: /claude-code-statusline-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Code Status Line: Complete Guide (2026)
@@ -340,6 +339,7 @@ Yes. When Claude calls [MCP server tools](/claude-code-mcp-server-setup/), the a
 The status line shows session-level token usage. The [5-hour usage limit](/claude-5-hour-usage-limit-guide/) is account-level across all sessions. The status line does not show your remaining plan allocation, only the current session's consumption.
 
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -358,3 +358,5 @@ The status line shows session-level token usage. The [5-hour usage limit](/claud
 - [Claude Code Cost Complete Guide](/claude-code-cost-complete-guide/)
 - [Claude 5-Hour Usage Limit Guide](/claude-5-hour-usage-limit-guide/)
 
+
+{% endraw %}

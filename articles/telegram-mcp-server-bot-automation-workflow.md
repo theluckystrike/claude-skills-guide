@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Telegram MCP Server"
+title: "How to Use Telegram MCP Server (2026)"
 description: "Automate Telegram bots with MCP server and Claude Code. Setup guide for message handling, workflow automation, and secure bot integration."
 date: 2026-03-14
 last_modified_at: 2026-04-17

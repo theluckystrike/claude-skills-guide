@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Content Filtering"
+title: "Chrome Enterprise Content Filtering (2026)"
 description: "Learn how to implement and manage Chrome Enterprise content filtering policies. Practical examples, code snippets, and configuration strategies for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

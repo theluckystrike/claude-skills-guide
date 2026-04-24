@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Passkeys How to Use"
+title: "Chrome Passkeys How to Use (2026)"
 description: "A practical guide for developers and power users on setting up and using passkeys in Google Chrome for passwordless authentication."
 date: 2026-03-15
 last_modified_at: 2026-04-17

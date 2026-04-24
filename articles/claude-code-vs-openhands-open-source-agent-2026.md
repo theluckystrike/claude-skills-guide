@@ -5,7 +5,6 @@ description: "Claude Code vs OpenHands (formerly OpenDevin) compared. Commercial
 permalink: /claude-code-vs-openhands-open-source-agent-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

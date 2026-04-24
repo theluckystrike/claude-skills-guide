@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "Claude Code + Neovim Terminal"
+title: "Claude Code + Neovim Terminal (2026)"
 description: "Use Claude Code inside Neovim terminal with toggleterm, custom Lua commands, and context-aware prompting. Full config examples included."
 permalink: /claude-code-neovim-terminal-integration-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## The Workflow

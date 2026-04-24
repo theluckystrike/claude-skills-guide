@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Flamegraph"
+title: "Claude Code for Flamegraph (2026)"
 description: "Learn how to integrate Claude Code into your flamegraph visualization workflow for efficient performance profiling and optimization."
 date: 2026-03-15
 last_modified_at: 2026-04-17

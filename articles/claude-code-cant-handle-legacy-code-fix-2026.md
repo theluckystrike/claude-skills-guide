@@ -1,9 +1,8 @@
 ---
-title: "Help Claude Code Work With Legacy Code"
+title: "Help Claude Code Work With Legacy Code (2026)"
 description: "Help Claude Code work with legacy codebases by documenting quirks, deprecated patterns, and migration boundaries in CLAUDE.md."
 permalink: /claude-code-cant-handle-legacy-code-fix-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Help Claude Code Work With Legacy Code (2026)
@@ -91,3 +90,71 @@ When creating a new file: use modern patterns.
 Use the [andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) "Don't Assume" principle as a reminder to read before writing. Legacy code has reasons for its patterns that are not always visible.
 
 For migration planning, see [The Claude Code Playbook](/playbook/). Learn about scoping Claude Code sessions to specific directories in the [large repo guide](/claude-code-slow-on-large-repos-fix-2026/). For code quality patterns that respect existing style, see our [best practices guide](/karpathy-skills-vs-claude-code-best-practices-2026/).
+
+
+## Frequently Asked Questions
+
+### Does this error affect all operating systems?
+
+This error can occur on macOS, Linux, and Windows (WSL). The exact error message may differ slightly between platforms, but the root cause and fix are the same. macOS users may see additional Gatekeeper or notarization prompts. Linux users should check that the relevant system packages are installed. Windows users should ensure they are running inside WSL2, not native Windows.
+
+### Will this error come back after updating Claude Code?
+
+Updates can occasionally reintroduce this error if the update changes default configurations or dependency requirements. After updating Claude Code, verify your project still builds and runs correctly. If the error returns, reapply the fix and check the changelog for breaking changes.
+
+### Can this error cause data loss?
+
+No, this error occurs before or during an operation and does not corrupt existing files. Claude Code's edit operations are atomic — they either complete fully or not at all. However, if the error occurs during a multi-step operation, you may have partial changes that need to be reviewed with `git diff` before continuing.
+
+### How do I report this error to Anthropic if the fix does not work?
+
+Open an issue at github.com/anthropics/claude-code with: (1) the full error message including stack trace, (2) your Node.js version (`node --version`), (3) your Claude Code version (`claude --version`), (4) your operating system and version, and (5) the command or operation that triggered the error.
+
+
+## Related Guides
+
+- [Modernizing Legacy Codebases](/claude-code-for-legacy-code-modernization/)
+- [Claude Code for Ada Legacy System](/claude-code-ada-legacy-system-updates-2026/)
+- [Why Does My Claude Skill Work Locally](/why-does-my-claude-skill-work-locally-but-fail-in-ci/)
+- [Why Does Claude Code Work Better](/why-does-claude-code-work-better-with-skills-loaded/)
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does this error affect all operating systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This error can occur on macOS, Linux, and Windows (WSL). The exact error message may differ slightly between platforms, but the root cause and fix are the same. macOS users may see additional Gatekeeper or notarization prompts. Linux users should check that the relevant system packages are installed. Windows users should ensure they are running inside WSL2, not native Windows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will this error come back after updating Claude Code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Updates can occasionally reintroduce this error if the update changes default configurations or dependency requirements. After updating Claude Code, verify your project still builds and runs correctly. If the error returns, reapply the fix and check the changelog for breaking changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this error cause data loss?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, this error occurs before or during an operation and does not corrupt existing files. Claude Code's edit operations are atomic — they either complete fully or not at all. However, if the error occurs during a multi-step operation, you may have partial changes that need to be reviewed with `git diff` before continuing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I report this error to Anthropic if the fix does not work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open an issue at github.com/anthropics/claude-code with: (1) the full error message including stack trace, (2) your Node.js version (`node --version`), (3) your Claude Code version (`claude --version`), (4) your operating system and version, and (5) the command or operation that triggered the error."
+      }
+    }
+  ]
+}
+</script>

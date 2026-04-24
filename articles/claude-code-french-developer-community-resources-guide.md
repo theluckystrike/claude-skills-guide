@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code French Developer Resources"
+title: "Claude Code French Developer Resources (2026)"
 description: "Find French Claude Code communities, Discord servers, forums, and localized documentation. Connect with francophone developers using AI coding tools."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -93,6 +93,9 @@ French developers frequently use development environments configured for French 
 The VS Code French language pack installs through the Extensions panel. Search for "French Language Pack" and install Microsoft's official extension. This changes menus, tooltips, and error messages to French.
 
 Configuring your system for French involves setting locale variables:
+
+For more on this topic, see [Best Claude Code Learning Resources](/best-claude-code-learning-resources-2026/).
+
 
 ```bash
 export LANG=fr_FR.UTF-8

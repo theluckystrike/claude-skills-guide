@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Production Profiling"
+title: "Claude Code for Production Profiling (2026)"
 description: "Profile production applications with Claude Code for CPU hotspots, memory leaks, and latency analysis. Identify bottlenecks without downtime."
 date: 2026-03-15
 last_modified_at: 2026-04-17

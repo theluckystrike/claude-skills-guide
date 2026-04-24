@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Emacs Workflow"
+title: "Claude Code for Emacs Workflow (2026)"
 description: "Learn how to integrate Claude Code into your Emacs workflow for enhanced coding assistance, automated refactoring, and intelligent code completion."
 date: 2026-03-15
 last_modified_at: 2026-04-17

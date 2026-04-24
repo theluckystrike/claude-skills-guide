@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Optimizing Tool Schemas to Cut Token"
+title: "Optimizing Tool Schemas to Cut Token (2026)"
 description: "Trim verbose tool schemas by 50% and save $50 per 10,000 Opus requests. Practical techniques for leaner JSON definitions."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, tool-schemas, optimization]
-render_with_liquid: false
 ---
 
 # Optimizing Tool Schemas to Cut Token Count

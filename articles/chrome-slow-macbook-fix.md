@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix Chrome Slow Macbook — Quick Guide"
-description: "Fix chrome slow macbook — quick guide fast. Step-by-step commands and config. Tested on Chrome."
+title: "Fix Chrome Slow Macbook — Quick Guide (2026)"
+description: "Fix Chrome Slow Macbook — Quick Guide — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

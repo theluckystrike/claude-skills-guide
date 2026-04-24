@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Slow Response"
+title: "Fix Claude Code Slow Response (2026)"
 description: "Speed up Claude Code when responses are slow or typing lags. Covers context management, model selection, and optimization. Updated for 2026."
 last_tested: "2026-04-22"
 date: 2026-04-14

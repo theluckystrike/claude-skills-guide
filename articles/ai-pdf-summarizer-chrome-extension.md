@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "AI PDF Summarizer Chrome Extension"
+title: "AI PDF Summarizer Chrome Extension (2026)"
 description: "Learn how to build and integrate AI PDF summarizer Chrome extensions for efficient document processing and productivity."
 date: 2026-03-15
 last_modified_at: 2026-04-17

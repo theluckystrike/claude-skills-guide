@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Gitleaks Secret"
+title: "Claude Code for Gitleaks Secret (2026)"
 description: "Learn how to integrate Claude Code with Gitleaks for automated secret scanning in your development workflow. Practical examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

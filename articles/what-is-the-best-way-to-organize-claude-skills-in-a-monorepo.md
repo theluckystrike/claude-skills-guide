@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Organize Claude Skills in a Monorepo"
+title: "Organize Claude Skills in a Monorepo (2026)"
 description: "Best way to organize Claude skills in a monorepo. Directory layouts, skill dependencies, and real-world examples for scalable skill management."
 date: 2026-03-14
 last_modified_at: 2026-04-17

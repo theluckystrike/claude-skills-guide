@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Evals Framework"
+title: "Claude Code for Evals Framework (2026)"
 description: "Learn how to build evaluation workflows with Claude Code. This tutorial covers setting up evals frameworks, creating test cases, running evaluations."
 date: 2026-03-15
 last_modified_at: 2026-04-17

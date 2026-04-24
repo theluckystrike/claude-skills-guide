@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Moon Build System"
-description: "Manage monorepos with Moon build system and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Moon Build System (2026)"
+description: "Claude Code for Moon Build System — practical setup steps, configuration examples, and working code you can use in your projects today."
 date: 2026-04-18
 permalink: /claude-code-for-moon-build-system-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, moon, workflow]
 ---

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "MCP Server Input Validation Security"
+title: "MCP Server Input Validation Security (2026)"
 description: "Learn essential security patterns for validating inputs in Model Context Protocol servers. Practical examples, code snippets, and best practices for."
 date: 2026-03-14
 last_modified_at: 2026-04-17

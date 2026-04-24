@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Split.io"
+title: "Claude Code for Split.io (2026)"
 description: "Learn how to use Claude Code to streamline your Split.io experimentation workflow, from feature flag management to A/B test implementation and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

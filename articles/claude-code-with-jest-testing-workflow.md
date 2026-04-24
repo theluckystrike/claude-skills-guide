@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Claude Code with Jest"
+title: "How to Use Claude Code with Jest (2026)"
 description: "Use Claude Code to write, run, debug, and fix Jest tests automatically. TDD workflow, hook integration, and error analysis tips."
 date: 2026-04-15
 permalink: /claude-code-with-jest-testing-workflow/

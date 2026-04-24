@@ -1,10 +1,9 @@
 ---
-title: "Claude Code Max vs API"
+title: "Claude Code Max vs API (2026)"
 description: "Calculate whether Claude Code Max at $100/month or pay-per-token API pricing saves more money based on actual usage patterns and token volumes."
 permalink: /claude-code-max-vs-api-cheaper-2026-calculator/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Max Subscription vs API: Which Is Cheaper? (2026 Calculator)

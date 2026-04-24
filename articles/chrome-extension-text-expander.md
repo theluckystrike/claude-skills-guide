@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Building a Chrome Extension Text"
+title: "Building a Chrome Extension Text (2026)"
 description: "A practical guide to building a Chrome extension text expander for developers and power users. Learn the architecture, implementation, and real-world."
 date: 2026-03-15
 last_modified_at: 2026-04-17

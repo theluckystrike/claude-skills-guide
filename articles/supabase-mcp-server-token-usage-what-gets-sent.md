@@ -1,10 +1,9 @@
 ---
-title: "Supabase MCP Server Token Usage"
+title: "Supabase MCP Server Token Usage (2026)"
 description: "The Supabase MCP server adds 1,500-4,000 tokens per tool definition to every Claude Code message -- learn exactly what gets sent and how to minimize it."
 permalink: /supabase-mcp-server-token-usage-what-gets-sent/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Supabase MCP Server Token Usage: What Gets Sent and Why

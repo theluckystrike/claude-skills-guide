@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Prompt Caching Implementation"
+title: "Claude Prompt Caching Implementation (2026)"
 description: "Step-by-step tutorial to enable Claude prompt caching. Cut a $4,500/month support bot to $455/month with 10 lines of code."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, prompt-caching, tutorial]
-render_with_liquid: false
 ---
 
 # Claude Prompt Caching Implementation Tutorial

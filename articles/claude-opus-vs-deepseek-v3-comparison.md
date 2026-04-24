@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Opus 4.6 vs DeepSeek V3"
+title: "Claude Opus 4.6 vs DeepSeek V3 (2026)"
 description: "Claude Opus 4.6 vs DeepSeek V3 for coding — comparing reasoning, cost, open-source flexibility, and real coding benchmarks."
 date: 2026-04-21
 permalink: /claude-opus-vs-deepseek-v3-comparison/

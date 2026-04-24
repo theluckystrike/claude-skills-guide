@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Prompt Caching Break-Even Calculator"
+title: "Prompt Caching Break-Even Calculator (2026)"
 description: "Calculate exactly when Claude prompt caching pays off. 5-min cache breaks even after 1 read, 1-hour after 2 reads. Full formulas inside."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, prompt-caching, calculator]
-render_with_liquid: false
 ---
 
 # Prompt Caching Break-Even Calculator for Claude

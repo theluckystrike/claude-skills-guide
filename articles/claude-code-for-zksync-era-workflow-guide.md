@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Zksync Era"
+title: "Claude Code For Zksync Era (2026)"
 description: "A comprehensive guide to using Claude Code for zkSync Era development. Learn smart contract deployment, Layer 2 optimization, testing strategies, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

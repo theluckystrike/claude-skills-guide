@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Cost Reduction Guide 2026"
-description: "Every technique for reducing Claude API and Claude Code costs. Real data from running 5 Claude Max subscriptions."
+description: "Claude Cost Reduction Guide 2026 — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /cost/
@@ -9,7 +9,6 @@ reviewed: true
 score: 10
 categories: [cost-optimization]
 tags: [claude, cost-reduction, hub]
-render_with_liquid: false
 ---
 
 # Claude Cost Reduction Guide 2026

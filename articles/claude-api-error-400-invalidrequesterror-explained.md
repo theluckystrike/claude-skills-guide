@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude API Error 400"
+title: "Fix: Claude API Error 400 (2026)"
 description: "Fix Claude API 400 invalid_request_error. Covers malformed JSON, missing parameters, prefill errors, and request validation with Python and TypeScript."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -53,6 +53,9 @@ The 400 error covers all request validation failures. The API checks your reques
 ### Validate Required Parameters
 
 Every Messages API request needs these three fields:
+
+For more on this topic, see [Fix: Claude Can't Open This Chat Error](/claude-cant-open-this-chat-fix/).
+
 
 ```python
 import anthropic

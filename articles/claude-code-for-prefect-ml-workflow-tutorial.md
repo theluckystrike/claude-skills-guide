@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Prefect Ml"
+title: "Claude Code For Prefect Ml (2026)"
 description: "Learn how to use Claude Code to build, orchestrate, and automate ML workflows with Prefect. A practical guide for data scientists and ML engineers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

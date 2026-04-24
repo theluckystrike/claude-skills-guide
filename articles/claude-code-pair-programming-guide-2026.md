@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Pair Programming Guide"
+title: "Claude Code Pair Programming Guide (2026)"
 description: "Use Claude Code as a pair programming partner with patterns for driver-navigator roles, real-time review, and collaborative debugging."
 permalink: /claude-code-pair-programming-guide-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Pair Programming Guide (2026)

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Make Claude Code Generate Complete Files Not Snippets"
-description: "Learn practical techniques to get Claude Code to generate complete, production-ready files instead of code snippets."
+title: "Claude Code: Generate Full Files (2026)"
+description: "Claude Code: Generate Full Files — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]

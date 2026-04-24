@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Example for Next.js +"
+title: "CLAUDE.md Example for Next.js + (2026)"
 description: "Complete 350-line CLAUDE.md for Next.js 15 with TypeScript. Enforces App Router conventions, Server Components, and Server Actions. Tested on Next.js 15.1.2."
 permalink: /claude-md-example-for-nextjs-typescript/
 render_with_liquid: false

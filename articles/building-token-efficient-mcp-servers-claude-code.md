@@ -1,10 +1,9 @@
 ---
-title: "Building Token-Efficient MCP Servers"
+title: "Building Token-Efficient MCP Servers (2026)"
 description: "Design MCP servers that minimize Claude Code token overhead with lean tool schemas, batch operations, and structured responses -- saving 40-60% per session."
 permalink: /building-token-efficient-mcp-servers-claude-code/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Building Token-Efficient MCP Servers for Claude Code

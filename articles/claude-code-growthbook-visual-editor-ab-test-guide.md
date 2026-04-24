@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Growthbook Visual"
+title: "Claude Code Growthbook Visual (2026)"
 description: "Learn how to use Claude Code to create, manage, and analyze A/B tests using GrowthBook's visual editor. Practical examples for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

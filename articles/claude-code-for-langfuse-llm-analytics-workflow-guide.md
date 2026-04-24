@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Langfuse LLM Analytics"
-description: "Monitor LLM apps with Langfuse observability and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Langfuse LLM Analytics (2026)"
+description: "Claude Code for Langfuse LLM Analytics — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-langfuse-llm-analytics-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, langfuse, workflow]
 ---

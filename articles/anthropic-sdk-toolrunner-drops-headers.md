@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Anthropic SDK toolRunner Drops"
+title: "Fix: Anthropic SDK toolRunner Drops (2026)"
 description: "Fix the bug where Anthropic SDK toolRunner drops defaultHeaders on follow-up requests, breaking Cloudflare AI Gateway and proxy setups."
 date: 2026-04-14
 last_modified_at: 2026-04-17

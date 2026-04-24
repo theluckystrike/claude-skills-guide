@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Todoist Alternative Chrome Extension"
+title: "Todoist Alternative Chrome Extension (2026)"
 description: "Discover the best Todoist alternatives for Chrome in 2026. These developer-focused task management extensions offer powerful features, keyboard shortcuts."
 date: 2026-03-15
 last_modified_at: 2026-04-17

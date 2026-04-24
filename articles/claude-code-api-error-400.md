@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code API Error 400 Bad"
+title: "Fix Claude Code API Error 400 Bad (2026)"
 description: "Diagnose and fix Claude Code API error 400 caused by malformed requests, context overflow, or invalid parameters with concrete solutions."
 date: 2026-04-17
 last_modified_at: 2026-04-17
@@ -59,6 +59,9 @@ The Anthropic API validates every incoming request against a strict schema. A 40
 **Massive file reads filling context.** If you asked Claude Code to read a very large file (e.g., a minified bundle or a database dump), the context may overflow. Avoid reading files over 500KB. Instead, ask Claude Code to read specific line ranges or search for patterns.
 
 **Invalid system prompt from CLAUDE.md.** If your CLAUDE.md file is extremely long (over 10,000 words) or contains binary characters, it can push the system prompt past API limits. Keep CLAUDE.md under 2,000 words and use only UTF-8 text.
+
+For more on this topic, see [Fix Claude Code Forgetting Decisions](/claude-code-forgets-previous-decisions-fix-2026/).
+
 
 **Stale conversation with incompatible message format.** If you updated Claude Code but resumed an old conversation, the message format may be incompatible. Start a fresh session with `claude --no-resume`.
 

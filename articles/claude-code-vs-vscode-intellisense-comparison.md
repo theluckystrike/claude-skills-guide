@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs VS Code IntelliSense"
+title: "Claude Code vs VS Code IntelliSense (2026)"
 description: "Claude Code AI completions vs VS Code IntelliSense — comparing accuracy, speed, context awareness, and when each approach wins."
 date: 2026-04-21
 last_tested: "2026-04-21"

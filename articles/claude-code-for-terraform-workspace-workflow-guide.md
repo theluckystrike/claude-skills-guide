@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Terraform Workspace"
+title: "Claude Code for Terraform Workspace (2026)"
 description: "Master Terraform workspace management with Claude Code. Learn practical workflows for organizing, deploying, and managing infrastructure across."
 date: 2026-03-15
 last_modified_at: 2026-04-17

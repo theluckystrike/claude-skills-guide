@@ -6,7 +6,6 @@ last_tested: "2026-04-22"
 permalink: /claude-code-vs-aider-for-test-driven-development/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

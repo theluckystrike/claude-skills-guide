@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Documentation Review"
+title: "Claude Code Documentation Review (2026)"
 description: "Automate documentation reviews with Claude Code for stale content detection, link checking, and technical accuracy validation. Save hours per review."
 date: 2026-04-19
 last_modified_at: 2026-04-19

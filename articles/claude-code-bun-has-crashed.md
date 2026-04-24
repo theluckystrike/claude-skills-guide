@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code 'Bun Has Crashed' Error"
+title: "Fix Claude Code 'Bun Has Crashed' Error (2026)"
 description: "Resolve the 'Bun has crashed' error in Claude Code with memory fixes, version updates, and diagnostic steps to get back to coding. Updated for 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17

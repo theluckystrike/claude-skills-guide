@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Git Bisect Automated"
+title: "Claude Code Git Bisect Automated (2026)"
 description: "Use git bisect with Claude Code to automatically locate buggy commits. Practical workflow automation for regression hunting."
 date: 2026-03-13
 last_modified_at: 2026-04-17

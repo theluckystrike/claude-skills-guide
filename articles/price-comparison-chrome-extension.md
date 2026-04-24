@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Price Comparison Chrome"
+title: "Price Comparison Chrome (2026)"
 description: "Learn how to build a price comparison Chrome extension from scratch. Covers manifest V3, content scripts, messaging APIs, and real-world implementation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

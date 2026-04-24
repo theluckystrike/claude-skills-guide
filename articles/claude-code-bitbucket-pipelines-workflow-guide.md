@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Bitbucket Pipelines"
+title: "Claude Code Bitbucket Pipelines (2026)"
 description: "A practical guide to integrating Claude Code into Bitbucket Pipelines for automated code generation, testing, and deployment workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

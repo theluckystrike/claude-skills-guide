@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Inngest"
-description: "Build durable workflows with Inngest and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Inngest (2026)"
+description: "Claude Code for Inngest — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-inngest-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, inngest, workflow]
 ---

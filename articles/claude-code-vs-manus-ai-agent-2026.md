@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Manus AI Agent Compared"
+title: "Claude Code vs Manus AI Agent Compared (2026)"
 description: "Test Claude Code's terminal-native agent against Manus AI's cloud sandbox on coding, research, and autonomous task completion."
 permalink: /claude-code-vs-manus-ai-agent-2026/
 date: 2026-04-21
@@ -10,7 +10,6 @@ tools_compared:
     version: "Opus 4.6 (CLI)"
   - name: "Manus AI"
     version: "Pro plan (2026)"
-render_with_liquid: false
 ---
 
 # Claude Code vs Manus AI Agent in 2026

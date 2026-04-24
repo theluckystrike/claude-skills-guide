@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for S3 Object Lambda"
+title: "Claude Code for S3 Object Lambda (2026)"
 description: "Learn how to use Claude Code to build, test, and deploy S3 Object Lambda functions efficiently. Includes practical examples, best practices, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

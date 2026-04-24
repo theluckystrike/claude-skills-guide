@@ -3,7 +3,6 @@ title: "Build Your Own Claude Code Skill (2026)"
 description: "Step-by-step guide to building a custom Claude Code skill with CLAUDE.md instructions, hooks, and slash command integration."
 permalink: /how-to-build-your-own-claude-code-skill-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Build Your Own Claude Code Skill (2026)

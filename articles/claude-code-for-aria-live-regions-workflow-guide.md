@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for ARIA Live Regions"
+title: "Claude Code for ARIA Live Regions (2026)"
 description: "Learn how to use Claude Code to implement accessible ARIA live regions in your web applications. This comprehensive guide covers best practices, code."
 date: 2026-03-15
 last_modified_at: 2026-04-17

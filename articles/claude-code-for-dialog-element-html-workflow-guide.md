@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Dialog Element HTML"
+title: "Claude Code for Dialog Element HTML (2026)"
 description: "Learn how to use Claude Code effectively for building accessible, interactive dialog modals in HTML. This guide covers workflow patterns, practical."
 date: 2026-03-15
 last_modified_at: 2026-04-17

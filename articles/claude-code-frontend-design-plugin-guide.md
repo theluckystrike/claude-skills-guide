@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Frontend Design Plugin"
+title: "Claude Code Frontend Design Plugin (2026)"
 description: "How to use the Claude Code frontend-design skill for CSS, React, Vue, and Tailwind workflows. Setup, real examples, and design-to-code techniques."
 permalink: /claude-code-frontend-design-plugin-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Code Frontend Design Plugin Guide (2026)
@@ -363,6 +362,7 @@ Create a Vue 3 modal dialog component with:
 - Slots for header, body, footer
 ```
 
+{% raw %}
 Claude generates the Vue SFC with proper `<script setup>`, scoped styles, and accessibility attributes including `role="dialog"`, `aria-modal`, and focus management.
 
 ## Tailwind CSS Workflows
@@ -692,3 +692,34 @@ Yes. Using a [Supabase MCP server](/claude-code-mcp-supabase-setup-guide/) along
 ## See Also
 
 - [Claude Code Frontend Developer Cross Browser Testing Guide](/claude-code-frontend-developer-cross-browser-testing-guide/)
+
+
+## Editor Integration with Claude Code
+
+Claude Code works alongside your editor rather than replacing it. Understanding how they interact prevents conflicts:
+
+**File watching conflicts.** Both your editor and Claude Code may watch the same files for changes. When Claude Code edits a file, the editor detects the change and may trigger auto-save, auto-format, or auto-lint. These secondary changes can conflict with Claude Code's next operation. Disable auto-format-on-save for files Claude Code is actively editing, or configure your editor to ignore external changes during Claude Code sessions.
+
+**Extension conflicts.** Some editor extensions (Copilot, Tabnine, IntelliCode) run language servers that consume significant CPU and memory. Running these alongside Claude Code can cause slowdowns. If Claude Code is slow, try disabling AI-powered extensions temporarily.
+
+**Terminal integration.** Claude Code runs in a terminal. In VS Code, use the integrated terminal for best compatibility. In Neovim, use a terminal buffer or tmux split. In JetBrains IDEs, use the built-in terminal tab.
+
+## Configuration for Smooth Co-existence
+
+Add these settings to prevent editor interference with Claude Code operations:
+
+**VS Code (`settings.json`):**
+```json
+{
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": false,
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.git/**": true
+  }
+}
+```
+
+These settings prevent VS Code from reformatting files immediately after Claude Code writes them, avoiding a common source of git conflicts.
+
+{% endraw %}

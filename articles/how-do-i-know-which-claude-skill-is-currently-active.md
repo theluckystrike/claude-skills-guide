@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Do I Know Which Claude Skill"
+title: "How Do I Know Which Claude Skill (2026)"
 description: "Learn how to identify the active Claude skill during your session. Practical methods, CLI commands, and tips for tracking skill context."
 date: 2026-03-14
 last_modified_at: 2026-04-17

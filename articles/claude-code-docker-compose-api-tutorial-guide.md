@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Docker Compose API Tutorial"
+title: "Claude Code Docker Compose API Tutorial (2026)"
 description: "Build APIs with Docker Compose and Claude Code for multi-container setups, service networking, and local development environments. Working configs."
 date: 2026-03-20
 last_modified_at: 2026-04-17

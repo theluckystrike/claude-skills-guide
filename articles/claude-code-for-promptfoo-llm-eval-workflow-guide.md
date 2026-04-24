@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Promptfoo"
-description: "Evaluate LLM prompts systematically with Promptfoo and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Promptfoo (2026)"
+description: "Claude Code for Promptfoo — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-promptfoo-llm-eval-workflow-guide/
 render_with_liquid: false

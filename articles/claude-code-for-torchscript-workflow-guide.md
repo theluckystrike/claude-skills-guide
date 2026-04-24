@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for TorchScript Workflow"
+title: "Claude Code for TorchScript Workflow (2026)"
 description: "A comprehensive guide to using Claude Code for PyTorch TorchScript workflows. Learn how to write, optimize, and debug TorchScript models with practical."
 date: 2026-03-15
 last_modified_at: 2026-04-17

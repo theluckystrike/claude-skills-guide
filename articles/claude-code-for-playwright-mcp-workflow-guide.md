@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Playwright MCP"
-description: "Use Playwright MCP server for browser testing with Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Playwright MCP (2026)"
+description: "Claude Code for Playwright MCP — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-playwright-mcp-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, playwright, workflow]
 ---

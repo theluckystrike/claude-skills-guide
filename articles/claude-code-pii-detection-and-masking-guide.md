@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Pii Detection"
+title: "Claude Code Pii Detection (2026)"
 description: "A practical guide to implementing PII detection and masking in your projects using Claude Code. Learn how to identify, protect, and handle sensitive."
 date: 2026-03-14
 last_modified_at: 2026-04-17

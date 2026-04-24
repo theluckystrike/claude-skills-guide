@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Astro View Transitions"
+title: "Claude Code for Astro View Transitions (2026)"
 description: "Build smooth page transitions in Astro with Claude Code. Covers the View Transitions API, persistent elements, animation customization, and fallbacks."
 date: 2026-03-15
 last_modified_at: 2026-04-17

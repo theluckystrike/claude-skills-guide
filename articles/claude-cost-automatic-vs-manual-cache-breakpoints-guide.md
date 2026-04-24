@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Automatic vs Manual Cache Breakpoints"
+title: "Automatic vs Manual Cache Breakpoints (2026)"
 description: "Claude supports up to 4 manual cache breakpoints per request. Learn where to place them for maximum savings on $5.00/MTok input."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, prompt-caching]
-render_with_liquid: false
 ---
 
 # Automatic vs Manual Cache Breakpoints Guide

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Switching From Android Studio"
+title: "Switching From Android Studio (2026)"
 description: "Move your Android development from Android Studio to Claude Code with AI-assisted workflows. Practical examples for building apps faster with less."
 date: 2026-03-14
 last_modified_at: 2026-04-17

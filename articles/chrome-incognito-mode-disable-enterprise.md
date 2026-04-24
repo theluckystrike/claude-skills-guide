@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Incognito Mode Disable"
+title: "Chrome Incognito Mode Disable (2026)"
 description: "Learn how to disable Chrome incognito mode in enterprise environments using Group Policy, Chrome Browser Cloud Management, and mobile device management."
 date: 2026-03-15
 last_modified_at: 2026-04-17

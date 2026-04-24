@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Page Speed Insights Chrome Extension"
+title: "Page Speed Insights Chrome Extension (2026)"
 description: "Learn how to build Chrome extensions that analyze page speed performance using Lighthouse and the Page Speed Insights API. Practical examples for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

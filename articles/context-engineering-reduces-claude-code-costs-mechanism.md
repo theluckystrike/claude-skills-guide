@@ -1,10 +1,9 @@
 ---
-title: "How Context Engineering Reduces Claude"
+title: "How Context Engineering Reduces Claude (2026)"
 description: "Context engineering reduces Claude Code costs by 40-70% through deliberate control of what enters the context window, eliminating wasted input tokens."
 permalink: /context-engineering-reduces-claude-code-costs-mechanism/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How Context Engineering Reduces Claude Code Costs: The Mechanism

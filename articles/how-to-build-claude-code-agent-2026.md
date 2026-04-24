@@ -3,7 +3,6 @@ title: "Build a Custom Claude Code Agent (2026)"
 description: "Build a custom agent for Claude Code by writing a CLAUDE.md persona, adding commands, and configuring hooks. Step-by-step with a security reviewer example."
 permalink: /how-to-build-claude-code-agent-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Build a Custom Claude Code Agent (2026)

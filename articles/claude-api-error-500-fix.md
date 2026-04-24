@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude API Error 500"
+title: "Fix Claude API Error 500 (2026)"
 description: "Resolve Claude API 500 internal server errors with step-by-step diagnosis. Covers retry strategies and request validation."
 date: 2026-04-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome vs Vivaldi Memory"
+title: "Chrome vs Vivaldi Memory (2026)"
 description: "A practical comparison of Chrome and Vivaldi memory usage. Learn memory management techniques, extension overhead, and optimization strategies for power."
 date: 2026-03-15
 last_modified_at: 2026-04-17

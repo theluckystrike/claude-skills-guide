@@ -1,9 +1,8 @@
 ---
-title: "Claude Task Master vs GitHub Issues"
+title: "Claude Task Master vs GitHub Issues (2026)"
 description: "Claude Task Master parses PRDs into tasks with AI. GitHub Issues tracks work with labels and boards. Compare automation vs ecosystem integration."
 permalink: /claude-task-master-vs-github-issues-project-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Task Master vs GitHub Issues for Project Management (2026)
@@ -65,6 +64,9 @@ For teams using [Claude Code in collaborative workflows](/karpathy-skills-vs-cla
 ## Ecosystem Integration
 
 GitHub Issues connects to everything: Actions for automation, Projects for visualization, Milestones for planning, branch protection rules, PR templates that auto-close issues, and hundreds of third-party integrations.
+
+For more on this topic, see [Convert a PRD to Tasks with Task Master](/how-to-convert-prd-to-tasks-claude-2026/).
+
 
 Task Master connects to Claude Code through MCP and that is about it. The CLI is its interface. There are no webhooks, no third-party integrations, and no visualization tools beyond the terminal output.
 

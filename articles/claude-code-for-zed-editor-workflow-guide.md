@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Zed Editor"
-description: "Pair Claude Code with Zed editor for fast coding. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Zed Editor (2026)"
+description: "Claude Code for Zed Editor — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-zed-editor-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, zed, workflow]
 ---

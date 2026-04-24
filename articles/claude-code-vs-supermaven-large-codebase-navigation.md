@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Supermaven Large"
+title: "Claude Code vs Supermaven Large (2026)"
 description: "A comprehensive comparison of Claude Code and Supermaven for navigating and understanding large codebases, with practical examples and use cases."
 date: 2026-03-14
 last_modified_at: 2026-04-17

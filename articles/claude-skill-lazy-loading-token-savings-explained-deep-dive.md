@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Skill Lazy Loading"
-description: "How Claude skill lazy loading works and how it reduces token consumption for developers and power users."
+title: "Claude Skill Lazy Loading (2026)"
+description: "Claude Skill Lazy Loading — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [advanced]

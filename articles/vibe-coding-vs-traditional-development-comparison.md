@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Vibe Coding vs Traditional"
+title: "Vibe Coding vs Traditional (2026)"
 description: "A comprehensive comparison of vibe coding versus traditional development approaches. Learn when AI-assisted coding shines and when manual development."
 date: 2026-03-14
 last_modified_at: 2026-04-17

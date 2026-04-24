@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Make Claude Code Write"
+title: "How to Make Claude Code Write (2026)"
 description: "Learn techniques to guide Claude when writing SQL queries that perform well. Optimize indexes, avoid N+1 queries, and use database-specific features."
 date: 2026-03-14
 last_modified_at: 2026-04-17

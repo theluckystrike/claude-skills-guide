@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code JSDoc TypeScript"
+title: "Claude Code JSDoc TypeScript (2026)"
 description: "Master JSDoc and TypeScript documentation workflows with Claude Code. Practical examples for generating type-safe docs, automating API references, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

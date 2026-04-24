@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Debug Configuration"
+title: "Claude Code Debug Configuration (2026)"
 description: "Master the debug configuration workflow in Claude Code. Learn to set breakpoints, inspect variables, and troubleshoot skill behavior effectively."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Prompt Compression Techniques"
+title: "Prompt Compression Techniques (2026)"
 description: "Reduce Claude prompt token count by 30-60% using XML structure, abbreviation, and deduplication — save $75 per 10K Opus requests."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # Prompt Compression Techniques for Claude API

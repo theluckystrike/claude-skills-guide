@@ -1,9 +1,8 @@
 ---
-title: "Convert a PRD to Tasks with Task Master"
+title: "Convert a PRD to Tasks with Task Master (2026)"
 description: "Turn a product requirements document into structured tasks using Claude Task Master. Step-by-step with PRD formatting, parsing, and dependency wiring."
 permalink: /how-to-convert-prd-to-tasks-claude-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Convert a PRD to Tasks with Claude Task Master (2026)

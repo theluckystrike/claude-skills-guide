@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Cross-Protocol"
+title: "Claude Code for Cross-Protocol (2026)"
 description: "Build and test services across REST, gRPC, WebSocket, and GraphQL using Claude Code. Covers protocol bridging, contract testing, and integration flows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

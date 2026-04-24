@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Engineering Wiki"
+title: "Claude Code for Engineering Wiki (2026)"
 description: "Automate engineering wiki maintenance with Claude Code. Generate documentation from code, keep API docs current, and enforce consistent formatting."
 date: 2026-03-15
 last_modified_at: 2026-04-17

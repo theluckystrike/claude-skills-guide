@@ -1,10 +1,9 @@
 ---
-title: "CLI vs MCP for Agent Operations"
+title: "CLI vs MCP for Agent Operations (2026)"
 description: "CLI Bash calls cost 245 tokens overhead versus 500-2,000 tokens for MCP tool definitions. Compare token costs to choose the cheaper agent operation path."
 permalink: /cli-vs-mcp-agent-operations-token-cost/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # CLI vs MCP for Agent Operations: Token Cost Comparison

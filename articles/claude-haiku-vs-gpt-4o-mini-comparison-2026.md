@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Haiku 4.5 vs GPT-4o Mini"
+title: "Claude Haiku 4.5 vs GPT-4o Mini (2026)"
 description: "Comparing the cheapest AI coding models — Claude Haiku 4.5 vs GPT-4o Mini on price, speed, and code quality for budget workflows."
 date: 2026-04-21
 last_tested: "2026-04-21"

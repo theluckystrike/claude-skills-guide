@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Sweep AI vs Claude Code"
+title: "Sweep AI vs Claude Code (2026)"
 description: "Sweep AI auto-creates PRs from issues while Claude Code handles full coding sessions. See which AI tool fits your GitHub workflow with real examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

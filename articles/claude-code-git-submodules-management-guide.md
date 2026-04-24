@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Git Submodules Management"
+title: "Claude Code Git Submodules Management (2026)"
 last_tested: "2026-04-22"
 description: "Learn how to manage Git submodules effectively with Claude Code. Practical workflows for adding, updating, cloning, and troubleshooting submodules in."
 date: 2026-03-14

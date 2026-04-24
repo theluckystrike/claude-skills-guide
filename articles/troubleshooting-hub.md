@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills Troubleshooting"
+title: "Claude Code Skills Troubleshooting (2026)"
 description: "Fix Claude Code skill errors fast: permission denied, YAML parsing, infinite loops, context overflow, and every other common issue."
 date: 2026-03-14
 last_modified_at: 2026-04-17

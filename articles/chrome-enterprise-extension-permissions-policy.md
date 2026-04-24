@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Extension Permissions"
+title: "Chrome Enterprise Extension Permissions (2026)"
 description: "Learn how to configure Chrome Enterprise extension permissions policy to control which extensions can access sensitive data in your organization."
 date: 2026-03-15
 last_modified_at: 2026-04-17

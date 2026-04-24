@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Frontend Developer Cross"
+title: "Claude Code Frontend Developer Cross (2026)"
 description: "A comprehensive guide to using Claude Code for cross-browser testing in frontend development. Learn how to set up, write, and automate browser."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Best MozBar Alternatives for Chrome"
+title: "Best MozBar Alternatives for Chrome (2026)"
 description: "Top MozBar alternative extensions for Chrome in 2026. Free and paid SEO tools compared with DA/PA metrics and real examples. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

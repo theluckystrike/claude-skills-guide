@@ -1,6 +1,6 @@
 ---
-title: "CLAUDE.md Example for Rust + Axum +"
-description: "Complete 310-line CLAUDE.md for Rust 1.83 with Axum 0.8 and SQLx."
+title: "CLAUDE.md Example for Rust + Axum + (2026)"
+description: "CLAUDE.md Example for Rust + Axum + — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-md-example-for-rust-axum-sqlx/
 render_with_liquid: false
 categories: [claude-md, templates, 2026]

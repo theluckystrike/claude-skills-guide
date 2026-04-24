@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Career Change to Software Development"
+title: "Career Change to Software Development (2026)"
 description: "Switch careers into software development using Claude Code as your AI pair programmer. Build real projects, learn faster, and skip tutorial purgatory."
 date: 2026-03-14
 last_modified_at: 2026-04-17

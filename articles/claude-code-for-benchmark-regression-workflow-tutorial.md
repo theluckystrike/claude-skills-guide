@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Benchmark Regression"
+title: "Claude Code for Benchmark Regression (2026)"
 description: "Learn how to set up automated benchmark regression testing with Claude Code to catch performance degradation before it reaches production."
 date: 2026-04-19
 last_modified_at: 2026-04-19

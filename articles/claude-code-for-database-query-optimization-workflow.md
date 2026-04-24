@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Database Query"
+title: "Claude Code for Database Query (2026)"
 description: "Learn how to use Claude Code and AI-assisted workflows to optimize database queries. Practical examples, code snippets, and actionable advice for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

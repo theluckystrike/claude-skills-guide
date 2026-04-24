@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Custom Keybindings"
+title: "Claude Code Custom Keybindings (2026)"
 description: "Configure custom keybindings in Claude Code. Set up shortcuts, key mappings, and keyboard-driven workflows for faster development."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Config File Location"
+title: "Claude Code Config File Location (2026)"
 description: "Find and configure Claude Code settings files — global settings.json, project settings, MCP config, and environment variables."
 date: 2026-04-14
 last_modified_at: 2026-04-17

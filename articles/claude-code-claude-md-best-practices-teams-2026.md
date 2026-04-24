@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "Claude Code CLAUDE.md Best Practices"
+title: "Claude Code CLAUDE.md Best Practices (2026)"
 description: "Write effective CLAUDE.md files for team projects. Conventions, style guides, tool permissions, and shared context patterns that scale."
 permalink: /claude-code-claude-md-best-practices-teams-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## The Workflow
@@ -188,3 +187,64 @@ A shared CLAUDE.md eliminates the "works on my machine" problem for AI-assisted 
 
 - [Share and Reuse CLAUDE.md Patterns Across Teams and Projects (2026)](/share-reuse-claude-md-patterns-across-teams/)
 - [Claude Code CLAUDE.md Not Found Fix (2026)](/claude-code-claude-md-not-found-parent-directories-fix/)
+
+
+## Frequently Asked Questions
+
+### Do I need a paid Anthropic plan to use this?
+
+Claude Code works with any Anthropic API plan, including the free tier. However, the free tier has lower rate limits (requests per minute and tokens per minute) that may slow down multi-step workflows. For professional use, the Build or Scale plan provides higher limits and priority access during peak hours.
+
+### How does this affect token usage and cost?
+
+The token cost depends on the size of your prompts and Claude's responses. Typical development tasks consume 10K-50K tokens per interaction. Using a CLAUDE.md file and skills reduces exploration tokens by 50-80%, which directly lowers costs. Monitor your usage at console.anthropic.com/settings/billing.
+
+### Can I customize this for my specific project?
+
+Yes. All Claude Code behavior can be customized through CLAUDE.md (project rules), `.claude/settings.json` (permissions), and `.claude/skills/` (domain knowledge). The most impactful customization is adding your project's specific patterns, conventions, and common commands to CLAUDE.md so Claude Code follows your standards from the start.
+
+### What happens when Claude Code makes a mistake?
+
+Claude Code creates files and edits through standard filesystem operations, so all changes are visible in `git diff`. If a change is wrong, revert it with `git checkout -- <file>` for a single file or `git stash` for all changes. Claude Code does not make irreversible changes unless you explicitly allow destructive commands in settings.json.
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a paid Anthropic plan to use this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code works with any Anthropic API plan, including the free tier. However, the free tier has lower rate limits (requests per minute and tokens per minute) that may slow down multi-step workflows. For professional use, the Build or Scale plan provides higher limits and priority access during peak hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does this affect token usage and cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The token cost depends on the size of your prompts and Claude's responses. Typical development tasks consume 10K-50K tokens per interaction. Using a CLAUDE.md file and skills reduces exploration tokens by 50-80%, which directly lowers costs. Monitor your usage at console.anthropic.com/settings/billing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I customize this for my specific project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All Claude Code behavior can be customized through CLAUDE.md (project rules), `.claude/settings.json` (permissions), and `.claude/skills/` (domain knowledge). The most impactful customization is adding your project's specific patterns, conventions, and common commands to CLAUDE.md so Claude Code follows your standards from the start."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when Claude Code makes a mistake?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code creates files and edits through standard filesystem operations, so all changes are visible in `git diff`. If a change is wrong, revert it with `git checkout -- <file>` for a single file or `git stash` for all changes. Claude Code does not make irreversible changes unless you explicitly allow destructive commands in settings.json."
+      }
+    }
+  ]
+}
+</script>

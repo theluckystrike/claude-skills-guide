@@ -1,9 +1,8 @@
 ---
-title: "EACCES npm Cache Permission Error — Fix"
+title: "EACCES npm Cache Permission Error — Fix (2026)"
 permalink: /claude-code-eacces-npm-cache-fix-2026/
-description: "Fix EACCES permission denied on npm cache during Claude Code install. Fix ownership of ~/.npm cache directory."
+description: "EACCES npm Cache Permission Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -108,3 +107,43 @@ Yes. Docker containers and CI runners often execute as root, which creates files
 ### Why does npm need special permissions?
 
 When Node.js is installed via system package managers, the global `node_modules` directory is owned by root. Running `npm install -g` as a regular user fails because the user lacks write access. Use `nvm` or configure npm to use a user-owned prefix directory to avoid this.
+
+
+## Related Guides
+
+- [Fix Claude Code NPM Install Eacces](/claude-code-npm-install-eacces-permission-fix/)
+- [EACCES Permission Denied Config Dir — Fix (2026)](/claude-code-config-dir-permission-denied-fix-2026/)
+- [Claude Code Permission Modes Explained](/claude-code-permission-modes/)
+- [Claude Code Permission Rules](/claude-code-permission-rules-settings-json-guide/)
+
+## Permission Issues in Claude Code
+
+File permission errors occur when Claude Code's process does not have read or write access to the files it needs to operate on. This is common in several scenarios:
+
+**System-installed packages.** Global npm packages installed with `sudo` are owned by root. Claude Code runs as your user and cannot modify them. Fix with `npm config set prefix ~/.npm-global` and add `~/.npm-global/bin` to your PATH.
+
+**Shared project directories.** In team environments, files may be owned by a different user or group. Run `ls -la` on the failing path to check ownership. Fix with `chmod -R u+rw .` for the project directory.
+
+**macOS security restrictions.** macOS Sequoia and later restrict terminal apps from accessing Desktop, Documents, and Downloads without explicit permission. Grant Full Disk Access to your terminal app in System Settings > Privacy & Security.
+
+## Fixing Common Permission Patterns
+
+```bash
+# Fix npm global permission (one-time setup)
+mkdir -p ~/.npm-global
+npm config set prefix ~/.npm-global
+echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.zshrc
+source ~/.zshrc
+
+# Fix project directory permissions
+chmod -R u+rw .
+
+# Fix git hook permissions
+chmod +x .git/hooks/*
+
+# Check what user Claude Code runs as
+whoami
+id
+```
+
+Each fix targets a different permission boundary. Apply only the fix that matches your specific error path.

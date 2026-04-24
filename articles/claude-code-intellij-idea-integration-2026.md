@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "How to Use Claude Code in IntelliJ IDEA"
+title: "How to Use Claude Code in IntelliJ IDEA (2026)"
 description: "Set up Claude Code in IntelliJ IDEA and JetBrains IDEs. Terminal integration, keybindings, and workflow tips for Java and Kotlin developers."
 permalink: /claude-code-intellij-idea-integration-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## The Workflow
@@ -211,3 +210,64 @@ Java developers using IntelliJ spend 60-70% of their time in the IDE. Having Cla
 - [Claude Code for JetBrains Plugin Workflow](/claude-code-for-jetbrains-plugin-workflow-tutorial/)
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)
 - [Best Way to Set Up Claude Code for a New Project](/best-way-to-set-up-claude-code-for-new-project/)
+
+
+## Frequently Asked Questions
+
+### What is the minimum setup required?
+
+You need Claude Code installed (Node.js 18+), a project with a `CLAUDE.md` file, and the relevant toolchain for your project type (e.g., npm for JavaScript, pip for Python). The CLAUDE.md file should describe your project structure, conventions, and common commands so Claude Code can work effectively.
+
+### How long does the initial setup take?
+
+For a typical project, initial setup takes 10-20 minutes. This includes creating the CLAUDE.md file, configuring `.claude/settings.json` for permissions, and running a test task to verify everything works. Subsequent sessions start immediately because the configuration persists.
+
+### Can I use this with a team?
+
+Yes. Commit your `.claude/` directory and `CLAUDE.md` to version control so the entire team uses the same configuration. Each developer can add personal preferences in `~/.claude/settings.json` (user-level) without affecting the project configuration. Review CLAUDE.md changes in pull requests like any other configuration file.
+
+### What if Claude Code produces incorrect output?
+
+First check that your CLAUDE.md accurately describes your project conventions. Incorrect or outdated context is the most common cause of wrong output. If the output is still wrong, provide feedback in the same session — Claude Code learns from corrections within a conversation. For persistent issues, add explicit rules to CLAUDE.md (e.g., "Always use single quotes" or "Never modify files in the config/ directory").
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the minimum setup required?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You need Claude Code installed (Node.js 18+), a project with a `CLAUDE.md` file, and the relevant toolchain for your project type (e.g., npm for JavaScript, pip for Python). The CLAUDE.md file should describe your project structure, conventions, and common commands so Claude Code can work effectively."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does the initial setup take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a typical project, initial setup takes 10-20 minutes. This includes creating the CLAUDE.md file, configuring `.claude/settings.json` for permissions, and running a test task to verify everything works. Subsequent sessions start immediately because the configuration persists."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this with a team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Commit your `.claude/` directory and `CLAUDE.md` to version control so the entire team uses the same configuration. Each developer can add personal preferences in `~/.claude/settings.json` (user-level) without affecting the project configuration. Review CLAUDE.md changes in pull requests like any other configuration file."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if Claude Code produces incorrect output?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First check that your CLAUDE.md accurately describes your project conventions. Incorrect or outdated context is the most common cause of wrong output. If the output is still wrong, provide feedback in the same session — Claude Code learns from corrections within a conversation. For persistent issues, add explicit rules to CLAUDE.md (e.g., \"Always use single quotes\" or \"Never modify files in the config/ directory\")."
+      }
+    }
+  ]
+}
+</script>

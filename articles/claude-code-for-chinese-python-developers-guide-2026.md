@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Python Developers Guide"
+title: "Claude Code for Python Developers Guide (2026)"
 description: "Claude Code guide for Python developers covering setup, essential skills, and real-world workflows for productive AI-assisted Python coding."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -302,6 +302,9 @@ names with special characters or mixed Chinese/English fields.
 ```
 
 Claude analyzes your code and identifies gaps in test coverage. For Python projects handling Chinese text, common untested edge cases include:
+
+For more on this topic, see [Best Claude Code Plugins for Python](/best-claude-code-plugins-python-2026/).
+
 
 - Unicode normalization differences (full-width vs. half-width characters)
 - Mixed Chinese-English strings in validation fields

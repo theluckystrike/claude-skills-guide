@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Technical Debt Tracking"
+title: "Claude Code Technical Debt Tracking (2026)"
 description: "A practical workflow for identifying, tracking, and managing technical debt using Claude Code skills and automation tools."
 date: 2026-03-14
 last_modified_at: 2026-04-17

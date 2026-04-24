@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For GitHub"
+title: "Claude Code For GitHub (2026)"
 description: "A comprehensive comparison of using Claude Code with GitHub Codespaces versus Gitpod. Learn which cloud IDE best suits your development workflow and."
 date: 2026-03-21
 last_modified_at: 2026-04-17

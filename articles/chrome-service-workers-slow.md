@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Service Workers Slow"
+title: "Chrome Service Workers Slow (2026)"
 description: "Discover why Chrome service workers become slow, common performance pitfalls, and actionable fixes to optimize your PWA and caching strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,10 +1,9 @@
 ---
-title: "Claude Code and large package.json"
+title: "Claude Code and large package.json (2026)"
 description: "A large package.json costs Claude Code 2,000-8,000 tokens when read unnecessarily. Prevent automatic loading and create a lean dependency summary instead."
 permalink: /claude-code-large-package-json-unnecessary-context/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code and large package.json -- unnecessary context loading

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Planetscale MCP Server Branching"
+title: "Planetscale MCP Server Branching (2026)"
 description: "A practical guide to implementing database branching workflows using the Planetscale MCP server for automated database schema management."
 date: 2026-03-14
 last_modified_at: 2026-04-17

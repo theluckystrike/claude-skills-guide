@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Claude Code Vue Developer"
+title: "Claude Code Vue Developer (2026)"
 description: "Master Vue.js component development with Claude Code. Learn efficient workflows for building, testing, and maintaining Vue components using Claude."
 date: 2026-03-14
 last_modified_at: 2026-04-17

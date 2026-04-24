@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Voice Interface"
+title: "Claude Skills Voice Interface (2026)"
 description: "Use voice input with Claude Code skills today. Practical workarounds using Whisper, macOS dictation, and custom MCP servers for hands-free coding."
 date: 2026-03-14
 last_modified_at: 2026-04-17

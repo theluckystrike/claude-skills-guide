@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Version Matrix Workflow"
+title: "Claude Code for Version Matrix Workflow (2026)"
 description: "Learn how to use Claude Code to automate and streamline version matrix testing workflows for your projects. Practical examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

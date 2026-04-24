@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Audit Tool Chrome Extension Guide"
+title: "Audit Tool Chrome Extension Guide (2026)"
 description: "Learn how to audit Chrome extensions for security, performance, and code quality. Practical tools and techniques for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

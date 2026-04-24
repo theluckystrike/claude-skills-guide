@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "When to Use Claude Haiku Instead"
+title: "When to Use Claude Haiku Instead (2026)"
 description: "Route classification and extraction tasks to Haiku 4.5 at $1/MTok instead of Opus at $5/MTok — save $1,800/month on 30K daily requests."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # When to Use Claude Haiku Instead of Opus

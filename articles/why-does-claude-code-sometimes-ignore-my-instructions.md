@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Does Claude Code Sometimes Ignore"
+title: "Why Does Claude Code Sometimes Ignore (2026)"
 description: "Debug why Claude Code ignores your instructions. Learn how token limits, system prompts, skill configurations, and instruction clarity affect Claude's."
 date: 2026-03-14
 last_modified_at: 2026-04-17

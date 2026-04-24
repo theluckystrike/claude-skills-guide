@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills with Embedded Scripts"
+title: "Claude Skills with Embedded Scripts (2026)"
 description: "How to bundle executable scripts inside SKILL.md directories with allowed-tools permissions, dynamic context injection, and visual HTML output."
 permalink: /claude-skills-with-embedded-scripts/
 render_with_liquid: false
@@ -124,6 +124,67 @@ if __name__ == "__main__":
     generate_html(graph, "dependency-graph.html")
     print(f"Generated dependency-graph.html with {len(graph)} modules")
 ```
+
+## Frequently Asked Questions
+
+### Do I need a paid Anthropic plan to use this?
+
+Claude Code works with any Anthropic API plan, including the free tier. However, the free tier has lower rate limits (requests per minute and tokens per minute) that may slow down multi-step workflows. For professional use, the Build or Scale plan provides higher limits and priority access during peak hours.
+
+### How does this affect token usage and cost?
+
+The token cost depends on the size of your prompts and Claude's responses. Typical development tasks consume 10K-50K tokens per interaction. Using a CLAUDE.md file and skills reduces exploration tokens by 50-80%, which directly lowers costs. Monitor your usage at console.anthropic.com/settings/billing.
+
+### Can I customize this for my specific project?
+
+Yes. All Claude Code behavior can be customized through CLAUDE.md (project rules), `.claude/settings.json` (permissions), and `.claude/skills/` (domain knowledge). The most impactful customization is adding your project's specific patterns, conventions, and common commands to CLAUDE.md so Claude Code follows your standards from the start.
+
+### What happens when Claude Code makes a mistake?
+
+Claude Code creates files and edits through standard filesystem operations, so all changes are visible in `git diff`. If a change is wrong, revert it with `git checkout -- <file>` for a single file or `git stash` for all changes. Claude Code does not make irreversible changes unless you explicitly allow destructive commands in settings.json.
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a paid Anthropic plan to use this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code works with any Anthropic API plan, including the free tier. However, the free tier has lower rate limits (requests per minute and tokens per minute) that may slow down multi-step workflows. For professional use, the Build or Scale plan provides higher limits and priority access during peak hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does this affect token usage and cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The token cost depends on the size of your prompts and Claude's responses. Typical development tasks consume 10K-50K tokens per interaction. Using a CLAUDE.md file and skills reduces exploration tokens by 50-80%, which directly lowers costs. Monitor your usage at console.anthropic.com/settings/billing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I customize this for my specific project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All Claude Code behavior can be customized through CLAUDE.md (project rules), `.claude/settings.json` (permissions), and `.claude/skills/` (domain knowledge). The most impactful customization is adding your project's specific patterns, conventions, and common commands to CLAUDE.md so Claude Code follows your standards from the start."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when Claude Code makes a mistake?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code creates files and edits through standard filesystem operations, so all changes are visible in `git diff`. If a change is wrong, revert it with `git checkout -- <file>` for a single file or `git stash` for all changes. Claude Code does not make irreversible changes unless you explicitly allow destructive commands in settings.json."
+      }
+    }
+  ]
+}
+</script>
+
 {% endraw %}
 
 ## Dynamic Context Injection Pattern

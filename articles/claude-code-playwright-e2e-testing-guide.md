@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Playwright E2E"
+title: "Claude Code Playwright E2E (2026)"
 description: "A practical guide to using Claude Code with Playwright for end-to-end testing. Learn how to set up, write, and maintain E2E tests with AI assistance."
 date: 2026-03-14
 last_modified_at: 2026-04-17

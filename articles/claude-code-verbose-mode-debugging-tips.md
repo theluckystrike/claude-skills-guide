@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Verbose Output"
+title: "Claude Code Verbose Output (2026)"
 description: "Use Claude Code verbose mode to trace tool execution and diagnose skill issues. Debug tips and output interpretation explained."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for P99 Latency"
+title: "Claude Code for P99 Latency (2026)"
 description: "Learn how to use Claude Code to optimize P99 latency in your applications with practical workflows, code examples, and actionable strategies for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,8 +1,7 @@
 ---
-render_with_liquid: false
 
 layout: default
-title: "Claude Code for Mermaid Diagram"
+title: "Claude Code for Mermaid Diagram (2026)"
 description: "Generate Mermaid diagrams from code with Claude Code. Covers flowcharts, sequence diagrams, ERDs, and architecture visualizations from your codebase."
 date: 2026-03-15
 last_modified_at: 2026-04-17

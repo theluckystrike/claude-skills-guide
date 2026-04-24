@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Lsp Hover"
+title: "Claude Code For Lsp Hover (2026)"
 description: "Learn how to build LSP hover provider workflows with Claude Code. Create custom skills that use language server protocol for intelligent code."
 date: 2026-03-15
 last_modified_at: 2026-04-17

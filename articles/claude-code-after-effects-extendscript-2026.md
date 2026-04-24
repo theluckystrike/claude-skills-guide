@@ -1,10 +1,9 @@
 ---
-title: "Claude Code for After Effects"
+title: "Claude Code for After Effects (2026)"
 permalink: /claude-code-after-effects-extendscript-2026/
 description: "Automate After Effects with ExtendScript and Claude Code. Build motion graphics templates, batch render compositions, and script expression controllers."
 last_tested: "2026-04-22"
 domain: "motion graphics"
-render_with_liquid: false
 ---
 
 ## Why Claude Code for After Effects ExtendScript
@@ -273,3 +272,106 @@ ls -la ~/ae-scripts/output/*.mp4 | wc -l
 - [Claude Code for Blender Python Scripting](/claude-code-blender-python-scripting-2026/)
 - [Claude Code for Three.js 3D Scene Development](/claude-code-threejs-3d-scene-development-2026/)
 - [Claude Code for Processing and p5.js Creative Coding](/claude-code-processing-p5js-creative-coding-2026/)
+
+
+## Frequently Asked Questions
+
+### Do I need a paid Anthropic plan to use this?
+
+Claude Code works with any Anthropic API plan, including the free tier. However, the free tier has lower rate limits (requests per minute and tokens per minute) that may slow down multi-step workflows. For professional use, the Build or Scale plan provides higher limits and priority access during peak hours.
+
+### How does this affect token usage and cost?
+
+The token cost depends on the size of your prompts and Claude's responses. Typical development tasks consume 10K-50K tokens per interaction. Using a CLAUDE.md file and skills reduces exploration tokens by 50-80%, which directly lowers costs. Monitor your usage at console.anthropic.com/settings/billing.
+
+### Can I customize this for my specific project?
+
+Yes. All Claude Code behavior can be customized through CLAUDE.md (project rules), `.claude/settings.json` (permissions), and `.claude/skills/` (domain knowledge). The most impactful customization is adding your project's specific patterns, conventions, and common commands to CLAUDE.md so Claude Code follows your standards from the start.
+
+### What happens when Claude Code makes a mistake?
+
+Claude Code creates files and edits through standard filesystem operations, so all changes are visible in `git diff`. If a change is wrong, revert it with `git checkout -- <file>` for a single file or `git stash` for all changes. Claude Code does not make irreversible changes unless you explicitly allow destructive commands in settings.json.
+
+
+## Practical Details
+
+When working with Claude Code on this topic, keep these implementation details in mind:
+
+**Project Configuration.** Your CLAUDE.md should include specific references to how your project handles this area. Include file paths, naming conventions, and any project-specific patterns that differ from defaults. Claude Code reads this file at session start and uses it to guide all operations.
+
+**Integration with Existing Tools.** Claude Code works alongside your existing development tools rather than replacing them. It respects .gitignore for file visibility, uses your project's installed dependencies, and follows the build/test scripts defined in package.json (or equivalent). Ensure your toolchain is working correctly before involving Claude Code.
+
+**Performance Considerations.** For large codebases (10,000+ files), Claude Code's file scanning can be slow if not properly scoped. Use `.claudeignore` to exclude generated directories (dist, build, .next, coverage) and dependency directories (node_modules, vendor). This typically reduces scan time by 80-90%.
+
+**Version Control Integration.** All changes Claude Code makes are regular filesystem operations visible to git. Use `git diff` after each significant change to review what was modified. For experimental changes, create a branch first with `git checkout -b experiment/topic` so you can easily discard or keep the results.
+
+
+## Related Guides
+
+- [Before and After](/before-and-after-switching-to-claude-code-workflow/)
+- [PATH Not Updated After Install — Fix](/claude-code-path-not-updated-after-install-fix-2026/)
+- [Prisma Generate Failure After Schema](/claude-code-prisma-generate-failure-fix-2026/)
+- [Fix Claude Code Not Working After](/claude-code-not-working-after-update-how-to-fix/)
+
+
+## Implementation Details
+
+When working with this in Claude Code, pay attention to these practical details:
+
+**Project configuration.** Add specific instructions to your CLAUDE.md file describing how your project handles this area. Include file paths, naming conventions, and any patterns that differ from common defaults. Claude Code reads CLAUDE.md at the start of every session and uses it to guide all operations.
+
+**Testing the setup.** After configuration, verify everything works by running a simple test task. Ask Claude Code to perform a read-only operation first (like listing files or reading a config) before moving to write operations. This confirms that permissions, paths, and tools are all correctly configured.
+
+**Monitoring and iteration.** Track your results over several sessions. If Claude Code consistently makes the same mistake, the fix is usually a more specific CLAUDE.md instruction. If it makes different mistakes each time, the issue is likely in the project setup or toolchain configuration.
+
+## Troubleshooting Checklist
+
+When something does not work as expected, check these items in order:
+
+1. **CLAUDE.md exists at the project root** — run `ls -la CLAUDE.md` to verify
+2. **Node.js version is 18+** — run `node --version` to check
+3. **API key is set** — run `echo $ANTHROPIC_API_KEY | head -c 10` to verify (shows first 10 characters only)
+4. **Disk space is available** — run `df -h .` to check
+5. **Network can reach the API** — run `curl -s -o /dev/null -w "%{http_code}" https://api.anthropic.com` (should return 401 without auth, meaning the server is reachable)
+6. **No conflicting processes** — run `ps aux | grep claude | grep -v grep` to check for stale sessions
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a paid Anthropic plan to use this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code works with any Anthropic API plan, including the free tier. However, the free tier has lower rate limits (requests per minute and tokens per minute) that may slow down multi-step workflows. For professional use, the Build or Scale plan provides higher limits and priority access during peak hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does this affect token usage and cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The token cost depends on the size of your prompts and Claude's responses. Typical development tasks consume 10K-50K tokens per interaction. Using a CLAUDE.md file and skills reduces exploration tokens by 50-80%, which directly lowers costs. Monitor your usage at console.anthropic.com/settings/billing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I customize this for my specific project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All Claude Code behavior can be customized through CLAUDE.md (project rules), `.claude/settings.json` (permissions), and `.claude/skills/` (domain knowledge). The most impactful customization is adding your project's specific patterns, conventions, and common commands to CLAUDE.md so Claude Code follows your standards from the start."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when Claude Code makes a mistake?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code creates files and edits through standard filesystem operations, so all changes are visible in `git diff`. If a change is wrong, revert it with `git checkout -- <file>` for a single file or `git stash` for all changes. Claude Code does not make irreversible changes unless you explicitly allow destructive commands in settings.json. When working with Claude Code on this topic, keep these implementation details in mind: **Project Configuration.** Your CLAUDE.md should include specific references to how your project handles this area. Include file paths, naming conventions, and any project-specific patterns that differ from defaults. Claude Code reads this file at session start and uses it to guide all operations. **Integration with Existing Tools.** Claude Code works alongside your existing development tools rather than replacing them. It respects .gitignore for file visibility, uses your project's installed dependencies, and follows the build/test scripts defined in package.json (or equivalent). Ensure your toolchain is working correctly before involving Claude Code. **Performance Considerations.** For large codebases (10,000+ files), Claude Code's file scanning can be slow if not properly scoped. Use `.claudeignore` to exclude generated directories (dist, build, .next, coverage) and dependency directories (node_modules, vendor). This typically reduces scan time by 80-90%. **Version Control Integration.** All changes Claude Code makes are regular filesystem operations visible to git. Use `git diff` after each significant change to review what was modified. For experimental changes, create a branch first with `git checkout -b experiment/topic` so you can easily discard or keep the results."
+      }
+    }
+  ]
+}
+</script>

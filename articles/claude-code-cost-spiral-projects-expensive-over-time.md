@@ -1,10 +1,9 @@
 ---
-title: "The Claude Code Cost Spiral"
+title: "The Claude Code Cost Spiral (2026)"
 description: "Understand why Claude Code costs spiral upward as projects grow, with the 5 compounding factors and systematic fixes that reverse the cost trajectory."
 permalink: /claude-code-cost-spiral-projects-expensive-over-time/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # The Claude Code Cost Spiral: Why Projects Get Expensive Over Time

@@ -1,9 +1,8 @@
 ---
-title: "Combine Karpathy Skills + SuperClaude"
+title: "Combine Karpathy Skills + SuperClaude (2026)"
 description: "Run Karpathy's 4 behavioral principles alongside SuperClaude's 30 commands without conflicts. Step-by-step integration with conflict resolution tips."
 permalink: /how-to-combine-karpathy-superclaude-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Combine Karpathy Skills + SuperClaude (2026)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for GraphQL Mutation"
+title: "Claude Code for GraphQL Mutation (2026)"
 description: "Learn how to use Claude Code CLI for building efficient GraphQL mutation workflows. This tutorial covers practical examples, best practices, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

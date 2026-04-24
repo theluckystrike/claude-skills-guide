@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Workflow for Turkish"
+title: "Claude Code Workflow for Turkish (2026)"
 description: "Practical guide for Turkish development teams implementing Claude Code workflows. Setup, team collaboration, skills, and real-world examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code from Zero to Hero Learning"
+title: "Claude Code from Zero to Hero Learning (2026)"
 description: "A structured learning path to master Claude Code from basics to advanced skill development. Build professional AI-powered workflows step by step."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -184,6 +184,9 @@ workflows:
 At this level, you start building skills tailored to your specific projects and team needs. Document your team's coding conventions, preferred libraries, and architectural patterns. Transform institutional knowledge into reusable skills that new team members can use immediately.
 
 Effective institutional skills cover these dimensions:
+
+For more on this topic, see [Best Claude Code Learning Resources](/best-claude-code-learning-resources-2026/).
+
 
 - Architecture decisions. "We use hexagonal architecture. Ports go in `src/ports/`, adapters in `src/adapters/`."
 - Library preferences. "Use `date-fns` for date manipulation, never `moment`. Use `zod` for validation, never `joi`."

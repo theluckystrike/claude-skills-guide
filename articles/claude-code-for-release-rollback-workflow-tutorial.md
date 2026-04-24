@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Release Rollback"
+title: "Claude Code for Release Rollback (2026)"
 description: "Automate release rollback procedures with Claude Code. Covers health checks, canary analysis, database migration reversal, and notification triggers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

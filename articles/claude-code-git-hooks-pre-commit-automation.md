@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Git Hooks"
+title: "Claude Code Git Hooks (2026)"
 description: "Learn how to integrate Claude Code with git hooks for automated code quality checks, linting, and pre-commit validation in your development workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17

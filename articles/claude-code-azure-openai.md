@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code with Azure OpenAI Setup"
-description: "Configure Claude Code alongside Azure OpenAI endpoints. Compare models, manage API keys, and build hybrid AI workflows."
+title: "Claude Code with Azure OpenAI Setup (2026)"
+description: "Claude Code with Azure OpenAI Setup — practical setup steps, configuration examples, and working code you can use in your projects today."
 date: 2026-04-17
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

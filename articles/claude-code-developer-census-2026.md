@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Developer Census 2026"
-description: "Real data from 185 countries: where Claude Code developers are, what devices they use, and which markets engage most."
+description: "Claude Code Developer Census 2026 — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 author: "Claude Skills Guide"
 permalink: /claude-code-developer-census-2026/
@@ -9,7 +9,6 @@ reviewed: true
 score: 9
 categories: [research]
 tags: [claude-code, research, data]
-render_with_liquid: false
 ---
 
 ## Claude Code Developer Census 2026: What 52,000 Impressions Reveal

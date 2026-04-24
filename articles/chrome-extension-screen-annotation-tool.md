@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build a Screen Annotation Chrome"
+title: "Build a Screen Annotation Chrome (2026)"
 description: "Build a Chrome extension for screen annotation and markup. Covers Canvas overlay rendering, drawing tools, text labels, and screenshot export options."
 date: 2026-03-15
 last_modified_at: 2026-04-17

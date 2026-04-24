@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Total Cost of Ownership"
-description: "Hidden costs add 20-40% to LLM API spend. Full TCO analysis from $3,600 to $120,000/year."
+title: "Total Cost of Ownership (2026)"
+description: "Total Cost of Ownership — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-cost-total-cost-ownership-every-provider/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, comparison]
-render_with_liquid: false
 ---
 
 # Total Cost of Ownership: Hidden Costs in Every Provider

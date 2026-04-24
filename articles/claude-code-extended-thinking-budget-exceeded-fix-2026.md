@@ -1,9 +1,8 @@
 ---
-title: "Extended Thinking Budget Exceeded — Fix"
+title: "Extended Thinking Budget Exceeded — Fix (2026)"
 permalink: /claude-code-extended-thinking-budget-exceeded-fix-2026/
 description: "Increase thinking_budget in settings to 32768 tokens with claude config set. Fixes the extended thinking token allocation mismatch error cleanly."
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -73,3 +72,38 @@ Run `claude usage` to see your current billing period's token consumption broken
 ### Which model does Claude Code use by default?
 
 Claude Code uses the latest Claude model available on your account. You can override the model with `claude --model claude-sonnet-4-20250514` or set a default in your configuration with `claude config set model claude-sonnet-4-20250514`.
+
+
+## Related Guides
+
+- [Fix Skill Exceeded Maximum Output](/claude-code-skill-exceeded-maximum-output-length-error-fix/)
+- [Context Window Exceeded — Fix (2026)](/claude-code-context-window-exceeded-mid-conversation-fix-2026/)
+- [Fix Claude Rate Exceeded Error (2026)](/claude-rate-exceeded-error-fix/)
+- [Fix Claude AI Rate Exceeded Error](/claude-ai-rate-exceeded-error-fix/)
+
+## How Extended Thinking Works
+
+Extended thinking gives Claude more processing time for complex tasks by allowing it to reason through problems step-by-step before producing an output. This is not the same as a longer response -- it is additional internal reasoning that improves accuracy on tasks requiring planning, multi-step logic, or complex code generation.
+
+**When to use extended thinking:** Multi-file refactoring, architecture decisions, debugging complex interactions, writing code that involves multiple interacting systems.
+
+**When NOT to use extended thinking:** Simple questions, single-file edits, formatting changes, or tasks where speed matters more than depth.
+
+**Token cost implications.** Extended thinking tokens count toward your usage but are often worthwhile. A task that takes 3 attempts without thinking (90K tokens total) may succeed on the first attempt with thinking (40K tokens including thinking overhead).
+
+## Configuring Extended Thinking
+
+Extended thinking is controlled by the model parameter and is available on Claude Opus 4.6 and Sonnet 4.6 models. In Claude Code, it activates automatically for complex tasks when using a supported model.
+
+To explicitly request thinking in API calls:
+
+```python
+response = client.messages.create(
+    model="claude-opus-4-6-20250414",
+    max_tokens=16000,
+    thinking={"type": "enabled", "budget_tokens": 10000},
+    messages=[{"role": "user", "content": prompt}]
+)
+```
+
+The `budget_tokens` parameter controls how many tokens Claude can use for internal reasoning. Higher budgets allow deeper analysis but cost more. Start with 5,000 and increase if outputs are incomplete.

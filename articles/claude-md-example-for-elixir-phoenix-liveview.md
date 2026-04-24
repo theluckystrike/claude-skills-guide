@@ -1,6 +1,6 @@
 ---
-title: "CLAUDE.md Example for Elixir + Phoenix"
-description: "Complete 320-line CLAUDE.md for Elixir 1.17 with Phoenix 1.7 and LiveView 1.0."
+title: "CLAUDE.md Example for Elixir + Phoenix (2026)"
+description: "CLAUDE.md Example for Elixir + Phoenix — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-md-example-for-elixir-phoenix-liveview/
 render_with_liquid: false
 categories: [claude-md, templates, 2026]

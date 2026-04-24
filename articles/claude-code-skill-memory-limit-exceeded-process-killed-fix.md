@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skill Memory Limit Exceeded"
+title: "Claude Code Skill Memory Limit Exceeded (2026)"
 description: "Resolve memory limit exceeded and process killed errors when running Claude Code skills. Practical solutions for developers and power users."
 date: 2026-03-14
 last_modified_at: 2026-04-17

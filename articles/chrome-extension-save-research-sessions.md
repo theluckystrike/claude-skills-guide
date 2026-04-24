@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Save Research Sessions Chrome Extension"
+title: "Save Research Sessions Chrome Extension (2026)"
 description: "Save and restore browser research sessions with one click. Build a Chrome extension that preserves tabs, scroll positions, and session history."
 date: 2026-03-15
 last_modified_at: 2026-04-17

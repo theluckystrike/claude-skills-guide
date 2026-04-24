@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills for Backend"
+title: "Claude Code Skills for Backend (2026)"
 description: "Claude Code skills for backend developers working with Node.js and Python. Practical patterns for /tdd, /pdf, /supermemory in API and data workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

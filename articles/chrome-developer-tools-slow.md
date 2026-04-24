@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Developer Tools Slow"
+title: "Chrome Developer Tools Slow (2026)"
 description: "Is Chrome Developer Tools running slow? Discover practical solutions to speed up DevTools, fix memory issues, and optimize performance for debugging."
 date: 2026-03-15
 last_modified_at: 2026-04-17

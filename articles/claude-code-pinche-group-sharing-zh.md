@@ -3,7 +3,6 @@ title: "Claude Code拼车指南：合租与共享方案 (2026)"
 description: "Claude Code拼车和账号共享的完整风险分析，包括官方Pro每月20美元和Max每月100到200美元订阅方案对比、Teams团队计划详解、API密钥共享的账号安全风险与合规替代方案、Token费用优化策略详解，以及不拼车也能省钱的实用技巧汇总，帮助你合规且经济地使用Claude Code。"
 permalink: /claude-code-pinche-group-sharing/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Code拼车指南：合租与共享方案 (2026)
@@ -447,6 +446,7 @@ Anthropic有能力检测异常使用模式，包括来自多个IP的并发请求
 
 可以合规地共享。AWS和GCP都支持IAM角色和权限管理，团队中每位成员可以有独立的访问凭证，同时使用统一的计费账户。这是官方支持的多人使用方式，完全合规。
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -469,3 +469,5 @@ Anthropic有能力检测异常使用模式，包括来自多个IP的并发请求
 ## See Also
 
 - [Claude Code使用教程：从入门到精通 (2026)](/claude-code-shiyong-jiaocheng-tutorial-zh/)
+
+{% endraw %}

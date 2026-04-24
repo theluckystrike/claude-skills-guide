@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Best Cookie Manager Chrome Extensions"
+title: "Best Cookie Manager Chrome Extensions (2026)"
 description: "Best cookie manager Chrome extensions for developers. Compare features, security, and API access to find the right cookie tool for your workflow."
 date: 2026-03-15
 last_modified_at: 2026-04-17

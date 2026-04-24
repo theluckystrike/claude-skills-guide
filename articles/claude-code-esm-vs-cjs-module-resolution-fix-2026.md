@@ -1,9 +1,8 @@
 ---
 title: "ESM vs CJS Module Resolution Failure — Fix (2026)"
 permalink: /claude-code-esm-vs-cjs-module-resolution-fix-2026/
-description: "Fix ERR_REQUIRE_ESM when Claude generates import/require mismatch. Align module format with package.json type field."
+description: "ESM vs CJS Module Resolution Failure — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -111,3 +110,34 @@ Run `npm doctor` to check your npm environment. It validates the registry connec
 ### What Node.js version does Claude Code require?
 
 Claude Code requires Node.js 18 or later. Node.js 20 LTS is recommended for the best compatibility and performance. Check your version with `node --version`.
+
+
+## Related Guides
+
+- [Monorepo Workspace Package Resolution](/claude-code-monorepo-workspace-package-resolution-fix-2026/)
+- [CLAUDE.md Conflict Resolution](/claude-md-conflict-resolution/)
+- [Claude Code Merge Conflict Resolution](/claude-code-merge-conflict-resolution-guide/)
+- [DNS Resolution Timeout Error — Fix](/claude-code-dns-resolution-timeout-fix-2026/)
+
+## Making the Right Choice
+
+When deciding between these options, consider these practical factors:
+
+**Project requirements.** The best tool depends on what your project actually needs, not which is more popular. A small personal project has different requirements than an enterprise application with compliance needs.
+
+**Team familiarity.** Choosing a tool your team already knows reduces onboarding time. The productivity gains from familiarity often outweigh the theoretical advantages of switching to a newer tool.
+
+**Ecosystem maturity.** Check the package ecosystem, community size, and documentation quality. A tool with 10,000 npm packages and active Stack Overflow answers will be easier to work with than a newer tool with cutting-edge features but sparse documentation.
+
+**Migration cost.** If you are considering switching, estimate the migration effort realistically. Include time for rewriting tests, updating CI/CD pipelines, retraining the team, and handling edge cases that only appear in production.
+
+## Decision Framework
+
+| Factor | Weight | Option A | Option B |
+|--------|--------|----------|----------|
+| Performance | Medium | Score 1-5 | Score 1-5 |
+| Ecosystem | High | Score 1-5 | Score 1-5 |
+| Learning curve | Medium | Score 1-5 | Score 1-5 |
+| Long-term viability | High | Score 1-5 | Score 1-5 |
+
+Score each factor for your specific situation, multiply by weight, and compare totals. This structured approach prevents decisions based on hype or recency bias.

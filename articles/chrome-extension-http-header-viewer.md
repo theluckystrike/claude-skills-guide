@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "HTTP Header Viewer Chrome Extension"
+title: "HTTP Header Viewer Chrome Extension (2026)"
 description: "Learn how to inspect, analyze, and debug HTTP headers using Chrome extensions. Practical examples for developers and power users debugging APIs and web."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Great Expectations"
+title: "Claude Code for Great Expectations (2026)"
 description: "Build automated data validation pipelines using Claude Code with Great Expectations. Create custom expectations and catch data quality issues early."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Benchmarking Claude Code Skills"
+title: "Benchmarking Claude Code Skills (2026)"
 description: "A practical guide for measuring and analyzing Claude Code skill performance. Learn to track execution time, token usage, and optimize skill workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -141,6 +141,9 @@ def run_benchmark(skill, prompt_file, iterations=5):
 
 Run benchmarks across different scenarios:
 
+For more on this topic, see [Claude Code Skills Reference](/skills-reference/).
+
+
 - Cold start (no prior context)
 - Warm session (existing project context)
 - Large file processing
@@ -233,6 +236,12 @@ Benchmarking Claude Code skills requires measuring execution time, token usage, 
 Focus on the metrics that impact your specific workflow. A solo developer optimizing for speed has different priorities than an enterprise team managing costs across hundreds of skill invocations daily.
 
 Regular benchmarking catches performance regressions early and validates optimization efforts. The tdd, frontend-design, pdf, xlsx, and supermemory skills each have distinct performance profiles. understanding these helps you choose and configure skills for maximum efficiency.
+
+## Interpreting Benchmark Results
+
+Raw numbers mean nothing without context. A skill that takes 30 seconds but generates correct, tested code in one pass is faster than a skill that finishes in 5 seconds but requires three correction rounds. Track end-to-end task completion time, not just skill execution time.
+
+When comparing metrics across sessions, control for variables. Context length, model selection, network latency, and system load all affect results. Run benchmarks at consistent times with consistent project states. Store results in a CSV file with metadata columns for model version, context size, and system specs so you can filter for meaningful comparisons later.
 
 ---
 

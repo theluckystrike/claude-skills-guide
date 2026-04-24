@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Astro Actions Workflow"
+title: "Claude Code for Astro Actions Workflow (2026)"
 description: "Build Astro Actions with Claude Code for server-side form handling, API routes, and data mutations. Type-safe server functions with working examples."
 date: 2026-04-19
 last_modified_at: 2026-04-19

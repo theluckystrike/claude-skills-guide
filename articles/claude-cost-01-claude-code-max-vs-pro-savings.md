@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Max vs Pro"
+title: "Claude Code Max vs Pro (2026)"
 description: "Max 20x at $200/month gives 20x Pro throughput. If your dev time is worth $50/hr, Max pays for itself by saving 4 hours of waiting."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, claude-code, subscription]
-render_with_liquid: false
 ---
 
 # Claude Code Max vs Pro: Which Plan Saves More

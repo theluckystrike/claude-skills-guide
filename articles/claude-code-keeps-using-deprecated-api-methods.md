@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix Claude Code Using Deprecated APIs"
+title: "Fix Claude Code Using Deprecated APIs (2026)"
 description: "Stop Claude Code from generating deprecated API calls. Configure version pinning, add API docs to context, and enforce modern method usage patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

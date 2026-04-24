@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build a Claude Cost Attribution System"
+title: "Build a Claude Cost Attribution System (2026)"
 description: "A 5-agent fleet had one agent consuming 3x tokens from runaway loops. Attribution found it, saving $300/month with a single fix."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, attribution, monitoring]
-render_with_liquid: false
 ---
 
 # Build a Claude Cost Attribution System

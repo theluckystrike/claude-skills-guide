@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code MCP Server Soc2"
+title: "Claude Code MCP Server Soc2 (2026)"
 description: "A practical guide to building and securing MCP servers for SOC 2 compliance. Learn about security controls, audit logging, and best practices for Claude."
 date: 2026-03-14
 last_modified_at: 2026-04-17

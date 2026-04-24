@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "The US CTR Problem"
+title: "The US CTR Problem (2026)"
 description: "Data analysis of 52K impressions across 185 countries reveals US developers click 4x less than the rest of the world on Claude Code content."
 date: 2026-04-18
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 9
 categories: [research]
 tags: [claude-code, research, data]
-render_with_liquid: false
 ---
 
 # The US CTR Problem: Why American Developers Ignore Claude Code Search Results

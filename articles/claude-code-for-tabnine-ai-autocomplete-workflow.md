@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code with Tabnine AI"
+title: "Claude Code with Tabnine AI (2026)"
 description: "Combine Claude Code and Tabnine for faster coding. Use Tabnine for inline completions and Claude Code for complex refactoring and code generation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

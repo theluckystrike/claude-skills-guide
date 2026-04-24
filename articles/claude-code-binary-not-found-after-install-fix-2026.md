@@ -1,9 +1,8 @@
 ---
 title: "claude: command not found After Install — Fix (2026)"
 permalink: /claude-code-binary-not-found-after-install-fix-2026/
-description: "Fix 'claude: command not found' after npm install. Add npm global bin directory to your PATH in .zshrc or .bashrc."
+description: "claude: command not found After Install — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -111,3 +110,32 @@ Run `npm doctor` to check your npm environment. It validates the registry connec
 ### What Node.js version does Claude Code require?
 
 Claude Code requires Node.js 18 or later. Node.js 20 LTS is recommended for the best compatibility and performance. Check your version with `node --version`.
+
+
+## Related Guides
+
+- [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
+- [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
+- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)
+
+## Implementation Details
+
+When working with this in Claude Code, pay attention to these practical details:
+
+**Project configuration.** Add specific instructions to your CLAUDE.md file describing how your project handles this area. Include file paths, naming conventions, and any patterns that differ from common defaults. Claude Code reads CLAUDE.md at the start of every session and uses it to guide all operations.
+
+**Testing the setup.** After configuration, verify everything works by running a simple test task. Ask Claude Code to perform a read-only operation first (like listing files or reading a config) before moving to write operations. This confirms that permissions, paths, and tools are all correctly configured.
+
+**Monitoring and iteration.** Track your results over several sessions. If Claude Code consistently makes the same mistake, the fix is usually a more specific CLAUDE.md instruction. If it makes different mistakes each time, the issue is likely in the project setup or toolchain configuration.
+
+## Troubleshooting Checklist
+
+When something does not work as expected, check these items in order:
+
+1. **CLAUDE.md exists at the project root** — run `ls -la CLAUDE.md` to verify
+2. **Node.js version is 18+** — run `node --version` to check
+3. **API key is set** — run `echo $ANTHROPIC_API_KEY | head -c 10` to verify (shows first 10 characters only)
+4. **Disk space is available** — run `df -h .` to check
+5. **Network can reach the API** — run `curl -s -o /dev/null -w "%{http_code}" https://api.anthropic.com` (should return 401 without auth, meaning the server is reachable)
+6. **No conflicting processes** — run `ps aux | grep claude | grep -v grep` to check for stale sessions

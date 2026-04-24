@@ -1,9 +1,8 @@
 ---
-title: "Install Claude Code Templates CLI Tool"
+title: "Install Claude Code Templates CLI Tool (2026)"
 description: "Install the Claude Code Templates CLI with npx to browse and install 600+ agents, 200+ commands, and 55+ MCP configs. Full walkthrough with examples."
 permalink: /how-to-install-claude-code-templates-cli-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Install Claude Code Templates CLI Tool (2026)

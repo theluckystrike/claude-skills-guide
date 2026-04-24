@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Model Card"
+title: "Claude Code for Model Card (2026)"
 description: "Learn how to use Claude Code and specialized skills to create comprehensive model cards for ML models. Practical workflow guide with examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

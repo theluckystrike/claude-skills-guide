@@ -3,7 +3,6 @@ title: "Claude Code Permission Denied Sandbox — Fix (2026)"
 permalink: /claude-code-permission-denied-sandbox-mode-fix-2026/
 description: "Add operation to permissions.allow in settings to fix sandbox denial. Or run with --dangerously-skip-permissions for fully trusted projects."
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -91,3 +90,11 @@ Yes. Docker containers and CI runners often execute as root, which creates files
 ### Why does npm need special permissions?
 
 When Node.js is installed via system package managers, the global `node_modules` directory is owned by root. Running `npm install -g` as a regular user fails because the user lacks write access. Use `nvm` or configure npm to use a user-owned prefix directory to avoid this.
+
+
+## Related Guides
+
+- [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
+- [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
+- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Responsive Design Tester Chrome"
+title: "Responsive Design Tester Chrome (2026)"
 description: "Discover the best Chrome extensions for testing responsive web designs. Compare top tools, features, and find the perfect solution for your workflow."
 date: 2026-03-15
 last_modified_at: 2026-04-17

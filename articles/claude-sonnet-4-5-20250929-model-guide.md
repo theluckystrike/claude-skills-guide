@@ -3,7 +3,6 @@ title: "Claude Sonnet 4.5 (20250929)"
 description: "Claude Sonnet 4.5 model ID explained. Capabilities, pricing, API usage, and comparisons with Sonnet 4 and Opus 4 for coding and analysis tasks."
 permalink: /claude-sonnet-4-5-20250929-model-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Sonnet 4.5 (20250929): Model Guide (2026)
@@ -242,6 +241,7 @@ Yes. You can use Sonnet 4.5 with the Message Batches API for 50% cost savings on
 - [The Claude Code Playbook](/playbook/) — comprehensive Claude Code reference
 - [Claude temperature settings guide](/claude-temperature-settings-guide/) — Configure temperature for Sonnet 4.5
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -260,3 +260,5 @@ Yes. You can use Sonnet 4.5 with the Message Batches API for 50% cost savings on
   ]
 }
 </script>
+
+{% endraw %}

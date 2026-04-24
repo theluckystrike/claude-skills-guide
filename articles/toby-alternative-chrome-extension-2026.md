@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Toby Alternative Chrome Extension"
+title: "Toby Alternative Chrome Extension (2026)"
 description: "Discover the best Toby alternatives for Chrome in 2026. Compare workspace management, tab organization, and session saving features for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

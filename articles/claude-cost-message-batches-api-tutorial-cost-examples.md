@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Message Batches API Tutorial with Cost"
-description: "Process 10,000 support tickets for $37 using Claude Batch API. Step-by-step code with real Haiku 4.5 cost breakdowns."
+title: "Message Batches API Tutorial with Cost (2026)"
+description: "Message Batches API Tutorial with Cost — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /message-batches-api-tutorial-cost-examples/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, batch-api, tutorial]
-render_with_liquid: false
 ---
 
 # Message Batches API Tutorial with Cost Examples

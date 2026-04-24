@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Find Chrome Extensions Using Memory"
+title: "Find Chrome Extensions Using Memory (2026)"
 description: "Discover Chrome extensions that use memory systems to provide personalized, context-aware experiences. Learn how to find, evaluate, and use."
 date: 2026-03-15
 last_modified_at: 2026-04-17

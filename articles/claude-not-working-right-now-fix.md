@@ -1,9 +1,8 @@
 ---
-title: "Fix: Claude Isn't Working Right Now"
+title: "Fix: Claude Isn't Working Right Now (2026)"
 description: "Fix every Claude not working scenario: API outages, rate limits, account issues, browser problems, and CLI errors. Quick diagnostic checklist."
 permalink: /claude-not-working-right-now-fix/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Fix: Claude Isn't Working Right Now (2026)
@@ -407,6 +406,7 @@ Claude Code uses the API, while Claude.ai uses a web interface with separate inf
 Only if you are in a region where Anthropic restricts access. VPNs can sometimes cause issues (slow connections, IP-based rate limiting). If Claude works without a VPN, you do not need one.
 
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -486,3 +486,5 @@ Only if you are in a region where Anthropic restricts access. VPNs can sometimes
 - [Claude Internal Server Error Fix](/claude-internal-server-error-fix/)
 - [Claude Code Process Exited Code 1 Fix](/claude-code-process-exited-code-1-fix/)
 
+
+{% endraw %}

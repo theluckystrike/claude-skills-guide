@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Project Scaffolding"
+title: "Claude Code Project Scaffolding (2026)"
 description: "Automate project scaffolding with Claude Code using skills, templates, and intelligent workflows. Set up new codebases in minutes, not hours."
 date: 2026-03-14
 last_modified_at: 2026-04-17

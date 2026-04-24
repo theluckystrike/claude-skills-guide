@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Focus Timer Productivity Chrome"
+title: "Focus Timer Productivity Chrome (2026)"
 description: "Learn how chrome extension focus timer productivity tools work, how to build them, and which techniques maximize your deep work sessions."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -5,7 +5,6 @@ description: "Claude Code vs Augment Code compared for enterprise teams. Codebas
 permalink: /claude-code-vs-augment-code-enterprise-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

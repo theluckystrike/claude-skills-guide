@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Design Patterns Refactoring"
+title: "Claude Code Design Patterns Refactoring (2026)"
 description: "A practical guide to applying design patterns and refactoring techniques in Claude Code skills. Learn patterns that improve skill maintainability."
 date: 2026-03-14
 last_modified_at: 2026-04-17

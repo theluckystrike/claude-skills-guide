@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Computational Biology"
+title: "Claude Skills for Computational Biology (2026)"
 description: "Claude skills for computational biology: automate sequence analysis, build phylogenetic pipelines, process NGS data, and accelerate bioinformatics."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -137,6 +137,12 @@ To integrate Claude skills into your bioinformatics workflow:
 Skills function as collaborative assistants rather than autonomous agents, they respond to your direction while handling implementation details. This approach maintains researcher control while accelerating mechanical tasks.
 
 The bioinformatics community benefits from reproducible, well-documented analysis. Claude skills support these goals by automating documentation generation, test creation, and pipeline construction. Your domain expertise remains essential; skills amplify your productivity without substituting for scientific judgment.
+
+## Performance Considerations for Large Datasets
+
+Bioinformatics datasets often exceed millions of records. When using Claude skills to process large FASTQ files or VCF datasets, work in chunks to manage context window limits. Split genome-wide association study outputs into per-chromosome files before skill invocation. For protein structure prediction workflows, batch sequences into groups of 50-100 rather than submitting entire proteome files at once.
+
+Memory usage matters on shared computing clusters. Run Claude Code with `NODE_OPTIONS="--max-old-space-size=8192"` when processing alignment summaries or annotation files that exceed several hundred megabytes. Pair this with `.claudeignore` rules that exclude raw sequencing data directories, keeping only the processed outputs that Claude skills actually need to analyze.
 
 ---
 

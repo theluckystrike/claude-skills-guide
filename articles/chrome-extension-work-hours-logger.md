@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Work Hours Logger Chrome Extension"
+title: "Work Hours Logger Chrome Extension (2026)"
 description: "Learn how to build and use Chrome extensions for tracking work hours. Explore implementation patterns, time tracking APIs, and practical solutions for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

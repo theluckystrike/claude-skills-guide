@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Roi Calculation"
+title: "Claude Code Roi Calculation (2026)"
 description: "Learn how to calculate the return on investment (ROI) for implementing Claude Code in your development team. Practical formulas, examples, and metrics."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Security Scan"
+title: "Claude Code for Security Scan (2026)"
 description: "Learn how to automate security scans using Claude Code. Practical examples for developers integrating security tooling into CI/CD pipelines."
 date: 2026-03-14
 last_modified_at: 2026-04-17

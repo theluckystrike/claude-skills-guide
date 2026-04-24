@@ -1,10 +1,9 @@
 ---
-title: "Context Engineering vs Prompt"
+title: "Context Engineering vs Prompt (2026)"
 description: "Context engineering outperforms prompt engineering for Claude Code agents by reducing token waste 40-60% through structured knowledge loading and scoping."
 permalink: /context-engineering-vs-prompt-engineering-agents/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Context Engineering vs Prompt Engineering: Why Context Wins for Agents

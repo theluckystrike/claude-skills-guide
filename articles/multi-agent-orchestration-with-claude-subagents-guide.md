@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Orchestrate Claude Code Subagents"
+title: "Orchestrate Claude Code Subagents (2026)"
 description: "Run multiple Claude Code subagents in parallel and sequence. Covers task decomposition, result aggregation, error handling, and hierarchical patterns."
 date: 2026-03-13
 last_modified_at: 2026-04-17

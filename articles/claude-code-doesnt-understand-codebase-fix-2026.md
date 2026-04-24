@@ -1,9 +1,8 @@
 ---
-title: "Fix Claude Code Not Understanding"
+title: "Fix Claude Code Not Understanding (2026)"
 description: "Fix Claude Code not understanding your codebase by configuring CLAUDE.md with architecture maps, key file paths, and project conventions."
 permalink: /claude-code-doesnt-understand-codebase-fix-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Fix Claude Code Not Understanding Your Codebase (2026)

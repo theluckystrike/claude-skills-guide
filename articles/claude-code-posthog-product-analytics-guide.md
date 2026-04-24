@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for PostHog Analytics Setup"
+title: "Claude Code for PostHog Analytics Setup (2026)"
 description: "Set up PostHog product analytics with Claude Code. Track custom events, build funnels, analyze user behavior, and automate dashboard creation faster."
 date: 2026-03-14
 last_modified_at: 2026-04-17

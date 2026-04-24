@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skips Error Handling"
+title: "Claude Code Skips Error Handling (2026)"
 description: "Understanding why Claude Code sometimes generates code without proper error handling, and how to work around this limitation effectively."
 date: 2026-03-14
 last_modified_at: 2026-04-17

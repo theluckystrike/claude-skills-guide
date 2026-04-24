@@ -1,10 +1,9 @@
 ---
-title: "Claude Code for Large Codebases"
+title: "Claude Code for Large Codebases (2026)"
 description: "Large codebases push Claude Code sessions past 200K tokens fast. These strategies cut exploration costs by 50-70% with structured context and targeted scoping."
 permalink: /claude-code-large-codebases-cost-effective-strategies/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code for Large Codebases: Cost-Effective Strategies

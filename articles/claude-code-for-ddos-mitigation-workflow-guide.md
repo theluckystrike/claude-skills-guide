@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for DDoS Mitigation"
+title: "Claude Code for DDoS Mitigation (2026)"
 description: "Learn how to use Claude Code to build automated DDoS mitigation workflows, analyze traffic patterns, and create responsive protection scripts for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

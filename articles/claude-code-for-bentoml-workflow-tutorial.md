@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for BentoML Workflow"
+title: "Claude Code for BentoML Workflow (2026)"
 description: "Learn how to use Claude Code to streamline your BentoML machine learning deployment workflow from model training to serving."
 date: 2026-03-15
 last_modified_at: 2026-04-17

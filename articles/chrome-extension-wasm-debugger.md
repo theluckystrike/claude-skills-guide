@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Debug: WASM Debugger Chrome Extension"
+title: "Debug: WASM Debugger Chrome Extension (2026)"
 description: "Learn how to debug WebAssembly modules within Chrome extensions using built-in DevTools features and practical techniques. Tested and working in 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17

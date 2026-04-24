@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Statuspage Workflow"
+title: "Claude Code for Statuspage Workflow (2026)"
 description: "Learn how to automate statuspage workflows using Claude Code. Create automated incident reporting, component monitoring, and status page integrations."
 date: 2026-03-15
 last_modified_at: 2026-04-17

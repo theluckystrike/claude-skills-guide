@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Wasmtime Runtime"
+title: "Claude Code for Wasmtime Runtime (2026)"
 description: "Build WebAssembly applications with Wasmtime and Claude Code. Covers module compilation, host functions, WASI integration, and component model usage."
 date: 2026-03-15
 last_modified_at: 2026-04-17

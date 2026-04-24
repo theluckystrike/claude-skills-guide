@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for OpenTofu Provider"
+title: "Claude Code for OpenTofu Provider (2026)"
 description: "Learn how to use Claude Code to automate OpenTofu provider workflows. Practical examples for managing infrastructure providers, credentials, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

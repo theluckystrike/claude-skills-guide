@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build Session Manager Chrome Extension"
+title: "Build Session Manager Chrome Extension (2026)"
 description: "Build Chrome extensions that manage browser sessions, save and restore tab groups, and automate tab organization for efficient developer workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,10 +1,9 @@
 ---
-title: "What Is Context Engineering? Karpathy +"
+title: "What Is Context Engineering? Karpathy + (2026)"
 description: "Context engineering -- Andrej Karpathy's term for controlling what an LLM sees -- applied to Claude Code to reduce token costs by 50-70% per session."
 permalink: /what-is-context-engineering-karpathy-claude-code/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # What Is Context Engineering? (Karpathy's Definition Applied to Claude Code)

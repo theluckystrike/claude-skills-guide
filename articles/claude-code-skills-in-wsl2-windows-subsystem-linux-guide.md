@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Skills In Wsl2"
+title: "How to Use Skills In Wsl2 (2026)"
 description: "Run Claude Code skills in WSL2 Windows Subsystem for Linux. Step-by-step installation, path configuration, and skill invocation examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

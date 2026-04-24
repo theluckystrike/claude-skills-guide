@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Nx Monorepo"
+title: "Claude Code For Nx Monorepo (2026)"
 description: "Learn how to use Claude Code to develop NX monorepo micro frontends efficiently. Includes practical patterns for workspace management, shared."
 date: 2026-03-15
 last_modified_at: 2026-04-17

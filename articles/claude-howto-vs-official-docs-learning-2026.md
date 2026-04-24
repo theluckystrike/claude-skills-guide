@@ -1,9 +1,8 @@
 ---
-title: "Claude Howto vs Official Docs"
+title: "Claude Howto vs Official Docs (2026)"
 description: "Claude Howto uses Mermaid diagrams and copy-paste templates. Official docs are authoritative but dense. Compare both for learning Claude Code fast."
 permalink: /claude-howto-vs-official-docs-learning-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Howto vs Official Docs for Learning Claude Code (2026)

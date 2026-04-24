@@ -4,7 +4,6 @@ description: "All major agentic AI coding tools compared for 2026: Claude Code, 
 permalink: /agentic-ai-coding-tools-comparison-2026/
 last_tested: "2026-04-21"
 tools_compared: ["Claude Code", "Cursor", "Devin", "Windsurf", "Cline", "Aider"]
-render_with_liquid: false
 ---
 
 ## The Hypothesis

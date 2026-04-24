@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Automate End-of-Day Git Commits"
+title: "Automate End-of-Day Git Commits (2026)"
 description: "Automate daily commit workflows with Claude Code. Stage changes, generate descriptive commit messages, and push to remote with a single command."
 date: 2026-03-14
 last_modified_at: 2026-04-17

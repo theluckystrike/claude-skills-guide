@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Using Claude Code for Polyglot"
+title: "Using Claude Code for Polyglot (2026)"
 description: "A practical guide to managing polyglot multi-language codebases with Claude Code and Claude.md files. Learn how to configure Claude for Python."
 date: 2026-03-14
 last_modified_at: 2026-04-17

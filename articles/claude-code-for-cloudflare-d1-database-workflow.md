@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Cloudflare D1"
+title: "Claude Code For Cloudflare D1 (2026)"
 description: "Master the workflow of building and managing Cloudflare D1 databases with Claude Code. This guide covers practical examples, code patterns, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

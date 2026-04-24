@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use AI Code Optimization"
+title: "How to Use AI Code Optimization (2026)"
 description: "Optimize AI code token usage in Claude Code. Practical strategies for prompt structuring, context management, and reducing API costs by 50%."
 date: 2026-03-14
 last_modified_at: 2026-04-17

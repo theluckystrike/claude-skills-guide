@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code with Angular vs React"
+title: "Claude Code with Angular vs React (2026)"
 description: "Compare Claude Code's effectiveness with Angular and React projects. Learn which framework gets better AI-assisted development results."
 date: 2026-04-17
 last_modified_at: 2026-04-17

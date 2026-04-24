@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for GraphQL to REST"
+title: "Claude Code for GraphQL to REST (2026)"
 description: "A practical guide to migrating from GraphQL to REST APIs using Claude Code. Learn strategies, code examples, and best practices for a smooth transition."
 date: 2026-03-15
 last_modified_at: 2026-04-17

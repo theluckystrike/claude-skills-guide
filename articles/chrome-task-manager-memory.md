@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Task Manager Memory"
+title: "Chrome Task Manager Memory (2026)"
 description: "Learn how to use Chrome Task Manager to identify memory leaks, monitor tab resource usage, and optimize browser performance for development workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

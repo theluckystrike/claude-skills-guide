@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Gitpod Cloud Dev"
-description: "Run Claude Code in Gitpod cloud environments. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Gitpod Cloud Dev (2026)"
+description: "Claude Code for Gitpod Cloud Dev — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-gitpod-cloud-dev-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, gitpod, workflow]
 ---

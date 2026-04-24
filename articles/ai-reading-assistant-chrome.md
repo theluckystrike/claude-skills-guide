@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Reading Assistant Chrome"
+title: "AI Reading Assistant Chrome (2026)"
 description: "Learn how to build and integrate AI reading assistants in Chrome. Code examples, APIs, and implementation patterns for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

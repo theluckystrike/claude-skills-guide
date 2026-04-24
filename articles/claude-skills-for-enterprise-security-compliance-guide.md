@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Enterprise Security &"
+title: "Claude Skills for Enterprise Security & (2026)"
 description: "Deploy Claude Code skills in enterprise environments with security controls, audit logging, access management, and compliance requirements."
 date: 2026-03-13
 last_modified_at: 2026-04-17

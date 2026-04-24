@@ -1,9 +1,8 @@
 ---
-title: "Claude Extra Usage Cost: What You Pay"
+title: "Claude Extra Usage Cost: What You Pay (2026)"
 description: "Exact pricing for Claude extra usage on Pro and Max plans. How usage is counted, how to monitor your spending, and proven strategies to reduce your bill."
 permalink: /claude-extra-usage-cost-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Extra Usage Cost: What You Pay (2026)
@@ -308,6 +307,7 @@ Yes. You can enable or disable extra usage at any time in your account settings.
 See our guides on [pruning unused tools](/03-pruning-unused-tools-saves-money/), [token usage auditing](/audit-claude-code-token-usage-step-by-step/), and [CLAUDE.md best practices](/claude-md-best-practices-definitive-guide/) for reducing context size.
 
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -411,3 +411,5 @@ See our guides on [pruning unused tools](/03-pruning-unused-tools-saves-money/),
 - [Claude API Pricing Complete Guide](/claude-api-pricing-complete-guide/)
 - [Claude Pro Subscription Price Guide](/claude-pro-subscription-price-guide/)
 
+
+{% endraw %}

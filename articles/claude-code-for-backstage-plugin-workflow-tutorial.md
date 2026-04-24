@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Backstage Plugin"
+title: "Claude Code for Backstage Plugin (2026)"
 description: "A comprehensive tutorial on building Backstage plugins using Claude Code. Learn how to create, test, and deploy custom plugins with AI-assisted."
 date: 2026-04-19
 last_modified_at: 2026-04-19

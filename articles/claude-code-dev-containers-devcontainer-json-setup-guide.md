@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Dev Containers"
+title: "How to Use Dev Containers (2026)"
 description: "Configure devcontainer.json for Claude Code development environments. Step-by-step setup for VS Code, Docker, and containerized AI development workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19

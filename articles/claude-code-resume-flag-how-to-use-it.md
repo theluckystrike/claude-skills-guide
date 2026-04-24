@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code --resume Flag"
+title: "Claude Code --resume Flag (2026)"
 description: "Use Claude Code --resume to continue interrupted sessions. Recover work in progress and manage long-running tasks effectively."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,10 +1,9 @@
 ---
-title: "Claude Code vs Cline: Token Efficiency Comparison"
+title: "Claude Code vs Cline: Token Efficiency Comparison (2026)"
 description: "Compare Claude Code and Cline for token efficiency with per-task measurements showing which tool wastes fewer tokens on common development operations."
 permalink: /claude-code-vs-cline-token-efficiency/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code vs Cline: Token Efficiency Comparison

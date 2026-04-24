@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Freelancers: Scale with Claude Code"
+title: "Freelancers: Scale with Claude Code (2026)"
 description: "Take on 3x more clients using Claude Code for code generation, debugging, and project scaffolding. Real freelancer workflows that reduce delivery time."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -218,7 +218,7 @@ Place supermemory.md in .claude/ then invoke: /supermemory
 
 Test each skill on a small project. Refine your prompts to match your style. Build templates for your most common project types.
 
-As you build confidence, layer in more automations. The compounding effect kicks in quickly, each improvement makes the next one easier. After 90 days of consistent use, most developers find it difficult to remember how they managed client work before.
+As you build confidence, layer in more automations. The compounding effect kicks in quickly, each improvement makes the next one easier. After 90 days of consistent use, most developers find it difficult to remember how they managed client work before. The key is consistency: use skills on every project, even small ones, so the templates and stored knowledge compound over time.
 
 ---
 

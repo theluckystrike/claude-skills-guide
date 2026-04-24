@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Social Media Scheduler Chrome Extension"
+title: "Social Media Scheduler Chrome Extension (2026)"
 description: "Learn how to build a Chrome extension for scheduling social media posts. Practical code examples and architecture patterns for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

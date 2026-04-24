@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Ansible MCP Server Configuration"
+title: "Ansible MCP Server Configuration (2026)"
 description: "Master Ansible MCP server configuration management with Claude Code. Practical examples, automation patterns, and workflow integration for DevOps."
 date: 2026-03-14
 last_modified_at: 2026-04-17

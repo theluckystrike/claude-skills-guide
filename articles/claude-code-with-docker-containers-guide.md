@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Using Claude Code with Docker"
-description: "Run Claude Code inside Docker containers and devcontainers for isolated development, CI/CD, and sandbox environments."
+title: "Using Claude Code with Docker (2026)"
+description: "Using Claude Code with Docker — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-15
 permalink: /claude-code-with-docker-containers-guide/
 categories: [guides, claude-code]

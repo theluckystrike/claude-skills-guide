@@ -1,9 +1,8 @@
 ---
-title: "Shell RC File Not Sourced Error — Fix"
+title: "Shell RC File Not Sourced Error — Fix (2026)"
 permalink: /claude-code-shell-rc-not-sourced-fix-2026/
-description: "Fix Claude Code env vars not loading because .zshrc is not sourced. Add source line to .zprofile for login shells."
+description: "Shell RC File Not Sourced Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -106,3 +105,44 @@ Yes. Set the `ANTHROPIC_API_KEY` in a project-level `.env` file or use direnv to
 ### Why is the claude command not found after installation?
 
 The installation directory is not in your PATH. Run `which claude` to check if it is accessible. If not, add the npm global bin directory to your PATH: `export PATH=$(npm bin -g):$PATH` and add this line to your shell profile (`~/.bashrc` or `~/.zshrc`).
+
+
+## Related Guides
+
+- [Optimal Skill File Size and Complexity](/optimal-skill-file-size-and-complexity-guidelines/)
+- [Claude Code Large File Refactoring](/best-way-to-use-claude-code-for-large-file-refactoring/)
+- [Declaration File .d.ts Missing Error — Fix (2026)](/claude-code-declaration-file-dts-missing-fix-2026/)
+- [Claude Code Enoent No Such File](/claude-code-enoent-no-such-file-directory-skill/)
+
+## Terminal and CLI Setup for Claude Code
+
+A properly configured terminal improves Claude Code's reliability and your development experience:
+
+**Shell compatibility.** Claude Code supports bash, zsh, and fish shells. Zsh (default on macOS) and bash (default on Linux) have the best compatibility. Fish shell requires additional configuration because its syntax differs from POSIX shells.
+
+**Tab completion setup.** Claude Code provides shell completions that help you type commands faster:
+
+```bash
+# For zsh (macOS default)
+claude completion zsh > ~/.zsh/completions/_claude
+source ~/.zshrc
+
+# For bash
+claude completion bash > /etc/bash_completion.d/claude
+source ~/.bashrc
+
+# For fish
+claude completion fish > ~/.config/fish/completions/claude.fish
+```
+
+**Terminal emulator recommendations.** Use a terminal that supports 256 colors, Unicode, and does not mangle escape sequences. Recommended: iTerm2 (macOS), Alacritty (cross-platform), Windows Terminal (Windows). Avoid: old versions of Terminal.app, PuTTY, or CMD.exe.
+
+## Command-Line Flags Reference
+
+| Flag | Purpose | Example |
+|------|---------|---------|
+| `-p "prompt"` | Non-interactive (pipe mode) | `claude -p "list all TODO comments"` |
+| `--trust` | Skip workspace trust prompt | `claude --trust -p "run tests"` |
+| `--yes` | Auto-approve all tool calls | `claude --yes -p "fix lint errors"` |
+| `--model` | Override default model | `claude --model claude-sonnet-4-20250514 -p "quick fix"` |
+| `--verbose` | Show debug output | `claude --verbose -p "diagnose build failure"` |

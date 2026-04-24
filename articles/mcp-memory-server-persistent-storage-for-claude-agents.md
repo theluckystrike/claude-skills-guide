@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "MCP Memory Server"
+title: "MCP Memory Server (2026)"
 description: "Set up the MCP memory server for persistent storage across Claude Code sessions. Configuration, practical usage patterns, and team sharing tips."
 date: 2026-03-13
 last_modified_at: 2026-04-17

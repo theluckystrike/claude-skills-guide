@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Use Claude Skills Without Max"
+title: "Use Claude Skills Without Max (2026)"
 description: "Claude skills work without a Max subscription via Claude Code CLI. Learn which features are free, what requires paid plans, and how to maximize value."
 date: 2026-03-14
 last_modified_at: 2026-04-17

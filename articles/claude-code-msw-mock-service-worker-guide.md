@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Msw Mock Service"
-description: "Use MSW (Mock Service Worker) with Claude Code for API mocking and frontend testing. Practical examples included."
+title: "Claude Code Msw Mock Service (2026)"
+description: "Claude Code Msw Mock Service — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]

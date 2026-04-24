@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code JWT Refresh Token Workflow"
+title: "Claude Code JWT Refresh Token Workflow (2026)"
 description: "Implement secure JWT refresh token rotation with Claude Code. Handle token expiry, refresh flows, and revocation with tested Node.js and Python examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

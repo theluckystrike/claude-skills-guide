@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Go Benchmark"
+title: "Claude Code For Go Benchmark (2026)"
 description: "A practical tutorial on integrating Claude Code into your Go benchmarking workflow. Learn to write, run, and analyze benchmarks with AI assistance."
 date: 2026-03-15
 last_modified_at: 2026-04-17

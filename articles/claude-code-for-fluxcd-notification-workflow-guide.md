@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for FluxCD Notification"
+title: "Claude Code for FluxCD Notification (2026)"
 description: "Learn how to use Claude Code CLI to streamline FluxCD notification workflows, from setting up alerts to integrating with Slack, Discord, and custom."
 date: 2026-03-15
 last_modified_at: 2026-04-17

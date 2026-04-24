@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude 1M Context Window"
+title: "Claude 1M Context Window (2026)"
 description: "Filling Claude Opus 4.7's 1M context window costs $5.00 per request. Here is how to use that capacity without destroying your budget."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # Claude 1M Context Window: What It Really Costs

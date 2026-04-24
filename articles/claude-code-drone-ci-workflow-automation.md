@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Drone CI Workflow"
+title: "Claude Code Drone CI Workflow (2026)"
 description: "Automate your Drone CI pipelines using Claude Code skills. Learn practical patterns for pipeline generation, testing, and maintenance with code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

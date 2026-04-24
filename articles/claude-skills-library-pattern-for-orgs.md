@@ -1,8 +1,7 @@
 ---
-title: "Build a Claude Skills Library for Your"
+title: "Build a Claude Skills Library for Your (2026)"
 description: "Architecture pattern for a centralized skills repository with categorization, discovery, version tracking, and distribution to multiple teams."
 permalink: /claude-skills-library-pattern-for-orgs/
-render_with_liquid: false
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, organization, library, architecture]
 last_updated: 2026-04-19

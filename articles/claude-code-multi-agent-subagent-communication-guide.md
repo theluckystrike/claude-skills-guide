@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Multi-Agent Subagent"
+title: "Claude Code Multi-Agent Subagent (2026)"
 description: "Design multi-agent workflows with Claude Code: spawn subagents, pass context between agents, and coordinate parallel work using print mode."
 date: 2026-03-13
 last_modified_at: 2026-04-17

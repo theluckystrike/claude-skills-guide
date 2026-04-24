@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Content Calendar"
+title: "Chrome Extension Content Calendar (2026)"
 description: "Learn how to build and use a chrome extension content calendar manager for organizing publishing schedules, managing content pipelines, and automating."
 date: 2026-03-15
 last_modified_at: 2026-04-17

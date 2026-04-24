@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build an Offline Article Saver"
+title: "Build an Offline Article Saver (2026)"
 description: "Build a Chrome extension to save articles for offline reading. Covers IndexedDB storage, service workers, content extraction, and sync strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17

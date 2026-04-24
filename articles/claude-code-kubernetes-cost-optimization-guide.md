@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Kubernetes Cost"
+title: "Claude Code Kubernetes Cost (2026)"
 description: "Reduce Kubernetes costs with Claude Code automation. Right-sizing strategies, idle resource detection, and spot instance optimization workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

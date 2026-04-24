@@ -1,9 +1,8 @@
 ---
-title: "Claude MCP List Command: Full Reference"
+title: "Claude MCP List Command: Full Reference (2026)"
 description: "Complete reference for claude mcp list and all MCP CLI commands. Syntax, output format, scope options, config locations, and troubleshooting."
 permalink: /claude-mcp-list-command-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude MCP List Command: Full Reference (2026)
@@ -44,6 +43,7 @@ Each line includes:
 </div>
 <div id="mf-list" style="display:grid;gap:8px;max-height:400px;overflow-y:auto;"></div>
 </div>
+{% raw %}
 <script>
 var mcpServers=[{n:"PostgreSQL",c:"data",d:"Query databases, inspect schemas, run SQL",cmd:"claude mcp add postgres -- npx -y @anthropic/mcp-server-postgres postgresql://localhost:5432/mydb"},{n:"SQLite",c:"data",d:"Read and query local SQLite databases",cmd:"claude mcp add sqlite -- npx -y @anthropic/mcp-server-sqlite /path/to/database.db"},{n:"GitHub",c:"dev",d:"Repos, issues, PRs, code search",cmd:"claude mcp add github --scope user -- npx -y @anthropic/mcp-server-github"},{n:"GitLab",c:"dev",d:"GitLab repos, merge requests, CI/CD",cmd:"claude mcp add gitlab -e GITLAB_TOKEN=glpat-xxx -- npx -y @anthropic/mcp-server-gitlab"},{n:"Linear",c:"dev",d:"Issue tracking, project management",cmd:"claude mcp add linear -e LINEAR_API_KEY=lin_api_xxx -- npx -y @anthropic/mcp-server-linear"},{n:"Sentry",c:"dev",d:"Error tracking, issue monitoring",cmd:"claude mcp add sentry -e SENTRY_AUTH_TOKEN=xxx -- npx -y @anthropic/mcp-server-sentry"},{n:"Slack",c:"comm",d:"Read channels, send messages",cmd:"claude mcp add slack -e SLACK_TOKEN=xoxb-xxx -- npx -y @anthropic/mcp-server-slack"},{n:"Google Drive",c:"file",d:"Read and search Google Drive files",cmd:"claude mcp add gdrive -- npx -y @anthropic/mcp-server-gdrive"},{n:"Filesystem",c:"file",d:"Controlled access to local directories",cmd:"claude mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem /path/to/dir"},{n:"Memory",c:"file",d:"Persistent key-value memory across sessions",cmd:"claude mcp add memory -- npx -y @anthropic/mcp-server-memory"},{n:"Brave Search",c:"search",d:"Web search via Brave Search API",cmd:"claude mcp add brave -e BRAVE_API_KEY=BSA_xxx -- npx -y @anthropic/mcp-server-brave-search"},{n:"Puppeteer",c:"dev",d:"Browser automation, screenshots, scraping",cmd:"claude mcp add puppeteer -- npx -y @anthropic/mcp-server-puppeteer"}];
 function filterMCP(cat){var html='';mcpServers.forEach(function(s){if(cat!=='all'&&s.c!==cat)return;html+='<div style="background:#0f172a;padding:12px;border-radius:6px;"><div style="display:flex;justify-content:space-between;align-items:center;"><strong style="color:#e2e8f0;font-size:14px;">'+s.n+'</strong><span style="color:#64748b;font-size:11px;background:#1e293b;padding:2px 8px;border-radius:3px;">'+s.c+'</span></div><p style="color:#94a3b8;font-size:13px;margin:4px 0 8px 0;">'+s.d+'</p><div style="display:flex;gap:8px;align-items:center;"><code style="flex:1;background:#1a1a2e;padding:6px 8px;border-radius:4px;font-size:11px;color:#4ade80;overflow-x:auto;white-space:nowrap;">'+s.cmd+'</code><button onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent).then(function(){}.bind(this))" style="padding:4px 10px;background:#334155;color:#e2e8f0;border:none;border-radius:4px;font-size:11px;cursor:pointer;white-space:nowrap;">Copy</button></div></div>';});document.getElementById('mf-list').innerHTML=html||'<div style="color:#94a3b8;padding:12px;">No servers in this category.</div>';document.querySelectorAll('.mf-btn').forEach(function(b){b.style.background=b.getAttribute('data-c')===cat?'#6ee7b7':'#334155';b.style.color=b.getAttribute('data-c')===cat?'#0f172a':'#e2e8f0';b.style.fontWeight=b.getAttribute('data-c')===cat?'600':'400';});}
@@ -399,3 +399,5 @@ The new configuration replaces the existing one at the same scope. If the existi
 ## See Also
 
 - [Claude MCP vs ChatGPT Plugins: Extension Systems Compared](/claude-mcp-vs-chatgpt-plugins-comparison/)
+
+{% endraw %}

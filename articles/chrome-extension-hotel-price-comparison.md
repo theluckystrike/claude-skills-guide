@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Hotel Price"
+title: "Chrome Extension Hotel Price (2026)"
 description: "Learn how chrome extension hotel price comparison tools work under the hood. Technical breakdown of APIs, scraping methods, and building custom price."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,10 +1,9 @@
 ---
-title: "Reducing Claude Code token usage"
+title: "Reducing Claude Code token usage (2026)"
 description: "Reduce Claude Code token usage for database operations by 60-80% with schema skills, query templates, and structured migration patterns saving $30-80/month."
 permalink: /reducing-claude-code-token-usage-database-operations/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Reducing Claude Code token usage for database operations

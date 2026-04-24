@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Over Engineers Simple"
+title: "Fix Claude Code Over Engineers Simple (2026)"
 description: "A practical guide to fixing common Claude Code issues quickly without requiring a full engineering team. Learn quick fixes, CLI optimizations, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

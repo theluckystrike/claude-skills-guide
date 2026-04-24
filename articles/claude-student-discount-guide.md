@@ -1,9 +1,8 @@
 ---
-title: "Claude Student Discount: How to Get It"
+title: "Claude Student Discount: How to Get It (2026)"
 description: "Anthropic does not offer a Claude student discount in 2026. Here are real alternatives: free tiers, API credits, university programs, and tips."
 permalink: /claude-student-discount-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Student Discount: How to Get It (2026)
@@ -251,6 +250,7 @@ Anthropic's terms require individual accounts. Each student should have their ow
 - [Claude API pricing](/claude-api-pricing-complete-guide/) — every model and plan priced
 - [Claude 5-hour usage limit](/claude-5-hour-usage-limit-guide/) — rolling limit on free and paid tiers
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -269,3 +269,5 @@ Anthropic's terms require individual accounts. Each student should have their ow
   ]
 }
 </script>
+
+{% endraw %}

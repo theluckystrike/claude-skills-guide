@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "CLAUDE.md Templates Library"
-description: "Complete library of CLAUDE.md templates for every project type. Copy-paste configurations for Claude Code."
+title: "CLAUDE.md Templates Library (2026)"
+description: "CLAUDE.md Templates Library — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 permalink: /templates-library/
-render_with_liquid: false
 ---
 
 # CLAUDE.md Templates Library

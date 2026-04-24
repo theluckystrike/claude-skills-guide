@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Developer Productivity"
+title: "Claude Code for Developer Productivity (2026)"
 description: "Learn how to use Claude Code to track and improve your developer productivity with practical examples, code snippets, and actionable strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17

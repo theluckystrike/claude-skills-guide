@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Passing Context Between Claude Code"
+title: "Passing Context Between Claude Code (2026)"
 description: "Learn how to effectively pass context and state between subagents in Claude Code. Practical patterns for multi-agent workflows with code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

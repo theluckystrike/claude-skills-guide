@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Batch API 50% Discount Complete"
-description: "Every Claude model offers 50% off via the Batch API. Opus 4.7 drops from $5/$25 to $2.50/$12.50 per million tokens."
+title: "Claude Batch API 50% Discount Complete (2026)"
+description: "Claude Batch API 50% Discount Complete — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-batch-api-50-percent-discount-guide/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, batch-api]
-render_with_liquid: false
 ---
 
 # Claude Batch API 50% Discount Complete Guide

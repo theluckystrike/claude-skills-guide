@@ -1,10 +1,9 @@
 ---
-title: "Pre-Loading Context"
+title: "Pre-Loading Context (2026)"
 description: "Pre-load context in CLAUDE.md sections to save 50%+ tokens per Claude Code session with project maps, error protocols, and architecture summaries."
 permalink: /pre-loading-context-claude-md-sections-save-tokens/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Pre-Loading Context: CLAUDE.md Sections That Save 50%+ Tokens

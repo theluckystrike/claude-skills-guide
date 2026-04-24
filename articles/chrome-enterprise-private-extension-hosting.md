@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Enterprise Private Extension"
+title: "Chrome Enterprise Private Extension (2026)"
 description: "Chrome Enterprise Private Extension Hosting Guide. Practical guide with working examples for developers. Tested on Chrome. Tested and working in 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Cloud Run Jobs Workflow"
+title: "Claude Code for Cloud Run Jobs Workflow (2026)"
 description: "Automate Google Cloud Run Jobs with Claude Code CLI for batch processing, deployment pipelines, and job monitoring. Step-by-step workflow examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

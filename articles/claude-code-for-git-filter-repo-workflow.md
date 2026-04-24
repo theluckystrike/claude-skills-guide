@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Git Filter-Repo"
+title: "Claude Code for Git Filter-Repo (2026)"
 description: "Learn how to use Claude Code to automate and simplify git filter-repo workflows for cleaning up repository history, removing sensitive data, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

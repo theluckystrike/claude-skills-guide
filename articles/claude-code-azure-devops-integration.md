@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Azure DevOps Integration Guide"
+title: "Claude Code Azure DevOps Integration Guide (2026)"
 description: "Integrate Claude Code with Azure DevOps pipelines, repos, and boards. Automate CI/CD, code reviews, and work item management."
 date: 2026-04-17
 last_modified_at: 2026-04-17

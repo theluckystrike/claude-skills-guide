@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Go Fuzz Testing"
+title: "Claude Code for Go Fuzz Testing (2026)"
 description: "Learn how to integrate Claude Code into your Go fuzz testing workflow. This guide covers setting up fuzz tests, writing effective fuzz targets, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19

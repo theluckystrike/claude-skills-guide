@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "AI Citation Generator Chrome"
+title: "AI Citation Generator Chrome (2026)"
 description: "Build and use AI-powered citation generators for Chrome. Practical implementation patterns, APIs, and code examples for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -92,6 +91,7 @@ Medium posts: The author byline is in a `<meta name="author">` tag, but the publ
 
 MDN Web Docs: No reliable author metadata. The contributor list is in the DOM but requires parsing. For MDN, treating Mozilla as the publisher and using the page title and URL is usually sufficient.
 
+{% raw %}
 YouTube videos: Channel name maps to author, upload date is available in structured data embedded as JSON-LD in a `<script>` tag.
 
 For JSON-LD, which many modern sites use for structured metadata, add a dedicated extraction path:
@@ -335,3 +335,5 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
 
+
+{% endraw %}

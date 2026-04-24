@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Bff API Pattern"
+title: "Claude Code For Bff API Pattern (2026)"
 description: "Claude Code For Bff API Pattern — Complete Developer tutorial with real-world examples, working configurations, best practices, and deployment steps..."
 date: 2026-04-19
 last_modified_at: 2026-04-19

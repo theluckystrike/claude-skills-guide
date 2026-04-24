@@ -3,7 +3,6 @@ title: "Best Claude Code Security Tools (2026)"
 description: "Ranked list of security tools for Claude Code including secret scanners, dependency auditors, SAST integration, and MCP security servers."
 permalink: /best-claude-code-security-tools-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Best Claude Code Security Tools (2026)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for OSS Issue Triage"
+title: "Claude Code for OSS Issue Triage (2026)"
 description: "Automate open source issue triage with Claude Code. Covers bug classification, priority assignment, duplicate detection, and label automation skills."
 date: 2026-03-15
 last_modified_at: 2026-04-17

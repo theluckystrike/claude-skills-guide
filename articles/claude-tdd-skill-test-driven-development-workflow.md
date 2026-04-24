@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Tdd Skill Test Driven"
+title: "Claude Tdd Skill Test Driven (2026)"
 description: "Use Claude's TDD skill to guide red-green-refactor cycles, generate meaningful test cases, and keep test coverage growing alongside your codebase."
 date: 2026-03-13
 last_modified_at: 2026-04-17

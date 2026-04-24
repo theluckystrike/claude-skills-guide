@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Do Teams Switch From Copilot"
+title: "Why Do Teams Switch From Copilot (2026)"
 description: "A practical guide for developers exploring why teams are migrating from GitHub Copilot to Claude Code for AI-assisted development."
 date: 2026-03-14
 last_modified_at: 2026-04-17

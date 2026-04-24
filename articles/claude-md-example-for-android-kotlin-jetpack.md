@@ -1,6 +1,6 @@
 ---
-title: "CLAUDE.md Example for Android + Kotlin"
-description: "Complete 320-line CLAUDE.md for Android with Kotlin 2.1 and Jetpack Compose."
+title: "CLAUDE.md Example for Android + Kotlin (2026)"
+description: "CLAUDE.md Example for Android + Kotlin — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-md-example-for-android-kotlin-jetpack/
 render_with_liquid: false
 categories: [claude-md, templates, 2026]

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Reduce Claude Code Hallucinations"
+title: "Reduce Claude Code Hallucinations (2026)"
 description: "Cut Claude Code hallucinations with 7 proven techniques that reduce wasted token usage and improve code accuracy on the first generation attempt."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Go To Definition"
+title: "Claude Code For Go To Definition (2026)"
 description: "Master the art of navigating codebases efficiently with Claude Code. Learn practical workflows for jumping to definitions, understanding code."
 date: 2026-03-15
 last_modified_at: 2026-04-17

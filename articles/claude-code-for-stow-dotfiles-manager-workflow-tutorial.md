@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for GNU Stow Dotfiles Setup"
+title: "Claude Code for GNU Stow Dotfiles Setup (2026)"
 description: "Manage dotfiles with GNU Stow and Claude Code. Automate symlink creation, organize config files across machines, and version control your environment."
 date: 2026-03-20
 last_modified_at: 2026-04-17

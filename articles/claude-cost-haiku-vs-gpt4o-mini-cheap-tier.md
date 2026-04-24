@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Haiku vs GPT-4o Mini Cost"
-description: "Claude Haiku at $1/$5 per MTok vs GPT-4o mini at $0.15/$0.60. When each budget model wins."
+title: "Claude Haiku vs GPT-4o Mini Cost (2026)"
+description: "Claude Haiku vs GPT-4o Mini Cost — features, pricing, and performance compared side by side to help you pick the right tool."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-cost-haiku-vs-gpt4o-mini-cheap-tier/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, comparison]
-render_with_liquid: false
 ---
 
 # Claude Haiku vs GPT-4o Mini: The Cheap-Tier Showdown

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Meilisearch Integration"
+title: "Claude Code for Meilisearch Integration (2026)"
 description: "Learn how to integrate Meilisearch with Claude Code for building fast, relevant search experiences. This guide covers setup, indexing, querying, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

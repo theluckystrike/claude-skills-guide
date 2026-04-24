@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Zig Programming"
+title: "Claude Code for Zig Programming (2026)"
 description: "Use Claude Code for Zig systems programming. Project scaffolding, memory-safe code generation, debugging, and build system integration tips."
 date: 2026-03-15
 last_modified_at: 2026-04-17

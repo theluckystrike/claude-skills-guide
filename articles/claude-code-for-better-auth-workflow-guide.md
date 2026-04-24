@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Better Auth"
-description: "Add framework-agnostic auth with Better Auth and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Better Auth (2026)"
+description: "Claude Code for Better Auth — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-better-auth-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, better-auth, workflow]
 ---

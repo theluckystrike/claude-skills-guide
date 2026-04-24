@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Groq Inference"
+title: "Claude Code for Groq Inference (2026)"
 description: "Claude Code for Groq Inference — Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps..."
 date: 2026-04-18
 permalink: /claude-code-for-groq-inference-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, groq, workflow]
 last_tested: "2026-04-22"

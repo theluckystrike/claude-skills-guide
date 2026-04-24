@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Load Testing with Locust"
+title: "Claude Code for Load Testing with Locust (2026)"
 description: "Learn how to use Claude Code for load testing with Locust. This comprehensive guide covers setting up Locust test scripts, integrating with Claude."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Language Learning Chrome Extension"
+title: "Language Learning Chrome Extension (2026)"
 description: "Build a language learning immersion Chrome extension that replaces words on web pages with target language translations. Code examples and API patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17

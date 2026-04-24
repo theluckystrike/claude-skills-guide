@@ -3,7 +3,6 @@ title: "Claude Code Write Path Outside — Fix (2026)"
 permalink: /claude-code-write-tool-path-outside-workspace-fix-2026/
 description: "Use absolute paths within workspace root to fix outside-workspace write error. Move target files inside the project boundary or use Bash tool."
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -84,3 +83,32 @@ Standard JSON does not support comments. If your project uses JSONC (JSON with C
 ### Why does Claude Code reject paths outside the workspace?
 
 Claude Code sandboxes file operations to the current workspace directory for security. Writing to paths outside the project root (like `/etc/` or `~/`) is blocked by default. This prevents accidental modification of system files or other projects.
+
+
+## Related Guides
+
+- [How to Write Token-Efficient Claude](/write-token-efficient-claude-code-skills/)
+- [How to Make Claude Code Write](/how-to-make-claude-code-write-performant-sql-queries/)
+- [How to Make Claude Code Write Secure](/how-to-make-claude-code-write-secure-code-always/)
+- [Write Database Queries with Claude Code](/how-to-use-claude-code-to-write-database-queries-from-scratch/)
+
+## Implementation Details
+
+When working with this in Claude Code, pay attention to these practical details:
+
+**Project configuration.** Add specific instructions to your CLAUDE.md file describing how your project handles this area. Include file paths, naming conventions, and any patterns that differ from common defaults. Claude Code reads CLAUDE.md at the start of every session and uses it to guide all operations.
+
+**Testing the setup.** After configuration, verify everything works by running a simple test task. Ask Claude Code to perform a read-only operation first (like listing files or reading a config) before moving to write operations. This confirms that permissions, paths, and tools are all correctly configured.
+
+**Monitoring and iteration.** Track your results over several sessions. If Claude Code consistently makes the same mistake, the fix is usually a more specific CLAUDE.md instruction. If it makes different mistakes each time, the issue is likely in the project setup or toolchain configuration.
+
+## Troubleshooting Checklist
+
+When something does not work as expected, check these items in order:
+
+1. **CLAUDE.md exists at the project root** — run `ls -la CLAUDE.md` to verify
+2. **Node.js version is 18+** — run `node --version` to check
+3. **API key is set** — run `echo $ANTHROPIC_API_KEY | head -c 10` to verify (shows first 10 characters only)
+4. **Disk space is available** — run `df -h .` to check
+5. **Network can reach the API** — run `curl -s -o /dev/null -w "%{http_code}" https://api.anthropic.com` (should return 401 without auth, meaning the server is reachable)
+6. **No conflicting processes** — run `ps aux | grep claude | grep -v grep` to check for stale sessions

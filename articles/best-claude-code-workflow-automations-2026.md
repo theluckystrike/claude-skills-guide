@@ -1,5 +1,5 @@
 ---
-title: "Best Claude Code Workflow Automations"
+title: "Best Claude Code Workflow Automations (2026)"
 description: "Ranked list of the best Claude Code workflow automations including task management, code review, scaffolding, and CI/CD integration tools."
 permalink: /best-claude-code-workflow-automations-2026/
 last_tested: "2026-04-22"
@@ -115,6 +115,15 @@ npx claude-code-templates@latest
 **Pros:**
 - Zero external dependencies (uses your existing tools)
 - Catches errors immediately (before they compound)
+
+For more on this topic, see [Claude Code for Direnv — Workflow Guide](/claude-code-for-direnv-workflow-guide/).
+
+For more on this topic, see [Claude Code for Devbox — Workflow Guide](/claude-code-for-devbox-jetify-workflow-guide/).
+
+
+For more on this topic, see [Claude Code for UnoCSS — Workflow Guide](/claude-code-for-unocss-workflow-guide/).
+
+
 - Output feeds back to Claude Code for self-correction
 - Works in both interactive and API mode
 

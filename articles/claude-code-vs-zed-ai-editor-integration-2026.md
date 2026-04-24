@@ -5,7 +5,6 @@ description: "Claude Code vs Zed's built-in AI compared for developers. Terminal
 permalink: /claude-code-vs-zed-ai-editor-integration-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

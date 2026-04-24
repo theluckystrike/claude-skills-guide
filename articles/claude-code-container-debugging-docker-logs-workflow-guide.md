@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Container Debugging"
+title: "Claude Code Container Debugging (2026)"
 description: "A practical workflow guide for debugging Docker containers using Claude Code and Docker logs. Real commands, scripts, and patterns for developers."
 date: 2026-04-19
 last_modified_at: 2026-04-19

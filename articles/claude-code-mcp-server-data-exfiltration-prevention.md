@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code MCP Server Data"
+title: "Claude Code MCP Server Data (2026)"
 description: "Secure your Claude Code MCP servers against data exfiltration. Practical patterns for developers building skills with external tool integrations."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Sre On Call Incident"
+title: "Claude Code Sre On Call Incident (2026)"
 description: "Learn how to use Claude Code skills and features to streamline on-call incident response, reduce MTTR, and automate SRE workflows effectively."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Compromised Password Alert"
+title: "Chrome Compromised Password Alert (2026)"
 description: "Learn how Chrome's compromised password alert works, how to enable it, and how developers can integrate breach detection into their applications."
 date: 2026-03-15
 last_modified_at: 2026-04-17

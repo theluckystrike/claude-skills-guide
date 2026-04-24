@@ -1,8 +1,7 @@
 ---
-title: "Fix Skill Name Already in Use"
+title: "Fix Skill Name Already in Use (2026)"
 description: "Diagnose and fix skill name collisions between personal, project, plugin, and legacy command scopes with specific resolution steps."
 permalink: /fix-skill-name-already-in-use-error/
-render_with_liquid: false
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, naming-conflict, precedence, troubleshooting]
 last_updated: 2026-04-19

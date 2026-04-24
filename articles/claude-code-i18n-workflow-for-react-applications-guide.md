@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code i18n Workflow for React"
+title: "Claude Code i18n Workflow for React (2026)"
 description: "A practical guide to implementing internationalization workflows in React using Claude Code, covering translation management, locale switching, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

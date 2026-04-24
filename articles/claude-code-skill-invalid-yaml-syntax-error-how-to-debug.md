@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Skill Invalid YAML Syntax Error"
+title: "Fix Skill Invalid YAML Syntax Error (2026)"
 description: "Learn how to diagnose and fix YAML syntax errors in Claude skills. Practical debugging techniques with real examples for developers. Updated for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17

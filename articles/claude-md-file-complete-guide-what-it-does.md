@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md File: What It Does"
+title: "Claude Md File: What It Does (2026)"
 description: "A comprehensive guide to .md files in Claude Code: how they power skills, contain configuration via front matter, and structure AI interactions."
 date: 2026-03-14
 last_modified_at: 2026-04-17

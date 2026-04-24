@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Next.js Deployment"
+title: "Claude Code Next.js Deployment (2026)"
 description: "Optimize Next.js deployments with Claude Code for build caching, ISR tuning, and CI/CD pipeline config. Reduce build times and improve performance."
 date: 2026-03-14
 last_modified_at: 2026-04-17

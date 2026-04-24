@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Costco Deal Tracker Chrome Extension"
+title: "Costco Deal Tracker Chrome Extension (2026)"
 description: "Learn how to build a Chrome extension to track Costco deals and price drops. Practical code examples and architecture for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

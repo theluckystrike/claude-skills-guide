@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Sentry Errors"
-description: "Integrate Sentry error tracking with Claude Code setup. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Sentry Errors (2026)"
+description: "Claude Code for Sentry Errors — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 date: 2026-04-18
 permalink: /claude-code-for-sentry-error-tracking-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, sentry, workflow]
 ---

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Code Generation"
+title: "Claude Code for Code Generation (2026)"
 description: "Learn how to build an automated code generation pipeline using Claude Code, leveraging specialized skills for consistent, high-quality output across."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for PowerSync"
-description: "Build offline-first apps with PowerSync and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for PowerSync (2026)"
+description: "Claude Code for PowerSync — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-powersync-offline-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, powersync, workflow]
 ---

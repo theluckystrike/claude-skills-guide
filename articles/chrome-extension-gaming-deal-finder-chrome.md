@@ -1,8 +1,7 @@
 ---
-render_with_liquid: false
 
 layout: default
-title: "Building a Chrome Extension for Gaming"
+title: "Building a Chrome Extension for Gaming (2026)"
 description: "Learn how to build a Chrome extension that finds the best gaming deals across multiple stores. Practical code examples, API integration patterns, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -374,3 +373,71 @@ Deal widget overlapping page content: Give users a dismiss button and store the 
 
 
 
+
+
+## Frequently Asked Questions
+
+### Do I need a paid Anthropic plan to use this?
+
+Claude Code works with any Anthropic API plan, including the free tier. However, the free tier has lower rate limits (requests per minute and tokens per minute) that may slow down multi-step workflows. For professional use, the Build or Scale plan provides higher limits and priority access during peak hours.
+
+### How does this affect token usage and cost?
+
+The token cost depends on the size of your prompts and Claude's responses. Typical development tasks consume 10K-50K tokens per interaction. Using a CLAUDE.md file and skills reduces exploration tokens by 50-80%, which directly lowers costs. Monitor your usage at console.anthropic.com/settings/billing.
+
+### Can I customize this for my specific project?
+
+Yes. All Claude Code behavior can be customized through CLAUDE.md (project rules), `.claude/settings.json` (permissions), and `.claude/skills/` (domain knowledge). The most impactful customization is adding your project's specific patterns, conventions, and common commands to CLAUDE.md so Claude Code follows your standards from the start.
+
+### What happens when Claude Code makes a mistake?
+
+Claude Code creates files and edits through standard filesystem operations, so all changes are visible in `git diff`. If a change is wrong, revert it with `git checkout -- <file>` for a single file or `git stash` for all changes. Claude Code does not make irreversible changes unless you explicitly allow destructive commands in settings.json.
+
+
+## Related Guides
+
+- [Virtual Background Chrome Extension](/virtual-background-chrome-extension/)
+- [Spending Tracker Chrome Extension Guide](/chrome-extension-spending-tracker-chrome/)
+- [Anki Web Integration Chrome Extension](/chrome-extension-anki-web-integration/)
+- [Notion Web Clipper Chrome Extension](/chrome-extension-notion-web-clipper/)
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a paid Anthropic plan to use this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code works with any Anthropic API plan, including the free tier. However, the free tier has lower rate limits (requests per minute and tokens per minute) that may slow down multi-step workflows. For professional use, the Build or Scale plan provides higher limits and priority access during peak hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does this affect token usage and cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The token cost depends on the size of your prompts and Claude's responses. Typical development tasks consume 10K-50K tokens per interaction. Using a CLAUDE.md file and skills reduces exploration tokens by 50-80%, which directly lowers costs. Monitor your usage at console.anthropic.com/settings/billing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I customize this for my specific project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All Claude Code behavior can be customized through CLAUDE.md (project rules), `.claude/settings.json` (permissions), and `.claude/skills/` (domain knowledge). The most impactful customization is adding your project's specific patterns, conventions, and common commands to CLAUDE.md so Claude Code follows your standards from the start."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when Claude Code makes a mistake?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code creates files and edits through standard filesystem operations, so all changes are visible in `git diff`. If a change is wrong, revert it with `git checkout -- <file>` for a single file or `git stash` for all changes. Claude Code does not make irreversible changes unless you explicitly allow destructive commands in settings.json."
+      }
+    }
+  ]
+}
+</script>

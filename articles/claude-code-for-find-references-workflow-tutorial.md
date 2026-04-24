@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Find References"
+title: "Claude Code for Find References (2026)"
 last_tested: "2026-04-22"
 description: "Learn how to use Claude Code to efficiently find references in your codebase, track function usages, and navigate complex code relationships."
 date: 2026-03-15

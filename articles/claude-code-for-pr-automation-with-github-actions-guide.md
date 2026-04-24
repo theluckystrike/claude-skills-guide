@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Pr Automation"
+title: "Claude Code For Pr Automation (2026)"
 description: "Learn how to use Claude Code with GitHub Actions to automate pull request workflows, including automated reviews, testing, and code quality checks."
 date: 2026-03-15
 last_modified_at: 2026-04-17

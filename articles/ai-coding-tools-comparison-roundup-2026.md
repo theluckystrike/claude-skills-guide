@@ -1,9 +1,8 @@
 ---
-title: "AI Coding Tools Roundup"
+title: "AI Coding Tools Roundup (2026)"
 permalink: /ai-coding-tools-comparison-roundup-2026/
 description: "14 AI coding tools compared head-to-head on agent capability, pricing, and real-world fit. From Copilot to Devin, ranked for developers in 2026."
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

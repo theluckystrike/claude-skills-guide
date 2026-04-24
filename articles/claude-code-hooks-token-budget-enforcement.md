@@ -1,10 +1,9 @@
 ---
-title: "Claude Code Hooks for Token Budget"
+title: "Claude Code Hooks for Token Budget (2026)"
 description: "Enforce token budgets automatically with Claude Code hooks that monitor spend per session, alert on threshold breaches, and block runaway operations."
 permalink: /claude-code-hooks-token-budget-enforcement/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Hooks for Token Budget Enforcement

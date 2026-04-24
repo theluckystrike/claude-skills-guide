@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Fluent Bit"
+title: "Claude Code For Fluent Bit (2026)"
 description: "A comprehensive guide to using Claude Code CLI for creating, managing, and optimizing Fluent Bit log processing workflows. Includes practical examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

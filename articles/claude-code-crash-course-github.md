@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Crash Course with GitHub"
+title: "Claude Code Crash Course with GitHub (2026)"
 description: "Complete crash course for using Claude Code with GitHub repos. Clone, branch, commit, PR — all through Claude Code in under 10 minutes."
 date: 2026-04-17
 last_modified_at: 2026-04-17
@@ -168,3 +168,129 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 - [VS Code Extension Host Crash Fix](/claude-code-extension-host-crash-fix-2026/)
 - [Apple Silicon Rosetta Crash Error — Fix (2026)](/claude-code-apple-silicon-rosetta-crash-fix-2026/)
+
+
+## Frequently Asked Questions
+
+### Does this error affect all operating systems?
+
+This error can occur on macOS, Linux, and Windows (WSL). The exact error message may differ slightly between platforms, but the root cause and fix are the same. macOS users may see additional Gatekeeper or notarization prompts. Linux users should check that the relevant system packages are installed. Windows users should ensure they are running inside WSL2, not native Windows.
+
+### Will this error come back after updating Claude Code?
+
+Updates can occasionally reintroduce this error if the update changes default configurations or dependency requirements. After updating Claude Code, verify your project still builds and runs correctly. If the error returns, reapply the fix and check the changelog for breaking changes.
+
+### Can this error cause data loss?
+
+No, this error occurs before or during an operation and does not corrupt existing files. Claude Code's edit operations are atomic — they either complete fully or not at all. However, if the error occurs during a multi-step operation, you may have partial changes that need to be reviewed with `git diff` before continuing.
+
+### How do I report this error to Anthropic if the fix does not work?
+
+Open an issue at github.com/anthropics/claude-code with: (1) the full error message including stack trace, (2) your Node.js version (`node --version`), (3) your Claude Code version (`claude --version`), (4) your operating system and version, and (5) the command or operation that triggered the error.
+
+
+## Related Error Messages
+
+This fix also applies if you see variations of this error:
+
+- Connection or process errors with similar root causes in the same subsystem
+- Timeout variants where the operation starts but does not complete
+- Permission variants where access is denied to the same resource
+- Configuration variants where the same setting is missing or malformed
+
+If your specific error message differs slightly from the one shown above, the fix is likely the same. The key indicator is the operation that failed (shown in the stack trace) rather than the exact wording of the message.
+
+
+## Prevention
+
+Add these rules to your project's `CLAUDE.md` to prevent this issue from recurring:
+
+```markdown
+# Environment Checks
+Before running commands, verify the required tools are available.
+Check versions match project requirements before proceeding.
+If a command fails, read the error message carefully before retrying.
+Do not retry failed commands without changing something first.
+```
+
+Additionally, consider adding a project setup validation script:
+
+```bash
+#!/bin/bash
+# validate-env.sh — run before starting Claude Code sessions
+set -euo pipefail
+
+echo "Checking environment..."
+node --version | grep -q "v2[0-2]" || echo "WARN: Node.js 20+ recommended"
+command -v git >/dev/null || echo "ERROR: git not found"
+[ -f package.json ] || echo "ERROR: not in project root"
+echo "Environment check complete."
+```
+
+
+## Related Guides
+
+- [Conversation History OOM Crash Fix — Fix (2026)](/claude-code-conversation-history-oom-fix-2026/)
+- [Fix Claude Code Bun Crash (2026)](/claude-code-bun-crash/)
+- [Claude Code GitHub Discussions](/claude-code-github-discussions-summarizer-workflow/)
+- [Claude Code + GitHub Models for Cost](/claude-code-with-github-models-for-cost-efficient-pipelines/)
+
+
+## Git Operations in Claude Code: Safety Checklist
+
+Claude Code can execute git commands, which makes safety guardrails important:
+
+**Before any destructive operation:** Always check `git status` and `git stash list` to confirm there are no uncommitted changes that could be lost.
+
+**Branch management:** Claude Code should create feature branches for non-trivial changes rather than committing directly to main. Use the pattern `git checkout -b claude/feature-name` to clearly identify AI-generated branches.
+
+**Commit message conventions:** Configure your preferred commit format in CLAUDE.md. Claude Code follows the format you specify. Common formats: Conventional Commits (`feat: add user search`), Angular style, or simple descriptive messages.
+
+## Common Git Mistakes Claude Code Makes
+
+1. **Amending the wrong commit.** If a pre-commit hook fails, Claude Code sometimes uses `--amend` on the next attempt, which modifies the previous (successful) commit instead of creating a new one. Configure CLAUDE.md with: "Never use git commit --amend. Always create new commits."
+
+2. **Force pushing to shared branches.** Claude Code may suggest `git push --force` to resolve push rejections. Add `Bash(git push --force*)` to your deny list in settings.json.
+
+3. **Committing generated files.** Without guidance, Claude Code may commit `dist/`, `node_modules/`, or `.env` files. Ensure your `.gitignore` is complete and add a pre-commit hook that checks for these.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does this error affect all operating systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This error can occur on macOS, Linux, and Windows (WSL). The exact error message may differ slightly between platforms, but the root cause and fix are the same. macOS users may see additional Gatekeeper or notarization prompts. Linux users should check that the relevant system packages are installed. Windows users should ensure they are running inside WSL2, not native Windows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will this error come back after updating Claude Code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Updates can occasionally reintroduce this error if the update changes default configurations or dependency requirements. After updating Claude Code, verify your project still builds and runs correctly. If the error returns, reapply the fix and check the changelog for breaking changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this error cause data loss?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, this error occurs before or during an operation and does not corrupt existing files. Claude Code's edit operations are atomic — they either complete fully or not at all. However, if the error occurs during a multi-step operation, you may have partial changes that need to be reviewed with `git diff` before continuing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I report this error to Anthropic if the fix does not work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open an issue at github.com/anthropics/claude-code with: (1) the full error message including stack trace, (2) your Node.js version (`node --version`), (3) your Claude Code version (`claude --version`), (4) your operating system and version, and (5) the command or operation that triggered the error. This fix also applies if you see variations of this error: - Connection or process errors with similar root causes in the same subsystem - Timeout variants where the operation starts but does not complete - Permission variants where access is denied to the same resource - Configuration variants where the same setting is missing or malformed If your specific error message differs slightly from the one shown above, the fix is likely the same. The key indicator is the operation that failed (shown in the stack trace) rather than the exact wording of the message. Add these rules to your project's `CLAUDE.md` to prevent this issue from recurring: ```markdown # Environment Checks Before running commands, verify the required tools are available. Check versions match project requirements before proceeding. If a command fails, read the error message carefully before retrying. Do not retry failed commands without changing something first. ``` Additionally, consider adding a project setup validation script: ```bash #!/bin/bash # validate-env.sh — run before starting Claude Code sessions set -euo pipefail echo \"Checking environment...\" node --version | grep -q \"v2[0-2]\" || echo \"WARN: Node.js 20+ recommended\" command -v git >/dev/null || echo \"ERROR: git not found\" [ -f package.json ] || echo \"ERROR: not in project root\" echo \"Environment check complete.\" ``` - [Conversation History OOM Crash Fix — Fix (2026)](/claude-code-conversation-history-oom-fix-2026/) - [Fix Claude Code Bun Crash (2026)](/claude-code-bun-crash/) - [Claude Code GitHub Discussions](/claude-code-github-discussions-summarizer-workflow/) - [Claude Code + GitHub Models for Cost](/claude-code-with-github-models-for-cost-efficient-pipelines/)"
+      }
+    }
+  ]
+}
+</script>

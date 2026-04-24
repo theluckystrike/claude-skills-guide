@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Review Comment"
+title: "Claude Code for Review Comment (2026)"
 description: "Learn how to build a review comment automation workflow with Claude Code to streamline code reviews, manage feedback, and maintain consistent quality."
 date: 2026-03-15
 last_modified_at: 2026-04-17

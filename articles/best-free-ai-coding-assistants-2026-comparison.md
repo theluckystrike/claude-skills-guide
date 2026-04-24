@@ -4,7 +4,6 @@ description: "A practical comparison of the best free AI coding assistants avail
 permalink: /best-free-ai-coding-assistants-2026-comparison/
 last_tested: "2026-04-21"
 tools_compared: ["Claude Code Free", "GitHub Copilot Free", "Cursor Free", "Amazon Q Developer Free", "Cline", "Tabnine Free"]
-render_with_liquid: false
 ---
 
 ## The Hypothesis

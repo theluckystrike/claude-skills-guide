@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Async Code Review"
+title: "Claude Code for Async Code Review (2026)"
 description: "Build async code review workflows with Claude Code that work across time zones. Covers PR templates, automated checks, and structured review comments."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Privacy Audit"
+title: "Chrome Extension Privacy Audit (2026)"
 description: "Chrome Extension Privacy Audit: Step-by-Step Guide. Practical guide with working examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

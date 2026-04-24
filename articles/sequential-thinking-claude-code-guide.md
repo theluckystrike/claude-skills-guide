@@ -1,9 +1,8 @@
 ---
-title: "Sequential Thinking in Claude Code"
+title: "Sequential Thinking in Claude Code (2026)"
 description: "How to install and use the sequential thinking MCP server in Claude Code. Step-by-step setup, when it helps, real examples, and configuration options."
 permalink: /sequential-thinking-claude-code-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Sequential Thinking in Claude Code: Guide (2026)
@@ -408,6 +407,7 @@ Yes. These are complementary features. Extended thinking is a model-level capabi
 - [Claude Code + Supabase MCP](/claude-code-mcp-supabase-setup-guide/) — MCP with Supabase databases
 - [Super Claude Code framework](/super-claude-code-framework-guide/) — structured reasoning framework
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -426,3 +426,5 @@ Yes. These are complementary features. Extended thinking is a model-level capabi
   ]
 }
 </script>
+
+{% endraw %}

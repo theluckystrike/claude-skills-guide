@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Add MongoDB MCP to Claude Code"
+title: "Add MongoDB MCP to Claude Code (2026)"
 description: "Connect Claude Code to MongoDB via MCP for direct collection queries, schema inspection, and aggregation pipeline building."
 date: 2026-04-17
 last_modified_at: 2026-04-17

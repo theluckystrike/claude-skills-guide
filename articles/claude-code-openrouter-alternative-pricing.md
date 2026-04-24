@@ -1,10 +1,9 @@
 ---
-title: "Claude Code + OpenRouter"
-description: "OpenRouter routes Claude Code API calls through alternative providers with potential 10-20% savings on token costs."
+title: "Claude Code + OpenRouter (2026)"
+description: "Claude Code + OpenRouter — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-openrouter-alternative-pricing/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code + OpenRouter: Alternative Pricing Strategies

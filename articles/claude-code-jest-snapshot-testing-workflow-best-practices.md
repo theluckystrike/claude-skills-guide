@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Jest Snapshot Testing"
+title: "Claude Code Jest Snapshot Testing (2026)"
 description: "Master Jest snapshot testing with Claude Code: set up workflows, manage snapshots, integrate with CI/CD, and avoid common pitfalls with practical examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

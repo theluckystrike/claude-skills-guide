@@ -1,9 +1,8 @@
 ---
-title: "Claude Upload Limit"
+title: "Claude Upload Limit (2026)"
 description: "Complete breakdown of Claude upload limits across web, API, and CLI. File sizes, supported types, page limits, and workarounds for large files."
 permalink: /claude-upload-limit-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Upload Limit: File Size and Types (2026)
@@ -365,6 +364,7 @@ Yes, you can mix file types in a single message, up to 5 files total. For exampl
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Large uploads affect token costs
 - [save Claude Code conversations](/claude-code-save-conversation-guide/) — Save conversations with uploaded files
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -383,3 +383,5 @@ Yes, you can mix file types in a single message, up to 5 files total. For exampl
   ]
 }
 </script>
+
+{% endraw %}

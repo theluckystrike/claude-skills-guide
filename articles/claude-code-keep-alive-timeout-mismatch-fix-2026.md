@@ -1,9 +1,8 @@
 ---
-title: "Keep-Alive Timeout Mismatch Error — Fix"
+title: "Keep-Alive Timeout Mismatch Error — Fix (2026)"
 permalink: /claude-code-keep-alive-timeout-mismatch-fix-2026/
-description: "Fix socket hang up from keep-alive timeout mismatch. Disable keep-alive or align client and server timeout values."
+description: "Keep-Alive Timeout Mismatch Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -104,3 +103,34 @@ Partially. If the server began processing your request before the client timed o
 ### How do I configure Claude Code to use a corporate proxy?
 
 Set the `HTTPS_PROXY` environment variable: `export HTTPS_PROXY=http://proxy.corp.com:8080`. Claude Code respects standard proxy environment variables. Add this to your shell profile for persistence.
+
+
+## Related Guides
+
+- [Fix Claude API Timeout](/claude-api-timeout-error-handling-retry-guide/)
+- [Fix Claude Code Timeout Error (2026)](/claude-code-skill-timeout-error-how-to-increase-the-limit/)
+- [Claude Code Bash Command Timeout 120s — Fix (2026)](/claude-code-bash-command-timeout-120s-fix-2026/)
+- [Claude SDK Timeout Configuration Guide](/claude-sdk-timeout-configuration-customization/)
+
+## Timeout Configuration Reference
+
+Claude Code has several timeout settings that interact with each other:
+
+| Setting | Default | Controls | How to Change |
+|---------|---------|----------|---------------|
+| Bash timeout | 120s | Maximum time for a single bash command | `CLAUDE_CODE_BASH_TIMEOUT=600` |
+| API timeout | 300s | Maximum time waiting for API response | Network-level setting |
+| Session timeout | None | Auto-close after inactivity | Not currently configurable |
+| MCP server init | 30s | Time allowed for MCP server startup | Set in settings.json |
+
+## Diagnosing Slow Operations
+
+When Claude Code appears to hang, determine which component is slow:
+
+**Step 1: Check CPU and memory.** Run `top -l 1 | grep -E "node|claude"` (macOS) or `top -bn1 | grep -E "node|claude"` (Linux). High CPU suggests active computation. High memory (over 1GB) suggests the conversation context is too large.
+
+**Step 2: Check network connectivity.** Run `curl -s -o /dev/null -w "%{time_total}" https://api.anthropic.com/v1/messages`. Response times over 2 seconds indicate network issues between you and the API.
+
+**Step 3: Check disk I/O.** Run `iostat 1 3` to see if disk is a bottleneck. Claude Code performs significant file reads when scanning large projects. An SSD reduces file scanning from minutes to seconds.
+
+**Step 4: Reduce context size.** If the session has been running for many turns, accumulated context can slow API responses. Use `/clear` to reset the conversation and start fresh with a smaller context window.

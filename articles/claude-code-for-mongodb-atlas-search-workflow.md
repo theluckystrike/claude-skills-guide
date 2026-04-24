@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for MongoDB Atlas Search"
+title: "Claude Code for MongoDB Atlas Search (2026)"
 description: "Build MongoDB Atlas Search indexes with Claude Code. Search index creation, aggregation pipelines, and natural language query translation guide."
 date: 2026-03-15
 last_modified_at: 2026-04-17

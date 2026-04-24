@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code vs Copilot: Writing Unit Tests"
+title: "Claude Code vs Copilot: Writing Unit Tests (2026)"
 description: "A comprehensive comparison of Claude Code and GitHub Copilot for automatically generating unit tests, with practical examples and code samples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -285,3 +285,11 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ## See Also
 
 - [Codium AI vs Claude Code Comparison 2026](/codium-ai-vs-claude-code-comparison-2026/)
+
+
+## Related Guides
+
+- [Writing Assistant Chrome Extension](/chrome-extension-writing-assistant/)
+- [Claude Code Skills for Writing](/claude-code-skills-for-writing-integration-tests/)
+- [Claude Code For Writing](/claude-code-for-writing-contributingmd-files-guide/)
+- [Stop Claude Code Writing Excessive Code](/claude-code-writes-too-much-code-fix-2026/)

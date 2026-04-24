@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills for Scientific"
+title: "Claude Code Skills for Scientific (2026)"
 description: "How to use Claude Code skills for scientific computing workflows with NumPy and SciPy. Practical patterns for data analysis, numerical computing, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

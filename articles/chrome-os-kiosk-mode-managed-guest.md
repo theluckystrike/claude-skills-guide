@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome OS Kiosk Mode"
+title: "Chrome OS Kiosk Mode (2026)"
 description: "Chrome OS Kiosk Mode: Managed Guest Setup Guide explained with practical examples and tested code. Step-by-step guide covering setup, common pitfalls,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

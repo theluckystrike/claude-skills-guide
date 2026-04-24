@@ -3,7 +3,6 @@ title: "Best MCP Servers for Claude Code (2026)"
 description: "The most useful MCP servers for Claude Code developers ranked by category. Database, Git, browser, and API servers with install commands and honest limits."
 permalink: /best-mcp-servers-for-claude-code-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Best MCP Servers for Claude Code (2026)

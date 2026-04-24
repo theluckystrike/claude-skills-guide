@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Go Pprof"
+title: "Claude Code For Go Pprof (2026)"
 description: "Learn how to integrate Claude Code into your Go pprof profiling workflow to efficiently identify performance bottlenecks, analyze heap allocations, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19

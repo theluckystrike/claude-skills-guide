@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for OSS Funding Workflows"
+title: "Claude Code for OSS Funding Workflows (2026)"
 description: "Automate open source project funding with Claude Code for sponsorship setup, donor management, and revenue tracking. Practical funding playbook."
 date: 2026-03-15
 last_modified_at: 2026-04-17

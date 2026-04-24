@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Multi-Agent Error Recovery"
+title: "Claude Code Multi-Agent Error Recovery (2026)"
 description: "Handle errors in multi-agent Claude Code workflows with retry patterns, fallback strategies, and graceful degradation. Build resilient agent systems."
 date: 2026-03-14
 last_modified_at: 2026-04-17

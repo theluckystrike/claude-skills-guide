@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Templates"
+title: "Claude Code Templates (2026)"
 description: "Install and use claude-code-templates — 600+ agents, 200+ commands, 55+ MCPs, and 60+ settings via CLI or web UI at aitmpl.com."
 permalink: /claude-code-templates-600-agents-guide-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Templates: 600+ Agents Guide (2026)

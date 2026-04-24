@@ -5,7 +5,6 @@ description: "Claude Code's /autocomplete vs Cursor Tab compared. Prediction acc
 permalink: /claude-code-vs-cursor-tab-autocomplete-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

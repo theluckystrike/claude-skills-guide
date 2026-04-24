@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Xata Database Branching"
+title: "Claude Code + Xata Database Branching (2026)"
 description: "Use Claude Code with Xata serverless database branching to create isolated dev environments and safely test schema changes before any merge."
 date: 2026-03-14
 last_modified_at: 2026-04-17

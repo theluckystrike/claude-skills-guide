@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Tool Use Cost Calculator Guide"
+title: "Claude Tool Use Cost Calculator Guide (2026)"
 description: "Calculate exact tool use costs with this formula: system overhead + tool definitions + results. Includes a ready-to-run Python calculator."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, calculator, tool-use]
-render_with_liquid: false
 ---
 
 # Claude Tool Use Cost Calculator Guide

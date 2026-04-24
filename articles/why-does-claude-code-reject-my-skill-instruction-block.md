@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Does Claude Code Reject My Skill"
+title: "Why Does Claude Code Reject My Skill (2026)"
 description: "Troubleshoot skill instruction block rejections in Claude Code: syntax errors, YAML formatting issues, character limits, and practical solutions."
 date: 2026-03-14
 last_modified_at: 2026-04-17

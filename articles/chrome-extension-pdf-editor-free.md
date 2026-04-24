@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "PDF Editor Free Chrome Extension Guide"
+title: "PDF Editor Free Chrome Extension Guide (2026)"
 description: "Discover free Chrome extension PDF editors for developers and power users. Learn about key features, practical workflows, and how to integrate PDF editing."
 date: 2026-03-15
 last_modified_at: 2026-04-17

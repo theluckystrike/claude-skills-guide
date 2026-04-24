@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Shared Memory Patterns"
+title: "Shared Memory Patterns (2026)"
 description: "Learn how to build effective shared memory patterns that enable AI agents to collaborate smoothly using Claude Code skills and features."
 date: 2026-03-14
 last_modified_at: 2026-04-17

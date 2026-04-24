@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Media Content"
+title: "Claude Skills for Media Content (2026)"
 description: "Learn how to use Claude skills to automate media asset management, generate content reports, and streamline workflows in media CMS platforms."
 date: 2026-03-14
 last_modified_at: 2026-04-17

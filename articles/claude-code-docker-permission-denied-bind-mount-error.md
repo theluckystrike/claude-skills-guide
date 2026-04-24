@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Docker Permission Denied"
+title: "Claude Code Docker Permission Denied (2026)"
 description: "Learn how to diagnose and fix Docker permission denied errors when using bind mounts with Claude Code. Practical solutions for development environments."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for tRPC React Query"
+title: "Claude Code for tRPC React Query (2026)"
 description: "Learn how to use Claude Code to streamline your tRPC and React Query development workflow. Practical examples and actionable advice for modern."
 date: 2026-03-15
 last_modified_at: 2026-04-17

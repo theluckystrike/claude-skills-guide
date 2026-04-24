@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Hooks"
+title: "Claude Code Hooks (2026)"
 description: "Every Claude Code hook type explained with JSON config, real examples, and use cases. PreToolUse, PostToolUse, Notification, and Stop hooks."
 permalink: /claude-code-hooks-complete-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Code Hooks: Complete Reference (2026)
@@ -668,6 +667,7 @@ Yes. Hooks are regular shell scripts. They can make HTTP requests, call APIs, se
 Check the [best Claude Code hooks collection](/best-claude-code-hooks-code-quality-2026/) for community-maintained hooks. The [SuperClaude framework](/super-claude-code-framework-guide/) also includes hook templates. For cost-related hooks, see our [token usage audit guide](/audit-claude-code-token-usage-step-by-step/) and [cost saving tools](/best-claude-code-cost-saving-tools-2026/).
 
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -755,3 +755,5 @@ Check the [best Claude Code hooks collection](/best-claude-code-hooks-code-quali
 - [CLAUDE.md Best Practices Definitive Guide](/claude-md-best-practices-definitive-guide/)
 - [Super Claude Code Framework Guide](/super-claude-code-framework-guide/)
 
+
+{% endraw %}

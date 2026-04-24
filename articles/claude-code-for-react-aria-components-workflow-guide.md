@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for React Aria Components"
-description: "Build accessible React UI with React Aria and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for React Aria Components (2026)"
+description: "Claude Code for React Aria Components — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-react-aria-components-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, react-aria, workflow]
 ---

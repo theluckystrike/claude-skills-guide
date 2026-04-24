@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Laravel Livewire Tutorial"
+title: "Claude Code Laravel Livewire Tutorial (2026)"
 description: "Build real-time Laravel Livewire apps with Claude Code for component creation, reactive updates, and form handling. Full-stack PHP workflow examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -5,7 +5,6 @@ description: "Claude Code vs Codestory Aide compared for AI pair programming. Op
 permalink: /claude-code-vs-codestory-aide-comparison-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

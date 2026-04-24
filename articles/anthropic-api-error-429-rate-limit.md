@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude API Error 429 Rate Limit"
+title: "Fix: Claude API Error 429 Rate Limit (2026)"
 description: "Fix Anthropic API error 429 rate limit reached with proper backoff, SDK retries, and usage optimization strategies. Tested and working in 2026."
 last_tested: "2026-04-22"
 date: 2026-04-15
@@ -155,6 +155,12 @@ A single batch can contain up to 100,000 requests or 256 MB, whichever is reache
 ### Option 4: Monitor Rate Limit Headers
 
 The API returns these headers with every response:
+
+For more on this topic, see [.gitignore Not Respected by Claude Fix — Fix (2026)](/claude-code-gitignore-not-respected-fix-2026/).
+
+
+For more on this topic, see [Fix: Claude Can't Open This Chat Error](/claude-cant-open-this-chat-fix/).
+
 
 - `anthropic-ratelimit-requests-limit` / `anthropic-ratelimit-requests-remaining` / `anthropic-ratelimit-requests-reset`
 - `anthropic-ratelimit-tokens-limit` / `anthropic-ratelimit-tokens-remaining` / `anthropic-ratelimit-tokens-reset`

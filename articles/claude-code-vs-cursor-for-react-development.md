@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code vs Cursor for React"
+title: "Claude Code vs Cursor for React (2026)"
 description: "Compare Claude Code and Cursor for React development. Component generation, state management, and debugging workflows tested side by side in 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17

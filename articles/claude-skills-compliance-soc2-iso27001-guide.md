@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Compliance SOC2 ISO27001"
+title: "Claude Skills Compliance SOC2 ISO27001 (2026)"
 description: "A practical guide for developers using Claude Code skills to implement SOC2 and ISO27001 compliance controls. Includes code examples and skill recommend..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -273,6 +273,8 @@ Schedule monthly evidence pulls. Set a recurring calendar event to run your pdf 
 Start with the tdd skill for test-driven security. Add the pdf skill for documentation management. Use supermemory for audit trails. These three skills cover the majority of technical controls required by both SOC2 and ISO27001.
 
 The goal isn't to use Claude skills for everything, it's to use them strategically where they provide the most value: consistent test coverage, auditable documentation, and maintainable security patterns. Pair skill-generated artifacts with a clear ownership model, every control needs a named owner accountable for its evidence, and your compliance program becomes something auditors can verify rather than something you assemble in a panic.
+
+One common mistake is treating compliance as a one-time project. SOC2 Type II audits evaluate controls over a sustained observation period, typically twelve months. Building compliance artifacts with Claude skills from day one means your evidence accumulates naturally as part of your development workflow rather than requiring a separate documentation sprint before each audit cycle.
 
 ---
 

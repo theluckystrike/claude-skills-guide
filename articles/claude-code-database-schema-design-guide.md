@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Database Schema Design with Claude Code"
+title: "Database Schema Design with Claude Code (2026)"
 description: "Use Claude Code to design, review, and optimize database schemas. Normalization, indexing strategies, migration workflows, and common pitfalls."
 date: 2026-04-15
 last_modified_at: 2026-04-17

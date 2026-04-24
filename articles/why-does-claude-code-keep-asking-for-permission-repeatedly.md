@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Why Claude Code Keeps Asking Permission"
-description: "Stop Claude Code from asking permission on every action. One config change fixes it permanently. Step-by-step guide."
+title: "Why Claude Code Keeps Asking Permission (2026)"
+description: "Why Claude Code Keeps Asking Permission — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

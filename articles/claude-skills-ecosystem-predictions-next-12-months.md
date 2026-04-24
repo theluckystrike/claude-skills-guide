@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Ecosystem"
+title: "Claude Skills Ecosystem (2026)"
 description: "Where the Claude skills ecosystem is heading: AI agent standardization, new skill categories, cross-platform compatibility, and productivity gains for deve"
 date: 2026-03-14
 last_modified_at: 2026-04-17

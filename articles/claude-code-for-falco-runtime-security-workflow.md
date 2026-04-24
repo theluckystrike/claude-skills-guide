@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Falco Runtime Security"
+title: "Claude Code for Falco Runtime Security (2026)"
 description: "Integrate Claude Code with Falco for container runtime security. Automate rule creation, alert tuning, and incident response in Kubernetes clusters."
 date: 2026-03-15
 last_modified_at: 2026-04-17

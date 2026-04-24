@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code API Changelog Documentation"
+title: "Claude Code API Changelog Documentation (2026)"
 description: "Learn how to create and maintain professional API changelog documentation using Claude Code. Discover automated workflows, best practices, and practical."
 date: 2026-03-18
 last_modified_at: 2026-04-17

@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "AI Answer Engine Chrome Extension Guide"
+title: "AI Answer Engine Chrome Extension Guide (2026)"
 description: "Learn how to build and integrate AI answer engine chrome extensions for enhanced productivity and intelligent web interactions."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Response Latency"
+title: "Claude Code Response Latency (2026)"
 description: "Reduce Claude Code response times by designing efficient skills. Practical patterns for faster skill invocation, optimized prompts, and streamlined tool..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

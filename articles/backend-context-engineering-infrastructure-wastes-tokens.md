@@ -1,10 +1,9 @@
 ---
-title: "Backend Context Engineering"
+title: "Backend Context Engineering (2026)"
 description: "Backend infrastructure decisions silently waste Claude Code tokens through verbose APIs, poor error messages, and missing metadata -- fix these patterns now."
 permalink: /backend-context-engineering-infrastructure-wastes-tokens/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Backend Context Engineering: Why Your Infrastructure Wastes Agent Tokens

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Remote Desktop Slow"
+title: "Chrome Remote Desktop Slow (2026)"
 description: "Chrome Remote Desktop Slow — Honest Review 2026. Practical guide with working examples for developers. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

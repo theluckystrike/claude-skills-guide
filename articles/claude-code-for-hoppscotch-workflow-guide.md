@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Hoppscotch"
-description: "Test APIs with Hoppscotch and Claude Code together. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Hoppscotch (2026)"
+description: "Claude Code for Hoppscotch — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-hoppscotch-workflow-guide/
 render_with_liquid: false

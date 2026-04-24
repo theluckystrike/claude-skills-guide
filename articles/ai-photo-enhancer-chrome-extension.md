@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Photo Enhancer Chrome Extension"
+title: "AI Photo Enhancer Chrome Extension (2026)"
 description: "Learn how AI photo enhancer Chrome extensions work, their technical implementation, and how developers can build or integrate them into workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

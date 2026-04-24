@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Algolia GeoSearch Filtering"
+title: "Claude Code Algolia GeoSearch Filtering (2026)"
 description: "Learn how to build powerful location-based search filtering workflows using Claude Code and Algolia's GeoSearch capabilities. Step-by-step guide with."
 date: 2026-04-19
 last_modified_at: 2026-04-19

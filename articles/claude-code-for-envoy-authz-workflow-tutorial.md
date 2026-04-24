@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Envoy Authorization"
+title: "Claude Code for Envoy Authorization (2026)"
 description: "Implement Envoy authorization with Claude Code. Covers JWT validation, RBAC policies, external authz filters, and rate limiting configurations."
 date: 2026-03-15
 last_modified_at: 2026-04-17

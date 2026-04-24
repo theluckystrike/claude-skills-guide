@@ -3,7 +3,6 @@ title: "XDG Config Directory Permissions Fix — Fix (2026)"
 permalink: /claude-code-xdg-config-directory-permissions-fix-2026/
 description: "Fix XDG config directory permission denied error in Claude Code. Reset ownership and permissions on ~/.config/claude-code to restore configuration access."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -91,3 +90,36 @@ Yes. Docker containers and CI runners often execute as root, which creates files
 ### Why does npm need special permissions?
 
 When Node.js is installed via system package managers, the global `node_modules` directory is owned by root. Running `npm install -g` as a regular user fails because the user lacks write access. Use `nvm` or configure npm to use a user-owned prefix directory to avoid this.
+
+
+## Related Guides
+
+- [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
+- [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
+- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)
+
+## Step-by-Step Configuration Audit
+
+To verify your configuration is working correctly and saving tokens:
+
+**Step 1: Check file locations.** Run `ls -la .claude/settings.json CLAUDE.md .claudeignore 2>/dev/null` to confirm all configuration files exist in the project root.
+
+**Step 2: Validate JSON syntax.** Run `python3 -m json.tool .claude/settings.json` to check for JSON parsing errors. A common mistake is trailing commas after the last item in an array.
+
+**Step 3: Test permission rules.** Start a Claude Code session and attempt a command from your allow list. It should execute without a confirmation prompt. Then attempt a command from your deny list. It should be blocked.
+
+**Step 4: Measure token savings.** Compare a session with and without settings.json by checking token usage in the API dashboard at console.anthropic.com. A properly configured project typically shows 30-50% lower token consumption.
+
+**Step 5: Share with team.** Commit `.claude/settings.json` to version control so all team members benefit from the same optimized configuration. Add it to your repository's README as part of the developer setup instructions.
+
+
+## Common Configuration Mistakes
+
+**Using relative paths in MCP server config.** The `command` and `args` fields in MCP server configuration must use absolute paths. Relative paths fail because the working directory when Claude Code spawns the server may differ from your project root.
+
+**Overly broad allow patterns.** Allowing `Bash(*)` defeats the purpose of permission controls. Instead, allow specific command prefixes like `Bash(npm test*)` and `Bash(git diff*)`.
+
+**Missing the `.claude/` directory prefix.** The settings file goes in `.claude/settings.json`, not `settings.json` in the project root. This is a different location from `CLAUDE.md`, which does go in the project root.
+
+**Not restarting after changes.** Claude Code reads settings.json at startup. Changes during a session take effect only in the next session. Always start a new session after modifying settings.

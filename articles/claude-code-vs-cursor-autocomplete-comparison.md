@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Cursor: Autocomplete Comparison"
+title: "Claude Code vs Cursor: Autocomplete Comparison (2026)"
 description: "How Claude Code and Cursor handle code completion differently. Inline suggestions vs explicit generation compared side by side."
 date: 2026-04-21
 last_tested: "2026-04-21"

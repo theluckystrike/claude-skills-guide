@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for NestJS Custom"
+title: "Claude Code for NestJS Custom (2026)"
 description: "Create NestJS custom decorators with Claude Code. Covers parameter decorators, composition patterns, metadata reflection, and guard integration."
 date: 2026-03-14
 last_modified_at: 2026-04-17

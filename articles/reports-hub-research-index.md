@@ -9,7 +9,6 @@ reviewed: true
 score: 10
 categories: [research]
 tags: [claude-code, research, data, reports]
-render_with_liquid: false
 ---
 
 # Claude Code Research Reports

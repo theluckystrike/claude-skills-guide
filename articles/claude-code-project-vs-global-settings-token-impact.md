@@ -1,10 +1,9 @@
 ---
-title: "Claude Code Project vs Global Settings"
+title: "Claude Code Project vs Global Settings (2026)"
 description: "Project-level Claude Code settings load only in relevant directories, saving 200-800 tokens per session versus global settings that load everywhere."
 permalink: /claude-code-project-vs-global-settings-token-impact/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Project vs Global Settings: Token Impact

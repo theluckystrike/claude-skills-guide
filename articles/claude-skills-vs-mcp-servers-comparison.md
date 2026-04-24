@@ -1,8 +1,7 @@
 ---
-title: "Claude Skills vs MCP Servers: When to Use Each"
+title: "Claude Skills vs MCP Servers: When to Use Each (2026)"
 description: "Skills provide workflow instructions; MCP servers provide tool access. Understand the boundary, complementary patterns, and when to combine both."
 permalink: /claude-skills-vs-mcp-servers-comparison/
-render_with_liquid: false
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, mcp-servers, comparison]
 last_updated: 2026-04-19

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Web Scraper Chrome Extension Guide"
-description: "Learn how to build and use AI-powered web scraper chrome extensions for efficient data extraction and automation."
+title: "AI Web Scraper Chrome Extension Guide (2026)"
+description: "AI Web Scraper Chrome Extension Guide — install, configure, and use this extension for faster workflows. Tested and reviewed for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

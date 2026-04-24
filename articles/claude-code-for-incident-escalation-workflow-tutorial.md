@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Incident Escalation"
+title: "Claude Code for Incident Escalation (2026)"
 description: "Build incident escalation systems with Claude Code. Covers severity classification, notification chains, SLA tracking, and runbook automation steps."
 date: 2026-04-19
 last_modified_at: 2026-04-19

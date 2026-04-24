@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Tonic gRPC Rust"
+title: "Claude Code for Tonic gRPC Rust (2026)"
 description: "Build high-performance gRPC services with Tonic and Rust using Claude Code for protobuf generation, service stubs, and async patterns. Full workflow."
 date: 2026-03-15
 last_modified_at: 2026-04-17

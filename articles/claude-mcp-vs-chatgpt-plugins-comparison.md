@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude MCP vs ChatGPT Plugins"
+title: "Claude MCP vs ChatGPT Plugins (2026)"
 description: "Compare Claude's Model Context Protocol with ChatGPT's plugin and GPT system. Architecture, developer experience, and ecosystem maturity."
 date: 2026-04-21
 last_tested: "2026-04-21"

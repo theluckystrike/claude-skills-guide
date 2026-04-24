@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Performance Data"
+title: "Claude Code for Performance Data (2026)"
 description: "Master performance data analysis with Claude Code. Learn to build automated workflows, process metrics, and generate actionable insights using Claude."
 date: 2026-03-15
 last_modified_at: 2026-04-17

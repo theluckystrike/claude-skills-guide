@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Automated Social Media"
+title: "Claude Skills Automated Social Media (2026)"
 description: "Automate social media content creation with Claude Code skills. Build a workflow for generating posts, managing schedules, and tracking engagement."
 date: 2026-03-13
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills for WordPress"
+title: "Claude Code Skills for WordPress (2026)"
 description: "Build Claude skills specifically designed for WordPress development. Automate theme creation, plugin scaffolding, custom post types, and debug WordPress."
 date: 2026-03-14
 last_modified_at: 2026-04-17

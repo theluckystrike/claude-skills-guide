@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Mojo Language"
-description: "Write high-performance AI code with Mojo and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Mojo Language (2026)"
+description: "Claude Code for Mojo Language — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-mojo-language-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, mojo, workflow]
 ---

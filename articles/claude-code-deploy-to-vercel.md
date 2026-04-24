@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Deploy to Vercel with Claude Code"
+title: "Deploy to Vercel with Claude Code (2026)"
 description: "Automate Vercel deployments using Claude Code. Configure vercel.json, environment variables, and preview deployments with CLAUDE.md templates."
 date: 2026-04-17
 last_modified_at: 2026-04-17

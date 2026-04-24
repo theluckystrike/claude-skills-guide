@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Million.js"
-description: "Speed up React rendering with Million.js and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Million.js (2026)"
+description: "Claude Code for Million.js — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-million-js-react-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, million-js, workflow]
 ---

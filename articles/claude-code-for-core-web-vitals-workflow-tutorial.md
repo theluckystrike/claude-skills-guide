@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Core Web Vitals"
+title: "Claude Code for Core Web Vitals (2026)"
 description: "Improve Core Web Vitals scores with Claude Code. Covers LCP optimization, CLS fixes, INP improvements, and automated Lighthouse auditing workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

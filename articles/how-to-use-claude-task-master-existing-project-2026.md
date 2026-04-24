@@ -1,9 +1,8 @@
 ---
-title: "Use Claude Task Master With Your"
+title: "Use Claude Task Master With Your (2026)"
 description: "Add Claude Task Master to an existing project in 5 steps. Parse your PRD, generate tasks, and let Claude execute them through MCP integration."
 permalink: /how-to-use-claude-task-master-existing-project-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Use Claude Task Master With an Existing Project (2026)

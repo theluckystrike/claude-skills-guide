@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Bug Reporting Best"
+title: "Claude Code Bug Reporting Best (2026)"
 description: "Master bug reporting for Claude Code projects. Learn to write effective issue reports with reproducible examples, logs, and context for faster resolution."
 date: 2026-03-14
 last_modified_at: 2026-04-17

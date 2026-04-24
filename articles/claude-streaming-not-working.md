@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Streaming Not Working"
+title: "Fix Claude Streaming Not Working (2026)"
 description: "Fix Claude streaming issues. Covers SSE event handling, stream helper methods, mid-stream errors, and timeout configuration for Python and TypeScript."
 date: 2026-04-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills For Php Laravel"
+title: "Claude Skills For Php Laravel (2026)"
 description: "Learn how to create Claude skills that accelerate your PHP Laravel development workflow. Practical examples for code generation, testing, debugging, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

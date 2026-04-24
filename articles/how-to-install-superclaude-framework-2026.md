@@ -1,9 +1,8 @@
 ---
-title: "Install SuperClaude Framework Step"
+title: "Install SuperClaude Framework Step (2026)"
 description: "Install SuperClaude with pipx in 5 minutes. Get 30 slash commands, 16 agents, and 7 behavioral modes for Claude Code. Full setup and verification."
 permalink: /how-to-install-superclaude-framework-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Install SuperClaude Framework Step by Step (2026)

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Axios HTTP Client Workflow"
-description: "Learn how to build efficient HTTP client workflows using Axios with Claude Code for streamlined API interactions."
+title: "Claude Code Axios HTTP Client Workflow (2026)"
+description: "Claude Code Axios HTTP Client Workflow — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -398,6 +398,15 @@ describe('userService', () => {
 ```
 
 The third test is particularly valuable. it verifies that the request interceptor is actually attaching the token, not just that the service call resolves. Use `axios-mock-adapter` bound to your `apiClient` instance (not the base `axios` import) so your interceptors run during tests.
+
+For more on this topic, see [Claude Code for DuckDB — Workflow Guide](/claude-code-for-duckdb-workflow-guide/).
+
+For more on this topic, see [Claude Code Academic Workflow Guide](/claude-code-academic-workflow-guide-2026/).
+
+
+For more on this topic, see [Claude Code for Zoxide — Workflow Guide](/claude-code-for-zoxide-workflow-guide/).
+
+
 
 ## Performance Optimization Tips
 

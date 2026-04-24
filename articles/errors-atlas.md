@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code Errors Atlas"
-description: "Complete reference of Claude Code error messages, causes, and fixes. Searchable atlas of troubleshooting guides."
+title: "Claude Code Errors Atlas (2026)"
+description: "Claude Code Errors Atlas — step-by-step fix with tested commands, error codes, and verified solutions for developers. Includes working examples, code sampl."
 date: 2026-04-19
 permalink: /errors-atlas/
-render_with_liquid: false
 ---
 
 # Claude Code Errors Atlas

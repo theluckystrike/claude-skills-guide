@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use npm Nock HTTP Mocking"
+title: "How to Use npm Nock HTTP Mocking (2026)"
 description: "Use npm nock for HTTP mocking in Node.js with Claude Code. Practical examples for intercepting requests and testing APIs efficiently. Tested on Node.js."
 date: 2026-03-14
 last_modified_at: 2026-04-17

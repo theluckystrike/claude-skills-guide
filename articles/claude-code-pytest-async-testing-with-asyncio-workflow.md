@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Pytest Async Testing"
+title: "Claude Code Pytest Async Testing (2026)"
 description: "A comprehensive guide to writing async tests using pytest and asyncio in Python. Learn practical patterns, common pitfalls, and how to structure your."
 date: 2026-03-14
 last_modified_at: 2026-04-17

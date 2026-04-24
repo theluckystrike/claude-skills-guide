@@ -3,7 +3,6 @@ title: "Unicode Encoding Errors in Code Output — Fix (2026)"
 permalink: /claude-code-unicode-encoding-errors-code-output-fix-2026/
 description: "Fix Unicode encoding errors in Claude Code output. Set UTF-8 locale and terminal encoding to prevent garbled characters in generated code files."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -92,3 +91,11 @@ Only if you mount host directories as volumes: `docker run -v /host/path:/contai
 ### Why is the claude command not found after installation?
 
 The installation directory is not in your PATH. Run `which claude` to check if it is accessible. If not, add the npm global bin directory to your PATH: `export PATH=$(npm bin -g):$PATH` and add this line to your shell profile (`~/.bashrc` or `~/.zshrc`).
+
+
+## Related Guides
+
+- [Fix Skill Exceeded Maximum Output](/claude-code-skill-exceeded-maximum-output-length-error-fix/)
+- [Fix: Structured Output + Thinking +](/anthropic-sdk-structured-output-thinking-tool-use-bug/)
+- [Claude Code Skill Output Streaming](/claude-code-skill-output-streaming-optimization/)
+- [Customize Claude Code Output Format](/best-way-to-customize-claude-code-output-format-style/)

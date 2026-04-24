@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Fix Chrome Extension Linear Issue"
+title: "Fix Chrome Extension Linear Issue (2026)"
 description: "Learn how to build and use Chrome extensions for Linear issue tracking. Practical code examples, API integration patterns, and best practices for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

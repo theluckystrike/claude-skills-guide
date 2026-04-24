@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Way To Use Claude Code"
+title: "Best Way To Use Claude Code (2026)"
 description: "Integrate Claude Code into your existing CI/CD workflows. Practical examples for GitHub Actions, GitLab CI, and Jenkins with code snippets and best."
 date: 2026-03-14
 last_modified_at: 2026-04-17

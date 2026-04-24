@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Fast Web Components"
+title: "Claude Code for Fast Web Components (2026)"
 description: "Learn how to use Claude Code to accelerate your web components development workflow with practical examples, automation scripts, and expert debugging."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,9 +1,8 @@
 ---
-title: "esbuild Target Mismatch Error — Fix"
+title: "esbuild Target Mismatch Error — Fix (2026)"
 permalink: /claude-code-esbuild-target-mismatch-fix-2026/
-description: "Fix esbuild target mismatch transforming modern syntax. Set target to match your Node or browser minimum version."
+description: "esbuild Target Mismatch Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -105,3 +104,29 @@ The `node:` prefix for built-in modules was introduced in Node.js 16. If you see
 ### Where does Claude Code store its configuration?
 
 Configuration is stored in `~/.claude/config.json` for global settings and `.claude/config.json` in the project root for project-specific settings. Project settings override global settings for any overlapping keys.
+
+
+## Related Guides
+
+- [Token Count Estimation Mismatch Fix — Fix (2026)](/claude-code-token-count-estimation-mismatch-fix-2026/)
+- [MCP Protocol Version Mismatch in Claude — Fix (2026)](/claude-code-model-context-protocol-version-mismatch-fix-2026/)
+- [Claude Code Node Version Mismatch — Fix](/claude-code-node-version-mismatch-fix/)
+- [Claude API Key Organization Mismatch — Fix (2026)](/claude-code-api-key-organization-mismatch-fix-2026/)
+
+## Build Tool Configuration with Claude Code
+
+When Claude Code generates or modifies build configurations, ensure the output matches your project's build pipeline:
+
+**Webpack specifics.** Claude Code may generate webpack 4 syntax when your project uses webpack 5. Key differences: `module.rules` (not `module.loaders`), `asset/resource` (not `file-loader`), and native module federation. Always specify your webpack version in CLAUDE.md.
+
+**Vite projects.** Claude Code sometimes generates Create React App patterns when the project uses Vite. Add to CLAUDE.md: "This project uses Vite, not CRA. Use `import.meta.env` for environment variables, not `process.env`. Dev server runs on port 5173."
+
+**Tree-shaking requirements.** For tree-shaking to work, modules must use ES module syntax (`import`/`export`), not CommonJS (`require`/`module.exports`). Claude Code defaults to whichever pattern it finds in existing code. If your project mixes both, add a CLAUDE.md rule specifying which to use.
+
+## Build Error Debugging Steps
+
+When Claude Code's generated code causes build failures:
+
+1. **Read the full error output.** Build tools often show the root cause at the beginning of the output, not the end. Scroll up to find the first error.
+2. **Check the import graph.** Circular dependencies cause subtle build failures. Run your bundler's analyze mode to visualize the dependency graph.
+3. **Verify TypeScript configuration.** If `tsconfig.json` has strict settings, Claude Code's generated code must comply. Common issues: missing null checks, implicit any types, and unused imports.

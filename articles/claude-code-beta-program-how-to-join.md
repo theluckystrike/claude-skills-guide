@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Join the Claude Code Beta Program"
+title: "Join the Claude Code Beta Program (2026)"
 description: "Apply for the Claude Code beta program to get early access to new features. Covers eligibility, application steps, and what beta testers get access to."
 date: 2026-03-14
 last_modified_at: 2026-04-17

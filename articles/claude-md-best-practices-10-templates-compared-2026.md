@@ -3,7 +3,6 @@ title: "CLAUDE.md: 10 Templates Compared (2026)"
 description: "Side-by-side comparison of 10 popular CLAUDE.md templates from the ecosystem, with strengths, weaknesses, and use cases for each."
 permalink: /claude-md-best-practices-10-templates-compared-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # CLAUDE.md: 10 Templates Compared (2026)
@@ -121,6 +120,9 @@ Each template is rated on:
 ## Template 6: claude-code-my-workflow (Academic)
 
 **Source:** [github.com/pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow) (963 stars)
+
+For more on this topic, see [CLAUDE.md Templates Library](/templates-library/).
+
 
 **Structure:** 28 skills and 14 agents tailored for academic LaTeX/R workflows.
 

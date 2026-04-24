@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for JetBrains Plugin"
+title: "Claude Code for JetBrains Plugin (2026)"
 description: "A comprehensive guide to using Claude Code for developing JetBrains plugins. Learn practical workflows, code examples, and actionable tips to."
 date: 2026-03-15
 last_modified_at: 2026-04-17

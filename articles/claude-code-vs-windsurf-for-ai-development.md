@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Windsurf for AI"
+title: "Claude Code vs Windsurf for AI (2026)"
 description: "Claude Code vs Windsurf compared for AI-assisted development: terminal workflow, skill invocation, editor integration, and persistent project memory."
 date: 2026-03-13
 last_modified_at: 2026-04-17

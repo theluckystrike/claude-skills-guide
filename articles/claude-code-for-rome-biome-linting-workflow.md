@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Rome Biome Linting"
+title: "Claude Code for Rome Biome Linting (2026)"
 description: "Learn how to create a Claude Code skill that automates Rome and Biome linting workflows for your JavaScript and TypeScript projects."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -337,3 +337,71 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ## See Also
 
 - [Claude Code for Biome — Workflow Guide](/claude-code-for-biome-linter-formatter-workflow-guide/)
+
+
+## Frequently Asked Questions
+
+### What is the minimum setup required?
+
+You need Claude Code installed (Node.js 18+), a project with a `CLAUDE.md` file, and the relevant toolchain for your project type (e.g., npm for JavaScript, pip for Python). The CLAUDE.md file should describe your project structure, conventions, and common commands so Claude Code can work effectively.
+
+### How long does the initial setup take?
+
+For a typical project, initial setup takes 10-20 minutes. This includes creating the CLAUDE.md file, configuring `.claude/settings.json` for permissions, and running a test task to verify everything works. Subsequent sessions start immediately because the configuration persists.
+
+### Can I use this with a team?
+
+Yes. Commit your `.claude/` directory and `CLAUDE.md` to version control so the entire team uses the same configuration. Each developer can add personal preferences in `~/.claude/settings.json` (user-level) without affecting the project configuration. Review CLAUDE.md changes in pull requests like any other configuration file.
+
+### What if Claude Code produces incorrect output?
+
+First check that your CLAUDE.md accurately describes your project conventions. Incorrect or outdated context is the most common cause of wrong output. If the output is still wrong, provide feedback in the same session — Claude Code learns from corrections within a conversation. For persistent issues, add explicit rules to CLAUDE.md (e.g., "Always use single quotes" or "Never modify files in the config/ directory").
+
+
+## Related Guides
+
+- [Claude Code for Biome Formatter Setup](/claude-code-biome-formatter-setup-2026/)
+- [Claude Code vs ESLint + Prettier](/claude-code-vs-eslint-prettier-comparison/)
+- [Claude Code for ESLint Custom Plugin](/claude-code-for-eslint-custom-plugin-workflow-tutorial/)
+- [Fix ESLint and Prettier Conflicts](/claude-code-eslint-prettier-conflict-fix/)
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the minimum setup required?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You need Claude Code installed (Node.js 18+), a project with a `CLAUDE.md` file, and the relevant toolchain for your project type (e.g., npm for JavaScript, pip for Python). The CLAUDE.md file should describe your project structure, conventions, and common commands so Claude Code can work effectively."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does the initial setup take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a typical project, initial setup takes 10-20 minutes. This includes creating the CLAUDE.md file, configuring `.claude/settings.json` for permissions, and running a test task to verify everything works. Subsequent sessions start immediately because the configuration persists."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this with a team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Commit your `.claude/` directory and `CLAUDE.md` to version control so the entire team uses the same configuration. Each developer can add personal preferences in `~/.claude/settings.json` (user-level) without affecting the project configuration. Review CLAUDE.md changes in pull requests like any other configuration file."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if Claude Code produces incorrect output?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First check that your CLAUDE.md accurately describes your project conventions. Incorrect or outdated context is the most common cause of wrong output. If the output is still wrong, provide feedback in the same session — Claude Code learns from corrections within a conversation. For persistent issues, add explicit rules to CLAUDE.md (e.g., \"Always use single quotes\" or \"Never modify files in the config/ directory\"). - [Claude Code for Biome Formatter Setup](/claude-code-biome-formatter-setup-2026/) - [Claude Code vs ESLint + Prettier](/claude-code-vs-eslint-prettier-comparison/) - [Claude Code for ESLint Custom Plugin](/claude-code-for-eslint-custom-plugin-workflow-tutorial/) - [Fix ESLint and Prettier Conflicts](/claude-code-eslint-prettier-conflict-fix/)"
+      }
+    }
+  ]
+}
+</script>

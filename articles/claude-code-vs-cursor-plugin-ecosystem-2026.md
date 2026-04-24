@@ -3,7 +3,6 @@ title: "Claude Code vs Cursor: Plugin Ecosystems Compared (2026)"
 description: "Compare Claude Code and Cursor plugin ecosystems across skills, extensions, MCP support, customization, and community size in 2026."
 permalink: /claude-code-vs-cursor-plugin-ecosystem-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code vs Cursor: Plugin Ecosystems Compared (2026)

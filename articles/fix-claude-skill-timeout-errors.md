@@ -1,8 +1,7 @@
 ---
-title: "Fix Claude Skill Timeout Errors"
+title: "Fix Claude Skill Timeout Errors (2026)"
 description: "Resolve skill timeout errors by identifying long-running scripts, optimizing context injection, tuning effort levels, and restructuring skill execution."
 permalink: /fix-claude-skill-timeout-errors/
-render_with_liquid: false
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, timeout, performance, troubleshooting]
 last_updated: 2026-04-19

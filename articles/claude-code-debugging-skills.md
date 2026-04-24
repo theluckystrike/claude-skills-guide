@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Master Claude Code Debugging Skills"
+title: "Master Claude Code Debugging Skills (2026)"
 description: "Level up your Claude Code debugging with proven skills: log analysis, bisection, hypothesis testing, and automated fix verification workflows."
 date: 2026-04-17
 last_modified_at: 2026-04-17

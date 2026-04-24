@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for GitBook Documentation"
+title: "Claude Code for GitBook Documentation (2026)"
 description: "Automate GitBook documentation workflows with Claude Code skills. Generate content, format pages, manage structure, and publish docs from your terminal."
 date: 2026-03-14
 last_modified_at: 2026-04-17

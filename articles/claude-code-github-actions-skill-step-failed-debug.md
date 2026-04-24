@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Debugging Failed GitHub Actions Skill"
+title: "Debugging Failed GitHub Actions Skill (2026)"
 description: "Learn how to diagnose and fix failed GitHub Actions steps when using Claude Code skills. Practical debugging techniques for CI/CD workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

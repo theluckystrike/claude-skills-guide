@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Container Environment Variables"
+title: "Container Environment Variables (2026)"
 description: "Set up and manage environment variables in Claude Code containers. Covers secrets, config injection, Docker Compose, and production-ready patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

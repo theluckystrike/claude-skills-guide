@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How To Build SaaS Mvp"
+title: "How To Build SaaS Mvp (2026)"
 description: "Practical guide to building a SaaS MVP using Claude Code skills. Learn which skills handle frontend, testing, PDF generation, and more."
 date: 2026-03-13
 last_modified_at: 2026-04-17

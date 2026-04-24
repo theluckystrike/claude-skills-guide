@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Skip Navigation"
+title: "Claude Code for Skip Navigation (2026)"
 description: "Learn how to use Claude Code and Claude Skills to implement accessible skip navigation links that improve keyboard navigation and WCAG compliance."
 date: 2026-03-15
 last_modified_at: 2026-04-17

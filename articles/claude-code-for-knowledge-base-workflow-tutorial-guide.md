@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Projects Knowledge Base"
+title: "Claude Projects Knowledge Base (2026)"
 description: "Add markdown files to Claude projects as knowledge base context. File structure, size limits, auto-indexing, and cross-reference linking setup."
 date: 2026-03-15
 last_modified_at: 2026-04-21
@@ -326,3 +326,35 @@ Step 1 involves creating a bash script (generate-article.sh) that accepts title,
 ### What is Step 2: Use Claude Code to Enhance Generated Articles?
 
 Step 2 uses Claude Code to expand skeleton articles into full content by running `claude --print "Expand this article skeleton with practical examples for a developer audience. Add code snippets, include actionable steps, and ensure the tone is helpful and technical." < articles/new-article.md`. This transforms structural templates into detailed articles. The pattern works for bulk operations: generate templates programmatically, then use Claude Code to add code snippets, step-by-step instructions, and technical depth.
+
+
+## Best Practices
+
+1. **Start with a clear CLAUDE.md.** Describe your project structure, tech stack, coding conventions, and common commands in under 300 words. This single file has the largest impact on Claude Code's accuracy and efficiency.
+
+2. **Use skills for domain knowledge.** Move detailed reference information (API routes, database schemas, deployment procedures) into `.claude/skills/` files. This keeps CLAUDE.md concise while making specialized knowledge available when needed.
+
+3. **Review changes before committing.** Always run `git diff` after Claude Code makes changes. Verify the edits are correct, match your project style, and do not introduce unintended side effects. This habit prevents compounding errors across sessions.
+
+4. **Set up permission guardrails.** Configure `.claude/settings.json` with explicit allow and deny lists. Allow your standard development commands (test, build, lint) and deny destructive operations (rm -rf, git push --force, database drops).
+
+5. **Keep sessions focused.** Give Claude Code one clear task per prompt. Multi-step requests like "refactor auth, add tests, and update docs" produce better results when broken into three separate prompts, each building on the previous result.
+
+
+## Common Issues
+
+**Claude Code ignores the configuration:** Ensure the configuration file is in the correct location. CLAUDE.md must be in the project root (the directory where you run `claude`). Settings go in `.claude/settings.json`. Verify with `ls -la CLAUDE.md .claude/settings.json`.
+
+**Changes are not taking effect:** Claude Code reads CLAUDE.md at the start of each session. If you modify it during a session, the changes apply to new conversations but not the current one. Start a new session to pick up configuration changes.
+
+**Slow performance on large projects:** Add a `.claudeignore` file to exclude large directories (node_modules, .git, dist, build, vendor). This reduces file scanning time and prevents Claude from reading irrelevant files. The format is identical to `.gitignore`.
+
+**Unexpected file modifications:** Check `.claude/settings.json` for overly broad permission patterns. Narrow the allow list to specific commands and file patterns. For sensitive directories, add explicit deny rules.
+
+
+## Related Guides
+
+- [AI Knowledge Base Chrome Extension](/ai-knowledge-base-chrome-extension/)
+- [Knowledge Base Exceeds 512KB Maximum — Fix (2026)](/claude-code-knowledge-base-too-large-fix-2026/)
+- [Notion MCP Server Knowledge Base](/notion-mcp-server-knowledge-base-automation/)
+- [Knowledge Wiki Team Chrome Extension](/chrome-extension-knowledge-wiki-team/)

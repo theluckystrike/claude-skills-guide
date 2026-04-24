@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Opus 4.6 vs Haiku 4.5"
-description: "Opus 4.6 vs Haiku 4.5 compared on speed, cost, and code quality — find where each model fits your coding workflow."
+title: "Claude Opus 4.6 vs Haiku 4.5 (2026)"
+description: "Claude Opus 4.6 vs Haiku 4.5 — features, pricing, and performance compared side by side to help you pick the right tool."
 date: 2026-04-21
 last_tested: "2026-04-21"
 permalink: /claude-opus-vs-haiku-speed-cost-tradeoff/

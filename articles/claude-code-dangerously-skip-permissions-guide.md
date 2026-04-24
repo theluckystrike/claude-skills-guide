@@ -1,9 +1,8 @@
 ---
-title: "Claude Code --dangerously-skip-permissions Guide"
+title: "Claude Code --dangerously-skip-permissions Guide (2026)"
 description: "What --dangerously-skip-permissions does, when you actually need it, the real security risks, and the safer scoped alternatives you should use instead."
 permalink: /claude-code-dangerously-skip-permissions-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Code --dangerously-skip-permissions Guide (2026)
@@ -85,7 +84,7 @@ jobs:
         run: npm install -g @anthropic-ai/claude-code
       - name: Run review
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_API_KEY: {% raw %}${{ secrets.ANTHROPIC_API_KEY }}{% endraw %}
         run: |
           claude -p "Review the changes in this PR. Check for bugs, security issues, and style violations. Output a summary." \
             --dangerously-skip-permissions \
@@ -368,6 +367,7 @@ cp .claude/settings.prod.json .claude/settings.json
 <pre id="pc-out" style="background:#0f172a;padding:16px;border-radius:6px;color:#4ade80;font-size:13px;overflow-x:auto;white-space:pre;margin:0 0 12px 0;min-height:60px;">// Select permissions above to generate config</pre>
 <button onclick="navigator.clipboard.writeText(document.getElementById('pc-out').textContent).then(function(){var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy to Clipboard'},2000)}.bind(this))" style="padding:8px 20px;background:#6ee7b7;color:#0f172a;border:none;border-radius:6px;font-weight:600;cursor:pointer;font-size:14px;">Copy to Clipboard</button>
 </div>
+{% raw %}
 <script>
 document.querySelectorAll('.pc-cb').forEach(function(cb){cb.addEventListener('change',function(){var s=[].slice.call(document.querySelectorAll('.pc-cb:checked')).map(function(c){return c.value});var o={permissions:{allow:s.length?s:["Read"],deny:["Bash(rm -rf *)","Bash(sudo *)","Bash(chmod 777 *)"]}};document.getElementById('pc-out').textContent=JSON.stringify(o,null,2)})});
 </script>
@@ -983,3 +983,5 @@ The right choice is almost always the most restrictive option that still lets yo
 
 - [--dangerously-skip-permissions flag reference](/claude-dangerously-skip-permissions-flag/) — Detailed flag reference and behavior
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — How permission modes affect token costs
+
+{% endraw %}

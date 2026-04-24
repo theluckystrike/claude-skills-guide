@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Courier Notification"
+title: "Claude Code for Courier Notification (2026)"
 description: "Build automated courier notification workflows with Claude Code. Learn to create skills that handle delivery tracking, status updates, and customer alerts."
 date: 2026-03-15
 last_modified_at: 2026-04-17

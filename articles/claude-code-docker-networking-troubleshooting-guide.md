@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix Docker Networking with Claude Code"
+title: "Fix Docker Networking with Claude Code (2026)"
 description: "Debug Docker networking issues with Claude Code. Fix DNS resolution, port mapping, and bridge network misconfigurations using systematic workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

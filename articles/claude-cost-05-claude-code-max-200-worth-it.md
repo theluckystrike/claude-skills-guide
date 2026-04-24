@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code $200 Max Plan"
+title: "Claude Code $200 Max Plan (2026)"
 description: "Max 20x at $200/month provides 20x Pro throughput. For developers billing $100+/hr, the ROI is 10x from eliminated wait time alone."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, claude-code, max-plan]
-render_with_liquid: false
 ---
 
 # Claude Code $200 Max Plan: Is It Worth the Cost

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for DVC Data Versioning"
+title: "Claude Code for DVC Data Versioning (2026)"
 description: "Version datasets and ML models with DVC and Claude Code. Covers pipeline tracking, remote storage, experiment management, and reproducible workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

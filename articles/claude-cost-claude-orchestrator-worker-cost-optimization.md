@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Orchestrator-Worker Cost"
-description: "Use Opus 4.7 as orchestrator ($5/$25 MTok) with Haiku 4.5 workers ($1/$5 MTok) to cut fleet costs by 64% per sprint."
+title: "Claude Orchestrator-Worker Cost (2026)"
+description: "Claude Orchestrator-Worker Cost — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-orchestrator-worker-cost-optimization/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, multi-agent, orchestrator-worker]
-render_with_liquid: false
 ---
 
 # Claude Orchestrator-Worker Cost Optimization

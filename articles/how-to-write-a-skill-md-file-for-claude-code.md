@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How To Write A Skill Md File"
+title: "How To Write A Skill Md File (2026)"
 description: "Step-by-step guide to creating Claude Code skill files (.md) with proper structure, front matter, and real code examples."
 date: 2026-03-13
 last_modified_at: 2026-04-17

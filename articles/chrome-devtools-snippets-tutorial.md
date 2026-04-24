@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Devtools Snippets"
+title: "Chrome Devtools Snippets (2026)"
 description: "Learn how to create, manage, and execute JavaScript snippets in Chrome DevTools to speed up debugging, testing, and repetitive development tasks."
 date: 2026-03-15
 last_modified_at: 2026-04-17

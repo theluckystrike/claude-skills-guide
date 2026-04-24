@@ -1,10 +1,9 @@
 ---
-title: "InsForge vs Supabase"
+title: "InsForge vs Supabase (2026)"
 description: "Compare InsForge and Supabase for Claude Code workflows with token cost analysis showing which backend saves more on agent-driven development."
 permalink: /insforge-vs-supabase-claude-code-token-cost-2026/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # InsForge vs Supabase for Claude Code: Token Cost Comparison (2026)

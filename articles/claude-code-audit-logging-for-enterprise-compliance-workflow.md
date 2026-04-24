@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Audit Logging"
+title: "Claude Code Audit Logging (2026)"
 description: "Implement audit logging in Claude Code for SOC 2, ISO 27001, and HIPAA compliance. Practical patterns and code examples for enterprise teams."
 date: 2026-03-14
 last_modified_at: 2026-04-17

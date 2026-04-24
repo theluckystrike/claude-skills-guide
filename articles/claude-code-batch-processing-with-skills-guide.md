@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Claude Batch API"
+title: "How to Use Claude Batch API (2026)"
 description: "Use the Claude batch API with Claude Code skills for efficient bulk processing. Reduce costs and automate repetitive tasks at scale."
 date: 2026-03-14
 last_modified_at: 2026-04-17

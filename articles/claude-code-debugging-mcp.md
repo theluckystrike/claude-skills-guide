@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Debug MCP Servers in Claude Code"
+title: "Debug MCP Servers in Claude Code (2026)"
 description: "Fix broken MCP server connections in Claude Code with step-by-step debugging for transport errors, timeouts, and configuration issues."
 date: 2026-04-17
 last_modified_at: 2026-04-17

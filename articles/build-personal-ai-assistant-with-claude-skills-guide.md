@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build a Personal AI Assistant"
+title: "Build a Personal AI Assistant (2026)"
 description: "Configure Claude Code as a personal assistant: /supermemory for persistent context, custom skills for daily tasks, and dotfiles for portability."
 date: 2026-03-13
 last_modified_at: 2026-04-17

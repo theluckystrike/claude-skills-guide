@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Cloud Security Posture"
+title: "Claude Code for Cloud Security Posture (2026)"
 description: "Learn how to automate cloud security posture management using Claude Code. Practical examples for developers implementing CSPM workflows across AWS."
 date: 2026-03-15
 last_modified_at: 2026-04-17

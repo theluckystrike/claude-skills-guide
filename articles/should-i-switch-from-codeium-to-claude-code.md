@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Should I Switch From Codeium To Claude"
+title: "Should I Switch From Codeium To Claude (2026)"
 description: "A practical comparison of Codeium and Claude Code for developers considering switching AI coding assistants. Learn about Claude Code's unique skills."
 date: 2026-03-14
 last_modified_at: 2026-04-17

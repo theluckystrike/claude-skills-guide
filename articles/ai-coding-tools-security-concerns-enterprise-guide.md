@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "AI Coding Tools Security Concerns"
+title: "AI Coding Tools Security Concerns (2026)"
 description: "A practical security guide for developers using AI coding tools in enterprise environments. Covers data exposure risks, prompt injection, API security."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Error: Git Push Rejected During Skill Fix"
-description: "Fix git push rejections when updating Claude skills. Solutions for branch conflicts and skill synchronization issues."
+title: "Claude Code Error: Git Push Rejected During Skill Fix (2026)"
+description: "Claude Code Error: Git Push Rejected During Skill Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [troubleshooting]

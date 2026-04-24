@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Use Claude Error Handling"
-description: "A comprehensive guide to implementing error handling patterns in Claude Code workflows for developers."
+title: "How to Use Claude Error Handling (2026)"
+description: "How to Use Claude Error Handling — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 date: 2026-03-20
 last_modified_at: 2026-04-17
 author: Claude Skills Guide

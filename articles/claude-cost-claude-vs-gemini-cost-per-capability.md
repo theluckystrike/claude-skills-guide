@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude vs Gemini Cost Per Capability"
-description: "Claude Sonnet at $3/$15 vs Gemini 2.5 Pro at $1.25/$10 per MTok. Real cost-per-task analysis."
+title: "Claude vs Gemini Cost Per Capability (2026)"
+description: "Claude vs Gemini Cost Per Capability — features, pricing, and performance compared side by side to help you pick the right tool."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-cost-claude-vs-gemini-cost-per-capability/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, comparison]
-render_with_liquid: false
 ---
 
 # Claude vs Gemini: Cost Per Capability

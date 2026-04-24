@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "AI Quiz Generator Chrome Extension"
+title: "AI Quiz Generator Chrome Extension (2026)"
 description: "A practical guide to AI-powered quiz generator Chrome extensions for developers. Learn how these tools work, their key features, and how to build custom."
 date: 2026-03-15
 last_modified_at: 2026-04-17

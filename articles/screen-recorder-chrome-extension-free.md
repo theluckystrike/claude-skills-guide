@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Free Screen Recorder Chrome Extension"
+title: "Free Screen Recorder Chrome Extension (2026)"
 description: "Build a free screen recorder Chrome extension. MediaRecorder API, tab capture, and download implementation with code examples. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

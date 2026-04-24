@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Notion Workflow Tutorial"
+title: "Claude Code + Notion Workflow Tutorial (2026)"
 description: "Integrate Claude Code with Notion API for automated page creation, database queries, and content workflows. Setup guide with working examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

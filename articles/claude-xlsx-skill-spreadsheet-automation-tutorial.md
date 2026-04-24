@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude /xlsx Skill"
+title: "Claude /xlsx Skill (2026)"
 description: "How to use Claude Code's /xlsx skill to automate Excel and CSV tasks. practical examples for reports, batch processing, and data cleanup."
 date: 2026-03-13
 last_modified_at: 2026-04-17

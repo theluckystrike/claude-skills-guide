@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Force Install Extensions Gpo Chrome"
+title: "Force Install Extensions Gpo Chrome (2026)"
 description: "Learn how to force install Chrome extensions across Windows workstations using Group Policy Objects. Practical examples for IT admins and developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

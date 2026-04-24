@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Max Subscription vs API"
+title: "Claude Max Subscription vs API (2026)"
 description: "5 Claude Max subs cost $1,000/month flat. The equivalent API usage costs $457 for 2,816 articles. Here is when each wins."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, multi-agent, subscription-vs-api]
-render_with_liquid: false
 ---
 
 # Claude Max Subscription vs API for Agent Fleets

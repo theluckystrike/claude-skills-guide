@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Webcam Overlay Recording Chrome"
+title: "Webcam Overlay Recording Chrome (2026)"
 description: "Learn how to build Chrome extensions that overlay webcam feeds on top of recorded screen content. Includes code examples and implementation details."
 date: 2026-03-15
 last_modified_at: 2026-04-17

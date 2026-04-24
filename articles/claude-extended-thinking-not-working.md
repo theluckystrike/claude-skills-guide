@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Extended Thinking Not"
+title: "Fix Claude Extended Thinking Not (2026)"
 description: "Fix Claude extended thinking errors. Covers budget_tokens validation, tool_choice conflicts, display options, and multi-turn thinking continuity."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -218,6 +218,24 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 47/500 founding spots. Price goes up when they're gone.
 
 </div>
+
+## Frequently Asked Questions
+
+### What models support extended thinking?
+
+Extended thinking is available on Claude Opus 4.6 and Claude Sonnet 4.6. It is not available on Claude Haiku or older model versions. When using Claude Code, the model is selected either by default or through the `--model` flag. Verify your model supports thinking before enabling the parameter.
+
+### Does extended thinking cost more than regular responses?
+
+Yes. Thinking tokens are billed as output tokens even though they represent internal reasoning rather than the final answer. A request with 10,000 thinking tokens and 2,000 output tokens is billed for 12,000 output tokens total. However, tasks that require multiple retries without thinking often cost more in aggregate than a single successful thinking-enabled attempt.
+
+### Can I see what Claude is thinking?
+
+By default, Claude 4 models return summarized thinking. You can control this with the `display` parameter: `"summarized"` returns a brief summary of the reasoning, `"omitted"` returns empty thinking blocks with an encrypted signature for multi-turn continuity. The full internal reasoning is not exposed to prevent prompt injection through reasoning manipulation.
+
+### Why does thinking fail silently without producing better results?
+
+If thinking is enabled but the budget is set too low (close to 1024), Claude may not have enough tokens to reason deeply and falls back to a fast response. Set the thinking budget to at least 5,000 tokens for meaningful reasoning improvement. For complex multi-step problems, use 10,000 or more.
 
 ## Related Guides
 

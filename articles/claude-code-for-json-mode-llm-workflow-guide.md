@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use For JSON Mode LLM"
+title: "How to Use For JSON Mode LLM (2026)"
 description: "Master JSON mode in LLM workflows with Claude Code. Learn practical patterns for structured output generation, validation, and integration with your."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Cypress Custom Commands"
+title: "Claude Code Cypress Custom Commands (2026)"
 description: "Master Cypress custom commands with Claude Code. Learn workflow patterns, TypeScript integration, best practices for maintainable test automation."
 date: 2026-04-19
 last_modified_at: 2026-04-19

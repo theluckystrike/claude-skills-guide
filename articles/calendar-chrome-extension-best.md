@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Calendar Chrome Extension"
+title: "Calendar Chrome Extension (2026)"
 description: "Discover the top calendar Chrome extensions that boost productivity for developers. Learn about key features, integration capabilities, and how to."
 date: 2026-03-15
 last_modified_at: 2026-04-17

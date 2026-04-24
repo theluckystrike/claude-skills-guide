@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude API vs OpenAI API"
+title: "Claude API vs OpenAI API (2026)"
 description: "Claude API vs OpenAI API compared on developer experience — SDKs, pricing, features, rate limits, and building production AI applications."
 date: 2026-04-21
 last_tested: "2026-04-21"

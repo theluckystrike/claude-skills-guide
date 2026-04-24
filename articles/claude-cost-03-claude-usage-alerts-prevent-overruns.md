@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Usage Alerts to Prevent Cost"
+title: "Claude Usage Alerts to Prevent Cost (2026)"
 description: "A cache miss spike cost $250 in 10 minutes. With alerts, the same incident costs $12.50. Build threshold-based Claude spend alerts."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, alerts, monitoring]
-render_with_liquid: false
 ---
 
 # Claude Usage Alerts to Prevent Cost Overruns

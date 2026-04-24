@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Standard Schema"
-description: "Use Standard Schema for validator-agnostic code with Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Standard Schema (2026)"
+description: "Claude Code for Standard Schema — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-standard-schema-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, standard-schema, workflow]
 ---

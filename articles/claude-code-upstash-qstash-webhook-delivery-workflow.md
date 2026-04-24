@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Upstash Qstash"
+title: "Claude Code Upstash Qstash (2026)"
 description: "Learn how to use Claude Code's AI capabilities to build robust, reliable webhook delivery systems using Upstash QStash for message queuing and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

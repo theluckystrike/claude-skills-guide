@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Password Sharing Team Chrome Extension"
+title: "Password Sharing Team Chrome Extension (2026)"
 description: "Learn how to implement secure password sharing within teams using Chrome extensions. Practical code examples and architectural patterns for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

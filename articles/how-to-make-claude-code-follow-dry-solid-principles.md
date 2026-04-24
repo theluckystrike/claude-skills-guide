@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How To Make Claude Code Follow"
+title: "How To Make Claude Code Follow (2026)"
 description: "Learn practical strategies for applying DRY and SOLID design principles when working with Claude Code and AI assistants."
 date: 2026-03-14
 last_modified_at: 2026-04-17

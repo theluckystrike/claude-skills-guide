@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code SQLAlchemy Alembic"
+title: "Claude Code SQLAlchemy Alembic (2026)"
 description: "Master database migrations with Claude Code and SQLAlchemy. Learn practical workflows for generating, reviewing, and managing Alembic migrations."
 date: 2026-03-14
 last_modified_at: 2026-04-17

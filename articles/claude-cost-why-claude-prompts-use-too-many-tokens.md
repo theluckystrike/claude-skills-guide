@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Your Claude Prompts Use Too Many"
+title: "Why Your Claude Prompts Use Too Many (2026)"
 description: "Five hidden token drains in Claude API prompts — tool overhead alone adds 1,680 tokens per request, costing $8.40 per 1K Opus calls."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # Why Your Claude Prompts Use Too Many Tokens

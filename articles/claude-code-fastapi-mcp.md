@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code FastAPI MCP Server Guide"
+title: "Claude Code FastAPI MCP Server Guide (2026)"
 description: "Build and connect a FastAPI-based MCP server to Claude Code for custom API endpoints, database queries, and tool integrations."
 date: 2026-04-17
 last_modified_at: 2026-04-17

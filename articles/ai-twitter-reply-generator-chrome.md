@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "AI Twitter Reply Generator Chrome"
+title: "AI Twitter Reply Generator Chrome (2026)"
 description: "Learn how to build and use AI-powered Twitter reply generator Chrome extensions. Practical code examples, architecture patterns, and implementation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Flask Blueprint"
+title: "Claude Code Flask Blueprint (2026)"
 description: "Structure Flask applications with blueprints using Claude Code. Scalable architecture patterns, modular organization, and factory app examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

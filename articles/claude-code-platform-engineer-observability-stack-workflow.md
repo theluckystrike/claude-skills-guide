@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Platform Engineer"
+title: "Claude Code Platform Engineer (2026)"
 description: "Learn how to build a comprehensive observability stack workflow using Claude Code skills. Includes practical examples for metrics, logging, tracing."
 date: 2026-03-14
 last_modified_at: 2026-04-17

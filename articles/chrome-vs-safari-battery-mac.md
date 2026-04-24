@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome vs Safari Battery Mac"
+title: "Chrome vs Safari Battery Mac (2026)"
 description: "Compare Chrome and Safari battery consumption on Mac with practical benchmarks, code examples, and optimization strategies for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

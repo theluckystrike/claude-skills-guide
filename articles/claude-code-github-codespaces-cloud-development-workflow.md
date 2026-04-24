@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code GitHub Codespaces"
+title: "Claude Code GitHub Codespaces (2026)"
 description: "A practical guide to building a cloud development workflow with Claude Code and GitHub Codespaces. Set up ephemeral development environments, integrate."
 date: 2026-03-14
 last_modified_at: 2026-04-17

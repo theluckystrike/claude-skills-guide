@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Web Search Costs $10 per 1,000 Searches"
+title: "Web Search Costs $10 per 1,000 Searches (2026)"
 description: "Claude web search costs $0.01 per search plus token ingestion fees. At scale, 1,000 daily searches run $750/month total."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, web-search, pricing]
-render_with_liquid: false
 ---
 
 # Web Search Costs $10 per 1,000 Searches

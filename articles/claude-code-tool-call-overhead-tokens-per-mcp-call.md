@@ -1,10 +1,9 @@
 ---
-title: "Claude Code tool call overhead --"
+title: "Claude Code tool call overhead -- (2026)"
 description: "Every Claude Code tool call costs 150-2,000+ tokens in overhead before any work happens -- understand the per-tool breakdown to minimize wasted tokens."
 permalink: /claude-code-tool-call-overhead-tokens-per-mcp-call/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code tool call overhead -- how many tokens per MCP call

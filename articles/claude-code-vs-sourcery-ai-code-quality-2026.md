@@ -5,7 +5,6 @@ description: "Claude Code vs Sourcery AI compared for code quality improvements.
 permalink: /claude-code-vs-sourcery-ai-code-quality-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

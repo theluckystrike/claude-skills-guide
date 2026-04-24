@@ -1,9 +1,8 @@
 ---
-title: "Claude Flow"
+title: "Claude Flow (2026)"
 description: "Claude Flow orchestrates multiple Claude Code agents as YAML-defined pipelines. Sequential chains, parallel execution, and conditional branching."
 permalink: /claude-flow-tool-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Flow: Multi-Agent Orchestration Tool (2026)
@@ -343,6 +342,7 @@ Check the individual agent log output for the failing step. Run the step's promp
 - [Claude Code hooks](/claude-code-hooks-complete-guide/) — hook into agent tool execution
 - [Super Claude Code framework](/super-claude-code-framework-guide/) — structured prompting for agents
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -361,3 +361,5 @@ Check the individual agent log output for the failing step. Run the step's promp
   ]
 }
 </script>
+
+{% endraw %}

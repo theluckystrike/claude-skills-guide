@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code MkDocs Documentation"
+title: "Claude Code MkDocs Documentation (2026)"
 description: "Build a Claude Code MkDocs documentation workflow that auto-generates and maintains developer docs from your codebase. Step-by-step guide with."
 date: 2026-03-14
 last_modified_at: 2026-04-17

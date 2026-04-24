@@ -1,9 +1,8 @@
 ---
-title: "Stop Claude Code Rewriting Entire Files"
+title: "Stop Claude Code Rewriting Entire Files (2026)"
 description: "Stop Claude Code from rewriting entire files when you ask for small edits by adding surgical edit rules and diff-size limits to CLAUDE.md."
 permalink: /claude-code-rewrites-instead-of-editing-fix-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Stop Claude Code Rewriting Entire Files (2026)
@@ -85,3 +84,71 @@ Review Claude Code's tool usage in your session. If you see write_file on an exi
 The [andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) "Goal-Driven Execution" principle reinforces this: do exactly what was asked, nothing more.
 
 For more on controlling Claude Code's editing behavior, see [The Claude Code Playbook](/playbook/). For refactoring-specific scope control, read the [refactoring quality guide](/claude-code-bad-at-refactoring-fix-2026/). For overall code quality patterns, see our [best practices guide](/karpathy-skills-vs-claude-code-best-practices-2026/).
+
+
+## Frequently Asked Questions
+
+### Does this error affect all operating systems?
+
+This error can occur on macOS, Linux, and Windows (WSL). The exact error message may differ slightly between platforms, but the root cause and fix are the same. macOS users may see additional Gatekeeper or notarization prompts. Linux users should check that the relevant system packages are installed. Windows users should ensure they are running inside WSL2, not native Windows.
+
+### Will this error come back after updating Claude Code?
+
+Updates can occasionally reintroduce this error if the update changes default configurations or dependency requirements. After updating Claude Code, verify your project still builds and runs correctly. If the error returns, reapply the fix and check the changelog for breaking changes.
+
+### Can this error cause data loss?
+
+No, this error occurs before or during an operation and does not corrupt existing files. Claude Code's edit operations are atomic — they either complete fully or not at all. However, if the error occurs during a multi-step operation, you may have partial changes that need to be reviewed with `git diff` before continuing.
+
+### How do I report this error to Anthropic if the fix does not work?
+
+Open an issue at github.com/anthropics/claude-code with: (1) the full error message including stack trace, (2) your Node.js version (`node --version`), (3) your Claude Code version (`claude --version`), (4) your operating system and version, and (5) the command or operation that triggered the error.
+
+
+## Related Guides
+
+- [Merge Conflict in Claude-Edited Files — Fix (2026)](/claude-code-merge-conflict-edited-files-fix-2026/)
+- [Claude Code Git Lfs Large Files](/claude-code-git-lfs-large-files-workflow/)
+- [Claude Code Stop Modifying Files](/how-to-make-claude-code-stop-adding-markdown-to-code/)
+- [Why Is Claude Code Changing Files I Did](/why-is-claude-code-changing-files-i-did-not-mention/)
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does this error affect all operating systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This error can occur on macOS, Linux, and Windows (WSL). The exact error message may differ slightly between platforms, but the root cause and fix are the same. macOS users may see additional Gatekeeper or notarization prompts. Linux users should check that the relevant system packages are installed. Windows users should ensure they are running inside WSL2, not native Windows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will this error come back after updating Claude Code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Updates can occasionally reintroduce this error if the update changes default configurations or dependency requirements. After updating Claude Code, verify your project still builds and runs correctly. If the error returns, reapply the fix and check the changelog for breaking changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this error cause data loss?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, this error occurs before or during an operation and does not corrupt existing files. Claude Code's edit operations are atomic — they either complete fully or not at all. However, if the error occurs during a multi-step operation, you may have partial changes that need to be reviewed with `git diff` before continuing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I report this error to Anthropic if the fix does not work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open an issue at github.com/anthropics/claude-code with: (1) the full error message including stack trace, (2) your Node.js version (`node --version`), (3) your Claude Code version (`claude --version`), (4) your operating system and version, and (5) the command or operation that triggered the error."
+      }
+    }
+  ]
+}
+</script>

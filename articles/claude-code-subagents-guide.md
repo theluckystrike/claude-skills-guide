@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Subagents Guide"
+title: "Claude Code Subagents Guide (2026)"
 description: "Create custom subagents in Claude Code to delegate tasks, preserve context, control costs, and enforce tool restrictions."
 date: 2026-04-15
 permalink: /claude-code-subagents-guide/

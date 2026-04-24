@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for TanStack Router"
-description: "Add type-safe routing with TanStack Router and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for TanStack Router (2026)"
+description: "Claude Code for TanStack Router — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-tanstack-router-workflow-guide/
 render_with_liquid: false

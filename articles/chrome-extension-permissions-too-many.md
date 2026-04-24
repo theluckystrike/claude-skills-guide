@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Permissions Too Many Chrome Extension"
+title: "Permissions Too Many Chrome Extension (2026)"
 description: "Learn how Chrome extension permissions work, why too many permissions pose security risks, and how to audit them effectively. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

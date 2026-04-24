@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix Claude Code Not Working After"
-description: "Fix Claude Code issues after updates. Solutions for skill failures, path errors, and configuration problems."
+title: "Fix Claude Code Not Working After (2026)"
+description: "Fix Claude Code Not Working After — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

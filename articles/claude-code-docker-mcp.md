@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Set Up Docker MCP Server for Claude"
+title: "Set Up Docker MCP Server for Claude (2026)"
 description: "Give Claude Code direct Docker access via MCP. Manage containers, images, and compose stacks with a Docker MCP server configuration. Updated for 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17
@@ -183,3 +183,34 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 - [How to Use Docker Volumes Persistence (2026)](/claude-code-docker-volumes-persistence-guide/)
+
+
+## MCP Server Architecture
+
+The Model Context Protocol (MCP) provides a standardized way for Claude Code to interact with external tools and data sources. Understanding the architecture helps diagnose connection issues:
+
+**Transport layer.** MCP servers communicate with Claude Code over stdio (standard input/output) or HTTP. Stdio is the default and most reliable transport. HTTP transport is used for remote servers.
+
+**Initialization handshake.** When Claude Code starts, it spawns each configured MCP server as a child process and waits for the initialization response. If this handshake does not complete within 30 seconds, the connection times out.
+
+**Tool registration.** After initialization, the MCP server declares its available tools (capabilities). Claude Code adds these to its tool catalog. Each registered tool adds approximately 50-100 tokens to the system prompt.
+
+## Debugging MCP Connection Issues
+
+Run this diagnostic sequence to isolate MCP problems:
+
+```bash
+# 1. Test the server command directly
+npx -y @modelcontextprotocol/server-filesystem /tmp 2>&1 | head -5
+
+# 2. Check if the port is already in use (HTTP transport)
+lsof -i :3100 2>/dev/null
+
+# 3. Verify the config file location and syntax
+cat ~/.claude/settings.json | python3 -m json.tool
+
+# 4. Check Claude Code's MCP status
+claude -p "/mcp" --trust --yes 2>&1
+```
+
+If the server starts manually but fails in Claude Code, the issue is usually PATH differences between your shell and the spawned subprocess.

@@ -3,7 +3,6 @@ title: "Terminal Emulator Rendering Artifacts — Fix (2026)"
 permalink: /claude-code-terminal-rendering-artifacts-fix-2026/
 description: "Fix terminal rendering artifacts in Claude Code. Reset ANSI state and switch terminal emulator to resolve garbled output, broken prompts, and ghost text."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -97,3 +96,11 @@ Claude Code can read binary files like images (it is multimodal) but cannot edit
 ### What is the recommended way to install Claude Code?
 
 Install globally with npm: `npm install -g @anthropic-ai/claude-code`. This adds the `claude` command to your PATH. Verify the installation with `claude --version`. Requires Node.js 18 or later.
+
+
+## Related Guides
+
+- [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
+- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)
+- [Merge Conflict in Claude-Edited Files — Fix (2026)](/claude-code-merge-conflict-edited-files-fix-2026/)

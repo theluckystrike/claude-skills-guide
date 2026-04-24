@@ -3,7 +3,6 @@ title: "Garbage Collection Pause Causing — Fix (2026)"
 permalink: /claude-code-gc-pause-causing-timeout-fix-2026/
 description: "Fix garbage collection pauses causing timeouts in Claude Code. Tune Node.js GC flags and reduce memory pressure to prevent long stop-the-world pauses."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -92,3 +91,11 @@ Partially. If the server began processing your request before the client timed o
 ### Why does Claude Code lose connection during long operations?
 
 Long-running operations can exceed keep-alive timeouts on intermediate proxies and load balancers. If a proxy closes an idle connection after 60 seconds and Claude Code's request takes 90 seconds, the connection is severed before the response arrives.
+
+
+## Related Guides
+
+- [Claude Code Postman Collection](/claude-code-postman-collection-automation/)
+- [Claude Code for Postman Collection](/claude-code-for-postman-collection-generation-workflow/)
+- [Claude Code Guides: Complete Collection](/playbook/)
+- [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)

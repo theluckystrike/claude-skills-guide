@@ -1,9 +1,8 @@
 ---
-title: "Claude 5-Hour Usage Limit Explained"
+title: "Claude 5-Hour Usage Limit Explained (2026)"
 description: "What the Claude 5-hour usage limit is, when it resets, how to check remaining usage, optimization tips, and Max plan upgrade differences explained."
 permalink: /claude-5-hour-usage-limit-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude 5-Hour Usage Limit Explained (2026)
@@ -236,6 +235,7 @@ The Free tier has a more restrictive daily limit rather than a 5-hour rolling wi
 Yes, through the [extra usage](/claude-extra-usage-cost-guide/) option. When enabled, you continue using Claude past the limit at per-token rates.
 
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -315,3 +315,5 @@ Yes, through the [extra usage](/claude-extra-usage-cost-guide/) option. When ena
 - [Claude Pro Subscription Price Guide](/claude-pro-subscription-price-guide/)
 - [Claude API Pricing Complete Guide](/claude-api-pricing-complete-guide/)
 
+
+{% endraw %}

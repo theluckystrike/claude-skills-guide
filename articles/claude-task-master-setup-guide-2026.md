@@ -1,9 +1,8 @@
 ---
-title: "Claude Task Master: Setup and Review"
+title: "Claude Task Master: Setup and Review (2026)"
 description: "Set up claude-task-master to parse PRDs into structured task lists with dependency tracking, MCP integration, and AI-powered task breakdown."
 permalink: /claude-task-master-setup-guide-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Task Master: Setup and Review (2026)
@@ -89,6 +88,9 @@ Claude Code can now call task-master tools directly:
 5. **Multi-Session Persistence** — The task database lives in `.task-master/tasks/tasks.json`. Start a new Claude Code session and it picks up where you left off.
 
 6. **Task Decomposition** — Break complex tasks into subtasks with a single command. The AI suggests logical decomposition points.
+
+For more on this topic, see [Convert a PRD to Tasks with Task Master](/how-to-convert-prd-to-tasks-claude-2026/).
+
 
 7. **Progress Dashboard** — `task-master status` prints a visual tree with completion percentages and blocked-task highlights.
 

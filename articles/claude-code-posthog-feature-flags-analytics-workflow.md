@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use PostHog Feature Flags"
+title: "How to Use PostHog Feature Flags (2026)"
 description: "Learn how to build a powerful analytics workflow with Claude Code and PostHog. Integrate feature flags, track user events, and analyze metrics."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Check SSL Certificate"
+title: "Chrome Check SSL Certificate (2026)"
 description: "Learn how to check SSL certificates in Chrome for developers and power users. Covers DevTools, command-line tools, and practical verification techniques."
 date: 2026-03-15
 last_modified_at: 2026-04-17

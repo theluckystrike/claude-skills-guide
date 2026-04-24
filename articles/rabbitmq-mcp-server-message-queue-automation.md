@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "RabbitMQ MCP Server: Queue Automation"
+title: "RabbitMQ MCP Server: Queue Automation (2026)"
 description: "Automate message queue operations with the RabbitMQ MCP server in Claude Code. Covers publishing, consuming, exchange routing, and dead letter handling."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Enterprise Disaster"
+title: "Claude Code Enterprise Disaster (2026)"
 description: "A comprehensive guide to building disaster recovery workflows for enterprise systems using Claude Code, with practical examples and actionable advice."
 date: 2026-03-14
 last_modified_at: 2026-04-17

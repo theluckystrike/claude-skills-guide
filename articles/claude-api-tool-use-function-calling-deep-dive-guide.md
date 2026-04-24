@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude API Tool Use and Function"
+title: "Claude API Tool Use and Function (2026)"
 description: "Master Claude's API tool use and function calling capabilities. Learn how to integrate external tools, build reliable function-calling workflows, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

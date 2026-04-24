@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Official Docs Walkthrough"
+title: "Claude Code Official Docs Walkthrough (2026)"
 description: "Walk through Claude Code official documentation covering core concepts, configuration, skills setup, and MCP integration. Get productive in 30 minutes."
 date: 2026-03-15
 last_modified_at: 2026-04-17

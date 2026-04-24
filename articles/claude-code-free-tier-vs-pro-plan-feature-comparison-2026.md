@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Free vs Pro Plan"
+title: "Claude Code Free vs Pro Plan (2026)"
 description: "Claude Code free tier vs Pro plan compared for 2026. Features, limits, pricing, and which plan is worth it for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,9 +1,8 @@
 ---
 title: "MITM Proxy Detection Error — Fix (2026)"
 permalink: /claude-code-mitm-proxy-detection-error-fix-2026/
-description: "Fix MITM proxy detection blocking Claude API. Verify your proxy certificate is legitimate and add it to Node CA store."
+description: "MITM Proxy Detection Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -97,3 +96,11 @@ Yes. Set `NO_PROXY=api.anthropic.com` to route Anthropic API traffic directly wh
 ### What does 'unable to verify the first certificate' mean?
 
 This error means Node.js cannot build a complete certificate chain from the server certificate to a trusted root CA. The most common cause is a corporate proxy performing TLS inspection with a self-signed CA certificate that Node.js does not trust.
+
+
+## Related Guides
+
+- [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
+- [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
+- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)

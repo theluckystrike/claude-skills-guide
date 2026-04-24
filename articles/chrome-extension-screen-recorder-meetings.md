@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Screen Recorder Meetings Chrome"
+title: "Screen Recorder Meetings Chrome (2026)"
 description: "Learn how to build a Chrome extension that records screen and audio during meetings. Complete implementation guide with code examples for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

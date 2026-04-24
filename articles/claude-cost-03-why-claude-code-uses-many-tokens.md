@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Claude Code Uses So Many Tokens"
+title: "Why Claude Code Uses So Many Tokens (2026)"
 description: "Claude Code sessions consume 100K-250K tokens because every file read and tool result stays in context. Here are the 5 biggest token sinks."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, claude-code, tokens]
-render_with_liquid: false
 ---
 
 # Why Claude Code Uses So Many Tokens Explained

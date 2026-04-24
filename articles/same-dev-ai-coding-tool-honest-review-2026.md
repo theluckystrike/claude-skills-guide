@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Same Dev AI Coding Tool Honest"
+title: "Same Dev AI Coding Tool Honest (2026)"
 description: "An honest review of Claude Code as an AI coding tool in 2026. Practical examples, real-world usage, and honest assessment of capabilities and limitations."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Habit Tracker Work Chrome Extension"
+title: "Habit Tracker Work Chrome Extension (2026)"
 description: "Build a Chrome extension habit tracker tailored for work productivity. Practical code examples, storage patterns, and implementation strategies for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

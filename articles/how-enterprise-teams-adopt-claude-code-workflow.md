@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Enterprise Teams Adopt"
+title: "How Enterprise Teams Adopt (2026)"
 description: "Learn how enterprise teams implement Claude Code workflows. Real examples, skill integration patterns, and deployment strategies for scaling."
 date: 2026-03-14
 last_modified_at: 2026-04-17

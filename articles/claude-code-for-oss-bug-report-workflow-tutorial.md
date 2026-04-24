@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Oss Bug Report"
+title: "Claude Code For Oss Bug Report (2026)"
 description: "Learn how to use Claude Code to streamline your open source bug reporting workflow. From reproducing issues to crafting detailed reports, this guide..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

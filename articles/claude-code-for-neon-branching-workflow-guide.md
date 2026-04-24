@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Neon Branching"
-description: "Use Neon database branching with Claude Code for safe migrations. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Neon Branching (2026)"
+description: "Claude Code for Neon Branching — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-neon-branching-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, neon, workflow]
 ---

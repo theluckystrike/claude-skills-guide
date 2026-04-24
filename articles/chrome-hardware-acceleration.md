@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Hardware Acceleration"
+title: "Chrome Hardware Acceleration (2026)"
 description: "Learn how Chrome hardware acceleration works, how to enable it, and how to optimize your web applications for GPU acceleration."
 date: 2026-03-15
 last_modified_at: 2026-04-17

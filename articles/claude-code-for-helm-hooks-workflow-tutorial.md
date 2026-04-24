@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Helm Hooks Workflow"
+title: "Claude Code for Helm Hooks Workflow (2026)"
 description: "Learn how to integrate Claude Code into your Helm hooks workflow to automate Kubernetes deployments with intelligent automation and testing."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -346,6 +346,30 @@ Related Reading
 - [Claude Code Git Hooks: Automate Your Pre-Commit Workflow](/claude-code-git-hooks-pre-commit-automation/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+## Workflow Optimization Tips
+
+To get the best results from Claude Code in this workflow:
+
+**Start each session with context.** Open your session with a brief description of what you want to accomplish, the relevant files, and any constraints. This front-loads context and reduces exploration tokens. Example: "I need to add pagination to the /api/users endpoint. The route is in src/api/users.ts and the Prisma model is in prisma/schema.prisma."
+
+**Use incremental requests.** Break large tasks into steps. After each step, review the output with `git diff` before proceeding. This catches errors early and prevents them from compounding across multiple files.
+
+**Reference specific files.** Instead of asking Claude Code to "find the configuration," tell it where to look: "Read src/config/database.ts and update the connection pool size." This saves 5,000-10,000 tokens of file exploration per task.
+
+## Measuring Workflow Efficiency
+
+Track these metrics to gauge whether your Claude Code workflow is improving:
+
+| Metric | Good | Needs Improvement |
+|--------|------|-------------------|
+| Tokens per task | Under 20K | Over 50K |
+| Turns per task | 2-4 | Over 8 |
+| Error rate | Under 10% | Over 30% |
+| Time per task | Under 5 min | Over 15 min |
+
+If your metrics fall in the "Needs Improvement" column, the most likely fixes are: better CLAUDE.md instructions, more specific prompts, and using skills for repeated tasks.
+
 {% endraw %}
 
 

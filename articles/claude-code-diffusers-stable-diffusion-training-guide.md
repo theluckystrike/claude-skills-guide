@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Train Stable Diffusion with Claude Code"
+title: "Train Stable Diffusion with Claude Code (2026)"
 description: "Fine-tune Stable Diffusion models using Claude Code and HuggingFace Diffusers. Covers DreamBooth, LoRA training, and optimization for custom AI art."
 date: 2026-03-14
 last_modified_at: 2026-04-17

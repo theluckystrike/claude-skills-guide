@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Building A CLI Devtool With Claude Code"
+title: "Building A CLI Devtool With Claude Code (2026)"
 description: "Learn how to build a powerful command-line development tool using Claude Code. This guide covers project setup, skill integration, automation, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,9 +1,8 @@
 ---
-title: "Tool Use Schema Validation Error — Fix"
+title: "Tool Use Schema Validation Error — Fix (2026)"
 permalink: /claude-code-tool-use-schema-validation-error-fix-2026/
 description: "Fix tool use schema validation error. Ensure input_schema is valid JSON Schema draft 2020-12 with correct property types."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -108,3 +107,39 @@ Standard JSON does not support comments. If your project uses JSONC (JSON with C
 ### Why does Claude Code generate TypeScript errors?
 
 Claude Code generates code based on the types and patterns it sees in your codebase. If your tsconfig uses strict mode but Claude Code does not see the full type definitions, it may produce code that fails type checking. Add the relevant type information to your prompt or CLAUDE.md.
+
+
+## Related Guides
+
+- [Request Body Validation Failed — Fix](/claude-code-request-body-validation-failed-fix-2026/)
+- [MCP Server Input Validation Security](/mcp-server-input-validation-security-patterns/)
+- [FastAPI Pydantic V2 Validation](/claude-code-fastapi-pydantic-v2-validation-deep-dive/)
+- [Input Validation and Sanitization](/claude-code-input-validation-sanitization-patterns-guide/)
+
+## Database Operations in Claude Code
+
+When using Claude Code for database-related tasks, configure proper safety rails:
+
+**Read-only by default.** Add to your CLAUDE.md: "Never run destructive database operations (DROP, TRUNCATE, DELETE without WHERE) without explicit confirmation." This prevents accidental data loss during development.
+
+**Migration management.** Claude Code can generate Prisma migrations, but review them before applying. The generated SQL may include operations that are safe in development but dangerous in production (column drops, type changes).
+
+```bash
+# Safe workflow for Claude Code database changes:
+# 1. Claude generates the migration
+npx prisma migrate dev --name add-user-preferences --create-only
+
+# 2. Review the generated SQL
+cat prisma/migrations/*/migration.sql
+
+# 3. Apply after review
+npx prisma migrate dev
+```
+
+**Query optimization.** Claude Code generates queries that work but may not be optimal. For production code, ask Claude to analyze query performance: "Check if this query uses an index and estimate the execution time for 1 million rows."
+
+## Common Database Mistakes in Claude Code
+
+1. **N+1 queries in loops.** Claude generates a loop that queries the database on each iteration. Fix: batch the IDs and use a single `WHERE IN` query.
+2. **Missing transactions.** Multi-table updates without a transaction can leave data inconsistent. Fix: wrap related operations in `prisma.$transaction()`.
+3. **Exposing sensitive fields.** Claude includes all columns in SELECT queries. Fix: specify a select clause that excludes passwords, tokens, and internal IDs.

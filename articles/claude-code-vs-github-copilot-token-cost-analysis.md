@@ -1,10 +1,9 @@
 ---
-title: "Claude Code vs GitHub Copilot"
+title: "Claude Code vs GitHub Copilot (2026)"
 description: "Compare Claude Code and GitHub Copilot costs across real workflows -- Copilot is $10/month flat while Claude Code API ranges from $15-$300/month depending."
 permalink: /claude-code-vs-github-copilot-token-cost-analysis/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code vs GitHub Copilot: Token Cost Analysis

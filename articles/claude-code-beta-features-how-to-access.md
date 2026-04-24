@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Beta Features"
+title: "Claude Code Beta Features (2026)"
 description: "A practical guide for developers and power users on accessing Claude Code beta features. Learn the setup process, configuration options, and practical."
 date: 2026-03-14
 last_modified_at: 2026-04-17

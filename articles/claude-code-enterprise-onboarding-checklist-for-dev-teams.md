@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Enterprise Onboarding"
+title: "Claude Code Enterprise Onboarding (2026)"
 description: "A comprehensive checklist for integrating Claude Code into your enterprise development workflow. Set up authentication, configure workspaces, establish."
 date: 2026-03-14
 last_modified_at: 2026-04-17

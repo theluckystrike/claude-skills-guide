@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How To Use Claude Code"
+title: "How To Use Claude Code (2026)"
 description: "A practical guide for developers to rapidly comprehend new codebases using Claude Code. Learn effective prompts, workflows, and skill-based strategies."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,8 +1,7 @@
 ---
-title: "Claude Skills for Monorepo Projects"
+title: "Claude Skills for Monorepo Projects (2026)"
 description: "Configure Claude Code skills in monorepos with nested .claude/skills/ directories, package-scoped activation, and cross-package orchestration."
 permalink: /claude-skills-for-monorepo-projects/
-render_with_liquid: false
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, monorepo, architecture]
 last_updated: 2026-04-19

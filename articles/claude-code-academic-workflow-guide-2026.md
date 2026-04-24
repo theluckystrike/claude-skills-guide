@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Academic Workflow Guide"
+title: "Claude Code Academic Workflow Guide (2026)"
 description: "Set up claude-code-my-workflow for academic LaTeX and R projects — 28 skills, 14 agents, 24 rules battle-tested on PhD courses at Emory."
 permalink: /claude-code-academic-workflow-guide-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Academic Workflow Guide (2026)
@@ -90,6 +89,15 @@ sudo apt install texlive-full
 7. **Multi-File Project Support** — handles papers with separate files for sections, appendices, figures, and tables. Maintains cross-reference integrity.
 
 8. **Emory-Tested** — refined through real academic use. The rules address actual mistakes students encountered, not hypothetical problems.
+
+For more on this topic, see [Claude Code for UnoCSS — Workflow Guide](/claude-code-for-unocss-workflow-guide/).
+
+For more on this topic, see [Claude Code for Devbox — Workflow Guide](/claude-code-for-devbox-jetify-workflow-guide/).
+
+
+
+For more on this topic, see [Claude Code for Direnv — Workflow Guide](/claude-code-for-direnv-workflow-guide/).
+
 
 ## Real Usage Example
 

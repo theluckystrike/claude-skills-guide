@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code License Compatibility Check"
+title: "Claude Code License Compatibility Check (2026)"
 description: "Automate software license compatibility checks with Claude Code for dependency scanning, conflict detection, and compliance reporting across packages."
 date: 2026-03-15
 last_modified_at: 2026-04-17

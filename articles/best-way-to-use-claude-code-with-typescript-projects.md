@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Use Claude Code with TypeScript"
+title: "Use Claude Code with TypeScript (2026)"
 description: "Use Claude Code effectively with TypeScript projects. Skill selection, type-safe workflows, and practical patterns for shipping production TS code."
 date: 2026-03-14
 last_modified_at: 2026-04-17

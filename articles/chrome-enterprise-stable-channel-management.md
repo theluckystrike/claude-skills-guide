@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Enterprise Stable Channel"
+title: "Chrome Enterprise Stable Channel (2026)"
 description: "Master Chrome Enterprise stable channel management with practical examples, policy configurations, and deployment strategies for IT administrators and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

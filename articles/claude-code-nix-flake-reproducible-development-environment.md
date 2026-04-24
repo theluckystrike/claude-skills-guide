@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Nix Flake Reproducible"
+title: "Claude Code Nix Flake Reproducible (2026)"
 description: "Learn how to combine Claude Code with Nix Flakes to create fully reproducible, declarative development environments that work consistently across machines."
 date: 2026-03-14
 last_modified_at: 2026-04-17

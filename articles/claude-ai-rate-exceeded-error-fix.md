@@ -1,10 +1,9 @@
 ---
-title: "Fix Claude AI Rate Exceeded Error"
+title: "Fix Claude AI Rate Exceeded Error (2026)"
 description: "Fix claude.ai rate exceeded errors on Free, Pro, and Max subscription plans. Understand web app rate limits vs API limits and fix throttling."
 permalink: /claude-ai-rate-exceeded-error-fix/
 canonical_url: /claude-rate-exceeded-error-fix/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -92,6 +91,9 @@ If you are building applications on Claude, the API is the right choice. The [fu
 Claude.ai uses a rolling window system for rate limits rather than a fixed daily reset. This is important to understand because it affects your recovery strategy.
 
 A rolling window means the system tracks your usage over a moving time period. When you send a message, it enters the window. After a certain amount of time passes, that message ages out of the window. Your available capacity at any given moment equals your plan limit minus the messages still inside the window.
+
+For more on this topic, see [.gitignore Not Respected by Claude Fix — Fix (2026)](/claude-code-gitignore-not-respected-fix-2026/).
+
 
 This means:
 
@@ -208,6 +210,7 @@ The rolling window system means your capacity recovers gradually as older messag
 - [Fix Claude API 503 Service Unavailable](/claude-api-503-service-unavailable-fix/)
 - [Fix Claude Can't Open This Chat](/claude-cant-open-this-chat-fix/)
 
+{% raw %}
 <script type="application/ld+json">
 [
   {
@@ -330,3 +333,5 @@ The rolling window system means your capacity recovers gradually as older messag
   }
 ]
 </script>
+
+{% endraw %}

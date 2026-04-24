@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Cost Per Request by Model"
+title: "Claude Cost Per Request by Model (2026)"
 description: "Each Claude API request costs $0.015 on Haiku, $0.045 on Sonnet, or $0.075 on Opus — here is how to calculate your exact spend."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # Claude Cost Per Request by Model Comparison

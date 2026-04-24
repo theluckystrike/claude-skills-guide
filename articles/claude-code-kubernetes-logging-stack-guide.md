@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Kubernetes Logging Stack"
+title: "Claude Code Kubernetes Logging Stack (2026)"
 last_tested: "2026-04-22"
 description: "A practical guide to building a Kubernetes logging stack with Claude Code. Learn how to configure Fluent Bit, Loki, and Grafana while leveraging Claude."
 date: 2026-03-14

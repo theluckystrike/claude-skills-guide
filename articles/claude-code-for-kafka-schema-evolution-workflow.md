@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Kafka Schema Evolution"
+title: "Claude Code for Kafka Schema Evolution (2026)"
 description: "Manage Kafka schema evolution with Claude Code. Avro and Protobuf compatibility checks, automated validation, and breaking change prevention."
 date: 2026-03-15
 last_modified_at: 2026-04-17

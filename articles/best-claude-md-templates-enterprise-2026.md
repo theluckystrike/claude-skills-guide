@@ -1,9 +1,8 @@
 ---
-title: "Best CLAUDE.md Templates for Teams"
+title: "Best CLAUDE.md Templates for Teams (2026)"
 description: "The best CLAUDE.md templates for engineering teams ranked by adoption and effectiveness. From Karpathy's principles to enterprise security configs."
 permalink: /best-claude-md-templates-enterprise-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Best CLAUDE.md Templates for Teams (2026)
@@ -131,6 +130,9 @@ cp claude-code-my-workflow/CLAUDE.md your-research-project/CLAUDE.md
 **Source**: github.com/luongnv89/claude-howto
 
 **What it provides**: Copy-paste CLAUDE.md templates for common project types: React, Python, Go, Rust, and more. Each template includes language-specific conventions and tool preferences.
+
+For more on this topic, see [CLAUDE.md Templates Library](/templates-library/).
+
 
 **Why it works for teams**: Language-specific templates mean the CLAUDE.md matches your stack exactly. Less customization needed.
 

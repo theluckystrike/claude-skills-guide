@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Anthropic SDK IndexError When"
+title: "Fix Anthropic SDK IndexError When (2026)"
 description: "Resolve IndexError in the Anthropic Python SDK when streaming responses with tool use, thinking, or empty content blocks. Tested and working in 2026."
 date: 2026-04-15
 permalink: /anthropic-sdk-indexerror-streaming-fix/

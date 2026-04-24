@@ -1,10 +1,9 @@
 ---
-title: "Karpathy Context Engineering + NASA P10"
+title: "Karpathy Context Engineering + NASA P10 (2026)"
 description: "The CCG framework combines Karpathy's context engineering principles with NASA Power of 10 rules to cut Claude Code costs by 40-60% in production workflows."
 permalink: /karpathy-context-engineering-nasa-p10-ccg-framework/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Karpathy's Context Engineering + NASA P10: The CCG Production Framework

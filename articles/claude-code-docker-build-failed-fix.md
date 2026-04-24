@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Docker Build Failures When Using"
+title: "Fix Docker Build Failures When Using (2026)"
 description: "Resolve Docker build failures with Claude Code. Fix multi-stage build errors, missing dependencies, layer caching issues, and platform mismatches."
 date: 2026-04-15
 last_modified_at: 2026-04-17

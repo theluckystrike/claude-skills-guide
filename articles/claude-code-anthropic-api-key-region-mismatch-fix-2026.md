@@ -1,9 +1,8 @@
 ---
-title: "API Key Region Mismatch eu-west-1 — Fix"
+title: "API Key Region Mismatch eu-west-1 — Fix (2026)"
 permalink: /claude-code-anthropic-api-key-region-mismatch-fix-2026/
 description: "Set the correct ANTHROPIC_BASE_URL environment variable for your API key region. Fixes the region mismatch authentication error in Claude Code."
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -85,3 +84,32 @@ Yes. Set the `ANTHROPIC_API_KEY` in a project-level `.env` file or use direnv to
 ### Which model does Claude Code use by default?
 
 Claude Code uses the latest Claude model available on your account. You can override the model with `claude --model claude-sonnet-4-20250514` or set a default in your configuration with `claude config set model claude-sonnet-4-20250514`.
+
+
+## Related Guides
+
+- [Token Count Estimation Mismatch Fix — Fix (2026)](/claude-code-token-count-estimation-mismatch-fix-2026/)
+- [MCP Protocol Version Mismatch in Claude — Fix (2026)](/claude-code-model-context-protocol-version-mismatch-fix-2026/)
+- [Claude Code Node Version Mismatch — Fix](/claude-code-node-version-mismatch-fix/)
+- [esbuild Target Mismatch Error — Fix](/claude-code-esbuild-target-mismatch-fix-2026/)
+
+## Implementation Details
+
+When working with this in Claude Code, pay attention to these practical details:
+
+**Project configuration.** Add specific instructions to your CLAUDE.md file describing how your project handles this area. Include file paths, naming conventions, and any patterns that differ from common defaults. Claude Code reads CLAUDE.md at the start of every session and uses it to guide all operations.
+
+**Testing the setup.** After configuration, verify everything works by running a simple test task. Ask Claude Code to perform a read-only operation first (like listing files or reading a config) before moving to write operations. This confirms that permissions, paths, and tools are all correctly configured.
+
+**Monitoring and iteration.** Track your results over several sessions. If Claude Code consistently makes the same mistake, the fix is usually a more specific CLAUDE.md instruction. If it makes different mistakes each time, the issue is likely in the project setup or toolchain configuration.
+
+## Troubleshooting Checklist
+
+When something does not work as expected, check these items in order:
+
+1. **CLAUDE.md exists at the project root** — run `ls -la CLAUDE.md` to verify
+2. **Node.js version is 18+** — run `node --version` to check
+3. **API key is set** — run `echo $ANTHROPIC_API_KEY | head -c 10` to verify (shows first 10 characters only)
+4. **Disk space is available** — run `df -h .` to check
+5. **Network can reach the API** — run `curl -s -o /dev/null -w "%{http_code}" https://api.anthropic.com` (should return 401 without auth, meaning the server is reachable)
+6. **No conflicting processes** — run `ps aux | grep claude | grep -v grep` to check for stale sessions

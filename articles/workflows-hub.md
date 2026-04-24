@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "Claude Code Workflows & Integrations"
+title: "Claude Code Workflows & Integrations (2026)"
 description: "Tested Claude Code workflows for IDEs, terminals, frameworks, and teams. Setup guides with working commands verified April 2026."
 permalink: /workflows/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 # Claude Code Workflows & Integrations

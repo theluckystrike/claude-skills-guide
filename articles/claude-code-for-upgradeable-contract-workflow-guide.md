@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Upgradeable Contract"
+title: "Claude Code for Upgradeable Contract (2026)"
 description: "Master upgradeable smart contract development with Claude Code. Learn proxy patterns, deployment workflows, and best practices for managing contract."
 date: 2026-03-15
 last_modified_at: 2026-04-17

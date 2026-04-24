@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Webcam Settings Adjuster Chrome"
+title: "Webcam Settings Adjuster Chrome (2026)"
 description: "Learn how to build a Chrome extension that adjusts webcam settings like brightness, contrast, and resolution directly in the browser. Updated for 2026."
 last_tested: "2026-04-22"
 date: 2026-03-15

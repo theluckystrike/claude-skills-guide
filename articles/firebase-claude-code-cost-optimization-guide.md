@@ -1,10 +1,9 @@
 ---
-title: "Firebase + Claude Code"
+title: "Firebase + Claude Code (2026)"
 description: "Optimize Claude Code token costs when working with Firebase projects using structured context, security rules skills, and agent-friendly error handling."
 permalink: /firebase-claude-code-cost-optimization-guide/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Firebase + Claude Code: Cost Optimization Guide

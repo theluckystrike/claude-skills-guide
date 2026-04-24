@@ -3,7 +3,6 @@ title: "Best Claude Code Skills in 2026"
 description: "The top Claude Code skills ranked by community adoption, star count, and practical impact. From Karpathy Skills to ccusage, with install commands."
 permalink: /best-claude-code-skills-ranked-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Best Claude Code Skills in 2026 (Ranked)
@@ -94,6 +93,9 @@ npm install -g task-master-ai && task-master init
 ```
 
 **Limitation**: Best for solo developers. Team collaboration features are limited. See [Task Master vs GitHub Issues](/claude-task-master-vs-github-issues-project-2026/).
+
+For more on this topic, see [Claude Code Skills Reference](/skills-reference/).
+
 
 ---
 

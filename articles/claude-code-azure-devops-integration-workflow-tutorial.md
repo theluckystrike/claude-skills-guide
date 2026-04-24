@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Azure DevOps Integration: Workflow Tutorial"
+title: "Claude Code Azure DevOps Integration (2026)"
 description: "Integrate Claude Code with Azure DevOps for automated builds, release pipelines, and CI/CD workflows. YAML pipeline configs and practical examples."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -358,6 +358,15 @@ claude -p supermemory "Remember: Production subscription ID is xxx,
 ```
 
 When triggering deployments, Claude automatically references the correct environment based on your stored context.
+
+For more on this topic, see [Claude Code for DuckDB — Workflow Guide](/claude-code-for-duckdb-workflow-guide/).
+
+For more on this topic, see [Claude Code Academic Workflow Guide](/claude-code-academic-workflow-guide-2026/).
+
+
+For more on this topic, see [Claude Code for Zoxide — Workflow Guide](/claude-code-for-zoxide-workflow-guide/).
+
+
 
 You can also persist pipeline IDs and resource group names so you do not need to look them up repeatedly:
 

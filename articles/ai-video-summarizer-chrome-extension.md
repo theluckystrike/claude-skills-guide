@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build an AI Video Summarizer Extension"
+title: "Build an AI Video Summarizer Extension (2026)"
 description: "Build a Chrome extension that summarizes YouTube, Vimeo, and Coursera videos using AI. Complete implementation with transcript extraction and LLM calls."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Facebook Page Manager Chrome Extension"
+title: "Facebook Page Manager Chrome Extension (2026)"
 description: "Learn how to build and use Chrome extensions for Facebook page management. Practical code examples, API integration patterns, and automation techniques."
 date: 2026-03-15
 last_modified_at: 2026-04-17

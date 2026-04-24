@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Kubernetes Ingress"
+title: "Claude Code Kubernetes Ingress (2026)"
 description: "Learn how to configure Kubernetes Ingress with Claude Code. Practical examples for managing routing, TLS, and load balancing. Tested and working in 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17

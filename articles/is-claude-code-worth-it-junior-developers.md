@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Is Claude Code Worth It Junior"
+title: "Is Claude Code Worth It Junior (2026)"
 description: "Discover whether Claude Code is the right AI coding assistant for junior developers. Learn about key features, learning benefits, and real-world use cases."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Building a Chrome Extension for Team"
+title: "Building a Chrome Extension for Team (2026)"
 description: "A practical guide for developers building Chrome extensions to manage world clocks across distributed teams. Learn architecture patterns, timezone."
 date: 2026-03-15
 last_modified_at: 2026-04-17

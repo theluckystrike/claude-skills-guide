@@ -1,9 +1,8 @@
 ---
-title: "Claude API Pricing"
+title: "Claude API Pricing (2026)"
 description: "Complete Claude API pricing for all models and plans. Per-token costs, rate limits, batch discounts, prompt caching savings, and plan comparisons."
 permalink: /claude-api-pricing-complete-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude API Pricing: Every Plan and Model (2026)
@@ -532,6 +531,7 @@ Local models (via Ollama, llama.cpp) have zero per-token cost but require GPU ha
 Each API key shares the organization-level rate limit. Multiple keys do not increase your total throughput. To get higher limits, upgrade your API tier by adding prepaid credits.
 
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -627,3 +627,5 @@ Each API key shares the organization-level rate limit. Multiple keys do not incr
 - [Claude 5-Hour Usage Limit Guide](/claude-5-hour-usage-limit-guide/)
 - [Claude Pro Subscription Price Guide](/claude-pro-subscription-price-guide/)
 
+
+{% endraw %}

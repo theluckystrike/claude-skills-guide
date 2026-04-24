@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Warp AI Terminal"
+title: "Claude Code vs Warp AI Terminal (2026)"
 description: "Measure Claude Code against Warp's AI terminal across agentic coding, command generation, pricing, and daily developer workflow."
 permalink: /claude-code-vs-warp-ai-terminal-2026/
 date: 2026-04-21
@@ -10,7 +10,6 @@ tools_compared:
     version: "Opus 4.6 (CLI)"
   - name: "Warp Terminal"
     version: "Build plan (2026)"
-render_with_liquid: false
 ---
 
 # Claude Code vs Warp AI Terminal in 2026
@@ -66,6 +65,9 @@ Claude Code is an AI agent that runs inside any terminal emulator, reading and m
 - Warp Free: $0 (75 AI credits/mo) + terminal features are free forever
 - Warp Build: $20/mo (1,500 AI credits/mo)
 - Cheapest option: Use Warp as your terminal for free, add Claude Code at $20/mo for heavy coding tasks
+
+For more on this topic, see [How to Use Claude Code with Warp](/claude-code-warp-terminal-workflow-2026/).
+
 
 **Team of 5:**
 - Claude Code Teams (Premium): $500/mo

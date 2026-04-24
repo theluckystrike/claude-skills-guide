@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Flash Sale Notification Chrome"
+title: "Flash Sale Notification Chrome (2026)"
 description: "Learn how to build a Chrome extension that monitors web pages for flash sales and notifies users in real-time. Includes code examples, architecture."
 date: 2026-03-15
 last_modified_at: 2026-04-17

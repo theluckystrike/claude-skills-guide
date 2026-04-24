@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Emotion CSS-in-JS Guide"
+title: "Claude Code Emotion CSS-in-JS Guide (2026)"
 description: "Master Emotion CSS-in-JS styling with Claude Code. Learn practical patterns for component styling, theming, and dynamic styles using @emotion/react and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

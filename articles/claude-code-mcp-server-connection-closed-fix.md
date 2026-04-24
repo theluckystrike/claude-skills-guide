@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code MCP Server Connection"
+title: "Fix Claude Code MCP Server Connection (2026)"
 description: "Resolve Claude Code MCP Server Connection Closed issues with tested solutions, step-by-step debugging, and production-ready code examples verified for..."
 date: 2026-04-15
 permalink: /claude-code-mcp-server-connection-closed-fix/

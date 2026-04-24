@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Chrome Web Vitals Optimization"
+title: "Chrome Web Vitals Optimization (2026)"
 description: "Learn how to optimize Chrome Web Vitals (LCP, FID, CLS) with practical code examples. A developer-focused guide to improving Core Web Vitals scores."
 date: 2026-03-15
 last_modified_at: 2026-04-17

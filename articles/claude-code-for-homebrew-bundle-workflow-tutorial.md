@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Homebrew Bundle"
+title: "Claude Code for Homebrew Bundle (2026)"
 description: "Learn how to use Claude Code to automate and streamline your Homebrew Bundle workflow for macOS package management. Practical examples for creating."
 date: 2026-03-15
 last_modified_at: 2026-04-17

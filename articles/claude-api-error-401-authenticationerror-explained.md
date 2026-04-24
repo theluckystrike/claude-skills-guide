@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude API Error 401"
+title: "Fix: Claude API Error 401 (2026)"
 description: "Fix Claude API 401 authentication_error. Covers invalid API keys, environment variable setup, and SDK authentication for Python and TypeScript."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -66,6 +66,9 @@ After setting, restart your terminal session or run `source ~/.bashrc`.
 ### Python SDK Authentication
 
 The Python SDK reads `ANTHROPIC_API_KEY` automatically:
+
+For more on this topic, see [Fix: Claude Can't Open This Chat Error](/claude-cant-open-this-chat-fix/).
+
 
 ```python
 import anthropic

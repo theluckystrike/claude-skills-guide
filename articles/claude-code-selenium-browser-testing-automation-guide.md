@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Selenium Browser Testing"
+title: "Claude Code Selenium Browser Testing (2026)"
 description: "Learn how to automate browser testing with Claude Code and Selenium. Practical examples, code snippets, and integration strategies for developers."
 date: 2026-03-13
 last_modified_at: 2026-04-17

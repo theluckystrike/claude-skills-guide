@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for K8s Metacontroller"
+title: "Claude Code for K8s Metacontroller (2026)"
 description: "Build Kubernetes Metacontroller composite controllers with Claude Code. Webhook-based workflows, sync hooks, and declarative logic patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17

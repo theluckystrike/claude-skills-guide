@@ -1,9 +1,8 @@
 ---
-title: "Vite Prebundle Dependency Error — Fix"
+title: "Vite Prebundle Dependency Error — Fix (2026)"
 permalink: /claude-code-vite-prebundle-error-fix-2026/
 description: "Fix Vite prebundle errors on new dependencies. Clear .vite cache and add missing deps to optimizeDeps.include in config."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -122,3 +121,29 @@ Run `npm doctor` to check your npm environment. It validates the registry connec
 ### What Node.js version does Claude Code require?
 
 Claude Code requires Node.js 18 or later. Node.js 20 LTS is recommended for the best compatibility and performance. Check your version with `node --version`.
+
+
+## Related Guides
+
+- [Claude Code Vite Bundle Optimization](/claude-code-for-vite-bundle-optimization-workflow/)
+- [CLAUDE.md Example for React + Vite +](/claude-md-example-for-react-vite-typescript/)
+- [Claude Code for Dependency Inversion](/claude-code-for-dependency-inversion-refactoring-guide/)
+- [Claude Skill Dependency Injection](/claude-skill-dependency-injection-patterns/)
+
+## Build Tool Configuration with Claude Code
+
+When Claude Code generates or modifies build configurations, ensure the output matches your project's build pipeline:
+
+**Webpack specifics.** Claude Code may generate webpack 4 syntax when your project uses webpack 5. Key differences: `module.rules` (not `module.loaders`), `asset/resource` (not `file-loader`), and native module federation. Always specify your webpack version in CLAUDE.md.
+
+**Vite projects.** Claude Code sometimes generates Create React App patterns when the project uses Vite. Add to CLAUDE.md: "This project uses Vite, not CRA. Use `import.meta.env` for environment variables, not `process.env`. Dev server runs on port 5173."
+
+**Tree-shaking requirements.** For tree-shaking to work, modules must use ES module syntax (`import`/`export`), not CommonJS (`require`/`module.exports`). Claude Code defaults to whichever pattern it finds in existing code. If your project mixes both, add a CLAUDE.md rule specifying which to use.
+
+## Build Error Debugging Steps
+
+When Claude Code's generated code causes build failures:
+
+1. **Read the full error output.** Build tools often show the root cause at the beginning of the output, not the end. Scroll up to find the first error.
+2. **Check the import graph.** Circular dependencies cause subtle build failures. Run your bundler's analyze mode to visualize the dependency graph.
+3. **Verify TypeScript configuration.** If `tsconfig.json` has strict settings, Claude Code's generated code must comply. Common issues: missing null checks, implicit any types, and unused imports.

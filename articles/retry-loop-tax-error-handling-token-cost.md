@@ -1,10 +1,9 @@
 ---
-title: "The Retry Loop Tax"
+title: "The Retry Loop Tax (2026)"
 description: "Understand how error handling architecture creates a retry loop tax in Claude Code, costing 50K-300K wasted tokens per incident, and how to eliminate it."
 permalink: /retry-loop-tax-error-handling-token-cost/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # The Retry Loop Tax: How Error Handling Architecture Affects Token Cost

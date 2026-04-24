@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Cost: Pricing Breakdown"
+title: "Claude Code Cost: Pricing Breakdown (2026)"
 description: "Complete Claude Code pricing guide. Max subscription, API token costs, real usage examples, cost tracking tools, and strategies that cut spend."
 permalink: /claude-code-cost-complete-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Code Cost: Pricing Breakdown (2026)
@@ -273,6 +272,7 @@ For more cost reduction rules, see our [reduce Claude Code costs guide](/claude-
 <p id="cost-note" style="color:#94a3b8;font-size:13px;margin:12px 0 0 0;"></p>
 </div>
 </div>
+{% raw %}
 <script>
 function calcCost(){var h=parseInt(document.getElementById('hrs').value),m=document.getElementById('model-sel').value,p=document.getElementById('plan-sel').value;document.getElementById('hrs-val').textContent=h;var tph={opus:150000,sonnet:200000,haiku:350000}[m];var cpi={opus:15,sonnet:3,haiku:0.8}[m];var cpo={opus:75,sonnet:15,haiku:4}[m];var tin=tph*h*0.7/1e6,tout=tph*h*0.3/1e6;var daily=tin*cpi+tout*cpo;var monthly=daily*22;var note='';if(p==='max5'){monthly=100;daily=monthly/22;note='Max $100/mo plan includes '+{opus:'moderate',sonnet:'heavy',haiku:'very heavy'}[m]+' usage. You may hit limits with '+h+'h/day of '+m+'.';}else if(p==='max20'){monthly=200;daily=monthly/22;note='Max $200/mo plan includes 20x usage. Sufficient for most workflows.';}else{note='API pricing: $'+cpi+'/M input + $'+cpo+'/M output. ~'+Math.round(tph*h/1000)+'K tokens/day.';}document.getElementById('cost-mo').textContent='$'+Math.round(monthly);document.getElementById('cost-day').textContent='$'+Math.round(daily);document.getElementById('cost-note').textContent=note;}calcCost();
 </script>
@@ -380,3 +380,5 @@ Anthropic does not publish volume discounts for standard API usage. For enterpri
   ]
 }
 </script>
+
+{% endraw %}

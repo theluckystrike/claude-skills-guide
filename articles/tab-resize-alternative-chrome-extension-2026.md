@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Tab Resize Alternative Chrome Extension"
+title: "Tab Resize Alternative Chrome Extension (2026)"
 description: "Discover the best Tab Resize alternatives for Chrome. Explore native features, extensions, and custom solutions for efficient window management."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,9 +1,8 @@
 ---
-title: "Best Claude Code Plugins for Python"
+title: "Best Claude Code Plugins for Python (2026)"
 description: "8 Claude Code plugins and agents built for Python development. Ruff linting, pytest integration, type checking, virtual env management, and more."
 permalink: /best-claude-code-plugins-python-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Best Claude Code Plugins for Python Development (2026)

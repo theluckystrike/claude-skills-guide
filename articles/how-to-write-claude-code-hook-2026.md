@@ -1,9 +1,8 @@
 ---
-title: "Write Your First Claude Code Hook"
+title: "Write Your First Claude Code Hook (2026)"
 description: "Create a Claude Code hook that runs before or after tool execution. Step-by-step with pre-commit linting example, event types, and error handling."
 permalink: /how-to-write-claude-code-hook-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Write Your First Claude Code Hook (2026)

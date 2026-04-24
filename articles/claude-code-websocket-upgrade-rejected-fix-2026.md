@@ -1,9 +1,8 @@
 ---
-title: "WebSocket Upgrade Rejected Error — Fix"
+title: "WebSocket Upgrade Rejected Error — Fix (2026)"
 permalink: /claude-code-websocket-upgrade-rejected-fix-2026/
 description: "Fix WebSocket upgrade rejected (HTTP 403) by proxy. Configure proxy to allow Upgrade headers for Claude Code connections."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -104,3 +103,32 @@ Yes. Set `NO_PROXY=api.anthropic.com` to route Anthropic API traffic directly wh
 ### What does 'unable to verify the first certificate' mean?
 
 This error means Node.js cannot build a complete certificate chain from the server certificate to a trusted root CA. The most common cause is a corporate proxy performing TLS inspection with a self-signed CA certificate that Node.js does not trust.
+
+
+## Related Guides
+
+- [Build WebSocket Apps with Claude Code](/claude-code-skills-websocket-real-time-app-development/)
+- [Fix WebSocket Connection Failures](/claude-code-websocket-connection-failed-fix/)
+- [Claude Code for WebSocket Realtime Apps](/claude-skills-for-websocket-realtime-app-development/)
+- [Claude Code for tRPC WebSocket Workflow](/claude-code-for-trpc-websocket-workflow-guide/)
+
+## Implementation Details
+
+When working with this in Claude Code, pay attention to these practical details:
+
+**Project configuration.** Add specific instructions to your CLAUDE.md file describing how your project handles this area. Include file paths, naming conventions, and any patterns that differ from common defaults. Claude Code reads CLAUDE.md at the start of every session and uses it to guide all operations.
+
+**Testing the setup.** After configuration, verify everything works by running a simple test task. Ask Claude Code to perform a read-only operation first (like listing files or reading a config) before moving to write operations. This confirms that permissions, paths, and tools are all correctly configured.
+
+**Monitoring and iteration.** Track your results over several sessions. If Claude Code consistently makes the same mistake, the fix is usually a more specific CLAUDE.md instruction. If it makes different mistakes each time, the issue is likely in the project setup or toolchain configuration.
+
+## Troubleshooting Checklist
+
+When something does not work as expected, check these items in order:
+
+1. **CLAUDE.md exists at the project root** — run `ls -la CLAUDE.md` to verify
+2. **Node.js version is 18+** — run `node --version` to check
+3. **API key is set** — run `echo $ANTHROPIC_API_KEY | head -c 10` to verify (shows first 10 characters only)
+4. **Disk space is available** — run `df -h .` to check
+5. **Network can reach the API** — run `curl -s -o /dev/null -w "%{http_code}" https://api.anthropic.com` (should return 401 without auth, meaning the server is reachable)
+6. **No conflicting processes** — run `ps aux | grep claude | grep -v grep` to check for stale sessions

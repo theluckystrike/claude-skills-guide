@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Opus 4.6 vs GPT-4o for Coding"
+title: "Claude Opus 4.6 vs GPT-4o for Coding (2026)"
 description: "Claude Opus 4.6 vs GPT-4o for coding tasks (2026): code quality, reasoning, context handling, tool use, and which model developers should choose."
 date: 2026-03-13
 last_modified_at: 2026-04-17

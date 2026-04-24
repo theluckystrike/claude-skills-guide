@@ -1,10 +1,9 @@
 ---
-title: "Context Window Budgeting"
+title: "Context Window Budgeting (2026)"
 description: "Allocate Claude Code's 200K context window across discovery, implementation, and verification phases to prevent costly mid-session context overflows."
 permalink: /context-window-budgeting-allocate-tokens-tasks/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Context Window Budgeting: How to Allocate Tokens Across Tasks

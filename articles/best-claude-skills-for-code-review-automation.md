@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Claude Skills for Code Review"
+title: "Best Claude Skills for Code Review (2026)"
 description: "Top Claude skills for automating code review: tdd, supermemory, pdf, and frontend-design with real invocation examples for faster, consistent PR reviews."
 date: 2026-03-13
 last_modified_at: 2026-04-17

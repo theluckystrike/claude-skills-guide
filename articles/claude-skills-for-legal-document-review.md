@@ -1,8 +1,7 @@
 ---
-title: "Claude Skills for Legal Document Review"
+title: "Claude Skills for Legal Document Review (2026)"
 description: "Build a Claude Code skill that extracts contract clauses by type, scores liability risk, compares redlines against standard templates, and flags."
 permalink: /claude-skills-for-legal-document-review/
-render_with_liquid: false
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, legal, contract-review]
 last_updated: 2026-04-19

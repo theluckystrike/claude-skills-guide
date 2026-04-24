@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Research Assistant Chrome Extension"
+title: "AI Research Assistant Chrome Extension (2026)"
 description: "Learn how AI research assistant Chrome extensions can streamline your research workflow. Practical examples and code snippets for developers and power."
 date: 2026-03-15
 last_modified_at: 2026-04-17

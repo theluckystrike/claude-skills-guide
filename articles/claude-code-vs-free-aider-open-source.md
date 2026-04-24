@@ -1,10 +1,9 @@
 ---
-title: "Claude Code vs Aider: Free Open Source Alternative"
+title: "Claude Code vs Aider: Free Open Source Alternative (2026)"
 permalink: /claude-code-vs-free-aider-open-source/
 description: "Claude Code has skills and MCP integrations. Aider has multi-model support and auto-commits. Honest comparison for terminal-first developers in 2026."
 last_tested: "2026-04-21"
 tools_compared: ["Claude Code", "Aider"]
-render_with_liquid: false
 ---
 
 ## The Hypothesis
@@ -68,6 +67,9 @@ Claude Code Teams ($30/seat). The skills system and CLAUDE.md pay for themselves
 
 ### Enterprise (50+)
 Claude Code Enterprise for teams that can use cloud AI. Aider with self-hosted models for teams with data residency requirements. Many enterprises use both: Claude Code for application development, Aider with local models for work touching sensitive data.
+
+For more on this topic, see [Claude Code for Bat (Cat Alternative)](/claude-code-for-bat-cat-alternative-workflow-guide/).
+
 
 ## FAQ
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Cost For Agencies"
+title: "Claude Code Cost For Agencies (2026)"
 description: "Understanding Claude Code pricing for agencies and consultancies. Includes cost breakdown, optimization strategies, and real-world ROI examples for."
 date: 2026-03-14
 last_modified_at: 2026-04-17

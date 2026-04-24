@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Vitest Fast Testing"
-description: "Learn how to create a blazing-fast testing workflow using Claude Code with Vitest for rapid test-driven development."
+title: "Claude Code Vitest Fast Testing (2026)"
+description: "Claude Code Vitest Fast Testing — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

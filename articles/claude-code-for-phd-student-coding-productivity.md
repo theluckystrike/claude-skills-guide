@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for PhD Research"
+title: "Claude Code for PhD Research (2026)"
 description: "PhD students save 10+ hours weekly using Claude Code for data analysis, paper code, and experiment automation. Practical workflows for researchers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

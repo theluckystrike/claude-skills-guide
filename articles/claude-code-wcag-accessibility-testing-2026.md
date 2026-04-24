@@ -1,10 +1,9 @@
 ---
-title: "Claude Code for WCAG Accessibility"
+title: "Claude Code for WCAG Accessibility (2026)"
 permalink: /claude-code-wcag-accessibility-testing-2026/
 description: "Automate WCAG 2.2 accessibility testing with Claude Code. Build CI pipeline checks for Level AA compliance with axe-core and Pa11y integration."
 last_tested: "2026-04-22"
 domain: "web accessibility"
-render_with_liquid: false
 ---
 
 ## Why Claude Code for WCAG Accessibility Testing
@@ -265,3 +264,71 @@ npx pa11y http://localhost:3000 --reporter html > a11y-report.html
 - [Claude Code for EU AI Act Compliance](/claude-code-eu-ai-act-compliance-2026/)
 - [Claude Code for GDPR Data Mapping](/claude-code-gdpr-data-mapping-2026/)
 - [Claude Code for ISO 27001 Controls Implementation](/claude-code-iso-27001-controls-implementation-2026/)
+
+
+## Frequently Asked Questions
+
+### Do I need a paid Anthropic plan to use this?
+
+Claude Code works with any Anthropic API plan, including the free tier. However, the free tier has lower rate limits (requests per minute and tokens per minute) that may slow down multi-step workflows. For professional use, the Build or Scale plan provides higher limits and priority access during peak hours.
+
+### How does this affect token usage and cost?
+
+The token cost depends on the size of your prompts and Claude's responses. Typical development tasks consume 10K-50K tokens per interaction. Using a CLAUDE.md file and skills reduces exploration tokens by 50-80%, which directly lowers costs. Monitor your usage at console.anthropic.com/settings/billing.
+
+### Can I customize this for my specific project?
+
+Yes. All Claude Code behavior can be customized through CLAUDE.md (project rules), `.claude/settings.json` (permissions), and `.claude/skills/` (domain knowledge). The most impactful customization is adding your project's specific patterns, conventions, and common commands to CLAUDE.md so Claude Code follows your standards from the start.
+
+### What happens when Claude Code makes a mistake?
+
+Claude Code creates files and edits through standard filesystem operations, so all changes are visible in `git diff`. If a change is wrong, revert it with `git checkout -- <file>` for a single file or `git stash` for all changes. Claude Code does not make irreversible changes unless you explicitly allow destructive commands in settings.json.
+
+
+## Related Guides
+
+- [Claude Skills for Accessibility Testing](/claude-skills-for-accessibility-testing-wcag-a11y/)
+- [Claude Code Mobile App Accessibility](/claude-code-mobile-app-accessibility-testing-workflow/)
+- [Claude Code Axe Accessibility](/claude-code-axe-accessibility-testing-guide/)
+- [Fix Semantic HTML Accessibility](/claude-code-semantic-html-accessibility-improvement-guide/)
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a paid Anthropic plan to use this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code works with any Anthropic API plan, including the free tier. However, the free tier has lower rate limits (requests per minute and tokens per minute) that may slow down multi-step workflows. For professional use, the Build or Scale plan provides higher limits and priority access during peak hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does this affect token usage and cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The token cost depends on the size of your prompts and Claude's responses. Typical development tasks consume 10K-50K tokens per interaction. Using a CLAUDE.md file and skills reduces exploration tokens by 50-80%, which directly lowers costs. Monitor your usage at console.anthropic.com/settings/billing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I customize this for my specific project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All Claude Code behavior can be customized through CLAUDE.md (project rules), `.claude/settings.json` (permissions), and `.claude/skills/` (domain knowledge). The most impactful customization is adding your project's specific patterns, conventions, and common commands to CLAUDE.md so Claude Code follows your standards from the start."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when Claude Code makes a mistake?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code creates files and edits through standard filesystem operations, so all changes are visible in `git diff`. If a change is wrong, revert it with `git checkout -- <file>` for a single file or `git stash` for all changes. Claude Code does not make irreversible changes unless you explicitly allow destructive commands in settings.json."
+      }
+    }
+  ]
+}
+</script>

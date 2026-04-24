@@ -5,7 +5,6 @@ description: "Claude Code vs Phind compared for developer problem-solving. Agent
 permalink: /claude-code-vs-phind-ai-search-developers-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

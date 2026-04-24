@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Font Loading"
+title: "Claude Code for Font Loading (2026)"
 description: "Learn how to build an automated font loading optimization workflow using Claude Code. Practical examples for analyzing, testing, and optimizing web."
 date: 2026-03-15
 last_modified_at: 2026-04-17

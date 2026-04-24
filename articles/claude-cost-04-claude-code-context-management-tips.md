@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Context Management Cost"
+title: "Claude Code Context Management Cost (2026)"
 description: "Manage Claude Code context to stay under 100K tokens per session. Smart file reading and session splitting save $80/month per developer."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, claude-code, context]
-render_with_liquid: false
 ---
 
 # Claude Code Context Management Cost Tips 2026

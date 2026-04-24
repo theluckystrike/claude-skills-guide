@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Structuring Claude Skills for Large"
+title: "Structuring Claude Skills for Large (2026)"
 description: "A practical guide to organizing, configuring, and managing Claude skills in large enterprise codebases. Learn directory structures, skill composition, a..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

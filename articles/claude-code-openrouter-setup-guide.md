@@ -1,9 +1,8 @@
 ---
-title: "Claude Code with OpenRouter"
+title: "Claude Code with OpenRouter (2026)"
 description: "Set up Claude Code with OpenRouter for model routing, cost comparison, and multi-provider access. Step-by-step configuration with real examples."
 permalink: /claude-code-openrouter-setup-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Code with OpenRouter: Setup Guide (2026)
@@ -354,6 +353,7 @@ Yes. [MCP servers](/claude-code-mcp-server-setup/) work independently of the API
 [Claude Code hooks](/claude-code-hooks-complete-guide/) run locally and do not interact with the API provider. Hooks work identically regardless of whether you route through OpenRouter or the direct Anthropic API.
 
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -446,3 +446,5 @@ Yes. [MCP servers](/claude-code-mcp-server-setup/) work independently of the API
 ## See Also
 
 - [Claude Code + OpenRouter: Alternative Pricing Strategies](/claude-code-openrouter-alternative-pricing/)
+
+{% endraw %}

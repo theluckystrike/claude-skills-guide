@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Used Item Price Checker Chrome"
+title: "Used Item Price Checker Chrome (2026)"
 description: "Learn how to build and use Chrome extensions for checking used item prices across multiple marketplaces. Practical implementation patterns, API."
 date: 2026-03-15
 last_modified_at: 2026-04-17

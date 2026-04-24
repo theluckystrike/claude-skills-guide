@@ -1,9 +1,8 @@
 ---
-title: "Install Awesome Claude Code Toolkit"
+title: "Install Awesome Claude Code Toolkit (2026)"
 description: "Browse and install tools from the Awesome Claude Code Toolkit's 135 agents, 35 skills, 42 commands, and 176+ plugins. Structured evaluation guide."
 permalink: /how-to-install-awesome-claude-code-toolkit-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Install Tools from the Awesome Claude Code Toolkit (2026)

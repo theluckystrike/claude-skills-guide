@@ -1,10 +1,9 @@
 ---
-title: "Claude Code vs Bolt.new for Web"
+title: "Claude Code vs Bolt.new for Web (2026)"
 permalink: /claude-code-skills-vs-bolt-new-for-web-development/
 description: "Bolt.new ships a live app in 60 seconds. Claude Code builds production systems. Compare both for web development workflows and team scale in 2026."
 last_tested: "2026-04-21"
 tools_compared: ["Claude Code", "Bolt.new"]
-render_with_liquid: false
 ---
 
 ## The Hypothesis

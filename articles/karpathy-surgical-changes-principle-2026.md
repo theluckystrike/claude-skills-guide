@@ -1,9 +1,8 @@
 ---
-title: "Karpathy Surgical Changes Principle"
+title: "Karpathy Surgical Changes Principle (2026)"
 description: "Apply Karpathy's Surgical Changes principle to keep Claude Code diffs minimal — change only what's needed, touch no unrelated files."
 permalink: /karpathy-surgical-changes-principle-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Karpathy Surgical Changes Principle (2026)

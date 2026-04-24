@@ -1,10 +1,9 @@
 ---
-title: "Claude Code used 500K tokens"
+title: "Claude Code used 500K tokens (2026)"
 description: "Claude Code consuming 500K tokens on a simple task is caused by unbounded exploration and retry loops. These 3 fixes prevent it and cap sessions at 50K tokens."
 permalink: /claude-code-500k-tokens-simple-task-prevent/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code used 500K tokens for a simple task -- how to prevent

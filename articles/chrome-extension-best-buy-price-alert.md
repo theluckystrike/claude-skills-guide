@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Chrome Extension Best Buy Price Alert"
+title: "Chrome Extension Best Buy Price Alert (2026)"
 description: "Learn how to build a Chrome extension for Best Buy price alerts. Includes code examples, manifest structure, and practical implementation for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for TypeScript Const Enums"
+title: "Claude Code for TypeScript Const Enums (2026)"
 description: "Master TypeScript const enums with Claude Code. Learn workflows, best practices, and practical examples for type-safe enum handling in your projects."
 date: 2026-03-15
 last_modified_at: 2026-04-17

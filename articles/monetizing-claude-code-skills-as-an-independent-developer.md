@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Monetizing Claude Code Skills"
+title: "Monetizing Claude Code Skills (2026)"
 description: "A practical guide to turning your Claude Code expertise into a sustainable income as a freelance developer or solo entrepreneur."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Opus 4.7"
-description: "Opus 4.7 costs 5x Haiku and 1.67x Sonnet. Here is when the premium pays off and when you are wasting $1,800/month."
+title: "Claude Opus 4.7 (2026)"
+description: "Claude Opus 4.7 — practical guide with working examples, tested configurations, and tips for developer workflows. Includes working examples, code samples,."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-opus-47-is-it-worth-extra-cost/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # Claude Opus 4.7: Is It Worth the Extra Cost?

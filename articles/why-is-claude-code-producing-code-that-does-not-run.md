@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Why Is Claude Code Producing Code"
-description: "Why is claude code producing code that — developer guide and how to stop it. Root causes and fixes explained."
+title: "Why Is Claude Code Producing Code (2026)"
+description: "Why Is Claude Code Producing Code — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [troubleshooting]

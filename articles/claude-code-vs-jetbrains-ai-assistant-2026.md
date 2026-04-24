@@ -1,9 +1,8 @@
 ---
-title: "Claude Code vs JetBrains AI Compared"
+title: "Claude Code vs JetBrains AI Compared (2026)"
 permalink: /claude-code-vs-jetbrains-ai-assistant-2026/
 description: "Claude Code delivers terminal-native autonomous agents. JetBrains AI bakes deep code intelligence into IntelliJ. Pricing, features, and verdict inside."
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

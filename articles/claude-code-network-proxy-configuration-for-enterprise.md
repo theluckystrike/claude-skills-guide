@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Configure Claude Code Proxy: HTTP_PROXY"
+title: "Configure Claude Code Proxy: HTTP_PROXY (2026)"
 description: "Configure Claude Code proxy: HTTP_PROXY, HTTPS_PROXY, NO_PROXY, and SSL certificate settings for enterprise networks. Copy-paste env variables."
 date: 2026-03-14
 last_modified_at: 2026-04-17

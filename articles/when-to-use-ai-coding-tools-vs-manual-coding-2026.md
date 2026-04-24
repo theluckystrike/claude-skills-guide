@@ -1,9 +1,8 @@
 ---
-title: "AI Coding Tools vs Manual Coding"
+title: "AI Coding Tools vs Manual Coding (2026)"
 permalink: /when-to-use-ai-coding-tools-vs-manual-coding-2026/
 description: "AI coding tools save hours on boilerplate but hurt you on novel algorithms. A practical framework for when to use AI vs write code yourself in 2026."
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Claude Md Conflicting"
+title: "How to Use Claude Md Conflicting (2026)"
 description: "Learn how to resolve conflicting instructions when working with Claude Code and Claude desktop skills. Practical patterns for developers and power users."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Opus 4.6 vs GPT-4o"
+title: "Claude Opus 4.6 vs GPT-4o (2026)"
 description: "Deep comparison of Claude Opus 4.6 and GPT-4o on reasoning, complex coding, and multi-step problem solving for developers."
 date: 2026-04-21
 permalink: /claude-opus-vs-gpt-4o-reasoning-comparison/

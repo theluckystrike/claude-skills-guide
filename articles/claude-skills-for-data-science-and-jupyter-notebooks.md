@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Data Science"
+title: "Claude Skills for Data Science (2026)"
 description: "Claude skills for data science and Jupyter: automate data cleaning, generate visualizations, build ML pipelines, and accelerate research workflows."
 date: 2026-03-13
 last_modified_at: 2026-04-17

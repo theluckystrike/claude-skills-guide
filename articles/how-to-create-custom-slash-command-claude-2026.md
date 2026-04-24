@@ -1,9 +1,8 @@
 ---
-title: "Create Custom Slash Commands for Claude"
+title: "Create Custom Slash Commands for Claude (2026)"
 description: "Build custom slash commands for Claude Code using markdown files in .claude/commands/. Step-by-step with argument handling and practical examples."
 permalink: /how-to-create-custom-slash-command-claude-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Create Custom Slash Commands for Claude Code (2026)

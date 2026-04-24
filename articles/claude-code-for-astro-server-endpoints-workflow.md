@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Astro Server Endpoints"
+title: "Claude Code for Astro Server Endpoints (2026)"
 description: "Learn how to build server endpoints in Astro using Claude Code. This guide covers API routes, server-side rendering, and practical workflows for 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17

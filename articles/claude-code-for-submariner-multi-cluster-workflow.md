@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Submariner"
+title: "Claude Code for Submariner (2026)"
 description: "Learn how to use Claude Code skills to automate and streamline Submariner multi-cluster networking configurations, troubleshooting, and deployment."
 date: 2026-03-15
 last_modified_at: 2026-04-17

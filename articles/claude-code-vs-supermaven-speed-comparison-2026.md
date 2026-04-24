@@ -5,7 +5,6 @@ description: "Claude Code vs Supermaven compared for fast autocomplete. Latency,
 permalink: /claude-code-vs-supermaven-speed-comparison-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

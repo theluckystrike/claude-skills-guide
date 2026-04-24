@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Git Branch Naming"
+title: "Claude Code Git Branch Naming (2026)"
 description: "Master git branch naming conventions that work smoothly with Claude Code. Learn patterns, prefixes, and workflows to organize your development."
 date: 2026-03-14
 last_modified_at: 2026-04-17

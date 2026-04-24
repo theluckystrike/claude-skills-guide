@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Code Example Generation"
+title: "Claude Code Code Example Generation (2026)"
 description: "Learn how to use Claude Code to generate practical code examples for your projects. A workflow guide for developers and power users."
 date: 2026-03-14
 last_modified_at: 2026-04-17

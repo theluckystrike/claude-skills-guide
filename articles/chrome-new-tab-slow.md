@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome New Tab Slow"
+title: "Chrome New Tab Slow (2026)"
 description: "Experiencing chrome new tab slow issues? This guide covers common causes, diagnostic techniques, and practical solutions for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

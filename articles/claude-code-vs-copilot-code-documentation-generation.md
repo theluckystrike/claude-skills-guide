@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Copilot Code"
+title: "Claude Code vs Copilot Code (2026)"
 description: "Discover how Claude Code and GitHub Copilot approach automated code documentation. Learn practical techniques for generating comprehensive docs with."
 date: 2026-03-14
 last_modified_at: 2026-04-17

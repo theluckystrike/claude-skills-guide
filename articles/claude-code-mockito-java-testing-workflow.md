@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Mockito Java Testing"
+title: "Claude Code Mockito Java Testing (2026)"
 description: "Learn how to integrate Claude Code with Mockito for efficient Java testing workflows. Practical examples for developers using JUnit 5, mocking."
 date: 2026-03-14
 last_modified_at: 2026-04-17

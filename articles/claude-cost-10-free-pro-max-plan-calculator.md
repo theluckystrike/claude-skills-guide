@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Free vs Pro vs Max"
+title: "Free vs Pro vs Max (2026)"
 description: "Find your optimal Claude Code plan with this calculator. Most developers overpay by $80/month by choosing the wrong tier."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, claude-code, calculator]
-render_with_liquid: false
 ---
 
 # Free vs Pro vs Max: Claude Code Plan Calculator

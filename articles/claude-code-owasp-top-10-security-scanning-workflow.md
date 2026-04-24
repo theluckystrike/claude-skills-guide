@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code OWASP Top 10 Security"
+title: "Claude Code OWASP Top 10 Security (2026)"
 description: "Build an automated security scanning workflow with Claude Code to identify and fix OWASP Top 10 vulnerabilities in your apps."
 date: 2026-03-13
 last_modified_at: 2026-04-17

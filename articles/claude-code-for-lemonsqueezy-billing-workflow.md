@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Lemonsqueezy"
+title: "Claude Code For Lemonsqueezy (2026)"
 description: "Learn how to use Claude Code to build, automate, and optimize LemonSqueezy billing workflows. Includes practical examples, code snippets, and actionable."
 date: 2026-03-15
 last_modified_at: 2026-04-17

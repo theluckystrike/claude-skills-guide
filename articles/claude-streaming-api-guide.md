@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Streaming API Guide"
+title: "Claude Streaming API Guide (2026)"
 description: "Implement Claude streaming with Server-Sent Events. Covers Python and TypeScript SDK helpers, event types, async streaming, and real-time output patterns."
 date: 2026-04-15
 last_modified_at: 2026-04-17

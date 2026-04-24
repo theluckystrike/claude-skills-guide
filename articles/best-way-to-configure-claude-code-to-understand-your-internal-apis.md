@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Configure Claude Code to Understand"
+title: "Configure Claude Code to Understand (2026)"
 description: "A comprehensive guide to configuring Claude Code to understand and work with your internal APIs, including OpenAPI specs, custom prompts, and."
 date: 2026-03-18
 last_modified_at: 2026-04-17

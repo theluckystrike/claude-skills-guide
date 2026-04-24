@@ -1,5 +1,5 @@
 ---
-title: "Claude Code CI/CD Integration Guide"
+title: "Claude Code CI/CD Integration Guide (2026)"
 description: "Integrate Claude Code into CI/CD pipelines for automated code review, test generation, documentation, and quality gates using API mode."
 permalink: /claude-code-ci-cd-integration-guide-2026/
 last_tested: "2026-04-22"

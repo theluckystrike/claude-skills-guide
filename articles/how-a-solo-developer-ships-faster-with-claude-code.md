@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How a Solo Developer Ships Faster"
+title: "How a Solo Developer Ships Faster (2026)"
 last_tested: "2026-04-22"
 description: "Practical strategies for solo developers to ship products faster using Claude Code skills. Learn about automation, testing, and workflow optimization."
 date: 2026-03-14

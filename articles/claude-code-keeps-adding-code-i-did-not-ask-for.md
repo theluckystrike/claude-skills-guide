@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Adding Unwanted Code"
+title: "Fix Claude Code Adding Unwanted Code (2026)"
 description: "Prevent Claude Code from generating extra code you did not request. Use targeted prompts, scope boundaries, and skill configs to control output scope."
 date: 2026-03-14
 last_modified_at: 2026-04-17

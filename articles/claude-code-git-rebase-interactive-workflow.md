@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Git Rebase Interactive"
+title: "Claude Code Git Rebase Interactive (2026)"
 description: "Master git rebase interactive workflows with Claude Code. Practical examples and automation patterns for developers. Tested and working in 2026."
 last_tested: "2026-04-22"
 date: 2026-03-14

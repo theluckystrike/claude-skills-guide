@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Unexpected Token in JSON"
+title: "Fix Unexpected Token in JSON (2026)"
 description: "Fix the unexpected token in JSON error in Claude Code with 4 practical solutions covering malformed responses, encoding, and streaming issues."
 date: 2026-03-14
 last_modified_at: 2026-04-17

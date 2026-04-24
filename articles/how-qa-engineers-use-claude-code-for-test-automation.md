@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How QA Engineers Use Claude Code"
+title: "How QA Engineers Use Claude Code (2026)"
 description: "Discover how QA engineers use Claude Code for test automation, from generating test cases with the tdd skill to validating PDF outputs and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

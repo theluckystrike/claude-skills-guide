@@ -1,10 +1,9 @@
 ---
-title: "Claude Code Subagent Token Usage"
+title: "Claude Code Subagent Token Usage (2026)"
 description: "Control Claude Code subagent token costs with spawn limits, scoped context, and task routing that prevent the 5,000-token base overhead from compounding."
 permalink: /claude-code-subagent-token-usage-control-costs/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Subagent Token Usage: How to Control Costs

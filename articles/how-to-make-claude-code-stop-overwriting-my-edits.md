@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Make Claude Code Stop"
+title: "How to Make Claude Code Stop (2026)"
 description: "Learn Make Claude Code Stop Overwriting Your Edits with hands-on examples and step-by-step instructions. Working code samples and expert tips verified..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

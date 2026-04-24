@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Zoom MCP Server Meeting Summary"
+title: "Zoom MCP Server Meeting Summary (2026)"
 description: "Automate Zoom meeting summaries with Claude Code and MCP servers. Complete setup guide with practical examples for developers and power users."
 date: 2026-03-14
 last_modified_at: 2026-04-17

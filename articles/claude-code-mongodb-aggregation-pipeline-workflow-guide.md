@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code MongoDB Aggregation"
+title: "Claude Code MongoDB Aggregation (2026)"
 description: "Master MongoDB aggregation pipelines with Claude Code. Learn practical workflows for building complex data transformations, analytics, and data."
 date: 2026-03-15
 last_modified_at: 2026-04-17

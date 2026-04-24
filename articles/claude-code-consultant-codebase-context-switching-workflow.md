@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Consultant Codebase"
+title: "Claude Code Consultant Codebase (2026)"
 description: "Master the art of efficient codebase context switching as a Claude Code consultant. Learn workflows, skills, and techniques for smooth transitions."
 date: 2026-03-14
 last_modified_at: 2026-04-17

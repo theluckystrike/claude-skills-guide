@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for PocketBase"
-description: "Build backends fast with PocketBase and Claude Code setup. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for PocketBase (2026)"
+description: "Claude Code for PocketBase — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-pocketbase-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, pocketbase, workflow]
 ---

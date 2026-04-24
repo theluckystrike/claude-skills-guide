@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Lean Prompting"
+title: "Lean Prompting (2026)"
 description: "Write Claude prompts that use 50% fewer tokens without sacrificing output quality — save $3,750/month on 1K daily Opus requests."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # Lean Prompting: Fewer Tokens, Same Quality

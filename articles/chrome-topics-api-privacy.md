@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Topics API Privacy"
+title: "Chrome Topics API Privacy (2026)"
 description: "Learn how the Chrome Topics API enables interest-based advertising while preserving user privacy. Includes implementation examples and privacy best."
 date: 2026-03-15
 last_modified_at: 2026-04-17

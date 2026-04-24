@@ -1,9 +1,8 @@
 ---
-title: "Learn Claude Code with Claude Howto"
+title: "Learn Claude Code with Claude Howto (2026)"
 description: "Use the Claude Howto repo's Mermaid diagrams and copy-paste templates to learn Claude Code fast. Structured learning path from beginner to productive."
 permalink: /how-to-learn-claude-code-with-howto-guide-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Learn Claude Code with the Claude Howto Guide (2026)
@@ -97,7 +96,7 @@ Once comfortable with the basics, progress to these topics:
 
 **MCP servers** — Extend Claude's capabilities. Follow the MCP section's guide to add your first external server. Start with a database or filesystem server for immediate utility.
 
-**Context management** �� Understand how Claude handles the context window. The diagram showing what gets compressed and what gets preserved helps you write more effective prompts.
+**Context management** — Understand how Claude handles the context window. The diagram showing what gets compressed and what gets preserved helps you write more effective prompts.
 
 **Custom agents** — Combine the CLAUDE.md template with custom commands to create specialized agents. The guide includes example agents for code review, security audit, and documentation.
 

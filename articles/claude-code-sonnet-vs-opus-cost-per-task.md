@@ -1,10 +1,9 @@
 ---
-title: "Claude Code Sonnet vs Opus"
+title: "Claude Code Sonnet vs Opus (2026)"
 description: "Compare Claude Code Sonnet 4.6 vs Opus 4.6 cost per task with real token measurements showing when each model delivers better ROI for development work."
 permalink: /claude-code-sonnet-vs-opus-cost-per-task/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Sonnet vs Opus: Cost Per Task Comparison

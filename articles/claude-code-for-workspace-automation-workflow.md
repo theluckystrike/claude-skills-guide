@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Workspace Automation"
+title: "Claude Code for Workspace Automation (2026)"
 description: "Learn how to use Claude Code to automate your development workspace. From file organization to batch processing, discover practical workflows that."
 date: 2026-03-15
 last_modified_at: 2026-04-17

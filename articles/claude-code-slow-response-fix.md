@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude Code Slow Response Latency"
+title: "Fix: Claude Code Slow Response Latency (2026)"
 description: "Claude Code responding slowly with 2+ minute latency and minimal output? Diagnose and fix response latency issues with these steps."
 date: 2026-04-15
 last_modified_at: 2026-04-17

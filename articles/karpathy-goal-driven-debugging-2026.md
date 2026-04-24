@@ -1,9 +1,8 @@
 ---
-title: "Fix Claude Code Losing Track of Goals"
+title: "Fix Claude Code Losing Track of Goals (2026)"
 description: "Diagnose and fix Claude Code goal drift — add CLAUDE.md checkpoints, scope declarations, and completion signals to keep sessions on track."
 permalink: /karpathy-goal-driven-debugging-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Fix Claude Code Losing Track of Goals (2026)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Kubernetes Secrets"
+title: "Claude Code Kubernetes Secrets (2026)"
 description: "Learn how to manage Kubernetes secrets effectively using Claude Code. This guide covers native methods, external secrets operators, and automation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

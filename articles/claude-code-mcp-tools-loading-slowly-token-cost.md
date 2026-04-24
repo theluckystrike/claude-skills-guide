@@ -1,10 +1,9 @@
 ---
-title: "Claude Code MCP tools loading slowly"
+title: "Claude Code MCP tools loading slowly (2026)"
 description: "Slow MCP tool loading adds 500-2,000 tokens of overhead per server to every Claude Code session. Diagnose latency and reduce token impact with these fixes."
 permalink: /claude-code-mcp-tools-loading-slowly-token-cost/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code MCP tools loading slowly -- token cost impact

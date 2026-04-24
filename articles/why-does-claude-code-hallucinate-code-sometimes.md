@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Claude Code Hallucinates Code"
+title: "Why Claude Code Hallucinates Code (2026)"
 description: "Claude Code sometimes generates non-existent APIs or wrong imports. Learn the root causes and 5 proven strategies to reduce hallucinations in output."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Canva"
+title: "Chrome Extension Canva (2026)"
 description: "Discover how to create a Chrome extension that serves as a Canva alternative for quick design tasks. Learn about browser-based design tools, API."
 date: 2026-03-15
 last_modified_at: 2026-04-17

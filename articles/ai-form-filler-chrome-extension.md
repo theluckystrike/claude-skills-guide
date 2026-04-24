@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Form Filler Chrome Extension Guide"
+title: "AI Form Filler Chrome Extension Guide (2026)"
 description: "Learn how AI form filler Chrome extensions work, their technical architecture, and how to build or customize one for automated form filling."
 date: 2026-03-15
 last_modified_at: 2026-04-17

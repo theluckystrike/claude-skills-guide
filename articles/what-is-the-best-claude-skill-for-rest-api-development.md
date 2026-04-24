@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "What Is The Best Claude Skill For Rest"
+title: "What Is The Best Claude Skill For Rest (2026)"
 description: "Discover the top Claude skills for building REST APIs efficiently. Compare skills like tdd, code-generation, and more for your API projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17

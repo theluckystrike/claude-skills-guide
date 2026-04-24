@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Container Registry"
+title: "Claude Code for Container Registry (2026)"
 description: "Automate container builds and registry pushes with Claude Code. Covers Docker Hub, GHCR, and ECR with multi-stage builds and vulnerability scanning."
 date: 2026-04-19
 last_modified_at: 2026-04-19

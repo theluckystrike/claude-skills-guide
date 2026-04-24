@@ -1,9 +1,8 @@
 ---
-title: "Save Claude Code Conversations"
+title: "Save Claude Code Conversations (2026)"
 description: "How Claude Code saves conversations automatically, where sessions are stored, how to resume them, export chat history, and manage your session data."
 permalink: /claude-code-save-conversation-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Save Claude Code Conversations: Full Guide (2026)
@@ -337,6 +336,7 @@ Yes. Every tool call and its result is recorded in the JSONL session file, inclu
 - [Claude Temperature Settings](/claude-temperature-settings-guide/) — control output behavior
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Understand conversation costs before saving
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -355,3 +355,5 @@ Yes. Every tool call and its result is recorded in the JSONL session file, inclu
   ]
 }
 </script>
+
+{% endraw %}

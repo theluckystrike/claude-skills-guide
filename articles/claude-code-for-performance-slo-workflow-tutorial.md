@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Performance SLO"
+title: "Claude Code for Performance SLO (2026)"
 description: "Implement and automate performance SLOs with Claude Code. Covers latency budgets, error rate thresholds, alerting rules, and SLI dashboard creation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

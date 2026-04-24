@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Is Claude Code Worth It for Data"
+title: "Is Claude Code Worth It for Data (2026)"
 description: "Claude Code saves data scientists 6+ hours weekly on analysis and preprocessing. Honest assessment with real-world examples and cost-benefit breakdown."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for French Developer Team"
+title: "Claude Code for French Developer Team (2026)"
 description: "Guide pratique pour les équipes de développement françaises : optimisez votre productivité avec Claude Code, concentrez-vous sur l'essentiel et."
 date: 2026-03-15
 last_modified_at: 2026-04-17

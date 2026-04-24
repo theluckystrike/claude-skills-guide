@@ -1,9 +1,8 @@
 ---
-title: "Super Claude Code (SuperClaude): Complete Guide (2026)"
+title: "SuperClaude Framework Guide (2026)"
 description: "Master the SuperClaude framework with all 30 slash commands, installation steps, configuration options, and when to use it over alternatives."
 permalink: /super-claude-code-framework-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Super Claude Code (SuperClaude): Complete Guide (2026)
@@ -620,6 +619,7 @@ Yes. SuperClaude is open-source under the MIT license. No paid tiers or premium 
 The project publishes updates approximately monthly. Major Claude Code releases usually trigger a SuperClaude update within a week to add support for new features.
 
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -699,3 +699,5 @@ The project publishes updates approximately monthly. Major Claude Code releases 
 - [Claude Code Hooks Complete Guide](/claude-code-hooks-complete-guide/)
 - [Claude Code Spec Workflow Guide](/claude-code-spec-workflow-guide/)
 
+
+{% endraw %}

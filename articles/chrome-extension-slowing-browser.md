@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Chrome Extensions Slowing Your"
+title: "Fix Chrome Extensions Slowing Your (2026)"
 description: "Identify and fix Chrome extensions causing slowdowns using Task Manager, DevTools profiling, and memory audits. Reduce browser memory usage by 40-60%."
 date: 2026-03-15
 last_modified_at: 2026-04-17

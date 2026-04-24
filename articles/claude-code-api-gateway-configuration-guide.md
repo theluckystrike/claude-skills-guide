@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code API Gateway Configuration"
-description: "Learn how to configure API gateways for Claude Code with practical examples and best practices for developers."
+title: "Claude Code API Gateway Configuration (2026)"
+description: "Claude Code API Gateway Configuration — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

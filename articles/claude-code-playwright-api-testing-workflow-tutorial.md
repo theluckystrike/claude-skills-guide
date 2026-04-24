@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Playwright API Testing"
+title: "Claude Code Playwright API Testing (2026)"
 description: "Learn how to build a powerful API testing workflow using Claude Code and Playwright. This comprehensive guide covers setup, test creation, and best."
 date: 2026-03-14
 last_modified_at: 2026-04-17

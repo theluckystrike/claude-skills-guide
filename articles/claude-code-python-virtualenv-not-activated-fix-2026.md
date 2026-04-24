@@ -3,7 +3,6 @@ title: "Python Virtualenv Not Activated Fix — Fix (2026)"
 permalink: /claude-code-python-virtualenv-not-activated-fix-2026/
 description: "Fix Python virtualenv not activated in Claude Code sessions. Source the activate script in CLAUDE.md or use absolute venv paths for correct Python environment."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -90,3 +89,43 @@ Claude Code's Bash tool always uses a POSIX-compatible shell (`bash` or `zsh`) r
 ### Why does Claude Code reject paths outside the workspace?
 
 Claude Code sandboxes file operations to the current workspace directory for security. Writing to paths outside the project root (like `/etc/` or `~/`) is blocked by default. This prevents accidental modification of system files or other projects.
+
+
+## Related Guides
+
+- [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
+- [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
+- [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)
+- [Merge Conflict in Claude-Edited Files — Fix (2026)](/claude-code-merge-conflict-edited-files-fix-2026/)
+
+## Environment Variable Management in Claude Code
+
+Environment variables control Claude Code's behavior and API connectivity. Managing them properly prevents security leaks and configuration errors.
+
+**Claude Code environment variables.** These control Claude Code itself:
+
+| Variable | Purpose | Default |
+|----------|---------|---------|
+| `ANTHROPIC_API_KEY` | API authentication | None (required) |
+| `CLAUDE_CODE_TRUST_WORKSPACE` | Skip trust prompt | `0` (prompt) |
+| `CLAUDE_CODE_BASH_TIMEOUT` | Bash command timeout | `120` seconds |
+| `CLAUDE_CODE_DEBUG` | Enable debug logging | `0` (off) |
+| `HTTPS_PROXY` | HTTP proxy for API calls | None |
+
+**Project environment variables.** Your application's `.env` file should be in `.gitignore` and `.claudeignore`. Claude Code should never read or commit secrets. Add to CLAUDE.md: "Never read, display, or commit .env files. Use environment variable names in code but never actual values."
+
+**Loading .env in Claude Code sessions.** If your project uses dotenv, ensure the `.env` file is loaded before Claude Code runs commands:
+
+```bash
+# In your CLAUDE.md, specify:
+# Before running the dev server or tests, source .env:
+# set -a && source .env && set +a && npm run dev
+```
+
+## Security Checklist for Environment Variables
+
+- [ ] `.env` is in `.gitignore`
+- [ ] `.env` is in `.claudeignore`
+- [ ] `CLAUDE.md` contains "never read or display .env contents"
+- [ ] API keys are not hardcoded in any source file
+- [ ] CI/CD uses secrets manager, not committed env files

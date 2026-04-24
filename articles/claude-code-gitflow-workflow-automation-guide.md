@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code GitFlow Workflow Automation"
+title: "Claude Code GitFlow Workflow Automation (2026)"
 description: "Learn how to automate GitFlow workflows using Claude Code. Practical examples for branch management, commit conventions, and release automation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

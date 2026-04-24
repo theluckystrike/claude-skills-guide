@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Reply Generator Gmail Chrome"
+title: "AI Reply Generator Gmail Chrome (2026)"
 description: "A developer guide to building an AI reply generator as a Chrome extension for Gmail. Covers architecture, APIs, and practical implementation patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17

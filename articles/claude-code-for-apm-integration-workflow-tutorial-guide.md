@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Apm Integration"
+title: "Claude Code For Apm Integration (2026)"
 description: "Learn how to integrate Claude Code into your Application Performance Monitoring workflows. This guide covers practical techniques for setting up APM."
 date: 2026-04-19
 last_modified_at: 2026-04-19

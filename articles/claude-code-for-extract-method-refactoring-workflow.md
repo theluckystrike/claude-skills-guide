@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Extract Method"
+title: "Claude Code for Extract Method (2026)"
 description: "Learn how to use Claude Code to automate and streamline the extract method refactoring workflow. Practical examples and actionable advice for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

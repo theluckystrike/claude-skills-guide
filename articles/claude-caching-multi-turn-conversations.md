@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Caching for Multi-Turn"
+title: "Claude Caching for Multi-Turn (2026)"
 description: "Save 76% on multi-turn Claude conversations by caching growing context. 8-turn Sonnet 4.6 chat drops from $0.72 to $0.175."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, prompt-caching, conversations]
-render_with_liquid: false
 ---
 
 # Claude Caching for Multi-Turn Conversations

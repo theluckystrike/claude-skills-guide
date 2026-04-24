@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "2,675 Articles to 496 Clicks"
+title: "2,675 Articles to 496 Clicks (2026)"
 description: "What we learned publishing 2,675 AI-generated articles about Claude Code. Honest data on what worked, what failed, and what we would change."
 date: 2026-04-18
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 9
 categories: [research]
 tags: [claude-code, research, data]
-render_with_liquid: false
 ---
 
 # From 2,675 Articles to 496 Clicks: What We Learned Building an AI Content Site

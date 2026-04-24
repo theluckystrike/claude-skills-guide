@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Sentry Error Tracking"
+title: "Claude Code Sentry Error Tracking (2026)"
 description: "A practical guide to integrating Claude Code with Sentry for error tracking and source maps. Automate debugging workflows using the tdd skill and relate..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

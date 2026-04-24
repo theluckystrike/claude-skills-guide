@@ -1,10 +1,9 @@
 ---
-title: "Claude Code Dashboard"
+title: "Claude Code Dashboard (2026)"
 description: "Use Claude Code's built-in /cost command and dashboard to monitor token usage, track session spend, and identify wasteful patterns in real time."
 permalink: /claude-code-dashboard-built-in-usage-monitoring/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Dashboard: Built-In Usage Monitoring Explained

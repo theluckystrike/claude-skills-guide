@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Devbox — Workflow Guide"
-description: "Create reproducible dev environments with Devbox and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Devbox — Workflow Guide (2026)"
+description: "Claude Code for Devbox — Workflow Guide — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-devbox-jetify-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, devbox, workflow]
 ---

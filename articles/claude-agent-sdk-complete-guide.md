@@ -1,9 +1,8 @@
 ---
-title: "Claude Agent SDK"
+title: "Claude Agent SDK (2026)"
 description: "Build autonomous AI agents with the Claude Agent SDK. Installation, working examples, architecture patterns, cost analysis, and configuration reference."
 permalink: /claude-agent-sdk-complete-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Agent SDK: Complete Developer Guide (2026)
@@ -50,6 +49,7 @@ This loop is the same pattern Claude Code uses internally. The SDK exposes it as
 </div>
 <div id="avz-out" style="background:#0f172a;padding:16px;border-radius:6px;color:#e2e8f0;font-size:14px;line-height:1.7;"></div>
 </div>
+{% raw %}
 <script>
 var apData={seq:{name:"Sequential Pattern",flow:"User Prompt \u2192 [Agent Reasons] \u2192 Tool Call \u2192 Result \u2192 [Agent Reasons] \u2192 Tool Call \u2192 ... \u2192 Final Output",desc:"One agent, linear execution. The agent receives a task, reasons through it step by step, calls tools as needed, and produces a final result.",best:"Single-purpose tasks, file edits, code review, simple automations",turns:"5-15 turns typical",cost:"$0.01-$0.50 (Sonnet), lowest cost pattern",code:'agent = Agent(\n  model="claude-sonnet-4-20250514",\n  tools=[tools.bash, tools.read_file],\n  max_turns=10\n)\nresult = agent.run("Analyze this module")'},orch:{name:"Orchestrator-Worker Pattern",flow:"User Prompt \u2192 [Orchestrator Agent] \u2192 delegates to [Worker A] + [Worker B] \u2192 Workers return results \u2192 [Orchestrator combines] \u2192 Final Output",desc:"A main agent delegates subtasks to specialized sub-agents. Each worker has its own model, tools, and turn limit. The orchestrator synthesizes results.",best:"Complex tasks with distinct sub-problems: security audit + style check, multi-language analysis, research + writing",turns:"15-30 turns total (across all agents)",cost:"$0.50-$5.00 (mixed models), highest capability",code:'orchestrator = Agent(\n  model="claude-opus-4-20250514",\n  sub_agents=[security_agent, style_agent],\n  max_turns=15\n)\nresult = orchestrator.run("Review the codebase")'},pipe:{name:"Pipeline Pattern",flow:"User Prompt \u2192 [Agent 1: Generate] \u2192 output \u2192 [Agent 2: Review] \u2192 output \u2192 [Agent 3: Test] \u2192 Final Output",desc:"Agents chained in sequence. Each agent's output becomes the next agent's input. Each stage has a focused role with its own tools.",best:"Staged workflows: generate-then-review, write-then-test, extract-then-transform",turns:"10-20 turns per stage",cost:"$0.15-$2.00 per stage (Sonnet), predictable per-stage costs",code:'gen = Agent(model="opus", tools=[tools.write_file], max_turns=10)\ngen.run("Write a REST API")\nrev = Agent(model="sonnet", tools=[tools.read_file], max_turns=10)\nrev.run("Review and fix ./api.py")'}};
 function showAP(p){var d=apData[p];if(!d)return;document.getElementById('avz-out').innerHTML='<div style="color:#6ee7b7;font-weight:600;font-size:16px;margin-bottom:8px;">'+d.name+'</div><div style="background:#1a1a2e;padding:10px;border-radius:4px;font-family:monospace;font-size:12px;color:#4ade80;margin-bottom:12px;overflow-x:auto;white-space:nowrap;">'+d.flow+'</div><p style="margin:0 0 8px 0;">'+d.desc+'</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0;"><div><span style="color:#94a3b8;font-size:12px;">BEST FOR</span><div style="font-size:13px;">'+d.best+'</div></div><div><span style="color:#94a3b8;font-size:12px;">TYPICAL TURNS</span><div style="font-size:13px;">'+d.turns+'</div></div><div><span style="color:#94a3b8;font-size:12px;">COST RANGE</span><div style="font-size:13px;">'+d.cost+'</div></div></div><pre style="background:#1a1a2e;padding:10px;border-radius:4px;font-size:12px;color:#e2e8f0;overflow-x:auto;margin:8px 0 0 0;">'+d.code+'</pre>';document.querySelectorAll('.avz-btn').forEach(function(b){b.style.background=b.getAttribute('data-p')===p?'#6ee7b7':'#334155';b.style.color=b.getAttribute('data-p')===p?'#0f172a':'#e2e8f0';b.style.fontWeight=b.getAttribute('data-p')===p?'600':'400';});}
@@ -820,3 +820,5 @@ Yes, if you provide the web_search tool. Without it, agents can only access loca
 - [Claude Code Router Guide](/claude-code-router-guide/)
 - [Super Claude Code Framework Guide](/super-claude-code-framework-guide/)
 
+
+{% endraw %}

@@ -1,10 +1,9 @@
 ---
-title: "Skills as Context Engineering"
+title: "Skills as Context Engineering (2026)"
 description: "Use Claude Code skills as context engineering tools to eliminate exploratory file reads and save 20K-80K tokens per task with zero-round-trip loading."
 permalink: /skills-context-engineering-zero-round-trip-loading/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Skills as Context Engineering: Zero-Round-Trip Knowledge Loading

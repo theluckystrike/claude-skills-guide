@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Agent Sandbox Skill"
+title: "Claude Agent Sandbox Skill (2026)"
 description: "How Claude agent sandbox skill provides isolated environments. Security benefits, configuration patterns, and examples for safe AI workflows."
 date: 2026-03-13
 last_modified_at: 2026-04-17

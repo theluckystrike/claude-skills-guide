@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md For Database Conventions"
+title: "Claude Md For Database Conventions (2026)"
 description: "Learn how to use Claude's markdown-based skills to implement consistent database conventions and design patterns across your projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17

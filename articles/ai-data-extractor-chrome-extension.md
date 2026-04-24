@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build an AI Data Extractor Extension"
+title: "Build an AI Data Extractor Extension (2026)"
 description: "Build an AI-powered Chrome extension that extracts structured data from any webpage. Manifest V3, content scripts, and LLM integration patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17

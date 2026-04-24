@@ -3,7 +3,6 @@ title: "Claude Code VS Code Connection Lost — Fix (2026)"
 permalink: /claude-code-vscode-connection-lost-fix-2026/
 description: "Restart the VS Code extension host to restore the dropped connection. Fixes the persistent reconnecting loop when Claude Code loses server contact."
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -74,3 +73,34 @@ Partially. If the server began processing your request before the client timed o
 ### Why does Claude Code lose connection during long operations?
 
 Long-running operations can exceed keep-alive timeouts on intermediate proxies and load balancers. If a proxy closes an idle connection after 60 seconds and Claude Code's request takes 90 seconds, the connection is severed before the response arrives.
+
+
+## Related Guides
+
+- [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
+- [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
+- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)
+
+## Making the Right Choice
+
+When deciding between these options, consider these practical factors:
+
+**Project requirements.** The best tool depends on what your project actually needs, not which is more popular. A small personal project has different requirements than an enterprise application with compliance needs.
+
+**Team familiarity.** Choosing a tool your team already knows reduces onboarding time. The productivity gains from familiarity often outweigh the theoretical advantages of switching to a newer tool.
+
+**Ecosystem maturity.** Check the package ecosystem, community size, and documentation quality. A tool with 10,000 npm packages and active Stack Overflow answers will be easier to work with than a newer tool with cutting-edge features but sparse documentation.
+
+**Migration cost.** If you are considering switching, estimate the migration effort realistically. Include time for rewriting tests, updating CI/CD pipelines, retraining the team, and handling edge cases that only appear in production.
+
+## Decision Framework
+
+| Factor | Weight | Option A | Option B |
+|--------|--------|----------|----------|
+| Performance | Medium | Score 1-5 | Score 1-5 |
+| Ecosystem | High | Score 1-5 | Score 1-5 |
+| Learning curve | Medium | Score 1-5 | Score 1-5 |
+| Long-term viability | High | Score 1-5 | Score 1-5 |
+
+Score each factor for your specific situation, multiply by weight, and compare totals. This structured approach prevents decisions based on hype or recency bias.

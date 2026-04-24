@@ -1,9 +1,8 @@
 ---
-title: "Awesome Claude Code vs Docs Mirror"
+title: "Awesome Claude Code vs Docs Mirror (2026)"
 description: "Awesome Claude Code curates the ecosystem with 40K stars. Claude Code Docs mirrors official documentation offline. Compare discovery vs reference."
 permalink: /awesome-claude-code-vs-claude-code-docs-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Awesome Claude Code vs Claude Code Docs Mirror (2026)

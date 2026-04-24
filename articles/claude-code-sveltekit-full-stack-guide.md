@@ -1,8 +1,7 @@
 ---
-render_with_liquid: false
 
 layout: default
-title: "Build SvelteKit Apps with Claude Code"
+title: "Build SvelteKit Apps with Claude Code (2026)"
 description: "Build full-stack SvelteKit applications faster with Claude Code. Covers server routes, form actions, load functions, and deployment configuration."
 date: 2026-03-14
 last_modified_at: 2026-04-17

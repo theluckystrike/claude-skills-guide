@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Building TypeScript APIs with Claude"
+title: "Building TypeScript APIs with Claude (2026)"
 description: "Learn how to use Claude Code CLI to build efficient TypeScript APIs using the Hono framework with modern workflow patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

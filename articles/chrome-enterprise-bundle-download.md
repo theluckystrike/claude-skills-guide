@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Bundle Download"
+title: "Chrome Enterprise Bundle Download (2026)"
 description: "Learn how to download, configure, and manage Chrome Enterprise bundles for streamlined browser deployment in enterprise environments."
 date: 2026-03-15
 last_modified_at: 2026-04-17

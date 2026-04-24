@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Slow Skill"
+title: "Fix Claude Code Slow Skill (2026)"
 description: "Speed up Claude Code skill initialization with caching, lazy loading, and config optimization. Cut load times from multiple seconds to milliseconds."
 date: 2026-03-14
 last_modified_at: 2026-04-17

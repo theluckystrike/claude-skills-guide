@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Build a Price Match Finder Extension"
+title: "Build a Price Match Finder Extension (2026)"
 description: "Build a Chrome extension that finds lower prices across retailers using Manifest V3, content scripts, and cross-origin messaging. Full source code."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -273,6 +272,7 @@ Start with a minimal viable product that detects products on two or three major 
 
 ## Step-by-Step: Building the Price Match Workflow
 
+{% raw %}
 1. Detect product pages: identify product detail pages on major retailers by matching URL patterns (`/product/`, `/item/`, `/p/`) and the presence of structured data (`<script type="application/ld+json">` with `@type: "Product"`).
 2. Extract product identifiers: read the UPC, EAN, or model number from the page. These are more reliable for cross-retailer matching than product names, which vary significantly between stores.
 3. Query comparison sources: use a price comparison API (e.g., Google Shopping Content API, PriceAPI, or your own scraper) to look up the same product at competing retailers.
@@ -376,3 +376,5 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
+
+{% endraw %}

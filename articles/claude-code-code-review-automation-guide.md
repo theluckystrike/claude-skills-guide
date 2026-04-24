@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Automate Code Reviews with Claude Code: Complete Guide"
+title: "Claude Code Review Automation (2026)"
 description: "Set up automated code review workflows with Claude Code. Custom review agents, PR analysis, security scanning, and review checklists."
 date: 2026-04-15
 last_modified_at: 2026-04-17

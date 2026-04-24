@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Batch API Cost Calculator for Claude"
-description: "Calculate exact batch costs for Opus ($2.50/$12.50), Sonnet ($1.50/$7.50), and Haiku ($0.50/$2.50) per million tokens."
+title: "Batch API Cost Calculator for Claude (2026)"
+description: "Batch API Cost Calculator for Claude — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /batch-api-cost-calculator-claude-models/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, batch-api, calculator]
-render_with_liquid: false
 ---
 
 # Batch API Cost Calculator for Claude Models

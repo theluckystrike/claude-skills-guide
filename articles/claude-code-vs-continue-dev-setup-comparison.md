@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Continue.dev: Setup Comparison"
+title: "Claude Code vs Continue.dev: Setup Comparison (2026)"
 description: "Compare setting up Claude Code CLI and Continue.dev extension. API keys, model config, and getting productive with each tool."
 date: 2026-04-21
 last_tested: "2026-04-21"

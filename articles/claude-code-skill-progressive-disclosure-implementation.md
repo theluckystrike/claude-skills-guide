@@ -1,10 +1,9 @@
 ---
-title: "Claude Code Skill Progressive"
+title: "Claude Code Skill Progressive (2026)"
 description: "Implement progressive disclosure in Claude Code skills to load instructions incrementally, reducing average session context by 40-60% and saving $5-15/month."
 permalink: /claude-code-skill-progressive-disclosure-implementation/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Skill Progressive Disclosure: Implementation Guide

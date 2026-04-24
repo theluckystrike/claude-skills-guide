@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For LLM Evaluation"
+title: "Claude Code For LLM Evaluation (2026)"
 description: "Master LLM evaluation workflows with Claude Code. Learn to build automated testing pipelines, benchmark model performance, and implement reliable."
 date: 2026-04-19
 last_modified_at: 2026-04-19

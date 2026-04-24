@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Turborepo Pipeline"
+title: "Claude Code Turborepo Pipeline (2026)"
 description: "Master the art of integrating Claude Code with Turborepo to create efficient monorepo workflows. Learn dependency graph strategies, pipeline."
 date: 2026-03-14
 last_modified_at: 2026-04-17

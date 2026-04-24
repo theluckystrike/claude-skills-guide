@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Build Web Share API with Claude Code"
+title: "Build Web Share API with Claude Code (2026)"
 description: "Implement the Web Share API with Claude Code for native sharing in web apps. Feature detection, fallback handling, and share target registration."
 date: 2026-03-15
 last_modified_at: 2026-04-17

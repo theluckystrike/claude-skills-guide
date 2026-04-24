@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Claude Skills for Data Analysis"
+title: "Best Claude Skills for Data Analysis (2026)"
 description: "Discover the top Claude skills for data analysis. Learn which skills streamline data processing, PDF extraction, spreadsheet automation, and more."
 date: 2026-03-13
 last_modified_at: 2026-04-17

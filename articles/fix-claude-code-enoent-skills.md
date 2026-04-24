@@ -1,8 +1,7 @@
 ---
-title: "Fix ENOENT No Such File or Directory"
+title: "Fix ENOENT No Such File or Directory (2026)"
 description: "Resolve ENOENT errors when Claude Code skills reference missing files, scripts, templates, or directories that do not exist at the expected path."
 permalink: /fix-claude-code-enoent-skills/
-render_with_liquid: false
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, enoent, file-not-found, troubleshooting]
 last_updated: 2026-04-19

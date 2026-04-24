@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Guest Mode vs Incognito in Chrome"
+title: "Guest Mode vs Incognito in Chrome (2026)"
 description: "Guest mode vs incognito mode in Chrome explained. Key differences for privacy, testing, and development workflows compared."
 date: 2026-03-15
 last_modified_at: 2026-04-17

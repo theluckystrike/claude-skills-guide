@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for PySpark Workflows"
+title: "Claude Code for PySpark Workflows (2026)"
 description: "Build Apache Spark and PySpark pipelines with Claude Code. Debugging strategies, performance tuning, and production-ready data workflow patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17

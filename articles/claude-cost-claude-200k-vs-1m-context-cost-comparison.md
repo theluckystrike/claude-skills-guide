@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude 200K vs 1M Context Cost"
+title: "Claude 200K vs 1M Context Cost (2026)"
 description: "Claude Haiku at 200K context costs $0.20/request. Opus at 1M costs $5.00/request. Choose the right window for 25x savings."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # Claude 200K vs 1M Context Cost Comparison

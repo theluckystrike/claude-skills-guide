@@ -1,6 +1,6 @@
 ---
-title: "CLAUDE.md Example for Laravel + PHP"
-description: "Complete 350-line CLAUDE.md for Laravel 11 with Eloquent, Blade, and queue workers."
+title: "CLAUDE.md Example for Laravel + PHP (2026)"
+description: "CLAUDE.md Example for Laravel + PHP — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-md-example-for-laravel-php/
 render_with_liquid: false
 categories: [claude-md, templates, 2026]

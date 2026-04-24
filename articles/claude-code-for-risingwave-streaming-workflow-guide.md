@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for RisingWave Streaming"
-description: "Build streaming pipelines with RisingWave and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for RisingWave Streaming (2026)"
+description: "Claude Code for RisingWave Streaming — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-risingwave-streaming-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, risingwave, workflow]
 ---

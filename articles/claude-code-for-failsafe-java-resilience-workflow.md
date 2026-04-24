@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Failsafe Java"
+title: "Claude Code for Failsafe Java (2026)"
 description: "Build retry policies, circuit breakers, and fallbacks in Java using Claude Code with Failsafe. Reduce production failures with tested resilience code."
 date: 2026-03-15
 last_modified_at: 2026-04-17

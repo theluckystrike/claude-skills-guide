@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for WorkOS AuthKit"
-description: "Add enterprise SSO with WorkOS AuthKit and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for WorkOS AuthKit (2026)"
+description: "Claude Code for WorkOS AuthKit — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-workos-authkit-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, workos, workflow]
 ---

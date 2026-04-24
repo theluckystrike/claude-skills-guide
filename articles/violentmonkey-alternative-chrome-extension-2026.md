@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Violentmonkey Alternatives"
+title: "Best Violentmonkey Alternatives (2026)"
 description: "Top Violentmonkey alternative extensions for Chrome in 2026. Userscript managers compared by features, speed, and developer experience. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

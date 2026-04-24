@@ -1,10 +1,9 @@
 ---
-title: "How to Stop Claude Code Retry Loops"
+title: "How to Stop Claude Code Retry Loops (2026)"
 description: "Stop Claude Code retry loops that waste 50K-200K tokens per incident with CLAUDE.md rules, exit strategies, and structured error handling patterns."
 permalink: /stop-claude-code-retry-loops-token-waste/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Stop Claude Code Retry Loops (The #1 Token Waste)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Nitric Cloud Framework"
+title: "Claude Code for Nitric Cloud Framework (2026)"
 description: "Learn how to integrate Claude Code into your Nitric cloud framework workflow for faster serverless development, intelligent API generation, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

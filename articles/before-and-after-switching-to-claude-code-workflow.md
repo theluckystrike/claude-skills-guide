@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Before and After"
+title: "Before and After (2026)"
 description: "A practical comparison of developer workflows before and after adopting Claude Code. See real productivity gains, workflow transformations, and how AI."
 date: 2026-03-14
 last_modified_at: 2026-04-17

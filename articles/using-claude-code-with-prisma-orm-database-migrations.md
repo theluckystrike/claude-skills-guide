@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Using Claude Code With Prisma Orm"
+title: "Using Claude Code With Prisma Orm (2026)"
 last_tested: "2026-04-22"
 description: "Learn how to use Claude Code AI assistant to streamline your Prisma ORM database migration workflow with practical examples and code snippets."
 date: 2026-03-14

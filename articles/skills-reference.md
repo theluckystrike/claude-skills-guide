@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code Skills Reference"
-description: "Complete directory of Claude Code skills. Find, install, and configure skills for any development workflow."
+title: "Claude Code Skills Reference (2026)"
+description: "Claude Code Skills Reference — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 permalink: /skills-reference/
-render_with_liquid: false
 ---
 
 # Claude Code Skills Reference

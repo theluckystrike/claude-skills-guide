@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Migrate Cursor Rules to Claude Skills"
+title: "Migrate Cursor Rules to Claude Skills (2026)"
 description: "Move your custom AI rules from Cursor to Claude Code skills in under 30 minutes. Step-by-step migration with syntax mapping and skill file examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

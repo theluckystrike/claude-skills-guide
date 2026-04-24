@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code API Key vs Pro"
+title: "Claude Code API Key vs Pro (2026)"
 description: "A practical guide to understanding Claude Code billing: API key pay-per-use vs Pro subscription. Learn which option fits your workflow with real cost."
 date: 2026-03-14
 last_modified_at: 2026-04-17

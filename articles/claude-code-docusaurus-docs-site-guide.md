@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Docusaurus Documentation"
+title: "Claude Code Docusaurus Documentation (2026)"
 description: "Learn how to use Claude Code to build, customize, and maintain Docusaurus documentation sites. Practical workflows for content creation, theme."
 date: 2026-03-14
 last_modified_at: 2026-04-17

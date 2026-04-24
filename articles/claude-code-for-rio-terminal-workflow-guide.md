@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Rio Terminal"
-description: "Configure Rio terminal for Claude Code workflows. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Rio Terminal (2026)"
+description: "Claude Code for Rio Terminal — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-rio-terminal-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, rio-terminal, workflow]
 ---

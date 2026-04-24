@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Unleash Feature"
+title: "Claude Code Unleash Feature (2026)"
 description: "Learn how to integrate Unleash feature toggles with Node.js using Claude Code. Master feature flag workflows, environment configuration, and best."
 date: 2026-03-14
 last_modified_at: 2026-04-17

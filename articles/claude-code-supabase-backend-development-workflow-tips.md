@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Supabase Backend"
+title: "Claude Code Supabase Backend (2026)"
 description: "Practical workflow tips for building Supabase backends with Claude Code. Learn how to structure projects, write database migrations, and use Claude."
 date: 2026-03-14
 last_modified_at: 2026-04-17

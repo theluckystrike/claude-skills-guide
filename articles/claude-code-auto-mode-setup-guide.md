@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Auto Mode Setup Guide"
+title: "Claude Code Auto Mode Setup Guide (2026)"
 description: "Configure Claude Code auto mode to eliminate permission prompts with background safety checks. Setup, customization, and best practices."
 date: 2026-04-15
 permalink: /claude-code-auto-mode-setup-guide/

@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Diff Checker Chrome Extension Guide"
+title: "Diff Checker Chrome Extension Guide (2026)"
 description: "Learn how to build and use Chrome extension diff checkers for comparing code, text, and files. Practical examples, APIs, and implementation patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17

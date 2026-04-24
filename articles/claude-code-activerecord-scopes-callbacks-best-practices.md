@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code ActiveRecord Scopes"
+title: "Claude Code ActiveRecord Scopes (2026)"
 description: "Master ActiveRecord scopes and callbacks in Rails with Claude Code. Learn to write efficient scopes, use callbacks properly, and avoid common."
 date: 2026-04-19
 last_modified_at: 2026-04-19

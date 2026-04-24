@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Oss Maintainer"
+title: "Claude Code For Oss Maintainer (2026)"
 description: "A comprehensive tutorial for open source maintainers on leveraging Claude Code to automate issue triage, review pull requests, manage releases, and build."
 date: 2026-04-19
 last_modified_at: 2026-04-19

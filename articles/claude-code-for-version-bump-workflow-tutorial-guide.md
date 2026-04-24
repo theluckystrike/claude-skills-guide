@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Automate Version Bumps with Claude Code"
+title: "Automate Version Bumps with Claude Code (2026)"
 description: "Automate semantic version bumps with Claude Code. Covers package.json updates, git tags, changelog generation, and CI release pipeline integration."
 date: 2026-03-15
 last_modified_at: 2026-04-17

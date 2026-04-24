@@ -1,10 +1,9 @@
 ---
-title: "Is Claude Code Worth $100/month?"
+title: "Is Claude Code Worth $100/month? (2026)"
 description: "Calculate Claude Code Max ROI honestly -- at $75/hour developer rate, saving just 1.5 hours/month makes the $100 subscription pay for itself."
 permalink: /is-claude-code-worth-100-month-roi-calculator/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Is Claude Code Worth $100/month? (Honest ROI Calculator)

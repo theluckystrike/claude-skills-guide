@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Upstash QStash Scheduled"
+title: "Claude Code Upstash QStash Scheduled (2026)"
 description: "Learn how to set up scheduled tasks using Upstash QStash with Claude Code. A practical guide to building reliable cron jobs and event-driven workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19

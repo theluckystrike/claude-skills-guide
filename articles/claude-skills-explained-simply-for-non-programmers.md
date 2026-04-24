@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Explained Simply"
+title: "Claude Skills Explained Simply (2026)"
 description: "A plain-English explanation of what Claude skills are, why they exist, and how to use them without any technical background. no coding required."
 date: 2026-03-13
 last_modified_at: 2026-04-17

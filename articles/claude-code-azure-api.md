@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Azure API Integration Guide"
+title: "Claude Code Azure API Integration Guide (2026)"
 description: "Use Claude Code with Azure OpenAI API endpoints. Configuration, authentication, and deployment workflow for Azure-hosted models."
 date: 2026-04-17
 last_modified_at: 2026-04-17

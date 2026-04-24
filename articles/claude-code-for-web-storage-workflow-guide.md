@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Web Storage API"
+title: "Claude Code for Web Storage API (2026)"
 description: "Automate localStorage, sessionStorage, and IndexedDB operations with Claude Code CLI. Practical patterns for web storage management and debugging."
 date: 2026-04-19
 last_modified_at: 2026-04-19

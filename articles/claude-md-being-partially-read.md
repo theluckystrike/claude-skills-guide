@@ -1,8 +1,7 @@
 ---
-title: "CLAUDE.md Being Partially Read"
+title: "CLAUDE.md Being Partially Read (2026)"
 description: "Fix the problem where Claude Code follows some CLAUDE.md rules but ignores others. Covers compaction behavior, file length, rule priority, and diagnostic steps."
 permalink: /claude-md-being-partially-read/
-render_with_liquid: false
 categories: [claude-md, fixes]
 tags: [claude-md, partially-read, compaction, ignored-rules, troubleshooting]
 last_updated: 2026-04-19

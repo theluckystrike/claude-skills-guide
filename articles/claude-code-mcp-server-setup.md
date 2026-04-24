@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code MCP Server Setup"
-description: "Configure MCP servers in Claude Code. Covers stdio and SSE transports, settings.json, and common setup errors."
+title: "Claude Code MCP Server Setup (2026)"
+description: "Claude Code MCP Server Setup — practical setup steps, configuration examples, and working code you can use in your projects today."
 date: 2026-04-14
 last_modified_at: 2026-04-17
 author: "Claude Code Guides"

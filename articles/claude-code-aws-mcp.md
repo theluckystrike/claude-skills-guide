@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code AWS MCP Setup Guide"
-description: "Connect Claude Code to AWS services via MCP for direct S3, DynamoDB, Lambda, and CloudWatch access from your editor."
+title: "Claude Code AWS MCP Setup Guide (2026)"
+description: "Claude Code AWS MCP Setup Guide — practical setup steps, configuration examples, and working code you can use in your projects today."
 date: 2026-04-17
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

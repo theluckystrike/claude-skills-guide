@@ -1,8 +1,7 @@
 ---
-title: "Claude Skills for Manufacturing QA"
+title: "Claude Skills for Manufacturing QA (2026)"
 description: "Build a Claude Code skill that analyzes SPC control charts, processes Non-Conformance Reports with root cause codes, and tracks CAPA corrective actions."
 permalink: /claude-skills-for-manufacturing-qa/
-render_with_liquid: false
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, manufacturing, quality-assurance]
 last_updated: 2026-04-19

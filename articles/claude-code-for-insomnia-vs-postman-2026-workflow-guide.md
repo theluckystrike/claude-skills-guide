@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Insomnia vs Postman with Claude Code"
+title: "Insomnia vs Postman with Claude Code (2026)"
 description: "Compare Insomnia and Postman API workflows inside Claude Code. See which tool pairs better for automated testing, collections, and environment sync."
 date: 2026-03-20
 last_modified_at: 2026-04-17

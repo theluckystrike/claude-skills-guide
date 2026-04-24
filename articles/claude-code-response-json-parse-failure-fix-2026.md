@@ -1,9 +1,8 @@
 ---
-title: "Response JSON Parse Failure — Fix"
+title: "Response JSON Parse Failure — Fix (2026)"
 permalink: /claude-code-response-json-parse-failure-fix-2026/
 description: "Fix JSON parse error on API response. Caused by truncated response or proxy interference. Enable retry and increase timeout."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -110,3 +109,46 @@ Partially. If the server began processing your request before the client timed o
 ### How do I configure Claude Code to use a corporate proxy?
 
 Set the `HTTPS_PROXY` environment variable: `export HTTPS_PROXY=http://proxy.corp.com:8080`. Claude Code respects standard proxy environment variables. Add this to your shell profile for persistence.
+
+
+## Related Guides
+
+- [Prisma Generate Failure After Schema](/claude-code-prisma-generate-failure-fix-2026/)
+- [Pre-Commit Hook Failure on Claude — Fix (2026)](/claude-code-pre-commit-hook-failure-fix-2026/)
+- [TLS Version Negotiation Failure — Fix](/claude-code-tls-version-negotiation-failure-fix-2026/)
+- [ESM vs CJS Module Resolution Failure — Fix (2026)](/claude-code-esm-vs-cjs-module-resolution-fix-2026/)
+
+## JSON Error Patterns in Claude Code
+
+JSON parsing errors occur in several contexts within Claude Code, each with a different root cause:
+
+**API response parsing.** The Anthropic API returns JSON responses. If the response is truncated (network timeout, proxy interference) or modified (corporate proxy injecting error pages), the JSON parser fails. Check network connectivity first.
+
+**Configuration file parsing.** Files like `settings.json`, `tsconfig.json`, and `package.json` must be valid JSON. Common issues: trailing commas (not allowed in JSON), comments (not allowed in standard JSON, but allowed in tsconfig.json), and UTF-8 BOM characters at the start of the file.
+
+**Tool output parsing.** When Claude Code's tools return results, they are JSON-encoded. If a bash command produces output that interferes with JSON encoding (binary data, very long lines, or null bytes), the parsing fails.
+
+## Debugging JSON Parse Errors
+
+Follow this sequence to identify and fix the problem:
+
+```bash
+# Validate a JSON file
+python3 -m json.tool file.json 2>&1
+
+# Find the exact error location
+python3 -c "
+import json
+with open('file.json') as f:
+    try:
+        json.load(f)
+    except json.JSONDecodeError as e:
+        print(f'Error at line {e.lineno}, column {e.colno}: {e.msg}')
+"
+
+# Remove BOM characters
+sed -i '1s/^ï»¿//' file.json
+
+# Check for trailing commas (common mistake)
+grep -n ',[ 	]*[}\]]' file.json
+```

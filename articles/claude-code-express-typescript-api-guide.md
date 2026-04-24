@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Express TypeScript"
+title: "Claude Code Express TypeScript (2026)"
 description: "A practical guide to building Express APIs with TypeScript using Claude Code. Learn project setup, routing, validation, error handling, and testing."
 date: 2026-03-14
 last_modified_at: 2026-04-17

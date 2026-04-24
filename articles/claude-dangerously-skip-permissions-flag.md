@@ -1,10 +1,9 @@
 ---
-title: "Claude --dangerously-skip-permissions"
+title: "Claude --dangerously-skip-permissions (2026)"
 description: "How to use the claude --dangerously-skip-permissions flag for unattended CI/CD, batch scripting, and headless automation. Syntax, use cases, and risks."
 permalink: /claude-dangerously-skip-permissions-flag/
 canonical_url: /claude-code-dangerously-skip-permissions-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 ## The Flag
@@ -41,6 +40,7 @@ The flag must be passed at startup. You cannot enable it mid-session.
 
 Run Claude Code as a step in your CI pipeline where no human is present to approve actions:
 
+{% raw %}
 ```yaml
 # GitHub Actions example
 - name: Fix lint errors with Claude
@@ -51,6 +51,7 @@ Run Claude Code as a step in your CI pipeline where no human is present to appro
   env:
     ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 ```
+{% endraw %}
 
 Without the flag, Claude Code would hang waiting for interactive approval that nobody can give. See the [full guide](/claude-code-dangerously-skip-permissions-guide/) for how to combine this with Docker sandboxing to limit blast radius.
 
@@ -154,6 +155,7 @@ The `:ro` flag makes the source directory read-only inside the container. Claude
 
 Add timeout controls to prevent runaway sessions:
 
+{% raw %}
 ```yaml
 - name: Claude Code automated fix
   timeout-minutes: 10
@@ -165,6 +167,7 @@ Add timeout controls to prevent runaway sessions:
   env:
     ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 ```
+{% endraw %}
 
 The `timeout-minutes` directive kills the step if it runs too long, preventing unbounded API costs.
 
@@ -310,6 +313,7 @@ No. The flag only skips interactive permission prompts. API authentication, rate
 - [Fix Claude Code Model Not Available in Region](/claude-code-model-not-available-region-fix/)
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Cost impact of permission settings
 
+{% raw %}
 <script type="application/ld+json">
 [
   {
@@ -427,3 +431,5 @@ No. The flag only skips interactive permission prompts. API authentication, rate
   }
 ]
 </script>
+
+{% endraw %}

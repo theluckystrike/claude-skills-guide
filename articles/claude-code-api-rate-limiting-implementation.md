@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code API Rate Limiting"
+title: "Claude Code API Rate Limiting (2026)"
 description: "Implement solid rate limiting for Claude Code API integrations. Learn token bucketing, request throttling, and practical patterns for production systems."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Open Source LLMs as Cost Floor"
-description: "Self-hosted Llama costs $0.05-$0.20 per MTok vs Claude's $1-$5. When open source makes sense."
+title: "Open Source LLMs as Cost Floor (2026)"
+description: "Open Source LLMs as Cost Floor — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-cost-open-source-llm-cost-floor/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, comparison]
-render_with_liquid: false
 ---
 
 # Open Source LLMs as Cost Floor: When Llama Makes Sense

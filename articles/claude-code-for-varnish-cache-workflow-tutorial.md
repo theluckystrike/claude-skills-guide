@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Varnish Cache"
+title: "Claude Code for Varnish Cache (2026)"
 description: "Automate Varnish Cache VCL configuration with Claude Code. Covers cache invalidation, backend probes, grace mode, and performance tuning workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Amber"
+title: "Claude Code for Amber (2026)"
 description: "Master bash scripting workflows with Claude Code. Learn practical techniques for writing, debugging, and optimizing shell scripts with AI assistance."
 date: 2026-03-15
 last_modified_at: 2026-04-17

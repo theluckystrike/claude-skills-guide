@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Awesome Screenshot Alternative"
+title: "Awesome Screenshot Alternative (2026)"
 description: "Discover powerful Chrome screenshot alternatives for developers and power users. Compare features, OCR capabilities, API integrations, and workflow."
 date: 2026-03-15
 last_modified_at: 2026-04-17

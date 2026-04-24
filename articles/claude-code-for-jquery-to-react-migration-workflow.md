@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Migrate jQuery to React with Claude"
+title: "Migrate jQuery to React with Claude (2026)"
 description: "Migrate legacy jQuery codebases to React components using Claude Code. Covers DOM manipulation rewrites, event handler conversion, and state extraction."
 date: 2026-03-14
 last_modified_at: 2026-04-17

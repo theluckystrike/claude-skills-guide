@@ -1,8 +1,7 @@
 ---
-title: "CLAUDE.md Version Control Strategies"
+title: "CLAUDE.md Version Control Strategies (2026)"
 description: "How to version control CLAUDE.md effectively: branch strategies for rule changes, PR review workflows, and tracking instruction evolution over time."
 permalink: /claude-md-version-control-strategies/
-render_with_liquid: false
 categories: [claude-md, workflow]
 tags: [claude-md, version-control, git, branching, code-review]
 last_updated: 2026-04-19

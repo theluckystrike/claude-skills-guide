@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Config Hierarchy Explained"
+title: "Claude Code Config Hierarchy Explained (2026)"
 description: "Understand how Claude Code resolves configuration from organization, user, and project levels, with precedence rules and override patterns."
 permalink: /claude-code-configuration-hierarchy-explained-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Configuration Hierarchy Explained (2026)

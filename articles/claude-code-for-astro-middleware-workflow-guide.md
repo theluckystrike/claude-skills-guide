@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Astro Middleware"
+title: "Claude Code for Astro Middleware (2026)"
 description: "Learn how to use Claude Code to build, test, and optimize Astro middleware with practical examples and actionable workflows for modern web development."
 date: 2026-03-15
 last_modified_at: 2026-04-17

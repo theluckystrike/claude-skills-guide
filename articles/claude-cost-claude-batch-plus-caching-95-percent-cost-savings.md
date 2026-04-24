@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Batch Plus Caching for 95% Cost"
-description: "Stack Claude's batch 50% discount with caching 90% discount for 95% total savings. Opus 4.7 input drops to $0.25/MTok."
+title: "Claude Batch Plus Caching for 95% Cost (2026)"
+description: "Claude Batch Plus Caching for 95% Cost — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-batch-plus-caching-95-percent-cost-savings/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, batch-api, prompt-caching]
-render_with_liquid: false
 ---
 
 # Claude Batch Plus Caching for 95% Cost Savings

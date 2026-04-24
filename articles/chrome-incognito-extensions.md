@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Development for Claude"
+title: "Chrome Extension Development for Claude (2026)"
 description: "Build Chrome extensions that work in incognito mode using Claude Code. Configuration, API patterns, and testing strategies for Claude Code-generated..."
 date: 2026-03-15
 last_modified_at: 2026-04-21

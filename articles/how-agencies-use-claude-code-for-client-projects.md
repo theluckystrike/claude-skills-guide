@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Agencies Use Claude Code for Client"
+title: "How Agencies Use Claude Code for Client (2026)"
 description: "Practical strategies for agencies integrating Claude Code into client workflows, with real examples and skill recommendations for deliverable-focused."
 date: 2026-03-14
 last_modified_at: 2026-04-17

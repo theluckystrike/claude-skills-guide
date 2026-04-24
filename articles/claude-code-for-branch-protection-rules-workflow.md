@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Git Branch Protection"
+title: "Claude Code for Git Branch Protection (2026)"
 description: "Automate Git branch protection rules with Claude Code for safer deployments. Configure required reviews, status checks, and merge restrictions."
 date: 2026-03-15
 last_modified_at: 2026-04-17

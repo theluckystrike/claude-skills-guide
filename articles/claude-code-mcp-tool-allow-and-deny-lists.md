@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code MCP Tool Allow and Deny"
+title: "Claude Code MCP Tool Allow and Deny (2026)"
 description: "A comprehensive guide to configuring tool allow and deny lists in Claude Code's Model Context Protocol. Learn how to control which tools your MCP servers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

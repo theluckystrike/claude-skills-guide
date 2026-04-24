@@ -3,7 +3,6 @@ title: "Fix Claude Internal Server Error (2026)"
 description: "Fix Claude internal server error with retry logic, prompt size reduction, and model fallback. Step-by-step diagnostic guide with code examples."
 permalink: /claude-internal-server-error-fix/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -29,6 +28,7 @@ A 500 internal server error from the Claude API means something broke on Anthrop
 <textarea id="err-input-500" placeholder="Paste your full error message here..." style="width:100%;min-height:80px;padding:12px;background:#0f172a;color:#e2e8f0;border:1px solid #334155;border-radius:6px;font-family:monospace;font-size:13px;resize:vertical;box-sizing:border-box;"></textarea>
 <div id="err-out-500" style="margin-top:12px;display:none;background:#0f172a;padding:16px;border-radius:6px;color:#e2e8f0;font-size:14px;"></div>
 </div>
+{% raw %}
 <script>
 document.getElementById('err-input-500').addEventListener('input',function(){var t=this.value.toLowerCase(),o=document.getElementById('err-out-500'),m=[];if(!t){o.style.display='none';return;}if(/500|internal.server/i.test(t))m.push('<strong style="color:#6ee7b7;">500 Internal Server Error</strong><br>Retry the request. Most 500 errors are transient. If persistent, check <a href="https://status.anthropic.com" style="color:#60a5fa;">status.anthropic.com</a> for incidents.');if(/api_error/i.test(t))m.push('<strong style="color:#6ee7b7;">API Error Type</strong><br>The inference pipeline failed. Try: switch to a different model (<code>claude-haiku-4-20250514</code>), reduce prompt size below 50K tokens, or wait 5 minutes and retry.');if(/timeout|timed?\s*out/i.test(t))m.push('<strong style="color:#6ee7b7;">Timeout Detected</strong><br>Your request may be too large or the server is under load. Reduce <code>max_tokens</code>, split into smaller requests, or increase your client timeout to 300s.');if(/overloaded|capacity/i.test(t))m.push('<strong style="color:#6ee7b7;">Server Overloaded</strong><br>This is a 529-type issue, not a true 500. Wait 30-60 seconds, then retry. Consider falling back to Haiku for non-critical tasks.');if(/ssl|tls|certificate/i.test(t))m.push('<strong style="color:#6ee7b7;">TLS/Certificate Issue</strong><br>Corporate proxy may be intercepting. Set: <code>export NODE_EXTRA_CA_CERTS=/path/to/ca-bundle.crt</code>');if(/proxy|firewall/i.test(t))m.push('<strong style="color:#6ee7b7;">Proxy/Firewall Issue</strong><br>Test direct: <code>curl --noproxy "*" https://api.anthropic.com/v1/messages</code>. If that works, configure your proxy to pass through api.anthropic.com.');if(/thinking|extended/i.test(t))m.push('<strong style="color:#6ee7b7;">Extended Thinking Error</strong><br>Large context + extended thinking exceeds memory. Reduce context below 100K tokens or disable extended thinking for this request.');if(m.length===0)m.push('<span style="color:#94a3b8;">No known patterns matched. Try retrying the request, checking <a href="https://status.anthropic.com" style="color:#60a5fa;">status.anthropic.com</a>, or reducing your prompt size.</span>');o.innerHTML=m.join('<hr style="border:none;border-top:1px solid #334155;margin:12px 0;">');o.style.display='block';});
 </script>
@@ -904,3 +904,5 @@ With streaming, a 500 error can occur mid-stream, meaning you may receive partia
 </script>
 
 - [Claude AI rate exceeded error fix](/claude-ai-rate-exceeded-error-fix/) — Fix the AI rate exceeded message
+
+{% endraw %}

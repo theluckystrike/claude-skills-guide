@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Zero Trust Security"
+title: "Claude Code Zero Trust Security (2026)"
 description: "Implement zero trust security principles with Claude Code. Validate AI outputs, secure tool permissions, and build verified development workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

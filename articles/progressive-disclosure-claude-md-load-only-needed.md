@@ -1,10 +1,9 @@
 ---
-title: "Progressive Disclosure in CLAUDE.md"
+title: "Progressive Disclosure in CLAUDE.md (2026)"
 description: "Reduce CLAUDE.md token cost by 60-80% with progressive disclosure patterns that load context only when Claude Code needs it for the current task."
 permalink: /progressive-disclosure-claude-md-load-only-needed/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Progressive Disclosure in CLAUDE.md: Load Only What You Need

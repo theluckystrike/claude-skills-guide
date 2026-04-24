@@ -1,10 +1,9 @@
 ---
-title: "CLAUDE.md Token Optimization"
+title: "CLAUDE.md Token Optimization (2026)"
 description: "Optimize CLAUDE.md files to reduce Claude Code token usage by 40-60% with precise rules, scoped instructions, and token-efficient formatting patterns."
 permalink: /claude-md-token-optimization-rules-save-money/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # CLAUDE.md Token Optimization: Write Rules That Save Money

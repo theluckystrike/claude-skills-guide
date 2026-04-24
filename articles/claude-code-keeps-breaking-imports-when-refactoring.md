@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix Claude Code Breaking Imports"
+title: "Fix Claude Code Breaking Imports (2026)"
 description: "Stop Claude Code from breaking imports during refactoring. Covers path aliasing, barrel file handling, and import resolution configuration patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "GitHub MCP Server Advanced Workflow"
+title: "GitHub MCP Server Advanced Workflow (2026)"
 description: "Learn how to automate GitHub workflows with the GitHub MCP server, integrating with Claude skills like pdf, tdd, and supermemory."
 date: 2026-03-14
 last_modified_at: 2026-04-17

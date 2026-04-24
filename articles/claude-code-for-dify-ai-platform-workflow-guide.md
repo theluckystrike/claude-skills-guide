@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code for Dify AI Platform"
-description: "Build AI apps with Dify's visual workflow and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Dify AI Platform (2026)"
+description: "Claude Code for Dify AI Platform — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-dify-ai-platform-workflow-guide/
 render_with_liquid: false

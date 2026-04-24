@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Figma Inspector Chrome Extension Guide"
+title: "Figma Inspector Chrome Extension Guide (2026)"
 description: "Streamline design-to-code handoff with Figma inspector Chrome extensions. Compare tools, extract CSS properties, and inspect design tokens directly."
 date: 2026-03-15
 last_modified_at: 2026-04-17

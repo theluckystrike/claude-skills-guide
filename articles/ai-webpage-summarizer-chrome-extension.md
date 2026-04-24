@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "AI Webpage Summarizer Chrome Extension"
+title: "AI Webpage Summarizer Chrome Extension (2026)"
 description: "Learn how to build AI-powered webpage summarizer Chrome extensions. Practical code examples, API integration patterns, and techniques for developers and."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -312,6 +311,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ## Step-by-Step: Building the AI Summarizer
 
 1. Set up Manifest V3 with `activeTab`, `storage`, and `contextMenus` permissions. No host permissions are required. `activeTab` grants temporary access to the current page when the user interacts with the extension.
+{% raw %}
 2. Extract page text: in the content script, extract readable text from the page by stripping `<script>`, `<style>`, `<nav>`, and `<footer>` elements, then reading `document.body.innerText`. For article pages, target the main content element (`<article>`, `<main>`, `.content`) to skip navigation and ads.
 3. Send text to the summarization API: pass the extracted text to your chosen AI API (Claude, OpenAI, or the built-in Chrome Summarizer API). Chunk the text if it exceeds the model's context window. for most articles, this is not necessary.
 4. Display the summary: show the summary in a popup or in a sidebar panel injected into the page. Provide three length options: one-sentence, three-bullet, and full paragraph.
@@ -380,3 +380,5 @@ Summary cached for outdated page content: Add a content hash to the cache key so
 
 
 
+
+{% endraw %}

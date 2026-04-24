@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for WireMock API Mocking"
+title: "Claude Code for WireMock API Mocking (2026)"
 description: "Mock APIs with WireMock and Claude Code for reliable testing. Covers stub creation, request matching, stateful scenarios, and CI pipeline integration."
 date: 2026-03-14
 last_modified_at: 2026-04-17

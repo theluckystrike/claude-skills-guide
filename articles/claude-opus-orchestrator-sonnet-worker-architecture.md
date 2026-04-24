@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Opus Orchestrator + Sonnet Worker"
+title: "Opus Orchestrator + Sonnet Worker (2026)"
 description: "Design multi-agent systems with Opus as orchestrator and Sonnet workers for parallel task execution. Architecture patterns with cost optimization."
 date: 2026-03-14
 last_modified_at: 2026-04-17

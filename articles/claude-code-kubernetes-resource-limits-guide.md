@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Configure K8s Resource Limits"
+title: "Configure K8s Resource Limits (2026)"
 description: "Configure Kubernetes CPU and memory resource limits with Claude Code. Right-sizing strategies, OOMKill prevention, and QoS class optimization."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Speed Up Claude Code Responses"
+title: "Speed Up Claude Code Responses (2026)"
 description: "Learn how to structure prompts for faster, more accurate Claude Code responses. Practical techniques for developers and power users."
 date: 2026-03-14
 last_modified_at: 2026-04-17

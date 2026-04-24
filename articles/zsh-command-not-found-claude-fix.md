@@ -1,9 +1,8 @@
 ---
-title: "Fix zsh: command not found: claude"
+title: "Fix zsh: command not found: claude (2026)"
 description: "Fix the zsh command not found claude error. Six causes with step-by-step PATH, Node.js, and permission fixes for macOS, Linux, and WSL shells."
 permalink: /zsh-command-not-found-claude-fix/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -554,6 +553,7 @@ Homebrew installs Node.js in /opt/homebrew/bin on Apple Silicon Macs or /usr/loc
 - [Fix Claude API 503 Service Unavailable](/claude-api-503-service-unavailable-fix/)
 - [Fix Claude Rate Exceeded Error](/claude-rate-exceeded-error-fix/)
 
+{% raw %}
 <script type="application/ld+json">
 [
   {
@@ -676,3 +676,5 @@ Homebrew installs Node.js in /opt/homebrew/bin on Apple Silicon Macs or /usr/loc
   }
 ]
 </script>
+
+{% endraw %}

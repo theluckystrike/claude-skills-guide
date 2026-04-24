@@ -3,7 +3,6 @@ title: "Anthropic Rate Limit Tokens Per Minute — Fix (2026)"
 permalink: /claude-code-anthropic-rate-limit-tokens-per-minute-fix-2026/
 description: "Wait 60 seconds then retry to fix input token rate limit error. Reduce request size or upgrade your Anthropic API tier to prevent future hits."
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -81,3 +80,33 @@ Use shorter prompts, reference specific files instead of loading entire director
 ### What causes token count mismatches?
 
 Token counts are estimated before sending a request and precisely calculated on the server. The estimation uses a fast local tokenizer that may differ slightly from the server's tokenizer. Small discrepancies (1-3%) are normal and do not affect functionality.
+
+
+## Related Guides
+
+- [Claude Code 429 Rate Limit](/claude-code-rate-limit-429-retry-after-fix/)
+- [Fix Claude Code API Rate Limit Reached](/claude-code-api-error-rate-limit-reached/)
+- [Fix Claude Rate Exceeded Error (2026)](/claude-rate-exceeded-error-fix/)
+- [Fix Claude AI Rate Exceeded Error](/claude-ai-rate-exceeded-error-fix/)
+
+## Rate Limit Tiers and Thresholds
+
+Understanding your rate limits helps you plan token budgets and avoid interruptions:
+
+| Plan | Requests/min | Input tokens/min | Output tokens/min |
+|------|-------------|-------------------|-------------------|
+| Free | 50 | 40,000 | 8,000 |
+| Build | 1,000 | 400,000 | 80,000 |
+| Scale | 4,000 | 2,000,000 | 400,000 |
+
+Check your current tier at console.anthropic.com/settings/limits. The most common trigger for rate limiting in Claude Code is running multiple sessions in parallel, each generating rapid API calls.
+
+## Implementing Proper Backoff
+
+The correct backoff strategy for Claude Code rate limits follows three rules:
+
+1. **Always read the `retry-after` header.** This tells you exactly how many seconds to wait. Do not guess or use a fixed delay.
+
+2. **Use exponential backoff as a fallback.** If the header is missing, start with a 2-second delay and double it on each consecutive 429 response, up to a maximum of 60 seconds.
+
+3. **Track token consumption proactively.** Count tokens before sending requests. If you are within 80% of your per-minute limit, add a voluntary 5-second delay between requests to avoid hitting the hard limit.

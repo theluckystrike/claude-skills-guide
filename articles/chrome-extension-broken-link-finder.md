@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Broken Link Finder Chrome Extension"
+title: "Broken Link Finder Chrome Extension (2026)"
 description: "Learn how to build a broken link finder Chrome extension. Practical code examples, APIs, and implementation patterns for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

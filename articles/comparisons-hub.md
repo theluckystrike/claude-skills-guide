@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Comparisons Hub: The Complete Guide"
+title: "Claude Code Comparisons Hub (2026)"
 description: "Side-by-side comparisons of Claude skills vs prompts, official vs community skills. Decision frameworks for every workflow."
 date: 2026-03-13
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome GPU Process High Memory"
+title: "Chrome GPU Process High Memory (2026)"
 description: "Fix Chrome GPU process high memory usage. Diagnose what is consuming GPU memory and apply proven solutions to reduce browser resource drain."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Data & Methodology"
-description: "How we collected and analyzed 50,000+ search impressions across 185 countries for our Claude Code developer research."
+title: "Data & Methodology (2026)"
+description: "Data & Methodology — practical guide with working examples, tested configurations, and tips for developer workflows. Includes working examples, code sample."
 date: 2026-04-18
 author: "Claude Skills Guide"
 permalink: /data/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [research]
 tags: [claude-code, research, methodology, data]
-render_with_liquid: false
 ---
 
 # Data and Methodology

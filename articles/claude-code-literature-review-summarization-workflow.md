@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Literature Review"
+title: "Claude Code Literature Review (2026)"
 last_tested: "2026-04-22"
 description: "Learn how to build an efficient literature review summarization workflow using Claude Code. This guide covers practical examples, code snippets, and."
 date: 2026-03-14

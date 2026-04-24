@@ -1,10 +1,9 @@
 ---
-title: "How to Audit Your Claude Code Token"
+title: "How to Audit Your Claude Code Token (2026)"
 description: "Audit Claude Code token usage with step-by-step instructions using /cost, ccusage, and session logs to identify waste and cut spending by 30-50%."
 permalink: /audit-claude-code-token-usage-step-by-step/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Audit Your Claude Code Token Usage (Step-by-Step)
@@ -98,6 +97,15 @@ Create a systematic audit over 5 business days.
 After 5 days, categorize sessions into:
 - **Clean sessions** (under 100K tokens): working well, no changes needed
 - **Moderate sessions** (100K-300K tokens): review for optimization opportunities
+
+For more on this topic, see [Claude Code for Hoppscotch](/claude-code-for-hoppscotch-workflow-guide/).
+
+For more on this topic, see [Claude Code for Automotive ECU AUTOSAR](/claude-code-automotive-ecu-autosar-2026/).
+
+
+For more on this topic, see [Claude Code for PocketBase](/claude-code-for-pocketbase-workflow-guide/).
+
+
 - **Expensive sessions** (300K+ tokens): investigate root cause
 
 ### Strategy 4: Identifying the Top Token Consumers

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Codemod Authoring"
+title: "Claude Code For Codemod Authoring (2026)"
 description: "Learn how to use Claude Code to automate large-scale code refactoring with codemods. This tutorial covers workflow setup, pattern matching, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19

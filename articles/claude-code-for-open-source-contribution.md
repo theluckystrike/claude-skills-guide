@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Contributing to Open Source with Claude"
+title: "Contributing to Open Source with Claude (2026)"
 description: "Use Claude Code to contribute to open source projects. Find issues, understand codebases, write quality PRs, and follow project conventions."
 date: 2026-04-15
 last_modified_at: 2026-04-17

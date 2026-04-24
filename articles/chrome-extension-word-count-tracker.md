@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Word Count Tracker Chrome Extension"
+title: "Word Count Tracker Chrome Extension (2026)"
 description: "Learn how to build a word count tracker Chrome extension. Practical code examples, APIs, and implementation patterns for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

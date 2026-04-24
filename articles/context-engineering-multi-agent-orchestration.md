@@ -1,10 +1,9 @@
 ---
-title: "Context Engineering for Multi-Agent"
+title: "Context Engineering for Multi-Agent (2026)"
 description: "Engineer context across Claude Code multi-agent workflows to prevent the 5,000-token spawn overhead from compounding into 50K+ tokens of waste per task."
 permalink: /context-engineering-multi-agent-orchestration/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Context Engineering for Multi-Agent Orchestration

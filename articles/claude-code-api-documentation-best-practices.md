@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code API Documentation"
+title: "Claude Code API Documentation (2026)"
 description: "Master API documentation with Claude Code: automate docs generation, maintain consistency, and create developer-friendly guides using Claude skills."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -5,7 +5,6 @@ description: "Claude Code vs Sweep AI compared for automated pull requests. Whic
 permalink: /claude-code-vs-sweep-ai-pr-automation-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

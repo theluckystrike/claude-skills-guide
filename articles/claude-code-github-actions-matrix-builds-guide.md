@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code GitHub Actions Matrix"
+title: "Claude Code GitHub Actions Matrix (2026)"
 description: "How to use Claude Code to configure GitHub Actions matrix builds for testing across multiple environments, Node versions, and OS platforms."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Bookmark Manager Students Chrome"
+title: "Bookmark Manager Students Chrome (2026)"
 description: "A developer-focused guide to Chrome extension bookmark managers tailored for students. Learn how to build, customize, and optimize bookmark workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

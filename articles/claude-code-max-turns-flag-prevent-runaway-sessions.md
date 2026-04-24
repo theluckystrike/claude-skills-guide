@@ -1,10 +1,9 @@
 ---
-title: "Claude Code --max-turns Flag"
+title: "Claude Code --max-turns Flag (2026)"
 description: "The --max-turns flag caps Claude Code session length, preventing runaway sessions that consume 200K+ tokens and cost over $0.60 per incident on Sonnet 4.6."
 permalink: /claude-code-max-turns-flag-prevent-runaway-sessions/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code --max-turns Flag: Prevent Runaway Sessions

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code OpenAPI Client Generation"
+title: "Claude Code OpenAPI Client Generation (2026)"
 description: "Learn how to use Claude Code with OpenAPI specifications to generate type-safe API clients. Practical examples, workflow patterns, and integration tips."
 date: 2026-03-14
 last_modified_at: 2026-04-17

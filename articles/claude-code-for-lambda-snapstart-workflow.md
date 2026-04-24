@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Lambda SnapStart"
+title: "Claude Code for Lambda SnapStart (2026)"
 description: "Learn how to use Claude Code to automate AWS Lambda SnapStart configuration, optimization, and deployment workflows. Practical patterns with code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

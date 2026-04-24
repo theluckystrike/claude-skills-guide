@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Zed Editor Integration"
+title: "Claude Code + Zed Editor Integration (2026)"
 description: "Integrate Claude Code with Zed editor for fast AI-assisted coding. Setup instructions, keybindings, and workflow optimization tips. April 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17

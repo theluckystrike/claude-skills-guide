@@ -1,8 +1,7 @@
 ---
-title: "Build Your First Claude Code Skill in 5"
+title: "Build Your First Claude Code Skill in 5 (2026)"
 description: "Create a working SKILL.md file from scratch with frontmatter, description, and body instructions that Claude loads automatically."
 permalink: /building-your-first-claude-skill/
-render_with_liquid: false
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, skill-creation, tutorial]
 last_updated: 2026-04-19

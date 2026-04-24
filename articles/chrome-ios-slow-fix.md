@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome iOS Slow Fix"
+title: "Chrome iOS Slow Fix (2026)"
 description: "Fix Chrome iOS slow performance with developer-focused solutions. Practical techniques for debugging, caching, and optimizing web apps on iOS Safari and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

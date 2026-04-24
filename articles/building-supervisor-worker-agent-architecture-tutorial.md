@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Building Supervisor Worker Agent"
+title: "Building Supervisor Worker Agent (2026)"
 description: "Learn how to build a supervisor-worker agent architecture using Claude Code. This comprehensive tutorial covers orchestrating multiple AI agents, task."
 date: 2026-03-14
 last_modified_at: 2026-04-17

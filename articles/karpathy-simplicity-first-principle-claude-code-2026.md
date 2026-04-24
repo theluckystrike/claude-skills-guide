@@ -1,9 +1,8 @@
 ---
-title: "Karpathy Simplicity First for Claude"
+title: "Karpathy Simplicity First for Claude (2026)"
 description: "Apply Karpathy's Simplicity First principle to stop Claude Code from overengineering — fewer abstractions, less code, simpler solutions."
 permalink: /karpathy-simplicity-first-principle-claude-code-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Karpathy Simplicity First for Claude Code (2026)

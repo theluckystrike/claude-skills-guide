@@ -1,6 +1,6 @@
 ---
-title: "CLAUDE.md Example for Flutter + Dart +"
-description: "Complete 310-line CLAUDE.md for Flutter 3.27 with Riverpod 2.6."
+title: "CLAUDE.md Example for Flutter + Dart + (2026)"
+description: "CLAUDE.md Example for Flutter + Dart + — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-md-example-for-flutter-dart-riverpod/
 render_with_liquid: false
 categories: [claude-md, templates, 2026]

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Hypothesis Property Testing"
+title: "Claude Code Hypothesis Property Testing (2026)"
 description: "Learn how to use Hypothesis for property-based testing in Python with Claude Code. Write smarter tests that catch edge cases automatically. Updated for 2026."
 last_tested: "2026-04-22"
 date: 2026-04-19

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Terraform Cloud Workflow"
+title: "Claude Code Terraform Cloud Workflow (2026)"
 description: "A practical guide to building automated Terraform Cloud workflows with Claude Code. Learn how to integrate AI assistance into your infrastructure."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Coding Tools Governance Policy"
+title: "AI Coding Tools Governance Policy (2026)"
 description: "A practical guide to establishing governance policies for AI coding tools in enterprise environments. Covers security controls, skill management."
 date: 2026-03-14
 last_modified_at: 2026-04-17

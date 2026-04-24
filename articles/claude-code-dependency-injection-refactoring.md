@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Dependency Injection"
+title: "Claude Code Dependency Injection (2026)"
 description: "Learn how to apply dependency injection patterns to your Claude skills for better testability, reusability, and maintainability."
 date: 2026-03-14
 last_modified_at: 2026-04-17

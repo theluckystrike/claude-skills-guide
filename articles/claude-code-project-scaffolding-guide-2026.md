@@ -1,9 +1,8 @@
 ---
-title: "Project Scaffolding with Claude Code"
+title: "Project Scaffolding with Claude Code (2026)"
 description: "Use Claude Code to scaffold new projects with proper structure, configuration, testing setup, and CI/CD from templates and slash commands."
 permalink: /claude-code-project-scaffolding-guide-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Project Scaffolding with Claude Code (2026)

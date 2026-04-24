@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Datadog MCP Server Monitoring"
+title: "Datadog MCP Server Monitoring (2026)"
 description: "Learn how to automate Datadog server monitoring using MCP servers and Claude AI for proactive infrastructure management."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Periodic Table"
+title: "Chrome Extension Periodic Table (2026)"
 description: "A comprehensive reference guide to Chrome extension APIs and components. Practical patterns, code examples, and best practices for developers building."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Certificate"
+title: "Chrome Enterprise Certificate (2026)"
 description: "Learn how to manage certificates in Chrome Enterprise environments using group policies, automated deployment, and best practices for IT administrators."
 date: 2026-03-15
 last_modified_at: 2026-04-17

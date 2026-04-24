@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Add MySQL MCP to Claude Code"
+title: "Add MySQL MCP to Claude Code (2026)"
 description: "Set up MySQL MCP in Claude Code for direct database queries, schema exploration, and migration generation from your editor."
 date: 2026-04-17
 last_modified_at: 2026-04-17

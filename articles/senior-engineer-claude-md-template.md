@@ -1,8 +1,7 @@
 ---
-title: "Senior Engineer CLAUDE.md Template"
+title: "Senior Engineer CLAUDE.md Template (2026)"
 description: "A battle-tested CLAUDE.md template used by senior engineers to enforce code quality, architecture patterns, and review standards in Claude Code."
 permalink: /senior-engineer-claude-md-template/
-render_with_liquid: false
 categories: [claude-md, patterns]
 tags: [claude-md, senior-engineer, template, best-practices, claude-code]
 last_updated: 2026-04-19

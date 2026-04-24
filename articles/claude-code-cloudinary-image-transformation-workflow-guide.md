@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Cloudinary Image"
+title: "Claude Code Cloudinary Image (2026)"
 description: "Master Cloudinary image transformations with Claude Code. Learn to build skills that upload, transform, optimize, and deliver images programmatically."
 date: 2026-03-14
 last_modified_at: 2026-04-17

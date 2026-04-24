@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Docker Multi-Stage Builds"
+title: "Claude Code Docker Multi-Stage Builds (2026)"
 description: "Create efficient Docker multi-stage builds with Claude Code for smaller images, faster builds, and secure production containers. Working Dockerfiles."
 date: 2026-03-14
 last_modified_at: 2026-04-17

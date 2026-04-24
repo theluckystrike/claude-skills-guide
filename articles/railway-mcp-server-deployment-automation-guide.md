@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Railway MCP Server Deployment"
+title: "Railway MCP Server Deployment (2026)"
 description: "A practical guide to automating MCP server deployments on Railway. Learn deployment patterns, configuration management, and CI/CD integration for."
 date: 2026-03-14
 last_modified_at: 2026-04-17

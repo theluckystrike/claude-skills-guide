@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Turso Database"
-description: "Use Turso edge SQLite with Claude Code for low-latency data. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Turso Database (2026)"
+description: "Claude Code for Turso Database — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-turso-edge-database-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, turso, workflow]
 ---

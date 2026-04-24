@@ -1,10 +1,9 @@
 ---
-title: "Claude Code Opus Used Instead of Sonnet"
+title: "Claude Code Opus Used Instead of Sonnet (2026)"
 description: "Accidentally running Claude Code on Opus 4.6 costs 5x more than Sonnet 4.6. Detect the mistake, set model defaults, and prevent it from recurring."
 permalink: /claude-code-opus-accidentally-used-instead-sonnet/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Opus accidentally used instead of Sonnet -- cost recovery

@@ -1,8 +1,7 @@
 ---
-render_with_liquid: false
 
 layout: default
-title: "Window Resizer Alternative Chrome"
+title: "Window Resizer Alternative Chrome (2026)"
 description: "Explore the best window resizer alternatives for Chrome in 2026. Find developer-friendly tools and custom solutions for precise browser window management."
 date: 2026-03-15
 last_modified_at: 2026-04-17

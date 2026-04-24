@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Mage AI Data Pipelines"
+title: "Claude Code for Mage AI Data Pipelines (2026)"
 description: "Build, debug, and optimize Mage AI data pipelines with Claude Code. Covers block creation, orchestration, testing, and deployment for data engineers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

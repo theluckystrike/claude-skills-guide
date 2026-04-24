@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "AI Agent Memory Types Explained"
+title: "AI Agent Memory Types Explained (2026)"
 description: "Understand the different memory types in AI agents and how Claude Code manages context, persistence, and knowledge for building smarter applications."
 date: 2026-03-14
 last_modified_at: 2026-04-17

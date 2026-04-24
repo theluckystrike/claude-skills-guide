@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code API Authentication Patterns"
+title: "Claude Code API Authentication Patterns (2026)"
 description: "Implement OAuth 2.0, API keys, JWT tokens, and mTLS with Claude Code. Secure credential management patterns for production API authentication."
 date: 2026-03-14
 last_modified_at: 2026-04-17

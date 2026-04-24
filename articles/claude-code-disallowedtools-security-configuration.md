@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Configure disallowedTools in Claude"
+title: "Configure disallowedTools in Claude (2026)"
 description: "Restrict tool access in Claude Code with disallowedTools configuration. Control file operations, bash commands, and MCP tools for safer AI workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

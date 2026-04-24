@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Duckduckgo vs Chrome Privacy"
+title: "Duckduckgo vs Chrome Privacy (2026)"
 description: "A technical comparison of DuckDuckGo and Chrome privacy features for developers. Learn about data collection, API access, extension ecosystems, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

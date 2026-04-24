@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Combining Caching with Batch API"
-description: "Stack Claude's 50% batch discount with 90% cache reads to pay just 5% of standard price. Opus 4.7 drops to $0.25/MTok."
+title: "Combining Caching with Batch API (2026)"
+description: "Combining Caching with Batch API — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /combining-caching-batch-api-95-percent-savings/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, prompt-caching, batch-api]
-render_with_liquid: false
 ---
 
 # Combining Caching with Batch API for 95% Savings

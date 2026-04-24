@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Inspector v2 Workflow"
+title: "Claude Code for Inspector v2 Workflow (2026)"
 description: "Master the Inspector v2 workflow with Claude Code. Learn practical integration patterns, debugging techniques, and actionable strategies for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

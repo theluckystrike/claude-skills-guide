@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Automate Tutorial Writing with Claude"
+title: "Automate Tutorial Writing with Claude (2026)"
 description: "Generate developer tutorials automatically with Claude Code. Covers code example creation, step-by-step structure, screenshot workflows, and publishing."
 date: 2026-03-14
 last_modified_at: 2026-04-17

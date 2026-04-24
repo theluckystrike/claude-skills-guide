@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Templates vs Awesome"
+title: "Claude Code Templates vs Awesome (2026)"
 description: "Claude Code Templates has 600+ agents via CLI while Awesome Toolkit curates 135 agents and 176 plugins. Compare both to find what you need."
 permalink: /claude-code-templates-vs-awesome-toolkit-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Templates vs Awesome Toolkit (2026)

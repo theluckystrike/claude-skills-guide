@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Shell Operator Workflow"
+title: "Claude Code for Shell Operator Workflow (2026)"
 description: "Learn how to use Claude Code to build, debug, and automate shell operator workflows. A comprehensive guide for developers working with Kubernetes."
 date: 2026-03-15
 last_modified_at: 2026-04-17

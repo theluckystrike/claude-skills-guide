@@ -1,8 +1,7 @@
 ---
-title: "Claude Skills vs Subagents: Comparison Guide"
+title: "Claude Skills vs Subagents: Comparison Guide (2026)"
 description: "Compare inline Claude Code skills with context-forked subagents. When to keep instructions in the main context vs delegate to isolated agents."
 permalink: /claude-skills-vs-subagents-comparison/
-render_with_liquid: false
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, subagents, comparison]
 last_updated: 2026-04-19

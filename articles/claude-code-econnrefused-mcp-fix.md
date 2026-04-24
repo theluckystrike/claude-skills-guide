@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Econnrefused MCP"
+title: "Fix Claude Code Econnrefused MCP (2026)"
 description: "Resolve ECONNREFUSED errors when Claude Code tries to connect to MCP servers. Step-by-step troubleshooting for port conflicts and configuration."
 date: 2026-04-15
 last_modified_at: 2026-04-17

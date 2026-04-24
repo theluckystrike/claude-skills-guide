@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Claude Code Skills for Frontend"
+title: "Best Claude Code Skills for Frontend (2026)"
 description: "The most useful Claude Code skills for frontend developers: UI generation, TDD, documentation, and data visualization. with invocation examples."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -248,6 +248,9 @@ Frontend developers benefit from this skill when dealing with state management c
 ## Concrete optimization scenarios
 
 The alg skill is most valuable when you have a specific performance problem to diagnose. Here are scenarios where it consistently produces actionable output:
+
+For more on this topic, see [Claude Code Skills Reference](/skills-reference/).
+
 
 Virtual scrolling: Rendering large lists without a windowing library. The skill explains the intersection observer approach and provides a working implementation sized to your specific row height and container dimensions.
 

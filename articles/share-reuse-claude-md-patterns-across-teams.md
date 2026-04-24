@@ -1,8 +1,7 @@
 ---
-title: "Share and Reuse CLAUDE.md Patterns"
+title: "Share and Reuse CLAUDE.md Patterns (2026)"
 description: "Techniques for sharing CLAUDE.md instructions across repositories: imports, symlinks, managed policies, and the --add-dir flag."
 permalink: /share-reuse-claude-md-across-teams/
-render_with_liquid: false
 categories: [claude-md, workflow]
 tags: [claude-md, sharing, reuse, cross-project, teams, claude-code]
 last_updated: 2026-04-19

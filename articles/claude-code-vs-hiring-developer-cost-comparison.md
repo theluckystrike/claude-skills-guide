@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Hiring a Developer: Cost"
+title: "Claude Code vs Hiring a Developer: Cost (2026)"
 description: "Compare the real cost of Claude Code vs hiring a developer. Monthly spend analysis, use case breakdown, and ROI calculations for 2026 projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17

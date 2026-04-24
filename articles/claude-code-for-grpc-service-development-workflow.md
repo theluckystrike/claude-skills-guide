@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for gRPC Service"
+title: "Claude Code for gRPC Service (2026)"
 last_tested: "2026-04-22"
 description: "Master gRPC service development with Claude Code. Learn practical workflows for defining proto files, generating code, implementing services, and testing."
 date: 2026-03-15

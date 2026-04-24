@@ -1,10 +1,9 @@
 ---
-title: "Agent-First Backend Design"
+title: "Agent-First Backend Design (2026)"
 description: "Agent-first backend design reduces Claude Code token usage by 50-70% through self-describing APIs, state inspection endpoints, and structured error responses."
 permalink: /agent-first-backend-design-token-efficiency/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Agent-First Backend Design: Principles for Token Efficiency

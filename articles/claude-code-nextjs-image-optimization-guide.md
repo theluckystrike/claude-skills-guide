@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Next.js Image"
+title: "Claude Code Next.js Image (2026)"
 last_tested: "2026-04-22"
 description: "Learn how to use Claude Code CLI with Next.js image optimization. Practical examples for developers using the frontend-design skill and modern image."
 date: 2026-03-14

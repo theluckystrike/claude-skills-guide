@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Migrate Terraform Backends with Claude"
+title: "Migrate Terraform Backends with Claude (2026)"
 description: "Migrate Terraform state backends safely with Claude Code. Covers S3 to GCS moves, state locking, encryption changes, and zero-downtime transitions."
 date: 2026-03-15
 last_modified_at: 2026-04-17

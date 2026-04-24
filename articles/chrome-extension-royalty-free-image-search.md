@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Royalty-Free Image Search Extension"
+title: "Royalty-Free Image Search Extension (2026)"
 description: "Find royalty-free images directly in Chrome with a search extension. Integrates Unsplash, Pexels, and Pixabay APIs for instant license-safe results."
 date: 2026-03-15
 last_modified_at: 2026-04-17

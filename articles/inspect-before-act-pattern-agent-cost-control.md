@@ -1,10 +1,9 @@
 ---
-title: "The 'Inspect Before Act' Pattern"
+title: "The 'Inspect Before Act' Pattern (2026)"
 description: "The inspect-before-act pattern reduces Claude Code action errors by 70%, preventing 10,000-40,000 tokens wasted on incorrect modifications and their rollbacks."
 permalink: /inspect-before-act-pattern-agent-cost-control/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # The 'Inspect Before Act' Pattern for Agent Cost Control

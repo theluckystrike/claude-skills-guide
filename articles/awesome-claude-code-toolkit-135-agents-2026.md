@@ -1,9 +1,8 @@
 ---
-title: "Awesome Claude Code Toolkit: 135 Agents"
+title: "Awesome Claude Code Toolkit: 135 Agents (2026)"
 description: "Explore the awesome-claude-code-toolkit — 135 agents, 35 skills, 42 commands, 176+ plugins, and 20 hooks curated for Claude Code developers."
 permalink: /awesome-claude-code-toolkit-135-agents-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Awesome Claude Code Toolkit: 135 Agents (2026)
@@ -67,6 +66,15 @@ chmod +x .claude/hooks/pre-commit-lint.sh
 5. **Compatibility Matrix** — entries tagged with supported Claude Code versions. Avoid installing plugins that require features your version lacks.
 
 6. **Plugin Bundles** — the 176+ plugins are pre-assembled combinations of skills, commands, and hooks that work together. Install one plugin, get a coherent toolset.
+
+For more on this topic, see [Claude Code for StyleX Meta](/claude-code-for-stylex-meta-workflow-guide/).
+
+For more on this topic, see [Claude Code for AeroSpace Tiling](/claude-code-for-aerospace-tiling-workflow-guide/).
+
+
+For more on this topic, see [Claude Code for Particle Physics ROOT](/claude-code-particle-physics-root-2026/).
+
+
 
 7. **Hook Library** — 20 curated hooks for common needs: linting, testing, logging, cost tracking, and documentation generation.
 

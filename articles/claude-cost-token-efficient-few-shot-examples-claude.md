@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Token-Efficient Few-Shot Examples"
+title: "Token-Efficient Few-Shot Examples (2026)"
 description: "Compress Claude few-shot examples from 2,000 to 400 tokens — save $80 per 10K Opus requests while maintaining 95%+ accuracy."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # Token-Efficient Few-Shot Examples for Claude

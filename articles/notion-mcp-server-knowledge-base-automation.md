@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Notion MCP Server Knowledge Base"
+title: "Notion MCP Server Knowledge Base (2026)"
 description: "Learn how to automate your Notion knowledge base using the Notion MCP server with Claude Code. Practical examples, API integration patterns, and workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17

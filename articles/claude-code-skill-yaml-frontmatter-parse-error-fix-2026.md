@@ -3,7 +3,6 @@ title: "Skill YAML Frontmatter Parse Error — Fix (2026)"
 permalink: /claude-code-skill-yaml-frontmatter-parse-error-fix-2026/
 description: "Fix YAML indentation and quoting errors in Claude Code skill frontmatter. Quote values with colons, use two-space indent not tabs."
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -98,3 +97,33 @@ Run `claude usage` to see your current billing period's token consumption broken
 ### Where does Claude Code store its configuration?
 
 Configuration is stored in `~/.claude/config.json` for global settings and `.claude/config.json` in the project root for project-specific settings. Project settings override global settings for any overlapping keys.
+
+
+## Related Guides
+
+- [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
+- [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
+- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)
+
+## Skill Development Best Practices
+
+When building custom Claude Code skills, follow these guidelines for reliable results:
+
+**Keep skills focused.** Each skill should do one thing well. A "code review" skill that also handles deployment and testing is too broad. Split it into three separate skills. Focused skills produce more consistent output because the context is smaller and more specific.
+
+**Include explicit output format.** Define exactly what the skill should produce. Without format guidance, Claude Code chooses its own structure, which varies between invocations. Example: "Output a markdown table with columns: File, Issue, Severity, Suggestion."
+
+**Test with edge cases.** A skill that works on a simple example may fail on large files, binary files, or files with unusual encoding. Test each skill with at least three inputs: a minimal case, a typical case, and a boundary case.
+
+## Skill File Structure
+
+```
+.claude/skills/
+  my-skill/
+    SKILL.md          # Skill definition (required)
+    templates/         # Output templates (optional)
+    examples/          # Example inputs/outputs (optional)
+```
+
+The SKILL.md file needs a YAML frontmatter block with `name` and `description` fields. The description determines when the skill auto-activates. Write trigger phrases carefully to avoid false activations on unrelated prompts.

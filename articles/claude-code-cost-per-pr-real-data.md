@@ -1,10 +1,9 @@
 ---
-title: "How Much Does Claude Code Cost Per PR?"
+title: "How Much Does Claude Code Cost Per PR? (2026)"
 description: "Calculate real Claude Code cost per pull request averaging $1.50-$8.00 on Sonnet 4.6 based on task type, file count, and optimization level."
 permalink: /claude-code-cost-per-pr-real-data/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How Much Does Claude Code Cost Per PR? (Real Data)

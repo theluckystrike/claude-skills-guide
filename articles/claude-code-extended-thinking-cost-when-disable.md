@@ -1,10 +1,9 @@
 ---
-title: "Claude Code Extended Thinking"
+title: "Claude Code Extended Thinking (2026)"
 description: "Extended thinking in Claude Code multiplies output tokens 2-5x, adding $0.50-$5.00 per use -- learn when to enable it and when the cost is not justified."
 permalink: /claude-code-extended-thinking-cost-when-disable/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Extended Thinking: Cost Implications and When to Disable

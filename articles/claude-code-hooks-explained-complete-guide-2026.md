@@ -3,7 +3,6 @@ title: "Claude Code Hooks: How They Work (2026)"
 description: "Complete guide to Claude Code hooks covering event types, configuration, practical examples for linting, testing, and security validation."
 permalink: /claude-code-hooks-explained-complete-guide-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Hooks: How They Work (2026)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code as a Debugging Agent"
+title: "Claude Code as a Debugging Agent (2026)"
 description: "Use Claude Code as an autonomous debugging agent. Configure agent mode, set breakpoints, and resolve complex bugs across your full stack."
 date: 2026-04-17
 last_modified_at: 2026-04-17

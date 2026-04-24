@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code DevOps Engineer CI"
+title: "Claude Code DevOps Engineer CI (2026)"
 description: "Learn how Claude Code transforms DevOps daily workflows with practical examples for CI/CD pipeline management, incident response, and infrastructure."
 date: 2026-03-14
 last_modified_at: 2026-04-17

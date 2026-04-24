@@ -5,7 +5,6 @@ description: "Claude Code vs Sourcegraph Cody compared: pricing, context, featur
 permalink: /claude-code-vs-cody-comparison-2026/
 date: 2026-04-21
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

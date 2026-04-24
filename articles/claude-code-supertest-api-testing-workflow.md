@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Supertest API Testing"
+title: "Claude Code for Supertest API Testing (2026)"
 description: "Build automated API test suites with Supertest and Claude Code. Covers endpoint validation, authentication flows, and CI integration with examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

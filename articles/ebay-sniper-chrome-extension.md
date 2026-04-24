@@ -1,5 +1,4 @@
 ---
-render_with_liquid: false
 layout: default
 title: "Ebay Sniper Chrome Extension (2026)"
 description: "Learn how to build and use an eBay sniper Chrome extension for automated bidding and price monitoring targeted at developers and power users."

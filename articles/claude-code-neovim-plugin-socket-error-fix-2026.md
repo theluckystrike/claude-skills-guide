@@ -3,7 +3,6 @@ title: "Neovim Plugin Socket Error Fix — Fix (2026)"
 permalink: /claude-code-neovim-plugin-socket-error-fix-2026/
 description: "Fix Neovim Claude Code plugin socket connection error. Set the correct socket path and restart the RPC server to restore editor communication."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -100,3 +99,39 @@ Yes. Claude Code retries transient failures (HTTP 429, 502, 503) with exponentia
 ### Where does Claude Code store its configuration?
 
 Configuration is stored in `~/.claude/config.json` for global settings and `.claude/config.json` in the project root for project-specific settings. Project settings override global settings for any overlapping keys.
+
+
+## Related Guides
+
+- [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
+- [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
+- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)
+
+## Editor Integration with Claude Code
+
+Claude Code works alongside your editor rather than replacing it. Understanding how they interact prevents conflicts:
+
+**File watching conflicts.** Both your editor and Claude Code may watch the same files for changes. When Claude Code edits a file, the editor detects the change and may trigger auto-save, auto-format, or auto-lint. These secondary changes can conflict with Claude Code's next operation. Disable auto-format-on-save for files Claude Code is actively editing, or configure your editor to ignore external changes during Claude Code sessions.
+
+**Extension conflicts.** Some editor extensions (Copilot, Tabnine, IntelliCode) run language servers that consume significant CPU and memory. Running these alongside Claude Code can cause slowdowns. If Claude Code is slow, try disabling AI-powered extensions temporarily.
+
+**Terminal integration.** Claude Code runs in a terminal. In VS Code, use the integrated terminal for best compatibility. In Neovim, use a terminal buffer or tmux split. In JetBrains IDEs, use the built-in terminal tab.
+
+## Configuration for Smooth Co-existence
+
+Add these settings to prevent editor interference with Claude Code operations:
+
+**VS Code (`settings.json`):**
+```json
+{
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": false,
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.git/**": true
+  }
+}
+```
+
+These settings prevent VS Code from reformatting files immediately after Claude Code writes them, avoiding a common source of git conflicts.

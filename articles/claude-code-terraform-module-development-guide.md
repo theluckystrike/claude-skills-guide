@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Terraform Module"
+title: "Claude Code Terraform Module (2026)"
 description: "Master Terraform module development with Claude Code. Learn practical workflows for creating reusable, well-documented infrastructure modules."
 date: 2026-04-19
 last_modified_at: 2026-04-19

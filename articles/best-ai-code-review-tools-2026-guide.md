@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Best AI Code Review Tools"
+title: "Best AI Code Review Tools (2026)"
 description: "Compare the top AI code review tools in 2026. Covers automated analysis, security scanning, style enforcement, and PR integration for dev teams."
 date: 2026-03-14
 last_modified_at: 2026-04-17

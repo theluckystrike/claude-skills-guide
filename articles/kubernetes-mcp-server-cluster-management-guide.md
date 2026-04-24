@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Kubernetes MCP Server Cluster"
+title: "Kubernetes MCP Server Cluster (2026)"
 description: "Learn how to manage Kubernetes clusters effectively using MCP servers with practical examples and code snippets for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

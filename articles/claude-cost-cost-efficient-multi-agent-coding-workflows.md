@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Cost-Efficient Multi-Agent Coding"
+title: "Cost-Efficient Multi-Agent Coding (2026)"
 description: "Build multi-agent coding workflows that cost $9/sprint instead of $25. Proven patterns from a 2,816-article production fleet."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, multi-agent, coding-workflows]
-render_with_liquid: false
 ---
 
 # Cost-Efficient Multi-Agent Coding Workflows

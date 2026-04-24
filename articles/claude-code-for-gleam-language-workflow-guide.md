@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Gleam Language"
-description: "Write type-safe BEAM code with Gleam and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Gleam Language (2026)"
+description: "Claude Code for Gleam Language — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-gleam-language-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, gleam, workflow]
 ---

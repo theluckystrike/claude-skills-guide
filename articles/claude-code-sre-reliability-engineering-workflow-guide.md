@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Sre Reliability"
+title: "Claude Code Sre Reliability (2026)"
 description: "Master Site Reliability Engineering workflows with Claude Code. Learn practical skills for incident response, monitoring automation, and building."
 date: 2026-03-14
 last_modified_at: 2026-04-17

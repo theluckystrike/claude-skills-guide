@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude Code Image 400 Error Loop"
+title: "Fix: Claude Code Image 400 Error Loop (2026)"
 description: "Fix the unrecoverable 'Could not process image' API 400 error in Claude Code where attaching a PNG makes the entire session unusable. Updated for 2026."
 date: 2026-04-15
 last_modified_at: 2026-04-17

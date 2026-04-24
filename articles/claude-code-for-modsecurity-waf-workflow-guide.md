@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Claude Code for ModSecurity WAF Rules"
+title: "Claude Code for ModSecurity WAF Rules (2026)"
 description: "Write and test ModSecurity WAF rules with Claude Code. Covers OWASP CRS tuning, false positive reduction, and virtual patching for web applications."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Typia Validator"
-description: "Generate runtime validators from TypeScript types with Typia. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Typia Validator (2026)"
+description: "Claude Code for Typia Validator — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-typia-runtime-validator-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, typia, workflow]
 ---

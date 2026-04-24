@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Build a Loyalty Rewards System"
+title: "Build a Loyalty Rewards System (2026)"
 description: "Build a production-ready loyalty rewards system with Claude Code. Covers point accumulation, tier management, reward redemption, and referral tracking."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Referrer Blocking Chrome Extension"
+title: "Referrer Blocking Chrome Extension (2026)"
 description: "Learn how to control and block the HTTP Referrer header in Chrome using extensions. Practical implementation guide for developers and power users."
 date: 2026-03-15
 last_modified_at: 2026-04-17

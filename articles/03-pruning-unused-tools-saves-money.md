@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Pruning Unused Claude Tools Saves Real"
+title: "Pruning Unused Claude Tools Saves Real (2026)"
 description: "Remove 5 unused tool definitions and save $125 per 10,000 Opus requests. A step-by-step guide to tool inventory auditing."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, tool-use, optimization]
-render_with_liquid: false
 ---
 
 # Pruning Unused Claude Tools Saves Real Money

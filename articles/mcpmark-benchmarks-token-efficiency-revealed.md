@@ -1,10 +1,9 @@
 ---
-title: "MCPMark Benchmarks"
+title: "MCPMark Benchmarks (2026)"
 description: "MCPMark benchmark results show 3-8x token efficiency gaps between MCP server implementations -- learn which servers waste tokens and which optimize them."
 permalink: /mcpmark-benchmarks-token-efficiency-revealed/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # MCPMark Benchmarks: What They Reveal About Token Efficiency

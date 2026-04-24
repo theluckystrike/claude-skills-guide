@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How AI Agents Use Tools and Skills"
-description: "A comprehensive guide to understanding how AI agents like Claude Code use tools and skills to accomplish complex tasks"
+title: "How AI Agents Use Tools and Skills (2026)"
+description: "How AI Agents Use Tools and Skills — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: theluckystrike

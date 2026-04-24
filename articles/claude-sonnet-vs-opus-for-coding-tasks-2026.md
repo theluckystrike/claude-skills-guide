@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Sonnet 4.6 vs Opus 4.6"
+title: "Claude Sonnet 4.6 vs Opus 4.6 (2026)"
 description: "Comparing Claude Sonnet 4.6 and Opus 4.6 for coding — speed, cost, reasoning depth, and when each model is the right pick."
 date: 2026-04-21
 last_tested: "2026-04-21"

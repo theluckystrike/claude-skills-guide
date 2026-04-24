@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Using Claude Code With Drizzle Orm"
+title: "Using Claude Code With Drizzle Orm (2026)"
 description: "Learn how to use Claude Code with Drizzle ORM for efficient database schema management. Practical examples, code snippets, and workflow tips."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code With Convex Backend"
+title: "Claude Code With Convex Backend (2026)"
 description: "Learn how to set up Convex as a backend for real-time data in your Claude Code projects. Practical code examples and integration patterns for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

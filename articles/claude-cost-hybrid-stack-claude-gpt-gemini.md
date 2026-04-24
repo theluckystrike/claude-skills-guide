@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Hybrid LLM Stack"
-description: "Build a multi-provider stack saving $2,247/month. Route tasks to the cheapest capable model."
+title: "Hybrid LLM Stack (2026)"
+description: "Hybrid LLM Stack — practical guide with working examples, tested configurations, and tips for developer workflows. Includes working examples, code samples,."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-cost-hybrid-stack-claude-gpt-gemini/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, comparison]
-render_with_liquid: false
 ---
 
 # The Hybrid Stack: Claude for X, GPT for Y, Gemini for Z

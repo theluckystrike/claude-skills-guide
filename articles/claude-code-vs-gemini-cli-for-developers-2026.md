@@ -1,9 +1,8 @@
 ---
-title: "Claude Code vs Gemini CLI"
+title: "Claude Code vs Gemini CLI (2026)"
 permalink: /claude-code-vs-gemini-cli-for-developers-2026/
 description: "Claude Code delivers autonomous multi-step coding execution. Gemini CLI offers 1M token context and Google Cloud integration. Comparison for developers."
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

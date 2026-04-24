@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Supabase Auth and RLS"
+title: "Claude Code for Supabase Auth and RLS (2026)"
 description: "Implement Supabase authentication with Row Level Security using Claude Code. Covers policy creation, JWT claims, role-based access, and testing RLS."
 date: 2026-03-14
 last_modified_at: 2026-04-17

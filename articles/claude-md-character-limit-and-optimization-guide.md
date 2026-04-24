@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude MD Character Limit"
+title: "Claude MD Character Limit (2026)"
 description: "Work within Claude MD character limits using practical optimization techniques. Exact ceiling, overflow behavior, and compression strategies."
 date: 2026-03-14
 last_modified_at: 2026-04-17

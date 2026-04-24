@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Best CRX Extractor Alternatives"
+title: "Best CRX Extractor Alternatives (2026)"
 description: "Top CRX extractor alternatives for Chrome in 2026. CLI tools, browser extensions, and programmatic approaches compared side-by-side. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

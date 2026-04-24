@@ -1,9 +1,8 @@
 ---
-title: "How to Use Claude Code: Beginner Guide"
+title: "How to Use Claude Code: Beginner Guide (2026)"
 description: "Step-by-step beginner guide to Claude Code. Install, first session, CLAUDE.md setup, commands, workflows, and tips for productive AI-assisted coding."
 permalink: /how-to-use-claude-code-beginner-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # How to Use Claude Code: Beginner Guide (2026)
@@ -656,6 +655,7 @@ No. Claude Code requires an internet connection to communicate with Anthropic's 
 Claude Code runs in the terminal independently of your editor. You can use it alongside VS Code, Vim, Neovim, Emacs, JetBrains IDEs, Sublime Text, or any other editor. Changes Claude makes to files appear in your editor when the editor detects file changes on disk. There is also a dedicated VS Code extension that integrates Claude Code directly into the editor interface.
 
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -767,3 +767,5 @@ Claude Code runs in the terminal independently of your editor. You can use it al
 - [Claude Code Statusline Guide](/claude-code-statusline-guide/)
 - [Claude Code Hooks Complete Guide](/claude-code-hooks-complete-guide/)
 
+
+{% endraw %}

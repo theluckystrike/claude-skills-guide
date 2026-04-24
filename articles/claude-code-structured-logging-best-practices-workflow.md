@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Structured Logging"
+title: "Claude Code Structured Logging (2026)"
 description: "Learn how to implement structured logging in your Claude Code workflow for better debugging, observability, and developer productivity. Updated for 2026."
 last_tested: "2026-04-22"
 date: 2026-03-14

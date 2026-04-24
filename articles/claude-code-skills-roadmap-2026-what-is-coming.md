@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Claude Code Skills Roadmap 2026"
-description: "Claude Code Skills Roadmap 2026 What Is — Developer Guide. Practical guide with working examples for developers."
+description: "Claude Code Skills Roadmap 2026 — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]

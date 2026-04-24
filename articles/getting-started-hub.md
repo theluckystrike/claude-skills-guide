@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code: Install to First Skill"
+title: "Claude Code: Install to First Skill (2026)"
 description: "Install Claude Code in 90 seconds, activate your first skill, and ship working code. Step-by-step walkthrough with terminal screenshots for every OS."
 date: 2026-03-14
 last_modified_at: 2026-04-21

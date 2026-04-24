@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "LLM Migration Cost Analysis"
-description: "Switching from OpenAI to Claude costs $2,000-$8,000 in engineering time. When the ROI justifies it."
+title: "LLM Migration Cost Analysis (2026)"
+description: "LLM Migration Cost Analysis — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-cost-migration-switching-providers-analysis/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, comparison]
-render_with_liquid: false
 ---
 
 # Migration Cost Analysis: Switching Providers Is Not Free

@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Router: Model Routing Guide"
+title: "Claude Code Router: Model Routing Guide (2026)"
 description: "Route tasks to the optimal Claude model automatically. Configure cost-aware model routing in Claude Code with Opus, Sonnet, and Haiku strategies."
 permalink: /claude-code-router-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Code Router: Model Routing Guide (2026)
@@ -325,6 +324,7 @@ The Claude Code router does not require any external dependencies or plugins. It
 - [Claude Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — Sonnet 4.5 capabilities and features
 - [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Sonnet 4 capabilities and features
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -343,3 +343,5 @@ The Claude Code router does not require any external dependencies or plugins. It
   ]
 }
 </script>
+
+{% endraw %}

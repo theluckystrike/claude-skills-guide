@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Podman Rootless Container"
-description: "A practical guide to running Claude Code in Podman rootless containers for secure, isolated development environments."
+title: "Claude Code Podman Rootless Container (2026)"
+description: "Claude Code Podman Rootless Container — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Mise — Workflow Guide"
+title: "Claude Code for Mise — Workflow Guide (2026)"
 description: "Claude Code for Mise — Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified for 2026."
 date: 2026-04-18
 permalink: /claude-code-for-mise-dev-tool-manager-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, mise, workflow]
 last_tested: "2026-04-22"

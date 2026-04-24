@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Claude Code Skills to Install"
+title: "Best Claude Code Skills to Install (2026)"
 description: "The most essential Claude Code skills to install in 2026. Practical invocation examples for pdf, tdd, xlsx, supermemory, and frontend-design skills."
 date: 2026-03-13
 last_modified_at: 2026-04-17

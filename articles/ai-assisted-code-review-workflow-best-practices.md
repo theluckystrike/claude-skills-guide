@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "AI Assisted Code Review Workflow"
+title: "AI Assisted Code Review Workflow (2026)"
 description: "Learn how to integrate AI tools into your code review process for faster feedback, better code quality, and improved developer experience."
 date: 2026-03-14
 last_modified_at: 2026-04-17

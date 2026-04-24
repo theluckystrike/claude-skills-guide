@@ -1,10 +1,9 @@
 ---
-title: "Claude Code reading too many files"
+title: "Claude Code reading too many files (2026)"
 description: "Fix Claude Code reading too many files by scoping context with .claudeignore, CLAUDE.md file budgets, and directory boundaries to save 50K+ tokens per task."
 permalink: /claude-code-reading-too-many-files-scope-context/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code reading too many files -- how to scope context

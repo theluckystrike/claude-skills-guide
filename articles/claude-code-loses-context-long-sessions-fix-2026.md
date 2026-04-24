@@ -1,9 +1,8 @@
 ---
-title: "Fix Claude Code Losing Context"
+title: "Fix Claude Code Losing Context (2026)"
 description: "Prevent Claude Code from losing context in long sessions using checkpoints, CLAUDE.md state files, and session chunking strategies."
 permalink: /claude-code-loses-context-long-sessions-fix-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Fix Claude Code Losing Context in Long Sessions (2026)

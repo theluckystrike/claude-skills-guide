@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For LLM Caching"
+title: "Claude Code For LLM Caching (2026)"
 description: "Learn how to implement intelligent LLM response caching with Claude Code to reduce costs, improve latency, and optimize API usage with practical code."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Monorepo Setup"
+title: "Claude Code Monorepo Setup (2026)"
 description: "Configure Claude Code for monorepos using Turborepo, Nx, or pnpm workspaces. CLAUDE.md structure, context management, and multi-package workflows."
 date: 2026-04-15
 last_modified_at: 2026-04-17

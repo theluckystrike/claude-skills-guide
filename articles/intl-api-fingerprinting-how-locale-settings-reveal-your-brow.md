@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Intl API Fingerprinting"
+title: "Intl API Fingerprinting (2026)"
 description: "Discover how websites use the Intl API to fingerprint your browser through locale settings. Detection techniques and privacy countermeasures."
 date: 2026-03-16
 last_modified_at: 2026-04-17

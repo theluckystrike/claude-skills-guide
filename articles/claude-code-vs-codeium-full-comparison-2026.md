@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "Claude Code vs Codeium (2026)"
-description: "Claude Code vs Codeium compared: pricing, context, features. 3-persona verdict for solo devs, teams, enterprise."
+description: "Claude Code vs Codeium — features, pricing, and performance compared side by side to help you pick the right tool. Includes working examples, code samples,."
 permalink: /claude-code-vs-codeium-full-comparison-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

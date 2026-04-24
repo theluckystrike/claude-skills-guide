@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Pro vs API"
+title: "Claude Code Pro vs API (2026)"
 description: "Pro at $20/month beats API pricing for solo devs doing 50 sessions/month. API wins above 200 sessions when you need model flexibility."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, claude-code, api-comparison]
-render_with_liquid: false
 ---
 
 # Claude Code Pro vs API: Cost Comparison Guide

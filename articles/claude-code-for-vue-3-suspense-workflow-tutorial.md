@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Vue 3 Suspense"
+title: "Claude Code For Vue 3 Suspense (2026)"
 description: "Learn how to use Claude Code CLI to build Vue 3 Suspense workflows with async components, error boundaries, and practical code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Rspec Ruby Bdd"
+title: "Claude Code Rspec Ruby Bdd (2026)"
 description: "A practical guide to integrating Claude Code with RSpec for Behavior-Driven Development in Ruby. Learn AI-assisted BDD workflow, test writing, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

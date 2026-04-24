@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Hardhat Plugins"
+title: "Claude Code for Hardhat Plugins (2026)"
 description: "Learn how to use Claude Code effectively with Hardhat plugins. Practical examples, code snippets, and actionable advice for Ethereum developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

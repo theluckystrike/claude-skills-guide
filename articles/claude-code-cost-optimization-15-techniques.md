@@ -1,10 +1,9 @@
 ---
-title: "Claude Code Cost Optimization"
+title: "Claude Code Cost Optimization (2026)"
 description: "Cut Claude Code costs by 40-70% with 15 proven optimization techniques covering context management, model selection, and token-efficient workflows."
 permalink: /claude-code-cost-optimization-15-techniques/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Cost Optimization: 15 Techniques That Actually Work

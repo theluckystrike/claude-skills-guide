@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Memory Leak Detection Workflow"
+title: "Claude Code Memory Leak Detection Workflow (2026)"
 description: "A practical guide to identifying and resolving memory leaks in Claude Code sessions. Learn the detection workflow with real examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,10 +1,9 @@
 ---
-title: "Claude Code + Docker"
+title: "Claude Code + Docker (2026)"
 description: "Use Docker with Claude Code to isolate test environments, prevent retry spirals from corrupted state, and save 20-40% on debugging token costs."
 permalink: /claude-code-docker-isolated-cost-controlled-testing/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code + Docker: Isolated Environments for Cost-Controlled Testing

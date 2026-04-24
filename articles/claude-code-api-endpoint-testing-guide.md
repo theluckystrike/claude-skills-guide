@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "API Endpoint Testing Workflow"
+title: "API Endpoint Testing Workflow (2026)"
 description: "Build a complete API testing workflow with Claude Code. Generate tests for REST and GraphQL endpoints with authentication, validation, and edge cases."
 date: 2026-04-15
 last_modified_at: 2026-04-17

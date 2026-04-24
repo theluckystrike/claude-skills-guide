@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Rails API Mode Full Stack"
+title: "Claude Code Rails API Mode Full Stack (2026)"
 description: "A comprehensive guide to building full stack Rails applications with API mode using Claude Code. Includes practical examples, skill recommendations."
 date: 2026-03-14
 last_modified_at: 2026-04-17

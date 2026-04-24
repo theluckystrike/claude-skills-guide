@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build an Image Compressor Chrome"
+title: "Build an Image Compressor Chrome (2026)"
 description: "Build a Chrome extension that compresses images before upload. Covers Canvas API resizing, WebP conversion, quality settings, and batch processing."
 date: 2026-03-15
 last_modified_at: 2026-04-17

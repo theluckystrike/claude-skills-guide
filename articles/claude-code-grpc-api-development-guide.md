@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for gRPC API Development"
+title: "Claude Code for gRPC API Development (2026)"
 description: "Build gRPC services with Claude Code. Covers proto file generation, server implementation in Node.js and Python, client stubs, and streaming patterns."
 date: 2026-04-19
 last_modified_at: 2026-04-19

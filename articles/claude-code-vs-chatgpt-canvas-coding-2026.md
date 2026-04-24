@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs ChatGPT Canvas"
+title: "Claude Code vs ChatGPT Canvas (2026)"
 description: "Compare Claude Code and ChatGPT Canvas side-by-side across pricing, workflow, and real coding tasks to pick the right tool for your stack."
 permalink: /claude-code-vs-chatgpt-canvas-coding-2026/
 date: 2026-04-21
@@ -10,7 +10,6 @@ tools_compared:
     version: "Opus 4.6 (CLI)"
   - name: "ChatGPT Canvas"
     version: "GPT-5.3 (Web UI)"
-render_with_liquid: false
 ---
 
 # Claude Code vs ChatGPT Canvas for Coding in 2026

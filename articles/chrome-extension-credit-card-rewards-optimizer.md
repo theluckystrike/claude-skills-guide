@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Credit Card Rewards"
+title: "Chrome Extension Credit Card Rewards (2026)"
 description: "Learn how to build and use Chrome extensions for optimizing credit card rewards. Technical implementation guide with code examples for developers and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

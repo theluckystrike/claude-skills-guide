@@ -1,9 +1,8 @@
 ---
-title: "Karpathy Skills vs Custom CLAUDE.md"
+title: "Karpathy Skills vs Custom CLAUDE.md (2026)"
 description: "Should you use Karpathy's proven 4-principle CLAUDE.md or write your own from scratch? Compare both approaches with concrete examples."
 permalink: /karpathy-skills-vs-custom-claude-md-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Karpathy Skills vs Custom CLAUDE.md (2026)

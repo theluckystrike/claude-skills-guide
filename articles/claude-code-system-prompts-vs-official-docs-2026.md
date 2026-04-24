@@ -1,9 +1,8 @@
 ---
-title: "System Prompts Repo vs Official Docs"
+title: "System Prompts Repo vs Official Docs (2026)"
 description: "The System Prompts repo exposes Claude Code's internal instructions and 24 tool definitions. Official docs explain features. Here's why both matter."
 permalink: /claude-code-system-prompts-vs-official-docs-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code System Prompts Repo vs Official Docs (2026)

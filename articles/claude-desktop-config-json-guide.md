@@ -1,9 +1,8 @@
 ---
-title: "claude_desktop_config.json Setup"
+title: "claude_desktop_config.json Setup (2026)"
 description: "Full reference for claude_desktop_config.json. File location, every config field, MCP server setup, validation commands, and common mistakes fixed."
 permalink: /claude-desktop-config-json-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # claude_desktop_config.json: Complete Guide (2026)
@@ -516,6 +515,7 @@ Run the server command directly in your terminal to see error output. For exampl
 
 No. Always use absolute paths. JSON values are literal strings and shell expansions like ~ or $HOME do not work. Use the full path like /Users/you/Documents.
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -534,3 +534,5 @@ No. Always use absolute paths. JSON values are literal strings and shell expansi
   ]
 }
 </script>
+
+{% endraw %}

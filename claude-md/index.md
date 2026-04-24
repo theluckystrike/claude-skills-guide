@@ -2,7 +2,6 @@
 title: "CLAUDE.md Templates & Patterns (2026)"
 description: "Production CLAUDE.md templates for every major stack. Plus patterns, team workflows, and fixes."
 permalink: /claude-md/
-render_with_liquid: false
 ---
 
 # CLAUDE.md Production Templates

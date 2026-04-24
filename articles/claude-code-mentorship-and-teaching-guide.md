@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Mentorship and Teaching"
+title: "Claude Code Mentorship and Teaching (2026)"
 description: "Master Claude Code mentorship and teaching strategies. Learn how to guide developers through AI-assisted coding, skill development, and building."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Brave vs Chrome Privacy"
+title: "Brave vs Chrome Privacy (2026)"
 description: "An in-depth technical comparison of Brave and Chrome browser privacy features. Explore tracking prevention, fingerprinting defense, network request."
 date: 2026-03-15
 last_modified_at: 2026-04-17

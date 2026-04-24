@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Claude Batch API"
+title: "Claude Code for Claude Batch API (2026)"
 description: "Learn how to use Claude Code with Anthropic's Batch API to efficiently process large volumes of prompts. This comprehensive guide covers setup,..."
 date: 2026-03-20
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code Error Rate Limit 429."
-description: "Learn how to claude code error rate limit 429. how to handle. Step-by-step with working examples."
+title: "Claude Code Error Rate Limit 429. (2026)"
+description: "Claude Code Error Rate Limit 429. — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [troubleshooting]

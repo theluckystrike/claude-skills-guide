@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Cost Anomaly Detection Setup"
+title: "Claude Cost Anomaly Detection Setup (2026)"
 description: "Detect cost anomalies using standard deviation thresholds. Catch a 10x token spike in 5 minutes instead of discovering it on next month's bill."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, anomaly-detection, monitoring]
-render_with_liquid: false
 ---
 
 # Claude Cost Anomaly Detection Setup Guide

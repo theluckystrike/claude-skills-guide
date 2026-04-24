@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Should I Use Claude Code For Security"
+title: "Should I Use Claude Code For Security (2026)"
 description: "A practical guide for developers evaluating Claude Code in security-critical projects. Understand the risks, benefits, and best practices."
 date: 2026-03-14
 last_modified_at: 2026-04-17

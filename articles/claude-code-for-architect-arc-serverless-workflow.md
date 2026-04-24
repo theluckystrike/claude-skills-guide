@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Architect Arc"
+title: "Claude Code For Architect Arc (2026)"
 description: "Learn how to use Claude Code to architect efficient serverless workflows using ARC patterns. Practical examples, code snippets, and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

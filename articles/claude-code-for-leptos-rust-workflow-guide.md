@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Leptos Rust"
-description: "Build full-stack Rust web apps with Leptos and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Leptos Rust (2026)"
+description: "Claude Code for Leptos Rust — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-leptos-rust-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, leptos, workflow]
 ---
@@ -21,6 +20,7 @@ You are building a full-stack web application with Leptos, the Rust framework fo
 
 3. **Creates separate client and server projects.** Claude scaffolds separate frontend and backend repos. Leptos has built-in server functions with `#[server]` attribute — client and server code live in the same project.
 
+{% raw %}
 4. **Uses JavaScript for client-side logic.** Claude adds `<script>` tags for interactivity. Leptos compiles Rust to WebAssembly — all client logic is Rust. No JavaScript needed (though JS interop is available).
 
 ## The CLAUDE.md Configuration
@@ -87,3 +87,5 @@ Claude Code should create a `#[component]` with signal-based state, `#[server]` 
 - [Claude Code for BentoML Workflow Tutorial](/claude-code-for-bentoml-workflow-tutorial/)
 - [Claude Code For Ant Design — Complete Developer Guide](/claude-code-for-ant-design-workflow-guide/)
 - [Claude Code for Tonic gRPC Rust Services (2026)](/claude-code-for-tonic-grpc-rust-workflow-guide/)
+
+{% endraw %}

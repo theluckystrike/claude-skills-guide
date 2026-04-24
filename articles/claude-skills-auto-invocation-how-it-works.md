@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Auto Invocation"
+title: "Claude Skills Auto Invocation (2026)"
 description: "Trigger Claude skills automatically using TRIGGER conditions and keyword detection. Learn when auto-invocation beats explicit slash command invocation."
 date: 2026-03-13
 last_modified_at: 2026-04-17

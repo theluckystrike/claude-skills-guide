@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Chrome Extension Return Policy Finder"
+title: "Chrome Extension Return Policy Finder (2026)"
 last_tested: "2026-04-22"
 description: "Learn how to build and use Chrome extensions for finding return policies. Includes practical code examples, API integration patterns, and techniques for."
 date: 2026-03-15

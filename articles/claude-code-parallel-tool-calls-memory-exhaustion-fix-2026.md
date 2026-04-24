@@ -3,7 +3,6 @@ title: "Parallel Tool Calls Memory Exhaustion — Fix (2026)"
 permalink: /claude-code-parallel-tool-calls-memory-exhaustion-fix-2026/
 description: "Fix memory exhaustion from parallel tool calls in Claude Code. Limit concurrent operations and reduce batch sizes to prevent heap overflow crashes."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -86,3 +85,44 @@ The `node:` prefix for built-in modules was introduced in Node.js 16. If you see
 ### How much memory does Claude Code use?
 
 Claude Code typically uses 200-500MB of RAM. Large file operations, parallel tool calls, and long conversation histories can push usage above 1GB. Monitor with `ps aux | grep claude` to see current memory usage.
+
+
+## Related Guides
+
+- [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
+- [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
+- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)
+
+## Memory Management in Claude Code
+
+Claude Code's memory consumption depends on three factors: conversation context size, file scanning scope, and concurrent tool operations.
+
+**Conversation context.** Each turn in a Claude Code session accumulates context. After 20-30 turns with large file reads, context can reach 100K+ tokens, consuming significant memory. Use `/clear` to reset when context grows too large.
+
+**File scanning.** When Claude Code searches for files or reads directory structures, it loads file metadata into memory. For repositories with 100,000+ files (common in monorepos), this can exceed available memory. Use `.claudeignore` to exclude `node_modules`, `.git`, and build output directories.
+
+**Node.js heap limits.** By default, Node.js limits heap to approximately 1.5GB on 64-bit systems. For very large operations, increase this limit:
+
+```bash
+export NODE_OPTIONS="--max-old-space-size=4096"
+claude
+```
+
+## Monitoring Memory Usage
+
+Track Claude Code's memory consumption during a session:
+
+```bash
+# Check current memory usage
+ps aux | grep -E "node.*claude" | awk '{print $6/1024 "MB", $11}'
+
+# Monitor continuously (every 5 seconds)
+while true; do ps aux | grep -E "node.*claude" | grep -v grep | awk '{print strftime("%H:%M:%S"), $6/1024 "MB"}'; sleep 5; done
+
+# Check system memory availability
+vm_stat | head -10  # macOS
+free -h              # Linux
+```
+
+If memory usage exceeds 1GB, start a new session. Continuing with high memory usage risks OOM kills that lose unsaved work.

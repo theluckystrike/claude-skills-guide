@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Trello Automation"
+title: "Claude Code for Trello Automation (2026)"
 description: "Learn how to use Claude Code CLI to automate Trello workflows, from basic board management to complex automation pipelines."
 date: 2026-03-15
 last_modified_at: 2026-04-17

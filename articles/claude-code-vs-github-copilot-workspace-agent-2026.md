@@ -1,9 +1,8 @@
 ---
-title: "Claude Code vs GitHub Copilot Workspace"
+title: "Claude Code vs GitHub Copilot Workspace (2026)"
 permalink: /claude-code-vs-github-copilot-workspace-agent-2026/
 description: "Copilot Workspace turns GitHub issues into PRs automatically. Claude Code handles complex multi-step tasks. Compare both agent approaches for 2026."
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

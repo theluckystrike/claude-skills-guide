@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Wazuh SIEM Automation"
+title: "Claude Code for Wazuh SIEM Automation (2026)"
 description: "Automate Wazuh SIEM workflows with Claude Code. Covers rule creation, alert correlation, log analysis, and incident response automation for SecOps."
 date: 2026-04-19
 last_modified_at: 2026-04-19

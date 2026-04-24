@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Multi-Platform Release"
+title: "Claude Code for Multi-Platform Release (2026)"
 description: "Learn how to use Claude Code CLI to automate and streamline multi-platform release workflows across iOS, Android, Web, and Desktop applications."
 date: 2026-04-19
 last_modified_at: 2026-04-19

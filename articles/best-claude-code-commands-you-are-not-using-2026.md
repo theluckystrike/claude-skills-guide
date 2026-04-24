@@ -1,9 +1,8 @@
 ---
-title: "Best Claude Code Commands You're"
+title: "Best Claude Code Commands You're (2026)"
 description: "10 Claude Code commands most developers overlook. From custom slash commands to built-in shortcuts, with examples showing what you are missing."
 permalink: /best-claude-code-commands-you-are-not-using-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Best Claude Code Commands You Are Not Using (2026)

@@ -5,7 +5,6 @@ description: "Claude Code vs v0 by Vercel compared for frontend development. Ful
 permalink: /claude-code-vs-v0-vercel-ai-builder-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

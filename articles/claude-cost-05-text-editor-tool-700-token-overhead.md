@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Text Editor Tool"
+title: "Text Editor Tool (2026)"
 description: "Claude's text editor tool adds 700 tokens per turn. Learn how phase-based tool loading cuts editor overhead by 60% in agent workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, text-editor, tokens]
-render_with_liquid: false
 ---
 
 # Text Editor Tool: 700 Token Overhead Explained

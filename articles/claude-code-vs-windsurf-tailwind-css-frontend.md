@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Windsurf for Tailwind"
+title: "Claude Code vs Windsurf for Tailwind (2026)"
 description: "Claude Code vs Windsurf compared for Tailwind CSS frontend development. Test results on component generation, responsive design, and utility classes."
 date: 2026-03-14
 last_modified_at: 2026-04-17

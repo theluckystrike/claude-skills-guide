@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Podcast Episodes Worth"
+title: "Claude Code Podcast Episodes Worth (2026)"
 description: "A curated list of podcast episodes for developers and power users exploring Claude Code, AI-assisted development, and skill-based workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

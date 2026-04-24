@@ -3,7 +3,6 @@ title: "Organization Billing Suspended Error — Fix (2026)"
 permalink: /claude-code-organization-billing-suspended-fix-2026/
 description: "Fix 'organization billing suspended' API error. Update payment method in Anthropic Console to restore access immediately."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -94,3 +93,11 @@ Yes. Set the `ANTHROPIC_API_KEY` in a project-level `.env` file or use direnv to
 ### What does Claude Code cache?
 
 Claude Code caches search indexes, file metadata, and session state in `.claude/cache/` within the project directory and `~/.claude/cache/` globally. Caches speed up repeated operations but can become stale after external changes.
+
+
+## Related Guides
+
+- [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
+- [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
+- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)

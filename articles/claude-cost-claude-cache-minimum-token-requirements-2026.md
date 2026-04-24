@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Cache Minimum Token Requirements"
-description: "Opus 4.7 needs 4,096 tokens minimum to cache. Sonnet 4.6 needs 1,024. Get the full model-by-model threshold table."
+title: "Claude Cache Minimum Token Requirements (2026)"
+description: "Claude Cache Minimum Token Requirements — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-cache-minimum-token-requirements-2026/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, prompt-caching]
-render_with_liquid: false
 ---
 
 # Claude Cache Minimum Token Requirements 2026

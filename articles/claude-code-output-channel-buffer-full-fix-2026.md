@@ -3,7 +3,6 @@ title: "Output Channel Buffer Full Truncated — Fix (2026)"
 permalink: /claude-code-output-channel-buffer-full-fix-2026/
 description: "Increase outputChannel.maxBuffer to 5MB in VS Code settings.json. Stops older message truncation in the Claude Code output channel during sessions."
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -78,3 +77,36 @@ The Grep and Glob tools build in-memory indexes for fast searching. In repositor
 ### Where does Claude Code store its configuration?
 
 Configuration is stored in `~/.claude/config.json` for global settings and `.claude/config.json` in the project root for project-specific settings. Project settings override global settings for any overlapping keys.
+
+
+## Related Guides
+
+- [Fix Skill Exceeded Maximum Output](/claude-code-skill-exceeded-maximum-output-length-error-fix/)
+- [Fix: Structured Output + Thinking +](/anthropic-sdk-structured-output-thinking-tool-use-bug/)
+- [Claude Code Skill Output Streaming](/claude-code-skill-output-streaming-optimization/)
+- [Unicode Encoding Errors in Code Output — Fix (2026)](/claude-code-unicode-encoding-errors-code-output-fix-2026/)
+
+## Step-by-Step Debugging Process
+
+When you encounter pipe-related errors in Claude Code, follow this systematic debugging approach:
+
+**Step 1: Identify the failing command.** Check the error output for the command that triggered the failure. The stack trace shows which process wrote to the closed pipe.
+
+**Step 2: Check command output size.** Run the command alone (without piping) and check output size with `wc -l`. If the output exceeds 10,000 lines, it needs buffering or file redirection.
+
+**Step 3: Replace pipes with file intermediaries.** Instead of `command1 | command2`, use `command1 > /tmp/intermediate.txt && command2 < /tmp/intermediate.txt`. This eliminates pipe buffer pressure entirely.
+
+**Step 4: Set appropriate timeouts.** Long-running commands need matching timeout values. Check `CLAUDE_CODE_BASH_TIMEOUT` and ensure it exceeds the expected command duration by at least 50%.
+
+**Step 5: Verify the fix under load.** Run the full workflow three times consecutively to confirm the error does not recur under typical conditions.
+
+
+## Common Scenarios That Trigger This Error
+
+**Large repository searches.** Running `grep -r` or `find` across a repository with 50,000+ files produces output faster than the pipe consumer can process it. Use `--max-count` or `-maxdepth` to limit output volume.
+
+**Build output during CI.** Build tools like webpack, tsc, and esbuild produce verbose output during compilation. If Claude Code's process supervisor terminates the build mid-output, the pipe breaks. Redirect build output to a log file.
+
+**Streaming API responses.** When Claude Code processes long streaming responses and the connection is interrupted (timeout, network drop), the write side of the stream receives EPIPE. Implement proper stream error handlers with `.on('error', handler)`.
+
+**Parallel tool execution.** Claude Code may run multiple bash commands simultaneously. If system pipe buffer capacity (typically 64KB on macOS, 65KB on Linux) is exhausted across all concurrent pipes, writes block and eventually fail.

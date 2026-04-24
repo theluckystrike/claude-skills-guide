@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "Claude Code vs Continue.dev (2026)"
-description: "Claude Code vs Continue.dev compared: pricing, context, features. 3-persona verdict for solo devs, teams, enterprise."
+description: "Claude Code vs Continue.dev — features, pricing, and performance compared side by side to help you pick the right tool. Includes working examples, code sam."
 permalink: /claude-code-vs-continue-dev-features-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

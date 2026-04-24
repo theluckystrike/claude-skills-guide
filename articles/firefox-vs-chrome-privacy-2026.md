@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Firefox vs Chrome Privacy"
+title: "Firefox vs Chrome Privacy (2026)"
 description: "A technical privacy comparison between Firefox and Chrome for developers and power users in 2026. Examine data collection, fingerprinting resistance."
 date: 2026-03-15
 last_modified_at: 2026-04-17

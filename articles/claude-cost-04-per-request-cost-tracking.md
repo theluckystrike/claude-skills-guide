@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Per-Request Cost Tracking for Claude"
+title: "Per-Request Cost Tracking for Claude (2026)"
 description: "Calculate exact cost per API call using the usage object formula. Identify your $0.50+ requests that drive 80% of monthly spend."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, tracking, per-request]
-render_with_liquid: false
 ---
 
 # Per-Request Cost Tracking for Claude API

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Wolfram Alpha Chrome Extension Guide"
+title: "Wolfram Alpha Chrome Extension Guide (2026)"
 description: "Build and use Chrome extensions for Wolfram Alpha integration. Get computational knowledge at your fingertips without leaving your browser tab."
 date: 2026-03-15
 last_modified_at: 2026-04-17

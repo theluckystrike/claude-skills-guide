@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Citation Generator Free Chrome"
+title: "Citation Generator Free Chrome (2026)"
 description: "Create a free citation generator Chrome extension for automatic bibliography creation. Complete developer guide with code examples and practical."
 date: 2026-03-15
 last_modified_at: 2026-04-17

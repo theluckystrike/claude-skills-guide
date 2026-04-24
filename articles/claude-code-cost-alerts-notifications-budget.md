@@ -1,10 +1,9 @@
 ---
-title: "Claude Code Cost Alerts"
+title: "Claude Code Cost Alerts (2026)"
 description: "Configure Claude Code cost alerts through Anthropic Console thresholds, CLAUDE.md budget rules, and hooks-based monitoring to prevent billing surprises."
 permalink: /claude-code-cost-alerts-notifications-budget/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Cost Alerts: Set Up Notifications When Spend Exceeds Budget

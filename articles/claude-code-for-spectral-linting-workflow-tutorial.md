@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Spectral Linting"
+title: "Claude Code for Spectral Linting (2026)"
 description: "Learn how to integrate Spectral API linting into your Claude Code workflow for better API quality and consistency. This tutorial covers setup, custom."
 date: 2026-03-15
 last_modified_at: 2026-04-17

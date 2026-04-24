@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "React Component Testing with Claude"
+title: "React Component Testing with Claude (2026)"
 description: "Build a complete React component testing workflow with Claude Code. Unit tests, interaction tests, accessibility checks, and snapshot testing."
 date: 2026-04-15
 last_modified_at: 2026-04-17

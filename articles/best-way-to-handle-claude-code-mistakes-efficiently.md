@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Handle Claude Code Mistakes Efficiently"
+title: "Handle Claude Code Mistakes Efficiently (2026)"
 description: "Fix Claude Code mistakes fast with proven strategies. Covers error identification, correction prompts, prevention patterns, and feedback loop design."
 date: 2026-03-14
 last_modified_at: 2026-04-17

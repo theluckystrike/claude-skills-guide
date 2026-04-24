@@ -3,7 +3,6 @@ title: "Claude Code使用教程：从入门到精通 (2026)"
 description: "Claude Code使用教程完整指南，从npm安装启动到高级配置，涵盖终端常用命令详解、CLAUDE.md配置文件编写规范、MCP服务器集成方法、多文件操作技巧和中国开发者专属网络建议，附详细代码示例、Sonnet与Opus模型选择、费用优化策略和常见问题解答，适合零基础到进阶用户的全面参考手册。"
 permalink: /claude-code-shiyong-jiaocheng-tutorial/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Code使用教程：从入门到精通 (2026)
@@ -651,6 +650,7 @@ Claude Code会将你的提示词和相关代码上下文发送到Anthropic的API
 
 直接用中文提问即可。Claude Code会自动检测你的输入语言并用对应的语言回复。你也可以在CLAUDE.md中明确指定"所有回复使用中文"来确保一致性。
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -675,3 +675,5 @@ Claude Code会将你的提示词和相关代码上下文发送到Anthropic的API
 ## See Also
 
 - [Claude Code拼车指南：合租与共享方案 (2026)](/claude-code-pinche-group-sharing-zh/)
+
+{% endraw %}

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Server-Sent Events API"
+title: "Claude Code Server-Sent Events API (2026)"
 description: "A practical guide to implementing Server-Sent Events (SSE) with Claude Code. Learn how to build real-time streaming features using event-driven."
 date: 2026-03-14
 last_modified_at: 2026-04-17

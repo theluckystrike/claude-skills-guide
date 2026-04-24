@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Infinite Loop"
+title: "Claude Code Infinite Loop (2026)"
 description: "Claude Code stuck in a loop? Interrupt it instantly with keyboard shortcuts, config fixes, and prevention strategies that stop future loops too."
 date: 2026-03-14
 last_modified_at: 2026-04-17

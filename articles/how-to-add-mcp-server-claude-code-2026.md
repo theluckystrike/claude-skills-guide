@@ -3,7 +3,6 @@ title: "Add an MCP Server to Claude Code (2026)"
 description: "Add any MCP server to Claude Code in 5 steps. Configure settings.json, set environment variables, verify the connection, and troubleshoot common errors."
 permalink: /how-to-add-mcp-server-claude-code-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Add an MCP Server to Claude Code (2026)

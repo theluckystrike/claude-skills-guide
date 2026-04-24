@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Event-Driven API Design"
+title: "Claude Code for Event-Driven API Design (2026)"
 description: "Design event-driven APIs with Claude Code. Covers webhook patterns, message queue integration, real-time updates, and asynchronous workflow handling."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,8 +1,7 @@
 ---
-title: "Claude Skills Folder Structure"
+title: "Claude Skills Folder Structure (2026)"
 description: "Exact directory layout for Claude Code skills including SKILL.md, scripts, templates, examples, and references with real file tree examples."
 permalink: /claude-skills-folder-structure/
-render_with_liquid: false
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, directory-structure, file-organization]
 last_updated: 2026-04-19

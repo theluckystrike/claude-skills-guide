@@ -5,7 +5,6 @@ description: "Cursor vs GitHub Copilot vs Claude Code compared: pricing, context
 permalink: /cursor-vs-github-copilot-vs-claude-code-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

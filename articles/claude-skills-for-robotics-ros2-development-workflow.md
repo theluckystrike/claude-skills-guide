@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Robotics ROS2"
+title: "Claude Skills for Robotics ROS2 (2026)"
 description: "Learn how to use Claude Code skills to accelerate your ROS2 robotics development. Practical workflow examples, skill recommendations, and integration."
 date: 2026-03-14
 last_modified_at: 2026-04-17

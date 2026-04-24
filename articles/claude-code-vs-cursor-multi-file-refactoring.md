@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code vs Cursor: Multi-File Refactoring"
+title: "Claude Code vs Cursor: Multi-File Refactoring (2026)"
 description: "Compare Claude Code and Cursor for multi-file refactoring. CLI vs IDE approach benchmarked across rename, extract, and restructure operations."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code API Response Caching Guide"
+title: "Claude Code API Response Caching Guide (2026)"
 description: "Learn how to implement efficient API response caching strategies using Claude Code, covering in-memory caching, Redis integration, andETag."
 date: 2026-03-14
 last_modified_at: 2026-04-17

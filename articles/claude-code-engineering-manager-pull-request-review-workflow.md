@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Claude Code Engineering Manager Pull"
-description: "Learn how to use Claude Code to streamline your pull request review process as an engineering manager."
+title: "Claude Code Engineering Manager Pull (2026)"
+description: "Claude Code Engineering Manager Pull — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

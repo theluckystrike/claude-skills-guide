@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Modernizing Legacy Codebases"
+title: "Modernizing Legacy Codebases (2026)"
 description: "Use Claude Code to modernize legacy code. Refactor jQuery to React, upgrade Node.js versions, add TypeScript, replace callbacks with async/await."
 date: 2026-04-15
 last_modified_at: 2026-04-17

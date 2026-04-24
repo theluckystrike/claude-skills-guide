@@ -1,8 +1,7 @@
 ---
-render_with_liquid: false
 
 layout: default
-title: "How to Build a Walmart Price Tracker Chrome Extension"
+title: "How to Build a Walmart Price Tracker Chrome Extension (2026)"
 description: "Learn to build a Chrome extension that tracks Walmart product prices. Technical guide for developers covering API integration, content scripts, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

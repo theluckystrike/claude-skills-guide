@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Halmos Symbolic"
+title: "Claude Code for Halmos Symbolic (2026)"
 description: "Learn how to integrate Claude Code with Halmos for powerful symbolic testing workflows. This guide covers setup, configuration, and practical examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

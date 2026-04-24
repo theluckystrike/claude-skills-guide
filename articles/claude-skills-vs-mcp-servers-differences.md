@@ -1,8 +1,7 @@
 ---
-title: "Claude Skills vs MCP Servers: Key Differences"
+title: "Claude Skills vs MCP Servers: Key Differences (2026)"
 description: "Concrete comparison of SKILL.md files and MCP servers covering use cases, architecture differences, and when to combine them in Claude Code."
 permalink: /claude-skills-vs-mcp-servers-differences/
-render_with_liquid: false
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, mcp, model-context-protocol, comparison]
 last_updated: 2026-04-19

@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Build an AI Text-to-Speech Extension"
+title: "Build an AI Text-to-Speech Extension (2026)"
 description: "Build a Chrome extension with AI-powered text-to-speech. Covers Web Speech API, voice selection, SSML markup, and streaming audio playback for devs."
 date: 2026-03-15
 last_modified_at: 2026-04-17

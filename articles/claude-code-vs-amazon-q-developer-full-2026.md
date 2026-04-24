@@ -5,7 +5,6 @@ description: "Claude Code vs Amazon Q Developer compared: pricing, context, feat
 permalink: /claude-code-vs-amazon-q-developer-full-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

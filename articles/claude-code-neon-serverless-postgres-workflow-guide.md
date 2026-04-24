@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Neon Serverless Postgres"
+title: "Claude Code Neon Serverless Postgres (2026)"
 description: "Master the art of building serverless PostgreSQL workflows with Claude Code. Learn how to integrate Neon with Claude Code skills for efficient database."
 date: 2026-04-19
 last_modified_at: 2026-04-19

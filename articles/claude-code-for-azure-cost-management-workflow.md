@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Azure Cost Management"
+title: "Claude Code for Azure Cost Management (2026)"
 description: "Learn how to build Claude skills that automate Azure cost management, monitor spending, and optimize cloud expenses with practical code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

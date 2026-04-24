@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "When NOT to Use Claude Prompt Caching"
+title: "When NOT to Use Claude Prompt Caching (2026)"
 description: "Prompt caching costs 25% MORE when cache hit rate is low. Learn the 5 scenarios where caching wastes money instead of saving it."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, prompt-caching]
-render_with_liquid: false
 ---
 
 # When NOT to Use Claude Prompt Caching

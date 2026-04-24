@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Accessibility Workflow"
+title: "Claude Code Accessibility Workflow (2026)"
 description: "Build accessible web apps with Claude Code for WCAG testing, ARIA patterns, semantic HTML, and automated a11y audits. Frontend engineer workflow guide."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -285,6 +285,15 @@ Manual keyboard testing checklist to run through on every interactive component:
 - Tab into the component from the previous focusable element
 - Verify the focus indicator is visible (check in all browsers. Chrome's default is fine, Safari's is borderline)
 - Perform the component's primary action using only the keyboard
+
+For more on this topic, see [Claude Code for UnoCSS — Workflow Guide](/claude-code-for-unocss-workflow-guide/).
+
+For more on this topic, see [Claude Code for Devbox — Workflow Guide](/claude-code-for-devbox-jetify-workflow-guide/).
+
+
+
+For more on this topic, see [Claude Code for Direnv — Workflow Guide](/claude-code-for-direnv-workflow-guide/).
+
 - Exit the component using Tab or Escape, confirming focus lands in a logical location
 - Verify there are no keyboard traps (elements you can enter but not exit)
 

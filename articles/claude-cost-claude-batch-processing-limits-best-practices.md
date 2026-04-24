@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Batch Processing Limits"
+title: "Claude Batch Processing Limits (2026)"
 description: "Claude batches cap at 100K requests and 256 MB. Learn chunking strategies and error recovery to maximize your 50% savings."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, batch-api]
-render_with_liquid: false
 ---
 
 # Claude Batch Processing Limits and Best Practices

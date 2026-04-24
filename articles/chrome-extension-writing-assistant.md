@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Writing Assistant Chrome Extension"
+title: "Writing Assistant Chrome Extension (2026)"
 description: "Learn how Chrome extension writing assistants enhance productivity for developers and content creators. Explore implementation patterns, API integrations."
 date: 2026-03-15
 last_modified_at: 2026-04-17

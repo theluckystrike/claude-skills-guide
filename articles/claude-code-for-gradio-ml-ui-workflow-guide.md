@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Gradio ML UI"
-description: "Build ML demo interfaces with Gradio and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Gradio ML UI (2026)"
+description: "Claude Code for Gradio ML UI — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-gradio-ml-ui-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, gradio, workflow]
 ---

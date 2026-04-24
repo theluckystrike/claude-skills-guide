@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Optimism Bedrock"
+title: "Claude Code for Optimism Bedrock (2026)"
 description: "A practical guide for developers using Claude Code to build on Optimism Bedrock. Learn workflow patterns, smart contract development, and deployment."
 date: 2026-03-15
 last_modified_at: 2026-04-17

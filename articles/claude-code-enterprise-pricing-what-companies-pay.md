@@ -1,10 +1,9 @@
 ---
-title: "Claude Code Enterprise Pricing"
-description: "Enterprise Claude Code pricing starts at $200/seat/month for Max Team."
+title: "Claude Code Enterprise Pricing (2026)"
+description: "Claude Code Enterprise Pricing — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-enterprise-pricing-what-companies-pay/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Enterprise Pricing: What Companies Actually Pay

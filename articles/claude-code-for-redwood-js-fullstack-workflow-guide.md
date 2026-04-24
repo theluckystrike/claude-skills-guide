@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Redwood JS"
+title: "Claude Code For Redwood JS (2026)"
 description: "Master the complete workflow of building fullstack applications with RedwoodJS and Claude Code. Learn practical patterns for API development, frontend."
 date: 2026-03-15
 last_modified_at: 2026-04-17

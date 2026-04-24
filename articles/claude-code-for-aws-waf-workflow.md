@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For AWS Waf"
+title: "Claude Code For AWS Waf (2026)"
 description: "Learn how to use Claude Code to streamline AWS WAF configuration, rule management, and security automation. Includes practical examples and code snippets."
 date: 2026-03-15
 last_modified_at: 2026-04-17

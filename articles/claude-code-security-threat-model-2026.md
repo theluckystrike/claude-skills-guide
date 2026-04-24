@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Security"
+title: "Claude Code Security (2026)"
 description: "Threat model for Claude Code covering supply chain risks, prompt injection, data leakage, MCP server vulnerabilities, and mitigations."
 permalink: /claude-code-security-threat-model-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Security: Threat Model Guide (2026)

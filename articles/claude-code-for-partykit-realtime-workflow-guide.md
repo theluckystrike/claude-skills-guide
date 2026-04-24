@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for PartyKit"
-description: "Build multiplayer features with PartyKit and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for PartyKit (2026)"
+description: "Claude Code for PartyKit — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-partykit-realtime-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, partykit, workflow]
 ---

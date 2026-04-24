@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Batch Processing 100K Requests"
-description: "Process 100,000 requests in a single Claude batch. Save $2,000 on Opus 4.7 with proper chunking and error handling."
+title: "Claude Batch Processing 100K Requests (2026)"
+description: "Claude Batch Processing 100K Requests — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-batch-processing-100k-requests-guide/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, batch-api]
-render_with_liquid: false
 ---
 
 # Claude Batch Processing 100K Requests Guide

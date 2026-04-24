@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Debugging Skill Setup"
+title: "Claude Code Debugging Skill Setup (2026)"
 description: "Configure Claude Code's built-in debugging skill for automated bug investigation. Step-by-step setup with CLAUDE.md templates and hooks."
 date: 2026-04-17
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Implement SOLID Principles with Claude"
+title: "Implement SOLID Principles with Claude (2026)"
 description: "Apply SOLID principles to your codebase using Claude Code for dependency injection, interface segregation, and refactoring. Before-and-after examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

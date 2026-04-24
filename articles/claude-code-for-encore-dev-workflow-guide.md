@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Encore Dev"
-description: "Build type-safe backends with Encore.dev and Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Encore Dev (2026)"
+description: "Claude Code for Encore Dev — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-encore-dev-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, encore, workflow]
 ---

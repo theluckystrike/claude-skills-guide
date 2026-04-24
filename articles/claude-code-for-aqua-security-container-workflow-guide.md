@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code + Aqua Security Containers"
+title: "Claude Code + Aqua Security Containers (2026)"
 description: "Secure containers with Aqua Security and Claude Code for vulnerability scanning, runtime protection, and compliance enforcement. DevSecOps workflow."
 date: 2026-04-19
 last_modified_at: 2026-04-19

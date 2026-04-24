@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Git Workflow Guide"
+title: "Claude Code Git Workflow Guide (2026)"
 description: "Use Claude Code for git operations: commits, branches, PRs, rebases, and conflict resolution with proper permission configuration."
 date: 2026-04-15
 permalink: /claude-code-with-git-workflow-guide/

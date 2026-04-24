@@ -1,9 +1,8 @@
 ---
-title: "Take the Claude Code 271-Question Quiz"
+title: "Take the Claude Code 271-Question Quiz (2026)"
 description: "Use the Claude Code Ultimate Guide's 271 quiz questions to find and fill gaps in your knowledge. Structured approach for self-assessment and team testing."
 permalink: /how-to-take-claude-code-ultimate-guide-quiz-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Take the Claude Code 271-Question Quiz (2026)

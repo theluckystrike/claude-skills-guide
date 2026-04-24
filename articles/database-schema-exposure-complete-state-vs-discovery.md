@@ -1,10 +1,9 @@
 ---
-title: "Database Schema Exposure"
+title: "Database Schema Exposure (2026)"
 description: "Exposing complete database schema upfront saves Claude Code 3,000-10,000 tokens per session by eliminating iterative discovery queries against the database."
 permalink: /database-schema-exposure-complete-state-vs-discovery/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Database Schema Exposure: Complete State vs Discovery Queries

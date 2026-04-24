@@ -1,9 +1,8 @@
 ---
-title: "Fix: Claude Can't Open This Chat Error"
+title: "Fix: Claude Can't Open This Chat Error (2026)"
 description: "Fix the Claude can't open this chat error. Seven causes including corrupted cache, expired sessions, and context limits with browser-specific solutions."
 permalink: /claude-cant-open-this-chat-fix/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -338,6 +337,7 @@ Almost certainly not. Conversations are stored on Anthropic's servers. The error
 - [Fix Claude Code ETIMEOUT Corporate Proxy](/claude-code-etimeout-corporate-proxy-fix/)
 - [Fix Claude Code Model Not Available in Region](/claude-code-model-not-available-region-fix/)
 
+{% raw %}
 <script type="application/ld+json">
 [
   {
@@ -460,3 +460,5 @@ Almost certainly not. Conversations are stored on Anthropic's servers. The error
   }
 ]
 </script>
+
+{% endraw %}

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code PR Size Management Workflow"
+title: "Claude Code PR Size Management Workflow (2026)"
 description: "Enforce PR size limits with Claude Code automation to maintain healthy pull request habits and ship smaller, faster-merging code review batches."
 date: 2026-03-15
 last_modified_at: 2026-04-17

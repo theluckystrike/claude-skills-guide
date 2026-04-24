@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Learning System Design"
+title: "Claude Code for Learning System Design (2026)"
 description: "A practical guide to using Claude Code as your learning companion for mastering system design. Includes actionable examples and code snippets."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -184,6 +184,9 @@ Request diagrams and step-by-step explanations:
 > "Walk me through what happens when a user uploads a file to our system"
 
 Claude can describe the complete flow. from client through load balancer, application server, storage, and database. helping you understand each component's role.
+
+For more on this topic, see [Best Claude Code Learning Resources](/best-claude-code-learning-resources-2026/).
+
 
 For complex flows, ask Claude to break it into numbered steps, then ask about each step individually:
 

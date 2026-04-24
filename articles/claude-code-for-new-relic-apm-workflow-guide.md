@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code + New Relic APM Workflow"
+title: "Claude Code + New Relic APM Workflow (2026)"
 description: "Integrate Claude Code with New Relic APM for application monitoring, transaction tracing, and error analysis. Set up observability workflows faster."
 date: 2026-03-15
 last_modified_at: 2026-04-17

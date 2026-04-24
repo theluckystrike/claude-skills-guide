@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for Rolldown"
-description: "Use the Rust-powered Rolldown bundler with Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for Rolldown (2026)"
+description: "Claude Code for Rolldown — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-rolldown-bundler-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, rolldown, workflow]
 ---

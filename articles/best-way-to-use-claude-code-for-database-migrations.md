@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Use Claude Code for Database Migrations"
+title: "Use Claude Code for Database Migrations (2026)"
 description: "Generate safe database migrations with Claude Code. Covers schema diffing, rollback scripts, data backfilling, and zero-downtime migration patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

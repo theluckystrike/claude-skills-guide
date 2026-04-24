@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Kubernetes YAML"
+title: "Claude Code for Kubernetes YAML (2026)"
 description: "Generate validated Kubernetes YAML with Claude Code. Covers deployments, services, ingress configs, and Kustomize overlays with schema validation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

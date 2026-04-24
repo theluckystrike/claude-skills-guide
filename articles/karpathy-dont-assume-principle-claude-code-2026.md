@@ -1,9 +1,8 @@
 ---
-title: "Karpathy Don't Assume Principle"
+title: "Karpathy Don't Assume Principle (2026)"
 description: "Apply Karpathy's Don't Assume principle to stop Claude Code from making silent decisions about your architecture, dependencies, and implementation."
 permalink: /karpathy-dont-assume-principle-claude-code-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Karpathy Don't Assume Principle for Claude Code (2026)

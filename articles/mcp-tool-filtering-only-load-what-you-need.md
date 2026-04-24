@@ -1,10 +1,9 @@
 ---
-title: "MCP Tool Filtering"
+title: "MCP Tool Filtering (2026)"
 description: "Filter MCP tool definitions in Claude Code to eliminate 2,000-10,000 tokens of overhead per turn by loading only the tools each session actually needs."
 permalink: /mcp-tool-filtering-only-load-what-you-need/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # MCP Tool Filtering: Only Load What You Need

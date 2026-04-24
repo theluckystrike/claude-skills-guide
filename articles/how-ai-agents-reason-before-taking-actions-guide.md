@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How AI Agents Reason Before"
+title: "How AI Agents Reason Before (2026)"
 description: "Discover how Claude Code and AI agents think through decisions, plan execution paths, and reason through complex tasks before acting."
 date: 2026-03-14
 last_modified_at: 2026-04-17

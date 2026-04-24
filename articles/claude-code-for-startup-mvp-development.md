@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Building Startup MVPs with Claude Code"
+title: "Building Startup MVPs with Claude Code (2026)"
 description: "Use Claude Code to rapidly build startup MVPs. Tech stack selection, scaffolding, authentication, payments, deployment, and iterating fast."
 date: 2026-04-15
 last_modified_at: 2026-04-17

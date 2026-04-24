@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Reading List Organizer"
+title: "Chrome Extension Reading List Organizer (2026)"
 description: "A practical guide to Chrome extensions for organizing academic reading lists. Features code examples, API integrations, and workflow tips for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

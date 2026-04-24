@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Claude Code with Existing"
+title: "How to Use Claude Code with Existing (2026)"
 description: "Connect Claude Code to your existing GitHub repository. Step-by-step guide for developers integrating AI-assisted development with established projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17

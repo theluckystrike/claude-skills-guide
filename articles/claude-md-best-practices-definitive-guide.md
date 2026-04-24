@@ -1,9 +1,8 @@
 ---
-title: "CLAUDE.md Best Practices"
+title: "CLAUDE.md Best Practices (2026)"
 description: "The definitive guide to CLAUDE.md files. Structure, rules, project configs, team standards, Karpathy principles, NASA P10, and real examples."
 permalink: /claude-md-best-practices-definitive-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # CLAUDE.md Best Practices: Definitive Guide (2026)
@@ -632,6 +631,7 @@ Use conditional sections. For example, add "When running in CI mode (--print fla
 Yes. CLAUDE.md is a local configuration file that Claude Code loads regardless of the API provider. Whether you use the direct Anthropic API, [OpenRouter](/claude-code-openrouter-setup-guide/), or another compatible endpoint, CLAUDE.md instructions apply identically.
 
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -759,3 +759,5 @@ Yes. CLAUDE.md is a local configuration file that Claude Code loads regardless o
 - [Claude Code Spec Workflow Guide](/claude-code-spec-workflow-guide/)
 - [Super Claude Code Framework Guide](/super-claude-code-framework-guide/)
 
+
+{% endraw %}

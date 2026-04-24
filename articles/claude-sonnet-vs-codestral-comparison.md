@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Sonnet 4.6 vs Codestral"
+title: "Claude Sonnet 4.6 vs Codestral (2026)"
 description: "Claude Sonnet 4.6 vs Codestral compared for code generation — speed, quality, cost, and specialized coding model trade-offs."
 date: 2026-04-21
 last_tested: "2026-04-21"

@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Structured Data Tester Chrome Extension"
+title: "Structured Data Tester Chrome Extension (2026)"
 description: "Learn how to test structured data using Chrome extensions. Compare tools, understand JSON-LD validation, and implement testing in your development."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -25,6 +24,7 @@ When you add JSON-LD or Microdata to a webpage, the browser parses this informat
 
 Structured data lives in one of three formats:
 
+{% raw %}
 - JSON-LD. a `<script type="application/ld+json">` block in the `<head>` or `<body>`. This is Google's recommended format because it is completely decoupled from the visual HTML.
 - Microdata. attributes like `itemscope`, `itemtype`, and `itemprop` embedded directly on HTML elements.
 - RDFa. a third standard, less common in practice, using `vocab`, `typeof`, and `property` attributes.
@@ -501,3 +501,5 @@ Related Reading
 - [How to Check if Your Email Has Been Compromised in a Data Breach](/chrome-check-email-breaches/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+{% endraw %}

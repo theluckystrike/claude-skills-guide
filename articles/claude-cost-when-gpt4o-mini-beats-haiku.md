@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "When GPT-4o Mini Beats Claude Haiku"
-description: "GPT-4o mini at $0.15/$0.60 beats Haiku's $1/$5 in 4 specific scenarios. Save $258 per 1M calls."
+title: "When GPT-4o Mini Beats Claude Haiku (2026)"
+description: "When GPT-4o Mini Beats Claude Haiku — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-cost-when-gpt4o-mini-beats-haiku/
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, comparison]
-render_with_liquid: false
 ---
 
 # When GPT-4o Mini Beats Claude Haiku (Yes, This Happens)

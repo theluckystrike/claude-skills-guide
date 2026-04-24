@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Disable Chrome Developer Tools"
+title: "How to Disable Chrome Developer Tools (2026)"
 description: "A practical guide for IT administrators and developers on disabling Chrome DevTools via Windows Group Policy. Includes registry methods and enterprise."
 date: 2026-03-15
 last_modified_at: 2026-04-17

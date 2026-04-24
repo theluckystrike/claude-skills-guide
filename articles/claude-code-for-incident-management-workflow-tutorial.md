@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Incident Management"
+title: "Claude Code for Incident Management (2026)"
 description: "Build automated incident management workflows with Claude Code. Covers alert routing, escalation policies, status pages, and post-mortem generation."
 date: 2026-04-19
 last_modified_at: 2026-04-19

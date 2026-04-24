@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Confluence Workflow"
+title: "Claude Code for Confluence Workflow (2026)"
 description: "Learn how to automate Confluence workflows using Claude Code CLI with practical examples and actionable advice for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

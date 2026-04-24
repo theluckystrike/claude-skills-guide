@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Multi-Agent Architecture"
+title: "Claude Code Multi-Agent Architecture (2026)"
 description: "Guide to Claude Code multi-agent patterns including sub-agent spawning, parallel execution, task delegation, and orchestration strategies."
 permalink: /claude-code-multi-agent-architecture-guide-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code Multi-Agent Architecture Guide (2026)

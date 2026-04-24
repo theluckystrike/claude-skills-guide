@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Wireframe Builder Chrome Extension"
+title: "Wireframe Builder Chrome Extension (2026)"
 description: "Learn how to build a Chrome extension for wireframing. Practical code examples, architecture patterns, and implementation techniques for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

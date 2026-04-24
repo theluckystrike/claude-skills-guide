@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Error Invalid API Key After"
+title: "Claude Code Error Invalid API Key After (2026)"
 description: "Fix the invalid API key error that occurs after rotating your Anthropic API key. Step-by-step solutions for environment variables, config files, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

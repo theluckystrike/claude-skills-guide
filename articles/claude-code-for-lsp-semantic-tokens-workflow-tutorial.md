@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Lsp Semantic"
+title: "Claude Code For Lsp Semantic (2026)"
 description: "Learn how to use Claude Code with Language Server Protocol (LSP) semantic tokens to build intelligent code analysis, syntax highlighting, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

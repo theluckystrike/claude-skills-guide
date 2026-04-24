@@ -1,9 +1,8 @@
 ---
-title: "Claude Code Spec Workflow"
+title: "Claude Code Spec Workflow (2026)"
 description: "Spec-driven development with Claude Code. Write specifications first, let Claude implement, then verify against the spec. Full workflow with examples."
 permalink: /claude-code-spec-workflow-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Code Spec Workflow: Write Specs First (2026)
@@ -602,6 +601,7 @@ Check our [CLAUDE.md best practices guide](/claude-md-best-practices-definitive-
 Spec files are read as input tokens when Claude processes them. A typical spec is 500-2,000 tokens. This small upfront cost pays for itself by reducing back-and-forth corrections. Track costs with [token usage auditing](/audit-claude-code-token-usage-step-by-step/).
 
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -721,3 +721,5 @@ Spec files are read as input tokens when Claude processes them. A typical spec i
 - [Claude Code Hooks Complete Guide](/claude-code-hooks-complete-guide/)
 - [How to Use Claude Code: Beginner Guide](/how-to-use-claude-code-beginner-guide/)
 
+
+{% endraw %}

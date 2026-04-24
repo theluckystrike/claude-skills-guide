@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Smart Model Selection Saves 80%"
+title: "Smart Model Selection Saves 80% (2026)"
 description: "Combine model routing with batch processing and caching to cut Claude API costs from $75/day to $15/day — verified pricing math."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # Smart Model Selection Saves 80% on Claude API

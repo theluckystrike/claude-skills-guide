@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Claude Code for UnJS Ecosystem"
-description: "Use UnJS universal JavaScript utilities with Claude Code. Tested setup with copy-paste CLAUDE.md config."
+title: "Claude Code for UnJS Ecosystem (2026)"
+description: "Claude Code for UnJS Ecosystem — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-unjs-ecosystem-workflow-guide/
-render_with_liquid: false
 categories: [workflow, niche-tools]
 tags: [claude-code, unjs, workflow]
 ---

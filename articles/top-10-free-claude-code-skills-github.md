@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Top 10 Free Claude Code Skills"
+title: "Top 10 Free Claude Code Skills (2026)"
 description: "Best free Claude skills from the GitHub directory. PDF processing, TDD, frontend design, and webapp testing skills you can install today."
 date: 2026-03-13
 last_modified_at: 2026-04-17

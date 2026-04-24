@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "YouTube Thumbnail Downloader Extension"
+title: "YouTube Thumbnail Downloader Extension (2026)"
 description: "Download YouTube thumbnails in all resolutions with a Chrome extension. Build one using Manifest V3, URL patterns, and the YouTube Data API v3."
 date: 2026-03-15
 last_modified_at: 2026-04-17

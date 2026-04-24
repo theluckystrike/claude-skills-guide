@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Pr Bot"
+title: "Claude Code For Pr Bot (2026)"
 description: "Learn how to integrate Claude Code into your PR bot workflows for automated code review, summarization, and quality checks."
 date: 2026-03-15
 last_modified_at: 2026-04-17

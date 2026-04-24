@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skill .md Format"
+title: "Claude Skill .md Format (2026)"
 description: "Master the Claude skill .md file format with structure, placement, invocation, and body content rules. Includes working examples you can copy and adapt."
 date: 2026-03-13
 last_modified_at: 2026-04-17

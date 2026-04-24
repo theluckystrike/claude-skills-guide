@@ -1,9 +1,8 @@
 ---
-title: "SuperClaude vs Karpathy"
+title: "SuperClaude vs Karpathy (2026)"
 description: "SuperClaude uses 30 commands and modes for structured workflows. Karpathy Skills uses 4 behavioral principles. Compare workflow philosophies."
 permalink: /superclaude-vs-karpathy-skills-workflow-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # SuperClaude vs Karpathy Skills: Workflow Approaches (2026)

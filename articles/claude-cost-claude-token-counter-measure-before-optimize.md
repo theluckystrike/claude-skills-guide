@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Token Counter"
+title: "Claude Token Counter (2026)"
 description: "Use Anthropic's token counting API to find where your tokens go — most teams discover 40% waste in system prompts and tool defs."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # Claude Token Counter: Measure Before You Optimize

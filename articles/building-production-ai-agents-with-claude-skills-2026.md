@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Building Production AI Agents"
+title: "Building Production AI Agents (2026)"
 description: "Practical patterns for building production-ready AI agents with Claude Code: skill composition, error handling, monitoring, and deployment considerations."
 date: 2026-03-13
 last_modified_at: 2026-04-17

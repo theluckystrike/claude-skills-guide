@@ -1,9 +1,8 @@
 ---
-title: "Claude Shortcuts"
+title: "Claude Shortcuts (2026)"
 description: "Complete list of keyboard shortcuts for Claude.ai, Claude Desktop, and Claude Code CLI. Platform-specific keys, slash commands, and customization."
 permalink: /claude-shortcuts-complete-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Shortcuts: Every Keyboard Shortcut (2026)
@@ -330,6 +329,7 @@ The Claude iOS and Android apps support basic system keyboard shortcuts when usi
 - [Claude MCP List Command Guide](/claude-mcp-list-command-guide/) — MCP CLI command reference
 - [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Permission shortcuts and auto-mode
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -348,3 +348,5 @@ The Claude iOS and Android apps support basic system keyboard shortcuts when usi
   ]
 }
 </script>
+
+{% endraw %}

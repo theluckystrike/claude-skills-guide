@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Optimal Context Size for Cost-Efficient"
+title: "Optimal Context Size for Cost-Efficient (2026)"
 description: "The sweet spot for Claude API context is 20-50K tokens — 95% cheaper than 1M full context with comparable answer quality on most tasks."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # Optimal Context Size for Cost-Efficient Claude

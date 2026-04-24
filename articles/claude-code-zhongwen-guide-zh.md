@@ -3,7 +3,6 @@ title: "Claude Code中文指南合集 (2026)"
 description: "Claude Code中文教程、安装指南、终端使用技巧和价格费用说明的完整合集。适合中国开发者的一站式资源中心，涵盖npm全局安装配置、国内网络代理设置、API密钥配置、CLAUDE.md编写规范、MCP服务器集成、Sonnet和Opus模型费用优化策略以及拼车共享风险分析等所有中文资源导航。"
 permalink: /claude-code-zhongwen-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Code中文指南合集 (2026)
@@ -286,6 +285,7 @@ export HTTPS_PROXY="http://127.0.0.1:7890"
 
 首先查看对应主题的故障排除指南。如果是网络问题，参考国内使用指南的常见错误部分。如果是安装问题，查看安装教程的错误解决章节。Anthropic也有官方的社区论坛和文档可以参考。
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -308,3 +308,5 @@ export HTTPS_PROXY="http://127.0.0.1:7890"
 - [Claude Code价格和费用完整指南 (2026)](/claude-code-jiage-pricing-guide-zh/)
 - [Claude Code安装教程：完整指南 (2026)](/claude-code-anzhuang-installation-guide-zh/)
 - [Claude Code国内使用指南 (2026)](/claude-code-guonei-shiyong-china-usage-guide-zh/)
+
+{% endraw %}

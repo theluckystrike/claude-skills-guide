@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Distraction Blocker Chrome Extension"
+title: "AI Distraction Blocker Chrome Extension (2026)"
 description: "Learn how to build and configure AI-powered distraction blocker Chrome extensions for enhanced focus and productivity. Technical implementation details."
 date: 2026-03-15
 last_modified_at: 2026-04-17

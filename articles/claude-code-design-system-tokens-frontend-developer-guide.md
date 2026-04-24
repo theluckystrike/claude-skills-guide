@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Design System Tokens"
+title: "Claude Code Design System Tokens (2026)"
 description: "Learn how to use Claude Code's design system tokens for building consistent, professional user interfaces with the canvas-design skill."
 date: 2026-03-14
 last_modified_at: 2026-04-17

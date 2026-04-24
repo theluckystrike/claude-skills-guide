@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Chrome High CPU"
+title: "Fix Chrome High CPU (2026)"
 description: "Fix Chrome high CPU usage with practical developer solutions. Diagnose processes, disable extensions, and optimize browser performance fast."
 date: 2026-03-15
 last_modified_at: 2026-04-17

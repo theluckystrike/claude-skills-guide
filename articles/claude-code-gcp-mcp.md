@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code GCP MCP Server Setup"
+title: "Claude Code GCP MCP Server Setup (2026)"
 description: "Connect Claude Code to Google Cloud Platform through MCP for direct access to Cloud Run, GCS, BigQuery, and Pub/Sub from your terminal."
 date: 2026-04-17
 last_modified_at: 2026-04-17

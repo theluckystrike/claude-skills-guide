@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Grafana Dashboard"
+title: "Claude Code Grafana Dashboard (2026)"
 description: "Master Grafana dashboard configuration with Claude Code. Practical workflow tips for automating dashboard creation, JSON generation, and monitoring setup."
 date: 2026-03-14
 last_modified_at: 2026-04-17

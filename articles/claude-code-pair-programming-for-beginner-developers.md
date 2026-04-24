@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Pair Programming"
+title: "Claude Code Pair Programming (2026)"
 description: "Learn how to use Claude Code as your programming partner. A beginner-friendly guide to pair programming with AI, covering setup, workflows, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

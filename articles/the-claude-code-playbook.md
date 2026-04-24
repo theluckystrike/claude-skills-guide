@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Guides: Complete Collection"
+title: "Claude Code Guides: Complete Collection (2026)"
 description: "Complete Claude Code collection: 50 error fixes, 25 CLAUDE.md templates, 15 orchestration configs, and 100 proven prompts. Tested April 2026."
 date: 2026-04-19
 last_tested: "2026-04-21"
@@ -8,7 +8,6 @@ author: "Claude Skills Guide"
 permalink: /playbook/
 categories: [playbook]
 tags: [claude-code, playbook, templates, errors, prompts, cost-optimization]
-render_with_liquid: false
 score: 10
 ---
 

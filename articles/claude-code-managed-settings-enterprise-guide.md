@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Managed Settings Enterprise"
+title: "Claude Code Managed Settings Enterprise (2026)"
 description: "Deploy organization-wide Claude Code settings with managed policies for permissions, hooks, MCP servers, and security controls."
 date: 2026-04-15
 permalink: /claude-code-managed-settings-enterprise-guide/

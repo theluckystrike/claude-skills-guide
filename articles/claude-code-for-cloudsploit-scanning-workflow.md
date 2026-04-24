@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for CloudSploit Scanning"
+title: "Claude Code for CloudSploit Scanning (2026)"
 description: "Learn how to integrate Claude Code with CloudSploit to automate cloud security scanning, identify misconfigurations, and strengthen your cloud security."
 date: 2026-03-15
 last_modified_at: 2026-04-17

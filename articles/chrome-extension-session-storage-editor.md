@@ -1,7 +1,6 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Session Storage Editor Chrome Extension"
+title: "Session Storage Editor Chrome Extension (2026)"
 description: "Learn how to edit sessionStorage directly in Chrome. Tools, techniques, and code examples for debugging and managing session storage in browser extensions."
 date: 2026-03-15
 last_modified_at: 2026-04-17

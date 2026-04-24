@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Using Claude Code with Zotero"
+title: "Using Claude Code with Zotero (2026)"
 description: "Combine Claude Code with Zotero to process research papers, generate summaries, and implement paper algorithms. Setup guide for academic developer workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-21

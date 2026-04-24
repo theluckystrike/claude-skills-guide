@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Supabase Integration"
+title: "How to Use Supabase Integration (2026)"
 description: "Integrate Claude Code with Supabase for backend development. Database operations, authentication, Edge Functions, and SSO workflow in one guide."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Terraform State Management"
+title: "Claude Code Terraform State Management (2026)"
 description: "Master Terraform state management with Claude Code. Learn practical techniques for handling state files, remote backends, and infrastructure tracking."
 date: 2026-03-14
 last_modified_at: 2026-04-17

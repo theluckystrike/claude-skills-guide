@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for ABAC"
+title: "Claude Code for ABAC (2026)"
 description: "Learn how to implement Attribute-Based Access Control (ABAC) in your applications using Claude Code. This comprehensive guide covers policy design."
 date: 2026-03-15
 last_modified_at: 2026-04-17

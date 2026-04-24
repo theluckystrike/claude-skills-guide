@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Mock API Responses in Chrome"
-description: "A practical guide to intercepting and mocking API responses in Chrome extensions for development and testing."
+title: "How to Mock API Responses in Chrome (2026)"
+description: "How to Mock API Responses in Chrome — practical setup steps, configuration examples, and working code you can use in your projects today."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

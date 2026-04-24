@@ -3,7 +3,6 @@ title: "Claude Code价格和费用完整指南 (2026)"
 description: "Claude Code价格和费用详解，包括免费版额度说明、Pro订阅每月20美元、Max计划100到200美元、API按Token计费模式详细对比，Sonnet与Opus各模型的定价表，实际使用成本估算，附费用优化策略以及与GitHub Copilot和Cursor的价格横向比较。"
 permalink: /claude-code-jiage-pricing-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Code价格和费用完整指南 (2026)
@@ -298,6 +297,7 @@ GitHub Copilot Individual每月10美元，比Claude Code Pro的20美元便宜。
 
 企业团队推荐使用API按量计费配合Bedrock或Vertex。这种方式提供更好的成本管理、合规支持和SLA保障。通过Bedrock或Vertex，企业可以将Claude Code费用整合到现有云服务账单中，使用已有的预算和审批流程。如果团队较小，也可以为每位开发者配备Max计划。
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -410,3 +410,5 @@ GitHub Copilot Individual每月10美元，比Claude Code Pro的20美元便宜。
 - [Claude Code安装教程：完整指南 (2026)](/claude-code-anzhuang-installation-guide-zh/)
 - [Claude Code国内使用指南 (2026)](/claude-code-guonei-shiyong-china-usage-guide-zh/)
 - [Claude Code中文指南合集 (2026)](/claude-code-zhongwen-guide-zh/)
+
+{% endraw %}

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Mobile Push Notifications"
+title: "Claude Code Mobile Push Notifications (2026)"
 description: "A comprehensive guide to implementing mobile push notifications in iOS and Android apps. Learn APNs, FCM setup, token management, and best practices."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Code + LangChain Integration"
-description: "Integrate Claude Code with LangChain to build AI agent workflows for automation and development tasks."
+title: "Claude Code + LangChain Integration (2026)"
+description: "Claude Code + LangChain Integration — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19
 categories: [guides]

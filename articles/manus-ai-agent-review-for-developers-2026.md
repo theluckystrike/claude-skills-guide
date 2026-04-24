@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Manus AI Agent Review for Developers"
+title: "Manus AI Agent Review for Developers (2026)"
 description: "An in-depth review of Manus AI agent capabilities for developers in 2026, focusing on Claude Code integration, skills, and practical implementation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

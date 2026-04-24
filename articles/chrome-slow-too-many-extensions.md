@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Slow Too Many Chrome Extension Guide"
+title: "Slow Too Many Chrome Extension Guide (2026)"
 description: "Discover why Chrome slows down with too many extensions. Practical troubleshooting steps, diagnostic techniques, and optimization strategies for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

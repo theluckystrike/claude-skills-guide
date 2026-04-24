@@ -3,7 +3,6 @@ title: "Fix Claude Rate Exceeded Error (2026)"
 description: "Fix Claude rate exceeded errors across all 5 rate limit types. Includes retry code, token budgeting, and tier upgrade paths for the Anthropic API."
 permalink: /claude-rate-exceeded-error-fix/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -27,6 +26,7 @@ A rate exceeded error means you have hit one of Anthropic's usage limits. Your A
 <textarea id="err-input-429" placeholder="Paste your full error message here..." style="width:100%;min-height:80px;padding:12px;background:#0f172a;color:#e2e8f0;border:1px solid #334155;border-radius:6px;font-family:monospace;font-size:13px;resize:vertical;box-sizing:border-box;"></textarea>
 <div id="err-out-429" style="margin-top:12px;display:none;background:#0f172a;padding:16px;border-radius:6px;color:#e2e8f0;font-size:14px;"></div>
 </div>
+{% raw %}
 <script>
 document.getElementById('err-input-429').addEventListener('input',function(){var t=this.value.toLowerCase(),o=document.getElementById('err-out-429'),m=[];if(!t){o.style.display='none';return;}if(/429|rate.limit/i.test(t))m.push('<strong style="color:#6ee7b7;">429 Rate Limit Error</strong><br>You have exceeded your API rate limit. Check the <code>retry-after</code> header for exact wait time. Implement exponential backoff with jitter.');if(/request.tokens|per-minute rate/i.test(t))m.push('<strong style="color:#6ee7b7;">Tokens Per Minute (TPM) Limit</strong><br>Your input/output tokens exceeded the per-minute cap. Reduce prompt size, add delays between requests, or upgrade your tier.');if(/too many requests/i.test(t))m.push('<strong style="color:#6ee7b7;">Requests Per Minute (RPM) Limit</strong><br>Too many API calls in 60 seconds. Add a rate limiter: queue requests and space them at <code>60/RPM_LIMIT</code> second intervals.');if(/concurrent/i.test(t))m.push('<strong style="color:#6ee7b7;">Concurrent Request Limit</strong><br>Too many in-flight requests. Use a semaphore: <code>asyncio.Semaphore(5)</code> in Python or <code>p-limit</code> in TypeScript.');if(/daily|per.day/i.test(t))m.push('<strong style="color:#6ee7b7;">Daily Token Limit (TPD)</strong><br>You have exhausted your daily token budget. The window resets ~24 hours from your first request of the day. Track usage with a daily counter.');if(/spend|billing|monthly/i.test(t))m.push('<strong style="color:#6ee7b7;">Monthly Spend Limit</strong><br>Organization spending cap reached. Go to console.anthropic.com > Settings > Billing to increase your limit or wait for the next billing cycle.');if(/overloaded|529/i.test(t))m.push('<strong style="color:#6ee7b7;">529 Overloaded (Not Rate Limit)</strong><br>This is a server capacity issue, not your rate limit. All users are affected. Wait 30-60s, retry with longer backoff, or fall back to a smaller model.');if(/quota/i.test(t))m.push('<strong style="color:#6ee7b7;">Quota Exceeded</strong><br>Your usage tier quota is reached. Check your tier at console.anthropic.com. Spending more automatically upgrades your tier within 24 hours.');if(m.length===0)m.push('<span style="color:#94a3b8;">No specific rate limit pattern matched. Check the <code>anthropic-ratelimit-*</code> response headers to identify which limit you hit (RPM, TPM, or TPD).</span>');o.innerHTML=m.join('<hr style="border:none;border-top:1px solid #334155;margin:12px 0;">');o.style.display='block';});
 </script>
@@ -902,3 +902,5 @@ No. Rate limits are enforced at the organization level, not per API key. Creatin
   }
 ]
 </script>
+
+{% endraw %}

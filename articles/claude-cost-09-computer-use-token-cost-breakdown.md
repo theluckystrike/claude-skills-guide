@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Computer Use Token Cost"
+title: "Claude Computer Use Token Cost (2026)"
 description: "Computer use sessions cost $1.12+ in tool overhead per 100 screenshots. Full breakdown of the 735-token per-call cost structure."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, computer-use, tokens]
-render_with_liquid: false
 ---
 
 # Claude Computer Use Token Cost Breakdown

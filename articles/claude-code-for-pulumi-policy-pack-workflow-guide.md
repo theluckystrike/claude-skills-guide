@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Pulumi Policy Pack"
+title: "Claude Code for Pulumi Policy Pack (2026)"
 description: "Learn how to use Claude Code to create, manage, and automate Pulumi Policy Packs with practical examples and actionable workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

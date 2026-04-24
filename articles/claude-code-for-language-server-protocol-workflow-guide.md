@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Language Server"
+title: "Claude Code for Language Server (2026)"
 description: "A comprehensive guide to integrating Claude Code with Language Server Protocol (LSP) for enhanced code intelligence, autocomplete, and intelligent."
 date: 2026-04-19
 last_modified_at: 2026-04-19

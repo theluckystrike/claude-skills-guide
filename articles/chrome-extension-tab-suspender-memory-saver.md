@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build Tab Suspender Chrome Extension"
+title: "Build Tab Suspender Chrome Extension (2026)"
 description: "Build a Chrome tab suspender extension that saves memory. Technical implementation patterns, APIs, and optimization strategies for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

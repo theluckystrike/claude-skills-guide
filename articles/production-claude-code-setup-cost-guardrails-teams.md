@@ -1,10 +1,9 @@
 ---
-title: "Production Claude Code Setup"
+title: "Production Claude Code Setup (2026)"
 description: "Set up production-grade Claude Code cost guardrails for teams with API key management, token budgets, model routing, and spending alerts saving $500+/month."
 permalink: /production-claude-code-setup-cost-guardrails-teams/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Production Claude Code Setup: Cost Guardrails for Teams

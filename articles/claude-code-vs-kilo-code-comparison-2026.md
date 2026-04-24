@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Kilo Code"
+title: "Claude Code vs Kilo Code (2026)"
 description: "Compare Claude Code's terminal agent against Kilo Code's open-source VS Code extension on cost, model flexibility, and coding quality."
 permalink: /claude-code-vs-kilo-code-comparison-2026/
 date: 2026-04-21
@@ -10,7 +10,6 @@ tools_compared:
     version: "Opus 4.6 (CLI)"
   - name: "Kilo Code"
     version: "VS Code Extension (2026)"
-render_with_liquid: false
 ---
 
 # Claude Code vs Kilo Code in 2026

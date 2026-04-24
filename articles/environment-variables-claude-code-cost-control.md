@@ -1,10 +1,9 @@
 ---
-title: "Environment Variables for Claude Code"
+title: "Environment Variables for Claude Code (2026)"
 description: "Control Claude Code costs with environment variables including model selection, turn limits, and token budgets that prevent runaway spending."
 permalink: /environment-variables-claude-code-cost-control/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Environment Variables for Claude Code Cost Control

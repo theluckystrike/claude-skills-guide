@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Generate Strong Passwords"
+title: "Chrome Generate Strong Passwords (2026)"
 description: "Learn how to use Chrome's built-in password generator, customize password strength settings, and integrate it into your workflow for better security."
 date: 2026-03-15
 last_modified_at: 2026-04-17

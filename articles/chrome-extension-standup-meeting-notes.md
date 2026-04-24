@@ -1,9 +1,8 @@
 ---
-render_with_liquid: false
 
 layout: default
-title: "Building a Chrome Extension for Standup"
-description: "Learn how to create a Chrome extension to capture, organize, and export your daily standup meeting notes efficiently."
+title: "Building a Chrome Extension for Standup (2026)"
+description: "Building a Chrome Extension for Standup — install, configure, and use this extension for faster workflows. Tested and reviewed for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

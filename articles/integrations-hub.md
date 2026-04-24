@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Integrations"
+title: "Claude Skills Integrations (2026)"
 description: "Connect Claude skills to any platform: GitHub Actions, n8n, Zapier, Supabase, Notion, Slack, and every major developer tool."
 date: 2026-03-14
 last_modified_at: 2026-04-17

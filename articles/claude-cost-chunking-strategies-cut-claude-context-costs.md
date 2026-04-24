@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chunking Strategies to Cut Claude"
+title: "Chunking Strategies to Cut Claude (2026)"
 description: "Split documents into chunks and send only relevant pieces to Claude — reduce 500K context to 30K and save $70.50 per 50 Opus requests."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction]
-render_with_liquid: false
 ---
 
 # Chunking Strategies to Cut Claude Context Costs

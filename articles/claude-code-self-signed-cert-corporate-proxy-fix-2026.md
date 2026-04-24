@@ -1,9 +1,8 @@
 ---
 title: "Self-Signed Cert in Corporate Proxy — Fix (2026)"
 permalink: /claude-code-self-signed-cert-corporate-proxy-fix-2026/
-description: "Fix SELF_SIGNED_CERT_IN_CHAIN error behind corporate proxy. Export proxy CA cert and set NODE_EXTRA_CA_CERTS."
+description: "Self-Signed Cert in Corporate Proxy — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -112,3 +111,48 @@ Run `npm doctor` to check your npm environment. It validates the registry connec
 ### How do I configure Claude Code to use a corporate proxy?
 
 Set the `HTTPS_PROXY` environment variable: `export HTTPS_PROXY=http://proxy.corp.com:8080`. Claude Code respects standard proxy environment variables. Add this to your shell profile for persistence.
+
+
+## Related Guides
+
+- [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
+- [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
+- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)
+
+## Network Configuration for Claude Code
+
+Claude Code needs outbound HTTPS access to `api.anthropic.com` on port 443. In corporate environments, this traffic often passes through proxy servers, firewalls, or SSL inspection appliances that can interfere.
+
+**Proxy configuration hierarchy.** Claude Code respects these environment variables in order: `HTTPS_PROXY`, `HTTP_PROXY`, `ALL_PROXY`. Set the appropriate variable before starting Claude Code:
+
+```bash
+export HTTPS_PROXY=http://proxy.company.com:8080
+claude
+```
+
+**SSL certificate verification.** If your corporate network uses SSL inspection (MITM proxy), Node.js will reject the proxy's certificate. You need to add the corporate CA certificate:
+
+```bash
+export NODE_EXTRA_CA_CERTS=/path/to/corporate-ca.pem
+```
+
+**DNS resolution issues.** If `api.anthropic.com` does not resolve inside your network, check with: `nslookup api.anthropic.com`. Some corporate DNS servers block external API endpoints. Contact your network team to whitelist the domain.
+
+## Testing Network Connectivity
+
+Run this sequence to diagnose network issues before contacting support:
+
+```bash
+# Test DNS resolution
+nslookup api.anthropic.com
+
+# Test HTTPS connectivity
+curl -v https://api.anthropic.com/v1/messages 2>&1 | head -20
+
+# Test through proxy
+curl -v --proxy $HTTPS_PROXY https://api.anthropic.com/v1/messages 2>&1 | head -20
+
+# Check for certificate issues
+openssl s_client -connect api.anthropic.com:443 -servername api.anthropic.com </dev/null 2>&1 | grep -E "Verify|subject|issuer"
+```

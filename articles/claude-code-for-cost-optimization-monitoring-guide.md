@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Cloud Cost Optimization"
+title: "Claude Code for Cloud Cost Optimization (2026)"
 description: "Monitor and reduce cloud infrastructure costs with Claude Code CLI. Automated analysis, right-sizing recommendations, and spending alert setup."
 date: 2026-03-15
 last_modified_at: 2026-04-17

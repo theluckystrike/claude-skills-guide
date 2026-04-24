@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Envoy Proxy Workflow"
+title: "Claude Code for Envoy Proxy Workflow (2026)"
 description: "A practical guide to using Claude Code for Envoy Proxy configuration, deployment, and management. Learn workflows for service mesh, traffic routing."
 date: 2026-03-15
 last_modified_at: 2026-04-17

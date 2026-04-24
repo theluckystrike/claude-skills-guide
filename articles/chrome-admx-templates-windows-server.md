@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Admx Templates Windows Server"
+title: "Chrome Admx Templates Windows Server (2026)"
 description: "Learn how to deploy and manage Chrome browser settings across Windows Server environments using ADMX templates. Includes practical examples for IT."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For War Room"
+title: "Claude Code For War Room (2026)"
 description: "Learn how to use Claude Code to build efficient war room workflows for incident response, debugging sessions, and critical production issues."
 date: 2026-03-15
 last_modified_at: 2026-04-17

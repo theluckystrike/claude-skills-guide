@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Students"
+title: "Claude Code for Students (2026)"
 description: "A practical guide for students using Claude Code to accelerate homework completion and project development. Includes code examples, workflow patterns, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

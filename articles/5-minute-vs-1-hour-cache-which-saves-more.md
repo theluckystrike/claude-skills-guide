@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "5-Minute vs 1-Hour Cache"
+title: "5-Minute vs 1-Hour Cache (2026)"
 description: "Claude's 5-minute cache costs 1.25x per write, 1-hour costs 2x. See break-even analysis to pick the right TTL for your workload."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, prompt-caching]
-render_with_liquid: false
 ---
 
 # 5-Minute vs 1-Hour Cache: Which Saves More

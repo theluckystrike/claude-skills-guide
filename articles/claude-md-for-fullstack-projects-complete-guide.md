@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md For Fullstack Projects"
+title: "Claude Md For Fullstack Projects (2026)"
 description: "Master Claude Code .md skill files for fullstack development. Learn to create, organize, and deploy Claude skills across frontend, backend, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

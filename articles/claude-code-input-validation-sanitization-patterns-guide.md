@@ -1,8 +1,7 @@
 ---
-render_with_liquid: false
 layout: default
-title: "Input Validation and Sanitization"
-description: "Implement input validation and sanitization patterns in Claude Code skills for secure, reliable AI agent development."
+title: "Input Validation and Sanitization (2026)"
+description: "Input Validation and Sanitization — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [guides]

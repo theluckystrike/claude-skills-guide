@@ -3,7 +3,6 @@ title: "Docker Container Missing Tools Fix — Fix (2026)"
 permalink: /claude-code-docker-container-missing-tools-fix-2026/
 description: "Fix Docker container missing tools needed by Claude Code. Install git, curl, and build essentials in your Dockerfile to enable full CLI functionality."
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 ## The Error
@@ -100,3 +99,31 @@ Run `npm doctor` to check your npm environment. It validates the registry connec
 ### Why does Claude Code require git?
 
 Claude Code uses git for several core operations: tracking file changes, creating commits, reading blame information, searching history with `git log`, and managing branches. Without git, these operations fail and Claude Code falls back to less efficient alternatives.
+
+
+## Related Guides
+
+- [Fix: Anthropic SDK MCP Tools Get Empty](/anthropic-sdk-mcp-empty-arguments-bug/)
+- [AI Coding Tools Governance Policy](/ai-coding-tools-governance-policy-for-enterprises/)
+- [Pruning Unused Claude Tools Saves Real](/pruning-unused-claude-tools-saves-money/)
+- [Best Claude Code Security Tools (2026)](/best-claude-code-security-tools-2026/)
+
+## Docker Best Practices for Claude Code Projects
+
+When using Claude Code to manage Dockerized applications, these patterns prevent common issues:
+
+**Layer ordering matters for cache efficiency.** Docker layers build sequentially and cache invalidates forward. Place rarely-changing layers (OS packages, runtime) before frequently-changing layers (application code). This single optimization can reduce build times from minutes to seconds.
+
+**Multi-stage builds reduce image size.** Use separate stages for building (includes dev dependencies, compilers) and running (only production dependencies and compiled output). A typical Node.js application goes from 1.2GB (single stage) to 150MB (multi-stage).
+
+**Use .dockerignore aggressively.** Exclude `node_modules`, `.git`, `*.md`, `.env`, `coverage/`, and `dist/` from the build context. A 500MB build context that takes 10 seconds to transfer can be reduced to 5MB in under a second.
+
+## Troubleshooting Docker Builds in Claude Code
+
+When Claude Code generates a Dockerfile that fails to build:
+
+1. **Read the build output carefully.** The error line number in the Dockerfile tells you exactly which instruction failed. Claude Code sometimes generates commands that work on your host but fail inside the container due to missing packages.
+
+2. **Check the base image.** Ensure the base image includes the tools your build needs. `node:22-slim` does not include `git`, `python3`, or build tools. Use `node:22` (full) for build stages that need native compilation.
+
+3. **Verify network access inside the build.** Corporate proxies and VPNs may block network access during `docker build`. Pass proxy settings as build args: `docker build --build-arg HTTP_PROXY=$HTTP_PROXY .`

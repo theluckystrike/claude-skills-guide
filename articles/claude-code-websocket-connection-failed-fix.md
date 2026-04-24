@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix WebSocket Connection Failures"
+title: "Fix WebSocket Connection Failures (2026)"
 description: "Resolve WebSocket connection failed errors in Claude Code projects. Debug WS handshake failures, proxy issues, and CORS configuration problems."
 date: 2026-04-15
 last_modified_at: 2026-04-17

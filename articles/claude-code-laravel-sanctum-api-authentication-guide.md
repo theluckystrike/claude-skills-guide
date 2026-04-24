@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Laravel Sanctum API"
+title: "Claude Code Laravel Sanctum API (2026)"
 description: "A comprehensive guide to implementing secure API authentication in Laravel using Sanctum. Learn to protect your routes, issue tokens, and build."
 date: 2026-03-14
 last_modified_at: 2026-04-17

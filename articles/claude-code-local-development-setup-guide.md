@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Local Development Setup"
+title: "How to Use Local Development Setup (2026)"
 description: "A practical guide to setting up Claude Code for local development, including environment configuration, skill integration, and optimization tips."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Hindi Speaking"
+title: "Claude Code for Hindi Speaking (2026)"
 description: "A comprehensive guide for Hindi-speaking developers to get started with Claude Code, covering installation, setup, essential skills, and practical."
 date: 2026-03-14
 last_modified_at: 2026-04-17

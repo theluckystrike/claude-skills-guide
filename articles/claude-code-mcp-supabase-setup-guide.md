@@ -1,9 +1,8 @@
 ---
-title: "Claude Code + Supabase MCP: Setup Guide"
+title: "Claude Code + Supabase MCP: Setup Guide (2026)"
 description: "Step-by-step Supabase MCP server setup for Claude Code. Schema inspection, SQL queries, RLS policies, edge functions, and a real project example."
 permalink: /claude-code-mcp-supabase-setup-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Code + Supabase MCP: Setup Guide (2026)
@@ -584,6 +583,7 @@ Add Supabase-specific rules to your [CLAUDE.md file](/claude-md-best-practices-d
 Yes. The [spec workflow](/claude-code-spec-workflow-guide/) works well with Supabase MCP. Write your database schema changes in a spec, then have Claude implement and verify them through MCP.
 
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -684,3 +684,5 @@ Yes. The [spec workflow](/claude-code-spec-workflow-guide/) works well with Supa
 ## See Also
 
 - [InsForge Setup Guide for Claude Code: Skills + CLI + MCP](/insforge-setup-guide-claude-code-skills-cli-mcp/)
+
+{% endraw %}

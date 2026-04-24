@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for OpenFaaS Kubernetes"
+title: "Claude Code for OpenFaaS Kubernetes (2026)"
 description: "Learn how to build serverless functions with OpenFaaS on Kubernetes using Claude Code. Automate function deployment, manage workflows, and optimize."
 date: 2026-03-15
 last_modified_at: 2026-04-17

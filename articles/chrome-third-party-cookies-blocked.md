@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Handle Chrome Third Party"
+title: "How to Handle Chrome Third Party (2026)"
 description: "Learn how Chrome's third-party cookies blocking affects web developers and power users. Discover practical solutions, testing strategies, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -184,6 +184,15 @@ Prefer targeted file reads over directory dumps. Instead of asking Claude to rea
 
 Cache expensive tool calls. If your MCP server fetches data from a slow API, implement response caching at the server level. Claude will call the tool repeatedly across a long session; caching at the MCP layer prevents redundant network calls without any changes to how you prompt.
 
+For more on this topic, see [Claude Code for PocketBase](/claude-code-for-pocketbase-workflow-guide/).
+
+For more on this topic, see [Claude Code for Automotive ECU AUTOSAR](/claude-code-automotive-ecu-autosar-2026/).
+
+
+
+For more on this topic, see [Claude Code for Hoppscotch](/claude-code-for-hoppscotch-workflow-guide/).
+
+
 ## Security and Enterprise Features
 
 Enterprise deployments benefit from enhanced permission controls. The 2026 release includes:

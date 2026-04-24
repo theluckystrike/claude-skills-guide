@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Lambda Response"
+title: "Claude Code for Lambda Response (2026)"
 description: "Learn how to implement streaming responses in AWS Lambda using Claude Code. Practical examples, code snippets, and actionable advice for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

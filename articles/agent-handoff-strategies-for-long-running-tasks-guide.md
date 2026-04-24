@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Agent Handoff for Long-Running Tasks"
+title: "Agent Handoff for Long-Running Tasks (2026)"
 description: "Implement agent handoff strategies for multi-hour tasks using checkpointing, state preservation, and session resumption. Proven patterns for Claude Code."
 date: 2026-03-14
 last_modified_at: 2026-04-17

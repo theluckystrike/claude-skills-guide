@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Claude Skill Prompt Compression"
-description: "Reduce token usage and improve response speed with these practical prompt compression strategies for Claude skills."
+title: "Claude Skill Prompt Compression (2026)"
+description: "Claude Skill Prompt Compression — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

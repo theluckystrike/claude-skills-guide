@@ -1,9 +1,8 @@
 ---
-title: "Claude Temperature Settings"
+title: "Claude Temperature Settings (2026)"
 description: "Yes, you can adjust Claude's temperature — but only via the API. Full guide to temperature, top_p, top_k, recommended values by task, and code examples."
 permalink: /claude-temperature-settings-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Temperature Settings: How to Adjust (2026)
@@ -53,6 +52,7 @@ Mathematically, temperature divides the logits (raw model scores) before the sof
 <div id="temp-meter-rec" style="background:#0f172a;padding:8px;border-radius:4px;"><span style="color:#94a3b8;font-size:11px;">RECOMMENDED</span><div id="temp-rec" style="color:#6ee7b7;font-size:12px;margin-top:4px;">General</div></div>
 </div>
 </div>
+{% raw %}
 <script>
 var tempEx={0:["user_email","user_email","user_email","All 10 runs: identical output"],1:["user_email","userEmail","user_email","9/10 runs: same output"],2:["user_email","userEmail","email_address","8/10 runs: similar output"],3:["userEmail","email_address","user_email_addr","7/10 runs: minor variations"],4:["user_email","emailAddress","user_email_str","Moderate variation between runs"],5:["userEmail","email_addr","user_mail","Balanced: conventional with variety"],6:["emailOfUser","usr_email","mail_address","Noticeable variation each run"],7:["electronic_mail","userContactEmail","inbox_addr","Creative alternatives appear"],8:["digital_postbox","e_correspondence","user_inbox_handle","Unconventional names emerge"],9:["cyber_pigeon_hole","electronic_letterbox","pixel_mailslot","Highly creative, less conventional"],10:["quantum_letter_vessel","astral_message_beacon","ethereal_post_nexus","Maximum creativity, may be impractical"]};
 var tempRec={0:"Code generation, data extraction",1:"Code generation, factual answers",2:"Technical writing, analysis",3:"Code review, documentation",4:"General conversation",5:"Balanced general use",6:"Explanations, tutorials",7:"Brainstorming, content writing",8:"Creative writing, marketing",9:"Fiction, poetry, ideation",10:"Creative exploration only"};
@@ -605,3 +605,5 @@ No. Temperature only affects the probability distribution used for token selecti
   ]
 }
 </script>
+
+{% endraw %}

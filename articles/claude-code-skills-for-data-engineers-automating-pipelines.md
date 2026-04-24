@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills for Data Engineers"
+title: "Claude Code Skills for Data Engineers (2026)"
 description: "A practical guide to using Claude Code skills for building, testing, and monitoring data pipelines. with examples for ETL, batch processing, and observa"
 date: 2026-03-14
 last_modified_at: 2026-04-17

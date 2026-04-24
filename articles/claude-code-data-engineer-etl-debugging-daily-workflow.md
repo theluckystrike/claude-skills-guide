@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for ETL Debugging"
+title: "Claude Code for ETL Debugging (2026)"
 description: "Debug ETL pipelines faster with Claude Code. Covers data quality checks, transformation errors, and scheduling issues in your daily engineering flow."
 date: 2026-03-14
 last_modified_at: 2026-04-17

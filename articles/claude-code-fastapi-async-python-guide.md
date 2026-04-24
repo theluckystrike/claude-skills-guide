@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code FastAPI Async Python Guide"
+title: "Claude Code FastAPI Async Python Guide (2026)"
 description: "A practical guide to building async Python APIs with FastAPI using Claude Code. Learn how to use Claude skills for development, testing, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -175,6 +175,9 @@ If you want property-based testing for your API contracts, the hypothesis skill 
 ## Error Handling Patterns
 
 Production APIs need consistent error handling. Define custom exception handlers:
+
+For more on this topic, see [Best Claude Code Plugins for Python](/best-claude-code-plugins-python-2026/).
+
 
 ```python
 from fastapi import Request, HTTPException

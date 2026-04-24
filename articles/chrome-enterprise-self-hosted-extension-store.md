@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Enterprise Self-Hosted Extension"
+title: "Chrome Enterprise Self-Hosted Extension (2026)"
 description: "Set up a self-hosted Chrome extension store for enterprise. Complete implementation guide with code examples and deployment instructions. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

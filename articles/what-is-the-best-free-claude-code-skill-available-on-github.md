@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "What Is The Best Free Claude Code"
+title: "What Is The Best Free Claude Code (2026)"
 description: "Discover the top free Claude Code skills on GitHub that can speed up your development workflow. Expert recommendations for developers and power users."
 date: 2026-03-14
 last_modified_at: 2026-04-17

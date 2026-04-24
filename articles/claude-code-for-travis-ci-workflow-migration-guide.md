@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Migrate Travis CI to Claude Code"
+title: "Migrate Travis CI to Claude Code (2026)"
 description: "Migrate your Travis CI pipelines to modern CI/CD with Claude Code automation. Step-by-step migration path with config translation and YAML examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

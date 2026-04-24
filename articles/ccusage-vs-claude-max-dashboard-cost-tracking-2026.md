@@ -3,7 +3,6 @@ title: "ccusage vs Claude Max Dashboard (2026)"
 description: "ccusage tracks Claude Code costs from local JSONL logs. The Claude Max dashboard tracks usage online. Compare granularity, accuracy, and use cases."
 permalink: /ccusage-vs-claude-max-dashboard-cost-tracking-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # ccusage vs Claude Max Dashboard for Cost Tracking (2026)

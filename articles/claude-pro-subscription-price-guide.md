@@ -1,9 +1,8 @@
 ---
-title: "Claude Pro Subscription"
+title: "Claude Pro Subscription (2026)"
 description: "Claude Pro at $20/month vs Max at $100 and $200 vs Free. Features, limits, model access, and a decision framework for choosing the right plan."
 permalink: /claude-pro-subscription-price-guide/
 last_tested: "2026-04-24"
-render_with_liquid: false
 ---
 
 # Claude Pro Subscription: Price and Features (2026)
@@ -304,6 +303,7 @@ Downgrades take effect at the next billing cycle. You keep access to the higher 
 Anthropic does not currently offer student pricing for Claude subscriptions.
 
 
+{% raw %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -383,3 +383,5 @@ Anthropic does not currently offer student pricing for Claude subscriptions.
 - [Claude 5-Hour Usage Limit Guide](/claude-5-hour-usage-limit-guide/)
 - [Claude API Pricing Complete Guide](/claude-api-pricing-complete-guide/)
 
+
+{% endraw %}

@@ -1,10 +1,9 @@
 ---
-title: "Claude Code --allowedTools"
+title: "Claude Code --allowedTools (2026)"
 description: "The --allowedTools flag restricts Claude Code tool access per session, cutting MCP overhead by 40-60% and preventing unnecessary tool call tokens."
 permalink: /claude-code-allowed-tools-flag-save-tokens/
 date: 2026-04-22
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # Claude Code --allowedTools Flag: Restrict Tool Calls to Save Tokens

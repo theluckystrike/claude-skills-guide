@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Agent Loop Cost"
+title: "Claude Agent Loop Cost (2026)"
 description: "Each agent loop iteration costs 245-735 tokens in tool overhead. At 100 iterations on Opus 4.7, that is $2.05 in overhead alone."
 date: 2026-04-19
 author: "Claude Skills Guide"
@@ -9,7 +9,6 @@ reviewed: true
 score: 8
 categories: [cost-optimization]
 tags: [claude, cost-reduction, multi-agent, token-overhead]
-render_with_liquid: false
 ---
 
 # Claude Agent Loop Cost: Tokens Per Iteration

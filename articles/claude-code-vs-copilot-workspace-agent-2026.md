@@ -5,7 +5,6 @@ description: "Claude Code vs GitHub Copilot Workspace compared as coding agents.
 permalink: /claude-code-vs-copilot-workspace-agent-2026/
 date: 2026-04-21
 last_tested: "2026-04-21"
-render_with_liquid: false
 ---
 
 ## Quick Verdict

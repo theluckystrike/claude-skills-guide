@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Firebase Debugger"
+title: "Chrome Extension Firebase Debugger (2026)"
 description: "Learn how to use Chrome extensions for Firebase debugging. Set up Firebase Debugger, inspect Firestore, Authentication, and Cloud Functions directly in."
 date: 2026-03-15
 last_modified_at: 2026-04-17

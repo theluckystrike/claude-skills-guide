@@ -1,9 +1,8 @@
 ---
-title: "Use Awesome LLM Apps Templates"
+title: "Use Awesome LLM Apps Templates (2026)"
 description: "Clone and customize Awesome LLM Apps templates using Claude Code. Step-by-step for picking a template, adapting it, and deploying your AI application."
 permalink: /how-to-use-awesome-llm-apps-with-claude-2026/
 last_tested: "2026-04-22"
-render_with_liquid: false
 ---
 
 # How to Use Awesome LLM Apps Templates with Claude Code (2026)

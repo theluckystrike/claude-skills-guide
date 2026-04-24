@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md Best Practices For Large"
+title: "Claude Md Best Practices For Large (2026)"
 description: "Practical guide to writing effective Claude Code markdown files for large-scale projects. Includes patterns, examples, and skill integration tips."
 date: 2026-03-14
 last_modified_at: 2026-04-17

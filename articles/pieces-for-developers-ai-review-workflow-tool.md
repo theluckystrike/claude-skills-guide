@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Pieces for Developers AI Review"
+title: "Pieces for Developers AI Review (2026)"
 description: "Learn how to integrate Pieces for Developers with Claude Code to build powerful AI-assisted code review workflows. Practical examples and real-world."
 date: 2026-03-14
 last_modified_at: 2026-04-17

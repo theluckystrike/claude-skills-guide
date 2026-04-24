@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Ghostery Alternative Chrome Extension"
+title: "Ghostery Alternative Chrome Extension (2026)"
 description: "Discover the best Ghostery alternatives for Chrome in 2026. Open-source ad blockers, privacy tools, and developer-friendly options for blocking trackers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

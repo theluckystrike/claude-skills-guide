@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code Teams vs Cursor Teams"
+title: "Claude Code Teams vs Cursor Teams (2026)"
 description: "Evaluate Claude Code Teams against Cursor Teams on admin controls, SSO, pricing, and real-world deployment for engineering orgs."
 permalink: /claude-code-teams-vs-cursor-teams-enterprise-2026/
 date: 2026-04-21
@@ -10,7 +10,6 @@ tools_compared:
     version: "Premium seats (2026)"
   - name: "Cursor Teams"
     version: "Teams / Enterprise (2026)"
-render_with_liquid: false
 ---
 
 # Claude Code Teams vs Cursor Teams for Enterprise in 2026

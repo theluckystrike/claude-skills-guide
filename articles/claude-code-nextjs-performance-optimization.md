@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Next.js Performance Optimization"
+title: "Next.js Performance Optimization (2026)"
 description: "Learn how to use Claude Code and specialized skills to optimize Next.js applications for speed, bundle size, and runtime performance."
 date: 2026-03-14
 last_modified_at: 2026-04-17
