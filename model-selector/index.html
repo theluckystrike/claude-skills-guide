@@ -578,6 +578,78 @@ a:focus-visible, button:focus-visible {
   .cta-banner { padding: 1.5rem; }
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Opus worth the extra cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For routine coding tasks, no. Sonnet handles the vast majority of feature work and bug fixes at one-fifth the cost. Opus becomes worth it for architecture decisions, complex refactoring across many files, and debugging subtle concurrency or security issues. Most teams save money by defaulting to Sonnet and switching to Opus selectively for high-stakes tasks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I mix models in one project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and you should. In your CLAUDE.md file, you can specify which model to use for different task types. For example, set Sonnet as your default, use Haiku for autocomplete and quick lookups, and switch to Opus for architecture reviews. Claude Code's /model command lets you switch models mid-session without losing context."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which model is fastest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Haiku 4.5 is the fastest by a significant margin, typically 2-3x faster than Sonnet for output generation. Sonnet 4.6 is fast enough for interactive coding sessions. Opus is noticeably slower, especially on long outputs, which is why it is best reserved for tasks where thoroughness matters more than speed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which model is cheapest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Haiku 4.5 at $1 per million input tokens and $5 per million output tokens. A solo developer doing light work can stay under $5/month with Haiku. Sonnet costs roughly 3x more per token, and Opus costs 5x more than Haiku for input. However, cheap tokens that produce wrong code cost more in debugging time, so consider quality alongside raw price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What changed from Sonnet 4.5 to 4.6?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sonnet 4.6 brought improved multi-step reasoning, better adherence to CLAUDE.md instructions, more reliable tool use (fewer hallucinated file paths), and stronger performance on long-context tasks. It also improved at understanding framework conventions and producing code that matches existing project style. For Claude Code users, the upgrade is meaningful for daily productivity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I switch models in Claude Code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the /model slash command within any Claude Code session to switch models instantly. You can also set a default model in your CLAUDE.md file by adding a \"Model Configuration\" section. When using the API directly, specify the model ID in your request: claude-sonnet-4-6-20260401, claude-opus-4-6-20260401, or claude-haiku-4-5-20241022."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do all models have the same context window?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, all three current models support a 200K token context window. The difference lies in how effectively each model utilizes that context. Opus tends to maintain better recall across the full window, while Haiku may lose accuracy on details placed early in very long contexts. For codebases exceeding 100K tokens, Sonnet or Opus will generally give more reliable answers about the full codebase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use extended thinking with any model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Extended thinking is most valuable with Opus for complex architectural decisions and multi-file refactoring. It adds latency and cost but can catch issues that standard responses miss. With Sonnet, extended thinking helps for moderately complex tasks but offers diminishing returns compared to Opus. Haiku does not benefit meaningfully from extended thinking and the added cost is rarely justified."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -634,7 +706,7 @@ a:focus-visible, button:focus-visible {
         <button class="option-btn" data-key="size" data-value="xlarge">Very large (200K+ lines)</button>
       </div>
       <div class="wizard-nav">
-        <button class="btn-back" onclick="goBack()">Back</button>
+        <button class="btn-back" data-action="back">Back</button>
         <span></span>
       </div>
     </div>
@@ -650,7 +722,7 @@ a:focus-visible, button:focus-visible {
         <button class="option-btn" data-key="priority" data-value="context">Context &mdash; I need maximum context window</button>
       </div>
       <div class="wizard-nav">
-        <button class="btn-back" onclick="goBack()">Back</button>
+        <button class="btn-back" data-action="back">Back</button>
         <span></span>
       </div>
     </div>
@@ -665,7 +737,7 @@ a:focus-visible, button:focus-visible {
         <button class="option-btn" data-key="team" data-value="enterprise">Enterprise (50+)</button>
       </div>
       <div class="wizard-nav">
-        <button class="btn-back" onclick="goBack()">Back</button>
+        <button class="btn-back" data-action="back">Back</button>
         <span></span>
       </div>
     </div>
@@ -680,7 +752,7 @@ a:focus-visible, button:focus-visible {
         <button class="option-btn" data-key="budget" data-value="any">Quality at any price</button>
       </div>
       <div class="wizard-nav">
-        <button class="btn-back" onclick="goBack()">Back</button>
+        <button class="btn-back" data-action="back">Back</button>
         <span></span>
       </div>
     </div>
@@ -695,7 +767,7 @@ a:focus-visible, button:focus-visible {
         <div class="config-snippet-wrap" id="configSnippetWrap"></div>
       </div>
       <div style="text-align:center;">
-        <button class="btn-restart" onclick="startOver()">Start Over</button>
+        <button class="btn-restart" data-action="restart">Start Over</button>
       </div>
     </div>
 
@@ -808,7 +880,7 @@ a:focus-visible, button:focus-visible {
 
     <details>
       <summary>Which model is cheapest?</summary>
-      <div class="faq-body">Haiku 4.5 at $0.80 per million input tokens and $4 per million output tokens. A solo developer doing light work can stay under $5/month with Haiku. Sonnet costs roughly 4x more per token, and Opus costs roughly 19x more than Haiku for input. However, cheap tokens that produce wrong code cost more in debugging time, so consider quality alongside raw price.</div>
+      <div class="faq-body">Haiku 4.5 at $1 per million input tokens and $5 per million output tokens. A solo developer doing light work can stay under $5/month with Haiku. Sonnet costs roughly 3x more per token, and Opus costs 5x more than Haiku for input. However, cheap tokens that produce wrong code cost more in debugging time, so consider quality alongside raw price.</div>
     </details>
 
     <details>
@@ -860,391 +932,540 @@ a:focus-visible, button:focus-visible {
 </footer>
 
 <script>
-/* ── State ── */
-var wizardState = {
-  step: 0,
-  answers: {},
-  totalSteps: 5
-};
+(function() {
+  'use strict';
 
-/* ── DOM refs ── */
-var steps = document.querySelectorAll('.question-step');
-var resultSection = document.getElementById('resultSection');
-var progressFill = document.getElementById('progressFill');
+  /* ── Frozen constant data ── */
+  const TIEBREAKER = Object.freeze({ sonnet: 2, opus: 1, haiku: 0 });
+  const VALID_MODELS = Object.freeze(['sonnet', 'opus', 'haiku']);
+  const VALID_TASKS = Object.freeze(['script', 'feature', 'app', 'architecture']);
+  const VALID_SIZES = Object.freeze(['small', 'medium', 'large', 'xlarge']);
+  const VALID_PRIORITIES = Object.freeze(['speed', 'quality', 'cost', 'context']);
+  const VALID_TEAMS = Object.freeze(['solo', 'small', 'enterprise']);
+  const VALID_BUDGETS = Object.freeze(['minimize', 'balanced', 'any']);
+  const COMPLEX_TASKS = Object.freeze(['architecture', 'app']);
+  const TOTAL_STEPS = 5;
+  const MAX_LOOP = 100;
+  const STORAGE_KEY = 'ccg_modelselector_uses';
 
-/* ── Init: attach option listeners ── */
-function initOptionListeners() {
-  var buttons = document.querySelectorAll('.option-btn');
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', handleOptionClick);
+  const MODEL_INFO = Object.freeze({
+    haiku:  Object.freeze({ label: 'Haiku 4.5',  maxPlan: '$100/mo (5x)' }),
+    sonnet: Object.freeze({ label: 'Sonnet 4.6', maxPlan: '$100/mo (5x)' }),
+    opus:   Object.freeze({ label: 'Opus 4.6',   maxPlan: '$200/mo (20x)' })
+  });
+
+  const SUBTASK_ADVICE = Object.freeze({
+    haiku: 'for autocomplete, quick file lookups, and generating boilerplate tests to keep costs low on simple tasks.',
+    sonnet: 'for standard feature work and bug fixes where deep architectural reasoning is not required.',
+    opus: 'for architecture reviews, security audits, and complex refactoring sessions that demand maximum reasoning depth.'
+  });
+
+  /* ── Null-safe DOM query helper ── */
+  function getEl(id) {
+    console.assert(typeof id === 'string', 'getEl: id must be a string');
+    const el = document.getElementById(id);
+    console.assert(el !== null, 'getEl: element not found for id: ' + id);
+    return el;
   }
-}
 
-/* ── Handle option click ── */
-function handleOptionClick(e) {
-  var btn = e.currentTarget;
-  var key = btn.getAttribute('data-key');
-  var value = btn.getAttribute('data-value');
-
-  wizardState.answers[key] = value;
-
-  /* Highlight selected */
-  var siblings = btn.parentElement.querySelectorAll('.option-btn');
-  for (var i = 0; i < siblings.length; i++) {
-    siblings[i].classList.remove('selected');
+  /* ── Null-safe getAttribute helper ── */
+  function getAttr(el, attr) {
+    console.assert(el instanceof HTMLElement, 'getAttr: el must be an HTMLElement');
+    console.assert(typeof attr === 'string', 'getAttr: attr must be a string');
+    const val = el.getAttribute(attr);
+    return val !== null ? val : '';
   }
-  btn.classList.add('selected');
 
-  /* Advance after brief delay */
-  setTimeout(function() {
-    if (wizardState.step < wizardState.totalSteps - 1) {
-      wizardState.step++;
-      renderStep();
-    } else {
-      showResult();
+  /* ── State (module-scoped, not global) ── */
+  let currentStep = 0;
+  let answers = {};
+
+  /* ── DOM refs with null guards ── */
+  const steps = document.querySelectorAll('.question-step');
+  const resultSection = getEl('resultSection');
+  const progressFill = getEl('progressFill');
+
+  /* ── Init: attach option listeners via delegation ── */
+  function initListeners() {
+    console.assert(steps.length > 0, 'initListeners: no question steps found');
+    console.assert(resultSection !== null, 'initListeners: resultSection is null');
+
+    const wizardCard = getEl('wizardCard');
+    if (!wizardCard) { return; }
+
+    /* Event delegation on the wizard card */
+    wizardCard.addEventListener('click', function(e) {
+      const optBtn = e.target.closest('.option-btn');
+      const backBtn = e.target.closest('[data-action="back"]');
+      const restartBtn = e.target.closest('[data-action="restart"]');
+      const copyBtn = e.target.closest('[data-action="copy"]');
+
+      if (optBtn) {
+        handleOptionClick(optBtn);
+      } else if (backBtn) {
+        goBack();
+      } else if (restartBtn) {
+        startOver();
+      } else if (copyBtn) {
+        copyConfig();
+      }
+    });
+  }
+
+  /* ── Handle option click ── */
+  function handleOptionClick(btn) {
+    console.assert(btn instanceof HTMLElement, 'handleOptionClick: btn must be HTMLElement');
+    const key = getAttr(btn, 'data-key');
+    const value = getAttr(btn, 'data-value');
+    console.assert(key.length > 0 && value.length > 0, 'handleOptionClick: missing data-key or data-value');
+
+    answers[key] = value;
+
+    /* Highlight selected */
+    const parent = btn.parentElement;
+    if (parent) {
+      const siblings = parent.querySelectorAll('.option-btn');
+      let count = 0;
+      for (let i = 0; i < siblings.length && count < MAX_LOOP; i++) {
+        siblings[i].classList.remove('selected');
+        count++;
+      }
     }
-  }, 250);
-}
+    btn.classList.add('selected');
 
-/* ── Render current step ── */
-function renderStep() {
-  for (var i = 0; i < steps.length; i++) {
-    steps[i].classList.remove('active');
-  }
-  resultSection.classList.remove('active');
-
-  if (wizardState.step < steps.length) {
-    steps[wizardState.step].classList.add('active');
-  }
-
-  updateProgress();
-}
-
-/* ── Go back ── */
-function goBack() {
-  if (wizardState.step > 0) {
-    wizardState.step--;
-    renderStep();
-  }
-}
-
-/* ── Update progress bar ── */
-function updateProgress() {
-  var pct = (wizardState.step / wizardState.totalSteps) * 100;
-  progressFill.style.width = pct + '%';
-}
-
-/* ── Scoring engine ── */
-function getRecommendation(answers) {
-  var scores = { sonnet: 0, opus: 0, haiku: 0 };
-
-  /* Q1: Task complexity */
-  if (answers.task === 'script')       { scores.haiku += 3; scores.sonnet += 2; }
-  if (answers.task === 'feature')      { scores.sonnet += 3; scores.opus += 1; }
-  if (answers.task === 'app')          { scores.sonnet += 2; scores.opus += 3; }
-  if (answers.task === 'architecture') { scores.opus += 4; }
-
-  /* Q2: Codebase size */
-  if (answers.size === 'small')  { scores.haiku += 2; }
-  if (answers.size === 'medium') { scores.sonnet += 2; }
-  if (answers.size === 'large')  { scores.sonnet += 2; scores.opus += 2; }
-  if (answers.size === 'xlarge') { scores.opus += 3; }
-
-  /* Q3: Priority */
-  if (answers.priority === 'speed')   { scores.haiku += 3; scores.sonnet += 2; }
-  if (answers.priority === 'quality') { scores.opus += 4; }
-  if (answers.priority === 'cost')    { scores.haiku += 4; }
-  if (answers.priority === 'context') { scores.opus += 2; scores.sonnet += 2; }
-
-  /* Q4: Team */
-  if (answers.team === 'solo')       { scores.sonnet += 1; }
-  if (answers.team === 'small')      { scores.sonnet += 2; }
-  if (answers.team === 'enterprise') { scores.opus += 2; }
-
-  /* Q5: Budget */
-  if (answers.budget === 'minimize') { scores.haiku += 4; }
-  if (answers.budget === 'balanced') { scores.sonnet += 3; }
-  if (answers.budget === 'any')      { scores.opus += 3; }
-
-  return rankModels(scores);
-}
-
-/* ── Rank models by score ── */
-function rankModels(scores) {
-  var models = [
-    { name: 'sonnet', score: scores.sonnet },
-    { name: 'opus',   score: scores.opus },
-    { name: 'haiku',  score: scores.haiku }
-  ];
-  models.sort(function(a, b) { return b.score - a.score; });
-  return { primary: models[0].name, secondary: models[1].name, scores: scores };
-}
-
-/* ── Show result ── */
-function showResult() {
-  var rec = getRecommendation(wizardState.answers);
-  var useCount = incrementUseCount();
-
-  for (var i = 0; i < steps.length; i++) {
-    steps[i].classList.remove('active');
+    /* Advance after brief delay */
+    setTimeout(function() {
+      if (currentStep < TOTAL_STEPS - 1) {
+        currentStep++;
+        renderStep();
+      } else {
+        showResult();
+      }
+    }, 250);
   }
 
-  progressFill.style.width = '100%';
-  resultSection.classList.add('active');
+  /* ── Render current step ── */
+  function renderStep() {
+    console.assert(currentStep >= 0 && currentStep < TOTAL_STEPS, 'renderStep: step out of bounds');
+    console.assert(steps.length > 0, 'renderStep: no steps available');
 
-  renderResultHeader(rec);
-  renderReasoning(rec);
-  renderAlsoConsider(rec);
-  renderCostTable(rec);
-  renderConfigSnippet(rec);
+    let count = 0;
+    for (let i = 0; i < steps.length && count < MAX_LOOP; i++) {
+      steps[i].classList.remove('active');
+      count++;
+    }
+    resultSection.classList.remove('active');
 
-  /* Paywall after 2 uses */
-  if (useCount > 2) {
-    applyPaywall();
-  }
-}
+    if (currentStep < steps.length) {
+      steps[currentStep].classList.add('active');
+    }
 
-/* ── Render result header ── */
-function renderResultHeader(rec) {
-  var el = document.getElementById('resultHeader');
-  var info = getModelInfo(rec.primary);
-  el.innerHTML =
-    '<span class="model-badge badge-' + rec.primary + '">' + info.label + '</span>' +
-    '<h2>Use ' + info.label + ' for This Project</h2>';
-}
-
-/* ── Render reasoning ── */
-function renderReasoning(rec) {
-  var el = document.getElementById('resultReasoning');
-  el.textContent = buildReasoningText(rec);
-}
-
-/* ── Build reasoning text ── */
-function buildReasoningText(rec) {
-  var a = wizardState.answers;
-  var info = getModelInfo(rec.primary);
-  var lines = [];
-
-  lines.push(info.label + ' is the best match for your scenario.');
-
-  if (rec.primary === 'opus') {
-    lines.push('Your project demands deep reasoning and architectural understanding that only Opus delivers reliably.');
-  } else if (rec.primary === 'sonnet') {
-    lines.push('Sonnet delivers the best balance of quality and cost for everyday coding tasks.');
-  } else {
-    lines.push('Haiku keeps costs minimal while handling straightforward tasks quickly.');
+    updateProgress();
   }
 
-  if (a.task === 'architecture') {
-    lines.push('Architecture-level decisions benefit from the strongest reasoning model available.');
-  } else if (a.task === 'app') {
-    lines.push('Full application development requires a model that maintains coherence across many files.');
+  /* ── Go back ── */
+  function goBack() {
+    console.assert(typeof currentStep === 'number', 'goBack: currentStep must be number');
+    console.assert(currentStep >= 0, 'goBack: currentStep must be non-negative');
+    if (currentStep > 0) {
+      currentStep--;
+      renderStep();
+    }
   }
 
-  if (a.budget === 'minimize' && rec.primary !== 'haiku') {
-    lines.push('While you prefer lower costs, the complexity of your task justifies the investment in a more capable model.');
+  /* ── Update progress bar ── */
+  function updateProgress() {
+    console.assert(typeof currentStep === 'number', 'updateProgress: currentStep must be number');
+    console.assert(progressFill !== null, 'updateProgress: progressFill element is null');
+    const pct = (currentStep / TOTAL_STEPS) * 100;
+    progressFill.style.width = pct + '%';
   }
 
-  return lines.join(' ');
-}
+  /* ── Scoring engine with complexity floor (FIX-11) ── */
+  function getRecommendation(ans) {
+    console.assert(typeof ans === 'object' && ans !== null, 'getRecommendation: answers must be object');
+    console.assert(typeof ans.task === 'string', 'getRecommendation: answers.task must be string');
 
-/* ── Render also-consider ── */
-function renderAlsoConsider(rec) {
-  var el = document.getElementById('alsoConsider');
-  var secondary = getModelInfo(rec.secondary);
-  var subtask = getSubtaskAdvice(rec.secondary);
-  el.innerHTML = '<strong>Also consider:</strong> Use ' + secondary.label + ' ' + subtask;
-}
+    const scores = { sonnet: 0, opus: 0, haiku: 0 };
 
-/* ── Subtask advice by model ── */
-function getSubtaskAdvice(model) {
-  if (model === 'haiku') {
-    return 'for autocomplete, quick file lookups, and generating boilerplate tests to keep costs low on simple tasks.';
-  }
-  if (model === 'sonnet') {
-    return 'for standard feature work and bug fixes where deep architectural reasoning is not required.';
-  }
-  return 'for architecture reviews, security audits, and complex refactoring sessions that demand maximum reasoning depth.';
-}
+    /* Q1: Task complexity */
+    if (ans.task === 'script')       { scores.haiku += 3; scores.sonnet += 2; }
+    if (ans.task === 'feature')      { scores.sonnet += 3; scores.opus += 1; }
+    if (ans.task === 'app')          { scores.sonnet += 2; scores.opus += 3; }
+    if (ans.task === 'architecture') { scores.opus += 4; }
 
-/* ── Render cost table ── */
-function renderCostTable(rec) {
-  var el = document.getElementById('costTableWrap');
-  var costs = getCostEstimates(wizardState.answers);
+    /* Q2: Codebase size */
+    if (ans.size === 'small')  { scores.haiku += 2; }
+    if (ans.size === 'medium') { scores.sonnet += 2; }
+    if (ans.size === 'large')  { scores.sonnet += 2; scores.opus += 2; }
+    if (ans.size === 'xlarge') { scores.opus += 3; }
 
-  var html = '<h3>Estimated Monthly Cost</h3>';
-  html += '<table class="cost-table">';
-  html += '<thead><tr><th>Model</th><th>API Cost</th><th>Max Plan</th></tr></thead>';
-  html += '<tbody>';
+    /* Q3: Priority */
+    if (ans.priority === 'speed')   { scores.haiku += 3; scores.sonnet += 2; }
+    if (ans.priority === 'quality') { scores.opus += 4; }
+    if (ans.priority === 'cost')    { scores.haiku += 4; }
+    if (ans.priority === 'context') { scores.opus += 2; scores.sonnet += 2; }
 
-  var models = ['haiku', 'sonnet', 'opus'];
-  for (var i = 0; i < models.length; i++) {
-    var m = models[i];
-    var info = getModelInfo(m);
-    var highlight = (m === rec.primary) ? ' class="highlight"' : '';
-    html += '<tr' + highlight + '>';
-    html += '<td>' + info.label + '</td>';
-    html += '<td>' + costs[m] + '</td>';
-    html += '<td>' + info.maxPlan + '</td>';
-    html += '</tr>';
-  }
+    /* Q4: Team */
+    if (ans.team === 'solo')       { scores.sonnet += 1; }
+    if (ans.team === 'small')      { scores.sonnet += 2; }
+    if (ans.team === 'enterprise') { scores.opus += 2; }
 
-  html += '</tbody></table>';
-  el.innerHTML = html;
-}
+    /* Q5: Budget */
+    if (ans.budget === 'minimize') { scores.haiku += 4; }
+    if (ans.budget === 'balanced') { scores.sonnet += 3; }
+    if (ans.budget === 'any')      { scores.opus += 3; }
 
-/* ── Get cost estimates based on answers ── */
-function getCostEstimates(answers) {
-  var base = { haiku: 5, sonnet: 25, opus: 120 };
+    /* FIX-11: Task complexity floor — Opus never loses to Haiku for complex tasks */
+    if (ans.task === 'architecture' || ans.task === 'app') {
+      scores.opus = Math.max(scores.opus, scores.haiku + 1);
+    }
 
-  if (answers.size === 'large' || answers.size === 'xlarge') {
-    base.haiku *= 2; base.sonnet *= 2; base.opus *= 1.5;
-  }
-  if (answers.team === 'small') {
-    base.haiku *= 4; base.sonnet *= 4; base.opus *= 4;
-  }
-  if (answers.team === 'enterprise') {
-    base.haiku *= 25; base.sonnet *= 25; base.opus *= 25;
-  }
-  if (answers.task === 'architecture' || answers.task === 'app') {
-    base.haiku *= 1.5; base.sonnet *= 1.5; base.opus *= 1.3;
+    return rankModels(scores);
   }
 
-  return {
-    haiku:  '$' + Math.round(base.haiku) + '/mo',
-    sonnet: '$' + Math.round(base.sonnet) + '/mo',
-    opus:   '$' + Math.round(base.opus) + '/mo'
-  };
-}
+  /* ── Rank models by score with deterministic tie-breaking (FIX-3) ── */
+  function rankModels(scores) {
+    console.assert(typeof scores === 'object' && scores !== null, 'rankModels: scores must be object');
+    console.assert(typeof scores.sonnet === 'number' && typeof scores.opus === 'number' && typeof scores.haiku === 'number',
+      'rankModels: all scores must be numbers');
 
-/* ── Render config snippet ── */
-function renderConfigSnippet(rec) {
-  var el = document.getElementById('configSnippetWrap');
-  var config = buildConfigText(rec);
+    const entries = Object.entries(scores);
+    entries.sort(function(a, b) {
+      if (b[1] !== a[1]) { return b[1] - a[1]; }
+      /* Tiebreak: sonnet(2) > opus(1) > haiku(0) */
+      return (TIEBREAKER[b[0]] || 0) - (TIEBREAKER[a[0]] || 0);
+    });
 
-  var html = '<h3>CLAUDE.md Model Configuration</h3>';
-  html += '<div class="config-snippet" id="configText">' + escapeHtml(config) + '</div>';
-  html += '<button class="btn-copy" id="btnCopy" onclick="copyConfig()">Copy Configuration</button>';
+    const result = {
+      primary: entries[0][0],
+      secondary: entries[1][0],
+      scores: scores
+    };
 
-  el.innerHTML = html;
-}
-
-/* ── Build config text ── */
-function buildConfigText(rec) {
-  var lines = ['## Model Configuration'];
-
-  if (rec.primary === 'sonnet') {
-    lines.push('- Default: sonnet (4.6) for all coding tasks');
-    lines.push('- Use opus for architecture reviews and complex refactoring');
-    lines.push('- Use haiku for autocomplete, quick lookups, and test generation');
-  } else if (rec.primary === 'opus') {
-    lines.push('- Default: opus (4.6) for architecture and complex tasks');
-    lines.push('- Use sonnet for standard feature work and bug fixes');
-    lines.push('- Use haiku for autocomplete and boilerplate generation');
-  } else {
-    lines.push('- Default: haiku (4.5) for quick tasks and cost efficiency');
-    lines.push('- Use sonnet for features requiring deeper reasoning');
-    lines.push('- Use opus sparingly for architecture-critical decisions');
+    console.assert(VALID_MODELS.indexOf(result.primary) !== -1, 'rankModels: invalid primary model');
+    console.assert(result.primary !== result.secondary, 'rankModels: primary must differ from secondary');
+    return result;
   }
 
-  return lines.join('\n');
-}
+  /* ── Show result ── */
+  function showResult() {
+    console.assert(Object.keys(answers).length > 0, 'showResult: no answers provided');
+    const rec = getRecommendation(answers);
+    const useCount = incrementUseCount();
+    console.assert(typeof useCount === 'number' && useCount > 0, 'showResult: useCount must be positive');
 
-/* ── Copy config to clipboard ── */
-function copyConfig() {
-  var text = document.getElementById('configText').textContent;
-  var btn = document.getElementById('btnCopy');
+    let count = 0;
+    for (let i = 0; i < steps.length && count < MAX_LOOP; i++) {
+      steps[i].classList.remove('active');
+      count++;
+    }
 
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(function() {
+    progressFill.style.width = '100%';
+    resultSection.classList.add('active');
+
+    renderResultHeader(rec);
+    renderReasoning(rec);
+    renderAlsoConsider(rec);
+    renderCostTable(rec);
+    renderConfigSnippet(rec);
+
+    /* Paywall after 2 uses */
+    if (useCount > 2) {
+      applyPaywall();
+    }
+  }
+
+  /* ── Render result header ── */
+  function renderResultHeader(rec) {
+    console.assert(rec && typeof rec.primary === 'string', 'renderResultHeader: rec.primary required');
+    const el = getEl('resultHeader');
+    if (!el) { return; }
+    const info = getModelInfo(rec.primary);
+    console.assert(info && typeof info.label === 'string', 'renderResultHeader: info.label required');
+    el.innerHTML =
+      '<span class="model-badge badge-' + rec.primary + '">' + info.label + '</span>' +
+      '<h2>Use ' + info.label + ' for This Project</h2>';
+  }
+
+  /* ── Render reasoning ── */
+  function renderReasoning(rec) {
+    console.assert(rec && typeof rec.primary === 'string', 'renderReasoning: rec.primary required');
+    const el = getEl('resultReasoning');
+    if (!el) { return; }
+    const text = buildReasoningText(rec);
+    console.assert(typeof text === 'string' && text.length > 0, 'renderReasoning: text must be non-empty');
+    el.textContent = text;
+  }
+
+  /* ── Build reasoning text ── */
+  function buildReasoningText(rec) {
+    console.assert(rec && typeof rec.primary === 'string', 'buildReasoningText: rec.primary required');
+    const info = getModelInfo(rec.primary);
+    console.assert(info && info.label, 'buildReasoningText: model info must exist');
+
+    const lines = [];
+    lines.push(info.label + ' is the best match for your scenario.');
+
+    if (rec.primary === 'opus') {
+      lines.push('Your project demands deep reasoning and architectural understanding that only Opus delivers reliably.');
+    } else if (rec.primary === 'sonnet') {
+      lines.push('Sonnet delivers the best balance of quality and cost for everyday coding tasks.');
+    } else {
+      lines.push('Haiku keeps costs minimal while handling straightforward tasks quickly.');
+    }
+
+    if (answers.task === 'architecture') {
+      lines.push('Architecture-level decisions benefit from the strongest reasoning model available.');
+    } else if (answers.task === 'app') {
+      lines.push('Full application development requires a model that maintains coherence across many files.');
+    }
+
+    if (answers.budget === 'minimize' && rec.primary !== 'haiku') {
+      lines.push('While you prefer lower costs, the complexity of your task justifies the investment in a more capable model.');
+    }
+
+    return lines.join(' ');
+  }
+
+  /* ── Render also-consider ── */
+  function renderAlsoConsider(rec) {
+    console.assert(rec && typeof rec.secondary === 'string', 'renderAlsoConsider: rec.secondary required');
+    const el = getEl('alsoConsider');
+    if (!el) { return; }
+    const secondary = getModelInfo(rec.secondary);
+    const subtask = getSubtaskAdvice(rec.secondary);
+    console.assert(typeof subtask === 'string', 'renderAlsoConsider: subtask must be string');
+    el.innerHTML = '<strong>Also consider:</strong> Use ' + secondary.label + ' ' + subtask;
+  }
+
+  /* ── Subtask advice by model ── */
+  function getSubtaskAdvice(model) {
+    console.assert(typeof model === 'string', 'getSubtaskAdvice: model must be string');
+    const advice = SUBTASK_ADVICE[model] || SUBTASK_ADVICE.opus;
+    console.assert(typeof advice === 'string' && advice.length > 0, 'getSubtaskAdvice: must return non-empty string');
+    return advice;
+  }
+
+  /* ── Render cost table ── */
+  function renderCostTable(rec) {
+    console.assert(rec && typeof rec.primary === 'string', 'renderCostTable: rec.primary required');
+    const el = getEl('costTableWrap');
+    if (!el) { return; }
+    const costs = getCostEstimates(answers);
+    console.assert(costs && typeof costs.haiku === 'string', 'renderCostTable: costs must have haiku');
+
+    let html = '<h3>Estimated Monthly Cost</h3>';
+    html += '<table class="cost-table">';
+    html += '<thead><tr><th>Model</th><th>API Cost</th><th>Max Plan</th></tr></thead>';
+    html += '<tbody>';
+
+    const modelNames = ['haiku', 'sonnet', 'opus'];
+    for (let i = 0; i < modelNames.length; i++) {
+      const m = modelNames[i];
+      const info = getModelInfo(m);
+      const highlight = (m === rec.primary) ? ' class="highlight"' : '';
+      html += '<tr' + highlight + '>';
+      html += '<td>' + info.label + '</td>';
+      html += '<td>' + costs[m] + '</td>';
+      html += '<td>' + info.maxPlan + '</td>';
+      html += '</tr>';
+    }
+
+    html += '</tbody></table>';
+    el.innerHTML = html;
+  }
+
+  /* ── Get cost estimates based on answers ── */
+  function getCostEstimates(ans) {
+    console.assert(typeof ans === 'object' && ans !== null, 'getCostEstimates: answers must be object');
+    const base = { haiku: 5, sonnet: 25, opus: 120 };
+
+    if (ans.size === 'large' || ans.size === 'xlarge') {
+      base.haiku *= 2; base.sonnet *= 2; base.opus *= 1.5;
+    }
+    if (ans.team === 'small') {
+      base.haiku *= 4; base.sonnet *= 4; base.opus *= 4;
+    }
+    if (ans.team === 'enterprise') {
+      base.haiku *= 25; base.sonnet *= 25; base.opus *= 25;
+    }
+    if (ans.task === 'architecture' || ans.task === 'app') {
+      base.haiku *= 1.5; base.sonnet *= 1.5; base.opus *= 1.3;
+    }
+
+    const result = {
+      haiku:  '$' + Math.round(base.haiku) + '/mo',
+      sonnet: '$' + Math.round(base.sonnet) + '/mo',
+      opus:   '$' + Math.round(base.opus) + '/mo'
+    };
+    console.assert(typeof result.haiku === 'string', 'getCostEstimates: haiku cost must be string');
+    return result;
+  }
+
+  /* ── Render config snippet ── */
+  function renderConfigSnippet(rec) {
+    console.assert(rec && typeof rec.primary === 'string', 'renderConfigSnippet: rec.primary required');
+    const el = getEl('configSnippetWrap');
+    if (!el) { return; }
+    const config = buildConfigText(rec);
+    console.assert(typeof config === 'string' && config.length > 0, 'renderConfigSnippet: config must be non-empty');
+
+    let html = '<h3>CLAUDE.md Model Configuration</h3>';
+    html += '<div class="config-snippet" id="configText">' + escapeHtml(config) + '</div>';
+    html += '<button class="btn-copy" data-action="copy">Copy Configuration</button>';
+
+    el.innerHTML = html;
+  }
+
+  /* ── Build config text ── */
+  function buildConfigText(rec) {
+    console.assert(rec && typeof rec.primary === 'string', 'buildConfigText: rec.primary required');
+    console.assert(VALID_MODELS.indexOf(rec.primary) !== -1, 'buildConfigText: must be valid model');
+    const lines = ['## Model Configuration'];
+
+    if (rec.primary === 'sonnet') {
+      lines.push('- Default: sonnet (4.6) for all coding tasks');
+      lines.push('- Use opus for architecture reviews and complex refactoring');
+      lines.push('- Use haiku for autocomplete, quick lookups, and test generation');
+    } else if (rec.primary === 'opus') {
+      lines.push('- Default: opus (4.6) for architecture and complex tasks');
+      lines.push('- Use sonnet for standard feature work and bug fixes');
+      lines.push('- Use haiku for autocomplete and boilerplate generation');
+    } else {
+      lines.push('- Default: haiku (4.5) for quick tasks and cost efficiency');
+      lines.push('- Use sonnet for features requiring deeper reasoning');
+      lines.push('- Use opus sparingly for architecture-critical decisions');
+    }
+
+    return lines.join('\n');
+  }
+
+  /* ── Copy config to clipboard (FIX-19: .catch added) ── */
+  function copyConfig() {
+    const textEl = document.getElementById('configText');
+    console.assert(textEl !== null, 'copyConfig: configText element must exist');
+    if (!textEl) { return; }
+    const text = textEl.textContent;
+
+    const btn = document.querySelector('[data-action="copy"]');
+    console.assert(btn !== null, 'copyConfig: copy button must exist');
+    if (!btn) { return; }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function() {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(function() {
+          btn.textContent = 'Copy Configuration';
+          btn.classList.remove('copied');
+        }, 2000);
+      }).catch(function(err) {
+        console.warn('Clipboard write failed:', err);
+        fallbackCopy(text, btn);
+      });
+    } else {
+      fallbackCopy(text, btn);
+    }
+  }
+
+  /* ── Fallback copy for older browsers ── */
+  function fallbackCopy(text, btn) {
+    console.assert(typeof text === 'string', 'fallbackCopy: text must be string');
+    console.assert(btn instanceof HTMLElement, 'fallbackCopy: btn must be HTMLElement');
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
       btn.textContent = 'Copied!';
       btn.classList.add('copied');
       setTimeout(function() {
         btn.textContent = 'Copy Configuration';
         btn.classList.remove('copied');
       }, 2000);
-    });
-  } else {
-    fallbackCopy(text, btn);
-  }
-}
-
-/* ── Fallback copy for older browsers ── */
-function fallbackCopy(text, btn) {
-  var ta = document.createElement('textarea');
-  ta.value = text;
-  ta.style.position = 'fixed';
-  ta.style.left = '-9999px';
-  document.body.appendChild(ta);
-  ta.select();
-  try {
-    document.execCommand('copy');
-    btn.textContent = 'Copied!';
-    btn.classList.add('copied');
-    setTimeout(function() {
-      btn.textContent = 'Copy Configuration';
-      btn.classList.remove('copied');
-    }, 2000);
-  } catch (e) {
-    btn.textContent = 'Copy failed';
-  }
-  document.body.removeChild(ta);
-}
-
-/* ── Model info helper ── */
-function getModelInfo(name) {
-  var models = {
-    haiku:  { label: 'Haiku 4.5',  maxPlan: '$100/mo (5x)' },
-    sonnet: { label: 'Sonnet 4.6', maxPlan: '$100/mo (5x)' },
-    opus:   { label: 'Opus 4.6',   maxPlan: '$200/mo (20x)' }
-  };
-  return models[name] || models.sonnet;
-}
-
-/* ── Escape HTML ── */
-function escapeHtml(str) {
-  var div = document.createElement('div');
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
-}
-
-/* ── Start over ── */
-function startOver() {
-  wizardState.step = 0;
-  wizardState.answers = {};
-
-  resultSection.classList.remove('active');
-
-  /* Clear all selected states */
-  var allBtns = document.querySelectorAll('.option-btn');
-  for (var i = 0; i < allBtns.length; i++) {
-    allBtns[i].classList.remove('selected');
+    } catch (e) {
+      btn.textContent = 'Copy failed';
+    }
+    document.body.removeChild(ta);
   }
 
-  renderStep();
-}
+  /* ── Model info helper ── */
+  function getModelInfo(name) {
+    console.assert(typeof name === 'string', 'getModelInfo: name must be string');
+    const info = MODEL_INFO[name] || MODEL_INFO.sonnet;
+    console.assert(info && typeof info.label === 'string', 'getModelInfo: must return valid info');
+    return info;
+  }
 
-/* ── Use counter (localStorage) ── */
-function incrementUseCount() {
-  var key = 'ccg_modelselector_uses';
-  var count = parseInt(localStorage.getItem(key) || '0', 10);
-  count++;
-  localStorage.setItem(key, String(count));
-  return count;
-}
+  /* ── Escape HTML ── */
+  function escapeHtml(str) {
+    console.assert(typeof str === 'string', 'escapeHtml: str must be string');
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    const result = div.innerHTML;
+    console.assert(typeof result === 'string', 'escapeHtml: must return string');
+    return result;
+  }
 
-/* ── Apply paywall blur ── */
-function applyPaywall() {
-  var content = document.getElementById('resultContent');
-  content.classList.add('result-blurred');
+  /* ── Start over ── */
+  function startOver() {
+    console.assert(typeof currentStep === 'number', 'startOver: currentStep must be number');
+    currentStep = 0;
+    answers = {};
 
-  var overlay = document.getElementById('paywall-overlay');
-  overlay.classList.add('visible');
-}
+    resultSection.classList.remove('active');
 
-/* ── Init ── */
-initOptionListeners();
-updateProgress();
+    /* Clear all selected states */
+    const allBtns = document.querySelectorAll('.option-btn');
+    console.assert(allBtns.length > 0, 'startOver: option buttons must exist');
+    let count = 0;
+    for (let i = 0; i < allBtns.length && count < MAX_LOOP; i++) {
+      allBtns[i].classList.remove('selected');
+      count++;
+    }
+
+    renderStep();
+  }
+
+  /* ── Use counter (localStorage) ── */
+  function incrementUseCount() {
+    console.assert(typeof STORAGE_KEY === 'string', 'incrementUseCount: STORAGE_KEY must be string');
+    let count = 0;
+    try {
+      count = parseInt(localStorage.getItem(STORAGE_KEY) || '0', 10);
+    } catch (e) {
+      count = 0;
+    }
+    count++;
+    console.assert(count > 0, 'incrementUseCount: count must be positive');
+    try {
+      localStorage.setItem(STORAGE_KEY, String(count));
+    } catch (e) { /* storage full or blocked — proceed without saving */ }
+    return count;
+  }
+
+  /* ── Apply paywall blur ── */
+  function applyPaywall() {
+    const content = document.getElementById('resultContent');
+    console.assert(content !== null, 'applyPaywall: resultContent must exist');
+    if (!content) { return; }
+    content.classList.add('result-blurred');
+
+    const overlay = document.getElementById('paywall-overlay');
+    console.assert(overlay !== null, 'applyPaywall: paywall-overlay must exist');
+    if (!overlay) { return; }
+    overlay.classList.add('visible');
+  }
+
+  /* ── Init ── */
+  initListeners();
+  updateProgress();
+
+})();
 </script>
 
 </body>

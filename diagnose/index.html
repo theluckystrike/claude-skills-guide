@@ -2,7 +2,7 @@
 layout: null
 permalink: /diagnose/
 sitemap: true
-title: "Claude Code Error Diagnostic — Paste Your Error, Get the Fix (2026)"
+title: "Claude Code Error Diagnostic Tool (2026)"
 description: "Instant Claude Code error diagnosis. Paste your error message, get the exact fix, prevention rules, and CLAUDE.md configuration. 50+ errors covered."
 ---
 <!DOCTYPE html>
@@ -10,11 +10,12 @@ description: "Instant Claude Code error diagnosis. Paste your error message, get
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude Code Error Diagnostic — Paste Your Error, Get the Fix (2026)</title>
+<title>Claude Code Error Diagnostic Tool (2026)</title>
 <meta name="description" content="Instant Claude Code error diagnosis. Paste your error message, get the exact fix, prevention rules, and CLAUDE.md configuration. 50+ errors covered.">
 <link rel="canonical" href="https://claudecodeguides.com/diagnose/">
 <meta name="robots" content="index, follow">
-<meta property="og:title" content="Claude Code Error Diagnostic — Paste Your Error, Get the Fix">
+<meta property="og:title" content="Claude Code Error Diagnostic Tool (2026)">
+<meta name="twitter:title" content="Claude Code Error Diagnostic Tool (2026)">
 <meta property="og:description" content="Instant Claude Code error diagnosis. Paste your error message, get the exact fix. 50+ errors covered.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://claudecodeguides.com/diagnose/">
@@ -132,6 +133,78 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
   #paywall-overlay .pw-inner{padding:32px 16px}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does this tool send my error messages to any server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The entire diagnostic runs in your browser using JavaScript pattern matching. No data is sent anywhere. No API calls are made. Your error messages stay on your machine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the error matching?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tool uses regex patterns written from real terminal output. It returns the top 3 matches ranked by confidence, so even if the first result is not exactly right, the second or third usually covers your specific variation. Accuracy is highest when you paste the full error message including any stack trace."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my error is not in the database?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If none of the 50+ patterns match your error, the tool will tell you no matches were found and suggest checking the Claude Code Errors Atlas for a comprehensive reference. You can also browse errors by category using the dropdown selector."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use the prevention rules in my CLAUDE.md?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every diagnostic result includes a \"Prevention rule for CLAUDE.md\" section with copy-ready text. Paste it directly into your project's CLAUDE.md file. These rules tell Claude Code to avoid the patterns that trigger the error in the first place."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do I get a stream idle timeout?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stream idle timeouts happen when Claude Code waits too long for the next chunk of a response from the Anthropic API. The default timeout is 120 seconds. Long code generations, complex reasoning, or slow network connections can trigger this. Fix it by setting ANTHROPIC_TIMEOUT_SECONDS=300 in your environment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I fix \"API key invalid\" errors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First verify your key starts with sk-ant- and has not expired. Run echo $ANTHROPIC_API_KEY to check it is set. If it is blank, add export ANTHROPIC_API_KEY=sk-ant-your-key to your ~/.bashrc or ~/.zshrc and restart your terminal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between this tool and the Errors Atlas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool gives you instant, targeted diagnostics: paste an error, get the fix. The Errors Atlas is a comprehensive reference of every documented error with full context, edge cases, and OS-specific variations. Use the diagnostic for quick fixes, the Atlas for deep dives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this work for MCP server errors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The database includes patterns for MCP server connection failures, tool registration errors, skill installation failures, and hook execution problems. These are common when setting up custom MCP servers or configuring Claude Code extensions."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -978,45 +1051,59 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
   const MAX_FREE = 2;
 
   function getUseCount() {
+    console.assert(typeof TOOL_KEY === 'string' && TOOL_KEY.length > 0, 'getUseCount: TOOL_KEY must be a non-empty string');
+    let result;
     try {
-      return parseInt(localStorage.getItem(TOOL_KEY) || '0', 10);
+      result = parseInt(localStorage.getItem(TOOL_KEY) || '0', 10);
     } catch (e) {
-      return 0;
+      result = 0;
     }
+    console.assert(typeof result === 'number' && !isNaN(result) && result >= 0, 'getUseCount: result must be a non-negative number');
+    return result;
   }
 
   function checkPaywall() {
-    return getUseCount() >= MAX_FREE;
+    console.assert(typeof MAX_FREE === 'number' && MAX_FREE > 0, 'checkPaywall: MAX_FREE must be a positive number');
+    const result = getUseCount() >= MAX_FREE;
+    console.assert(typeof result === 'boolean', 'checkPaywall: result must be a boolean');
+    return result;
   }
 
   function incrementUse() {
+    console.assert(typeof TOOL_KEY === 'string' && TOOL_KEY.length > 0, 'incrementUse: TOOL_KEY must be a non-empty string');
+    let result;
     try {
-      var uses = getUseCount() + 1;
+      const uses = getUseCount() + 1;
       localStorage.setItem(TOOL_KEY, uses.toString());
-      return uses;
+      result = uses;
     } catch (e) {
-      return MAX_FREE + 1;
+      result = MAX_FREE + 1;
     }
+    console.assert(typeof result === 'number' && result > 0, 'incrementUse: result must be a positive number');
+    return result;
   }
 
   function showPaywall() {
-    var resultEl = document.getElementById('results-container');
+    console.assert(document.getElementById('paywall-overlay') !== null, 'showPaywall: paywall-overlay element must exist in DOM');
+    const resultEl = document.getElementById('results-container');
     if (resultEl) {
       resultEl.style.filter = 'blur(8px)';
       resultEl.style.userSelect = 'none';
       resultEl.style.pointerEvents = 'none';
     }
-    var overlay = document.getElementById('paywall-overlay');
+    const overlay = document.getElementById('paywall-overlay');
     if (overlay) {
       overlay.style.display = 'flex';
     }
+    console.assert(!overlay || overlay.style.display === 'flex', 'showPaywall: overlay must be visible after call');
   }
 
   function updateUsesBadge() {
-    var badge = document.getElementById('uses-badge');
+    console.assert(typeof MAX_FREE === 'number', 'updateUsesBadge: MAX_FREE must be a number');
+    const badge = document.getElementById('uses-badge');
     if (!badge) { return; }
-    var uses = getUseCount();
-    var remaining = MAX_FREE - uses;
+    const uses = getUseCount();
+    const remaining = MAX_FREE - uses;
 
     if (remaining > 1) {
       badge.className = 'uses-badge green';
@@ -1028,14 +1115,17 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       badge.className = 'uses-badge red';
       badge.textContent = '0 free uses remaining \u2014 next use requires Playbook access';
     }
+    console.assert(badge.textContent.length > 0, 'updateUsesBadge: badge text must not be empty after update');
   }
 
   /* ====================================================================
    * MATCHING ENGINE
    * ==================================================================== */
   function scoreMatch(error, input) {
-    var score = 0;
-    var lowerInput = input.toLowerCase();
+    console.assert(error && typeof error.regex !== 'undefined' && Array.isArray(error.keywords), 'scoreMatch: error must have regex and keywords');
+    console.assert(typeof input === 'string', 'scoreMatch: input must be a string');
+    let score = 0;
+    const lowerInput = input.toLowerCase();
 
     /* Regex match (highest weight) */
     if (error.regex.test(input)) {
@@ -1043,8 +1133,8 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
     }
 
     /* Keyword matches */
-    var keywordHits = 0;
-    for (var k = 0; k < error.keywords.length; k++) {
+    let keywordHits = 0;
+    for (let k = 0; k < error.keywords.length; k++) {
       if (lowerInput.indexOf(error.keywords[k].toLowerCase()) !== -1) {
         keywordHits++;
       }
@@ -1052,8 +1142,8 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
     score += keywordHits * 15;
 
     /* Title word matches */
-    var titleWords = error.title.toLowerCase().split(/\s+/);
-    for (var t = 0; t < titleWords.length; t++) {
+    const titleWords = error.title.toLowerCase().split(/\s+/);
+    for (let t = 0; t < titleWords.length; t++) {
       if (titleWords[t].length > 2 && lowerInput.indexOf(titleWords[t]) !== -1) {
         score += 5;
       }
@@ -1063,11 +1153,13 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
   }
 
   function findTopMatches(input, count) {
+    console.assert(typeof input === 'string', 'findTopMatches: input must be a string');
+    console.assert(typeof count === 'number' && count > 0, 'findTopMatches: count must be a positive number');
     if (!input || input.trim().length < 3) { return []; }
 
-    var scored = [];
-    for (var i = 0; i < ERROR_DB.length; i++) {
-      var s = scoreMatch(ERROR_DB[i], input);
+    const scored = [];
+    for (let i = 0; i < ERROR_DB.length; i++) {
+      const s = scoreMatch(ERROR_DB[i], input);
       if (s > 0) {
         scored.push({ error: ERROR_DB[i], score: s });
       }
@@ -1081,38 +1173,49 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
    * RENDERING
    * ==================================================================== */
   function escapeHtml(text) {
-    var div = document.createElement('div');
+    console.assert(typeof text === 'string', 'escapeHtml: text must be a string');
+    const div = document.createElement('div');
     div.appendChild(document.createTextNode(text));
-    return div.innerHTML;
+    const result = div.innerHTML;
+    console.assert(typeof result === 'string', 'escapeHtml: result must be a string');
+    return result;
   }
 
   function severityClass(severity) {
+    console.assert(typeof severity === 'string', 'severityClass: severity must be a string');
+    console.assert(['high', 'medium', 'low'].indexOf(severity) !== -1, 'severityClass: severity must be high, medium, or low');
     if (severity === 'high') { return 'severity-high'; }
     if (severity === 'medium') { return 'severity-medium'; }
     return 'severity-low';
   }
 
   function renderCodeBlock(code, blockId) {
+    console.assert(typeof code === 'string' && code.length > 0, 'renderCodeBlock: code must be a non-empty string');
+    console.assert(typeof blockId === 'string' && blockId.length > 0, 'renderCodeBlock: blockId must be a non-empty string');
     return '<div class="code-block-wrapper">' +
-      '<button class="btn-copy" data-target="' + blockId + '" onclick="copyBlock(this)" aria-label="Copy code">Copy</button>' +
+      '<button class="btn-copy" data-target="' + blockId + '" aria-label="Copy code">Copy</button>' +
       '<pre class="code-block" id="' + blockId + '">' + escapeHtml(code) + '</pre>' +
       '</div>';
   }
 
   function renderRelatedLinks(links) {
+    console.assert(!links || Array.isArray(links), 'renderRelatedLinks: links must be null/undefined or an array');
     if (!links || links.length === 0) { return ''; }
-    var html = '<div class="related-links"><h4>Related Guides</h4>';
-    for (var i = 0; i < links.length; i++) {
+    let html = '<div class="related-links"><h4>Related Guides</h4>';
+    for (let i = 0; i < links.length; i++) {
       html += '<a href="' + escapeHtml(links[i].url) + '">' + escapeHtml(links[i].text) + '</a>';
     }
     html += '</div>';
+    console.assert(html.indexOf('</div>') !== -1, 'renderRelatedLinks: output must be valid HTML with closing div');
     return html;
   }
 
   function renderResultCard(match, rank) {
-    var e = match.error;
-    var prefix = 'result-' + e.id;
-    var html = '<div class="result-card">';
+    console.assert(match && match.error && typeof match.error.id !== 'undefined', 'renderResultCard: match must have an error with an id');
+    console.assert(typeof rank === 'number' && rank > 0, 'renderResultCard: rank must be a positive number');
+    const e = match.error;
+    const prefix = 'result-' + e.id;
+    let html = '<div class="result-card">';
     html += '<span class="match-rank">#' + rank + '</span>';
     html += '<h3>' + escapeHtml(e.title) +
       ' <span class="severity-badge ' + severityClass(e.severity) + '">' +
@@ -1135,7 +1238,8 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
   }
 
   function renderResults(matches) {
-    var container = document.getElementById('results-container');
+    console.assert(Array.isArray(matches), 'renderResults: matches must be an array');
+    const container = document.getElementById('results-container');
     if (!container) { return; }
 
     if (matches.length === 0) {
@@ -1146,23 +1250,26 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       return;
     }
 
-    var html = '';
-    for (var i = 0; i < matches.length; i++) {
+    let html = '';
+    for (let i = 0; i < matches.length; i++) {
       html += renderResultCard(matches[i], i + 1);
     }
     container.innerHTML = html;
+    console.assert(container.innerHTML.length > 0, 'renderResults: container must have content after rendering');
   }
 
   /* ====================================================================
-   * COPY HANDLER (global for onclick)
+   * COPY HANDLER (event delegation)
    * ==================================================================== */
-  window.copyBlock = function(btn) {
+  function copyBlock(btn) {
+    console.assert(btn instanceof HTMLElement, 'copyBlock: btn must be an HTMLElement');
+    console.assert(btn.hasAttribute('data-target'), 'copyBlock: btn must have a data-target attribute');
     try {
-      var targetId = btn.getAttribute('data-target');
-      var codeEl = document.getElementById(targetId);
+      const targetId = btn.getAttribute('data-target');
+      const codeEl = document.getElementById(targetId);
       if (!codeEl) { return; }
 
-      var text = codeEl.textContent || codeEl.innerText;
+      const text = codeEl.textContent || codeEl.innerText;
 
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(function() {
@@ -1181,10 +1288,12 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
     } catch (e) {
       /* silently fail */
     }
-  };
+  }
 
   function fallbackCopy(text, btn) {
-    var ta = document.createElement('textarea');
+    console.assert(typeof text === 'string', 'fallbackCopy: text must be a string');
+    console.assert(btn instanceof HTMLElement, 'fallbackCopy: btn must be an HTMLElement');
+    const ta = document.createElement('textarea');
     ta.value = text;
     ta.style.position = 'fixed';
     ta.style.opacity = '0';
@@ -1209,42 +1318,46 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
    * DROPDOWN POPULATION
    * ==================================================================== */
   function populateDropdown() {
-    var select = document.getElementById('error-select');
+    console.assert(Array.isArray(ERROR_DB) && ERROR_DB.length > 0, 'populateDropdown: ERROR_DB must be a non-empty array');
+    const select = document.getElementById('error-select');
     if (!select) { return; }
 
-    /* Show top 30 by ID (they are ordered by priority) */
-    var count = Math.min(30, ERROR_DB.length);
-    for (var i = 0; i < count; i++) {
-      var opt = document.createElement('option');
+    /* Show ALL errors - removed 30-item cap */
+    
+    for (let i = 0; i < ERROR_DB.length && i < 200; i++) {
+      const opt = document.createElement('option');
       opt.value = ERROR_DB[i].id.toString();
       opt.textContent = ERROR_DB[i].title;
       select.appendChild(opt);
     }
+    console.assert(select.options.length > 1, 'populateDropdown: select must have options after population');
   }
 
   /* ====================================================================
    * DIAGNOSE ACTION
    * ==================================================================== */
   function diagnose() {
-    var textarea = document.getElementById('error-input');
-    var select = document.getElementById('error-select');
-    var container = document.getElementById('results-container');
+    console.assert(document.getElementById('error-input') !== null, 'diagnose: error-input element must exist');
+    console.assert(document.getElementById('error-select') !== null, 'diagnose: error-select element must exist');
+    const textarea = document.getElementById('error-input');
+    const select = document.getElementById('error-select');
+    const container = document.getElementById('results-container');
     if (!textarea || !select || !container) { return; }
 
     /* Reset blur/overlay from previous paywall trigger */
     container.style.filter = 'none';
     container.style.userSelect = 'auto';
     container.style.pointerEvents = 'auto';
-    var overlay = document.getElementById('paywall-overlay');
+    const overlay = document.getElementById('paywall-overlay');
     if (overlay) { overlay.style.display = 'none'; }
 
-    var input = textarea.value.trim();
-    var selectedId = select.value;
-    var matches = [];
+    const input = textarea.value.trim();
+    const selectedId = select.value;
+    let matches = [];
 
     if (selectedId) {
       /* Dropdown selection */
-      for (var i = 0; i < ERROR_DB.length; i++) {
+      for (let i = 0; i < ERROR_DB.length; i++) {
         if (ERROR_DB[i].id.toString() === selectedId) {
           matches = [{ error: ERROR_DB[i], score: 100 }];
           break;
@@ -1281,43 +1394,55 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
    * CHARACTER COUNTER
    * ==================================================================== */
   function updateCharCount() {
-    var textarea = document.getElementById('error-input');
-    var counter = document.getElementById('char-count');
+    console.assert(document.getElementById('error-input') !== null, 'updateCharCount: error-input element must exist');
+    const textarea = document.getElementById('error-input');
+    const counter = document.getElementById('char-count');
     if (textarea && counter) {
       counter.textContent = textarea.value.length.toString();
     }
+    console.assert(!counter || counter.textContent.length > 0, 'updateCharCount: counter must have content after update');
   }
 
   /* ====================================================================
    * INITIALIZATION
    * ==================================================================== */
   function init() {
+    console.assert(Array.isArray(ERROR_DB) && ERROR_DB.length > 0, 'init: ERROR_DB must be loaded before init');
     populateDropdown();
     updateUsesBadge();
 
-    var btn = document.getElementById('btn-diagnose');
+    const btn = document.getElementById('btn-diagnose');
     if (btn) {
       btn.addEventListener('click', diagnose);
     }
 
-    var textarea = document.getElementById('error-input');
+    const textarea = document.getElementById('error-input');
     if (textarea) {
       textarea.addEventListener('input', updateCharCount);
       /* Clear dropdown when typing */
       textarea.addEventListener('input', function() {
-        var select = document.getElementById('error-select');
-        if (select) { select.value = ''; }
+        const sel = document.getElementById('error-select');
+        if (sel) { sel.value = ''; }
       });
     }
 
-    var select = document.getElementById('error-select');
+    const select = document.getElementById('error-select');
     if (select) {
       select.addEventListener('change', function() {
-        var textarea2 = document.getElementById('error-input');
-        if (textarea2 && select.value) { textarea2.value = ''; }
+        const ta = document.getElementById('error-input');
+        if (ta && select.value) { ta.value = ''; }
         updateCharCount();
       });
     }
+
+    /* Event delegation for copy buttons (replaces inline onclick) */
+    document.addEventListener('click', function(e) {
+      const copyBtn = e.target.closest('.btn-copy');
+      if (copyBtn) {
+        e.preventDefault();
+        copyBlock(copyBtn);
+      }
+    });
 
     /* Keyboard shortcut: Ctrl/Cmd + Enter to diagnose */
     document.addEventListener('keydown', function(e) {
@@ -1326,6 +1451,8 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
         diagnose();
       }
     });
+
+    console.assert(document.getElementById('btn-diagnose') !== null, 'init: diagnose button must exist after init');
   }
 
   /* Run on DOM ready */

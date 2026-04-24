@@ -500,6 +500,78 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
       .plan-table th, .plan-table td { padding: 8px 4px; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does Claude Code cost per month?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Monthly costs range from $0 (free tier) to $200+ depending on your plan and usage. A typical developer using Sonnet 4.6 for 4 hours per day on a medium-sized project spends approximately $95-$130 per month on the API, making the Max Individual plan ($100/mo) the breakeven point. Light users (1-2 hours/day) can often stay within the Pro plan's included tokens at just $20/mo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Claude Code Max worth it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Max is worth it if you use Claude Code for more than 3-4 hours daily or work with large codebases. The unlimited token usage eliminates cost anxiety and lets you use Opus 4.6 freely for complex architectural decisions. If your estimated API costs would exceed $80-90/month, Max Individual ($100/mo) is the better choice. Teams benefit from Max Team ($200/mo) with shared billing, admin controls, and priority support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Claude Code vs Cursor pricing — which is cheaper?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cursor Pro costs $20/month, but limits you to a fixed number of \"fast\" requests before falling back to slower models. Claude Code Pro at $20/month gives you direct access to Sonnet 4.6 with higher token limits. For heavy users, Claude Code Max ($100/mo) offers unlimited Opus-level reasoning, while Cursor Business ($40/mo) still imposes request caps. The right choice depends on whether you prefer an IDE-integrated experience (Cursor) or a terminal-native agent (Claude Code)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reduce Claude Code costs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Several strategies can cut your Claude Code costs significantly: Use a well-structured CLAUDE.md file to reduce context-gathering tokens by up to 40%. Start with Haiku for simple tasks (formatting, renaming), then switch to Sonnet or Opus only for complex reasoning. Use /compact regularly to compress conversation context. Keep your .claudeignore file updated to exclude build artifacts, node_modules, and other irrelevant directories. Break large tasks into focused, single-purpose sessions rather than long-running conversations that accumulate context."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the cheapest way to use Claude Code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The cheapest approach is to use the API Direct option with Haiku 4.5 for routine tasks and only switch to Sonnet for complex problems. Combined with an optimized CLAUDE.md file and strict .claudeignore rules, you can keep monthly costs under $15-20. However, this requires discipline in model selection and session management. For most developers, the Pro plan at $20/mo provides better value with simpler budgeting."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "API vs subscription — which is better?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "API Direct billing is better if your usage is highly variable (some weeks heavy, some weeks none) or if you primarily use Haiku. Subscription plans (Pro or Max) are better for consistent daily usage because they provide predictable costs and included tokens. The crossover point is roughly $20/month in API usage for Pro, and $100/month for Max Individual. Use this calculator to estimate your API costs, then compare against the subscription options."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do unused tokens roll over between months?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Included tokens on Pro and other subscription plans reset each billing cycle. There is no rollover or banking of unused tokens. This means the Pro plan's 500,000 included tokens are a \"use it or lose it\" allocation. If you consistently use less than half your included tokens, you may be overpaying and should consider the Free tier or API Direct instead."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I switch plans mid-month?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can upgrade or downgrade your Claude Code plan at any time. Upgrades take effect immediately with prorated billing for the remainder of the month. Downgrades typically take effect at the start of the next billing cycle. If you're experimenting with Claude Code, start with Pro and upgrade to Max once your usage patterns stabilize."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -638,7 +710,7 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
         <li><strong>Input tokens</strong> include your prompts, the codebase context Claude reads, file contents, and system instructions. These are cheaper because Anthropic can process them in batch.</li>
         <li><strong>Output tokens</strong> are what Claude generates: code, explanations, file edits, and command suggestions. These cost 3-5x more than input tokens because they require sequential generation.</li>
       </ul>
-      <p>Current per-token pricing (April 2026) varies by model. <strong>Sonnet 4.6</strong> charges $3 per million input tokens and $15 per million output tokens, offering the best balance of capability and cost. <strong>Opus 4.6</strong> at $15/$75 per million tokens delivers the highest reasoning quality but at 5x the cost. <strong>Haiku 4.5</strong> at $0.80/$4 per million tokens is the budget option, best for simple tasks like formatting, renaming, and boilerplate generation.</p>
+      <p>Current per-token pricing (April 2026) varies by model. <strong>Sonnet 4.6</strong> charges $3 per million input tokens and $15 per million output tokens, offering the best balance of capability and cost. <strong>Opus 4.6</strong> at $5/$25 per million tokens delivers the highest reasoning quality at a moderate premium. <strong>Haiku 4.5</strong> at $1/$5 per million tokens is the budget option, best for simple tasks like formatting, renaming, and boilerplate generation.</p>
       <p>In a typical Claude Code session, approximately 40% of tokens are input (your code context and prompts) and 60% are output (Claude's responses and generated code). Larger projects consume more input tokens because Claude needs to read more files for context. Opus tends to produce longer, more detailed responses, increasing output token usage by roughly 50% compared to Sonnet.</p>
 
       <h2>Frequently Asked Questions</h2>
@@ -710,354 +782,427 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
   <script>
     /* ========================================================
        Claude Code Cost Calculator — All logic
+       NASA Power of 10 compliant. IIFE-encapsulated.
        ======================================================== */
+    (function() {
+      'use strict';
 
-    'use strict';
-
-    /** Pricing constants (April 2026) */
-    const PRICING = Object.freeze({
-      sonnet: { input: 3, output: 15 },
-      opus:   { input: 15, output: 75 },
-      haiku:  { input: 0.80, output: 4 },
-      plans: {
-        free:   { name: 'Free Tier',              monthly: 0,   tokensIncluded: 50000,          overage: false },
-        pro:    { name: 'Pro ($20/mo)',            monthly: 20,  tokensIncluded: 500000,         overage: true  },
-        max100: { name: 'Max Individual ($100/mo)', monthly: 100, tokensIncluded: Infinity,      overage: false },
-        max200: { name: 'Max Team ($200/mo)',       monthly: 200, tokensIncluded: Infinity,      overage: false },
-        api:    { name: 'API Direct',              monthly: 0,   tokensIncluded: 0,              overage: true  }
-      },
-      competitors: {
-        cursor:   { name: 'Cursor Pro',       monthly: 20 },
-        copilot:  { name: 'GitHub Copilot',   monthly: 10 },
-        windsurf: { name: 'Windsurf',         monthly: 15 }
-      }
-    });
-
-    const WORKING_DAYS = 22;
-    const INPUT_RATIO = 0.4;
-    const OUTPUT_RATIO = 0.6;
-    const BASE_TOKENS_PER_HOUR = 100000;
-
-    const SIZE_MULT  = Object.freeze({ small: 1.2, medium: 1.8, large: 3.0 });
-    const MODEL_MULT = Object.freeze({ sonnet: 1.0, opus: 1.5, haiku: 0.8 });
-
-    const fmt = new Intl.NumberFormat('en-US');
-    const fmtCurrency = new Intl.NumberFormat('en-US', {
-      style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0
-    });
-    const fmtCurrencyDecimal = new Intl.NumberFormat('en-US', {
-      style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2
-    });
-
-    /* ---- Paywall state ---- */
-    const PAYWALL_KEY = 'ccg_calculator_uses';
-    const PAYWALL_LIMIT = 2;
-
-    /** Read use count from localStorage. Returns 0 if unavailable. */
-    function getUseCount() {
-      try {
-        return parseInt(localStorage.getItem(PAYWALL_KEY), 10) || 0;
-      } catch (_) {
-        return 0;
-      }
-    }
-
-    /** Increment and persist use count. */
-    function incrementUseCount() {
-      const count = getUseCount() + 1;
-      try {
-        localStorage.setItem(PAYWALL_KEY, String(count));
-      } catch (_) { /* storage full or blocked */ }
-      return count;
-    }
-
-    /* ---- DOM refs ---- */
-    const slider          = document.getElementById('hours-slider');
-    const hoursDisplay    = document.getElementById('hours-display');
-    const usageOutput     = document.getElementById('usage-output');
-    const plansOutput     = document.getElementById('plans-output');
-    const recOutput       = document.getElementById('recommendation-output');
-    const tipsOutput      = document.getElementById('tips-output');
-    const compOutput      = document.getElementById('competitors-output');
-    const paywallOverlay  = document.getElementById('paywall-overlay');
-
-    const gatedCardIds = ['card-plans', 'card-recommendation', 'card-tips', 'card-competitors'];
-
-    /* ---- Utility: read selected radio value ---- */
-    function getRadio(name) {
-      const el = document.querySelector('input[name="' + name + '"]:checked');
-      return el ? el.value : null;
-    }
-
-    /* ---- Clamp helper ---- */
-    function clamp(val, min, max) {
-      return Math.max(min, Math.min(max, val));
-    }
-
-    /* ---- Token estimation ---- */
-    function estimateMonthlyTokens(hoursPerDay, model, projectSize) {
-      console.assert(hoursPerDay >= 1 && hoursPerDay <= 12, 'hours out of range');
-      console.assert(SIZE_MULT[projectSize] !== undefined, 'invalid project size');
-
-      const daily = BASE_TOKENS_PER_HOUR * hoursPerDay
-        * SIZE_MULT[projectSize] * MODEL_MULT[model];
-
-      const total = Math.round(daily * WORKING_DAYS);
-      const inputTokens  = Math.round(total * INPUT_RATIO);
-      const outputTokens = Math.round(total * OUTPUT_RATIO);
-
-      return { total: total, input: inputTokens, output: outputTokens };
-    }
-
-    /* ---- Cost calculation for a single plan ---- */
-    function calcPlanCost(planKey, tokens, model) {
-      console.assert(PRICING.plans[planKey] !== undefined, 'invalid plan key');
-      console.assert(PRICING[model] !== undefined, 'invalid model');
-
-      const plan = PRICING.plans[planKey];
-      const modelPricing = PRICING[model];
-      let cost = plan.monthly;
-
-      if (plan.tokensIncluded === Infinity) {
-        return cost; // Max plans — flat fee, no overage
-      }
-
-      const overage = Math.max(0, tokens.total - plan.tokensIncluded);
-
-      if (overage > 0 && plan.overage) {
-        const overInput  = Math.round(overage * INPUT_RATIO);
-        const overOutput = Math.round(overage * OUTPUT_RATIO);
-        cost += (overInput / 1e6) * modelPricing.input;
-        cost += (overOutput / 1e6) * modelPricing.output;
-      }
-
-      return Math.round(cost * 100) / 100;
-    }
-
-    /* ---- Render: usage card ---- */
-    function renderUsage(tokens, hoursPerDay) {
-      const sessions = Math.round(hoursPerDay * WORKING_DAYS * 1.5);
-      usageOutput.innerHTML =
-        '<div class="stat-row"><span class="stat-label">Total tokens/month</span>' +
-        '<span class="stat-value">' + fmt.format(tokens.total) + '</span></div>' +
-        '<div class="stat-row"><span class="stat-label">Input tokens (40%)</span>' +
-        '<span class="stat-value">' + fmt.format(tokens.input) + '</span></div>' +
-        '<div class="stat-row"><span class="stat-label">Output tokens (60%)</span>' +
-        '<span class="stat-value">' + fmt.format(tokens.output) + '</span></div>' +
-        '<div class="stat-row"><span class="stat-label">Estimated sessions</span>' +
-        '<span class="stat-value">' + fmt.format(sessions) + '</span></div>';
-    }
-
-    /* ---- Render: plan comparison table ---- */
-    function renderPlans(tokens, model, currentPlan) {
-      const planKeys = ['free', 'pro', 'max100', 'max200', 'api'];
-      const rows = [];
-      let cheapestKey = planKeys[0];
-      let cheapestCost = Infinity;
-
-      for (let i = 0; i < planKeys.length; i++) {
-        var key = planKeys[i];
-        var cost = calcPlanCost(key, tokens, model);
-        if (cost < cheapestCost) {
-          cheapestCost = cost;
-          cheapestKey = key;
-        }
-        rows.push({ key: key, cost: cost });
-      }
-
-      var html = '<table class="plan-table">';
-      html += '<thead><tr><th>Plan</th><th>Monthly Cost</th><th>Status</th></tr></thead><tbody>';
-
-      for (var j = 0; j < rows.length; j++) {
-        var r = rows[j];
-        var isBest = (r.key === cheapestKey);
-        var isCurrent = (r.key === currentPlan);
-        var cls = isBest ? ' class="best-plan"' : '';
-        var badge = isBest ? '<span class="best-badge">Best Value</span>' : '';
-        var status = isCurrent ? 'Current' : '';
-        var costStr = (r.cost >= 1000)
-          ? fmtCurrency.format(r.cost)
-          : fmtCurrencyDecimal.format(r.cost);
-
-        html += '<tr' + cls + '><td>' + PRICING.plans[r.key].name + badge + '</td>';
-        html += '<td class="cost-cell">' + costStr + '</td>';
-        html += '<td>' + status + '</td></tr>';
-      }
-
-      html += '</tbody></table>';
-      plansOutput.innerHTML = html;
-
-      return { bestKey: cheapestKey, bestCost: cheapestCost };
-    }
-
-    /* ---- Render: recommendation ---- */
-    function renderRecommendation(bestKey, bestCost, currentPlan, tokens) {
-      var best = PRICING.plans[bestKey];
-      var reason = buildReasonText(bestKey, bestCost, currentPlan, tokens);
-
-      recOutput.innerHTML =
-        '<div class="rec-plan">' + best.name + '</div>' +
-        '<div class="rec-reason">' + reason + '</div>';
-    }
-
-    /** Build recommendation reason text. */
-    function buildReasonText(bestKey, bestCost, currentPlan, tokens) {
-      if (bestKey === currentPlan) {
-        return 'You are already on the most cost-effective plan for your usage. ' +
-          'Your estimated monthly cost is ' + fmtCurrencyDecimal.format(bestCost) + '.';
-      }
-
-      var currentCost = calcPlanCost(currentPlan, tokens, getRadio('model'));
-      var savings = currentCost - bestCost;
-
-      if (savings > 0) {
-        return 'Switching from ' + PRICING.plans[currentPlan].name +
-          ' to ' + PRICING.plans[bestKey].name +
-          ' would save you approximately ' + fmtCurrencyDecimal.format(savings) +
-          ' per month (' + fmtCurrencyDecimal.format(bestCost) + ' vs ' +
-          fmtCurrencyDecimal.format(currentCost) + ').';
-      }
-
-      return 'At your current usage level, ' + PRICING.plans[bestKey].name +
-        ' offers the best value at ' + fmtCurrencyDecimal.format(bestCost) + '/month.';
-    }
-
-    /* ---- Render: savings tips ---- */
-    function renderTips(model, projectSize, hoursPerDay) {
-      var tips = selectTips(model, projectSize, hoursPerDay);
-      var html = '';
-      var icons = ['\u2699', '\u26A1', '\u{1F4CB}'];
-      for (var i = 0; i < tips.length; i++) {
-        html += '<div class="tip-item">' +
-          '<div class="tip-icon">' + icons[i % icons.length] + '</div>' +
-          '<div class="tip-text">' + tips[i] + '</div></div>';
-      }
-      tipsOutput.innerHTML = html;
-    }
-
-    /** Select contextual tips based on user inputs. */
-    function selectTips(model, projectSize, hoursPerDay) {
-      var tips = [];
-
-      if (model === 'opus') {
-        tips.push('Use Sonnet 4.6 for routine tasks and reserve Opus for complex architectural decisions. This alone can cut costs by 60-70%.');
-      } else if (model === 'sonnet') {
-        tips.push('Switch to Haiku 4.5 for simple tasks like formatting, renaming, and boilerplate. Haiku costs 75% less than Sonnet.');
-      } else {
-        tips.push('You are already using the most affordable model. Consider upgrading to Sonnet only for tasks where Haiku struggles, like complex refactoring.');
-      }
-
-      if (projectSize === 'large') {
-        tips.push('Add a .claudeignore file to exclude build artifacts, node_modules, and vendor directories. This can reduce input tokens by 30-40% on large codebases.');
-      } else {
-        tips.push('Create a CLAUDE.md file with project conventions and architecture notes. This helps Claude find relevant code faster, reducing context-gathering tokens.');
-      }
-
-      if (hoursPerDay >= 6) {
-        tips.push('Use /compact between major tasks to compress conversation history. Long sessions accumulate context that gets re-sent with every message.');
-      } else {
-        tips.push('Break work into focused 30-60 minute sessions with clear objectives. Shorter, targeted sessions waste fewer tokens on context setup.');
-      }
-
-      return tips;
-    }
-
-    /* ---- Render: competitor comparison ---- */
-    function renderCompetitors(bestCost) {
-      var comps = [
-        { name: 'Cursor Pro',       monthly: 20, note: 'IDE-based, limited fast requests'    },
-        { name: 'GitHub Copilot',   monthly: 10, note: 'Autocomplete focus, less agentic'    },
-        { name: 'Windsurf',         monthly: 15, note: 'IDE-based, Cascade flow agent'       }
-      ];
-
-      var html = '';
-      for (var i = 0; i < comps.length; i++) {
-        var c = comps[i];
-        var diff = bestCost - c.monthly;
-        var diffStr = (diff > 0)
-          ? '(+' + fmtCurrencyDecimal.format(diff) + ' more)'
-          : (diff < 0)
-            ? '(' + fmtCurrencyDecimal.format(Math.abs(diff)) + ' cheaper)'
-            : '(same price)';
-
-        html += '<div class="competitor-row">' +
-          '<div><span class="competitor-name">' + c.name + '</span>' +
-          '<div class="competitor-note">' + c.note + '</div></div>' +
-          '<div><span class="competitor-price">' + fmtCurrency.format(c.monthly) + '/mo</span>' +
-          '<div class="competitor-note">' + diffStr + '</div></div></div>';
-      }
-
-      compOutput.innerHTML = html;
-    }
-
-    /* ---- Paywall enforcement ---- */
-    function applyPaywall() {
-      var uses = getUseCount();
-      if (uses >= PAYWALL_LIMIT) {
-        for (var i = 0; i < gatedCardIds.length; i++) {
-          var el = document.getElementById(gatedCardIds[i]);
-          if (el) { el.classList.add('blurred'); }
-        }
-        paywallOverlay.style.display = 'flex';
-      } else {
-        for (var j = 0; j < gatedCardIds.length; j++) {
-          var el2 = document.getElementById(gatedCardIds[j]);
-          if (el2) { el2.classList.remove('blurred'); }
-        }
-        paywallOverlay.style.display = 'none';
-      }
-    }
-
-    /* ---- Main recalculate ---- */
-    var hasCalculated = false;
-
-    function recalculate() {
-      var hoursPerDay = clamp(parseInt(slider.value, 10), 1, 12);
-      var model       = getRadio('model')       || 'sonnet';
-      var projectSize = getRadio('projectSize')  || 'medium';
-      var currentPlan = getRadio('plan')         || 'pro';
-
-      hoursDisplay.textContent = hoursPerDay + ' hrs';
-
-      var tokens = estimateMonthlyTokens(hoursPerDay, model, projectSize);
-
-      renderUsage(tokens, hoursPerDay);
-      var best = renderPlans(tokens, model, currentPlan);
-      renderRecommendation(best.bestKey, best.bestCost, currentPlan, tokens);
-      renderTips(model, projectSize, hoursPerDay);
-      renderCompetitors(best.bestCost);
-
-      /* Increment paywall counter once per meaningful interaction set */
-      if (!hasCalculated) {
-        hasCalculated = true;
-        incrementUseCount();
-      }
-
-      applyPaywall();
-    }
-
-    /* ---- Debounce for slider ---- */
-    var debounceTimer = null;
-    function debouncedRecalc() {
-      /* Update the display immediately for responsiveness */
-      hoursDisplay.textContent = clamp(parseInt(slider.value, 10), 1, 12) + ' hrs';
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(recalculate, 80);
-    }
-
-    /* ---- Wire up event listeners ---- */
-    slider.addEventListener('input', debouncedRecalc);
-
-    var allRadios = document.querySelectorAll('input[type="radio"]');
-    for (var r = 0; r < allRadios.length; r++) {
-      allRadios[r].addEventListener('change', function() {
-        hasCalculated = false; // Each distinct config change counts as a new use
-        recalculate();
+      /* ---- FIX-1: Opus $5/$25, FIX-2: Haiku $1/$5 ---- */
+      const PRICING = Object.freeze({
+        sonnet: Object.freeze({ input: 3, output: 15 }),
+        opus:   Object.freeze({ input: 5, output: 25 }),
+        haiku:  Object.freeze({ input: 1, output: 5 }),
+        plans: Object.freeze({
+          free:   Object.freeze({ name: 'Free Tier',              monthly: 0,   tokensIncluded: 50000,     overage: false }),
+          pro:    Object.freeze({ name: 'Pro ($20/mo)',            monthly: 20,  tokensIncluded: 500000,    overage: true  }),
+          max100: Object.freeze({ name: 'Max Individual ($100/mo)', monthly: 100, tokensIncluded: Infinity, overage: false }),
+          max200: Object.freeze({ name: 'Max Team ($200/mo)',       monthly: 200, tokensIncluded: Infinity, overage: false }),
+          api:    Object.freeze({ name: 'API Direct',              monthly: 0,   tokensIncluded: 0,         overage: true  })
+        }),
+        competitors: Object.freeze({
+          cursor:   Object.freeze({ name: 'Cursor Pro',       monthly: 20 }),
+          copilot:  Object.freeze({ name: 'GitHub Copilot',   monthly: 10 }),
+          windsurf: Object.freeze({ name: 'Windsurf',         monthly: 15 })
+        })
       });
-    }
 
-    /* ---- Initial calculation on load ---- */
-    recalculate();
+      const WORKING_DAYS = 22;
+      const INPUT_RATIO = 0.4;
+      const OUTPUT_RATIO = 0.6;
+      const BASE_TOKENS_PER_HOUR = 100000;
+      const VALID_MODELS = Object.freeze(['sonnet', 'opus', 'haiku']);
+      const VALID_SIZES = Object.freeze(['small', 'medium', 'large']);
+      const VALID_PLANS = Object.freeze(['free', 'pro', 'max100', 'max200', 'api']);
+
+      const SIZE_MULT  = Object.freeze({ small: 1.2, medium: 1.8, large: 3.0 });
+      const MODEL_MULT = Object.freeze({ sonnet: 1.0, opus: 1.5, haiku: 0.8 });
+
+      const fmt = new Intl.NumberFormat('en-US');
+      const fmtCurrency = new Intl.NumberFormat('en-US', {
+        style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0
+      });
+      const fmtCurrencyDecimal = new Intl.NumberFormat('en-US', {
+        style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2
+      });
+
+      /* ---- Paywall state (inside IIFE, no globals) ---- */
+      const PAYWALL_KEY = 'ccg_calculator_uses';
+      const PAYWALL_LIMIT = 2;
+      const GATED_CARD_IDS = Object.freeze(['card-plans', 'card-recommendation', 'card-tips', 'card-competitors']);
+      let calculationCount = 0; // tracks full calculations displayed this session
+
+      /** Read use count from localStorage. Returns 0 if unavailable. */
+      function getUseCount() {
+        console.assert(typeof PAYWALL_KEY === 'string', 'PAYWALL_KEY must be a string');
+        let count = 0;
+        try {
+          count = parseInt(localStorage.getItem(PAYWALL_KEY), 10) || 0;
+        } catch (e) {
+          console.warn('localStorage read failed:', e.message);
+          count = 0;
+        }
+        console.assert(typeof count === 'number' && count >= 0, 'use count must be non-negative number');
+        return count;
+      }
+
+      /** Increment and persist use count. */
+      function incrementUseCount() {
+        console.assert(typeof PAYWALL_KEY === 'string', 'PAYWALL_KEY must be a string');
+        const count = getUseCount() + 1;
+        try {
+          localStorage.setItem(PAYWALL_KEY, String(count));
+        } catch (e) {
+          console.warn('localStorage write failed:', e.message);
+        }
+        console.assert(typeof count === 'number' && count >= 1, 'incremented count must be >= 1');
+        return count;
+      }
+
+      /* ---- DOM refs ---- */
+      const slider          = document.getElementById('hours-slider');
+      const hoursDisplay    = document.getElementById('hours-display');
+      const usageOutput     = document.getElementById('usage-output');
+      const plansOutput     = document.getElementById('plans-output');
+      const recOutput       = document.getElementById('recommendation-output');
+      const tipsOutput      = document.getElementById('tips-output');
+      const compOutput      = document.getElementById('competitors-output');
+      const paywallOverlay  = document.getElementById('paywall-overlay');
+
+      /* ---- Utility: read selected radio value ---- */
+      function getRadio(name) {
+        console.assert(typeof name === 'string' && name.length > 0, 'radio name must be non-empty string');
+        const el = document.querySelector('input[name="' + name + '"]:checked');
+        const result = el ? el.value : null;
+        console.assert(result === null || typeof result === 'string', 'radio value must be string or null');
+        return result;
+      }
+
+      /* ---- Clamp helper ---- */
+      function clamp(val, lo, hi) {
+        console.assert(typeof val === 'number' && typeof lo === 'number' && typeof hi === 'number', 'clamp args must be numbers');
+        console.assert(lo <= hi, 'clamp lo must be <= hi');
+        const result = Math.max(lo, Math.min(hi, val));
+        console.assert(result >= lo && result <= hi, 'clamped result must be within bounds');
+        return result;
+      }
+
+      /* ---- Token estimation ---- */
+      function estimateMonthlyTokens(hoursPerDay, model, projectSize) {
+        console.assert(typeof hoursPerDay === 'number' && hoursPerDay >= 1 && hoursPerDay <= 12, 'hoursPerDay must be 1-12');
+        console.assert(VALID_MODELS.includes(model), 'model must be sonnet/opus/haiku');
+
+        const daily = BASE_TOKENS_PER_HOUR * hoursPerDay
+          * SIZE_MULT[projectSize] * MODEL_MULT[model];
+
+        const total = Math.round(daily * WORKING_DAYS);
+        const inputTokens  = Math.round(total * INPUT_RATIO);
+        const outputTokens = Math.round(total * OUTPUT_RATIO);
+
+        const result = { total: total, input: inputTokens, output: outputTokens };
+        console.assert(result.total > 0, 'token estimate must be positive');
+        console.assert(result.input + result.output > 0, 'input + output tokens must be positive');
+        return result;
+      }
+
+      /* ---- Cost calculation for a single plan ---- */
+      function calcPlanCost(planKey, tokens, model) {
+        console.assert(VALID_PLANS.includes(planKey), 'invalid plan key: ' + planKey);
+        console.assert(VALID_MODELS.includes(model), 'invalid model: ' + model);
+
+        const plan = PRICING.plans[planKey];
+        const modelPricing = PRICING[model];
+        let cost = plan.monthly;
+
+        if (plan.tokensIncluded === Infinity) {
+          console.assert(typeof cost === 'number' && cost >= 0, 'flat cost must be non-negative');
+          return cost;
+        }
+
+        const overage = Math.max(0, tokens.total - plan.tokensIncluded);
+
+        if (overage > 0 && plan.overage) {
+          const overInput  = Math.round(overage * INPUT_RATIO);
+          const overOutput = Math.round(overage * OUTPUT_RATIO);
+          cost += (overInput / 1e6) * modelPricing.input;
+          cost += (overOutput / 1e6) * modelPricing.output;
+        }
+
+        const result = Math.round(cost * 100) / 100;
+        console.assert(typeof result === 'number' && result >= 0, 'plan cost must be non-negative');
+        return result;
+      }
+
+      /* ---- Render: usage card ---- */
+      function renderUsage(tokens, hoursPerDay) {
+        console.assert(tokens && typeof tokens.total === 'number', 'tokens object required');
+        console.assert(typeof hoursPerDay === 'number' && hoursPerDay >= 1, 'hoursPerDay must be >= 1');
+
+        const sessions = Math.round(hoursPerDay * WORKING_DAYS * 1.5);
+        usageOutput.innerHTML =
+          '<div class="stat-row"><span class="stat-label">Total tokens/month</span>' +
+          '<span class="stat-value">' + fmt.format(tokens.total) + '</span></div>' +
+          '<div class="stat-row"><span class="stat-label">Input tokens (40%)</span>' +
+          '<span class="stat-value">' + fmt.format(tokens.input) + '</span></div>' +
+          '<div class="stat-row"><span class="stat-label">Output tokens (60%)</span>' +
+          '<span class="stat-value">' + fmt.format(tokens.output) + '</span></div>' +
+          '<div class="stat-row"><span class="stat-label">Estimated sessions</span>' +
+          '<span class="stat-value">' + fmt.format(sessions) + '</span></div>';
+
+        console.assert(usageOutput.innerHTML.length > 0, 'usage output must not be empty');
+      }
+
+      /* ---- Render: plan comparison table ---- */
+      function renderPlans(tokens, model, currentPlan) {
+        console.assert(tokens && typeof tokens.total === 'number', 'tokens object required');
+        console.assert(VALID_MODELS.includes(model), 'model must be valid');
+
+        const planKeys = VALID_PLANS;
+        const rows = [];
+        let cheapestKey = planKeys[0];
+        let cheapestCost = Infinity;
+
+        for (let i = 0; i < planKeys.length; i++) {
+          const key = planKeys[i];
+          const cost = calcPlanCost(key, tokens, model);
+          if (cost < cheapestCost) {
+            cheapestCost = cost;
+            cheapestKey = key;
+          }
+          rows.push({ key: key, cost: cost });
+        }
+
+        let html = '<table class="plan-table">';
+        html += '<thead><tr><th>Plan</th><th>Monthly Cost</th><th>Status</th></tr></thead><tbody>';
+
+        for (let j = 0; j < rows.length; j++) {
+          const r = rows[j];
+          const isBest = (r.key === cheapestKey);
+          const isCurrent = (r.key === currentPlan);
+          const cls = isBest ? ' class="best-plan"' : '';
+          const badge = isBest ? '<span class="best-badge">Best Value</span>' : '';
+          const status = isCurrent ? 'Current' : '';
+          const costStr = (r.cost >= 1000)
+            ? fmtCurrency.format(r.cost)
+            : fmtCurrencyDecimal.format(r.cost);
+
+          html += '<tr' + cls + '><td>' + PRICING.plans[r.key].name + badge + '</td>';
+          html += '<td class="cost-cell">' + costStr + '</td>';
+          html += '<td>' + status + '</td></tr>';
+        }
+
+        html += '</tbody></table>';
+        plansOutput.innerHTML = html;
+
+        const result = { bestKey: cheapestKey, bestCost: cheapestCost };
+        console.assert(typeof result.bestKey === 'string', 'bestKey must be a string');
+        return result;
+      }
+
+      /* ---- Render: recommendation ---- */
+      function renderRecommendation(bestKey, bestCost, currentPlan, tokens) {
+        console.assert(VALID_PLANS.includes(bestKey), 'bestKey must be a valid plan');
+        console.assert(typeof bestCost === 'number' && bestCost >= 0, 'bestCost must be non-negative');
+
+        const best = PRICING.plans[bestKey];
+        const reason = buildReasonText(bestKey, bestCost, currentPlan, tokens);
+
+        recOutput.innerHTML =
+          '<div class="rec-plan">' + best.name + '</div>' +
+          '<div class="rec-reason">' + reason + '</div>';
+
+        console.assert(recOutput.innerHTML.length > 0, 'recommendation output must not be empty');
+      }
+
+      /** Build recommendation reason text. */
+      function buildReasonText(bestKey, bestCost, currentPlan, tokens) {
+        console.assert(VALID_PLANS.includes(bestKey), 'bestKey must be valid plan');
+        console.assert(VALID_PLANS.includes(currentPlan), 'currentPlan must be valid plan');
+
+        let text;
+        if (bestKey === currentPlan) {
+          text = 'You are already on the most cost-effective plan for your usage. ' +
+            'Your estimated monthly cost is ' + fmtCurrencyDecimal.format(bestCost) + '.';
+        } else {
+          const currentCost = calcPlanCost(currentPlan, tokens, getRadio('model') || 'sonnet');
+          const savings = currentCost - bestCost;
+
+          if (savings > 0) {
+            text = 'Switching from ' + PRICING.plans[currentPlan].name +
+              ' to ' + PRICING.plans[bestKey].name +
+              ' would save you approximately ' + fmtCurrencyDecimal.format(savings) +
+              ' per month (' + fmtCurrencyDecimal.format(bestCost) + ' vs ' +
+              fmtCurrencyDecimal.format(currentCost) + ').';
+          } else {
+            text = 'At your current usage level, ' + PRICING.plans[bestKey].name +
+              ' offers the best value at ' + fmtCurrencyDecimal.format(bestCost) + '/month.';
+          }
+        }
+
+        console.assert(typeof text === 'string' && text.length > 0, 'reason text must be non-empty string');
+        return text;
+      }
+
+      /* ---- Render: savings tips ---- */
+      function renderTips(model, projectSize, hoursPerDay) {
+        console.assert(VALID_MODELS.includes(model), 'model must be valid');
+        console.assert(VALID_SIZES.includes(projectSize), 'projectSize must be valid');
+
+        const tips = selectTips(model, projectSize, hoursPerDay);
+        const icons = ['\u2699', '\u26A1', '\u{1F4CB}'];
+        let html = '';
+        for (let i = 0; i < tips.length; i++) {
+          html += '<div class="tip-item">' +
+            '<div class="tip-icon">' + icons[i % icons.length] + '</div>' +
+            '<div class="tip-text">' + tips[i] + '</div></div>';
+        }
+        tipsOutput.innerHTML = html;
+
+        console.assert(tipsOutput.innerHTML.length > 0, 'tips output must not be empty');
+      }
+
+      /** Select contextual tips based on user inputs. */
+      function selectTips(model, projectSize, hoursPerDay) {
+        console.assert(VALID_MODELS.includes(model), 'model must be valid');
+        console.assert(typeof hoursPerDay === 'number' && hoursPerDay >= 1, 'hoursPerDay must be >= 1');
+
+        const tips = [];
+
+        if (model === 'opus') {
+          tips.push('Use Sonnet 4.6 for routine tasks and reserve Opus for complex architectural decisions. This alone can cut costs by 60-70%.');
+        } else if (model === 'sonnet') {
+          tips.push('Switch to Haiku 4.5 for simple tasks like formatting, renaming, and boilerplate. Haiku costs 75% less than Sonnet.');
+        } else {
+          tips.push('You are already using the most affordable model. Consider upgrading to Sonnet only for tasks where Haiku struggles, like complex refactoring.');
+        }
+
+        if (projectSize === 'large') {
+          tips.push('Add a .claudeignore file to exclude build artifacts, node_modules, and vendor directories. This can reduce input tokens by 30-40% on large codebases.');
+        } else {
+          tips.push('Create a CLAUDE.md file with project conventions and architecture notes. This helps Claude find relevant code faster, reducing context-gathering tokens.');
+        }
+
+        if (hoursPerDay >= 6) {
+          tips.push('Use /compact between major tasks to compress conversation history. Long sessions accumulate context that gets re-sent with every message.');
+        } else {
+          tips.push('Break work into focused 30-60 minute sessions with clear objectives. Shorter, targeted sessions waste fewer tokens on context setup.');
+        }
+
+        console.assert(Array.isArray(tips) && tips.length === 3, 'must produce exactly 3 tips');
+        return tips;
+      }
+
+      /* ---- Render: competitor comparison ---- */
+      function renderCompetitors(bestCost) {
+        console.assert(typeof bestCost === 'number' && bestCost >= 0, 'bestCost must be non-negative number');
+
+        const comps = Object.freeze([
+          Object.freeze({ name: 'Cursor Pro',       monthly: 20, note: 'IDE-based, limited fast requests'  }),
+          Object.freeze({ name: 'GitHub Copilot',   monthly: 10, note: 'Autocomplete focus, less agentic'  }),
+          Object.freeze({ name: 'Windsurf',         monthly: 15, note: 'IDE-based, Cascade flow agent'     })
+        ]);
+
+        let html = '';
+        for (let i = 0; i < comps.length; i++) {
+          const c = comps[i];
+          const diff = bestCost - c.monthly;
+          let diffStr;
+          if (diff > 0) {
+            diffStr = '(+' + fmtCurrencyDecimal.format(diff) + ' more)';
+          } else if (diff < 0) {
+            diffStr = '(' + fmtCurrencyDecimal.format(Math.abs(diff)) + ' cheaper)';
+          } else {
+            diffStr = '(same price)';
+          }
+
+          html += '<div class="competitor-row">' +
+            '<div><span class="competitor-name">' + c.name + '</span>' +
+            '<div class="competitor-note">' + c.note + '</div></div>' +
+            '<div><span class="competitor-price">' + fmtCurrency.format(c.monthly) + '/mo</span>' +
+            '<div class="competitor-note">' + diffStr + '</div></div></div>';
+        }
+
+        compOutput.innerHTML = html;
+        console.assert(compOutput.innerHTML.length > 0, 'competitor output must not be empty');
+      }
+
+      /* ---- Paywall enforcement ---- */
+      function applyPaywall() {
+        console.assert(Array.isArray(GATED_CARD_IDS), 'GATED_CARD_IDS must be an array');
+        const uses = getUseCount();
+
+        if (uses >= PAYWALL_LIMIT) {
+          for (let i = 0; i < GATED_CARD_IDS.length; i++) {
+            const el = document.getElementById(GATED_CARD_IDS[i]);
+            if (el) { el.classList.add('blurred'); }
+          }
+          paywallOverlay.style.display = 'flex';
+        } else {
+          for (let j = 0; j < GATED_CARD_IDS.length; j++) {
+            const el = document.getElementById(GATED_CARD_IDS[j]);
+            if (el) { el.classList.remove('blurred'); }
+          }
+          paywallOverlay.style.display = 'none';
+        }
+
+        console.assert(typeof uses === 'number', 'uses must be a number after applyPaywall');
+      }
+
+      /* ---- Main recalculate ---- */
+      function recalculate() {
+        console.assert(slider !== null, 'slider element must exist');
+
+        const hoursPerDay = clamp(parseInt(slider.value, 10), 1, 12);
+        const model       = getRadio('model')       || 'sonnet';
+        const projectSize = getRadio('projectSize')  || 'medium';
+        const currentPlan = getRadio('plan')         || 'pro';
+
+        hoursDisplay.textContent = hoursPerDay + ' hrs';
+
+        const tokens = estimateMonthlyTokens(hoursPerDay, model, projectSize);
+
+        renderUsage(tokens, hoursPerDay);
+        const best = renderPlans(tokens, model, currentPlan);
+        renderRecommendation(best.bestKey, best.bestCost, currentPlan, tokens);
+        renderTips(model, projectSize, hoursPerDay);
+        renderCompetitors(best.bestCost);
+
+        /* FIX-18: Increment paywall counter only when a full calculation is displayed */
+        calculationCount++;
+        if (calculationCount <= PAYWALL_LIMIT) {
+          incrementUseCount();
+        }
+
+        applyPaywall();
+        console.assert(typeof best.bestCost === 'number', 'recalculate must produce a valid bestCost');
+      }
+
+      /* ---- Debounce for slider ---- */
+      let debounceTimer = null;
+
+      function debouncedRecalc() {
+        console.assert(slider !== null, 'slider element must exist');
+        /* Update the display immediately for responsiveness */
+        hoursDisplay.textContent = clamp(parseInt(slider.value, 10), 1, 12) + ' hrs';
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(recalculate, 80);
+        console.assert(debounceTimer !== null, 'debounceTimer must be set');
+      }
+
+      /* ---- Wire up event listeners ---- */
+      slider.addEventListener('input', debouncedRecalc);
+
+      const allRadios = document.querySelectorAll('input[type="radio"]');
+      for (let r = 0; r < allRadios.length; r++) {
+        allRadios[r].addEventListener('change', function() {
+          /* FIX-18: Radio clicks do NOT independently increment paywall.
+             Only recalculate() increments when the full result is displayed. */
+          recalculate();
+        });
+      }
+
+      /* ---- Initial calculation on load ---- */
+      recalculate();
+    })();
   </script>
 </body>
 </html>

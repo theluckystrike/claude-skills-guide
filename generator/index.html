@@ -461,6 +461,78 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
     ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: #484f58; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where do I put the CLAUDE.md file?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Place it in the root directory of your repository, at the same level as your package.json, Cargo.toml, or pyproject.toml. Claude Code reads it automatically when it opens the project. You can also place additional CLAUDE.md files in subdirectories for module-specific instructions that override or extend the root file."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does CLAUDE.md work with other AI tools like Cursor or Copilot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CLAUDE.md is specific to Claude Code (Anthropic's CLI agent). However, the concept translates well. Cursor uses .cursorrules files with a similar approach. Many teams maintain both a CLAUDE.md and a .cursorrules file that share the same core conventions. The rules themselves (coding style, framework patterns, testing requirements) are universal regardless of the tool."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long should my CLAUDE.md be?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aim for 80 to 200 lines. Under 80 lines and you are leaving too much to inference, leading to inconsistent output. Over 200 lines and you are consuming excessive input tokens on every request without proportional quality improvement. This generator produces files in that sweet spot based on your selections."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I commit CLAUDE.md to version control?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. CLAUDE.md should be treated like any other project configuration file such as .editorconfig, .eslintrc, or tsconfig.json. Committing it ensures every team member and every CI/CD pipeline gets the same Claude Code behavior. It also creates a versioned history of your coding standards as they evolve."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use multiple CLAUDE.md files in a monorepo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Claude Code reads the CLAUDE.md closest to the file being edited. In a monorepo with packages/frontend/ and packages/api/, you can place a root CLAUDE.md with shared conventions and additional CLAUDE.md files in each package with framework-specific rules. The package-level file supplements the root file."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does CLAUDE.md affect Claude Code's token costs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A CLAUDE.md file is read as input context on every interaction, so it consumes input tokens. A typical 150-line file costs approximately 500-800 input tokens per request. However, this upfront cost is recouped many times over by eliminating correction cycles, reducing output length (because Claude gets it right the first time), and avoiding wasted tokens on framework confusion. Net savings are typically 30-50% lower total token usage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What coding style should I choose?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most teams building production web applications, start with Balanced. It provides sensible defaults without being overly restrictive. Switch to NASA Power of 10 if you work in safety-critical domains (fintech, healthcare, infrastructure) where every edge case matters. Use Karpathy 4 Principles for ML/research projects where iteration speed matters more than strict convention. Use Minimal for personal projects, scripts, and hackathons."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I customize the generated CLAUDE.md after downloading?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, and you should. This generator produces a solid starting point, but every project has unique conventions. After downloading, add your specific architectural decisions, custom linting rules, naming conventions, and any team-specific patterns that Claude should follow. The generated file includes clear section headers to make editing straightforward."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -724,12 +796,8 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
 (function () {
   'use strict';
 
-  function assert(cond, msg) {
-    if (!cond) console.error('Assertion failed: ' + msg);
-  }
-
   /* ── Framework options keyed by language ── */
-  var FRAMEWORK_MAP = {
+  const FRAMEWORK_MAP = {
     typescript: [['nextjs','Next.js'],['react','React'],['nestjs','NestJS'],['express','Express'],['none','None']],
     javascript: [['react','React'],['vue','Vue'],['express','Express'],['nodejs','Node.js'],['none','None']],
     python:     [['django','Django'],['fastapi','FastAPI'],['flask','Flask'],['none','None']],
@@ -746,7 +814,7 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
   };
 
   /* ── Coding style content blocks ── */
-  var STYLE_RULES = {
+  const STYLE_RULES = {
     nasa: '## Code Quality Rules (NASA Power of 10)\n\n1. **No complex flow constructs** - no goto, no deep recursion, no switch fallthrough\n2. **All loops must have fixed upper bounds** - no while(true) without break ceiling\n3. **No dynamic memory allocation after initialization** - allocate at startup, reuse\n4. **Functions stay under 60 lines** - extract helpers aggressively\n5. **Minimum two assertions per function** - validate inputs and outputs\n6. **Restrict data scope** - no global mutable state, smallest possible visibility\n7. **Check every return value** - no unhandled errors, no ignored promises\n8. **Minimize preprocessor/build complexity** - simple, auditable build steps\n9. **No pointer/reference arithmetic** - use safe abstractions and bounds-checked access\n10. **Zero warnings policy** - all compiler and linter warnings are treated as bugs\n\n### Enforcement\n- Every PR must pass all lint rules with zero warnings\n- Functions exceeding 60 lines must be split before merge\n- Every function must have at least 2 assertions (input validation + output validation)\n- No exception: if a loop lacks an upper bound, it is rejected in code review',
 
     karpathy: '## Code Quality Rules (Karpathy 4 Principles)\n\n1. **Keep it simple** - Write the simplest code that could possibly work. No premature abstraction, no design patterns for their own sake. If a function can be understood in 30 seconds, it is good.\n2. **Make it readable** - Code is read 10x more than it is written. Optimize for the reader. Use clear variable names, add comments for "why" not "what", and prefer explicit over clever.\n3. **Ship and iterate** - Working code today beats perfect code next month. Get it running, measure, then optimize. Premature optimization is the root of all evil.\n4. **Minimize dependencies** - Every dependency is a liability. If you can write it in 20 lines, do not install a package. Vendored code you understand beats black-box libraries.\n\n### Practical Guidelines\n- Prefer flat code over nested code - early returns reduce indentation\n- Avoid inheritance hierarchies deeper than 2 levels\n- Write functions that do one thing and do it well\n- If a module needs a README to explain its API, the API is too complex',
@@ -757,7 +825,7 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
   };
 
   /* ── Language-specific rules ── */
-  var LANGUAGE_RULES = {
+  const LANGUAGE_RULES = {
     typescript: '## TypeScript Conventions\n\n- Strict mode enabled (`"strict": true` in tsconfig.json)\n- No `any` types - use `unknown` with type guards instead\n- Prefer `interface` over `type` for object shapes\n- Use `as const` for literal types\n- Exhaustive switch with `never` type for union narrowing\n- All function parameters and return types explicitly typed\n- Use named exports, not default exports\n- Prefer `const` over `let`; never use `var`',
 
     javascript: '## JavaScript Conventions\n\n- Use ES modules (`import`/`export`), not CommonJS unless Node.js requires it\n- Prefer `const` over `let`; never use `var`\n- Use optional chaining (`?.`) and nullish coalescing (`??`)\n- Destructure function parameters for clarity\n- Add JSDoc comments for public functions with `@param` and `@returns`\n- Validate inputs at function boundaries\n- Use template literals over string concatenation',
@@ -786,7 +854,7 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
   };
 
   /* ── Framework-specific rules ── */
-  var FRAMEWORK_RULES = {
+  const FRAMEWORK_RULES = {
     nextjs: '## Framework Rules - Next.js\n\n- Use App Router (`app/` directory), not Pages Router\n- Server Components are the default; add `"use client"` only for browser APIs, event handlers, or React state\n- Never use `getServerSideProps` or `getStaticProps` - those are Pages Router patterns\n- Do not import server-only code in Client Components\n- Use `next/image` over `<img>` for automatic optimization\n- Add `loading.tsx` for route segments that fetch data\n- Never store secrets in `NEXT_PUBLIC_*` environment variables\n\n### Project Structure\n```\napp/           - Pages, layouts, and route handlers\ncomponents/    - Reusable UI components\nlib/           - Shared utilities and helpers\npublic/        - Static assets\n```\n\n### Commands\n```bash\npnpm dev       - Start dev server (port 3000)\npnpm build     - Production build\npnpm lint      - ESLint\npnpm test      - Run tests\n```',
 
     react: '## Framework Rules - React\n\n- Use functional components with hooks exclusively; no class components\n- Lift state up only as far as necessary; prefer colocation\n- Use `useMemo` and `useCallback` only when you have measured a performance problem\n- Never mutate state directly; always use the setter from useState\n- Keep components under 150 lines; extract sub-components when they grow\n- Use React.lazy and Suspense for code-splitting heavy routes\n- Prefer controlled components for forms',
@@ -849,7 +917,7 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
   };
 
   /* ── Team size rules ── */
-  var TEAM_RULES = {
+  const TEAM_RULES = {
     solo: '## Team Conventions (Solo Developer)\n\n- Commit frequently with descriptive messages; future-you is your code reviewer\n- Use branches for experiments; merge or delete within a week\n- Write at least smoke tests for critical paths; skip unit tests for throwaway code\n- Keep a DECISIONS.md log for architectural choices so you remember why later\n- Automate deployment so you never forget a step',
 
     small: '## Team Conventions (Small Team: 2-10)\n\n- All changes go through pull requests with at least one reviewer\n- Use Conventional Commits format: `feat:`, `fix:`, `refactor:`, `docs:`, `test:`\n- Maintain a shared coding standards document (this CLAUDE.md is a start)\n- Run CI on every PR: lint, type-check, test, build\n- Use feature branches; keep PRs under 400 lines of diff when possible\n- Rotate code review responsibility to spread knowledge\n- Tag releases with semantic versioning',
@@ -858,7 +926,7 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
   };
 
   /* ── Test rules by language ── */
-  var TEST_RULES = {
+  const TEST_RULES = {
     typescript: '## Testing Rules\n\n- Place tests as `*.test.ts` next to source files\n- Use `describe`/`it` blocks for grouping; one assertion per `it` block preferred\n- Mock external dependencies; never mock the module under test\n- Use factory functions for test data, not shared mutable fixtures\n- Run with coverage; enforce minimum 80% on critical modules\n- Test edge cases: empty inputs, null values, error paths, boundary conditions',
 
     javascript: '## Testing Rules\n\n- Place tests as `*.test.js` next to source files\n- Use `describe`/`it` blocks with clear test names that describe expected behavior\n- Mock external dependencies; never mock the module under test\n- Use factory functions for test data\n- Test async code with `async`/`await`, not callbacks\n- Assert both success and error paths',
@@ -887,105 +955,123 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
   };
 
   /* ── Git rules ── */
-  var GIT_RULES = '## Git Workflow\n\n- Write commit messages in imperative mood: "Add feature" not "Added feature"\n- Keep commits atomic: one logical change per commit\n- Never commit generated files, build artifacts, or secrets\n- Use `.gitignore` to exclude: `node_modules/`, `dist/`, `.env`, `*.log`, IDE configs\n- Squash fixup commits before merging to main\n- Never force-push to shared branches (main, develop)\n- Tag releases with semantic versions: `v1.2.3`\n- Write meaningful PR descriptions that explain the "why"';
+  const GIT_RULES = '## Git Workflow\n\n- Write commit messages in imperative mood: "Add feature" not "Added feature"\n- Keep commits atomic: one logical change per commit\n- Never commit generated files, build artifacts, or secrets\n- Use `.gitignore` to exclude: `node_modules/`, `dist/`, `.env`, `*.log`, IDE configs\n- Squash fixup commits before merging to main\n- Never force-push to shared branches (main, develop)\n- Tag releases with semantic versions: `v1.2.3`\n- Write meaningful PR descriptions that explain the "why"';
 
   /* ── Documentation rules ── */
-  var DOC_RULES = '## Documentation Rules\n\n- Every public function must have a doc comment explaining its purpose, parameters, and return value\n- Keep a CHANGELOG.md updated with notable changes per version\n- Write ADRs (Architecture Decision Records) for significant technical decisions\n- README.md must include: project description, setup instructions, and contribution guidelines\n- Inline comments explain "why", not "what" - the code should explain "what"\n- API endpoints must be documented with request/response examples\n- Update documentation in the same PR that changes the code';
+  const DOC_RULES = '## Documentation Rules\n\n- Every public function must have a doc comment explaining its purpose, parameters, and return value\n- Keep a CHANGELOG.md updated with notable changes per version\n- Write ADRs (Architecture Decision Records) for significant technical decisions\n- README.md must include: project description, setup instructions, and contribution guidelines\n- Inline comments explain "why", not "what" - the code should explain "what"\n- API endpoints must be documented with request/response examples\n- Update documentation in the same PR that changes the code';
 
   /* ── Security rules ── */
-  var SECURITY_RULES = '## Security Rules\n\n- Never commit secrets, API keys, tokens, or passwords to version control\n- Use environment variables or secret managers for all credentials\n- Validate and sanitize all user input at system boundaries\n- Use parameterized queries; never concatenate user input into SQL or commands\n- Set Content Security Policy (CSP) headers on web applications\n- Keep dependencies updated; run `npm audit` / `pip audit` / equivalent regularly\n- Use HTTPS everywhere; never serve anything over plain HTTP in production\n- Implement rate limiting on public API endpoints\n- Log security-relevant events (auth failures, permission denials, input validation errors)\n- Follow the principle of least privilege for all service accounts and IAM roles';
+  const SECURITY_RULES = '## Security Rules\n\n- Never commit secrets, API keys, tokens, or passwords to version control\n- Use environment variables or secret managers for all credentials\n- Validate and sanitize all user input at system boundaries\n- Use parameterized queries; never concatenate user input into SQL or commands\n- Set Content Security Policy (CSP) headers on web applications\n- Keep dependencies updated; run `npm audit` / `pip audit` / equivalent regularly\n- Use HTTPS everywhere; never serve anything over plain HTTP in production\n- Implement rate limiting on public API endpoints\n- Log security-relevant events (auth failures, permission denials, input validation errors)\n- Follow the principle of least privilege for all service accounts and IAM roles';
+
+  /* ── Label helpers ── */
+  function getLangLabel(language) {
+    console.assert(typeof language === 'string', 'getLangLabel: language must be string');
+    const SPECIAL = { typescript: 'TypeScript', javascript: 'JavaScript', csharp: 'C#' };
+    const result = SPECIAL[language] || language.charAt(0).toUpperCase() + language.slice(1);
+    console.assert(result.length > 0, 'getLangLabel: result must be non-empty');
+    return result;
+  }
+
+  function getFrameworkLabel(language, framework) {
+    console.assert(typeof framework === 'string', 'getFrameworkLabel: framework must be string');
+    console.assert(typeof language === 'string', 'getFrameworkLabel: language must be string');
+    if (!FRAMEWORK_RULES[framework]) { return framework; }
+    const fwOptions = FRAMEWORK_MAP[language] || [];
+    for (let i = 0; i < fwOptions.length && i < 30; i++) {
+      if (fwOptions[i][0] === framework) { return fwOptions[i][1]; }
+    }
+    return framework;
+  }
+
+  function getStyleLabel(style) {
+    console.assert(typeof style === 'string', 'getStyleLabel: style must be string');
+    const MAP = { nasa: 'NASA Power of 10', karpathy: 'Karpathy 4 Principles', balanced: 'Balanced', minimal: 'Minimal' };
+    const result = MAP[style] || 'Balanced';
+    console.assert(result.length > 0, 'getStyleLabel: result must be non-empty');
+    return result;
+  }
+
+  function getTeamLabel(team) {
+    console.assert(typeof team === 'string', 'getTeamLabel: team must be string');
+    const MAP = { solo: 'Solo', small: 'Small Team (2-10)', enterprise: 'Enterprise (50+)' };
+    const result = MAP[team] || 'Solo';
+    console.assert(result.length > 0, 'getTeamLabel: result must be non-empty');
+    return result;
+  }
+
+  /* ── Build optional sections array ── */
+  function buildOptionalSections(config) {
+    console.assert(config !== null && typeof config === 'object', 'buildOptionalSections: config must be object');
+    const parts = [];
+    if (config.includeTests) {
+      parts.push(TEST_RULES[config.language] || TEST_RULES.typescript);
+      parts.push('');
+    }
+    if (config.includeGit) {
+      parts.push(GIT_RULES);
+      parts.push('');
+    }
+    if (config.includeDocs) {
+      parts.push(DOC_RULES);
+      parts.push('');
+    }
+    if (config.includeSecurity) {
+      parts.push(SECURITY_RULES);
+      parts.push('');
+    }
+    console.assert(Array.isArray(parts), 'buildOptionalSections: must return array');
+    return parts;
+  }
 
   /* ── Generate CLAUDE.md content ── */
   function generateClaudeMd(config) {
-    assert(config !== null, 'config is not null');
-    assert(typeof config.language === 'string', 'language is string');
+    console.assert(config !== null && typeof config === 'object', 'generateClaudeMd: config must be object');
+    console.assert(typeof config.language === 'string', 'generateClaudeMd: language must be string');
 
-    var sections = [];
-    var langLabel = config.language.charAt(0).toUpperCase() + config.language.slice(1);
-    if (config.language === 'typescript') langLabel = 'TypeScript';
-    if (config.language === 'javascript') langLabel = 'JavaScript';
-    if (config.language === 'csharp') langLabel = 'C#';
+    const langLabel = getLangLabel(config.language);
+    const fwLabel = getFrameworkLabel(config.language, config.framework);
+    const styleLabel = getStyleLabel(config.style);
+    const teamLabel = getTeamLabel(config.team);
+    const fwSuffix = config.framework !== 'none' ? ' + ' + fwLabel : '';
 
-    var fwLabel = config.framework;
-    if (FRAMEWORK_RULES[config.framework]) {
-      /* Extract display name from the rule block title */
-      var fwMatch = FRAMEWORK_RULES[config.framework].match(/- (.+)/);
-      /* Use the framework map for display name */
-      var fwOptions = FRAMEWORK_MAP[config.language] || [];
-      for (var i = 0; i < fwOptions.length && i < 30; i++) {
-        if (fwOptions[i][0] === config.framework) {
-          fwLabel = fwOptions[i][1];
-          break;
-        }
-      }
-    }
-
-    var styleLabel = config.style === 'nasa' ? 'NASA Power of 10' :
-                     config.style === 'karpathy' ? 'Karpathy 4 Principles' :
-                     config.style === 'balanced' ? 'Balanced' : 'Minimal';
-    var teamLabel = config.team === 'solo' ? 'Solo' :
-                    config.team === 'small' ? 'Small Team (2-10)' : 'Enterprise (50+)';
-
-    /* Header */
-    sections.push('# CLAUDE.md \u2014 ' + langLabel + (config.framework !== 'none' ? ' + ' + fwLabel : '') + ' Project Guidelines');
+    const sections = [];
+    sections.push('# CLAUDE.md \u2014 ' + langLabel + fwSuffix + ' Project Guidelines');
     sections.push('');
     sections.push('> Generated by [Claude Code Guides](https://claudecodeguides.com/generator/)');
     sections.push('> Style: ' + styleLabel + ' | Team: ' + teamLabel);
     sections.push('');
-
-    /* Coding style section */
     sections.push(STYLE_RULES[config.style] || STYLE_RULES.balanced);
     sections.push('');
-
-    /* Language-specific rules */
     sections.push(LANGUAGE_RULES[config.language] || '');
     sections.push('');
-
-    /* Framework-specific rules */
     if (config.framework !== 'none' && FRAMEWORK_RULES[config.framework]) {
       sections.push(FRAMEWORK_RULES[config.framework]);
       sections.push('');
     }
-
-    /* Team size rules */
     sections.push(TEAM_RULES[config.team] || TEAM_RULES.solo);
     sections.push('');
-
-    /* Optional sections */
-    if (config.includeTests) {
-      sections.push(TEST_RULES[config.language] || TEST_RULES.typescript);
-      sections.push('');
-    }
-    if (config.includeGit) {
-      sections.push(GIT_RULES);
-      sections.push('');
-    }
-    if (config.includeDocs) {
-      sections.push(DOC_RULES);
-      sections.push('');
-    }
-    if (config.includeSecurity) {
-      sections.push(SECURITY_RULES);
-      sections.push('');
-    }
-
+    const optional = buildOptionalSections(config);
+    for (let i = 0; i < optional.length; i++) { sections.push(optional[i]); }
     sections.push('---');
     sections.push('');
-    sections.push('*Generated by [Claude Code Guides](https://claudecodeguides.com/generator/) \u2014 ' + langLabel + (config.framework !== 'none' ? ' + ' + fwLabel : '') + ' template.*');
+    sections.push('*Generated by [Claude Code Guides](https://claudecodeguides.com/generator/) \u2014 ' + langLabel + fwSuffix + ' template.*');
 
-    return sections.join('\n');
+    const result = sections.join('\n');
+    console.assert(typeof result === 'string' && result.length > 0, 'generateClaudeMd: output must be non-empty string');
+    return result;
   }
 
   /* ── Syntax highlighting for markdown ── */
   function highlightMd(raw) {
-    assert(typeof raw === 'string', 'highlight expects string');
-    var escaped = raw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    var lines = escaped.split('\n');
-    var inCode = false;
-    var result = [];
+    console.assert(typeof raw === 'string', 'highlightMd: input must be string');
+    console.assert(raw.length > 0, 'highlightMd: input must be non-empty');
+    const escaped = raw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const lines = escaped.split('\n');
+    let inCode = false;
+    const result = [];
 
-    for (var i = 0; i < lines.length && i < 2000; i++) {
-      var line = lines[i];
+    for (let i = 0; i < lines.length && i < 2000; i++) {
+      const line = lines[i];
       if (line.match(/^```/)) {
         inCode = !inCode;
         result.push('<span class="md-code">' + line + '</span>');
@@ -1003,7 +1089,7 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
       else if (line.match(/^---$/))   { result.push('<span class="md-comment">' + line + '</span>'); }
       else if (line.match(/^>/))      { result.push('<span class="md-comment">' + line + '</span>'); }
       else {
-        var l = line.replace(/\*\*([^*]+)\*\*/g, '<span class="md-bold">**$1**</span>');
+        let l = line.replace(/\*\*([^*]+)\*\*/g, '<span class="md-bold">**$1**</span>');
         l = l.replace(/`([^`]+)`/g, '<span class="md-code">`$1`</span>');
         result.push(l);
       }
@@ -1013,10 +1099,11 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
 
   /* ── Download as file ── */
   function downloadFile(content, filename) {
-    assert(typeof content === 'string', 'content is string');
-    var blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement('a');
+    console.assert(typeof content === 'string' && content.length > 0, 'downloadFile: content must be non-empty string');
+    console.assert(typeof filename === 'string' && filename.length > 0, 'downloadFile: filename must be non-empty string');
+    const blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
     a.href = url;
     a.download = filename;
     document.body.appendChild(a);
@@ -1027,99 +1114,108 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
 
   /* ── Get radio value ── */
   function getRadio(name) {
-    var el = document.querySelector('input[name="' + name + '"]:checked');
-    assert(el !== null, 'radio ' + name + ' has selection');
+    console.assert(typeof name === 'string' && name.length > 0, 'getRadio: name must be non-empty string');
+    const el = document.querySelector('input[name="' + name + '"]:checked');
+    console.assert(el !== null, 'getRadio: radio ' + name + ' must have selection');
     return el ? el.value : '';
   }
 
   /* ── Paywall state ── */
-  var PAYWALL_KEY = 'ccg_generator_uses';
-  var PAYWALL_LIMIT = 2;
+  const PAYWALL_KEY = 'ccg_generator_uses';
+  const PAYWALL_LIMIT = 2;
 
   function getUseCount() {
-    try { return parseInt(localStorage.getItem(PAYWALL_KEY), 10) || 0; }
-    catch (_) { return 0; }
+    console.assert(typeof PAYWALL_KEY === 'string', 'getUseCount: PAYWALL_KEY must be string');
+    let count = 0;
+    try {
+      count = parseInt(localStorage.getItem(PAYWALL_KEY), 10) || 0;
+    } catch (err) {
+      console.warn('getUseCount: localStorage read failed:', err.message);
+    }
+    console.assert(typeof count === 'number' && count >= 0, 'getUseCount: count must be non-negative number');
+    return count;
   }
 
   function incrementUseCount() {
-    var count = getUseCount() + 1;
-    try { localStorage.setItem(PAYWALL_KEY, String(count)); }
-    catch (_) { /* storage blocked */ }
+    console.assert(typeof PAYWALL_KEY === 'string', 'incrementUseCount: PAYWALL_KEY must be string');
+    const count = getUseCount() + 1;
+    try {
+      localStorage.setItem(PAYWALL_KEY, String(count));
+    } catch (err) {
+      console.warn('incrementUseCount: localStorage write failed:', err.message);
+    }
+    console.assert(count > 0, 'incrementUseCount: count must be positive');
     return count;
   }
 
   /* ── State ── */
-  var generatedContent = '';
+  let generatedContent = '';
 
-  /* ── DOM Ready ── */
-  document.addEventListener('DOMContentLoaded', function () {
-    var selLanguage   = document.getElementById('sel-language');
-    var selFramework  = document.getElementById('sel-framework');
-    var btnGenerate   = document.getElementById('btnGenerate');
-    var outputSection = document.getElementById('outputSection');
-    var codeOutput    = document.getElementById('codeOutput');
-    var outputMeta    = document.getElementById('outputMeta');
-    var btnDownload   = document.getElementById('btnDownload');
-    var btnCopy       = document.getElementById('btnCopy');
-    var copyFeedback  = document.getElementById('copyFeedback');
-    var paywallOverlay = document.getElementById('paywall-overlay');
-
-    assert(selLanguage !== null, 'language select exists');
-    assert(selFramework !== null, 'framework select exists');
-
-    /* ── Update framework dropdown when language changes ── */
-    function updateFrameworks() {
-      var lang = selLanguage.value;
-      var options = FRAMEWORK_MAP[lang] || [['none','None']];
-      selFramework.innerHTML = '';
-      for (var i = 0; i < options.length && i < 30; i++) {
-        var opt = document.createElement('option');
-        opt.value = options[i][0];
-        opt.textContent = options[i][1];
-        selFramework.appendChild(opt);
-      }
+  /* ── Update framework dropdown when language changes ── */
+  function updateFrameworks(selLanguage, selFramework) {
+    console.assert(selLanguage !== null, 'updateFrameworks: selLanguage must exist');
+    console.assert(selFramework !== null, 'updateFrameworks: selFramework must exist');
+    const lang = selLanguage.value;
+    const options = FRAMEWORK_MAP[lang] || [['none','None']];
+    selFramework.innerHTML = '';
+    for (let i = 0; i < options.length && i < 30; i++) {
+      const opt = document.createElement('option');
+      opt.value = options[i][0];
+      opt.textContent = options[i][1];
+      selFramework.appendChild(opt);
     }
+  }
 
-    selLanguage.addEventListener('change', updateFrameworks);
-    updateFrameworks(); /* Initialize on load */
+  /* ── Handle generate click ── */
+  function handleGenerate(els) {
+    console.assert(els !== null && typeof els === 'object', 'handleGenerate: els must be object');
+    console.assert(els.selLanguage !== null, 'handleGenerate: selLanguage must exist');
+    const useCount = incrementUseCount();
 
-    /* ── Generate ── */
-    btnGenerate.addEventListener('click', function () {
-      var useCount = incrementUseCount();
+    const config = {
+      language: els.selLanguage.value,
+      framework: els.selFramework.value,
+      style: getRadio('style'),
+      team: getRadio('team'),
+      includeTests: document.getElementById('chk-tests').checked,
+      includeGit: document.getElementById('chk-git').checked,
+      includeDocs: document.getElementById('chk-docs').checked,
+      includeSecurity: document.getElementById('chk-security').checked
+    };
 
-      var config = {
-        language: selLanguage.value,
-        framework: selFramework.value,
-        style: getRadio('style'),
-        team: getRadio('team'),
-        includeTests: document.getElementById('chk-tests').checked,
-        includeGit: document.getElementById('chk-git').checked,
-        includeDocs: document.getElementById('chk-docs').checked,
-        includeSecurity: document.getElementById('chk-security').checked
-      };
+    generatedContent = generateClaudeMd(config);
+    const lineCount = generatedContent.split('\n').length;
+    els.outputMeta.textContent = lineCount + ' lines \u2022 ~' + (lineCount * 20) + ' tokens saved per session';
 
-      generatedContent = generateClaudeMd(config);
-      var lineCount = generatedContent.split('\n').length;
-      outputMeta.textContent = lineCount + ' lines \u2022 ~' + (lineCount * 20) + ' tokens saved per session';
+    els.codeOutput.innerHTML = highlightMd(generatedContent);
+    els.outputSection.classList.add('visible');
+    els.outputSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-      codeOutput.innerHTML = highlightMd(generatedContent);
-      outputSection.classList.add('visible');
-      outputSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (useCount > PAYWALL_LIMIT) {
+      els.codeOutput.classList.add('blurred');
+      els.paywallOverlay.style.display = 'flex';
+    } else {
+      els.codeOutput.classList.remove('blurred');
+      els.paywallOverlay.style.display = 'none';
+    }
+  }
 
-      /* Paywall after 2 free uses */
-      if (useCount > PAYWALL_LIMIT) {
-        codeOutput.classList.add('blurred');
-        paywallOverlay.style.display = 'flex';
-      } else {
-        codeOutput.classList.remove('blurred');
-        paywallOverlay.style.display = 'none';
-      }
+  /* ── Bind all event listeners ── */
+  function bindEvents(els) {
+    console.assert(els !== null && typeof els === 'object', 'bindEvents: els must be object');
+    console.assert(els.btnGenerate !== null, 'bindEvents: btnGenerate must exist');
+
+    els.selLanguage.addEventListener('change', function () {
+      updateFrameworks(els.selLanguage, els.selFramework);
     });
 
-    /* ── Download ── */
-    btnDownload.addEventListener('click', function () {
+    els.btnGenerate.addEventListener('click', function () {
+      handleGenerate(els);
+    });
+
+    els.btnDownload.addEventListener('click', function () {
       if (getUseCount() > PAYWALL_LIMIT) {
-        paywallOverlay.style.display = 'flex';
+        els.paywallOverlay.style.display = 'flex';
         return;
       }
       if (generatedContent.length > 0) {
@@ -1127,24 +1223,47 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
       }
     });
 
-    /* ── Copy ── */
-    btnCopy.addEventListener('click', function () {
+    els.btnCopy.addEventListener('click', function () {
       if (getUseCount() > PAYWALL_LIMIT) {
-        paywallOverlay.style.display = 'flex';
+        els.paywallOverlay.style.display = 'flex';
         return;
       }
-      if (generatedContent.length === 0) return;
+      if (generatedContent.length === 0) { return; }
       navigator.clipboard.writeText(generatedContent).then(function () {
-        copyFeedback.textContent = 'Copied!';
-        copyFeedback.classList.add('show');
-        setTimeout(function () { copyFeedback.classList.remove('show'); }, 2000);
+        els.copyFeedback.textContent = 'Copied!';
+        els.copyFeedback.classList.add('show');
+        setTimeout(function () { els.copyFeedback.classList.remove('show'); }, 2000);
       }).catch(function () {
-        copyFeedback.textContent = 'Copy failed - select and copy manually.';
-        copyFeedback.classList.add('show');
-        setTimeout(function () { copyFeedback.classList.remove('show'); }, 3000);
+        els.copyFeedback.textContent = 'Copy failed - select and copy manually.';
+        els.copyFeedback.classList.add('show');
+        setTimeout(function () { els.copyFeedback.classList.remove('show'); }, 3000);
       });
     });
-  });
+  }
+
+  /* ── Initialize form elements ── */
+  function initForm() {
+    console.assert(document.readyState !== 'loading', 'initForm: DOM must be ready');
+    const els = {
+      selLanguage:    document.getElementById('sel-language'),
+      selFramework:   document.getElementById('sel-framework'),
+      btnGenerate:    document.getElementById('btnGenerate'),
+      outputSection:  document.getElementById('outputSection'),
+      codeOutput:     document.getElementById('codeOutput'),
+      outputMeta:     document.getElementById('outputMeta'),
+      btnDownload:    document.getElementById('btnDownload'),
+      btnCopy:        document.getElementById('btnCopy'),
+      copyFeedback:   document.getElementById('copyFeedback'),
+      paywallOverlay: document.getElementById('paywall-overlay')
+    };
+    console.assert(els.selLanguage !== null && els.selFramework !== null, 'initForm: required selects must exist');
+
+    updateFrameworks(els.selLanguage, els.selFramework);
+    bindEvents(els);
+  }
+
+  /* ── DOM Ready ── */
+  document.addEventListener('DOMContentLoaded', initForm);
 })();
 </script>
 </body>

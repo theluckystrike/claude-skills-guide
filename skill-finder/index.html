@@ -2,7 +2,7 @@
 layout: null
 permalink: /skill-finder/
 sitemap: true
-title: "Claude Code Skill Finder — Browse 200+ Skills (2026)"
+title: "Claude Code Skill Finder — Browse 150+ Skills (2026)"
 description: "Search and discover Claude Code skills by category. Installation commands, descriptions, and source links for 150+ community and official skills."
 ---
 <!DOCTYPE html>
@@ -10,14 +10,14 @@ description: "Search and discover Claude Code skills by category. Installation c
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude Code Skill Finder — Browse 200+ Skills (2026)</title>
+<title>Claude Code Skill Finder — Browse 150+ Skills (2026)</title>
 <meta name="description" content="Search and discover Claude Code skills by category. Installation commands, descriptions, and source links for 150+ community and official skills.">
-<meta property="og:title" content="Claude Code Skill Finder — Browse 200+ Skills (2026)">
+<meta property="og:title" content="Claude Code Skill Finder — Browse 150+ Skills (2026)">
 <meta property="og:description" content="Search and discover Claude Code skills by category. Installation commands, descriptions, and source links for 150+ community and official skills.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://claudecodeguides.com/skill-finder/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Claude Code Skill Finder — Browse 200+ Skills (2026)">
+<meta name="twitter:title" content="Claude Code Skill Finder — Browse 150+ Skills (2026)">
 <meta name="twitter:description" content="Search and discover Claude Code skills by category.">
 <link rel="canonical" href="https://claudecodeguides.com/skill-finder/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -138,11 +138,13 @@ code, .mono { font-family: 'DM Mono', 'Fira Code', monospace; }
   border-radius: 6px;
   border: 1px solid rgba(201,209,217,0.12);
   background: rgba(201,209,217,0.04);
+  font-family: inherit;
   font-size: 0.8rem;
   color: rgba(201,209,217,0.7);
   cursor: pointer;
   transition: all 0.2s;
   user-select: none;
+  line-height: 1.6;
 }
 .cat-chip:hover {
   border-color: rgba(201,209,217,0.3);
@@ -154,7 +156,6 @@ code, .mono { font-family: 'DM Mono', 'Fira Code', monospace; }
   color: #6ee7b7;
   font-weight: 500;
 }
-.cat-chip input { display: none; }
 
 /* ── Results Info ── */
 .results-info {
@@ -403,6 +404,78 @@ code, .mono { font-family: 'DM Mono', 'Fira Code', monospace; }
   color: rgba(201,209,217,0.35);
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many skills can I install in one project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no hard limit. Most projects use 3 to 6 skills. Skills compose well because each one targets a specific domain. A language skill and a framework skill rarely conflict. If two skills have overlapping instructions, the one listed later in your CLAUDE.md takes precedence."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do skills work with Claude Code on all plans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Skills are just CLAUDE.md instructions. They work on Claude Pro, Claude Max, Claude Team, and Claude Enterprise. The skills themselves are free and open source. The tool above searches the community catalog."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I write my own custom skills?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. A skill is a structured CLAUDE.md section with a name, description, and instruction set. Create a GitHub repository with your skill file, and anyone can install it with npx skills add your-username/your-skill. See the Skills Reference for the full authoring guide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do skills increase token usage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Skills add instructions to your context window, which does consume tokens. A typical skill adds 200 to 500 tokens of instructions. For most projects with 3 to 5 skills, this is 1,000 to 2,500 extra tokens per conversation, a negligible cost compared to the improved output quality."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if a skill conflicts with my existing CLAUDE.md?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The skill installer appends new sections to your CLAUDE.md. If you already have instructions that conflict, the later instruction wins. Best practice: install skills first, then add your project-specific overrides at the bottom of the file."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are skills updated automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Once installed, a skill's instructions are part of your project files. To update, run the install command again and it will replace the existing section. Check the skill's source repository for changelogs and new versions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use skills with other AI coding tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Skills are designed for Claude Code specifically, but since they are plain-text instructions in a CLAUDE.md file, many of the conventions apply to any AI coding assistant that reads project configuration files. The install command and tooling are Claude Code specific."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I find the full list of official skills?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Skill Finder above indexes over 150 community and official skills. For curated, production-tested skills with detailed documentation, check the Claude Code Playbook which includes 200 skills organized by use case."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -568,13 +641,16 @@ code, .mono { font-family: 'DM Mono', 'Fira Code', monospace; }
 </footer>
 
 <script>
+(function() {
+'use strict';
 /* ================================================================
    SKILL FINDER — Claude Code Guides
    All logic in <script>. No external dependencies.
+   IIFE-encapsulated — zero global mutable state (NASA P10 Rule 6).
    ================================================================ */
 
-/* ── Skill Database (155 skills) ── */
-const skills = [
+/* ── Skill Database (155 skills) — frozen after definition ── */
+const skills = Object.freeze([
   // ── Behavioral (12) ──
   { name: "karpathy-guidelines", desc: "Andrej Karpathy's 4 principles for Claude Code", category: "Behavioral", install: "npx skills add forrestchang/andrej-karpathy-skills", source: "https://github.com/forrestchang/andrej-karpathy-skills", stars: 1200, ccgLink: "/karpathy-claude-code-skills-guide/" },
   { name: "nasa-power-of-10", desc: "NASA's 10 rules for safety-critical code applied to Claude Code", category: "Behavioral", install: "npx skills add ccg/nasa-power-of-10", source: "https://github.com/ccg-skills/nasa-power-of-10", stars: 890, ccgLink: "/nasa-power-of-10-claude-code/" },
@@ -749,13 +825,13 @@ const skills = [
   { name: "pr-template", desc: "Pull request template — description, checklist, reviewer assignment", category: "Productivity", install: "npx skills add ccg/pr-template", source: "https://github.com/ccg-skills/pr-template", stars: 360 },
   { name: "refactoring-patterns", desc: "Refactoring patterns — extract, inline, move, rename safely", category: "Productivity", install: "npx skills add ccg/refactoring-patterns", source: "https://github.com/ccg-skills/refactoring-patterns", stars: 410 },
   { name: "task-decomposition", desc: "Break complex tasks into small, testable increments", category: "Productivity", install: "npx skills add ccg/task-decomposition", source: "https://github.com/ccg-skills/task-decomposition", stars: 340 }
-];
+]);
 
 /* ── Constants ── */
-const CATEGORIES = [
+const CATEGORIES = Object.freeze([
   "Languages", "Frameworks", "DevOps", "Security", "Testing",
   "Behavioral", "Research", "Data", "Debugging", "Productivity"
-];
+]);
 const MAX_DISPLAY = 200;
 const DEBOUNCE_MS = 300;
 const STORAGE_KEY = "ccg_skillfinder_uses";
@@ -771,15 +847,21 @@ let searchInput, sortSelect, categoryFiltersEl, skillsGrid, resultCount, searche
 
 /* ── Utility: sanitize search input ── */
 function sanitizeInput(str) {
+  console.assert(typeof str === 'string', 'sanitizeInput: input must be a string');
   const div = document.createElement("div");
   div.textContent = str;
-  return div.innerHTML.substring(0, 100);
+  const result = div.innerHTML.substring(0, 100);
+  console.assert(typeof result === 'string' && result.length <= 100, 'sanitizeInput: output must be a string <= 100 chars');
+  return result;
 }
 
 /* ── Utility: get usage count ── */
 function getUsageCount() {
+  console.assert(typeof STORAGE_KEY === 'string', 'getUsageCount: STORAGE_KEY must be a string');
   try {
-    return parseInt(localStorage.getItem(STORAGE_KEY) || "0", 10);
+    const count = parseInt(localStorage.getItem(STORAGE_KEY) || "0", 10);
+    console.assert(typeof count === 'number' && !isNaN(count) && count >= 0, 'getUsageCount: result must be a non-negative number');
+    return count;
   } catch (e) {
     return 0;
   }
@@ -787,9 +869,11 @@ function getUsageCount() {
 
 /* ── Utility: increment usage ── */
 function incrementUsage() {
+  console.assert(typeof STORAGE_KEY === 'string', 'incrementUsage: STORAGE_KEY must be a string');
   try {
     const count = getUsageCount() + 1;
     localStorage.setItem(STORAGE_KEY, String(count));
+    console.assert(count >= 1, 'incrementUsage: count must be >= 1 after increment');
     return count;
   } catch (e) {
     return 1;
@@ -798,17 +882,24 @@ function incrementUsage() {
 
 /* ── Utility: check paywall ── */
 function isPaywalled() {
-  return getUsageCount() >= FREE_USES;
+  console.assert(typeof FREE_USES === 'number' && FREE_USES > 0, 'isPaywalled: FREE_USES must be a positive number');
+  const result = getUsageCount() >= FREE_USES;
+  console.assert(typeof result === 'boolean', 'isPaywalled: result must be a boolean');
+  return result;
 }
 
 /* ── Build category filter chips ── */
 function buildCategoryFilters() {
+  console.assert(categoryFiltersEl instanceof HTMLElement, 'buildCategoryFilters: categoryFiltersEl must be an HTMLElement');
+  console.assert(Array.isArray(CATEGORIES) && CATEGORIES.length > 0, 'buildCategoryFilters: CATEGORIES must be a non-empty array');
   const frag = document.createDocumentFragment();
-  for (let i = 0; i < CATEGORIES.length; i++) {
+  for (let i = 0; i < CATEGORIES.length && i < 50; i++) {
     const cat = CATEGORIES[i];
-    const chip = document.createElement("label");
+    const chip = document.createElement("button");
+    chip.type = "button";
     chip.className = "cat-chip";
     chip.setAttribute("data-cat", cat);
+    chip.setAttribute("aria-pressed", "false");
     chip.textContent = cat;
     chip.addEventListener("click", function() {
       handleCategoryToggle(cat, chip);
@@ -820,18 +911,23 @@ function buildCategoryFilters() {
 
 /* ── Handle category toggle ── */
 function handleCategoryToggle(cat, chip) {
+  console.assert(typeof cat === 'string' && CATEGORIES.indexOf(cat) !== -1, 'handleCategoryToggle: cat must be a valid category string');
+  console.assert(chip instanceof HTMLElement, 'handleCategoryToggle: chip must be an HTMLElement');
   if (activeCategories.has(cat)) {
     activeCategories.delete(cat);
     chip.classList.remove("active");
+    chip.setAttribute("aria-pressed", "false");
   } else {
     activeCategories.add(cat);
     chip.classList.add("active");
+    chip.setAttribute("aria-pressed", "true");
   }
   renderSkills();
 }
 
 /* ── Filter skills ── */
 function filterSkills() {
+  console.assert(searchInput instanceof HTMLInputElement, 'filterSkills: searchInput must be an HTMLInputElement');
   const query = sanitizeInput(searchInput.value.trim().toLowerCase());
   let filtered = skills;
 
@@ -849,11 +945,13 @@ function filterSkills() {
     });
   }
 
+  console.assert(Array.isArray(filtered) && filtered.length <= skills.length, 'filterSkills: filtered must be an array no larger than skills');
   return filtered;
 }
 
 /* ── Sort skills ── */
 function sortSkills(list) {
+  console.assert(Array.isArray(list), 'sortSkills: list must be an array');
   const mode = sortSelect.value;
   const sorted = list.slice();
   if (mode === "popular") {
@@ -866,11 +964,13 @@ function sortSkills(list) {
       return catCmp !== 0 ? catCmp : b.stars - a.stars;
     });
   }
+  console.assert(sorted.length === list.length, 'sortSkills: sorted output must have same length as input');
   return sorted;
 }
 
 /* ── Build install row for a skill card ── */
 function buildInstallRow(skill) {
+  console.assert(skill && typeof skill.install === 'string', 'buildInstallRow: skill must have a string install property');
   const installRow = document.createElement("div");
   installRow.className = "install-row";
 
@@ -888,11 +988,13 @@ function buildInstallRow(skill) {
 
   installRow.appendChild(cmdEl);
   installRow.appendChild(copyBtn);
+  console.assert(installRow.childNodes.length === 2, 'buildInstallRow: install row must have exactly 2 children');
   return installRow;
 }
 
 /* ── Build links row for a skill card ── */
 function buildLinksRow(skill) {
+  console.assert(skill && typeof skill.name === 'string', 'buildLinksRow: skill must have a name property');
   const links = document.createElement("div");
   links.className = "skill-links";
   if (skill.source) {
@@ -909,11 +1011,14 @@ function buildLinksRow(skill) {
     ccgA.textContent = "Learn more \u2192";
     links.appendChild(ccgA);
   }
+  console.assert(links instanceof HTMLElement, 'buildLinksRow: must return an HTMLElement');
   return links;
 }
 
 /* ── Create a single skill card HTML ── */
 function createSkillCard(skill, blurred) {
+  console.assert(skill && typeof skill.name === 'string' && typeof skill.stars === 'number', 'createSkillCard: skill must have name (string) and stars (number)');
+  console.assert(typeof blurred === 'boolean', 'createSkillCard: blurred must be a boolean');
   const card = document.createElement("div");
   card.className = "skill-card" + (blurred ? " blurred" : "");
   card.setAttribute("role", "article");
@@ -951,6 +1056,8 @@ function createSkillCard(skill, blurred) {
 
 /* ── Handle copy-to-clipboard ── */
 function handleCopy(text, btn) {
+  console.assert(typeof text === 'string' && text.length > 0, 'handleCopy: text must be a non-empty string');
+  console.assert(btn instanceof HTMLElement, 'handleCopy: btn must be an HTMLElement');
   navigator.clipboard.writeText(text).then(function() {
     btn.textContent = "Copied!";
     btn.classList.add("copied");
@@ -966,6 +1073,7 @@ function handleCopy(text, btn) {
 
 /* ── Render skills grid ── */
 function renderSkills() {
+  console.assert(skillsGrid instanceof HTMLElement, 'renderSkills: skillsGrid must be an HTMLElement');
   const filtered = filterSkills();
   const sorted = sortSkills(filtered);
   const bounded = sorted.slice(0, MAX_DISPLAY);
@@ -974,13 +1082,14 @@ function renderSkills() {
   skillsGrid.innerHTML = "";
   const frag = document.createDocumentFragment();
 
-  for (let i = 0; i < bounded.length; i++) {
+  for (let i = 0; i < bounded.length && i < MAX_DISPLAY; i++) {
     const blurred = paywalled && i >= BLUR_THRESHOLD;
     frag.appendChild(createSkillCard(bounded[i], blurred));
   }
 
   skillsGrid.appendChild(frag);
   resultCount.textContent = bounded.length + " of " + skills.length + " skills";
+  console.assert(bounded.length <= MAX_DISPLAY, 'renderSkills: bounded length must not exceed MAX_DISPLAY');
 
   if (paywalled) {
     updateSearchesLeftText(true);
@@ -994,6 +1103,8 @@ function renderSkills() {
 
 /* ── Update searches-left indicator ── */
 function updateSearchesLeftText(paywalled) {
+  console.assert(typeof paywalled === 'boolean', 'updateSearchesLeftText: paywalled must be a boolean');
+  console.assert(searchesLeft instanceof HTMLElement, 'updateSearchesLeftText: searchesLeft must be an HTMLElement');
   if (paywalled) {
     searchesLeft.textContent = "Free searches used";
     searchesLeft.style.color = "#f87171";
@@ -1006,20 +1117,32 @@ function updateSearchesLeftText(paywalled) {
 
 /* ── Show paywall overlay ── */
 function showPaywall() {
+  console.assert(paywallOverlay instanceof HTMLElement, 'showPaywall: paywallOverlay must be an HTMLElement');
   paywallOverlay.classList.add("visible");
+  console.assert(paywallOverlay.classList.contains("visible"), 'showPaywall: overlay must have visible class after show');
 }
 
 /* ── Handle search with debounce ── */
 function handleSearchInput() {
+  console.assert(searchInput instanceof HTMLInputElement, 'handleSearchInput: searchInput must be an HTMLInputElement');
   clearTimeout(debounceTimer);
   debounceTimer = setTimeout(function() {
-    incrementUsage();
+    const query = searchInput.value.trim();
+    if (query.length > 0) {
+      const filtered = filterSkills();
+      if (filtered.length > 0) {
+        incrementUsage();
+      }
+    }
     renderSkills();
+    console.assert(typeof debounceTimer === 'number', 'handleSearchInput: debounceTimer must be a number after setTimeout');
   }, DEBOUNCE_MS);
 }
 
 /* ── Handle sort change ── */
 function handleSortChange() {
+  console.assert(sortSelect instanceof HTMLSelectElement, 'handleSortChange: sortSelect must be an HTMLSelectElement');
+  console.assert(['popular', 'name', 'category'].indexOf(sortSelect.value) !== -1, 'handleSortChange: sort value must be one of popular/name/category');
   renderSkills();
 }
 
@@ -1033,11 +1156,14 @@ function init() {
   searchesLeft = document.getElementById("searchesLeft");
   paywallOverlay = document.getElementById("paywall-overlay");
 
+  console.assert(searchInput && sortSelect && categoryFiltersEl && skillsGrid && resultCount && searchesLeft && paywallOverlay, 'init: all required DOM elements must exist');
+
   buildCategoryFilters();
   renderSkills();
 
   searchInput.addEventListener("input", handleSearchInput);
   sortSelect.addEventListener("change", handleSortChange);
+  console.assert(skills.length > 0, 'init: skills database must be non-empty');
 }
 
 if (document.readyState === "loading") {
@@ -1045,6 +1171,7 @@ if (document.readyState === "loading") {
 } else {
   init();
 }
+})();
 </script>
 </body>
 </html>
