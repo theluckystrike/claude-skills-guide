@@ -158,8 +158,8 @@ After resolving threshold issues:
 
 ## See Also
 
-- [Automatic vs Manual Cache Breakpoints Guide](/claude-cost-automatic-vs-manual-cache-breakpoints-guide/)
-- [Claude Token Counter: Measure Before You Optimize](/claude-cost-claude-token-counter-measure-before-optimize/)
-- [Claude Orchestrator-Worker Cost Optimization](/claude-cost-claude-orchestrator-worker-cost-optimization/)
-- [Token-Efficient Few-Shot Examples for Claude](/claude-cost-token-efficient-few-shot-examples-claude/)
-- [Claude Agent Loop Cost: Tokens Per Iteration](/claude-cost-claude-agent-loop-cost-tokens-per-iteration/)
+- [Automatic vs Manual Cache Breakpoints Guide](/automatic-vs-manual-cache-breakpoints-guide/)
+- [Claude Token Counter: Measure Before You Optimize](/claude-token-counter-measure-before-optimize/)
+- [Claude Orchestrator-Worker Cost Optimization](/claude-orchestrator-worker-cost-optimization/)
+- [Token-Efficient Few-Shot Examples for Claude](/token-efficient-few-shot-examples-claude/)
+- [Claude Agent Loop Cost: Tokens Per Iteration](/claude-agent-loop-cost-tokens-per-iteration/)

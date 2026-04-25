@@ -84,7 +84,7 @@ Claude Code should create `~/.config/rio/config.toml` with `[fonts]` section for
 - [Claude Code for SolidJS Resources Workflow Guide](/claude-code-for-solidjs-resources-workflow-guide/)
 - [Claude Code for Hive Metastore Workflow Guide](/claude-code-for-hive-metastore-workflow-guide/)
 - [Claude Code for Release Candidate Workflow Tutorial](/claude-code-for-release-candidate-workflow-tutorial/)
-- [How to Use Claude Code with Warp Terminal 2026](/claude-code-for-warp-terminal-workflow-guide/)
+- [How to Use Claude Code with Warp Terminal 2026](/claude-code-warp-terminal-workflow-2026/)
 - [Claude Code Terminal UTF-8 Garbled Output — Fix (2026)](/claude-code-terminal-encoding-utf8-garbled-fix/)
 - [Claude Code for Bloomberg Data Extraction (2026)](/claude-code-bloomberg-terminal-data-extraction-2026/)
 - [Terminal Emulator Rendering Artifacts Fix](/claude-code-terminal-rendering-artifacts-fix-2026/)

@@ -153,7 +153,7 @@ For error handling patterns that complement database conventions, see the [error
 
 ## See Also
 
-- [CLAUDE.md for Testing Conventions — Generate Tests That Actually Catch Bugs (2026)](/claude-md-for-testing-conventions/)
+- [CLAUDE.md for Testing Conventions — Generate Tests That Actually Catch Bugs (2026)](/claude-md-testing-conventions/)
 
 
 ## Frequently Asked Questions

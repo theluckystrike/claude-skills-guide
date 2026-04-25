@@ -180,8 +180,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
-- [Track Claude Token Spend Per Project and Team](/02-track-claude-spend-per-project/)
-- [Claude Code Cost Per Project Estimation Guide](/claude-cost-09-claude-code-cost-per-project/)
+- [Track Claude Token Spend Per Project and Team](/track-claude-token-spend-per-project-team/)
+- [Claude Code Cost Per Project Estimation Guide](/claude-code-cost-per-project-estimation-guide/)
 - [Claude Code .env File Not Loaded — Fix (2026)](/claude-code-env-file-not-loaded-project-scope-fix/)
 - [The Claude Code Cost Spiral: Why Projects Get Expensive Over Time](/claude-code-cost-spiral-projects-expensive-over-time/)
 - [Claude Code vs Windsurf: Cost-Per-Feature Breakdown](/claude-code-vs-windsurf-cost-per-feature/)

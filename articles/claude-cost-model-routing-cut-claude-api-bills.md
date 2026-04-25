@@ -203,6 +203,6 @@ Track three dashboards: (1) cost per request by model tier — verify the expect
 
 ## See Also
 
-- [How Context Window Size Drives Claude API Bills](/claude-cost-context-window-size-drives-claude-api-bills/)
-- [Reducing Agent Fleet Costs with Model Routing](/claude-cost-reducing-agent-fleet-costs-model-routing/)
-- [System Prompt Optimization to Cut Claude Costs](/claude-cost-system-prompt-optimization-cut-claude-costs/)
+- [How Context Window Size Drives Claude API Bills](/context-window-size-drives-claude-api-bills/)
+- [Reducing Agent Fleet Costs with Model Routing](/reducing-agent-fleet-costs-model-routing/)
+- [System Prompt Optimization to Cut Claude Costs](/system-prompt-optimization-cut-claude-costs/)

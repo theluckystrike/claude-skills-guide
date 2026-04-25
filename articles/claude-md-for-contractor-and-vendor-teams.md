@@ -243,8 +243,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
-- [CLAUDE.md Not Loading in Claude Code — Fix Guide (2026)](/claude-md-not-loading-in-claude-code/)
-- [CLAUDE.md for Security Rules — Prevent Vulnerabilities at Generation Time (2026)](/claude-md-for-security-rules/)
-- [Share and Reuse CLAUDE.md Patterns Across Teams and Projects (2026)](/share-reuse-claude-md-patterns-across-teams/)
-- [CLAUDE.md for Database Conventions — Schema, Queries, and Migration Rules (2026)](/claude-md-for-database-conventions/)
-- [CLAUDE.md for Testing Conventions — Generate Tests That Actually Catch Bugs (2026)](/claude-md-for-testing-conventions/)
+- [CLAUDE.md Not Loading in Claude Code — Fix Guide (2026)](/claude-md-not-loading-fix/)
+- [CLAUDE.md for Security Rules — Prevent Vulnerabilities at Generation Time (2026)](/claude-md-security-rules/)
+- [Share and Reuse CLAUDE.md Patterns Across Teams and Projects (2026)](/share-reuse-claude-md-across-teams/)
+- [CLAUDE.md for Database Conventions — Schema, Queries, and Migration Rules (2026)](/claude-md-database-conventions/)
+- [CLAUDE.md for Testing Conventions — Generate Tests That Actually Catch Bugs (2026)](/claude-md-testing-conventions/)

@@ -321,7 +321,7 @@ The Claude iOS and Android apps support basic system keyboard shortcuts when usi
 - [claude_desktop_config.json Guide](/claude-desktop-config-json-guide/) — configure Claude Desktop settings
 - [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
 - [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
-- [Claude Code Getting Started](/claude-code-getting-started-terminal-setup/) — initial CLI setup
+- [Claude Code Getting Started](/claude-code-for-beginners-complete-getting-started-2026/) — initial CLI setup
 - [Claude Code Configuration Hierarchy](/claude-code-configuration-hierarchy-explained-2026/) — understand settings files
 - [Claude Code Save Conversation Guide](/claude-code-save-conversation-guide/) — manage session history
 - [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — extend capabilities

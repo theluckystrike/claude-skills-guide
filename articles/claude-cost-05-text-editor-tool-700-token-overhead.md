@@ -162,7 +162,7 @@ Compare total input tokens per session before and after deploying adaptive tool 
 
 ## See Also
 
-- [Token-Efficient Few-Shot Examples for Claude](/claude-cost-token-efficient-few-shot-examples-claude/)
-- [Claude Code $200 Max Plan: Is It Worth the Cost](/claude-cost-05-claude-code-max-200-worth-it/)
-- [Reduce Claude Code Token Consumption by 60%](/claude-cost-06-reduce-claude-code-token-consumption/)
-- [Claude Workspace Spend Limits Configuration](/claude-cost-05-claude-workspace-spend-limits/)
+- [Token-Efficient Few-Shot Examples for Claude](/token-efficient-few-shot-examples-claude/)
+- [Claude Code $200 Max Plan: Is It Worth the Cost](/claude-code-200-max-plan-worth-the-cost/)
+- [Reduce Claude Code Token Consumption by 60%](/reduce-claude-code-token-consumption-60-percent/)
+- [Claude Workspace Spend Limits Configuration](/claude-workspace-spend-limits-configuration/)

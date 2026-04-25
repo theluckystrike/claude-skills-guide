@@ -87,7 +87,7 @@ On case-sensitive filesystems like Linux ext4, `claude.md` and `CLAUDE.md` are d
 
 ## See Also
 
-- [CLAUDE.md Not Loading in Claude Code — Fix Guide (2026)](/claude-md-not-loading-in-claude-code/)
+- [CLAUDE.md Not Loading in Claude Code — Fix Guide (2026)](/claude-md-not-loading-fix/)
 
 
 ## Related Error Messages

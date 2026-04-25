@@ -216,5 +216,5 @@ Track the contribution of each optimization layer separately. Target savings: mo
 
 ## See Also
 
-- [Claude Code /compact Saves Thousands of Tokens](/claude-cost-02-claude-code-compact-saves-tokens/)
-- [Smart Context Pruning for Claude API Savings](/claude-cost-smart-context-pruning-claude-api-savings/)
+- [Claude Code /compact Saves Thousands of Tokens](/claude-code-compact-saves-thousands-tokens/)
+- [Smart Context Pruning for Claude API Savings](/smart-context-pruning-claude-api-savings/)

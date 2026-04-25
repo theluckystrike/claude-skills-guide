@@ -245,8 +245,8 @@ The primary metric is average context size per request, tracked weekly. Secondar
 
 ## See Also
 
-- [Prompt Compression Techniques for Claude API](/claude-cost-prompt-compression-techniques-claude-api/)
-- [Claude 1M Context Window: What It Really Costs](/claude-cost-claude-1m-context-window-what-it-costs/)
-- [RAG vs Context Stuffing: Claude Cost Analysis](/claude-cost-rag-vs-context-stuffing-claude-cost-analysis/)
-- [Optimal Context Size for Cost-Efficient Claude](/claude-cost-optimal-context-size-cost-efficient-claude/)
-- [Claude Code Context Management Cost Tips 2026](/claude-cost-04-claude-code-context-management-tips/)
+- [Prompt Compression Techniques for Claude API](/prompt-compression-techniques-claude-api/)
+- [Claude 1M Context Window: What It Really Costs](/claude-1m-context-window-what-it-costs/)
+- [RAG vs Context Stuffing: Claude Cost Analysis](/rag-vs-context-stuffing-claude-cost-analysis/)
+- [Optimal Context Size for Cost-Efficient Claude](/optimal-context-size-cost-efficient-claude/)
+- [Claude Code Context Management Cost Tips 2026](/claude-code-context-management-cost-tips-2026/)

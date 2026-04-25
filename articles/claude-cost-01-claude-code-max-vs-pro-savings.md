@@ -175,6 +175,6 @@ After switching plans, track two metrics: rate limit encounters per week (should
 
 ## See Also
 
-- [Free vs Pro vs Max: Claude Code Plan Calculator](/claude-cost-10-free-pro-max-plan-calculator/)
-- [Claude API Cost Dashboard Setup Guide 2026](/claude-cost-01-claude-api-cost-dashboard-setup/)
-- [Claude Code $200 Max Plan: Is It Worth the Cost](/claude-cost-05-claude-code-max-200-worth-it/)
+- [Free vs Pro vs Max: Claude Code Plan Calculator](/free-vs-pro-vs-max-claude-code-plan-calculator/)
+- [Claude API Cost Dashboard Setup Guide 2026](/claude-api-cost-dashboard-setup-guide-2026/)
+- [Claude Code $200 Max Plan: Is It Worth the Cost](/claude-code-200-max-plan-worth-the-cost/)

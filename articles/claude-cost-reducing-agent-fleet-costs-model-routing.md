@@ -220,6 +220,6 @@ Track routing effectiveness:
 
 ## See Also
 
-- [Model Routing by Task Cuts Claude API Bills](/claude-cost-model-routing-cut-claude-api-bills/)
-- [Multi-Agent Claude Fleet Cost Architecture Guide](/claude-cost-multi-agent-claude-fleet-cost-architecture/)
-- [Cost-Efficient Multi-Agent Coding Workflows](/claude-cost-cost-efficient-multi-agent-coding-workflows/)
+- [Model Routing by Task Cuts Claude API Bills](/model-routing-cut-claude-api-bills/)
+- [Multi-Agent Claude Fleet Cost Architecture Guide](/multi-agent-claude-fleet-cost-architecture/)
+- [Cost-Efficient Multi-Agent Coding Workflows](/cost-efficient-multi-agent-coding-workflows/)

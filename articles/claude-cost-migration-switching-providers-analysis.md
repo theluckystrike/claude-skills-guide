@@ -129,4 +129,4 @@ Minimize migration cost and risk with these four strategies:
 
 ## See Also
 
-- [RAG vs Context Stuffing: Claude Cost Analysis](/claude-cost-rag-vs-context-stuffing-claude-cost-analysis/)
+- [RAG vs Context Stuffing: Claude Cost Analysis](/rag-vs-context-stuffing-claude-cost-analysis/)

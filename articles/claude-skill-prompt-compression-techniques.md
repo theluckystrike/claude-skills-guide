@@ -227,4 +227,4 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
-- [Prompt Compression Techniques for Claude API](/claude-cost-prompt-compression-techniques-claude-api/)
+- [Prompt Compression Techniques for Claude API](/prompt-compression-techniques-claude-api/)

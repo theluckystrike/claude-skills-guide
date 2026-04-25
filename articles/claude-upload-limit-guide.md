@@ -281,7 +281,7 @@ cd /path/to/large-project
 claude
 ```
 
-Claude Code reads from disk with no upload size limit. It searches and reads selectively, making it far more effective for large projects than uploading files through the web interface. See the [getting started guide](/claude-code-getting-started-terminal-setup/) for initial setup.
+Claude Code reads from disk with no upload size limit. It searches and reads selectively, making it far more effective for large projects than uploading files through the web interface. See the [getting started guide](/claude-code-for-beginners-complete-getting-started-2026/) for initial setup.
 
 ### Chunk CSV and Excel Files
 
@@ -355,7 +355,7 @@ Yes, you can mix file types in a single message, up to 5 files total. For exampl
 
 - [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
 - [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup
-- [Claude Code Getting Started](/claude-code-getting-started-terminal-setup/) — initial CLI setup
+- [Claude Code Getting Started](/claude-code-for-beginners-complete-getting-started-2026/) — initial CLI setup
 - [Claude Temperature Settings Guide](/claude-temperature-settings-guide/) — control output behavior
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — reduce token consumption
 - [Claude Code Configuration Hierarchy](/claude-code-configuration-hierarchy-explained-2026/) — understand settings precedence

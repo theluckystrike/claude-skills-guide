@@ -229,5 +229,5 @@ Track workflow economics:
 
 ## See Also
 
-- [Optimal Context Size for Cost-Efficient Claude](/claude-cost-optimal-context-size-cost-efficient-claude/)
-- [Multi-Agent Claude Fleet Cost Architecture Guide](/claude-cost-multi-agent-claude-fleet-cost-architecture/)
+- [Optimal Context Size for Cost-Efficient Claude](/optimal-context-size-cost-efficient-claude/)
+- [Multi-Agent Claude Fleet Cost Architecture Guide](/multi-agent-claude-fleet-cost-architecture/)

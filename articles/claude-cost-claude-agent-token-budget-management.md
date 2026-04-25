@@ -233,8 +233,8 @@ Track budget effectiveness:
 
 ## See Also
 
-- [Text Editor Tool: 700 Token Overhead Explained](/claude-cost-05-text-editor-tool-700-token-overhead/)
-- [Claude Max Subscription vs API for Agent Fleets](/claude-cost-claude-max-subscription-vs-api-agent-fleets/)
-- [Claude Context Management: Pay Less, Use More](/claude-cost-claude-context-management-pay-less-use-more/)
-- [Claude Cache Minimum Token Requirements 2026](/claude-cost-claude-cache-minimum-token-requirements-2026/)
-- [Claude Opus 4.7: Is It Worth the Extra Cost?](/claude-cost-claude-opus-47-is-it-worth-extra-cost/)
+- [Text Editor Tool: 700 Token Overhead Explained](/claude-text-editor-tool-700-token-overhead/)
+- [Claude Max Subscription vs API for Agent Fleets](/claude-max-subscription-vs-api-agent-fleets/)
+- [Claude Context Management: Pay Less, Use More](/claude-context-management-pay-less-use-more/)
+- [Claude Cache Minimum Token Requirements 2026](/claude-cache-minimum-token-requirements-2026/)
+- [Claude Opus 4.7: Is It Worth the Extra Cost?](/claude-opus-47-is-it-worth-extra-cost/)

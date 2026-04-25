@@ -237,6 +237,6 @@ Measure mean-time-to-detection (MTTD) for cost anomalies before and after deploy
 ## Related Articles
 
 - [Migrating Real-Time Claude Calls to Batch API](/migrating-real-time-claude-calls-to-batch/)
-- [Optimizing Tool Schemas to Cut Token Count](/claude-cost-08-optimizing-tool-schemas-reduce-tokens/)
-- [Migrating Real-Time Claude Calls to Batch API](/claude-cost-migrating-real-time-claude-calls-to-batch/)
-- [Claude Code Expensive? Here Are 7 Fixes](/claude-cost-08-claude-code-expensive-fixes/)
+- [Optimizing Tool Schemas to Cut Token Count](/optimizing-tool-schemas-reduce-token-count/)
+- [Migrating Real-Time Claude Calls to Batch API](/migrating-real-time-claude-calls-to-batch/)
+- [Claude Code Expensive? Here Are 7 Fixes](/claude-code-expensive-7-fixes/)

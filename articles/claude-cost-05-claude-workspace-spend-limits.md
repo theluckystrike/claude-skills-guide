@@ -180,5 +180,5 @@ The spend limit's value is measured in prevented overages. Track the number of m
 
 ## See Also
 
-- [Text Editor Tool: 700 Token Overhead Explained](/claude-cost-05-text-editor-tool-700-token-overhead/)
-- [Claude Code $200 Max Plan: Is It Worth the Cost](/claude-cost-05-claude-code-max-200-worth-it/)
+- [Text Editor Tool: 700 Token Overhead Explained](/claude-text-editor-tool-700-token-overhead/)
+- [Claude Code $200 Max Plan: Is It Worth the Cost](/claude-code-200-max-plan-worth-the-cost/)

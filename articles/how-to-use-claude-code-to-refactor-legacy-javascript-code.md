@@ -246,5 +246,5 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
-- [How To Use Claude Code To — Complete Developer Guide](/how-to-use-claude-code-to-understand-unfamiliar-codebase-qui/)
-- [Write Database Queries with Claude Code (2026)](/how-to-use-claude-code-to-write-database-queries-from-scratc/)
+- [How To Use Claude Code To — Complete Developer Guide](/how-to-use-claude-code-to-understand-unfamiliar-codebase-quickly/)
+- [Write Database Queries with Claude Code (2026)](/how-to-use-claude-code-to-write-database-queries-from-scratch/)

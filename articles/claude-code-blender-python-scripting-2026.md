@@ -291,7 +291,7 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
-- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Python Virtualenv Not Activated — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
 - [Migrate VBA Excel Macros to Python](/claude-code-vba-excel-macros-to-python-migration/)
 - [Best AI Coding Tools for Python (2026)](/best-ai-coding-tools-python-comparison-2026/)
 - [Claude Code For Rye Python](/claude-code-for-rye-python-project-workflow-guide/)

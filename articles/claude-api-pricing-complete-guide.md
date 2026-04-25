@@ -329,7 +329,7 @@ If your workload can tolerate 24-hour latency, the 50% batch discount is substan
 - Trim unnecessary context from prompts
 - Use structured output to reduce verbose responses
 - Set appropriate `max_tokens` limits
-- [Prune unused tools](/03-pruning-unused-tools-saves-money/) from tool definitions
+- [Prune unused tools](/pruning-unused-claude-tools-saves-money/) from tool definitions
 
 ### 5. Monitor and Alert
 

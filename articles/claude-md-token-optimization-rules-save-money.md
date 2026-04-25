@@ -292,4 +292,4 @@ Stack: {lang}, {framework}, {DB}, {test framework}
 
 ## See Also
 
-- [CLAUDE.md Length Optimization — Why 200 Lines Is the Hard Ceiling (2026)](/claude-md-length-optimization-300-lines/)
+- [CLAUDE.md Length Optimization — Why 200 Lines Is the Hard Ceiling (2026)](/claude-md-length-optimization/)

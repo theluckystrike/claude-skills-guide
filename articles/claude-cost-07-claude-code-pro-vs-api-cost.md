@@ -202,5 +202,5 @@ Track cost-per-task (not cost-per-session) as the primary comparison metric. A t
 
 ## See Also
 
-- [Claude Tool Use Cost Calculator Guide](/claude-cost-07-tool-use-cost-calculator/)
-- [Claude API Usage Metrics Every Team Needs](/claude-cost-07-claude-api-usage-metrics-teams/)
+- [Claude Tool Use Cost Calculator Guide](/claude-tool-use-cost-calculator-guide/)
+- [Claude API Usage Metrics Every Team Needs](/claude-api-usage-metrics-every-team-needs/)

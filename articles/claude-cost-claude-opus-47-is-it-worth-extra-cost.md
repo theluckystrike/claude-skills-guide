@@ -162,8 +162,8 @@ The key metric is cost-per-quality-point: divide your monthly API spend by your 
 
 ## See Also
 
-- [Opus Orchestrator with Haiku Workers Pattern](/claude-cost-opus-orchestrator-haiku-workers-pattern/)
-- [Claude Haiku 4.5 Budget-Friendly Coding Guide](/claude-cost-claude-haiku-45-budget-friendly-coding/)
-- [Claude /compact Command Token Savings Guide](/claude-cost-claude-compact-command-token-savings/)
-- [Claude Batch Processing Limits and Best Practices](/claude-cost-claude-batch-processing-limits-best-practices/)
+- [Opus Orchestrator with Haiku Workers Pattern](/opus-orchestrator-haiku-workers-pattern/)
+- [Claude Haiku 4.5 Budget-Friendly Coding Guide](/claude-haiku-45-budget-friendly-coding/)
+- [Claude /compact Command Token Savings Guide](/claude-compact-command-token-savings/)
+- [Claude Batch Processing Limits and Best Practices](/claude-batch-processing-limits-best-practices/)
 - [Claude Opus 4.6 vs Haiku 4.5: Speed and Cost Tradeoffs](/claude-opus-vs-haiku-speed-cost-tradeoff/)

@@ -138,5 +138,5 @@ If you suspect caching is costing you money:
 
 ## See Also
 
-- [Prompt Caching Break-Even Calculator for Claude](/claude-cost-prompt-caching-break-even-calculator-claude/)
-- [When to Use Claude Batch vs Real-Time API](/claude-cost-when-to-use-claude-batch-vs-real-time-api/)
+- [Prompt Caching Break-Even Calculator for Claude](/prompt-caching-break-even-calculator-claude/)
+- [When to Use Claude Batch vs Real-Time API](/when-to-use-claude-batch-vs-real-time-api/)

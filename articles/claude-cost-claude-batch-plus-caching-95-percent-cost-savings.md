@@ -222,8 +222,8 @@ Confirm both discounts are stacking:
 
 ## See Also
 
-- [Claude Batch Processing 100K Requests Guide](/claude-cost-claude-batch-processing-100k-requests-guide/)
-- [Claude Batch API 50% Discount Complete Guide](/claude-cost-claude-batch-api-50-percent-discount-guide/)
-- [Combining Caching with Batch API for 95% Savings](/claude-cost-combining-caching-batch-api-95-percent-savings/)
-- [Claude /compact Command Token Savings Guide](/claude-cost-claude-compact-command-token-savings/)
-- [Claude Batch Processing Limits and Best Practices](/claude-cost-claude-batch-processing-limits-best-practices/)
+- [Claude Batch Processing 100K Requests Guide](/claude-batch-processing-100k-requests-guide/)
+- [Claude Batch API 50% Discount Complete Guide](/claude-batch-api-50-percent-discount-guide/)
+- [Combining Caching with Batch API for 95% Savings](/combining-caching-batch-api-95-percent-savings/)
+- [Claude /compact Command Token Savings Guide](/claude-compact-command-token-savings/)
+- [Claude Batch Processing Limits and Best Practices](/claude-batch-processing-limits-best-practices/)

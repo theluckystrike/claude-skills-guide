@@ -320,4 +320,4 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
-- [Enterprise Claude Cost Chargebacks by Team](/claude-cost-10-enterprise-claude-cost-chargebacks/)
+- [Enterprise Claude Cost Chargebacks by Team](/enterprise-claude-cost-chargebacks-by-team/)

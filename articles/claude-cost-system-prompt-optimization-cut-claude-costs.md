@@ -199,6 +199,6 @@ The primary metric is system prompt token count before and after. Multiply the d
 ## Related Articles
 
 - [Chunking Strategies to Cut Claude Context Costs](/chunking-strategies-cut-claude-context-costs/)
-- [Build a Claude Cost Attribution System](/claude-cost-06-build-cost-attribution-system/)
-- [Chunking Strategies to Cut Claude Context Costs](/claude-cost-chunking-strategies-cut-claude-context-costs/)
-- [Model Routing by Task Cuts Claude API Bills](/claude-cost-model-routing-cut-claude-api-bills/)
+- [Build a Claude Cost Attribution System](/build-claude-cost-attribution-system/)
+- [Chunking Strategies to Cut Claude Context Costs](/chunking-strategies-cut-claude-context-costs/)
+- [Model Routing by Task Cuts Claude API Bills](/model-routing-cut-claude-api-bills/)

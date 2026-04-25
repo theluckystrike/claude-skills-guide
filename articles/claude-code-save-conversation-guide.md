@@ -331,7 +331,7 @@ Yes. Every tool call and its result is recorded in the JSONL session file, inclu
 - [Claude Shortcuts Guide](/claude-shortcuts-complete-guide/) — keyboard shortcuts for all Claude interfaces
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — manage context window efficiently
 - [Claude Code Security Best Practices](/claude-code-security-best-practices-2026/) — secure your workflow
-- [Claude Code Getting Started](/claude-code-getting-started-terminal-setup/) — initial CLI setup
+- [Claude Code Getting Started](/claude-code-for-beginners-complete-getting-started-2026/) — initial CLI setup
 - [Claude Code Git Workflow Best Practices](/claude-code-git-workflow-best-practices-guide/) — version control integration
 - [Claude Temperature Settings](/claude-temperature-settings-guide/) — control output behavior
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Understand conversation costs before saving

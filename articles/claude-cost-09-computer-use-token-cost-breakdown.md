@@ -191,7 +191,7 @@ Track three metrics per session: total steps, screenshots taken, and total cost 
 
 ## See Also
 
-- [Claude Cost Anomaly Detection Setup Guide](/claude-cost-09-claude-cost-anomaly-detection/)
-- [Claude Code Cost Per Project Estimation Guide](/claude-cost-09-claude-code-cost-per-project/)
-- [Token-Efficient Few-Shot Examples for Claude](/claude-cost-token-efficient-few-shot-examples-claude/)
+- [Claude Cost Anomaly Detection Setup Guide](/claude-cost-anomaly-detection-setup-guide/)
+- [Claude Code Cost Per Project Estimation Guide](/claude-code-cost-per-project-estimation-guide/)
+- [Token-Efficient Few-Shot Examples for Claude](/token-efficient-few-shot-examples-claude/)
 - [InsForge vs Supabase: Claude Code Token Cost (2026)](/insforge-vs-supabase-claude-code-token-cost-2026/)

@@ -180,7 +180,7 @@ Review cost logs weekly. Key metrics: average cost per request (target: below $0
 
 ## See Also
 
-- [Per-Request Cost Tracking for Claude API](/claude-cost-04-per-request-cost-tracking/)
-- [Reducing Agent Fleet Costs with Model Routing](/claude-cost-reducing-agent-fleet-costs-model-routing/)
-- [Per-Agent Cost Attribution in Claude Systems](/claude-cost-per-agent-cost-attribution-claude-systems/)
-- [How 5 Parallel Claude Agents Cost $1,000/Month](/claude-cost-5-parallel-claude-agents-1000-per-month/)
+- [Per-Request Cost Tracking for Claude API](/per-request-cost-tracking-claude-api/)
+- [Reducing Agent Fleet Costs with Model Routing](/reducing-agent-fleet-costs-model-routing/)
+- [Per-Agent Cost Attribution in Claude Systems](/per-agent-cost-attribution-claude-systems/)
+- [How 5 Parallel Claude Agents Cost $1,000/Month](/5-parallel-claude-agents-1000-per-month/)

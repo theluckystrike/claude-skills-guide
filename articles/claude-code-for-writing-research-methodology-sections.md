@@ -258,4 +258,4 @@ Documenting experimental setup involves providing Claude Code with specific conf
 
 ## See Also
 
-- [Data & Methodology: Claude Code Research](/data-methodology-claude-code-research/)
+- [Data & Methodology: Claude Code Research](/data/)

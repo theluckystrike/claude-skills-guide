@@ -312,7 +312,7 @@ Compare average context size per request before and after implementing chunking.
 ## Related Articles
 
 - [System Prompt Optimization to Cut Claude Costs](/system-prompt-optimization-cut-claude-costs/)
-- [Shrink Claude Context Without Losing Quality](/claude-cost-shrink-claude-context-without-losing-quality/)
-- [System Prompt Optimization to Cut Claude Costs](/claude-cost-system-prompt-optimization-cut-claude-costs/)
-- [Model Routing by Task Cuts Claude API Bills](/claude-cost-model-routing-cut-claude-api-bills/)
-- [When Full Context Costs More Than a RAG Pipeline](/claude-cost-when-full-context-costs-more-than-rag/)
+- [Shrink Claude Context Without Losing Quality](/shrink-claude-context-without-losing-quality/)
+- [System Prompt Optimization to Cut Claude Costs](/system-prompt-optimization-cut-claude-costs/)
+- [Model Routing by Task Cuts Claude API Bills](/model-routing-cut-claude-api-bills/)
+- [When Full Context Costs More Than a RAG Pipeline](/when-full-context-costs-more-than-rag/)

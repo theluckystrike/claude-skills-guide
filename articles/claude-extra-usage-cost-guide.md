@@ -191,7 +191,7 @@ Every token in your context window costs money on replay:
 - Remove uploaded files from conversations when no longer needed
 - Do not paste entire files when you can reference them
 - In Claude Code, use focused searches rather than reading entire files
-- [Prune unused tools](/03-pruning-unused-tools-saves-money/) from MCP configurations
+- [Prune unused tools](/pruning-unused-claude-tools-saves-money/) from MCP configurations
 
 ### Strategy 5: Control Extended Thinking
 
@@ -304,7 +304,7 @@ Yes. You can enable or disable extra usage at any time in your account settings.
 [OpenRouter](/claude-code-openrouter-setup-guide/) uses its own billing separate from your Anthropic subscription. If you route through OpenRouter, you pay OpenRouter's rates instead. This bypasses subscription limits but introduces separate costs.
 
 ### Where can I learn to optimize my Claude Code token usage?
-See our guides on [pruning unused tools](/03-pruning-unused-tools-saves-money/), [token usage auditing](/audit-claude-code-token-usage-step-by-step/), and [CLAUDE.md best practices](/claude-md-best-practices-definitive-guide/) for reducing context size.
+See our guides on [pruning unused tools](/pruning-unused-claude-tools-saves-money/), [token usage auditing](/audit-claude-code-token-usage-step-by-step/), and [CLAUDE.md best practices](/claude-md-best-practices-definitive-guide/) for reducing context size.
 
 
 {% raw %}

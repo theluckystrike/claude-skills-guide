@@ -185,7 +185,7 @@ export HTTPS_PROXY="http://127.0.0.1:7890"
 
 **401 Unauthorized 未授权**：API 密钥配置不正确。检查 ANTHROPIC_API_KEY 环境变量是否设置正确，密钥是否已过期或被撤销。你可以在 Anthropic Console 的 API Keys 页面查看密钥状态并重新生成。
 
-如果遇到其他连接问题，请查阅 [Claude Code 无法正常工作修复指南](/claude-code-not-working-fix/) 获取更多排查步骤和解决方案。大多数国内开发者反馈的问题都可以通过正确配置代理或切换到 Bedrock 接入来解决。
+如果遇到其他连接问题，请查阅 [Claude Code 无法正常工作修复指南](/claude-code-not-working-after-update-how-to-fix/) 获取更多排查步骤和解决方案。大多数国内开发者反馈的问题都可以通过正确配置代理或切换到 Bedrock 接入来解决。
 
 ## 进阶指南（英文）
 
@@ -305,8 +305,8 @@ export HTTPS_PROXY="http://127.0.0.1:7890"
 
 ## See Also
 
-- [Claude Code价格和费用完整指南 (2026)](/claude-code-jiage-pricing-guide-zh/)
-- [Claude Code安装教程：完整指南 (2026)](/claude-code-anzhuang-installation-guide-zh/)
-- [Claude Code国内使用指南 (2026)](/claude-code-guonei-shiyong-china-usage-guide-zh/)
+- [Claude Code价格和费用完整指南 (2026)](/claude-code-jiage-pricing-guide/)
+- [Claude Code安装教程：完整指南 (2026)](/claude-code-anzhuang-installation-guide/)
+- [Claude Code国内使用指南 (2026)](/claude-code-guonei-shiyong-china-usage-guide/)
 
 {% endraw %}

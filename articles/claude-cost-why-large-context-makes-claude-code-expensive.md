@@ -232,6 +232,6 @@ Track daily Claude Code spend before and after adopting context management habit
 
 ## See Also
 
-- [Why Your Claude Prompts Use Too Many Tokens](/claude-cost-why-claude-prompts-use-too-many-tokens/)
-- [Claude Code Expensive? Here Are 7 Fixes](/claude-cost-08-claude-code-expensive-fixes/)
-- [Why Claude Code Uses So Many Tokens Explained](/claude-cost-03-why-claude-code-uses-many-tokens/)
+- [Why Your Claude Prompts Use Too Many Tokens](/why-claude-prompts-use-too-many-tokens/)
+- [Claude Code Expensive? Here Are 7 Fixes](/claude-code-expensive-7-fixes/)
+- [Why Claude Code Uses So Many Tokens Explained](/why-claude-code-uses-so-many-tokens-explained/)

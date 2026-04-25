@@ -96,7 +96,7 @@ Always iterate response.content blocks and check block.type before accessing .te
 
 ## See Also
 
-- [Claude Tool Use Hidden Token Costs Explained](/01-claude-tool-use-hidden-token-costs/)
+- [Claude Tool Use Hidden Token Costs Explained](/claude-tool-use-hidden-token-costs-explained/)
 
 
 ## Related Error Messages

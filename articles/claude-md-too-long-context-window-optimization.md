@@ -251,6 +251,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
-- [CLAUDE.md Too Long? How to Split and Optimize for Context Window (2026)](/claude-md-too-long-split-and-optimize-fix/)
-- [CLAUDE.md Length Optimization — Why 200 Lines Is the Hard Ceiling (2026)](/claude-md-length-optimization-300-lines/)
+- [CLAUDE.md Too Long? How to Split and Optimize for Context Window (2026)](/claude-md-too-long-fix/)
+- [CLAUDE.md Length Optimization — Why 200 Lines Is the Hard Ceiling (2026)](/claude-md-length-optimization/)
 - [Fix Claude Code Losing Context in Sessions (2026)](/claude-code-loses-context-long-sessions-fix-2026/)

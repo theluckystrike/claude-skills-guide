@@ -242,5 +242,5 @@ Compare total Claude spend in the 3 months before chargebacks to the 3 months af
 
 ## See Also
 
-- [Free vs Pro vs Max: Claude Code Plan Calculator](/claude-cost-10-free-pro-max-plan-calculator/)
-- [Tool Use vs Direct Prompting Cost Comparison](/claude-cost-10-tool-use-vs-direct-prompting-cost/)
+- [Free vs Pro vs Max: Claude Code Plan Calculator](/free-vs-pro-vs-max-claude-code-plan-calculator/)
+- [Tool Use vs Direct Prompting Cost Comparison](/tool-use-vs-direct-prompting-cost-comparison/)

@@ -573,7 +573,7 @@ For most use cases, temperature is simpler and more intuitive. Use top_p when yo
 - [Claude Upload Limit Guide](/claude-upload-limit-guide/) — file size and type limits
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — manage costs
 - [Claude Code REST API Design](/claude-code-rest-api-design-best-practices/) — API integration patterns
-- [Claude Code Getting Started](/claude-code-getting-started-terminal-setup/) — initial CLI setup
+- [Claude Code Getting Started](/claude-code-for-beginners-complete-getting-started-2026/) — initial CLI setup
 - [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — extend capabilities
 - [Claude Code Save Conversation Guide](/claude-code-save-conversation-guide/) — session management
 

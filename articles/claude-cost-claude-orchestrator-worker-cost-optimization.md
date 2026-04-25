@@ -225,4 +225,4 @@ Track cost distribution across the fleet:
 
 ## See Also
 
-- [Opus Orchestrator with Haiku Workers Pattern](/claude-cost-opus-orchestrator-haiku-workers-pattern/)
+- [Opus Orchestrator with Haiku Workers Pattern](/opus-orchestrator-haiku-workers-pattern/)

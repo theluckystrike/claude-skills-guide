@@ -121,6 +121,6 @@ Yes, if your Anthropic API plan supports concurrent requests. Warp split panes l
 ## See Also
 
 - [Claude Code for Rio Terminal — Workflow Guide](/claude-code-for-rio-terminal-workflow-guide/)
-- [How to Use Claude Code with Warp Terminal 2026](/claude-code-for-warp-terminal-workflow-guide/)
+- [How to Use Claude Code with Warp Terminal 2026](/claude-code-warp-terminal-workflow-2026/)
 - [Claude Code for Dify AI Platform — Guide](/claude-code-for-dify-ai-platform-workflow-guide/)
 - [Claude Code vs Warp AI Terminal Compared (2026)](/claude-code-vs-warp-ai-terminal-2026/)

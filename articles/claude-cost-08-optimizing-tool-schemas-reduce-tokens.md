@@ -185,8 +185,8 @@ Measure `usage.input_tokens` before and after schema optimization on identical r
 
 ## See Also
 
-- [Claude Code /compact Saves Thousands of Tokens](/claude-cost-02-claude-code-compact-saves-tokens/)
-- [Claude Bash Tool Costs 245 Tokens Per Call](/04-bash-tool-costs-245-tokens/)
-- [Real-Time Claude Token Monitoring Pipeline](/claude-cost-08-real-time-token-monitoring-pipeline/)
-- [Lean Prompting: Fewer Tokens, Same Quality](/claude-cost-lean-prompting-fewer-tokens-same-quality/)
-- [Claude Code Expensive? Here Are 7 Fixes](/claude-cost-08-claude-code-expensive-fixes/)
+- [Claude Code /compact Saves Thousands of Tokens](/claude-code-compact-saves-thousands-tokens/)
+- [Claude Bash Tool Costs 245 Tokens Per Call](/claude-bash-tool-costs-245-tokens-per-call/)
+- [Real-Time Claude Token Monitoring Pipeline](/real-time-claude-token-monitoring-pipeline/)
+- [Lean Prompting: Fewer Tokens, Same Quality](/lean-prompting-fewer-tokens-same-quality/)
+- [Claude Code Expensive? Here Are 7 Fixes](/claude-code-expensive-7-fixes/)

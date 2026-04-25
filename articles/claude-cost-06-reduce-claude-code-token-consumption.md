@@ -212,5 +212,5 @@ Measure your before/after token consumption by tracking session length and inter
 
 ## See Also
 
-- [Build a Claude Cost Attribution System](/claude-cost-06-build-cost-attribution-system/)
-- [How to Reduce Claude API Token Usage by 50%](/claude-cost-reduce-claude-api-token-usage-50-percent/)
+- [Build a Claude Cost Attribution System](/build-claude-cost-attribution-system/)
+- [How to Reduce Claude API Token Usage by 50%](/reduce-claude-api-token-usage-50-percent/)

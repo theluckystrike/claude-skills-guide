@@ -230,7 +230,7 @@ After running your first production batch:
 
 ## See Also
 
-- [Prompt Caching Break-Even Calculator for Claude](/claude-cost-prompt-caching-break-even-calculator-claude/)
-- [Claude Code Pro vs API: Cost Comparison Guide](/claude-cost-07-claude-code-pro-vs-api-cost/)
-- [Combining Caching with Batch API for 95% Savings](/claude-cost-combining-caching-batch-api-95-percent-savings/)
-- [Migrating Real-Time Claude Calls to Batch API](/claude-cost-migrating-real-time-claude-calls-to-batch/)
+- [Prompt Caching Break-Even Calculator for Claude](/prompt-caching-break-even-calculator-claude/)
+- [Claude Code Pro vs API: Cost Comparison Guide](/claude-code-pro-vs-api-cost-comparison-guide/)
+- [Combining Caching with Batch API for 95% Savings](/combining-caching-batch-api-95-percent-savings/)
+- [Migrating Real-Time Claude Calls to Batch API](/migrating-real-time-claude-calls-to-batch/)

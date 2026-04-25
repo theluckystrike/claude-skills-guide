@@ -241,8 +241,8 @@ Track these metrics for large batch operations:
 
 ## See Also
 
-- [Async Claude Processing: Half Price Same Quality](/claude-cost-async-claude-processing-half-price-same-quality/)
-- [Automatic vs Manual Cache Breakpoints Guide](/claude-cost-automatic-vs-manual-cache-breakpoints-guide/)
-- [Claude 200K vs 1M Context Cost Comparison](/claude-cost-claude-200k-vs-1m-context-cost-comparison/)
-- [Claude Batch API 50% Discount Complete Guide](/claude-cost-claude-batch-api-50-percent-discount-guide/)
-- [Claude Opus 4.7: Is It Worth the Extra Cost?](/claude-cost-claude-opus-47-is-it-worth-extra-cost/)
+- [Async Claude Processing: Half Price Same Quality](/async-claude-processing-half-price-same-quality/)
+- [Automatic vs Manual Cache Breakpoints Guide](/automatic-vs-manual-cache-breakpoints-guide/)
+- [Claude 200K vs 1M Context Cost Comparison](/claude-200k-vs-1m-context-cost-comparison/)
+- [Claude Batch API 50% Discount Complete Guide](/claude-batch-api-50-percent-discount-guide/)
+- [Claude Opus 4.7: Is It Worth the Extra Cost?](/claude-opus-47-is-it-worth-extra-cost/)

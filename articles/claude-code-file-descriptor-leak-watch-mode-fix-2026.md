@@ -1,5 +1,5 @@
 ---
-title: "File Descriptor Leak in Watch Mode Fix — Fix (2026)"
+title: "File Descriptor Leak in Watch Mode — Fix (2026)"
 permalink: /claude-code-file-descriptor-leak-watch-mode-fix-2026/
 description: "Fix file descriptor leak in Claude Code watch mode. Close stale watchers and increase ulimit to prevent EMFILE too many open files errors."
 last_tested: "2026-04-22"
@@ -100,7 +100,7 @@ Claude Code requires Node.js 18 or later. Node.js 20 LTS is recommended for the 
 
 - [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
 - [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
-- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Python Virtualenv Not Activated — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
 - [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)
 
 ## Memory Management in Claude Code

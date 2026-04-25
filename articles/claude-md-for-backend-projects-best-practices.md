@@ -268,4 +268,4 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
-- [CLAUDE.md for Frontend Projects — React, Component, and State Rules (2026)](/claude-md-for-frontend-projects/)
+- [CLAUDE.md for Frontend Projects — React, Component, and State Rules (2026)](/claude-md-frontend-projects/)

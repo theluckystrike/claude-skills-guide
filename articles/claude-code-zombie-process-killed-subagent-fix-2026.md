@@ -1,5 +1,5 @@
 ---
-title: "Zombie Process From Killed Subagent Fix — Fix (2026)"
+title: "Zombie Process From Killed Subagent — Fix (2026)"
 permalink: /claude-code-zombie-process-killed-subagent-fix-2026/
 description: "Fix zombie processes left by killed Claude Code subagents. Find and kill orphaned node processes to reclaim system resources and prevent port conflicts."
 last_tested: "2026-04-22"
@@ -92,7 +92,7 @@ Claude Code typically uses 200-500MB of RAM. Large file operations, parallel too
 - [Fix Claude Code Install Killed on Linux](/claude-code-install-killed-low-memory-linux-fix/)
 - [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
 - [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
-- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Python Virtualenv Not Activated — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
 
 ## Implementation Details
 

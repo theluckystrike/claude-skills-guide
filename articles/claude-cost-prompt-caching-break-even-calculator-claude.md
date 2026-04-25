@@ -172,7 +172,7 @@ Validate your calculator predictions against reality:
 
 ## See Also
 
-- [Prompt Compression Techniques for Claude API](/claude-cost-prompt-compression-techniques-claude-api/)
+- [Prompt Compression Techniques for Claude API](/prompt-compression-techniques-claude-api/)
 - [Prompt Cache Stale Context Warning — Fix (2026)](/claude-code-prompt-caching-stale-context-fix-2026/)
-- [When NOT to Use Claude Prompt Caching](/claude-cost-when-not-to-use-claude-prompt-caching/)
+- [When NOT to Use Claude Prompt Caching](/when-not-to-use-claude-prompt-caching/)
 - [Claude Code Cost vs Manual Developer Time: Break-Even Calculator](/claude-code-cost-vs-developer-time-break-even/)

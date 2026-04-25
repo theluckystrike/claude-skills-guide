@@ -168,7 +168,7 @@ On subscription plans (Pro $20, Max $100-$200), cost savings from `/compact` don
 
 ## See Also
 
-- [Smart Model Selection Saves 80% on Claude API](/claude-cost-smart-model-selection-saves-80-percent-claude/)
-- [Lean Prompting: Fewer Tokens, Same Quality](/claude-cost-lean-prompting-fewer-tokens-same-quality/)
-- [Why Claude Code Uses So Many Tokens Explained](/claude-cost-03-why-claude-code-uses-many-tokens/)
-- [How Tool Definitions Add 346 Tokens Per Call](/02-tool-definitions-add-346-tokens/)
+- [Smart Model Selection Saves 80% on Claude API](/smart-model-selection-saves-80-percent-claude/)
+- [Lean Prompting: Fewer Tokens, Same Quality](/lean-prompting-fewer-tokens-same-quality/)
+- [Why Claude Code Uses So Many Tokens Explained](/why-claude-code-uses-so-many-tokens-explained/)
+- [How Tool Definitions Add 346 Tokens Per Call](/claude-tool-definitions-346-tokens-per-call/)

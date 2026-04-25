@@ -144,4 +144,4 @@ Compare `usage.input_tokens` averages from the week before pruning to the week a
 
 ## See Also
 
-- [Web Search Costs $10 per 1,000 Searches](/06-web-search-costs-10-per-thousand/)
+- [Web Search Costs $10 per 1,000 Searches](/claude-web-search-costs-10-per-thousand/)

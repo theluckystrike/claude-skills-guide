@@ -148,4 +148,4 @@ ccusage
 
 ## See Also
 
-- [Track Claude Token Spend Per Project and Team](/02-track-claude-spend-per-project/)
+- [Track Claude Token Spend Per Project and Team](/track-claude-token-spend-per-project-team/)

@@ -148,5 +148,5 @@ For a team of five engineers, multiply the solo figures by 5 for a monthly savin
 
 ## See Also
 
-- [Reduce Claude Code Token Consumption by 60%](/claude-cost-06-reduce-claude-code-token-consumption/)
+- [Reduce Claude Code Token Consumption by 60%](/reduce-claude-code-token-consumption-60-percent/)
 - [Monitoring Claude Code Token Usage with Custom Hooks](/monitoring-claude-code-token-usage-custom-hooks/)

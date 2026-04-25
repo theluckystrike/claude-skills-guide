@@ -185,7 +185,7 @@ A shared CLAUDE.md eliminates the "works on my machine" problem for AI-assisted 
 
 ## See Also
 
-- [Share and Reuse CLAUDE.md Patterns Across Teams and Projects (2026)](/share-reuse-claude-md-patterns-across-teams/)
+- [Share and Reuse CLAUDE.md Patterns Across Teams and Projects (2026)](/share-reuse-claude-md-across-teams/)
 - [Claude Code CLAUDE.md Not Found Fix (2026)](/claude-code-claude-md-not-found-parent-directories-fix/)
 
 

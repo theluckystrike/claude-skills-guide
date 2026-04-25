@@ -176,8 +176,8 @@ Compare average tokens per request before and after optimization. Track four met
 
 ## See Also
 
-- [Claude Batch API 50% Discount Complete Guide](/claude-cost-claude-batch-api-50-percent-discount-guide/)
-- [Claude Usage Alerts to Prevent Cost Overruns](/claude-cost-03-claude-usage-alerts-prevent-overruns/)
-- [Claude API Cost Dashboard Setup Guide 2026](/claude-cost-01-claude-api-cost-dashboard-setup/)
-- [Claude API Usage Metrics Every Team Needs](/claude-cost-07-claude-api-usage-metrics-teams/)
-- [Smart Context Pruning for Claude API Savings](/claude-cost-smart-context-pruning-claude-api-savings/)
+- [Claude Batch API 50% Discount Complete Guide](/claude-batch-api-50-percent-discount-guide/)
+- [Claude Usage Alerts to Prevent Cost Overruns](/claude-usage-alerts-prevent-cost-overruns/)
+- [Claude API Cost Dashboard Setup Guide 2026](/claude-api-cost-dashboard-setup-guide-2026/)
+- [Claude API Usage Metrics Every Team Needs](/claude-api-usage-metrics-every-team-needs/)
+- [Smart Context Pruning for Claude API Savings](/smart-context-pruning-claude-api-savings/)

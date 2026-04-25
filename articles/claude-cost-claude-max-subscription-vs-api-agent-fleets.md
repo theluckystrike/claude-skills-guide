@@ -223,8 +223,8 @@ Track the cost-effectiveness of your chosen model:
 
 ## See Also
 
-- [Claude Agent Token Budget Management Guide](/claude-cost-claude-agent-token-budget-management/)
-- [Message Batches API Tutorial with Cost Examples](/claude-cost-message-batches-api-tutorial-cost-examples/)
-- [Claude Token Counter: Measure Before You Optimize](/claude-cost-claude-token-counter-measure-before-optimize/)
-- [Claude Orchestrator-Worker Cost Optimization](/claude-cost-claude-orchestrator-worker-cost-optimization/)
-- [Claude Agent Loop Cost: Tokens Per Iteration](/claude-cost-claude-agent-loop-cost-tokens-per-iteration/)
+- [Claude Agent Token Budget Management Guide](/claude-agent-token-budget-management/)
+- [Message Batches API Tutorial with Cost Examples](/message-batches-api-tutorial-cost-examples/)
+- [Claude Token Counter: Measure Before You Optimize](/claude-token-counter-measure-before-optimize/)
+- [Claude Orchestrator-Worker Cost Optimization](/claude-orchestrator-worker-cost-optimization/)
+- [Claude Agent Loop Cost: Tokens Per Iteration](/claude-agent-loop-cost-tokens-per-iteration/)

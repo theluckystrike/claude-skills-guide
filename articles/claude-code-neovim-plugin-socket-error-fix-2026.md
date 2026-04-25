@@ -1,5 +1,5 @@
 ---
-title: "Neovim Plugin Socket Error Fix — Fix (2026)"
+title: "Neovim Plugin Socket Error — Fix (2026)"
 permalink: /claude-code-neovim-plugin-socket-error-fix-2026/
 description: "Fix Neovim Claude Code plugin socket connection error. Set the correct socket path and restart the RPC server to restore editor communication."
 last_tested: "2026-04-22"
@@ -105,7 +105,7 @@ Configuration is stored in `~/.claude/config.json` for global settings and `.cla
 
 - [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
 - [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
-- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Python Virtualenv Not Activated — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
 - [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)
 
 ## Editor Integration with Claude Code

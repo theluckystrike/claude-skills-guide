@@ -1,5 +1,5 @@
 ---
-title: "Large File Read Memory Spike Fix — Fix (2026)"
+title: "Large File Read Memory Spike — Fix (2026)"
 permalink: /claude-code-large-file-read-memory-spike-fix-2026/
 description: "Fix memory spike when Claude Code reads large files. Use line ranges and targeted reads to avoid loading entire files into the context window."
 last_tested: "2026-04-22"
@@ -94,5 +94,5 @@ Token counts are estimated before sending a request and precisely calculated on 
 
 - [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
 - [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
-- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Python Virtualenv Not Activated — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
 - [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)

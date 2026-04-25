@@ -92,7 +92,7 @@ Claude.ai uses a rolling window system for rate limits rather than a fixed daily
 
 A rolling window means the system tracks your usage over a moving time period. When you send a message, it enters the window. After a certain amount of time passes, that message ages out of the window. Your available capacity at any given moment equals your plan limit minus the messages still inside the window.
 
-For more on this topic, see [.gitignore Not Respected by Claude Fix — Fix (2026)](/claude-code-gitignore-not-respected-fix-2026/).
+For more on this topic, see [.gitignore Not Respected by Claude — Fix (2026)](/claude-code-gitignore-not-respected-fix-2026/).
 
 
 This means:

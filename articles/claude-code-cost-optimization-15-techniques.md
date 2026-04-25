@@ -430,5 +430,5 @@ Running this script takes 30 seconds and captures the majority of savings availa
 
 ## See Also
 
-- [Claude Code Cost Optimization Hub](/cost-optimization-hub/)
+- [Claude Code Cost Optimization Hub](/cost-optimization/)
 - [Firebase + Claude Code: Cost Optimization Guide](/firebase-claude-code-cost-optimization-guide/)

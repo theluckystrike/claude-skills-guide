@@ -207,5 +207,5 @@ Track fleet economics across sprints:
 ## Related Articles
 
 - [Reducing Agent Fleet Costs with Model Routing](/reducing-agent-fleet-costs-model-routing/)
-- [Reducing Agent Fleet Costs with Model Routing](/claude-cost-reducing-agent-fleet-costs-model-routing/)
-- [Cost-Efficient Multi-Agent Coding Workflows](/claude-cost-cost-efficient-multi-agent-coding-workflows/)
+- [Reducing Agent Fleet Costs with Model Routing](/reducing-agent-fleet-costs-model-routing/)
+- [Cost-Efficient Multi-Agent Coding Workflows](/cost-efficient-multi-agent-coding-workflows/)

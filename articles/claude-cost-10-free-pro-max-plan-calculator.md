@@ -245,6 +245,6 @@ The plan calculator's value is measured in monthly savings: the difference betwe
 
 ## See Also
 
-- [Tool Use vs Direct Prompting Cost Comparison](/claude-cost-10-tool-use-vs-direct-prompting-cost/)
-- [Claude Code Max vs Pro: Which Plan Saves More](/claude-cost-01-claude-code-max-vs-pro-savings/)
-- [Enterprise Claude Cost Chargebacks by Team](/claude-cost-10-enterprise-claude-cost-chargebacks/)
+- [Tool Use vs Direct Prompting Cost Comparison](/tool-use-vs-direct-prompting-cost-comparison/)
+- [Claude Code Max vs Pro: Which Plan Saves More](/claude-code-max-vs-pro-which-plan-saves/)
+- [Enterprise Claude Cost Chargebacks by Team](/enterprise-claude-cost-chargebacks-by-team/)

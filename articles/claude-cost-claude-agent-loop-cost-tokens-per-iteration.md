@@ -209,5 +209,5 @@ Track overhead efficiency:
 
 ## See Also
 
-- [Claude Agent Token Budget Management Guide](/claude-cost-claude-agent-token-budget-management/)
-- [Claude Max Subscription vs API for Agent Fleets](/claude-cost-claude-max-subscription-vs-api-agent-fleets/)
+- [Claude Agent Token Budget Management Guide](/claude-agent-token-budget-management/)
+- [Claude Max Subscription vs API for Agent Fleets](/claude-max-subscription-vs-api-agent-fleets/)

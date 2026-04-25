@@ -93,7 +93,7 @@ Keep system prompts under 10K tokens. Move large reference material to user mess
 
 ## See Also
 
-- [CLAUDE.md Too Long? How to Split and Optimize for Context Window (2026)](/claude-md-too-long-split-and-optimize-fix/)
+- [CLAUDE.md Too Long? How to Split and Optimize for Context Window (2026)](/claude-md-too-long-fix/)
 - [Claude API 413 Request Payload Too Large — Fix (2026)](/claude-api-413-request-payload-too-large-fix/)
 - [System Prompt Exceeds Token Limit — Fix (2026)](/claude-code-system-prompt-too-many-tokens-fix-2026/)
 

@@ -639,7 +639,7 @@ Yes. Each person needs their own authentication (subscription or API key). Share
 Claude.ai is a web chat interface. Claude Code is a terminal application that can read, write, and execute code in your actual project. Claude Code is built for developers; Claude.ai is for general-purpose conversations.
 
 ### Can I use Claude Code in CI/CD pipelines?
-Yes. Use `claude --print "your prompt"` for non-interactive mode. This works in [GitHub Actions, Jenkins, and other CI systems](/claude-code-ci-cd-automation-guide/).
+Yes. Use `claude --print "your prompt"` for non-interactive mode. This works in [GitHub Actions, Jenkins, and other CI systems](/claude-code-ci-cd-integration-guide-2026/).
 
 ### How do I update Claude Code?
 ```bash

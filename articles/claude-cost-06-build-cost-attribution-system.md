@@ -219,5 +219,5 @@ The attribution system pays for itself when it surfaces the first actionable ins
 
 ## See Also
 
-- [Per-Agent Cost Attribution in Claude Systems](/claude-cost-per-agent-cost-attribution-claude-systems/)
-- [Reduce Claude Code Token Consumption by 60%](/claude-cost-06-reduce-claude-code-token-consumption/)
+- [Per-Agent Cost Attribution in Claude Systems](/per-agent-cost-attribution-claude-systems/)
+- [Reduce Claude Code Token Consumption by 60%](/reduce-claude-code-token-consumption-60-percent/)

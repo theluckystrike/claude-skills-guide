@@ -289,7 +289,7 @@ Claude Flow adds value for repeatable, multi-step workflows. It adds overhead fo
 - You need real-time interaction during the workflow (use Claude Code directly)
 - Your workflow changes every time (scripts are more flexible)
 
-For cost implications of multi-agent workflows, see our [multi-agent cost architecture guide](/claude-cost-multi-agent-claude-fleet-cost-architecture/).
+For cost implications of multi-agent workflows, see our [multi-agent cost architecture guide](/multi-agent-claude-fleet-cost-architecture/).
 
 ## Frequently Asked Questions
 
@@ -334,7 +334,7 @@ Check the individual agent log output for the failing step. Run the step's promp
 - [Parallel subagents best practices](/parallel-subagents-claude-code-best-practices-2026/) — optimization techniques
 - [Multi-agent error recovery](/claude-code-multi-agent-error-recovery-strategies/) — handling failures gracefully
 - [Token budgeting for multi-agent](/multi-agent-token-budgeting-allocate-subagents/) — cost control strategies
-- [Cost-efficient multi-agent workflows](/claude-cost-cost-efficient-multi-agent-coding-workflows/) — minimize spend
+- [Cost-efficient multi-agent workflows](/cost-efficient-multi-agent-coding-workflows/) — minimize spend
 - [How to build a Claude Code agent](/how-to-build-claude-code-agent-2026/) — foundational agent-building guide
 - [The Claude Code Playbook](/playbook/) — comprehensive Claude Code reference
 - [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) — Build custom agents with the Agent SDK

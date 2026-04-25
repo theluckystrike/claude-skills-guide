@@ -146,5 +146,5 @@ The break-even: if re-establishing context costs less than $5.25 in tokens (abou
 
 ## See Also
 
-- [CLAUDE.md Too Long? How to Split and Optimize for Context Window (2026)](/claude-md-too-long-split-and-optimize-fix/)
+- [CLAUDE.md Too Long? How to Split and Optimize for Context Window (2026)](/claude-md-too-long-fix/)
 - [Conversation History OOM Crash Fix](/claude-code-conversation-history-oom-fix-2026/)

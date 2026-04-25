@@ -304,4 +304,4 @@ The accuracy of pre-project estimates improves significantly after one month of 
 
 ## See Also
 
-- [Batch API Cost Calculator for Claude Models](/claude-cost-batch-api-cost-calculator-claude-models/)
+- [Batch API Cost Calculator for Claude Models](/batch-api-cost-calculator-claude-models/)

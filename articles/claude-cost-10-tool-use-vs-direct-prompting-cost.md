@@ -172,8 +172,8 @@ Compare `usage.input_tokens` for identical tasks processed via both paths. The t
 
 ## See Also
 
-- [Free vs Pro vs Max: Claude Code Plan Calculator](/claude-cost-10-free-pro-max-plan-calculator/)
-- [Claude Tool Use Cost Calculator Guide](/claude-cost-07-tool-use-cost-calculator/)
-- [Claude Tool Use Hidden Token Costs Explained](/01-claude-tool-use-hidden-token-costs/)
-- [Enterprise Claude Cost Chargebacks by Team](/claude-cost-10-enterprise-claude-cost-chargebacks/)
+- [Free vs Pro vs Max: Claude Code Plan Calculator](/free-vs-pro-vs-max-claude-code-plan-calculator/)
+- [Claude Tool Use Cost Calculator Guide](/claude-tool-use-cost-calculator-guide/)
+- [Claude Tool Use Hidden Token Costs Explained](/claude-tool-use-hidden-token-costs-explained/)
+- [Enterprise Claude Cost Chargebacks by Team](/enterprise-claude-cost-chargebacks-by-team/)
 - [Tool Use Schema Validation Error — Fix (2026)](/claude-code-tool-use-schema-validation-error-fix-2026/)

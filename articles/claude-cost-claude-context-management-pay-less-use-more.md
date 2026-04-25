@@ -270,8 +270,8 @@ Three key metrics: cache hit rate (target above 80%), average context size after
 
 ## See Also
 
-- [Claude Agent Token Budget Management Guide](/claude-cost-claude-agent-token-budget-management/)
-- [Claude 200K vs 1M Context Cost Comparison](/claude-cost-claude-200k-vs-1m-context-cost-comparison/)
-- [Claude 1M Context Window: What It Really Costs](/claude-cost-claude-1m-context-window-what-it-costs/)
-- [Shrink Claude Context Without Losing Quality](/claude-cost-shrink-claude-context-without-losing-quality/)
-- [Claude Orchestrator-Worker Cost Optimization](/claude-cost-claude-orchestrator-worker-cost-optimization/)
+- [Claude Agent Token Budget Management Guide](/claude-agent-token-budget-management/)
+- [Claude 200K vs 1M Context Cost Comparison](/claude-200k-vs-1m-context-cost-comparison/)
+- [Claude 1M Context Window: What It Really Costs](/claude-1m-context-window-what-it-costs/)
+- [Shrink Claude Context Without Losing Quality](/shrink-claude-context-without-losing-quality/)
+- [Claude Orchestrator-Worker Cost Optimization](/claude-orchestrator-worker-cost-optimization/)

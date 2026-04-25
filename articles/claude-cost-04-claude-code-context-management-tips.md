@@ -159,5 +159,5 @@ Track three metrics per week: average session token count (target: under 80K at 
 ## Related Articles
 
 - [Optimal Context Size for Cost-Efficient Claude](/optimal-context-size-cost-efficient-claude/)
-- [Per-Request Cost Tracking for Claude API](/claude-cost-04-per-request-cost-tracking/)
-- [Claude Context Management: Pay Less, Use More](/claude-cost-claude-context-management-pay-less-use-more/)
+- [Per-Request Cost Tracking for Claude API](/per-request-cost-tracking-claude-api/)
+- [Claude Context Management: Pay Less, Use More](/claude-context-management-pay-less-use-more/)

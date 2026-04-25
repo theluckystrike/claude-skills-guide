@@ -196,5 +196,5 @@ After one week of per-request tracking, generate a Pareto analysis. Typically, 1
 
 ## See Also
 
-- [Claude Code Context Management Cost Tips 2026](/claude-cost-04-claude-code-context-management-tips/)
-- [How 5 Parallel Claude Agents Cost $1,000/Month](/claude-cost-5-parallel-claude-agents-1000-per-month/)
+- [Claude Code Context Management Cost Tips 2026](/claude-code-context-management-cost-tips-2026/)
+- [How 5 Parallel Claude Agents Cost $1,000/Month](/5-parallel-claude-agents-1000-per-month/)

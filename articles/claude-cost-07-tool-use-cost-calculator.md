@@ -197,8 +197,8 @@ Run the calculator before any optimization to establish a baseline, then after e
 
 ## See Also
 
-- [Tool Use vs Direct Prompting Cost Comparison](/claude-cost-10-tool-use-vs-direct-prompting-cost/)
-- [Batch API Cost Calculator for Claude Models](/claude-cost-batch-api-cost-calculator-claude-models/)
-- [Claude Code Pro vs API: Cost Comparison Guide](/claude-cost-07-claude-code-pro-vs-api-cost/)
-- [Claude API Usage Metrics Every Team Needs](/claude-cost-07-claude-api-usage-metrics-teams/)
+- [Tool Use vs Direct Prompting Cost Comparison](/tool-use-vs-direct-prompting-cost-comparison/)
+- [Batch API Cost Calculator for Claude Models](/batch-api-cost-calculator-claude-models/)
+- [Claude Code Pro vs API: Cost Comparison Guide](/claude-code-pro-vs-api-cost-comparison-guide/)
+- [Claude API Usage Metrics Every Team Needs](/claude-api-usage-metrics-every-team-needs/)
 - [Tool Use Schema Validation Error — Fix (2026)](/claude-code-tool-use-schema-validation-error-fix-2026/)

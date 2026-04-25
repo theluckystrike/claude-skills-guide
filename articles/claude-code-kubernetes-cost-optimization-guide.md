@@ -119,5 +119,5 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
-- [Claude Code Cost Optimization Hub](/cost-optimization-hub/)
+- [Claude Code Cost Optimization Hub](/cost-optimization/)
 - [Firebase + Claude Code: Cost Optimization Guide](/firebase-claude-code-cost-optimization-guide/)

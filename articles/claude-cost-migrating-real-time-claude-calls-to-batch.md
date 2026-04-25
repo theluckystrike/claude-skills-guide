@@ -238,5 +238,5 @@ Track migration health with these metrics:
 ## Related Articles
 
 - [Real-Time Claude Token Monitoring Pipeline](/real-time-claude-token-monitoring-pipeline/)
-- [When to Use Claude Batch vs Real-Time API](/claude-cost-when-to-use-claude-batch-vs-real-time-api/)
-- [Real-Time Claude Token Monitoring Pipeline](/claude-cost-08-real-time-token-monitoring-pipeline/)
+- [When to Use Claude Batch vs Real-Time API](/when-to-use-claude-batch-vs-real-time-api/)
+- [Real-Time Claude Token Monitoring Pipeline](/real-time-claude-token-monitoring-pipeline/)

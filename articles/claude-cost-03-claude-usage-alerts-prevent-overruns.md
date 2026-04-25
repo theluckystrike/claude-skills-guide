@@ -200,4 +200,4 @@ Track "alert response time" (minutes from spike to detection) and "cost averted"
 
 ## See Also
 
-- [Why Claude Code Uses So Many Tokens Explained](/claude-cost-03-why-claude-code-uses-many-tokens/)
+- [Why Claude Code Uses So Many Tokens Explained](/why-claude-code-uses-so-many-tokens-explained/)

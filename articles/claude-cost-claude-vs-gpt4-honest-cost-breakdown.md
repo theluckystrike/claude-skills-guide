@@ -127,4 +127,4 @@ Track these metrics weekly after choosing a provider:
 - [Claude Haiku vs Sonnet vs Opus Cost Breakdown 2026](/claude-haiku-vs-sonnet-vs-opus-cost-breakdown/)
 - [Claude Cost Per Request by Model Comparison](/claude-cost-per-request-model-comparison/)
 - [Claude Code $200 Max Plan: Is It Worth the Cost](/claude-code-200-max-plan-worth-the-cost/)
-- [Claude Computer Use Token Cost Breakdown](/claude-cost-09-computer-use-token-cost-breakdown/)
+- [Claude Computer Use Token Cost Breakdown](/claude-computer-use-token-cost-breakdown/)

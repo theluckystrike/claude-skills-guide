@@ -119,5 +119,5 @@ Choosing between Claude and Gemini requires mapping your workload to each provid
 
 ## See Also
 
-- [Claude Agent Loop Cost: Tokens Per Iteration](/claude-cost-claude-agent-loop-cost-tokens-per-iteration/)
-- [How 5 Parallel Claude Agents Cost $1,000/Month](/claude-cost-5-parallel-claude-agents-1000-per-month/)
+- [Claude Agent Loop Cost: Tokens Per Iteration](/claude-agent-loop-cost-tokens-per-iteration/)
+- [How 5 Parallel Claude Agents Cost $1,000/Month](/5-parallel-claude-agents-1000-per-month/)

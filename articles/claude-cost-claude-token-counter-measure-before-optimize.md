@@ -226,5 +226,5 @@ Before optimization: record average input tokens, average output tokens, and tot
 
 ## See Also
 
-- [Claude Cache Minimum Token Requirements 2026](/claude-cost-claude-cache-minimum-token-requirements-2026/)
-- [Claude /compact Command Token Savings Guide](/claude-cost-claude-compact-command-token-savings/)
+- [Claude Cache Minimum Token Requirements 2026](/claude-cache-minimum-token-requirements-2026/)
+- [Claude /compact Command Token Savings Guide](/claude-compact-command-token-savings/)

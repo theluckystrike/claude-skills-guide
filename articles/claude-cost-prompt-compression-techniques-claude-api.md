@@ -216,8 +216,8 @@ Measure compression ratio: (original tokens - compressed tokens) / original toke
 
 ## See Also
 
-- [Prompt Caching Break-Even Calculator for Claude](/claude-cost-prompt-caching-break-even-calculator-claude/)
-- [Message Batches API Tutorial with Cost Examples](/claude-cost-message-batches-api-tutorial-cost-examples/)
-- [System Prompt Optimization to Cut Claude Costs](/claude-cost-system-prompt-optimization-cut-claude-costs/)
-- [Claude API Cost Dashboard Setup Guide 2026](/claude-cost-01-claude-api-cost-dashboard-setup/)
-- [Smart Context Pruning for Claude API Savings](/claude-cost-smart-context-pruning-claude-api-savings/)
+- [Prompt Caching Break-Even Calculator for Claude](/prompt-caching-break-even-calculator-claude/)
+- [Message Batches API Tutorial with Cost Examples](/message-batches-api-tutorial-cost-examples/)
+- [System Prompt Optimization to Cut Claude Costs](/system-prompt-optimization-cut-claude-costs/)
+- [Claude API Cost Dashboard Setup Guide 2026](/claude-api-cost-dashboard-setup-guide-2026/)
+- [Smart Context Pruning for Claude API Savings](/smart-context-pruning-claude-api-savings/)

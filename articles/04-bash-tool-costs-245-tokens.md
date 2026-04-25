@@ -152,4 +152,4 @@ To baseline your current overhead accurately, log the `usage.input_tokens` field
 
 ## See Also
 
-- [How Tool Definitions Add 346 Tokens Per Call](/02-tool-definitions-add-346-tokens/)
+- [How Tool Definitions Add 346 Tokens Per Call](/claude-tool-definitions-346-tokens-per-call/)

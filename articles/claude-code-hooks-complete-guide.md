@@ -643,7 +643,7 @@ If you set up hooks before the stable API, update your configuration:
 No. PreToolUse hooks can only allow or block tool calls. They cannot modify the tool's parameters. If you need to change what Claude does, return feedback text that Claude will see and respond to.
 
 ### Do hooks work with Claude Code headless mode?
-Yes. Hooks fire in both interactive and headless (`--print`) mode. This makes them useful for [CI/CD integrations](/claude-code-ci-cd-automation-guide/).
+Yes. Hooks fire in both interactive and headless (`--print`) mode. This makes them useful for [CI/CD integrations](/claude-code-ci-cd-integration-guide-2026/).
 
 ### Can I have multiple hooks for the same event?
 Yes. Define multiple entries in the array. They execute in order, and all must pass for the tool call to proceed (for PreToolUse).

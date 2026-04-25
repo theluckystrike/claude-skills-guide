@@ -206,4 +206,4 @@ Track average prompt token count per request type over time. Plot a weekly trend
 
 ## See Also
 
-- [Async Claude Processing: Half Price Same Quality](/claude-cost-async-claude-processing-half-price-same-quality/)
+- [Async Claude Processing: Half Price Same Quality](/async-claude-processing-half-price-same-quality/)

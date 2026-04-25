@@ -155,6 +155,6 @@ Prevention ROI:
 ## See Also
 
 - [Anthropic Rate Limit Tokens Per Minute — Fix (2026)](/claude-code-anthropic-rate-limit-tokens-per-minute-fix-2026/)
-- [Claude Bash Tool Costs 245 Tokens Per Call](/04-bash-tool-costs-245-tokens/)
+- [Claude Bash Tool Costs 245 Tokens Per Call](/claude-bash-tool-costs-245-tokens-per-call/)
 - [Claude Code Tool Calling and Parallel Execution 2026](/claude-code-tool-calling-parallel-execution-2026/)
-- [How Tool Definitions Add 346 Tokens Per Call](/02-tool-definitions-add-346-tokens/)
+- [How Tool Definitions Add 346 Tokens Per Call](/claude-tool-definitions-346-tokens-per-call/)

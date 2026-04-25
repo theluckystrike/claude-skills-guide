@@ -209,4 +209,4 @@ The dashboard itself doesn't save money -- the insights it surfaces do. Track tw
 
 ## See Also
 
-- [Claude Code Max vs Pro: Which Plan Saves More](/claude-cost-01-claude-code-max-vs-pro-savings/)
+- [Claude Code Max vs Pro: Which Plan Saves More](/claude-code-max-vs-pro-which-plan-saves/)

@@ -1,5 +1,5 @@
 ---
-title: "Push Rejected After Claude Rebase Fix — Fix (2026)"
+title: "Push Rejected After Claude Rebase — Fix (2026)"
 permalink: /claude-code-push-rejected-after-rebase-fix-2026/
 description: "Fix push rejected after Claude Code rebase. Use git push --force-with-lease to safely update remote after rebase without overwriting teammate commits."
 last_tested: "2026-04-22"
@@ -97,7 +97,7 @@ Claude Code cannot perform interactive rebases (`git rebase -i`) because it requ
 
 - [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
 - [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
-- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Python Virtualenv Not Activated — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
 - [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)
 
 ## Git Operations in Claude Code: Safety Checklist

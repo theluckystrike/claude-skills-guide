@@ -181,5 +181,5 @@ Validate the stacked discount is applying correctly:
 
 ## See Also
 
-- [Claude Batch Plus Caching for 95% Cost Savings](/claude-cost-claude-batch-plus-caching-95-percent-cost-savings/)
-- [Batch API Cost Calculator for Claude Models](/claude-cost-batch-api-cost-calculator-claude-models/)
+- [Claude Batch Plus Caching for 95% Cost Savings](/claude-batch-plus-caching-95-percent-cost-savings/)
+- [Batch API Cost Calculator for Claude Models](/batch-api-cost-calculator-claude-models/)

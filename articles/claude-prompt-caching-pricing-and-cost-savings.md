@@ -186,5 +186,5 @@ $99 once. Pays for itself in saved tokens within a week.
 - [Claude Batch Plus Caching for 95% Cost Savings](/claude-batch-plus-caching-95-percent-cost-savings/)
 - [Per-Agent Cost Attribution in Claude Systems](/per-agent-cost-attribution-claude-systems/)
 - [Prompt Caching Break-Even Calculator for Claude](/prompt-caching-break-even-calculator-claude/)
-- [When NOT to Use Claude Prompt Caching](/claude-cost-when-not-to-use-claude-prompt-caching/)
+- [When NOT to Use Claude Prompt Caching](/when-not-to-use-claude-prompt-caching/)
 - [How to limit Claude Code to specific directories (cost savings)](/limit-claude-code-specific-directories-cost-savings/)

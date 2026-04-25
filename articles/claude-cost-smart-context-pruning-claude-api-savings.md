@@ -276,5 +276,5 @@ Measure average context size per interaction with and without pruning. Target a 
 
 ## See Also
 
-- [Smart Model Selection Saves 80% on Claude API](/claude-cost-smart-model-selection-saves-80-percent-claude/)
-- [How Context Window Size Drives Claude API Bills](/claude-cost-context-window-size-drives-claude-api-bills/)
+- [Smart Model Selection Saves 80% on Claude API](/smart-model-selection-saves-80-percent-claude/)
+- [How Context Window Size Drives Claude API Bills](/context-window-size-drives-claude-api-bills/)

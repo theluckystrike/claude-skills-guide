@@ -156,4 +156,4 @@ Chunking your codebase means providing only the specific files or modules Claude
 
 ## See Also
 
-- [Why Large Context Makes Claude Code Expensive](/claude-cost-why-large-context-makes-claude-code-expensive/)
+- [Why Large Context Makes Claude Code Expensive](/why-large-context-makes-claude-code-expensive/)

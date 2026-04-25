@@ -187,8 +187,8 @@ Track per-workload metrics after migration:
 
 ## See Also
 
-- [Real-Time Claude Token Monitoring Pipeline](/claude-cost-08-real-time-token-monitoring-pipeline/)
-- [Combining Caching with Batch API for 95% Savings](/claude-cost-combining-caching-batch-api-95-percent-savings/)
-- [Claude Batch Processing Limits and Best Practices](/claude-cost-claude-batch-processing-limits-best-practices/)
-- [Migrating Real-Time Claude Calls to Batch API](/claude-cost-migrating-real-time-claude-calls-to-batch/)
-- [When Full Context Costs More Than a RAG Pipeline](/claude-cost-when-full-context-costs-more-than-rag/)
+- [Real-Time Claude Token Monitoring Pipeline](/real-time-claude-token-monitoring-pipeline/)
+- [Combining Caching with Batch API for 95% Savings](/combining-caching-batch-api-95-percent-savings/)
+- [Claude Batch Processing Limits and Best Practices](/claude-batch-processing-limits-best-practices/)
+- [Migrating Real-Time Claude Calls to Batch API](/migrating-real-time-claude-calls-to-batch/)
+- [When Full Context Costs More Than a RAG Pipeline](/when-full-context-costs-more-than-rag/)

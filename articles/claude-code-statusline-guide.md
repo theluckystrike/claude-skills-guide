@@ -243,7 +243,7 @@ For accurate cost data, use the `/cost` command or check your Anthropic console.
 If the token count seems inflated:
 
 1. **Context replay**: Each message in a conversation replays the full history. A 20-message conversation replays all 20 messages with each new exchange.
-2. **Tool definitions**: [Tool definitions add tokens](/02-tool-definitions-add-346-tokens/) to every request.
+2. **Tool definitions**: [Tool definitions add tokens](/claude-tool-definitions-346-tokens-per-call/) to every request.
 3. **File reads**: When Claude reads large files, those tokens count as input.
 4. **Extended thinking**: Thinking tokens count as output tokens.
 

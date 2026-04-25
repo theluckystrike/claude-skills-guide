@@ -172,4 +172,4 @@ For a broader guide to Claude Code workflows beyond cost optimization, see the [
 
 ## See Also
 
-- [Claude Cost Reduction Guide 2026](/cost-reduction-hub-2026/)
+- [Claude Cost Reduction Guide 2026](/cost/)

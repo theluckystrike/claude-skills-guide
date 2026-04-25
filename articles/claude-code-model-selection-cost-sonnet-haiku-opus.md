@@ -197,4 +197,4 @@ ccusage --days 7 --format table
 
 ## See Also
 
-- [Smart Model Selection Saves 80% on Claude API](/claude-cost-smart-model-selection-saves-80-percent-claude/)
+- [Smart Model Selection Saves 80% on Claude API](/smart-model-selection-saves-80-percent-claude/)

@@ -235,4 +235,4 @@ Plot a cost-accuracy curve for your workload: x-axis is context size, y-axis is 
 
 ## See Also
 
-- [Cost-Efficient Multi-Agent Coding Workflows](/claude-cost-cost-efficient-multi-agent-coding-workflows/)
+- [Cost-Efficient Multi-Agent Coding Workflows](/cost-efficient-multi-agent-coding-workflows/)

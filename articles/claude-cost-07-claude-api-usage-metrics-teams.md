@@ -210,7 +210,7 @@ Compare your month-1 baselines to month-3 actuals. The metrics themselves cost n
 
 ## See Also
 
-- [Claude Tool Use Cost Calculator Guide](/claude-cost-07-tool-use-cost-calculator/)
-- [How to Reduce Claude API Token Usage by 50%](/claude-cost-reduce-claude-api-token-usage-50-percent/)
-- [Claude Usage Alerts to Prevent Cost Overruns](/claude-cost-03-claude-usage-alerts-prevent-overruns/)
-- [Claude Code Pro vs API: Cost Comparison Guide](/claude-cost-07-claude-code-pro-vs-api-cost/)
+- [Claude Tool Use Cost Calculator Guide](/claude-tool-use-cost-calculator-guide/)
+- [How to Reduce Claude API Token Usage by 50%](/reduce-claude-api-token-usage-50-percent/)
+- [Claude Usage Alerts to Prevent Cost Overruns](/claude-usage-alerts-prevent-cost-overruns/)
+- [Claude Code Pro vs API: Cost Comparison Guide](/claude-code-pro-vs-api-cost-comparison-guide/)

@@ -353,10 +353,10 @@ Claude Code的安装过程相对简单：确保Node.js 18+环境就绪，通过n
 - [Claude Code价格指南 (Chinese Pricing Guide)](/claude-code-jiage-pricing-guide/) — Claude Code pricing guide in Chinese (中文价格教程)
 - [Claude Code拼车指南 (Chinese Group Sharing Guide)](/claude-code-pinche-group-sharing/) — Claude Code group sharing and cost optimization in Chinese (中文拼车指南)
 - [Claude Code中文指南合集 (Chinese Guide Index)](/claude-code-zhongwen-guide/) — All Chinese guides in one place (中文指南合集)
-- [Claude Code价格和费用完整指南 (2026)](/claude-code-jiage-pricing-guide-zh/)
-- [Claude Code拼车指南：合租与共享方案 (2026)](/claude-code-pinche-group-sharing-zh/)
-- [Claude Code国内使用指南 (2026)](/claude-code-guonei-shiyong-china-usage-guide-zh/)
-- [Claude Code中文指南合集 (2026)](/claude-code-zhongwen-guide-zh/)
+- [Claude Code价格和费用完整指南 (2026)](/claude-code-jiage-pricing-guide/)
+- [Claude Code拼车指南：合租与共享方案 (2026)](/claude-code-pinche-group-sharing/)
+- [Claude Code国内使用指南 (2026)](/claude-code-guonei-shiyong-china-usage-guide/)
+- [Claude Code中文指南合集 (2026)](/claude-code-zhongwen-guide/)
 
 ## 常见问题
 

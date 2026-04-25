@@ -215,6 +215,6 @@ Track three metrics: average context size per interaction (should decrease 40-60
 
 ## See Also
 
-- [Claude Cache Minimum Token Requirements 2026](/claude-cost-claude-cache-minimum-token-requirements-2026/)
-- [Claude Token Counter: Measure Before You Optimize](/claude-cost-claude-token-counter-measure-before-optimize/)
-- [Claude Batch Plus Caching for 95% Cost Savings](/claude-cost-claude-batch-plus-caching-95-percent-cost-savings/)
+- [Claude Cache Minimum Token Requirements 2026](/claude-cache-minimum-token-requirements-2026/)
+- [Claude Token Counter: Measure Before You Optimize](/claude-token-counter-measure-before-optimize/)
+- [Claude Batch Plus Caching for 95% Cost Savings](/claude-batch-plus-caching-95-percent-cost-savings/)

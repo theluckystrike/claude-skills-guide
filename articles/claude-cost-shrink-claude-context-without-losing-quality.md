@@ -223,5 +223,5 @@ Track context size per interaction over time. Plot the growth curve with and wit
 
 ## See Also
 
-- [Async Claude Processing: Half Price Same Quality](/claude-cost-async-claude-processing-half-price-same-quality/)
-- [Chunking Strategies to Cut Claude Context Costs](/claude-cost-chunking-strategies-cut-claude-context-costs/)
+- [Async Claude Processing: Half Price Same Quality](/async-claude-processing-half-price-same-quality/)
+- [Chunking Strategies to Cut Claude Context Costs](/chunking-strategies-cut-claude-context-costs/)

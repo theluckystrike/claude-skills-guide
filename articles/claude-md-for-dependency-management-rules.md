@@ -214,4 +214,4 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
-- [CLAUDE.md for Security Rules — Prevent Vulnerabilities at Generation Time (2026)](/claude-md-for-security-rules/)
+- [CLAUDE.md for Security Rules — Prevent Vulnerabilities at Generation Time (2026)](/claude-md-security-rules/)

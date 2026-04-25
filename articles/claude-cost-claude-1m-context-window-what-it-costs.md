@@ -213,7 +213,7 @@ Track the 90th percentile context size per request type. Target keeping this und
 ## Related Articles
 
 - [Chunking Strategies to Cut Claude Context Costs](/chunking-strategies-cut-claude-context-costs/)
-- [How Context Window Size Drives Claude API Bills](/claude-cost-context-window-size-drives-claude-api-bills/)
-- [Claude 200K vs 1M Context Cost Comparison](/claude-cost-claude-200k-vs-1m-context-cost-comparison/)
-- [Claude Opus 4.7: Is It Worth the Extra Cost?](/claude-cost-claude-opus-47-is-it-worth-extra-cost/)
-- [Claude Haiku 4.5 Budget-Friendly Coding Guide](/claude-cost-claude-haiku-45-budget-friendly-coding/)
+- [How Context Window Size Drives Claude API Bills](/context-window-size-drives-claude-api-bills/)
+- [Claude 200K vs 1M Context Cost Comparison](/claude-200k-vs-1m-context-cost-comparison/)
+- [Claude Opus 4.7: Is It Worth the Extra Cost?](/claude-opus-47-is-it-worth-extra-cost/)
+- [Claude Haiku 4.5 Budget-Friendly Coding Guide](/claude-haiku-45-budget-friendly-coding/)

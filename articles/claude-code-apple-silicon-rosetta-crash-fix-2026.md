@@ -122,7 +122,7 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 ## Related Guides
 
 - [Claude Code Crash Course with GitHub](/claude-code-crash-course-github/)
-- [Conversation History OOM Crash Fix — Fix (2026)](/claude-code-conversation-history-oom-fix-2026/)
+- [Conversation History OOM Crash — Fix (2026)](/claude-code-conversation-history-oom-fix-2026/)
 - [Fix Claude Code Bun Crash (2026)](/claude-code-bun-crash/)
 
 <script type="application/ld+json">

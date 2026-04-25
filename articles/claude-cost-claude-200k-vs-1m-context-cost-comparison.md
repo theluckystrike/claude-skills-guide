@@ -200,8 +200,8 @@ Track the distribution of context sizes across all requests. If 80%+ of requests
 
 ## See Also
 
-- [Claude Context Management: Pay Less, Use More](/claude-cost-claude-context-management-pay-less-use-more/)
-- [Claude 1M Context Window: What It Really Costs](/claude-cost-claude-1m-context-window-what-it-costs/)
-- [Optimal Context Size for Cost-Efficient Claude](/claude-cost-optimal-context-size-cost-efficient-claude/)
-- [Claude Code Context Management Cost Tips 2026](/claude-cost-04-claude-code-context-management-tips/)
-- [Claude Haiku 4.5 Budget-Friendly Coding Guide](/claude-cost-claude-haiku-45-budget-friendly-coding/)
+- [Claude Context Management: Pay Less, Use More](/claude-context-management-pay-less-use-more/)
+- [Claude 1M Context Window: What It Really Costs](/claude-1m-context-window-what-it-costs/)
+- [Optimal Context Size for Cost-Efficient Claude](/optimal-context-size-cost-efficient-claude/)
+- [Claude Code Context Management Cost Tips 2026](/claude-code-context-management-cost-tips-2026/)
+- [Claude Haiku 4.5 Budget-Friendly Coding Guide](/claude-haiku-45-budget-friendly-coding/)

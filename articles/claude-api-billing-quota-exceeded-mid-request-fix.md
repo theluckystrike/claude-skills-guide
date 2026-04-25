@@ -65,7 +65,7 @@ Anthropic enforces two spending controls: prepaid credit balance and monthly spe
 
 - **Alternative 1:** Switch to a lower-cost model temporarily — Haiku at $0.25/M input vs Sonnet at $3/M input
 
-For more on this topic, see [.gitignore Not Respected by Claude Fix — Fix (2026)](/claude-code-gitignore-not-respected-fix-2026/).
+For more on this topic, see [.gitignore Not Respected by Claude — Fix (2026)](/claude-code-gitignore-not-respected-fix-2026/).
 
 - **Alternative 2:** Add a local spend tracker that aborts before hitting the API limit: track `response.usage.input_tokens * rate` per call
 - **Check:** Verify you're on the correct organization — `curl -s https://api.anthropic.com/v1/organizations -H "x-api-key: $ANTHROPIC_API_KEY"` — wrong org means wrong billing account

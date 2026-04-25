@@ -73,7 +73,7 @@ Add this to your `CLAUDE.md`:
 
 ## See Also
 
-- [Why Your Claude Prompts Use Too Many Tokens](/claude-cost-why-claude-prompts-use-too-many-tokens/)
+- [Why Your Claude Prompts Use Too Many Tokens](/why-claude-prompts-use-too-many-tokens/)
 - [Claude API System Prompt Too Long Error — Fix (2026)](/claude-api-system-prompt-too-long-error-fix/)
 - [File Watcher EMFILE Too Many Open Files Fix](/claude-code-file-watcher-emfile-too-many-open-files-fix-2026/)
 - [Claude Code System Prompts Explained (2026)](/claude-code-system-prompts-guide-2026/)

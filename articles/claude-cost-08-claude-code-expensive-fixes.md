@@ -185,5 +185,5 @@ The most visible metric on subscription plans is rate limit frequency. Track how
 
 ## See Also
 
-- [Optimizing Tool Schemas to Cut Token Count](/claude-cost-08-optimizing-tool-schemas-reduce-tokens/)
-- [Why Large Context Makes Claude Code Expensive](/claude-cost-why-large-context-makes-claude-code-expensive/)
+- [Optimizing Tool Schemas to Cut Token Count](/optimizing-tool-schemas-reduce-token-count/)
+- [Why Large Context Makes Claude Code Expensive](/why-large-context-makes-claude-code-expensive/)

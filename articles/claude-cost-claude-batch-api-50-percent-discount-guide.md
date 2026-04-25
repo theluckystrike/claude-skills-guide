@@ -178,8 +178,8 @@ Verify the 50% discount is applying correctly:
 
 ## See Also
 
-- [Claude Batch Processing 100K Requests Guide](/claude-cost-claude-batch-processing-100k-requests-guide/)
-- [Claude Max Subscription vs API for Agent Fleets](/claude-cost-claude-max-subscription-vs-api-agent-fleets/)
-- [When to Use Claude Batch vs Real-Time API](/claude-cost-when-to-use-claude-batch-vs-real-time-api/)
+- [Claude Batch Processing 100K Requests Guide](/claude-batch-processing-100k-requests-guide/)
+- [Claude Max Subscription vs API for Agent Fleets](/claude-max-subscription-vs-api-agent-fleets/)
+- [When to Use Claude Batch vs Real-Time API](/when-to-use-claude-batch-vs-real-time-api/)
 - [Batch API Job Failed Status — Fix (2026)](/claude-code-batch-api-job-failed-fix-2026/)
-- [How to Reduce Claude API Token Usage by 50%](/claude-cost-reduce-claude-api-token-usage-50-percent/)
+- [How to Reduce Claude API Token Usage by 50%](/reduce-claude-api-token-usage-50-percent/)

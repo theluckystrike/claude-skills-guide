@@ -272,4 +272,4 @@ Use attribution data to drive optimization:
 ## Related Articles
 
 - [Build a Claude Cost Attribution System](/build-claude-cost-attribution-system/)
-- [Build a Claude Cost Attribution System](/claude-cost-06-build-cost-attribution-system/)
+- [Build a Claude Cost Attribution System](/build-claude-cost-attribution-system/)

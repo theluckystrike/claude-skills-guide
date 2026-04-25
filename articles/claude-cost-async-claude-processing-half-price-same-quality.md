@@ -223,5 +223,5 @@ Confirm quality parity and cost savings simultaneously:
 ## Related Articles
 
 - [Lean Prompting: Fewer Tokens, Same Quality](/lean-prompting-fewer-tokens-same-quality/)
-- [Shrink Claude Context Without Losing Quality](/claude-cost-shrink-claude-context-without-losing-quality/)
-- [Lean Prompting: Fewer Tokens, Same Quality](/claude-cost-lean-prompting-fewer-tokens-same-quality/)
+- [Shrink Claude Context Without Losing Quality](/shrink-claude-context-without-losing-quality/)
+- [Lean Prompting: Fewer Tokens, Same Quality](/lean-prompting-fewer-tokens-same-quality/)

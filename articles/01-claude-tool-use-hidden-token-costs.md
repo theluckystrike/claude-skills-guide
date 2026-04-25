@@ -149,6 +149,6 @@ Log `usage.input_tokens` from every API response before and after implementing c
 
 ## See Also
 
-- [Claude Bash Tool Costs 245 Tokens Per Call](/04-bash-tool-costs-245-tokens/)
+- [Claude Bash Tool Costs 245 Tokens Per Call](/claude-bash-tool-costs-245-tokens-per-call/)
 - [Claude tool_use Response Parsing Error — Fix (2026)](/claude-tool-use-response-parsing-error-fix/)
-- [Web Search Costs $10 per 1,000 Searches](/06-web-search-costs-10-per-thousand/)
+- [Web Search Costs $10 per 1,000 Searches](/claude-web-search-costs-10-per-thousand/)

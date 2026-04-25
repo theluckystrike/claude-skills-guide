@@ -460,7 +460,7 @@ Show an example interaction.
 - **Token-sensitive projects**: SuperClaude loads skill definitions that consume [context window tokens](/claude-code-high-token-usage/)
 - **Highly specialized domains**: Medical, financial, or legal code needs domain-specific rules
 - **Minimal setups**: If you only need 3-4 commands, 30 skill files are overhead
-- **Performance-critical**: Loading 30 skill files adds latency to [Claude Code startup](/claude-code-slow-startup-fix-2026/)
+- **Performance-critical**: Loading 30 skill files adds latency to [Claude Code startup](/claude-code-slow-on-large-repos-fix-2026/)
 
 ## Real-World Usage Patterns
 
@@ -577,7 +577,7 @@ Community resources:
 ## Alternatives to SuperClaude
 
 ### Aider
-Aider is a terminal-based coding assistant that works with multiple LLMs. It focuses on git-integrated editing rather than structured commands. See our [aider comparison](/aider-vs-claude-code-comparison-2026/) for details.
+Aider is a terminal-based coding assistant that works with multiple LLMs. It focuses on git-integrated editing rather than structured commands. See our [aider comparison](/codex-vs-claude-code-comparison-2026/) for details.
 
 ### Custom Skills Framework
 Build your own framework by creating individual [Claude Code skills](/best-claude-code-skills-ranked-2026/) without SuperClaude's full structure. This gives you maximum control at the cost of setup time.

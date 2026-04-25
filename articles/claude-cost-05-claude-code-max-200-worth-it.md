@@ -164,6 +164,6 @@ After upgrading to Max, track two metrics daily: rate limit encounters (should d
 
 ## See Also
 
-- [Text Editor Tool: 700 Token Overhead Explained](/claude-cost-05-text-editor-tool-700-token-overhead/)
-- [Claude Code Max vs Pro: Which Plan Saves More](/claude-cost-01-claude-code-max-vs-pro-savings/)
-- [Claude Workspace Spend Limits Configuration](/claude-cost-05-claude-workspace-spend-limits/)
+- [Text Editor Tool: 700 Token Overhead Explained](/claude-text-editor-tool-700-token-overhead/)
+- [Claude Code Max vs Pro: Which Plan Saves More](/claude-code-max-vs-pro-which-plan-saves/)
+- [Claude Workspace Spend Limits Configuration](/claude-workspace-spend-limits-configuration/)

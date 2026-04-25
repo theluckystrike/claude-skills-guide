@@ -262,5 +262,5 @@ Track cost per query across your chosen approach. If using the hybrid strategy, 
 
 ## See Also
 
-- [RAG vs Context Stuffing: Claude Cost Analysis](/claude-cost-rag-vs-context-stuffing-claude-cost-analysis/)
-- [Chunking Strategies to Cut Claude Context Costs](/claude-cost-chunking-strategies-cut-claude-context-costs/)
+- [RAG vs Context Stuffing: Claude Cost Analysis](/rag-vs-context-stuffing-claude-cost-analysis/)
+- [Chunking Strategies to Cut Claude Context Costs](/chunking-strategies-cut-claude-context-costs/)

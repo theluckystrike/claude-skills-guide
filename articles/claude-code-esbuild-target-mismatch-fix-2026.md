@@ -108,7 +108,7 @@ Configuration is stored in `~/.claude/config.json` for global settings and `.cla
 
 ## Related Guides
 
-- [Token Count Estimation Mismatch Fix — Fix (2026)](/claude-code-token-count-estimation-mismatch-fix-2026/)
+- [Token Count Estimation Mismatch — Fix (2026)](/claude-code-token-count-estimation-mismatch-fix-2026/)
 - [MCP Protocol Version Mismatch in Claude — Fix (2026)](/claude-code-model-context-protocol-version-mismatch-fix-2026/)
 - [Claude Code Node Version Mismatch — Fix](/claude-code-node-version-mismatch-fix/)
 - [Claude API Key Organization Mismatch — Fix (2026)](/claude-code-api-key-organization-mismatch-fix-2026/)

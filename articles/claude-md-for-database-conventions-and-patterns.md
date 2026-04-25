@@ -158,8 +158,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
-- [Share and Reuse CLAUDE.md Patterns Across Teams and Projects (2026)](/share-reuse-claude-md-patterns-across-teams/)
-- [CLAUDE.md for API Design — Consistent Endpoints, Responses, and Versioning (2026)](/claude-md-for-api-design-patterns/)
-- [CLAUDE.md for Database Conventions — Schema, Queries, and Migration Rules (2026)](/claude-md-for-database-conventions/)
-- [CLAUDE.md for Testing Conventions — Generate Tests That Actually Catch Bugs (2026)](/claude-md-for-testing-conventions/)
-- [CLAUDE.md for Error Handling — Patterns That Prevent Silent Failures (2026)](/claude-md-for-error-handling-patterns/)
+- [Share and Reuse CLAUDE.md Patterns Across Teams and Projects (2026)](/share-reuse-claude-md-across-teams/)
+- [CLAUDE.md for API Design — Consistent Endpoints, Responses, and Versioning (2026)](/claude-md-api-design-patterns/)
+- [CLAUDE.md for Database Conventions — Schema, Queries, and Migration Rules (2026)](/claude-md-database-conventions/)
+- [CLAUDE.md for Testing Conventions — Generate Tests That Actually Catch Bugs (2026)](/claude-md-testing-conventions/)
+- [CLAUDE.md for Error Handling — Patterns That Prevent Silent Failures (2026)](/claude-md-error-handling-patterns/)

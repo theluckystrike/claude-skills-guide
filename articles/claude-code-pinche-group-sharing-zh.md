@@ -468,6 +468,6 @@ Anthropic有能力检测异常使用模式，包括来自多个IP的并发请求
 
 ## See Also
 
-- [Claude Code使用教程：从入门到精通 (2026)](/claude-code-shiyong-jiaocheng-tutorial-zh/)
+- [Claude Code使用教程：从入门到精通 (2026)](/claude-code-shiyong-jiaocheng-tutorial/)
 
 {% endraw %}

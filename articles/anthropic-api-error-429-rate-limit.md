@@ -156,7 +156,7 @@ A single batch can contain up to 100,000 requests or 256 MB, whichever is reache
 
 The API returns these headers with every response:
 
-For more on this topic, see [.gitignore Not Respected by Claude Fix — Fix (2026)](/claude-code-gitignore-not-respected-fix-2026/).
+For more on this topic, see [.gitignore Not Respected by Claude — Fix (2026)](/claude-code-gitignore-not-respected-fix-2026/).
 
 
 For more on this topic, see [Fix: Claude Can't Open This Chat Error](/claude-cant-open-this-chat-fix/).

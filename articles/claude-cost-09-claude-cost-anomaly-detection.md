@@ -245,5 +245,5 @@ Track anomaly detection rate (anomalies caught / total anomalies), false positiv
 
 ## See Also
 
-- [Claude Computer Use Token Cost Breakdown](/claude-cost-09-computer-use-token-cost-breakdown/)
-- [Claude Code Cost Per Project Estimation Guide](/claude-cost-09-claude-code-cost-per-project/)
+- [Claude Computer Use Token Cost Breakdown](/claude-computer-use-token-cost-breakdown/)
+- [Claude Code Cost Per Project Estimation Guide](/claude-code-cost-per-project-estimation-guide/)

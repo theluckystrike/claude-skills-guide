@@ -1,5 +1,5 @@
 ---
-title: "Git Worktree Lock Conflict Fix — Fix (2026)"
+title: "Git Worktree Lock Conflict — Fix (2026)"
 permalink: /claude-code-worktree-lock-conflict-fix-2026/
 description: "Fix git worktree lock conflict in Claude Code. Remove stale lock files and prune dead worktrees to resolve 'worktree already locked' errors."
 last_tested: "2026-04-22"
@@ -99,7 +99,7 @@ Reading very large files (over 10MB), processing repositories with more than 100
 
 - [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
 - [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)
-- [Python Virtualenv Not Activated Fix — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
+- [Python Virtualenv Not Activated — Fix (2026)](/claude-code-python-virtualenv-not-activated-fix-2026/)
 - [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)
 
 ## Git Operations in Claude Code: Safety Checklist

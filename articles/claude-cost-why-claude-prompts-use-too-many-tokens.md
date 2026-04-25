@@ -204,8 +204,8 @@ Track average input tokens per request broken down by component (system, tools, 
 
 ## See Also
 
-- [Claude Cost Anomaly Detection Setup Guide](/claude-cost-09-claude-cost-anomaly-detection/)
-- [Claude Code /compact Saves Thousands of Tokens](/claude-cost-02-claude-code-compact-saves-tokens/)
-- [Automatic vs Manual Cache Breakpoints Guide](/claude-cost-automatic-vs-manual-cache-breakpoints-guide/)
-- [Optimizing Tool Schemas to Cut Token Count](/claude-cost-08-optimizing-tool-schemas-reduce-tokens/)
-- [Why Large Context Makes Claude Code Expensive](/claude-cost-why-large-context-makes-claude-code-expensive/)
+- [Claude Cost Anomaly Detection Setup Guide](/claude-cost-anomaly-detection-setup-guide/)
+- [Claude Code /compact Saves Thousands of Tokens](/claude-code-compact-saves-thousands-tokens/)
+- [Automatic vs Manual Cache Breakpoints Guide](/automatic-vs-manual-cache-breakpoints-guide/)
+- [Optimizing Tool Schemas to Cut Token Count](/optimizing-tool-schemas-reduce-token-count/)
+- [Why Large Context Makes Claude Code Expensive](/why-large-context-makes-claude-code-expensive/)

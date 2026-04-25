@@ -131,7 +131,7 @@ For general coding standards that complement testing conventions, see the [codin
 
 ## See Also
 
-- [CLAUDE.md for Database Conventions — Schema, Queries, and Migration Rules (2026)](/claude-md-for-database-conventions/)
+- [CLAUDE.md for Database Conventions — Schema, Queries, and Migration Rules (2026)](/claude-md-database-conventions/)
 
 
 ## Frequently Asked Questions
