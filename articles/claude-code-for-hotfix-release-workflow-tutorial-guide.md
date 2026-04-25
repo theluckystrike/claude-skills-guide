@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Hotfix Release Workflow (2026)"
+title: "Claude Code for Hotfix Release Workflow"
 description: "Learn how to use Claude Code to streamline hotfix release workflows. This guide covers creating skills, automating bug fixes, and deploying rapid updates."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -255,6 +255,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code for Changesets Monorepo Release Workflow](/claude-code-for-changesets-monorepo-release-workflow/)
 - [Claude Code for Multi-Platform Release Workflow Guide](/claude-code-for-multi-platform-release-workflow-guide/)
 - [Claude Code for Release Automation Workflow Tutorial](/claude-code-for-release-automation-workflow-tutorial/)

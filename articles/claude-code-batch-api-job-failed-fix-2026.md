@@ -1,7 +1,7 @@
 ---
-title: "Batch API Job Failed Status — Fix (2026)"
+title: "Batch API Job Failed Status — Fix"
 permalink: /claude-code-batch-api-job-failed-fix-2026/
-description: "Fix Message Batches API job failures. Check individual request errors, fix malformed items, and resubmit failed batch entries."
+description: "Claude Code troubleshooting: fix Message Batches API job failures. Check individual request errors, fix malformed items, and resubmit failed batch entries."
 last_tested: "2026-04-22"
 ---
 

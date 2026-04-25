@@ -1,5 +1,5 @@
 ---
-title: "Claude Code ENOSPC Disk Full Error (2026)"
+title: "Claude Code ENOSPC Disk Full Error"
 description: "Fix Claude Code ENOSPC disk full during operation. Free disk space and relocate temp directories. Step-by-step solution."
 permalink: /claude-code-enospc-disk-full-fix/
 last_tested: "2026-04-21"

@@ -1,7 +1,7 @@
 ---
-title: "Streaming SSE Event Parse Error — Fix (2026)"
+title: "Streaming SSE Event Parse Error — Fix"
 permalink: /claude-code-streaming-sse-event-parse-error-fix-2026/
-description: "Fix SSE 'unexpected field in event stream' error. Caused by proxy rewriting chunked responses. Bypass with direct connection."
+description: "Claude Code troubleshooting: fix SSE 'unexpected field in event stream' error. Caused by proxy rewriting chunked responses. Bypass with direct connection."
 last_tested: "2026-04-22"
 ---
 

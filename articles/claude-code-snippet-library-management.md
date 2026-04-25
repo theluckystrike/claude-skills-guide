@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Snippet Library Management (2026)"
+title: "Claude Code Snippet Library Management"
 description: "Learn how to build, organize, and maintain a personal code snippet library using Claude Code skills. Practical strategies for developers and power users."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -604,6 +604,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Claude Code Code Generation Templates Guide](/claude-code-for-template-based-code-generation-guide/). Templates and snippets are closely related
 - [Claude Code Boilerplate Generation Workflow](/claude-code-project-scaffolding-automation/). Snippets are reusable boilerplate components
 - [How to Write Your First Custom Prompt with Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). Custom prompts can reference snippet libraries

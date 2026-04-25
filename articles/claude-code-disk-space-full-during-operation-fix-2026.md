@@ -1,5 +1,5 @@
 ---
-title: "Disk Space Full During Operation Fix (2026)"
+title: "Disk Space Full During Operation Fix"
 permalink: /claude-code-disk-space-full-during-operation-fix-2026/
 description: "Fix disk space full error during Claude Code operation. Free disk space by clearing caches, logs, and node_modules to resume file write operations."
 last_tested: "2026-04-22"

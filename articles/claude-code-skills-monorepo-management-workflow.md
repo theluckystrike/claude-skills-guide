@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills Monorepo Management (2026)"
+title: "Claude Code Skills Monorepo Management"
 description: "Monorepo management with Claude Code skills. Practical workflows for organizing, building, and maintaining multi-package repositories. Updated for 2026."
 last_tested: "2026-04-22"
 date: 2026-03-14

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Node.js Cluster Module (2026)"
+title: "Claude Code for Node.js Cluster Module"
 description: "Learn how to use Claude Code to streamline Node.js cluster module workflows, with practical examples for multi-process server architectures and load."
 date: 2026-03-15
 last_modified_at: 2026-04-17

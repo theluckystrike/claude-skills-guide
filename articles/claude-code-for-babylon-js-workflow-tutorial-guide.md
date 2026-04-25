@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Babylon.js Workflow (2026)"
+title: "Claude Code for Babylon.js Workflow"
 description: "Master Claude Code CLI to streamline your Babylon.js development workflow. Learn essential commands, automation patterns, and practical techniques for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Atuin Shell History (2026)"
+title: "Claude Code for Atuin Shell History"
 description: "Master the combination of Claude Code and Atuin for enhanced shell history management. Learn practical workflows to search, analyze, and use your."
 date: 2026-03-15
 last_modified_at: 2026-04-17

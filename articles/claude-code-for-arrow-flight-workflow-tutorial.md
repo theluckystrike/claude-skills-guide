@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Arrow Flight Workflow (2026)"
+title: "Claude Code for Arrow Flight Workflow"
 last_tested: "2026-04-22"
 description: "Learn how to use Claude Code to build efficient Arrow Flight data transfer workflows. Practical guide with code examples for developers working with."
 date: 2026-03-15

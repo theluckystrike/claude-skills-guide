@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code 2026"
+title: "Claude Code 2026 Features Roundup"
 description: "Claude Code 2026 skills and hooks roundup: pdf, tdd, supermemory, webapp-testing, and hook system with real invocation examples and config patterns."
 date: 2026-03-13
 last_modified_at: 2026-04-17

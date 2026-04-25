@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Setup Claude Code in Gitpod Cloud IDE (2026)"
+title: "Setup Claude Code in Gitpod Cloud IDE"
 description: "Install and configure Claude Code CLI in Gitpod cloud workspaces. Covers devcontainer setup, persistent configuration, and skill sync across sessions."
 date: 2026-03-14
 last_modified_at: 2026-04-17

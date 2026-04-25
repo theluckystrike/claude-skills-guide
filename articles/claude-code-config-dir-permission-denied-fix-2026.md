@@ -1,5 +1,5 @@
 ---
-title: "EACCES Permission Denied Config Dir — Fix (2026)"
+title: "EACCES Permission Denied Config Dir"
 permalink: /claude-code-config-dir-permission-denied-fix-2026/
 description: "Fix ownership of the .config/claude-code directory with sudo chown command. Resolves EACCES permission denied errors on config.json read/write."
 last_tested: "2026-04-21"

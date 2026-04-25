@@ -1,5 +1,5 @@
 ---
-title: "How to Use Claude Code: Beginner Guide (2026)"
+title: "How to Use Claude Code: Beginner Guide"
 description: "Step-by-step beginner guide to Claude Code. Install, first session, CLAUDE.md setup, commands, workflows, and tips for productive AI-assisted coding."
 permalink: /how-to-use-claude-code-beginner-guide/
 last_tested: "2026-04-24"

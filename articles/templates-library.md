@@ -152,3 +152,7 @@ Browse by project type or use Ctrl+F to find templates for your stack.
 - [CLAUDE.md for Testing Conventions — Generate Tests That Actually Catch Bugs (2026)](/claude-md-testing-conventions/)
 - [CLAUDE.md for API Design — Consistent Endpoints, Responses, and Versioning (2026)](/claude-md-api-design-patterns/)
 - [CLAUDE.md for Frontend Projects — React, Component, and State Rules (2026)](/claude-md-frontend-projects/)
+
+Related Reading
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide

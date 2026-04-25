@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Per-Agent Cost Attribution in Claude (2026)"
+title: "Per-Agent Cost Attribution in Claude"
 description: "Per-Agent Cost Attribution in Claude — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Screen Reader Testing (2026)"
+title: "Claude Code Screen Reader Testing"
 description: "A practical guide to testing web accessibility with screen readers using Claude Code. Automate your a11y workflow with proven techniques. Updated for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17

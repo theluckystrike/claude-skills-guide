@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Disable Background Chrome Extension (2026)"
-description: "Learn how to disable Chrome background extensions to improve browser performance, enhance privacy, and streamline development debugging."
+title: "Disable Background Chrome Extension"
+description: "Claude Code extension tip: learn how to disable Chrome background extensions to improve browser performance, enhance privacy, and streamline..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

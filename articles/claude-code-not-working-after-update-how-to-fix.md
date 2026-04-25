@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Not Working After (2026)"
+title: "Fix Claude Code Not Working After"
 description: "Fix Claude Code Not Working After — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -241,6 +241,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [How Do I Rollback a Bad Claude Skill Update Safely?](/how-do-i-rollback-a-bad-claude-skill-update-safely/). See also
 - [Claude Skill Not Found in Skills Directory: How to Fix](/claude-code-skill-not-found-in-skills-directory-how-to-fix/). See also
 - [Claude Code Skill Permission Denied: Fix 2026](/claude-code-skill-permission-denied-error-fix-2026/). See also

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Code Graph Analysis Workflow (2026)"
+title: "How to Use Code Graph Analysis Workflow"
 description: "Master code graph analysis with Claude Code. Learn to map dependencies, visualize relationships, and automate architecture discovery using skills and."
 date: 2026-04-19
 last_modified_at: 2026-04-19

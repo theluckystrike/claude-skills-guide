@@ -1,5 +1,5 @@
 ---
-title: "How to limit Claude Code to specific (2026)"
+title: "How to limit Claude Code to specific"
 description: "Limit Claude Code to specific directories for 40-70% token savings using .claudeignore, CLAUDE.md boundaries, and settings.json path restrictions."
 permalink: /limit-claude-code-specific-directories-cost-savings/
 date: 2026-04-22

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for ZenML Pipeline Workflow (2026)"
+title: "Claude Code for ZenML Pipeline Workflow"
 description: "Claude Code for ZenML Pipeline Workflow — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -463,6 +463,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [Claude Code for Embedding Pipeline Workflow](/claude-code-for-embedding-pipeline-workflow/)
 - [Claude Code for Harness CD Pipeline Workflow](/claude-code-for-harness-cd-pipeline-workflow/)
 - [Claude Code for Mage AI Pipeline Workflow Guide](/claude-code-for-mage-ai-pipeline-workflow-guide/)

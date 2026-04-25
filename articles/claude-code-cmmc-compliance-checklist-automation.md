@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code CMMC Compliance Checklist (2026)"
+title: "Claude Code CMMC Compliance Checklist"
 description: "Learn how to automate CMMC compliance checklist tasks using Claude Code skills. Practical examples for defense contractors managing cybersecurity."
 date: 2026-03-14
 last_modified_at: 2026-04-17

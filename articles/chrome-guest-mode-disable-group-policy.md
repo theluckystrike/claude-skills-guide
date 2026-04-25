@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Guest Mode for Claude Code (2026)"
+title: "Chrome Guest Mode for Claude Code"
 description: "Use Chrome Guest Mode to create isolated testing environments for Claude Code browser integrations and MCP servers. Disable or configure via Group Policy."
 date: 2026-03-15
 last_modified_at: 2026-04-21

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Build N8N Workflows with Claude Code (2026)"
+title: "Build N8N Workflows with Claude Code"
 description: "Generate N8N workflow JSON with Claude Code. Automate node creation, credential setup, and webhook configuration for no-code automation pipelines."
 permalink: /claude-code-n8n-workflow-automation-2026/
 date: 2026-04-21

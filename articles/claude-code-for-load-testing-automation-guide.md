@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Load Testing Automation (2026)"
+title: "Claude Code for Load Testing Automation"
 description: "Learn how to automate load testing workflows using Claude Code. Practical examples, code snippets, and integration strategies for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

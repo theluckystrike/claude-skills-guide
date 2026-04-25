@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Oxlint — Workflow Guide (2026)"
+title: "Claude Code for Oxlint — Workflow Guide"
 description: "Claude Code for Oxlint — Workflow Guide — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-oxlint-workflow-guide/
@@ -70,3 +70,24 @@ Claude Code should install `oxlint`, create `.oxlintrc.json` with the two catego
 - [Claude Code CI/CD Pipeline Optimization Guide](/claude-code-ci-cd-pipeline-optimization-guide/)
 - [Best Way to Validate Claude Code Output Before Committing](/best-way-to-validate-claude-code-output-before-committing/)
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)
+
+
+## Common Questions
+
+### What AI models work best with this approach?
+
+Claude Opus 4 and Claude Sonnet 4 handle complex reasoning tasks. For simpler operations, Claude Haiku 3.5 offers faster responses at lower cost. Match model capability to task complexity.
+
+### How do I handle AI agent failures gracefully?
+
+Implement retry logic with exponential backoff, set clear timeout boundaries, and design fallback paths for critical operations. Log all failures for pattern analysis.
+
+### Can this workflow scale to production?
+
+Yes. Add rate limiting, request queuing, and monitoring before production deployment. Most AI agent architectures scale horizontally by adding worker instances behind a load balancer.
+
+## Related Resources
+
+- [Claude Code Academic Workflow Guide](/claude-code-academic-workflow-guide-2026/)
+- [Claude Code Debugging Workflow Guide](/claude-code-debugging-workflow-guide-2026/)
+- [Claude Code for Ark UI — Workflow Guide](/claude-code-for-ark-ui-workflow-guide/)

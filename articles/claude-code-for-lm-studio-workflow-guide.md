@@ -78,3 +78,28 @@ Claude Code should configure the OpenAI client with `base_url="http://localhost:
 
 - [Claude Code for Beekeeper Studio — Workflow Guide](/claude-code-for-beekeeper-studio-workflow-guide/)
 - [Switching From Android Studio — Complete Developer Guide](/switching-from-android-studio-workflow/)
+
+
+## Common Questions
+
+### How do I get started with claude code for lm studio?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Claude Code for Beekeeper Studio](/claude-code-for-beekeeper-studio-workflow-guide/)
+- [Claude Code Announcements 2026](/anthropic-claude-code-announcements-2026/)
+- [Fix Stream Idle Timeout in Claude Code](/anthropic-sdk-streaming-hang-timeout/)

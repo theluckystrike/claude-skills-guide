@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AI LinkedIn Post Writer Chrome (2026)"
-description: "Explore approaches to building and using AI-powered tools for writing LinkedIn posts directly in Chrome. Practical implementation patterns, code examples."
+description: "Claude Code extension tip: explore approaches to building and using AI-powered tools for writing LinkedIn posts directly in Chrome. Practical..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

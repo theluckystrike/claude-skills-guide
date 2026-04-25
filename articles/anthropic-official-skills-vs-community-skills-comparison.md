@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Official vs Community Claude Skills (2026)"
+title: "Official vs Community Claude Skills"
 description: "Compare official vs community Claude skills to find the best fit for your workflow. See reliability, security, and flexibility trade-offs explained."
 date: 2026-03-13
 last_modified_at: 2026-04-17

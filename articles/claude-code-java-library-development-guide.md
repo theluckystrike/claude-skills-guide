@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Java Library Development (2026)"
+title: "Claude Code Java Library Development"
 description: "Build production-ready Java libraries with Claude Code. Set up projects, implement core features, write tests with TDD patterns, and publish to Maven."
 date: 2026-03-14
 last_modified_at: 2026-04-17

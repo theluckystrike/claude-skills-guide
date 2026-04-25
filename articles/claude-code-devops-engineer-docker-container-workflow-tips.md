@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code DevOps Engineer Docker (2026)"
+title: "Claude Code DevOps Engineer Docker"
 description: "Practical tips for DevOps engineers using Claude Code to streamline Docker container workflows, from Dockerfile optimization to multi-container."
 date: 2026-04-19
 last_modified_at: 2026-04-19

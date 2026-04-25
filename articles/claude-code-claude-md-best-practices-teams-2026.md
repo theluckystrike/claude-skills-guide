@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code CLAUDE.md Best Practices (2026)"
+title: "Claude Code CLAUDE.md Best Practices"
 description: "Write effective CLAUDE.md files for team projects. Conventions, style guides, tool permissions, and shared context patterns that scale."
 permalink: /claude-code-claude-md-best-practices-teams-2026/
 date: 2026-04-21

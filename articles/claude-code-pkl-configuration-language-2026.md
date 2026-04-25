@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Pkl Configuration (2026)"
+title: "Claude Code for Pkl Configuration"
 permalink: /claude-code-pkl-configuration-language-2026/
 description: "Write type-safe configurations with Pkl and Claude Code. Define schemas, validate configs at build time, and generate YAML/JSON from Pkl modules."
 last_tested: "2026-04-22"
@@ -281,7 +281,7 @@ pkl eval config/prod/config.pkl -f yaml | \
 - [Claude Code for Buf Protobuf Schema Management](/claude-code-buf-protobuf-schema-management-2026/)
 - [Claude Code for Pulumi Infrastructure as Code](/claude-code-pulumi-infrastructure-as-code-2026/)
 - [Claude Code for Ruff Python Linter Configuration](/claude-code-ruff-python-linter-configuration-2026/)
-
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
 
 ## Frequently Asked Questions
 

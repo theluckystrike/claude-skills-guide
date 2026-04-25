@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Taskfile Workflow (2026)"
+title: "Claude Code for Taskfile Workflow"
 description: "Learn how to use Claude Code with Taskfile to automate development workflows, streamline repetitive tasks, and build intelligent task runners that."
 date: 2026-03-15
 last_modified_at: 2026-04-17

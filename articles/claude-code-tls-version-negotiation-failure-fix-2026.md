@@ -1,7 +1,7 @@
 ---
-title: "TLS Version Negotiation Failure — Fix (2026)"
+title: "TLS Version Negotiation Failure — Fix"
 permalink: /claude-code-tls-version-negotiation-failure-fix-2026/
-description: "Fix TLS handshake failure due to version mismatch. Ensure TLS 1.2+ is enabled in your Node.js and network configuration."
+description: "Claude Code troubleshooting: fix TLS handshake failure due to version mismatch. Ensure TLS 1.2+ is enabled in your Node.js and network configuration."
 last_tested: "2026-04-22"
 ---
 

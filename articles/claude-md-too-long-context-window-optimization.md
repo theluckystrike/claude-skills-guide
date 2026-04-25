@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude MD Too Long Context Window (2026)"
+title: "Fix Claude MD Too Long Context Window"
 description: "Optimize long Claude MD context windows for better performance and lower costs. Compression techniques, chunking strategies, and token budgeting."
 date: 2026-03-14
 last_modified_at: 2026-04-17

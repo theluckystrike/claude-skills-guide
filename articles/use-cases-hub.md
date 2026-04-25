@@ -315,6 +315,8 @@ This section lists every article in the use-cases cluster, grouped by sub-topic.
 
 Related Reading
 
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [Claude Code for Beginners: Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/). set up Claude Code before diving into specific use cases
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). the most impactful skills across all developer roles
 - [Claude Skills for Startup Founders and Solopreneurs 2026](/claude-skills-for-startup-founders-and-solopreneurs/). key use cases for builders moving fast

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Best AI Tools for Backend Development (2026)"
-description: "Discover the most powerful AI tools transforming backend development in 2026. From code generation to testing and deployment automation."
+title: "Best AI Tools for Backend Development"
+description: "Claude Code picks: discover the most powerful AI tools transforming backend development in 2026. From code generation to testing and deployment automation."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

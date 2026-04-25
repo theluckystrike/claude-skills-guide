@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Scrolling Screen Capture Chrome (2026)"
-description: "Capture full-page scrolling screenshots in Chrome with automatic stitching. Build the extension using canvas API, scrollTo, and image concatenation."
+description: "Claude Code extension tip: capture full-page scrolling screenshots in Chrome with automatic stitching. Build the extension using canvas API, scrollTo,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

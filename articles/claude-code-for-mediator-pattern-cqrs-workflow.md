@@ -94,6 +94,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Claude Code for Ambassador Sidecar Pattern Workflow](/claude-code-for-ambassador-sidecar-pattern-workflow/)
 - [Claude Code for BFF API Pattern Workflow Guide](/claude-code-for-bff-api-pattern-workflow-guide/)
 - [Claude Code for Claim Check Pattern Workflow](/claude-code-for-claim-check-pattern-workflow/)

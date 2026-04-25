@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Load Testing with k6 (2026)"
+title: "Claude Code for Load Testing with k6"
 description: "Learn how to integrate Claude Code with K6 for efficient load testing workflows. This guide covers script generation, test execution, and result."
 date: 2026-04-19
 last_modified_at: 2026-04-19

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Harden Chrome Privacy in 2026"
-description: "Harden Chrome privacy with flags, policies, and extensions. Step-by-step guide to reducing tracking without breaking your developer workflows."
+description: "Claude Code extension tip: harden Chrome privacy with flags, policies, and extensions. Step-by-step guide to reducing tracking without breaking your..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

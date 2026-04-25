@@ -2,7 +2,7 @@
 
 layout: default
 title: "Downgrade Chrome Speed (2026)"
-description: "Learn how to throttle Chrome network and CPU speeds for testing, plus how to downgrade Chrome to an older version for compatibility or debugging."
+description: "Claude Code extension tip: learn how to throttle Chrome network and CPU speeds for testing, plus how to downgrade Chrome to an older version for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

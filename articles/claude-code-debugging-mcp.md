@@ -146,3 +146,22 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
+## Common Questions
+
+### What causes debug mcp servers in claude code issues?
+
+Common causes include misconfigured settings, outdated dependencies, and environment conflicts. Check your project configuration and ensure all dependencies are up to date.
+
+### How do I prevent this error from recurring?
+
+Set up automated checks in your development workflow. Use Claude Code's built-in validation tools to catch configuration issues before they reach production.
+
+### Does this fix work on all operating systems?
+
+The core fix applies to macOS, Linux, and Windows. Some path-related adjustments may be needed depending on your OS. Check the platform-specific notes in the guide above.
+
+## Related Resources
+
+- [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/)
+- [Claude Code Skills vs MCP Servers](/claude-code-skills-vs-mcp-servers-token-usage/)
+- [MCP Servers for Claude Code](/mcp-servers-claude-code-complete-setup-2026/)

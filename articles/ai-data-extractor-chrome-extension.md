@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Build an AI Data Extractor Extension (2026)"
-description: "Build an AI-powered Chrome extension that extracts structured data from any webpage. Manifest V3, content scripts, and LLM integration patterns."
+title: "Build an AI Data Extractor Extension"
+description: "Claude Code extension tip: build an AI-powered Chrome extension that extracts structured data from any webpage. Manifest V3, content scripts, and LLM..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

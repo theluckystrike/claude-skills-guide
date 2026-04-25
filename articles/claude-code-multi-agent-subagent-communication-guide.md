@@ -400,6 +400,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The skills most suited for subagent use (tdd, pdf, frontend-design) are profiled here with invocation patterns that translate to multi-agent workflows
 - [Claude Skills Auto-Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). Understanding auto-invocation is key for orchestration: you need to know when to use explicit skill invocations in subagent print mode
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Running many subagents in parallel multiplies API costs; these optimization techniques are especially important in multi-agent architectures

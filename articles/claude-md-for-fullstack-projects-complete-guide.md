@@ -800,6 +800,8 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Claude MD Example for Remix Fullstack Application](/claude-md-example-for-remix-fullstack-application/)
 - [Using Claude Code with Bun Runtime for JavaScript Projects](/using-claude-code-with-bun-runtime-javascript-projects/)
 - [Best Way to Use Claude Code for Rapid Prototyping](/best-way-to-use-claude-code-for-rapid-prototyping/)

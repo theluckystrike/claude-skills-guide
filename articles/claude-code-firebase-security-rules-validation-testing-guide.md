@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Firebase Security Rules (2026)"
+title: "Claude Code Firebase Security Rules"
 description: "Learn how to validate and test Firebase security rules using Claude Code. Practical patterns for writing, testing, and debugging Firestore and Realtime ..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

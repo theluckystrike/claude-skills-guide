@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Extended Thinking API Guide (2026)"
+title: "Claude Extended Thinking API Guide"
 description: "Implement Claude extended thinking for enhanced reasoning. Covers budget_tokens, display options, tool use integration, and multi-turn thinking continuity."
 date: 2026-04-15
 last_modified_at: 2026-04-17

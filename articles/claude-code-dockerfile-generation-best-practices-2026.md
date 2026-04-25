@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Dockerfile Best Practices (2026)"
+title: "Claude Code Dockerfile Best Practices"
 description: "Generate production Dockerfiles with Claude Code. Multi-stage builds, security hardening, and layer optimization patterns for Node, Python, and Go."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -506,6 +506,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Claude Code Docker Networking Workflow Guide](/claude-code-docker-networking-workflow-guide/)
 - [Claude Code Dockerfile Generation: Multi-Stage Build Guide](/claude-code-dockerfile-generation-multi-stage-build-guide/)
 - [Claude Code Buildah Container Builds Guide](/claude-code-buildah-container-builds-guide/)

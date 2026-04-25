@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Inngest Durable Workflow (2026)"
+title: "Claude Code Inngest Durable Workflow"
 description: "Learn how to combine Claude Code with Inngest to build solid durable workflows for long-running tasks. Practical examples and best practices for."
 date: 2026-03-14
 last_modified_at: 2026-04-17

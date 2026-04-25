@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Android DataStore (2026)"
+title: "Claude Code for Android DataStore"
 description: "Learn how to use Claude Code to streamline your Android DataStore implementation with practical examples, code patterns, and actionable workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -330,6 +330,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
 - [Switching from Android Studio Workflow: A Developer's Guide](/switching-from-android-studio-workflow/)
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code GitHub Actions with Bedrock (2026)"
+title: "Claude Code GitHub Actions with Bedrock"
 description: "Set up Claude Code in GitHub Actions CI/CD pipelines using Amazon Bedrock for automated code reviews, testing, and deployment assistance."
 date: 2026-04-17
 last_modified_at: 2026-04-17

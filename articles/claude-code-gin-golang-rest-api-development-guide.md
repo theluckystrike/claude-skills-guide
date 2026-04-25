@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build Go Gin REST APIs with Claude Code (2026)"
+title: "Build Go Gin REST APIs with Claude Code"
 description: "Build production-ready Go Gin REST APIs using Claude Code for scaffolding, routing, middleware, and GORM integration. Includes working code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

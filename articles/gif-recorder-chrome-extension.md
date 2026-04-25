@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Build a GIF Recorder Chrome Extension (2026)"
-description: "Build a Chrome extension that records screen captures as GIFs. Covers MediaRecorder API, canvas rendering, frame optimization, and file size reduction."
+title: "Build a GIF Recorder Chrome Extension"
+description: "Claude Code extension tip: build a Chrome extension that records screen captures as GIFs. Covers MediaRecorder API, canvas rendering, frame..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"

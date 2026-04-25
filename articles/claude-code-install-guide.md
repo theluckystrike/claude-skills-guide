@@ -216,6 +216,7 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Fix Claude Code Login — Cannot Paste Auth Code](/claude-code-login-paste-fix) — Login issues after installation
 - [Claude Code Docker CI/CD Pipeline Integration Guide](/claude-code-docker-ci-cd-pipeline-integration-guide/) — Full Docker configuration
 - [Claude Code Command Not Found After Install Troubleshooting](/claude-code-command-not-found-after-install-troubleshooting/) — Browse all installation guides
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 
 ---
 

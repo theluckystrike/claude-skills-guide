@@ -369,6 +369,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Chrome Developer Tools Running Slow? Here is How to Fix It](/chrome-developer-tools-slow/)
 - [Chrome DevTools Memory Leak Debugging: Find and Fix.](/chrome-devtools-memory-leak-debugging/)
 - [Claude Code CS50 Project Help and Debugging Guide](/claude-code-cs50-project-help-and-debugging-guide/)

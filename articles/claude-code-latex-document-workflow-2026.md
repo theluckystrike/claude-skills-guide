@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code for LaTeX Document Workflow (2026)"
+title: "Claude Code for LaTeX Document Workflow"
 description: "Write and edit LaTeX documents with Claude Code: paper formatting, bibliography management, equation editing, and compilation automation."
 permalink: /claude-code-latex-document-workflow-2026/
 date: 2026-04-21

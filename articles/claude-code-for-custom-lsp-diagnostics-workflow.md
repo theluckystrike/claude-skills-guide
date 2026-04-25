@@ -683,6 +683,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 - [Claude Code for Aurora Serverless V2 Workflow](/claude-code-for-aurora-serverless-v2-workflow/)
 - [Claude Code for Branch Protection Rules Workflow](/claude-code-for-branch-protection-rules-workflow/)

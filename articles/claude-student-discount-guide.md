@@ -1,5 +1,5 @@
 ---
-title: "Claude Student Discount: How to Get It (2026)"
+title: "Claude Student Discount: How to Get It"
 description: "Anthropic does not offer a Claude student discount in 2026. Here are real alternatives: free tiers, API credits, university programs, and tips."
 permalink: /claude-student-discount-guide/
 last_tested: "2026-04-24"

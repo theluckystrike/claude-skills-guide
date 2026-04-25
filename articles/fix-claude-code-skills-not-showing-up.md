@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Skills Not Showing (2026)"
+title: "Fix Claude Code Skills Not Showing"
 description: "Troubleshoot skills that exist on disk but do not appear in Claude Code's / menu due to discovery, scope, visibility, or description budget issues."
 permalink: /fix-claude-code-skills-not-showing-up/
 categories: [skills, 2026]

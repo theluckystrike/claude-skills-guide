@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Monorepo: Best Setup Guide (2026)"
+title: "Claude Code Monorepo: Best Setup Guide"
 description: "Configure Claude Code for monorepos with per-package CLAUDE.md files, scoped tool permissions, and workspace-aware dependency management rules."
 permalink: /claude-code-monorepo-best-setup-2026/
 last_tested: "2026-04-22"
@@ -102,7 +102,7 @@ Related: [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compa
 - [Make Claude Code Write Tests First (TDD) (2026)](/claude-code-write-tests-first-tdd-setup-2026/)
 - [Claude Code Tab Completion Setup Guide 2026](/claude-code-tab-completion-setup-2026/)
 - [How to Set Up Claude Code in Ghostty Terminal 2026](/claude-code-ghostty-terminal-setup-2026/)
-
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
 
 ## Frequently Asked Questions
 

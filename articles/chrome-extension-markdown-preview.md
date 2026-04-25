@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Markdown Preview Chrome Extension Guide (2026)"
-description: "Preview markdown files live in Chrome with syntax highlighting, GFM support, and custom themes. Compare the best extensions for documentation work."
+title: "Markdown Preview Chrome Extension Guide"
+description: "Claude Code guide: preview markdown files live in Chrome with syntax highlighting, GFM support, and custom themes. Compare the best extensions for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

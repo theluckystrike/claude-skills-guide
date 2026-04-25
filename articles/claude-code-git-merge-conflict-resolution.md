@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Claude Code Resolves Git Merge (2026)"
+title: "How Claude Code Resolves Git Merge"
 description: "Use Claude Code to automatically detect, understand, and resolve git merge conflicts. Complete workflow with examples for complex conflicts."
 date: 2026-04-15
 last_modified_at: 2026-04-17

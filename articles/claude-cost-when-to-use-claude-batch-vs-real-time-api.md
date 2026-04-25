@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "When to Use Claude Batch vs Real-Time (2026)"
+title: "When to Use Claude Batch vs Real-Time"
 description: "Batch API saves 50% but adds up to 1 hour latency. Use this decision framework to pick the right mode for each workload."
 date: 2026-04-19
 author: "Claude Skills Guide"

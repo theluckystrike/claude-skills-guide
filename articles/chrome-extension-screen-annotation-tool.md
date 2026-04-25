@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Build a Screen Annotation Chrome (2026)"
-description: "Build a Chrome extension for screen annotation and markup. Covers Canvas overlay rendering, drawing tools, text labels, and screenshot export options."
+description: "Claude Code extension tip: build a Chrome extension for screen annotation and markup. Covers Canvas overlay rendering, drawing tools, text labels, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

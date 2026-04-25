@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Symbol Search Workflow (2026)"
+title: "Claude Code Symbol Search Workflow"
 description: "Find functions, classes, and variables across large codebases with Claude Code symbol search. Navigate unfamiliar code faster with practical examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

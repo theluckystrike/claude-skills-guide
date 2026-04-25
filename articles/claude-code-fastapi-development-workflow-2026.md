@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code for FastAPI Development (2026)"
+title: "Claude Code for FastAPI Development"
 description: "Build FastAPI applications with Claude Code: endpoint generation, Pydantic models, async handlers, and OpenAPI spec automation with examples."
 permalink: /claude-code-fastapi-development-workflow-2026/
 date: 2026-04-21

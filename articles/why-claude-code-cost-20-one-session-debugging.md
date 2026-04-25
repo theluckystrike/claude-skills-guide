@@ -1,5 +1,5 @@
 ---
-title: "Why did Claude Code cost $20 for one (2026)"
+title: "Why did Claude Code cost $20 for one"
 description: "A $20 Claude Code session means 3-4 million tokens were consumed, likely from Opus 4.6 usage or an unbounded session. Diagnose the cause and prevent recurrence."
 permalink: /why-claude-code-cost-20-one-session-debugging/
 date: 2026-04-22

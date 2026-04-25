@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "MCP Tool Description Injection Attack (2026)"
+title: "MCP Tool Description Injection Attack"
 description: "Understanding how malicious tool descriptions in Claude's Model Context Protocol can manipulate AI behavior. Practical examples and security guidance for."
 date: 2026-03-14
 last_modified_at: 2026-04-17

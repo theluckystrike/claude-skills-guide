@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Enterprise Extension Management API (2026)"
+title: "Enterprise Extension Management API"
 description: "Learn how to programmatically manage Chrome extensions in enterprise environments using the Chrome Enterprise Extension Management API with code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -434,6 +434,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [Chrome Enterprise Bandwidth Management: A Practical Guide](/chrome-enterprise-bandwidth-management/)
 - [AI Code Assistant Chrome Extension: Practical Guide for.](/ai-code-assistant-chrome-extension/)
 - [Best AI Chrome Extensions 2026: A Practical Guide for Developers](/best-ai-chrome-extensions-2026/)

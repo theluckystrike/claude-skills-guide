@@ -1,5 +1,5 @@
 ---
-title: "Team CLAUDE.md vs Personal CLAUDE.md (2026)"
+title: "Team CLAUDE.md vs Personal CLAUDE.md"
 description: "How to split instructions between shared CLAUDE.md, personal CLAUDE.local.md, and user-level ~/.claude/CLAUDE.md for team projects."
 permalink: /team-claude-md-vs-personal-claude-md/
 categories: [claude-md, workflow]

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Hemingway Editor (2026)"
+title: "Chrome Extension Hemingway Editor"
 description: "Find the best Chrome extension Hemingway editor alternative for clean, distraction-free writing. Compare options with real-time readability analysis and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

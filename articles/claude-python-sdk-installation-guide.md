@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Python SDK Installation Guide (2026)"
+title: "Claude Python SDK Installation Guide"
 description: "Install and configure the Anthropic Python SDK. Covers pip install, platform extras for Bedrock and Vertex AI, async setup, and environment configuration."
 date: 2026-04-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Crash Course with GitHub (2026)"
+title: "Claude Code Crash Course with GitHub"
 description: "Complete crash course for using Claude Code with GitHub repos. Clone, branch, commit, PR — all through Claude Code in under 10 minutes."
 date: 2026-04-17
 last_modified_at: 2026-04-17

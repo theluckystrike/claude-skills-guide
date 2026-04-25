@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Generate Cornell Notes with Claude AI (2026)"
+title: "Generate Cornell Notes with Claude AI"
 description: "Generate formatted Cornell Notes with Claude AI in seconds. Includes prompts for lectures, meetings, and study sessions with real output examples."
 last_tested: "2026-04-21"
 date: 2026-04-01

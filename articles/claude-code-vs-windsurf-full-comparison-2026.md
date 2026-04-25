@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs Windsurf: Full Comparison (2026)"
+title: "Claude Code vs Windsurf"
 permalink: /claude-code-vs-windsurf-full-comparison-2026/
 description: "Windsurf offers agentic AI coding from $15/mo in a VS Code fork. Claude Code delivers unrestricted terminal autonomy. Features, pricing, and verdict."
 last_tested: "2026-04-21"

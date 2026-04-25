@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Dependency Versioning (2026)"
+title: "Claude Code Dependency Versioning"
 description: "Automate dependency versioning with Claude Code using practical workflows for semver, lockfile management, and automated updates that save hours."
 date: 2026-04-19
 last_modified_at: 2026-04-19

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Developer Advocate Demo (2026)"
+title: "Claude Code Developer Advocate Demo"
 description: "Master the art of creating compelling demos and content using Claude Code. Learn practical workflow strategies for developer advocates."
 date: 2026-04-19
 last_modified_at: 2026-04-19

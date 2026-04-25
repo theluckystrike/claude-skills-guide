@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Oscilloscope Automation (2026)"
+title: "Claude Code for Oscilloscope Automation"
 permalink: /claude-code-oscilloscope-automation-2026/
 description: "Claude Code for Oscilloscope Automation — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"

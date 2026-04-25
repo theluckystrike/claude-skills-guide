@@ -1,6 +1,6 @@
 ---
 title: "MCPMark Benchmarks (2026)"
-description: "MCPMark benchmark results show 3-8x token efficiency gaps between MCP server implementations -- learn which servers waste tokens and which optimize them."
+description: "Claude Code resource: mCPMark benchmark results show 3-8x token efficiency gaps between MCP server implementations -- learn which servers waste tokens..."
 permalink: /mcpmark-benchmarks-token-efficiency-revealed/
 date: 2026-04-22
 last_tested: "2026-04-22"
@@ -144,3 +144,28 @@ Worst case (unfiltered GitHub, 12 tools):
 - [MCP Tool Filtering: Only Load What You Need](/mcp-tool-filtering-only-load-what-you-need/) -- applying benchmark insights to filter tools
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- configuring MCP servers for optimal performance
 - [Claude Code Tool Call Overhead](/claude-code-tool-call-overhead-tokens-per-mcp-call/) -- understanding the full cost of tool calls
+
+
+## Common Questions
+
+### How do I get started with mcpmark benchmarks?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Claude Code for JMH Java Benchmarks](/claude-code-for-jmh-benchmark-workflow-tutorial-guide/)
+- [Claude Code spending tokens on files I](/claude-code-spending-tokens-files-didnt-ask-about/)
+- [Claude Code for Release Candidate](/claude-code-for-release-candidate-workflow-tutorial/)

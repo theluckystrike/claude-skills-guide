@@ -1,5 +1,5 @@
 ---
-title: "Awesome MCP vs Templates MCP Directory (2026)"
+title: "Awesome MCP vs Templates MCP Directory"
 description: "Awesome MCP Servers lists 200+ servers across 30 categories. Claude Code Templates bundles 55+ MCP configs. Compare discovery vs installation."
 permalink: /awesome-mcp-servers-vs-claude-code-templates-mcp-2026/
 last_tested: "2026-04-22"

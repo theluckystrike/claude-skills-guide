@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Docker Secrets Management (2026)"
+title: "Claude Code Docker Secrets Management"
 description: "Manage Docker secrets securely with Claude Code for credential rotation, Swarm secrets, and Compose secret injection. Zero plaintext in your configs."
 date: 2026-03-14
 last_modified_at: 2026-04-17

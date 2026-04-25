@@ -1,5 +1,5 @@
 ---
-title: "Make Claude Code Respect Your Type (2026)"
+title: "Make Claude Code Respect Your Type"
 description: "Force Claude Code to use your TypeScript types, Zod schemas, and interfaces instead of generating untyped or loosely-typed code."
 permalink: /claude-code-ignores-type-system-fix-2026/
 last_tested: "2026-04-22"

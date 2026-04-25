@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Mockup Screenshot Tool Extension Guide (2026)"
-description: "Create professional UI mockups with a Chrome extension screenshot tool. Frame captures in device bezels, add annotations, and export high-res images."
+title: "Mockup Screenshot Tool Extension Guide"
+description: "Claude Code guide: create professional UI mockups with a Chrome extension screenshot tool. Frame captures in device bezels, add annotations, and export..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

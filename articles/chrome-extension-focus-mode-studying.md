@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Focus Mode Studying Chrome Extension (2026)"
-description: "Discover Chrome extensions that create distraction-free study environments. Learn how to build custom focus modes with blocking, timers, and workspace."
+title: "Focus Mode Studying Chrome Extension"
+description: "Claude Code extension tip: discover Chrome extensions that create distraction-free study environments. Learn how to build custom focus modes with..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

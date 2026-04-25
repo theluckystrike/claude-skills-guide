@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extensions That Track You (2026)"
-description: "Identify Chrome extensions that spy on your browsing data. Code-level analysis of tracking mechanisms with audit tools to protect your privacy."
+description: "Claude Code extension tip: identify Chrome extensions that spy on your browsing data. Code-level analysis of tracking mechanisms with audit tools to..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

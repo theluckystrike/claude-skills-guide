@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Nimbus Screenshot Alternative Chrome (2026)"
+title: "Nimbus Screenshot Alternative Chrome"
 description: "Discover the best Nimbus Screenshot alternatives for Chrome in 2026. Developer-friendly screen capture tools with API access, automation support, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

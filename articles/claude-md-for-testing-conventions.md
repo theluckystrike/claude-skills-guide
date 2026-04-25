@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md for Testing Conventions (2026)"
+title: "CLAUDE.md for Testing Conventions"
 description: "How to write CLAUDE.md rules for test structure, coverage requirements, mocking strategies, and assertion patterns that Claude Code follows consistently."
 permalink: /claude-md-testing-conventions/
 categories: [claude-md, patterns]

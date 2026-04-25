@@ -256,3 +256,7 @@ This compounding effect means that the first retry incident in a session is rela
 - [Semantic Exit Codes: Help Claude Code Debug Faster](/semantic-exit-codes-help-claude-code-debug-faster/) -- detailed exit code patterns
 - [Errors Atlas](/errors-atlas/) -- structured error reference for Claude Code
 - [InsForge vs Supabase: Claude Code Token Cost (2026)](/insforge-vs-supabase-claude-code-token-cost-2026/)
+
+Related Reading
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide

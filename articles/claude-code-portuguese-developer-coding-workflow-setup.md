@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Portuguese Developer Coding (2026)"
+title: "Claude Code Portuguese Developer Coding"
 description: "Aprenda a configurar Claude Code para otimizar seu fluxo de trabalho como desenvolvedor português. Guia prático com exemplos de configuração e."
 date: 2026-03-14
 last_modified_at: 2026-04-17

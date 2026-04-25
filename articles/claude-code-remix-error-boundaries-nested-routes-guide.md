@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Remix Error Boundaries (2026)"
+title: "Fix Claude Code Remix Error Boundaries"
 description: "Learn how to implement error boundaries with nested routes in Remix to create resilient, user-friendly applications with granular error handling."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -272,6 +272,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Claude Code for Remix Error Boundary Workflow Guide](/claude-code-for-remix-error-boundary-workflow-guide/)
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)
 - [AI Code Assistant Chrome Extension: Practical Guide for.](/ai-code-assistant-chrome-extension/)

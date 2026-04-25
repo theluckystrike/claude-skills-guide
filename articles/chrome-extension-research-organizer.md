@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Research Organizer Chrome Extension (2026)"
-description: "Learn how to build a Chrome extension research organizer for managing web research, bookmarks, and notes. Practical code examples and implementation."
+title: "Research Organizer Chrome Extension"
+description: "Claude Code extension tip: learn how to build a Chrome extension research organizer for managing web research, bookmarks, and notes. Practical code..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"

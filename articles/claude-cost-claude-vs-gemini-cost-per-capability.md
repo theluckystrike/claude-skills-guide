@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude vs Gemini Cost Per Capability (2026)"
+title: "Claude vs Gemini Cost Per Capability"
 description: "Claude vs Gemini Cost Per Capability — features, pricing, and performance compared side by side to help you pick the right tool."
 date: 2026-04-19
 author: "Claude Skills Guide"

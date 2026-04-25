@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Does Claude Code Break My Existing (2026)"
+title: "Why Does Claude Code Break My Existing"
 description: "Discover why Claude Code sometimes breaks your existing tests and learn practical strategies to prevent and resolve these conflicts."
 date: 2026-03-14
 last_modified_at: 2026-04-17

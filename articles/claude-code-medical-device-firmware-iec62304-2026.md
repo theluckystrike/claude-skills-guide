@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Medical Device IEC (2026)"
+title: "Claude Code for Medical Device IEC"
 permalink: /claude-code-medical-device-firmware-iec62304-2026/
 description: "Claude Code for Medical Device IEC — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"

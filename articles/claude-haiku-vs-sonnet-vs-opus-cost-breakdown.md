@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Haiku vs Sonnet vs Opus Cost (2026)"
+title: "Claude Haiku vs Sonnet vs Opus Cost"
 description: "Compare Claude API costs per million tokens across Haiku ($1), Sonnet ($3), and Opus ($5) to pick the right model for your budget."
 date: 2026-04-19
 author: "Claude Skills Guide"

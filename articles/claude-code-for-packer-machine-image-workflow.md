@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Packer Machine Image (2026)"
+title: "Claude Code for Packer Machine Image"
 description: "Learn how to use Claude Code to streamline Packer machine image creation workflows. This guide covers template generation, validation, building, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

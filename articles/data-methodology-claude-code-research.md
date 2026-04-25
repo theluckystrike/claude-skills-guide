@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Data & Methodology (2026)"
-description: "Data & Methodology — practical guide with working examples, tested configurations, and tips for developer workflows. Includes working examples, code sample."
+description: "Claude Code resource: data & Methodology — practical guide with working examples, tested configurations, and tips for developer workflows. Includes..."
 date: 2026-04-18
 author: "Claude Skills Guide"
 permalink: /data/
@@ -78,3 +78,28 @@ Any site owner with GSC access can reproduce this analysis on their own data. Th
 ## Questions
 
 For questions about the data or methodology, visit the [research hub](/reports/) or explore the individual report pages linked there. For access to the tools and workflows used to build this site, see [Zovo](https://zovo.one).
+
+
+## Common Questions
+
+### How do I get started with data & methodology?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Build an AI Data Extractor Extension](/ai-data-extractor-chrome-extension/)
+- [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/)
+- [Chrome Data Google Collects](/chrome-data-google-collects/)

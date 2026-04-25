@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Langfuse LLM Analytics (2026)"
+title: "Claude Code for Langfuse LLM Analytics"
 description: "Claude Code for Langfuse LLM Analytics — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-langfuse-llm-analytics-workflow-guide/
@@ -77,3 +77,24 @@ Claude Code should initialize the Langfuse client, create a trace with `user_id`
 ## See Also
 
 - [Claude Code for Mixpanel Analytics — Guide](/claude-code-for-mixpanel-analytics-workflow-guide/)
+
+
+## Common Questions
+
+### What AI models work best with this approach?
+
+Claude Opus 4 and Claude Sonnet 4 handle complex reasoning tasks. For simpler operations, Claude Haiku 3.5 offers faster responses at lower cost. Match model capability to task complexity.
+
+### How do I handle AI agent failures gracefully?
+
+Implement retry logic with exponential backoff, set clear timeout boundaries, and design fallback paths for critical operations. Log all failures for pattern analysis.
+
+### Can this workflow scale to production?
+
+Yes. Add rate limiting, request queuing, and monitoring before production deployment. Most AI agent architectures scale horizontally by adding worker instances behind a load balancer.
+
+## Related Resources
+
+- [Awesome LLM Apps vs Claude Code](/awesome-llm-apps-vs-claude-code-templates-2026/)
+- [Claude Code For Helicone LLM](/claude-code-for-helicone-llm-gateway-workflow-tutorial/)
+- [Claude Code For LLM Caching](/claude-code-for-llm-caching-workflow-tutorial/)

@@ -1,5 +1,5 @@
 ---
-title: "PATH Not Updated After Install — Fix (2026)"
+title: "PATH Not Updated After Install — Fix"
 permalink: /claude-code-path-not-updated-after-install-fix-2026/
 description: "Fix PATH not updated after Claude Code install. Source your shell rc file or open a new terminal to pick up PATH changes."
 last_tested: "2026-04-22"

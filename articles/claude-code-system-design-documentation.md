@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code System Design Documentation (2026)"
+title: "Claude Code System Design Documentation"
 description: "Learn how to create comprehensive system design documentation using Claude Code. Practical techniques for architects and developers to document."
 date: 2026-03-14
 last_modified_at: 2026-04-17

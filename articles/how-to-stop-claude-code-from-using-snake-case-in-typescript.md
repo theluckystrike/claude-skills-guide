@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Stop Claude Code from Using (2026)"
+title: "How to Stop Claude Code from Using"
 description: "Practical guide to prevent Claude Code from generating snake_case variable names in TypeScript projects. Learn configuration tricks and best practices."
 date: 2026-03-14
 last_modified_at: 2026-04-17

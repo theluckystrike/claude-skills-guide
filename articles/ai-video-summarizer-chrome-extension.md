@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Build an AI Video Summarizer Extension (2026)"
-description: "Build a Chrome extension that summarizes YouTube, Vimeo, and Coursera videos using AI. Complete implementation with transcript extraction and LLM calls."
+title: "Build an AI Video Summarizer Extension"
+description: "Claude Code extension tip: build a Chrome extension that summarizes YouTube, Vimeo, and Coursera videos using AI. Complete implementation with..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

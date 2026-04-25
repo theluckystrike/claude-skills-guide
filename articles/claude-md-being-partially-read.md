@@ -138,3 +138,28 @@ paths:
 | Rules never active | Path patterns not matching | Check glob patterns or remove paths |
 
 For splitting long CLAUDE.md files, see the [length optimization guide](/claude-md-length-optimization/). For diagnosing conflict-specific issues, see the [conflicting instructions fix guide](/claude-md-conflicting-instructions-fix/). For the complete CLAUDE.md loading specification, see the [CLAUDE.md complete guide](/claude-md-file-complete-guide-what-it-does/).
+
+
+## Common Questions
+
+### How do I get started with claude.md being partially read?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Fix Claude Md Not Being Read By Claude](/claude-md-not-being-read-by-claude-code-fix/)
+- [Best CLAUDE.md Templates for Teams](/best-claude-md-templates-enterprise-2026/)
+- [Building a Chrome Extension for a Read](/chrome-extension-read-later-list/)

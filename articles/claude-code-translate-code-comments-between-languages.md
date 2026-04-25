@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Translate Code Comments (2026)"
+title: "Claude Code Translate Code Comments"
 description: "Learn how to use Claude Code to translate code comments between programming languages. Practical examples, workflow patterns, and skill recommendations."
 date: 2026-03-14
 last_modified_at: 2026-04-17

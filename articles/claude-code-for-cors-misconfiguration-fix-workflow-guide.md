@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix CORS Misconfigurations with Claude (2026)"
+title: "Fix CORS Misconfigurations with Claude"
 description: "Diagnose and fix CORS errors with Claude Code. Covers origin whitelisting, preflight handling, credentials mode, and header configuration patterns."
 date: 2026-03-20
 last_modified_at: 2026-04-17

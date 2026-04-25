@@ -1,5 +1,5 @@
 ---
-title: ".env File Not Loaded by Claude Fix (2026)"
+title: ".env File Not Loaded by Claude Fix"
 permalink: /claude-code-env-file-not-loaded-fix-2026/
 description: "Fix .env file not loaded by Claude Code. Export variables manually or use dotenv in CLAUDE.md to make environment variables available to Bash commands."
 last_tested: "2026-04-22"

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Redux DevTools Chrome Tutorial (2026)"
-description: "A comprehensive guide to using Redux DevTools in Chrome for debugging Redux applications. Learn time-travel debugging, action inspection, and state."
+description: "Claude Code guide: a comprehensive guide to using Redux DevTools in Chrome for debugging Redux applications. Learn time-travel debugging, action..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

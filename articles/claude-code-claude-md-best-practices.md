@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CLAUDE.md Best Practices for Projects (2026)"
+title: "CLAUDE.md Best Practices for Projects"
 description: "Write effective CLAUDE.md files that Claude Code follows consistently. Scoping, structure, imports, and rules for team projects. Updated for 2026."
 last_tested: "2026-04-22"
 date: 2026-04-15

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Astro Integrations (2026)"
+title: "Claude Code for Astro Integrations"
 description: "Learn how to use Claude Code to build, test, and maintain Astro integrations efficiently. Practical workflow guide with code examples for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -468,6 +468,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
 - [Claude Code Astro Islands Architecture Workflow Deep Dive](/claude-code-astro-islands-architecture-workflow-deep-dive/)
 - [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)

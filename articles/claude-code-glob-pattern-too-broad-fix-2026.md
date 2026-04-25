@@ -1,7 +1,7 @@
 ---
-title: "Claude Code Glob Pattern Too Broad — Fix (2026)"
+title: "Glob Pattern Too Broad — Fix"
 permalink: /claude-code-glob-pattern-too-broad-fix-2026/
-description: "Narrow glob pattern scope to fix the 10000-file match limit error. Add a specific directory prefix or targeted extension filter to stay under the cap."
+description: "Claude Code troubleshooting: narrow glob pattern scope to fix the 10000-file match limit error. Add a specific directory prefix or targeted extension..."
 last_tested: "2026-04-21"
 ---
 

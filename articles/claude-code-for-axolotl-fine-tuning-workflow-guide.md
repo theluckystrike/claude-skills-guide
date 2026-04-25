@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Axolotl Fine-Tuning (2026)"
+title: "Claude Code for Axolotl Fine-Tuning"
 description: "Fine-tune LLMs with Axolotl and Claude Code for dataset prep, training config, and model evaluation. Accelerate your fine-tuning workflow end to end."
 date: 2026-03-15
 last_modified_at: 2026-04-17

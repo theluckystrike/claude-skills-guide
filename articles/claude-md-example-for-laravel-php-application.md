@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude.md Example for Laravel PHP (2026)"
+title: "Claude.md Example for Laravel PHP"
 description: "Configure Claude Code for Laravel with real CLAUDE.md examples. Covers Eloquent patterns, Blade templates, route definitions, and Artisan commands."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome Browser Msi Deployment Sccm (2026)"
-description: "Learn how to deploy Google Chrome via MSI installer using Microsoft SCCM. Practical examples, command-line parameters, and troubleshooting tips for IT."
+title: "Chrome Browser Msi Deployment Sccm"
+description: "Claude Code extension tip: learn how to deploy Google Chrome via MSI installer using Microsoft SCCM. Practical examples, command-line parameters, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike
@@ -205,6 +205,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [Chrome Memory Saver Mode: A Developer's Guide to Reducing Browser Memory Usage](/chrome-memory-saver-mode/)
 - [Lightest Browser for Chromebook: A Developer Guide](/lightest-browser-chromebook/)
 - [AI Citation Generator Chrome: A Developer Guide](/ai-citation-generator-chrome/)

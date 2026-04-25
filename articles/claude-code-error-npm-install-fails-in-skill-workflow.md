@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix: Claude Code npm Install Fails (2026)"
+title: "Fix: Claude Code npm Install Fails"
 last_tested: "2026-04-22"
 description: "Troubleshooting npm install failures when using Claude Code skills. Practical solutions for dependency issues with pdf, xlsx, tdd, frontend-design and."
 date: 2026-03-14
@@ -377,6 +377,10 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 Related Reading
 
+
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code Command Not Found After Install Troubleshooting](/claude-code-command-not-found-after-install-troubleshooting/). Related: install and PATH issues
 - [Claude Code Not Detecting My Virtual Environment Python Fix](/claude-code-not-detecting-my-virtual-environment-python-fix/). Similar environment detection issue (Python)
 - [Building Your First MCP Tool Integration Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/). MCP server setup often involves npm installs

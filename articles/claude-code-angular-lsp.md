@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Angular LSP Integration (2026)"
+title: "Claude Code Angular LSP Integration"
 description: "Configure Angular Language Service with Claude Code for type-checked templates, inline error detection, and accurate refactoring."
 date: 2026-04-17
 last_modified_at: 2026-04-17

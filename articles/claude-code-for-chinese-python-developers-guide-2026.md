@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Python Developers Guide (2026)"
+title: "Claude Code for Python Developers Guide"
 description: "Claude Code guide for Python developers covering setup, essential skills, and real-world workflows for productive AI-assisted Python coding."
 date: 2026-03-14
 last_modified_at: 2026-04-17

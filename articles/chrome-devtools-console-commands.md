@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Devtools Console Commands (2026)"
-description: "Master Chrome DevTools console commands for efficient debugging. Learn essential console methods, shortcuts, and practical techniques used by professional."
+description: "Claude Code extension tip: master Chrome DevTools console commands for efficient debugging. Learn essential console methods, shortcuts, and practical..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

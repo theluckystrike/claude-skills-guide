@@ -71,3 +71,28 @@ Claude Code should output the Neon CLI command to create the branch, update `dri
 - [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)
 - [Using Claude Code with Drizzle ORM Schema Management](/using-claude-code-with-drizzle-orm-schema-management/)
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
+
+
+## Common Questions
+
+### How do I get started with claude code for neon branching?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Claude Code for Neon DB Branching](/claude-code-for-neon-database-branching-workflow-guide/)
+- [Claude Code for Release Branching](/claude-code-for-release-branching-strategy-workflow/)
+- [Claude Code Neon Serverless Postgres](/claude-code-neon-serverless-postgres-workflow-guide/)

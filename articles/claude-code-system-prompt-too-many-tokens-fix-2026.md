@@ -1,7 +1,7 @@
 ---
-title: "System Prompt Exceeds Token Limit — Fix (2026)"
+title: "System Prompt Exceeds Token Limit — Fix"
 permalink: /claude-code-system-prompt-too-many-tokens-fix-2026/
-description: "System Prompt Exceeds Token Limit — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
+description: "Claude Code troubleshooting: system Prompt Exceeds Token Limit — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
 last_tested: "2026-04-22"
 ---
 

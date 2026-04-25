@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Code Outline Navigation (2026)"
+title: "Claude Code for Code Outline Navigation"
 description: "Master code outline navigation in Claude Code to quickly understand codebase structure, jump to definitions, and traverse complex codebases efficiently."
 date: 2026-03-15
 last_modified_at: 2026-04-17

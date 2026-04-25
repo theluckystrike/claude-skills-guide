@@ -1,5 +1,5 @@
 ---
-title: "Claude API Billing Quota Exceeded — Fix (2026)"
+title: "Claude API Billing Quota Exceeded — Fix"
 description: "Fix Claude API billing quota exceeded mid-request. Check usage, increase limits, and add spend alerts. Step-by-step solution."
 permalink: /claude-api-billing-quota-exceeded-mid-request-fix/
 last_tested: "2026-04-21"

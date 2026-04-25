@@ -1,5 +1,5 @@
 ---
-title: "Automate Code Reviews with Claude Code (2026)"
+title: "Automate Code Reviews with Claude Code"
 description: "Set up automated code reviews with Claude Code using API mode, GitHub Actions, slash commands, and custom review checklists."
 permalink: /claude-code-code-review-automation-2026/
 last_tested: "2026-04-22"

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "AI Coding Tools for Accessibility (2026)"
-description: "Discover how AI coding tools can help developers build more accessible web applications, with practical examples and real-world techniques."
+title: "AI Coding Tools for Accessibility"
+description: "Claude Code AI workflow: discover how AI coding tools can help developers build more accessible web applications, with practical examples and..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Polygon zkEVM Workflow (2026)"
+title: "Claude Code for Polygon zkEVM Workflow"
 description: "Master Polygon zkEVM development with Claude Code. Learn to set up your environment, write optimized smart contracts, and deploy Layer 2 solutions."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -406,6 +406,8 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [Understanding Claude Code Hooks System: Complete Guide](/understanding-claude-code-hooks-system-complete-guide/). Claude Code hooks and git hooks work together
 - [Claude Code Git Workflow Best Practices Guide](/claude-code-git-workflow-best-practices-guide/). Pre-commit hooks are a git best practice
 - [Claude Code for Release Automation Workflow Tutorial](/claude-code-for-release-automation-workflow-tutorial/). Hooks are part of the full release automation pipeline

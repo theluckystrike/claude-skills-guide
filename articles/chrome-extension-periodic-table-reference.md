@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Periodic Table (2026)"
-description: "A comprehensive reference guide to Chrome extension APIs and components. Practical patterns, code examples, and best practices for developers building."
+description: "Claude Code extension tip: a comprehensive reference guide to Chrome extension APIs and components. Practical patterns, code examples, and best..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

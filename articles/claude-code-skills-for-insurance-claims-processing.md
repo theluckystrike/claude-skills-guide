@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills for Insurance Claims (2026)"
+title: "Claude Code Skills for Insurance Claims"
 description: "Build Claude Code skills that automate insurance claims processing workflows. Practical patterns for document extraction, validation, fraud detection, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

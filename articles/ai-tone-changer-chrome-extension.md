@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Tone Changer Chrome Extension Guide (2026)"
-description: "Explore how AI tone changer Chrome extensions work, their technical implementation, and how developers can build custom solutions for real-time text."
+title: "AI Tone Changer Chrome Extension Guide"
+description: "Claude Code guide: explore how AI tone changer Chrome extensions work, their technical implementation, and how developers can build custom solutions..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

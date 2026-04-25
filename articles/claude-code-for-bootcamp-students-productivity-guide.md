@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Bootcamp Students (2026)"
+title: "Claude Code for Bootcamp Students"
 description: "Master Claude Code to accelerate your coding bootcamp journey. Learn practical tips, workflows, and strategies to complete projects faster and learn."
 date: 2026-03-14
 last_modified_at: 2026-04-17

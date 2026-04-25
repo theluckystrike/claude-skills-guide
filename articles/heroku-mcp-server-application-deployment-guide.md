@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Heroku MCP Server Application (2026)"
-description: "Heroku MCP Server Application — practical guide with working examples, tested configurations, and tips for developer workflows."
+description: "Claude Code resource: heroku MCP Server Application — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Real-Time Claude Token Monitoring (2026)"
+title: "Real-Time Claude Token Monitoring"
 description: "Build a streaming token monitor that catches cost anomalies in under 60 seconds. Prevent $250+ cache miss incidents with instant detection."
 date: 2026-04-19
 author: "Claude Skills Guide"

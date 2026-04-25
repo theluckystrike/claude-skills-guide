@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Distribute Claude Skills Across (2026)"
+title: "How to Distribute Claude Skills Across"
 description: "Package and distribute Claude skills to engineering teams: npm packages, Git submodules, managed settings, and versioning strategies."
 permalink: /distribute-claude-skills-across-teams-2026/
 date: 2026-04-21

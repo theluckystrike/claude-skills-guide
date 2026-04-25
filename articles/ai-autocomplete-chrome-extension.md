@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Autocomplete Chrome Extension Guide (2026)"
-description: "Explore how AI autocomplete Chrome extensions enhance coding productivity. Learn about implementation approaches, API integration, and practical use."
+title: "AI Autocomplete Chrome Extension Guide"
+description: "Claude Code guide: explore how AI autocomplete Chrome extensions enhance coding productivity. Learn about implementation approaches, API integration,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"

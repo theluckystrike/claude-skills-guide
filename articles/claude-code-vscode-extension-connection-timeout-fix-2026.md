@@ -1,5 +1,5 @@
 ---
-title: "VS Code Extension Connection Timeout (2026)"
+title: "VS Code Extension Connection Timeout"
 permalink: /claude-code-vscode-extension-connection-timeout-fix-2026/
 description: "Fix VS Code extension connection timeout for Claude Code. Restart the extension host and check WebSocket port to restore the editor integration."
 last_tested: "2026-04-22"

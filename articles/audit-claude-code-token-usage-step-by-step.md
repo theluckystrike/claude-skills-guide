@@ -1,5 +1,5 @@
 ---
-title: "How to Audit Your Claude Code Token (2026)"
+title: "How to Audit Your Claude Code Token"
 description: "Audit Claude Code token usage with step-by-step instructions using /cost, ccusage, and session logs to identify waste and cut spending by 30-50%."
 permalink: /audit-claude-code-token-usage-step-by-step/
 date: 2026-04-22

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Lead Generator Chrome Extension (2026)"
-description: "AI Lead Generator Chrome Extension — install, configure, and use this extension for faster workflows. Tested and reviewed for developers."
+title: "AI Lead Generator Chrome Extension"
+description: "Claude Code extension tip: aI Lead Generator Chrome Extension — install, configure, and use this extension for faster workflows. Tested and reviewed..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

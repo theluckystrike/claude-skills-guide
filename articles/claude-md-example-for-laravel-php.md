@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Example for Laravel + PHP (2026)"
+title: "CLAUDE.md Example for Laravel + PHP"
 description: "CLAUDE.md Example for Laravel + PHP — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-md-example-for-laravel-php/
 render_with_liquid: false

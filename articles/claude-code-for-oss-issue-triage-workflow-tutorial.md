@@ -386,6 +386,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code for Claude Issue Triage Workflow Tutorial Guide](/claude-code-for-claude-issue-triage-workflow-tutorial-guide/)
 - [Claude Code for OSS Good First Issue Workflow Guide](/claude-code-for-oss-good-first-issue-workflow-guide/)
 - [Claude Code Open Source Issue Triage Workflow Guide](/claude-code-open-source-issue-triage-workflow-guide/)

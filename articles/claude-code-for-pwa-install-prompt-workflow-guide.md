@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Build PWA Install Prompt with Claude (2026)"
+title: "Build PWA Install Prompt with Claude"
 description: "Implement PWA install prompts with Claude Code. Service worker setup, custom install UI, and beforeinstallprompt event handling with examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -360,6 +360,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [Claude Code for MCP Prompt Server Workflow](/claude-code-for-mcp-prompt-server-workflow/)
 - [Claude Code for Prompt Engineering Techniques: 2026 Workflow Guide](/claude-code-for-prompt-engineering-techniques-2026-workflow-/)
 - [Claude Code for PWA Testing and Auditing Workflow](/claude-code-for-pwa-testing-and-auditing-workflow/)

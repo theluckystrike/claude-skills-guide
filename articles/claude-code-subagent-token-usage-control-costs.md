@@ -154,3 +154,4 @@ Track these metrics over two weeks:
 - [Claude Code Subagent Spawn Limit Reached — Fix (2026)](/claude-code-subagent-spawn-limit-fix-2026/)
 - [Claude Code subagent spawning too many agents — cost control](/claude-code-subagent-spawning-too-many-cost-control/)
 - [Claude Code Permission Modes: How They Affect Token Usage](/claude-code-permission-modes-affect-token-usage/)
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Configure TLS for MCP Servers (2026)"
-description: "Configure TLS 1.3 for MCP servers with certificate setup, cipher suite selection, and mutual TLS authentication. Includes working config examples."
+description: "Claude Code resource: configure TLS 1.3 for MCP servers with certificate setup, cipher suite selection, and mutual TLS authentication. Includes working..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

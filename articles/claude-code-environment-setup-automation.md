@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Automate Claude Code Environment Setup (2026)"
+title: "Automate Claude Code Environment Setup"
 description: "Automate your Claude Code environment setup with skills, hooks, and custom scripts. Save hours on configuration with reproducible dev environments."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -723,6 +723,10 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [Claude Code Project Scaffolding Automation](/claude-code-project-scaffolding-automation/). Scaffolding is the first step in environment setup
 - [Claude Code Not Detecting My Virtual Environment Python Fix](/claude-code-not-detecting-my-virtual-environment-python-fix/). Fix environment detection issues after setup
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/). Document your environment setup in CLAUDE.md

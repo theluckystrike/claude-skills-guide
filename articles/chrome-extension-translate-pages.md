@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Build a Page Translation Chrome (2026)"
-description: "Build a Chrome extension that translates web pages in real time. Covers Google Translate API, DOM text extraction, and inline translation replacement."
+description: "Claude Code extension tip: build a Chrome extension that translates web pages in real time. Covers Google Translate API, DOM text extraction, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

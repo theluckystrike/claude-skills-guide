@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code GitHub Actions Custom (2026)"
+title: "Claude Code GitHub Actions Custom"
 description: "Master custom GitHub Actions workflow automation with Claude Code. Learn advanced patterns for CI/CD pipelines, matrix builds, conditional execution."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Epidemiology SIR/SEIR (2026)"
+title: "Claude Code for Epidemiology SIR/SEIR"
 permalink: /claude-code-epidemiology-sir-seir-2026/
 description: "Claude Code for Epidemiology SIR/SEIR — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"

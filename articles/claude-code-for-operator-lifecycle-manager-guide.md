@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Operator Lifecycle (2026)"
+title: "Claude Code for Operator Lifecycle"
 description: "A comprehensive guide to using Claude Code with Kubernetes Operator Lifecycle Manager (OLM). Learn to create, manage, and deploy operators with."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -618,6 +618,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [AI Bookmark Manager for Chrome: Organizing Your Web Knowledge](/ai-bookmark-manager-chrome/)
 - [AI Prompt Manager Chrome Extension: Organize and Optimize Your AI Workflows](/ai-prompt-manager-chrome-extension/)
 - [Best Cookie Manager Chrome Extensions for Developers in 2026](/best-cookie-manager-chrome/)

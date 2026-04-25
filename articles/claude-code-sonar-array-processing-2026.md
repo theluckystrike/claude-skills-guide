@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Sonar Array Processing (2026)"
+title: "Claude Code for Sonar Array Processing"
 permalink: /claude-code-sonar-array-processing-2026/
 description: "Sonar array processing with Claude Code. Build beamformers, matched filters, and target detection for underwater acoustics."
 last_tested: "2026-04-22"

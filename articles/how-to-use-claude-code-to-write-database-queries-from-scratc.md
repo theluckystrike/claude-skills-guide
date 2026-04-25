@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Write Database Queries with Claude Code (2026)"
+title: "Write Database Queries with Claude Code"
 description: "Generate SQL and NoSQL queries from scratch using Claude Code. Covers SELECT, JOIN, subqueries, and ORM patterns with tested working examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

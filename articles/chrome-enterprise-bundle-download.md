@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Bundle Download (2026)"
+title: "Chrome Enterprise Bundle Download"
 description: "Learn how to download, configure, and manage Chrome Enterprise bundles for streamlined browser deployment in enterprise environments."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -340,6 +340,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [AI Coding Tools Security Concerns Enterprise Guide](/ai-coding-tools-security-concerns-enterprise-guide/)
 - [Augment Code AI Review for Enterprise Teams 2026](/augment-code-ai-review-for-enterprise-teams-2026/)
 - [Chrome ADMX Templates for Windows Server: Enterprise.](/chrome-admx-templates-windows-server/)

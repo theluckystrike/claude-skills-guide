@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Automate Tutorial Writing with Claude (2026)"
+title: "Automate Tutorial Writing with Claude"
 description: "Generate developer tutorials automatically with Claude Code. Covers code example creation, step-by-step structure, screenshot workflows, and publishing."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -374,6 +374,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/). Documentation automation paired with tutorial writing
 - [Claude Skills Automated Blog Post Workflow](/claude-skills-automated-blog-post-workflow-tutorial/). Content creation beyond tutorials
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack

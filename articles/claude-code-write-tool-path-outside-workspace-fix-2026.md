@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Write Path Outside — Fix (2026)"
+title: "Claude Code Write Path Outside — Fix"
 permalink: /claude-code-write-tool-path-outside-workspace-fix-2026/
 description: "Use absolute paths within workspace root to fix outside-workspace write error. Move target files inside the project boundary or use Bash tool."
 last_tested: "2026-04-21"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Node.js Child Process (2026)"
+title: "Claude Code Node.js Child Process"
 description: "Manage Node.js child processes with Claude Code. Spawn, exec, fork patterns plus stream handling and process lifecycle management with examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

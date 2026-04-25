@@ -373,6 +373,8 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [Building Stateful Agents with Claude Skills](/building-stateful-agents-with-claude-skills-guide/). Hooks are core to stateful agent design
 - [Claude Skill .md File Format: Full Specification](/claude-skill-md-format-complete-specification-guide/). Skill file format reference
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top developer skills that work well with hooks

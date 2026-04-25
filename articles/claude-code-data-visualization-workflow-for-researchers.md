@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Data Visualization Workflow (2026)"
+title: "Claude Code Data Visualization Workflow"
 description: "A practical guide to building efficient data visualization workflows using Claude Code, with examples for researchers working with Python, R, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

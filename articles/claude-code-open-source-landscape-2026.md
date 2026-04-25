@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Open Source Landscape (2026)"
+title: "Claude Code Open Source Landscape"
 description: "Overview of the Claude Code open source landscape in 2026 with 14 major repos, contribution trends, and ecosystem growth patterns."
 permalink: /claude-code-open-source-landscape-2026/
 last_tested: "2026-04-22"

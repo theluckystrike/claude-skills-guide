@@ -1,5 +1,5 @@
 ---
-title: "Codespaces WebSocket Disconnect Fix (2026)"
+title: "Codespaces WebSocket Disconnect Fix"
 permalink: /claude-code-codespaces-websocket-disconnect-fix-2026/
 description: "Fix WebSocket disconnect in GitHub Codespaces with Claude Code. Adjust idle timeout settings and use port forwarding to maintain stable connections."
 last_tested: "2026-04-22"

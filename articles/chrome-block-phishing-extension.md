@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Block Phishing Chrome Extension Guide (2026)"
-description: "Learn how Chrome block phishing extension technology works under the hood. This guide covers the Chrome Web Store, extension APIs, phishing detection."
+title: "Block Phishing Chrome Extension Guide"
+description: "Claude Code guide: learn how Chrome block phishing extension technology works under the hood. This guide covers the Chrome Web Store, extension APIs,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -1,7 +1,7 @@
 ---
-title: "API 529 Overloaded Retry Backoff — Fix (2026)"
+title: "API 529 Overloaded Retry Backoff — Fix"
 permalink: /claude-code-api-overloaded-529-backoff-fix-2026/
-description: "Fix API 529 overloaded errors with exponential backoff. Implement retry logic with jitter to handle Anthropic capacity limits."
+description: "Claude Code troubleshooting: fix API 529 overloaded errors with exponential backoff. Implement retry logic with jitter to handle Anthropic capacity limits."
 last_tested: "2026-04-22"
 ---
 

@@ -74,3 +74,24 @@ Claude Code should configure AuthKit middleware for Next.js, create the webhook 
 - [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
+
+
+## Common Questions
+
+### Is my data safe when using AI coding tools?
+
+Review each tool's data handling policy. Claude Code processes code locally by default. For sensitive projects, use API-based access with enterprise data agreements and avoid sharing credentials in prompts.
+
+### How do I audit AI-generated code for security?
+
+Run static analysis tools on all AI-generated code. Review authentication logic, input validation, and data handling manually. Treat AI output like any untrusted code contribution.
+
+### What are the compliance considerations?
+
+Check your organization's policies on AI code generation. Many frameworks (SOC 2, HIPAA) require documentation of AI tool usage. Maintain audit logs of AI-assisted changes.
+
+## Related Resources
+
+- [Claude Code Announcements 2026](/anthropic-claude-code-announcements-2026/)
+- [Fix Stream Idle Timeout in Claude Code](/anthropic-sdk-streaming-hang-timeout/)
+- [How to Audit Your Claude Code Token](/audit-claude-code-token-usage-step-by-step/)

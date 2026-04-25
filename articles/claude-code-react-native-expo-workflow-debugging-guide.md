@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Debug React Native Expo with Claude (2026)"
+title: "Debug React Native Expo with Claude"
 description: "Fix React Native Expo runtime errors, native module crashes, and build failures using Claude Code debugging workflows. Tested solutions included."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -372,6 +372,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Claude Code React Native Performance Optimization Guide](/claude-code-react-native-performance-optimization-guide/)
 - [Claude Code Expo EAS Build Submission Workflow Guide](/claude-code-expo-eas-build-submission-workflow-guide/)
 - [Claude Code React Native Paper Mobile UI Guide](/claude-code-react-native-paper-mobile-ui-guide/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Optimize Claude Skill Prompts (2026)"
+title: "How to Optimize Claude Skill Prompts"
 description: "Write Claude skill bodies that produce consistent, accurate results: role framing, output constraints, edge case handling, and iterative refinement."
 date: 2026-03-13
 last_modified_at: 2026-04-17

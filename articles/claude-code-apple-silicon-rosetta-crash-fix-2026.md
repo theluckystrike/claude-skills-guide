@@ -1,5 +1,5 @@
 ---
-title: "Apple Silicon Rosetta Crash Error — Fix (2026)"
+title: "Apple Silicon Rosetta Crash Error — Fix"
 permalink: /claude-code-apple-silicon-rosetta-crash-fix-2026/
 description: "Fix Claude Code crashing on Apple Silicon Mac. Install arm64-native Node.js instead of x86 version running through Rosetta."
 last_tested: "2026-04-22"

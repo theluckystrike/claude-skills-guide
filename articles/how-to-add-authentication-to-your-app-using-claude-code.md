@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Add Authentication to Your App (2026)"
+title: "How to Add Authentication to Your App"
 description: "Learn how to implement secure authentication in your applications using Claude Code and specialized skills. A practical guide for developers building."
 date: 2026-03-14
 last_modified_at: 2026-04-17

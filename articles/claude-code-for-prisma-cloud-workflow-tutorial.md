@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Prisma Cloud Workflow (2026)"
+title: "Claude Code for Prisma Cloud Workflow"
 description: "Learn how to integrate Claude Code into your Prisma Cloud security workflows. This tutorial covers automating security scans, vulnerability management."
 date: 2026-04-19
 last_modified_at: 2026-04-19

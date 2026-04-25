@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills for Academic Research (2026)"
+title: "Claude Skills for Academic Research"
 description: "Build a Claude Code skill that extracts citations from BibTeX/RIS files, cross-references DOIs, validates statistical claims, and generates literature."
 permalink: /claude-skills-for-academic-research/
 categories: [skills, 2026]

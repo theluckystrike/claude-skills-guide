@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Mobile App Accessibility (2026)"
+title: "Claude Code Mobile App Accessibility"
 description: "A comprehensive guide to implementing accessibility testing workflows for mobile apps using Claude Code. Learn practical techniques for automated."
 date: 2026-03-14
 last_modified_at: 2026-04-17

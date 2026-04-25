@@ -359,6 +359,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code Community Health Metrics Documentation Workflow](/claude-code-community-health-metrics-documentation-workflow/)
 - [Claude Code for First OSS Contribution Workflow Guide](/claude-code-for-first-oss-contribution-workflow-guide/)
 - [Claude Code for OSS Contributor Guide Workflow](/claude-code-for-oss-contributor-guide-workflow/)

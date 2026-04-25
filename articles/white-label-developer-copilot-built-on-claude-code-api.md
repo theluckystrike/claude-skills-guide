@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "White Label Developer Copilot Built (2026)"
+title: "White Label Developer Copilot Built"
 description: "Learn how to build a customizable developer copilot using Claude Code API, with practical examples and implementation guidance."
 date: 2026-03-14
 last_modified_at: 2026-04-17

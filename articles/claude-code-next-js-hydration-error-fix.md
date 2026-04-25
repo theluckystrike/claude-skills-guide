@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Next.js Hydration Errors Using (2026)"
+title: "Fix Next.js Hydration Errors Using"
 description: "Resolve Next.js hydration mismatch errors with Claude Code. Fix server/client rendering differences, dynamic content, and date formatting issues."
 date: 2026-04-15
 last_modified_at: 2026-04-17

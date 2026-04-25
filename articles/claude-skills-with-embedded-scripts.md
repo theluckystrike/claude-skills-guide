@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills with Embedded Scripts (2026)"
+title: "Claude Skills with Embedded Scripts"
 description: "How to bundle executable scripts inside SKILL.md directories with allowed-tools permissions, dynamic context injection, and visual HTML output."
 permalink: /claude-skills-with-embedded-scripts/
 render_with_liquid: false

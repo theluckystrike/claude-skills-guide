@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build a Claude Cost Attribution System (2026)"
+title: "Build a Claude Cost Attribution System"
 description: "A 5-agent fleet had one agent consuming 3x tokens from runaway loops. Attribution found it, saving $300/month with a single fix."
 date: 2026-04-19
 author: "Claude Skills Guide"

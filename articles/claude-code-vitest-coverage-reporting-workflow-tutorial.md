@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Vitest Coverage Reporting (2026)"
+title: "Claude Code Vitest Coverage Reporting"
 description: "Learn how to set up automated Vitest coverage reporting with Claude Code. This tutorial covers configuration, CI integration, and best practices for."
 date: 2026-03-14
 last_modified_at: 2026-04-17

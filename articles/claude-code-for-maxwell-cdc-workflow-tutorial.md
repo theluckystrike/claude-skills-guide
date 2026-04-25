@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Maxwell CDC Streaming (2026)"
+title: "Claude Code for Maxwell CDC Streaming"
 description: "Stream database changes in real-time with Maxwell CDC and Claude Code. Configure binlog capture, Kafka output, and schema migration workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

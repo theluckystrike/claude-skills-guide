@@ -212,3 +212,9 @@ This atlas covers common errors, edge cases, and platform-specific issues. Each 
 - [Fix Claude Code Bun Crash](/claude-code-bun-crash/)
 - [Fix Chrome Extension Linear Issue Tracker — Quick Guide](/chrome-extension-linear-issue-tracker/)
 - [Fix Claude Code Econnrefused MCP — Quick Guide](/claude-code-econnrefused-mcp-fix/)
+
+Related Reading
+
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide

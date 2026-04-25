@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Message Batches API Tutorial with Cost (2026)"
-description: "Message Batches API Tutorial with Cost — practical guide with working examples, tested configurations, and tips for developer workflows."
+title: "Message Batches API Tutorial with Cost"
+description: "Claude Code guide: message Batches API Tutorial with Cost — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /message-batches-api-tutorial-cost-examples/

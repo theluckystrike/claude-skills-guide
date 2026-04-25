@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs ChatGPT for Coding (2026)"
+title: "Claude Code vs ChatGPT for Coding"
 description: "Claude Code vs ChatGPT for Coding — features, pricing, and performance compared side by side to help you pick the right tool."
 permalink: /when-to-use-claude-code-vs-chatgpt-for-coding-tasks/
 date: 2026-04-21

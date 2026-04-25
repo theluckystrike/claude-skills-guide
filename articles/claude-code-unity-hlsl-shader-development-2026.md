@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Unity HLSL Shader (2026)"
+title: "Claude Code for Unity HLSL Shader"
 description: "Claude Code for Unity HLSL Shader — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-unity-hlsl-shader-development-2026/
 last_tested: "2026-04-21"

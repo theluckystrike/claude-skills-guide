@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude API Cost Optimization Strategies (2026)"
+title: "Claude API Cost Optimization Strategies"
 description: "Practical strategies to reduce Claude API costs in production SaaS applications without sacrificing quality. Learn prompt optimization, caching."
 date: 2026-03-14
 last_modified_at: 2026-04-17

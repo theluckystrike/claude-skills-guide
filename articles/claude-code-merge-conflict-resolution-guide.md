@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Merge Conflict Resolution (2026)"
+title: "Claude Code Merge Conflict Resolution"
 description: "A practical guide to resolving git merge conflicts when working with Claude Code. Learn strategies, commands, and workflows for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

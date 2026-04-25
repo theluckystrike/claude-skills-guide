@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Harness CD Pipelines (2026)"
+title: "Claude Code for Harness CD Pipelines"
 description: "Integrate Claude Code with Harness CD for intelligent deployment automation, pipeline generation, and canary release management. Working YAML configs."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -565,6 +565,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [Claude Code Continuous Testing Workflow: Complete Guide for 2026](/claude-code-continuous-testing-workflow/)
 - [Claude Code Docker Networking Workflow Guide](/claude-code-docker-networking-workflow-guide/)
 - [Claude Code for ArgoCD Image Updater Workflow](/claude-code-for-argocd-image-updater-workflow/)

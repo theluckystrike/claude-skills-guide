@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Not Recognizing TypeScript (2026)"
+title: "Claude Code Not Recognizing TypeScript"
 description: "Fix the issue where Claude Code ignores TypeScript path aliases from tsconfig.json. Practical solutions for developers working with path aliases."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -443,6 +443,10 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code Gives Incorrect Imports: How to Fix](/claude-code-gives-incorrect-imports-how-to-fix/). See also
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/). See also
 - [Claude Code Jest to Vitest Migration Workflow Tutorial](/claude-code-jest-to-vitest-migration-workflow-tutorial/). See also

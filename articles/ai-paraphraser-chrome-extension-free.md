@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Paraphraser Free Chrome Extension (2026)"
-description: "Learn how to use and build AI paraphraser Chrome extensions for free. Explore implementation approaches, API integrations, and practical use cases for."
+title: "AI Paraphraser Free Chrome Extension"
+description: "Claude Code extension tip: learn how to use and build AI paraphraser Chrome extensions for free. Explore implementation approaches, API integrations,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

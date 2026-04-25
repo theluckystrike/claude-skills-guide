@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use GitHub Actions Self-Hosted (2026)"
+title: "How to Use GitHub Actions Self-Hosted"
 description: "Learn how to set up and configure Claude Code on GitHub Actions self-hosted runners for automated AI-assisted development workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

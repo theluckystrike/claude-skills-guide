@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code Pull Request Review Skill (2026)"
+title: "Claude Code Pull Request Review Skill"
 description: "Build a Claude Code skill for automated PR reviews. Code quality checks, security scanning, and review comment generation with examples."
 permalink: /claude-code-pull-request-review-skill-2026/
 date: 2026-04-21

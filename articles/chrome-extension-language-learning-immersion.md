@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Language Learning Chrome Extension (2026)"
-description: "Build a language learning immersion Chrome extension that replaces words on web pages with target language translations. Code examples and API patterns."
+title: "Language Learning Chrome Extension"
+description: "Claude Code extension tip: build a language learning immersion Chrome extension that replaces words on web pages with target language translations...."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

@@ -1,5 +1,5 @@
 ---
-title: "Fix: Claude Isn't Working Right Now (2026)"
+title: "Fix: Claude Isn't Working Right Now"
 description: "Fix every Claude not working scenario: API outages, rate limits, account issues, browser problems, and CLI errors. Quick diagnostic checklist."
 permalink: /claude-not-working-right-now-fix/
 last_tested: "2026-04-24"
@@ -485,6 +485,6 @@ Only if you are in a region where Anthropic restricts access. VPNs can sometimes
 - [Claude Rate Exceeded Error Fix](/claude-rate-exceeded-error-fix/)
 - [Claude Internal Server Error Fix](/claude-internal-server-error-fix/)
 - [Claude Code Process Exited Code 1 Fix](/claude-code-process-exited-code-1-fix/)
-
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 
 {% endraw %}

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Referrer Blocking Chrome Extension (2026)"
-description: "Learn how to control and block the HTTP Referrer header in Chrome using extensions. Practical implementation guide for developers and power users."
+title: "Referrer Blocking Chrome Extension"
+description: "Claude Code extension tip: learn how to control and block the HTTP Referrer header in Chrome using extensions. Practical implementation guide for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

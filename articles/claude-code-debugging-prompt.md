@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Debugging Prompts That Work (2026)"
+title: "Claude Code Debugging Prompts That Work"
 description: "Write effective debugging prompts for Claude Code that find root causes fast. Tested prompt templates for errors, performance, and logic bugs."
 date: 2026-04-17
 last_modified_at: 2026-04-17

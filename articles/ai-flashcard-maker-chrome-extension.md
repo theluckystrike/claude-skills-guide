@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Flashcard Maker Chrome Extension (2026)"
-description: "Learn how to create an AI-powered flashcard generator as a Chrome extension. Practical code examples, APIs, and implementation patterns for developers and."
+title: "AI Flashcard Maker Chrome Extension"
+description: "Claude Code extension tip: learn how to create an AI-powered flashcard generator as a Chrome extension. Practical code examples, APIs, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

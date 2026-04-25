@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Reduce Claude Code API Costs by 50% (2026)"
+title: "Reduce Claude Code API Costs by 50%"
 description: "Reduce Claude Code API Costs by 50% — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-15
 permalink: /claude-code-reduce-api-costs-guide/

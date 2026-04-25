@@ -1,7 +1,7 @@
 ---
-title: "HTTP/2 Stream Error During Request — Fix (2026)"
+title: "HTTP/2 Stream Error During Request"
 permalink: /claude-code-http2-stream-error-fix-2026/
-description: "Fix HTTP/2 stream error (NGHTTP2_INTERNAL_ERROR). Force HTTP/1.1 or increase stream limits to resolve multiplexing issues."
+description: "Claude Code troubleshooting: fix HTTP/2 stream error (NGHTTP2_INTERNAL_ERROR). Force HTTP/1.1 or increase stream limits to resolve multiplexing issues."
 last_tested: "2026-04-22"
 ---
 

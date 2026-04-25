@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Modernize Fortran Code with Claude Code (2026)"
+title: "Modernize Fortran Code with Claude Code"
 description: "Modernize legacy Fortran scientific codebases with Claude Code. Refactoring patterns, testing strategies, and Fortran 2018 migration workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

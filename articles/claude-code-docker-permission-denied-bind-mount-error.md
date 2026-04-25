@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Docker Permission Denied (2026)"
+title: "Claude Code Docker Permission Denied"
 description: "Learn how to diagnose and fix Docker permission denied errors when using bind mounts with Claude Code. Practical solutions for development environments."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -472,6 +472,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Claude Code Not Working After Update: How to Fix](/claude-code-not-working-after-update-how-to-fix/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)

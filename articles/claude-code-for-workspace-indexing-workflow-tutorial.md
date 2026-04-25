@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Workspace Indexing (2026)"
+title: "Claude Code for Workspace Indexing"
 description: "Learn how to set up and optimize workspace indexing workflows with Claude Code. Practical examples, automation patterns, and expert tips for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

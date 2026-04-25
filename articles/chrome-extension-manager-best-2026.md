@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Best Chrome Extension Managers (2026)"
-description: "Compare the best Chrome extension managers for developers. Enable, disable, and group extensions with one click. Performance and security features ranked."
+description: "Claude Code picks: compare the best Chrome extension managers for developers. Enable, disable, and group extensions with one click. Performance and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

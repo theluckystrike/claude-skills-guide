@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Slack Features Chrome Extension Guide (2026)"
-description: "Slack Features Chrome Extension Guide — install, configure, and use this extension for faster workflows. Tested and reviewed for developers."
+title: "Slack Features Chrome Extension Guide"
+description: "Claude Code guide: slack Features Chrome Extension Guide — install, configure, and use this extension for faster workflows. Tested and reviewed for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 categories: [tutorials]

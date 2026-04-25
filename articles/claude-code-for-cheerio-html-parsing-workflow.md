@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Cheerio HTML Parsing (2026)"
+title: "Claude Code for Cheerio HTML Parsing"
 description: "Master HTML parsing with Cheerio and Claude Code. Learn practical workflows for extracting data from web pages, handling dynamic content, and building."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Intercom MCP Server (2026)"
-description: "Learn how to build an Intercom MCP server to automate customer data operations, sync user profiles, and streamline support workflows."
+description: "Claude Code resource: learn how to build an Intercom MCP server to automate customer data operations, sync user profiles, and streamline support workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [integrations]

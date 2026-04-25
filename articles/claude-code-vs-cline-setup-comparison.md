@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Cline: Setup and Configuration (2026)"
+title: "Claude Code vs Cline"
 description: "Compare setting up Claude Code CLI vs Cline VS Code extension. Both use Anthropic API but differ in interface and capabilities."
 date: 2026-04-21
 last_tested: "2026-04-21"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Few-Shot Prompting Best (2026)"
+title: "Claude Code for Few-Shot Prompting Best"
 description: "Master few-shot prompting with Claude Code. Learn practical workflows, code examples, and actionable techniques to get better results from AI coding."
 date: 2026-03-20
 last_modified_at: 2026-04-17

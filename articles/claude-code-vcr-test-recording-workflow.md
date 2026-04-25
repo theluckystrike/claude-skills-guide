@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code VCR Test Recording Workflow (2026)"
+title: "Claude Code VCR Test Recording Workflow"
 description: "Implement VCR-style test recording in Claude Code for reproducible AI interactions. Capture, replay, and verify tool calls deterministically."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -230,6 +230,8 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). A curated overview of the highest-impact skills for professional developers, including triage, review, and testing workflows
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). How Claude skills integrate with CI/CD pipelines, infrastructure automation, and deployment processes
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Practical techniques for keeping triage and automation workflows efficient without exceeding token budgets

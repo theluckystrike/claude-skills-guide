@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Seismology Waveform (2026)"
+title: "Claude Code for Seismology Waveform"
 permalink: /claude-code-seismology-waveform-analysis-2026/
 description: "Claude Code for Seismology Waveform — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"

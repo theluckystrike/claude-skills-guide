@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code vLLM Inference Server (2026)"
+title: "Claude Code vLLM Inference Server"
 description: "Learn how to use Claude Code skills to automate vLLM inference server deployment, from local development to production Kubernetes clusters."
 date: 2026-03-14
 last_modified_at: 2026-04-17

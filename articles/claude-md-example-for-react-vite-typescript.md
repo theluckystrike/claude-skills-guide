@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Example for React + Vite + (2026)"
+title: "CLAUDE.md Example for React + Vite +"
 description: "Complete 300-line CLAUDE.md for React 19 with Vite 6. Covers HMR patterns, barrel exports, lazy loading, and Tanstack Query conventions. Tested on Vite 6.1.0."
 permalink: /claude-md-example-for-react-vite-typescript/
 render_with_liquid: false

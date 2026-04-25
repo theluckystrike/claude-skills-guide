@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for TypeScript Template Literal Types (2026)"
+title: "TypeScript Template Literal Types"
 description: "Learn how to use Claude Code CLI to write, debug, and master TypeScript template literal types with practical examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

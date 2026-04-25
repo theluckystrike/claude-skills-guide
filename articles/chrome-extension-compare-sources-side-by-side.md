@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Compare Sources Side by Side (2026)"
-description: "Learn how to build or use Chrome extensions that compare sources side by side for code review, diff checking, and content comparison."
+title: "How to Compare Sources Side by Side"
+description: "Claude Code guide: learn how to build or use Chrome extensions that compare sources side by side for code review, diff checking, and content comparison."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

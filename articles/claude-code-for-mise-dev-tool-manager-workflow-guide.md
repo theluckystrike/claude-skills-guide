@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Mise — Workflow Guide (2026)"
+title: "Claude Code for Mise — Workflow Guide"
 description: "Claude Code for Mise — Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified for 2026."
 date: 2026-04-18
 permalink: /claude-code-for-mise-dev-tool-manager-workflow-guide/
@@ -78,3 +78,24 @@ Claude Code should create `.mise.toml` with `[tools]` section listing `node = "2
 
 - [Pieces for Developers AI Review Workflow Tool](/pieces-for-developers-ai-review-workflow-tool/)
 - [Claude Code for fnm Node Manager — Guide](/claude-code-for-fnm-node-manager-workflow-guide/)
+
+
+## Common Questions
+
+### What AI models work best with this approach?
+
+Claude Opus 4 and Claude Sonnet 4 handle complex reasoning tasks. For simpler operations, Claude Haiku 3.5 offers faster responses at lower cost. Match model capability to task complexity.
+
+### How do I handle AI agent failures gracefully?
+
+Implement retry logic with exponential backoff, set clear timeout boundaries, and design fallback paths for critical operations. Log all failures for pattern analysis.
+
+### Can this workflow scale to production?
+
+Yes. Add rate limiting, request queuing, and monitoring before production deployment. Most AI agent architectures scale horizontally by adding worker instances behind a load balancer.
+
+## Related Resources
+
+- [Claude Code Academic Workflow Guide](/claude-code-academic-workflow-guide-2026/)
+- [Claude Code Debugging Workflow Guide](/claude-code-debugging-workflow-guide-2026/)
+- [Claude Code for Ark UI — Workflow Guide](/claude-code-for-ark-ui-workflow-guide/)

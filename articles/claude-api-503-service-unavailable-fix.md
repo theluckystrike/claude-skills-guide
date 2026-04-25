@@ -1,5 +1,5 @@
 ---
-title: "Claude API 503 Service Unavailable (2026)"
+title: "Claude API 503 Service Unavailable"
 description: "Fix Claude API 503 Service Unavailable errors. Add exponential backoff retry logic and fallback routing. Step-by-step solution."
 permalink: /claude-api-503-service-unavailable-fix/
 last_tested: "2026-04-21"

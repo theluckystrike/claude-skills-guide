@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Lighthouse Audit Runner Chrome (2026)"
-description: "Learn how to build a Chrome extension that runs Lighthouse audits programmatically. Practical code examples, automation patterns, and integration."
+description: "Claude Code extension tip: learn how to build a Chrome extension that runs Lighthouse audits programmatically. Practical code examples, automation..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

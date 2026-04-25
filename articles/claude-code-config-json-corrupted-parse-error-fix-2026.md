@@ -1,5 +1,5 @@
 ---
-title: "Config File JSON Parse Error — Fix (2026)"
+title: "Config File JSON Parse Error — Fix"
 permalink: /claude-code-config-json-corrupted-parse-error-fix-2026/
 description: "Fix 'unexpected token in JSON' config parse error. Reset corrupted Claude Code config file to defaults with one command."
 last_tested: "2026-04-22"

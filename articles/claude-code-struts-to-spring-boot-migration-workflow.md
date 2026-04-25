@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Struts to Spring Boot (2026)"
+title: "Claude Code Struts to Spring Boot"
 description: "A comprehensive guide to migrating legacy Struts applications to Spring Boot using Claude Code skills and automation workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

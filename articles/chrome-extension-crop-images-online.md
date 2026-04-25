@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Crop Images Online Chrome Extension (2026)"
-description: "Learn how to build and use Chrome extensions for cropping images directly in your browser. Technical implementation guide for developers and power users."
+title: "Crop Images Online Chrome Extension"
+description: "Claude Code extension tip: learn how to build and use Chrome extensions for cropping images directly in your browser. Technical implementation guide..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

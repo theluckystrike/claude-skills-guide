@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Remix Error Boundary (2026)"
+title: "Claude Code for Remix Error Boundary"
 description: "Learn how to use Claude Code to build solid error boundary workflows in Remix. Practical examples and actionable advice for handling errors."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -273,6 +273,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Claude Code for Claude Error Handling Patterns Workflow Guide](/claude-code-for-claude-error-handling-patterns-workflow-guid/)
 - [Claude Code for Remix Optimistic UI Workflow](/claude-code-for-remix-optimistic-ui-workflow/)
 - [Remix Error Boundaries and Nested Routes: A Practical Guide](/claude-code-remix-error-boundaries-nested-routes-guide/)

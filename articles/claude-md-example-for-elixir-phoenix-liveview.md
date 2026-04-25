@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Example for Elixir + Phoenix (2026)"
+title: "CLAUDE.md Example for Elixir + Phoenix"
 description: "CLAUDE.md Example for Elixir + Phoenix — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-md-example-for-elixir-phoenix-liveview/
 render_with_liquid: false

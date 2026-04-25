@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fixing Claude Code's 'Unexpected End (2026)"
+title: "Fixing Claude Code's 'Unexpected End"
 description: "Fixing Claude Code's 'Unexpected End — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -468,6 +468,10 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Claude Code Not Working After Update: How to Fix](/claude-code-not-working-after-update-how-to-fix/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)

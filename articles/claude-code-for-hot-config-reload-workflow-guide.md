@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use VSCode Reload: Hot Config (2026)"
+title: "How to Use VSCode Reload: Hot Config"
 description: "Implement hot config reload with Claude Code and VSCode restart workflows. Faster development iterations with live configuration updates."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -186,6 +186,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
 - [Claude Code Hot Reload Development Setup](/claude-code-hot-reload-development-setup/)
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)

@@ -1,5 +1,5 @@
 ---
-title: "Implement Surgical Changes in CLAUDE.md (2026)"
+title: "Implement Surgical Changes in CLAUDE.md"
 description: "Copy-paste CLAUDE.md rules that enforce Karpathy's Surgical Changes principle — diff budgets, file-scope limits, and noticed-issue tracking."
 permalink: /karpathy-surgical-changes-implementation-2026/
 last_tested: "2026-04-22"

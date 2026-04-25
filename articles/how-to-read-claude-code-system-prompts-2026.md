@@ -1,5 +1,5 @@
 ---
-title: "Read Claude Code System Prompts Repo (2026)"
+title: "Read Claude Code System Prompts Repo"
 description: "Navigate the extracted Claude Code system prompts to understand internal behavior, tool definitions, and sub-agent prompts. Practical reading guide."
 permalink: /how-to-read-claude-code-system-prompts-2026/
 last_tested: "2026-04-22"

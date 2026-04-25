@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Openclaw Security Review Is It Safe (2026)"
-description: "A technical security analysis of OpenCLAW for developers and power users. Examine the codebase, sandboxing, and best practices for safe usage."
+title: "Openclaw Security Review Is It Safe"
+description: "Claude Code resource: a technical security analysis of OpenCLAW for developers and power users. Examine the codebase, sandboxing, and best practices..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

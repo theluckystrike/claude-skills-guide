@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Enterprise Claude Cost Chargebacks (2026)"
+title: "Enterprise Claude Cost Chargebacks"
 description: "Implement per-team cost chargebacks for Claude API. Teams that see their own spend optimize 30% faster than those on shared budgets."
 date: 2026-04-19
 author: "Claude Skills Guide"

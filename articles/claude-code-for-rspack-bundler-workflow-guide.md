@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Rspack — Workflow Guide (2026)"
+title: "Claude Code for Rspack — Workflow Guide"
 description: "Claude Code for Rspack — Workflow Guide — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-rspack-bundler-workflow-guide/

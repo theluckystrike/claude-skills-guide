@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Accessibility Regression (2026)"
+title: "Claude Code Accessibility Regression"
 description: "Learn how to set up and run accessibility regression testing with Claude Code. Practical workflows, tools integration, and automation examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

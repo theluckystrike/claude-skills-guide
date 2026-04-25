@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "System Prompt Optimization to Cut (2026)"
+title: "System Prompt Optimization to Cut"
 description: "Compress your Claude system prompt from 2,000 to 500 tokens and save $75 per 10,000 Opus requests — 75% input cost reduction."
 date: 2026-04-19
 author: "Claude Skills Guide"

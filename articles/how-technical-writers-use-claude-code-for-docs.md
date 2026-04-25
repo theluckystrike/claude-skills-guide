@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Technical Writers Use Claude Code (2026)"
+title: "How Technical Writers Use Claude Code"
 description: "Discover how technical writers use Claude Code and its skill system to streamline documentation workflows, automate repetitive tasks, and create."
 date: 2026-03-14
 last_modified_at: 2026-04-17

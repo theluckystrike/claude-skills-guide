@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code API Rate Limit Reached (2026)"
+title: "Fix Claude Code API Rate Limit Reached"
 description: "Handle Claude Code 'api error rate limit reached' with backoff strategies, usage optimization, and multi-key rotation techniques."
 date: 2026-04-17
 last_modified_at: 2026-04-17

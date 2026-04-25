@@ -1,5 +1,5 @@
 ---
-title: "macOS Gatekeeper Blocking Binary — Fix (2026)"
+title: "macOS Gatekeeper Blocking Binary — Fix"
 permalink: /claude-code-macos-gatekeeper-blocking-binary-fix-2026/
 description: "Fix macOS Gatekeeper blocking Claude Code binary execution. Remove quarantine attribute with xattr to allow the downloaded binary to run."
 last_tested: "2026-04-22"

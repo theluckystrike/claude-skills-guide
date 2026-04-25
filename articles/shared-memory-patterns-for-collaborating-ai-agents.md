@@ -477,6 +477,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Claude Code Multi-Agent Orchestration Patterns Guide](/claude-code-multi-agent-orchestration-patterns-guide/)
 - [Grounding AI Agents in Real World Data Explained](/grounding-ai-agents-in-real-world-data-explained/)
 - [How to Coordinate Multiple AI Agents in Pipeline](/how-to-coordinate-multiple-ai-agents-in-pipeline/)

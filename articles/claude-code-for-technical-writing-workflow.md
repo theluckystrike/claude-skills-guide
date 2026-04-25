@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Technical Writing (2026)"
+title: "Claude Code for Technical Writing"
 description: "Master technical writing with Claude Code: build skills for API documentation, code comments, README files, and automated content generation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

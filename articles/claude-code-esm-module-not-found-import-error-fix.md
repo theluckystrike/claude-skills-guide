@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Esm Module Not Found (2026)"
+title: "Fix Claude Code Esm Module Not Found"
 description: "Learn how to resolve ESM module not found and import errors in Claude Code. Practical solutions for CommonJS vs ESM conflicts, package.json."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -533,6 +533,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Claude Code Not Working After Update: How to Fix](/claude-code-not-working-after-update-how-to-fix/)
 - [Claude Code Troubleshooting Hub](/troubleshooting-hub/)

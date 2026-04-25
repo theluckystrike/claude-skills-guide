@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code + Emacs Integration Guide (2026)"
+title: "Claude Code + Emacs Integration Guide"
 description: "Integrate Claude Code with Emacs using shell-mode, vterm, and custom elisp. Includes keybindings, context passing, and workflow automation."
 permalink: /claude-code-emacs-integration-guide-2026/
 date: 2026-04-21

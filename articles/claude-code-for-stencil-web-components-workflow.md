@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Stencil Web Components (2026)"
+title: "Claude Code for Stencil Web Components"
 description: "Learn how to use Claude Code CLI to streamline your Stencil web component development workflow with practical examples and actionable tips."
 date: 2026-03-15
 last_modified_at: 2026-04-17

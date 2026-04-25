@@ -1,5 +1,5 @@
 ---
-title: "Conversation History OOM Crash — Fix (2026)"
+title: "Conversation History OOM Crash — Fix"
 permalink: /claude-code-conversation-history-oom-fix-2026/
 description: "Fix conversation history out-of-memory crash in Claude Code. Clear cached sessions and limit history retention to prevent Node.js heap exhaustion."
 last_tested: "2026-04-22"

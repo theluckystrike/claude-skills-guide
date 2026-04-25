@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Meeting Agenda Template Chrome (2026)"
-description: "Learn how to create and use meeting agenda templates specifically designed for Chrome extension development teams. Includes practical examples and code."
+description: "Claude Code extension tip: learn how to create and use meeting agenda templates specifically designed for Chrome extension development teams. Includes..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

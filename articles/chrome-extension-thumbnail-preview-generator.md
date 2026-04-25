@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Thumbnail Preview (2026)"
-description: "Learn how to build a Chrome extension that generates thumbnail previews for images, links, and media. Practical code examples and implementation patterns."
+title: "Chrome Extension Thumbnail Preview"
+description: "Claude Code extension tip: learn how to build a Chrome extension that generates thumbnail previews for images, links, and media. Practical code..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

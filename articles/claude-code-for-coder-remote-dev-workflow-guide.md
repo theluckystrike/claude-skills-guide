@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Coder — Workflow Guide (2026)"
+title: "Claude Code for Coder — Workflow Guide"
 description: "Claude Code for Coder — Workflow Guide — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-coder-remote-dev-workflow-guide/
@@ -79,3 +79,24 @@ Claude Code should verify the template has Node.js installed, check `coder gitau
 - [Claude Code for Bazel Remote Cache Workflow](/claude-code-for-bazel-remote-cache-workflow/)
 - [SSH Remote Session Drops Fix](/claude-code-ssh-remote-session-drops-fix-2026/)
 - [Claude Code for Encore Dev — Workflow Guide](/claude-code-for-encore-dev-workflow-guide/)
+
+
+## Common Questions
+
+### What AI models work best with this approach?
+
+Claude Opus 4 and Claude Sonnet 4 handle complex reasoning tasks. For simpler operations, Claude Haiku 3.5 offers faster responses at lower cost. Match model capability to task complexity.
+
+### How do I handle AI agent failures gracefully?
+
+Implement retry logic with exponential backoff, set clear timeout boundaries, and design fallback paths for critical operations. Log all failures for pattern analysis.
+
+### Can this workflow scale to production?
+
+Yes. Add rate limiting, request queuing, and monitoring before production deployment. Most AI agent architectures scale horizontally by adding worker instances behind a load balancer.
+
+## Related Resources
+
+- [Claude Code Academic Workflow Guide](/claude-code-academic-workflow-guide-2026/)
+- [Claude Code Debugging Workflow Guide](/claude-code-debugging-workflow-guide-2026/)
+- [Claude Code for Ark UI — Workflow Guide](/claude-code-for-ark-ui-workflow-guide/)

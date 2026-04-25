@@ -1,5 +1,5 @@
 ---
-title: "Claude Code keeps retrying the same (2026)"
+title: "Claude Code keeps retrying the same"
 description: "Stop Claude Code from retrying the same error in a loop that wastes 20K-50K tokens per spiral by adding retry limits and error classification to CLAUDE.md."
 permalink: /claude-code-keeps-retrying-same-error-cost-fix/
 date: 2026-04-22

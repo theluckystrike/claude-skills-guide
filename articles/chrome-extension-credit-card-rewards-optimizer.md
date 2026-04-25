@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Credit Card Rewards (2026)"
-description: "Learn how to build and use Chrome extensions for optimizing credit card rewards. Technical implementation guide with code examples for developers and."
+title: "Chrome Extension Credit Card Rewards"
+description: "Claude Code extension tip: learn how to build and use Chrome extensions for optimizing credit card rewards. Technical implementation guide with code..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

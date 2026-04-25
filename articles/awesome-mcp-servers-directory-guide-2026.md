@@ -1,6 +1,6 @@
 ---
-title: "Awesome MCP Servers: Directory Guide (2026)"
-description: "Browse 200+ MCP servers across 30+ categories in the awesome-mcp-servers repo (85K stars) — the definitive directory at mcpservers.org."
+title: "Awesome MCP Servers: Directory Guide"
+description: "Claude Code guide: browse 200+ MCP servers across 30+ categories in the awesome-mcp-servers repo (85K stars) — the definitive directory at mcpservers.org."
 permalink: /awesome-mcp-servers-directory-guide-2026/
 last_tested: "2026-04-22"
 ---

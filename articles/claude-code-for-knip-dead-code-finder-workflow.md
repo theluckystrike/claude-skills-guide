@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Knip Dead Code Finder (2026)"
+title: "Claude Code for Knip Dead Code Finder"
 description: "Learn how to integrate Knip dead code detection into your Claude Code workflow to identify and remove unused code, exports, and dependencies automatically."
 date: 2026-03-15
 last_modified_at: 2026-04-17

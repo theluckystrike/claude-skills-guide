@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Nacos Service Registry (2026)"
+title: "Claude Code for Nacos Service Registry"
 description: "Learn how to use Claude Code CLI to automate Nacos service registration, discovery, and management workflows. Practical examples and best practices for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

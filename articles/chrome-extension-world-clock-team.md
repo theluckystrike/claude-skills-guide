@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Building a Chrome Extension for Team (2026)"
-description: "A practical guide for developers building Chrome extensions to manage world clocks across distributed teams. Learn architecture patterns, timezone."
+title: "Building a Chrome Extension for Team"
+description: "Claude Code extension tip: a practical guide for developers building Chrome extensions to manage world clocks across distributed teams. Learn..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

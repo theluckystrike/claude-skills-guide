@@ -1,5 +1,5 @@
 ---
-title: "CI/CD Runner Missing Dependencies Fix (2026)"
+title: "CI/CD Runner Missing Dependencies Fix"
 permalink: /claude-code-ci-cd-runner-missing-dependencies-fix-2026/
 description: "Fix CI/CD runner missing dependencies for Claude Code. Add Node.js setup, Claude Code install, and API key to your GitHub Actions or CI pipeline config."
 last_tested: "2026-04-22"

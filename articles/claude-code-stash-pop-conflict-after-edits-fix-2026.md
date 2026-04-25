@@ -1,5 +1,5 @@
 ---
-title: "Stash Pop Conflict After Claude Edits — Fix (2026)"
+title: "Stash Pop Conflict After Claude Edits"
 permalink: /claude-code-stash-pop-conflict-after-edits-fix-2026/
 description: "Fix git stash pop conflict after Claude Code edits. Resolve conflicts manually or drop the stash and re-apply changes to files Claude already modified."
 last_tested: "2026-04-22"

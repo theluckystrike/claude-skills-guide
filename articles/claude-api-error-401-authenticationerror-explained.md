@@ -191,3 +191,22 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Claude TypeScript SDK Installation Guide](/claude-typescript-sdk-installation-guide/) -- TypeScript-specific setup and auth configuration.
 
 
+## Common Questions
+
+### What causes fix: claude api error 401 issues?
+
+Common causes include misconfigured settings, outdated dependencies, and environment conflicts. Check your project configuration and ensure all dependencies are up to date.
+
+### How do I prevent this error from recurring?
+
+Set up automated checks in your development workflow. Use Claude Code's built-in validation tools to catch configuration issues before they reach production.
+
+### Does this fix work on all operating systems?
+
+The core fix applies to macOS, Linux, and Windows. Some path-related adjustments may be needed depending on your OS. Check the platform-specific notes in the guide above.
+
+## Related Resources
+
+- [Fix: Claude API Error 429 Rate Limit](/anthropic-api-error-429-rate-limit/)
+- [Fix: Claude API Error 400](/claude-api-error-400-invalidrequesterror-explained/)
+- [Fix Claude API Error 401](/claude-api-error-401-fix/)

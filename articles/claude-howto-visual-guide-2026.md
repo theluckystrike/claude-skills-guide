@@ -1,5 +1,5 @@
 ---
-title: "Claude Howto: Visual Learning Guide (2026)"
+title: "Claude Howto: Visual Learning Guide"
 description: "Learn Claude Code with claude-howto's Mermaid diagrams, copy-paste templates, and structured 11-13 hour learning path. EPUB export included."
 permalink: /claude-howto-visual-guide-2026/
 last_tested: "2026-04-22"

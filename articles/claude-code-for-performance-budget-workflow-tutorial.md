@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Performance Budget (2026)"
+title: "Claude Code for Performance Budget"
 description: "Learn how to set up automated performance budgets using Claude Code CLI. This tutorial covers creating skills, integrating Lighthouse, and enforcing."
 date: 2026-04-19
 last_modified_at: 2026-04-19

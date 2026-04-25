@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills vs Subagents: When to Use Which (2026)"
+title: "Claude Skills vs Subagents: When to"
 description: "Understand when a SKILL.md solves the problem, when context: fork subagent delegation is needed, and how to combine both for complex workflows."
 permalink: /claude-skills-vs-subagents-when-to-use/
 categories: [skills, 2026]

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Meilisearch Faceted Search (2026)"
+title: "Claude Code Meilisearch Faceted Search"
 description: "Master faceted search implementation with Meilisearch using Claude Code. Learn practical workflows for building dynamic filtering, attribute."
 date: 2026-03-14
 last_modified_at: 2026-04-17

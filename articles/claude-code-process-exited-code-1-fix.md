@@ -1312,4 +1312,9 @@ Post this output in the [Claude Code GitHub Issues](https://github.com/anthropic
 - [Claude internal server error fix](/claude-internal-server-error-fix/) — Fix server-side errors causing exit failures
 - [Claude rate exceeded error fix](/claude-rate-exceeded-error-fix/) — Rate limits can cause process exits
 
+Related Reading
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
+
 {% endraw %}

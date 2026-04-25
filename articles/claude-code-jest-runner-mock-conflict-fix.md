@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Jest Test Runner Mock (2026)"
+title: "Claude Code Jest Test Runner Mock"
 description: "Fix Claude Code Jest test runner mock conflicts. Reset mock state and fix module resolution ordering. Step-by-step solution."
 permalink: /claude-code-jest-runner-mock-conflict-fix/
 last_tested: "2026-04-21"

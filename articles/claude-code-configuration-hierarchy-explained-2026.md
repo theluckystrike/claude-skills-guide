@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Config Hierarchy Explained (2026)"
+title: "Claude Code Config Hierarchy Explained"
 description: "Understand how Claude Code resolves configuration from organization, user, and project levels, with precedence rules and override patterns."
 permalink: /claude-code-configuration-hierarchy-explained-2026/
 last_tested: "2026-04-22"
@@ -224,3 +224,7 @@ Commit it if it contains only project-relevant hooks and non-sensitive MCP confi
 Check files in order: `~/.claude/CLAUDE.md` → `./CLAUDE.md` → `./.claude/settings.json`. The [claude-code-system-prompts](https://github.com/Piebald-AI/claude-code-system-prompts) repo helps you understand what Claude Code sees by default.
 
 For CLAUDE.md writing guides, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). For hook configuration, read the [hooks guide](/claude-code-hooks-explained-complete-guide-2026/). For enterprise setup with organization-level config, see the [enterprise guide](/claude-code-enterprise-setup-guide-2026/).
+
+Related Reading
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Wappalyzer Chrome Extension (2026)"
-description: "A practical guide for developers on using Wappalyzer Chrome extension. Learn how to detect web technologies, analyze competitors, and integrate."
+description: "Claude Code extension tip: a practical guide for developers on using Wappalyzer Chrome extension. Learn how to detect web technologies, analyze..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

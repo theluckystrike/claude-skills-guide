@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Focus Management Audit (2026)"
+title: "Claude Code Focus Management Audit"
 description: "Master focus management and accessibility auditing with Claude Code skills. Learn practical techniques for keyboard navigation, screen reader support."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Mage AI Data Pipelines (2026)"
+title: "Claude Code for Mage AI Data Pipelines"
 description: "Build, debug, and optimize Mage AI data pipelines with Claude Code. Covers block creation, orchestration, testing, and deployment for data engineers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -586,6 +586,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [Claude Code for Embedding Pipeline Workflow](/claude-code-for-embedding-pipeline-workflow/)
 - [Claude Code for Harness CD Pipeline Workflow](/claude-code-for-harness-cd-pipeline-workflow/)
 - [Claude Code for ZenML Pipeline Workflow Guide](/claude-code-for-zenml-pipeline-workflow-guide/)

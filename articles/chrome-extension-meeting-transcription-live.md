@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Meeting Transcription Live Chrome (2026)"
-description: "Learn how to build Chrome extensions for real-time meeting transcription. Technical implementation, APIs, and best practices for developers."
+title: "Meeting Transcription Live Chrome"
+description: "Claude Code extension tip: learn how to build Chrome extensions for real-time meeting transcription. Technical implementation, APIs, and best practices..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

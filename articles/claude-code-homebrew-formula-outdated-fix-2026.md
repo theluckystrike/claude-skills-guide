@@ -1,7 +1,7 @@
 ---
-title: "Homebrew Formula Outdated Error — Fix (2026)"
+title: "Homebrew Formula Outdated Error — Fix"
 permalink: /claude-code-homebrew-formula-outdated-fix-2026/
-description: "Homebrew Formula Outdated Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
+description: "Claude Code troubleshooting: homebrew Formula Outdated Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
 last_tested: "2026-04-22"
 ---
 

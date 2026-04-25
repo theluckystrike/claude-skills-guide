@@ -281,3 +281,4 @@ These templates give Claude concrete numbers to work with, reducing the likeliho
 - [Claude Code Subagent Management](/claude-code-multi-agent-subagent-communication-guide/) -- subagent behavior reference
 - [Claude Code Monorepos: Scoping Context](/claude-code-monorepos-scoping-context-reduce-costs/) -- scoping for large codebases
 - [Cost Optimization Hub](/cost-optimization/) -- all cost optimization techniques
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns

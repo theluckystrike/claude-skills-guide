@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Datadog Log Management (2026)"
+title: "Claude Code Datadog Log Management"
 description: "Learn how to use Claude Code skills for efficient Datadog log management. This tutorial covers practical workflows for searching, filtering."
 date: 2026-03-14
 last_modified_at: 2026-04-17

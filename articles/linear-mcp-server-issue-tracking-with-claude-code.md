@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Linear MCP Server (2026)"
-description: "Linear MCP Server — practical guide with working examples, tested configurations, and tips for developer workflows. Includes working examples, code samples."
+description: "Claude Code resource: linear MCP Server — practical guide with working examples, tested configurations, and tips for developer workflows. Includes..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]
@@ -188,6 +188,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code MCP Server Setup: Complete Guide 2026](/building-your-first-mcp-tool-integration-guide-2026/)
 - [Jira MCP Server Claude Code Integration Guide](/jira-mcp-server-claude-code-integration-guide/)
 - [ClickUp MCP Server Workflow Automation Guide](/clickup-mcp-server-workflow-automation-guide/)

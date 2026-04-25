@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code TypeScript Strict Mode (2026)"
+title: "Claude Code TypeScript Strict Mode"
 description: "A practical guide to setting up and using TypeScript strict mode with Claude Code. Includes configuration examples, workflow patterns, and integration."
 date: 2026-03-14
 last_modified_at: 2026-04-17

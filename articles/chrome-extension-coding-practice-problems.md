@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension Coding Practice (2026)"
-description: "Master Chrome extension development with hands-on practice problems. Build real extensions, debug common issues, and learn Manifest V3 patterns."
+description: "Claude Code extension tip: master Chrome extension development with hands-on practice problems. Build real extensions, debug common issues, and learn..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

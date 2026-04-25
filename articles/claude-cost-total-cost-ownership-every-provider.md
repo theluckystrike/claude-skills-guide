@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Total Cost of Ownership (2026)"
-description: "Total Cost of Ownership — practical guide with working examples, tested configurations, and tips for developer workflows."
+description: "Claude Code cost insight: total Cost of Ownership — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-cost-total-cost-ownership-every-provider/

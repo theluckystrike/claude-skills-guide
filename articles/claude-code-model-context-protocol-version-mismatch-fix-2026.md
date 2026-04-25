@@ -1,7 +1,7 @@
 ---
-title: "MCP Protocol Version Mismatch in Claude — Fix (2026)"
+title: "MCP Protocol Version Mismatch in"
 permalink: /claude-code-model-context-protocol-version-mismatch-fix-2026/
-description: "Update MCP server package to fix protocol version mismatch error. Align client and server SDK versions so the initialization handshake succeeds."
+description: "Claude Code resource: update MCP server package to fix protocol version mismatch error. Align client and server SDK versions so the initialization..."
 last_tested: "2026-04-21"
 ---
 

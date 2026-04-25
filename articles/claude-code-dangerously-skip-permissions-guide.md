@@ -1,6 +1,6 @@
 ---
-title: "Claude Code --dangerously-skip-permissions Guide (2026)"
-description: "What --dangerously-skip-permissions does, when you actually need it, the real security risks, and the safer scoped alternatives you should use instead."
+title: "--dangerously-skip-permissions"
+description: "Claude Code resource: what --dangerously-skip-permissions does, when you actually need it, the real security risks, and the safer scoped alternatives..."
 permalink: /claude-code-dangerously-skip-permissions-guide/
 last_tested: "2026-04-24"
 ---
@@ -84,7 +84,13 @@ jobs:
         run: npm install -g @anthropic-ai/claude-code
       - name: Run review
         env:
-          ANTHROPIC_API_KEY: {% raw %}${{ secrets.ANTHROPIC_API_KEY }}{% endraw %}
+          ANTHROPIC_API_KEY: {% raw %}${{ secrets.ANTHROPIC_API_KEY }}
+
+Related Reading
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
+
+{% endraw %}
         run: |
           claude -p "Review the changes in this PR. Check for bugs, security issues, and style violations. Output a summary." \
             --dangerously-skip-permissions \

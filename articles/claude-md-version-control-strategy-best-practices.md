@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CLAUDE.md Version Control Strategy (2026)"
+title: "CLAUDE.md Version Control Strategy"
 description: "Version control your CLAUDE.md files with branching strategies, commit conventions, and merge workflows. Keep skill configs consistent across teams."
 date: 2026-03-14
 last_modified_at: 2026-04-17

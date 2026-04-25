@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Stuck in Loop Repeating (2026)"
+title: "Claude Code Stuck in Loop Repeating"
 description: "Practical solutions for fixing Claude Code stuck in loop issues. Learn how to break repetitive output patterns and get Claude Code unstuck."
 date: 2026-03-14
 last_modified_at: 2026-04-17

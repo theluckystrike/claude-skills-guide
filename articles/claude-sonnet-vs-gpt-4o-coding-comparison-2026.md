@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Sonnet 4.6 vs GPT-4o for Coding (2026)"
+title: "Claude Sonnet 4.6 vs GPT-4o for Coding"
 description: "Head-to-head comparison of Claude Sonnet 4.6 and GPT-4o for coding tasks — pricing, quality, context, and real workflow differences."
 date: 2026-04-21
 last_tested: "2026-04-21"

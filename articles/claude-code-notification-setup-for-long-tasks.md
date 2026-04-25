@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Notification Setup for Long (2026)"
+title: "Claude Code Notification Setup for Long"
 description: "Learn how to configure notifications in Claude Code to stay informed during long-running operations. Practical examples and code snippets for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

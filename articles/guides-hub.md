@@ -502,6 +502,10 @@ This section lists every article in the guides cluster alphabetically for quick 
 - [Claude shortcuts guide](/claude-shortcuts-complete-guide/) — Complete guide to Claude Code keyboard shortcuts and slash commands
 Related Reading
 
+
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Claude Code for Beginners: Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/). Start here before the guides
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Top-ranked skills across all categories
 - [Vibe Coding with Claude Code: Complete Guide 2026](/vibe-coding-productivity-tips-and-best-practices/). The methodology behind modern Claude Code workflows

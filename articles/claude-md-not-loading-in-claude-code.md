@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Not Loading in Claude Code (2026)"
+title: "CLAUDE.md Not Loading in Claude Code"
 description: "Step-by-step fix when Claude Code does not load your CLAUDE.md file. Covers file placement, naming, exclusions, subdirectory behavior, and --add-dir."
 permalink: /claude-md-not-loading-fix/
 categories: [claude-md, fixes]

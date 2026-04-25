@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Wireframe Builder Chrome Extension (2026)"
-description: "Learn how to build a Chrome extension for wireframing. Practical code examples, architecture patterns, and implementation techniques for developers."
+title: "Wireframe Builder Chrome Extension"
+description: "Claude Code extension tip: learn how to build a Chrome extension for wireframing. Practical code examples, architecture patterns, and implementation..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"

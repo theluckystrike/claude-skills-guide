@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Responsive Design Tester Chrome (2026)"
-description: "Discover the best Chrome extensions for testing responsive web designs. Compare top tools, features, and find the perfect solution for your workflow."
+description: "Claude Code extension tip: discover the best Chrome extensions for testing responsive web designs. Compare top tools, features, and find the perfect..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

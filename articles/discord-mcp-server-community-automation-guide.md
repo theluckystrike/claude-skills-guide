@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Discord MCP Server Community Automation (2026)"
-description: "Learn how to build Discord MCP server automation for community management. Includes practical code examples, Discord bot integration, and workflow."
+title: "Discord MCP Server Community Automation"
+description: "Claude Code resource: learn how to build Discord MCP server automation for community management. Includes practical code examples, Discord bot..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]

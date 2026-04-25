@@ -1,5 +1,5 @@
 ---
-title: "Claude Flow (2026)"
+title: "Claude Flow Multi-Agent Tool"
 description: "Claude Flow orchestrates multiple Claude Code agents as YAML-defined pipelines. Sequential chains, parallel execution, and conditional branching."
 permalink: /claude-flow-tool-guide/
 last_tested: "2026-04-24"
@@ -361,5 +361,9 @@ Check the individual agent log output for the failing step. Run the step's promp
   ]
 }
 </script>
+
+Related Reading
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 
 {% endraw %}

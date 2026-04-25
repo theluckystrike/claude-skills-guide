@@ -1,5 +1,5 @@
 ---
-title: "Claude Code SSH Key Passphrase Blocking (2026)"
+title: "Claude Code SSH Key Passphrase Blocking"
 description: "Fix Claude Code SSH key passphrase prompt blocking automation. Configure ssh-agent or deploy key without passphrase. Step-by-step solution."
 permalink: /claude-code-ssh-key-passphrase-prompt-blocking-fix/
 last_tested: "2026-04-21"

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Wing Cloud Language (2026)"
+title: "Claude Code for Wing Cloud Language"
 description: "Learn how to integrate Claude Code into your Wing cloud language development workflow for faster infrastructure coding, testing, and deployment."
 date: 2026-03-15
 last_modified_at: 2026-04-17

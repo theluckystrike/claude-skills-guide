@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Brave Search MCP Server for Research (2026)"
+title: "Brave Search MCP Server for Research"
 description: "Learn how to integrate Brave Search with Claude Code using MCP servers. Build automated research workflows that query Brave's search API and process."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fingerprint Test Chrome Extension Guide (2026)"
-description: "Learn how to test and analyze your browser fingerprint using Chrome extensions. Covers fingerprinting vectors, testing tools, and code examples for."
+title: "Fingerprint Test Chrome Extension Guide"
+description: "Claude Code guide: learn how to test and analyze your browser fingerprint using Chrome extensions. Covers fingerprinting vectors, testing tools, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 categories: [guides]

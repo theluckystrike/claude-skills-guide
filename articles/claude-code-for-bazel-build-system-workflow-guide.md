@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Bazel Build System: Workflow Guide (2026)"
+title: "Claude Code for Bazel Build System"
 description: "Integrate Claude Code into Bazel build workflows for C++ and multi-language projects. Covers BUILD files, rules, remote caching, and query analysis."
 date: 2026-04-19
 last_modified_at: 2026-04-19

@@ -1,7 +1,7 @@
 ---
-title: "Docker Multi-Stage Build Cache Miss (2026)"
+title: "Docker Multi-Stage Build Cache Miss"
 permalink: /claude-code-docker-multi-stage-cache-invalidation-fix-2026/
-description: "Fix Docker build cache invalidation in multi-stage builds. Order COPY commands correctly and separate dependency install layer."
+description: "Claude Code cost insight: fix Docker build cache invalidation in multi-stage builds. Order COPY commands correctly and separate dependency install layer."
 last_tested: "2026-04-22"
 ---
 

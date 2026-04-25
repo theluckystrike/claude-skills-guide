@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Express Middleware Error (2026)"
+title: "Claude Code Express Middleware Error"
 description: "Master Express middleware error handling patterns with Claude Code. Learn async error handling, centralized error classes, and production-ready patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -286,6 +286,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/). Write tests for your Express error handlers before implementation to catch edge cases systematically.
 - [Claude Code Input Validation and Sanitization Patterns Guide](/claude-code-input-validation-sanitization-patterns-guide/). Pair error handling with solid input validation to prevent the errors before they need handling.
 - [Express to Fastify Migration with Claude Code (2026)](/claude-code-express-to-fastify-migration-tutorial-2026/). When your Express error handling outgrows the framework, migrate to Fastify with Claude Code assistance.

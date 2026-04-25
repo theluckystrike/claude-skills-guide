@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude vs GPT-4o API Cost Breakdown (2026)"
+title: "Claude vs GPT-4o API Cost Breakdown"
 description: "Claude vs GPT-4o API Cost Breakdown — features, pricing, and performance compared side by side to help you pick the right tool."
 date: 2026-04-19
 author: "Claude Skills Guide"

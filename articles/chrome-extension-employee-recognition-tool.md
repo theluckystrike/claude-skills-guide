@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Employee Recognition Tool Chrome (2026)"
-description: "Learn how to build a custom Chrome extension for employee recognition. Practical code examples, architecture patterns, and implementation strategies."
+description: "Claude Code extension tip: learn how to build a custom Chrome extension for employee recognition. Practical code examples, architecture patterns, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

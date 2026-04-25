@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md For Database Conventions (2026)"
+title: "Claude Md For Database Conventions"
 description: "Learn how to use Claude's markdown-based skills to implement consistent database conventions and design patterns across your projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -148,6 +148,8 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
 - [Claude MD for Backend Projects Best Practices](/claude-md-for-backend-projects-best-practices/)
 - [Best Claude Code Skills to Install First (2026)](/best-claude-code-skills-to-install-first-2026/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Managed Bookmarks Group Policy (2026)"
+title: "Chrome Managed Bookmarks Group Policy"
 description: "Configure Chrome managed bookmarks via Group Policy. Standardize browser bookmarks across your organization with step-by-step deployment instructions."
 date: 2026-03-15
 last_modified_at: 2026-04-17

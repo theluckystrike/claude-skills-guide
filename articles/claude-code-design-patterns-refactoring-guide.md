@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Design Patterns Refactoring (2026)"
+title: "Claude Code Design Patterns Refactoring"
 description: "A practical guide to applying design patterns and refactoring techniques in Claude Code skills. Learn patterns that improve skill maintainability."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -209,6 +209,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [How to Make Claude Code Follow DRY and SOLID Principles](/how-to-make-claude-code-follow-dry-solid-principles/). Design patterns implement DRY and SOLID principles
 - [Claude Code Dependency Injection Refactoring](/claude-code-dependency-injection-refactoring/). DI is a key design pattern for refactoring
 - [Claude Code Test Driven Refactoring Guide](/claude-code-test-driven-refactoring-guide/). Safe pattern-based refactoring

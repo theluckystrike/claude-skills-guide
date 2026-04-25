@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code API Backward Compatibility (2026)"
+title: "Claude Code API Backward Compatibility"
 description: "Maintain API backward compatibility with Claude Code for version negotiation, deprecation warnings, and schema evolution. Prevent breaking changes."
 date: 2026-03-14
 last_modified_at: 2026-04-17

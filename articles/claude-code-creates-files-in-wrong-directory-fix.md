@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Creates Files in Wrong (2026)"
+title: "Claude Code Creates Files in Wrong"
 description: "A practical guide to fixing file path issues when Claude Code skills create files in unexpected directories. Includes troubleshooting steps and code."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -390,6 +390,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Skill MD Format Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/). understand skill file structure to prevent path configuration issues
 - [Claude Code Ignores CLAUDE.md Instructions Fix](/how-to-fix-claude-code-ignoring-my-claude-md-file/). ensure your project configuration is read correctly
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). overview of popular skills and their directory assumptions

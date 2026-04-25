@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Hybrid Search Workflow (2026)"
+title: "Claude Code for Hybrid Search Workflow"
 description: "A comprehensive guide to building hybrid search workflows using Claude Code. Learn how to combine semantic and keyword search, integrate vector."
 date: 2026-03-15
 last_modified_at: 2026-04-17

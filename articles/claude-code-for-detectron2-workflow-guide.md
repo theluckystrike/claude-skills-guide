@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Detectron2 Workflow (2026)"
+title: "Claude Code for Detectron2 Workflow"
 description: "A comprehensive guide to using Claude Code for Detectron2 object detection projects. Learn how to set up, train, and deploy Detectron2 models."
 date: 2026-03-15
 last_modified_at: 2026-04-17

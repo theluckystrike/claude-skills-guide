@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for PCI-DSS Code Scanning (2026)"
+title: "Claude Code for PCI-DSS Code Scanning"
 description: "Claude Code for PCI-DSS Code Scanning — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-pci-dss-code-scanning-2026/
 last_tested: "2026-04-21"

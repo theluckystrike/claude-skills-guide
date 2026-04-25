@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills Code Review Workflow (2026)"
+title: "Claude Skills Code Review Workflow"
 description: "Build a SKILL.md that reviews PRs with structured output, severity levels, and subagent isolation using context fork and the Explore agent."
 permalink: /claude-skills-code-review-workflow/
 categories: [skills, 2026]

@@ -1,7 +1,7 @@
 ---
-title: "SSL Certificate Chain Incomplete Error — Fix (2026)"
+title: "SSL Certificate Chain Incomplete Error"
 permalink: /claude-code-ssl-certificate-chain-incomplete-fix-2026/
-description: "SSL Certificate Chain Incomplete Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
+description: "Claude Code troubleshooting: sSL Certificate Chain Incomplete Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions..."
 last_tested: "2026-04-22"
 ---
 

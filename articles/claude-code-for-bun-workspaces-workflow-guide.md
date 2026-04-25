@@ -84,3 +84,28 @@ Claude Code should create `packages/ui/package.json` with proper `"exports"` and
 - [Claude Code For Step Ca Pki — Complete Developer Guide](/claude-code-for-step-ca-pki-workflow-guide/)
 - [How to Use Ripgrep: Search Workflow (2026)](/claude-code-with-ripgrep-and-grep-workflow-tips/)
 - [Claude Code for Bun Runtime — Workflow Guide](/claude-code-for-bun-runtime-workflow-guide/)
+
+
+## Common Questions
+
+### How do I get started with claude code for bun workspaces?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Fix Claude Code Bun Crash](/claude-code-bun-crash/)
+- [Fix Claude Code Bun Errors](/claude-code-bun-error/)
+- [Claude Code Bun Install Setup Guide](/claude-code-bun-install/)

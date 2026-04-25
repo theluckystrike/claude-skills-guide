@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code WebSocket Implementation (2026)"
+title: "Claude Code WebSocket Implementation"
 description: "Implement WebSocket connections with Claude Code for real-time events, server setup, client integration, and reconnection handling. Working code samples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

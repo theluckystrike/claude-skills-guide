@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Headline Writer Chrome Extension (2026)"
-description: "AI Headline Writer Chrome Extension — install, configure, and use this extension for faster workflows. Tested and reviewed for developers."
+title: "AI Headline Writer Chrome Extension"
+description: "Claude Code extension tip: aI Headline Writer Chrome Extension — install, configure, and use this extension for faster workflows. Tested and reviewed..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

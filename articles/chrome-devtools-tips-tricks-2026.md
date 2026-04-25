@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome DevTools Tips and Tricks (2026)"
-description: "Master Chrome DevTools with practical tips and tricks for debugging, performance optimization, and modern web development workflows."
+description: "Claude Code extension tip: master Chrome DevTools with practical tips and tricks for debugging, performance optimization, and modern web development..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

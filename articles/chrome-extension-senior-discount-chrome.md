@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Building a Chrome Extension for Senior (2026)"
-description: "Learn how to build a Chrome extension that helps users discover and apply senior discounts. Includes code examples, API integration patterns, and best."
+title: "Building a Chrome Extension for Senior"
+description: "Claude Code extension tip: learn how to build a Chrome extension that helps users discover and apply senior discounts. Includes code examples, API..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

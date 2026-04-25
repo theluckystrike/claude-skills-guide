@@ -1,5 +1,5 @@
 ---
-title: "Interactive Rebase Unsupported Error — Fix (2026)"
+title: "Interactive Rebase Unsupported Error"
 permalink: /claude-code-interactive-rebase-unsupported-fix-2026/
 description: "Fix interactive rebase unsupported error in Claude Code. Use non-interactive rebase alternatives or git reset --soft to squash commits without -i flag."
 last_tested: "2026-04-22"

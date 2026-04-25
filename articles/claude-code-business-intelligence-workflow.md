@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Business Intelligence (2026)"
+title: "Claude Code Business Intelligence"
 description: "Build powerful business intelligence pipelines with Claude Code. Learn to automate data extraction, analysis, and reporting using Claude skills and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

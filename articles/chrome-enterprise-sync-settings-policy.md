@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Sync Settings Policy (2026)"
+title: "Chrome Enterprise Sync Settings Policy"
 description: "Learn how to configure Chrome browser sync settings via enterprise policies. Practical examples for IT administrators and developers managing Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

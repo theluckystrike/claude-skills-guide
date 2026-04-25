@@ -1,5 +1,5 @@
 ---
-title: "Claude Skill Inheritance and Composition Guide (2026)"
+title: "Claude Skill Inheritance and"
 description: "Extend team-shared base skills with project-specific overrides using scope precedence, layered invocation, and the wrapper skill pattern."
 permalink: /claude-skill-inheritance-composition/
 categories: [skills, 2026]

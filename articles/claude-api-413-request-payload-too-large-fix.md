@@ -1,5 +1,5 @@
 ---
-title: "Claude API 413 Request Payload Too (2026)"
+title: "Claude API 413 Request Payload Too"
 description: "Fix Claude API 413 request entity too large. Chunk oversized payloads and compress base64 images. Step-by-step solution."
 permalink: /claude-api-413-request-payload-too-large-fix/
 last_tested: "2026-04-21"

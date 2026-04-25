@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Connect Claude Code to Remote MCP (2026)"
+title: "Connect Claude Code to Remote MCP"
 description: "Set up remote HTTP and SSE MCP servers in Claude Code with authentication headers, OAuth, and troubleshooting connection issues."
 date: 2026-04-15
 permalink: /claude-code-mcp-remote-http-server-setup/

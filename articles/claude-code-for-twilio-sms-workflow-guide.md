@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Twilio SMS Automation (2026)"
+title: "Claude Code for Twilio SMS Automation"
 description: "Build Twilio SMS automation with Claude Code. Appointment reminders, 2FA, and customer support workflows with production-ready code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -162,3 +162,28 @@ The recommended approach for cost-conscious developers is the allowlist mode, wh
 
 - [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- hooks-based permission control for advanced validation
 - [Claude Code Token Budget: How to Set Limits](/claude-code-token-budget-set-limits-track-spend/) -- budget controls that complement permission settings
+
+
+## Common Questions
+
+### How do I get started with claude code permission modes?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Claude Code Permission Modes Explained](/claude-code-permission-modes/)
+- [Claude Code Docker Permission Denied](/claude-code-docker-permission-denied-bind-mount-error/)
+- [Claude Code EACCES Permission Denied](/claude-code-eacces-permission-denied-npm-global-install-fix/)

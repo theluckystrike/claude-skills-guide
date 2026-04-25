@@ -1,7 +1,7 @@
 ---
-title: "Anthropic Rate Limit Tokens Per Minute — Fix (2026)"
+title: "Anthropic Rate Limit Tokens Per Minute"
 permalink: /claude-code-anthropic-rate-limit-tokens-per-minute-fix-2026/
-description: "Wait 60 seconds then retry to fix input token rate limit error. Reduce request size or upgrade your Anthropic API tier to prevent future hits."
+description: "Claude Code cost insight: wait 60 seconds then retry to fix input token rate limit error. Reduce request size or upgrade your Anthropic API tier to..."
 last_tested: "2026-04-21"
 ---
 

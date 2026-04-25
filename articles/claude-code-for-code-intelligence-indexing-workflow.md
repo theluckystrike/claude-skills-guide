@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Code Intelligence (2026)"
+title: "Claude Code for Code Intelligence"
 description: "Learn how to build intelligent code indexing workflows with Claude Code. This guide covers semantic search, code graph analysis, and automated."
 date: 2026-03-15
 last_modified_at: 2026-04-17

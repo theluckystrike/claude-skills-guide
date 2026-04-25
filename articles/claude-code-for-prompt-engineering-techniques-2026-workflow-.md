@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Prompt Engineering (2026)"
+title: "Claude Code for Prompt Engineering"
 description: "Master prompt engineering with Claude Code using structured workflows, chain-of-thought techniques, and iterative refinement strategies for..."
 date: 2026-03-20
 last_modified_at: 2026-04-17

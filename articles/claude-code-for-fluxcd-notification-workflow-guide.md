@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for FluxCD Notification (2026)"
+title: "Claude Code for FluxCD Notification"
 description: "Learn how to use Claude Code CLI to streamline FluxCD notification workflows, from setting up alerts to integrating with Slack, Discord, and custom."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -487,6 +487,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Claude Code for Courier Notification Workflow Guide](/claude-code-for-courier-notification-workflow-guide/)
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)

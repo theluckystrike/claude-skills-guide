@@ -270,3 +270,4 @@ rm -f /tmp/test-type-error.ts
 - [Structured Error Returns](/structured-error-returns-format-affects-agent-tokens/) -- complementary pattern for error output format
 - [How to Stop Claude Code Retry Loops](/stop-claude-code-retry-loops-token-waste/) -- preventing error-driven loops
 - [Errors Atlas](/errors-atlas/) -- complete error reference
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide

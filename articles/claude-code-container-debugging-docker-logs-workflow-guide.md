@@ -316,6 +316,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Claude Code with Docker: Container Setup Guide](/using-claude-code-inside-docker-container-tutorial/). Set up Claude Code to run inside Docker containers for consistent debugging environments
 - [Claude SuperMemory Skill: Persistent Context Guide](/claude-supermemory-skill-persistent-context-explained/). Preserve debugging findings and hypotheses across multi-session investigations
 - [Monitoring and Logging Claude Code Multi-Agent Systems](/monitoring-and-logging-claude-code-multi-agent-systems/). Extend container logging to multi-agent orchestration scenarios

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md For Enforcing Architecture (2026)"
+title: "Claude Md For Enforcing Architecture"
 description: "Learn how to use Claude Code with custom skills to enforce architectural patterns consistently across your codebase. Practical examples and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -371,6 +371,8 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 - [Claude Code Agent Task Queue Architecture Deep Dive](/claude-code-agent-task-queue-architecture-deep-dive/)
 - [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)

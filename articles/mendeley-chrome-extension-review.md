@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Mendeley Chrome Extension Review (2026)"
-description: "Mendeley Chrome extension tested for web import, PDF annotation, citation management, and Zotero comparison. Honest review for academic researchers."
+description: "Claude Code extension tip: mendeley Chrome extension tested for web import, PDF annotation, citation management, and Zotero comparison. Honest review..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

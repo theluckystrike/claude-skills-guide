@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Docker Multi-Stage Builds (2026)"
+title: "Claude Code Docker Multi-Stage Builds"
 description: "Create efficient Docker multi-stage builds with Claude Code for smaller images, faster builds, and secure production containers. Working Dockerfiles."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -497,6 +497,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Claude Code Dockerfile Generation: Multi-Stage Build Guide](/claude-code-dockerfile-generation-multi-stage-build-guide/)
 - [Chrome Extension Docker Dashboard: Streamlined Container.](/chrome-extension-docker-dashboard/)
 - [Chrome Extension Multi Account Container: A Developer Guide](/chrome-extension-multi-account-container/)

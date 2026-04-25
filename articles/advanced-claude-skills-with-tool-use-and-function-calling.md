@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Advanced Claude Skills with Tool Use (2026)"
+title: "Advanced Claude Skills with Tool Use"
 description: "Design Claude skills with precise tool use: restrict tool access per skill, create custom MCP tools, and build reliable function-calling workflows."
 date: 2026-03-13
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Apache Kafka MCP Server for Event (2026)"
-description: "A practical guide to building event streaming workflows with Apache Kafka and MCP server integration for developers and power users."
+title: "Apache Kafka MCP Server for Event"
+description: "Claude Code resource: a practical guide to building event streaming workflows with Apache Kafka and MCP server integration for developers and power users."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [tutorials]

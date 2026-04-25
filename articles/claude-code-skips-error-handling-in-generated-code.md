@@ -349,6 +349,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Claude Code Output Quality: How to Improve Results](/claude-code-output-quality-how-to-improve-results/). Direct strategies for improving generated code quality
 - [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/). Scoping tasks explicitly leads to more complete outputs
 - [Claude TDD Skill: Test-Driven Development Workflow](/claude-tdd-skill-test-driven-development-workflow/). TDD catches missing error handling before it ships

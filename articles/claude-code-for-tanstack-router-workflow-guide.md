@@ -77,3 +77,28 @@ Claude Code should create `src/routes/users/$id.tsx` using `createFileRoute('/us
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
 - [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/)
 - [Vibe Coding for Web Apps NextJS Vercel Guide](/vibe-coding-for-web-apps-nextjs-vercel-guide/)
+
+
+## Common Questions
+
+### How do I get started with claude code for tanstack router?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Claude Code for TanStack Form](/claude-code-for-tanstack-form-workflow-guide/)
+- [Claude Code for TanStack Start Workflow](/claude-code-for-tanstack-start-workflow-guide/)
+- [Claude Code Next.js App Router](/claude-code-nextjs-app-router-migration-guide/)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for AWS Spot Instance (2026)"
+title: "Claude Code for AWS Spot Instance"
 description: "Cut AWS compute costs up to 90% using spot instances managed by Claude Code. Automate bidding strategies, fallback logic, and interruption handling."
 date: 2026-03-15
 last_modified_at: 2026-04-17

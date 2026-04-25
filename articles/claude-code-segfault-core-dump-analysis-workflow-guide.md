@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Segmentation Fault (2026)"
+title: "Fix Claude Code Segmentation Fault"
 description: "Debug segmentation faults with Claude Code. Configure core dump capture, extract stack traces, and identify root causes with AI-assisted analysis."
 date: 2026-04-19
 last_modified_at: 2026-04-19

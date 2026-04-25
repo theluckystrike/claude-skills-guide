@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Documentation Generation (2026)"
+title: "Claude Code Documentation Generation"
 description: "Learn how to generate code documentation in Spanish using Claude Code skills. Step-by-step guide with practical examples for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

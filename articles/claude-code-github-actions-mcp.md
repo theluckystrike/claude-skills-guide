@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code GitHub Actions MCP Setup (2026)"
+title: "Claude Code GitHub Actions MCP Setup"
 description: "Connect Claude Code to GitHub Actions through MCP for workflow management, run monitoring, and automated CI/CD debugging from your terminal."
 date: 2026-04-17
 last_modified_at: 2026-04-17

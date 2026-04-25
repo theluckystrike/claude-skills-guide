@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "MCP Updates March 2026"
-description: "MCP Updates March 2026 — practical guide with working examples, tested configurations, and tips for developer workflows."
+description: "Claude Code resource: mCP Updates March 2026 — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-13
 last_modified_at: 2026-04-17
 categories: [guides]

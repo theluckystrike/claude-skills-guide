@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Regex Tester (2026)"
-description: "Learn how to use a regex tester Chrome extension for efficient pattern development. Discover practical examples, code snippets, and tips for testing."
+description: "Claude Code extension tip: learn how to use a regex tester Chrome extension for efficient pattern development. Discover practical examples, code..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -220,6 +220,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [AI Flashcard Maker Chrome Extension: Build Your Own Learning Tool](/ai-flashcard-maker-chrome-extension/)
 - [AI Quiz Generator Chrome Extension: Build Your Own Quiz Tool](/ai-quiz-generator-chrome-extension/)
 - [AI Summarizer Chrome Extension: Build Your Own Text Summarization Tool](/ai-summarizer-chrome-extension/)

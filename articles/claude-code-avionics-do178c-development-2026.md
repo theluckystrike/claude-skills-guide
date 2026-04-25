@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Avionics Software (2026)"
+title: "Claude Code for Avionics Software"
 permalink: /claude-code-avionics-do178c-development-2026/
 description: "Avionics software development with Claude Code under DO-178C. Generate traceable requirements, MC/DC tests, and artifacts."
 last_tested: "2026-04-22"

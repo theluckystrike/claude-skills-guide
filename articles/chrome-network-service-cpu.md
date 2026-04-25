@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Network Service Cpu (2026)"
-description: "Troubleshoot Chrome network service CPU spikes. Learn why Chrome uses high CPU for network tasks and fix performance issues with practical solutions."
+description: "Claude Code extension tip: troubleshoot Chrome network service CPU spikes. Learn why Chrome uses high CPU for network tasks and fix performance issues..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

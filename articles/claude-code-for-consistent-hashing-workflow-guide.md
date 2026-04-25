@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Consistent Hashing (2026)"
+title: "Claude Code for Consistent Hashing"
 description: "A practical guide to implementing consistent hashing workflows using Claude Code. Learn how to build scalable distributed systems with code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

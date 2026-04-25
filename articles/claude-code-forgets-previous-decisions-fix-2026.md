@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Forgetting Decisions (2026)"
+title: "Fix Claude Code Forgetting Decisions"
 description: "Stop Claude Code from contradicting earlier choices in long sessions — add decision logging, session anchors, and Task Master integration."
 permalink: /claude-code-forgets-previous-decisions-fix-2026/
 last_tested: "2026-04-22"

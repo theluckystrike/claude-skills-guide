@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix Bash Command Not Found in Skills (2026)"
+title: "Fix Bash Command Not Found in Skills"
 description: "Fix bash command not found errors inside Claude Code skills. Resolve PATH issues, shell configuration, and skill execution failures."
 date: 2026-03-14
 last_modified_at: 2026-04-17

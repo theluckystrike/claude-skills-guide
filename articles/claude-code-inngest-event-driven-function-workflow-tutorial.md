@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Inngest Event Functions (2026)"
+title: "Claude Code for Inngest Event Functions"
 description: "Build event-driven function workflows with Claude Code and Inngest. Covers step functions, retries, cron scheduling, and fan-out patterns with code."
 date: 2026-04-19
 last_modified_at: 2026-04-19

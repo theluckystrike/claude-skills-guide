@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Wormhole Workflow Guide (2026)"
+title: "Claude Code for Wormhole Workflow Guide"
 description: "Learn how to build wormhole-style workflows with Claude Code to instantly transfer context, code patterns, and solutions across projects, teams, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -281,6 +281,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 - [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-code-dotfiles-management-and-skill-sync-workflow/)
 - [Claude Code Workflow Optimization Tips for 2026](/claude-code-workflow-optimization-tips-2026/)

@@ -1,5 +1,5 @@
 ---
-title: "Installing and Managing Claude Code (2026)"
+title: "Installing and Managing Claude Code"
 description: "Install and manage Claude Code skills for cost control with setup instructions, directory structure, and maintenance patterns that save $50-150/month."
 permalink: /installing-managing-claude-code-skills-cost-control/
 date: 2026-04-22

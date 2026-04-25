@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Shell Script Automation (2026)"
+title: "Claude Code Shell Script Automation"
 description: "Automate bash and shell scripting with Claude Code for script generation, debugging, and optimization. Create robust CI/CD and DevOps shell workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19

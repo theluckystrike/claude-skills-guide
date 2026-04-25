@@ -1,5 +1,5 @@
 ---
-title: "Karpathy Simplicity First for Claude (2026)"
+title: "Karpathy Simplicity First for Claude"
 description: "Apply Karpathy's Simplicity First principle to stop Claude Code from overengineering — fewer abstractions, less code, simpler solutions."
 permalink: /karpathy-simplicity-first-principle-claude-code-2026/
 last_tested: "2026-04-22"
@@ -109,3 +109,28 @@ Same functionality, 5 lines instead of 30+, 1 file instead of 4+.
 - [Full Karpathy Skills Guide](/karpathy-claude-code-skills-complete-guide-2026/)
 - [Implement Simplicity First in CLAUDE.md](/karpathy-simplicity-first-implementation-2026/)
 - [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)
+
+
+## Common Questions
+
+### How do I get started with karpathy simplicity first for claude?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Build Your First Claude Code Skill in 5](/building-your-first-claude-skill/)
+- [Claude Code First Project Tutorial](/claude-code-first-project-tutorial-hello-world/)
+- [Claude Code For First Oss](/claude-code-for-first-oss-contribution-workflow-guide/)

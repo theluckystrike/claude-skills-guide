@@ -159,7 +159,7 @@ For the complete CLAUDE.md writing guide, see the [best practices documentation]
 - [Claude Code Prisma Error Handling Patterns (2026)](/claude-code-prisma-transactions-and-error-handling-patterns/)
 - [Fix Claude Opus Prefill Not Supported Error — Quick Guide](/claude-opus-prefill-not-supported-error-fix/)
 - [How to Use Claude Error Handling Patterns (2026)](/claude-code-for-claude-error-handling-patterns-workflow-guid/)
-
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 
 ## Frequently Asked Questions
 

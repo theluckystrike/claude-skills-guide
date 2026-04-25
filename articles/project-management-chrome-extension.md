@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Project Management Chrome Extension (2026)"
-description: "A practical guide to project management Chrome extensions for developers and power users. Learn how to integrate task management directly into your."
+title: "Project Management Chrome Extension"
+description: "Claude Code extension tip: a practical guide to project management Chrome extensions for developers and power users. Learn how to integrate task..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

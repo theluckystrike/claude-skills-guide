@@ -2,7 +2,7 @@
 
 layout: default
 title: "Quizlet Helper Chrome Extension (2026)"
-description: "Build Quizlet helper Chrome extensions for enhanced flashcard study. DOM interaction patterns, API integration, and spaced repetition features."
+description: "Claude Code extension tip: build Quizlet helper Chrome extensions for enhanced flashcard study. DOM interaction patterns, API integration, and spaced..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

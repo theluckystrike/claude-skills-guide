@@ -535,4 +535,8 @@ No. Always use absolute paths. JSON values are literal strings and shell expansi
 }
 </script>
 
+Related Reading
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
+
 {% endraw %}

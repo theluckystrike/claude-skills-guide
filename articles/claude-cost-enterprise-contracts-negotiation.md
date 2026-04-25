@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Enterprise LLM Contracts (2026)"
-description: "Enterprise LLM Contracts — practical guide with working examples, tested configurations, and tips for developer workflows."
+description: "Claude Code AI workflow: enterprise LLM Contracts — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-cost-enterprise-contracts-negotiation/

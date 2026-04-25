@@ -150,3 +150,24 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 ## See Also
 
 - [Claude Code Bash Command Timeout 120s — Fix (2026)](/claude-code-bash-command-timeout-120s-fix-2026/)
+
+
+## Common Questions
+
+### What causes fix: claude code 2m bash timeout issues?
+
+Common causes include misconfigured settings, outdated dependencies, and environment conflicts. Check your project configuration and ensure all dependencies are up to date.
+
+### How do I prevent this error from recurring?
+
+Set up automated checks in your development workflow. Use Claude Code's built-in validation tools to catch configuration issues before they reach production.
+
+### Does this fix work on all operating systems?
+
+The core fix applies to macOS, Linux, and Windows. Some path-related adjustments may be needed depending on your OS. Check the platform-specific notes in the guide above.
+
+## Related Resources
+
+- [Fix Stream Idle Timeout in Claude Code](/anthropic-sdk-streaming-hang-timeout/)
+- [Fix: Claude Code npm Install Fails](/claude-code-error-npm-install-fails-in-skill-workflow/)
+- [Fix: Claude Code Gives Incorrect](/claude-code-gives-incorrect-imports-how-to-fix/)

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "GraphQL Network Inspector Chrome (2026)"
-description: "Learn how to use and build Chrome extensions for inspecting GraphQL network requests. Practical examples, code snippets, and techniques for developers."
+description: "Claude Code extension tip: learn how to use and build Chrome extensions for inspecting GraphQL network requests. Practical examples, code snippets, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Flags for Faster Browsing (2026)"
-description: "Discover the best Chrome flags to speed up your browser in 2026. Learn about experimental features that reduce latency, improve rendering, and optimize."
+description: "Claude Code extension tip: discover the best Chrome flags to speed up your browser in 2026. Learn about experimental features that reduce latency,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

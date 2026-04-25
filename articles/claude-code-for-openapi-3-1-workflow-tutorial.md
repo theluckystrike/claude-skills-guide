@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for OpenAPI 3.1 Workflow (2026)"
+title: "Claude Code for OpenAPI 3.1 Workflow"
 description: "Learn how to use Claude Code to streamline your OpenAPI 3.1 API design, documentation, and implementation workflow with practical examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

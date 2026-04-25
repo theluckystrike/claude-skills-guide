@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Do I Create A Private Claude Skill (2026)"
+title: "How Do I Create A Private Claude Skill"
 description: "Learn how to create and use private Claude Code skills that stay local on your machine without publishing to GitHub. Step-by-step guide with practical e..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

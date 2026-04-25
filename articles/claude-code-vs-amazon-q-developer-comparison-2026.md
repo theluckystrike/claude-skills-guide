@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs Amazon Q Developer: Quick Comparison (2026)"
+title: "Claude Code vs Amazon Q Developer"
 permalink: /claude-code-vs-amazon-q-developer-comparison-2026/
 description: "Amazon Q has the best free tier for AWS developers. Claude Code has the best autonomous agent. Compare features, pricing, and team fit for 2026."
 last_tested: "2026-04-21"

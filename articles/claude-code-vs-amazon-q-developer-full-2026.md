@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Amazon Q Developer: Full Comparison (2026)"
+title: "Claude Code vs Amazon Q Developer"
 description: "Claude Code vs Amazon Q Developer compared: pricing, context, features. 3-persona verdict for solo devs, teams, enterprise."
 permalink: /claude-code-vs-amazon-q-developer-full-2026/
 date: 2026-04-21

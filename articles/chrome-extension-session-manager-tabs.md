@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Build Session Manager Chrome Extension (2026)"
-description: "Build Chrome extensions that manage browser sessions, save and restore tab groups, and automate tab organization for efficient developer workflows."
+title: "Build Session Manager Chrome Extension"
+description: "Claude Code extension tip: build Chrome extensions that manage browser sessions, save and restore tab groups, and automate tab organization for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude API Prompt Caching Performance (2026)"
+title: "Claude API Prompt Caching Performance"
 description: "A comprehensive guide to optimizing Claude API performance through prompt caching strategies, reducing costs and improving response times for."
 date: 2026-03-14
 last_modified_at: 2026-04-17

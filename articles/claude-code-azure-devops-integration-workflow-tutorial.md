@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Azure DevOps Integration (2026)"
+title: "Claude Code Azure DevOps Integration"
 description: "Integrate Claude Code with Azure DevOps for automated builds, release pipelines, and CI/CD workflows. YAML pipeline configs and practical examples."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -491,6 +491,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). Skills for CI/CD pipelines, infrastructure, and automated deployments
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/). The most useful developer skills in the Claude ecosystem
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep your DevOps automation loops cost-efficient

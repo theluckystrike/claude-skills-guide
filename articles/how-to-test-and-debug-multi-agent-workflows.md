@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Test and Debug Multi Agent (2026)"
+title: "How to Test and Debug Multi Agent"
 description: "A practical guide to testing and debugging multi-agent workflows using Claude Code skills and features, with real-world examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -336,6 +336,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Claude Code Crashes When Loading Skill: Debug Guide](/claude-code-crashes-when-loading-skill-debug-steps/)
 - [Claude Code Debug Configuration Workflow](/claude-code-debug-configuration-workflow/)
 - [Claude Code Maximum Call Stack Exceeded: Skill Debug Guide](/claude-code-maximum-call-stack-exceeded-skill-debug/)

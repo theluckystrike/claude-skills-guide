@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AI Agent Skills Standardization in 2026"
-description: "Explore emerging standards for AI agent skills including MCP, skill manifests, and cross-platform compatibility for building portable agent workflows."
+description: "Claude Code AI workflow: explore emerging standards for AI agent skills including MCP, skill manifests, and cross-platform compatibility for building..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]

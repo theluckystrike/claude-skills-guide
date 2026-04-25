@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for README Generation (2026)"
+title: "Claude Code for README Generation"
 description: "Learn how to automate your README generation workflow using Claude Code and custom skills. This comprehensive tutorial covers practical examples, code."
 date: 2026-03-15
 last_modified_at: 2026-04-17

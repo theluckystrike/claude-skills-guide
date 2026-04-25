@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome New Tab Page Enterprise (2026)"
-description: "Learn how to customize Chrome's new tab page in enterprise environments using group policies, extensions, and developer tools."
+description: "Claude Code extension tip: learn how to customize Chrome's new tab page in enterprise environments using group policies, extensions, and developer tools."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

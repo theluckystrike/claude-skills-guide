@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AI Bookmark Manager for Chrome (2026)"
-description: "Organize bookmarks automatically with AI-powered Chrome extensions. Covers smart categorization, content summaries, deduplication, and semantic search."
+description: "Claude Code extension tip: organize bookmarks automatically with AI-powered Chrome extensions. Covers smart categorization, content summaries,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Slack Chrome Extension + (2026)"
+title: "How to Use Slack Chrome Extension +"
 description: "Build a Slack bot with Claude skills integration. Code review, document processing, and memory recall from Slack using Node.js and Claude Code."
 date: 2026-03-13
 last_modified_at: 2026-04-17

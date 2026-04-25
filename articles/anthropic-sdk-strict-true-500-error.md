@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Fix: Anthropic API 500 Error (2026)"
-description: "Fix: Anthropic API 500 Error — step-by-step fix with tested commands, error codes, and verified solutions for developers."
+description: "Claude Code troubleshooting: fix: Anthropic API 500 Error — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 date: 2026-04-14
 last_modified_at: 2026-04-17
 author: "Claude Code Guides"

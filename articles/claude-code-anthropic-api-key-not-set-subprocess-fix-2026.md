@@ -1,5 +1,5 @@
 ---
-title: "ANTHROPIC_API_KEY Not Set in Subprocess (2026)"
+title: "ANTHROPIC_API_KEY Not Set in Subprocess"
 permalink: /claude-code-anthropic-api-key-not-set-subprocess-fix-2026/
 description: "Fix ANTHROPIC_API_KEY not set in subprocess spawned by Claude Code. Export the key in shell profile or pass it explicitly to child process environments."
 last_tested: "2026-04-22"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Auto Meeting Summary Chrome Extension (2026)"
+title: "Auto Meeting Summary Chrome Extension"
 description: "Build a Chrome extension that automatically captures and summarizes meeting transcripts. Complete implementation guide with code examples for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

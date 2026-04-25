@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Cookie Editor Developer Chrome (2026)"
-description: "Master cookie manipulation in Chrome extensions. Practical code examples, API usage patterns, and security best practices for developers building."
+description: "Claude Code extension tip: master cookie manipulation in Chrome extensions. Practical code examples, API usage patterns, and security best practices..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

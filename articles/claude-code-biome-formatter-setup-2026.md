@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Biome Formatter Setup (2026)"
+title: "Claude Code for Biome Formatter Setup"
 permalink: /claude-code-biome-formatter-setup-2026/
 description: "Configure Biome for JavaScript/TypeScript projects with Claude Code. Replace ESLint and Prettier with a single Rust-powered tool running in milliseconds."
 last_tested: "2026-04-22"

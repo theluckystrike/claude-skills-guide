@@ -1,5 +1,5 @@
 ---
-title: "How to Combine Multiple Claude Skills (2026)"
+title: "How to Combine Multiple Claude Skills"
 description: "Chain Claude Code skills in sequence, layer reference skills with task skills, and build multi-step workflows using skill composition patterns."
 permalink: /how-to-combine-multiple-claude-skills/
 categories: [skills, 2026]

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for JMH Java Benchmarks (2026)"
+title: "Claude Code for JMH Java Benchmarks"
 description: "Run JMH Java benchmarks with Claude Code. Project setup, benchmark implementation, result analysis, and continuous performance regression testing."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -543,6 +543,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [Claude Code for API Benchmark Workflow Tutorial Guide](/claude-code-for-api-benchmark-workflow-tutorial-guide/)
 - [Claude Code for Benchmark CI Integration Workflow](/claude-code-for-benchmark-ci-integration-workflow/)
 - [Claude Code for Benchmark Regression Workflow Tutorial](/claude-code-for-benchmark-regression-workflow-tutorial/)

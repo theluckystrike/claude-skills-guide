@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Molecular Dynamics (2026)"
+title: "Claude Code for Molecular Dynamics"
 description: "Claude Code for Molecular Dynamics — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-molecular-dynamics-gromacs-2026/
 last_tested: "2026-04-21"

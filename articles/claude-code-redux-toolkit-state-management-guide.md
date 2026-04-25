@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Redux Toolkit Setup (2026)"
+title: "Claude Code for Redux Toolkit Setup"
 description: "Set up Redux Toolkit state management with Claude Code. Covers slice creation, async thunks, RTK Query, entity adapters, and middleware configuration."
 date: 2026-03-14
 last_modified_at: 2026-04-17

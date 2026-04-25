@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Proton Pass Chrome — Honest Review 2026"
-description: "A practical review of Proton Pass Chrome extension for developers. Examine security architecture, CLI tools, autofill performance, and integration with."
+description: "Claude Code extension tip: a practical review of Proton Pass Chrome extension for developers. Examine security architecture, CLI tools, autofill..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

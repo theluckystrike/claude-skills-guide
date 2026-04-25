@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Spring Boot Microservices (2026)"
+title: "Claude Code Spring Boot Microservices"
 description: "A practical guide to using Claude Code for building Spring Boot microservices. Learn how to use AI-assisted development for faster microservices."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code GitHub Actions Setup Guide (2026)"
+title: "Claude Code GitHub Actions Setup Guide"
 description: "Set up Claude Code GitHub Actions for automated PR creation, code review, and issue implementation with @claude mentions."
 date: 2026-04-15
 permalink: /claude-code-github-actions-setup-guide/

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code Tool Calling and Parallel (2026)"
+title: "Claude Code Tool Calling and Parallel"
 description: "Master Claude Code tool calling: parallel tool use, custom tool definitions, execution strategies, and error handling for complex workflows."
 permalink: /claude-code-tool-calling-parallel-execution-2026/
 date: 2026-04-21

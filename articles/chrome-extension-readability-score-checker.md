@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Readability Score (2026)"
-description: "Learn how to build and use Chrome extensions for checking readability scores. Practical implementation patterns, APIs, and code examples for developers."
+title: "Chrome Extension Readability Score"
+description: "Claude Code extension tip: learn how to build and use Chrome extensions for checking readability scores. Practical implementation patterns, APIs, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

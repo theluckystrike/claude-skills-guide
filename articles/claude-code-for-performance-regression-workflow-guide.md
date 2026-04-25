@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Performance Regression (2026)"
+title: "Claude Code for Performance Regression"
 description: "Learn how to use Claude Code to detect, prevent, and manage performance regressions in your development workflow with practical examples and actionable."
 date: 2026-03-15
 last_modified_at: 2026-04-17

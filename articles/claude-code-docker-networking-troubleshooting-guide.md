@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix Docker Networking with Claude Code (2026)"
+title: "Fix Docker Networking with Claude Code"
 description: "Debug Docker networking issues with Claude Code. Fix DNS resolution, port mapping, and bridge network misconfigurations using systematic workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -196,6 +196,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code Docker Networking Workflow Guide](/claude-code-docker-networking-workflow-guide/)
 - [Chrome Extension Docker Dashboard: Streamlined Container.](/chrome-extension-docker-dashboard/)
 - [Claude Code DevOps Engineer Docker Container Workflow Tips](/claude-code-devops-engineer-docker-container-workflow-tips/)

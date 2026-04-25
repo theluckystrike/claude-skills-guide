@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + WezTerm Terminal Setup (2026)"
+title: "Claude Code + WezTerm Terminal Setup"
 description: "Configure Claude Code with WezTerm terminal for split panes, custom keybindings, and multiplexed AI workflows that boost daily productivity."
 date: 2026-03-15
 last_modified_at: 2026-04-17

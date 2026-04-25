@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Axios HTTP Client Workflow (2026)"
+title: "Claude Code Axios HTTP Client Workflow"
 description: "Claude Code Axios HTTP Client Workflow — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -558,6 +558,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [What Is the Best Claude Skill for REST API Development?](/what-is-the-best-claude-skill-for-rest-api-development/)
 - [Claude Code Tutorials Hub](/tutorials-hub/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)

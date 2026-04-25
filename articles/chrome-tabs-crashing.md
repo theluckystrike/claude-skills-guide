@@ -394,6 +394,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Chrome Extension Session Manager Tabs: A Complete Guide.](/chrome-extension-session-manager-tabs/)
 - [Chrome Lag When Switching Tabs. Causes and Solutions.](/chrome-lag-switching-tabs/)
 - [Chrome New Tab Slow: Causes and Fixes for Developers](/chrome-new-tab-slow/)

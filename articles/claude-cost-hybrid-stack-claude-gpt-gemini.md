@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Hybrid LLM Stack (2026)"
-description: "Hybrid LLM Stack — practical guide with working examples, tested configurations, and tips for developer workflows. Includes working examples, code samples,."
+description: "Claude Code AI workflow: hybrid LLM Stack — practical guide with working examples, tested configurations, and tips for developer workflows. Includes..."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-cost-hybrid-stack-claude-gpt-gemini/

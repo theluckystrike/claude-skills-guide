@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code L10n Testing Automation (2026)"
+title: "Claude Code L10n Testing Automation"
 description: "Build automated localization testing pipelines with Claude Code skills. Learn to integrate tdd, pdf, and supermemory skills for comprehensive l10n."
 date: 2026-04-19
 last_modified_at: 2026-04-19

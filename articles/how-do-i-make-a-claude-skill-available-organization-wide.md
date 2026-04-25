@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Do I Make A Claude Skill Available (2026)"
+title: "How Do I Make A Claude Skill Available"
 description: "A practical guide to sharing Claude Code skills across your team. Learn to distribute, install, and maintain skills organization-wide using git."
 date: 2026-03-14
 last_modified_at: 2026-04-17

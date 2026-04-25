@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Flutter MCP Server Guide (2026)"
+title: "Claude Code Flutter MCP Server Guide"
 description: "Build a custom MCP server for Flutter development with Claude Code to run tests, inspect widgets, and manage device builds from your terminal."
 date: 2026-04-17
 last_modified_at: 2026-04-17

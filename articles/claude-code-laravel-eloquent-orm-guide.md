@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Laravel Eloquent ORM (2026)"
+title: "Claude Code for Laravel Eloquent ORM"
 description: "Master Eloquent ORM with Claude Code handling relationships, query scopes, eager loading, and N+1 detection. Practical patterns for Laravel developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AI Competitive Analysis Chrome (2026)"
-description: "Learn how to build and use AI-powered Chrome extensions for competitive analysis. Includes code examples, architecture patterns, and practical."
+description: "Claude Code extension tip: learn how to build and use AI-powered Chrome extensions for competitive analysis. Includes code examples, architecture..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

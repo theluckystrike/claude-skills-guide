@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Use Tree-of-Thought Prompting in Claude (2026)"
+title: "Use Tree-of-Thought Prompting in Claude"
 description: "Explore multiple solution paths with tree-of-thought prompting in Claude Code. Systematic problem-solving strategies with branching and evaluation."
 date: 2026-03-20
 last_modified_at: 2026-04-17

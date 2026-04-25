@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for RisingWave Streaming (2026)"
+title: "Claude Code for RisingWave Streaming"
 description: "Claude Code for RisingWave Streaming — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-risingwave-streaming-workflow-guide/
@@ -73,3 +73,28 @@ Claude Code should write `CREATE SOURCE` for the Kafka topic with JSON format, `
 - [Claude Code for ClickHouse Workflow Guide](/claude-code-for-clickhouse-workflow-guide/)
 - [Claude Code Database Schema Design Guide](/claude-code-database-schema-design-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
+
+
+## Common Questions
+
+### How do I get started with claude code for risingwave streaming?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Claude Code for Maxwell CDC Streaming](/claude-code-for-maxwell-cdc-workflow-tutorial/)
+- [Claude Code Skill Output Streaming](/claude-code-skill-output-streaming-optimization/)
+- [Claude Code Announcements 2026](/anthropic-claude-code-announcements-2026/)

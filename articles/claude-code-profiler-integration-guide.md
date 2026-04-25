@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Profiler Integration Guide (2026)"
+title: "Claude Code Profiler Integration Guide"
 description: "A practical guide to integrating code profilers with Claude Code. Learn to measure execution time, memory usage, and identify performance bottlenecks."
 date: 2026-03-14
 last_modified_at: 2026-04-17

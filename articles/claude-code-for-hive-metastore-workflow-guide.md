@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Hive Metastore Workflow (2026)"
+title: "Claude Code for Hive Metastore Workflow"
 last_tested: "2026-04-22"
 description: "Master Hive Metastore operations with Claude Code. Learn efficient workflows for schema management, table operations, and metadata automation."
 date: 2026-03-15

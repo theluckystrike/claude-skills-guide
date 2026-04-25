@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Argo Rollouts Canary (2026)"
+title: "Claude Code for Argo Rollouts Canary"
 description: "Learn how to integrate Claude Code with Argo Rollouts for intelligent canary deployments. Practical guide with code examples for DevOps engineers."
 date: 2026-03-20
 last_modified_at: 2026-04-17

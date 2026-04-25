@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Tab Organizer Chrome Extension Guide (2026)"
-description: "Learn how AI-powered tab organizers transform browser workflow for developers. Explore practical implementations, code examples, and power user strategies."
+title: "AI Tab Organizer Chrome Extension Guide"
+description: "Claude Code guide: learn how AI-powered tab organizers transform browser workflow for developers. Explore practical implementations, code examples, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

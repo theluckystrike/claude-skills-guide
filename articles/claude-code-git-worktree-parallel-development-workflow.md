@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Git Worktree Parallel (2026)"
+title: "Claude Code Git Worktree Parallel"
 description: "Master parallel development with Git worktrees and Claude Code. Run multiple branches simultaneously without switching contexts."
 date: 2026-03-14
 last_modified_at: 2026-04-17

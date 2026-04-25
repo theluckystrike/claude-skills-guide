@@ -1,7 +1,7 @@
 ---
-title: "Turbopack Compatibility Error — Fix (2026)"
+title: "Turbopack Compatibility Error — Fix"
 permalink: /claude-code-turbopack-compatibility-error-fix-2026/
-description: "Turbopack Compatibility Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
+description: "Claude Code troubleshooting: turbopack Compatibility Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
 last_tested: "2026-04-22"
 ---
 

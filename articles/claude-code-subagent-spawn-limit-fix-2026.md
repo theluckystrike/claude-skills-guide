@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Subagent Spawn Limit — Fix (2026)"
+title: "Claude Code Subagent Spawn Limit — Fix"
 permalink: /claude-code-subagent-spawn-limit-fix-2026/
 description: "Reduce agent nesting depth to fix maximum spawn limit reached error. Restructure tasks as sequential operations to stay within the 3-level cap."
 last_tested: "2026-04-21"

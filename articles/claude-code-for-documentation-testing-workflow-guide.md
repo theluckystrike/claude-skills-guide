@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Documentation Testing (2026)"
+title: "Claude Code for Documentation Testing"
 description: "Learn how to use Claude Code CLI to automate documentation testing, validate links, check syntax, and ensure quality across your documentation projects."
 date: 2026-03-15
 last_modified_at: 2026-04-17

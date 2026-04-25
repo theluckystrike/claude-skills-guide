@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Using Claude Code To Study Open Source (2026)"
+title: "Using Claude Code To Study Open Source"
 description: "Learn how to use Claude Code and its skill system to efficiently study, explore, and understand open source projects. Practical examples and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Claude Skill for Documentation (2026)"
+title: "Best Claude Skill for Documentation"
 description: "A practical guide to Claude skills for documentation generation, comparing the best options for developers who need to create API docs, README files, an..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

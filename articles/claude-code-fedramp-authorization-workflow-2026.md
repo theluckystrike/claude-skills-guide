@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for FedRAMP Authorization (2026)"
+title: "Claude Code for FedRAMP Authorization"
 permalink: /claude-code-fedramp-authorization-workflow-2026/
 description: "Automate FedRAMP authorization with Claude Code. Generate SSP documentation, OSCAL artifacts, and continuous monitoring evidence from code."
 last_tested: "2026-04-22"

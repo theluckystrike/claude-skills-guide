@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Package Tracker All Carriers Chrome (2026)"
-description: "Learn how to build or use a Chrome extension that tracks packages across all carriers. Practical code examples and architecture for developers."
+title: "Package Tracker All Carriers Chrome"
+description: "Claude Code extension tip: learn how to build or use a Chrome extension that tracks packages across all carriers. Practical code examples and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

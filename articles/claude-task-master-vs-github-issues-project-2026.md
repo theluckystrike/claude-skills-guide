@@ -1,5 +1,5 @@
 ---
-title: "Claude Task Master vs GitHub Issues (2026)"
+title: "Claude Task Master vs GitHub Issues"
 description: "Claude Task Master parses PRDs into tasks with AI. GitHub Issues tracks work with labels and boards. Compare automation vs ecosystem integration."
 permalink: /claude-task-master-vs-github-issues-project-2026/
 last_tested: "2026-04-22"

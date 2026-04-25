@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Over Engineers Simple (2026)"
+title: "Fix Claude Code Over Engineers Simple"
 description: "A practical guide to fixing common Claude Code issues quickly without requiring a full engineering team. Learn quick fixes, CLI optimizations, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -312,6 +312,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Skills Troubleshooting Hub](/troubleshooting-hub/)
 - [Claude Code Output Quality: How to Improve Results](/claude-code-output-quality-how-to-improve-results/)
 - [Claude Code Keeps Making the Same Mistake: Fix Guide](/claude-code-keeps-making-same-mistake-fix-guide/)

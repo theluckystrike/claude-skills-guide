@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Backstage Software (2026)"
+title: "Claude Code for Backstage Software"
 description: "A comprehensive guide to managing Backstage software catalog workflows using Claude Code. Learn how to automate entity registration, documentation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

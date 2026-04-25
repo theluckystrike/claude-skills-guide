@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Data Anonymization (2026)"
+title: "Claude Code for Data Anonymization"
 description: "Learn how to use Claude Code to build automated data anonymization workflows that protect sensitive information while maintaining data utility."
 date: 2026-03-15
 last_modified_at: 2026-04-17

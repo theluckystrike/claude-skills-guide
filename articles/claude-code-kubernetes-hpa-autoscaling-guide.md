@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Kubernetes HPA Autoscaling (2026)"
+title: "Claude Code Kubernetes HPA Autoscaling"
 description: "Configure Kubernetes HPA autoscaling with Claude Code for CPU, memory, and custom metric-based pod scaling. Working YAML configs and test commands."
 date: 2026-03-14
 last_modified_at: 2026-04-17

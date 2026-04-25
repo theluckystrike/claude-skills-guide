@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Deal Finder Chrome Extension (2026)"
-description: "Learn how to build a deal finder Chrome extension from scratch. This guide covers architecture, implementation patterns, and code examples for developers."
+description: "Claude Code extension tip: learn how to build a deal finder Chrome extension from scratch. This guide covers architecture, implementation patterns, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

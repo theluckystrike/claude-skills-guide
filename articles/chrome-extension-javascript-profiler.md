@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "JavaScript Profiler Chrome Extension (2026)"
-description: "Learn how to profile JavaScript performance in Chrome extensions. Practical techniques for identifying bottlenecks, measuring execution time, and."
+title: "JavaScript Profiler Chrome Extension"
+description: "Claude Code extension tip: learn how to profile JavaScript performance in Chrome extensions. Practical techniques for identifying bottlenecks,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills For Restaurant Pos System (2026)"
+title: "Claude Skills For Restaurant Pos System"
 description: "Practical guide to building restaurant POS systems using Claude Code skills: spreadsheet automation, PDF invoicing, document generation, and testing."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Check Email Breaches (2026)"
-description: "Learn how to use Chrome and developer tools to check if your email address has appeared in known data breaches. Practical methods and code examples for."
+description: "Claude Code extension tip: learn how to use Chrome and developer tools to check if your email address has appeared in known data breaches. Practical..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

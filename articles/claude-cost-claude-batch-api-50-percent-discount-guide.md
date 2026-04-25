@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Batch API 50% Discount Complete (2026)"
+title: "Claude Batch API 50% Discount Complete"
 description: "Claude Batch API 50% Discount Complete — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"

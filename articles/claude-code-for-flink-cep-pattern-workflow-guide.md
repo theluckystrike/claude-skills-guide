@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Flink CEP Patterns (2026)"
+title: "Claude Code for Flink CEP Patterns"
 description: "Build Complex Event Processing patterns in Apache Flink with Claude Code. Pattern detection, alerting systems, and streaming data workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -463,6 +463,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Claude Code for Apache Flink Workflow Tutorial](/claude-code-for-apache-flink-workflow-tutorial/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)

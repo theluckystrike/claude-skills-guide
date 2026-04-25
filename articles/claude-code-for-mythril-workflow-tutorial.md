@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Mythril Smart Contract (2026)"
+title: "Claude Code + Mythril Smart Contract"
 description: "Integrate Claude Code with Mythril for automated smart contract security analysis. Step-by-step guide with practical Solidity audit examples."
 date: 2026-04-19
 last_modified_at: 2026-04-19

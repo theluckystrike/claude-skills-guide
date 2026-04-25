@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Accessible Forms with Claude Code (2026)"
+title: "Accessible Forms with Claude Code"
 description: "Build accessible, WCAG-compliant forms with proper validation and error handling using Claude Code and frontend-design skill."
 date: 2026-03-13
 last_modified_at: 2026-04-17

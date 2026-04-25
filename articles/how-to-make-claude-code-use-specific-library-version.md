@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Make Claude Code Use Specific (2026)"
+title: "How to Make Claude Code Use Specific"
 description: "Control which library versions Claude Code uses in your projects. Practical techniques for specifying package versions in requirements.txt."
 date: 2026-03-14
 last_modified_at: 2026-04-17

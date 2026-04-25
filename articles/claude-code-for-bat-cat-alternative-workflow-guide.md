@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Bat (Cat Alternative) (2026)"
+title: "Claude Code for Bat (Cat Alternative)"
 description: "Claude Code for Bat (Cat Alternative) — features, pricing, and performance compared side by side to help you pick the right tool."
 date: 2026-04-18
 permalink: /claude-code-for-bat-cat-alternative-workflow-guide/

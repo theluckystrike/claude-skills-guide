@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Translate Slow (2026)"
-description: "Experiencing Chrome translate slow performance? This guide covers diagnostic steps, extension conflicts, and workarounds to speed up Google Translate in."
+description: "Claude Code extension tip: experiencing Chrome translate slow performance? This guide covers diagnostic steps, extension conflicts, and workarounds to..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

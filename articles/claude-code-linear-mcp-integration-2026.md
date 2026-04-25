@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code + Linear MCP Integration (2026)"
+title: "Claude Code + Linear MCP Integration"
 description: "Connect Claude Code to Linear via MCP for automated issue management, sprint planning, and PR-to-issue linking with working config examples."
 permalink: /claude-code-linear-mcp-integration-2026/
 date: 2026-04-21

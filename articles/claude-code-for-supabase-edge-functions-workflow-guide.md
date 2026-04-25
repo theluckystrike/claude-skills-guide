@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Supabase Edge Functions (2026)"
+title: "Claude Code for Supabase Edge Functions"
 description: "Claude Code for Supabase Edge Functions — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-supabase-edge-functions-workflow-guide/
@@ -80,3 +80,28 @@ Claude Code should create `supabase/functions/stripe-webhook/index.ts` with `Den
 - [Claude Code Supabase Backend Development Workflow Tips](/claude-code-supabase-backend-development-workflow-tips/)
 - [How to Use Supabase Integration: Backend (2026)](/claude-code-with-supabase-backend-integration-guide/)
 - [Claude Code Supabase Auth Row — Complete Developer Guide](/claude-code-supabase-auth-row-level-security-guide/)
+
+
+## Common Questions
+
+### How do I get started with claude code for supabase edge functions?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Claude Code Azure Functions Development](/claude-code-azure-functions-development-workflow/)
+- [Make Claude Code Handle Edge Cases](/claude-code-doesnt-handle-edge-cases-fix-2026/)
+- [Claude Code for Turso SQLite Edge](/claude-code-for-turso-sqlite-edge-database-tutorial/)

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Stop Chrome Tracking Location (2026)"
-description: "A practical technical guide for developers and power users to disable Chrome location tracking, configure geolocation permissions, and understand the."
+description: "Claude Code picks: a practical technical guide for developers and power users to disable Chrome location tracking, configure geolocation permissions,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

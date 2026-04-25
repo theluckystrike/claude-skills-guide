@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Prowler Compliance (2026)"
+title: "Claude Code for Prowler Compliance"
 description: "Learn how to use Claude Code to automate Prowler security compliance workflows. This guide covers practical techniques for integrating Prowler."
 date: 2026-03-15
 last_modified_at: 2026-04-17

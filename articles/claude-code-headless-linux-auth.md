@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude Code Auth Fails on Headless (2026)"
+title: "Fix: Claude Code Auth Fails on Headless"
 description: "Claude Code OAuth token refresh blocked by Cloudflare WAF on headless Linux. Fix the permanent lockout after 1 hour with these workarounds."
 date: 2026-04-15
 last_modified_at: 2026-04-17

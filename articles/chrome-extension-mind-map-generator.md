@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Mind Map Generator Chrome Extension (2026)"
-description: "Learn how chrome extension mind map generators work, their practical applications for developers, and how to build custom solutions for your workflow."
+title: "Mind Map Generator Chrome Extension"
+description: "Claude Code extension tip: learn how chrome extension mind map generators work, their practical applications for developers, and how to build custom..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

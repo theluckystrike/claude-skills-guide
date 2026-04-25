@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Parallel Subagents Guide (2026)"
+title: "Claude Code Parallel Subagents Guide"
 description: "Run parallel subagents in Claude Code to cut workflow time by 5x. Execution patterns, optimization strategies, and real-world examples for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -235,6 +235,8 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-code-agent-pipeline-sequential-vs-parallel/). Understand when to choose parallel versus sequential pipeline execution
 - [Fan-Out Fan-In Pattern with Claude Code Subagents](/fan-out-fan-in-pattern-claude-code-subagents/). Implement the fan-out fan-in pattern for controlled parallel subagent workflows
 - [Claude Code Tmux Session Management Multi Agent Workflow](/claude-code-tmux-session-management-multi-agent-workflow/). Manage parallel subagent sessions visually with tmux terminal multiplexing

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Browser Audit Enterprise (2026)"
-description: "Learn how to perform a comprehensive Chrome browser audit for enterprise environments. Includes practical code examples and automation strategies for."
+description: "Claude Code extension tip: learn how to perform a comprehensive Chrome browser audit for enterprise environments. Includes practical code examples and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Vocabulary Builder Chrome Extension (2026)"
-description: "Learn how to build and integrate AI vocabulary builder chrome extensions for enhanced language learning and terminology management."
+title: "AI Vocabulary Builder Chrome Extension"
+description: "Claude Code extension tip: learn how to build and integrate AI vocabulary builder chrome extensions for enhanced language learning and terminology..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Web Store Slow (2026)"
-description: "Experiencing Chrome Web Store slow loading times? This guide covers common causes, diagnostic techniques, and practical solutions for developers and."
+description: "Claude Code extension tip: experiencing Chrome Web Store slow loading times? This guide covers common causes, diagnostic techniques, and practical..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"

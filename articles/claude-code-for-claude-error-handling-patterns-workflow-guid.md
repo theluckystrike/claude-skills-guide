@@ -563,6 +563,10 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Claude Code Express Middleware Error Handling Patterns Guide](/claude-code-express-middleware-error-handling-patterns-guide/)
 - [Claude Code Prisma Transactions and Error Handling Patterns](/claude-code-prisma-transactions-and-error-handling-patterns/)
 - [Accessible Forms with Claude Code: Error Handling Guide](/claude-code-accessible-forms-validation-error-handling-guide/)

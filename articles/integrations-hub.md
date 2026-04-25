@@ -293,6 +293,10 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [Getting Started Hub](/getting-started-hub/). Foundations: what skills are, the .md format, and writing your first skill
 - [Troubleshooting Hub](/troubleshooting-hub/). Fix every common skill error: permissions, YAML, context overflow, and more
 - [Comparisons Hub](/comparisons-hub/). How Claude Code stacks up against Copilot, Cursor, and other tools

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code with Azure OpenAI Setup (2026)"
+title: "Claude Code with Azure OpenAI Setup"
 description: "Claude Code with Azure OpenAI Setup — practical setup steps, configuration examples, and working code you can use in your projects today."
 date: 2026-04-17
 last_modified_at: 2026-04-17
@@ -125,3 +125,24 @@ Related Reading
 - [Best Way to Use Claude Code for Debugging Sessions](/best-way-to-use-claude-code-for-debugging-sessions/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
+## Common Questions
+
+### What AI models work best with this approach?
+
+Claude Opus 4 and Claude Sonnet 4 handle complex reasoning tasks. For simpler operations, Claude Haiku 3.5 offers faster responses at lower cost. Match model capability to task complexity.
+
+### How do I handle AI agent failures gracefully?
+
+Implement retry logic with exponential backoff, set clear timeout boundaries, and design fallback paths for critical operations. Log all failures for pattern analysis.
+
+### Can this workflow scale to production?
+
+Yes. Add rate limiting, request queuing, and monitoring before production deployment. Most AI agent architectures scale horizontally by adding worker instances behind a load balancer.
+
+## Related Resources
+
+- [Claude Code Azure DevOps MCP Setup](/claude-code-azure-devops-mcp/)
+- [Claude Code Offline Mode Setup](/best-way-to-use-claude-code-offline-without-internet-access/)
+- [Claude Code Auto Mode Setup Guide](/claude-code-auto-mode-setup-guide/)

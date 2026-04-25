@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build Rust Actix Web APIs with Claude (2026)"
+title: "Build Rust Actix Web APIs with Claude"
 description: "Build REST APIs with Actix Web and Rust using Claude Code for code generation, testing, and middleware configuration. Practical examples included."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -561,6 +561,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full developer skill stack
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/). CI/CD integration
 - [Frontend Design Skills for React Development](/best-claude-code-skills-for-frontend-development/). Building UI layers

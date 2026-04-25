@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Setup Paddle Billing with Claude Code (2026)"
+title: "Setup Paddle Billing with Claude Code"
 description: "Integrate Paddle billing into your app using Claude Code with webhook handlers, subscription management, and complete checkout flow configuration."
 date: 2026-03-14
 last_modified_at: 2026-04-17

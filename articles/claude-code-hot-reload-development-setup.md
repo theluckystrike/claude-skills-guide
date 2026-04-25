@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code VSCode Restart Reload (2026)"
+title: "Claude Code VSCode Restart Reload"
 description: "Set up Claude Code hot reload with VSCode restart and reload workflows. Configure live development for faster iteration cycles. Tested and working in 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17

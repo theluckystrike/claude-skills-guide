@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code Prompt Chaining Workflow (2026)"
+title: "Claude Code Prompt Chaining Workflow"
 description: "Chain multiple Claude prompts into automated workflows. Sequential execution, conditional branching, and output piping with shell scripts."
 permalink: /claude-code-prompt-chaining-workflow-2026/
 date: 2026-04-21

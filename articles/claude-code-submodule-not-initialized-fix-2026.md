@@ -1,5 +1,5 @@
 ---
-title: "Git Submodule Not Initialized Error — Fix (2026)"
+title: "Git Submodule Not Initialized Error"
 permalink: /claude-code-submodule-not-initialized-fix-2026/
 description: "Fix git submodule not initialized error in Claude Code. Run git submodule update --init --recursive to clone missing submodule directories."
 last_tested: "2026-04-22"

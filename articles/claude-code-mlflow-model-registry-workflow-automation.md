@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for MLflow Model Registry (2026)"
+title: "Claude Code for MLflow Model Registry"
 description: "Learn how to use Claude Code to automate MLflow Model Registry workflows with practical examples for streamlining your MLOps pipeline. Updated for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17

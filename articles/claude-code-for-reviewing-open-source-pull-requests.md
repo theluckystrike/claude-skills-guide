@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Reviewing Open Source (2026)"
+title: "Claude Code for Reviewing Open Source"
 description: "Learn how to use Claude Code to efficiently review open source pull requests, with practical workflows, code analysis techniques, and actionable advice."
 date: 2026-03-14
 last_modified_at: 2026-04-17

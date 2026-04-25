@@ -1,7 +1,7 @@
 ---
-title: "Certificate Pinning Conflict Error (2026)"
+title: "Certificate Pinning Conflict Error"
 permalink: /claude-code-certificate-pinning-conflict-fix-2026/
-description: "Certificate Pinning Conflict Error — step-by-step fix with tested commands, error codes, and verified solutions for developers."
+description: "Claude Code troubleshooting: certificate Pinning Conflict Error — step-by-step fix with tested commands, error codes, and verified solutions for..."
 last_tested: "2026-04-22"
 ---
 

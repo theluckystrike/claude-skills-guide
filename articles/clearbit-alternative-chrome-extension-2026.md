@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Clearbit Alternative Chrome Extension (2026)"
+title: "Clearbit Alternative Chrome Extension"
 description: "Discover the best Clearbit alternatives for Chrome in 2026. These data enrichment and lead generation extensions offer company insights, email lookup."
 date: 2026-03-15
 last_modified_at: 2026-04-17

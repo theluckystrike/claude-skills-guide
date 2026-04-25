@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Spawn Unknown Error: Node Skill (2026)"
+title: "Fix Claude Code Spawn Unknown Error"
 description: "Fix spawn unknown errors in Claude Code by resolving child_process path issues, Node.js skill configuration, and missing dependencies quickly."
 date: 2026-03-14
 last_modified_at: 2026-04-17

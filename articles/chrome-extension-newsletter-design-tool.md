@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome Extension Newsletter Design Tool (2026)"
-description: "A comprehensive guide to building and designing newsletters using Chrome extensions. Learn about automation tools, template systems, and developer."
+title: "Chrome Extension Newsletter Design Tool"
+description: "Claude Code extension tip: a comprehensive guide to building and designing newsletters using Chrome extensions. Learn about automation tools, template..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

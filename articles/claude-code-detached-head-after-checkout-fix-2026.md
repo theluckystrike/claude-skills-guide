@@ -1,5 +1,5 @@
 ---
-title: "Detached HEAD After Claude Checkout Fix (2026)"
+title: "Detached HEAD After Claude Checkout Fix"
 permalink: /claude-code-detached-head-after-checkout-fix-2026/
 description: "Fix detached HEAD state after Claude Code checkout. Create a branch from the detached commit or switch back to your working branch to save your work."
 last_tested: "2026-04-22"

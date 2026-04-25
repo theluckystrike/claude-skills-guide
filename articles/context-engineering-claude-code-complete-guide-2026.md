@@ -1,5 +1,5 @@
 ---
-title: "Context Engineering for Claude Code (2026)"
+title: "Context Engineering for Claude Code"
 description: "Master context engineering for Claude Code to cut token costs by 60-80% with structured CLAUDE.md files, precision reads, and compaction strategies."
 permalink: /context-engineering-claude-code-complete-guide-2026/
 date: 2026-04-22

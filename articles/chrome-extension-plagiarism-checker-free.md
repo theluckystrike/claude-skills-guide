@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Plagiarism Checker Free Chrome (2026)"
-description: "Discover free Chrome extensions for plagiarism checking tailored for developers and power users. Compare features, integration methods, and best practices."
+description: "Claude Code extension tip: discover free Chrome extensions for plagiarism checking tailored for developers and power users. Compare features,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Computational Chemistry (2026)"
+title: "Claude Code for Computational Chemistry"
 description: "Claude Code for Computational Chemistry — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-computational-chemistry-orca-2026/
 last_tested: "2026-04-21"

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Browser Reporting API (2026)"
-description: "Learn how to implement the Chrome Browser Reporting API to capture frontend errors, security violations, and network failures in production. Code."
+description: "Claude Code extension tip: learn how to implement the Chrome Browser Reporting API to capture frontend errors, security violations, and network..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

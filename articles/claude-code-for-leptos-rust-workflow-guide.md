@@ -89,3 +89,28 @@ Claude Code should create a `#[component]` with signal-based state, `#[server]` 
 - [Claude Code for Tonic gRPC Rust Services (2026)](/claude-code-for-tonic-grpc-rust-workflow-guide/)
 
 {% endraw %}
+
+
+## Common Questions
+
+### How do I get started with claude code for leptos rust?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Claude Code Axum Rust Web Framework](/claude-code-axum-rust-web-framework-guide/)
+- [Claude Code for Cargo Make Rust Builds](/claude-code-for-cargo-make-build-workflow-guide/)
+- [Claude Code for Criterion Rust](/claude-code-for-criterion-benchmarking-workflow-guide/)

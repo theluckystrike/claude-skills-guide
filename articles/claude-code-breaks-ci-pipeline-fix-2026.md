@@ -1,5 +1,5 @@
 ---
-title: "Stop Claude Code Breaking CI Pipelines (2026)"
+title: "Stop Claude Code Breaking CI Pipelines"
 description: "Prevent Claude Code from breaking CI by adding pre-commit checks, test requirements, and pipeline-aware rules to your CLAUDE.md."
 permalink: /claude-code-breaks-ci-pipeline-fix-2026/
 last_tested: "2026-04-22"

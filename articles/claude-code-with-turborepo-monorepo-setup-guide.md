@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code with Turborepo Monorepo (2026)"
+title: "Claude Code with Turborepo Monorepo"
 description: "Learn how to integrate Claude Code with Turborepo monorepo projects for efficient development workflows and AI-assisted coding."
 date: 2026-03-14
 last_modified_at: 2026-04-17

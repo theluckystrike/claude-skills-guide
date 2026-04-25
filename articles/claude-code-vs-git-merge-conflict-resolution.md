@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Git Merge Conflict (2026)"
+title: "Claude Code vs Git Merge Conflict"
 description: "Comparing Claude Code's AI conflict resolution with traditional git merge tools — when AI understanding beats mechanical three-way merge."
 date: 2026-04-21
 last_tested: "2026-04-21"

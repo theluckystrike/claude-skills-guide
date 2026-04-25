@@ -1,5 +1,5 @@
 ---
-title: "Implement Simplicity First in CLAUDE.md (2026)"
+title: "Implement Simplicity First in CLAUDE.md"
 description: "Copy-paste CLAUDE.md rules that enforce Karpathy's Simplicity First principle — with complexity budgets, abstraction gates, and file limits."
 permalink: /karpathy-simplicity-first-implementation-2026/
 last_tested: "2026-04-22"

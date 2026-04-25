@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Pytest Fixtures Parametrize (2026)"
+title: "Claude Code Pytest Fixtures Parametrize"
 description: "Master pytest fixtures and parametrize decorators. Practical patterns for test parametrization, fixture composition, and efficient pytest workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

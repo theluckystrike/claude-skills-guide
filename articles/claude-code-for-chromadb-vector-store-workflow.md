@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for ChromaDB Vector Store (2026)"
+title: "Claude Code for ChromaDB Vector Store"
 description: "Learn how to build efficient vector store workflows using ChromaDB with Claude Code. Practical examples for semantic search, embeddings, and AI-powered."
 date: 2026-03-15
 last_modified_at: 2026-04-17

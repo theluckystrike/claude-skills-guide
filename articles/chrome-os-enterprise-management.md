@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Os Enterprise Management (2026)"
-description: "Learn how to manage Chrome OS devices in enterprise environments using Google Admin Console, Chrome Enterprise policies, and APIs. Includes code."
+description: "Claude Code extension tip: learn how to manage Chrome OS devices in enterprise environments using Google Admin Console, Chrome Enterprise policies, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

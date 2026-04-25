@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for GitLab CI Workflow (2026)"
+title: "Claude Code for GitLab CI Workflow"
 description: "Master GitLab CI workflow optimization with Claude Code. Learn practical strategies to speed up pipelines, reduce costs, and improve deployment."
 date: 2026-03-15
 last_modified_at: 2026-04-17

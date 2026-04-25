@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Timezone Converter Chrome Extension (2026)"
-description: "Build a timezone converter Chrome extension for remote teams. Convert meeting times, display multiple clocks, and integrate with Google Calendar."
+title: "Timezone Converter Chrome Extension"
+description: "Claude Code extension tip: build a timezone converter Chrome extension for remote teams. Convert meeting times, display multiple clocks, and integrate..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

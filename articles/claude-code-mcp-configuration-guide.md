@@ -535,4 +535,8 @@ Claude Code will see both tools and may use either one. To avoid confusion, ensu
 }
 </script>
 
+Related Reading
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
+
 {% endraw %}

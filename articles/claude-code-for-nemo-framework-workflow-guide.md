@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for NVIDIA NeMo Framework (2026)"
+title: "Claude Code for NVIDIA NeMo Framework"
 description: "Build and deploy generative AI models with NVIDIA NeMo and Claude Code. Training configs, model optimization, and inference deployment workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

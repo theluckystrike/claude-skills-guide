@@ -1,7 +1,7 @@
 ---
-title: "SOCKS Proxy Not Supported Error — Fix (2026)"
+title: "SOCKS Proxy Not Supported Error — Fix"
 permalink: /claude-code-socks-proxy-not-supported-fix-2026/
-description: "SOCKS Proxy Not Supported Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
+description: "Claude Code troubleshooting: sOCKS Proxy Not Supported Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
 last_tested: "2026-04-22"
 ---
 

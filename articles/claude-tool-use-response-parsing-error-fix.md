@@ -1,5 +1,5 @@
 ---
-title: "Claude tool_use Response Parsing Error (2026)"
+title: "Claude tool_use Response Parsing Error"
 description: "Fix Claude tool_use response parsing errors. Handle mixed content blocks and validate tool input schema. Step-by-step solution."
 permalink: /claude-tool-use-response-parsing-error-fix/
 last_tested: "2026-04-21"

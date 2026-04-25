@@ -1,5 +1,5 @@
 ---
-title: "Reducing Claude Code MCP Round-Trips (2026)"
+title: "Reducing Claude Code MCP Round-Trips"
 description: "Batch MCP operations reduce Claude Code round-trips by 60-80%, cutting tool call overhead from 2,450 tokens to 490 tokens for 10-operation sequences."
 permalink: /reducing-claude-code-mcp-round-trips-batch-pattern/
 date: 2026-04-22

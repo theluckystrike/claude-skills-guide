@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Speed Up Chrome: Performance Tips (2026)"
-description: "Make Chrome faster with flags, memory management, and extension cleanup. Covers tab suspension, GPU acceleration, and developer tools optimization."
+title: "Speed Up Chrome: Performance Tips"
+description: "Claude Code extension tip: make Chrome faster with flags, memory management, and extension cleanup. Covers tab suspension, GPU acceleration, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

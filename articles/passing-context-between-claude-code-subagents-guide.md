@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Passing Context Between Claude Code (2026)"
+title: "Passing Context Between Claude Code"
 description: "Learn how to effectively pass context and state between subagents in Claude Code. Practical patterns for multi-agent workflows with code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -281,6 +281,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [How to Pass State Between AI Agents](/how-to-pass-state-between-ai-agents/). Framework-agnostic patterns for state sharing applicable to Claude, LangChain, CrewAI, and other agent runtimes.
 - [Multi-Agent Orchestration with Claude Subagents Guide](/multi-agent-orchestration-with-claude-subagents-guide/). Understand the subagent coordination model before implementing context-passing patterns.
 - [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/). Implement clear communication protocols alongside context passing for reliable workflows.

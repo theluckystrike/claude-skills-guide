@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills vs MCP Servers: Key Differences (2026)"
+title: "Claude Skills vs MCP Servers: Key"
 description: "Concrete comparison of SKILL.md files and MCP servers covering use cases, architecture differences, and when to combine them in Claude Code."
 permalink: /claude-skills-vs-mcp-servers-differences/
 categories: [skills, 2026]

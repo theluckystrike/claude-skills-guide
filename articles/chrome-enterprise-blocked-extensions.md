@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Enterprise Blocked Chrome Extension (2026)"
+title: "Enterprise Blocked Chrome Extension"
 description: "Understand how Chrome Enterprise manages extension blocking, configure policies for your organization, and work around restrictions effectively."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -357,6 +357,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [Best AI Chrome Extensions 2026: A Practical Guide for Developers](/best-ai-chrome-extensions-2026/)
 - [Chrome Enterprise Bandwidth Management: A Practical Guide](/chrome-enterprise-bandwidth-management/)
 - [Chrome Enterprise Certificate Management: A Practical Guide](/chrome-enterprise-certificate-management/)

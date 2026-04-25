@@ -438,6 +438,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
 - [Claude Code for Evals Framework Workflow Tutorial](/claude-code-for-evals-framework-workflow-tutorial/)
 - [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/)
 - [How Do I Test a Claude Skill Before Deploying to Team](/how-do-i-test-a-claude-skill-before-deploying-to-team/)

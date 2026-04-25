@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Twilio Voice Automation (2026)"
+title: "Claude Code for Twilio Voice Automation"
 description: "Build Twilio voice call workflows with Claude Code. Covers TwiML generation, call routing, IVR menus, recording, and webhook handling with examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

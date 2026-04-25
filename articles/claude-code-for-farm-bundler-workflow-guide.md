@@ -76,7 +76,7 @@ Claude Code should create `farm.config.ts` using `defineConfig` from `@farmfe/co
 ## See Also
 
 - [Claude Code for Rolldown — Workflow Guide](/claude-code-for-rolldown-bundler-workflow-guide/)
-
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
 
 ## Frequently Asked Questions
 

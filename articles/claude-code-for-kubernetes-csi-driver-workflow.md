@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Kubernetes CSI Drivers (2026)"
+title: "Claude Code for Kubernetes CSI Drivers"
 description: "Develop Kubernetes CSI drivers with Claude Code. Code generation, spec compliance testing, and storage backend integration workflow patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17

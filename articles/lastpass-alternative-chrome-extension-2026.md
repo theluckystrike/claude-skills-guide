@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "LastPass Alternative Chrome Extension (2026)"
+title: "LastPass Alternative Chrome Extension"
 description: "Discover the best LastPass alternatives with Chrome extensions for developers in 2026. Compare open-source options, security features, and migration."
 date: 2026-03-15
 last_modified_at: 2026-04-17

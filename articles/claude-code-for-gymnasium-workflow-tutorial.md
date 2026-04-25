@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Gymnasium RL Workflow (2026)"
+title: "Claude Code for Gymnasium RL Workflow"
 description: "Build reinforcement learning environments with Claude Code and Gymnasium. Agent training, environment setup, and evaluation workflow patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17

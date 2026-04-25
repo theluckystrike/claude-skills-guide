@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Check Color Contrast with Claude Code (2026)"
+title: "Check Color Contrast with Claude Code"
 description: "Check WCAG color contrast ratios with Claude Code for accessibility compliance. Automate contrast audits across your entire design system and codebase."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Make Claude Code Add Error Handling (2026)"
+title: "Make Claude Code Add Error Handling"
 description: "Force Claude Code to include proper error handling with CLAUDE.md rules for boundary validation, error responses, and failure recovery patterns."
 permalink: /claude-code-skips-error-handling-fix-2026/
 last_tested: "2026-04-22"

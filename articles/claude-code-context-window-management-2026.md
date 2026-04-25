@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Context Window Management (2026)"
+title: "Claude Code Context Window Management"
 description: "Manage Claude Code's context window effectively with token budgeting, session splitting, and context-aware CLAUDE.md strategies."
 permalink: /claude-code-context-window-management-2026/
 last_tested: "2026-04-22"

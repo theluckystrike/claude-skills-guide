@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for OSS Documentation (2026)"
+title: "Claude Code for OSS Documentation"
 description: "Contribute high-quality documentation to open source projects using Claude Code. Covers API docs, tutorials, migration guides, and style consistency."
 date: 2026-03-15
 last_modified_at: 2026-04-17

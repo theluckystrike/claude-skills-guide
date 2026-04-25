@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension LinkedIn Post (2026)"
-description: "Learn how to build or use a Chrome extension to schedule LinkedIn posts programmatically. Practical code examples and implementation guide for developers."
+description: "Claude Code extension tip: learn how to build or use a Chrome extension to schedule LinkedIn posts programmatically. Practical code examples and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

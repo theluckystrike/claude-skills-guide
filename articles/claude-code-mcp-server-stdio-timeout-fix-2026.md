@@ -1,5 +1,5 @@
 ---
-title: "MCP Server stdio Timeout 30000ms — Fix (2026)"
+title: "MCP Server stdio Timeout 30000ms — Fix"
 permalink: /claude-code-mcp-server-stdio-timeout-fix-2026/
 description: "Increase timeout to 60000ms with claude mcp update command for your server entry. Fixes stdio transport initialization hangs on slow MCP servers."
 last_tested: "2026-04-21"

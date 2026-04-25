@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Antigravity vs Claude Native Skills (2026)"
+title: "Antigravity vs Claude Native Skills"
 description: "Compare Antigravity skills vs native Claude skills. Learn when to use each type and how to install community skills in Claude Code (2026)."
 date: 2026-03-13
 last_modified_at: 2026-04-17

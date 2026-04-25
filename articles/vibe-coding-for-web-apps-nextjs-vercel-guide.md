@@ -2,7 +2,7 @@
 
 layout: default
 title: "Vibe Coding for Web Apps (2026)"
-description: "A practical guide to vibe coding NextJS web applications with Vercel deployment. Learn how to build, test, and ship full-stack apps using AI-assisted."
+description: "Claude Code resource: a practical guide to vibe coding NextJS web applications with Vercel deployment. Learn how to build, test, and ship full-stack..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 categories: [guides]

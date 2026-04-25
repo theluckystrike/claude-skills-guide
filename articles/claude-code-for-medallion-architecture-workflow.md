@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Medallion Architecture (2026)"
+title: "Claude Code for Medallion Architecture"
 description: "Master medallion architecture workflows with Claude Code. Learn practical techniques for implementing Bronze-Silver-Gold data pipelines, managing data."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Example for iOS + Swift + (2026)"
+title: "CLAUDE.md Example for iOS + Swift +"
 description: "Complete 310-line CLAUDE.md for iOS 18 with Swift 6 and SwiftUI. Covers @Observable, SwiftData, async/await, and structured concurrency. Tested on Xcode 16.2."
 permalink: /claude-md-example-for-ios-swift-swiftui/
 render_with_liquid: false

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "When GPT-4o Mini Beats Claude Haiku (2026)"
+title: "When GPT-4o Mini Beats Claude Haiku"
 description: "When GPT-4o Mini Beats Claude Haiku — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"

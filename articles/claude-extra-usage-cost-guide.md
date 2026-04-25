@@ -1,5 +1,5 @@
 ---
-title: "Claude Extra Usage Cost: What You Pay (2026)"
+title: "Claude Extra Usage Cost: What You Pay"
 description: "Exact pricing for Claude extra usage on Pro and Max plans. How usage is counted, how to monitor your spending, and proven strategies to reduce your bill."
 permalink: /claude-extra-usage-cost-guide/
 last_tested: "2026-04-24"

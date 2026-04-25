@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude MD Error Handling Patterns (2026)"
+title: "Fix: Claude MD Error Handling Patterns"
 description: "Add error handling patterns to Claude MD skill files. Recovery logic, retry strategies, and graceful fallbacks for production-ready skill files."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -371,6 +371,8 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Claude Code Skips Error Handling in Generated Code](/claude-code-skips-error-handling-in-generated-code/)
 - [Claude API Timeout Errors: Handling and Retry Guide](/claude-api-timeout-error-handling-retry-guide/)
 - [Claude Code Docker Permission Denied Bind Mount Error](/claude-code-docker-permission-denied-bind-mount-error/)

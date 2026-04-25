@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Workload Balance Tracker Chrome (2026)"
-description: "Learn how to build and use chrome extension workload balance trackers to manage tasks, time, and productivity across projects."
+description: "Claude Code extension tip: learn how to build and use chrome extension workload balance trackers to manage tasks, time, and productivity across projects."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

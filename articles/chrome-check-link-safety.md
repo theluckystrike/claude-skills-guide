@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Check Link Safety (2026)"
-description: "Learn how to check link safety in Chrome using built-in features, developer tools, and extensions. Practical techniques for developers and power users."
+description: "Claude Code extension tip: learn how to check link safety in Chrome using built-in features, developer tools, and extensions. Practical techniques for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

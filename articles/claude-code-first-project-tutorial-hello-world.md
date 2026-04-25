@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code First Project Tutorial (2026)"
+title: "Claude Code First Project Tutorial"
 description: "Create your first Claude Code project with this step-by-step hello world tutorial. Code examples for developers getting started with Claude Code."
 date: 2026-03-14
 last_modified_at: 2026-04-17

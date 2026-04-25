@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Example for Rust + Axum + (2026)"
+title: "CLAUDE.md Example for Rust + Axum +"
 description: "CLAUDE.md Example for Rust + Axum + — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-md-example-for-rust-axum-sqlx/
 render_with_liquid: false

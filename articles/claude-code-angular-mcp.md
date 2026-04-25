@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Angular MCP Configuration (2026)"
+title: "Claude Code Angular MCP Configuration"
 description: "Set up MCP servers for Angular projects in Claude Code to enable component-aware code generation and project navigation. Tested and working in 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17

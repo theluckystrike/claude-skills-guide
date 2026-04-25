@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Change Management Rolling (2026)"
+title: "Claude Skills Change Management Rolling"
 description: "A practical guide to deploying Claude Code skills across engineering teams with version control, testing, and governance policies."
 date: 2026-03-14
 last_modified_at: 2026-04-17

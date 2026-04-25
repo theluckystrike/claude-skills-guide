@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for CCPA Data Handling (2026)"
+title: "Claude Code for CCPA Data Handling"
 permalink: /claude-code-ccpa-data-handling-2026/
 description: "Implement CCPA/CPRA consumer rights with Claude Code. Build opt-out mechanisms, data deletion workflows, and sale disclosure tracking."
 last_tested: "2026-04-22"

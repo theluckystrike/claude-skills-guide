@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "CSS Grid Inspector Chrome Extension (2026)"
-description: "Learn how to use and build CSS Grid inspector Chrome extensions for debugging and visualizing grid layouts in modern web development."
+title: "CSS Grid Inspector Chrome Extension"
+description: "Claude Code extension tip: learn how to use and build CSS Grid inspector Chrome extensions for debugging and visualizing grid layouts in modern web..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

@@ -450,6 +450,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/). DevOps skills for managing preview and production deployments
 - [Best Claude Skills for Frontend and UI Development](/best-claude-code-skills-for-frontend-development/). Frontend skills that pair with Vercel and Next.js workflows
 - [Claude Skills with GitHub Actions CI/CD Pipeline](/claude-skills-with-github-actions-ci-cd-pipeline/). Automate deployment pipelines with Claude skills

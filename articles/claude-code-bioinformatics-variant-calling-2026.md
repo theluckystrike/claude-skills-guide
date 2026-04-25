@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for FASTQ to Variant Calls (2026)"
+title: "Claude Code for FASTQ to Variant Calls"
 description: "Claude Code for FASTQ to Variant Calls — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-bioinformatics-variant-calling-2026/
 last_tested: "2026-04-21"

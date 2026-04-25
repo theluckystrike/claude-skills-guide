@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Do I Set Environment Variables (2026)"
+title: "How Do I Set Environment Variables"
 description: "A practical guide to configuring environment variables for Claude Code skills. Learn how to set up API keys, credentials, and custom configurations for ..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -477,6 +477,8 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 Related Reading
 
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
 - [How to Create a Private Claude Skill Not on GitHub](/how-do-i-create-a-private-claude-skill-not-on-github/). Keep skills and their credentials local without GitHub exposure
 - [Claude Code Permissions Model and Security Guide 2026](/claude-code-permissions-model-security-guide-2026/). Understand security boundaries when exposing environment variables to skills
 - [Claude Code Secret Scanning: Prevent Credential Leaks Guide](/claude-code-secret-scanning-prevent-credential-leaks-guide/). Ensure API keys and secrets in skills don't leak accidentally

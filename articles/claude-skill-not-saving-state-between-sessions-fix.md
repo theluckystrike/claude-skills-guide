@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Skill Not Saving State (2026)"
+title: "Fix Claude Skill Not Saving State"
 description: "Fix Claude Code skills losing state between sessions. Covers supermemory, CLAUDE.md context, file-based persistence, and pitfalls. Updated for 2026."
 date: 2026-03-13
 last_modified_at: 2026-04-17

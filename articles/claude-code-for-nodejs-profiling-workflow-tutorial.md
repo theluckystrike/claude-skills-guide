@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Node.js Profiling Workflow (2026)"
+title: "Claude Code Node.js Profiling Workflow"
 description: "Profile Node.js applications with Claude Code for CPU flame graphs, memory snapshots, and event loop analysis. Find and fix performance bottlenecks."
 date: 2026-03-15
 last_modified_at: 2026-04-17

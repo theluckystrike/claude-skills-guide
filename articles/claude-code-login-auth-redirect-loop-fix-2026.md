@@ -1,5 +1,5 @@
 ---
-title: "Login Auth Redirect Loop Error — Fix (2026)"
+title: "Login Auth Redirect Loop Error — Fix"
 permalink: /claude-code-login-auth-redirect-loop-fix-2026/
 description: "Fix Claude Code login redirect loop. Clear auth cache, reset OAuth state, and re-authenticate with claude login command."
 last_tested: "2026-04-22"

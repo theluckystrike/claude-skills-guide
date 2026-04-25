@@ -1,5 +1,5 @@
 ---
-title: "Claude Code System Prompts Explained (2026)"
+title: "Claude Code System Prompts Explained"
 description: "Explore the claude-code-system-prompts repo — extracted system prompts, 24 tool descriptions, sub-agent prompts, and a changelog tracking 152+ versions."
 permalink: /claude-code-system-prompts-guide-2026/
 last_tested: "2026-04-22"

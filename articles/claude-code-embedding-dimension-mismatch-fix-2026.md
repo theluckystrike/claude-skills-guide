@@ -1,7 +1,7 @@
 ---
-title: "Embedding Dimension Mismatch Error (2026)"
+title: "Embedding Dimension Mismatch Error"
 permalink: /claude-code-embedding-dimension-mismatch-fix-2026/
-description: "Fix embedding dimension mismatch when switching models. Rebuild vector index to match new embedding size (1024 vs 1536 vs 3072)."
+description: "Claude Code troubleshooting: fix embedding dimension mismatch when switching models. Rebuild vector index to match new embedding size (1024 vs 1536 vs..."
 last_tested: "2026-04-22"
 ---
 

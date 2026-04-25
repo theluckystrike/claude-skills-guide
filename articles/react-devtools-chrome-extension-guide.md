@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "React Devtools Chrome Extension (2026)"
-description: "A practical guide to using React DevTools Chrome extension for debugging React applications. Learn component inspection, profiling, and advanced."
+description: "Claude Code extension tip: a practical guide to using React DevTools Chrome extension for debugging React applications. Learn component inspection,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

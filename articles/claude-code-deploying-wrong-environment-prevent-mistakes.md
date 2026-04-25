@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Wrong Environment Deploy (2026)"
+title: "Claude Code Wrong Environment Deploy"
 description: "Claude Code deploying to production instead of staging wastes 10K-50K tokens in rollback and costs real business damage. Pre-flight checks prevent this."
 permalink: /claude-code-deploying-wrong-environment-prevent-mistakes/
 date: 2026-04-22
@@ -264,3 +264,4 @@ The token cost of this prevention: zero (hooks run as external processes). The t
 - [The "Inspect Before Act" Pattern for Agent Cost Control](/inspect-before-act-pattern-agent-cost-control/) -- verify before executing
 - [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- automate pre-deployment checks
 - [Errors Atlas](/errors-atlas/) -- troubleshoot deployment failures
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns

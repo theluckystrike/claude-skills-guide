@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Password Manager (2026)"
+title: "Chrome Enterprise Password Manager"
 description: "Learn how to configure Chrome's enterprise password manager policies. This guide covers Group Policy settings, registry configurations, and practical."
 date: 2026-03-15
 last_modified_at: 2026-04-17

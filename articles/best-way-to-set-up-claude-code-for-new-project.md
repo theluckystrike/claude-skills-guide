@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Way To Set Up Claude Code For New (2026)"
+title: "Best Way To Set Up Claude Code For New"
 description: "A practical guide to configuring Claude Code for new projects. Learn how to create CLAUDE.md files, organize project context, and use skills like."
 date: 2026-03-14
 last_modified_at: 2026-04-17

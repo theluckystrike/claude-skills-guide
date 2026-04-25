@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code Tab Completion Setup Guide (2026)"
+title: "Claude Code Tab Completion Setup Guide"
 description: "Enable tab completion for Claude Code commands in bash, zsh, and fish shells. Installation steps and custom completion scripts included."
 permalink: /claude-code-tab-completion-setup-2026/
 date: 2026-04-21

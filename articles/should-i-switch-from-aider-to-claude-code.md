@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Should I Switch From Aider To Claude (2026)"
+title: "Should I Switch From Aider To Claude"
 description: "Thinking about switching from Aider to Claude Code? This comprehensive guide covers the key differences, Claude Code's unique skills system, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

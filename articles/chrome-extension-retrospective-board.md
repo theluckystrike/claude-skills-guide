@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Retrospective Board (2026)"
-description: "A comprehensive guide to Chrome extension retrospective boards for development teams. Compare top tools, features, and implementation strategies for."
+title: "Chrome Extension Retrospective Board"
+description: "Claude Code extension tip: a comprehensive guide to Chrome extension retrospective boards for development teams. Compare top tools, features, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

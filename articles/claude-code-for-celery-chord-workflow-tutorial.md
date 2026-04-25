@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Celery Chord Workflow (2026)"
+title: "Claude Code for Celery Chord Workflow"
 description: "Learn how to use Claude Code to build, debug, and optimize Celery chord workflows. A practical guide for Python developers working with asynchronous."
 date: 2026-04-19
 last_modified_at: 2026-04-19

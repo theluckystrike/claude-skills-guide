@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Russian Developer (2026)"
+title: "Claude Code for Russian Developer"
 description: "Практическое руководство по использованию Claude Code для русскоязычных backend-разработчиков. Настройка, ключевые навыки и рабочие процессы."
 date: 2026-03-14
 last_modified_at: 2026-04-17

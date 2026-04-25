@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for PLC Ladder Logic to ST (2026)"
+title: "Claude Code for PLC Ladder Logic to ST"
 description: "Claude Code for PLC Ladder Logic to ST — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-plc-ladder-logic-structured-text-2026/
 last_tested: "2026-04-21"

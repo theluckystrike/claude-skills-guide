@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Open Source Issue Triage (2026)"
+title: "Claude Code Open Source Issue Triage"
 description: "Learn how to use Claude Code to efficiently triage open source issues, prioritize bug reports, and streamline your contribution workflow."
 date: 2026-04-19
 last_modified_at: 2026-04-19

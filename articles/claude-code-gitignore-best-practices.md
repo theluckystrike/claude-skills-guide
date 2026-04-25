@@ -418,6 +418,8 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 Related Reading
 
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). Know which skills generate the most filesystem output so you can plan your gitignore patterns ahead of time
 - [Claude MD Best Practices for Large Codebases](/claude-md-best-practices-for-large-codebases/). Learn how CLAUDE.md and project configuration files relate to what should and should not be committed
 - [Claude Code for End-of-Day Commit Workflow](/claude-code-for-end-of-day-commit-workflow/). Build a daily commit habit that works cleanly with the gitignore patterns described here

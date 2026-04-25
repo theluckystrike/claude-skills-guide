@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Value-at-Risk Modeling (2026)"
+title: "Claude Code for Value-at-Risk Modeling"
 permalink: /claude-code-value-at-risk-modeling-2026/
 description: "Claude Code for Value-at-Risk Modeling — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"

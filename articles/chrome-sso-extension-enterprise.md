@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Build a Chrome SSO Extension (2026)"
-description: "Implement Chrome SSO extensions for enterprise with SAML, OAuth, and session management. Covers managed policies and identity provider integration."
+description: "Claude Code extension tip: implement Chrome SSO extensions for enterprise with SAML, OAuth, and session management. Covers managed policies and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

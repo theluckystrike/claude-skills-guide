@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude API Usage Metrics Every Team (2026)"
+title: "Claude API Usage Metrics Every Team"
 description: "Track these 7 metrics to control Claude API costs: cost per request, cache hit rate, model distribution, and 4 more with code examples."
 date: 2026-04-19
 author: "Claude Skills Guide"

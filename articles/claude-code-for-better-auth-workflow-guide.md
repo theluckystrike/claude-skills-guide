@@ -81,3 +81,24 @@ Claude Code should create `auth()` config with Drizzle adapter and Google social
 - [Claude Code for Lucia Auth — Workflow Guide](/claude-code-for-lucia-auth-workflow-workflow-guide/)
 - [Claude Code for Hanko Auth — Workflow Guide](/claude-code-for-hanko-auth-workflow-guide/)
 - [Claude Code for Clerk Auth — Workflow Guide](/claude-code-for-clerk-auth-workflow-guide/)
+
+
+## Common Questions
+
+### Is my data safe when using AI coding tools?
+
+Review each tool's data handling policy. Claude Code processes code locally by default. For sensitive projects, use API-based access with enterprise data agreements and avoid sharing credentials in prompts.
+
+### How do I audit AI-generated code for security?
+
+Run static analysis tools on all AI-generated code. Review authentication logic, input validation, and data handling manually. Treat AI output like any untrusted code contribution.
+
+### What are the compliance considerations?
+
+Check your organization's policies on AI code generation. Many frameworks (SOC 2, HIPAA) require documentation of AI tool usage. Maintain audit logs of AI-assisted changes.
+
+## Related Resources
+
+- [Claude Code for Clerk Auth](/claude-code-for-clerk-auth-workflow-guide/)
+- [Claude Code for Hanko Auth](/claude-code-for-hanko-auth-workflow-guide/)
+- [Claude Code for Lucia Auth](/claude-code-for-lucia-auth-workflow-workflow-guide/)

@@ -1,5 +1,5 @@
 ---
-title: "File Exceeds 10MB Limit in Claude Code — Fix (2026)"
+title: "File Exceeds 10MB Limit in Claude Code"
 permalink: /claude-code-max-file-size-exceeded-fix-2026/
 description: "Extract the relevant section from large files using sed or jq commands. Bypasses the 10MB per-file analysis limit in Claude Code without data loss."
 last_tested: "2026-04-21"

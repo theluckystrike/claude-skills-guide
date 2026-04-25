@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code GitLab CI Pipeline Docker (2026)"
+title: "Claude Code GitLab CI Pipeline Docker"
 description: "A practical guide to building CI/CD pipelines with GitLab and Docker Registry. Includes .gitlab-ci.yml examples, Docker configuration, and automation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Radar Signal Processing (2026)"
+title: "Claude Code for Radar Signal Processing"
 permalink: /claude-code-radar-signal-processing-2026/
 description: "Claude Code for Radar Signal Processing — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"

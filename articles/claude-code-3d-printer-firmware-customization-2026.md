@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for 3D Printer Firmware (2026)"
+title: "Claude Code for 3D Printer Firmware"
 permalink: /claude-code-3d-printer-firmware-customization-2026/
 description: "Claude Code for 3D Printer Firmware — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"

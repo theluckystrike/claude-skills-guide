@@ -1,7 +1,7 @@
 ---
-title: "npm Global Install Permission Denied (2026)"
+title: "npm Global Install Permission Denied"
 permalink: /claude-code-npm-global-install-permission-denied-fix-2026/
-description: "npm Global Install Permission Denied — practical setup steps, configuration examples, and working code you can use in your projects today."
+description: "Claude Code guide: npm Global Install Permission Denied — practical setup steps, configuration examples, and working code you can use in your projects..."
 last_tested: "2026-04-22"
 ---
 

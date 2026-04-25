@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Competitive Programming (2026)"
+title: "Claude Code for Competitive Programming"
 description: "Master competitive programming with Claude Code: automated problem solving, template generation, solution testing, and efficient practice workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -512,6 +512,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code Cold Fusion Modernization Workflow Guide](/claude-code-cold-fusion-modernization-workflow-guide/)
 - [Claude Code Daily Workflow for Frontend Developers Guide](/claude-code-daily-workflow-for-frontend-developers-guide/)
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)

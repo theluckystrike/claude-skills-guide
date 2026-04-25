@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Default Printer (2026)"
+title: "Chrome Enterprise Default Printer"
 description: "Configure Chrome browser default printer policies for enterprise environments using group policy objects, the Administrative Templates, and JSON."
 date: 2026-03-15
 last_modified_at: 2026-04-17

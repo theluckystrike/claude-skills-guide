@@ -144,3 +144,24 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ## See Also
 
 - [Claude Code for Bun Workspaces — Workflow Guide](/claude-code-for-bun-workspaces-workflow-guide/)
+
+
+## Common Questions
+
+### What causes fix claude code bun errors issues?
+
+Common causes include misconfigured settings, outdated dependencies, and environment conflicts. Check your project configuration and ensure all dependencies are up to date.
+
+### How do I prevent this error from recurring?
+
+Set up automated checks in your development workflow. Use Claude Code's built-in validation tools to catch configuration issues before they reach production.
+
+### Does this fix work on all operating systems?
+
+The core fix applies to macOS, Linux, and Windows. Some path-related adjustments may be needed depending on your OS. Check the platform-specific notes in the guide above.
+
+## Related Resources
+
+- [Fix Claude Code Bun Crash](/claude-code-bun-crash/)
+- [Fix Claude Code TLS/SSL Errors Behind](/claude-code-tls-ssl-connection-error-corporate-proxy-fix/)
+- [Fix Claude Code Repeating Same Errors](/why-does-claude-code-occasionally-repeat-same-errors/)

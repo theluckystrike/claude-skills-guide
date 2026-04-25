@@ -1,7 +1,7 @@
 ---
-title: "Claude Code Maximum Turns Exceeded Loop — Fix (2026)"
+title: "Maximum Turns Exceeded Loop — Fix"
 permalink: /claude-code-max-turns-exceeded-fix-2026/
-description: "Increase the --max-turns flag or decompose task to fix agent turn limit. Break large multi-file operations into focused sequential subtasks."
+description: "Claude Code troubleshooting: increase the --max-turns flag or decompose task to fix agent turn limit. Break large multi-file operations into focused..."
 last_tested: "2026-04-21"
 ---
 

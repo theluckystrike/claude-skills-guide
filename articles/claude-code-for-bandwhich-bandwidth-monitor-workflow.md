@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Bandwhich Bandwidth (2026)"
+title: "Claude Code for Bandwhich Bandwidth"
 description: "Learn how to integrate Claude Code with bandwhich for network bandwidth monitoring. Includes practical examples, CLI workflows, and skill integration."
 date: 2026-03-15
 last_modified_at: 2026-04-17

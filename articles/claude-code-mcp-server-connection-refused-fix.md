@@ -1,5 +1,5 @@
 ---
-title: "Claude Code MCP Server Connection (2026)"
+title: "Claude Code MCP Server Connection"
 description: "Fix Claude Code MCP server connection refused error. Verify server process is running and port config matches. Step-by-step solution."
 permalink: /claude-code-mcp-server-connection-refused-fix/
 last_tested: "2026-04-21"

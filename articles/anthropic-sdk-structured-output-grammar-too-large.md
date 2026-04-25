@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Fix: Anthropic SDK Grammar Too Large (2026)"
-description: "Fix the Anthropic API 'compiled grammar is too large' 400 error when using structured outputs with complex JSON schemas. Schema optimization strategies."
+title: "Fix: Anthropic SDK Grammar Too Large"
+description: "Claude Code troubleshooting: fix the Anthropic API 'compiled grammar is too large' 400 error when using structured outputs with complex JSON schemas...."
 date: 2026-04-14
 last_modified_at: 2026-04-17
 author: "Claude Code Guides"

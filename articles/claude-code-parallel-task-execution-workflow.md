@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Parallel Task Execution (2026)"
+title: "Claude Code Parallel Task Execution"
 description: "Learn how to execute multiple Claude Code tasks simultaneously using parallel workflows, subagents, and batch processing techniques for maximum."
 date: 2026-03-14
 last_modified_at: 2026-04-17

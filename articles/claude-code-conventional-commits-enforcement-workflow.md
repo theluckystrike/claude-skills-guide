@@ -579,6 +579,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Claude Code for Conventional Commits Workflow Guide](/claude-code-for-conventional-commits-workflow-guide/)
 - [Claude Code Team Coding Standards Enforcement Workflow](/claude-code-team-coding-standards-enforcement-workflow/)
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)

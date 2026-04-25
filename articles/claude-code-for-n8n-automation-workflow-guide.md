@@ -82,6 +82,10 @@ First check that your CLAUDE.md accurately describes your project conventions. I
 }
 </script>
 
+Related Reading
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
+
 {% endraw %}
 
 ## The CLAUDE.md Configuration

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs Cursor: Definitive Comparison (2026)"
+title: "Claude Code vs Cursor: Definitive"
 description: "Claude Code vs Cursor compared across 15+ features, pricing tiers, architecture, and team fit. Three-persona verdict updated for April 2026."
 permalink: /claude-code-vs-cursor-definitive-comparison-2026/
 last_tested: "2026-04-24"

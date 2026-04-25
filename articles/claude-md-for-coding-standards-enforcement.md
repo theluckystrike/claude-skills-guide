@@ -1,5 +1,5 @@
 ---
-title: "Enforce Coding Standards with CLAUDE.md (2026)"
+title: "Enforce Coding Standards with CLAUDE.md"
 description: "How to write CLAUDE.md rules that Claude Code actually follows for coding standards: naming, formatting, import ordering, and type safety."
 permalink: /claude-md-for-coding-standards-enforcement/
 categories: [claude-md, patterns]

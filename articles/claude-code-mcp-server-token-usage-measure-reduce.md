@@ -1,5 +1,5 @@
 ---
-title: "Claude Code MCP Server Token Usage (2026)"
+title: "Claude Code MCP Server Token Usage"
 description: "MCP servers add 500-2,000 tokens per tool definition to every Claude Code session. Measure your overhead and apply these techniques to cut it by 50-70%."
 permalink: /claude-code-mcp-server-token-usage-measure-reduce/
 date: 2026-04-22

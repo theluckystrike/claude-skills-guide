@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Building a Chrome Extension for Gaming (2026)"
-description: "Learn how to build a Chrome extension that finds the best gaming deals across multiple stores. Practical code examples, API integration patterns, and."
+title: "Building a Chrome Extension for Gaming"
+description: "Claude Code extension tip: learn how to build a Chrome extension that finds the best gaming deals across multiple stores. Practical code examples, API..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Making Assumptions (2026)"
+title: "Fix Claude Code Making Assumptions"
 description: "Stop Claude Code from silently choosing libraries, patterns, and architecture — add Don't Assume rules to CLAUDE.md with exact code blocks."
 permalink: /claude-code-keeps-making-assumptions-karpathy-fix-2026/
 last_tested: "2026-04-22"

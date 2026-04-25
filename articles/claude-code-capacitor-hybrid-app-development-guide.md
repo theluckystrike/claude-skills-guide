@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Build Hybrid Apps with Claude Code + (2026)"
+title: "Build Hybrid Apps with Claude Code +"
 description: "Build hybrid mobile apps with Claude Code and Capacitor. Native features, plugin integration, and cross-platform deployment workflows explained."
 date: 2026-04-19
 last_modified_at: 2026-04-19

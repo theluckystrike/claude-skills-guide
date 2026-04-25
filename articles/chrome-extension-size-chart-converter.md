@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome Extension Size Chart Converter (2026)"
-description: "Discover the best Chrome extensions for size chart conversions. Compare popular options for clothing, shoe, and ring size conversions with practical."
+title: "Chrome Extension Size Chart Converter"
+description: "Claude Code extension tip: discover the best Chrome extensions for size chart conversions. Compare popular options for clothing, shoe, and ring size..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

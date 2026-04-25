@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Cross-Repo Code Search (2026)"
+title: "Claude Code for Cross-Repo Code Search"
 description: "Learn how to build a powerful cross-repository code search workflow with Claude Code. Practical examples, configuration tips, and automation strategies."
 date: 2026-04-19
 last_modified_at: 2026-04-19

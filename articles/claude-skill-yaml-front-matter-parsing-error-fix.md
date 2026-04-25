@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix YAML Front Matter Parsing Errors (2026)"
+title: "Fix YAML Front Matter Parsing Errors"
 description: "Fix YAML frontmatter parsing errors in Claude Code skills. Missing delimiters, bad indentation, and special character issues solved with examples."
 date: 2026-03-13
 last_modified_at: 2026-04-17

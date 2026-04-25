@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Build Tab Suspender Chrome Extension (2026)"
-description: "Build a Chrome tab suspender extension that saves memory. Technical implementation patterns, APIs, and optimization strategies for developers."
+title: "Build Tab Suspender Chrome Extension"
+description: "Claude Code extension tip: build a Chrome tab suspender extension that saves memory. Technical implementation patterns, APIs, and optimization..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

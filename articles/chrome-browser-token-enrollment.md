@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Browser Token Enrollment (2026)"
-description: "Learn how to implement Chrome browser token enrollment for enterprise environments. Step-by-step setup, API integration, and code examples for."
+description: "Claude Code extension tip: learn how to implement Chrome browser token enrollment for enterprise environments. Step-by-step setup, API integration, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

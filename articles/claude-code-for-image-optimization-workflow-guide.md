@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Image Optimization Workflow (2026)"
+title: "Claude Code Image Optimization Workflow"
 description: "Automate image optimization with Claude Code to batch-compress, resize, and convert to WebP format. Cuts total page weight by 60% in minutes."
 date: 2026-03-15
 last_modified_at: 2026-04-17

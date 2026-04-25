@@ -2,7 +2,7 @@
 
 layout: default
 title: "Chrome Extension Color Palette (2026)"
-description: "Learn how to use Chrome extensions for extracting color palettes from any website. Discover the best tools for designers and developers to capture."
+description: "Claude Code extension tip: learn how to use Chrome extensions for extracting color palettes from any website. Discover the best tools for designers and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

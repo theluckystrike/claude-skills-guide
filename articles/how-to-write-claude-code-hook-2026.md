@@ -1,5 +1,5 @@
 ---
-title: "Write Your First Claude Code Hook (2026)"
+title: "Write Your First Claude Code Hook"
 description: "Create a Claude Code hook that runs before or after tool execution. Step-by-step with pre-commit linting example, event types, and error handling."
 permalink: /how-to-write-claude-code-hook-2026/
 last_tested: "2026-04-22"
@@ -227,3 +227,4 @@ python3 -c "import json; json.load(open('.claude/settings.json'))"
 ## See Also
 
 - [Claude Code Hook Script Not Executable — Fix (2026)](/claude-code-hook-script-not-executable-fix-2026/)
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns

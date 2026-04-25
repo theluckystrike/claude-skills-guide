@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Open Props Design Tokens (2026)"
+title: "Claude Code + Open Props Design Tokens"
 description: "Use Open Props design tokens with Claude Code for consistent spacing, colors, and typography in frontend projects. Integration patterns and examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

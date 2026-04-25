@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Health Endpoint Pattern (2026)"
+title: "Claude Code for Health Endpoint Pattern"
 description: "Learn how to use Claude Code to implement solid health endpoint patterns in your applications. Covers Kubernetes probes, dependency checks, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

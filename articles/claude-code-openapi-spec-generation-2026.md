@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for OpenAPI Spec Generation (2026)"
+title: "Claude Code for OpenAPI Spec Generation"
 description: "Claude Code for OpenAPI Spec Generation — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-openapi-spec-generation-2026/
 last_tested: "2026-04-21"

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Dangerous Chrome Extensions 2026"
-description: "Dangerous Chrome extensions threatening developers in 2026. Identify credential harvesters, cryptojackers, and data exfiltration risks before install."
+description: "Claude Code extension tip: dangerous Chrome extensions threatening developers in 2026. Identify credential harvesters, cryptojackers, and data..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

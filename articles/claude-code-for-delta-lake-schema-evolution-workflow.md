@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Delta Lake Schema Evolution (2026)"
+title: "Claude Code Delta Lake Schema Evolution"
 description: "Manage Delta Lake schema changes with Claude Code for column additions, type migrations, and backward-compatible table evolution. Spark SQL examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: MCP Server Disconnected Error (2026)"
+title: "Fix: MCP Server Disconnected Error"
 description: "Fix the 'MCP server disconnected' error in Claude Code caused by progress token handling in stdio transport. Root cause and workaround."
 date: 2026-04-15
 last_modified_at: 2026-04-17

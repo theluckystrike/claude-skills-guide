@@ -1,5 +1,5 @@
 ---
-title: "Claude Code max_tokens Ignored in API (2026)"
+title: "Claude Code max_tokens Ignored in API"
 description: "Fix Claude Code max_tokens parameter being ignored in API mode. Use the correct parameter name and placement. Step-by-step solution."
 permalink: /claude-code-max-tokens-ignored-api-mode-fix/
 last_tested: "2026-04-21"

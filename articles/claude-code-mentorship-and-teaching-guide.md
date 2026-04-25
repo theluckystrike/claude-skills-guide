@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Mentorship and Teaching (2026)"
+title: "Claude Code Mentorship and Teaching"
 description: "Master Claude Code mentorship and teaching strategies. Learn how to guide developers through AI-assisted coding, skill development, and building."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -200,6 +200,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)
 - [Agentic AI Coding Tools Comparison 2026: A Practical.](/agentic-ai-coding-tools-comparison-2026/)

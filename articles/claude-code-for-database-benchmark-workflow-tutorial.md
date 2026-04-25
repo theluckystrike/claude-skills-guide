@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Database Benchmark (2026)"
+title: "Claude Code for Database Benchmark"
 description: "Learn how to use Claude Code for database benchmark workflows. Practical examples, code snippets, and actionable advice for developers measuring."
 date: 2026-03-15
 last_modified_at: 2026-04-17

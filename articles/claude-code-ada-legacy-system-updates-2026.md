@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Ada Legacy System (2026)"
+title: "Claude Code for Ada Legacy System"
 permalink: /claude-code-ada-legacy-system-updates-2026/
 description: "Maintain and update Ada legacy systems with Claude Code. Modernize Ada 83/95 code to Ada 2022 standards for defense and avionics."
 last_tested: "2026-04-22"

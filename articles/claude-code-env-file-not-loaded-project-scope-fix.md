@@ -1,5 +1,5 @@
 ---
-title: "Claude Code .env File Not Loaded — Fix (2026)"
+title: "Claude Code .env File Not Loaded — Fix"
 description: "Fix Claude Code .env file not loaded in project scope. Source the file or use direnv for automatic loading. Step-by-step solution."
 permalink: /claude-code-env-file-not-loaded-project-scope-fix/
 last_tested: "2026-04-21"

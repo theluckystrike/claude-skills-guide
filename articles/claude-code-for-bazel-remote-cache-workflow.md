@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Bazel Remote Cache (2026)"
+title: "Claude Code for Bazel Remote Cache"
 description: "Learn how to integrate Claude Code into your Bazel build pipeline with remote caching. This guide covers setup, configuration, and practical workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

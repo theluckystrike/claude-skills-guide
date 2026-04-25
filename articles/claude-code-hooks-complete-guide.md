@@ -754,6 +754,6 @@ Check the [best Claude Code hooks collection](/best-claude-code-hooks-code-quali
 - [Claude Code Spec Workflow Guide](/claude-code-spec-workflow-guide/)
 - [CLAUDE.md Best Practices Definitive Guide](/claude-md-best-practices-definitive-guide/)
 - [Super Claude Code Framework Guide](/super-claude-code-framework-guide/)
-
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 
 {% endraw %}

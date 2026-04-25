@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Inbox Organizer Chrome Extension (2026)"
-description: "Learn how AI inbox organizer Chrome extensions work under the hood. Practical implementation guide for developers building email automation tools."
+title: "AI Inbox Organizer Chrome Extension"
+description: "Claude Code extension tip: learn how AI inbox organizer Chrome extensions work under the hood. Practical implementation guide for developers building..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

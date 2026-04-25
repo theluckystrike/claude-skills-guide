@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Setting Up Claude Code Approved Tools (2026)"
+title: "Setting Up Claude Code Approved Tools"
 description: "Learn how to configure an approved tools list for Claude Code in enterprise environments. This guide covers security policies, tool restrictions, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

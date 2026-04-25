@@ -1,7 +1,7 @@
 ---
-title: "IPv6 Fallback Failure Error — Fix (2026)"
+title: "IPv6 Fallback Failure Error — Fix"
 permalink: /claude-code-ipv6-fallback-failure-fix-2026/
-description: "Fix ENETUNREACH when Node tries IPv6 first. Force IPv4 with --dns-result-order=ipv4first or disable IPv6 on the interface."
+description: "Claude Code troubleshooting: fix ENETUNREACH when Node tries IPv6 first. Force IPv4 with --dns-result-order=ipv4first or disable IPv6 on the interface."
 last_tested: "2026-04-22"
 ---
 

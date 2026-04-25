@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for OSS Maintainer Burnout (2026)"
+title: "Claude Code for OSS Maintainer Burnout"
 description: "Reduce open source maintainer burnout with Claude Code automation. Covers issue triage, PR review, release management, and contributor onboarding."
 date: 2026-03-15
 last_modified_at: 2026-04-17

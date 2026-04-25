@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Jamf Deployment Mac (2026)"
+title: "Chrome Enterprise Jamf Deployment Mac"
 description: "Learn how to deploy Chrome Enterprise on Mac using Jamf Pro. Includes configuration profiles, plist settings, and automation scripts for IT."
 date: 2026-03-15
 last_modified_at: 2026-04-17

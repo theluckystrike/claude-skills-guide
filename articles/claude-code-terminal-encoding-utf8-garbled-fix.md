@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Terminal UTF-8 Garbled (2026)"
+title: "Claude Code Terminal UTF-8 Garbled"
 description: "Fix Claude Code terminal encoding UTF-8 garbled output. Set locale and terminal encoding to UTF-8 correctly. Step-by-step solution."
 permalink: /claude-code-terminal-encoding-utf8-garbled-fix/
 last_tested: "2026-04-21"

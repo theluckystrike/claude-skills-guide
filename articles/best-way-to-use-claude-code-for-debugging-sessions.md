@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Debugging Sessions (2026)"
+title: "Claude Code for Debugging Sessions"
 description: "A practical guide for developers on using Claude Code effectively during debugging sessions. Learn prompt patterns, skill combinations, and real-world."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -283,6 +283,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Automated Testing Pipeline with Claude TDD Skill](/claude-tdd-skill-test-driven-development-workflow/)
 - [Claude Code Git Bisect Automated Bug Finding Workflow](/claude-code-git-bisect-automated-bug-finding-workflow/)
 - [How to Debug a Claude Skill That Silently Fails](/how-do-i-debug-a-claude-skill-that-silently-fails/)

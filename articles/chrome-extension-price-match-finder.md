@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Build a Price Match Finder Extension (2026)"
-description: "Build a Chrome extension that finds lower prices across retailers using Manifest V3, content scripts, and cross-origin messaging. Full source code."
+title: "Build a Price Match Finder Extension"
+description: "Claude Code extension tip: build a Chrome extension that finds lower prices across retailers using Manifest V3, content scripts, and cross-origin..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

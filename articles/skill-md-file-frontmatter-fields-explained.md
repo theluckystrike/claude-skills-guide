@@ -1,6 +1,6 @@
 ---
 title: "Every SKILL.md Frontmatter Field (2026)"
-description: "Complete reference for all 14 SKILL.md YAML frontmatter fields including name, description, allowed-tools, paths, effort, and context."
+description: "Claude Code resource: complete reference for all 14 SKILL.md YAML frontmatter fields including name, description, allowed-tools, paths, effort, and..."
 permalink: /skill-md-file-frontmatter-fields-explained/
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, frontmatter, yaml, reference]

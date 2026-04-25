@@ -1,5 +1,5 @@
 ---
-title: "Merge Conflict in Claude-Edited Files — Fix (2026)"
+title: "Merge Conflict in Claude-Edited Files"
 permalink: /claude-code-merge-conflict-edited-files-fix-2026/
 description: "Fix merge conflicts in files edited by Claude Code. Use git mergetool or manual resolution to handle overlapping changes from AI and human edits."
 last_tested: "2026-04-22"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Build Claude Code GitHub Actions (2026)"
+title: "How to Build Claude Code GitHub Actions"
 description: "Automate PR reviews, code generation, and testing with Claude Code in GitHub Actions. YAML templates and secret management included."
 permalink: /claude-code-github-actions-workflow-2026/
 date: 2026-04-21

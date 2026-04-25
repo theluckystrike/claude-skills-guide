@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Apache Spark DataFrame (2026)"
+title: "Claude Code for Apache Spark DataFrame"
 description: "A comprehensive guide to using Claude Code for Apache Spark DataFrame development, including practical examples and actionable advice for developers."
 date: 2026-04-19
 last_modified_at: 2026-04-19

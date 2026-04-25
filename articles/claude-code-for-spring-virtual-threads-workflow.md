@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Spring Virtual Threads (2026)"
+title: "Claude Code for Spring Virtual Threads"
 description: "Learn how to use Claude Code to build efficient Spring applications with Virtual Threads. Practical examples and workflow patterns for modern Java."
 date: 2026-03-15
 last_modified_at: 2026-04-17

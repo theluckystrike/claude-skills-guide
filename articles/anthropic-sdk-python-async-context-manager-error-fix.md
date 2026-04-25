@@ -1,6 +1,6 @@
 ---
-title: "Anthropic SDK Python Async Context (2026)"
-description: "Fix Anthropic SDK async context manager TypeError. Use AsyncAnthropic client instead of sync Anthropic. Step-by-step solution."
+title: "Anthropic SDK Python Async Context"
+description: "Claude Code resource: fix Anthropic SDK async context manager TypeError. Use AsyncAnthropic client instead of sync Anthropic. Step-by-step solution."
 permalink: /anthropic-sdk-python-async-context-manager-error-fix/
 last_tested: "2026-04-21"
 ---

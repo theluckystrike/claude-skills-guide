@@ -2,7 +2,7 @@
 
 layout: default
 title: "TypeORM Query Builder Patterns (2026)"
-description: "Build advanced TypeORM Query Builder patterns including subqueries, joins, conditional filtering, and dynamic queries. Code examples included."
+description: "Claude Code resource: build advanced TypeORM Query Builder patterns including subqueries, joins, conditional filtering, and dynamic queries. Code..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: Claude Skills Guide

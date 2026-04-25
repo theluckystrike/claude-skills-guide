@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome Extension Sprint Planning Poker (2026)"
-description: "A practical guide to using Chrome extensions for sprint planning poker in agile teams. Learn how to run estimation sessions directly in your browser with."
+title: "Chrome Extension Sprint Planning Poker"
+description: "Claude Code extension tip: a practical guide to using Chrome extensions for sprint planning poker in agile teams. Learn how to run estimation sessions..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

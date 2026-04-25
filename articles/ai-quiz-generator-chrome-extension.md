@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Quiz Generator Chrome Extension (2026)"
-description: "A practical guide to AI-powered quiz generator Chrome extensions for developers. Learn how these tools work, their key features, and how to build custom."
+title: "AI Quiz Generator Chrome Extension"
+description: "Claude Code extension tip: a practical guide to AI-powered quiz generator Chrome extensions for developers. Learn how these tools work, their key..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

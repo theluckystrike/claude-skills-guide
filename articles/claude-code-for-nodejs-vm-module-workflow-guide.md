@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code For Node.js VM Module (2026)"
+title: "Claude Code For Node.js VM Module"
 description: "Master Node.js vm module for code compilation and sandboxing with Claude Code. Learn practical workflows for secure code execution, template rendering."
 date: 2026-03-15
 last_modified_at: 2026-04-17

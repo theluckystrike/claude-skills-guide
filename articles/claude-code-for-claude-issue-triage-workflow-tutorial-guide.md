@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Claude Issue Triage (2026)"
+title: "Claude Code for Claude Issue Triage"
 description: "Learn how to build an automated issue triage workflow using Claude Code. This guide covers skill creation, automation patterns, and practical examples for."
 date: 2026-04-19
 last_modified_at: 2026-04-19
@@ -234,6 +234,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Chrome Extension Jira Ticket Creator: Automate Issue.](/chrome-extension-jira-ticket-creator/)
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 - [Claude Code Makefile Build Automation Workflow Guide](/claude-code-makefile-build-automation-workflow-guide/)

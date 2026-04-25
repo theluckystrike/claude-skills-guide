@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Responsive Viewer Alternative Chrome (2026)"
+title: "Responsive Viewer Alternative Chrome"
 description: "Discover practical alternatives to traditional responsive viewer extensions. Learn about built-in browser tools, developer workflows, and custom."
 date: 2026-03-15
 last_modified_at: 2026-04-17

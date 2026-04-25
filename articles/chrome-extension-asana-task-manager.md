@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Asana Task Manager Chrome Extension (2026)"
+title: "Asana Task Manager Chrome Extension"
 description: "Learn how to build and use Chrome extensions for Asana task management. Practical code examples, API integration patterns, and tips for developers and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

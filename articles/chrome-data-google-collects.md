@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Data Google Collects (2026)"
-description: "A comprehensive technical breakdown of what data Google Chrome collects, how tracking works, and what developers need to know about browser data."
+description: "Claude Code extension tip: a comprehensive technical breakdown of what data Google Chrome collects, how tracking works, and what developers need to..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

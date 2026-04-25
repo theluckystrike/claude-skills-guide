@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Cheapest LLM Model for Your Workload (2026)"
-description: "Cheapest LLM Model for Your Workload — practical guide with working examples, tested configurations, and tips for developer workflows."
+title: "Cheapest LLM Model for Your Workload"
+description: "Claude Code AI workflow: cheapest LLM Model for Your Workload — practical guide with working examples, tested configurations, and tips for developer..."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /claude-cost-cheapest-model-workload-calculator/

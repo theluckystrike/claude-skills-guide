@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for ArgoCD App of Apps (2026)"
+title: "Claude Code for ArgoCD App of Apps"
 description: "Learn how to use Claude Code to streamline your ArgoCD App of Apps pattern implementation. Practical examples, YAML configurations, and automation tips."
 date: 2026-03-15
 last_modified_at: 2026-04-17

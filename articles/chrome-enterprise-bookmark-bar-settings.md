@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Bookmark Bar Settings (2026)"
+title: "Chrome Enterprise Bookmark Bar Settings"
 description: "Learn how to configure Chrome browser bookmark bar settings via enterprise policies for IT administrators and power users managing Chrome deployments."
 date: 2026-03-15
 last_modified_at: 2026-04-17

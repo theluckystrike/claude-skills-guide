@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Large File Refactoring (2026)"
+title: "Claude Code Large File Refactoring"
 description: "Refactor large files with Claude Code using incremental strategies that avoid context overflow. Memory plugin tips and file splitting patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

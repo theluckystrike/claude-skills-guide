@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills with Linear Project (2026)"
+title: "Claude Skills with Linear Project"
 description: "Integrate Claude Code skills with Linear's API to automate issue triage, generate technical specs, and improve project management workflows."
 date: 2026-03-13
 last_modified_at: 2026-04-17

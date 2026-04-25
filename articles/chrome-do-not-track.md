@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome Do Not Track — Developer Guide (2026)"
-description: "Learn how Chrome's Do Not Track setting works, its limitations, and practical alternatives for privacy-conscious developers and users."
+title: "Chrome Do Not Track — Developer Guide"
+description: "Claude Code guide: learn how Chrome's Do Not Track setting works, its limitations, and practical alternatives for privacy-conscious developers and users."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

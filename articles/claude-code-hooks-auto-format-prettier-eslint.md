@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Auto-Format Code with Claude Code Hooks (2026)"
+title: "Auto-Format Code with Claude Code Hooks"
 description: "Set up PostToolUse hooks to run Prettier and ESLint automatically after every Claude Code edit. Step-by-step configuration guide."
 date: 2026-04-15
 permalink: /claude-code-hooks-auto-format-prettier-eslint/

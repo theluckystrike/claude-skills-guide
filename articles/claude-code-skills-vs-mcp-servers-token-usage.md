@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Skills vs MCP Servers (2026)"
+title: "Claude Code Skills vs MCP Servers"
 description: "Skills use 60-80% fewer tokens than MCP servers for common Claude Code tasks. Compare overhead, latency, and cost to pick the right tool."
 permalink: /claude-code-skills-vs-mcp-servers-token-usage/
 date: 2026-04-22

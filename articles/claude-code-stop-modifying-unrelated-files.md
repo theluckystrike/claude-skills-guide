@@ -116,3 +116,28 @@ If Claude keeps modifying unrelated files despite your rules:
 The scope rules should be near the top of your CLAUDE.md, in the first 50 lines, where Claude's adherence is strongest.
 
 For the complete troubleshooting guide to CLAUDE.md instruction-following, see the [ignoring CLAUDE.md fix guide](/how-to-fix-claude-code-ignoring-my-claude-md-file/). For general best practices in writing rules Claude follows, see the [CLAUDE.md best practices](/claude-code-claude-md-best-practices/). For setting up permissions, see the [CLAUDE.md complete guide](/claude-md-file-complete-guide-what-it-does/).
+
+
+## Common Questions
+
+### How do I get started with stop claude code from modifying?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Stop Claude Code From Over-Engineering](/how-to-make-claude-code-not-over-engineer-solutions/)
+- [Claude Code Stop Modifying Files](/how-to-make-claude-code-stop-adding-markdown-to-code/)
+- [Stop Claude Code Modifying Unrelated](/how-to-stop-claude-code-from-modifying-unrelated-files/)

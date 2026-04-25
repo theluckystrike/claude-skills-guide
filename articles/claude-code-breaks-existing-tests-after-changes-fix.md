@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Breaks Existing Tests After (2026)"
+title: "Claude Code Breaks Existing Tests After"
 description: "When Claude Code modifies your codebase, existing tests may fail. Learn the root causes and practical solutions to prevent and fix test breaks during."
 date: 2026-03-14
 last_modified_at: 2026-04-17

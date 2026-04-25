@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Apache Flink Workflow (2026)"
+title: "Claude Code for Apache Flink Workflow"
 description: "Master Apache Flink stream processing with Claude Code. Learn efficient workflows, debugging strategies, and production-ready event-driven application."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills vs Raw Prompts with Tools (2026)"
+title: "Claude Skills vs Raw Prompts with Tools"
 description: "Compare structured SKILL.md files against pasting instructions into chat. Skills win at consistency and sharing; raw prompts win at speed and flexibility."
 permalink: /claude-skills-vs-raw-prompts-with-tools/
 categories: [skills, 2026]

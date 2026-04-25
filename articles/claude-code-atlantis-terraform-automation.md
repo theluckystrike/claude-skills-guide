@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code with Atlantis Terraform (2026)"
+title: "Claude Code with Atlantis Terraform"
 description: "Combine Claude Code with Atlantis for automated Terraform PR workflows. Covers plan reviews, apply automation, and infrastructure change governance."
 date: 2026-03-14
 last_modified_at: 2026-04-17

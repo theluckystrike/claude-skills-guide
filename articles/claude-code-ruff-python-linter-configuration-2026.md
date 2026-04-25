@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Ruff Python Linter (2026)"
+title: "Claude Code for Ruff Python Linter"
 permalink: /claude-code-ruff-python-linter-configuration-2026/
 description: "Configure Ruff for Python projects with Claude Code. Replace Flake8, isort, and Black with a single Rust-powered linter that runs in milliseconds."
 last_tested: "2026-04-22"

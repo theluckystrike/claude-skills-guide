@@ -474,6 +474,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code Cypress Custom Commands Workflow Best Practices](/claude-code-cypress-custom-commands-workflow-best-practices/)
 - [Claude Code for Calico Network Policy Workflow](/claude-code-for-calico-network-policy-workflow/)
 - [Claude Code for Network Firewall Workflow](/claude-code-for-network-firewall-workflow/)

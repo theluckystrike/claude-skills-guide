@@ -1,7 +1,7 @@
 ---
-title: "Organization Billing Suspended Error — Fix (2026)"
+title: "Organization Billing Suspended Error"
 permalink: /claude-code-organization-billing-suspended-fix-2026/
-description: "Fix 'organization billing suspended' API error. Update payment method in Anthropic Console to restore access immediately."
+description: "Claude Code troubleshooting: fix 'organization billing suspended' API error. Update payment method in Anthropic Console to restore access immediately."
 last_tested: "2026-04-22"
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: "Vite Prebundle Dependency Error — Fix (2026)"
+title: "Vite Prebundle Dependency Error — Fix"
 permalink: /claude-code-vite-prebundle-error-fix-2026/
-description: "Fix Vite prebundle errors on new dependencies. Clear .vite cache and add missing deps to optimizeDeps.include in config."
+description: "Claude Code troubleshooting: fix Vite prebundle errors on new dependencies. Clear .vite cache and add missing deps to optimizeDeps.include in config."
 last_tested: "2026-04-22"
 ---
 

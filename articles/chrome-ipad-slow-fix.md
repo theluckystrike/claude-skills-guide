@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Chrome Ipad Slow — Quick Guide (2026)"
+title: "Fix Chrome Ipad Slow — Quick Guide"
 description: "Discover proven solutions to fix Chrome running slow on iPad. Troubleshooting tips for developers and power users to optimize Safari and Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

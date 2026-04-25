@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fixing Claude Code Deprecated API (2026)"
+title: "Fixing Claude Code Deprecated API"
 description: "Resolve deprecated API method warnings and errors in Claude Code. Practical solutions for developers and power users working with the Anthropic API."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Is Claude Code Worth It Open Source (2026)"
+title: "Is Claude Code Worth It Open Source"
 description: "Discover how Claude Code can transform your open source maintenance workflow. Real examples from managing repositories, handling issues, and automating."
 date: 2026-03-14
 last_modified_at: 2026-04-17

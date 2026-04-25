@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Best Claude Code Courses and Tutorials (2026)"
+title: "Best Claude Code Courses and Tutorials"
 description: "Curated list of Claude Code courses, tutorials, and learning paths for 2026. Free and paid options for beginners to advanced developers."
 permalink: /best-claude-code-courses-tutorials-2026/
 date: 2026-04-21
@@ -232,3 +232,4 @@ The right learning path saves 20-40 hours of trial-and-error. Developers who inv
 - [Best Claude Code Newsletters and Blogs 2026](/best-claude-code-newsletters-and-blogs-2026/)
 
 - [Claude student discount guide](/claude-student-discount-guide/) — How students can get Claude at reduced pricing
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code

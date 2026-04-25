@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Reduce Claude API Token Usage (2026)"
+title: "How to Reduce Claude API Token Usage"
 description: "Cut Claude API token consumption in half with system prompt compression, tool pruning, and output constraints — save $1,125/month."
 date: 2026-04-19
 author: "Claude Skills Guide"

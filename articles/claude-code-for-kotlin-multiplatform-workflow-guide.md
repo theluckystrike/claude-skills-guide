@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Kotlin Multiplatform (2026)"
+title: "Claude Code for Kotlin Multiplatform"
 description: "Claude Code for Kotlin Multiplatform — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-kotlin-multiplatform-workflow-guide/
@@ -73,3 +73,28 @@ Claude Code should create the data class in `commonMain` with `@Serializable`, t
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
 - [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)
 - [Best Way to Set Up Claude Code for New Project](/best-way-to-set-up-claude-code-for-new-project/)
+
+
+## Common Questions
+
+### How do I get started with claude code for kotlin multiplatform?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Claude Code for Kotlin Coroutines Flow](/claude-code-for-kotlin-coroutines-flow-workflow/)
+- [Claude Code for Kotlin Delegation](/claude-code-for-kotlin-delegation-pattern-workflow/)
+- [Claude Code Announcements 2026](/anthropic-claude-code-announcements-2026/)

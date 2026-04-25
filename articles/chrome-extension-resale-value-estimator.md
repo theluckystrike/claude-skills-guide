@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Resale Value Estimator Chrome Extension (2026)"
-description: "Learn how to estimate the resale value of your Chrome extension with this comprehensive guide covering metrics, valuation methods, and practical examples."
+title: "Resale Value Estimator Chrome Extension"
+description: "Claude Code extension tip: learn how to estimate the resale value of your Chrome extension with this comprehensive guide covering metrics, valuation..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code git diff too large -- (2026)"
+title: "Claude Code git diff too large --"
 description: "Reduce oversized git diff output in Claude Code from 10K-50K tokens to under 1K with --stat, file filtering, and targeted diff commands that save context."
 permalink: /claude-code-git-diff-too-large-reducing-context/
 date: 2026-04-22

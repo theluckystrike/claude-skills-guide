@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for fd (Find Alternative) (2026)"
+title: "Claude Code for fd (Find Alternative)"
 description: "Claude Code for fd (Find Alternative) — features, pricing, and performance compared side by side to help you pick the right tool."
 date: 2026-04-18
 permalink: /claude-code-for-fd-find-alternative-workflow-guide/

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Set Up Claude SSO with Okta & Azure AD (2026)"
+title: "Set Up Claude SSO with Okta & Azure AD"
 description: "Set up Claude with enterprise SSO: Okta, Azure AD, Google Workspace. Step-by-step SAML/OIDC auth flow configuration with working code examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

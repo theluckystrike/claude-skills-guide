@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Orchestrate Claude Code Subagents (2026)"
+title: "Orchestrate Claude Code Subagents"
 description: "Run multiple Claude Code subagents in parallel and sequence. Covers task decomposition, result aggregation, error handling, and hierarchical patterns."
 date: 2026-03-13
 last_modified_at: 2026-04-17
@@ -240,6 +240,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [Multi-Agent Workflow Design Patterns for Developers](/multi-agent-workflow-design-patterns-for-developers/). Conceptual pattern overview covering handoff chains and debate-and-consensus patterns
 - [Supervisor Agent and Worker Agent Pattern with Claude Code](/supervisor-agent-worker-agent-pattern-claude-code/). Detailed look on the supervisor/worker topology
 - [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/). How results pass between agents

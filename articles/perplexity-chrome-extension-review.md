@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Perplexity Chrome Extension Review (2026)"
-description: "Perplexity Chrome extension tested for developer workflows including API research, debugging, and docs lookup. See real performance data and features."
+title: "Perplexity Chrome Extension Review"
+description: "Claude Code extension tip: perplexity Chrome extension tested for developer workflows including API research, debugging, and docs lookup. See real..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

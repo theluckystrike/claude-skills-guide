@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Docker Dashboard Chrome Extension Guide (2026)"
-description: "Discover Chrome extensions that bring Docker management directly into your browser. Compare top solutions, explore key features, and learn how to."
+title: "Docker Dashboard Chrome Extension Guide"
+description: "Claude Code guide: discover Chrome extensions that bring Docker management directly into your browser. Compare top solutions, explore key features, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

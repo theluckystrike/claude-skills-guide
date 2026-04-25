@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Knowledge Base Chrome Extension (2026)"
-description: "Learn how to build and use AI knowledge base chrome extensions for intelligent document management and quick information retrieval."
+title: "AI Knowledge Base Chrome Extension"
+description: "Claude Code extension tip: learn how to build and use AI knowledge base chrome extensions for intelligent document management and quick information..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

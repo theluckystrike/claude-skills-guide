@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code with PlanetScale Database (2026)"
+title: "Claude Code with PlanetScale Database"
 description: "Learn how to integrate Claude Code with PlanetScale for smooth database development. This guide covers connection setup, schema management, branching."
 date: 2026-03-14
 last_modified_at: 2026-04-17

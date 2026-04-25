@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Satellite Telemetry (2026)"
+title: "Claude Code for Satellite Telemetry"
 permalink: /claude-code-satellite-telemetry-processing-2026/
 description: "Satellite telemetry processing with Claude Code. Parse CCSDS packets, decode housekeeping data, and build ground station pipelines."
 last_tested: "2026-04-22"

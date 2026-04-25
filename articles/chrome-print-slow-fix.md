@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Chrome Print Slow — Quick Guide (2026)"
+title: "Fix Chrome Print Slow — Quick Guide"
 description: "Discover proven solutions to fix slow printing in Google Chrome. This guide covers browser settings, extensions, system configurations, and developer."
 date: 2026-03-15
 last_modified_at: 2026-04-17

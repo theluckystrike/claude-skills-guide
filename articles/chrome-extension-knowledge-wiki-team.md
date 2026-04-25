@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Knowledge Wiki Team Chrome Extension (2026)"
-description: "Learn how to build and manage a comprehensive knowledge wiki for chrome extension development teams. Covers documentation strategies, tooling, and."
+title: "Knowledge Wiki Team Chrome Extension"
+description: "Claude Code extension tip: learn how to build and manage a comprehensive knowledge wiki for chrome extension development teams. Covers documentation..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Astro Static Sites (2026)"
+title: "Claude Code for Astro Static Sites"
 description: "Build static sites with Claude Code and Astro using workflow patterns, skill integration, and tested automation recipes. Updated for April 2026."
 date: 2026-04-19
 last_modified_at: 2026-04-19

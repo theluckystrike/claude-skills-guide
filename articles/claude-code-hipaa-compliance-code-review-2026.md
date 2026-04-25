@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for HIPAA Compliance Code (2026)"
+title: "Claude Code for HIPAA Compliance Code"
 permalink: /claude-code-hipaa-compliance-code-review-2026/
 description: "Automate HIPAA compliance code reviews with Claude Code. Detect PHI exposure, audit encryption, and validate access controls systematically."
 last_tested: "2026-04-22"

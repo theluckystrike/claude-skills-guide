@@ -1,7 +1,7 @@
 ---
-title: "Response JSON Parse Failure — Fix (2026)"
+title: "Response JSON Parse Failure — Fix"
 permalink: /claude-code-response-json-parse-failure-fix-2026/
-description: "Fix JSON parse error on API response. Caused by truncated response or proxy interference. Enable retry and increase timeout."
+description: "Claude Code troubleshooting: fix JSON parse error on API response. Caused by truncated response or proxy interference. Enable retry and increase timeout."
 last_tested: "2026-04-22"
 ---
 

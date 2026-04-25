@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Mise Version Manager (2026)"
+title: "Claude Code + Mise Version Manager"
 description: "Integrate Claude Code with Mise version manager for automated tool switching, environment handling, and project-aware runtime configuration."
 date: 2026-03-14
 last_modified_at: 2026-04-17

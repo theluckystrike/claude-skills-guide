@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Puppet and Chef (2026)"
+title: "Claude Skills for Puppet and Chef"
 description: "Accelerate Puppet manifests and Chef cookbooks with Claude skills for infrastructure automation. Write, test, and deploy configurations faster."
 date: 2026-03-14
 last_modified_at: 2026-04-17

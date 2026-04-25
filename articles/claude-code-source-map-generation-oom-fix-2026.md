@@ -1,7 +1,7 @@
 ---
-title: "Source Map Generation Out of Memory (2026)"
+title: "Source Map Generation Out of Memory"
 permalink: /claude-code-source-map-generation-oom-fix-2026/
-description: "Source Map Generation Out of Memory — practical guide with working examples, tested configurations, and tips for developer workflows."
+description: "Claude Code resource: source Map Generation Out of Memory — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"
 ---
 

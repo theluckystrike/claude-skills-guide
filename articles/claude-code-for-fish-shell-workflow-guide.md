@@ -86,3 +86,28 @@ Claude Code should use `fish_add_path ./node_modules/.bin`, `abbr -a nr 'npm run
 - [Claude Code for Flux Bootstrap Workflow Tutorial](/claude-code-for-flux-bootstrap-workflow-tutorial/)
 - [Claude Code for Homebrew Bundle Workflow Tutorial](/claude-code-for-homebrew-bundle-workflow-tutorial/)
 - [Shell RC File Not Sourced Error — Fix (2026)](/claude-code-shell-rc-not-sourced-fix-2026/)
+
+
+## Common Questions
+
+### How do I get started with claude code for fish shell?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Claude Code for Atuin Shell History](/claude-code-for-atuin-shell-history-workflow/)
+- [Claude Code for Shell Operator Workflow](/claude-code-for-shell-operator-workflow-tutorial/)
+- [Claude Code Permission Denied Shell](/claude-code-permission-denied-shell-commands-fix/)

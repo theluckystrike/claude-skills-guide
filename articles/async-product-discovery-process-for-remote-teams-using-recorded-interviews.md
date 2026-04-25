@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Async Product Discovery for Remote (2026)"
-description: "Learn how to implement an effective async product discovery process for remote teams using recorded interviews. Step-by-step guide for product managers."
+title: "Async Product Discovery for Remote"
+description: "Claude Code resource: learn how to implement an effective async product discovery process for remote teams using recorded interviews. Step-by-step..."
 date: 2026-03-18
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

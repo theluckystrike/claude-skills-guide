@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Extension Permissions (2026)"
+title: "Chrome Enterprise Extension Permissions"
 description: "Learn how to configure Chrome Enterprise extension permissions policy to control which extensions can access sensitive data in your organization."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -393,6 +393,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [Chrome Enterprise Split Tunnel Browsing: A Practical Guide](/chrome-enterprise-split-tunnel-browsing/)
 - [Chrome Enterprise Webstore Private: Deploying Extensions to Your Organization](/chrome-enterprise-webstore-private/)
 - [Chrome Group Policy Templates 2026: Complete Admin Guide](/chrome-group-policy-templates-2026/)

@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Example for Android + Kotlin (2026)"
+title: "CLAUDE.md Example for Android + Kotlin"
 description: "CLAUDE.md Example for Android + Kotlin — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-md-example-for-android-kotlin-jetpack/
 render_with_liquid: false

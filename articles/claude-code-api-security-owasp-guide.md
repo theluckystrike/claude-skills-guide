@@ -750,6 +750,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Agent Handoff Strategies for Long Running Tasks Guide](/agent-handoff-strategies-for-long-running-tasks-guide/)
 - [AI Agent Goal Decomposition: How It Works Explained](/ai-agent-goal-decomposition-how-it-works-explained/)
 - [AI Agent Memory Types Explained for Developers](/ai-agent-memory-types-explained-for-developers/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Code Complexity Reduction with Claude (2026)"
+title: "Code Complexity Reduction with Claude"
 description: "A practical guide to reducing code complexity using Claude Code skills. Learn actionable techniques, skill recommendations, and real code examples for."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -240,6 +240,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/). Cyclomatic complexity is a key complexity metric
 - [Claude Code Coupling and Cohesion Improvement](/claude-code-coupling-and-cohesion-improvement/). Coupling and cohesion metrics indicate complexity
 - [How to Make Claude Code Follow DRY and SOLID Principles](/how-to-make-claude-code-follow-dry-solid-principles/). DRY/SOLID principles reduce complexity

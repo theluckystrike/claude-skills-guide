@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Helm Hooks Workflow (2026)"
+title: "Claude Code for Helm Hooks Workflow"
 description: "Learn how to integrate Claude Code into your Helm hooks workflow to automate Kubernetes deployments with intelligent automation and testing."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -341,6 +341,8 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [Claude Code for Helm Chart Publishing Workflow Guide](/claude-code-for-helm-chart-publishing-workflow-guide/)
 - [Claude Code for Wagmi Hooks Workflow](/claude-code-for-wagmi-hooks-workflow/)
 - [Claude Code Git Hooks: Automate Your Pre-Commit Workflow](/claude-code-git-hooks-pre-commit-automation/)

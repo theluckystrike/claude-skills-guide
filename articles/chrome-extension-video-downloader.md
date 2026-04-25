@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Video Downloader Chrome Extension Guide (2026)"
-description: "Learn how to build a Chrome extension for downloading videos from websites. Technical implementation, APIs, code examples, and patterns for developers."
+title: "Video Downloader Chrome Extension Guide"
+description: "Claude Code guide: learn how to build a Chrome extension for downloading videos from websites. Technical implementation, APIs, code examples, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"

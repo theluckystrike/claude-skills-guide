@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension HTML Email P (2026)"
-description: "Learn how to build a Chrome extension for HTML email preview. Practical code examples, API usage, and techniques for developers and power users."
+description: "Claude Code extension tip: learn how to build a Chrome extension for HTML email preview. Practical code examples, API usage, and techniques for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"

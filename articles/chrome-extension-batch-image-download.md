@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Batch Image Download Chrome Extension (2026)"
+title: "Batch Image Download Chrome Extension"
 description: "Learn how to build a Chrome extension for batch image downloading. Practical code examples, APIs, and implementation patterns for developers and power."
 date: 2026-03-15
 last_modified_at: 2026-04-17

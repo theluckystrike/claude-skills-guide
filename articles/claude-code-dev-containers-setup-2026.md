@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Set Up Claude Code in Dev Containers (2026)"
+title: "Set Up Claude Code in Dev Containers"
 description: "Configure devcontainer.json for Claude Code with pre-installed dependencies, environment variables, and remote development settings for teams."
 permalink: /claude-code-dev-containers-setup-2026/
 date: 2026-04-21

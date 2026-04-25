@@ -1,5 +1,5 @@
 ---
-title: "CLAUDE.md Example for Flutter + Dart + (2026)"
+title: "CLAUDE.md Example for Flutter + Dart +"
 description: "CLAUDE.md Example for Flutter + Dart + — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-md-example-for-flutter-dart-riverpod/
 render_with_liquid: false

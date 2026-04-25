@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Keeps Producing Slightly (2026)"
+title: "Claude Code Keeps Producing Slightly"
 description: "Understand why Claude Code generates varying outputs on each run and learn practical strategies to achieve consistent results. Includes real examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

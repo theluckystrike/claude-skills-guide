@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix \"Skill Not Found\" in Claude Code (2026)"
+title: "Fix Skill Not Found in Claude Code"
 description: "Fix 'skill not found' errors in Claude Code. Exact steps to configure your skills directory, file paths, and naming conventions. Tested 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17

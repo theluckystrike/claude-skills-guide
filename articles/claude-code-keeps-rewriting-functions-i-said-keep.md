@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Keeps Rewriting Functions I (2026)"
+title: "Claude Code Keeps Rewriting Functions I"
 description: "Understand why Claude Code rewrites functions you've asked to preserve, and learn practical strategies to prevent unwanted refactoring during your."
 date: 2026-03-14
 last_modified_at: 2026-04-17

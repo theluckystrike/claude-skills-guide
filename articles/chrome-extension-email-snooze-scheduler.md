@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Build Email Snooze Chrome Extension (2026)"
-description: "Build Chrome extensions for email snooze scheduling. Implementation patterns using Gmail API, local storage triggers, and background service workers."
+title: "Build Email Snooze Chrome Extension"
+description: "Claude Code extension tip: build Chrome extensions for email snooze scheduling. Implementation patterns using Gmail API, local storage triggers, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

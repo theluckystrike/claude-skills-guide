@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Data Cleaning Workflows (2026)"
+title: "Claude Code for Data Cleaning Workflows"
 description: "Clean and preprocess datasets 5x faster using Claude Code. Covers null handling, type conversion, outlier detection, and pandas transformation chains."
 date: 2026-03-14
 last_modified_at: 2026-04-17

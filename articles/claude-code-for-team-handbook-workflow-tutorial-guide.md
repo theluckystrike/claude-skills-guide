@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Team Handbook Workflow (2026)"
+title: "Claude Code for Team Handbook Workflow"
 description: "Learn how to use Claude Code to create, maintain, and automate your team's handbook workflows with practical examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

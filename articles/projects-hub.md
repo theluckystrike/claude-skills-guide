@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build Projects with Claude Code Skills (2026)"
+title: "Build Projects with Claude Code Skills"
 description: "Step-by-step project guides for building SaaS apps, CLI tools, REST APIs, Chrome extensions, and landing pages with Claude Code skills and workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

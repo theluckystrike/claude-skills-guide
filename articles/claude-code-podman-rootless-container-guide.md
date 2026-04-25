@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Podman Rootless Container (2026)"
+title: "Claude Code Podman Rootless Container"
 description: "Claude Code Podman Rootless Container — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

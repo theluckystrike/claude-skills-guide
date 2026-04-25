@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for TanStack Start Workflow (2026)"
+title: "Claude Code for TanStack Start Workflow"
 description: "Master Claude Code CLI with TanStack Start for building type-safe full-stack applications. Practical workflow examples for TanStack Router, nested."
 date: 2026-03-15
 last_modified_at: 2026-04-17

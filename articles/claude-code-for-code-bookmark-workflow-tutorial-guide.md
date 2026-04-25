@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Code Bookmark Workflow (2026)"
+title: "Claude Code for Code Bookmark Workflow"
 description: "Learn how to build a code bookmark workflow with Claude Code. This tutorial covers organizing code snippets, creating a personal snippet library, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19

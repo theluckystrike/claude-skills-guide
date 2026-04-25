@@ -1,5 +1,5 @@
 ---
-title: "System Prompts Repo vs Official Docs (2026)"
+title: "System Prompts Repo vs Official Docs"
 description: "The System Prompts repo exposes Claude Code's internal instructions and 24 tool definitions. Official docs explain features. Here's why both matter."
 permalink: /claude-code-system-prompts-vs-official-docs-2026/
 last_tested: "2026-04-22"
@@ -90,3 +90,24 @@ Read the system prompts repo once to build your mental model of how Claude Code 
 
 - [Claude Code System Prompts Explained (2026)](/claude-code-system-prompts-guide-2026/)
 - [Claude Howto vs Official Docs for Learning (2026)](/claude-howto-vs-official-docs-learning-2026/)
+
+
+## Common Questions
+
+### Which option is best for beginners?
+
+Start with the option that has the gentlest learning curve and strongest documentation. Both tools covered in this comparison integrate well with Claude Code for AI-assisted development.
+
+### Can I switch between these tools later?
+
+Yes. Most modern development tools support standard formats and migration paths. Plan your switch during a low-activity period and test thoroughly with a small project first.
+
+### How do pricing models compare?
+
+Pricing varies by tier and team size. Check each tool's current pricing page for the latest rates. Many offer free tiers sufficient for individual developers and small teams.
+
+## Related Resources
+
+- [Read Claude Code System Prompts Repo](/how-to-read-claude-code-system-prompts-2026/)
+- [Claude Code Official Docs Walkthrough](/claude-code-official-documentation-walkthrough/)
+- [Claude Code System Prompts Explained](/claude-code-system-prompts-guide-2026/)

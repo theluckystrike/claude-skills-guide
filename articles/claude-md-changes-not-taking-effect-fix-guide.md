@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Md Changes Not Taking Effect (2026)"
+title: "Fix Claude Md Changes Not Taking Effect"
 description: "Troubleshoot and fix Claude Code MD file changes not taking effect. Practical solutions for developers dealing with markdown rendering issues."
 date: 2026-03-14
 last_modified_at: 2026-04-17

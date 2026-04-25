@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome Omnibox Slow — Developer Guide (2026)"
-description: "Is your Chrome address bar lagging? Discover the common causes of slow omnibox performance and practical solutions to speed up Chrome's URL bar."
+title: "Chrome Omnibox Slow — Developer Guide"
+description: "Claude Code guide: is your Chrome address bar lagging? Discover the common causes of slow omnibox performance and practical solutions to speed up..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Svelte Devtools Chrome Extension Guide (2026)"
-description: "Learn how to build Chrome extensions with Svelte and use devtools for debugging. Practical examples and code snippets for developers."
+title: "Svelte Devtools Chrome Extension Guide"
+description: "Claude Code guide: learn how to build Chrome extensions with Svelte and use devtools for debugging. Practical examples and code snippets for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

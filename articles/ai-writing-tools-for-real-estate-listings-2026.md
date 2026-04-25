@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AI Writing Tools For Real Estate (2026)"
-description: "Explore the best AI writing tools for real estate listings in 2026. Learn how to integrate these tools into your property platform with practical code."
+description: "Claude Code AI workflow: explore the best AI writing tools for real estate listings in 2026. Learn how to integrate these tools into your property..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

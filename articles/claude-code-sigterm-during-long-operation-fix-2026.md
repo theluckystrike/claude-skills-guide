@@ -1,5 +1,5 @@
 ---
-title: "SIGTERM During Long Operation Fix (2026)"
+title: "SIGTERM During Long Operation Fix"
 permalink: /claude-code-sigterm-during-long-operation-fix-2026/
 description: "Fix SIGTERM killing Claude Code during long operations. Increase bash timeout, use background execution, and handle signal traps to prevent data loss."
 last_tested: "2026-04-22"

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Does Claude Skill Produce Different (2026)"
+title: "Why Does Claude Skill Produce Different"
 description: "Understanding why Claude Code skills generate varied results across runs. Practical examples and techniques for achieving consistent AI-assisted outputs."
 date: 2026-03-14
 last_modified_at: 2026-04-17

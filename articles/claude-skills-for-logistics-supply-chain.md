@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills for Logistics and Supply (2026)"
+title: "Claude Skills for Logistics and Supply"
 description: "Build a Claude Code skill that validates HS codes, parses EDI 856 ASN documents, tracks container status, and generates reorder-point alerts."
 permalink: /claude-skills-for-logistics-supply-chain/
 categories: [skills, 2026]

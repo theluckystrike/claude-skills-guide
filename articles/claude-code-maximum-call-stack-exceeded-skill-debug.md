@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Maximum Call Stack Exceeded (2026)"
+title: "Claude Code Maximum Call Stack Exceeded"
 description: "Diagnose and fix 'Maximum call stack size exceeded' errors in Claude Code skills. Learn common causes, debugging strategies, and prevention techniques."
 date: 2026-03-14
 last_modified_at: 2026-04-17

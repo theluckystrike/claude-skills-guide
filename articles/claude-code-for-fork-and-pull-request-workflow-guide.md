@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Fork and Pull Request (2026)"
+title: "Claude Code for Fork and Pull Request"
 description: "Learn how to use Claude Code CLI to efficiently work with GitHub forks and pull requests. This guide covers essential commands, practical examples, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19

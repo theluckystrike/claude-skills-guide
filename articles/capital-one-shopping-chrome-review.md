@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Capital One Shopping Chrome Extension (2026)"
+title: "Capital One Shopping Chrome Extension"
 description: "Capital One Shopping Chrome extension reviewed. Architecture analysis, API integrations, and how it compares to other shopping extensions."
 date: 2026-03-15
 last_modified_at: 2026-04-17

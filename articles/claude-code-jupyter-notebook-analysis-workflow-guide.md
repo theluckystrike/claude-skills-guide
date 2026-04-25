@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Jupyter Notebook Analysis (2026)"
+title: "Claude Code Jupyter Notebook Analysis"
 description: "Master the art of using Claude Code with Jupyter notebooks for interactive data analysis. Learn practical workflows, code patterns, and tips for."
 date: 2026-03-14
 last_modified_at: 2026-04-17

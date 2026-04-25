@@ -1,5 +1,5 @@
 ---
-title: "Claude Skill Composition Patterns (2026)"
+title: "Claude Skill Composition Patterns"
 description: "Master five skill composition patterns: layering, delegation, pipeline, fan-out, and fallback. With complete SKILL.md examples and token budget analysis."
 permalink: /claude-skill-composition-patterns/
 categories: [skills, 2026]

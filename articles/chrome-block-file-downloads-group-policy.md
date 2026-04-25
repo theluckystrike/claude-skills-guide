@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Block Downloads in Chrome via Group (2026)"
+title: "Block Downloads in Chrome via Group"
 description: "How to block file downloads in Chrome using Group Policy. Enterprise configuration guide with GPO templates for IT administrators. Tested on Chrome."
 date: 2026-03-15
 last_modified_at: 2026-04-17

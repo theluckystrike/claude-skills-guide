@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Migrate Jest to Vitest with Claude Code (2026)"
+title: "Migrate Jest to Vitest with Claude Code"
 description: "Migrate test suites from Jest to Vitest using Claude Code. Covers config translation, import rewrites, mock updates, and CI pipeline adjustments."
 date: 2026-04-19
 last_modified_at: 2026-04-19

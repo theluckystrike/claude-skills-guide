@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Extension Google Serp P (2026)"
-description: "Learn how to build and use Chrome extensions for Google Search Engine Results Page preview, including implementation patterns and practical examples."
+description: "Claude Code extension tip: learn how to build and use Chrome extensions for Google Search Engine Results Page preview, including implementation..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

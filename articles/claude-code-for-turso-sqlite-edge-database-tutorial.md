@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Turso SQLite Edge (2026)"
+title: "Claude Code for Turso SQLite Edge"
 description: "Build edge-first applications with Turso SQLite and Claude Code. Covers database creation, libSQL client setup, replication, and embedded replicas."
 date: 2026-03-14
 last_modified_at: 2026-04-17

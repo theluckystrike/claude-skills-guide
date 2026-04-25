@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension OneNote Clipper Setup (2026)"
-description: "Learn how to set up and configure the OneNote Clipper Chrome extension for efficient web clipping. Perfect for developers and power users who need to save."
+title: "Chrome Extension OneNote Clipper Setup"
+description: "Claude Code guide: learn how to set up and configure the OneNote Clipper Chrome extension for efficient web clipping. Perfect for developers and power..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

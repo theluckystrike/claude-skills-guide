@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Automated Changelog (2026)"
+title: "Claude Skills for Automated Changelog"
 description: "Build automated changelog generation workflows using Claude skills. Practical examples and code snippets for developers automating release notes."
 date: 2026-03-14
 last_modified_at: 2026-04-17

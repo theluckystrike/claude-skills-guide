@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Team Coding Standards (2026)"
+title: "Claude Code Team Coding Standards"
 description: "A comprehensive guide to implementing and enforcing coding standards across your development team using Claude Code. Learn practical workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

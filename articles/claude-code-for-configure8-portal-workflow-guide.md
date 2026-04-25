@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Configure8 Portal (2026)"
+title: "Claude Code for Configure8 Portal"
 description: "Learn how to use Claude Code to streamline your Configure8 developer portal workflow. This guide covers automation, API integration, and practical."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -395,6 +395,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/)
 - [Claude Code Dotfiles Management and Skill Sync Workflow](/claude-code-dotfiles-management-and-skill-sync-workflow/)

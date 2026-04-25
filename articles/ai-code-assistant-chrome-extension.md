@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Code Assistant Chrome Extension (2026)"
+title: "AI Code Assistant Chrome Extension"
 description: "Learn how AI code assistant Chrome extensions boost development workflow. Explore features, setup, integration patterns, and real-world coding examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills vs OpenAI Assistants API: Overview (2026)"
+title: "Claude Skills vs OpenAI Assistants API"
 description: "Compare Claude Code skills (file-based, open standard) with OpenAI Assistants API (cloud-hosted, thread-based). Includes 3 scenarios where Assistants win."
 permalink: /claude-skills-vs-openai-assistants-api/
 categories: [skills, 2026]

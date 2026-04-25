@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Cursor: Which to Use in 2026"
+title: "Claude Code vs Cursor"
 description: "Detailed comparison of Claude Code CLI and Cursor IDE for AI-assisted development. Features, workflows, costs, and when to use each."
 date: 2026-04-15
 permalink: /claude-code-vs-cursor-comparison-2026/

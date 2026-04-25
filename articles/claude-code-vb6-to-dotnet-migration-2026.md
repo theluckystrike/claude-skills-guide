@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for VB6 to .NET Migration (2026)"
+title: "Claude Code for VB6 to .NET Migration"
 description: "Claude Code for VB6 to .NET Migration — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-vb6-to-dotnet-migration-2026/
 last_tested: "2026-04-21"

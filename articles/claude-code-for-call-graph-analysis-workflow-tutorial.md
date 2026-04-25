@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Call Graph Analysis (2026)"
+title: "Claude Code for Call Graph Analysis"
 description: "Learn how to use Claude Code for efficient call graph analysis. This tutorial covers practical workflows to understand code relationships, trace."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Memcached Caching (2026)"
+title: "Claude Code for Memcached Caching"
 description: "Learn how to use Claude Code CLI to streamline Memcached caching workflows, with practical examples and best practices for developers. Updated for 2026."
 last_tested: "2026-04-22"
 date: 2026-03-15

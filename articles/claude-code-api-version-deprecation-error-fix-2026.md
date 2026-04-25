@@ -1,7 +1,7 @@
 ---
-title: "API Version Deprecated Error — Fix (2026)"
+title: "API Version Deprecated Error — Fix"
 permalink: /claude-code-api-version-deprecation-error-fix-2026/
-description: "Fix 'API version deprecated' error by updating anthropic-version header. Upgrade SDK to get the latest supported version."
+description: "Claude Code troubleshooting: fix 'API version deprecated' error by updating anthropic-version header. Upgrade SDK to get the latest supported version."
 last_tested: "2026-04-22"
 ---
 

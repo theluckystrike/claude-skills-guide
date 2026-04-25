@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Azure DevOps Pipeline (2026)"
+title: "Claude Code Azure DevOps Pipeline"
 description: "Master Azure DevOps pipeline automation with Claude Code. Learn to build intelligent CI/CD workflows that use AI-powered code generation, testing."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -515,6 +515,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-code-azure-devops-integration-workflow-tutorial/)
 - [Claude Code DevSecOps Compliance Pipeline Automation Guide](/claude-code-devsecops-compliance-pipeline-automation/)
 - [Brave Search MCP Server for Research Automation](/brave-search-mcp-server-research-automation/)

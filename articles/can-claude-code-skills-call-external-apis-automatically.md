@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Can Claude Code Skills Call External (2026)"
+title: "Can Claude Code Skills Call External"
 description: "Learn how Claude Code skills can automatically call external APIs, with practical examples and configuration tips for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

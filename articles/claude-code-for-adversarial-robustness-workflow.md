@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Adversarial Robustness (2026)"
+title: "Claude Code for Adversarial Robustness"
 description: "A practical guide to building adversarial robustness testing workflows with Claude Code. Learn to implement perturbation testing, defensive strategies."
 date: 2026-03-16
 last_modified_at: 2026-04-17

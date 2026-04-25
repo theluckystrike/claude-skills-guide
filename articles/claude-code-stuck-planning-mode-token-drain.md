@@ -1,5 +1,5 @@
 ---
-title: "Claude Code stuck in planning mode (2026)"
+title: "Claude Code stuck in planning mode"
 description: "Fix Claude Code stuck in planning mode that drains 30K-100K tokens on analysis without action, using action-first prompts and CLAUDE.md execution rules."
 permalink: /claude-code-stuck-planning-mode-token-drain/
 date: 2026-04-22

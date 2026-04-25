@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Use Claude Code for Figma-to-Code (2026)"
+title: "Use Claude Code for Figma-to-Code"
 description: "Convert Figma designs to production code with Claude Code. Extract design tokens, generate components, and maintain design-dev consistency."
 permalink: /claude-code-figma-to-code-workflow-2026/
 date: 2026-04-21

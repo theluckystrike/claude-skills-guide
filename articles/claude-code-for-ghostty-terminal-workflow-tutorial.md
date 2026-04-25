@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Ghostty Terminal for Claude (2026)"
+title: "How to Use Ghostty Terminal for Claude"
 description: "Set up Ghostty terminal for Claude Code with optimal configuration. A faster, GPU-accelerated terminal workflow for AI-assisted development."
 date: 2026-04-19
 last_modified_at: 2026-04-19

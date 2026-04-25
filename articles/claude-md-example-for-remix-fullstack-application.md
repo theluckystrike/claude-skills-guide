@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md Example For Remix Fullstack (2026)"
+title: "Claude Md Example For Remix Fullstack"
 description: "A practical guide to using Claude Code with Remix. Includes skill templates, fullstack workflows, loaders, actions, and real code examples for modern."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -501,6 +501,8 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 Related Reading
 
+
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [Claude MD Example for Elixir Phoenix Application](/claude-md-example-for-elixir-phoenix-application/)
 - [Claude MD Example for Laravel PHP Application](/claude-md-example-for-laravel-php-application/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)

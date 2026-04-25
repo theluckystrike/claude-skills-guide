@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Virtual Background Chrome Extension (2026)"
-description: "Learn how virtual background Chrome extensions work, the technologies behind them, and how to implement one. Practical code examples and technical."
+title: "Virtual Background Chrome Extension"
+description: "Claude Code extension tip: learn how virtual background Chrome extensions work, the technologies behind them, and how to implement one. Practical code..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

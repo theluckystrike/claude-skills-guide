@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Make Claude Code Write Secure (2026)"
+title: "How to Make Claude Code Write Secure"
 description: "A practical guide to configuring Claude Code for secure coding practices. Learn to use security-focused skills, define security constraints, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

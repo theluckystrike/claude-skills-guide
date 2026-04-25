@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + GitHub Models for Cost (2026)"
+title: "Claude Code + GitHub Models for Cost"
 description: "Combine Claude Code with GitHub Models to cut AI pipeline costs by 60%. Route tasks to the cheapest capable model with working pipeline configs."
 date: 2026-03-14
 last_modified_at: 2026-04-17

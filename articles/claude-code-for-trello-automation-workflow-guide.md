@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Trello Automation (2026)"
+title: "Claude Code for Trello Automation"
 description: "Learn how to use Claude Code CLI to automate Trello workflows, from basic board management to complex automation pipelines."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -595,6 +595,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [Claude Code for Mailchimp Automation Workflow Guide](/claude-code-for-mailchimp-automation-workflow-guide/)
 - [Claude Code for SRE Toil Automation Workflow](/claude-code-for-sre-toil-automation-workflow/)
 - [Claude Code Data Retention Policy Workflow](/claude-code-data-retention-policy-workflow/)

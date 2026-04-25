@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "JSON Formatter Chrome Extension (2026)"
-description: "A practical guide to the best JSON formatter Chrome extensions for developers and power users. Compare features, speed, and usability for daily API."
+description: "Claude Code extension tip: a practical guide to the best JSON formatter Chrome extensions for developers and power users. Compare features, speed, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

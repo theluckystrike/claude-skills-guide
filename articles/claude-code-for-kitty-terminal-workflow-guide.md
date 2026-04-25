@@ -84,3 +84,28 @@ Claude Code should use `kitty @` commands to create the layout, launch panes wit
 - [Claude Code Solo SaaS Builder Launch Checklist Workflow](/claude-code-solo-saas-builder-launch-checklist-workflow/)
 - [How to Use Anvil Local Fork (2026)](/claude-code-for-anvil-local-fork-workflow/)
 - [Claude Code Sre On Call Incident — Complete Developer Guide](/claude-code-sre-on-call-incident-response-workflow-guide/)
+
+
+## Common Questions
+
+### How do I get started with claude code for kitty terminal?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Claude Code for Chalk Terminal Styling](/claude-code-for-chalk-feature-workflow-tutorial/)
+- [Claude Code + k9s Kubernetes Terminal](/claude-code-for-k9s-kubernetes-terminal-workflow-guide/)
+- [Claude Code for Rio Terminal](/claude-code-for-rio-terminal-workflow-guide/)

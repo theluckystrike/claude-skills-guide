@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Prompt Caching Pricing Guide (2026)"
+title: "Claude Prompt Caching Pricing Guide"
 description: "Calculate Claude prompt caching cost savings. Covers pricing per model, cache write vs read costs, 1-hour cache option, and ROI calculations."
 date: 2026-04-15
 last_modified_at: 2026-04-17

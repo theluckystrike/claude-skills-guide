@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "ChatGPT For Google Chrome Extension (2026)"
+title: "ChatGPT For Google Chrome Extension"
 description: "Learn how to integrate ChatGPT into Chrome extensions, build AI-powered features, and create custom implementations for enhanced productivity."
 date: 2026-03-15
 last_modified_at: 2026-04-17

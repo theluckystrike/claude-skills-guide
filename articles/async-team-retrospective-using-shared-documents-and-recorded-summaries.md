@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Async Team Retrospectives with Shared (2026)"
-description: "Learn how to run effective async team retrospectives using shared documents and recorded summaries. Perfect for distributed teams across time zones."
+title: "Async Team Retrospectives with Shared"
+description: "Claude Code resource: learn how to run effective async team retrospectives using shared documents and recorded summaries. Perfect for distributed teams..."
 date: 2026-03-18
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Product Review Summary (2026)"
-description: "Learn how to build and use Chrome extensions that use AI to summarize product reviews. Technical implementation, API patterns, and practical code examples."
+title: "Chrome Extension Product Review Summary"
+description: "Claude Code extension tip: learn how to build and use Chrome extensions that use AI to summarize product reviews. Technical implementation, API..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 categories: [guides]

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for gRPC Stub Generation (2026)"
+title: "Claude Code for gRPC Stub Generation"
 description: "Learn how to use Claude Code to streamline gRPC stub generation. This guide covers practical workflows, code examples, and best practices for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

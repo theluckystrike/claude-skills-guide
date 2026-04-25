@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for SharedArrayBuffer (2026)"
+title: "Claude Code for SharedArrayBuffer"
 description: "Learn how to use SharedArrayBuffer for high-performance parallel computing in JavaScript with practical examples and best practices. Updated for 2026."
 last_tested: "2026-04-22"
 date: 2026-03-15

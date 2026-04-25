@@ -1,5 +1,5 @@
 ---
-title: "Claude Code VS Code Extension Fails (2026)"
+title: "Claude Code VS Code Extension Fails"
 description: "Fix Claude Code VS Code extension fails to activate. Clear extension cache and reinstall from marketplace. Step-by-step solution."
 permalink: /claude-code-vscode-extension-fails-to-activate-fix/
 last_tested: "2026-04-21"

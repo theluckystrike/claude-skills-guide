@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Microphone Test Tool (2026)"
-description: "Learn how to build and implement microphone test tools for Chrome extensions. Complete guide covering getUserMedia API, permission handling, and audio."
+title: "Chrome Extension Microphone Test Tool"
+description: "Claude Code extension tip: learn how to build and implement microphone test tools for Chrome extensions. Complete guide covering getUserMedia API,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

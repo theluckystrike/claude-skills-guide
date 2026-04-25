@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Accessible Modal Dialog (2026)"
+title: "Claude Code for Accessible Modal Dialog"
 description: "Learn how to implement accessible modal dialogs using Claude Code. This guide covers ARIA attributes, focus management, keyboard navigation, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

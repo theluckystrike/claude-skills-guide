@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Creating Database (2026)"
+title: "Claude Skills for Creating Database"
 description: "Learn how to create and use Claude skills that automate database migration script generation, schema versioning, and data transformation tasks."
 date: 2026-03-14
 last_modified_at: 2026-04-17

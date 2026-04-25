@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Tool Use vs Direct Prompting Cost (2026)"
-description: "Tool use adds 1,500+ tokens overhead per request. When direct prompting handles the task, you save $0.0075 per call on Opus 4.7."
+title: "Tool Use vs Direct Prompting Cost"
+description: "Claude Code comparison: tool use adds 1,500+ tokens overhead per request. When direct prompting handles the task, you save $0.0075 per call on Opus 4.7."
 date: 2026-04-19
 author: "Claude Skills Guide"
 permalink: /tool-use-vs-direct-prompting-cost-comparison/

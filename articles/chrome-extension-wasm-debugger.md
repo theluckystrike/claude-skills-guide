@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Debug: WASM Debugger Chrome Extension (2026)"
-description: "Learn how to debug WebAssembly modules within Chrome extensions using built-in DevTools features and practical techniques. Tested and working in 2026."
+title: "Debug: WASM Debugger Chrome Extension"
+description: "Claude Code troubleshooting: learn how to debug WebAssembly modules within Chrome extensions using built-in DevTools features and practical techniques...."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -259,6 +259,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Chrome Cast Buffering Fix: Practical Solutions for.](/chrome-cast-buffering-fix/)
 - [Chrome DevTools Responsive Design Mode: A Practical.](/chrome-devtools-responsive-design-mode/)
 - [Chrome Extension Firebase Debugger: Complete Guide for Developers](/chrome-extension-firebase-debugger/)

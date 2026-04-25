@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Svelte Animations (2026)"
+title: "Claude Code for Svelte Animations"
 description: "Learn how to create stunning Svelte animations using Claude Code. This comprehensive tutorial covers workflow best practices, practical code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

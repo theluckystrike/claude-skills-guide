@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "Chrome Extension Word Counter for Essay (2026)"
-description: "Build a Chrome extension that counts words in essays and documents. Practical code examples, implementation patterns, and API usage for developers."
+title: "Chrome Extension Word Counter for Essay"
+description: "Claude Code extension tip: build a Chrome extension that counts words in essays and documents. Practical code examples, implementation patterns, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"

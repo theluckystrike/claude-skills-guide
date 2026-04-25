@@ -1,7 +1,7 @@
 ---
-title: "Claude Code Hook Script Not Executable — Fix (2026)"
+title: "Hook Script Not Executable — Fix"
 permalink: /claude-code-hook-script-not-executable-fix-2026/
-description: "Run chmod +x on hook script to fix not-executable permission error. Ensure valid shebang line and Unix line endings are present in the file."
+description: "Claude Code troubleshooting: run chmod +x on hook script to fix not-executable permission error. Ensure valid shebang line and Unix line endings are..."
 last_tested: "2026-04-21"
 ---
 

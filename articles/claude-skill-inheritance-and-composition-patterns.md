@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skill Inheritance and Composition Patterns (2026)"
+title: "Claude Skill Inheritance and"
 description: "Build modular Claude skills with inheritance and composition patterns. Combine multiple capabilities into reusable, maintainable skill architectures."
 date: 2026-03-14
 last_modified_at: 2026-04-17

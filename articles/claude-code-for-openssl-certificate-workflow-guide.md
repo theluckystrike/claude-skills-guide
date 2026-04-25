@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for OpenSSL Certificate (2026)"
+title: "Claude Code for OpenSSL Certificate"
 description: "Learn how to use Claude Code to automate OpenSSL certificate workflows including generation, validation, renewal, and management of SSL/TLS certificates."
 date: 2026-03-15
 last_modified_at: 2026-04-17

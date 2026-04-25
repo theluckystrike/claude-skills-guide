@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build Supabase Apps with Claude Code (2026)"
+title: "Build Supabase Apps with Claude Code"
 description: "Build Supabase full-stack apps with Claude Code skills covering database design, auth, Edge Functions, and deployment workflows in one guide."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Password Managers for Claude Code API (2026)"
+title: "Password Managers for Claude Code API"
 description: "Securely store Claude API keys, MCP server tokens, and deployment secrets. NordPass, Bitwarden, and 1Password compared for Claude Code developer workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-21

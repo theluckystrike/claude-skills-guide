@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Learn Programming Languages with Claude (2026)"
+title: "Learn Programming Languages with Claude"
 description: "Use Claude Code to learn new programming languages faster with interactive coding assistance, real-time feedback, and skill-guided practice projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -123,6 +123,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [Aider AI Pair Programming Review 2026: An Honest Take](/aider-ai-pair-programming-review-2026-honest-take/)
 - [Chrome Extension Blackboard Learn Helper: A Developer Guide](/chrome-extension-blackboard-learn-helper/)
 - [Claude Code for Competitive Programming Practice Workflow](/claude-code-for-competitive-programming-practice-workflow/)

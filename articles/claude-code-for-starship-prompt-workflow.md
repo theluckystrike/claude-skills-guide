@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Starship Prompt Setup (2026)"
+title: "Claude Code + Starship Prompt Setup"
 description: "Configure Starship prompt to show Claude Code status, context usage, and session info. Copy-paste TOML config with practical customization tips."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Infura Web3 Workflow (2026)"
+title: "Claude Code for Infura Web3 Workflow"
 description: "Learn how to integrate Claude Code with Infura for efficient Web3 development workflows. This guide covers setup, practical examples, and expert tips."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,5 +1,5 @@
 ---
-title: "Awesome Claude Code Toolkit: 135 Agents (2026)"
+title: "Awesome Claude Code Toolkit: 135 Agents"
 description: "Explore the awesome-claude-code-toolkit — 135 agents, 35 skills, 42 commands, 176+ plugins, and 20 hooks curated for Claude Code developers."
 permalink: /awesome-claude-code-toolkit-135-agents-2026/
 last_tested: "2026-04-22"

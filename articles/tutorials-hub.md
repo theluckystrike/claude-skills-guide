@@ -379,6 +379,10 @@ Getting Started Tutorials:
 
 Related Reading
 
+
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
+- [Best Practices Guide](/best-practices/). Production-ready Claude Code guidelines and patterns
 - [How to Write a Skill MD File for Claude Code](/how-to-write-a-skill-md-file-for-claude-code/). The starting point before most tutorials
 - [Skill MD File Format Explained With Examples Guide](/claude-skill-md-format-complete-specification-guide/). The format reference every tutorial assumes
 - [Claude TDD Skill: Test-Driven Development Guide (2026)](/claude-tdd-skill-test-driven-development-workflow/). The most used Claude Code skill, explained in full

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for AI Risk Assessment (2026)"
+title: "Claude Code for AI Risk Assessment"
 description: "Learn how to build automated AI risk assessment workflows using Claude Code. Practical examples for evaluating model outputs, detecting bias, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

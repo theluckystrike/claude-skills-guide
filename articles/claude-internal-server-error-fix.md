@@ -905,4 +905,9 @@ With streaming, a 500 error can occur mid-stream, meaning you may receive partia
 
 - [Claude AI rate exceeded error fix](/claude-ai-rate-exceeded-error-fix/) — Fix the AI rate exceeded message
 
+Related Reading
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
+
 {% endraw %}

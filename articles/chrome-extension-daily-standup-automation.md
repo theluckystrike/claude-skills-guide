@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Daily Standup Automation Chrome (2026)"
-description: "Learn how to build a Chrome extension that automates your daily standup workflow. Practical code examples, APIs, and implementation patterns for."
+description: "Claude Code extension tip: learn how to build a Chrome extension that automates your daily standup workflow. Practical code examples, APIs, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

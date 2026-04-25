@@ -1,8 +1,8 @@
 ---
 
 layout: default
-title: "How to Automatically Delete Cookies (2026)"
-description: "Learn multiple methods to automatically delete cookies in Chrome, from built-in settings to advanced automation scripts for developers and power users."
+title: "How to Automatically Delete Cookies"
+description: "Claude Code guide: learn multiple methods to automatically delete cookies in Chrome, from built-in settings to advanced automation scripts for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

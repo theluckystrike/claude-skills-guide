@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Connection Refused (2026)"
+title: "Fix Claude Code Connection Refused"
 description: "Fix Claude Code connection refused errors on localhost. Check ports, proxy settings, and API config with copy-paste diagnostic commands included."
 date: 2026-03-14
 last_modified_at: 2026-04-17

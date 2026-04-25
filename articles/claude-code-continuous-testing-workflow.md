@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Continuous Testing Workflow (2026)"
+title: "Claude Code Continuous Testing Workflow"
 description: "Master continuous testing with Claude Code. Learn how to automate testing at every stage of development, integrate with CI/CD pipelines, and build a."
 date: 2026-04-19
 last_modified_at: 2026-04-19

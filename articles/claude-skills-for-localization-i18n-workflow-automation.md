@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Localization i18n (2026)"
+title: "Claude Skills for Localization i18n"
 description: "Practical guide to automating localization and i18n workflows using Claude Code skills. Includes code examples for translation management, locale file p..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

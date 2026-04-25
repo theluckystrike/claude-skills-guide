@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs Cursor: Detailed Feature Comparison (2026)"
+title: "Claude Code vs Cursor"
 permalink: /claude-code-vs-cursor-2026-detailed-comparison/
 description: "Claude Code runs autonomous multi-step tasks from your terminal. Cursor adds AI to a VS Code fork. Pricing, features, and 3-persona verdict compared."
 last_tested: "2026-04-21"

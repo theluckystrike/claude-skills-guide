@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Touching Unrelated (2026)"
+title: "Fix Claude Code Touching Unrelated"
 description: "Diagnose and fix Claude Code's habit of modifying files outside the task scope — with CLAUDE.md rules, scope declarations, and diff audits."
 permalink: /karpathy-surgical-changes-debugging-2026/
 last_tested: "2026-04-22"

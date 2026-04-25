@@ -1,7 +1,7 @@
 ---
-title: "Claude Code Bash Command Timeout 120s — Fix (2026)"
+title: "Bash Command Timeout 120s — Fix"
 permalink: /claude-code-bash-command-timeout-120s-fix-2026/
-description: "Set an explicit timeout parameter to fix the 120-second command timeout. Use background execution mode for long-running builds and test suites."
+description: "Claude Code troubleshooting: set an explicit timeout parameter to fix the 120-second command timeout. Use background execution mode for long-running..."
 last_tested: "2026-04-21"
 ---
 

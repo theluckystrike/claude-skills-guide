@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Build Multi-Account Container Chrome (2026)"
-description: "Build Chrome extensions for multi-account container management. Architecture patterns, cookie isolation, and identity switching implementation."
+title: "Build Multi-Account Container Chrome"
+description: "Claude Code extension tip: build Chrome extensions for multi-account container management. Architecture patterns, cookie isolation, and identity..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -1,6 +1,6 @@
 ---
-title: "Anthropic SDK Streaming Connection (2026)"
-description: "Fix Anthropic SDK streaming connection dropped mid-response. Implement reconnection with partial content recovery. Step-by-step solution."
+title: "Anthropic SDK Streaming Connection"
+description: "Claude Code resource: fix Anthropic SDK streaming connection dropped mid-response. Implement reconnection with partial content recovery. Step-by-step..."
 permalink: /anthropic-sdk-streaming-connection-dropped-fix/
 last_tested: "2026-04-21"
 ---

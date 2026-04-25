@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Use Lighthouse Chrome Extension (2026)"
-description: "Master Lighthouse Chrome extension for performance auditing. Step-by-step guide with practical examples, interpretation tips, and optimization."
+title: "How to Use Lighthouse Chrome Extension"
+description: "Claude Code guide: master Lighthouse Chrome extension for performance auditing. Step-by-step guide with practical examples, interpretation tips, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

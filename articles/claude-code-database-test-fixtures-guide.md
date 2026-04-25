@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Database Test Fixtures (2026)"
+title: "Claude Code Database Test Fixtures"
 description: "Learn how to use Claude Code CLI to create and manage database test fixtures. Practical examples for generating test data, seeding databases, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -333,6 +333,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Chrome Extension Microphone Test Tool: Developer Guide](/chrome-extension-microphone-test-tool/)
 - [Chrome Fingerprint Test Extension: A Developer's Guide.](/chrome-fingerprint-test-extension/)
 - [Claude Code Docker Compose Test Setup Guide](/claude-code-docker-compose-test-setup-guide/)

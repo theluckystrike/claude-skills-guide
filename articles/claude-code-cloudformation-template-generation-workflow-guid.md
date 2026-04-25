@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code CloudFormation Template (2026)"
+title: "Claude Code CloudFormation Template"
 description: "Learn how to generate AWS CloudFormation templates efficiently using Claude Code. Practical workflow patterns, code examples, and skill integration for inf"
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Export Highlights Notes Chrome (2026)"
-description: "Learn how to export highlights and notes from Chrome extensions. Practical examples, API approaches, and code snippets for developers building reading and."
+description: "Claude Code extension tip: learn how to export highlights and notes from Chrome extensions. Practical examples, API approaches, and code snippets for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

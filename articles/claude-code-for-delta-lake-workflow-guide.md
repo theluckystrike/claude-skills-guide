@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Delta Lake Workflow (2026)"
+title: "Claude Code for Delta Lake Workflow"
 description: "A comprehensive guide to using Claude Code for Delta Lake workflows. Learn practical patterns for data ingestion, table management, and pipeline."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Docker Image Publishing (2026)"
+title: "Claude Code for Docker Image Publishing"
 description: "A comprehensive guide to using Claude Code for automating Docker image building, tagging, and publishing workflows. Learn practical techniques for."
 date: 2026-04-19
 last_modified_at: 2026-04-19

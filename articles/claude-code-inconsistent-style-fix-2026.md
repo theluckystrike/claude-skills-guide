@@ -1,5 +1,5 @@
 ---
-title: "Fix Claude Code Inconsistent Code Style (2026)"
+title: "Fix Claude Code Inconsistent Code Style"
 description: "Enforce consistent code style across Claude Code sessions with CLAUDE.md style guides, reference files, and automated linting hooks."
 permalink: /claude-code-inconsistent-style-fix-2026/
 last_tested: "2026-04-22"

@@ -1,7 +1,7 @@
 ---
-title: "EACCES npm Cache Permission Error — Fix (2026)"
+title: "EACCES npm Cache Permission Error — Fix"
 permalink: /claude-code-eacces-npm-cache-fix-2026/
-description: "EACCES npm Cache Permission Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
+description: "Claude Code troubleshooting: eACCES npm Cache Permission Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
 last_tested: "2026-04-22"
 ---
 

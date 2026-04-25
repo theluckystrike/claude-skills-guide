@@ -2,7 +2,7 @@
 
 layout: default
 title: "AI Translation Chrome Extension (2026)"
-description: "Build an AI translation Chrome extension with practical code examples. APIs, implementation patterns, and translation models for developers."
+description: "Claude Code extension tip: build an AI translation Chrome extension with practical code examples. APIs, implementation patterns, and translation models..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

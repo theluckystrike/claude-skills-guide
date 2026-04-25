@@ -2,7 +2,7 @@
 
 layout: default
 title: "Rakuten Chrome Extension Review (2026)"
-description: "A technical deep-dive into the Rakuten Chrome extension for developers and power users, exploring API access, customization, automation potential, and."
+description: "Claude Code extension tip: a technical deep-dive into the Rakuten Chrome extension for developers and power users, exploring API access, customization,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Build Tab Audio Recorder Chrome (2026)"
-description: "Build Chrome extensions that capture audio from browser tabs using the MediaRecorder API. Practical code examples and implementation patterns."
+description: "Claude Code extension tip: build Chrome extensions that capture audio from browser tabs using the MediaRecorder API. Practical code examples and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

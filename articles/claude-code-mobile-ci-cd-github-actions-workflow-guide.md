@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Mobile CI/CD GitHub Actions (2026)"
+title: "Claude Code Mobile CI/CD GitHub Actions"
 description: "Build automated mobile CI/CD pipelines with GitHub Actions and Claude Code. Learn to automate iOS and Android builds, testing, code signing, and app."
 date: 2026-03-14
 last_modified_at: 2026-04-17

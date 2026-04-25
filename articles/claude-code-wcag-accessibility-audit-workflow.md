@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code WCAG Accessibility Audit (2026)"
+title: "Claude Code WCAG Accessibility Audit"
 description: "Build a practical WCAG accessibility audit workflow using Claude Code skills. Practical examples, automated checks, and remediation guidance for."
 date: 2026-03-14
 last_modified_at: 2026-04-17

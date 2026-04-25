@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome Extension Clearance Sale Finder (2026)"
-description: "Learn how to find discounts, sales, and clearance deals on Chrome extensions. Practical methods for developers and power users to save money on browser."
+title: "Chrome Extension Clearance Sale Finder"
+description: "Claude Code extension tip: learn how to find discounts, sales, and clearance deals on Chrome extensions. Practical methods for developers and power..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

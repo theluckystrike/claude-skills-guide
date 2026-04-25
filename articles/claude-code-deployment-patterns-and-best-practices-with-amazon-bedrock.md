@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Deployment with Amazon (2026)"
+title: "Claude Code Deployment with Amazon"
 description: "Deploy Claude Code applications using Amazon Bedrock. Covers IAM setup, model access, cost optimization, and production deployment patterns."
 date: 2026-04-17
 last_modified_at: 2026-04-17

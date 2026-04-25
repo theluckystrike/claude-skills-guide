@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AI Citation Generator Chrome (2026)"
-description: "Build and use AI-powered citation generators for Chrome. Practical implementation patterns, APIs, and code examples for developers and power users."
+description: "Claude Code extension tip: build and use AI-powered citation generators for Chrome. Practical implementation patterns, APIs, and code examples for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

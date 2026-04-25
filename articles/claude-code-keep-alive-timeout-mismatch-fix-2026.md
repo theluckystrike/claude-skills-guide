@@ -1,7 +1,7 @@
 ---
-title: "Keep-Alive Timeout Mismatch Error — Fix (2026)"
+title: "Keep-Alive Timeout Mismatch Error — Fix"
 permalink: /claude-code-keep-alive-timeout-mismatch-fix-2026/
-description: "Keep-Alive Timeout Mismatch Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
+description: "Claude Code troubleshooting: keep-Alive Timeout Mismatch Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
 last_tested: "2026-04-22"
 ---
 

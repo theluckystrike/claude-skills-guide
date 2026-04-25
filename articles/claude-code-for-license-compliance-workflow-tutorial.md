@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for License Compliance (2026)"
+title: "Claude Code for License Compliance"
 description: "Learn how to automate software license compliance using Claude Code. This comprehensive guide covers practical workflows, code examples, and actionable."
 date: 2026-04-19
 last_modified_at: 2026-04-19

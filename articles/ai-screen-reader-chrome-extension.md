@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Screen Reader Chrome Extension Guide (2026)"
-description: "Learn how to build and integrate AI-powered screen readers as Chrome extensions. Practical code examples and implementation strategies for developers."
+title: "AI Screen Reader Chrome Extension Guide"
+description: "Claude Code guide: learn how to build and integrate AI-powered screen readers as Chrome extensions. Practical code examples and implementation..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

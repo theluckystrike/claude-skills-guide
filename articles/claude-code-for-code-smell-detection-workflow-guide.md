@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Code Smell Detection (2026)"
+title: "Claude Code for Code Smell Detection"
 description: "Detect and fix code smells automatically with Claude Code. Covers long methods, feature envy, and data clumps with automated refactoring workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

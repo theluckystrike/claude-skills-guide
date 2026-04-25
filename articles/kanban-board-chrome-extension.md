@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Kanban Board Chrome Extension Guide (2026)"
-description: "Learn how to build and customize kanban board chrome extensions for task management. Practical examples and code snippets for developers and power users."
+title: "Kanban Board Chrome Extension Guide"
+description: "Claude Code guide: learn how to build and customize kanban board chrome extensions for task management. Practical examples and code snippets for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

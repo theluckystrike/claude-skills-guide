@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Fetch API Wrapper Guide (2026)"
+title: "Claude Code Fetch API Wrapper Guide"
 description: "Learn how to create efficient fetch API wrappers for Claude Code to streamline HTTP requests in your AI-assisted development workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17

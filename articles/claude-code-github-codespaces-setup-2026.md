@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Use Claude Code with GitHub Codespaces (2026)"
+title: "Use Claude Code with GitHub Codespaces"
 description: "Run Claude Code inside GitHub Codespaces with devcontainer config, SSH tunnels, and remote development best practices for cloud workflows."
 permalink: /claude-code-github-codespaces-setup-2026/
 date: 2026-04-21

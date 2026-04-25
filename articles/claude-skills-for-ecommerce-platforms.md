@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills for E-Commerce Platforms (2026)"
+title: "Claude Skills for E-Commerce Platforms"
 description: "Build a Claude Code skill that validates SKU/ASIN formats, enforces cart pricing rules, generates Google Merchant Center feeds, and audits checkout flows."
 permalink: /claude-skills-for-ecommerce-platforms/
 categories: [skills, 2026]

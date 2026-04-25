@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Tone.js Web Audio (2026)"
+title: "Claude Code for Tone.js Web Audio"
 permalink: /claude-code-tonejs-web-audio-programming-2026/
 description: "Build web audio applications with Tone.js and Claude Code. Create synthesizers, sequencers, effects chains, and interactive music tools in the browser."
 last_tested: "2026-04-22"

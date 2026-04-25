@@ -1,5 +1,5 @@
 ---
-title: "Claude Skills Performance Optimization (2026)"
+title: "Claude Skills Performance Optimization"
 description: "Reduce skill token usage by 60% with progressive disclosure, front-loaded descriptions, compaction-aware design, and reference file offloading."
 permalink: /claude-skills-performance-optimization/
 categories: [skills, 2026]

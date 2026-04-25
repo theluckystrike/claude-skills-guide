@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Pair Review Workflow (2026)"
+title: "Claude Code for Pair Review Workflow"
 description: "Learn how to use Claude Code for effective pair programming and code review workflows. This guide covers practical setups, skill combinations, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

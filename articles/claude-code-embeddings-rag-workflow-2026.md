@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code Embeddings and RAG Workflow (2026)"
+title: "Claude Code Embeddings and RAG Workflow"
 description: "Build RAG pipelines with Claude Code: generate embeddings, create vector stores, and implement retrieval-augmented generation for codebases."
 permalink: /claude-code-embeddings-rag-workflow-2026/
 date: 2026-04-21

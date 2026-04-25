@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Human-in-the-Loop Multi-Agent Patterns (2026)"
+title: "Human-in-the-Loop Multi-Agent Patterns"
 description: "Build human-in-the-loop multi-agent patterns with Claude Code. Practical techniques for approval gates, escalation, and oversight in AI workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

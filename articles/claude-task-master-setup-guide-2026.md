@@ -1,5 +1,5 @@
 ---
-title: "Claude Task Master: Setup and Review (2026)"
+title: "Claude Task Master: Setup and Review"
 description: "Set up claude-task-master to parse PRDs into structured task lists with dependency tracking, MCP integration, and AI-powered task breakdown."
 permalink: /claude-task-master-setup-guide-2026/
 last_tested: "2026-04-22"

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Chrome Extension PubMed Search Helper (2026)"
-description: "A practical guide to building and using Chrome extensions for PubMed search. Learn how to create custom search helpers, automate literature reviews, and."
+title: "Chrome Extension PubMed Search Helper"
+description: "Claude Code extension tip: a practical guide to building and using Chrome extensions for PubMed search. Learn how to create custom search helpers,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

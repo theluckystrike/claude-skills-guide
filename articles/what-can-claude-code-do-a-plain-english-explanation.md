@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "What Can Claude Code Do A Plain English (2026)"
+title: "What Can Claude Code Do A Plain English"
 description: "Learn what Claude Code is, what it can do, and how it can transform your development workflow. Practical examples and actionable advice included."
 date: 2026-03-14
 last_modified_at: 2026-04-17

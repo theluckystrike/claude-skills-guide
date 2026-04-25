@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code for VBA Macro Development (2026)"
+title: "Claude Code for VBA Macro Development"
 description: "Write and debug VBA macros with Claude Code for Excel, Access, and Outlook automation. Includes error handling patterns and testing approaches."
 permalink: /claude-code-vba-macro-development-2026/
 date: 2026-04-21

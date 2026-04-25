@@ -1,5 +1,5 @@
 ---
-title: "Unicode Encoding Errors in Code Output — Fix (2026)"
+title: "Unicode Encoding Errors in Code Output"
 permalink: /claude-code-unicode-encoding-errors-code-output-fix-2026/
 description: "Fix Unicode encoding errors in Claude Code output. Set UTF-8 locale and terminal encoding to prevent garbled characters in generated code files."
 last_tested: "2026-04-22"

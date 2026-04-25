@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Outlook Calendar Integration Chrome (2026)"
-description: "Learn how to build Chrome extensions that integrate with Outlook Calendar. Practical code examples, API authentication, and implementation patterns for."
+title: "Outlook Calendar Integration Chrome"
+description: "Claude Code extension tip: learn how to build Chrome extensions that integrate with Outlook Calendar. Practical code examples, API authentication, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

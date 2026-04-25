@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for Sarbanes-Oxley Code (2026)"
+title: "Claude Code for Sarbanes-Oxley Code"
 permalink: /claude-code-sarbanes-oxley-code-controls-2026/
 description: "Implement SOX-compliant code controls with Claude Code. Build segregation of duties, change management gates, and tamper-evident audit trails."
 last_tested: "2026-04-22"

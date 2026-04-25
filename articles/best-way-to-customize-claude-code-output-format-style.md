@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Customize Claude Code Output Format (2026)"
+title: "Customize Claude Code Output Format"
 description: "Control Claude Code output format using CLAUDE.md settings, skill metadata, and prompt patterns. Working examples for consistent code style output."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -360,6 +360,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Code Permissions Model Security Guide 2026](/claude-code-permissions-model-security-guide-2026/)

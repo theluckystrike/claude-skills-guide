@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Coding Tools Governance Policy (2026)"
-description: "A practical guide to establishing governance policies for AI coding tools in enterprise environments. Covers security controls, skill management."
+title: "AI Coding Tools Governance Policy"
+description: "Claude Code AI workflow: a practical guide to establishing governance policies for AI coding tools in enterprise environments. Covers security..."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: theluckystrike

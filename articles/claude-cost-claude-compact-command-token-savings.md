@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude /compact Command Token Savings (2026)"
+title: "Claude /compact Command Token Savings"
 description: "The /compact command reduces Claude Code context by 50-70%, saving $0.60 per session on Opus 4.7 — here is when and how to use it."
 date: 2026-04-19
 author: "Claude Skills Guide"

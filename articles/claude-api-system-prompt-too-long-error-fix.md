@@ -1,5 +1,5 @@
 ---
-title: "Claude API System Prompt Too Long Error (2026)"
+title: "Claude API System Prompt Too Long Error"
 description: "Fix Claude API system prompt too long error. Compress system instructions and split into cached blocks. Step-by-step solution."
 permalink: /claude-api-system-prompt-too-long-error-fix/
 last_tested: "2026-04-21"

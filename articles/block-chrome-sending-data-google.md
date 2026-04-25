@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Block Chrome from Sending Data (2026)"
+title: "How to Block Chrome from Sending Data"
 last_tested: "2026-04-22"
 description: "A practical guide for developers and power users to block Chrome from sending data to Google. Covers hosts file modifications, DNS-level blocking."
 date: 2026-03-15

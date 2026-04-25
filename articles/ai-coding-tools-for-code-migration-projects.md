@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "AI Coding Tools for Code Migration (2026)"
+title: "AI Coding Tools for Code Migration"
 description: "Discover the best AI coding tools that streamline code migration projects, from legacy system upgrades to cross-platform transitions."
 date: 2026-03-14
 last_modified_at: 2026-04-17

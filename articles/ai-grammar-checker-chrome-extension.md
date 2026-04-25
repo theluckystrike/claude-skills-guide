@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Grammar Checker Chrome Extension (2026)"
-description: "Learn how AI grammar checker Chrome extensions work under the hood, how to build one, and which APIs power real-time writing assistance."
+title: "AI Grammar Checker Chrome Extension"
+description: "Claude Code extension tip: learn how AI grammar checker Chrome extensions work under the hood, how to build one, and which APIs power real-time writing..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

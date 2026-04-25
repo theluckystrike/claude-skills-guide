@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code API Reference Generation (2026)"
+title: "Claude Code API Reference Generation"
 description: "Learn how to generate API references automatically using Claude Code skills. Practical examples with frontend-design, pdf, and documentation workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

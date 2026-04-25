@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Apollo.io Alternative Chrome Extension (2026)"
+title: "Apollo.io Alternative Chrome Extension"
 description: "Find the best Apollo.io alternatives with Chrome extensions for developers in 2026. Compare free options, API integrations, and workflow automation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

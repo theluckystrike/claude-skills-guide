@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Blue-Green Deployment (2026)"
+title: "Claude Code for Blue-Green Deployment"
 description: "Learn how to use Claude Code to implement blue-green deployment workflows for zero-downtime releases. Practical examples, code snippets, and actionable."
 date: 2026-03-15
 last_modified_at: 2026-04-17

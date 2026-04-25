@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Prettier Format Conflict (2026)"
+title: "Claude Code Prettier Format Conflict"
 description: "Fix Claude Code Prettier format conflict with project config. Align Claude output with .prettierrc settings. Step-by-step solution."
 permalink: /claude-code-prettier-format-conflict-fix/
 last_tested: "2026-04-21"

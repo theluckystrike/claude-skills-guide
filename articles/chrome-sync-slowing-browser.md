@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Sync Slowing Browser (2026)"
-description: "Is Chrome Sync slowing your browser? Learn how to diagnose sync-related performance issues, identify problematic data types, and optimize Chrome's sync."
+description: "Claude Code extension tip: is Chrome Sync slowing your browser? Learn how to diagnose sync-related performance issues, identify problematic data types,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

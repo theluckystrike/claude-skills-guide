@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Development Chrome Extension Guide (2026)"
-description: "Build Chrome extensions in 2026 with Manifest V3, service workers, content scripts, and popup UI. Includes a minimal working example and Chrome Web Store."
+title: "Development Chrome Extension Guide"
+description: "Claude Code guide: build Chrome extensions in 2026 with Manifest V3, service workers, content scripts, and popup UI. Includes a minimal working example..."
 date: 2026-03-20
 last_modified_at: 2026-04-17
 categories: [tutorials]

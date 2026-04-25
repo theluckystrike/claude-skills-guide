@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "AI Spreadsheet Helper Chrome Extension (2026)"
-description: "Learn how AI-powered Chrome extensions transform spreadsheet workflows. Build custom solutions, integrate with Google Sheets and Excel, and automate."
+title: "AI Spreadsheet Helper Chrome Extension"
+description: "Claude Code extension tip: learn how AI-powered Chrome extensions transform spreadsheet workflows. Build custom solutions, integrate with Google Sheets..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

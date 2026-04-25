@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code with Windsurf Cascade (2026)"
+title: "Claude Code with Windsurf Cascade"
 description: "Combine Claude Code with Windsurf Cascade for enhanced AI development. Covers workflow chaining, context sharing, and multi-tool orchestration tips."
 date: 2026-04-19
 last_modified_at: 2026-04-19

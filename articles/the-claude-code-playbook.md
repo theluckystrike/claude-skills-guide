@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Guides: Complete Collection (2026)"
+title: "Claude Code Guides: Complete Collection"
 description: "Complete Claude Code collection: 50 error fixes, 25 CLAUDE.md templates, 15 orchestration configs, and 100 proven prompts. Tested April 2026."
 date: 2026-04-19
 last_tested: "2026-04-21"
@@ -405,6 +405,9 @@ The public half (100 patterns) is also available as a [GitHub repository](https:
 ## Related
 
 - [Claude shortcuts guide](/claude-shortcuts-complete-guide/) — Complete guide to Claude Code keyboard shortcuts and slash commands
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
+
 ---
 
 *Last updated: April 2026. Curated from 3,000+ Claude Code articles by the Claude Skills Guide team.*

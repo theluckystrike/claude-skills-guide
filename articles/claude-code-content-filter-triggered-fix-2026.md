@@ -1,5 +1,5 @@
 ---
-title: "Content Filter Triggered Refusal — Fix (2026)"
+title: "Content Filter Triggered Refusal — Fix"
 permalink: /claude-code-content-filter-triggered-fix-2026/
 description: "Fix content filter refusal in Claude API. Rephrase prompt to remove flagged patterns. Check stop_reason for 'end_turn' vs 'content_filter'."
 last_tested: "2026-04-22"

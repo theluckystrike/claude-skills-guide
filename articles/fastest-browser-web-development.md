@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fastest Browser for Web Development (2026)"
+title: "Fastest Browser for Web Development"
 description: "Discover the fastest browsers for web development in 2026. Compare performance, developer tools, and features for building modern web applications."
 date: 2026-03-15
 last_modified_at: 2026-04-17

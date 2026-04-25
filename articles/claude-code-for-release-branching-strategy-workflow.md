@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Release Branching (2026)"
+title: "Claude Code for Release Branching"
 description: "Learn how to use Claude Code to streamline your release branching strategy workflow with practical examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

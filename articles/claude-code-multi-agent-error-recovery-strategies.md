@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Multi-Agent Error Recovery (2026)"
+title: "Claude Code Multi-Agent Error Recovery"
 description: "Handle errors in multi-agent Claude Code workflows with retry patterns, fallback strategies, and graceful degradation. Build resilient agent systems."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -362,6 +362,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Claude Opus Orchestrator-Sonnet-Worker Architecture](/claude-opus-orchestrator-sonnet-worker-architecture/). Design fault-tolerant architectures with orchestrators that handle worker failures
 - [Claude Code Agent Pipeline: Sequential vs Parallel Execution](/claude-code-agent-pipeline-sequential-vs-parallel/). Choose pipeline execution models that minimize cascading errors
 - [Monitoring and Logging Claude Code Multi-Agent Systems](/monitoring-and-logging-claude-code-multi-agent-systems/). Detect and diagnose errors before they require manual recovery

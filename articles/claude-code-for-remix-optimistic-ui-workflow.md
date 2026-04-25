@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Remix Optimistic UI (2026)"
+title: "Claude Code for Remix Optimistic UI"
 description: "Build responsive Remix apps with optimistic UI patterns using Claude Code. Implement instant feedback, pending states, and error rollback strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17

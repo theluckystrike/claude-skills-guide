@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Incident Tracking (2026)"
+title: "Claude Code for Incident Tracking"
 description: "Learn how to build an incident tracking workflow with Claude Code. Create skills for logging, triaging, and resolving incidents with practical code."
 date: 2026-03-15
 last_modified_at: 2026-04-17

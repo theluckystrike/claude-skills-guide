@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Build an Amazon Research Chrome (2026)"
-description: "Build a Chrome extension for Amazon product research. Covers price history tracking, review analysis, competitor comparison, and sales rank monitoring."
+description: "Claude Code extension tip: build a Chrome extension for Amazon product research. Covers price history tracking, review analysis, competitor comparison,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

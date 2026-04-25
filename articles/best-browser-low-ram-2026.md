@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Browser Setup for Running Claude (2026)"
+title: "Best Browser Setup for Running Claude"
 description: "Optimize your browser choice when running Claude Code on machines with limited RAM. Firefox, Brave, and lightweight browsers compared for AI coding..."
 date: 2026-03-15
 last_modified_at: 2026-04-21

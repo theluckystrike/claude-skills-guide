@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Lost Context Mid-Task (2026)"
+title: "Fix Claude Code Lost Context Mid-Task"
 description: "Recover lost context when Claude Code forgets your task mid-session. Five proven recovery commands and prevention techniques with real examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

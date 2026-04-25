@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Dead Code Elimination (2026)"
+title: "Claude Code for Dead Code Elimination"
 description: "Learn how to use Claude Code to identify and eliminate dead code from your projects. A practical workflow guide with examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

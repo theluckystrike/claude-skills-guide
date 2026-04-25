@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Ungoogled Chromium (2026)"
-description: "Compare Ungoogled Chromium and Google Chrome in terms of privacy, performance, extension compatibility, and developer tools. Learn which browser best."
+description: "Claude Code resource: compare Ungoogled Chromium and Google Chrome in terms of privacy, performance, extension compatibility, and developer tools...."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

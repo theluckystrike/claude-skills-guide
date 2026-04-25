@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for AI Agent Tool Calling (2026)"
+title: "Claude Code for AI Agent Tool Calling"
 description: "Learn how to implement tool calling in AI agents using Claude Code. This guide covers practical patterns, code examples, and best practices for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Test Fixture Generation (2026)"
+title: "Claude Code for Test Fixture Generation"
 description: "Learn how to use Claude Code to automate and streamline your test fixture generation workflow. Practical examples and actionable advice for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -598,6 +598,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code Test Data Generation Workflow](/claude-code-test-data-generation-workflow/)
 - [Claude Code Astro Static Site Generation Workflow Guide](/claude-code-astro-static-site-generation-workflow-guide/)
 - [Claude Code Automated Alt Text Generation Workflow](/claude-code-automated-alt-text-generation-workflow/)

@@ -73,3 +73,24 @@ Claude Code should create a GitHub OAuth instance with Arctic, an `/api/auth/git
 - [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
 - [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)
+
+
+## Common Questions
+
+### Is my data safe when using AI coding tools?
+
+Review each tool's data handling policy. Claude Code processes code locally by default. For sensitive projects, use API-based access with enterprise data agreements and avoid sharing credentials in prompts.
+
+### How do I audit AI-generated code for security?
+
+Run static analysis tools on all AI-generated code. Review authentication logic, input validation, and data handling manually. Treat AI output like any untrusted code contribution.
+
+### What are the compliance considerations?
+
+Check your organization's policies on AI code generation. Many frameworks (SOC 2, HIPAA) require documentation of AI tool usage. Maintain audit logs of AI-assisted changes.
+
+## Related Resources
+
+- [Claude Code for Better Auth](/claude-code-for-better-auth-workflow-guide/)
+- [Claude Code for Clerk Auth](/claude-code-for-clerk-auth-workflow-guide/)
+- [Claude Code for Hanko Auth](/claude-code-for-hanko-auth-workflow-guide/)

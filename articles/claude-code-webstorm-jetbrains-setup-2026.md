@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code + WebStorm JetBrains Setup (2026)"
+title: "Claude Code + WebStorm JetBrains Setup"
 description: "Use Claude Code with WebStorm for JavaScript and TypeScript development. Terminal integration, file watching, and workflow automation tips."
 permalink: /claude-code-webstorm-jetbrains-setup-2026/
 date: 2026-04-21

@@ -1,5 +1,5 @@
 ---
-title: "Claude Code for ColdFusion to Node.js (2026)"
+title: "Claude Code for ColdFusion to Node.js"
 permalink: /claude-code-coldfusion-to-nodejs-migration-2026/
 description: "Migrate Adobe ColdFusion CFML applications to Node.js with Claude Code. Convert CFCs, custom tags, and cfquery to modern Express APIs."
 last_tested: "2026-04-22"

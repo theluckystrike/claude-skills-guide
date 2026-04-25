@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude Code High Token Usage (2026)"
+title: "Fix: Claude Code High Token Usage"
 description: "Claude Code burning through tokens on simple queries? Understand why context accumulates and how to control token consumption."
 date: 2026-04-15
 last_modified_at: 2026-04-17

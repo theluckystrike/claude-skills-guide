@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Changelogs and Release (2026)"
+title: "Claude Code Changelogs and Release"
 description: "Learn how to automate changelogs and release notes generation using Claude Code skills, git history analysis, and practical workflows for development."
 date: 2026-03-14
 last_modified_at: 2026-04-17

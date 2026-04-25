@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension GitHub Issues Manager (2026)"
+title: "Chrome Extension GitHub Issues Manager"
 description: "A practical guide to Chrome extensions for managing GitHub issues. Learn how to efficiently track, organize, and handle issues directly from your browser."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -729,6 +729,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/)
 - [Claude Skills Guides Hub](/guides-hub/)

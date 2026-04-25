@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Automate Compliance Reports with Claude (2026)"
+title: "Automate Compliance Reports with Claude"
 description: "Automate compliance reporting with Claude Code for SOC2, ISO 27001, and GDPR evidence collection. Generate audit-ready reports from your codebase."
 date: 2026-03-14
 last_modified_at: 2026-04-17

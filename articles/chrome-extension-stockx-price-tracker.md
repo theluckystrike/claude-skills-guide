@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Build a StockX Price Tracker Extension (2026)"
-description: "Track StockX sneaker prices with a Chrome extension. Set price alerts, monitor market trends, and compare historical pricing data automatically."
+title: "Build a StockX Price Tracker Extension"
+description: "Claude Code extension tip: track StockX sneaker prices with a Chrome extension. Set price alerts, monitor market trends, and compare historical pricing..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

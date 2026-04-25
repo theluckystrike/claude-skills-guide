@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Claude Code Keeps Asking Permission (2026)"
+title: "Why Claude Code Keeps Asking Permission"
 description: "Why Claude Code Keeps Asking Permission — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

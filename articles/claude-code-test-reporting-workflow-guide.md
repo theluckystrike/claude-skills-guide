@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Test Reporting Workflow (2026)"
+title: "Claude Code Test Reporting Workflow"
 description: "Learn how to set up and optimize test reporting workflows with Claude Code. Comprehensive guide covering test automation, reporting tools, and best."
 keywords: "claude code test reporting workflow guide"
 date: 2024-01-01

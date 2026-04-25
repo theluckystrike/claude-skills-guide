@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Statsig Dynamic Config (2026)"
+title: "Claude Code Statsig Dynamic Config"
 description: "Learn how to integrate Claude Code with Statsig for dynamic configuration and remote values. Practical examples for feature flags and dynamic config."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -328,6 +328,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
 - [Claude Code PostHog Feature Flag React SDK Guide](/claude-code-posthog-feature-flag-react-sdk-guide/)
 - [Claude Code PostHog Feature Flags Analytics Workflow](/claude-code-posthog-feature-flags-analytics-workflow/)
 - [Claude Code LaunchDarkly Gradual Rollout Workflow Tutorial](/claude-code-launchdarkly-gradual-rollout-workflow-tutorial/)

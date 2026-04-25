@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Command Not Found After (2026)"
+title: "Fix Claude Command Not Found After"
 description: "Fix zsh/bash 'claude: command not found' after install. Step-by-step PATH fix with copy-paste commands. Works in 2 minutes."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -422,6 +422,10 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code Setup on Mac: Step-by-Step Guide](/claude-code-setup-on-mac-step-by-step/). Full installation walkthrough for macOS
 - [Best Claude Code Skills to Install First in 2026](/best-claude-code-skills-to-install-first-2026/). First skills to add once Claude is running
 - [Claude Code for Beginners: Complete Getting Started Guide](/claude-code-for-beginners-complete-getting-started-2026/). Full orientation for new users

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Product Architecture for a Claude Code (2026)"
+title: "Product Architecture for a Claude Code"
 description: "Learn how to design and build a powerful CLI tool powered by Claude Code, focusing on core architecture, skills integration, and practical."
 date: 2026-03-14
 last_modified_at: 2026-04-17

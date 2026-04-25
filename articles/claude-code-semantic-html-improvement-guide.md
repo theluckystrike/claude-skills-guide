@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Semantic HTML Improvement (2026)"
+title: "Claude Code Semantic HTML Improvement"
 description: "Learn how to use Claude Code to audit, refactor, and improve semantic HTML structure in your projects. Practical patterns for developers and power users."
 date: 2026-03-14
 last_modified_at: 2026-04-17

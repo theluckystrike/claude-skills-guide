@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Static Analysis Automation (2026)"
+title: "Claude Code Static Analysis Automation"
 description: "Learn how to automate static code analysis with Claude Code skills. Practical examples for JavaScript, Python, and TypeScript projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome WebGL Slow: Causes and Solutions (2026)"
+title: "Chrome WebGL Slow: Causes and Solutions"
 description: "Chrome WebGL Slow: Causes and Solutions explained with practical examples and tested code. Step-by-step guide covering setup, common pitfalls, and tips..."
 last_tested: "2026-04-22"
 date: 2026-03-15

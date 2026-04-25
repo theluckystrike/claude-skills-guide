@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for TypeScript Conditional Types (2026)"
+title: "TypeScript Conditional Types"
 description: "Master TypeScript conditional types with Claude Code. Learn to write, debug, and refactor complex generic conditional types with practical examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

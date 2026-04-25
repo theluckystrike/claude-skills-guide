@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for CDK Pipelines Workflow (2026)"
+title: "Claude Code for CDK Pipelines Workflow"
 description: "Learn how to use Claude Code with AWS CDK Pipelines for automated infrastructure deployment. Practical examples and code snippets for building robust."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -241,6 +241,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns
 - [Claude Code for CDK Nag Policy Workflow Guide](/claude-code-for-cdk-nag-policy-workflow-guide/)
 - [Claude Code Algolia GeoSearch Filtering Workflow Tutorial](/claude-code-algolia-geosearch-filtering-workflow-tutorial/)
 - [Claude Code CloudFormation Template Generation Workflow Guid](/claude-code-cloudformation-template-generation-workflow-guid/)

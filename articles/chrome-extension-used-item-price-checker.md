@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Used Item Price Checker Chrome (2026)"
-description: "Learn how to build and use Chrome extensions for checking used item prices across multiple marketplaces. Practical implementation patterns, API."
+description: "Claude Code extension tip: learn how to build and use Chrome extensions for checking used item prices across multiple marketplaces. Practical..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

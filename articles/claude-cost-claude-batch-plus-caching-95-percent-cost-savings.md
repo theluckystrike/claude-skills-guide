@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Batch Plus Caching for 95% Cost (2026)"
+title: "Claude Batch Plus Caching for 95% Cost"
 description: "Claude Batch Plus Caching for 95% Cost — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"

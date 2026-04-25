@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Sonnet 4.6 vs Gemini 2.5 Pro (2026)"
+title: "Claude Sonnet 4.6 vs Gemini 2.5 Pro"
 description: "Claude Sonnet 4.6 vs Gemini 2.5 Pro compared for coding — context windows, pricing, multimodal features, and real-world performance."
 date: 2026-04-21
 permalink: /claude-sonnet-vs-gemini-25-pro-coding/

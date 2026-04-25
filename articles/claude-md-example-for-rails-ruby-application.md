@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CLAUDE.md Example for Rails and Ruby (2026)"
+title: "CLAUDE.md Example for Rails and Ruby"
 description: "CLAUDE.md Example for Rails and Ruby — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

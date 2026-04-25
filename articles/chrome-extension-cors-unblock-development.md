@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "CORS Unblock Development Chrome (2026)"
-description: "Learn how to build Chrome extensions that handle CORS restrictions during development. Complete implementation guide with code examples for developers and."
+description: "Claude Code extension tip: learn how to build Chrome extensions that handle CORS restrictions during development. Complete implementation guide with..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

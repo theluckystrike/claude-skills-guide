@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Nitro Server Engine (2026)"
+title: "Claude Code for Nitro Server Engine"
 description: "Claude Code for Nitro Server Engine — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-nitro-server-engine-workflow-guide/

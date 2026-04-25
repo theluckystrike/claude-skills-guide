@@ -79,3 +79,24 @@ Claude Code should create a Next.js API route that sends POST requests to `${DIF
 ## See Also
 
 - [Claude Code Spacelift Platform Guide](/claude-code-spacelift-platform-guide/)
+
+
+## Common Questions
+
+### What AI models work best with this approach?
+
+Claude Opus 4 and Claude Sonnet 4 handle complex reasoning tasks. For simpler operations, Claude Haiku 3.5 offers faster responses at lower cost. Match model capability to task complexity.
+
+### How do I handle AI agent failures gracefully?
+
+Implement retry logic with exponential backoff, set clear timeout boundaries, and design fallback paths for critical operations. Log all failures for pattern analysis.
+
+### Can this workflow scale to production?
+
+Yes. Add rate limiting, request queuing, and monitoring before production deployment. Most AI agent architectures scale horizontally by adding worker instances behind a load balancer.
+
+## Related Resources
+
+- [Best AI Code Completion Tools vs Claude](/best-ai-code-completion-tools-vs-claude-code/)
+- [Use Claude Code with Other AI Models](/can-claude-code-skills-work-alongside-other-ai-models/)
+- [Claude Code and Linear AI for Project](/claude-code-and-linear-ai-for-project-and-code-alignment/)

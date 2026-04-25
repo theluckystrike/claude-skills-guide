@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code vs Cursor for Debugging (2026)"
+title: "Claude Code vs Cursor for Debugging"
 description: "Claude Code vs Cursor compared for debugging runtime errors. Test results on stack traces, memory leaks, and async bugs across both AI coding tools."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -244,6 +244,8 @@ $99. Once. Everything I use to ship.
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Claude Code vs Cursor 2026: Detailed Comparison for.](/claude-code-vs-cursor-2026-detailed-comparison/)
 - [Claude Code vs Cursor for React Development](/claude-code-vs-cursor-for-react-development/)
 - [Bolt.new Review: AI Web App Builder 2026](/bolt-new-review-ai-web-app-builder-2026/)

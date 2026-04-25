@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Go Module Development (2026)"
+title: "Claude Code Go Module Development"
 description: "Learn how to build production-ready Go modules with Claude Code. Covers module initialization, dependency management, testing patterns, and workflow."
 date: 2026-03-14
 last_modified_at: 2026-04-17

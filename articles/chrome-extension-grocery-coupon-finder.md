@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Build a Grocery Coupon Finder Chrome Extension (2026)"
-description: "A practical guide for developers building Chrome extensions that help users find and manage grocery coupons. Includes architecture patterns, code."
+title: "Build a Grocery Coupon Finder Extension"
+description: "Claude Code extension tip: a practical guide for developers building Chrome extensions that help users find and manage grocery coupons. Includes..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

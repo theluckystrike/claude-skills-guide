@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Resilience4j Circuit (2026)"
+title: "Claude Code for Resilience4j Circuit"
 description: "Learn how to use Claude Code to build resilient Java applications with Resilience4j circuit breakers. Practical examples and code snippets for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

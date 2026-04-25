@@ -1,7 +1,7 @@
 ---
-title: "Declaration File .d.ts Missing Error — Fix (2026)"
+title: "Declaration File .d.ts Missing Error"
 permalink: /claude-code-declaration-file-dts-missing-fix-2026/
-description: "Declaration File .d.ts Missing Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
+description: "Claude Code troubleshooting: declaration File .d.ts Missing Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions..."
 last_tested: "2026-04-22"
 ---
 

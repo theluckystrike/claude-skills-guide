@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for IPFS Storage Workflows (2026)"
+title: "Claude Code for IPFS Storage Workflows"
 description: "Build decentralized storage workflows using Claude Code and IPFS. Covers file pinning, content addressing, gateway configuration, and retrieval logic."
 date: 2026-03-15
 last_modified_at: 2026-04-17

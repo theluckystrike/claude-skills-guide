@@ -1,5 +1,5 @@
 ---
-title: "Fix Unknown Skill Error in Claude Code (2026)"
+title: "Fix Unknown Skill Error in Claude Code"
 description: "Resolve the 'unknown skill' error when Claude Code cannot find your SKILL.md file due to path, naming, directory structure, or discovery issues."
 permalink: /fix-unknown-skill-error-claude-code/
 categories: [skills, 2026]

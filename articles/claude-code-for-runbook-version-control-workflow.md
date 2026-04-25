@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Runbook Version Control (2026)"
+title: "Claude Code for Runbook Version Control"
 description: "Master runbook version control with Claude Code. Learn practical workflows for tracking, branching, and managing operational procedures with Git."
 date: 2026-03-15
 last_modified_at: 2026-04-17

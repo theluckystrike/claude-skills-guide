@@ -1,5 +1,5 @@
 ---
-title: "Make Claude Code Write Tests First (2026)"
+title: "Make Claude Code Write Tests First"
 description: "Configure Claude Code for test-driven development with CLAUDE.md rules that enforce red-green-refactor and test-before-implementation ordering."
 permalink: /claude-code-write-tests-first-tdd-setup-2026/
 last_tested: "2026-04-22"

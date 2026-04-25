@@ -367,6 +367,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Claude Skill .md Format: Complete Specification Guide](/claude-skill-md-format-complete-specification-guide/)
 - [Claude Code Crashes When Loading Skill: Debug Steps](/claude-code-crashes-when-loading-skill-debug-steps/)
 - [Claude Code Output Quality: How to Improve Results](/claude-code-output-quality-how-to-improve-results/)

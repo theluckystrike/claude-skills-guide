@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Shift Left Testing Strategy (2026)"
+title: "Claude Code Shift Left Testing Strategy"
 description: "Learn how to implement shift-left testing strategy with Claude Code to catch bugs earlier, reduce costs, and improve software quality."
 date: 2026-03-14
 last_modified_at: 2026-04-17

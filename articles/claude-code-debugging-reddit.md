@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Debugging Tips from Reddit (2026)"
+title: "Claude Code Debugging Tips from Reddit"
 description: "Community-tested Claude Code debugging techniques from Reddit. Real developer solutions for common bugs, crashes, and workflow issues."
 date: 2026-04-17
 last_modified_at: 2026-04-17

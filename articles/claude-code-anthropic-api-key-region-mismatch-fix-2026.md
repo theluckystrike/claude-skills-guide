@@ -1,5 +1,5 @@
 ---
-title: "API Key Region Mismatch eu-west-1 — Fix (2026)"
+title: "API Key Region Mismatch eu-west-1 — Fix"
 permalink: /claude-code-anthropic-api-key-region-mismatch-fix-2026/
 description: "Set the correct ANTHROPIC_BASE_URL environment variable for your API key region. Fixes the region mismatch authentication error in Claude Code."
 last_tested: "2026-04-21"

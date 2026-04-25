@@ -1,5 +1,5 @@
 ---
-title: "Workspace Trust Required for Claude — Fix (2026)"
+title: "Workspace Trust Required for Claude"
 permalink: /claude-code-workspace-trust-required-fix-2026/
 description: "Grant workspace trust via the VS Code Manage Workspace Trust command palette option. Enables Claude Code operations in restricted workspace folders."
 last_tested: "2026-04-21"

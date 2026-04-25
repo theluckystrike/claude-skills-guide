@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Build an AI Sentiment Analyzer (2026)"
-description: "Build a Chrome extension for real-time sentiment analysis using AI. Detect positive, negative, and neutral tone in any text on any webpage instantly."
+description: "Claude Code AI workflow: build a Chrome extension for real-time sentiment analysis using AI. Detect positive, negative, and neutral tone in any text on..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

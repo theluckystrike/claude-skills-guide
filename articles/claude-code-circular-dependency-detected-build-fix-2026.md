@@ -1,7 +1,7 @@
 ---
-title: "Circular Dependency Detected in Build (2026)"
+title: "Circular Dependency Detected in Build"
 permalink: /claude-code-circular-dependency-detected-build-fix-2026/
-description: "Circular Dependency Detected in Build — practical setup steps, configuration examples, and working code you can use in your projects today."
+description: "Claude Code resource: circular Dependency Detected in Build — practical setup steps, configuration examples, and working code you can use in your..."
 last_tested: "2026-04-22"
 ---
 

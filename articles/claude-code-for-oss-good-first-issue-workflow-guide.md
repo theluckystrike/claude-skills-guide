@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code For Oss Good First (2026)"
+title: "Fix Claude Code For Oss Good First"
 description: "A comprehensive guide to using Claude Code effectively for contributing to open source projects through good first issues. Learn practical workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -296,6 +296,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 Related Reading
 
+
+- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Claude Code for First OSS Contribution Workflow Guide](/claude-code-for-first-oss-contribution-workflow-guide/)
 - [Claude Code for OSS Issue Triage Workflow Tutorial](/claude-code-for-oss-issue-triage-workflow-tutorial/)
 - [Claude Code for Claude Issue Triage Workflow Tutorial Guide](/claude-code-for-claude-issue-triage-workflow-tutorial-guide/)

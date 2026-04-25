@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Color Picker Design Chrome Extension (2026)"
-description: "Learn how to design effective chrome extension color picker interfaces with practical implementation patterns and code examples."
+title: "Color Picker Design Chrome Extension"
+description: "Claude Code extension tip: learn how to design effective chrome extension color picker interfaces with practical implementation patterns and code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: theluckystrike

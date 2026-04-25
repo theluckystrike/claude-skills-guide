@@ -1,5 +1,5 @@
 ---
-title: "Should I Switch from Continue.dev to Claude Code? (2026)"
+title: "Switch from Continue.dev to Claude"
 permalink: /should-i-switch-from-continue-dev-to-claude/
 description: "Continue.dev is free and model-flexible. Claude Code offers autonomous execution and deep context. Honest comparison with migration guide for developers."
 last_tested: "2026-04-21"

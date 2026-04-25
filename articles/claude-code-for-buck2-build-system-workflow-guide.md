@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Buck2 Build System (2026)"
+title: "Claude Code for Buck2 Build System"
 description: "Learn how to integrate Claude Code into your Buck2 build system workflow for faster builds, intelligent debugging, and optimized compilation strategies."
 date: 2026-03-15
 last_modified_at: 2026-04-17

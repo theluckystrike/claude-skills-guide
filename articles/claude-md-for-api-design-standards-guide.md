@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude.md for API Design Standards (2026)"
+title: "Claude.md for API Design Standards"
 description: "Learn how to use Claude.md and Claude Code to create, maintain, and enforce consistent API design standards across your projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17

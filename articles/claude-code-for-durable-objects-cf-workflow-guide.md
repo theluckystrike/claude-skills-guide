@@ -77,3 +77,28 @@ Claude Code should create a DO class with `this.count` state initialized from st
 
 - [Claude Code for Rust Trait Objects Workflow Guide](/claude-code-for-rust-trait-objects-workflow-guide/)
 - [Claude Code Inngest Durable Workflow for Long Running Tasks](/claude-code-inngest-durable-workflow-long-running-tasks/)
+
+
+## Common Questions
+
+### How do I get started with claude code for durable objects?
+
+Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
+
+### What are the prerequisites?
+
+You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
+
+### Can I use this with my existing development workflow?
+
+Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
+
+### Where can I find more advanced techniques?
+
+Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+## Related Resources
+
+- [Claude Code for Rust Trait Objects](/claude-code-for-rust-trait-objects-workflow-guide/)
+- [Claude Code Inngest Durable Workflow](/claude-code-inngest-durable-workflow-long-running-tasks/)
+- [Claude Code Announcements 2026](/anthropic-claude-code-announcements-2026/)

@@ -1,6 +1,6 @@
 ---
-title: "Anthropic SDK TypeScript Tool Results (2026)"
-description: "Fix Anthropic SDK TypeScript type mismatch on tool_result content blocks. Correct the ToolResultBlockParam type. Step-by-step solution."
+title: "Anthropic SDK TypeScript Tool Results"
+description: "Claude Code resource: fix Anthropic SDK TypeScript type mismatch on tool_result content blocks. Correct the ToolResultBlockParam type. Step-by-step..."
 permalink: /anthropic-sdk-typescript-type-mismatch-tool-results-fix/
 last_tested: "2026-04-21"
 ---

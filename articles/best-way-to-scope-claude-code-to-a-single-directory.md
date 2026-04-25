@@ -369,6 +369,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
 - [Claude Code disallowedTools Security Configuration](/claude-code-disallowedtools-security-configuration/)
 - [MCP Transport Layer Security TLS Configuration Guide](/mcp-transport-layer-security-tls-configuration/)
 - [Best Encrypted Backup Solution for Developers: A 2026 Technical Guide](/best-encrypted-backup-solution-for-developers/)

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for LlamaIndex RAG Pipeline (2026)"
+title: "Claude Code for LlamaIndex RAG Pipeline"
 description: "Master the art of debugging LlamaIndex RAG pipelines using Claude Code's powerful skills and features. Learn practical techniques to identify and fix."
 date: 2026-03-14
 last_modified_at: 2026-04-17
@@ -542,6 +542,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 Related Reading
 
+
+- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [AI Tools for Incident Debugging and Postmortems](/ai-tools-for-incident-debugging-and-postmortems/)
 - [Chrome DevTools Memory Leak Debugging: Find and Fix.](/chrome-devtools-memory-leak-debugging/)
 - [Claude Code CS50 Project Help and Debugging Guide](/claude-code-cs50-project-help-and-debugging-guide/)

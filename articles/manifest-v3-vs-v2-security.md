@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Manifest V3 vs V2 Security Comparison (2026)"
-description: "Manifest V3 tightens Chrome extension security with declarativeNetRequest, service workers, and reduced permissions. See what breaks and how to migrate."
+title: "Manifest V3 vs V2 Security Comparison"
+description: "Claude Code comparison: manifest V3 tightens Chrome extension security with declarativeNetRequest, service workers, and reduced permissions. See what..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 last_tested: "2026-04-21"

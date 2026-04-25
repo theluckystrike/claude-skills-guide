@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Domain Events Workflow (2026)"
+title: "Claude Code for Domain Events Workflow"
 description: "Learn how to use Claude Code to build solid domain event workflows, implement event sourcing patterns, and create scalable event-driven architectures."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for PyPI Package Publishing (2026)"
+title: "Claude Code for PyPI Package Publishing"
 description: "A comprehensive guide to publishing Python packages to PyPI using Claude Code. Learn the complete workflow from setup to distribution."
 date: 2026-03-15
 last_modified_at: 2026-04-17
@@ -664,6 +664,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 Related Reading
 
+
+- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 - [Claude Code for NPM Package Publishing Workflow Guide](/claude-code-for-npm-package-publishing-workflow-guide/)
 - [Claude Code for Artifact Publishing Workflow Tutorial](/claude-code-for-artifact-publishing-workflow-tutorial/)
 - [Claude Code for Cargo Crate Publishing Workflow Guide](/claude-code-for-cargo-crate-publishing-workflow-guide/)
