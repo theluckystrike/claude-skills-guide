@@ -712,6 +712,67 @@ html[data-theme="light"] .nav {
 .gen-out .c-str { color: var(--green); }
 .gen-out .c-cmt { color: var(--ink-4); font-style: italic; font-weight: 300; }
 
+/* ========== FREE TOOLS ========== */
+.tools-section {
+  padding: clamp(80px, 12vw, 140px) 0 clamp(72px, 10vw, 120px);
+  border-top: 1px solid var(--line);
+}
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: clamp(40px, 5vw, 64px);
+}
+.tool-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-2);
+  padding: 32px 28px;
+  display: flex; flex-direction: column; gap: 16px;
+  text-decoration: none; color: inherit;
+  transition: border-color .18s ease, background .18s ease, transform .18s ease;
+}
+.tool-card:hover {
+  border-color: rgba(217, 119, 87, 0.6);
+  background: var(--bg-3);
+  transform: translateY(-2px);
+}
+.tool-card-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: rgba(217, 119, 87, 0.1);
+  border: 1px solid rgba(217, 119, 87, 0.25);
+  display: grid; place-items: center;
+  color: var(--accent);
+}
+.tool-card-icon svg { width: 22px; height: 22px; }
+.tool-card-title {
+  font-family: var(--serif); font-weight: 400;
+  font-size: 22px; line-height: 1.12;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0;
+}
+.tool-card-desc {
+  font-size: 14px; color: var(--ink-2);
+  line-height: 1.55; letter-spacing: -0.005em;
+}
+.tool-card-link {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: var(--track-tight);
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: auto;
+}
+@media (max-width: 1100px) {
+  .tools-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 680px) {
+  .tools-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 420px) {
+  .tools-grid { grid-template-columns: 1fr; }
+}
+
 /* ========== PRICING ========== */
 .pricing {
   padding: clamp(80px, 12vw, 140px) 0 clamp(72px, 10vw, 120px);
@@ -1292,6 +1353,66 @@ html[data-theme="light"] .nav {
   </div>
 </section>
 
+<!-- ========= FREE TOOLS ========= -->
+<section class="tools-section" id="free-tools">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">&sect; 03b &middot; Free tools</span>
+        <h2 class="h2">Five tools,<br>zero <i>login.</i></h2>
+        <p class="sub">Each tool solves one problem. No signup, no paywall, no tracking. Open them, use them, ship.</p>
+      </div>
+    </div>
+
+    <div class="tools-grid">
+      <a class="tool-card" href="/calculator/">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/><line x1="14" y1="18" x2="16" y2="18"/></svg>
+        </div>
+        <h3 class="tool-card-title">Cost Calculator</h3>
+        <p class="tool-card-desc">Estimate Claude Code API costs for your project.</p>
+        <span class="tool-card-link">Open tool &rarr;</span>
+      </a>
+
+      <a class="tool-card" href="/diagnose/">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v4"/><circle cx="12" cy="16" r="0.5" fill="currentColor"/></svg>
+        </div>
+        <h3 class="tool-card-title">Diagnose Tool</h3>
+        <p class="tool-card-desc">Troubleshoot common Claude Code errors instantly.</p>
+        <span class="tool-card-link">Open tool &rarr;</span>
+      </a>
+
+      <a class="tool-card" href="/skill-finder/">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg>
+        </div>
+        <h3 class="tool-card-title">Skill Finder</h3>
+        <p class="tool-card-desc">Find the right Claude Code skill for your task.</p>
+        <span class="tool-card-link">Open tool &rarr;</span>
+      </a>
+
+      <a class="tool-card" href="/model-selector/">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/><circle cx="8" cy="7" r="2" fill="currentColor"/><circle cx="16" cy="12" r="2" fill="currentColor"/><circle cx="10" cy="17" r="2" fill="currentColor"/></svg>
+        </div>
+        <h3 class="tool-card-title">Model Selector</h3>
+        <p class="tool-card-desc">Choose the best Claude model for your use case.</p>
+        <span class="tool-card-link">Open tool &rarr;</span>
+      </a>
+
+      <a class="tool-card" href="/generator/">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        </div>
+        <h3 class="tool-card-title">CLAUDE.md Generator</h3>
+        <p class="tool-card-desc">Generate optimized CLAUDE.md configuration files.</p>
+        <span class="tool-card-link">Open tool &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ========= PRICING ========= -->
 <section class="pricing" id="pricing">
   <div class="wrap">
@@ -1383,9 +1504,11 @@ html[data-theme="light"] .nav {
       </div>
       <div class="foot-col">
         <h3>&sect; Tools</h3>
-        <a href="/generator/">CLAUDE.md generator</a>
-        <a href="https://zovo.one/lifetime">Template library</a>
-        <a href="https://zovo.one/lifetime">Orchestration kit</a>
+        <a href="/calculator/">Cost Calculator</a>
+        <a href="/diagnose/">Diagnose Tool</a>
+        <a href="/skill-finder/">Skill Finder</a>
+        <a href="/model-selector/">Model Selector</a>
+        <a href="/generator/">CLAUDE.md Generator</a>
         <a href="/feed.xml">RSS feed</a>
       </div>
       <div class="foot-col">

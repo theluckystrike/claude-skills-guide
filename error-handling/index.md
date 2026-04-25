@@ -3,6 +3,7 @@ title: "Claude Code Error Handling"
 permalink: /error-handling/
 description: "Complete Claude Code error reference — API errors, timeouts, SSL failures, permission issues, and how to fix each one systematically."
 layout: default
+date: 2026-04-20
 ---
 
 # Claude Code Error Handling

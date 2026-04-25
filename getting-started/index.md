@@ -3,6 +3,7 @@ title: "Getting Started with Claude Code"
 permalink: /getting-started/
 description: "Learn Claude Code from zero to productive — installation, first session walkthrough, essential commands, and CLAUDE.md setup guide."
 layout: default
+date: 2026-04-20
 ---
 
 # Getting Started with Claude Code

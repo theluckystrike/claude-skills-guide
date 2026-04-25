@@ -3,6 +3,7 @@ title: "Claude Code Troubleshooting"
 permalink: /troubleshooting/
 description: "Fix any Claude Code issue — performance problems, installation failures, configuration conflicts, and IDE integration troubleshooting."
 layout: default
+date: 2026-04-20
 ---
 
 # Claude Code Troubleshooting

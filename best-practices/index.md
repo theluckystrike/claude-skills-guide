@@ -3,6 +3,7 @@ title: "Claude Code Best Practices"
 permalink: /best-practices/
 description: "Production-ready Claude Code best practices for CLAUDE.md setup, code quality, cost optimization, team workflows, and security hardening."
 layout: default
+date: 2026-04-20
 ---
 
 # Claude Code Best Practices

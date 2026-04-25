@@ -3,6 +3,7 @@ title: "Claude Code Configuration"
 permalink: /configuration/
 description: "Complete Claude Code settings reference — settings.json, CLAUDE.md, environment variables, MCP servers, and permission configuration."
 layout: default
+date: 2026-04-20
 ---
 
 # Claude Code Configuration

@@ -159,3 +159,21 @@ Every comparison article follows this structure:
 6. **Migration Guide** — Step-by-step switching instructions
 
 All comparisons tested on real projects. Pricing verified at time of publication. Updated quarterly.
+
+<section class="related-hubs" style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 12px; border: 1px solid #e9ecef;">
+  <h2 style="margin-top: 0; font-size: 1.5rem;">Explore More Guides</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+    <a href="/workflows/" style="display: block; padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid #dee2e6; text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
+      <strong style="color: #5436DA; font-size: 1.1rem;">Workflows & Integrations</strong>
+      <p style="margin: 0.5rem 0 0; color: #666; font-size: 0.9rem;">Step-by-step workflow guides for Claude Code automation</p>
+    </a>
+    <a href="/ecosystem/" style="display: block; padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid #dee2e6; text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
+      <strong style="color: #5436DA; font-size: 1.1rem;">Ecosystem Hub</strong>
+      <p style="margin: 0.5rem 0 0; color: #666; font-size: 0.9rem;">Comprehensive guide to the Claude Code ecosystem — tools, extensions, and integrations</p>
+    </a>
+    <a href="/cost-optimization/" style="display: block; padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid #dee2e6; text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
+      <strong style="color: #5436DA; font-size: 1.1rem;">Cost Optimization Hub</strong>
+      <p style="margin: 0.5rem 0 0; color: #666; font-size: 0.9rem;">Reduce Claude Code costs with proven strategies and tools</p>
+    </a>
+  </div>
+</section>

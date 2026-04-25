@@ -3,6 +3,7 @@ title: "Advanced Claude Code Usage"
 permalink: /advanced-usage/
 description: "Power user guide for Claude Code — multi-agent orchestration, hooks, custom commands, sequential thinking, and cost optimization at scale."
 layout: default
+date: 2026-04-20
 ---
 
 # Advanced Claude Code Usage
