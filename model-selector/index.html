@@ -12,23 +12,21 @@ description: "Answer 5 questions to find the best Claude model for your project.
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Which Claude Model Should You Use? Interactive Selector (2026)</title>
 <meta name="description" content="Answer 5 questions to find the best Claude model for your project. Compare Sonnet 4.6, Opus 4.6, and Haiku 4.5 by task, budget, and team size.">
-<meta property="og:title" content="Claude Model Selector — Claude Code Guides">
-<meta property="og:description" content="Answer 5 questions to find the best Claude model for your project.">
+<meta property="og:title" content="Claude Model Selector — Free Comparison Tool">
+<meta property="og:description" content="Choose the best Claude model for your use case. Compare Opus, Sonnet, and Haiku on speed, cost, and capability.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://claudecodeguides.com/model-selector/">
+<meta name="robots" content="index, follow">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Claude Model Selector — Claude Code Guides">
 <meta name="twitter:description" content="Answer 5 questions to find the best Claude model for your project.">
 <link rel="canonical" href="https://claudecodeguides.com/model-selector/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; scroll-behavior: smooth; }
 body {
-  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   background: #0d1117;
   color: #c9d1d9;
   line-height: 1.6;
@@ -297,7 +295,7 @@ a:focus-visible, button:focus-visible {
   border: 1px solid rgba(201,209,217,0.1);
   border-radius: 8px;
   padding: 16px;
-  font-family: 'DM Mono', monospace;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospace;
   font-size: 0.82rem;
   line-height: 1.6;
   color: #c9d1d9;
@@ -714,7 +712,7 @@ a:focus-visible, button:focus-visible {
         <button class="option-btn" data-key="size" data-value="xlarge">Very large (200K+ lines)</button>
       </div>
       <div class="wizard-nav">
-        <button class="btn-back" data-action="back">Back</button>
+        <button class="btn-back" data-action="back" aria-label="Go back to previous question">Back</button>
         <span></span>
       </div>
     </div>
@@ -730,7 +728,7 @@ a:focus-visible, button:focus-visible {
         <button class="option-btn" data-key="priority" data-value="context">Context &mdash; I need maximum context window</button>
       </div>
       <div class="wizard-nav">
-        <button class="btn-back" data-action="back">Back</button>
+        <button class="btn-back" data-action="back" aria-label="Go back to previous question">Back</button>
         <span></span>
       </div>
     </div>
@@ -745,7 +743,7 @@ a:focus-visible, button:focus-visible {
         <button class="option-btn" data-key="team" data-value="enterprise">Enterprise (50+)</button>
       </div>
       <div class="wizard-nav">
-        <button class="btn-back" data-action="back">Back</button>
+        <button class="btn-back" data-action="back" aria-label="Go back to previous question">Back</button>
         <span></span>
       </div>
     </div>
@@ -760,7 +758,7 @@ a:focus-visible, button:focus-visible {
         <button class="option-btn" data-key="budget" data-value="any">Quality at any price</button>
       </div>
       <div class="wizard-nav">
-        <button class="btn-back" data-action="back">Back</button>
+        <button class="btn-back" data-action="back" aria-label="Go back to previous question">Back</button>
         <span></span>
       </div>
     </div>
@@ -775,7 +773,7 @@ a:focus-visible, button:focus-visible {
         <div class="config-snippet-wrap" id="configSnippetWrap"></div>
       </div>
       <div style="text-align:center;">
-        <button class="btn-restart" data-action="restart">Start Over</button>
+        <button class="btn-restart" data-action="restart" aria-label="Start over">Start Over</button>
       </div>
     </div>
 
@@ -1321,7 +1319,7 @@ a:focus-visible, button:focus-visible {
 
     let html = '<h3>CLAUDE.md Model Configuration</h3>';
     html += '<div class="config-snippet" id="configText">' + escapeHtml(config) + '</div>';
-    html += '<button class="btn-copy" data-action="copy">Copy Configuration</button>';
+    html += '<button class="btn-copy" data-action="copy" aria-label="Copy configuration to clipboard">Copy Configuration</button>';
 
     el.innerHTML = html;
   }

@@ -243,6 +243,37 @@ Check the server process status, verify transport configuration (stdio vs HTTP),
 - [Advanced patterns for complex issues](/advanced-usage/)
 
 
+<section class="related-hubs" style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 12px; border: 1px solid #e9ecef;">
+  <h2 style="margin-top: 0; font-size: 1.5rem;">Related Guides</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+    <a href="/best-practices/" style="display: block; padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid #dee2e6; text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
+      <strong style="color: #5436DA; font-size: 1.05rem;">Best Practices</strong>
+      <p style="margin: 0.5rem 0 0; color: #666; font-size: 0.85rem;">Proven patterns for effective Claude Code usage</p>
+    </a>
+    <a href="/error-handling/" style="display: block; padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid #dee2e6; text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
+      <strong style="color: #5436DA; font-size: 1.05rem;">Error Handling</strong>
+      <p style="margin: 0.5rem 0 0; color: #666; font-size: 0.85rem;">Fix common Claude Code errors and exceptions</p>
+    </a>
+    <a href="/getting-started/" style="display: block; padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid #dee2e6; text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
+      <strong style="color: #5436DA; font-size: 1.05rem;">Getting Started</strong>
+      <p style="margin: 0.5rem 0 0; color: #666; font-size: 0.85rem;">Quick start guide for new Claude Code users</p>
+    </a>
+    <a href="/configuration/" style="display: block; padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid #dee2e6; text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
+      <strong style="color: #5436DA; font-size: 1.05rem;">Configuration</strong>
+      <p style="margin: 0.5rem 0 0; color: #666; font-size: 0.85rem;">Configure Claude Code, CLAUDE.md, and MCP servers</p>
+    </a>
+    <a href="/advanced-usage/" style="display: block; padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid #dee2e6; text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
+      <strong style="color: #5436DA; font-size: 1.05rem;">Advanced Usage</strong>
+      <p style="margin: 0.5rem 0 0; color: #666; font-size: 0.85rem;">Power user techniques and advanced workflows</p>
+    </a>
+  </div>
+</section>
+
+<div style="margin-top: 1.5rem; padding: 1.25rem; background: linear-gradient(135deg, #5436DA15, #7c5ce015); border-radius: 12px; border: 1px solid #5436DA30;">
+  <strong style="color: #5436DA;">Try our Diagnostic Tool →</strong>
+  <a href="/diagnose/" style="color: #333; text-decoration: none; margin-left: 0.5rem;">Run the diagnostic tool on your error</a>
+</div>
+
 ---
 
 ## Beyond Troubleshooting
