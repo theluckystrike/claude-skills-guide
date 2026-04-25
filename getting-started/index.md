@@ -248,6 +248,15 @@ Run {% raw %}`npm install -g @anthropic-ai/claude-code@latest`{% endraw %} to up
 }
 </script>
 
+## Explore More Guides
+
+- [Production-ready guidelines](/best-practices/)
+- [Complete settings reference](/configuration/)
+- [Error reference when things go wrong](/error-handling/)
+- [Fix common beginner issues](/troubleshooting/)
+- [Ready for the next level?](/advanced-usage/)
+
+
 ---
 
 ## Ready to Go Deeper?

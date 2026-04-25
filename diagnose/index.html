@@ -210,7 +210,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
 
 <div class="container">
   <nav class="breadcrumb">
-    <a href="/">Home</a> &rsaquo; <a href="/free-tools/">Free Tools</a> &rsaquo; Error Diagnostic
+    <a href="/">Home</a> &rsaquo; <a href="/">Free Tools</a> &rsaquo; Error Diagnostic
   </nav>
 
   <header class="tool-header">
@@ -315,12 +315,12 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
 
     <details>
       <summary>Why do I get a stream idle timeout?</summary>
-      <div class="faq-answer">Stream idle timeouts happen when Claude Code waits too long for the next chunk of a response from the Anthropic API. The default timeout is 120 seconds. Long code generations, complex reasoning, or slow network connections can trigger this. Fix it by setting <code>ANTHROPIC_TIMEOUT_SECONDS=300</code> in your environment. See our <a href="/articles/stream-idle-timeout-fix/">full stream idle timeout guide</a> for details.</div>
+      <div class="faq-answer">Stream idle timeouts happen when Claude Code waits too long for the next chunk of a response from the Anthropic API. The default timeout is 120 seconds. Long code generations, complex reasoning, or slow network connections can trigger this. Fix it by setting <code>ANTHROPIC_TIMEOUT_SECONDS=300</code> in your environment. See our <a href="/anthropic-sdk-streaming-hang-timeout/">full stream idle timeout guide</a> for details.</div>
     </details>
 
     <details>
       <summary>How do I fix "API key invalid" errors?</summary>
-      <div class="faq-answer">First verify your key starts with <code>sk-ant-</code> and has not expired. Run <code>echo $ANTHROPIC_API_KEY</code> to check it is set. If it is blank, add <code>export ANTHROPIC_API_KEY=sk-ant-your-key</code> to your <code>~/.bashrc</code> or <code>~/.zshrc</code> and restart your terminal. See our <a href="/articles/api-key-authentication-guide/">API key authentication guide</a>.</div>
+      <div class="faq-answer">First verify your key starts with <code>sk-ant-</code> and has not expired. Run <code>echo $ANTHROPIC_API_KEY</code> to check it is set. If it is blank, add <code>export ANTHROPIC_API_KEY=sk-ant-your-key</code> to your <code>~/.bashrc</code> or <code>~/.zshrc</code> and restart your terminal. See our <a href="/claude-code-failed-to-authenticate/">API key authentication guide</a>.</div>
     </details>
 
     <details>
@@ -336,11 +336,11 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
     <h2>Related Guides</h2>
     <ul>
       <li><a href="/errors-atlas/">Claude Code Errors Atlas</a> &mdash; comprehensive reference for all documented errors</li>
-      <li><a href="/articles/stream-idle-timeout-fix/">How to Fix Stream Idle Timeout in Claude Code</a></li>
-      <li><a href="/articles/api-key-authentication-guide/">Claude Code API Key Authentication Guide</a></li>
-      <li><a href="/articles/mcp-server-setup-troubleshooting/">MCP Server Setup and Troubleshooting</a></li>
-      <li><a href="/articles/claude-md-configuration-guide/">CLAUDE.md Configuration Guide</a></li>
-      <li><a href="/articles/permission-denied-fixes/">Fixing Permission Denied Errors in Claude Code</a></li>
+      <li><a href="/anthropic-sdk-streaming-hang-timeout/">How to Fix Stream Idle Timeout in Claude Code</a></li>
+      <li><a href="/claude-code-failed-to-authenticate/">Claude Code API Key Authentication Guide</a></li>
+      <li><a href="/mcp-servers-claude-code-complete-setup-2026/">MCP Server Setup and Troubleshooting</a></li>
+      <li><a href="/claude-md-best-practices-definitive-guide/">CLAUDE.md Configuration Guide</a></li>
+      <li><a href="/claude-code-permission-modes/">Fixing Permission Denied Errors in Claude Code</a></li>
       <li><a href="/cost-optimization/">Claude Code Cost Optimization Calculator</a></li>
       <li><a href="/workflows/">Claude Code Workflows Hub</a></li>
       <li><a href="/compare/">Extension Comparisons</a></li>
@@ -357,7 +357,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
 
   <footer class="footer">
     &copy; 2026 Claude Code Guides. All rights reserved.<br>
-    <a href="/">Home</a> &middot; <a href="/playbook/">Playbook</a> &middot; <a href="/errors-atlas/">Errors Atlas</a> &middot; <a href="/free-tools/">Free Tools</a>
+    <a href="/">Home</a> &middot; <a href="/playbook/">Playbook</a> &middot; <a href="/errors-atlas/">Errors Atlas</a> &middot; <a href="/">Free Tools</a>
   </footer>
 </div>
 
@@ -379,7 +379,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "Claude Code waits for API response chunks. Complex generations or slow networks can exceed the default 120-second idle timeout between chunks.",
       prevention: "# CLAUDE.md — Prevent stream idle timeout\n# Environment: Set ANTHROPIC_TIMEOUT_SECONDS=300 before starting sessions\n# For long-running tasks, break them into smaller steps to avoid single-response timeouts",
       links: [
-        { text: "Stream Idle Timeout Fix", url: "/articles/stream-idle-timeout-fix/" },
+        { text: "Stream Idle Timeout Fix", url: "/anthropic-sdk-streaming-hang-timeout/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },
@@ -393,7 +393,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "Your system's CA certificate store is outdated or a corporate proxy is injecting its own SSL certificate that Node.js does not trust.",
       prevention: "# CLAUDE.md — SSL certificate handling\n# If behind corporate proxy, set NODE_EXTRA_CA_CERTS to the corporate CA bundle path\n# Never use NODE_TLS_REJECT_UNAUTHORIZED=0 in production",
       links: [
-        { text: "SSL Certificate Fix Guide", url: "/articles/ssl-certificate-troubleshooting/" },
+        { text: "SSL Certificate Fix Guide", url: "/claude-code-ssl-certificate-chain-incomplete-fix-2026/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },
@@ -407,7 +407,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "You have exceeded the API request rate for your current plan tier. This happens during rapid successive calls, parallel agents, or when approaching monthly usage caps.",
       prevention: "# CLAUDE.md — Rate limit prevention\n# Space out API calls in scripts — minimum 1s between requests\n# Use /compact regularly to reduce token usage per request\n# Monitor usage at console.anthropic.com before hitting limits",
       links: [
-        { text: "Rate Limit Guide", url: "/articles/rate-limit-management/" },
+        { text: "Rate Limit Guide", url: "/rate-limit-management-claude-code-skill-intensive-workflows/" },
         { text: "Cost Optimization", url: "/cost-optimization/" }
       ]
     },
@@ -421,7 +421,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "The combined size of your conversation history, loaded files, and system prompt exceeds the model's context window. This grows over long sessions with many file reads.",
       prevention: "# CLAUDE.md — Context management\n# Run /compact after every 10 interactions\n# Keep .claudeignore updated to exclude build artifacts, logs, and vendor directories\n# Break large tasks into separate sessions",
       links: [
-        { text: "Context Window Management", url: "/articles/context-window-optimization/" },
+        { text: "Context Window Management", url: "/claude-code-for-context-window-optimization-workflow-guide/" },
         { text: "Cost Optimization", url: "/cost-optimization/" }
       ]
     },
@@ -435,7 +435,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "The connection to the Anthropic API (or your proxy) was actively refused. This means the target server is not running, a firewall is blocking the port, or the API endpoint URL is wrong.",
       prevention: "# CLAUDE.md — Connection configuration\n# Verify network connectivity before starting long sessions\n# If behind proxy: set HTTP_PROXY and HTTPS_PROXY environment variables\n# Test API reachability: curl -I https://api.anthropic.com/v1/messages",
       links: [
-        { text: "Connection Troubleshooting", url: "/articles/connection-refused-fix/" },
+        { text: "Connection Troubleshooting", url: "/claude-code-mcp-server-connection-refused-fix/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },
@@ -449,8 +449,8 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "Claude Code's tool-use permissions restrict which operations it can perform. By default, some tools require explicit approval. Your settings may be blocking the tool Claude needs.",
       prevention: "# CLAUDE.md — Tool permissions\n# Ensure project settings allow necessary tools: Edit, Write, Bash, Read, Glob, Grep\n# Review ~/.claude/settings.json and .claude/settings.json for permission conflicts",
       links: [
-        { text: "Permission Configuration", url: "/articles/permission-denied-fixes/" },
-        { text: "CLAUDE.md Guide", url: "/articles/claude-md-configuration-guide/" }
+        { text: "Permission Configuration", url: "/claude-code-permission-modes/" },
+        { text: "CLAUDE.md Guide", url: "/claude-md-best-practices-definitive-guide/" }
       ]
     },
     {
@@ -477,7 +477,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "Your API key is missing, expired, incorrectly formatted, or belongs to a deactivated account. Keys must start with 'sk-ant-' for direct API access.",
       prevention: "# CLAUDE.md — API key management\n# Store API key in shell profile (~/.zshrc or ~/.bashrc), not in project files\n# Never commit API keys to git — add .env to .gitignore\n# Rotate keys quarterly via console.anthropic.com",
       links: [
-        { text: "API Key Authentication Guide", url: "/articles/api-key-authentication-guide/" },
+        { text: "API Key Authentication Guide", url: "/claude-code-failed-to-authenticate/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },
@@ -489,9 +489,9 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       keywords: ["claude.md", "not found", "missing"],
       fix: "# Create a CLAUDE.md in your project root\ntouch CLAUDE.md\n\n# Add basic configuration\ncat > CLAUDE.md << 'EOF'\n# Project Configuration\n\n## Build & Test\n- Build: `npm run build`\n- Test: `npm test`\n- Lint: `npm run lint`\n\n## Conventions\n- Use TypeScript strict mode\n- All functions under 60 lines\n- Error handling on all async operations\nEOF\n\n# Verify Claude Code picks it up\nclaude --print 'What does my CLAUDE.md say?'",
       why: "Claude Code looks for a CLAUDE.md file in your project root and parent directories to understand project conventions. Without it, Claude uses generic defaults.",
-      prevention: "# Every project should have a CLAUDE.md at the root\n# Include: build commands, test commands, coding conventions, project structure\n# See claudecodeguides.com/articles/claude-md-configuration-guide/ for templates",
+      prevention: "# Every project should have a CLAUDE.md at the root\n# Include: build commands, test commands, coding conventions, project structure\n# See claudecodeguides.com/claude-md-best-practices-definitive-guide/ for templates",
       links: [
-        { text: "CLAUDE.md Configuration Guide", url: "/articles/claude-md-configuration-guide/" },
+        { text: "CLAUDE.md Configuration Guide", url: "/claude-md-best-practices-definitive-guide/" },
         { text: "Free CLAUDE.md Template", url: "/free-template/" }
       ]
     },
@@ -505,7 +505,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "Claude Code uses git for change tracking, diff generation, and safe file operations. Many features require an initialized git repository.",
       prevention: "# CLAUDE.md — Git requirement\n# This project requires git — always work in an initialized repository\n# Claude Code uses git history for context and safe rollbacks",
       links: [
-        { text: "Git Setup Guide", url: "/articles/git-workflow-with-claude-code/" },
+        { text: "Git Setup Guide", url: "/claude-code-with-git-workflow-guide/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },
@@ -519,7 +519,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "Claude Code's Node.js process exceeded its memory allocation. This happens with very large codebases, many files loaded in context, or memory leaks in MCP servers.",
       prevention: "# CLAUDE.md — Memory management\n# Set NODE_OPTIONS='--max-old-space-size=8192' in your environment\n# Use .claudeignore to exclude large directories (node_modules, .git objects, build outputs)\n# Run /compact regularly during long sessions",
       links: [
-        { text: "Memory Optimization", url: "/articles/memory-optimization-claude-code/" },
+        { text: "Memory Optimization", url: "/claude-code-error-out-of-memory-large-codebase-fix/" },
         { text: "Cost Optimization", url: "/cost-optimization/" }
       ]
     },
@@ -546,7 +546,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "Node.js tried to spawn a child process for a command that does not exist in your PATH. This often happens when Claude Code tries to run build tools, linters, or compilers that are installed but not in the current shell's PATH.",
       prevention: "# CLAUDE.md — PATH configuration\n# Ensure all required tools are in PATH before starting Claude Code\n# List required tools: node, npm, git, and any project-specific CLI tools\n# Verify with: which node npm git",
       links: [
-        { text: "PATH Configuration", url: "/articles/spawn-enoent-fix/" },
+        { text: "PATH Configuration", url: "/fix-claude-code-enoent-skills/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },
@@ -560,7 +560,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "The current user does not have read or write permission to the target file or directory. Common with system directories, npm global installs, or files created by a different user or process.",
       prevention: "# CLAUDE.md — File permissions\n# Never run Claude Code as root/sudo\n# Ensure project directory is owned by current user\n# Check permissions before automated file operations: ls -la target",
       links: [
-        { text: "Permission Denied Fixes", url: "/articles/permission-denied-fixes/" },
+        { text: "Permission Denied Fixes", url: "/claude-code-permission-modes/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },
@@ -574,7 +574,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "A JSON configuration file (settings.json, package.json, tsconfig.json) contains invalid syntax. JSON is strict: no trailing commas, no comments, double quotes only.",
       prevention: "# CLAUDE.md — JSON file handling\n# Always validate JSON files after editing: python3 -m json.tool < file.json\n# Use a JSON-aware editor with syntax highlighting\n# Never manually edit minified JSON",
       links: [
-        { text: "Settings Configuration", url: "/articles/claude-md-configuration-guide/" },
+        { text: "Settings Configuration", url: "/claude-md-best-practices-definitive-guide/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },
@@ -588,7 +588,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "Claude Code cannot establish a connection to the configured MCP (Model Context Protocol) server. The server may not be running, the port may be wrong, or the server process crashed during startup.",
       prevention: "# CLAUDE.md — MCP server setup\n# Always test MCP server independently before connecting to Claude Code\n# Include health check endpoint in custom MCP servers\n# Log MCP server output to a file for debugging",
       links: [
-        { text: "MCP Server Troubleshooting", url: "/articles/mcp-server-setup-troubleshooting/" },
+        { text: "MCP Server Troubleshooting", url: "/mcp-servers-claude-code-complete-setup-2026/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },
@@ -602,7 +602,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "The MCP tool you're trying to use is not registered in the current server configuration. This happens when the server definition changed, the tool name is misspelled, or the MCP server does not expose the expected tools.",
       prevention: "# CLAUDE.md — MCP tools\n# Document all required MCP tools and their server names\n# Verify tool availability after server updates: claude mcp list\n# Pin MCP server versions to avoid breaking changes",
       links: [
-        { text: "MCP Server Troubleshooting", url: "/articles/mcp-server-setup-troubleshooting/" },
+        { text: "MCP Server Troubleshooting", url: "/mcp-servers-claude-code-complete-setup-2026/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },
@@ -838,7 +838,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "Git tried to authenticate via SSH but no valid SSH key was found, or the key is not added to the ssh-agent. This blocks git operations (clone, push, pull) to private repositories.",
       prevention: "# CLAUDE.md — Git authentication\n# Use SSH keys for git (not HTTPS with password)\n# Add ssh-add to shell profile for automatic key loading\n# Test connection: ssh -T git@github.com",
       links: [
-        { text: "Git Workflow Guide", url: "/articles/git-workflow-with-claude-code/" },
+        { text: "Git Workflow Guide", url: "/claude-code-with-git-workflow-guide/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },
@@ -852,7 +852,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "Git found conflicting changes in the same lines of a file during a merge, rebase, or pull. Both branches modified the same code, and git cannot automatically determine which version to keep.",
       prevention: "# CLAUDE.md — Merge strategy\n# Pull from main before starting new work: git pull origin main\n# Keep branches short-lived to minimize conflicts\n# Communicate with team about which files are being modified",
       links: [
-        { text: "Git Workflow Guide", url: "/articles/git-workflow-with-claude-code/" },
+        { text: "Git Workflow Guide", url: "/claude-code-with-git-workflow-guide/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },
@@ -880,7 +880,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "The network request to the API timed out before receiving a response. Caused by slow internet, DNS resolution failures, proxy issues, or API service degradation.",
       prevention: "# CLAUDE.md — Network resilience\n# Set ANTHROPIC_TIMEOUT_SECONDS=300 for unreliable networks\n# Use a wired connection for long sessions\n# Check API status at status.anthropic.com before starting critical work",
       links: [
-        { text: "Connection Troubleshooting", url: "/articles/connection-refused-fix/" },
+        { text: "Connection Troubleshooting", url: "/claude-code-mcp-server-connection-refused-fix/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },
@@ -894,7 +894,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "The Claude Code settings file contains invalid JSON. This can happen from manual editing, merge conflicts inside the settings file, or a corrupted write operation.",
       prevention: "# CLAUDE.md — Settings management\n# Use 'claude config set' instead of manually editing settings.json\n# If manually editing, validate with: python3 -m json.tool < settings.json\n# Keep a backup: cp ~/.claude/settings.json ~/.claude/settings.json.bak",
       links: [
-        { text: "CLAUDE.md Configuration", url: "/articles/claude-md-configuration-guide/" },
+        { text: "CLAUDE.md Configuration", url: "/claude-md-best-practices-definitive-guide/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },
@@ -921,7 +921,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       why: "The ANTHROPIC_API_KEY environment variable is not set in your shell session. Claude Code requires this to authenticate with the Anthropic API.",
       prevention: "# CLAUDE.md — API key setup\n# Store ANTHROPIC_API_KEY in shell profile (~/.zshrc or ~/.bashrc)\n# Never store API keys in project files or CLAUDE.md\n# Verify key is set before starting: echo $ANTHROPIC_API_KEY | head -c 10",
       links: [
-        { text: "API Key Guide", url: "/articles/api-key-authentication-guide/" },
+        { text: "API Key Guide", url: "/claude-code-failed-to-authenticate/" },
         { text: "Errors Atlas", url: "/errors-atlas/" }
       ]
     },

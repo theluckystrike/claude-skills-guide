@@ -233,6 +233,15 @@ Check the server process status, verify transport configuration (stdio vs HTTP),
 }
 </script>
 
+## Explore More Guides
+
+- [Error messages and how to fix them](/error-handling/)
+- [Configuration and settings reference](/configuration/)
+- [Prevent issues with best practices](/best-practices/)
+- [Installation and setup guide](/getting-started/)
+- [Advanced patterns for complex issues](/advanced-usage/)
+
+
 ---
 
 ## Beyond Troubleshooting

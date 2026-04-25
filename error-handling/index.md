@@ -232,6 +232,15 @@ Report bugs to the Anthropic Claude Code GitHub repository. Include your Claude 
 }
 </script>
 
+## Explore More Guides
+
+- [Non-error issues and fixes](/troubleshooting/)
+- [Prevent errors with best practices](/best-practices/)
+- [Configuration-related error prevention](/configuration/)
+- [Beginner guide to Claude Code](/getting-started/)
+- [Advanced debugging and monitoring](/advanced-usage/)
+
+
 ---
 
 ## Stop Debugging, Start Building

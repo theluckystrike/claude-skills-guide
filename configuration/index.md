@@ -264,6 +264,15 @@ Commit {% raw %}`.claude/settings.json`{% endraw %} and CLAUDE.md to your reposi
 }
 </script>
 
+## Explore More Guides
+
+- [New to Claude Code? Start here](/getting-started/)
+- [Configuration best practices](/best-practices/)
+- [Fix configuration-related errors](/error-handling/)
+- [Troubleshoot config issues](/troubleshooting/)
+- [Advanced configuration patterns](/advanced-usage/)
+
+
 ---
 
 ## Master Every Configuration Surface

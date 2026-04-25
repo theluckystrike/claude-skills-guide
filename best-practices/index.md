@@ -202,6 +202,15 @@ Update your CLAUDE.md whenever you change project conventions, add new dependenc
 }
 </script>
 
+## Explore More Guides
+
+- [New to Claude Code? Start here](/getting-started/)
+- [Set up your environment correctly](/configuration/)
+- [Handle errors like a pro](/error-handling/)
+- [Fix issues when they arise](/troubleshooting/)
+- [Level up with power-user patterns](/advanced-usage/)
+
+
 ---
 
 ## Go Deeper: The Complete Playbook

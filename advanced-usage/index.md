@@ -232,6 +232,15 @@ Yes. Claude Code supports headless mode for automated environments. Configure it
 }
 </script>
 
+## Explore More Guides
+
+- [Foundation best practices](/best-practices/)
+- [Configuration for advanced setups](/configuration/)
+- [Debug complex error scenarios](/error-handling/)
+- [Troubleshoot advanced features](/troubleshooting/)
+- [Review the fundamentals](/getting-started/)
+
+
 ---
 
 ## The Full Arsenal

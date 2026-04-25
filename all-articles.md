@@ -1497,7 +1497,7 @@ A complete index of all 2,518 guides, tutorials, and resources on this site.
 - [Claude Code for Wagmi Hooks Workflow](/claude-code-for-wagmi-hooks-workflow/)
 - [Claude Code for Wake Smart Contract Workflow](/claude-code-for-wake-smart-contract-workflow/)
 - [Claude Code for War Room Workflow Tutorial Guide](/claude-code-for-war-room-workflow-tutorial-guide/)
-- [Claude Code for Warp Terminal Workflow Guide](/claude-code-for-warp-terminal-workflow-guide/)
+- [Claude Code for Warp Terminal Workflow Guide](/claude-code-warp-terminal-workflow-2026/)
 - [Claude Code for Wasi Workflow Tutorial Guide](/claude-code-for-wasi-workflow-tutorial-guide/)
 - [Claude Code for WASM Bindgen Workflow Tutorial](/claude-code-for-wasm-bindgen-workflow-tutorial/)
 - [Claude Code for Wasmtime Runtime Workflow Guide](/claude-code-for-wasmtime-runtime-workflow-guide/)
@@ -2590,7 +2590,7 @@ A complete index of all 2,518 guides, tutorials, and resources on this site.
 - [Windsurf Editor Review for Professional Developers 2026](/windsurf-editor-review-for-professional-developers-2026/)
 - [Wireguard Performance Tuning Large File Transfer Optimization Guide](/wireguard-performance-tuning-large-file-transfer-optimization-guide/)
 - [Wireguard Postup Postdown Scripts for Advanced Routing Configuration](/wireguard-postup-postdown-scripts-for-advanced-routing-configuration/)
-- [Workflows Hub](/workflows-hub/)
+- [Workflows Hub](/workflows/)
 - [Workona Alternative Chrome Extension 2026](/workona-alternative-chrome-extension-2026/)
 - [Writing Claude Md Files That Define Your Projects API Versio](/writing-claude-md-files-that-define-your-projects-api-versio/)
 

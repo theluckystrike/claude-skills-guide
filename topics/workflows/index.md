@@ -729,7 +729,7 @@ Configure projects, automate workflows, and get the most out of Claude Code's pr
 - [Claude Code for Wagmi Hooks Workflow](/claude-code-for-wagmi-hooks-workflow/)
 - [Claude Code for Wake Smart Contract Workflow](/claude-code-for-wake-smart-contract-workflow/)
 - [Claude Code for War Room Workflow Tutorial Guide](/claude-code-for-war-room-workflow-tutorial-guide/)
-- [Claude Code for Warp Terminal Workflow Guide](/claude-code-for-warp-terminal-workflow-guide/)
+- [Claude Code for Warp Terminal Workflow Guide](/claude-code-warp-terminal-workflow-2026/)
 - [Claude Code for Wasi Workflow Tutorial Guide](/claude-code-for-wasi-workflow-tutorial-guide/)
 - [Claude Code for WASM Bindgen Workflow Tutorial](/claude-code-for-wasm-bindgen-workflow-tutorial/)
 - [Claude Code for Wasmtime Runtime Workflow Guide](/claude-code-for-wasmtime-runtime-workflow-guide/)
@@ -1030,7 +1030,7 @@ Configure projects, automate workflows, and get the most out of Claude Code's pr
 - [Understanding Claude Code Hooks System Complete Guide](/understanding-claude-code-hooks-system-complete-guide/)
 - [What is the Best Claude Skill for Python Data Workflows](/what-is-the-best-claude-skill-for-python-data-workflows/)
 - [Why Does Claude Code Perform Better with Claude Md](/why-does-claude-code-perform-better-with-claude-md/)
-- [Workflows Hub](/workflows-hub/)
+- [Workflows Hub](/workflows/)
 - [Writing Claude Md Files That Define Your Projects API Versio](/writing-claude-md-files-that-define-your-projects-api-versio/)
 - [Zoom MCP Server Meeting Summary Automation](/zoom-mcp-server-meeting-summary-automation/)
 
