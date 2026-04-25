@@ -1,7 +1,9 @@
 ---
-title: "nvm Switching to Wrong Node Version"
+layout: default
+title: "nvm Switching to Wrong Node Version (2026)"
 permalink: /claude-code-nvm-switching-wrong-node-fix-2026/
-description: "Claude Code resource: nvm Switching to Wrong Node Version — practical guide with working examples, tested configurations, and tips for developer workflows."
+date: 2026-04-20
+description: "nvm Switching to Wrong Node Version — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"
 ---
 

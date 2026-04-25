@@ -1,7 +1,9 @@
 ---
-title: "Improve Claude Code Refactoring Quality"
+layout: default
+title: "Improve Claude Code Refactoring Quality (2026)"
 description: "Get better refactoring results from Claude Code by defining refactoring constraints, scope limits, and verification steps in CLAUDE.md."
 permalink: /claude-code-bad-at-refactoring-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "CLAUDE.md Templates & Patterns (2026)"
 description: "Production CLAUDE.md templates for every major stack. Plus patterns, team workflows, and fixes."
 permalink: /claude-md/
+date: 2026-04-20
 ---
 
 # CLAUDE.md Production Templates

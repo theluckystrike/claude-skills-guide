@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "MITM Proxy Detection Error — Fix (2026)"
 permalink: /claude-code-mitm-proxy-detection-error-fix-2026/
-description: "Claude Code troubleshooting: mITM Proxy Detection Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
+date: 2026-04-20
+description: "MITM Proxy Detection Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
 ---
 

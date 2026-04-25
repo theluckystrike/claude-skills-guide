@@ -1,6 +1,8 @@
 ---
-title: "JetBrains Plugin Incompatibility Fix"
+layout: default
+title: "JetBrains Plugin Incompatibility Fix (2026)"
 permalink: /claude-code-jetbrains-plugin-incompatibility-fix-2026/
+date: 2026-04-20
 description: "Fix JetBrains plugin incompatibility with Claude Code. Update IDE version, check plugin compatibility matrix, and resolve JetBrains AI Assistant conflicts."
 last_tested: "2026-04-22"
 ---

@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "CLAUDE.md Conflict Resolution (2026)"
 description: "How Claude Code handles conflicting instructions across CLAUDE.md, CLAUDE.local.md, rules files, and managed policies. Diagnosis and resolution steps."
 permalink: /claude-md-conflict-resolution/
+date: 2026-04-20
 categories: [claude-md, workflow]
 tags: [claude-md, conflicts, resolution, loading-order, troubleshooting]
 last_updated: 2026-04-19

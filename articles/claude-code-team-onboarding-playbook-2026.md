@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Team Onboarding Playbook"
+layout: default
+title: "Claude Code Team Onboarding Playbook (2026)"
 description: "Step-by-step playbook for onboarding development teams to Claude Code with configuration, training, and productivity milestones."
 permalink: /claude-code-team-onboarding-playbook-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

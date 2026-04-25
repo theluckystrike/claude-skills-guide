@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code Ecosystem: Tools Map (2026)"
 description: "Map of the Claude Code ecosystem in 2026 covering skills, hooks, MCP servers, agent frameworks, and community tools across 14 key repos."
 permalink: /claude-code-ecosystem-complete-map-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

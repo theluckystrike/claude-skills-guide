@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Custom Slash Command Not"
+layout: default
+title: "Claude Code Custom Slash Command Not (2026)"
 description: "Fix Claude Code custom slash command not recognized error. Place command files in the correct .claude/commands/ directory. Step-by-step solution."
 permalink: /claude-code-custom-slash-command-not-recognized-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

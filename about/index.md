@@ -3,6 +3,7 @@ layout: default
 title: "About"
 description: "Practical Claude Code guides and AI coding tutorials for developers."
 permalink: /about/
+date: 2026-04-20
 ---
 
 # About Claude Code Guides

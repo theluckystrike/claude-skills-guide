@@ -1,7 +1,9 @@
 ---
-title: "Karpathy Surgical Changes Principle"
+layout: default
+title: "Karpathy Surgical Changes Principle (2026)"
 description: "Apply Karpathy's Surgical Changes principle to keep Claude Code diffs minimal — change only what's needed, touch no unrelated files."
 permalink: /karpathy-surgical-changes-principle-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 
@@ -99,28 +101,3 @@ One line changed. The bug is fixed. Everything else stays put.
 - [Implement Surgical Changes in CLAUDE.md](/karpathy-surgical-changes-implementation-2026/)
 - [Diff-Minimizing Examples](/karpathy-surgical-changes-examples-2026/)
 - [The Claude Code Playbook](/playbook/)
-
-
-## Common Questions
-
-### How do I get started with karpathy surgical changes principle?
-
-Begin with the setup instructions in this guide. Install the required dependencies, configure your environment, and test with a small project before scaling to your full codebase.
-
-### What are the prerequisites?
-
-You need a working development environment with Node.js or Python installed. Familiarity with the command line and basic Git operations is helpful. No advanced AI knowledge is required.
-
-### Can I use this with my existing development workflow?
-
-Yes. These techniques integrate with standard development tools and CI/CD pipelines. Start by adding them to a single project and expand once you have verified the benefits.
-
-### Where can I find more advanced techniques?
-
-Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
-
-## Related Resources
-
-- [Karpathy Don't Assume Principle](/karpathy-dont-assume-principle-claude-code-2026/)
-- [Surgical Changes](/karpathy-surgical-changes-examples-2026/)
-- [Implement Surgical Changes in CLAUDE.md](/karpathy-surgical-changes-implementation-2026/)

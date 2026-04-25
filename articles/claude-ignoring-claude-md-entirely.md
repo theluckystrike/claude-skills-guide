@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Ignoring CLAUDE.md Entirely"
+layout: default
+title: "Claude Code Ignoring CLAUDE.md Entirely (2026)"
 description: "Step-by-step diagnostic when Claude Code does not follow any CLAUDE.md instructions. Covers loading verification, file placement, specificity, and enforcement."
 permalink: /claude-ignoring-claude-md-entirely/
+date: 2026-04-20
 categories: [claude-md, fixes]
 tags: [claude-code, ignoring, claude-md, diagnostic, fix, troubleshooting]
 last_updated: 2026-04-19

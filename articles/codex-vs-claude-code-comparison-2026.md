@@ -1,7 +1,9 @@
 ---
-title: "Codex vs Claude Code: Full Comparison"
+layout: default
+title: "Codex vs Claude Code: Full Comparison (2026)"
 description: "OpenAI Codex CLI vs Claude Code compared across architecture, capabilities, pricing, language support, MCP, terminal integration, and community."
 permalink: /codex-vs-claude-code-comparison-2026/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

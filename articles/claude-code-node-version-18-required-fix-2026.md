@@ -1,7 +1,9 @@
 ---
-title: "Node 18+ Required Version Error — Fix"
+layout: default
+title: "Node 18+ Required Version Error — Fix (2026)"
 permalink: /claude-code-node-version-18-required-fix-2026/
-description: "Claude Code troubleshooting: node 18+ Required Version Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
+date: 2026-04-20
+description: "Node 18+ Required Version Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
 ---
 

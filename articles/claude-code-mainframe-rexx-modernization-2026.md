@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code for Mainframe REXX (2026)"
 permalink: /claude-code-mainframe-rexx-modernization-2026/
+date: 2026-04-20
 description: "Modernize mainframe REXX scripts with Claude Code. Convert ISPF panels, EXECIO file I/O, and TSO commands to Python automation."
 last_tested: "2026-04-22"
 domain: "mainframe modernization"

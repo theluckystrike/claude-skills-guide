@@ -1,7 +1,9 @@
 ---
-title: "Tool Use Schema Validation Error — Fix"
+layout: default
+title: "Tool Use Schema Validation Error — Fix (2026)"
 permalink: /claude-code-tool-use-schema-validation-error-fix-2026/
-description: "Claude Code troubleshooting: fix tool use schema validation error. Ensure input_schema is valid JSON Schema draft 2020-12 with correct property types."
+date: 2026-04-20
+description: "Fix tool use schema validation error. Ensure input_schema is valid JSON Schema draft 2020-12 with correct property types."
 last_tested: "2026-04-22"
 ---
 

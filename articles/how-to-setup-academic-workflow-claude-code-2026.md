@@ -1,7 +1,9 @@
 ---
-title: "Set Up Academic Workflow in Claude Code"
+layout: default
+title: "Set Up Academic Workflow in Claude Code (2026)"
 description: "Configure Claude Code for academic work using the claude-code-my-workflow repo's 28 skills and 14 agents. LaTeX, R, citations, and paper writing."
 permalink: /how-to-setup-academic-workflow-claude-code-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

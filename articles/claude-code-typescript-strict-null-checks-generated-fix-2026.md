@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "TypeScript Strict Null Checks (2026)"
 permalink: /claude-code-typescript-strict-null-checks-generated-fix-2026/
+date: 2026-04-20
 description: "Fix TypeScript strict null check errors in Claude-generated code. Add null guards and optional chaining to generated functions."
 last_tested: "2026-04-22"
 ---

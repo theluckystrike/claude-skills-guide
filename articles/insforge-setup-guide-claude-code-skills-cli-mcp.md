@@ -1,5 +1,6 @@
 ---
-title: "InsForge Setup Guide for Claude Code"
+layout: default
+title: "InsForge Setup Guide for Claude Code (2026)"
 description: "InsForge centralizes Claude Code instruction management across skills, CLI, and MCP, reducing context overhead by 30-50% through structured instruction."
 permalink: /insforge-setup-guide-claude-code-skills-cli-mcp/
 date: 2026-04-22

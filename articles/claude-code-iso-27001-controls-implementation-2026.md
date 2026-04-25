@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for ISO 27001 Controls"
+layout: default
+title: "Claude Code for ISO 27001 Controls (2026)"
 permalink: /claude-code-iso-27001-controls-implementation-2026/
+date: 2026-04-20
 description: "Implement ISO 27001:2022 Annex A controls with Claude Code. Automate evidence collection, policy-as-code, and continuous compliance monitoring."
 last_tested: "2026-04-22"
 domain: "information security"

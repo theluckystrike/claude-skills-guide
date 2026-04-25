@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for HIPAA Compliance Code"
+layout: default
+title: "Claude Code for HIPAA Compliance Code (2026)"
 permalink: /claude-code-hipaa-compliance-code-review-2026/
+date: 2026-04-20
 description: "Automate HIPAA compliance code reviews with Claude Code. Detect PHI exposure, audit encryption, and validate access controls systematically."
 last_tested: "2026-04-22"
 domain: "healthcare compliance"

@@ -1,6 +1,8 @@
 ---
-title: "tmux Session Not Detected Error — Fix"
+layout: default
+title: "tmux Session Not Detected Error — Fix (2026)"
 permalink: /claude-code-tmux-session-not-detected-fix-2026/
+date: 2026-04-20
 description: "Fix tmux session not detected by Claude Code. Set TERM correctly and configure tmux for 256-color support to restore full terminal functionality."
 last_tested: "2026-04-22"
 ---

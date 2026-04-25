@@ -1,7 +1,9 @@
 ---
-title: "CLAUDE.md Example for Node.js + Express"
+layout: default
+title: "CLAUDE.md Example for Node.js + Express (2026)"
 description: "Complete 300-line CLAUDE.md for Node.js 22 with Express 5 and Prisma 6. Covers middleware patterns, Prisma schema design, and error middleware chains."
 permalink: /claude-md-example-for-nodejs-express-prisma/
+date: 2026-04-20
 render_with_liquid: false
 categories: [claude-md, templates, 2026]
 tags: [claude-code, claude-md, nodejs, express, prisma]

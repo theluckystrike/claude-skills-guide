@@ -1,7 +1,9 @@
 ---
-title: "Onboarding New Developers to Your"
-description: "Claude Code resource: step-by-step onboarding checklist for new team members covering skill discovery, naming conventions, personal vs project scope,..."
+layout: default
+title: "Onboarding New Developers to Your (2026)"
+description: "Step-by-step onboarding checklist for new team members covering skill discovery, naming conventions, personal vs project scope, and common pitfalls."
 permalink: /claude-skills-onboarding-new-developers/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, onboarding, team, documentation]
 last_updated: 2026-04-19

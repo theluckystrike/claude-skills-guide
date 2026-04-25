@@ -3,6 +3,7 @@ layout: default
 title: "Chrome Extension Guides"
 description: "Guides for building Chrome extensions with AI, Claude Code, and modern development tools."
 permalink: /topics/chrome-extensions/
+date: 2026-04-20
 ---
 # Chrome Extension Guides
 

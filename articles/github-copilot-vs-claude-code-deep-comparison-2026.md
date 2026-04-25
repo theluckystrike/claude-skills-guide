@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "GitHub Copilot vs Claude Code (2026)"
 permalink: /github-copilot-vs-claude-code-deep-comparison-2026/
+date: 2026-04-20
 description: "GitHub Copilot offers $10/mo inline autocomplete in every IDE. Claude Code delivers autonomous multi-step execution from the terminal. Full comparison."
 last_tested: "2026-04-21"
 ---

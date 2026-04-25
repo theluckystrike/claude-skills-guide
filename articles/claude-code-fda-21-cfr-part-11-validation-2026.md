@@ -1,7 +1,9 @@
 ---
-title: "Claude Code for FDA 21 CFR Part 11"
+layout: default
+title: "Claude Code for FDA 21 CFR Part 11 (2026)"
 description: "Claude Code for FDA 21 CFR Part 11 — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-fda-21-cfr-part-11-validation-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

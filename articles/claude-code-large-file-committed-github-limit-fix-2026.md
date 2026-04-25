@@ -1,6 +1,8 @@
 ---
-title: "Large File Committed Exceeds GitHub"
+layout: default
+title: "Large File Committed Exceeds GitHub (2026)"
 permalink: /claude-code-large-file-committed-github-limit-fix-2026/
+date: 2026-04-20
 description: "Fix large file committed exceeding GitHub 100MB limit. Remove the file from git history with git filter-repo or use Git LFS for legitimate large files."
 last_tested: "2026-04-22"
 ---

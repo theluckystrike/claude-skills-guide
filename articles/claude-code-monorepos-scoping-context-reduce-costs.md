@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Claude Code for Monorepos (2026)"
 description: "Reduce Claude Code costs in monorepos by 50-70% with context scoping techniques including nested CLAUDE.md, package boundaries, and targeted file access."
 permalink: /claude-code-monorepos-scoping-context-reduce-costs/

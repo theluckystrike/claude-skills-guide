@@ -1,7 +1,9 @@
 ---
-title: "Claude Code EACCES Permission Denied"
+layout: default
+title: "Claude Code EACCES Permission Denied (2026)"
 description: "Fix Claude Code EACCES permission denied on npm global install. Change npm prefix to home directory. Step-by-step solution."
 permalink: /claude-code-eacces-permission-denied-npm-global-install-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

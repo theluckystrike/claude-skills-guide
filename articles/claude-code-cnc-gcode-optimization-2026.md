@@ -1,7 +1,9 @@
 ---
-title: "Claude Code for CNC G-Code Optimization"
+layout: default
+title: "Claude Code for CNC G-Code Optimization (2026)"
 description: "Claude Code for CNC G-Code Optimization — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-cnc-gcode-optimization-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

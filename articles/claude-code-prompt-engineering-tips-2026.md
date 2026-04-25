@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Prompt Engineering Tips"
+layout: default
+title: "Claude Code Prompt Engineering Tips (2026)"
 description: "Practical prompt engineering tips for Claude Code including task scoping, file references, acceptance criteria, and common anti-patterns."
 permalink: /claude-code-prompt-engineering-tips-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

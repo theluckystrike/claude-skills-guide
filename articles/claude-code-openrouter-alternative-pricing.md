@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Claude Code + OpenRouter (2026)"
 description: "Claude Code + OpenRouter — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-openrouter-alternative-pricing/

@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Karpathy Don't Assume (2026)"
 description: "See Karpathy's Don't Assume principle in real codebases — API projects, React apps, CLI tools, and monorepos with exact CLAUDE.md rules."
 permalink: /karpathy-dont-assume-examples-real-projects-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

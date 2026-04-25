@@ -1,7 +1,9 @@
 ---
-title: "Managing Claude Skills Across Team"
+layout: default
+title: "Managing Claude Skills Across Team (2026)"
 description: "Prevent skill collisions between personal, project, and plugin scopes with precedence rules, naming conventions, and discovery debugging."
 permalink: /managing-claude-skills-across-team-members/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, team-management, precedence, conflicts]
 last_updated: 2026-04-19

@@ -1,7 +1,9 @@
 ---
-title: "Connection Reset by Peer Error — Fix"
+layout: default
+title: "Connection Reset by Peer Error — Fix (2026)"
 permalink: /claude-code-connection-reset-by-peer-fix-2026/
-description: "Claude Code troubleshooting: connection Reset by Peer Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
+date: 2026-04-20
+description: "Connection Reset by Peer Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
 ---
 

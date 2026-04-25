@@ -1,7 +1,9 @@
 ---
-title: "Claude Skill Registry Pattern for Teams"
+layout: default
+title: "Claude Skill Registry Pattern for Teams (2026)"
 description: "Build a skill registry that gives teams centralized discovery, version tracking, and controlled distribution of Claude Code skills across projects."
 permalink: /claude-skill-registry-pattern-for-teams/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, team-registry, architecture]
 last_updated: 2026-04-19

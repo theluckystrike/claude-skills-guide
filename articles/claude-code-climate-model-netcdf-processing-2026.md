@@ -1,7 +1,9 @@
 ---
-title: "Claude Code for Climate Model Data"
+layout: default
+title: "Claude Code for Climate Model Data (2026)"
 description: "Claude Code for Climate Model Data — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-climate-model-netcdf-processing-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

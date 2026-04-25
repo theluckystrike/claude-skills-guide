@@ -1,6 +1,8 @@
 ---
-title: "VS Code Extension Consuming Excessive"
+layout: default
+title: "VS Code Extension Consuming Excessive (2026)"
 permalink: /claude-code-vscode-extension-excessive-cpu-fix-2026/
+date: 2026-04-20
 description: "Fix VS Code Claude Code extension consuming excessive CPU. Disable file watchers on large directories and limit workspace indexing to reduce CPU load."
 last_tested: "2026-04-22"
 ---

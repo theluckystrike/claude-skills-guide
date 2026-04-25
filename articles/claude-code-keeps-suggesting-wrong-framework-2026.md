@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Fix Claude Code Suggesting Wrong (2026)"
 description: "Stop Claude Code from suggesting Express when you use Fastify, or React when you use Vue, by pinning frameworks in CLAUDE.md."
 permalink: /claude-code-keeps-suggesting-wrong-framework-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

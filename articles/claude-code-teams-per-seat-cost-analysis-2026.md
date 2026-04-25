@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Claude Code for Teams (2026)"
 description: "Analyze Claude Code per-seat costs for teams in 2026 with Max vs API pricing, team size optimization, and break-even calculations for 3-50 developers."
 permalink: /claude-code-teams-per-seat-cost-analysis-2026/

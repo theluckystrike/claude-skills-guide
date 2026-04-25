@@ -1,7 +1,9 @@
 ---
-title: "Claude Skills for SEO Content"
+layout: default
+title: "Claude Skills for SEO Content Generation Guide (2026)"
 description: "Build a Claude Code skill that clusters keywords by search intent, generates meta descriptions under 155 chars, and maps internal links from your sitemap."
 permalink: /claude-skills-for-seo-content-generation/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, seo, content-generation]
 last_updated: 2026-04-19

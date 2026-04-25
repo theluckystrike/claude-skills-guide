@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Bazel Build System"
+layout: default
+title: "Claude Code for Bazel Build System (2026)"
 permalink: /claude-code-bazel-build-system-2026/
+date: 2026-04-20
 description: "Configure Bazel builds with Claude Code. Write BUILD files, manage external dependencies with bzlmod, and optimize remote execution caching."
 last_tested: "2026-04-22"
 domain: "build systems"

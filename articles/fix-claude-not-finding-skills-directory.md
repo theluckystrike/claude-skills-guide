@@ -1,7 +1,9 @@
 ---
-title: "Fix Claude Code Not Finding the Skills"
+layout: default
+title: "Fix Claude Code Not Finding the Skills (2026)"
 description: "Resolve discovery failures when Claude Code cannot locate .claude/skills/ due to working directory, gitignore, permissions, or monorepo nesting issues."
 permalink: /fix-claude-not-finding-skills-directory/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, error, directory, discovery, troubleshooting]
 last_updated: 2026-04-19

@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Plugin Marketplace Guide"
+layout: default
+title: "Claude Code Plugin Marketplace Guide (2026)"
 description: "Navigate the Claude Code plugin ecosystem with this guide to finding, evaluating, and installing skills, hooks, and MCP integrations."
 permalink: /claude-code-plugin-marketplace-guide-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

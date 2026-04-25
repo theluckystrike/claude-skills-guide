@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Skills for Git, Docker, (2026)"
 description: "Three production-ready SKILL.md files for git commit workflows, Docker container management, and test runner automation with allowed-tools."
 permalink: /claude-skills-for-git-docker-testing/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, git, docker, testing, devops]
 last_updated: 2026-04-19

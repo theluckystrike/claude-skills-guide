@@ -1,5 +1,6 @@
 ---
-title: "Why Claude Code 4.6 uses more tokens"
+layout: default
+title: "Why Claude Code 4.6 uses more tokens (2026)"
 description: "Claude 4.6 models use 10-25% more tokens than 4.5 for the same tasks due to improved reasoning depth. Offset the increase with context engineering techniques."
 permalink: /why-claude-code-46-uses-more-tokens-than-45/
 date: 2026-04-22

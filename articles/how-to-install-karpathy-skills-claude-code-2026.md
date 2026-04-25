@@ -1,7 +1,9 @@
 ---
-title: "Install Karpathy Skills in Claude Code"
+layout: default
+title: "Install Karpathy Skills in Claude Code (2026)"
 description: "Install Karpathy's 4-principle CLAUDE.md in under 60 seconds. Step-by-step guide with curl command, verification, and customization tips."
 permalink: /how-to-install-karpathy-skills-claude-code-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

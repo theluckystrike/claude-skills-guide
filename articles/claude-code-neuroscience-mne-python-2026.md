@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Neuroscience MNE-Python"
+layout: default
+title: "Claude Code for Neuroscience MNE-Python (2026)"
 permalink: /claude-code-neuroscience-mne-python-2026/
+date: 2026-04-20
 description: "Claude Code for Neuroscience MNE-Python — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"
 ---

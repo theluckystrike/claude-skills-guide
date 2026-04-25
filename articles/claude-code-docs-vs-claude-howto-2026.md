@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Docs Mirror vs Claude Howto"
+layout: default
+title: "Claude Code Docs Mirror vs Claude Howto (2026)"
 description: "Claude Code Docs auto-syncs official docs for offline use. Claude Howto provides visual guides with Mermaid diagrams. Compare both learning tools."
 permalink: /claude-code-docs-vs-claude-howto-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

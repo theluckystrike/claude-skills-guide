@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Three.js 3D Scene"
+layout: default
+title: "Claude Code for Three.js 3D Scene (2026)"
 permalink: /claude-code-threejs-3d-scene-development-2026/
+date: 2026-04-20
 description: "Build 3D web experiences with Three.js and Claude Code. Create scenes, materials, post-processing, and physics-based interactions for the browser."
 last_tested: "2026-04-22"
 domain: "web 3D"

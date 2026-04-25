@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Find MCP Servers in Awesome MCP (2026)"
 description: "Navigate the 200+ MCP servers in the Awesome MCP directory by category. Find, evaluate, and install the right server for your Claude Code setup."
 permalink: /how-to-browse-awesome-mcp-servers-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

@@ -1,7 +1,9 @@
 ---
-title: "Simplicity First: Before and After Code"
+layout: default
+title: "Simplicity First: Before and After Code (2026)"
 description: "Side-by-side code comparisons showing Claude Code output before and after applying Karpathy's Simplicity First principle across 6 scenarios."
 permalink: /karpathy-simplicity-first-examples-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

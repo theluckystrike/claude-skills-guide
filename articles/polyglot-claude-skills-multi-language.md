@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Polyglot Claude Skills (2026)"
 description: "Design Claude Code skills that adapt to multiple programming languages using path-conditional activation, language-specific references, and runtime detection."
 permalink: /polyglot-claude-skills-multi-language/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, polyglot, multi-language]
 last_updated: 2026-04-19

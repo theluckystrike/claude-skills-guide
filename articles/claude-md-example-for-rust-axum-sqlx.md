@@ -1,7 +1,9 @@
 ---
-title: "CLAUDE.md Example for Rust + Axum +"
+layout: default
+title: "CLAUDE.md Example for Rust + Axum + (2026)"
 description: "CLAUDE.md Example for Rust + Axum + — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-md-example-for-rust-axum-sqlx/
+date: 2026-04-20
 render_with_liquid: false
 categories: [claude-md, templates, 2026]
 tags: [claude-code, claude-md, rust, axum, sqlx]

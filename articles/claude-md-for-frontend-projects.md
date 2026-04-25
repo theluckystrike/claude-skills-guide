@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "CLAUDE.md for Frontend Projects (2026)"
 description: "Write CLAUDE.md rules for React component structure, state management, styling conventions, and accessibility that Claude Code follows in frontend projects."
 permalink: /claude-md-frontend-projects/
+date: 2026-04-20
 categories: [claude-md, patterns]
 tags: [claude-md, frontend, react, components, styling, claude-code]
 last_updated: 2026-04-19

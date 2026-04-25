@@ -1,7 +1,9 @@
 ---
-title: "Fix Claude Code Spawn Unknown Error in"
+layout: default
+title: "Fix Claude Code Spawn Unknown Error in Skills (2026)"
 description: "Resolve spawn UNKNOWN errors caused by missing interpreters, permission failures, script encoding issues, and shell configuration in skills."
 permalink: /fix-claude-code-spawn-unknown-error-skills/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, spawn-error, scripts, troubleshooting]
 last_updated: 2026-04-19

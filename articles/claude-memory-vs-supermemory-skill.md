@@ -1,7 +1,9 @@
 ---
-title: "Claude Auto-Memory vs Supermemory Skill"
+layout: default
+title: "Claude Auto-Memory vs Supermemory Skill (2026)"
 description: "Compare Claude Code's native auto-memory (MEMORY.md, 200-line limit) with Supermemory-style skills for persistent knowledge."
 permalink: /claude-memory-vs-supermemory-skill/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, memory, supermemory, comparison]
 last_updated: 2026-04-19

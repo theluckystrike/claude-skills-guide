@@ -3,6 +3,7 @@ layout: default
 title: "Claude Code Ecosystem: Tools, Plugins & Repos (2026)"
 description: "150+ guides covering every Claude Code tool, from Karpathy Skills to MCP servers. The complete ecosystem map for developers."
 permalink: /ecosystem/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

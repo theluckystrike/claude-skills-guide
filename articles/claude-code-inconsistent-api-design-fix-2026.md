@@ -1,7 +1,9 @@
 ---
-title: "Fix Claude Code Inconsistent API Design"
+layout: default
+title: "Fix Claude Code Inconsistent API Design (2026)"
 description: "Fix inconsistent API design from Claude Code by defining response shapes, naming patterns, and error formats in your CLAUDE.md file."
 permalink: /claude-code-inconsistent-api-design-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

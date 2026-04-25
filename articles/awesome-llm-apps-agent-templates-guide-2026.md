@@ -1,7 +1,9 @@
 ---
-title: "Awesome LLM Apps: Agent Templates Guide"
-description: "Claude Code guide: browse 100+ runnable agent and RAG templates in awesome-llm-apps (107K stars) — Apache-2.0 licensed, production-ready reference..."
+layout: default
+title: "Awesome LLM Apps: Agent Templates Guide (2026)"
+description: "Browse 100+ runnable agent and RAG templates in awesome-llm-apps (107K stars) — Apache-2.0 licensed, production-ready reference implementations."
 permalink: /awesome-llm-apps-agent-templates-guide-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

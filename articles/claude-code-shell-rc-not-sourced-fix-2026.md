@@ -1,7 +1,9 @@
 ---
-title: "Shell RC File Not Sourced Error — Fix"
+layout: default
+title: "Shell RC File Not Sourced Error — Fix (2026)"
 permalink: /claude-code-shell-rc-not-sourced-fix-2026/
-description: "Claude Code troubleshooting: shell RC File Not Sourced Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
+date: 2026-04-20
+description: "Shell RC File Not Sourced Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
 ---
 

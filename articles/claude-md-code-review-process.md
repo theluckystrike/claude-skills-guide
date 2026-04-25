@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "CLAUDE.md Code Review Process (2026)"
 description: "How to use CLAUDE.md as a code review checklist, automate rule verification, and build a review workflow for Claude Code output."
 permalink: /claude-md-code-review-process/
+date: 2026-04-20
 categories: [claude-md, workflow]
 tags: [claude-md, code-review, workflow, automation, quality]
 last_updated: 2026-04-19

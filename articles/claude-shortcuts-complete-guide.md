@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Shortcuts (2026)"
 description: "Complete list of keyboard shortcuts for Claude.ai, Claude Desktop, and Claude Code CLI. Platform-specific keys, slash commands, and customization."
 permalink: /claude-shortcuts-complete-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

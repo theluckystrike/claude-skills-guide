@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "SuperClaude Framework (2026)"
 description: "Install SuperClaude's 30 slash commands, 16 agents, and 7 behavioral modes — the most feature-rich Claude Code framework at 22K stars."
 permalink: /superclaude-framework-guide-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

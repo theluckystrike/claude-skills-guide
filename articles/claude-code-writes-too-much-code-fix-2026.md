@@ -1,7 +1,9 @@
 ---
-title: "Stop Claude Code Writing Excessive Code"
+layout: default
+title: "Stop Claude Code Writing Excessive Code (2026)"
 description: "Reduce Claude Code's code output volume with line budgets, file limits, and CLAUDE.md rules that enforce minimalism over completeness."
 permalink: /claude-code-writes-too-much-code-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

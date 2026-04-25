@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "The Compaction Strategy (2026)"
 description: "Master Claude Code /compact timing to reduce context by 60-80% without losing critical information -- includes decision rules and compaction cadence formulas."
 permalink: /compaction-strategy-when-compact-when-not/

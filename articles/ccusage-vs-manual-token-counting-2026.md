@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "ccusage vs Manual Token Counting (2026)"
 description: "ccusage parses Claude Code JSONL logs automatically. Manual counting uses tiktoken or the API response. Compare accuracy and effort for cost tracking."
 permalink: /ccusage-vs-manual-token-counting-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

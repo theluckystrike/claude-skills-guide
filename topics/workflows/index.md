@@ -3,6 +3,7 @@ layout: default
 title: "CLAUDE.md and Workflow Guides"
 description: "Configure Claude Code projects with CLAUDE.md files, Git hooks, and automation workflows."
 permalink: /topics/workflows/
+date: 2026-04-20
 ---
 # CLAUDE.md and Workflow Guides
 

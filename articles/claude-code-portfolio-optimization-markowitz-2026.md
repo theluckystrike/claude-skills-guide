@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Portfolio Optimization"
+layout: default
+title: "Claude Code for Portfolio Optimization (2026)"
 permalink: /claude-code-portfolio-optimization-markowitz-2026/
+date: 2026-04-20
 description: "Portfolio optimization with Claude Code. Build Markowitz mean-variance, Black-Litterman, and risk parity models in Python."
 last_tested: "2026-04-22"
 ---

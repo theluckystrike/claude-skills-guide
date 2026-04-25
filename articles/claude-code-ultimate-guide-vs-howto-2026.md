@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Guide vs Howto: Which First? (2026)"
 description: "The Ultimate Guide has 22K lines and 271 quizzes. Claude Howto has visual diagrams and templates. Here's which to study first based on your experience."
 permalink: /claude-code-ultimate-guide-vs-howto-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

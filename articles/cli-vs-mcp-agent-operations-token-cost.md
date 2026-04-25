@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "CLI vs MCP for Agent Operations (2026)"
 description: "Claude Code comparison: cLI Bash calls cost 245 tokens overhead versus 500-2,000 tokens for MCP tool definitions. Compare token costs to choose the..."
 permalink: /cli-vs-mcp-agent-operations-token-cost/

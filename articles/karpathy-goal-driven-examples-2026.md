@@ -1,7 +1,9 @@
 ---
-title: "Goal-Driven Execution: Project Examples"
-description: "Claude Code resource: four project scenarios showing Karpathy's Goal-Driven Execution in practice — API fixes, React features, CLI tools, and database..."
+layout: default
+title: "Goal-Driven Execution: Project Examples (2026)"
+description: "Four project scenarios showing Karpathy's Goal-Driven Execution in practice — API fixes, React features, CLI tools, and database migrations."
 permalink: /karpathy-goal-driven-examples-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

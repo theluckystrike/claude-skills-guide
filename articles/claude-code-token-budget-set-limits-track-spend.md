@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Claude Code Token Budget (2026)"
 description: "Set token budgets and track Claude Code spending with built-in /cost, ccusage, and API console alerts to prevent runaway costs on every session."
 permalink: /claude-code-token-budget-set-limits-track-spend/

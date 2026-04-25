@@ -1,6 +1,8 @@
 ---
-title: "Response Truncation Max Tokens Hit Fix"
+layout: default
+title: "Response Truncation Max Tokens Hit Fix (2026)"
 permalink: /claude-code-response-truncation-max-tokens-fix-2026/
+date: 2026-04-20
 description: "Fix response truncation when max tokens hit in Claude Code. Increase output limit or split large generation tasks to get complete code output."
 last_tested: "2026-04-22"
 ---

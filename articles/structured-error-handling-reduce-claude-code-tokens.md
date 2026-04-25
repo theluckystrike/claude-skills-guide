@@ -1,5 +1,6 @@
 ---
-title: "Structured Error Handling to Reduce"
+layout: default
+title: "Structured Error Handling to Reduce (2026)"
 description: "Structured error handling cuts Claude Code retry loops by 70%, saving 20K-80K tokens per debugging session with predictable error formats."
 permalink: /structured-error-handling-reduce-claude-code-tokens/
 date: 2026-04-22
@@ -289,4 +290,3 @@ For teams, the savings multiply: 5 developers each saving $10.80/month = $54/mon
 - [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- automate error formatting with pre/post hooks
 - [Errors Atlas](/errors-atlas/) -- comprehensive error reference for Claude Code
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- reduce context cost from error output flooding
-- [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide

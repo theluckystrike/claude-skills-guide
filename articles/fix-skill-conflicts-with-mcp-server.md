@@ -1,7 +1,9 @@
 ---
-title: "Fix Skill Conflicts with MCP Servers"
-description: "Claude Code troubleshooting: resolve conflicts when SKILL.md instructions and MCP server tools overlap, producing duplicate actions, inconsistent..."
+layout: default
+title: "Fix Skill Conflicts with MCP Servers (2026)"
+description: "Resolve conflicts when SKILL.md instructions and MCP server tools overlap, producing duplicate actions, inconsistent behavior, or tool confusion."
 permalink: /fix-skill-conflicts-with-mcp-server/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, mcp, conflicts, troubleshooting]
 last_updated: 2026-04-19

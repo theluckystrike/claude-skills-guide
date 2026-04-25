@@ -1,7 +1,9 @@
 ---
-title: "CLAUDE.md Example for NestJS + TypeORM"
+layout: default
+title: "CLAUDE.md Example for NestJS + TypeORM (2026)"
 description: "Complete 310-line CLAUDE.md for NestJS 11 with TypeORM 0.3. Covers modules, providers, guards, interceptors, and pipe patterns. Tested on NestJS 11.0.1."
 permalink: /claude-md-example-for-nestjs-typeorm/
+date: 2026-04-20
 render_with_liquid: false
 categories: [claude-md, templates, 2026]
 tags: [claude-code, claude-md, nestjs, typeorm, typescript]

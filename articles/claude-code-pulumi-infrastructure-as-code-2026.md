@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Pulumi Infrastructure"
+layout: default
+title: "Claude Code for Pulumi Infrastructure (2026)"
 permalink: /claude-code-pulumi-infrastructure-as-code-2026/
+date: 2026-04-20
 description: "Build cloud infrastructure with Pulumi and Claude Code. Write type-safe IaC in TypeScript/Python, implement policy-as-code, and manage stack references."
 last_tested: "2026-04-22"
 domain: "infrastructure"

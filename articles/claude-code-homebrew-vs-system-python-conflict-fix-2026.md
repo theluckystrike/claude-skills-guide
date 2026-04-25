@@ -1,6 +1,8 @@
 ---
-title: "Homebrew vs System Python Conflict Fix"
+layout: default
+title: "Homebrew vs System Python Conflict Fix (2026)"
 permalink: /claude-code-homebrew-vs-system-python-conflict-fix-2026/
+date: 2026-04-20
 description: "Fix Homebrew vs system Python conflict in Claude Code. Set correct Python path in CLAUDE.md to avoid import errors from wrong Python installation."
 last_tested: "2026-04-22"
 ---

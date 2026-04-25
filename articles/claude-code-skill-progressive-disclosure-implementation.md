@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Claude Code Skill Progressive (2026)"
 description: "Implement progressive disclosure in Claude Code skills to load instructions incrementally, reducing average session context by 40-60% and saving $5-15/month."
 permalink: /claude-code-skill-progressive-disclosure-implementation/

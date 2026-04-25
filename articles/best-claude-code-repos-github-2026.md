@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Best Claude Code Repos on GitHub (2026)"
 description: "Ranked list of the 14 best Claude Code repositories on GitHub in 2026 with star counts, install commands, and honest evaluations."
 permalink: /best-claude-code-repos-github-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

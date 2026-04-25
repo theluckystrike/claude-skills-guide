@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Awesome LLM Apps vs Claude Code (2026)"
 description: "Awesome LLM Apps offers 100+ runnable agent/RAG templates. Claude Code Templates provides 600+ Claude-specific configs. Here's how they differ."
 permalink: /awesome-llm-apps-vs-claude-code-templates-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

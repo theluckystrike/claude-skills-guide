@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "CLAUDE.md Character Limit (2026)"
 description: "The exact CLAUDE.md size recommendation, what happens when you exceed it, and techniques for keeping instructions within the effective limit."
 permalink: /claude-md-character-limit-errors/
+date: 2026-04-20
 categories: [claude-md, fixes]
 tags: [claude-md, character-limit, size, optimization, context-window]
 last_updated: 2026-04-19

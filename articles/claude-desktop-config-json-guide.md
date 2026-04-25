@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "claude_desktop_config.json Setup (2026)"
 description: "Full reference for claude_desktop_config.json. File location, every config field, MCP server setup, validation commands, and common mistakes fixed."
 permalink: /claude-desktop-config-json-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "SSH Remote Session Drops Fix (2026)"
 permalink: /claude-code-ssh-remote-session-drops-fix-2026/
+date: 2026-04-20
 description: "Fix SSH session dropping while running Claude Code remotely. Configure SSH keepalive and use tmux to persist sessions across network interruptions."
 last_tested: "2026-04-22"
 ---

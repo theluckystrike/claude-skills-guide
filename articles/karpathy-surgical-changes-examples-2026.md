@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Surgical Changes (2026)"
 description: "Five diff-minimizing examples showing how Karpathy's Surgical Changes principle keeps Claude Code modifications focused and reviewable."
 permalink: /karpathy-surgical-changes-examples-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

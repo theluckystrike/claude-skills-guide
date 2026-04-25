@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code MCP Configuration (2026)"
 description: "Complete guide to configuring MCP servers in Claude Code. Settings.json schema, scope precedence, CLI commands, 5 server examples, and troubleshooting."
 permalink: /claude-code-mcp-configuration-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

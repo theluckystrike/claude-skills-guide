@@ -1,7 +1,9 @@
 ---
-title: "Make Claude Code Match Team Conventions"
+layout: default
+title: "Make Claude Code Match Team Conventions (2026)"
 description: "Configure Claude Code to follow your team's naming, file structure, and code style conventions using CLAUDE.md and linter integration."
 permalink: /claude-code-doesnt-match-team-conventions-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

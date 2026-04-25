@@ -1,7 +1,9 @@
 ---
-title: "Claude Code ESLint Plugin Crashes"
+layout: default
+title: "Claude Code ESLint Plugin Crashes (2026)"
 description: "Fix Claude Code ESLint plugin crash on custom rules. Update rule schema and fix AST visitor conflicts. Step-by-step solution."
 permalink: /claude-code-eslint-plugin-crashes-custom-rule-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

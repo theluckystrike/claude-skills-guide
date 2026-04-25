@@ -1,7 +1,9 @@
 ---
-title: "Should CLAUDE.md Be in .gitignore? When"
+layout: default
+title: "Should CLAUDE.md Be in .gitignore? When (2026)"
 description: "The definitive answer on whether CLAUDE.md belongs in version control, .gitignore, or both. Covers CLAUDE.local.md, team standards, and personal preferences."
 permalink: /should-claude-md-be-in-gitignore/
+date: 2026-04-20
 categories: [claude-md, workflow]
 tags: [claude-md, gitignore, version-control, team, claude-code]
 last_updated: 2026-04-19

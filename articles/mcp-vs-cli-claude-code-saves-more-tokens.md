@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "MCP vs CLI for Claude Code (2026)"
 description: "Compare MCP servers and CLI tools for Claude Code to determine when each approach saves more tokens, with per-operation measurements and cost analysis."
 permalink: /mcp-vs-cli-claude-code-saves-more-tokens/

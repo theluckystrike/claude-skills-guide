@@ -1,7 +1,9 @@
 ---
-title: "Claude API Invalid API Key Format Error"
+layout: default
+title: "Claude API Invalid API Key Format Error (2026)"
 description: "Fix Claude API invalid_api_key format error. Verify key prefix and remove hidden whitespace characters. Step-by-step solution."
 permalink: /claude-api-invalid-api-key-format-error-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

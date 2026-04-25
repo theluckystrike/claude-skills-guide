@@ -1,7 +1,9 @@
 ---
-title: "mTLS Client Certificate Error — Fix"
+layout: default
+title: "mTLS Client Certificate Error — Fix (2026)"
 permalink: /claude-code-mtls-client-cert-error-fix-2026/
-description: "Claude Code troubleshooting: mTLS Client Certificate Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
+date: 2026-04-20
+description: "mTLS Client Certificate Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
 ---
 

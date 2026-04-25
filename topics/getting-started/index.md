@@ -3,6 +3,7 @@ layout: default
 title: "Getting Started with Claude Code"
 description: "Beginner guides for Claude Code: installation, first project, setup, and essential workflows."
 permalink: /topics/getting-started/
+date: 2026-04-20
 ---
 # Getting Started with Claude Code
 

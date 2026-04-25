@@ -1,6 +1,8 @@
 ---
-title: "Streaming Buffer Overflow Error — Fix"
+layout: default
+title: "Streaming Buffer Overflow Error — Fix (2026)"
 permalink: /claude-code-streaming-buffer-overflow-fix-2026/
+date: 2026-04-20
 description: "Fix streaming buffer overflow in Claude Code. Clear the output buffer and reduce response size to prevent terminal rendering crashes during long outputs."
 last_tested: "2026-04-22"
 ---

@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Stop Claude Code Adding Extra (2026)"
 description: "Prevent Claude Code from adding unnecessary npm packages by defining approved dependency lists and native-first rules in CLAUDE.md."
 permalink: /claude-code-adds-unnecessary-dependencies-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

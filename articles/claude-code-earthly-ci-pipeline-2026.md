@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Earthly CI Pipeline"
+layout: default
+title: "Claude Code for Earthly CI Pipeline (2026)"
 permalink: /claude-code-earthly-ci-pipeline-2026/
+date: 2026-04-20
 description: "Build reproducible CI pipelines with Earthly and Claude Code. Write Earthfiles, cache dependencies, and run identical builds locally and in CI."
 last_tested: "2026-04-22"
 domain: "CI/CD"

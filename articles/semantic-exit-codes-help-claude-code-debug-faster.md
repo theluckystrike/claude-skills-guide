@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Semantic Exit Codes (2026)"
 description: "Implement semantic exit codes to help Claude Code debug 40% faster with categorized error signals that reduce unnecessary token-expensive investigation."
 permalink: /semantic-exit-codes-help-claude-code-debug-faster/

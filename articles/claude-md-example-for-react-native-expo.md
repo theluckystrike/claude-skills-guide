@@ -1,7 +1,9 @@
 ---
-title: "CLAUDE.md Example for React Native +"
+layout: default
+title: "CLAUDE.md Example for React Native + (2026)"
 description: "Complete 300-line CLAUDE.md for React Native 0.76 with Expo SDK 52. Covers Expo Router, EAS Build, Reanimated, and native module patterns."
 permalink: /claude-md-example-for-react-native-expo/
+date: 2026-04-20
 render_with_liquid: false
 categories: [claude-md, templates, 2026]
 tags: [claude-code, claude-md, react-native, expo]

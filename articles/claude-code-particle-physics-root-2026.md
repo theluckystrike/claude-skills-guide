@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Particle Physics ROOT"
+layout: default
+title: "Claude Code for Particle Physics ROOT (2026)"
 permalink: /claude-code-particle-physics-root-2026/
+date: 2026-04-20
 description: "Particle physics analysis with Claude Code and ROOT/uproot. Automate histogram fitting, cut optimization, and statistical tests."
 last_tested: "2026-04-22"
 ---

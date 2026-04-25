@@ -1,6 +1,8 @@
 ---
-title: "Workspace Trust Blocking Execution Fix"
+layout: default
+title: "Workspace Trust Blocking Execution Fix (2026)"
 permalink: /claude-code-workspace-trust-blocking-execution-fix-2026/
+date: 2026-04-20
 description: "Fix VS Code workspace trust blocking Claude Code execution. Trust the workspace folder or configure restricted mode exceptions to enable full functionality."
 last_tested: "2026-04-22"
 ---

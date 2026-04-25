@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Multi-Agent Token Budgeting (2026)"
 description: "Allocate token budgets across Claude Code subagents to prevent runaway costs, with per-agent caps and delegation patterns saving $100-300/month."
 permalink: /multi-agent-token-budgeting-allocate-subagents/

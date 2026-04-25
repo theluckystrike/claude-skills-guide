@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "CLAUDE.md for Error Handling (2026)"
 description: "Encode error handling rules in CLAUDE.md to stop Claude Code from generating try-catch-ignore blocks, untyped errors, and missing error boundaries."
 permalink: /claude-md-error-handling-patterns/
+date: 2026-04-20
 categories: [claude-md, patterns]
 tags: [claude-md, error-handling, patterns, result-type, claude-code]
 last_updated: 2026-04-19

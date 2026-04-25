@@ -1,6 +1,8 @@
 ---
-title: "WebSocket Upgrade Rejected Error — Fix"
+layout: default
+title: "WebSocket Upgrade Rejected Error — Fix (2026)"
 permalink: /claude-code-websocket-upgrade-rejected-fix-2026/
+date: 2026-04-20
 description: "Fix WebSocket upgrade rejected (HTTP 403) by proxy. Configure proxy to allow Upgrade headers for Claude Code connections."
 last_tested: "2026-04-22"
 ---

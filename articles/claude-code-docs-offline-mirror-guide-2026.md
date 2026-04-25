@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Docs Offline Mirror Guide"
+layout: default
+title: "Claude Code Docs Offline Mirror Guide (2026)"
 description: "Set up claude-code-docs for offline documentation access with auto-update hooks — never lose docs access when the network drops."
 permalink: /claude-code-docs-offline-mirror-guide-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

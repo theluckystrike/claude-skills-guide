@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code for ASIC Design (2026)"
 description: "Claude Code for ASIC Design — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-asic-design-verification-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

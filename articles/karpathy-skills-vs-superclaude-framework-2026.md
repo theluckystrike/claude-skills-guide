@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Karpathy Skills vs SuperClaude (2026)"
 description: "Karpathy Skills offers 4 behavioral principles while SuperClaude provides 30 commands and 16 agents. Here's which to pick for your workflow."
 permalink: /karpathy-skills-vs-superclaude-framework-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

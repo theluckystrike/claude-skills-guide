@@ -1,7 +1,9 @@
 ---
-title: "Fix Claude Code Using Outdated Patterns"
+layout: default
+title: "Fix Claude Code Using Outdated Patterns (2026)"
 description: "Stop Claude Code from generating deprecated APIs, old React patterns, and outdated library usage — add version pinning and pattern rules to CLAUDE.md."
 permalink: /claude-code-generates-outdated-patterns-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Awesome Claude Code (2026)"
 description: "Navigate the awesome-claude-code repo — 40K stars of curated skills, hooks, slash-commands, agent orchestrators, and plugins for Claude Code developers."
 permalink: /awesome-claude-code-master-index-guide-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

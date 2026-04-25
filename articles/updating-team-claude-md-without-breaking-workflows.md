@@ -1,7 +1,9 @@
 ---
-title: "Update Team CLAUDE.md Without Breaking"
+layout: default
+title: "Update Team CLAUDE.md Without Breaking (2026)"
 description: "Safe strategies for rolling out CLAUDE.md changes across a team: phased rollouts, testing before merge, and backward-compatible rule additions."
 permalink: /updating-team-claude-md-without-breaking-workflows/
+date: 2026-04-20
 categories: [claude-md, workflow]
 tags: [claude-md, team, updates, rollout, backward-compatibility]
 last_updated: 2026-04-19

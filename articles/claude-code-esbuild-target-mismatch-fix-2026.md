@@ -1,7 +1,9 @@
 ---
-title: "esbuild Target Mismatch Error — Fix"
+layout: default
+title: "esbuild Target Mismatch Error — Fix (2026)"
 permalink: /claude-code-esbuild-target-mismatch-fix-2026/
-description: "Claude Code troubleshooting: esbuild Target Mismatch Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
+date: 2026-04-20
+description: "esbuild Target Mismatch Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
 ---
 

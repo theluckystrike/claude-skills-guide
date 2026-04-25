@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Credit Scoring Models"
+layout: default
+title: "Claude Code for Credit Scoring Models (2026)"
 permalink: /claude-code-credit-scoring-model-2026/
+date: 2026-04-20
 description: "Credit scoring model development with Claude Code. Build logistic regression scorecards with WoE binning and GINI validation."
 last_tested: "2026-04-22"
 ---

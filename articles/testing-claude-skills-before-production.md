@@ -1,7 +1,9 @@
 ---
-title: "How to Test Claude Code Skills Before"
+layout: default
+title: "How to Test Claude Code Skills Before (2026)"
 description: "Step-by-step testing workflow for SKILL.md files including trigger testing, permission validation, compaction survival, and edge case checks."
 permalink: /testing-claude-skills-before-production/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, testing, debugging, quality-assurance]
 last_updated: 2026-04-19

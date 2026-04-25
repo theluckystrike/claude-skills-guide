@@ -1,7 +1,9 @@
 ---
-title: "Make Claude Code Consider Performance"
+layout: default
+title: "Make Claude Code Consider Performance (2026)"
 description: "Add performance awareness to Claude Code with CLAUDE.md rules for query optimization, bundle size, algorithmic complexity, and caching decisions."
 permalink: /claude-code-ignores-performance-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

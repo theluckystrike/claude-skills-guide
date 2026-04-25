@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code for After Effects (2026)"
 permalink: /claude-code-after-effects-extendscript-2026/
+date: 2026-04-20
 description: "Automate After Effects with ExtendScript and Claude Code. Build motion graphics templates, batch render compositions, and script expression controllers."
 last_tested: "2026-04-22"
 domain: "motion graphics"

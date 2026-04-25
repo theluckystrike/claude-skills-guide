@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Claude Code Max vs API (2026)"
 description: "Calculate whether Claude Code Max at $100/month or pay-per-token API pricing saves more money based on actual usage patterns and token volumes."
 permalink: /claude-code-max-vs-api-cheaper-2026-calculator/

@@ -1,7 +1,9 @@
 ---
-title: "Make Claude Code Read Existing Code"
+layout: default
+title: "Make Claude Code Read Existing Code (2026)"
 description: "Force Claude Code to read existing files before writing new code — CLAUDE.md rules for mandatory context loading and pattern matching."
 permalink: /claude-code-doesnt-read-existing-code-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

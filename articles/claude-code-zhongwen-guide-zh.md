@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code中文指南合集 (2026)"
 description: "Claude Code中文教程、安装指南、终端使用技巧和价格费用说明的完整合集。适合中国开发者的一站式资源中心，涵盖npm全局安装配置、国内网络代理设置、API密钥配置、CLAUDE.md编写规范、MCP服务器集成、Sonnet和Opus模型费用优化策略以及拼车共享风险分析等所有中文资源导航。"
 permalink: /claude-code-zhongwen-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

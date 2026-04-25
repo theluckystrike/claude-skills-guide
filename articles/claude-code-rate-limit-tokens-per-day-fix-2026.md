@@ -1,7 +1,9 @@
 ---
-title: "Daily Token Limit Exceeded Error — Fix"
+layout: default
+title: "Daily Token Limit Exceeded Error — Fix (2026)"
 permalink: /claude-code-rate-limit-tokens-per-day-fix-2026/
-description: "Claude Code troubleshooting: fix 'daily token limit exceeded' error. Monitor usage, reduce token consumption, or upgrade plan for higher daily limits."
+date: 2026-04-20
+description: "Fix 'daily token limit exceeded' error. Monitor usage, reduce token consumption, or upgrade plan for higher daily limits."
 last_tested: "2026-04-22"
 ---
 

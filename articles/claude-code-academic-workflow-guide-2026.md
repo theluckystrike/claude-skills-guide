@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Academic Workflow Guide"
+layout: default
+title: "Claude Code Academic Workflow Guide (2026)"
 description: "Set up claude-code-my-workflow for academic LaTeX and R projects — 28 skills, 14 agents, 24 rules battle-tested on PhD courses at Emory."
 permalink: /claude-code-academic-workflow-guide-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

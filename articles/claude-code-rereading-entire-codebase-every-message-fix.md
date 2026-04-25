@@ -1,5 +1,6 @@
 ---
-title: "Claude Code re-reading entire codebase"
+layout: default
+title: "Claude Code re-reading entire codebase (2026)"
 description: "Stop Claude Code from re-reading files it already has in context -- this pattern wastes 10K-30K tokens per session through redundant Read and Grep calls."
 permalink: /claude-code-rereading-entire-codebase-every-message-fix/
 date: 2026-04-22

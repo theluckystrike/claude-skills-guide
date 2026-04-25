@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code Status Line (2026)"
 description: "What the Claude Code status line shows, how to customize it, configure display options, and fix missing or broken status line issues in your terminal."
 permalink: /claude-code-statusline-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

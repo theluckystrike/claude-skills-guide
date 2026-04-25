@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code for STM32 Firmware (2026)"
 description: "Claude Code for STM32 Firmware — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-stm32-firmware-development-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

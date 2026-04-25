@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code for Order Management (2026)"
 permalink: /claude-code-order-management-system-2026/
+date: 2026-04-20
 description: "Order management system development with Claude Code. Build OMS with smart routing, compliance checks, and audit trails."
 last_tested: "2026-04-22"
 ---

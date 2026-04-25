@@ -1,7 +1,9 @@
 ---
-title: "Claude Code API Mode vs Interactive"
+layout: default
+title: "Claude Code API Mode vs Interactive (2026)"
 description: "Compare Claude Code API mode and interactive mode for CI/CD automation, batch processing, and when to use each for maximum efficiency."
 permalink: /claude-code-api-mode-vs-interactive-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 render_with_liquid: false
 ---

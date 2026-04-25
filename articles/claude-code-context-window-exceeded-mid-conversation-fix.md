@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Context Window Exceeded"
+layout: default
+title: "Claude Code Context Window Exceeded (2026)"
 description: "Fix Claude Code context window exceeded mid-conversation. Compact context and start focused sub-sessions. Step-by-step solution."
 permalink: /claude-code-context-window-exceeded-mid-conversation-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

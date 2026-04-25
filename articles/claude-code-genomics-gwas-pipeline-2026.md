@@ -1,7 +1,9 @@
 ---
-title: "Claude Code for Genomics GWAS Analysis"
+layout: default
+title: "Claude Code for Genomics GWAS Analysis (2026)"
 description: "Claude Code for Genomics GWAS Analysis — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-genomics-gwas-pipeline-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

@@ -1,6 +1,8 @@
 ---
-title: "Token Count Estimation Mismatch — Fix"
+layout: default
+title: "Token Count Estimation Mismatch — Fix (2026)"
 permalink: /claude-code-token-count-estimation-mismatch-fix-2026/
+date: 2026-04-20
 description: "Fix token count estimation mismatch in Claude Code. Actual usage exceeds displayed count due to hidden system prompt and tool definition overhead."
 last_tested: "2026-04-22"
 ---

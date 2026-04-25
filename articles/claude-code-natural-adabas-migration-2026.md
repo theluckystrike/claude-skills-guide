@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code for Natural/ADABAS (2026)"
 permalink: /claude-code-natural-adabas-migration-2026/
+date: 2026-04-20
 description: "Migrate Software AG Natural/ADABAS applications to modern stacks with Claude Code. Convert Natural programs, maps, and ADABAS DDMs."
 last_tested: "2026-04-22"
 domain: "mainframe modernization"

@@ -1,7 +1,9 @@
 ---
-title: "Security Review Process for Claude Code"
+layout: default
+title: "Security Review Process for Claude Code (2026)"
 description: "Review checklist for SKILL.md files covering allowed-tools risks, script injection, env var exposure, and permission boundaries in shared skills."
 permalink: /security-review-process-for-claude-skills/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, security, review, permissions]
 last_updated: 2026-04-19

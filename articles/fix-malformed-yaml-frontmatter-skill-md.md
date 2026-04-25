@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Fix Malformed YAML Frontmatter (2026)"
 description: "Claude Code troubleshooting: debug and fix YAML parse errors in SKILL.md frontmatter including tabs vs spaces, unquoted colons, missing delimiters, and..."
 permalink: /fix-malformed-yaml-frontmatter-skill-md/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, yaml, frontmatter, parse-error, troubleshooting]
 last_updated: 2026-04-19

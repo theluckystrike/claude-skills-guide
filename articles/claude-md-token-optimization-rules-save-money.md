@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "CLAUDE.md Token Optimization (2026)"
 description: "Optimize CLAUDE.md files to reduce Claude Code token usage by 40-60% with precise rules, scoped instructions, and token-efficient formatting patterns."
 permalink: /claude-md-token-optimization-rules-save-money/

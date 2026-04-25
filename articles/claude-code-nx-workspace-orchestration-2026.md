@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code for Nx Workspace (2026)"
 permalink: /claude-code-nx-workspace-orchestration-2026/
+date: 2026-04-20
 description: "Orchestrate large monorepos with Nx and Claude Code. Build custom generators, configure task runners, and enforce module boundaries at scale."
 last_tested: "2026-04-22"
 domain: "monorepo tooling"

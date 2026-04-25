@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code with OpenRouter (2026)"
 description: "Set up Claude Code with OpenRouter for model routing, cost comparison, and multi-provider access. Step-by-step configuration with real examples."
 permalink: /claude-code-openrouter-setup-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

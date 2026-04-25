@@ -1,7 +1,9 @@
 ---
-title: "Learn Claude Code with Claude Howto"
+layout: default
+title: "Learn Claude Code with Claude Howto (2026)"
 description: "Use the Claude Howto repo's Mermaid diagrams and copy-paste templates to learn Claude Code fast. Structured learning path from beginner to productive."
 permalink: /how-to-learn-claude-code-with-howto-guide-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

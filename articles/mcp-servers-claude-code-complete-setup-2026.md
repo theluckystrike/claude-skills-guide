@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "MCP Servers for Claude Code (2026)"
 description: "Set up MCP servers for Claude Code with step-by-step configuration for databases, APIs, file systems, and cloud service integrations."
 permalink: /mcp-servers-claude-code-complete-setup-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

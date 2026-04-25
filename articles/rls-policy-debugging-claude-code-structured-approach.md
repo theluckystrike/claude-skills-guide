@@ -1,5 +1,6 @@
 ---
-title: "RLS Policy Debugging with Claude Code"
+layout: default
+title: "RLS Policy Debugging with Claude Code (2026)"
 description: "Debug Supabase RLS policies with Claude Code using a structured approach that reduces debugging token cost from 50K to 10K tokens per incident."
 permalink: /rls-policy-debugging-claude-code-structured-approach/
 date: 2026-04-22

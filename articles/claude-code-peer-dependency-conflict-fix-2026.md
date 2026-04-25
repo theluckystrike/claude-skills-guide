@@ -1,7 +1,9 @@
 ---
-title: "Peer Dependency Conflict npm Error"
+layout: default
+title: "Peer Dependency Conflict npm Error (2026)"
 permalink: /claude-code-peer-dependency-conflict-fix-2026/
-description: "Claude Code troubleshooting: fix npm ERESOLVE peer dependency conflict. Use --legacy-peer-deps or align versions to resolve conflicting requirements."
+date: 2026-04-20
+description: "Fix npm ERESOLVE peer dependency conflict. Use --legacy-peer-deps or align versions to resolve conflicting requirements."
 last_tested: "2026-04-22"
 ---
 

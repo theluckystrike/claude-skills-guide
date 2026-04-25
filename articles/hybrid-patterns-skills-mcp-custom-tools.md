@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Hybrid Patterns (2026)"
 description: "Design hybrid architectures combining Claude Code skills (instructions), MCP servers (external access), and custom tools (scripts). With 3 production patterns."
 permalink: /hybrid-patterns-skills-mcp-custom-tools/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, mcp, custom-tools, hybrid]
 last_updated: 2026-04-19

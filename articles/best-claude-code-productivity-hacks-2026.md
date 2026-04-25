@@ -1,7 +1,9 @@
 ---
-title: "Best Claude Code Productivity Hacks"
+layout: default
+title: "Best Claude Code Productivity Hacks (2026)"
 description: "Ranked productivity hacks for Claude Code including context scoping, session chunking, hook automation, and cost-effective workflow patterns."
 permalink: /best-claude-code-productivity-hacks-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Amending Wrong Commit Fix (2026)"
 permalink: /claude-code-amending-wrong-commit-fix-2026/
+date: 2026-04-20
 description: "Fix Claude Code amending the wrong commit with git commit --amend. Use git reflog to recover the original commit and create a new one instead."
 last_tested: "2026-04-22"
 ---

@@ -1,7 +1,9 @@
 ---
-title: "Claude Skills for Medical Records"
+layout: default
+title: "Claude Skills for Medical Records (2026)"
 description: "Build a Claude Code skill that maps procedures to CPT/ICD-10 codes, validates FHIR R4 resources, parses HL7 v2 messages, and enforces HIPAA-safe output."
 permalink: /claude-skills-for-medical-records-processing/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, healthcare, medical-records]
 last_updated: 2026-04-19

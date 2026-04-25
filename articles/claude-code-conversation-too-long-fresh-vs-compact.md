@@ -1,5 +1,6 @@
 ---
-title: "Claude Code Conversation Too Long"
+layout: default
+title: "Claude Code Conversation Too Long (2026)"
 description: "Decide whether to /compact or start a fresh Claude Code session when conversations grow too long -- compact saves 60-80% but fresh sessions reset at zero cost."
 permalink: /claude-code-conversation-too-long-fresh-vs-compact/
 date: 2026-04-22

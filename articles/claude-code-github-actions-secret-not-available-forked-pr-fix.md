@@ -1,7 +1,9 @@
 ---
-title: "Claude Code GitHub Actions Secret"
+layout: default
+title: "Claude Code GitHub Actions Secret (2026)"
 description: "Fix Claude Code GitHub Actions secret not available in forked PRs. Use pull_request_target trigger safely. Step-by-step solution."
 permalink: /claude-code-github-actions-secret-not-available-forked-pr-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 render_with_liquid: false
 ---

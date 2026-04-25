@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "CLAUDE.md: 10 Templates Compared (2026)"
 description: "Side-by-side comparison of 10 popular CLAUDE.md templates from the ecosystem, with strengths, weaknesses, and use cases for each."
 permalink: /claude-md-best-practices-10-templates-compared-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

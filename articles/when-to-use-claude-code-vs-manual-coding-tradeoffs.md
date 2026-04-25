@@ -1,8 +1,10 @@
 ---
-title: "Claude Code vs Manual Coding: Tradeoffs"
+layout: default
+title: "Claude Code vs Manual Coding: Tradeoffs (2026)"
 last_tested: "2026-04-22"
 description: "Compare Claude Code automation with manual coding across complexity levels. Speed benchmarks, understanding tradeoffs, and decision framework."
 permalink: /when-to-use-claude-code-vs-manual-coding-tradeoffs/
+date: 2026-04-20
 last_tested: "2026-04-21"
 tools_compared: ["Claude Code", "Manual Coding"]
 ---

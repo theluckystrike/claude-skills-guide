@@ -1,6 +1,8 @@
 ---
-title: "Skill YAML Frontmatter Parse Error"
+layout: default
+title: "Skill YAML Frontmatter Parse Error — Fix (2026)"
 permalink: /claude-code-skill-yaml-frontmatter-parse-error-fix-2026/
+date: 2026-04-20
 description: "Fix YAML indentation and quoting errors in Claude Code skill frontmatter. Quote values with colons, use two-space indent not tabs."
 last_tested: "2026-04-21"
 ---

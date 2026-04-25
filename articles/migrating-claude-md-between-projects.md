@@ -1,7 +1,9 @@
 ---
-title: "Migrate CLAUDE.md Between Projects"
+layout: default
+title: "Migrate CLAUDE.md Between Projects (2026)"
 description: "How to extract, adapt, and apply CLAUDE.md patterns from one project to another. Covers universal rules, project-specific adaptation, and shared libraries."
 permalink: /migrating-claude-md-between-projects/
+date: 2026-04-20
 categories: [claude-md, workflow]
 tags: [claude-md, migration, portable, cross-project, reuse]
 last_updated: 2026-04-19

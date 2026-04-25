@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for SCADA Modernization"
+layout: default
+title: "Claude Code for SCADA Modernization (2026)"
 permalink: /claude-code-scada-modernization-2026/
+date: 2026-04-20
 description: "Claude Code for SCADA Modernization — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"
 ---

@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code for Blender Python (2026)"
 description: "Blender Python scripting workflow with Claude Code. Automate 3D asset pipelines, procedural generation, and batch rendering."
 permalink: /claude-code-blender-python-scripting-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

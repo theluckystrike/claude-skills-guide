@@ -1,7 +1,9 @@
 ---
-title: "Update Shared Claude Skills Without"
+layout: default
+title: "Update Shared Claude Skills Without (2026)"
 description: "Safe skill update patterns including parallel versions, PR-based reviews, gradual rollouts, and rollback strategies for team-shared SKILL.md files."
 permalink: /updating-shared-claude-skills-without-breaking-workflows/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, updates, team, change-management]
 last_updated: 2026-04-19

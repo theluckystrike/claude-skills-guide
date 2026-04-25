@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Unreal Blueprint to C++"
+layout: default
+title: "Claude Code for Unreal Blueprint to C++ (2026)"
 permalink: /claude-code-unreal-blueprint-to-cpp-2026/
+date: 2026-04-20
 description: "Convert Unreal Engine Blueprints to C++ with Claude Code. Optimize gameplay logic, expose properties to editor, and maintain Blueprint compatibility."
 last_tested: "2026-04-22"
 domain: "game development"

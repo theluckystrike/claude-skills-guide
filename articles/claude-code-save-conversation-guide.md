@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Save Claude Code Conversations (2026)"
 description: "How Claude Code saves conversations automatically, where sessions are stored, how to resume them, export chat history, and manage your session data."
 permalink: /claude-code-save-conversation-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

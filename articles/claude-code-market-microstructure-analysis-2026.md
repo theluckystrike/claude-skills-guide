@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Market Microstructure"
+layout: default
+title: "Claude Code for Market Microstructure (2026)"
 permalink: /claude-code-market-microstructure-analysis-2026/
+date: 2026-04-20
 description: "Market microstructure analysis with Claude Code. Build order book reconstruction, trade classification, and price impact models."
 last_tested: "2026-04-22"
 ---

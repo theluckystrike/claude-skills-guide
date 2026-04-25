@@ -1,6 +1,8 @@
 ---
-title: "Branch Protection Bypass Attempt — Fix"
+layout: default
+title: "Branch Protection Bypass Attempt — Fix (2026)"
 permalink: /claude-code-branch-protection-bypass-attempt-fix-2026/
+date: 2026-04-20
 description: "Fix branch protection bypass attempt by Claude Code. Push to feature branch and create PR instead of committing directly to protected main branch."
 last_tested: "2026-04-22"
 ---

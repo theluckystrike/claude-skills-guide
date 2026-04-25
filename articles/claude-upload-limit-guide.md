@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Upload Limit (2026)"
 description: "Complete breakdown of Claude upload limits across web, API, and CLI. File sizes, supported types, page limits, and workarounds for large files."
 permalink: /claude-upload-limit-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

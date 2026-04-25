@@ -1,7 +1,9 @@
 ---
-title: "Fix: Claude Can't Open This Chat Error"
+layout: default
+title: "Fix: Claude Can't Open This Chat Error (2026)"
 description: "Fix the Claude can't open this chat error. Seven causes including corrupted cache, expired sessions, and context limits with browser-specific solutions."
 permalink: /claude-cant-open-this-chat-fix/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

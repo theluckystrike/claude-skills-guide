@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code for Trading System (2026)"
 permalink: /claude-code-trading-system-backtesting-2026/
+date: 2026-04-20
 description: "Trading system backtesting framework with Claude Code. Build event-driven engines with fill simulation and risk controls."
 last_tested: "2026-04-22"
 ---

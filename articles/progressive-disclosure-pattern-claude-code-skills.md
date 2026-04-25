@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Progressive Disclosure Pattern (2026)"
 description: "Apply the progressive disclosure pattern to Claude Code skills for 40-60% token savings by loading context in layers based on task complexity."
 permalink: /progressive-disclosure-pattern-claude-code-skills/

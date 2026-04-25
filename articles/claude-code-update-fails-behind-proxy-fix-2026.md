@@ -1,7 +1,9 @@
 ---
-title: "Update Fails Behind Corporate Proxy"
+layout: default
+title: "Update Fails Behind Corporate Proxy (2026)"
 permalink: /claude-code-update-fails-behind-proxy-fix-2026/
-description: "Claude Code resource: update Fails Behind Corporate Proxy — step-by-step fix with tested commands, error codes, and verified solutions for developers."
+date: 2026-04-20
+description: "Update Fails Behind Corporate Proxy — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
 ---
 

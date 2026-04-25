@@ -1,6 +1,8 @@
 ---
-title: "Claude Code vs Aider"
+layout: default
+title: "Claude Code vs Aider: Free Open Source Alternative (2026)"
 permalink: /claude-code-vs-free-aider-open-source/
+date: 2026-04-20
 description: "Claude Code has skills and MCP integrations. Aider has multi-model support and auto-commits. Honest comparison for terminal-first developers in 2026."
 last_tested: "2026-04-21"
 tools_compared: ["Claude Code", "Aider"]

@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code for Godot GDScript (2026)"
 permalink: /claude-code-godot-gdscript-development-2026/
+date: 2026-04-20
 description: "Build Godot 4 games with GDScript and Claude Code. Implement state machines, physics systems, and shader effects with Godot-native patterns."
 last_tested: "2026-04-22"
 domain: "game development"

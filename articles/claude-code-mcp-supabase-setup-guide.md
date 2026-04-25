@@ -1,7 +1,9 @@
 ---
-title: "Claude Code + Supabase MCP: Setup Guide"
+layout: default
+title: "Claude Code + Supabase MCP: Setup Guide (2026)"
 description: "Step-by-step Supabase MCP server setup for Claude Code. Schema inspection, SQL queries, RLS policies, edge functions, and a real project example."
 permalink: /claude-code-mcp-supabase-setup-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

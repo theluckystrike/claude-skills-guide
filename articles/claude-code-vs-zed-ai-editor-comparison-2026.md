@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code vs Zed AI (2026)"
 permalink: /claude-code-vs-zed-ai-editor-comparison-2026/
+date: 2026-04-20
 description: "Claude Code runs autonomous multi-file tasks from your terminal. Zed AI edits at 120fps with inline predictions. Which fits your dev workflow?"
 last_tested: "2026-04-21"
 ---

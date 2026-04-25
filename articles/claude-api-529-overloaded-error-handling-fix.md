@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude API 529 Overloaded Error (2026)"
 description: "Fix Claude API 529 overloaded_error with queue-based retry and model fallback chain. Step-by-step solution with working code."
 permalink: /claude-api-529-overloaded-error-handling-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

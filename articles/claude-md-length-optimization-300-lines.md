@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "CLAUDE.md Length Optimization (2026)"
 description: "How to keep your CLAUDE.md under 200 lines using imports, rules directories, and skills. Data-backed guidance on what happens when you exceed the limit."
 permalink: /claude-md-length-optimization/
+date: 2026-04-20
 categories: [claude-md, patterns]
 tags: [claude-md, optimization, length, imports, context-window]
 last_updated: 2026-04-19

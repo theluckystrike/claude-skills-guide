@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Enterprise Setup and Config"
+layout: default
+title: "Claude Code Enterprise Setup and Config (2026)"
 description: "Set up Claude Code for enterprise teams with organization policies, security controls, approved plugin lists, and team configuration."
 permalink: /claude-code-enterprise-setup-guide-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

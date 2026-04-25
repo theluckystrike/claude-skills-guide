@@ -3,6 +3,7 @@ layout: default
 title: "Prompt Engineering for Claude Code"
 description: "Guides for writing better prompts, system prompts, and prompt workflows with Claude Code and Claude API."
 permalink: /topics/prompt-engineering/
+date: 2026-04-20
 ---
 # Prompt Engineering for Claude Code
 

@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Fix Claude Code Ignoring Project (2026)"
 description: "Make Claude Code read your codebase before writing code — CLAUDE.md rules for mandatory context loading, reference files, and pattern matching."
 permalink: /claude-code-ignores-project-context-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

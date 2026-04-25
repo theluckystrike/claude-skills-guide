@@ -1,5 +1,6 @@
 ---
-title: "Claude Code vs Aider"
+layout: default
+title: "Claude Code vs Aider: Cost Analysis for Open Source (2026)"
 description: "Aider is free but uses the same API tokens as Claude Code. Real cost comparison shows Aider saves $0-20/month on tooling but similar API spend."
 permalink: /claude-code-vs-aider-cost-analysis-open-source/
 date: 2026-04-22

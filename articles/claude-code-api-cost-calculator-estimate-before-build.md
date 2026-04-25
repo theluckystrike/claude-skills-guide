@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Claude Code API Cost Calculator (2026)"
 description: "Estimate Claude Code API costs before starting a project with this calculator covering model selection, task budgets, and monthly spend projections."
 permalink: /claude-code-api-cost-calculator-estimate-before-build/

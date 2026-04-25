@@ -1,6 +1,8 @@
 ---
-title: "Claude Code vs Cline: Agent Mode"
+layout: default
+title: "Claude Code vs Cline: Agent Mode Comparison (2026)"
 permalink: /claude-code-vs-cline-agent-mode-2026/
+date: 2026-04-20
 description: "Claude Code defaults to autonomous execution with configurable guardrails. Cline asks before every action. Agent mode compared for speed, cost, and safety."
 last_tested: "2026-04-21"
 ---

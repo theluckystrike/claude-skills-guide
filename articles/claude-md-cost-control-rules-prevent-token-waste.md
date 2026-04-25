@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "CLAUDE.md as Cost Control (2026)"
 description: "Transform CLAUDE.md into a cost control instrument with rules that prevent retry spirals, cap file reads, and enforce model routing -- saving $50-200/month."
 permalink: /claude-md-cost-control-rules-prevent-token-waste/

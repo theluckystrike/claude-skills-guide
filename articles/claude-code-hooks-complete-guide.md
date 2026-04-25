@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code Hooks (2026)"
 description: "Every Claude Code hook type explained with JSON config, real examples, and use cases. PreToolUse, PostToolUse, Notification, and Stop hooks."
 permalink: /claude-code-hooks-complete-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

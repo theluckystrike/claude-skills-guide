@@ -1,7 +1,9 @@
 ---
-title: "Stop Claude Code Creating Duplicate"
+layout: default
+title: "Stop Claude Code Creating Duplicate (2026)"
 description: "Prevent Claude Code from creating duplicate functions and modules by mapping existing utilities in CLAUDE.md and enforcing reuse rules."
 permalink: /claude-code-creates-duplicate-code-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

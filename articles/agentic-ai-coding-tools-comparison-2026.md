@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Agentic AI Coding Tools Compared (2026)"
 description: "All major agentic AI coding tools compared for 2026: Claude Code, Devin, Cursor, Windsurf, Cline, and more. Features, pricing, and use cases."
 permalink: /agentic-ai-coding-tools-comparison-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 tools_compared: ["Claude Code", "Cursor", "Devin", "Windsurf", "Cline", "Aider"]
 ---

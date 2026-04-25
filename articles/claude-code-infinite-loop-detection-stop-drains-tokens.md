@@ -1,5 +1,6 @@
 ---
-title: "Claude Code Infinite Loop Detection"
+layout: default
+title: "Claude Code Infinite Loop Detection (2026)"
 description: "Detect and stop Claude Code infinite loops that drain 50K-200K tokens by recognizing the three loop patterns and adding CLAUDE.md circuit breakers."
 permalink: /claude-code-infinite-loop-detection-stop-drains-tokens/
 date: 2026-04-22

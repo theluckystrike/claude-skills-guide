@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code for VHDL Synthesis (2026)"
 description: "Claude Code for VHDL Synthesis — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-vhdl-synthesis-simulation-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

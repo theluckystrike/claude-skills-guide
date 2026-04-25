@@ -1,6 +1,8 @@
 ---
-title: "Python Virtualenv Not Activated — Fix"
+layout: default
+title: "Python Virtualenv Not Activated — Fix (2026)"
 permalink: /claude-code-python-virtualenv-not-activated-fix-2026/
+date: 2026-04-20
 description: "Fix Python virtualenv not activated in Claude Code sessions. Source the activate script in CLAUDE.md or use absolute venv paths for correct Python environment."
 last_tested: "2026-04-22"
 ---

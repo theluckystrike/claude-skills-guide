@@ -1,7 +1,9 @@
 ---
-title: "Claude Skills vs Langflow for Building"
+layout: default
+title: "Claude Skills vs Langflow for Building (2026)"
 description: "Compare Claude Code skills (markdown-based, CLI-native, open standard) with Langflow (visual DAG builder, Python-based)."
 permalink: /claude-skills-vs-langflow-ai-agents/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, langflow, ai-agents, comparison]
 last_updated: 2026-04-19

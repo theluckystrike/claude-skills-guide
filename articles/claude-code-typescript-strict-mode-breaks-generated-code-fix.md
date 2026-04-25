@@ -1,7 +1,9 @@
 ---
-title: "TypeScript Strict Mode Breaks Claude"
+layout: default
+title: "TypeScript Strict Mode Breaks Claude (2026)"
 description: "Fix TypeScript strict mode breaking Claude-generated code. Add null checks and explicit types to generated output. Step-by-step solution."
 permalink: /claude-code-typescript-strict-mode-breaks-generated-code-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

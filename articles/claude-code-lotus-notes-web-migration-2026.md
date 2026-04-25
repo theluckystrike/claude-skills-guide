@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code for Lotus Notes Web (2026)"
 permalink: /claude-code-lotus-notes-web-migration-2026/
+date: 2026-04-20
 description: "Migrate Lotus Notes/Domino applications to modern web stacks with Claude Code. Convert NSF databases, LotusScript, and formula language."
 last_tested: "2026-04-22"
 domain: "legacy modernization"

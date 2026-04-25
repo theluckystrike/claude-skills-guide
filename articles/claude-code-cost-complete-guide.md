@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Cost: Pricing Breakdown"
+layout: default
+title: "Claude Code Cost: Pricing Breakdown (2026)"
 description: "Complete Claude Code pricing guide. Max subscription, API token costs, real usage examples, cost tracking tools, and strategies that cut spend."
 permalink: /claude-code-cost-complete-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

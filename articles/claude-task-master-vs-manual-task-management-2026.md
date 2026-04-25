@@ -1,7 +1,9 @@
 ---
-title: "Claude Task Master vs Manual Tasks"
+layout: default
+title: "Claude Task Master vs Manual Tasks (2026)"
 description: "Claude Task Master parses PRDs into structured tasks automatically. See how it compares to manual task tracking with plain files and checklists."
 permalink: /claude-task-master-vs-manual-task-management-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

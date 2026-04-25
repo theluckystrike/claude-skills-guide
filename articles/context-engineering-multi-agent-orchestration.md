@@ -1,5 +1,6 @@
 ---
-title: "Context Engineering for Multi-Agent"
+layout: default
+title: "Context Engineering for Multi-Agent (2026)"
 description: "Engineer context across Claude Code multi-agent workflows to prevent the 5,000-token spawn overhead from compounding into 50K+ tokens of waste per task."
 permalink: /context-engineering-multi-agent-orchestration/
 date: 2026-04-22
@@ -163,7 +164,3 @@ Multi-agent orchestration is where context engineering failures are most expensi
 - [Claude Code Subagent Management](/claude-code-multi-agent-subagent-communication-guide/) -- full subagent orchestration guide
 - [Context Engineering for Claude Code: Complete Guide](/context-engineering-claude-code-complete-guide-2026/) -- the complete context engineering framework
 - [How Context Engineering Reduces Claude Code Costs: The Mechanism](/context-engineering-reduces-claude-code-costs-mechanism/)
-
-Related Reading
-
-- [Advanced Usage Guide](/advanced-usage/). Power user techniques and advanced patterns

@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Astrophysics Data"
+layout: default
+title: "Claude Code for Astrophysics Data (2026)"
 permalink: /claude-code-astrophysics-data-reduction-2026/
+date: 2026-04-20
 description: "Claude Code for Astrophysics Data — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"
 ---

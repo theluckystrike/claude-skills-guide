@@ -1,6 +1,8 @@
 ---
-title: "Prompt Cache Stale Context Warning"
+layout: default
+title: "Prompt Cache Stale Context Warning — Fix (2026)"
 permalink: /claude-code-prompt-caching-stale-context-fix-2026/
+date: 2026-04-20
 description: "Run claude cache clear to invalidate stale prompt context after external file changes. Fixes outdated code suggestions based on cached file state."
 last_tested: "2026-04-21"
 ---

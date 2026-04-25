@@ -3,6 +3,7 @@ render_with_liquid: false
 layout: homepage
 title: "Claude Code Guides — Ship Faster with Claude Code"
 description: "3,021 production-tested Claude Code guides. CLAUDE.md templates, debugging workflows, and MCP integrations from a developer earning $400K+/year on Upwork."
+date: 2026-04-20
 ---
 
 <style>

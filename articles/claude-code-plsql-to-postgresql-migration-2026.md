@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for PL/SQL to PostgreSQL"
+layout: default
+title: "Claude Code for PL/SQL to PostgreSQL (2026)"
 permalink: /claude-code-plsql-to-postgresql-migration-2026/
+date: 2026-04-20
 description: "Migrate Oracle PL/SQL to PostgreSQL with Claude Code. Convert packages, cursors, autonomous transactions, and Oracle-specific syntax."
 last_tested: "2026-04-22"
 domain: "database migration"

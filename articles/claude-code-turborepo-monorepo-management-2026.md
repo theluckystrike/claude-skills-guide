@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Turborepo Monorepo"
+layout: default
+title: "Claude Code for Turborepo Monorepo (2026)"
 permalink: /claude-code-turborepo-monorepo-management-2026/
+date: 2026-04-20
 description: "Manage JavaScript/TypeScript monorepos with Turborepo and Claude Code. Configure task pipelines, remote caching, and boundary enforcement."
 last_tested: "2026-04-22"
 domain: "monorepo tooling"

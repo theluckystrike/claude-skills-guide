@@ -1,7 +1,9 @@
 ---
-title: "Review Claude Code PRs Efficiently"
+layout: default
+title: "Review Claude Code PRs Efficiently (2026)"
 description: "Speed up Claude Code PR reviews with structured diff audits, scope verification checklists, and automated review commands."
 permalink: /claude-code-review-prs-efficiently-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

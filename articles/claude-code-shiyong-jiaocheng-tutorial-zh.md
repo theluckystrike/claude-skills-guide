@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code使用教程：从入门到精通 (2026)"
 description: "Claude Code使用教程完整指南，从npm安装启动到高级配置，涵盖终端常用命令详解、CLAUDE.md配置文件编写规范、MCP服务器集成方法、多文件操作技巧和中国开发者专属网络建议，附详细代码示例、Sonnet与Opus模型选择、费用优化策略和常见问题解答，适合零基础到进阶用户的全面参考手册。"
 permalink: /claude-code-shiyong-jiaocheng-tutorial/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

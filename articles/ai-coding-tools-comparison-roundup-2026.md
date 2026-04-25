@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "AI Coding Tools Roundup (2026)"
 permalink: /ai-coding-tools-comparison-roundup-2026/
-description: "Claude Code AI workflow: 14 AI coding tools compared head-to-head on agent capability, pricing, and real-world fit. From Copilot to Devin, ranked for..."
+date: 2026-04-20
+description: "14 AI coding tools compared head-to-head on agent capability, pricing, and real-world fit. From Copilot to Devin, ranked for developers in 2026."
 last_tested: "2026-04-21"
 ---
 

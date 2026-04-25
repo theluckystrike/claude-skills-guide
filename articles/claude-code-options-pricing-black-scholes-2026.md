@@ -1,7 +1,9 @@
 ---
-title: "Claude Code for Options Pricing Models"
+layout: default
+title: "Claude Code for Options Pricing Models (2026)"
 description: "Claude Code for Options Pricing Models — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-options-pricing-black-scholes-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

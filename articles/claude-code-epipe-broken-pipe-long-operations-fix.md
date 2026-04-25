@@ -1,7 +1,9 @@
 ---
-title: "Claude Code EPIPE Broken Pipe Error"
+layout: default
+title: "Claude Code EPIPE Broken Pipe Error (2026)"
 description: "Fix Claude Code EPIPE broken pipe during long operations. Increase pipe buffer and handle SIGPIPE signals. Step-by-step solution."
 permalink: /claude-code-epipe-broken-pipe-long-operations-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: "Claude Code Cost Optimization Hub"
+layout: default
+title: "Claude Code Cost Optimization Hub (2026)"
 description: "110+ guides on reducing Claude Code costs. Context engineering, token tracking, architecture patterns, tool comparisons, and problem fixes."
 permalink: /cost-optimization/
 date: 2026-04-22

@@ -1,7 +1,9 @@
 ---
-title: "Fix zsh: command not found: claude"
+layout: default
+title: "Fix zsh: command not found: claude (2026)"
 description: "Fix the zsh command not found claude error. Six causes with step-by-step PATH, Node.js, and permission fixes for macOS, Linux, and WSL shells."
 permalink: /zsh-command-not-found-claude-fix/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 
@@ -676,10 +678,5 @@ Homebrew installs Node.js in /opt/homebrew/bin on Apple Silicon Macs or /usr/loc
   }
 ]
 </script>
-
-Related Reading
-
-- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
-- [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 
 {% endraw %}

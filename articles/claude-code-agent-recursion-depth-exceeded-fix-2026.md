@@ -1,6 +1,8 @@
 ---
-title: "Agent Recursion Depth Exceeded Fix"
+layout: default
+title: "Agent Recursion Depth Exceeded Fix (2026)"
 permalink: /claude-code-agent-recursion-depth-exceeded-fix-2026/
+date: 2026-04-20
 description: "Fix agent recursion depth exceeded in Claude Code. Set max turns limit and break circular task delegation to stop infinite subagent loops."
 last_tested: "2026-04-22"
 ---

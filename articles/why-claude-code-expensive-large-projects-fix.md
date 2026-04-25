@@ -1,5 +1,6 @@
 ---
-title: "Why Claude Code Gets Expensive on Large"
+layout: default
+title: "Why Claude Code Gets Expensive on Large (2026)"
 description: "Discover why Claude Code costs spike on large projects and apply 7 targeted fixes to cut token usage by 50-70% on codebases with 1,000+ files."
 permalink: /why-claude-code-expensive-large-projects-fix/
 date: 2026-04-22

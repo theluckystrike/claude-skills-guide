@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Skill Naming Conventions (2026)"
 description: "Naming rules for SKILL.md name field, directory names, and plugin namespaces with examples of what works and what breaks."
 permalink: /claude-skill-naming-conventions/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, naming, conventions, organization]
 last_updated: 2026-04-19

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Production Claude Code Setup (2026)"
 description: "Set up production-grade Claude Code cost guardrails for teams with API key management, token budgets, model routing, and spending alerts saving $500+/month."
 permalink: /production-claude-code-setup-cost-guardrails-teams/

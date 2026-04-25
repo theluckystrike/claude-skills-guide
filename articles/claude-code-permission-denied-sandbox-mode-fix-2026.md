@@ -1,7 +1,9 @@
 ---
-title: "Permission Denied Sandbox — Fix"
+layout: default
+title: "Claude Code Permission Denied Sandbox — Fix (2026)"
 permalink: /claude-code-permission-denied-sandbox-mode-fix-2026/
-description: "Claude Code troubleshooting: add operation to permissions.allow in settings to fix sandbox denial. Or run with --dangerously-skip-permissions for fully..."
+date: 2026-04-20
+description: "Add operation to permissions.allow in settings to fix sandbox denial. Or run with --dangerously-skip-permissions for fully trusted projects."
 last_tested: "2026-04-21"
 ---
 

@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code for Algo Trading (2026)"
 description: "Algorithmic trading backtesting with Claude Code. Build strategy pipelines with vectorbt and proper walk-forward validation."
 permalink: /claude-code-algorithmic-trading-backtesting-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

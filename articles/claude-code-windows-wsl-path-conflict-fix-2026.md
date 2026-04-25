@@ -1,7 +1,9 @@
 ---
-title: "Windows WSL Path Conflict Error — Fix"
+layout: default
+title: "Windows WSL Path Conflict Error — Fix (2026)"
 permalink: /claude-code-windows-wsl-path-conflict-fix-2026/
-description: "Claude Code troubleshooting: windows WSL Path Conflict Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
+date: 2026-04-20
+description: "Windows WSL Path Conflict Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
 ---
 

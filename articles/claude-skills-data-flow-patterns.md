@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Skills Data Flow Patterns (2026)"
 description: "Design data flow between Claude Code skills using file-based interfaces, argument passing, dynamic injection, and structured output routing patterns."
 permalink: /claude-skills-data-flow-patterns/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, data-flow, architecture]
 last_updated: 2026-04-19

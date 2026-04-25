@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Fix Claude Rate Exceeded Error (2026)"
 description: "Fix Claude rate exceeded errors across all 5 rate limit types. Includes retry code, token budgeting, and tier upgrade paths for the Anthropic API."
 permalink: /claude-rate-exceeded-error-fix/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

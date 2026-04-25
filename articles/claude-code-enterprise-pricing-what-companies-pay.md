@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Claude Code Enterprise Pricing (2026)"
 description: "Claude Code Enterprise Pricing — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-enterprise-pricing-what-companies-pay/

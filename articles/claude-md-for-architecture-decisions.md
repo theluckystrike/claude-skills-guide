@@ -1,7 +1,9 @@
 ---
-title: "CLAUDE.md for Architecture Decisions"
+layout: default
+title: "CLAUDE.md for Architecture Decisions (2026)"
 description: "How to encode architectural decisions in CLAUDE.md so Claude Code enforces layer boundaries, dependency rules, and design patterns automatically."
 permalink: /claude-md-for-architecture-decisions/
+date: 2026-04-20
 categories: [claude-md, patterns]
 tags: [claude-md, architecture, design-patterns, layer-boundaries, claude-code]
 last_updated: 2026-04-19

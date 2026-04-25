@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Fix Claude Code Misunderstanding (2026)"
 description: "Fix Claude Code misunderstanding requirements by structuring prompts with acceptance criteria, examples, and constraint definitions."
 permalink: /claude-code-misunderstands-requirements-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

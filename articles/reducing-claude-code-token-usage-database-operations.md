@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Reducing Claude Code token usage (2026)"
 description: "Reduce Claude Code token usage for database operations by 60-80% with schema skills, query templates, and structured migration patterns saving $30-80/month."
 permalink: /reducing-claude-code-token-usage-database-operations/

@@ -1,7 +1,9 @@
 ---
-title: "Fix Claude Code Poor Commit Messages"
+layout: default
+title: "Fix Claude Code Poor Commit Messages (2026)"
 description: "Improve Claude Code commit messages with CLAUDE.md templates that enforce conventional commits, scope tagging, and why-not-what descriptions."
 permalink: /claude-code-poor-commit-messages-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

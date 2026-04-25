@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Make Claude Code Follow Coding (2026)"
 description: "Enforce your team's coding standards in Claude Code with CLAUDE.md directives, reference files, and pre-commit hooks that reject violations."
 permalink: /claude-code-wont-follow-coding-standards-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

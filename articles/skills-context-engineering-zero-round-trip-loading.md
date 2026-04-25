@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Skills as Context Engineering (2026)"
 description: "Use Claude Code skills as context engineering tools to eliminate exploratory file reads and save 20K-80K tokens per task with zero-round-trip loading."
 permalink: /skills-context-engineering-zero-round-trip-loading/

@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code for DSP Pipeline (2026)"
 permalink: /claude-code-dsp-pipeline-development-2026/
+date: 2026-04-20
 description: "Digital signal processing pipelines with Claude Code. Build FFT, FIR filters, and real-time audio chains in Python and C."
 last_tested: "2026-04-22"
 ---

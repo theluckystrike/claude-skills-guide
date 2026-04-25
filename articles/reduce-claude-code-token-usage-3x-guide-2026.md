@@ -1,5 +1,6 @@
 ---
-title: "How to Reduce Claude Code Token Usage"
+layout: default
+title: "How to Reduce Claude Code Token Usage (2026)"
 description: "Reduce Claude Code token usage by 3x with proven strategies covering context control, model routing, and CLAUDE.md rules that cut API costs immediately."
 permalink: /reduce-claude-code-token-usage-3x-guide-2026/
 date: 2026-04-22

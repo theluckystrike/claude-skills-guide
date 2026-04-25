@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Multi-Cursor Edit Conflict Fix (2026)"
 permalink: /claude-code-multi-cursor-edit-conflict-fix-2026/
+date: 2026-04-20
 description: "Fix multi-cursor edit conflict between IDE and Claude Code. Save and close editor buffers before Claude edits to prevent simultaneous write collisions."
 last_tested: "2026-04-22"
 ---

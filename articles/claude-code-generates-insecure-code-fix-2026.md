@@ -1,7 +1,9 @@
 ---
-title: "Fix Claude Code Generating Insecure"
+layout: default
+title: "Fix Claude Code Generating Insecure (2026)"
 description: "Prevent Claude Code from generating SQL injection, XSS, and auth vulnerabilities by adding security rules to your CLAUDE.md file."
 permalink: /claude-code-generates-insecure-code-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

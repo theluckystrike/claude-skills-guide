@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "CLAUDE.md Example for FastAPI + (2026)"
 description: "Complete 310-line CLAUDE.md for FastAPI 0.115 with SQLAlchemy 2.0 and Alembic. Covers async patterns, Pydantic v2 models, and dependency injection."
 permalink: /claude-md-example-for-fastapi-sqlalchemy/
+date: 2026-04-20
 render_with_liquid: false
 categories: [claude-md, templates, 2026]
 tags: [claude-code, claude-md, fastapi, sqlalchemy, python]

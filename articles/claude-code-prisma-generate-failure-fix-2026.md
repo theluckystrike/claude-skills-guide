@@ -1,7 +1,9 @@
 ---
-title: "Prisma Generate Failure After Schema"
+layout: default
+title: "Prisma Generate Failure After Schema (2026)"
 permalink: /claude-code-prisma-generate-failure-fix-2026/
-description: "Claude Code resource: prisma Generate Failure After Schema — practical guide with working examples, tested configurations, and tips for developer..."
+date: 2026-04-20
+description: "Prisma Generate Failure After Schema — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"
 ---
 

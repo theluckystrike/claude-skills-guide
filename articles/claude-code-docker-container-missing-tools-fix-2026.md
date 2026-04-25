@@ -1,6 +1,8 @@
 ---
-title: "Docker Container Missing Tools — Fix"
+layout: default
+title: "Docker Container Missing Tools — Fix (2026)"
 permalink: /claude-code-docker-container-missing-tools-fix-2026/
+date: 2026-04-20
 description: "Fix Docker container missing tools needed by Claude Code. Install git, curl, and build essentials in your Dockerfile to enable full CLI functionality."
 last_tested: "2026-04-22"
 ---

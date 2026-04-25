@@ -3,6 +3,7 @@ layout: default
 title: "MCP Integration Guides"
 description: "Connect Claude Code to external tools, databases, and APIs using Model Context Protocol (MCP) servers."
 permalink: /topics/mcp/
+date: 2026-04-20
 ---
 # MCP Integration Guides
 

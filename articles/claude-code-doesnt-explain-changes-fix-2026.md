@@ -1,7 +1,9 @@
 ---
-title: "Make Claude Code Explain Its Changes"
+layout: default
+title: "Make Claude Code Explain Its Changes (2026)"
 description: "Add CLAUDE.md rules that force Claude Code to explain the reasoning behind code changes — what changed, why, what alternatives were considered."
 permalink: /claude-code-doesnt-explain-changes-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

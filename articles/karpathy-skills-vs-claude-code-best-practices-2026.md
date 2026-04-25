@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Karpathy Skills vs Generic (2026)"
 description: "Karpathy Skills gives Claude 4 specific behavioral rules. Generic best practices offer broad advice. Compare focused principles vs general guidance."
 permalink: /karpathy-skills-vs-claude-code-best-practices-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

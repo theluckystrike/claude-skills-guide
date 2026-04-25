@@ -1,7 +1,9 @@
 ---
-title: "Sequential Thinking in Claude Code"
+layout: default
+title: "Sequential Thinking in Claude Code (2026)"
 description: "How to install and use the sequential thinking MCP server in Claude Code. Step-by-step setup, when it helps, real examples, and configuration options."
 permalink: /sequential-thinking-claude-code-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

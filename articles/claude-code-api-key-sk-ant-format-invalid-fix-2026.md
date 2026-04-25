@@ -1,7 +1,9 @@
 ---
-title: "Invalid API Key Format sk-ant — Fix"
+layout: default
+title: "Invalid API Key Format sk-ant — Fix (2026)"
 permalink: /claude-code-api-key-sk-ant-format-invalid-fix-2026/
-description: "Claude Code troubleshooting: invalid API Key Format sk-ant — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
+date: 2026-04-20
+description: "Invalid API Key Format sk-ant — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
 ---
 

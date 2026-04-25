@@ -1,7 +1,9 @@
 ---
-title: "Claude Code for PCB Layout Review"
+layout: default
+title: "Claude Code for PCB Layout Review (2026)"
 description: "Claude Code for PCB Layout Review — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-pcb-layout-review-kicad-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

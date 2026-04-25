@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Telescope FITS Data"
+layout: default
+title: "Claude Code for Telescope FITS Data (2026)"
 permalink: /claude-code-telescope-fits-pipeline-2026/
+date: 2026-04-20
 description: "Claude Code for Telescope FITS Data — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"
 ---

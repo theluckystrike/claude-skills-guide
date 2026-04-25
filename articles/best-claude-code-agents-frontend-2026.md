@@ -1,7 +1,9 @@
 ---
-title: "Best Claude Code Agents for Frontend"
+layout: default
+title: "Best Claude Code Agents for Frontend (2026)"
 description: "7 Claude Code agents built for frontend development. React, accessibility, CSS architecture, performance, and testing agents with install instructions."
 permalink: /best-claude-code-agents-frontend-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

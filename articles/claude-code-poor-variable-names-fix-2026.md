@@ -1,7 +1,9 @@
 ---
-title: "Fix Claude Code Poor Variable Naming"
+layout: default
+title: "Fix Claude Code Poor Variable Naming (2026)"
 description: "Fix Claude Code generating vague variable names like 'data' and 'result' by adding naming rules and domain vocabulary to CLAUDE.md."
 permalink: /claude-code-poor-variable-names-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

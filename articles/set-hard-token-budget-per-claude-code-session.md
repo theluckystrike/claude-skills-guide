@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "How to set a hard token budget (2026)"
 description: "Set hard token budgets per Claude Code session using --max-turns, API spend limits, and hooks-based enforcement to cap costs at $1-$5 per session."
 permalink: /set-hard-token-budget-per-claude-code-session/

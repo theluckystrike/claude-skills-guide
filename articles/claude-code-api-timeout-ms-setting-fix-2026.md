@@ -1,6 +1,8 @@
 ---
-title: "Request Timed Out 120000ms — Fix"
+layout: default
+title: "Claude Code Request Timed Out 120000ms — Fix (2026)"
 permalink: /claude-code-api-timeout-ms-setting-fix-2026/
+date: 2026-04-20
 description: "Increase the api_timeout setting to 300000ms with claude config set. Prevents request timeout failures on complex multi-file code operations."
 last_tested: "2026-04-21"
 ---

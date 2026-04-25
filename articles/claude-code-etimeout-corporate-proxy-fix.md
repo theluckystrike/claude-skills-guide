@@ -1,7 +1,9 @@
 ---
-title: "Claude Code ETIMEOUT Corporate Proxy"
+layout: default
+title: "Claude Code ETIMEOUT Corporate Proxy (2026)"
 description: "Fix Claude Code ETIMEOUT connecting through corporate proxy. Configure HTTPS_PROXY and SSL certificates. Step-by-step solution."
 permalink: /claude-code-etimeout-corporate-proxy-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

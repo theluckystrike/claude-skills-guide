@@ -1,7 +1,9 @@
 ---
-title: "Best Claude Code MCP Integrations"
+layout: default
+title: "Best Claude Code MCP Integrations (2026)"
 description: "Ranked list of the best MCP server integrations for Claude Code covering databases, GitHub, file systems, memory, and cloud services."
 permalink: /best-claude-code-mcp-integrations-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

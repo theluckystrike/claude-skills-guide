@@ -3,6 +3,7 @@ layout: default
 title: "All Topics — Claude Skills Guide"
 description: "Browse all topic categories: AI agents, Claude API, Chrome extensions, getting started, MCP integrations, prompt engineering, and workflows."
 permalink: /topics/
+date: 2026-04-20
 ---
 # All Topics
 

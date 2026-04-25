@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Config YAML Parse Error"
+layout: default
+title: "Claude Code Config YAML Parse Error (2026)"
 description: "Fix Claude Code config file YAML parse error. Validate syntax and fix common indentation mistakes. Step-by-step solution."
 permalink: /claude-code-config-yaml-parse-error-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

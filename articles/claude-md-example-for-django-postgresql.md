@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "CLAUDE.md Example for Django + (2026)"
 description: "Complete 320-line CLAUDE.md for Django 5.1 with DRF, PostgreSQL, and Celery. Enforces migration safety, ViewSet patterns, and settings split."
 permalink: /claude-md-example-for-django-postgresql/
+date: 2026-04-20
 render_with_liquid: false
 categories: [claude-md, templates, 2026]
 tags: [claude-code, claude-md, django, postgresql, python]

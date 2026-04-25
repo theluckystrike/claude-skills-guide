@@ -1,7 +1,9 @@
 ---
-title: "Fix Conflicting CLAUDE.md Instructions"
+layout: default
+title: "Fix Conflicting CLAUDE.md Instructions (2026)"
 description: "When CLAUDE.md files contradict each other, Claude picks arbitrarily. This guide shows how to find conflicts, understand loading order, and resolve them."
 permalink: /claude-md-conflicting-instructions-fix/
+date: 2026-04-20
 categories: [claude-md, fixes]
 tags: [claude-md, conflicting, instructions, fix, loading-order]
 last_updated: 2026-04-19

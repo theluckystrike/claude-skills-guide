@@ -1,7 +1,9 @@
 ---
-title: "Claude MCP List Command: Full Reference"
+layout: default
+title: "Claude MCP List Command: Full Reference (2026)"
 description: "Complete reference for claude mcp list and all MCP CLI commands. Syntax, output format, scope options, config locations, and troubleshooting."
 permalink: /claude-mcp-list-command-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

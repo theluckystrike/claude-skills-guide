@@ -1,6 +1,8 @@
 ---
-title: "Next.js Build Fails With Generated Code"
+layout: default
+title: "Next.js Build Fails With Generated Code (2026)"
 permalink: /claude-code-nextjs-build-generated-code-fix-2026/
+date: 2026-04-20
 description: "Fix Next.js build errors in Claude-generated code. Handle 'use client' directives, server component boundaries, and dynamic imports."
 last_tested: "2026-04-22"
 ---

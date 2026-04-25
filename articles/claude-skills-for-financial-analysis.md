@@ -1,7 +1,9 @@
 ---
-title: "Claude Skills for Financial Analysis"
+layout: default
+title: "Claude Skills for Financial Analysis (2026)"
 description: "Build a Claude Code skill that extracts financial data from 10-K/10-Q filings, calculates DCF valuations, computes financial ratios, and generates."
 permalink: /claude-skills-for-financial-analysis/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, finance, financial-analysis]
 last_updated: 2026-04-19

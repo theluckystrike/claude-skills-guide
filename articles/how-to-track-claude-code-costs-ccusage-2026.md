@@ -1,7 +1,9 @@
 ---
-title: "Track Claude Code Costs With ccusage"
+layout: default
+title: "Track Claude Code Costs With ccusage (2026)"
 description: "Run npx ccusage to see per-session Claude Code costs from local logs. Step-by-step setup, filtering, and export for cost tracking and optimization."
 permalink: /how-to-track-claude-code-costs-ccusage-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

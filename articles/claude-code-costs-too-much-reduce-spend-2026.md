@@ -1,7 +1,9 @@
 ---
-title: "Reduce Claude Code Costs with ccusage"
+layout: default
+title: "Reduce Claude Code Costs with ccusage (2026)"
 description: "Cut Claude Code spending by tracking sessions with ccusage, identifying token waste, and applying CLAUDE.md rules that reduce unnecessary tool calls."
 permalink: /claude-code-costs-too-much-reduce-spend-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

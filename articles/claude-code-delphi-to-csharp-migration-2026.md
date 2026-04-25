@@ -1,7 +1,9 @@
 ---
-title: "Claude Code for Delphi to C# Migration"
+layout: default
+title: "Claude Code for Delphi to C# Migration (2026)"
 description: "Claude Code for Delphi to C# Migration — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-delphi-to-csharp-migration-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 render_with_liquid: false
 ---

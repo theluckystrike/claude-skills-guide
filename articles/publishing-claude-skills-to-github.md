@@ -1,7 +1,9 @@
 ---
-title: "Publish Claude Code Skills to GitHub"
+layout: default
+title: "Publish Claude Code Skills to GitHub (2026)"
 description: "Step-by-step guide to publishing SKILL.md files to GitHub as project skills, plugins, or standalone repos with proper structure."
 permalink: /publishing-claude-skills-to-github/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, github, publishing, open-source]
 last_updated: 2026-04-19

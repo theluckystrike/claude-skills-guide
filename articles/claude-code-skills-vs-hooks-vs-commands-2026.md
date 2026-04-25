@@ -1,7 +1,9 @@
 ---
-title: "Skills vs Hooks vs Commands in Claude"
+layout: default
+title: "Skills vs Hooks vs Commands in Claude (2026)"
 description: "Understand the differences between Claude Code skills, hooks, and slash commands to choose the right extension type for your workflow."
 permalink: /claude-code-skills-vs-hooks-vs-commands-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

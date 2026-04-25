@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Karpathy Skills vs Guide (2026)"
 description: "Karpathy Skills is a 4-rule CLAUDE.md behavior file. Claude Code Ultimate Guide is 22K lines of documentation and quizzes. Here's when to use each."
 permalink: /karpathy-skills-vs-claude-code-ultimate-guide-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

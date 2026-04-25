@@ -1,7 +1,9 @@
 ---
-title: "Awesome Claude Code vs Awesome Toolkit"
+layout: default
+title: "Awesome Claude Code vs Awesome Toolkit (2026)"
 description: "Awesome Claude Code has 40K stars and covers the full ecosystem. Awesome Toolkit has 1.4K stars with deeper plugin coverage. Here's the difference."
 permalink: /awesome-claude-code-vs-awesome-toolkit-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

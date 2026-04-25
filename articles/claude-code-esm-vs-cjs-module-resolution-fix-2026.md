@@ -1,7 +1,9 @@
 ---
-title: "ESM vs CJS Module Resolution Failure"
+layout: default
+title: "ESM vs CJS Module Resolution Failure — Fix (2026)"
 permalink: /claude-code-esm-vs-cjs-module-resolution-fix-2026/
-description: "Claude Code comparison: eSM vs CJS Module Resolution Failure — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
+date: 2026-04-20
+description: "ESM vs CJS Module Resolution Failure — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
 ---
 

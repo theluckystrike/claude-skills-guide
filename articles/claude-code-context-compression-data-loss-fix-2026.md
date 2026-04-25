@@ -1,6 +1,8 @@
 ---
-title: "Context Compression Data — Fix"
+layout: default
+title: "Claude Code Context Compression Data — Fix (2026)"
 permalink: /claude-code-context-compression-data-loss-fix-2026/
+date: 2026-04-20
 description: "Re-read critical files after context compression warning appears. Store key decisions in CLAUDE.md so they persist across compression boundaries."
 last_tested: "2026-04-21"
 ---

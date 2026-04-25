@@ -3,6 +3,7 @@ layout: default
 title: "Claude API Guides: SDKs, Streaming and Tools"
 description: "Claude API guides for developers. SDKs, streaming, tool use, authentication, and cost optimization tutorials with production-ready patterns."
 permalink: /topics/api/
+date: 2026-04-20
 ---
 # Claude API Guides
 

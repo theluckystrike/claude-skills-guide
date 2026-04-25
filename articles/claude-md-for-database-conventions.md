@@ -1,7 +1,9 @@
 ---
-title: "CLAUDE.md for Database Conventions"
+layout: default
+title: "CLAUDE.md for Database Conventions (2026)"
 description: "How to write CLAUDE.md rules for database naming, query patterns, migration safety, and ORM usage that Claude Code follows consistently."
 permalink: /claude-md-database-conventions/
+date: 2026-04-20
 categories: [claude-md, patterns]
 tags: [claude-md, database, conventions, migrations, orm, claude-code]
 last_updated: 2026-04-19

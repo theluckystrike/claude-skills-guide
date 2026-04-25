@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for ITAR Compliance Code"
+layout: default
+title: "Claude Code for ITAR Compliance Code (2026)"
 permalink: /claude-code-itar-compliance-code-review-2026/
+date: 2026-04-20
 description: "Enforce ITAR technical data controls with Claude Code. Detect export-controlled code patterns, validate access restrictions, and audit data flows."
 last_tested: "2026-04-22"
 domain: "export control compliance"

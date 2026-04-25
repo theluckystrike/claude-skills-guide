@@ -1,6 +1,8 @@
 ---
-title: "Devcontainer Claude Code Path Missing"
+layout: default
+title: "Devcontainer Claude Code Path Missing — Fix (2026)"
 permalink: /claude-code-devcontainer-path-missing-fix-2026/
+date: 2026-04-20
 description: "Fix Claude Code not found in devcontainer PATH. Add Claude Code install to devcontainer.json features or postCreateCommand for container access."
 last_tested: "2026-04-22"
 ---

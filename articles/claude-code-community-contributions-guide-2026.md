@@ -1,7 +1,9 @@
 ---
-title: "Contributing to Claude Code Ecosystem"
+layout: default
+title: "Contributing to Claude Code Ecosystem (2026)"
 description: "Contributing to Claude Code Ecosystem — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-community-contributions-guide-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

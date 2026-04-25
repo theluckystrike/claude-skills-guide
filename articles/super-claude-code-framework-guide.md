@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "SuperClaude Framework Guide (2026)"
 description: "Master the SuperClaude framework with all 30 slash commands, installation steps, configuration options, and when to use it over alternatives."
 permalink: /super-claude-code-framework-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

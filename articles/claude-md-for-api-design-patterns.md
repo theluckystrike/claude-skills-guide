@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "CLAUDE.md for API Design (2026)"
 description: "Encode API design patterns in CLAUDE.md so Claude Code generates consistent REST endpoints, response envelopes, pagination, and error formats."
 permalink: /claude-md-api-design-patterns/
+date: 2026-04-20
 categories: [claude-md, patterns]
 tags: [claude-md, api-design, rest, response-format, claude-code]
 last_updated: 2026-04-19

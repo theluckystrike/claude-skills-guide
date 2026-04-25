@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Buf Protobuf Schema"
+layout: default
+title: "Claude Code for Buf Protobuf Schema (2026)"
 permalink: /claude-code-buf-protobuf-schema-management-2026/
+date: 2026-04-20
 description: "Manage Protobuf schemas with Buf and Claude Code. Lint proto files, detect breaking changes, and generate type-safe clients across languages."
 last_tested: "2026-04-22"
 domain: "API development"

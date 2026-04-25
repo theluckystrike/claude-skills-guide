@@ -1,5 +1,6 @@
 ---
-title: "Best Claude Code Skills for Token"
+layout: default
+title: "Best Claude Code Skills for Token (2026)"
 description: "Ranked list of Claude Code skills that reduce token usage, from commit automation saving 5K tokens per use to code review skills cutting PR review costs 40%."
 permalink: /best-claude-code-skills-token-reduction-2026-ranked/
 date: 2026-04-22

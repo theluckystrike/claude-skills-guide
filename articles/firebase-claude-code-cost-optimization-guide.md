@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Firebase + Claude Code (2026)"
 description: "Optimize Claude Code token costs when working with Firebase projects using structured context, security rules skills, and agent-friendly error handling."
 permalink: /firebase-claude-code-cost-optimization-guide/

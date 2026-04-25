@@ -1,6 +1,8 @@
 ---
-title: "Wrong Node.js Version in PATH Fix"
+layout: default
+title: "Wrong Node.js Version in PATH Fix (2026)"
 permalink: /claude-code-wrong-node-version-in-path-fix-2026/
+date: 2026-04-20
 description: "Fix wrong Node.js version in PATH when running Claude Code. Switch to the correct version with nvm or fnm to resolve compatibility errors."
 last_tested: "2026-04-22"
 ---

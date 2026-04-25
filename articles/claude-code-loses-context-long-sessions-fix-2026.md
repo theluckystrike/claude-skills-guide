@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Fix Claude Code Losing Context (2026)"
 description: "Prevent Claude Code from losing context in long sessions using checkpoints, CLAUDE.md state files, and session chunking strategies."
 permalink: /claude-code-loses-context-long-sessions-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

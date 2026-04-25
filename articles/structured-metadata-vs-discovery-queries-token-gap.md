@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Structured Metadata vs Discovery (2026)"
 description: "Structured metadata costs 200-500 tokens while discovery queries burn 3,000-15,000 tokens for the same information -- close this gap in Claude Code."
 permalink: /structured-metadata-vs-discovery-queries-token-gap/

@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Pro Subscription (2026)"
 description: "Claude Pro at $20/month vs Max at $100 and $200 vs Free. Features, limits, model access, and a decision framework for choosing the right plan."
 permalink: /claude-pro-subscription-price-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

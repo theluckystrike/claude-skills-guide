@@ -3,6 +3,7 @@ layout: default
 title: "AI Agent Guides"
 description: "Build autonomous agents, multi-agent systems, and orchestration patterns with Claude Code and Claude API."
 permalink: /topics/agents/
+date: 2026-04-20
 ---
 # AI Agent Guides
 

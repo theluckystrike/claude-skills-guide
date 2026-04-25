@@ -1,7 +1,9 @@
 ---
-title: "Claude Code for FIX Protocol Message"
+layout: default
+title: "Claude Code for FIX Protocol Message (2026)"
 description: "Claude Code for FIX Protocol Message — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 permalink: /claude-code-fix-protocol-message-handling-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 
@@ -242,7 +244,7 @@ python3 fix_engine/messages/order_builder.py
 - [Claude Code for Options Pricing](/claude-code-options-pricing-black-scholes-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)
 - [Claude Code for CCPA Data Handling Implementation (2026)](/claude-code-ccpa-data-handling-2026/)
-- [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
+
 
 ## Frequently Asked Questions
 

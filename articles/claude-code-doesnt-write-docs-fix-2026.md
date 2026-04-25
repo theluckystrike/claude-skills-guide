@@ -1,7 +1,9 @@
 ---
-title: "Make Claude Code Write Documentation"
+layout: default
+title: "Make Claude Code Write Documentation (2026)"
 description: "Make Claude Code generate JSDoc, README sections, and inline documentation by adding documentation requirements to CLAUDE.md."
 permalink: /claude-code-doesnt-write-docs-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

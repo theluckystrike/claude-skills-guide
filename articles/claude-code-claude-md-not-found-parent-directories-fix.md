@@ -1,7 +1,9 @@
 ---
-title: "Claude Code CLAUDE.md Not Found Fix"
+layout: default
+title: "Claude Code CLAUDE.md Not Found Fix (2026)"
 description: "Fix Claude Code CLAUDE.md not found in parent directories. Create the file in the correct project root location. Step-by-step solution."
 permalink: /claude-code-claude-md-not-found-parent-directories-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

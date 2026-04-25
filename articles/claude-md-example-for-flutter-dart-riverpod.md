@@ -1,7 +1,9 @@
 ---
-title: "CLAUDE.md Example for Flutter + Dart +"
+layout: default
+title: "CLAUDE.md Example for Flutter + Dart + (2026)"
 description: "CLAUDE.md Example for Flutter + Dart + — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-md-example-for-flutter-dart-riverpod/
+date: 2026-04-20
 render_with_liquid: false
 categories: [claude-md, templates, 2026]
 tags: [claude-code, claude-md, flutter, dart, riverpod]

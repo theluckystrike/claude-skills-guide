@@ -1,5 +1,6 @@
 ---
-title: "Claude Code vs Cursor: Monthly Cost"
+layout: default
+title: "Claude Code vs Cursor: Monthly Cost Comparison (2026)"
 description: "Claude Code costs $100/month (Max) or $3-75/MTok (API) versus Cursor Pro at $20/month. Real-world cost analysis with usage scenarios for April 2026."
 permalink: /claude-code-vs-cursor-monthly-cost-comparison-2026/
 date: 2026-04-22

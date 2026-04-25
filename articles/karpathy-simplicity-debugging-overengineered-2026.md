@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Fix Claude Code Overengineering (2026)"
 description: "Diagnose and fix Claude Code overengineering — identify unnecessary abstractions, flatten indirection, and add Simplicity First rules to CLAUDE.md."
 permalink: /karpathy-simplicity-debugging-overengineered-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

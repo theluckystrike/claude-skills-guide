@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Quantum Computing"
+layout: default
+title: "Claude Code for Quantum Computing (2026)"
 permalink: /claude-code-quantum-computing-qiskit-2026/
+date: 2026-04-20
 description: "Quantum computing circuits with Claude Code and Qiskit. Build variational algorithms, error mitigation, and transpiler workflows."
 last_tested: "2026-04-22"
 ---

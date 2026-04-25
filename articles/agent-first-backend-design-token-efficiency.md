@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Agent-First Backend Design (2026)"
 description: "Agent-first backend design reduces Claude Code token usage by 50-70% through self-describing APIs, state inspection endpoints, and structured error responses."
 permalink: /agent-first-backend-design-token-efficiency/

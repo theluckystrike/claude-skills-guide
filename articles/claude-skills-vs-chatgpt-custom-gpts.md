@@ -1,7 +1,9 @@
 ---
-title: "Claude Skills vs ChatGPT Custom GPTs"
+layout: default
+title: "Claude Skills vs ChatGPT Custom GPTs (2026)"
 description: "Compare Claude Code skills (file-based, version-controlled, open standard) with ChatGPT Custom GPTs (web-based, proprietary). Honest breakdown with 4 GPT wins."
 permalink: /claude-skills-vs-chatgpt-custom-gpts/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, custom-gpts, comparison]
 last_updated: 2026-04-19

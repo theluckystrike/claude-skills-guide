@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Processing and p5.js"
+layout: default
+title: "Claude Code for Processing and p5.js (2026)"
 permalink: /claude-code-processing-p5js-creative-coding-2026/
+date: 2026-04-20
 description: "Create generative art and creative coding with p5.js and Claude Code. Build particle systems, noise-based visuals, and interactive installations."
 last_tested: "2026-04-22"
 domain: "creative coding"

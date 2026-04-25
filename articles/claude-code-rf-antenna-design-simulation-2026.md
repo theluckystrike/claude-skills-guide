@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for RF Antenna Design"
+layout: default
+title: "Claude Code for RF Antenna Design (2026)"
 permalink: /claude-code-rf-antenna-design-simulation-2026/
+date: 2026-04-20
 description: "Claude Code for RF Antenna Design — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"
 ---

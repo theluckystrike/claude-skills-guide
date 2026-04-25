@@ -1,7 +1,9 @@
 ---
-title: "DNS Resolution Timeout Error — Fix"
+layout: default
+title: "DNS Resolution Timeout Error — Fix (2026)"
 permalink: /claude-code-dns-resolution-timeout-fix-2026/
-description: "Claude Code troubleshooting: dNS Resolution Timeout Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
+date: 2026-04-20
+description: "DNS Resolution Timeout Error — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
 ---
 

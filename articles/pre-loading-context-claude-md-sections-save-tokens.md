@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Pre-Loading Context (2026)"
 description: "Pre-load context in CLAUDE.md sections to save 50%+ tokens per Claude Code session with project maps, error protocols, and architecture summaries."
 permalink: /pre-loading-context-claude-md-sections-save-tokens/

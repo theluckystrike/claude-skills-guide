@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code vs Replit Agent (2026)"
 permalink: /claude-code-vs-replit-agent-which-is-better-2026/
+date: 2026-04-20
 description: "Claude Code runs in your terminal on your codebase. Replit Agent runs in a browser and deploys instantly. Compare both for your workflow in 2026."
 last_tested: "2026-04-21"
 ---

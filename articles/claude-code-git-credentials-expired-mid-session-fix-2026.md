@@ -1,6 +1,8 @@
 ---
-title: "Git Credentials Expired Mid-Session"
+layout: default
+title: "Git Credentials Expired Mid-Session — Fix (2026)"
 permalink: /claude-code-git-credentials-expired-mid-session-fix-2026/
+date: 2026-04-20
 description: "Fix git credentials expired during Claude Code session. Refresh your GitHub token or SSH key passphrase to resume push and fetch operations."
 last_tested: "2026-04-22"
 ---

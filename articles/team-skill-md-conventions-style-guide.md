@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Team SKILL.md Conventions (2026)"
 description: "Claude Code resource: writing standards for team-shared SKILL.md files covering description triggers, body structure, naming, and progressive..."
 permalink: /team-skill-md-conventions-style-guide/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, style-guide, conventions, team]
 last_updated: 2026-04-19

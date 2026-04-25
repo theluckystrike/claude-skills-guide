@@ -1,7 +1,9 @@
 ---
-title: "Claude Skills with Embedded Scripts"
+layout: default
+title: "Claude Skills with Embedded Scripts (2026)"
 description: "How to bundle executable scripts inside SKILL.md directories with allowed-tools permissions, dynamic context injection, and visual HTML output."
 permalink: /claude-skills-with-embedded-scripts/
+date: 2026-04-20
 render_with_liquid: false
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, scripts, python, bash, automation]

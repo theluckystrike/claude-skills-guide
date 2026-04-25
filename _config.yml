@@ -20,6 +20,10 @@ relative_links:
 exclude:
   - plan.md
   - plan-archive.md
+  - KNOWN_WARNINGS.md
+  - QA_PLAYBOOK.md
+  - SPRINT_EXECUTION_STANDARDS.md
+  - README.md
 
 include:
   - _headers

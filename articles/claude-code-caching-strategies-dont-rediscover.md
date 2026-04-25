@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Claude Code Caching (2026)"
 description: "Claude Code re-discovers project structure every session, wasting 5,000-15,000 tokens. Caching strategies using skills and CLAUDE.md eliminate repeat discovery."
 permalink: /claude-code-caching-strategies-dont-rediscover/

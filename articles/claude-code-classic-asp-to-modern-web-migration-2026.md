@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Classic ASP to Modern"
+layout: default
+title: "Claude Code for Classic ASP to Modern (2026)"
 permalink: /claude-code-classic-asp-to-modern-web-migration-2026/
+date: 2026-04-20
 description: "Migrate Classic ASP/VBScript applications to modern web frameworks with Claude Code. Convert ADO recordsets, server includes, and inline code."
 last_tested: "2026-04-22"
 domain: "web migration"

@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Best Free AI Coding Assistants 2026"
 description: "Claude Code picks: a practical comparison of the best free AI coding assistants available in 2026. Learn which tools deliver real value for developers..."
 permalink: /best-free-ai-coding-assistants-2026-comparison/
+date: 2026-04-20
 last_tested: "2026-04-21"
 tools_compared: ["Claude Code Free", "GitHub Copilot Free", "Cursor Free", "Amazon Q Developer Free", "Cline", "Tabnine Free"]
 ---

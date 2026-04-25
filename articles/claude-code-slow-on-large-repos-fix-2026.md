@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Speed Up Claude Code on Large (2026)"
 description: "Speed up Claude Code on large repos by configuring .claudeignore, scoping sessions to subdirectories, and optimizing file discovery."
 permalink: /claude-code-slow-on-large-repos-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

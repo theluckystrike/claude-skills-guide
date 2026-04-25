@@ -1,7 +1,9 @@
 ---
-title: "Claude Code for FEA Mesh Generation"
+layout: default
+title: "Claude Code for FEA Mesh Generation (2026)"
 description: "Claude Code for FEA Mesh Generation — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-code-fea-mesh-generation-2026/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

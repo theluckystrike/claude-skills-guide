@@ -1,7 +1,9 @@
 ---
-title: "Self-Signed Cert in Corporate Proxy"
+layout: default
+title: "Self-Signed Cert in Corporate Proxy — Fix (2026)"
 permalink: /claude-code-self-signed-cert-corporate-proxy-fix-2026/
-description: "Claude Code resource: self-Signed Cert in Corporate Proxy — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
+date: 2026-04-20
+description: "Self-Signed Cert in Corporate Proxy — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
 ---
 

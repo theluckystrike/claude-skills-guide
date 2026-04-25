@@ -1,7 +1,9 @@
 ---
-title: "Fix Claude Code Overcomplicating — Fix"
+layout: default
+title: "Fix Claude Code Overcomplicating — Fix (2026)"
 description: "Stop Claude Code from generating over-abstracted code with factories, builders, and patterns you don't need — Simplicity First CLAUDE.md rules."
 permalink: /claude-code-overcomplicates-simplicity-fix-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

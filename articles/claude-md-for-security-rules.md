@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "CLAUDE.md for Security Rules (2026)"
 description: "Encode security rules in CLAUDE.md to prevent Claude Code from generating SQL injection, XSS, insecure authentication, and other common vulnerabilities."
 permalink: /claude-md-security-rules/
+date: 2026-04-20
 categories: [claude-md, patterns]
 tags: [claude-md, security, vulnerabilities, authentication, claude-code]
 last_updated: 2026-04-19

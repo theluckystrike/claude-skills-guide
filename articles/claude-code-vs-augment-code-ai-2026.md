@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code vs Augment Code (2026)"
 permalink: /claude-code-vs-augment-code-ai-2026/
+date: 2026-04-20
 description: "Claude Code offers autonomous agents while Augment Code focuses on deep codebase context. Compare pricing, features, and best team fit for 2026."
 last_tested: "2026-04-21"
 ---

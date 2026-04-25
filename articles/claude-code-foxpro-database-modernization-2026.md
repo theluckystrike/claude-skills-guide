@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code for FoxPro Database (2026)"
 permalink: /claude-code-foxpro-database-modernization-2026/
+date: 2026-04-20
 description: "Modernize Visual FoxPro databases with Claude Code. Convert DBF tables, PRG procedures, and SCX forms to modern web applications."
 last_tested: "2026-04-22"
 domain: "legacy modernization"

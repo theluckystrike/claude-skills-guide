@@ -1,6 +1,8 @@
 ---
-title: "JSON Parse Error on Malformed Response"
+layout: default
+title: "JSON Parse Error on Malformed Response (2026)"
 permalink: /claude-code-json-parse-error-malformed-response-fix-2026/
+date: 2026-04-20
 description: "Fix JSON parse error on malformed API response in Claude Code. Retry the request or clear corrupted cache to resolve SyntaxError unexpected token."
 last_tested: "2026-04-22"
 ---

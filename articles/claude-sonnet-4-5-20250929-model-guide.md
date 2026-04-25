@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Sonnet 4.5 (20250929)"
 description: "Claude Sonnet 4.5 model ID explained. Capabilities, pricing, API usage, and comparisons with Sonnet 4 and Opus 4 for coding and analysis tasks."
 permalink: /claude-sonnet-4-5-20250929-model-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

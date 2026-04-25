@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code for mise Development (2026)"
 permalink: /claude-code-mise-development-environment-2026/
+date: 2026-04-20
 description: "Set up polyglot dev environments with mise and Claude Code. Manage tool versions, environment variables, and project-scoped tasks in one config."
 last_tested: "2026-04-22"
 domain: "developer tooling"

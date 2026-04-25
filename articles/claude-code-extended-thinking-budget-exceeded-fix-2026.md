@@ -1,6 +1,8 @@
 ---
-title: "Extended Thinking Budget Exceeded — Fix"
+layout: default
+title: "Extended Thinking Budget Exceeded — Fix (2026)"
 permalink: /claude-code-extended-thinking-budget-exceeded-fix-2026/
+date: 2026-04-20
 description: "Increase thinking_budget in settings to 32768 tokens with claude config set. Fixes the extended thinking token allocation mismatch error cleanly."
 last_tested: "2026-04-21"
 ---

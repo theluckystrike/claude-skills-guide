@@ -1,6 +1,8 @@
 ---
-title: "Terminal Emulator Rendering Artifacts"
+layout: default
+title: "Terminal Emulator Rendering Artifacts — Fix (2026)"
 permalink: /claude-code-terminal-rendering-artifacts-fix-2026/
+date: 2026-04-20
 description: "Fix terminal rendering artifacts in Claude Code. Reset ANSI state and switch terminal emulator to resolve garbled output, broken prompts, and ghost text."
 last_tested: "2026-04-22"
 ---

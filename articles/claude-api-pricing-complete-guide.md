@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude API Pricing (2026)"
 description: "Complete Claude API pricing for all models and plans. Per-token costs, rate limits, batch discounts, prompt caching savings, and plan comparisons."
 permalink: /claude-api-pricing-complete-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

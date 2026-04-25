@@ -1,6 +1,8 @@
 ---
-title: "VS Code Connection Lost — Fix"
+layout: default
+title: "Claude Code VS Code Connection Lost — Fix (2026)"
 permalink: /claude-code-vscode-connection-lost-fix-2026/
+date: 2026-04-20
 description: "Restart the VS Code extension host to restore the dropped connection. Fixes the persistent reconnecting loop when Claude Code loses server contact."
 last_tested: "2026-04-21"
 ---

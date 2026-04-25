@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Claude Code + Docker (2026)"
 description: "Use Docker with Claude Code to isolate test environments, prevent retry spirals from corrupted state, and save 20-40% on debugging token costs."
 permalink: /claude-code-docker-isolated-cost-controlled-testing/

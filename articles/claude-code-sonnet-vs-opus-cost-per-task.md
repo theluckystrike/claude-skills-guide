@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Claude Code Sonnet vs Opus (2026)"
 description: "Compare Claude Code Sonnet 4.6 vs Opus 4.6 cost per task with real token measurements showing when each model delivers better ROI for development work."
 permalink: /claude-code-sonnet-vs-opus-cost-per-task/

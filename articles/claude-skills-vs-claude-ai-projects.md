@@ -1,7 +1,9 @@
 ---
-title: "Claude Skills vs Claude AI Projects"
+layout: default
+title: "Claude Skills vs Claude AI Projects (2026)"
 description: "Compare Claude Code skills (file-based, CLI, developer workflows) with Claude.ai Projects (web-based, knowledge-heavy, team conversations)."
 permalink: /claude-skills-vs-claude-ai-projects/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, claude-projects, comparison]
 last_updated: 2026-04-19

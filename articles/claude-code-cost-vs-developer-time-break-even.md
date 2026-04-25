@@ -1,5 +1,6 @@
 ---
-title: "Claude Code Cost vs Manual Developer"
+layout: default
+title: "Claude Code Cost vs Manual Developer (2026)"
 description: "Calculate exactly when Claude Code costs less than manual development -- break-even analysis shows AI saves money at $50+/hour developer rates on most tasks."
 permalink: /claude-code-cost-vs-developer-time-break-even/
 date: 2026-04-22

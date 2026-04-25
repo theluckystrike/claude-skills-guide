@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Context Engineering vs Prompt (2026)"
 description: "Context engineering outperforms prompt engineering for Claude Code agents by reducing token waste 40-60% through structured knowledge loading and scoping."
 permalink: /context-engineering-vs-prompt-engineering-agents/

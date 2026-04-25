@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Git Worktree Lock Conflict — Fix (2026)"
 permalink: /claude-code-worktree-lock-conflict-fix-2026/
+date: 2026-04-20
 description: "Fix git worktree lock conflict in Claude Code. Remove stale lock files and prune dead worktrees to resolve 'worktree already locked' errors."
 last_tested: "2026-04-22"
 ---

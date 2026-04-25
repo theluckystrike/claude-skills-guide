@@ -1,6 +1,8 @@
 ---
-title: "File Descriptor Leak in Watch Mode"
+layout: default
+title: "File Descriptor Leak in Watch Mode — Fix (2026)"
 permalink: /claude-code-file-descriptor-leak-watch-mode-fix-2026/
+date: 2026-04-20
 description: "Fix file descriptor leak in Claude Code watch mode. Close stale watchers and increase ulimit to prevent EMFILE too many open files errors."
 last_tested: "2026-04-22"
 ---

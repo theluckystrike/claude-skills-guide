@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "CLAUDE.md Best Practices (2026)"
 description: "The definitive guide to CLAUDE.md files. Structure, rules, project configs, team standards, Karpathy principles, NASA P10, and real examples."
 permalink: /claude-md-best-practices-definitive-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

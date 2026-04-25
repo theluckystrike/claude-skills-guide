@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Debugging Workflow Guide"
+layout: default
+title: "Claude Code Debugging Workflow Guide (2026)"
 description: "Use Claude Code for debugging with structured investigation prompts, log analysis patterns, and root cause identification workflows."
 permalink: /claude-code-debugging-workflow-guide-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

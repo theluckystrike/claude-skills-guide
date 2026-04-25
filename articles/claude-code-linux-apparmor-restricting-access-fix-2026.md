@@ -1,6 +1,8 @@
 ---
-title: "Linux AppArmor Restricting Access — Fix"
+layout: default
+title: "Linux AppArmor Restricting Access — Fix (2026)"
 permalink: /claude-code-linux-apparmor-restricting-access-fix-2026/
+date: 2026-04-20
 description: "Fix Linux AppArmor restricting Claude Code file access. Create an AppArmor profile or set complain mode to allow Claude Code filesystem operations."
 last_tested: "2026-04-22"
 ---

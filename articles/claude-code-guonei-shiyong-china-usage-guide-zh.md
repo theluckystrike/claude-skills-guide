@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code国内使用指南 (2026)"
 description: "Claude Code国内使用完整指南，详解中国大陆环境下的API访问方式，包括终端代理与VPN配置、Amazon Bedrock和Google Vertex AI替代接入方案、DNS和TCP BBR网络优化技巧，以及Connection Timed Out和ECONNRESET等常见连接错误的排查与解决。"
 permalink: /claude-code-guonei-shiyong-china-usage-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

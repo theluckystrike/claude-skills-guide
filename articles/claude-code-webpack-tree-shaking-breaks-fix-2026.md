@@ -1,7 +1,9 @@
 ---
-title: "Webpack Tree-Shaking Breaks Build — Fix"
+layout: default
+title: "Webpack Tree-Shaking Breaks Build — Fix (2026)"
 permalink: /claude-code-webpack-tree-shaking-breaks-fix-2026/
-description: "Claude Code troubleshooting: webpack Tree-Shaking Breaks Build — Fix — step-by-step fix with tested commands, error codes, and verified solutions for..."
+date: 2026-04-20
+description: "Webpack Tree-Shaking Breaks Build — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
 ---
 

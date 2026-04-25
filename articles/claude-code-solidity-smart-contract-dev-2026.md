@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code for Solidity Smart (2026)"
 permalink: /claude-code-solidity-smart-contract-dev-2026/
+date: 2026-04-20
 description: "Claude Code for Solidity Smart — practical guide with working examples, tested configurations, and tips for developer workflows."
 last_tested: "2026-04-22"
 ---

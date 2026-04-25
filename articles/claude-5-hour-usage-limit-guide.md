@@ -1,7 +1,9 @@
 ---
-title: "Claude 5-Hour Usage Limit Explained"
+layout: default
+title: "Claude 5-Hour Usage Limit Explained (2026)"
 description: "What the Claude 5-hour usage limit is, when it resets, how to check remaining usage, optimization tips, and Max plan upgrade differences explained."
 permalink: /claude-5-hour-usage-limit-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

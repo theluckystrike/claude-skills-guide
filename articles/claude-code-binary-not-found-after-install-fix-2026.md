@@ -1,6 +1,8 @@
 ---
-title: "claude: command not found After"
+layout: default
+title: "claude: command not found After Install — Fix (2026)"
 permalink: /claude-code-binary-not-found-after-install-fix-2026/
+date: 2026-04-20
 description: "claude: command not found After Install — Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."
 last_tested: "2026-04-22"
 ---

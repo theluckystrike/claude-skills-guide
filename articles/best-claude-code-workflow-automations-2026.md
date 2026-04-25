@@ -1,7 +1,9 @@
 ---
-title: "Best Claude Code Workflow Automations"
+layout: default
+title: "Best Claude Code Workflow Automations (2026)"
 description: "Ranked list of the best Claude Code workflow automations including task management, code review, scaffolding, and CI/CD integration tools."
 permalink: /best-claude-code-workflow-automations-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 render_with_liquid: false
 ---

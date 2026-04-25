@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Frontend Design Plugin"
+layout: default
+title: "Claude Code Frontend Design Plugin (2026)"
 description: "How to use the Claude Code frontend-design skill for CSS, React, Vue, and Tailwind workflows. Setup, real examples, and design-to-code techniques."
 permalink: /claude-code-frontend-design-plugin-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

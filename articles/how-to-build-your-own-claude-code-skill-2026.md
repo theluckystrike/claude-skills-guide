@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Build Your Own Claude Code Skill (2026)"
 description: "Step-by-step guide to building a custom Claude Code skill with CLAUDE.md instructions, hooks, and slash command integration."
 permalink: /how-to-build-your-own-claude-code-skill-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

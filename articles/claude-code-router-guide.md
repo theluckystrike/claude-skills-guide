@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Router: Model Routing Guide"
+layout: default
+title: "Claude Code Router: Model Routing Guide (2026)"
 description: "Route tasks to the optimal Claude model automatically. Configure cost-aware model routing in Claude Code with Opus, Sonnet, and Haiku strategies."
 permalink: /claude-code-router-guide/
+date: 2026-04-20
 last_tested: "2026-04-24"
 ---
 

@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code Model Not Available (2026)"
 description: "Fix Claude Code model not available in your region. Switch API endpoint or use an available model variant. Step-by-step solution."
 permalink: /claude-code-model-not-available-region-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

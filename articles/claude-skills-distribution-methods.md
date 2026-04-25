@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Skills Distribution (2026)"
 description: "Detailed comparison of three SKILL.md distribution methods including setup steps, tradeoffs, and which to use for teams of 5, 50, and 500 people."
 permalink: /claude-skills-distribution-methods/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, distribution, plugins, enterprise]
 last_updated: 2026-04-19

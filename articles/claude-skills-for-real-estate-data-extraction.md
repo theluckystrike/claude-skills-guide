@@ -1,7 +1,9 @@
 ---
-title: "Real Estate Data Extraction Skills"
+layout: default
+title: "Real Estate Data Extraction Skills (2026)"
 description: "Build a Claude Code skill that parses MLS listing data, runs comparable sales analysis with price-per-square-foot adjustments, and generates CMA reports."
 permalink: /claude-skills-for-real-estate-data-extraction/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, real-estate, data-extraction]
 last_updated: 2026-04-19

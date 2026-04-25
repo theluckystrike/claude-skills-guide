@@ -1,5 +1,6 @@
 ---
-title: "Claude Code .claude/settings.json"
+layout: default
+title: "Claude Code .claude/settings.json (2026)"
 description: "Configure Claude Code .claude/settings.json for cost savings with permission controls, tool restrictions, and directory scoping that reduce token waste."
 permalink: /claude-code-settings-json-cost-saving-configuration/
 date: 2026-04-22
@@ -337,7 +338,7 @@ echo "Created .claude/settings.json from $template template"
 - [Environment Variables for Claude Code Cost Control](/environment-variables-claude-code-cost-control/) -- session-level controls
 - [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- event-based automation
 - [Cost Optimization Hub](/cost-optimization/) -- all cost guides
-- [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
+
 
 ## Practical Details
 

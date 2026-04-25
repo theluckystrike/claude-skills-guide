@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Skills — Complete Reference (2026)"
 description: "Every aspect of Claude Skills: creation, team sharing, troubleshooting, use cases, architecture, comparisons."
 permalink: /skills/
+date: 2026-04-20
 ---
 
 # Claude Skills Complete Reference

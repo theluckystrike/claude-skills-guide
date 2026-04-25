@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code Git Hook Pre-commit (2026)"
 description: "Fix Claude Code git hook pre-commit conflict blocking commits. Configure hooks to work with AI-generated code. Step-by-step solution."
 permalink: /claude-code-git-hook-pre-commit-conflict-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

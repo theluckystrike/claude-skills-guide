@@ -1,5 +1,6 @@
 ---
-title: "How to Write Token-Efficient Claude"
+layout: default
+title: "How to Write Token-Efficient Claude (2026)"
 description: "Write Claude Code skills that minimize token usage with telegraphic formatting, layered depth, and information-dense patterns saving 500-2,000 tokens each."
 permalink: /write-token-efficient-claude-code-skills/
 date: 2026-04-22

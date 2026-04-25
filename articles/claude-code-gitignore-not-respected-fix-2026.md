@@ -1,6 +1,8 @@
 ---
-title: ".gitignore Not Respected by Claude"
+layout: default
+title: ".gitignore Not Respected by Claude — Fix (2026)"
 permalink: /claude-code-gitignore-not-respected-fix-2026/
+date: 2026-04-20
 description: "Fix Claude Code ignoring .gitignore rules. Remove cached tracked files and update .claudeignore to prevent committing build artifacts and secrets."
 last_tested: "2026-04-22"
 ---

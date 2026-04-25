@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Skills in CI/CD (2026)"
 description: "How to validate SKILL.md files in CI pipelines, lint frontmatter, run skill-driven automation in GitHub Actions, and prevent broken skills from merging."
 permalink: /claude-skills-ci-cd-patterns/
+date: 2026-04-20
 categories: [skills, 2026]
 tags: [claude-code, claude-skills, ci-cd, github-actions, automation]
 last_updated: 2026-04-19

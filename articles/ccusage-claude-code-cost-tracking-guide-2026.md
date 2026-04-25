@@ -1,7 +1,9 @@
 ---
-title: "ccusage: Claude Code Cost Tracking"
+layout: default
+title: "ccusage: Claude Code Cost Tracking (2026)"
 description: "Track Claude Code session costs with ccusage — parse JSONL logs for daily, monthly, and per-session spend breakdowns via CLI."
 permalink: /ccusage-claude-code-cost-tracking-guide-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

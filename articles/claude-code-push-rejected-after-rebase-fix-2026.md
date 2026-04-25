@@ -1,6 +1,8 @@
 ---
-title: "Push Rejected After Claude Rebase — Fix"
+layout: default
+title: "Push Rejected After Claude Rebase — Fix (2026)"
 permalink: /claude-code-push-rejected-after-rebase-fix-2026/
+date: 2026-04-20
 description: "Fix push rejected after Claude Code rebase. Use git push --force-with-lease to safely update remote after rebase without overwriting teammate commits."
 last_tested: "2026-04-22"
 ---

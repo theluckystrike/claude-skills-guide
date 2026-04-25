@@ -1,6 +1,8 @@
 ---
-title: "Pre-Commit Hook Failure on Claude — Fix"
+layout: default
+title: "Pre-Commit Hook Failure on Claude — Fix (2026)"
 permalink: /claude-code-pre-commit-hook-failure-fix-2026/
+date: 2026-04-20
 description: "Fix pre-commit hook failures on Claude Code changes. Run linters manually, fix violations, then re-commit to pass ESLint, Prettier, or type checks."
 last_tested: "2026-04-22"
 ---

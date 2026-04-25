@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Claude Code Monorepo Workspace (2026)"
 description: "Fix Claude Code monorepo workspace resolution failure. Configure workspace protocols and package paths. Step-by-step solution."
 permalink: /claude-code-monorepo-workspace-resolution-failure-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

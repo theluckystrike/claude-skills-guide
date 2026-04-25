@@ -1,7 +1,9 @@
 ---
-title: "CLAUDE.md Example for Rails + Turbo +"
+layout: default
+title: "CLAUDE.md Example for Rails + Turbo + (2026)"
 description: "Complete 320-line CLAUDE.md for Rails 8.0 with Hotwire. Enforces Turbo Stream patterns, Stimulus controller conventions, and ActiveRecord safety."
 permalink: /claude-md-example-for-rails-turbo-stimulus/
+date: 2026-04-20
 render_with_liquid: false
 categories: [claude-md, templates, 2026]
 tags: [claude-code, claude-md, rails, ruby, hotwire]

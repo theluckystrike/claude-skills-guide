@@ -1,6 +1,8 @@
 ---
-title: "Claude Code for Clipper to PostgreSQL"
+layout: default
+title: "Claude Code for Clipper to PostgreSQL (2026)"
 permalink: /claude-code-clipper-to-postgresql-migration-2026/
+date: 2026-04-20
 description: "Migrate CA-Clipper and Harbour applications to PostgreSQL with Claude Code. Convert DBF data, Xbase code, and NTX indexes."
 last_tested: "2026-04-22"
 domain: "legacy modernization"

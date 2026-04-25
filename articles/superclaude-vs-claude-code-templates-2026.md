@@ -1,7 +1,9 @@
 ---
-title: "SuperClaude vs Claude Code Templates"
+layout: default
+title: "SuperClaude vs Claude Code Templates (2026)"
 description: "SuperClaude offers 30 slash commands and 16 agents as a framework. Claude Code Templates provides 600+ installable configs via CLI. Full comparison."
 permalink: /superclaude-vs-claude-code-templates-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

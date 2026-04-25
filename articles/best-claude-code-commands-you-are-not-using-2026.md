@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "Best Claude Code Commands You're (2026)"
 description: "10 Claude Code commands most developers overlook. From custom slash commands to built-in shortcuts, with examples showing what you are missing."
 permalink: /best-claude-code-commands-you-are-not-using-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

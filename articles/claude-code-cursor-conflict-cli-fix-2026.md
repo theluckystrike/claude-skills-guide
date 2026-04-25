@@ -1,6 +1,8 @@
 ---
-title: "Cursor Conflict With Claude Code CLI"
+layout: default
+title: "Cursor Conflict With Claude Code CLI (2026)"
 permalink: /claude-code-cursor-conflict-cli-fix-2026/
+date: 2026-04-20
 description: "Fix Cursor editor conflicting with Claude Code CLI. Disable Cursor's AI features or use separate terminals to prevent simultaneous file edit collisions."
 last_tested: "2026-04-22"
 ---

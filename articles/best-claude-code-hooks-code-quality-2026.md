@@ -1,7 +1,9 @@
 ---
-title: "Best Claude Code Hooks for Code Quality"
+layout: default
+title: "Best Claude Code Hooks for Code Quality (2026)"
 description: "8 Claude Code hooks that enforce code quality automatically. Pre-commit linting, post-write formatting, test runners, and security scanners."
 permalink: /best-claude-code-hooks-code-quality-2026/
+date: 2026-04-20
 last_tested: "2026-04-22"
 ---
 

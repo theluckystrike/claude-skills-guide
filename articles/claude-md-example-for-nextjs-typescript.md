@@ -1,7 +1,9 @@
 ---
+layout: default
 title: "CLAUDE.md Example for Next.js + (2026)"
 description: "Complete 350-line CLAUDE.md for Next.js 15 with TypeScript. Enforces App Router conventions, Server Components, and Server Actions. Tested on Next.js 15.1.2."
 permalink: /claude-md-example-for-nextjs-typescript/
+date: 2026-04-20
 render_with_liquid: false
 categories: [claude-md, templates, 2026]
 tags: [claude-code, claude-md, nextjs, typescript]

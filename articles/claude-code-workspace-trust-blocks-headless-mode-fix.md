@@ -1,7 +1,9 @@
 ---
-title: "Claude Code Workspace Trust Blocks"
+layout: default
+title: "Claude Code Workspace Trust Blocks (2026)"
 description: "Fix Claude Code workspace trust dialog blocking headless and CI mode. Pre-approve directories with settings.json. Step-by-step solution."
 permalink: /claude-code-workspace-trust-blocks-headless-mode-fix/
+date: 2026-04-20
 last_tested: "2026-04-21"
 ---
 

@@ -1,6 +1,8 @@
 ---
+layout: default
 title: "Claude Code for PowerBuilder (2026)"
 permalink: /claude-code-powerbuilder-modernization-2026/
+date: 2026-04-20
 description: "Modernize PowerBuilder applications with Claude Code. Convert DataWindows to REST APIs and migrate PBL code to C# or Java."
 last_tested: "2026-04-22"
 domain: "legacy modernization"

@@ -1,7 +1,9 @@
 ---
-title: "Monorepo Workspace Package Resolution"
+layout: default
+title: "Monorepo Workspace Package Resolution (2026)"
 permalink: /claude-code-monorepo-workspace-package-resolution-fix-2026/
-description: "Claude Code resource: fix monorepo workspace package not found error. Configure workspace protocol and ensure packages are listed in root config."
+date: 2026-04-20
+description: "Fix monorepo workspace package not found error. Configure workspace protocol and ensure packages are listed in root config."
 last_tested: "2026-04-22"
 ---
 

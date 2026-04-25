@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Claude Code Cost Optimization (2026)"
 description: "Cut Claude Code costs by 40-70% with 15 proven optimization techniques covering context management, model selection, and token-efficient workflows."
 permalink: /claude-code-cost-optimization-15-techniques/

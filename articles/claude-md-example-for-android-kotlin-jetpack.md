@@ -1,7 +1,9 @@
 ---
-title: "CLAUDE.md Example for Android + Kotlin"
+layout: default
+title: "CLAUDE.md Example for Android + Kotlin (2026)"
 description: "CLAUDE.md Example for Android + Kotlin — practical guide with working examples, tested configurations, and tips for developer workflows."
 permalink: /claude-md-example-for-android-kotlin-jetpack/
+date: 2026-04-20
 render_with_liquid: false
 categories: [claude-md, templates, 2026]
 tags: [claude-code, claude-md, android, kotlin, jetpack-compose]

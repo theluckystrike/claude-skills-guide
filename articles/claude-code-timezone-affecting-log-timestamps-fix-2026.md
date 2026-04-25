@@ -1,6 +1,8 @@
 ---
-title: "Timezone Affecting Log Timestamps — Fix"
+layout: default
+title: "Timezone Affecting Log Timestamps — Fix (2026)"
 permalink: /claude-code-timezone-affecting-log-timestamps-fix-2026/
+date: 2026-04-20
 description: "Fix timezone affecting log timestamps in Claude Code. Set TZ environment variable to UTC or your local timezone to get correct timestamps in output."
 last_tested: "2026-04-22"
 ---
