@@ -73,6 +73,8 @@ Claude Code should create a TypeScript file at `.fig/autocomplete/src/deploy.ts`
 
 ## Related Guides
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)

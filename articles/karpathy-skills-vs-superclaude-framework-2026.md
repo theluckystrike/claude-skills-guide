@@ -93,6 +93,8 @@ Start with Karpathy Skills. It takes 30 seconds to set up and the improvements a
 
 ## See Also
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Build your own with our [CLAUDE.md Generator](/generator/).
 
 - [Karpathy Skills vs Ultimate Guide (2026)](/karpathy-skills-vs-claude-code-ultimate-guide-2026/)

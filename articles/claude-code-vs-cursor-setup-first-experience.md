@@ -70,6 +70,8 @@ For a solo developer doing 4-6 hours of AI-assisted coding daily, Claude Code on
 
 ## FAQ
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 ### Can I use Claude Code inside Cursor?

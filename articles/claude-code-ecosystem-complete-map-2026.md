@@ -130,6 +130,8 @@ The [claude-code-ultimate-guide](https://github.com/FlorianBruniaux/claude-code-
 
 ## FAQ
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 ### How many tools are in the ecosystem?

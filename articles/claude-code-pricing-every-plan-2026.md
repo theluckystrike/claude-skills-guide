@@ -201,6 +201,8 @@ It depends on usage. Light users (under 2 hours/day) often pay less with API Dir
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [Claude Code Cost Complete Guide](/claude-code-cost-complete-guide/) — Deep dive on all cost factors
 - [15 Cost Optimization Techniques](/claude-code-cost-optimization-15-techniques/) — Reduce spend without reducing output
 - [Claude Code Cost vs Developer Time](/claude-code-cost-vs-developer-time-break-even/) — ROI analysis

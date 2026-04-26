@@ -100,6 +100,8 @@ If your work is primarily data science in Jupyter notebooks, none of these codin
 
 ## Related
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Codex vs Claude Code comparison](/codex-vs-claude-code-comparison-2026/) — detailed OpenAI Codex vs Claude Code analysis

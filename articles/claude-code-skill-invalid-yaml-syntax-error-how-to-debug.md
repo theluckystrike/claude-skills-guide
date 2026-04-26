@@ -251,6 +251,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Skill YAML Frontmatter Parse Error in Claude — Fix (2026)](/claude-code-skill-yaml-frontmatter-parse-error-fix-2026/)

@@ -69,6 +69,8 @@ Claude Code should delete `.eslintrc.*`, `.prettierrc`, remove ESLint/Prettier p
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)

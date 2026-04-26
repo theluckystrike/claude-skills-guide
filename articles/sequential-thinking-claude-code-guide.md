@@ -398,6 +398,8 @@ Yes. These are complementary features. Extended thinking is a model-level capabi
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code MCP Configuration](/claude-code-mcp-configuration-guide/) — full MCP setup reference

@@ -230,6 +230,8 @@ Explore the related resources below for deeper coverage. The Claude Code documen
 
 ## Related Resources
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Add Angular MCP to Claude Code](/claude-code-add-angular-mcp/)
 - [Add MongoDB MCP to Claude Code](/claude-code-add-mongodb-mcp/)
 - [Add MySQL MCP to Claude Code](/claude-code-add-mysql-mcp/)

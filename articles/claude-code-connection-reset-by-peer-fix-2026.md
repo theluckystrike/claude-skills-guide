@@ -107,6 +107,8 @@ Claude Code requires TLS 1.2 or later. The Anthropic API endpoints do not suppor
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Peer Dependency Conflict npm Error](/claude-code-peer-dependency-conflict-fix-2026/)

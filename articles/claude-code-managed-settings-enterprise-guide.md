@@ -223,6 +223,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Find the right model with our [Model Selector](/model-selector/).
 
 - [AI Coding Tools Security Concerns Enterprise Guide](/ai-coding-tools-security-concerns-enterprise-guide/)

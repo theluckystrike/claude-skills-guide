@@ -101,6 +101,8 @@ Split decision. Augment's cross-repo search quickly identifies where the faulty 
 
 ## Related Comparisons
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code vs Sourcegraph Cody: Compared](/claude-code-vs-cody-comparison-2026/)
 - [Claude Code vs Tabnine: Complete Comparison](/claude-code-vs-tabnine-full-comparison-2026/)
 - [AI Coding Tools Security Concerns for Enterprises](/ai-coding-tools-security-concerns-enterprise-guide/)

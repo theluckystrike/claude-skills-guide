@@ -275,6 +275,8 @@ await server.connect(transport);
 
 ## FAQ
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 ### How many MCP servers can I run simultaneously?

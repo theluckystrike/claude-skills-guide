@@ -224,3 +224,4 @@ Related Reading
 
 **Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).

@@ -299,6 +299,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Python SDK Installation Guide](/claude-python-sdk-installation-guide/) -- installation and environment setup.

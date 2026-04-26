@@ -95,6 +95,8 @@ Adding Claude Code to a Cody workflow:
 
 ## Related Comparisons
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Claude Code vs Cursor 2026: Detailed Comparison](/claude-code-vs-cursor-2026-detailed-comparison/)
 - [Claude Code vs Amazon Q Developer 2026](/claude-code-vs-amazon-q-developer-full-2026/)
 - [Agentic AI Coding Tools Compared 2026](/agentic-ai-coding-tools-comparison-2026/)

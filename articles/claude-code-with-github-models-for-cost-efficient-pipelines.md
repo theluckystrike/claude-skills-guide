@@ -226,3 +226,5 @@ A real-world pipeline uses a GitHub Actions workflow (`.github/workflows/ai-assi
 ### What is Optimizing Token Usage Through Task Segmentation?
 
 Task segmentation breaks complex projects into phases handled by appropriate models. The Planning Phase uses Claude Code to analyze the codebase and create a detailed plan. Simple Transformations like renaming and formatting go to GitHub models. Complex Implementation with architectural changes uses Claude Code. Validation combines both models for tests and corrections. This segmentation typically reduces Claude Code usage by 50-70% because the bulk of mechanical work runs on more economical models.
+
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).

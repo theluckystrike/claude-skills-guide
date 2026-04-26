@@ -15,6 +15,8 @@ geo_optimized: true
 
 # Claude Code Skills Troubleshooting Guide (2026)
 
+> **Interactive Tool:** Paste your error message into our [Error Diagnostic Tool](/diagnose/) -- get the fix, root cause, and a CLAUDE.md prevention rule instantly.
+
 Skills break in predictable ways. A YAML typo stops the skill from loading. A missing permission scope causes silent failures. An oversized context causes Claude to start dropping instructions mid-session. Understanding which category your problem falls into cuts debugging time from hours to minutes.
 
 This hub maps every common Claude Code skill error to its cause and fix, then points you to the detailed article for each one.
@@ -246,6 +248,8 @@ Advanced diagnostics:
 **Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
 ## Related
+
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 

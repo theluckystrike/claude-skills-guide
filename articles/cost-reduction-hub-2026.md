@@ -151,3 +151,4 @@ Honest cost comparisons between Claude, GPT-4o, Gemini, and open source. Where e
 
 **Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).

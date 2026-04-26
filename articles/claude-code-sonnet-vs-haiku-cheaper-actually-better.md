@@ -265,6 +265,8 @@ Automated CI tasks benefit from Haiku because they run frequently, have well-def
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code vs Cursor: Monthly Cost Comparison](/claude-code-vs-cursor-monthly-cost-comparison-2026/) -- broader cost comparison

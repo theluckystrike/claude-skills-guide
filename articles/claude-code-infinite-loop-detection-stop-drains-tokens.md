@@ -148,6 +148,8 @@ Large loop (20+ iterations): ~150K tokens = $2.25-$11.25
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code keeps retrying the same error](/claude-code-keeps-retrying-same-error-cost-fix/) -- specific fix for retry spirals

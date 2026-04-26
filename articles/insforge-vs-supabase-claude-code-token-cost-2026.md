@@ -349,6 +349,8 @@ For teams that value Supabase's mature ecosystem (real-time, auth, edge function
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Reducing Claude Code Token Usage for Database Operations](/reducing-claude-code-token-usage-database-operations/) -- database-specific optimization

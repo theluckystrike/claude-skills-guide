@@ -103,6 +103,8 @@ Pricing varies by tier and team size. Check each tool's current pricing page for
 
 ## Related Resources
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code Docs Mirror vs Claude Howto](/claude-code-docs-vs-claude-howto-2026/)
 - [Claude Code Official Docs Walkthrough](/claude-code-official-documentation-walkthrough/)
 - [Official vs Community Claude Skills](/anthropic-official-skills-vs-community-skills-comparison/)

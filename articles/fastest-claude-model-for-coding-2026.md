@@ -99,6 +99,8 @@ Meanwhile, hardware improvements and optimization on Anthropic's side continue t
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [Which Claude Model Should I Use?](/which-claude-model-should-i-use-2026/) — Full decision tree
 - [Claude Opus vs Sonnet vs Haiku](/claude-opus-vs-sonnet-vs-haiku-2026/) — Complete comparison
 - [Claude Opus vs Haiku Speed/Cost Tradeoff](/claude-opus-vs-haiku-speed-cost-tradeoff/) — Deep dive on extremes

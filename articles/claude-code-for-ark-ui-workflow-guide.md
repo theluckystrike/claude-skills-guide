@@ -70,6 +70,8 @@ Claude Code should import from `@ark-ui/react`, create `<Combobox.Root>` with `<
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)

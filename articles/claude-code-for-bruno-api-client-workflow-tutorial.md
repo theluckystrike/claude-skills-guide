@@ -216,3 +216,4 @@ Related Reading
 
 **Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).

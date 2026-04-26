@@ -150,6 +150,8 @@ Track these metrics over two weeks:
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Subagent Management](/claude-code-multi-agent-subagent-communication-guide/) -- comprehensive subagent orchestration guide

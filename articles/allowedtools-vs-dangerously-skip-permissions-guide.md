@@ -275,6 +275,8 @@ Yes. Use * as a wildcard: Bash(npm run *) allows any npm script. Bash(git diff *
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Permissions Configurator](/permissions/) -- Generate --allowedTools lists and settings.json

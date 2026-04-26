@@ -234,6 +234,8 @@ The 12-15% budget increase accounts for 4.6's verbosity while maintaining cost c
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- aggressive compacting strategies

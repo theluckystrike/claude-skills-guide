@@ -121,6 +121,8 @@ Remember that security configurations require regular review as your organizatio
 
 ## Related
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
 - [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) — Understanding the --dangerously-skip-permissions CLI flag

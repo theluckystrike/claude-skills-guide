@@ -315,6 +315,8 @@ public class SetupDissolveMaterial : MonoBehaviour
 
 ## Related
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code for Blender Python Scripting](/claude-code-blender-python-scripting-2026/)

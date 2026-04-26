@@ -324,6 +324,8 @@ The Claude iOS and Android apps support basic system keyboard shortcuts when usi
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [claude_desktop_config.json Guide](/claude-desktop-config-json-guide/) — configure Claude Desktop settings

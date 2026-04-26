@@ -170,6 +170,8 @@ For the response envelope pattern and how it integrates with error handling, see
 
 ## Related Articles
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [Claude.md for API Design Standards Guide](/claude-md-for-api-design-standards-guide/)
 - [Claude Md Example For Go Fiber API Project — Developer Guide](/claude-md-example-for-go-fiber-api-project/)
 

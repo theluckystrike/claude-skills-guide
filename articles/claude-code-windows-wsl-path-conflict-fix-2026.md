@@ -124,6 +124,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [PATH Not Updated After Install — Fix](/claude-code-path-not-updated-after-install-fix-2026/)

@@ -316,6 +316,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code ISO 27001 Evidence](/claude-code-iso27001-evidence-collection-workflow/)

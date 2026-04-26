@@ -97,6 +97,10 @@ If you need a coding assistant that works without internet access (air-gapped en
 
 ## Related
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code vs Cursor comparison](/claude-code-vs-cursor-definitive-comparison-2026/) — Definitive Claude Code vs Cursor comparison for 2026

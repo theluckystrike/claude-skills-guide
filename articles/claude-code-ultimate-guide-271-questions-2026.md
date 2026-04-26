@@ -181,6 +181,8 @@ Regex patterns matched against skill file contents. Run the scanner script again
 
 ## Related Resources
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — complement the guide's secure templates
 - [Best Claude Skills for Developers](/best-claude-skills-for-developers-2026/) — vetted skill recommendations
 - [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — security patterns for daily use

@@ -182,3 +182,4 @@ This data is valuable for:
 
 **Quick reference →** Search all commands in our [Command Reference](/commands/).
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).

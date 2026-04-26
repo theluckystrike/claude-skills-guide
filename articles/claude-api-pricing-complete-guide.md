@@ -629,6 +629,8 @@ Each API key shares the organization-level rate limit. Multiple keys do not incr
 
 ## See Also
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Extra Usage Cost Guide](/claude-extra-usage-cost-guide/)

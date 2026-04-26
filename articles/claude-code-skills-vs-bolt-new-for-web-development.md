@@ -103,6 +103,8 @@ For static sites with no dynamic functionality -- a personal blog, documentation
 
 ## See Also
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Fastest Browser for Web Development in 2026](/fastest-browser-web-development/)

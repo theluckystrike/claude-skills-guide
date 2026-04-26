@@ -203,6 +203,8 @@ For CI/CD integration patterns, see the [CI/CD guide](/claude-code-ci-cd-integra
 
 ## Related
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code hooks](/claude-code-hooks-complete-guide/) — hook into API mode tool execution

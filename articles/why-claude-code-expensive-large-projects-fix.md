@@ -300,6 +300,8 @@ Track these metrics weekly to verify that large-project optimizations are workin
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- understanding how context grows

@@ -109,6 +109,8 @@ Set the `HTTPS_PROXY` environment variable: `export HTTPS_PROXY=http://proxy.cor
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Fix Claude API Timeout](/claude-api-timeout-error-handling-retry-guide/)

@@ -347,6 +347,8 @@ The diff output shows exactly how your skill modification changed model behavior
 
 ## Related
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude

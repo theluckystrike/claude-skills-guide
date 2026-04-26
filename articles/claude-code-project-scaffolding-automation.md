@@ -289,6 +289,8 @@ Template-based scaffolding uses a reference project embodying your team's conven
 
 ## See Also
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Project Scaffolding with Claude Code (2026)](/claude-code-project-scaffolding-guide-2026/)

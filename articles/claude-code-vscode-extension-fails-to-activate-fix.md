@@ -109,6 +109,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Next.js Build Fails With Generated Code](/claude-code-nextjs-build-generated-code-fix-2026/)

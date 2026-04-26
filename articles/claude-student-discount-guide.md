@@ -242,6 +242,8 @@ Anthropic's terms require individual accounts. Each student should have their ow
 
 ## Related Guides
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code cost breakdown](/claude-code-cost-complete-guide/) — understand what you would pay

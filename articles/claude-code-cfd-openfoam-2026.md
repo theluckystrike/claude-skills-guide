@@ -398,6 +398,8 @@ checkMesh 2>&1 | tail -20
 
 ## Related
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code for FEA Mesh Generation](/claude-code-fea-mesh-generation-2026/)

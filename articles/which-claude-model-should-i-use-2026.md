@@ -133,6 +133,8 @@ The decision tree works for 90 percent of cases. Override it when:
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [Claude Opus vs Sonnet vs Haiku Cost Breakdown](/claude-haiku-vs-sonnet-vs-opus-cost-breakdown/) — Detailed cost analysis
 - [Claude Code Model Selection: Sonnet, Haiku, Opus](/claude-code-model-selection-cost-sonnet-haiku-opus/) — In-depth comparison
 - [Cheapest Claude Model for Your Task](/cheapest-claude-model-for-your-task/) — Budget-first selection

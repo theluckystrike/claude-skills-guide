@@ -351,3 +351,4 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 **Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).

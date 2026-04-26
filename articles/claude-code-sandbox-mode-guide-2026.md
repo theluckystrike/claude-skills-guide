@@ -251,6 +251,8 @@ No. In CI/CD, you want Claude to actually make changes (fix tests, update files)
 
 ## Related Guides
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 - [Permissions Configurator](/permissions/) — Choose between sandbox and permissions
 - [Permissions Guide](/claude-code-permissions-complete-guide-2026/) — Complete permission system reference
 - [Permission Denied Sandbox Fix](/claude-code-permission-denied-sandbox-mode-fix-2026/) — Troubleshoot sandbox errors

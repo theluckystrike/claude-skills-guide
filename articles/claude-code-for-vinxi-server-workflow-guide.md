@@ -70,6 +70,8 @@ Claude Code should create `app.config.js` with client and server routers, a Reac
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code for TanStack Router Workflow Guide](/claude-code-for-tanstack-router-workflow-guide/)
 - [Claude Code for Hono Framework Workflow Guide](/claude-code-for-hono-framework-workflow-guide/)
 - [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)

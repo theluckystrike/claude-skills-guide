@@ -165,6 +165,8 @@ The recommended approach for cost-conscious developers is the allowlist mode, wh
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- hooks-based permission control for advanced validation

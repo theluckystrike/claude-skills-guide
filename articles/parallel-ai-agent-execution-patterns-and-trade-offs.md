@@ -512,3 +512,4 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 **Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).

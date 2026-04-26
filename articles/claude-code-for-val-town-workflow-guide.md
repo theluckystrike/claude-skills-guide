@@ -69,6 +69,8 @@ Claude Code should produce a single val file that exports a default async functi
 
 ## Related Guides
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

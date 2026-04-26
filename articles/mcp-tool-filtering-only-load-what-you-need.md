@@ -178,6 +178,8 @@ Filtered: 3 servers * ~2,500 tokens/turn * 20 turns = 150,000 tokens
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- complete MCP server configuration guide

@@ -71,6 +71,8 @@ Claude Code should create a `Y.Doc`, connect it with `WebsocketProvider`, config
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Claude Code for AI Agent Tool Calling](/claude-code-for-ai-agent-tool-calling-implementation/)
 - [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

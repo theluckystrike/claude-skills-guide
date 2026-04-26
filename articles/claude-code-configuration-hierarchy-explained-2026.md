@@ -217,6 +217,8 @@ For a file in `src/legacy/`, Claude Code sees all three. If they conflict, the c
 
 ## FAQ
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 ### Can I see what configuration Claude Code is using?

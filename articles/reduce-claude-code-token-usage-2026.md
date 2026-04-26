@@ -207,6 +207,8 @@ Conversation history re-transmission. Every message you have sent and received i
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Token Estimator](/token-estimator/) — Measure token counts for any text
 - [Claude Code Token Usage Explained](/claude-code-token-usage-explained-2026/) — How tokens work
 - [Cost Optimization: 15 Techniques](/claude-code-cost-optimization-15-techniques/) — Complete cost guide

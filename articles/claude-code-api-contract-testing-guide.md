@@ -511,3 +511,4 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 **Get started →** Generate your project setup with our [Project Starter](/starter/).
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).

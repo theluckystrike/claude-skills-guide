@@ -123,6 +123,8 @@ For developers working at the bleeding edge of frameworks and libraries, Phind's
 
 ## Related Comparisons
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [Claude Code vs ChatGPT for Coding](/when-to-use-claude-code-vs-chatgpt-for-coding-tasks/)
 - [Claude Code vs Sourcegraph Cody](/claude-code-vs-cody-comparison-2026/)
 - [Claude Code vs Continue.dev: Feature Comparison](/claude-code-vs-continue-dev-features-2026/)

@@ -271,6 +271,8 @@ A comptime string table is a Zig pattern useful for parsers and interpreters tha
 
 ## See Also
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code for Gleam Language — Workflow Guide](/claude-code-for-gleam-language-workflow-guide/)

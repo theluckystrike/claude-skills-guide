@@ -140,6 +140,8 @@ Skills outperform CLAUDE.md rules for task-specific optimization because they lo
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Skills Guide](/skills/) -- complete skills authoring and management guide

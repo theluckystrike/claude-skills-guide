@@ -118,6 +118,8 @@ For any project that will live beyond a week and require ongoing modification, C
 
 ## Related Comparisons
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 - [Claude Code vs OpenHands: Open-Source Agent](/claude-code-vs-openhands-open-source-agent-2026/)
 - [Claude Code vs Devin: AI Agent Comparison](/claude-code-vs-devin-ai-agent-comparison-2026/)
 - [Agentic AI Coding Tools Compared](/agentic-ai-coding-tools-comparison-2026/)

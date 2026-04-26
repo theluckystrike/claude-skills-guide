@@ -263,6 +263,8 @@ For the full list of ecosystem tools, see the [tools map](/claude-code-ecosystem
 
 ## Related
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code router guide](/claude-code-router-guide/) — How Claude Code's model router selects between Haiku, Sonnet, and Opus

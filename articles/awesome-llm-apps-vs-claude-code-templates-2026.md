@@ -110,6 +110,8 @@ These repos answer different questions. "How should I configure Claude Code?" le
 
 ## See Also
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
 - [SuperClaude vs Claude Code Templates (2026)](/superclaude-vs-claude-code-templates-2026/)

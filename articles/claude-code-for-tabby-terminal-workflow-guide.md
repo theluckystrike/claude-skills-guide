@@ -70,6 +70,8 @@ Claude Code should modify `~/.config/tabby/config.yaml` to add a shell profile n
 
 ## Related Guides
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
 - [Claude Code for Alacritty Workflow Guide](/claude-code-for-alacritty-workflow-guide/)
 - [Claude Code for Warp AI Terminal Workflow Guide](/claude-code-for-warp-ai-terminal-workflow-guide/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)

@@ -113,6 +113,8 @@ Claude Code generates code based on the types and patterns it sees in your codeb
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Request Body Validation Failed — Fix](/claude-code-request-body-validation-failed-fix-2026/)

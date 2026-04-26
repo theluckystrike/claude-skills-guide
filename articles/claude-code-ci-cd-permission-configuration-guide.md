@@ -272,6 +272,8 @@ Add the install command to your allowedTools list: --allowedTools "Read,Glob,Gre
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Permissions Configurator](/permissions/) -- Generate CI-specific permission configs

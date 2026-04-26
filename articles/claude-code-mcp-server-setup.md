@@ -186,6 +186,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Issues
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Fix: Anthropic SDK MCP Empty Arguments Bug](/anthropic-sdk-mcp-empty-arguments-bug/) — Debugging tool discovery
 - [Fix: Claude Code MCP Server Disconnected](/claude-code-mcp-server-disconnected/) — Endless permission prompts
 - [AWS MCP Server Cloud Automation with Claude Code](/aws-mcp-server-cloud-automation-with-claude-code/) — Browse all MCP guides

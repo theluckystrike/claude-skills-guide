@@ -395,6 +395,8 @@ Before deploying an MCP server for team use:
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- server installation and configuration

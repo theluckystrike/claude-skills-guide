@@ -324,6 +324,8 @@ Perl codebases are increasingly difficult to maintain and hire for. Automated mi
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Using Claude Code to Learn New Programming Languages](/using-claude-code-to-learn-new-programming-languages/)

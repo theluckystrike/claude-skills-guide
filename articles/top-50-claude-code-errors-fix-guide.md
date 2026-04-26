@@ -178,6 +178,8 @@ Yes. Set the <code>HTTPS_PROXY</code> environment variable and, if your proxy us
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Why Claude Code Keeps Crashing: Root Causes](/why-claude-code-keeps-crashing-root-causes/)
 - [Claude Code Error Messages Dictionary](/claude-code-error-messages-dictionary/)
 - [Error Handling Guide](/error-handling/)

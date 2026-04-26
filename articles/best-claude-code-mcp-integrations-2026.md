@@ -270,6 +270,8 @@ For setup instructions, see the [MCP setup guide](/mcp-servers-claude-code-compl
 
 ## Related
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [claude mcp list command guide](/claude-mcp-list-command-guide/) — How to use the claude mcp list command to manage MCP servers

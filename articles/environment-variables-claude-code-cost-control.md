@@ -252,6 +252,8 @@ When all four layers are active, the combined effect is multiplicative: environm
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code .claude/settings.json: Cost-Saving Configuration](/claude-code-settings-json-cost-saving-configuration/) -- project-level permissions

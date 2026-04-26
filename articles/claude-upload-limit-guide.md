@@ -359,6 +359,8 @@ Yes, you can mix file types in a single message, up to 5 files total. For exampl
 
 ## Related Guides
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [The Claude Code Playbook](/playbook/) — comprehensive workflow reference

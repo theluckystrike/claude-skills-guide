@@ -429,6 +429,8 @@ Claude Code. When a command fails or tests break, Claude Code can read the error
 
 ## See Also
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code vs Cursor Definitive Comparison](/claude-code-vs-cursor-definitive-comparison-2026/)

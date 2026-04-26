@@ -70,6 +70,8 @@ Claude Code should create `server/api/todos/index.get.ts` for listing, `server/a
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code for Hono Framework Workflow Guide](/claude-code-for-hono-framework-workflow-guide/)

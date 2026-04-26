@@ -148,6 +148,8 @@ Pricing varies by tier and team size. Check each tool's current pricing page for
 
 ## Related Resources
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code Auto Mode Setup Guide](/claude-code-auto-mode-setup-guide/)
 - [Claude Code AWS Bedrock Setup Guide](/claude-code-aws-bedrock-setup/)
 - [Claude Code AWS MCP Server Setup Guide](/claude-code-aws-mcp-server/)

@@ -392,6 +392,8 @@ This log provides when, who, and which project without capturing session content
 
 ## Related Guides
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Environment Variables for Claude Code Cost Control](/environment-variables-claude-code-cost-control/) -- detailed variable reference

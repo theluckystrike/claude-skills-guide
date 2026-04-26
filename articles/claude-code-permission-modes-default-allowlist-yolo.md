@@ -247,6 +247,8 @@ Claude Code acknowledges the denial and attempts an alternative approach. For ex
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Permissions Configurator](/permissions/) -- Generate your ideal settings.json
 - [Configuration Guide](/configuration/) -- Full settings.json reference
 - [Commands Reference](/commands/) -- CLI flags for permission modes

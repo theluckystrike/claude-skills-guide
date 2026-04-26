@@ -182,6 +182,8 @@ ccusage --days 90 --format json > quarterly-usage.json
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- full Max subscription features and setup

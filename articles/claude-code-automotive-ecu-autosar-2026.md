@@ -212,6 +212,8 @@ print('ARXML validation: PASS')
 
 ## Related
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code for STM32 Firmware Development](/claude-code-stm32-firmware-development-2026/)

@@ -149,6 +149,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude API Error 529 overloaded_error Fix](/claude-api-error-529-overloadederror-explained/) -- handle API overload errors that look similar to rate limits.

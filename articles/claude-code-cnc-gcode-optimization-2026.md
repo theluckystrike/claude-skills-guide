@@ -279,6 +279,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Skills Performance Optimization](/claude-skills-performance-optimization/)

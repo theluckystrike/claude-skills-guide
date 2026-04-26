@@ -159,6 +159,8 @@ Explore the related resources below for deeper coverage. The Claude Code documen
 
 ## Related Resources
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Claude Code AWS MCP Server Setup Guide](/claude-code-aws-mcp-server/)
 - [Claude Code FastAPI MCP Server Guide](/claude-code-fastapi-mcp/)
 - [Claude Code Flutter MCP Server Guide](/claude-code-flutter-mcp/)

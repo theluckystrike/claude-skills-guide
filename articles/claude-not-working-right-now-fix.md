@@ -488,6 +488,8 @@ Only if you are in a region where Anthropic restricts access. VPNs can sometimes
 
 ## See Also
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Rate Exceeded Error Fix](/claude-rate-exceeded-error-fix/)

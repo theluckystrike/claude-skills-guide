@@ -234,6 +234,8 @@ echo "Environment check complete."
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Conversation History OOM Crash — Fix (2026)](/claude-code-conversation-history-oom-fix-2026/)

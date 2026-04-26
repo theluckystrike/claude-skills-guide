@@ -9,6 +9,8 @@ last_tested: "2026-04-21"
 
 # Claude Code Workflows & Integrations
 
+> **Interactive Tool:** Look up any Claude Code command instantly with our [Command Reference](/commands/) -- searchable database of 80+ slash commands, CLI flags, and keyboard shortcuts.
+
 Tested integration guides and workflow patterns for Claude Code. Every guide includes working commands, verified April 2026.
 
 ## IDE Integrations
@@ -104,3 +106,4 @@ Tested integration guides and workflow patterns for Claude Code. Every guide inc
 
 **Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).

@@ -94,6 +94,10 @@ If you only need autocomplete and nothing else, GitHub Copilot at $10/month or C
 
 ## See Also
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code vs Cline: Setup and Configuration](/claude-code-vs-cline-setup-comparison/)

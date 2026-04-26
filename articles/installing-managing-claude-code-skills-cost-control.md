@@ -290,6 +290,8 @@ wc -w CLAUDE.md
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [How to Write Token-Efficient Claude Code Skills](/write-token-efficient-claude-code-skills/) -- authoring best practices

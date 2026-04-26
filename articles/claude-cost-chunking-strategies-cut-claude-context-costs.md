@@ -309,6 +309,8 @@ Compare average context size per request before and after implementing chunking.
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — context size as the main cost driver

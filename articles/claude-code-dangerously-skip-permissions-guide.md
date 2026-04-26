@@ -987,6 +987,8 @@ The right choice is almost always the most restrictive option that still lets yo
 
 ## Related
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [--dangerously-skip-permissions flag reference](/claude-dangerously-skip-permissions-flag/) — Detailed flag reference and behavior

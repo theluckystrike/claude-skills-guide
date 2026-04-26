@@ -77,6 +77,8 @@ Claude Code should run `fd -e test.ts -e spec.ts --changed-within 24h -x wc -l |
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code for Ripgrep Workflow Guide](/claude-code-for-ripgrep-workflow-guide/)

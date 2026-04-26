@@ -71,6 +71,8 @@ Claude Code should create `turbo.json` with `build` depending on `^build` (works
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
 - [What Is the Best Way to Organize Claude Skills in a Monorepo](/what-is-the-best-way-to-organize-claude-skills-in-a-monorepo/)

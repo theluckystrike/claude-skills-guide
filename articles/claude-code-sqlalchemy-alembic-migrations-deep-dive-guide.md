@@ -193,6 +193,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Jest Mock Modules and Spies Deep Dive Guide](/claude-code-jest-mock-modules-and-spies-deep-dive-guide/)

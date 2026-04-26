@@ -340,6 +340,8 @@ Use Haiku for simple tasks, Sonnet for moderate tasks, and avoid Opus unless the
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [ccusage cost tracking setup](/ccusage-claude-code-cost-tracking-guide-2026/) — install and use ccusage

@@ -279,6 +279,8 @@ File an issue on the Claude Code GitHub repository with the full error message, 
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [Top 50 Claude Code Errors](/top-50-claude-code-errors-2026/) — Quick-fix list with one-line solutions
 - [Claude Code Error Logs Location Guide](/claude-code-error-logs-location-guide/) — Find and parse log files
 - [Why Claude Code Keeps Crashing](/why-claude-code-keeps-crashing-2026/) — Systematic crash debugging

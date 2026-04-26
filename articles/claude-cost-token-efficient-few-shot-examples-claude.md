@@ -219,6 +219,8 @@ Compare total example tokens before and after compression. Multiply savings by r
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — optimize tokens across your entire prompt

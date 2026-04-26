@@ -237,6 +237,8 @@ Yes. You can use Sonnet 4.5 with the Message Batches API for 50% cost savings on
 
 ## Related Guides
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — the current recommended Sonnet model

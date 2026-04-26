@@ -93,6 +93,8 @@ Claude Code for development teams, with its predictable pricing and direct codeb
 
 ## FAQ
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 ### Can Manus deploy code directly to my production environment?

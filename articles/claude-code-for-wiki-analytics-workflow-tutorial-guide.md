@@ -267,3 +267,4 @@ Related Reading
 
 **Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).

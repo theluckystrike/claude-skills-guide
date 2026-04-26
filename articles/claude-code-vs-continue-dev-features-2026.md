@@ -107,6 +107,8 @@ These are different capabilities. Continue.dev's autocomplete predicts your next
 
 ## Related Comparisons
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code vs Codeium: Full Comparison 2026](/claude-code-vs-codeium-full-comparison-2026/)
 - [Claude Code vs Aider: CLI Coding Compared 2026](/claude-code-vs-aider-for-test-driven-development/)
 - [Claude Code vs Cline: Agent Mode Compared 2026](/claude-code-vs-cline-agent-mode-2026/)

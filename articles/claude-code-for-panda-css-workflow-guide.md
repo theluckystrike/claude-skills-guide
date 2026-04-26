@@ -70,6 +70,8 @@ Claude Code should define a `buttonRecipe` using `cva()` from `styled-system/css
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/)
 - [Claude Code CSS Animations Workflow Guide](/claude-code-css-animations-workflow-guide/)
 - [Claude Code Figma to Code Component Workflow](/claude-code-figma-to-code-component-workflow/)

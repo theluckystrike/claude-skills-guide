@@ -276,6 +276,8 @@ Keep each skill within these budgets. A skill that exceeds its budget should be 
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Skills Guide](/skills/) -- complete skills reference and API

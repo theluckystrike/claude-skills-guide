@@ -719,6 +719,8 @@ Spec files are read as input tokens when Claude processes them. A typical spec i
 
 ## See Also
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [CLAUDE.md Best Practices Definitive Guide](/claude-md-best-practices-definitive-guide/)

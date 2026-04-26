@@ -494,6 +494,8 @@ This section lists every article in the guides cluster alphabetically for quick 
 
 ## Related Hubs
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Getting Started Hub](/getting-started-hub/). Installation, first skill, and interface fundamentals
 - [Tutorials Hub](/tutorials-hub/). Step-by-step tutorials for specific stacks and workflows
 - [Workflows Hub](/workflows/). Repeatable workflow automation patterns

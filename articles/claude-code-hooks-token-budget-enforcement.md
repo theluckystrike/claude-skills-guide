@@ -222,6 +222,8 @@ if __name__ == "__main__":
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- complete hooks reference and configuration

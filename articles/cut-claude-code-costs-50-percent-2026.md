@@ -244,6 +244,8 @@ Yes. The open-source ccusage tool tracks Claude Code spending per project and pe
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code Cost Complete Guide](/claude-code-cost-complete-guide/) — Comprehensive cost breakdown
 - [15 Cost Optimization Techniques](/claude-code-cost-optimization-15-techniques/) — Extended optimization strategies
 - [ccusage Cost Tracking Guide](/ccusage-claude-code-cost-tracking-guide-2026/) — Set up per-project tracking

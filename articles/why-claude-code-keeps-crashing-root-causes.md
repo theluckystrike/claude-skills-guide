@@ -209,6 +209,8 @@ Run <code>claude --resume</code> to attempt session recovery. If the session dat
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Top 50 Claude Code Errors Fix Guide](/top-50-claude-code-errors-fix-guide/)
 - [Claude Code Error Logs Location Guide](/claude-code-error-logs-location-guide/)
 - [Troubleshooting Guide](/troubleshooting/)

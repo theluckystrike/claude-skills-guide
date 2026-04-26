@@ -294,6 +294,8 @@ Run this script after adding or modifying skills to verify the library remains e
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Skills Guide](/skills/) -- foundational skills documentation

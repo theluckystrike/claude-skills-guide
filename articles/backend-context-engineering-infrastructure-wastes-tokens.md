@@ -158,6 +158,8 @@ Backend context engineering represents the "supply side" of the context optimiza
 
 ## Further Reading
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Context Engineering for Claude Code: Complete Guide](/context-engineering-claude-code-complete-guide-2026/) -- the full context engineering framework
 - [The Metadata-First Pattern](/metadata-first-pattern-npx-metadata-json/) -- structured metadata as an alternative to discovery queries
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- configuring MCP servers with minimal token overhead

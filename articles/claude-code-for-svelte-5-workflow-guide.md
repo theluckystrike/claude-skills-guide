@@ -76,6 +76,8 @@ Claude Code should use `let todos = $state<Todo[]>([])` for the list, `let compl
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)

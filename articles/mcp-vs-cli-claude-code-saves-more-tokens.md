@@ -282,6 +282,8 @@ Custom single-purpose MCP servers provide the best token-to-value ratio because 
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- complete MCP configuration reference

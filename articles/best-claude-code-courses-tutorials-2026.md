@@ -231,6 +231,8 @@ The right learning path saves 20-40 hours of trial-and-error. Developers who inv
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Setup on Mac Step by Step](/claude-code-setup-on-mac-step-by-step/)

@@ -268,6 +268,8 @@ The combination of CLAUDE.md retry limits, structured error wrappers, and automa
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [The Retry Loop Tax: How Error Handling Architecture Affects Token Cost](/retry-loop-tax-error-handling-token-cost/) -- architectural perspective on retry loops

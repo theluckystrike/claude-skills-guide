@@ -198,3 +198,5 @@ Competitive analysis automation chains Tavily searches with the /pdf skill to ex
 ### What is Technical Documentation Gathering?
 
 Technical documentation gathering uses Tavily combined with Claude Code's document processing to retrieve external API references, authentication patterns, error handling best practices, and community tutorials for your current project. Ask Claude to find the latest documentation on a specific technology and focus on particular aspects. This pairs well with the /tdd skill for research-backed test creation, gathering specification requirements from official docs before writing test suites.
+
+**Quick setup →** Launch your project with our [Project Starter](/starter/).

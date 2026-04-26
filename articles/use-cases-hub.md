@@ -16,6 +16,8 @@ geo_optimized: true
 
 # Claude Code Use Cases: Real-World Applications & Examples
 
+> **Interactive Tools:** Find the right skill for your use case with our [Skill Finder](/skill-finder/), or generate a project-specific CLAUDE.md with the [CLAUDE.md Generator](/generator/).
+
 Claude Code is not a generic AI chat tool, it is a programmable coding assistant that adapts to specific roles, technology stacks, and workflow types through its skill system. This hub maps the full library of use-case guides to what you actually do: your job, your language, and your tasks. Use it to find the right guides without wading through content that does not apply to your work.
 
 ## Table of Contents

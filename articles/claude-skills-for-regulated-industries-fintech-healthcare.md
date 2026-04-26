@@ -722,3 +722,4 @@ Related Reading
 
 **Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).

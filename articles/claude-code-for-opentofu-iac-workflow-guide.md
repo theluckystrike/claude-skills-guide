@@ -71,6 +71,8 @@ Claude Code should create modular `.tf` files using `tofu`-compatible syntax, de
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)

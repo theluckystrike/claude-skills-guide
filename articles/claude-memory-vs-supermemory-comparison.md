@@ -76,6 +76,8 @@ For organizations wanting shared knowledge bases across teams, Supermemory's dep
 
 ## FAQ
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 ### Can Claude Code access Supermemory?

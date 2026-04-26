@@ -663,6 +663,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Topics
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 - Test-Driven Development with Claude Code
 - Python Testing Best Practices
 - [Claude Skills for Developers](/best-claude-skills-for-developers-2026/)

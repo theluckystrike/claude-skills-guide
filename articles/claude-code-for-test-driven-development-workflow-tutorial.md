@@ -254,6 +254,8 @@ Related Reading
 
 ## See Also
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Career Change to Software Development with AI](/claude-code-for-career-changers-into-software-development/)

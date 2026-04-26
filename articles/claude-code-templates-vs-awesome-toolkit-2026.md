@@ -103,6 +103,8 @@ Pricing varies by tier and team size. Check each tool's current pricing page for
 
 ## Related Resources
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 - [Awesome Claude Code](/awesome-claude-code-master-index-guide-2026/)
 - [Awesome Claude Code Toolkit: 135 Agents](/awesome-claude-code-toolkit-135-agents-2026/)
 - [Awesome Claude Code vs Awesome Toolkit](/awesome-claude-code-vs-awesome-toolkit-2026/)

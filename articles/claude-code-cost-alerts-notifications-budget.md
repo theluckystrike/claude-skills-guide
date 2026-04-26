@@ -171,6 +171,8 @@ The recommended approach is all three layers: Console for monthly protection, CL
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code Dashboard: Built-In Usage Monitoring](/claude-code-dashboard-built-in-usage-monitoring/) -- understanding the /cost command output

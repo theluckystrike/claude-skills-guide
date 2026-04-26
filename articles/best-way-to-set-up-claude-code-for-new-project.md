@@ -345,3 +345,4 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 **Get started →** Generate your project setup with our [Project Starter](/starter/).
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).

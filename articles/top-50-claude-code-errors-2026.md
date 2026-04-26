@@ -239,6 +239,8 @@ Yes. The [Error Diagnostic Tool](/diagnose/) accepts any error message and retur
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code Error Messages Dictionary](/claude-code-error-messages-dictionary/) — Alphabetical reference for every error
 - [Claude Code Error Logs Location Guide](/claude-code-error-logs-location-guide/) — Where to find and read log files
 - [Claude Code Debugging Workflow Guide](/claude-code-debugging-workflow-guide-2026/) — Systematic debugging methodology

@@ -196,6 +196,8 @@ Yes, CLAUDE.md content is loaded into the context window. A 150-line CLAUDE.md u
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [CLAUDE.md Generator](/generator/) -- Build a complete CLAUDE.md for your project in 60 seconds
 - [Claude Code Best Practices](/best-practices/) -- Production-tested patterns for Claude Code workflows
 - [Claude Code Configuration Guide](/configuration/) -- All configuration options for Claude Code

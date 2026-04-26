@@ -158,3 +158,4 @@ For the complete workflow approach, see the [Claude Code playbook](/playbook/) a
 
 **Get started →** Generate your project setup with our [Project Starter](/starter/).
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).

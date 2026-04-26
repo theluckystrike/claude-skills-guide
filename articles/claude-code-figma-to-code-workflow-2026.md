@@ -256,6 +256,8 @@ Manual design-to-code translation introduces visual inconsistencies and takes ho
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Generating CSS Variables from Design System](/claude-code-generating-css-variables-from-design-system/)

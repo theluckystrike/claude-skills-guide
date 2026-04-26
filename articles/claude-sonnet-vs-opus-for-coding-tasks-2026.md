@@ -100,6 +100,8 @@ If your coding tasks are pure boilerplate generation (scaffolding projects, gene
 
 ## See Also
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Sonnet 4.6 vs Gemini 2.5 Pro for Coding](/claude-sonnet-vs-gemini-25-pro-coding/)

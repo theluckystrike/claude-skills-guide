@@ -162,6 +162,8 @@ Explore the related resources below for deeper coverage. The Claude Code documen
 
 ## Related Resources
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Claude Code AWS MCP Setup Guide](/claude-code-aws-mcp/)
 - [Claude Code AWS Bedrock Setup Guide](/claude-code-aws-bedrock-setup/)
 - [Claude Code Azure MCP Server Guide](/claude-code-azure-mcp/)

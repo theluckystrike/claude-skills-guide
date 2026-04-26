@@ -360,6 +360,8 @@ The status line shows session-level token usage. The [5-hour usage limit](/claud
 
 ## See Also
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [How to Use Claude Code: Beginner Guide](/how-to-use-claude-code-beginner-guide/)

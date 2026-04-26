@@ -372,6 +372,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Secret Scanning](/claude-code-secret-scanning-prevent-credential-leaks-guide/)

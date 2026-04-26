@@ -116,6 +116,8 @@ Bolt.new for speed. If you need a clickable demo in 30 minutes for a client meet
 
 ## Related Comparisons
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code vs Replit Agent: Which Is Better 2026](/claude-code-vs-replit-agent-which-is-better-2026/)
 - [Claude Code vs Cursor 2026: Detailed Comparison](/claude-code-vs-cursor-2026-detailed-comparison/)
 - [Claude Code vs Devin: AI Agent Comparison 2026](/claude-code-vs-devin-ai-agent-comparison-2026/)

@@ -268,6 +268,8 @@ cd ~/rexx-migration/output && python3 -m pytest tests/ -v
 
 ## Related
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code for COBOL to Java Migration](/claude-code-cobol-to-java-migration-2026/)

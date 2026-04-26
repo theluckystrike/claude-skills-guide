@@ -280,6 +280,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
 - [InsForge Setup Guide for Claude Code: Skills + CLI + MCP](/insforge-setup-guide-claude-code-skills-cli-mcp/)

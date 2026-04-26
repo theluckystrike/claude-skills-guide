@@ -160,3 +160,4 @@ For more optimization strategies, see [Claude Code best practices](/karpathy-ski
 
 **Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).

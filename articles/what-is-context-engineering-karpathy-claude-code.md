@@ -133,6 +133,8 @@ The CCG framework applies context engineering across three timescales: per-turn 
 
 ## Further Reading
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [Context Engineering for Claude Code: Complete Guide](/context-engineering-claude-code-complete-guide-2026/) -- full implementation playbook
 - [CLAUDE.md as Cost Control](/claude-md-cost-control-rules-prevent-token-waste/) -- CLAUDE.md patterns specifically for cost reduction
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- technical mechanics of the context window

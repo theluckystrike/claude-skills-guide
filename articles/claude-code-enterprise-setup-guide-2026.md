@@ -223,6 +223,8 @@ For each new team member:
 
 ## FAQ
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 ### Can we use Claude Code with our private model deployment?

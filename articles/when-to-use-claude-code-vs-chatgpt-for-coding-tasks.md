@@ -115,6 +115,8 @@ For isolated code snippets (single functions, algorithms), both produce comparab
 
 ## Related Comparisons
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Claude Code vs Cursor 2026: Detailed Comparison](/claude-code-vs-cursor-2026-detailed-comparison/)
 - [GitHub Copilot vs Claude Code: Deep Comparison 2026](/github-copilot-vs-claude-code-deep-comparison-2026/)
 - [Claude Code vs Devin: AI Agent Comparison 2026](/claude-code-vs-devin-ai-agent-comparison-2026/)

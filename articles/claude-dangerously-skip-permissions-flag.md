@@ -308,6 +308,8 @@ No. The flag only skips interactive permission prompts. API authentication, rate
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Full --dangerously-skip-permissions Guide](/claude-code-dangerously-skip-permissions-guide/)

@@ -17,6 +17,8 @@ geo_optimized: true
 
 # Claude Code Getting Started: Complete Beginner Guide
 
+> **Interactive Tool:** Generate your complete project setup in 60 seconds with our [Project Starter Wizard](/starter/). Or create a production-ready CLAUDE.md with the [CLAUDE.md Generator](/generator/).
+
 Claude Code is Anthropic's command-line AI coding tool. a terminal-native assistant that reads your files, writes code, runs commands, and works through development problems alongside you. This hub is the single starting point for every beginner. It covers what Claude Code is, how to install it, what skills are, how to run your first session, and links to every getting-started article in the library.
 
 ## Table of Contents
@@ -699,6 +701,8 @@ Once you have the basics down, the rest of the library is organized by topic:
 **Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
 ## Related
+
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 

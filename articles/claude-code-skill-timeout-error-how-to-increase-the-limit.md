@@ -304,3 +304,5 @@ A timeout immediately on invocation means the problem is in the MCP server or ex
 ### What is Timeout mid-generation?
 
 A timeout mid-generation occurs when you see partial output followed by a cutoff. The model started generating but ran out of time before finishing the response. This is a pure output-length problem caused by requesting too much content in a single API call. The fix is always scoping the request down by breaking the task into smaller pieces, working module-by-module, or using /supermemory to cache results rather than regenerating them.
+
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).

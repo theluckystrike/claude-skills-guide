@@ -69,6 +69,8 @@ Claude Code should output the original query with `EXPLAIN ANALYZE` prepended, a
 
 ## Related Guides
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Database Schema Design Guide](/claude-code-database-schema-design-guide/)

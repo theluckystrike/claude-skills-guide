@@ -69,7 +69,7 @@ uv (use `uv add` for dependencies, `uv run` for commands)
 - Base template: templates/base.html
 - App templates: templates/<app_name>/*.html
 - Template tags/filters in apps/*/templatetags/
-- Use {% block %} inheritance, not {% include %} for layouts
+- Use {% raw %}{% block %}{% endraw %} inheritance, not {% raw %}{% include %}{% endraw %} for layouts
 
 ## File Structure
 - apps/<app_name>/ -- Django apps (models, views, urls, tests)

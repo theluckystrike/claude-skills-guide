@@ -355,6 +355,8 @@ Claude Code的安装过程相对简单：确保Node.js 18+环境就绪，通过n
 
 ## Related
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code使用教程 (Chinese Tutorial)](/claude-code-shiyong-jiaocheng-tutorial/) — Claude Code complete tutorial in Chinese (中文使用教程)

@@ -218,3 +218,4 @@ Whether you are building custom skills or looking for pre-built ones, this refer
 
 **Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).

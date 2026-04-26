@@ -67,6 +67,8 @@ Claude Code should update the `Presence` type in `liveblocks.config.ts` to inclu
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Claude Code for Yjs CRDT Workflow Guide](/claude-code-for-yjs-crdt-workflow-guide/)
 - [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)
 - [Claude Code for AI Agent Tool Calling](/claude-code-for-ai-agent-tool-calling-implementation/)

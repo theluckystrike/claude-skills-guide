@@ -111,5 +111,7 @@ Beginners: clone Claude Howto and work through it this week. You will be product
 
 ## See Also
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 - [Claude Code Ultimate Guide: 271 Questions (2026)](/claude-code-ultimate-guide-271-questions-2026/)
 - [Take the Claude Code 271-Question Quiz (2026)](/how-to-take-claude-code-ultimate-guide-quiz-2026/)

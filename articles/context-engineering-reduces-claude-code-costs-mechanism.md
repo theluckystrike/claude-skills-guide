@@ -263,6 +263,8 @@ These mistakes are identifiable through `ccusage` analysis: look for sessions wh
 
 ## Further Reading
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- practical context management techniques
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- deep dive on the compress lever
 - [Claude Code Subagent Management](/claude-code-multi-agent-subagent-communication-guide/) -- the isolate lever in practice

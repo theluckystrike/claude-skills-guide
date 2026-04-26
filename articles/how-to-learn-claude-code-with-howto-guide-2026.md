@@ -132,3 +132,4 @@ Three features set Claude Howto apart from generic tutorials:
 
 **Get started →** Generate your project setup with our [Project Starter](/starter/).
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).

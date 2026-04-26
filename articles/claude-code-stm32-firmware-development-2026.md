@@ -201,6 +201,8 @@ arm-none-eabi-gdb firmware.elf \
 
 ## Related
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code for Embedded Systems](/claude-skills-for-embedded-systems-iot-firmware/)

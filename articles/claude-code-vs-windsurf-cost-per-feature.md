@@ -169,6 +169,8 @@ Claude Code API estimate:
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code vs Cursor Comparison](/claude-code-vs-cursor-comparison-2026/) -- comparing Claude Code with Cursor

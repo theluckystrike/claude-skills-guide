@@ -327,6 +327,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Stop Claude Code Over-Relying on Comments (2026)](/claude-code-over-relies-on-comments-fix-2026/)

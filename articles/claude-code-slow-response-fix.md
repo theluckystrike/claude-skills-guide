@@ -158,6 +158,8 @@ $99 once. Pays for itself in saved tokens within a week.
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Fix: Claude API Error 429 Rate Limit](/anthropic-api-error-429-rate-limit/)

@@ -460,6 +460,8 @@ The beta ecosystem continues expanding with skills like pdf for document process
 
 ## Related
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code hooks](/claude-code-hooks-complete-guide/) — hooks system for tool automation

@@ -98,6 +98,8 @@ Kilo Code's open-source nature is both an advantage (auditable code, no vendor l
 
 ## FAQ
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 ### Can Kilo Code use Claude Opus 4.6 as its model?

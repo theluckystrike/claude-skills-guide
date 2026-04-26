@@ -293,6 +293,8 @@ python3 mumps_migration/parse_mumps.py routines/DGPT.m
 
 ## Related
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code for COBOL to Java](/claude-code-cobol-to-java-migration-2026/)

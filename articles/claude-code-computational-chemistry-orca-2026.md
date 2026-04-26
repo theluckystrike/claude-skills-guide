@@ -253,6 +253,8 @@ print(f'N iterations: {len(data.scfenergies)}')
 
 ## Related
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code for Molecular Dynamics](/claude-code-molecular-dynamics-gromacs-2026/)

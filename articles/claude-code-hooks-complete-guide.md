@@ -757,6 +757,8 @@ Check the [best Claude Code hooks collection](/best-claude-code-hooks-code-quali
 
 ## See Also
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Spec Workflow Guide](/claude-code-spec-workflow-guide/)

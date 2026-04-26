@@ -202,3 +202,4 @@ Team agents should be versioned and reviewed like any other code. Changes to the
 
 **Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).

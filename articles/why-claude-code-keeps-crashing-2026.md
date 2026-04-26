@@ -247,6 +247,8 @@ Yes. Wrap Claude Code in a process manager like pm2 or a simple bash loop. Howev
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Top 50 Claude Code Errors](/top-50-claude-code-errors-2026/) — Quick reference for every common error
 - [Claude Code Crashes on Large Files](/claude-code-crashes-on-large-files-how-to-fix/) — File-size-specific crash fixes
 - [Claude Code Debugging Workflow](/claude-code-debugging-workflow-guide-2026/) — Systematic debugging methodology

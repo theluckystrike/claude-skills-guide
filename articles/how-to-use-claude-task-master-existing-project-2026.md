@@ -180,3 +180,4 @@ Adding Task Master to a project that is already underway requires some adjustmen
 
 **Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).

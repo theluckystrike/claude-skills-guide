@@ -246,6 +246,8 @@ Tab completion reduces typos and eliminates the need to check `--help` output. D
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code for Nushell Workflow Guide](/claude-code-for-nushell-workflow-guide/)

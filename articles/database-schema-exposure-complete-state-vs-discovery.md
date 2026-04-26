@@ -329,6 +329,8 @@ The measurement is straightforward because database discovery tokens are concent
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Prisma with Claude Code: Reducing Schema Discovery Tokens](/prisma-claude-code-reducing-schema-discovery-tokens/) -- Prisma-specific optimization

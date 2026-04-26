@@ -177,6 +177,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-
-
-
+**Quick setup →** Launch your project with our [Project Starter](/starter/).

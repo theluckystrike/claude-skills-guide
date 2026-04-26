@@ -184,6 +184,8 @@ Explore the related resources below for deeper coverage. The Claude Code documen
 
 ## Related Resources
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 - [Claude Code + Linear MCP Integration](/claude-code-linear-mcp-integration-2026/)
 - [MCP Integration Guide for Claude Code](/mcp-integration-guide-for-claude-code-beginners/)
 - [Best Claude Code MCP Integrations](/best-claude-code-mcp-integrations-2026/)

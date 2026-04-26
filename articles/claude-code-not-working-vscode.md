@@ -174,6 +174,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Issues
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 - [Install Claude Code — All Platforms Guide](/claude-code-install-guide) — Fresh installation instructions
 - [Fix Claude Code Login — Cannot Paste Auth Code](/claude-code-login-paste-fix) — Authentication issues
 - [Claude Code Docker Desktop Workflow Tips](/claude-code-docker-desktop-workflow-tips/) — Browse all IDE guides

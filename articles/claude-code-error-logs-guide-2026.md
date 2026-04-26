@@ -251,6 +251,8 @@ Yes. Attach verbose logs to GitHub issues. Remove your API key from the logs fir
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code Error Messages Dictionary](/claude-code-error-messages-dictionary-2026/) — Alphabetical error reference
 - [Debugging Like a Senior Engineer](/debugging-claude-code-senior-engineer-2026/) — Advanced debugging methodology
 - [Top 50 Claude Code Errors](/top-50-claude-code-errors-2026/) — Most common errors with one-line fixes

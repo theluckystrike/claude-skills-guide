@@ -87,6 +87,8 @@ For individual developers doing moderate coding work, Gemini's free tier makes i
 
 ## FAQ
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 ### Does the 1M context window actually help for coding?

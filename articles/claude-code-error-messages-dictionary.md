@@ -133,6 +133,8 @@ Most warnings are informational and safe to ignore short-term. However, the "ses
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Top 50 Claude Code Errors Fix Guide](/top-50-claude-code-errors-fix-guide/)
 - [Error Handling Guide](/error-handling/)
 - [Commands Reference](/commands/)

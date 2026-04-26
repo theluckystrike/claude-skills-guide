@@ -232,6 +232,8 @@ Automated PR reviews catch security vulnerabilities and code quality issues befo
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Best Claude Skills for Code Review Automation](/best-claude-skills-for-code-review-automation/)

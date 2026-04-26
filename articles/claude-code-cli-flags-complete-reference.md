@@ -312,6 +312,8 @@ Use heredoc syntax or pipe from a file. For example: <code>claude --print "$(cat
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Command Reference](/commands/) — Interactive command and flag explorer
 - [Permissions and Security](/permissions/) — Understanding tool access controls
 - [Claude Code Configuration Guide](/configuration/) — Settings and project configuration

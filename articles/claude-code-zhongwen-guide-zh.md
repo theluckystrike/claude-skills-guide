@@ -340,6 +340,8 @@ Explore the related resources below for deeper coverage. The Claude Code documen
 
 ## Related Resources
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Tool Use Hidden Token Costs](/claude-tool-use-hidden-token-costs-explained/)
 - [Track Claude Token Spend Per Project](/track-claude-token-spend-per-project-team/)
 - [Pruning Unused Claude Tools Saves Real](/pruning-unused-claude-tools-saves-money/)

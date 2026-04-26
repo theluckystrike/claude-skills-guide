@@ -360,6 +360,8 @@ Not all agent-first elements deliver equal value. The priority order based on to
 
 ## Further Reading
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [State Inspection Pattern: Give Agents Full Backend State in One Call](/state-inspection-pattern-agents-full-state-one-call/) -- deep dive on the inspection endpoint
 - [Structured Error Handling to Reduce Claude Code Token Waste](/structured-error-handling-reduce-claude-code-tokens/) -- error communication patterns
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- complementary context optimization

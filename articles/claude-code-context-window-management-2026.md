@@ -215,6 +215,8 @@ For session management strategies, see [the context loss fix guide](/claude-code
 
 ## See Also
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code Context Window Exceeded Mid-Chat — Fix (2026)](/claude-code-context-window-exceeded-mid-conversation-fix/)

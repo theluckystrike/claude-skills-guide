@@ -477,3 +477,4 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 **Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).

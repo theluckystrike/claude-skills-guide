@@ -113,6 +113,8 @@ Source: [anthropic.com/pricing](https://anthropic.com/pricing), [replit.com/pric
 
 ## FAQ
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 ### Can I import my existing project into Replit and use Replit Agent on it?

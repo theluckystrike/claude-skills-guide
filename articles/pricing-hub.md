@@ -15,6 +15,8 @@ geo_optimized: true
 
 # Claude Code Pricing & Cost Optimization Guide 2026
 
+> **Interactive Tool:** Estimate your monthly Claude Code spend with our [Cost Calculator](/calculator/) -- input your usage, get a plan recommendation and cost breakdown.
+
 AI coding tools have a reputation for cost unpredictability. A developer prototyping on a weekend hits no limits. The same developer working on a production codebase with long context windows, frequent skill invocations, and CI/CD integrations can see API costs scale quickly. Understanding the pricing model before you commit, and knowing which techniques keep costs under control, makes the difference between a sustainable workflow and an expensive surprise.
 
 This hub covers Claude Code's pricing tiers, how skills affect token consumption, practical cost optimization strategies, and a direct comparison with the other major AI coding tools available in 2026.
@@ -247,3 +249,4 @@ Related Reading
 
 **Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).

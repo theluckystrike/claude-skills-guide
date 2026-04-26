@@ -206,6 +206,8 @@ Each removed MCP server saves its full tool definition overhead on every session
 
 ## Further Reading
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- when MCP is the right choice
 - [Claude Code Skills Guide](/skills/) -- an even cheaper alternative to both CLI and MCP for static knowledge
 - [Reducing Claude Code MCP Round-Trips: Batch Operations Pattern](/reducing-claude-code-mcp-round-trips-batch-pattern/) -- optimize MCP when it is needed

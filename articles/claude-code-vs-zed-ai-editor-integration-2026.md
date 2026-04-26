@@ -104,6 +104,8 @@ Claude Code with its enterprise tier handles compliance, SSO, and audit requirem
 
 ## Related Comparisons
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 - [Claude Code vs Cursor for Coding](/claude-code-vs-cursor-2026-detailed-comparison/)
 - [Claude Code vs Windsurf: Full Comparison](/claude-code-vs-windsurf-full-comparison-2026/)
 - [Claude Code vs Cline: Agent Mode Compared](/claude-code-vs-cline-agent-mode-2026/)

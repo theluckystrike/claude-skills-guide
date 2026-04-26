@@ -192,6 +192,8 @@ Batch processing turns a 2-hour manual code review into a 10-minute automated ru
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Best Way to Batch Claude Code Requests and Reduce API Calls](/best-way-to-batch-claude-code-requests-reduce-api-calls/)

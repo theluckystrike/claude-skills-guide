@@ -229,6 +229,8 @@ print('Parse: PASS')
 
 ## Related
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code for Industrial IoT Protocol Implementation](/claude-code-industrial-iot-protocol-2026/)

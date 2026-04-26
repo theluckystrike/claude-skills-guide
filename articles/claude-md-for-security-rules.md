@@ -146,6 +146,8 @@ For the full CLAUDE.md structure including security sections, see the [senior en
 
 ## Related Articles
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [Claude Md For Dependency Management Rules — Developer Guide](/claude-md-for-dependency-management-rules/)
 
 

@@ -140,3 +140,5 @@ CLI-first design means Claude Code lives in your terminal where senior developer
 ### What is Real-World Productivity Gains?
 
 Senior developers report three consistent productivity improvements with Claude Code: code review speed increases significantly through skills that analyze pull requests and suggest improvements in seconds; boilerplate and scaffolding tasks like generating database models, API endpoints, and test fixtures happen automatically; and documentation quality improves through the docs-generator skill which creates and maintains documentation synchronized with actual code implementation far better than manually maintained docs.
+
+**Quick setup →** Launch your project with our [Project Starter](/starter/).

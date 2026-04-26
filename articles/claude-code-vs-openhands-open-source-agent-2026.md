@@ -128,6 +128,8 @@ Expect 2-4 hours per month for updates, Docker image management, and model confi
 
 ## Related Comparisons
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code vs Devin: AI Agent Comparison](/claude-code-vs-devin-ai-agent-comparison-2026/)
 - [Claude Code vs Cline: Agent Mode Compared](/claude-code-vs-cline-agent-mode-2026/)
 - [Agentic AI Coding Tools Compared](/agentic-ai-coding-tools-comparison-2026/)

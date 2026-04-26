@@ -372,6 +372,8 @@ The new configuration replaces the existing one at the same scope. If the existi
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [How to Add an MCP Server to Claude Code](/how-to-add-mcp-server-claude-code-2026/) — step-by-step installation walkthrough

@@ -279,6 +279,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Extended Thinking Not Working](/claude-extended-thinking-not-working/) -- troubleshoot thinking parameter errors.

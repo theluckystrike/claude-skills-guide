@@ -344,6 +344,8 @@ Yes. There is no restriction on selling skills. Some developers offer premium sk
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Building a Custom Claude Code Skill Tutorial](/building-custom-claude-code-skill-tutorial/) — Alternative tutorial with different approach
 - [Building Your First Claude Skill](/building-your-first-claude-skill/) — Beginner-friendly introduction
 - [How to Install Claude Code Skills](/how-to-install-claude-code-skills-2026/) — Installation guide for users

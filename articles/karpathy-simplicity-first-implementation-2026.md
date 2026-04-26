@@ -191,6 +191,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Build Your First Claude Code Skill in 5](/building-your-first-claude-skill/)

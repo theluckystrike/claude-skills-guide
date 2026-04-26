@@ -258,6 +258,8 @@ When using `context: fork` with scripts, the subagent has its own tool permissio
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Skills Folder Structure](/claude-skills-folder-structure/)

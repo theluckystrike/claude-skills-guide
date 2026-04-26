@@ -70,6 +70,8 @@ Start with the CLAUDE.md best practices if you are new to Claude Code. The CLAUD
 
 ## Related Hubs
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Guides Hub](/guides-hub/)
 - [Tutorials Hub](/tutorials-hub/)
 - [Advanced Hub](/advanced-hub/)

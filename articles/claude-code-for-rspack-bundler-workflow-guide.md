@@ -68,6 +68,8 @@ Claude Code should replace `webpack` with `@rspack/core`, remove `babel-loader` 
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Claude Code CI/CD Pipeline Optimization Guide](/claude-code-ci-cd-pipeline-optimization-guide/)
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)
 - [AI Coding Tools for Performance Optimization](/ai-coding-tools-for-performance-optimization/)

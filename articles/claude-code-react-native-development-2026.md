@@ -292,6 +292,8 @@ React Native projects have significant boilerplate per screen. Claude Code gener
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code for React Native Navigation Setup Guide](/claude-code-for-react-native-navigation-setup-guide/)

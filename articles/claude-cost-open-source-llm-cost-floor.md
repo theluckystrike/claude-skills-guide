@@ -116,6 +116,8 @@ Deciding between self-hosted open source and commercial APIs requires evaluating
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Haiku vs GPT-4o Mini Cost Showdown](/claude-cost-haiku-vs-gpt4o-mini-cheap-tier/)

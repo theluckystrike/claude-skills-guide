@@ -87,6 +87,8 @@ These tools are additive costs because they serve different layers. You cannot r
 
 ## FAQ
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 ### Can Claude Code trigger GitHub Actions?

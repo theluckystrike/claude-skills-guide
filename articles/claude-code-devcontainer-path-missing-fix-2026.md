@@ -116,6 +116,8 @@ Claude Code requires VS Code 1.85 or later. Earlier versions lack the extension 
 
 ## Related Guides
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)

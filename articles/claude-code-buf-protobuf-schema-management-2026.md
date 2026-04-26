@@ -299,6 +299,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Prisma Generate Failure After Schema](/claude-code-prisma-generate-failure-fix-2026/)

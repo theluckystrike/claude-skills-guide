@@ -161,6 +161,8 @@ Set up a dashboard tracking: requests by model (pie chart), cost by model (stack
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — understanding the root causes of high Claude API bills

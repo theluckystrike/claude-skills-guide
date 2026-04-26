@@ -376,3 +376,4 @@ Secrets Manager adding latency: Cache the API key in a module-level variable aft
 
 **Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).

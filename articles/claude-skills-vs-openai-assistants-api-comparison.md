@@ -103,6 +103,8 @@ For simple, stateless AI interactions (ask a question, get an answer, no memory 
 
 ## See Also
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Skills vs OpenAI Assistants API Compared (2026)](/claude-skills-vs-openai-assistants-api-2026/)

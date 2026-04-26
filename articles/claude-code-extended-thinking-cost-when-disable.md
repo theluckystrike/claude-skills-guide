@@ -203,6 +203,8 @@ Compare against: value of better first-attempt success rates
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Model Selection for Cost](/claude-code-model-selection-cost-sonnet-haiku-opus/) -- model routing to complement extended thinking decisions

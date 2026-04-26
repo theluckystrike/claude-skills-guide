@@ -115,6 +115,8 @@ The installation directory is not in your PATH. Run `which claude` to check if i
 
 ## Related Guides
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Optimal Skill File Size and Complexity](/optimal-skill-file-size-and-complexity-guidelines/)

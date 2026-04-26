@@ -263,3 +263,5 @@ The Controller Service handles volume lifecycle management and contains most CSI
 ### What is Node Service Implementation Patterns?
 
 The Node Service handles volume mounting on worker nodes through `NodePublishVolume`, which is critical for pod scheduling. The implementation extracts volumeID and targetPath from the request, verifies volume capability is present, creates target directories with appropriate permissions (0750), and branches between block volume and filesystem mount handling based on the volume capability type. Proper error handling uses gRPC status codes like `codes.InvalidArgument` and `codes.Internal` to return meaningful errors to Kubernetes.
+
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).

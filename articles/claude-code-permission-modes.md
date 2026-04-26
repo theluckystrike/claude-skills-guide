@@ -185,6 +185,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Issues
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
 - [Claude Code API Security OWASP Guide](/claude-code-api-security-owasp-guide/) — When permissions are ignored
 - [Claude Code PreToolUse Hooks Bypassed Fix](/claude-code-pretooluse-hooks-bypassed/) — Preventing dangerous operations
 - [Claude Code Permission Modes Explained](/claude-code-permission-modes/) — Browse all permissions guides

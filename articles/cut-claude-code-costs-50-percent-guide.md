@@ -209,6 +209,8 @@ Check <code>~/.claude/logs/</code> for session logs that include <code>input_tok
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code Pricing Explained](/claude-code-pricing-every-plan-model-explained/)
 - [Token Estimator Tool](/token-estimator/)
 - [CLAUDE.md Generator](/generator/)

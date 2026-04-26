@@ -256,6 +256,8 @@ No official GUI exists. For a better reading experience, pipe logs through <code
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Debugging Claude Code Like a Senior Engineer](/debugging-claude-code-senior-engineer-guide/)
 - [Error Handling Guide](/error-handling/)
 - [Troubleshooting Guide](/troubleshooting/)

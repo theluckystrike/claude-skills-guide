@@ -277,6 +277,8 @@ There is no hard limit on the number of skills. The practical limit is your cont
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [Best Claude Code Skills Ranked](/best-claude-code-skills-2026-ranked/)
 - [Building Custom Skills Tutorial](/building-custom-claude-code-skill-tutorial/)
 - [Configuration Guide](/configuration/)

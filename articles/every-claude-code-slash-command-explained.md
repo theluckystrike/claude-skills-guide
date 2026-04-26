@@ -310,6 +310,8 @@ Type / in the Claude Code prompt to see an autocomplete list of available comman
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Command Reference](/commands/) — Interactive command explorer

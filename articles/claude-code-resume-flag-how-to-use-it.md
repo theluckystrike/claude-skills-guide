@@ -321,6 +321,10 @@ Used well, `--resume` turns Claude Code from a session-based assistant into some
 
 ## Related
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude shortcuts guide](/claude-shortcuts-complete-guide/) — Complete guide to Claude Code keyboard shortcuts and slash commands

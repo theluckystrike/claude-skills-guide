@@ -353,6 +353,8 @@ For most development tasks, Sonnet 4 with extended thinking provides sufficient 
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — predecessor model comparison

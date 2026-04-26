@@ -680,6 +680,8 @@ Claude Code会将你的提示词和相关代码上下文发送到Anthropic的API
 
 ## See Also
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code拼车指南：合租与共享方案 (2026)](/claude-code-pinche-group-sharing/)

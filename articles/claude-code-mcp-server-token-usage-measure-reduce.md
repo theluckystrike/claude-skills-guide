@@ -344,6 +344,8 @@ The weekly report surfaces trends: if MCP overhead is growing (more tools being 
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- MCP configuration reference

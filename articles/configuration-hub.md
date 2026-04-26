@@ -59,6 +59,8 @@ If you are setting up Claude Code for the first time, start with the configurati
 
 ## Related Hubs
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Guides Hub](/guides-hub/)
 - [Getting Started Hub](/getting-started-hub/)
 - [Advanced Hub](/advanced-hub/)

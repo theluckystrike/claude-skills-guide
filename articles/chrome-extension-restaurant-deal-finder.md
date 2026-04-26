@@ -353,3 +353,4 @@ The restaurant deal space remains fragmented, with many independent restaurants 
 
 **Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).

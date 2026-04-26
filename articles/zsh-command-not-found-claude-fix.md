@@ -546,6 +546,8 @@ Homebrew installs Node.js in /opt/homebrew/bin on Apple Silicon Macs or /usr/loc
 
 ## Related Guides
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [The Claude Code Playbook](/playbook/)

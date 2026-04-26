@@ -181,6 +181,8 @@ For a broader guide to Claude Code workflows beyond cost optimization, see the [
 
 ## See Also
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Cost Reduction Guide 2026](/cost/)

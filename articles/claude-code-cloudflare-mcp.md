@@ -171,6 +171,8 @@ Explore the related resources below for deeper coverage. The Claude Code documen
 
 ## Related Resources
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Claude Code AWS MCP Server Setup Guide](/claude-code-aws-mcp-server/)
 - [Claude Code GCP MCP Server Setup](/claude-code-gcp-mcp/)
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/)

@@ -122,6 +122,8 @@ These ranges apply similarly to both Anthropic and OpenAI enterprise agreements.
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Migration Cost Analysis: Switching Providers](/claude-cost-migration-switching-providers-analysis/)

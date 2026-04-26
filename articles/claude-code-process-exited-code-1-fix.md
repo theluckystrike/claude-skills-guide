@@ -1178,6 +1178,8 @@ Post this output in the [Claude Code GitHub Issues](https://github.com/anthropic
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Permission Denied Shell Commands Fix](/claude-code-permission-denied-shell-commands-fix/) — When Claude Code runs but cannot execute commands

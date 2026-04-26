@@ -98,6 +98,8 @@ Token counts are estimated before sending a request and precisely calculated on 
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Skills for SEO Content Generation Guide](/claude-skills-for-seo-content-generation/)

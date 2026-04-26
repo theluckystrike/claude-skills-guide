@@ -82,6 +82,8 @@ The default timeout is 120 seconds (120000ms). For complex operations involving 
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Set Up Django MCP Server for Claude](/claude-code-django-mcp/)

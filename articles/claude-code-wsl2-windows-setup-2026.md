@@ -216,6 +216,8 @@ WSL2 gives Windows developers the Linux environment Claude Code expects. Project
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Skills in WSL2 Windows Subsystem Linux Guide](/claude-code-skills-in-wsl2-windows-subsystem-linux-guide/)

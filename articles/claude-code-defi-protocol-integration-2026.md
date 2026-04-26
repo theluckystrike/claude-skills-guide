@@ -317,6 +317,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code for OpenSea Protocol](/claude-code-for-opensea-protocol-workflow-guide/)

@@ -253,6 +253,8 @@ The switching cost (1-2 days of workflow adjustment, 4-8 hours of CLAUDE.md setu
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code vs Cursor Comparison (Full Feature Review)](/claude-code-vs-cursor-comparison-2026/) -- feature-by-feature comparison beyond cost

@@ -210,6 +210,8 @@ Track the 90th percentile context size per request type. Target keeping this und
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — deep analysis of context-driven costs

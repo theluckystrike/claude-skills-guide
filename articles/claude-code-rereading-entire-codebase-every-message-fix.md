@@ -131,6 +131,8 @@ Cost savings at Sonnet: $0.42-$8.10/month
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [The Compaction Strategy: When to /compact and When Not To](/compaction-strategy-when-compact-when-not/) -- preventing post-compaction re-reads

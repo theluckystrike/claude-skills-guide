@@ -248,6 +248,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Error npm Install Fails in Skill Workflow](/claude-code-error-npm-install-fails-in-skill-workflow/)

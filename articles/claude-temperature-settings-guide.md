@@ -573,6 +573,8 @@ For most use cases, temperature is simpler and more intuitive. Use top_p when yo
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [The Claude Code Playbook](/playbook/) — comprehensive workflow reference

@@ -72,6 +72,8 @@ When reading files, use line ranges instead of full reads. Run /compact proactiv
 
 ## Related Error Messages
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
 This fix also applies if you see these related error messages:
 
 - `ContextWindowExceeded: input exceeds maximum context length`

@@ -173,6 +173,8 @@ Tips from studying the most-starred ecosystem repos:
 
 ## FAQ
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 ### Do I need permission to build ecosystem tools?

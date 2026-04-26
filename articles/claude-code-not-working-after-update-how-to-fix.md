@@ -224,6 +224,8 @@ Keeping your skills modular, well-documented, and using environment-aware path h
 
 ## Related
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude not working right now fix](/claude-not-working-right-now-fix/) — troubleshoot when Claude is completely down

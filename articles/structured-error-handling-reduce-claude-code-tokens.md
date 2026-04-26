@@ -287,6 +287,8 @@ For teams, the savings multiply: 5 developers each saving $10.80/month = $54/mon
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- automate error formatting with pre/post hooks

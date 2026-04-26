@@ -303,6 +303,8 @@ The accuracy of pre-project estimates improves significantly after one month of 
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- subscription details and optimization

@@ -271,6 +271,8 @@ Automated Claude Code in CI catches issues within minutes of pushing code, befor
 
 ## Related Guides
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Skills for Creating GitHub Actions Workflows](/claude-code-skills-for-creating-github-actions-workflows/)

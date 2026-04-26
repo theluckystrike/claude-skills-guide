@@ -226,6 +226,8 @@ For a detailed comparison, see our [skills vs hooks vs commands article](/claude
 
 ## FAQ
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 ### Do hooks consume tokens?

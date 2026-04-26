@@ -212,6 +212,8 @@ The iteration cycle is where progressive disclosure transforms from a static pat
 
 ## Further Reading
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [Claude Code Skills Guide](/skills/) -- creating and managing skills
 - [Context Engineering vs Prompt Engineering](/context-engineering-vs-prompt-engineering-agents/) -- theoretical foundation
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- mechanics of context growth across tiers

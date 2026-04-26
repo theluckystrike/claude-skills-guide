@@ -134,7 +134,11 @@ The cost of a poorly written skill is subtle: it produces acceptable but not exc
 
 **Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
+> **Interactive Tool:** Not sure which Claude model fits your project? Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Hubs
+
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
 
 - [Getting Started with Claude Skills](/getting-started-hub/). Learn the foundations before comparing options
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The top skills worth choosing over prompts

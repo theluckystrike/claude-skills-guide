@@ -15,6 +15,8 @@ geo_optimized: true
 
 # Advanced Claude Skills Architecture
 
+> **Interactive Tools:** Estimate token usage with our [Token Estimator](/token-estimator/), compare model costs with the [Cost Calculator](/calculator/), or pick the right model with the [Model Selector](/model-selector/).
+
 Once you've mastered the basics of Claude skills, the next frontier is efficiency and scale. This hub covers advanced topics: keeping token costs low, chaining skills intelligently, and building workflows that hold up in production.
 
 ## Table of Contents
@@ -140,3 +142,4 @@ Related Reading
 
 **Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).

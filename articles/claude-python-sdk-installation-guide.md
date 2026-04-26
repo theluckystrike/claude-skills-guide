@@ -215,6 +215,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Python SDK Getting Started](/claude-python-sdk-getting-started-example/) -- your first project with error handling and streaming.

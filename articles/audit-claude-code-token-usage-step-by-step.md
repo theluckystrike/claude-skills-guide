@@ -266,6 +266,8 @@ Use all four in combination: /cost for real-time awareness, ccusage for historic
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code Cost Optimization: 15 Techniques That Actually Work](/claude-code-cost-optimization-15-techniques/) -- apply findings from audit

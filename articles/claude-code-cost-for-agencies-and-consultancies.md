@@ -356,6 +356,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [The Claude Code Cost Spiral: Why Projects Get Expensive Over Time](/claude-code-cost-spiral-projects-expensive-over-time/)

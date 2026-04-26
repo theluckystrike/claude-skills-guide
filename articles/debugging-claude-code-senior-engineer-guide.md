@@ -208,6 +208,8 @@ Run <code>claude mcp list</code> to see server status. For a failing server, tes
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code Error Messages Dictionary](/claude-code-error-messages-dictionary/)
 - [Commands Reference](/commands/)
 - [Permissions Guide](/permissions/)

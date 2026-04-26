@@ -775,6 +775,8 @@ With streaming, a 500 error can occur mid-stream, meaning you may receive partia
 
 ## Related Guides
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Fix Claude API 503 Service Unavailable](/claude-api-503-service-unavailable-fix/)

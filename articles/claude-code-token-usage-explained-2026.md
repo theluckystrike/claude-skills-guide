@@ -201,6 +201,8 @@ The Token Estimator tool lets you check token counts for any text. For in-sessio
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Token Estimator](/token-estimator/) — Real-time token counting tool
 - [Reduce Claude Code Token Usage](/reduce-claude-code-token-usage-2026/) — Actionable reduction strategies
 - [Context Window Management](/claude-code-context-window-management-2026/) — Full context strategy

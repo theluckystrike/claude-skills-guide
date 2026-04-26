@@ -256,3 +256,5 @@ When you discover unexpected servers or overly broad permissions, take four imme
 ### What is Audit Checklist: Four Key Areas?
 
 The four key audit areas are scope minimization (ensure each server has minimum required access with read-only where possible), credential management (never commit API keys to version control, use environment variables, rotate keys quarterly), network exposure (prefer local servers for sensitive operations, require TLS for remote servers), and audit logging (enable verbose logging with MCP_LOG_LEVEL=debug, review logs weekly for unusual access patterns or unexpected tool invocations).
+
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).

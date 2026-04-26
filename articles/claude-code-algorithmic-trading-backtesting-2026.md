@@ -229,6 +229,8 @@ python3 trading/strategies/mean_reversion.py
 
 ## Related
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code for Options Pricing](/claude-code-options-pricing-black-scholes-2026/)

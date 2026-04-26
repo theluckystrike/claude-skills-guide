@@ -273,6 +273,8 @@ Yes. Each skill's instructions are sent as context with every message, consuming
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [Top Claude Code Skills Ranked](/top-claude-code-skills-ranked-2026/) — Best skills to install
 - [Best Skills to Install First](/best-claude-code-skills-to-install-first-2026/) — Starter recommendations
 - [Building Your Own Claude Code Skill](/building-your-own-claude-code-skill-2026/) — Create custom skills

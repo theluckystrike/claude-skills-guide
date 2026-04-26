@@ -223,6 +223,8 @@ This cadence keeps you informed without becoming a full-time activity.
 
 ## See Also
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Best Claude Code Learning Resources (2026)](/best-claude-code-learning-resources-2026/)

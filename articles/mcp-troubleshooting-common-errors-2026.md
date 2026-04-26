@@ -229,6 +229,8 @@ If all eight checks pass and the server still fails, check the MCP server's GitH
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [MCP Server Setup Complete Guide](/mcp-server-setup-complete-guide-2026/) — Proper setup from the start
 - [MCP Config JSON Explained](/mcp-config-json-explained-2026/) — Understand every config field
 - [Claude Code ECONNREFUSED MCP Fix](/claude-code-econnrefused-mcp-fix/) — Deep dive on connection errors

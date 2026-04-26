@@ -701,6 +701,10 @@ The project publishes updates approximately monthly. Major Claude Code releases 
 
 ## See Also
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [CLAUDE.md Best Practices Definitive Guide](/claude-md-best-practices-definitive-guide/)

@@ -314,6 +314,8 @@ If directory limits are not being respected, the likely cause is that the task d
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code reading too many files](/claude-code-reading-too-many-files-scope-context/) -- complementary file-level scoping

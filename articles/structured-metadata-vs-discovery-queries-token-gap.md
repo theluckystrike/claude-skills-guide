@@ -122,6 +122,8 @@ The structured metadata vs discovery query framework is the practical core of co
 
 ## Further Reading
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [What Is Context Engineering?](/what-is-context-engineering-karpathy-claude-code/) -- the conceptual framework behind metadata-first approaches
 - [CLAUDE.md as Cost Control](/claude-md-cost-control-rules-prevent-token-waste/) -- practical CLAUDE.md patterns
 - [The Metadata-First Pattern](/metadata-first-pattern-npx-metadata-json/) -- the architecture pattern formalized

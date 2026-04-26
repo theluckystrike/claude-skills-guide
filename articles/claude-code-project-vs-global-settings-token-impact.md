@@ -292,6 +292,8 @@ Run this audit monthly. Each MCP server found in global settings represents 500-
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- configuring MCP servers at the right scope

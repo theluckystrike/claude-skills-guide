@@ -175,6 +175,8 @@ Enterprise IDEs provide compliance features and security scanning. Claude Code a
 
 ## FAQ
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 ### Will Claude Code replace my IDE?

@@ -251,3 +251,4 @@ This is one of 16 production CLAUDE.md templates available in the Lifetime pack.
 
 **Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).

@@ -372,6 +372,8 @@ Getting Started Tutorials:
 
 ## Related Hubs
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Getting Started Hub](/getting-started-hub/). Install Claude Code and run your first skill
 - [Guides Hub](/guides-hub/). Deep reference guides for every Claude Code topic
 - [Workflows Hub](/workflows/). Repeatable workflow automation patterns

@@ -146,6 +146,8 @@ The core fix applies to macOS, Linux, and Windows. Some path-related adjustments
 
 ## Related Resources
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Fix Stream Idle Timeout in Claude Code](/anthropic-sdk-streaming-hang-timeout/)
 - [Fix Claude Code API Error 400 Bad](/claude-code-api-error-400/)
 - [Fix Claude Code API Rate Limit Reached](/claude-code-api-error-rate-limit-reached/)

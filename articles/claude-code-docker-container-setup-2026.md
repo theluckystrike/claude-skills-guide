@@ -214,6 +214,8 @@ Docker isolation guarantees Claude Code cannot access files outside your mounted
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code for Docker Image Publishing Workflow](/claude-code-for-docker-image-publishing-workflow-guide/)

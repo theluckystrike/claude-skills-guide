@@ -211,6 +211,8 @@ There is no hard limit. Claude loads command files at session start, so hundreds
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Command Reference](/commands/) — Interactive command explorer with search
 - [Every Claude Code Slash Command](/every-claude-code-slash-command-explained/) — Official command reference
 - [Best Commands You Are Not Using](/best-claude-code-commands-you-are-not-using-2026/) — Top 10 overlooked commands

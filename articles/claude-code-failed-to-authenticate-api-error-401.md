@@ -157,6 +157,8 @@ The core fix applies to macOS, Linux, and Windows. Some path-related adjustments
 
 ## Related Resources
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Fix Claude API Error 401](/claude-api-error-401-fix/)
 - [Fix Claude Code API Error 400 Bad](/claude-code-api-error-400/)
 - [Fix: Claude API Error 401](/claude-api-error-401-authenticationerror-explained/)

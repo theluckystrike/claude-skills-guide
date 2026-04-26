@@ -238,3 +238,4 @@ Related Reading
 
 **Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).

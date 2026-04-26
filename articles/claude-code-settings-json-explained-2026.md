@@ -283,6 +283,8 @@ Yes. Use `${VAR_NAME}` syntax in env values. This lets you reference secrets sto
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Permissions Configurator](/permissions/) — Generate settings.json interactively
 - [Claude Code Permissions Guide](/claude-code-permissions-complete-guide-2026/) — Complete permissions reference
 - [Configuration Hierarchy](/claude-code-configuration-hierarchy-explained-2026/) — How settings layer together

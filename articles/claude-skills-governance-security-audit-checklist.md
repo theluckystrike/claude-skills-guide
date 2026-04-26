@@ -155,4 +155,4 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
-
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).

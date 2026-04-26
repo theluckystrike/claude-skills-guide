@@ -114,6 +114,8 @@ If you can afford only one: Codeium Free ($0) provides daily value through autoc
 
 ## Related Comparisons
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 - [Claude Code vs Tabnine: Complete Comparison 2026](/claude-code-vs-tabnine-full-comparison-2026/)
 - [GitHub Copilot vs Claude Code: Deep Comparison 2026](/github-copilot-vs-claude-code-deep-comparison-2026/)
 - [Claude Code vs Continue.dev: Feature Comparison 2026](/claude-code-vs-continue-dev-features-2026/)

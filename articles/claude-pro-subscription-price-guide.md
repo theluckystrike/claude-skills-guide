@@ -385,6 +385,8 @@ Anthropic does not currently offer student pricing for Claude subscriptions.
 
 ## See Also
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Extra Usage Cost Guide](/claude-extra-usage-cost-guide/)

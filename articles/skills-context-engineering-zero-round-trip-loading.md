@@ -232,6 +232,8 @@ If skills are not producing expected savings, check:
 
 ## Further Reading
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [Claude Code Skills Guide](/skills/) -- complete skills reference
 - [Context Engineering vs Prompt Engineering](/context-engineering-vs-prompt-engineering-agents/) -- the theoretical framework
 - [CLAUDE.md Token Optimization](/claude-md-token-optimization-rules-save-money/) -- optimizing the always-loaded context

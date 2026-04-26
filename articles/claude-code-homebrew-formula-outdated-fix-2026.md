@@ -119,6 +119,8 @@ Claude Code uses git for several core operations: tracking file changes, creatin
 
 ## Related Guides
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code For Homebrew Formula](/claude-code-for-homebrew-formula-workflow-tutorial/)

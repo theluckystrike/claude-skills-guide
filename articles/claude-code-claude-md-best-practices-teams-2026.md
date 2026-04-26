@@ -181,6 +181,8 @@ A shared CLAUDE.md eliminates the "works on my machine" problem for AI-assisted 
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [CLAUDE.md Length Optimization: 300 Lines](/claude-md-length-optimization/)

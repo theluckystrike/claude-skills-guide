@@ -268,6 +268,8 @@ print('VQE verification: PASS (chemical accuracy reached)')
 
 ## Related
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code for Computational Chemistry (ORCA)](/claude-code-computational-chemistry-orca-2026/)

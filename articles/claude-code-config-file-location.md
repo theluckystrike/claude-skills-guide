@@ -251,6 +251,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Issues
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Set Up MCP Servers in Claude Code](/claude-code-mcp-server-setup) — MCP configuration details
 - [Claude Code Permission Modes Explained](/claude-code-permission-modes) — Permission configuration
 - [Claude Code Install Guide](/claude-code-install-guide/) — Browse all setup guides

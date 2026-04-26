@@ -142,6 +142,8 @@ Explore the related resources below for deeper coverage. The Claude Code documen
 
 ## Related Resources
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Stop Claude Code From Over-Engineering](/how-to-make-claude-code-not-over-engineer-solutions/)
 - [Claude Code Stop Modifying Files](/how-to-make-claude-code-stop-adding-markdown-to-code/)
 - [Stop Claude Code Modifying Unrelated](/how-to-stop-claude-code-from-modifying-unrelated-files/)

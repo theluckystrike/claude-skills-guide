@@ -494,6 +494,8 @@ Claude Code supports the current MCP specification. Servers built with the offic
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude MCP List Command Reference](/claude-mcp-list-command-guide/) — full CLI command details

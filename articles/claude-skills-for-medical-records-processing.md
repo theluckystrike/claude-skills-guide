@@ -173,6 +173,8 @@ FHIR servers enforce different validation strictness. Epic's FHIR API rejects re
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Skills for Legal Document Review](/claude-skills-for-legal-document-review/) -- regulated document extraction patterns

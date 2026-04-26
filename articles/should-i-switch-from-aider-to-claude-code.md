@@ -297,6 +297,10 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Should I Switch From Supermaven To Claude — Developer Guide](/should-i-switch-from-supermaven-to-claude-code/)

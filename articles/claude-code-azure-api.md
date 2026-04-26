@@ -160,6 +160,8 @@ Explore the related resources below for deeper coverage. The Claude Code documen
 
 ## Related Resources
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Claude Code API Client TypeScript Guide](/claude-code-api-client-typescript-guide/)
 - [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/)
 - [Claude Code API Response Caching Guide](/claude-code-api-response-caching-guide/)

@@ -314,6 +314,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Before and After](/before-and-after-switching-to-claude-code-workflow/)

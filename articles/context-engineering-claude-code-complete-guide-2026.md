@@ -161,6 +161,8 @@ A well-executed context engineering practice should show a 50-70% reduction in w
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [What Is Context Engineering? (Karpathy's Definition Applied to Claude Code)](/what-is-context-engineering-karpathy-claude-code/) -- the conceptual foundation behind these techniques

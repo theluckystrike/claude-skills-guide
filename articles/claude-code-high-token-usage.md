@@ -157,6 +157,8 @@ $99 once. Pays for itself in saved tokens within a week.
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Fix: Claude Code Slow Response Times](/claude-code-slow-response-fix/)

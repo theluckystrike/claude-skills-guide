@@ -411,6 +411,8 @@ For small personal projects with 2-3 skill files and a lean CLAUDE.md, the InsFo
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Skills Guide](/skills/) -- foundational skills documentation

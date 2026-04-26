@@ -149,6 +149,8 @@ Yes. Add rate limiting, request queuing, and monitoring before production deploy
 
 ## Related Resources
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code Azure DevOps MCP Setup](/claude-code-azure-devops-mcp/)
 - [Claude Code Offline Mode Setup](/best-way-to-use-claude-code-offline-without-internet-access/)
 - [Claude Code Auto Mode Setup Guide](/claude-code-auto-mode-setup-guide/)

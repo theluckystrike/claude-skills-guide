@@ -101,6 +101,8 @@ Start manual. Seriously. A `tasks.md` file works for most projects and keeps you
 
 ## See Also
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [ccusage vs Manual Token Counting (2026)](/ccusage-vs-manual-token-counting-2026/)

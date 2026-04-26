@@ -239,6 +239,8 @@ psql -d financial_db -c "
 
 ## Related
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code for SOX Audit Automation](/claude-code-sox-audit-automation-2026/)

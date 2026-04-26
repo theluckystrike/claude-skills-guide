@@ -162,3 +162,4 @@ Related Reading
 
 **Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).

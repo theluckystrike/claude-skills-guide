@@ -118,6 +118,8 @@ The token paradox is a core concept in the CCG cost framework because it affects
 
 ## Further Reading
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 - [Claude Code Model Selection for Cost](/claude-code-model-selection-cost-sonnet-haiku-opus/) -- choosing the right model to balance capability and cost
 - [Claude Code Extended Thinking: Cost Implications](/claude-code-extended-thinking-cost-when-disable/) -- extended thinking as a verbosity multiplier
 - [How to Reduce Claude Code Token Usage by 3x](/reduce-claude-code-token-usage-3x-guide-2026/) -- comprehensive reduction strategies

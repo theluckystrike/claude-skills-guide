@@ -145,6 +145,8 @@ Prevention: --stat first pattern
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code re-reading entire codebase every message](/claude-code-rereading-entire-codebase-every-message-fix/) -- reducing redundant file reads

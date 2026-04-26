@@ -207,6 +207,10 @@ Pricing last verified: April 2026.
 
 ## Related Guides
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code vs Cursor: Monthly Cost Comparison](/claude-code-vs-cursor-monthly-cost-comparison-2026/) -- comparison with Cursor

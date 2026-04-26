@@ -14,6 +14,8 @@ geo_optimized: true
 
 # Claude Code Error Handling Hub
 
+> **Interactive Tool:** Paste any Claude Code error into our [Error Diagnostic Tool](/diagnose/) for an instant fix with copy-ready prevention rules.
+
 Systematic error handling patterns for Claude Code projects. From Express middleware to Prisma transactions, these guides cover the error handling strategies that keep production systems stable.
 
 ## Why Error Handling Is Critical in AI-Assisted Development

@@ -822,6 +822,10 @@ Yes, if you provide the web_search tool. Without it, agents can only access loca
 
 ## See Also
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code Hooks Complete Guide](/claude-code-hooks-complete-guide/)

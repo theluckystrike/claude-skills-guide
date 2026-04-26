@@ -241,6 +241,8 @@ Claude Pro's Claude Code integration with managed settings provides better enter
 
 ## FAQ
 
+**Find commands →** Search all commands in our [Command Reference](/commands/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 ### Can I use Claude models through ChatGPT?

@@ -213,6 +213,8 @@ Most likely because context overflow caused truncation of older messages. Check 
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Token Estimator](/token-estimator/) — Check token counts and context usage
 - [Context Window Management](/claude-code-context-window-management-2026/) — Full management strategies
 - [Token Usage Explained](/claude-code-token-usage-explained-2026/) — How tokens work

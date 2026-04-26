@@ -88,3 +88,4 @@ Windsurf is the most accessible agentic AI coding tool in 2026 — $15/mo for a 
 
 **Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).

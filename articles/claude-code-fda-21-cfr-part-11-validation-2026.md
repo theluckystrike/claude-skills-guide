@@ -307,6 +307,8 @@ python3 part11/validation/generate_report.py
 
 ## Related
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code for HIPAA Development](/claude-code-hipaa-compliant-development-workflow-guide/)

@@ -236,4 +236,4 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
-
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).

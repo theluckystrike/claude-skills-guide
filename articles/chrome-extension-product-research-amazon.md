@@ -405,3 +405,4 @@ AI analysis of reviews hitting token limits: Amazon review sections can contain 
 
 **Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).

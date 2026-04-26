@@ -251,6 +251,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [.env File Not Loaded by Claude Fix](/claude-code-env-file-not-loaded-fix-2026/)

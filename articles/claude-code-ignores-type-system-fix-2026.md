@@ -143,6 +143,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Vanilla Extract Type Safe](/claude-code-vanilla-extract-type-safe-css/)

@@ -221,6 +221,8 @@ Manually writing MCP config JSON is error-prone. A missing comma, wrong path, or
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — Top server recommendations
 - [MCP Config JSON Explained](/mcp-config-json-explained-2026/) — Every config field decoded
 - [Building a Custom MCP Server](/building-custom-mcp-server-claude-code/) — Build your own server

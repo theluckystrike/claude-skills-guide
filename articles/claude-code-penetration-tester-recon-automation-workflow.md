@@ -184,6 +184,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Resources
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - Claude Code Skills Tutorial
 - Security Automation with Claude Code
 - AI-Powered Penetration Testing Guide

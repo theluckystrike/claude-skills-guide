@@ -205,6 +205,8 @@ Assumes Sonnet 4.6 rates, 20 working days, 5 sessions/day. The `--allowedTools` 
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code Max Turns Flag: Prevent Runaway Sessions](/claude-code-max-turns-flag-prevent-runaway-sessions/) -- pair with --allowedTools for maximum cost control

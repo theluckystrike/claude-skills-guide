@@ -339,6 +339,8 @@ echo "Created .claude/settings.json from $template template"
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Environment Variables for Claude Code Cost Control](/environment-variables-claude-code-cost-control/) -- session-level controls

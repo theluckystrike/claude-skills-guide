@@ -71,6 +71,8 @@ Claude Code should use `Bun.serve({ fetch(req) { } })` with URL pattern matching
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Using Claude Code with Bun Runtime JavaScript Projects](/using-claude-code-with-bun-runtime-javascript-projects/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

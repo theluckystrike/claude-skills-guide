@@ -218,6 +218,8 @@ Configuring multiple MCP servers means writing JSON for each one, getting the pa
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [MCP Server Setup Complete Guide](/mcp-server-setup-complete-guide-2026/) — Step-by-step installation
 - [MCP Config JSON Explained](/mcp-config-json-explained-2026/) — Understanding the config format
 - [Awesome MCP Servers Directory](/awesome-mcp-servers-directory-guide-2026/) — Complete server directory

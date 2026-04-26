@@ -228,6 +228,8 @@ After running your first production batch:
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Anthropic Message Batches API Guide](/anthropic-message-batches-api-guide/)

@@ -599,6 +599,8 @@ Related Reading
 
 ## See Also
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Fix Claude Code Using Outdated Patterns (2026)](/claude-code-generates-outdated-patterns-fix-2026/)

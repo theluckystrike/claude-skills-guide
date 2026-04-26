@@ -331,6 +331,8 @@ Yes. Every tool call and its result is recorded in the JSONL session file, inclu
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [The Claude Code Playbook](/playbook/) — comprehensive workflow reference

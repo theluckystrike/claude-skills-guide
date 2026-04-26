@@ -181,4 +181,6 @@ For enterprise setup details, see the [enterprise guide](/claude-code-enterprise
 
 ## See Also
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 - [Claude Code for Credit Scoring Models (2026)](/claude-code-credit-scoring-model-2026/)

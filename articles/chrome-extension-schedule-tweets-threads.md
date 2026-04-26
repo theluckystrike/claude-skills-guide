@@ -436,3 +436,5 @@ The storage schema uses chrome.storage.local with each tweet containing an id (u
 ### What is Implementation Patterns?
 
 The key implementation patterns are alarm-based scheduling using chrome.alarms.create with a calculated delay, an onAlarm listener that filters pending tweets with due scheduledTime and processes them, and sequential thread posting using Twitter's in_reply_to_tweet_id to chain tweets. Recovery logic in chrome.runtime.onStartup recreates alarms for all pending tweets after browser restarts. A tiered retry strategy with delays of 1, 5, and 15 minutes handles transient API failures before marking tweets as failed.
+
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).

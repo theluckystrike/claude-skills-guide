@@ -122,6 +122,8 @@ Subagents spawned via `context: fork` cannot invoke other skills from the main p
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Skill Composition Patterns](/claude-skill-composition-patterns/) -- layering and delegation patterns

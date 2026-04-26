@@ -319,6 +319,8 @@ The Claude Code router does not require any external dependencies or plugins. It
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code cost breakdown](/claude-code-cost-complete-guide/) — full pricing reference

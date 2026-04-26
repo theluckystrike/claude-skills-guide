@@ -74,6 +74,8 @@ Claude Code should create `.devcontainer/devcontainer.json` with Node.js feature
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
 - [Best Way to Set Up Claude Code for New Project](/best-way-to-set-up-claude-code-for-new-project/)
 - [Claude Code for Gitpod Cloud Dev Workflow Guide](/claude-code-for-gitpod-cloud-dev-workflow-guide/)

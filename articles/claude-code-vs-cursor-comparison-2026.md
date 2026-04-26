@@ -232,6 +232,8 @@ $99. Once. Everything I use to ship.
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Agentic AI Coding Tools Comparison 2026](/agentic-ai-coding-tools-comparison-2026/)

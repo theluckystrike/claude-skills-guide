@@ -142,6 +142,8 @@ echo "Environment check complete."
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Fix Claude Code Forgetting Variable](/claude-code-keeps-losing-track-of-my-variable-names/)

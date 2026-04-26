@@ -74,6 +74,8 @@ Claude Code should add `export BAT_THEME="Catppuccin Mocha"` to shell config, se
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code for Ripgrep Workflow Guide](/claude-code-for-ripgrep-workflow-guide/)

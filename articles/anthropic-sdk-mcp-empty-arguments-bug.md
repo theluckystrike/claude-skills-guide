@@ -200,6 +200,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Issues
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Fix: Claude Code MCP Server Disconnected](/claude-code-mcp-server-disconnected)
 - [Fix: Claude API Error 400 Invalid Request](/claude-api-error-400-invalidrequesterror-explained/)

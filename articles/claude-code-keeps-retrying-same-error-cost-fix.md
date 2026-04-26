@@ -132,6 +132,8 @@ The compaction alone saves significant money on remaining turns. If the context 
 
 ## Related Guides
 
+**Estimate tokens →** Calculate your usage with our [Token Estimator](/token-estimator/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code infinite loop detection](/claude-code-infinite-loop-detection-stop-drains-tokens/) -- detecting and stopping broader loop patterns

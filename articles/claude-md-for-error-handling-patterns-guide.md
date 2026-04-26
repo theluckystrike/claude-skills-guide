@@ -386,6 +386,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [CLAUDE.md for Error Handling — Patterns That Prevent Silent Failures (2026)](/claude-md-error-handling-patterns/)

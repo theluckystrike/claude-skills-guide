@@ -442,6 +442,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Quick setup →** Launch your project with our [Project Starter](/starter/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Claude Code for Objective-C to Swift Conversion (2026)](/claude-code-objective-c-to-swift-conversion-2026/)

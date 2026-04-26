@@ -116,6 +116,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Configure permissions →** Build your settings with our [Permission Configurator](/permissions/).
+
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Fix Claude Code Incomplete Code Blocks](/why-does-claude-code-produce-incomplete-code-blocks-fix/)

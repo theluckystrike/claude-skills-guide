@@ -297,6 +297,8 @@ This multi-schema index (~200 tokens) prevents Claude Code from reading all thre
 
 ## Related Guides
 
+**Configure MCP →** Build your server config with our [MCP Config Generator](/mcp-config/).
+
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 
 - [Database Schema Exposure: Complete State vs Discovery Queries](/database-schema-exposure-complete-state-vs-discovery/) -- broader schema optimization patterns
