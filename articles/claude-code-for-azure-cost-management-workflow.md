@@ -262,6 +262,8 @@ Start with the basic cost query skill, then progressively add budget alerts, ano
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

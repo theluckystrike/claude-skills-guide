@@ -241,6 +241,8 @@ Documentation generation does not need to be a manual chore. By using Claude ski
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

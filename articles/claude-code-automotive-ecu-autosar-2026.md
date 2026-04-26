@@ -208,6 +208,8 @@ print('ARXML validation: PASS')
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for STM32 Firmware Development](/claude-code-stm32-firmware-development-2026/)
 - [Claude Code for Avionics DO-178C](/claude-code-avionics-do178c-development-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

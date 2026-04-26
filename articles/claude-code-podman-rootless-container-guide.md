@@ -491,6 +491,8 @@ Start with the alias approach for local development, graduate to the wrapper scr
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

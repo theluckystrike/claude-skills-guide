@@ -263,6 +263,8 @@ Start small, stay consistent, and let Claude guide you through the complexity of
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

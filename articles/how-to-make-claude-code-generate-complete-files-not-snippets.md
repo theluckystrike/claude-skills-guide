@@ -173,6 +173,8 @@ Remember: Claude Code is excellent at following detailed specifications. The mor
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -211,6 +211,8 @@ The best Vue developers using Claude Code don't just accept generated code, they
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

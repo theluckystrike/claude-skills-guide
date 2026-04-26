@@ -309,6 +309,8 @@ These Claude Code skills transform Ruby on Rails development workflows. Integrat
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -71,6 +71,8 @@ Claude Code should create `config/deploy.yml` with the server IP, Docker registr
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)
 - [Claude Code Docker Compose Production Guide](/claude-code-docker-compose-production-guide/)
 - [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)

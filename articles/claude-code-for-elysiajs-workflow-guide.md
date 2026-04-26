@@ -71,6 +71,8 @@ Claude Code should create routes with `t.Object()` schemas for request bodies, g
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Using Claude Code with Bun Runtime JavaScript Projects](/using-claude-code-with-bun-runtime-javascript-projects/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

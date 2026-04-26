@@ -284,6 +284,8 @@ The compounding effect is the key insight: every token saved in CLAUDE.md is sav
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- broader strategies for managing context costs
 - [Claude Code Skills Guide](/skills/) -- how to create and organize skills files
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- reducing context mid-session

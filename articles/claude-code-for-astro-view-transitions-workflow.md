@@ -303,6 +303,8 @@ By following these patterns and workflows, you'll create applications that feel 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

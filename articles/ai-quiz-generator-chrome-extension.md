@@ -185,6 +185,8 @@ For developers and power users, custom quiz generators offer flexibility that pr
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -405,6 +405,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/)
 - [Claude Code Test Driven Refactoring Guide](/claude-code-test-driven-refactoring-guide/)
 - [Claude Code API Regression Testing Workflow](/claude-code-api-regression-testing-workflow/)

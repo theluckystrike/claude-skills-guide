@@ -159,6 +159,8 @@ Composition patterns compound token usage. A pipeline of 4 skills where each use
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Combine Multiple Claude Skills](/how-to-combine-multiple-claude-skills/) -- practical workflow examples
 - [Claude Skills Shared Dependencies](/claude-skills-shared-dependencies/) -- managing shared resources
 - [Claude Skills Data Flow Patterns](/claude-skills-data-flow-patterns/) -- data movement between skills

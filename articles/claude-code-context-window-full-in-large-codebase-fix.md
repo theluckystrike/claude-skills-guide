@@ -195,6 +195,8 @@ Remember: The goal isn't to fit your entire codebase into context, but to put ex
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -229,6 +229,8 @@ Remember: metrics should answer questions that matter for operating and improvin
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

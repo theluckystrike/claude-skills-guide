@@ -234,6 +234,8 @@ The audit takes 15 minutes and typically removes 2-3 unused servers, saving 2,00
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code MCP Server Token Usage: How to Measure and Reduce](/claude-code-mcp-server-token-usage-measure-reduce/) -- measure and reduce overhead
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- proper MCP configuration
 - [Errors Atlas](/errors-atlas/) -- troubleshoot MCP connection errors

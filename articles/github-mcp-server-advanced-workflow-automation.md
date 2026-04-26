@@ -271,6 +271,8 @@ Once you have a few workflows running reliably, use supermemory to document what
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

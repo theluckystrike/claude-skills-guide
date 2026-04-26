@@ -131,6 +131,8 @@ The combination of clear context, appropriate skills, and specific prompts trans
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

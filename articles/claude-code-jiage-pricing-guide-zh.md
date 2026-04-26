@@ -407,6 +407,8 @@ GitHub Copilot Individual每月10美元，比Claude Code Pro的20美元便宜。
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code拼车指南：合租与共享方案 (2026)](/claude-code-pinche-group-sharing/)
 - [Claude Code使用教程：从入门到精通 (2026)](/claude-code-shiyong-jiaocheng-tutorial/)
 - [Claude Code安装教程：完整指南 (2026)](/claude-code-anzhuang-installation-guide/)

@@ -381,5 +381,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [CLAUDE.md for API Design — Consistent Endpoints, Responses, and Versioning (2026)](/claude-md-api-design-patterns/)
 - [CLAUDE.md for Error Handling — Patterns That Prevent Silent Failures (2026)](/claude-md-error-handling-patterns/)

@@ -248,6 +248,8 @@ Start with simple templates and progressively tackle more complex architectures.
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

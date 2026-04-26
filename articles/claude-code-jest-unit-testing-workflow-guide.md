@@ -260,6 +260,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Jest Test Runner Mock Conflict — Fix (2026)](/claude-code-jest-runner-mock-conflict-fix/)
 - [How to Use Claude Code with Jest Testing](/claude-code-with-jest-testing-workflow/)
 - [Claude Code Jest Snapshot Testing Workflow Best Practices](/claude-code-jest-snapshot-testing-workflow-best-practices/)

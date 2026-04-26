@@ -313,6 +313,8 @@ Yes, through the [extra usage](/claude-extra-usage-cost-guide/) option. When ena
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Extra Usage Cost Guide](/claude-extra-usage-cost-guide/)
 - [Claude Pro Subscription Price Guide](/claude-pro-subscription-price-guide/)
 - [Claude API Pricing Complete Guide](/claude-api-pricing-complete-guide/)

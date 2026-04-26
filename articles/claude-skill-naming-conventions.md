@@ -114,6 +114,8 @@ The `argument-hint` field (e.g., `[branch-name]`) appears during autocomplete. U
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [SKILL.md Frontmatter Fields Explained](/skill-md-file-frontmatter-fields-explained/)
 - [Managing Claude Skills Across Team Members](/managing-claude-skills-across-team-members/)
 - [Fix Skill Name Already in Use Error](/fix-skill-name-already-in-use-error/)

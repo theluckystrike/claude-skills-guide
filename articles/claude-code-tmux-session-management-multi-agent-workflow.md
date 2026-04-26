@@ -286,4 +286,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [tmux Session Not Detected Error Fix](/claude-code-tmux-session-not-detected-fix-2026/)

@@ -305,6 +305,8 @@ Claude Code streamlines configuration generation and helps maintain best practic
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

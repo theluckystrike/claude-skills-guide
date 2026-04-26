@@ -213,6 +213,8 @@ Steps:
 
 ## FAQ
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 ### Should I give Claude Code the full stack trace?
 Yes. Include the full stack trace — it contains file paths and line numbers that Claude Code can read directly. Truncating loses valuable context.
 

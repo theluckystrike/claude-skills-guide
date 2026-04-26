@@ -239,6 +239,8 @@ Monitor batch operations at scale:
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Anthropic Message Batches API Guide](/anthropic-message-batches-api-guide/)
 - [Claude API Batch Processing Large Datasets](/claude-api-batch-processing-large-datasets-workflow-guide/)
 - [Claude Code for Batch Processing Optimization](/claude-code-for-batch-processing-optimization-workflow/)

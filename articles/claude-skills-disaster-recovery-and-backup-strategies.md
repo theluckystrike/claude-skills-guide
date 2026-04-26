@@ -170,6 +170,8 @@ Backing up Claude skills requires more than copying files. By implementing versi
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

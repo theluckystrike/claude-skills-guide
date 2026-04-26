@@ -247,6 +247,8 @@ The key is establishing clear patterns early: consistent flag naming, centralize
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

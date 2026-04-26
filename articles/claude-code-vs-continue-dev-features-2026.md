@@ -110,4 +110,6 @@ These are different capabilities. Continue.dev's autocomplete predicts your next
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Continue.dev: Setup and Configuration](/claude-code-vs-continue-dev-setup-comparison/)

@@ -130,6 +130,8 @@ Regular review keeps your governance effective as the Claude skills ecosystem ev
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

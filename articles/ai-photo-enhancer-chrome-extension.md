@@ -377,6 +377,8 @@ Downloaded enhanced image has wrong filename: The enhanced image URL from the AP
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

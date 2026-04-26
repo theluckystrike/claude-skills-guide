@@ -113,6 +113,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Chrome Proxy Slow — Developer Guide](/chrome-proxy-slow/)
 - [MITM Proxy Detection Error — Fix (2026)](/claude-code-mitm-proxy-detection-error-fix-2026/)
 - [Claude Code for Envoy Proxy Workflow](/claude-code-for-envoy-proxy-workflow-tutorial/)

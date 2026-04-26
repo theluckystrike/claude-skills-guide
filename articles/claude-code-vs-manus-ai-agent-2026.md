@@ -93,6 +93,8 @@ Claude Code for development teams, with its predictable pricing and direct codeb
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can Manus deploy code directly to my production environment?
 No. Manus operates in an isolated sandbox. You receive downloadable artifacts that you must integrate into your codebase and deploy through your own pipeline. Claude Code can run deployment commands directly but requires careful permission management.
 

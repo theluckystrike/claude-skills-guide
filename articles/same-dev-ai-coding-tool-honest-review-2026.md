@@ -309,4 +309,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Continue Dev Review: Open Source AI Coding in 2026](/continue-dev-review-open-source-ai-coding-2026/)

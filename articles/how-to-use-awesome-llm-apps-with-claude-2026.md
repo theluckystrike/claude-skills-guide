@@ -134,4 +134,6 @@ Community templates are starting points, not production-ready code. Before deplo
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Awesome LLM Apps: Agent Templates Guide (2026)](/awesome-llm-apps-agent-templates-guide-2026/)

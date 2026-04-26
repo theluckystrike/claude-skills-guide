@@ -362,6 +362,8 @@ The most impactful gains come not from replacing human judgment, but from elimin
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

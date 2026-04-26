@@ -77,6 +77,8 @@ paths:
 paths:
   - "src/components/**/*.tsx"
   - "src/pages/**/*.tsx"
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 ## Frontend Security Rules

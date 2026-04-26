@@ -124,6 +124,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Chrome Lighthouse Score Improve](/chrome-lighthouse-score-improve/)
 - [Using Claude Code for Data Quality](/claude-code-for-data-quality-validation-workflow/)
 - [Best Claude Code Hooks for Code Quality](/best-claude-code-hooks-code-quality-2026/)

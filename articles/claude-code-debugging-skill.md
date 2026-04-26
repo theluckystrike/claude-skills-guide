@@ -122,6 +122,8 @@ The skill pattern works because it constrains Claude's behavior into a structure
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

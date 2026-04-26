@@ -219,5 +219,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Make Claude Code Consider Performance (2026)](/claude-code-ignores-performance-fix-2026/)
 - [Claude Code for Performance SLO Workflows (2026)](/claude-code-for-performance-slo-workflow-tutorial/)

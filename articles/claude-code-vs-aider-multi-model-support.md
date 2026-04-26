@@ -96,4 +96,6 @@ If your model needs are simple and you just want chat with code context, the pro
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Aider: Git Integration Compared](/claude-code-vs-aider-git-integration/)

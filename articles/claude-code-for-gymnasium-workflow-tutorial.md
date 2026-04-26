@@ -556,6 +556,8 @@ Use Reproducible Seeds: Set seeds consistently in your training scripts to repro
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

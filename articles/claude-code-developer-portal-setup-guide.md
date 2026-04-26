@@ -330,6 +330,8 @@ For team environments, consider sharing skill configurations through a dotfiles 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

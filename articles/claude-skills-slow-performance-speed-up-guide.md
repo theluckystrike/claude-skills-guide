@@ -218,6 +218,8 @@ If you are consistently beyond these ranges on simple tasks, context bloat or to
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

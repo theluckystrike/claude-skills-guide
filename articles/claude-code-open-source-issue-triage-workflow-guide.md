@@ -220,6 +220,8 @@ Remember: the goal isn't to replace human judgment, but to handle repetitive tas
 
 
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 *Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*

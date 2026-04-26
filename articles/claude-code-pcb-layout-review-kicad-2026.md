@@ -213,6 +213,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Documentation Review](/claude-code-for-documentation-review-workflow-guide/)
 - [Claude Code for Code Review Metrics](/claude-code-for-code-review-metrics-workflow-guide/)
 - [Mendeley Chrome Extension Review (2026)](/mendeley-chrome-extension-review/)

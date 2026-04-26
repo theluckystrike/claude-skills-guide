@@ -70,6 +70,8 @@ Claude Code should create a `party/cursor.ts` server with `onMessage` that parse
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Yjs CRDT Workflow Guide](/claude-code-for-yjs-crdt-workflow-guide/)
 - [Claude Code for AI Agent Tool Calling](/claude-code-for-ai-agent-tool-calling-implementation/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

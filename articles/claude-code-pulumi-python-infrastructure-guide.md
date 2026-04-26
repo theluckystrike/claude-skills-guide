@@ -365,6 +365,8 @@ For teams working with complex deployments, integrate the tdd skill for testing 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -67,6 +67,8 @@ Claude Code should create `rolldown.config.ts` with two output configurations (E
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Rspack Bundler Workflow Guide](/claude-code-for-rspack-bundler-workflow-guide/)
 - [Claude Code for Farm Bundler Workflow Guide](/claude-code-for-farm-bundler-workflow-guide/)
 - [Claude Code CI/CD Pipeline Optimization Guide](/claude-code-ci-cd-pipeline-optimization-guide/)

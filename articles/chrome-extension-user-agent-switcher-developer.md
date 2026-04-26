@@ -269,6 +269,8 @@ Building a user agent switcher in Chrome extensions requires understanding the D
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

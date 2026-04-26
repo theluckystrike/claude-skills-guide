@@ -278,6 +278,8 @@ One common mistake is treating compliance as a one-time project. SOC2 Type II au
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -306,6 +306,8 @@ echo "Environment check complete."
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for OpenSea Protocol](/claude-code-for-opensea-protocol-workflow-guide/)
 - [Claude Code for DeFi Protocol](/claude-code-defi-protocol-integration-2026/)
 - [MCP Protocol Version Mismatch in Claude — Fix (2026)](/claude-code-model-context-protocol-version-mismatch-fix-2026/)

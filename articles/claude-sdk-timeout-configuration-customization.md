@@ -226,6 +226,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Streaming Not Working](/claude-streaming-not-working/) -- fix streaming issues that arise from timeout misconfiguration.
 - [Claude API Error 500 api_error Fix](/claude-api-error-500-apierror-explained/) -- server errors that retries can recover from.
 - [Claude API Error 429 rate_limit_error Fix](/claude-api-error-429-ratelimiterror-explained/) -- rate limit handling works with retry configuration.

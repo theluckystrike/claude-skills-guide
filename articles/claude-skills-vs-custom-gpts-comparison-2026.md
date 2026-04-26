@@ -141,6 +141,8 @@ Claude skills and Custom GPTs serve different roles in 2026. Skills provide deep
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

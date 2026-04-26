@@ -181,6 +181,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Performance Monitor Chrome Extension](/chrome-extension-performance-monitor/)
 - [Claude Skills Performance Optimization](/claude-skills-performance-optimization/)
 - [Chrome DevTools Performance Profiling](/chrome-devtools-performance-profiling/)

@@ -468,6 +468,8 @@ Remember that the key to successful dependency injection is maintaining clear bo
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

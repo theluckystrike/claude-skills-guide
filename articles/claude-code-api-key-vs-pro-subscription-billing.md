@@ -134,5 +134,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Invalid API Key Format sk-ant — Fix (2026)](/claude-code-api-key-sk-ant-format-invalid-fix-2026/)
 - [Claude API Key Organization Mismatch — Fix (2026)](/claude-code-api-key-organization-mismatch-fix-2026/)

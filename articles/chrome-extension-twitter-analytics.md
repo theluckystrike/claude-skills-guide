@@ -255,6 +255,8 @@ Building a Twitter analytics Chrome extension requires understanding Chrome's ex
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

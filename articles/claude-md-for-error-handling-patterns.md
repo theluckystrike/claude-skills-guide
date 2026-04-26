@@ -87,6 +87,8 @@ Different parts of your codebase need different error handling. Use `.claude/rul
 paths:
   - "src/routes/**/*.ts"
   - "src/middleware/**/*.ts"
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 ## API Error Handling

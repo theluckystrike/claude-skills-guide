@@ -284,6 +284,8 @@ Start implementing these patterns in your next project, and you'll see immediate
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

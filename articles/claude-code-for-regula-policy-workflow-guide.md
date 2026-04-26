@@ -612,6 +612,8 @@ Start with the skill definition, run your first `regula run` against a real Terr
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

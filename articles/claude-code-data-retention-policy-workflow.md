@@ -326,6 +326,8 @@ The key is automation, set up scheduled runs and let the system manage itself. Y
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [save Claude Code conversations](/claude-code-save-conversation-guide/) — How to save and export conversation history
 ---
 

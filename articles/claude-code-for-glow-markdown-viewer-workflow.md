@@ -173,6 +173,8 @@ This workflow isn't just about convenience, it's about making documentation as a
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

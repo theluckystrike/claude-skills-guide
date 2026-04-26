@@ -158,6 +158,8 @@ npx claude-code-templates@latest
 
 **Limitation**: Complex migrations may need manual intervention. The agent handles 80% of cases but edge cases require human judgment.
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 ## Getting Started

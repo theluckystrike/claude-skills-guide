@@ -229,6 +229,8 @@ Remember to iterate on your prompts and skills based on what works best for your
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -454,4 +454,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Interactive Rebase Unsupported Error Fix](/claude-code-interactive-rebase-unsupported-fix-2026/)

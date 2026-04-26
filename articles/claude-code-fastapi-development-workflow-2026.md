@@ -232,6 +232,8 @@ Claude Code generates FastAPI resources 5x faster than writing manually, includi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Hono Framework Workflow Guide](/claude-code-for-hono-framework-workflow-guide/)
 - [Claude Code Skills for Scientific Python NumPy SciPy](/claude-code-skills-for-scientific-python-numpy-scipy/)
 - [Claude Code for Test-Driven Development Workflow](/claude-code-for-test-driven-development-workflow-tutorial/)

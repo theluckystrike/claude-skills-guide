@@ -96,6 +96,8 @@ If your work is primarily data science in Jupyter notebooks, none of these codin
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Codex vs Claude Code comparison](/codex-vs-claude-code-comparison-2026/) — detailed OpenAI Codex vs Claude Code analysis
 - [How to use Claude Code](/how-to-use-claude-code-beginner-guide/) — beginner walkthrough if choosing Claude Code
 - [Claude API pricing](/claude-api-pricing-complete-guide/) — every plan and model priced

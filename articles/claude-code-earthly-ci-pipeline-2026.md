@@ -262,6 +262,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Embedding Pipeline](/claude-code-for-embedding-pipeline-workflow/)
 - [Claude Code for DSP Pipeline](/claude-code-dsp-pipeline-development-2026/)
 - [Claude Code Pipeline](/claude-code-agent-pipeline-sequential-vs-parallel/)

@@ -733,4 +733,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Use Claude Code with Jest Testing](/claude-code-with-jest-testing-workflow/)

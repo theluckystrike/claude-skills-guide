@@ -365,4 +365,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [SSH Remote Session Drops Fix](/claude-code-ssh-remote-session-drops-fix-2026/)

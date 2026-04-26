@@ -69,6 +69,8 @@ Claude Code should run `devbox add python@3.12 poetry postgresql@16`, configure 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Devenv Nix Development Shell Workflow](/claude-code-for-devenv-nix-development-shell-workflow/)
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
 - [Best Way to Set Up Claude Code for New Project](/best-way-to-set-up-claude-code-for-new-project/)

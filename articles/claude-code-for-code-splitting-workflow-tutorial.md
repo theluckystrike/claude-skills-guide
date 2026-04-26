@@ -298,6 +298,8 @@ Implement these techniques in your next project and watch your application load 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

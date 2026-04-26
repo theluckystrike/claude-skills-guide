@@ -163,6 +163,8 @@ The best approach? Try both and see which aligns better with your development ph
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

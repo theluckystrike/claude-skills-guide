@@ -71,6 +71,8 @@ Claude Code should create schemas with `pipe()` composition: `pipe(string(), min
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)
 - [Claude Code Accessible Forms Validation Error Handling Guide](/claude-code-accessible-forms-validation-error-handling-guide/)
 - [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/)

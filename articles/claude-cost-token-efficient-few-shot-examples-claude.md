@@ -215,6 +215,8 @@ Compare total example tokens before and after compression. Multiply savings by r
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — optimize tokens across your entire prompt
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — better examples reduce hallucination-driven retries
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — measure per-skill token consumption

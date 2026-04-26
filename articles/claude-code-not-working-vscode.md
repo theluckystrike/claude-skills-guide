@@ -182,6 +182,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 *If you debug browser extensions alongside VS Code work, [Zovo's developer tools](https://zovo.one) streamline the inspect-reload-test cycle for Chrome extensions.*
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 *Last verified: 2026-04-14. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*

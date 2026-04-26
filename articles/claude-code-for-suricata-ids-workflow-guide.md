@@ -202,6 +202,8 @@ Start by setting up a structured project with proper context, then progressively
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

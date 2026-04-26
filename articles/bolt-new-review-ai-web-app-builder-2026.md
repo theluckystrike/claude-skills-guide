@@ -216,4 +216,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Code vs v0 by Vercel (2026): AI Builders](/claude-code-vs-v0-vercel-ai-builder-2026/)

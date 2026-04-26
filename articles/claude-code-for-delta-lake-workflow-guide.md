@@ -315,6 +315,8 @@ By integrating Claude Code into your Delta Lake workflows, you can reduce manual
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

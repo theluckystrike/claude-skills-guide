@@ -198,6 +198,8 @@ This documentation surfaces in every Claude Code session because CLAUDE.md is re
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to --dangerously-skip-permissions and safer alternatives
 ---
 

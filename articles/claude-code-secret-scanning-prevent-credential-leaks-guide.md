@@ -178,6 +178,8 @@ Implementing secret scanning in your Claude Code workflows protects against cred
 The investment in proper secret scanning pays dividends in reduced incident response costs, compliance posture, and developer confidence. Start with basic pattern matching, layer in git hooks, and expand to comprehensive monitoring as your workflows mature.
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

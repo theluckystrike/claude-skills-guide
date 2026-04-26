@@ -176,6 +176,8 @@ Manual code analysis of a 50,000-line codebase takes days. Claude Code produces 
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Cyclomatic Complexity Reduction](/claude-code-cyclomatic-complexity-reduction/)
 - [Claude Code Embeddings and RAG Workflow 2026](/claude-code-embeddings-rag-workflow-2026/)
 - [Claude Code for Code Intelligence Indexing Workflow](/claude-code-for-code-intelligence-indexing-workflow/)

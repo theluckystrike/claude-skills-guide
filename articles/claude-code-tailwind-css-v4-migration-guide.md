@@ -307,6 +307,8 @@ With proper planning and the right tools, your team can complete the migration w
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

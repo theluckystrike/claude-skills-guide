@@ -251,6 +251,8 @@ The focus on skill interoperability signals a shift toward treating Claude Code 
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Guide to the claude-sonnet-4-20250514 model and features
 - [save Claude Code conversations](/claude-code-save-conversation-guide/) — How to save and resume conversations
 ---

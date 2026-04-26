@@ -319,6 +319,8 @@ Claude skills with Linear transforms routine PM work into automated intelligence
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

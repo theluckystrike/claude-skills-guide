@@ -362,6 +362,8 @@ The biggest payoff comes when profiling is no longer a special event triggered b
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

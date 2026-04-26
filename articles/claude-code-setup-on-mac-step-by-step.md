@@ -258,6 +258,8 @@ cat ~/.claude/prompts/explain-code.txt src/utils.js | claude
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [dangerously skip permissions guide](/claude-code-dangerously-skip-permissions-guide/) — Complete guide to --dangerously-skip-permissions and safer alternatives
 ---
 

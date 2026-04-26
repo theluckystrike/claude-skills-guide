@@ -97,6 +97,8 @@ Long-running operations can exceed keep-alive timeouts on intermediate proxies a
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Postman Collection](/claude-code-postman-collection-automation/)
 - [Claude Code for Postman Collection](/claude-code-for-postman-collection-generation-workflow/)
 - [Claude Code Guides: Complete Collection](/playbook/)

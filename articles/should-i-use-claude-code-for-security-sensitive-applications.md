@@ -299,6 +299,8 @@ Evaluate your specific needs, implement the strategies that work for your contex
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

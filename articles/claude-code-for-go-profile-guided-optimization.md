@@ -209,6 +209,8 @@ The key is treating PGO as part of an ongoing performance engineering process ra
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

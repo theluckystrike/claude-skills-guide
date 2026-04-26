@@ -214,6 +214,8 @@ By understanding and properly configuring these permissions, you can build relia
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

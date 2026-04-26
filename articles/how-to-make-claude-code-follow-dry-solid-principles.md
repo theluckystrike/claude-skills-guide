@@ -203,6 +203,8 @@ The key is treating Claude as a junior developer: provide clear requirements, es
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

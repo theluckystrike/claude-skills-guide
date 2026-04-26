@@ -89,6 +89,8 @@ Install Karpathy Skills right now — it takes 30 seconds and works immediately.
 
 ## See Also
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Code Ultimate Guide: 271 Questions (2026)](/claude-code-ultimate-guide-271-questions-2026/)
 - [Take the Claude Code 271-Question Quiz (2026)](/how-to-take-claude-code-ultimate-guide-quiz-2026/)
 - [Karpathy Skills vs SuperClaude Framework (2026)](/karpathy-skills-vs-superclaude-framework-2026/)

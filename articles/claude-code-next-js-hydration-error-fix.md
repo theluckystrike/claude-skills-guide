@@ -298,6 +298,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code VS Cursor for React Development](/claude-code-vs-cursor-for-react-development/)
 - [Claude Code React Testing Library Workflow](/claude-code-react-testing-library-workflow/)
 - [Claude Code React Router v7 Navigation Guide](/claude-code-react-router-v7-navigation-guide/)

@@ -187,5 +187,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Review Claude Code PRs Efficiently (2026)](/claude-code-review-prs-efficiently-2026/)
 - [Claude Code for ITAR Compliance Code Review (2026)](/claude-code-itar-compliance-code-review-2026/)

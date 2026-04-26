@@ -447,6 +447,8 @@ False positives. code "applied" but no discount shown: Parse the order summary a
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

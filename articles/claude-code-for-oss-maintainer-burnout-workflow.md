@@ -246,6 +246,8 @@ Start small: create one skill for your most repetitive task, set one bounded ses
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

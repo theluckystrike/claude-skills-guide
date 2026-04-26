@@ -390,6 +390,8 @@ Claude Code creates files and edits through standard filesystem operations, so a
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Buck2 Build System](/claude-code-for-buck2-build-system-workflow-guide/)
 - [Claude Code Hooks System](/understanding-claude-code-hooks-system-complete-guide/)
 - [Read Claude Code System Prompts Repo](/how-to-read-claude-code-system-prompts-2026/)

@@ -155,6 +155,8 @@ Integrating Claude Code into your Nacos service registry workflow transforms wha
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -367,6 +367,8 @@ The key discipline is treating Chrome itself as a tool that requires the same at
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

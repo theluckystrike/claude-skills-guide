@@ -145,3 +145,5 @@ Honest cost comparisons between Claude, GPT-4o, Gemini, and open source. Where e
 - [Cheapest LLM Model for Your Workload Guide](/claude-cost-cheapest-model-workload-calculator/) -- Decision tree for selecting the lowest-cost model
 - [Enterprise LLM Contracts: Claude vs OpenAI](/claude-cost-enterprise-contracts-negotiation/) -- Negotiation strategies for enterprise deals
 - [Total Cost of Ownership: Claude vs OpenAI vs Gemini](/claude-cost-total-cost-ownership-every-provider/) -- Full TCO analysis including hidden costs
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

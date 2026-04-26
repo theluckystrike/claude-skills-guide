@@ -235,6 +235,8 @@ Remember: the best caching strategy is one that your users never notice, because
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

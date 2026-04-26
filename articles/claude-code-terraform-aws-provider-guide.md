@@ -220,4 +220,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Terraform Drift Detection (2026)](/claude-code-terraform-drift-detection-2026/)

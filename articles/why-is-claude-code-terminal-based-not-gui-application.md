@@ -129,5 +129,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Terminal UTF-8 Garbled Output — Fix (2026)](/claude-code-terminal-encoding-utf8-garbled-fix/)
 - [Terminal Emulator Rendering Artifacts Fix](/claude-code-terminal-rendering-artifacts-fix-2026/)

@@ -197,6 +197,8 @@ arm-none-eabi-gdb firmware.elf \
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Embedded Systems](/claude-skills-for-embedded-systems-iot-firmware/)
 - [Claude Code for FPGA Development](/claude-code-for-fpga-development-workflow-tutorial/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

@@ -93,6 +93,8 @@ If you need a coding assistant that works without internet access (air-gapped en
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Cursor comparison](/claude-code-vs-cursor-definitive-comparison-2026/) — Definitive Claude Code vs Cursor comparison for 2026
 - [Claude Code vs Cline: Token Efficiency Comparison](/claude-code-vs-cline-token-efficiency/)
 - [Claude Code vs Continue.dev: Setup and Configuration](/claude-code-vs-continue-dev-setup-comparison/)

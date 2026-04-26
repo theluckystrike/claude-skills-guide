@@ -204,6 +204,8 @@ MCP tool permissions and skill `allowed-tools` are independent systems. Denying 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills vs MCP Servers: When to Use Each](/claude-skills-vs-mcp-servers-differences/)
 - [SKILL.md Frontmatter Fields Explained](/skill-md-file-frontmatter-fields-explained/)
 - [Security Review Process for Claude Skills](/security-review-process-for-claude-skills/)

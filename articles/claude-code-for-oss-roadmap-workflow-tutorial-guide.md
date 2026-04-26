@@ -213,6 +213,8 @@ By implementing these workflow improvements, you'll find it easier to coordinate
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -271,6 +271,8 @@ await server.connect(transport);
 
 ## FAQ
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 ### How many MCP servers can I run simultaneously?
 There is no hard limit, but each server is a running process. Keep it under 10 for reasonable resource usage.
 

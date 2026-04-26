@@ -423,6 +423,8 @@ Start your migration today by installing the recommended skills and executing th
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

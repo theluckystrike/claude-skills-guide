@@ -227,6 +227,8 @@ The key insight: start with skills for immediate productivity, then layer in fra
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

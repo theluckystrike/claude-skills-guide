@@ -154,4 +154,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Switching From Xcode To Claude — Complete Developer Guide](/switching-from-xcode-to-claude-code-guide/)

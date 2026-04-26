@@ -305,6 +305,8 @@ Over weeks and months, you will see measurable improvements in code quality metr
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

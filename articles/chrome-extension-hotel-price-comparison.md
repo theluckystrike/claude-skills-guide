@@ -340,6 +340,8 @@ Extension slowing down hotel search pages: Content scripts that run on every mut
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

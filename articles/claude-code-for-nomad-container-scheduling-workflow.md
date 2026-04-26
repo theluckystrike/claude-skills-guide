@@ -414,6 +414,8 @@ As you build out the workflow, consider storing generated job specifications in 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

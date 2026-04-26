@@ -307,6 +307,8 @@ export HTTPS_PROXY="http://127.0.0.1:7890"
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code价格和费用完整指南 (2026)](/claude-code-jiage-pricing-guide/)
 - [Claude Code安装教程：完整指南 (2026)](/claude-code-anzhuang-installation-guide/)
 - [Claude Code国内使用指南 (2026)](/claude-code-guonei-shiyong-china-usage-guide/)

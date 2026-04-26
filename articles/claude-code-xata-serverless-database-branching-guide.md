@@ -688,6 +688,8 @@ Start integrating database branching into your development workflow today. The i
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

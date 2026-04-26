@@ -104,6 +104,8 @@ For teams using Claude Code with an Anthropic API key alongside Azure OpenAI in 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

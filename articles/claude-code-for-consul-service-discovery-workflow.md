@@ -391,6 +391,8 @@ Remember to start with a single-node development setup, thoroughly test your hea
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -210,6 +210,8 @@ Invest time in creating comprehensive runbooks now, it pays dividends during inc
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

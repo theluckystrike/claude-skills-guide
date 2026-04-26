@@ -480,6 +480,8 @@ Testing structured data with Chrome extensions transforms what is a frustrating,
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

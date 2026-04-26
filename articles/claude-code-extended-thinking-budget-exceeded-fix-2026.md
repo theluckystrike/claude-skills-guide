@@ -78,6 +78,8 @@ Claude Code uses the latest Claude model available on your account. You can over
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Skill Exceeded Maximum Output](/claude-code-skill-exceeded-maximum-output-length-error-fix/)
 - [Context Window Exceeded — Fix (2026)](/claude-code-context-window-exceeded-mid-conversation-fix-2026/)
 - [Fix Claude Rate Exceeded Error (2026)](/claude-rate-exceeded-error-fix/)

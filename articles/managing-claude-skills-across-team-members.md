@@ -147,6 +147,8 @@ When a legacy command exists at `.claude/commands/deploy.md` and a skill exists 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-team/)
 - [Claude Skill Naming Conventions](/claude-skill-naming-conventions/)
 - [Fix Skill Name Already in Use Error](/fix-skill-name-already-in-use-error/)

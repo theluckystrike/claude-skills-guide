@@ -232,6 +232,8 @@ Start with a small set of critical pages, establish baseline acceptance criteria
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

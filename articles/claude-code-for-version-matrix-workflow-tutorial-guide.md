@@ -239,6 +239,8 @@ The key is treating your matrix not as a static configuration file, but as a liv
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

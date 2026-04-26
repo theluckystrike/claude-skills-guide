@@ -156,3 +156,5 @@ Browse by project type or use Ctrl+F to find templates for your stack.
 Related Reading
 
 - [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

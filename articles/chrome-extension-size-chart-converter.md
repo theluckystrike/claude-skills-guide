@@ -191,6 +191,8 @@ The most effective extensions balance accuracy with speed, providing conversions
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

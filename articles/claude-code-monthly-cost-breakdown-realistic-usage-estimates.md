@@ -155,6 +155,8 @@ The key insight: your monthly cost correlates directly with how you use the tool
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

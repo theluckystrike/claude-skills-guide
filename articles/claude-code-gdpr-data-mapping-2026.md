@@ -310,6 +310,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code GDPR Compliance](/claude-code-gdpr-compliance-implementation/)
 - [GDPR Data Privacy Implementation](/claude-code-gdpr-data-privacy-implementation-checklist/)
 - [Claude Code Factory Bot Test Data](/claude-code-factory-bot-test-data-guide/)

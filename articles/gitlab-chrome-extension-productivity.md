@@ -195,6 +195,8 @@ Start with one or two extensions and expand your toolkit as you identify more ti
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

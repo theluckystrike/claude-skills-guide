@@ -186,6 +186,8 @@ For most developers, a combination approach works best: enable automatic blockin
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

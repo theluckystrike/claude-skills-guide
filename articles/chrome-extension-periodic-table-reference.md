@@ -369,6 +369,8 @@ The Chrome extension ecosystem offers tremendous flexibility for enhancing brows
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

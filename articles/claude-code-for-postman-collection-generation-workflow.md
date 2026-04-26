@@ -724,6 +724,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Source Map Generation Out of Memory — Fix (2026)](/claude-code-source-map-generation-oom-fix-2026/)
 - [Claude Code for gRPC Stub Generation Workflow Guide](/claude-code-for-grpc-stub-generation-workflow-guide/)
 - [Claude Code for FEA Mesh Generation (2026)](/claude-code-fea-mesh-generation-2026/)

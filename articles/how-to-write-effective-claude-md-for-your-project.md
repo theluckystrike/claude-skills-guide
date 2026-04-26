@@ -182,6 +182,8 @@ Start with the basics, project overview, coding conventions, and directory struc
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

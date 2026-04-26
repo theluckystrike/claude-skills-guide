@@ -264,6 +264,8 @@ Claude Code's headless mode enables automated Python code quality checks in pipe
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Which tool handles Django better?
 
 Claude Code generates complete Django views, models, serializers, and URL configurations. Windsurf provides inline suggestions for Django patterns. For new projects, Claude Code is faster. For extending existing code, Windsurf is more practical.

@@ -204,6 +204,8 @@ Remember that most failures stem from authentication, syntax, or environment iss
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

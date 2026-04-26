@@ -154,6 +154,8 @@ Review skills quarterly. Remove unused ones, update descriptions for skills with
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skill Naming Conventions](/claude-skill-naming-conventions/)
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-team/)
 - [Claude Skills Onboarding New Developers](/claude-skills-onboarding-new-developers/)

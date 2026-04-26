@@ -165,6 +165,8 @@ Claude Code API estimate:
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Cursor Comparison](/claude-code-vs-cursor-comparison-2026/) -- comparing Claude Code with Cursor
 - [Is Claude Code Worth $100/month?](/is-claude-code-worth-100-month-roi-calculator/) -- ROI analysis for the Max subscription
 - [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- full guide to the Max plan

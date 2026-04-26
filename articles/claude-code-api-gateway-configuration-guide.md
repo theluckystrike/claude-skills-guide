@@ -717,6 +717,8 @@ Remember that Claude Code integrates well with specialized skills like the pdf s
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

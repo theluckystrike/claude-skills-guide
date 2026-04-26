@@ -147,6 +147,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Ignoring Skill .md File](/why-does-claude-code-ignore-my-skill-md-file-entirely/)
 - [Claude Code Ignoring CLAUDE.md Entirely](/claude-ignoring-claude-md-entirely/)
 - [Fix How To Fix Claude Code Ignoring My](/how-to-fix-claude-code-ignoring-my-claude-md-file/)

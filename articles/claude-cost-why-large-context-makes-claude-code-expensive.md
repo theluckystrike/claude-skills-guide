@@ -226,6 +226,8 @@ Track daily Claude Code spend before and after adopting context management habit
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — the full analysis of Claude Code cost drivers
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/) — practical context management techniques
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — design decisions behind context limits

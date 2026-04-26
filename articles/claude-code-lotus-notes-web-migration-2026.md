@@ -266,6 +266,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Cornell Notes Template Chrome Extension](/chrome-extension-cornell-notes-template/)
 - [Generate Cornell Notes with Claude AI](/claude-ai-cornell-notes-how-to-create-guide/)
 - [Outline Notes Organizer Chrome](/chrome-extension-outline-notes-organizer/)

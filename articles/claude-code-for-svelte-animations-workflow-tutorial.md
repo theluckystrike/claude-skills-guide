@@ -319,4 +319,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Svelte 5 — Workflow Guide (2026)](/claude-code-for-svelte-5-workflow-guide/)

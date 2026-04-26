@@ -164,6 +164,8 @@ Claude Code's skill system provides the flexibility to start simple and expand i
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

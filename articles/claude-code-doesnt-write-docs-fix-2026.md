@@ -147,6 +147,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [How to Write Token-Efficient Claude](/write-token-efficient-claude-code-skills/)
 - [How to Make Claude Code Write](/how-to-make-claude-code-write-performant-sql-queries/)
 - [How to Make Claude Code Write Secure](/how-to-make-claude-code-write-secure-code-always/)

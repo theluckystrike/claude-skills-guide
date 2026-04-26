@@ -363,6 +363,8 @@ The investment in mastering these tools pays dividends daily. Every minute spent
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

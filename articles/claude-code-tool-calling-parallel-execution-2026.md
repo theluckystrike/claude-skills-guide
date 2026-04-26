@@ -258,6 +258,8 @@ Parallel tool execution cuts workflow time by 60-80% for independent operations.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Multi-Agent Subagent Communication Guide](/claude-code-multi-agent-subagent-communication-guide/)
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 - [Claude Skills vs MCP Servers Differences](/claude-skills-vs-mcp-servers-differences/)

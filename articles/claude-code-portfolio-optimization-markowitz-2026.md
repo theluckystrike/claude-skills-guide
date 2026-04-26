@@ -338,6 +338,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Developer Portfolio](/claude-code-developer-portfolio-projects-guide/)
 - [Claude Code for Portfolio Project](/claude-code-for-portfolio-project-development/)
 - [Claude Skills Performance Optimization](/claude-skills-performance-optimization/)

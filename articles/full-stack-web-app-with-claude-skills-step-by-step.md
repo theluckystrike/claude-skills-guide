@@ -247,6 +247,8 @@ Each skill specializes in a specific domain, letting you focus on architecture a
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

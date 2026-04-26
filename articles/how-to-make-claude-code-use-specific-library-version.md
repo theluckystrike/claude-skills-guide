@@ -358,6 +358,8 @@ The most durable setup combines all four: pinned `requirements.txt` or `package.
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

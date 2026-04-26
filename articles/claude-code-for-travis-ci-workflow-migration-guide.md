@@ -512,4 +512,6 @@ Converting Travis CI configurations maps `.travis.yml` stages to Claude Code ski
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Dagger CI — Workflow Guide](/claude-code-for-dagger-ci-workflow-guide/)

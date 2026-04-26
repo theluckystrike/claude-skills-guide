@@ -70,6 +70,8 @@ Claude Code should initialize the SuperTokens backend SDK with `ThirdPartyEmailP
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)
 - [Claude Code for Better Auth Workflow Guide](/claude-code-for-better-auth-workflow-guide/)
 - [Claude Code for Clerk Auth Workflow Guide](/claude-code-for-clerk-auth-workflow-guide/)

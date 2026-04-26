@@ -248,6 +248,8 @@ When all four layers are active, the combined effect is multiplicative: environm
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code .claude/settings.json: Cost-Saving Configuration](/claude-code-settings-json-cost-saving-configuration/) -- project-level permissions
 - [Claude Code Sonnet vs Opus: Cost Per Task](/claude-code-sonnet-vs-opus-cost-per-task/) -- model selection guidance
 - [Cost Optimization Hub](/cost-optimization/) -- all cost optimization guides

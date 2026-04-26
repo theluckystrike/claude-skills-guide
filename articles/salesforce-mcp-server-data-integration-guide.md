@@ -159,6 +159,8 @@ Salesforce MCP server integration opens up powerful automation possibilities for
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

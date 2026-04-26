@@ -210,6 +210,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Best Way to Set Up Claude Code for a New Project](/best-way-to-set-up-claude-code-for-new-project/)
 - [Claude Code Headless Linux Auth](/claude-code-headless-linux-auth/)
 - [Claude Code TLS/SSL Connection Error Corporate Proxy Fix](/claude-code-tls-ssl-connection-error-corporate-proxy-fix/)

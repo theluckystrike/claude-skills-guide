@@ -100,6 +100,8 @@ Run a competitive evaluation. At 50+ seats, all vendors negotiate custom pricing
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Why is Claude Code's team pricing so much higher than competitors?
 Claude Code Teams Premium includes access to Claude Opus 4.6, Anthropic's most capable model, without per-request metering. Competitors either use cheaper models as defaults or charge per premium request. The premium pricing reflects the cost of bundling unrestricted access to a frontier model. Standard Team seats without Claude Code access are available at $20-25/seat/month.
 

@@ -652,6 +652,8 @@ Whether you are building a product catalog, a documentation site, or an internal
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

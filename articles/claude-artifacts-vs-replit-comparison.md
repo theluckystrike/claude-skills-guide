@@ -79,6 +79,8 @@ For serious application development, Replit Pro at $25/month includes everything
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can Claude Artifacts run Python code?
 Artifacts primarily render HTML, CSS, JavaScript, React, and SVG. They do not execute Python server-side code. For Python visualization, you would generate the visualization as HTML/JS (using libraries like Chart.js) rather than running Python directly. Replit fully supports Python execution.
 

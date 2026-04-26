@@ -386,6 +386,8 @@ A good rule of thumb: if an extension requests access to "all data on all websit
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

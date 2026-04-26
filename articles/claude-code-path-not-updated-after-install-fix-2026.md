@@ -119,6 +119,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Before and After](/before-and-after-switching-to-claude-code-workflow/)
 - [Prisma Generate Failure After Schema](/claude-code-prisma-generate-failure-fix-2026/)
 - [Fix Claude Code Not Working After](/claude-code-not-working-after-update-how-to-fix/)

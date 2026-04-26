@@ -156,6 +156,8 @@ The transition requires adjustment, but developers who make the switch typically
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

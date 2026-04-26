@@ -133,6 +133,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Buck2 Build System](/claude-code-for-buck2-build-system-workflow-guide/)
 - [Claude Code Hooks System](/understanding-claude-code-hooks-system-complete-guide/)
 - [Claude Code for Trading System](/claude-code-trading-system-backtesting-2026/)

@@ -236,6 +236,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix: Anthropic SDK TypeError: terminated](/anthropic-sdk-typeerror-terminated/)
 - [Fix: Claude API Error 429 Rate Limit](/anthropic-api-error-429-rate-limit/)
 - [Claude Code API Client TypeScript Guide](/claude-code-api-client-typescript-guide/)

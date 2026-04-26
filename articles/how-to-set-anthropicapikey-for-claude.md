@@ -229,6 +229,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude API Error 401 authentication_error Fix](/claude-api-error-401-authenticationerror-explained/) -- troubleshoot when your key is rejected.
 - [Claude Python SDK Installation Guide](/claude-python-sdk-installation-guide/) -- full Python SDK setup.
 - [Claude TypeScript SDK Installation Guide](/claude-typescript-sdk-installation-guide/) -- full TypeScript SDK setup.

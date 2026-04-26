@@ -372,6 +372,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 </div>
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 Related Reading

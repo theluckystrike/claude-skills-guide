@@ -285,6 +285,8 @@ Start implementing few-shot prompting in your Claude Code workflows today, the i
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude
 ---
 

@@ -579,6 +579,8 @@ Due date management is another area where automation saves time. Claude Code gen
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

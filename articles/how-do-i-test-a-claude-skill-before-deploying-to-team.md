@@ -203,6 +203,8 @@ The investment in testing pays dividends in team trust and skill adoption. A wel
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

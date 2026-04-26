@@ -125,6 +125,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [CLAUDE.md for Database Conventions](/claude-md-database-conventions/)
 - [CLAUDE.md for Architecture Decisions](/claude-md-for-architecture-decisions/)
 - [CLAUDE.md Length Optimization](/claude-md-length-optimization/)

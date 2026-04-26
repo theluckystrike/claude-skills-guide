@@ -391,6 +391,8 @@ Claude Code creates files and edits through standard filesystem operations, so a
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Snippet Library Management](/claude-code-snippet-library-management/)
 - [Claude Code Tmux Session Management](/claude-code-tmux-session-management-multi-agent-workflow/)
 - [Tab Management for Claude Code Research](/onetab-alternative-chrome-extension-2026/)

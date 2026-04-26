@@ -252,6 +252,8 @@ Start with the five skills listed above, build your supermemory index with team 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

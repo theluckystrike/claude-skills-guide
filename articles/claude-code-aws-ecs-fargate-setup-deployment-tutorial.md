@@ -296,6 +296,8 @@ Claude Code accelerates each phase: generating Terraform and task definitions, w
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

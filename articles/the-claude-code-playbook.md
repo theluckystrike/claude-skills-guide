@@ -404,6 +404,8 @@ The public half (100 patterns) is also available as a [GitHub repository](https:
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude shortcuts guide](/claude-shortcuts-complete-guide/) — Complete guide to Claude Code keyboard shortcuts and slash commands
 - [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 - [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue

@@ -349,6 +349,8 @@ Deploying an MCP server on Heroku bridges the gap between Claude's capabilities 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

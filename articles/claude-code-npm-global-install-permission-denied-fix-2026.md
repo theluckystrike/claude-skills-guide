@@ -135,6 +135,8 @@ First check that your CLAUDE.md accurately describes your project conventions. I
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Project vs Global Settings](/claude-code-project-vs-global-settings-token-impact/)
 - [Claude Code Skill Permission Denied](/claude-code-skill-permission-denied-error-fix-2026/)
 - [Claude Code Permission Denied Shell](/claude-code-permission-denied-shell-commands-fix/)

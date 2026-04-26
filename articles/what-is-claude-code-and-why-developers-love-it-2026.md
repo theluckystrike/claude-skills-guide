@@ -118,6 +118,8 @@ That's the full setup. The getting started guide on this site covers the first p
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

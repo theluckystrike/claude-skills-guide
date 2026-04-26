@@ -100,5 +100,7 @@ For tasks that require neither reasoning nor code generation — like reformatti
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Opus 4.6 vs GPT-4o: Reasoning and Complex Tasks](/claude-opus-vs-gpt-4o-reasoning-comparison/)
 - [Claude Opus 4.6 vs DeepSeek V3: Coding Comparison](/claude-opus-vs-deepseek-v3-comparison/)

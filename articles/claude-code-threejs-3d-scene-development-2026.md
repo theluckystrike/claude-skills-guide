@@ -336,6 +336,8 @@ npx vite-bundle-visualizer
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Processing and p5.js Creative Coding](/claude-code-processing-p5js-creative-coding-2026/)
 - [Claude Code for Tone.js Web Audio Programming](/claude-code-tonejs-web-audio-programming-2026/)
 - [Claude Code for Blender Python Scripting](/claude-code-blender-python-scripting-2026/)

@@ -194,6 +194,8 @@ The key takeaways are straightforward: rotate tokens on refresh, store only hash
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

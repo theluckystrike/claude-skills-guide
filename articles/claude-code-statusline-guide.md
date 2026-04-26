@@ -356,6 +356,8 @@ The status line shows session-level token usage. The [5-hour usage limit](/claud
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [How to Use Claude Code: Beginner Guide](/how-to-use-claude-code-beginner-guide/)
 - [Claude Code Cost Complete Guide](/claude-code-cost-complete-guide/)
 - [Claude 5-Hour Usage Limit Guide](/claude-5-hour-usage-limit-guide/)

@@ -205,6 +205,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code vs JetBrains AI Compared (2026)](/claude-code-vs-jetbrains-ai-assistant-2026/)
 - [Continue Dev Review: Open Source AI Coding in 2026](/continue-dev-review-open-source-ai-coding-2026/)
 - [Best Free AI Coding Assistants 2026 Comparison](/best-free-ai-coding-assistants-2026-comparison/)

@@ -222,6 +222,8 @@ As you build confidence, layer in more automations. The compounding effect kicks
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

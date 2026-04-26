@@ -236,6 +236,8 @@ The freelancers who benefit most treat Claude Code as a skilled teammate rather 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

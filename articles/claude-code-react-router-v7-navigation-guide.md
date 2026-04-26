@@ -261,6 +261,8 @@ The key is understanding how loaders, actions, and outlets work together to crea
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

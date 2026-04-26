@@ -304,6 +304,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Node.js Profiling Workflow](/claude-code-for-nodejs-profiling-workflow-tutorial/)
 - [Claude Code For Node.js Event](/claude-code-for-nodejs-event-loop-workflow-guide/)
 - [Claude Code For Node.js Worker](/claude-code-for-nodejs-worker-threads-workflow/)

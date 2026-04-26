@@ -285,6 +285,8 @@ First check that your CLAUDE.md accurately describes your project conventions. I
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Rome Biome Linting](/claude-code-for-rome-biome-linting-workflow/)
 - [JSON Formatter Chrome Extension](/json-formatter-chrome-extension-best/)
 - [Apa Citation Formatter Chrome Extension](/chrome-extension-apa-citation-formatter/)

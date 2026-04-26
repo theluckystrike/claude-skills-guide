@@ -228,6 +228,8 @@ Start by adding your Hardhat configuration to Claude Code's context, then iterat
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

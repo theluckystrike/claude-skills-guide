@@ -262,5 +262,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Review Claude Code PRs Efficiently (2026)](/claude-code-review-prs-efficiently-2026/)
 - [Automate Code Reviews with Claude Code (2026)](/claude-code-code-review-automation-2026/)

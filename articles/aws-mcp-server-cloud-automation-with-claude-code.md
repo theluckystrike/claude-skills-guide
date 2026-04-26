@@ -179,6 +179,8 @@ Start with simple queries to verify your setup, then gradually introduce more co
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

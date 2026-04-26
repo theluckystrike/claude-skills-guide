@@ -231,6 +231,8 @@ Start with simple ingress configurations and progressively incorporate middlewar
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

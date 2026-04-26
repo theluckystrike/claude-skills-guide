@@ -228,6 +228,8 @@ $99. Once. Everything I use to ship.
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Agentic AI Coding Tools Comparison 2026](/agentic-ai-coding-tools-comparison-2026/)
 - [Best AI Code Completion Tools vs Claude Code](/best-ai-code-completion-tools-vs-claude-code/)
 - [Before and After Switching to Claude Code Workflow](/before-and-after-switching-to-claude-code-workflow/)

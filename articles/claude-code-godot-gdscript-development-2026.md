@@ -263,6 +263,8 @@ godot --headless --path ~/my-game --check-only
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Unreal Blueprint to C++ Conversion](/claude-code-unreal-blueprint-to-cpp-2026/)
 - [Claude Code for Unity Shader Development](/claude-code-unity-hlsl-shader-development-2026/)
 - [Claude Code for Processing and p5.js Creative Coding](/claude-code-processing-p5js-creative-coding-2026/)

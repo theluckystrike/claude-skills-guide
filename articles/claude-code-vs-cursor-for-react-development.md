@@ -520,6 +520,8 @@ Many React developers ultimately use both tools for different aspects of their w
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

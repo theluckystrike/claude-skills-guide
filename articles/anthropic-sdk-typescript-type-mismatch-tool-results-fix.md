@@ -140,6 +140,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Building TypeScript APIs with Claude](/claude-code-hono-framework-typescript-api-workflow/)
 - [Fix TypeScript Strict Mode Errors](/claude-code-typescript-strict-mode-errors-fix/)
 - [Claude Code JSDoc TypeScript](/claude-code-jsdoc-typescript-documentation/)

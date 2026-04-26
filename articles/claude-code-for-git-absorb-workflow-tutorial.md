@@ -243,6 +243,8 @@ Start using Git Absorb today, and you'll wonder how you ever managed without it.
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

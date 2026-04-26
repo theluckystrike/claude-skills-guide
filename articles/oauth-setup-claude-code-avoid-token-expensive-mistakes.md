@@ -264,6 +264,8 @@ At Sonnet 4.6 rates, the two-provider implementation costs $0.30-$0.57 with skil
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Structured Error Handling to Reduce Claude Code Token Waste](/structured-error-handling-reduce-claude-code-tokens/) -- prevent debugging loops
 - [Claude Code Caching Strategies: Don't Re-Discover What You Already Know](/claude-code-caching-strategies-dont-rediscover/) -- pre-stage configuration as a caching strategy
 - [Claude Code Skills Guide](/skills/) -- creating effective skill files

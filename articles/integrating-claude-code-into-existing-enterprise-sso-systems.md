@@ -207,6 +207,8 @@ The integration approach described here scales from small teams to large enterpr
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

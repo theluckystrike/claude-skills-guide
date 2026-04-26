@@ -350,6 +350,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Skills for Smart Grid](/claude-skills-for-energy-smart-grid-applications/)
 - [Smart Context Pruning for Claude API](/smart-context-pruning-claude-api-savings/)
 - [Claude Code + Mythril Smart Contract](/claude-code-for-mythril-workflow-tutorial/)

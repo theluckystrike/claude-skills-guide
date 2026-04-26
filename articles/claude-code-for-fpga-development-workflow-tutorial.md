@@ -451,6 +451,8 @@ The key is treating AI as an intelligent assistant rather than an oracle, provid
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

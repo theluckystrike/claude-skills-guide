@@ -253,6 +253,8 @@ The investment pays dividends across every aspect of technical work. Whether you
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

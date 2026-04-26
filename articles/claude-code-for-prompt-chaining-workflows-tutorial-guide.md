@@ -329,4 +329,6 @@ Related Reading
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Prompt Testing Evaluation Guide](/claude-code-for-prompt-testing-evaluation-guide/)

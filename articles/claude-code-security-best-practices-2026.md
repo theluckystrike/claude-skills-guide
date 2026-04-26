@@ -244,6 +244,8 @@ One leaked API key costs an average of $28,000 in incident response. Proper Clau
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [CLAUDE.md Security Rules](/claude-md-security-rules/)
 - [Understanding Claude Code Hooks System Complete Guide](/understanding-claude-code-hooks-system-complete-guide/)
 - [How Do I Limit What a Claude Skill Can Access on Disk](/how-do-i-limit-what-a-claude-skill-can-access-on-disk/)

@@ -222,6 +222,8 @@ The key to building a useful tool is presenting data in context. Don't just show
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

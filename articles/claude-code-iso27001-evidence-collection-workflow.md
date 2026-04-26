@@ -872,6 +872,8 @@ The most important shift is cultural: once evidence collection is automated and 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -258,6 +258,8 @@ Each level progressively reduces the searchable file tree. Level 1 alone typical
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Why Claude Code Gets Expensive on Large Projects](/why-claude-code-expensive-large-projects-fix/) -- comprehensive guide for large codebases
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- understanding context mechanics
 - [Cost Optimization Hub](/cost-optimization/) -- all cost reduction techniques

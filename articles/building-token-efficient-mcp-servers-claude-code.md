@@ -391,6 +391,8 @@ Before deploying an MCP server for team use:
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- server installation and configuration
 - [Reducing Claude Code MCP Round-Trips: Batch Operations Pattern](/reducing-claude-code-mcp-round-trips-batch-pattern/) -- batch pattern in depth
 - [Claude Code MCP Server Token Usage: How to Measure and Reduce](/claude-code-mcp-server-token-usage-measure-reduce/) -- measurement techniques

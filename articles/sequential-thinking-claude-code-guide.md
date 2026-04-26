@@ -394,6 +394,8 @@ Yes. These are complementary features. Extended thinking is a model-level capabi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code MCP Configuration](/claude-code-mcp-configuration-guide/) — full MCP setup reference
 - [Claude MCP List Command Reference](/claude-mcp-list-command-guide/) — CLI command details
 - [How to Add an MCP Server](/how-to-add-mcp-server-claude-code-2026/) — step-by-step installation

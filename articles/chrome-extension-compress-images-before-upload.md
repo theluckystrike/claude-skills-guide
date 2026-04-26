@@ -265,6 +265,8 @@ The implementation above provides a foundation that handles standard file inputs
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

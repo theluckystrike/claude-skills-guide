@@ -410,6 +410,8 @@ The goal is a skill ecosystem where individual skills remain maintainable, inter
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

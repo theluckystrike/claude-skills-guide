@@ -669,6 +669,8 @@ A production-ready extension also handles the edge cases: service worker restart
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

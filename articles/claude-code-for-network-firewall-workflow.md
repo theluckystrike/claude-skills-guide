@@ -249,6 +249,8 @@ Claude Code transforms firewall management from a error-prone manual process int
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -135,6 +135,8 @@ The cost of a poorly written skill is subtle: it produces acceptable but not exc
 - [Getting Started with Claude Skills](/getting-started-hub/). Learn the foundations before comparing options
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The top skills worth choosing over prompts
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 Related Reading

@@ -288,6 +288,8 @@ For developers interested in full customization, building a personal AI writing 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

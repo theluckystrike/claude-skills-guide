@@ -69,6 +69,8 @@ Claude Code should create a multi-stage `Dockerfile` optimized for Next.js stand
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Docker Compose Production Guide](/claude-code-docker-compose-production-guide/)
 - [Claude Code AWS Lambda Deployment Guide](/claude-code-aws-lambda-deployment-guide/)
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)

@@ -382,6 +382,8 @@ Claude Code serves as an excellent development partner for Dash projects, helpin
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

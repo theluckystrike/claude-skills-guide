@@ -275,6 +275,8 @@ Claude Code transforms database seeding from manual work into an automated proce
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

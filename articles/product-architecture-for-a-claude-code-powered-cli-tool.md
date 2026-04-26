@@ -198,6 +198,8 @@ The key is to view Claude Code not just as a wrapper around existing commands, b
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

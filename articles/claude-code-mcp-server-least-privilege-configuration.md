@@ -368,4 +368,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [MCP Server stdio Timeout 30000ms — Fix (2026)](/claude-code-mcp-server-stdio-timeout-fix-2026/)

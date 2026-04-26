@@ -159,6 +159,8 @@ Start with a simple implementation focusing on one language or project type, mea
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -354,6 +354,8 @@ Step 2 uses Claude Code to expand skeleton articles into full content by running
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [AI Knowledge Base Chrome Extension](/ai-knowledge-base-chrome-extension/)
 - [Knowledge Base Exceeds 512KB Maximum — Fix (2026)](/claude-code-knowledge-base-too-large-fix-2026/)
 - [Notion MCP Server Knowledge Base](/notion-mcp-server-knowledge-base-automation/)

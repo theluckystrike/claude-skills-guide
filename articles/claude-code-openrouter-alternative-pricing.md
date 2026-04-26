@@ -230,6 +230,8 @@ Pricing last verified: April 2026. OpenRouter pricing changes frequently -- veri
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Cursor: Monthly Cost Comparison](/claude-code-vs-cursor-monthly-cost-comparison-2026/) -- broader tool cost comparison
 - [Claude Code Sonnet vs Haiku: When Cheaper Is Actually Better](/claude-code-sonnet-vs-haiku-cheaper-actually-better/) -- model routing decisions
 - [Cost Optimization Hub](/cost-optimization/) -- optimization techniques that work regardless of provider

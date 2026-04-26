@@ -224,4 +224,6 @@ Format:
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Custom Slash Command Not Found — Fix (2026)](/claude-code-custom-slash-command-not-recognized-fix/)

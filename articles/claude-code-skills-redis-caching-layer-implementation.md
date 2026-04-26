@@ -281,6 +281,8 @@ Start with simple key-value caching, then expand to hashes for session data and 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

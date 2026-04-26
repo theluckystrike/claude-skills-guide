@@ -404,6 +404,8 @@ Start with the basic Web ACL template, then gradually add custom rules and autom
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

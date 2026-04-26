@@ -405,6 +405,8 @@ The before version would produce anything from a one-liner to a multi-paragraph 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

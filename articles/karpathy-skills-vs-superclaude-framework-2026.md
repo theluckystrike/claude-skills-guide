@@ -89,6 +89,8 @@ Start with Karpathy Skills. It takes 30 seconds to set up and the improvements a
 
 ## See Also
 
+**Try it:** Build your own with our [CLAUDE.md Generator](/generator/).
+
 - [Karpathy Skills vs Ultimate Guide (2026)](/karpathy-skills-vs-claude-code-ultimate-guide-2026/)
 - [Karpathy Skills vs Custom CLAUDE.md (2026)](/karpathy-skills-vs-custom-claude-md-2026/)
 - [Install SuperClaude Framework Step by Step (2026)](/how-to-install-superclaude-framework-2026/)

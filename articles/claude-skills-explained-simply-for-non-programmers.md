@@ -126,6 +126,8 @@ With `supermemory` active, Claude stores important things you tell it (your writ
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -218,6 +218,8 @@ Remember: Claude enhances your team's expertise but doesn't replace good enginee
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

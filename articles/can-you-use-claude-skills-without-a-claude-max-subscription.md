@@ -115,6 +115,8 @@ Only consider Max when your usage patterns exceed free tier capacity. By then, y
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -187,6 +187,8 @@ Start with the context file method for quick results, then progressively add ski
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

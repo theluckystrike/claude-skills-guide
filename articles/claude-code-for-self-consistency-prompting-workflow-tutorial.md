@@ -265,4 +265,6 @@ Related Reading
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Coolify — Workflow Guide](/claude-code-for-coolify-self-hosting-workflow-guide/)

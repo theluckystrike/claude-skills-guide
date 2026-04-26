@@ -374,6 +374,8 @@ By following these practices and using Claude Code to generate YAML scaffolding 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

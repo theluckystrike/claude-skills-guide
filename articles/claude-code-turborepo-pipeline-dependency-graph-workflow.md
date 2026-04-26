@@ -243,4 +243,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Turborepo Cache Miss — Fix (2026)](/claude-code-turborepo-cache-miss-fix/)

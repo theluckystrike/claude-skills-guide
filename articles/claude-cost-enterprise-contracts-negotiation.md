@@ -118,6 +118,8 @@ These ranges apply similarly to both Anthropic and OpenAI enterprise agreements.
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Migration Cost Analysis: Switching Providers](/claude-cost-migration-switching-providers-analysis/)
 - [Total Cost of Ownership: Every Provider](/claude-cost-total-cost-ownership-every-provider/)
 - [Claude vs GPT-4o Honest Cost Breakdown](/claude-cost-claude-vs-gpt4-honest-cost-breakdown/)

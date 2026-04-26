@@ -183,4 +183,6 @@ For more on specific plugin types, see our [skills vs hooks vs commands comparis
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Plugin Load Failure Error — Fix (2026)](/claude-code-plugin-load-failure-fix-2026/)

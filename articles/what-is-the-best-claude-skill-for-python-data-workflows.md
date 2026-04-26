@@ -147,6 +147,8 @@ The beauty of Claude skills is their composability, you're not locked into a sin
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

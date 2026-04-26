@@ -301,6 +301,8 @@ The time invested in building this tool pays back quickly when you eliminate the
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

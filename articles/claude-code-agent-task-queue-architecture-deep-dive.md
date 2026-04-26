@@ -245,4 +245,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Agent Recursion Depth Exceeded Fix](/claude-code-agent-recursion-depth-exceeded-fix-2026/)

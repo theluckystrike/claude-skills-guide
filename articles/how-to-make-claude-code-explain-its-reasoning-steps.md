@@ -160,6 +160,8 @@ Combine verbal explanation with visible tool use. When you can see both what Cla
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

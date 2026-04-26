@@ -223,6 +223,8 @@ Remember: the goal isn't just to generate a call graph, but to answer specific q
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

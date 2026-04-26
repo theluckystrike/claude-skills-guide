@@ -240,6 +240,8 @@ List your skill in community directories or forums. Skills gain adoption when pe
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

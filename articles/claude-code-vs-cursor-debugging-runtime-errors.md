@@ -205,6 +205,8 @@ Claude Code's headless mode can analyze production error logs automatically, gen
 
 ## FAQ
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 ### Can Claude Code debug production errors without the running system?
 
 Yes. Claude Code analyzes stack traces, error logs, and source code to identify probable causes. It cannot inspect live memory, but its static analysis identifies the most likely failure points.

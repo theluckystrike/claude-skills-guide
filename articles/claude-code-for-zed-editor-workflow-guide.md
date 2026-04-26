@@ -68,6 +68,8 @@ After Claude Code makes changes, Zed automatically reloads the modified files, s
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Zed Editor AI Features Review for Developers 2026](/zed-editor-ai-features-review-for-developers-2026/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)
 - [When to Use Claude Code vs Manual Coding Tradeoffs](/when-to-use-claude-code-vs-manual-coding-tradeoffs/)

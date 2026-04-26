@@ -630,6 +630,8 @@ A well-built study schedule planner extension replaces multiple separate tools w
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

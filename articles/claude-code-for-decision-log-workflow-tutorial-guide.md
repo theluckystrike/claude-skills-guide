@@ -292,4 +292,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Timezone Affecting Log Timestamps Fix](/claude-code-timezone-affecting-log-timestamps-fix-2026/)

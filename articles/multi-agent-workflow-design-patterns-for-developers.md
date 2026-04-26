@@ -295,6 +295,8 @@ The key is starting simple, two-agent handoffs or parallel specialists, and prog
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

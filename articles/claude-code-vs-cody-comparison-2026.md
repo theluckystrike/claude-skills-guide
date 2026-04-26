@@ -98,4 +98,6 @@ Adding Claude Code to a Cody workflow:
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Sourcegraph Cody: Codebase Search](/claude-code-vs-sourcegraph-cody-codebase-search/)

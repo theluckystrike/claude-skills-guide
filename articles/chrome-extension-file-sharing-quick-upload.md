@@ -462,6 +462,8 @@ Chrome extensions provide a powerful platform for quick file sharing. By using m
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

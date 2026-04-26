@@ -186,5 +186,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Drizzle ORM — Workflow Guide](/claude-code-for-drizzle-orm-workflow-guide/)
 - [Claude Code for Buf Protobuf Schema Management (2026)](/claude-code-buf-protobuf-schema-management-2026/)

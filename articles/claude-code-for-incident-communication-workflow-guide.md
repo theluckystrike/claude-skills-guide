@@ -297,6 +297,8 @@ Start small: create one template, test one integration, and gradually expand you
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -109,6 +109,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code + WebStorm JetBrains Setup](/claude-code-webstorm-jetbrains-setup-2026/)
 - [Claude Code vs JetBrains AI Compared](/claude-code-vs-jetbrains-ai-assistant-2026/)
 - [Switching From Jetbrains AI To Claude](/switching-from-jetbrains-ai-to-claude-code/)

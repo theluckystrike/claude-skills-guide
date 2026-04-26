@@ -193,6 +193,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Headless Linux Auth](/claude-code-headless-linux-auth/)
 - [Claude Code Slow Response Fix](/claude-code-slow-response-fix/)
 - [Anthropic API Error 429 Rate Limit](/anthropic-api-error-429-rate-limit/)

@@ -71,6 +71,8 @@ Claude Code should create a server endpoint that returns HTML partial containing
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
 - [Vibe Coding for Web Apps NextJS Vercel Guide](/vibe-coding-for-web-apps-nextjs-vercel-guide/)

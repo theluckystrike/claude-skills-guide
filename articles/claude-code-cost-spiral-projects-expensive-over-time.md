@@ -301,6 +301,8 @@ The counter-measure is treating CLAUDE.md and skills updates as first-class PR r
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Why Claude Code Gets Expensive on Large Projects](/why-claude-code-expensive-large-projects-fix/) -- project-size specific fixes
 - [How to Audit Your Claude Code Token Usage](/audit-claude-code-token-usage-step-by-step/) -- the measurement foundation
 - [Cost Optimization Hub](/cost-optimization/) -- all optimization techniques

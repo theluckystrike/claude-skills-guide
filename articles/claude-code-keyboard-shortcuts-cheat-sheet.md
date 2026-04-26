@@ -215,6 +215,8 @@ Ctrl+C cancels the current operation. If Claude is in the middle of writing a fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Command Reference](/commands/) — Full interactive command explorer
 - [Getting Started with Claude Code](/getting-started/) — First-time setup and basics
 - [Claude Code Configuration Guide](/configuration/) — Settings and customization

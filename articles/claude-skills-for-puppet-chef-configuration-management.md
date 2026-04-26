@@ -301,6 +301,8 @@ Related Reading
 - [Claude Code Azure DevOps Integration Workflow Tutorial](/claude-code-azure-devops-integration-workflow-tutorial/). Automate configuration deployment through CI/CD pipelines
 - [Automated Testing Pipeline with Claude TDD Skill (2026)](/claude-tdd-skill-test-driven-development-workflow/). Validate manifests and cookbooks with test-driven workflows
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

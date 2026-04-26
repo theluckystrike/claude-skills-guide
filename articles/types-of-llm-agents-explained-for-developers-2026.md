@@ -153,6 +153,8 @@ Master these agent types, and you'll be well-equipped to build sophisticated AI-
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

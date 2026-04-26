@@ -89,6 +89,8 @@ The pricing is competitive between the two providers. Claude's caching advantage
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Is the Claude API harder to learn than OpenAI's?
 No. The Claude Messages API is simpler — fewer concepts, fewer endpoints, more consistent behavior. Developers new to AI APIs often find Claude's documentation clearer. OpenAI's API surface is larger (Chat Completions, Assistants, Threads, Files, Vector Stores, Fine-tuning) which provides more capabilities but requires learning more concepts.
 

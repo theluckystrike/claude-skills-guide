@@ -260,6 +260,8 @@ Claude Code transforms Grafana plugin development from a complex, multi-step pro
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

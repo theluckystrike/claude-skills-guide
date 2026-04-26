@@ -235,6 +235,8 @@ psql -d financial_db -c "
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for SOX Audit Automation](/claude-code-sox-audit-automation-2026/)
 - [Claude Code for SOC 2 Evidence Collection](/claude-code-soc2-evidence-collection-2026/)
 - [Claude Code for Basel III Risk Calculation](/claude-code-basel-iii-risk-calculation-2026/)

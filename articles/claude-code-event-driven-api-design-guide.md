@@ -255,4 +255,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Inconsistent API Design (2026)](/claude-code-inconsistent-api-design-fix-2026/)

@@ -318,6 +318,8 @@ The overhead of good versioning practices pays back every time a user updates wi
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

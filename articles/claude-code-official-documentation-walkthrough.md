@@ -318,6 +318,8 @@ With Claude Code at your side and a solid understanding of its documentation, yo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

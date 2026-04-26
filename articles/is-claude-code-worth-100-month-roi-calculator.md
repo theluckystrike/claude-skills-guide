@@ -178,6 +178,8 @@ If ROI > 200%: Strong recommendation for Max subscription.
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Max Subscription vs API](/claude-code-max-vs-api-cheaper-2026-calculator/) -- detailed pricing comparison
 - [Claude Code vs GitHub Copilot](/claude-code-vs-github-copilot-token-cost-analysis/) -- comparison with the leading alternative
 - [How to Reduce Claude Code Token Usage by 3x](/reduce-claude-code-token-usage-3x-guide-2026/) -- maximize value by reducing waste

@@ -354,5 +354,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Playwright Visual Testing (2026)](/claude-code-playwright-visual-regression-testing-guide/)
 - [Claude Code for Supertest API Testing (2026)](/claude-code-supertest-api-testing-workflow/)

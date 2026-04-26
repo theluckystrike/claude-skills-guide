@@ -680,6 +680,8 @@ Remember: the key to success is starting simple and incrementally adding complex
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

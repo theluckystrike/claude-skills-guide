@@ -287,6 +287,8 @@ For teams, the savings multiply: 5 developers each saving $10.80/month = $54/mon
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- automate error formatting with pre/post hooks
 - [Errors Atlas](/errors-atlas/) -- comprehensive error reference for Claude Code
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- reduce context cost from error output flooding

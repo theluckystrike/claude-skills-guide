@@ -209,6 +209,8 @@ The key is to design clear escalation criteria, provide sufficient context for h
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

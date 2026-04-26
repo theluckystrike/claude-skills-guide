@@ -207,6 +207,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude API Error 400 invalid_request_error Fix](/claude-api-error-400-invalidrequesterror-explained/) -- the error type returned when prefill is used on unsupported models.
 - [Claude Extended Thinking API Guide](/claude-extended-thinking-api-guide/) -- Opus 4.6 capabilities beyond prefilling.
 - [Claude API Tool Use Function Calling Deep Dive Guide](/claude-api-tool-use-function-calling-deep-dive-guide/) -- full parameter reference including output_config.

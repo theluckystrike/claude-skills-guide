@@ -552,6 +552,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Go Module Development — Complete Developer Guide](/claude-code-go-module-development-guide/)
 - [Claude Code Rust Crate Development Guide (2026)](/claude-code-rust-crate-development-guide/)
 - [Claude Code for mise Development Environment Setup (2026)](/claude-code-mise-development-environment-2026/)

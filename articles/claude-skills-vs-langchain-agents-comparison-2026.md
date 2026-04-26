@@ -84,6 +84,8 @@ LangChain is the right foundation for production agent systems that need observa
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can I use Claude as the LLM inside a LangChain agent?
 Yes. LangChain supports Claude models through the `langchain-anthropic` package. You can use Claude Opus 4.6 or Sonnet 4.6 as the backbone model in any LangChain chain or agent while keeping LangChain's routing, memory, and observability layers.
 

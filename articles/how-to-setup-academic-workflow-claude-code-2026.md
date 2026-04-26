@@ -141,5 +141,7 @@ The default configuration is tuned for economics and social sciences (the mainta
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Set Up Claude Code Docs for Offline Use (2026)](/how-to-setup-claude-code-docs-offline-2026/)
 - [Claude Code Academic Workflow Guide (2026)](/claude-code-academic-workflow-guide-2026/)

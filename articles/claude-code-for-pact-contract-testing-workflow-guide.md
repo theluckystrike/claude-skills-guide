@@ -237,6 +237,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Spike Testing Workflow Tutorial Guide (2026)](/claude-code-for-spike-testing-workflow-tutorial-guide/)
 - [Claude Code + Percy Visual Testing (2026)](/claude-code-for-percy-visual-testing-workflow-guide/)
 - [Claude Code for Soak Testing Workflow Tutorial Guide](/claude-code-for-soak-testing-workflow-tutorial-guide/)

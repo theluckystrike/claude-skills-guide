@@ -118,6 +118,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [CLAUDE.md Version Control Strategies](/claude-md-version-control-strategies/)
 - [Claude Code for Version Matrix Workflow](/claude-code-for-version-matrix-workflow-tutorial-guide/)
 - [Claude Code Version History and Changes](/claude-code-version-history-changes-2026/)

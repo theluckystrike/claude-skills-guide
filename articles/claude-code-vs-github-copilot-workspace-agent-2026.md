@@ -105,4 +105,6 @@ Related reading:
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Copilot Workspace (2026): Agents](/claude-code-vs-copilot-workspace-agent-2026/)

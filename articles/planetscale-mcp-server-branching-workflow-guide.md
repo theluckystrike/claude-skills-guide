@@ -218,6 +218,8 @@ The patterns in this guide work particularly well when combined with other Claud
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

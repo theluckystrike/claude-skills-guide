@@ -201,6 +201,8 @@ Remember: the permission system exists to protect you. The goal isn't to elimina
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

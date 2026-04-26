@@ -116,6 +116,8 @@ With these approaches, Claude Code becomes more than a tool, it becomes an inter
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

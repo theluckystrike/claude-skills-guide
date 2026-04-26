@@ -218,6 +218,8 @@ If you are working specifically with Claude Code, the companion guide [Passing C
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

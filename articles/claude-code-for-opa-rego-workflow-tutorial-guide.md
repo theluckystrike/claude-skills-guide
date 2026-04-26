@@ -254,6 +254,8 @@ The key is treating Claude as a collaborative partner, explain your requirements
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -422,6 +422,8 @@ The biggest use comes from investing in reusable data preparation functions and 
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

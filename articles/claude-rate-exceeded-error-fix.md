@@ -764,6 +764,8 @@ No. Rate limits are enforced at the organization level, not per API key. Creatin
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Fix Claude Code Rate Limit 429 Retry-After](/claude-code-rate-limit-429-retry-after-fix/)
 - [Fix Claude Code Tokens Per Day Limit](/claude-code-rate-limit-tokens-per-day-fix-2026/)
 - [Fix Claude API 529 Overloaded Error](/claude-api-529-overloaded-error-handling-fix/)

@@ -86,6 +86,8 @@ Some architectural rules apply only to specific modules. Use path-specific rules
 ---
 paths:
   - "src/modules/auth/**"
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 ## Auth Module Architecture

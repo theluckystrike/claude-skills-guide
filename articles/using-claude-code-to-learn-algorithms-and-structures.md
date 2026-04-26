@@ -176,4 +176,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Learn Claude Code with Claude Howto Guide (2026)](/how-to-learn-claude-code-with-howto-guide-2026/)

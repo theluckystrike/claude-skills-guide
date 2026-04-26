@@ -221,6 +221,8 @@ Remember that RUM data is most powerful when combined with your existing monitor
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

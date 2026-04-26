@@ -237,3 +237,5 @@ Context efficiency measurement has diminishing returns once a team consistently 
 - [How to Audit Your Claude Code Token Usage (Step-by-Step)](/audit-claude-code-token-usage-step-by-step/) -- the full audit methodology
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- the top tool for improving efficiency mid-session
 - [Cost Optimization Hub](/cost-optimization/) -- technique index
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

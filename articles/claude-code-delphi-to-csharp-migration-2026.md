@@ -321,6 +321,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [LLM Migration Cost Analysis](/claude-cost-migration-switching-providers-analysis/)
 - [AI Coding Tools for Code Migration](/ai-coding-tools-for-code-migration-projects/)
 - [Claude Code for OpenTofu Migration](/claude-code-for-opentofu-migration-workflow-guide/)

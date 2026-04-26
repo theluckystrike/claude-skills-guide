@@ -116,6 +116,8 @@ These skills compound when used together. Start with log analysis to identify sy
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

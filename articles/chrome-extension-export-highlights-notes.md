@@ -352,6 +352,8 @@ These patterns work whether you're extending an existing annotation tool or buil
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -119,6 +119,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Skill Circular Dependency](/claude-code-skill-circular-dependency-detected-error-fix/)
 - [Next.js Build Fails With Generated Code](/claude-code-nextjs-build-generated-code-fix-2026/)
 - [Claude Code for Buck2 Build System](/claude-code-for-buck2-build-system-workflow-guide/)

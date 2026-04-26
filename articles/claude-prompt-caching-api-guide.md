@@ -228,6 +228,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Prompt Caching Not Working](/claude-prompt-caching-not-working/) -- troubleshoot when caching silently fails.
 - [Claude Prompt Caching Pricing Guide](/claude-prompt-caching-pricing-and-cost-savings/) -- calculate your cost savings.
 - [Claude API Error 429 rate_limit_error Fix](/claude-api-error-429-ratelimiterror-explained/) -- cache-read tokens do not count toward ITPM limits.

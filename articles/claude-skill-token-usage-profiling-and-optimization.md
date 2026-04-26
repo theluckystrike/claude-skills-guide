@@ -220,6 +220,8 @@ Start by measuring your current skills, then apply these strategies systematical
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

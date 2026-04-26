@@ -173,6 +173,8 @@ Full-text PDFs from publishers are copyrighted. Your extraction pipeline should 
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Skills for Medical Records Processing](/claude-skills-for-medical-records-processing/) -- clinical research data extraction
 - [Claude Skills for Financial Analysis](/claude-skills-for-financial-analysis/) -- quantitative research methodology
 - [Claude Skills vs Subagents: When to Use Each](/claude-skills-vs-subagents-when-to-use/) -- forked context for paper analysis

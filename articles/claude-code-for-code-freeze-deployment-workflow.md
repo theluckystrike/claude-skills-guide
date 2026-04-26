@@ -213,6 +213,8 @@ Claude Code transforms code freeze from a stressful bottleneck into a controlled
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

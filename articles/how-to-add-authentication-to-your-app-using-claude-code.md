@@ -173,6 +173,8 @@ The initial investment in proper authentication pays dividends in security and u
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

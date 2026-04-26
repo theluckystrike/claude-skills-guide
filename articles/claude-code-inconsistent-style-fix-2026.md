@@ -159,6 +159,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Inconsistent API Design](/claude-code-inconsistent-api-design-fix-2026/)
 
 <script type="application/ld+json">

@@ -229,6 +229,8 @@ Remember: type safety isn't just about catching bugs, it's about documentation t
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

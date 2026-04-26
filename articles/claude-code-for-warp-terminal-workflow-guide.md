@@ -329,6 +329,8 @@ Developers using Warp + Claude Code together report 40% less context switching c
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Alacritty Workflow Guide](/claude-code-for-alacritty-workflow-guide/)
 - [Claude Code for WezTerm Terminal Workflow Guide](/claude-code-for-wezterm-terminal-workflow-guide/)
 - [Claude Code Tmux Session Management](/claude-code-tmux-session-management-multi-agent-workflow/)

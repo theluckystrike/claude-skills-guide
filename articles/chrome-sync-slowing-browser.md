@@ -179,6 +179,8 @@ Chrome Sync is invaluable for multi-device workflows, but it requires occasional
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

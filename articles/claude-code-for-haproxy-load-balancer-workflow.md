@@ -259,6 +259,8 @@ Start by describing your load balancing requirements in natural language, and le
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

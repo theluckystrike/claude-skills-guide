@@ -351,6 +351,8 @@ With Claude Code as your assistant, you have a powerful partner in preserving an
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

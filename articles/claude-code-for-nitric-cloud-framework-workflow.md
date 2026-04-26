@@ -263,6 +263,8 @@ The key is treating Claude not just as a code generator, but as a development pa
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

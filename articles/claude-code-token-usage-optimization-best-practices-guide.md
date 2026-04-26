@@ -246,4 +246,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Token Count Estimation Mismatch Fix](/claude-code-token-count-estimation-mismatch-fix-2026/)

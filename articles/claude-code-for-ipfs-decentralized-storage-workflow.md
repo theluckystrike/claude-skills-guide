@@ -258,6 +258,8 @@ Remember to always consider your redundancy needs, implement proper error handli
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

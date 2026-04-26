@@ -247,6 +247,8 @@ Claude Code transforms Fluent Bit workflow management from manual configuration 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

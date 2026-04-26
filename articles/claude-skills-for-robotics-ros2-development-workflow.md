@@ -188,6 +188,8 @@ This integrated approach reduces context switching and maintains consistency acr
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

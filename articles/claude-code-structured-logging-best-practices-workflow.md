@@ -324,6 +324,8 @@ The goal is not perfect logs. It is logs that let you answer specific questions 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

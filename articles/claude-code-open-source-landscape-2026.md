@@ -118,6 +118,8 @@ See our [contribution guide](/claude-code-community-contributions-guide-2026/) f
 
 ## FAQ
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ### Is the ecosystem slowing down or speeding up?
 Accelerating. MCP server creation is the fastest-growing category, driven by the protocol's adoption across multiple AI tools.
 

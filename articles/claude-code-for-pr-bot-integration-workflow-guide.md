@@ -236,6 +236,8 @@ Remember to iterate on your configuration based on real feedback. The most succe
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

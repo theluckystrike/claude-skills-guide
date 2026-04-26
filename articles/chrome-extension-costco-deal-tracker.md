@@ -278,6 +278,8 @@ For developers looking to extend this functionality, adding price history visual
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

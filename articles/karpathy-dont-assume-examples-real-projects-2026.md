@@ -138,3 +138,5 @@ Claude Code correctly scopes dependencies to packages and uses workspace imports
 - [Debug When Claude Code Assumes Wrong](/karpathy-dont-assume-debugging-failures-2026/) — fixing assumption failures
 - [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — broader patterns
 - [Karpathy Skills Complete Guide](/karpathy-claude-code-skills-complete-guide-2026/) — all four principles
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

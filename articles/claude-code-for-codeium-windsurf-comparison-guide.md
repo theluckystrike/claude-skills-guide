@@ -203,6 +203,8 @@ Consider trying each tool for a week in your actual development work, the real-w
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

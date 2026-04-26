@@ -385,6 +385,8 @@ The teams that get the most value from Claude Code treat it as a team member rat
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

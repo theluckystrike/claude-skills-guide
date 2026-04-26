@@ -214,6 +214,8 @@ The key is consistency: check flags consistently, log evaluations thoroughly, an
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

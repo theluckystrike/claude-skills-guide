@@ -667,6 +667,8 @@ Start with the pre-commit hook and a basic collection pipeline. Add custom rules
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

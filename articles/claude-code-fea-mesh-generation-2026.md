@@ -283,6 +283,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for AWS App Mesh Workflow](/claude-code-for-aws-app-mesh-workflow/)
 - [Claude Code for Kong Mesh Service Mesh](/claude-code-for-kong-mesh-workflow-tutorial/)
 - [Claude Skills for SEO Content Generation Guide](/claude-skills-for-seo-content-generation/)

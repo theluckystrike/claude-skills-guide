@@ -167,6 +167,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Setup: Neovim AI Coding Setup](/neovim-ai-coding-setup-with-claude-2026/)
 - [Claude Sonnet 4.6 vs GPT-4o for Coding](/claude-sonnet-vs-gpt-4o-coding-comparison-2026/)
 - [Claude Code vs ChatGPT for Coding](/when-to-use-claude-code-vs-chatgpt-for-coding-tasks/)

@@ -97,5 +97,7 @@ Start manual. Seriously. A `tasks.md` file works for most projects and keeps you
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [ccusage vs Manual Token Counting (2026)](/ccusage-vs-manual-token-counting-2026/)
 - [Claude Task Master vs Linear and Jira (2026)](/claude-task-master-vs-linear-jira-2026/)

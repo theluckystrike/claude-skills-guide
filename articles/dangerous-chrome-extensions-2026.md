@@ -192,6 +192,8 @@ The convenience of extensions often comes with hidden costs. By understanding th
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

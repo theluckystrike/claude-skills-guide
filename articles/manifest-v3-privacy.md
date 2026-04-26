@@ -331,6 +331,8 @@ The Manifest V3 privacy model isn't perfect, but it represents meaningful progre
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

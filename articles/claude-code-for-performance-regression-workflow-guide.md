@@ -247,6 +247,8 @@ Remember: the best time to catch a performance regression is before it ships. Cl
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

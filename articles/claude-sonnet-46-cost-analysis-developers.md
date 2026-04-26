@@ -140,6 +140,8 @@ Compare your API bill for the first month after switching. Track quality by havi
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — understand what drives Claude development costs
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — get better results while spending less
 - [Claude Code Monthly Cost Breakdown](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/) — budget planning for Claude-powered development

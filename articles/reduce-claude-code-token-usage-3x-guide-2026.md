@@ -143,6 +143,8 @@ For a team of five engineers, multiply the solo figures by 5 for a monthly savin
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- deep dive on compaction mechanics and timing
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- strategies for staying within context limits
 - [Claude Code Model Selection for Cost: Sonnet vs Haiku vs Opus](/claude-code-model-selection-cost-sonnet-haiku-opus/) -- full model routing decision framework

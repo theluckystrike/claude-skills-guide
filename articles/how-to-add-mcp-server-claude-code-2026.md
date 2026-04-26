@@ -229,3 +229,5 @@ Explore the related resources below for deeper coverage. The Claude Code documen
 - [Add Angular MCP to Claude Code](/claude-code-add-angular-mcp/)
 - [Add MongoDB MCP to Claude Code](/claude-code-add-mongodb-mcp/)
 - [Add MySQL MCP to Claude Code](/claude-code-add-mysql-mcp/)
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

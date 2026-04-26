@@ -181,5 +181,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Making Assumptions (2026)](/claude-code-keeps-making-assumptions-karpathy-fix-2026/)
 - [Fix Claude Code Suggesting Wrong Framework (2026)](/claude-code-keeps-suggesting-wrong-framework-2026/)

@@ -243,6 +243,8 @@ The best approach often combines both tools, SuperMaven for rapid inline complet
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

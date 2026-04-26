@@ -392,6 +392,8 @@ The investment in setting up workspaces, whether through a third-party extension
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

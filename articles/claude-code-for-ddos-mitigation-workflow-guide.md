@@ -247,6 +247,8 @@ Remember that DDoS mitigation is an ongoing process. Continuously refine your th
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

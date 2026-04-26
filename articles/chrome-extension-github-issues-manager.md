@@ -713,6 +713,8 @@ Start with the free extensions, build a label schema that works for your team, a
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

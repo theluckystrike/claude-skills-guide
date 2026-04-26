@@ -111,6 +111,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Wrong Environment Deploy](/claude-code-deploying-wrong-environment-prevent-mistakes/)
 - [Fix Claude Code Wrong File Context](/claude-code-keeps-switching-to-wrong-file-context/)
 - [Wrong Node.js Version in PATH Fix](/claude-code-wrong-node-version-in-path-fix-2026/)

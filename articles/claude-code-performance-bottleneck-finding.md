@@ -162,6 +162,8 @@ Performance optimization for Claude Code is an ongoing process rather than a one
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

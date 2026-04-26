@@ -297,6 +297,8 @@ Building a Chrome extension for running Lighthouse audits transforms your browse
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -429,6 +429,8 @@ The combination of Claude Code for generation and iteration, the AsyncAPI CLI fo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

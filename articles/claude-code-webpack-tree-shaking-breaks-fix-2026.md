@@ -130,6 +130,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [TypeScript Strict Mode Breaks Claude](/claude-code-typescript-strict-mode-breaks-generated-code-fix/)
 - [Claude Code Breaks Existing Tests After](/claude-code-breaks-existing-tests-after-changes-fix/)
 - [Claude Code for Rspack Webpack](/claude-code-for-rspack-webpack-compatible-workflow/)

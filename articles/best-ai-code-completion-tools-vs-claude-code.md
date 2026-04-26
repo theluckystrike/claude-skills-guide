@@ -178,6 +178,8 @@ The inline tools make you faster at writing code you already understand. Claude 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

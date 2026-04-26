@@ -397,6 +397,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Spec Workflow](/claude-code-spec-workflow-guide/)
 - [Claude Code for OpenAPI 3.1 Workflow](/claude-code-for-openapi-3-1-workflow-tutorial/)
 - [Claude Code OpenAPI Client Generation](/claude-code-openapi-client-generation-guide/)

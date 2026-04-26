@@ -199,6 +199,8 @@ For CI/CD integration patterns, see the [CI/CD guide](/claude-code-ci-cd-integra
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code hooks](/claude-code-hooks-complete-guide/) — hook into API mode tool execution
 - [Claude Code spec workflow](/claude-code-spec-workflow-guide/) — feed specs into API mode
 - [Claude Agent SDK](/claude-agent-sdk-complete-guide/) — build custom agents with the SDK

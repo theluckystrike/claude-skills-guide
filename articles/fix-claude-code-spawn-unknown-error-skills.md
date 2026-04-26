@@ -230,6 +230,8 @@ The `disableSkillShellExecution: true` setting prevents `!`command`` execution b
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills with Embedded Scripts](/claude-skills-with-embedded-scripts/)
 - [Fix ENOENT No Such File or Directory Error](/fix-claude-code-enoent-skills/)
 - [Fix Claude Skill Timeout Errors](/fix-claude-skill-timeout-errors/)

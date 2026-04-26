@@ -192,4 +192,6 @@ For the full ecosystem overview, see the [tools map](/claude-code-ecosystem-comp
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Multi-Agent Claude Fleet Cost Architecture Guide](/multi-agent-claude-fleet-cost-architecture/)

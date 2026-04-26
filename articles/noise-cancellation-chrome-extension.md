@@ -287,6 +287,8 @@ Focus on specific use cases, whether that is cleaning up voice recordings, reduc
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

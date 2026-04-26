@@ -485,6 +485,8 @@ The combination of Playwright's deterministic browser control and Claude Code's 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

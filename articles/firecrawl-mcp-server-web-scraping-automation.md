@@ -204,6 +204,8 @@ Start with simple single-page extractions, then expand to crawling operations as
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

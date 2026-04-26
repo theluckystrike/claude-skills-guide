@@ -203,6 +203,8 @@ Start incorporating these symbol search techniques into your daily development r
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

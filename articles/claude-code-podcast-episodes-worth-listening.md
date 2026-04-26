@@ -95,6 +95,8 @@ The developers who get the most from Claude Code treat each episode as a startin
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

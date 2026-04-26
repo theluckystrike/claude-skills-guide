@@ -175,6 +175,8 @@ The composable nature of skills means your Claude setup grows with your needs. S
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

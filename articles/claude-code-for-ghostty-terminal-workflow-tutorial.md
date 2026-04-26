@@ -233,6 +233,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Rio Terminal — Workflow Guide](/claude-code-for-rio-terminal-workflow-guide/)
 - [How to Use Claude Code with Warp Terminal 2026](/claude-code-warp-terminal-workflow-2026/)
 - [How to Set Up Claude Code in Ghostty Terminal 2026](/claude-code-ghostty-terminal-setup-2026/)

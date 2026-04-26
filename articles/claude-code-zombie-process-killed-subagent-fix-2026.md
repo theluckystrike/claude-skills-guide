@@ -91,6 +91,8 @@ Claude Code typically uses 200-500MB of RAM. Large file operations, parallel too
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Install Killed on Linux](/claude-code-install-killed-low-memory-linux-fix/)
 - [Terminal Emulator Rendering Artifacts — Fix (2026)](/claude-code-terminal-rendering-artifacts-fix-2026/)
 - [How to Use Thirdweb SDK Workflow (2026)](/claude-code-for-thirdweb-sdk-workflow-tutorial/)

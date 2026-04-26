@@ -352,6 +352,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 ## Frequently Asked Questions

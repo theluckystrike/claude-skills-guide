@@ -70,6 +70,8 @@ Claude Code should create CSF3 stories with `play` functions using `userEvent.ty
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Accessibility Regression Testing](/claude-code-accessibility-regression-testing/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
 - [Claude Code Cypress Component Testing Guide](/claude-code-cypress-component-testing-guide/)

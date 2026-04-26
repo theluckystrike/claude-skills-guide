@@ -286,6 +286,8 @@ Remember to regularly update your skills as Podman introduces new features, and 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

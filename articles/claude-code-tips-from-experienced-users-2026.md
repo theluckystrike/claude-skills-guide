@@ -390,6 +390,8 @@ The developers who extract the most value from Claude Code are not those who use
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

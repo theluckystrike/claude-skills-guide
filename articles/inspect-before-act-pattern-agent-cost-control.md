@@ -303,6 +303,8 @@ The savings are modest per individual task but compound reliably because inspect
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Structured Error Handling to Reduce Claude Code Token Waste](/structured-error-handling-reduce-claude-code-tokens/) -- handle errors that slip past inspection
 - [Claude Code Caching Strategies: Don't Re-Discover What You Already Know](/claude-code-caching-strategies-dont-rediscover/) -- cache inspection results for repeated patterns
 - [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- automate inspection with hooks

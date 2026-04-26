@@ -389,6 +389,8 @@ Chrome's data collection enables features that many users find valuable, sync ac
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -79,6 +79,8 @@ Skill versioning in Claude Code follows predictable patterns that, once understo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

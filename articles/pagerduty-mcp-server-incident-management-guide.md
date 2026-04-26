@@ -190,6 +190,8 @@ Start with simple automations like incident acknowledgment and resolution notes,
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

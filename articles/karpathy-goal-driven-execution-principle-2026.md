@@ -148,3 +148,5 @@ Explore the related resources below for deeper coverage. The Claude Code documen
 - [Implement Goal-Driven Execution](/karpathy-goal-driven-implementation-2026/)
 - [Claude Code Parallel Task Execution](/claude-code-parallel-task-execution-workflow/)
 - [Workspace Trust Blocking Execution Fix](/claude-code-workspace-trust-blocking-execution-fix-2026/)
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

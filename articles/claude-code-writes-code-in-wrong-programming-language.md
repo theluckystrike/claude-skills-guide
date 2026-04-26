@@ -329,6 +329,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [nvm Switching to Wrong Node Version — Fix (2026)](/claude-code-nvm-switching-wrong-node-fix-2026/)
 - [Claude Amending Wrong Commit Fix](/claude-code-amending-wrong-commit-fix-2026/)
 - [Stop Claude Code Writing Excessive Code (2026)](/claude-code-writes-too-much-code-fix-2026/)

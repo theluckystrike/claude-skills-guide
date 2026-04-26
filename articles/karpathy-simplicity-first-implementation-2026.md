@@ -187,6 +187,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Build Your First Claude Code Skill in 5](/building-your-first-claude-skill/)
 - [Claude Code First Project Tutorial](/claude-code-first-project-tutorial-hello-world/)
 - [Claude Code: Install to First Skill](/getting-started-hub/)

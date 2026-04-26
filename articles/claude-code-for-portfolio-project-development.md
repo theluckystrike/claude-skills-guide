@@ -450,6 +450,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Career Change to Software Development with AI](/claude-code-for-career-changers-into-software-development/)
 - [Build a Loyalty Rewards System with Claude Code (2026)](/claude-code-for-loyalty-rewards-system-development/)
 - [Building Startup MVPs with Claude Code](/claude-code-for-startup-mvp-development/)

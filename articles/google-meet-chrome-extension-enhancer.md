@@ -587,6 +587,8 @@ The techniques covered here, MutationObservers, dynamic element detection, toolb
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

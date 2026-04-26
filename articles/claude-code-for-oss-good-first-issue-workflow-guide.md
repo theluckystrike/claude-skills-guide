@@ -280,6 +280,8 @@ Remember: every expert contributor began exactly where you are now. The communit
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

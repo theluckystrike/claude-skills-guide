@@ -484,6 +484,8 @@ Claude Code is well-equipped to help you every step of the way, from initial set
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

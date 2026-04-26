@@ -135,6 +135,8 @@ fi
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Where are the log files?
 
 `~/.claude/projects/` contains one directory per project, each with JSONL log files. ccusage reads all of them.

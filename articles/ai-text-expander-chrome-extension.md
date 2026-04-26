@@ -277,6 +277,8 @@ The most durable implementations treat the snippet library as a first-class data
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

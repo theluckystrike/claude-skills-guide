@@ -307,6 +307,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [AWS MCP Server Cloud Automation](/aws-mcp-server-cloud-automation-with-claude-code/)
 - [Daily Standup Automation with Claude Skills](/claude-skills-daily-standup-automation-workflow/)
 - [Claude Code for Twilio Voice Automation](/claude-code-twilio-voice-call-automation-workflow-guide/)

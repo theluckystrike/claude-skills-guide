@@ -189,6 +189,8 @@ There is no sandboxing for skill scripts. A Python script in `scripts/` has the 
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Skills CI/CD Patterns](/claude-skills-ci-cd-patterns/)
 - [Managing Claude Skills Across Team Members](/managing-claude-skills-across-team-members/)
 - [Fix Claude Code Spawn Unknown Error Skills](/fix-claude-code-spawn-unknown-error-skills/)

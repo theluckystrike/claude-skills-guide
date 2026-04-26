@@ -819,6 +819,8 @@ Start with a simple fine-tuning run on a small dataset, use Claude Code to itera
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

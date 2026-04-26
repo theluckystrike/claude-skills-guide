@@ -307,6 +307,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Vite Prebundle Dependency Error — Fix (2026)](/claude-code-vite-prebundle-error-fix-2026/)
 - [Webpack Tree-Shaking Breaks Build — Fix (2026)](/claude-code-webpack-tree-shaking-breaks-fix-2026/)
 - [How to Use Claude Docker Image Size: Reduction (2026)](/claude-code-docker-image-size-reduction-guide/)

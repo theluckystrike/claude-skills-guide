@@ -164,6 +164,8 @@ The description budget is per-session. If you have many skills loaded from multi
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Fix Unknown Skill Error in Claude Code](/fix-unknown-skill-error-claude-code/)
 - [Fix Claude Not Finding Skills Directory](/fix-claude-not-finding-skills-directory/)
 - [SKILL.md Frontmatter Fields Explained](/skill-md-file-frontmatter-fields-explained/)

@@ -306,6 +306,8 @@ Related Reading
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 - [Claude Code Keeps Breaking Imports When Refactoring](/claude-code-keeps-breaking-imports-when-refactoring/)
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)

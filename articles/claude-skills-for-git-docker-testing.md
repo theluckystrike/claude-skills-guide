@@ -188,6 +188,8 @@ The `$ARGUMENTS` substitution handles multi-word inputs. `/commit feat add user 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [SKILL.md Frontmatter Fields Explained](/skill-md-file-frontmatter-fields-explained/)
 - [Claude Skills with Embedded Scripts](/claude-skills-with-embedded-scripts/)
 - [Security Review Process for Claude Skills](/security-review-process-for-claude-skills/)

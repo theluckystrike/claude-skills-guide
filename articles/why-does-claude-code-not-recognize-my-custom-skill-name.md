@@ -206,4 +206,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Why Does Claude Code Break My Existing — Developer Guide](/why-does-claude-code-break-my-existing-tests-unexpectedly/)

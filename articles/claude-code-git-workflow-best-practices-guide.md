@@ -602,6 +602,8 @@ Start with these practices: write descriptive commits, use branches intentionall
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -157,6 +157,8 @@ A Chrome extension StockX price tracker is essential for any serious sneaker col
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

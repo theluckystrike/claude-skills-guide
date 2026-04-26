@@ -238,6 +238,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Best Way to Validate Claude Code Output Before Committing](/best-way-to-validate-claude-code-output-before-committing/)
 - [Claude Code GitHub Actions Setup Guide](/claude-code-github-actions-setup-guide/)
 - [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)

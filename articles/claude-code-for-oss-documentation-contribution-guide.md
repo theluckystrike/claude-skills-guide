@@ -246,6 +246,8 @@ Ready to begin? Clone a repository you've been meaning to explore, ask Claude Co
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

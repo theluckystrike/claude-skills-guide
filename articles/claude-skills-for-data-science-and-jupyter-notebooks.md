@@ -239,6 +239,8 @@ Claude skills for data science and Jupyter notebooks eliminate friction between 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

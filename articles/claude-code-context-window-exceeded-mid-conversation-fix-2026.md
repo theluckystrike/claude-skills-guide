@@ -60,6 +60,8 @@ When reading files, use line ranges instead of full reads. Run /compact proactiv
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Context Window Exceeded Mid-Chat — Fix (2026)](/claude-code-context-window-exceeded-mid-conversation-fix/)
 - [Claude API Billing Quota Exceeded — Fix (2026)](/claude-api-billing-quota-exceeded-mid-request-fix/)
 - [Claude Code Context Compression Data Loss — Fix (2026)](/claude-code-context-compression-data-loss-fix-2026/)

@@ -173,5 +173,7 @@ The offline setup pays off in several scenarios beyond obvious ones:
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Set Up Academic Workflow in Claude Code (2026)](/how-to-setup-academic-workflow-claude-code-2026/)
 - [OAuth Setup with Claude Code: Avoid the Token-Expensive Mistakes](/oauth-setup-claude-code-avoid-token-expensive-mistakes/)

@@ -280,6 +280,8 @@ Start with simple flows, then gradually incorporate more advanced patterns like 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

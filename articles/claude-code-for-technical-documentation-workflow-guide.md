@@ -243,6 +243,8 @@ The key is consistency: regular updates, automated reviews, and treating documen
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

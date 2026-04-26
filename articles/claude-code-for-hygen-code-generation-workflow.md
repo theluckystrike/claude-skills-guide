@@ -400,6 +400,8 @@ Over time, your `_templates/` directory becomes a living record of your team's c
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

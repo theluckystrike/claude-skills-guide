@@ -135,6 +135,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Forgetting Variable](/claude-code-keeps-losing-track-of-my-variable-names/)
 - [Claude Skill Naming Conventions](/claude-skill-naming-conventions/)
 - [Make Claude Code Follow Naming](/how-to-make-claude-code-follow-my-naming-conventions/)

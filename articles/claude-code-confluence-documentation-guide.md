@@ -235,4 +235,6 @@ Automating the documentation pipeline uses Git hooks or CI triggers to regenerat
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Confluence Documentation 2026](/claude-code-confluence-documentation-workflow-2026/)

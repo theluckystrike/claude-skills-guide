@@ -184,6 +184,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Implement ArXiv Papers with Claude Code](/claude-code-arxiv-paper-implementation-guide/)
 - [Implement Surgical Changes in CLAUDE.md](/karpathy-surgical-changes-implementation-2026/)
 - [Implement SOLID Principles with Claude](/claude-code-solid-principles-implementation/)

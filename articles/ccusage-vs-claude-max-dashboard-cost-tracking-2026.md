@@ -98,4 +98,6 @@ Install ccusage today. It takes 10 seconds (`npx ccusage`), requires no configur
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [ccusage vs Manual Token Counting (2026)](/ccusage-vs-manual-token-counting-2026/)

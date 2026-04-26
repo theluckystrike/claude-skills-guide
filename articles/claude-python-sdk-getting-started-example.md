@@ -295,6 +295,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Python SDK Installation Guide](/claude-python-sdk-installation-guide/) -- installation and environment setup.
 - [Claude Streaming API Guide](/claude-streaming-api-guide/) -- advanced streaming patterns and event handling.
 - [Claude Tool Use Not Working](/claude-tool-use-not-working/) -- add function calling to your application.

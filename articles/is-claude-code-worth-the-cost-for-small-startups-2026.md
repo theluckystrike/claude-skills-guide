@@ -174,6 +174,8 @@ Start small, measure results, and scale usage as your team sees value. That's ho
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

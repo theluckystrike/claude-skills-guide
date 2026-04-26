@@ -216,6 +216,8 @@ The key is treating domain knowledge as code: version-controlled, documented, an
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

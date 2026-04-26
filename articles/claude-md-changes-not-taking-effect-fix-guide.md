@@ -354,6 +354,8 @@ The most important diagnostic habit is reading build logs carefully. Jekyll and 
 
 For persistent issues, consult your specific skill documentation or rebuild from a known-good configuration template.
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 Related Reading

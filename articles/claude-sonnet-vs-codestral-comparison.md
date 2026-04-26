@@ -106,5 +106,7 @@ For generating boilerplate-heavy code that follows perfectly predictable pattern
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Sonnet 4.6 vs Gemini 2.5 Pro for Coding](/claude-sonnet-vs-gemini-25-pro-coding/)
 - [Claude Sonnet 4.6 vs Opus 4.6 for Coding Tasks](/claude-sonnet-vs-opus-for-coding-tasks-2026/)

@@ -446,4 +446,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code vs Amazon Q Developer (2026): Guide](/claude-code-vs-amazon-q-developer-full-2026/)

@@ -296,6 +296,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code vs Aider: Cost Analysis for Open Source](/claude-code-vs-aider-cost-analysis-open-source/)
 - [LLM Migration Cost Analysis](/claude-cost-migration-switching-providers-analysis/)
 - [Claude Code for Load Test Analysis](/claude-code-for-load-test-results-analysis-workflow/)

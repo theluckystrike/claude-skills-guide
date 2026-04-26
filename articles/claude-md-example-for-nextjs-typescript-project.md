@@ -586,6 +586,8 @@ The investment in writing a good skill file is small compared to the accumulated
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

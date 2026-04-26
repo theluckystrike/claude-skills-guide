@@ -479,6 +479,8 @@ From here, the natural next step is adding your own business details to the invo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

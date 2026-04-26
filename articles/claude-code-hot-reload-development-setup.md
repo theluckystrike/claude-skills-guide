@@ -390,6 +390,8 @@ Start with simple file watching using `chokidar` or `fswatch`, then layer on opt
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

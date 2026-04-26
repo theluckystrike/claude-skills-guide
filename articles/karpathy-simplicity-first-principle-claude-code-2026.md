@@ -111,3 +111,5 @@ Same functionality, 5 lines instead of 30+, 1 file instead of 4+.
 - [Full Karpathy Skills Guide](/karpathy-claude-code-skills-complete-guide-2026/)
 - [Implement Simplicity First in CLAUDE.md](/karpathy-simplicity-first-implementation-2026/)
 - [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/)
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).

@@ -305,6 +305,8 @@ The best Pomodoro extension is ultimately the one you'll consistently use. Exper
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

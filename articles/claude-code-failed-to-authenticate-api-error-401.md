@@ -108,6 +108,8 @@ Claude Code reads the `ANTHROPIC_API_KEY` environment variable at startup and se
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

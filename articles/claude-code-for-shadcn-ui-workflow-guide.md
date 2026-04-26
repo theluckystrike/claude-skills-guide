@@ -69,6 +69,8 @@ Claude Code should edit `src/components/ui/button.tsx` directly, adding an `icon
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/)
 - [Claude Code Figma to Code Component Workflow](/claude-code-figma-to-code-component-workflow/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)

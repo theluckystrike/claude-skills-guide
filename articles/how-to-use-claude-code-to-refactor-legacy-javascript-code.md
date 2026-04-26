@@ -246,5 +246,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [How To Use Claude Code To — Complete Developer Guide](/how-to-use-claude-code-to-understand-unfamiliar-codebase-quickly/)
 - [Write Database Queries with Claude Code (2026)](/how-to-use-claude-code-to-write-database-queries-from-scratch/)

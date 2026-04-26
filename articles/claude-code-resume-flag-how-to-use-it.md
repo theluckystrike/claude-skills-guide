@@ -317,6 +317,8 @@ Used well, `--resume` turns Claude Code from a session-based assistant into some
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude shortcuts guide](/claude-shortcuts-complete-guide/) — Complete guide to Claude Code keyboard shortcuts and slash commands
 ---
 

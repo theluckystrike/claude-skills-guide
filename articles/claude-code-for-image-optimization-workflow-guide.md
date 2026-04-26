@@ -485,6 +485,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
 
+
+**Try it:** Build your own with our [CLAUDE.md Generator](/generator/).
 ---
 
 ## Frequently Asked Questions

@@ -375,6 +375,8 @@ Start with simple single-commit cherry-picks on non-critical branches to build c
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

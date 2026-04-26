@@ -214,5 +214,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [TypeScript Strict Mode Breaks Claude Generated Code — Fix (2026)](/claude-code-typescript-strict-mode-breaks-generated-code-fix/)
 - [TypeScript Strict Null Checks in Generated Code — Fix (2026)](/claude-code-typescript-strict-null-checks-generated-fix-2026/)

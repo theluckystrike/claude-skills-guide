@@ -70,6 +70,8 @@ Claude Code should configure Colima start parameters, export `DOCKER_HOST` in th
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
 - [Claude Code Docker Build Failed Fix](/claude-code-docker-build-failed-fix/)
 - [Claude Code Container Debugging Docker Logs Workflow Guide](/claude-code-container-debugging-docker-logs-workflow-guide/)

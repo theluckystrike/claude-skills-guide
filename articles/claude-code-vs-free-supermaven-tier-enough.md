@@ -255,4 +255,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Supermaven (2026): Speed Comparison](/claude-code-vs-supermaven-speed-comparison-2026/)

@@ -83,6 +83,8 @@ For individual developers doing moderate coding work, Gemini's free tier makes i
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Does the 1M context window actually help for coding?
 Yes, for specific tasks. Loading an entire application (all source files, tests, configs) into context enables questions like "find all places where we handle authentication" or "what happens when service X goes down" that require cross-file reasoning. For writing a single function, 200K is more than sufficient and the extra context provides no benefit.
 

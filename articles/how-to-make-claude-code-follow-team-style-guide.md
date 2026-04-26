@@ -242,6 +242,8 @@ Related Reading
 - [How to Make Claude Code Handle Edge Cases Properly](/how-to-make-claude-code-handle-edge-cases-properly/)
 - [How to Make Claude Code Understand Domain Business Logic](/how-to-make-claude-code-understand-domain-business-logic/)
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

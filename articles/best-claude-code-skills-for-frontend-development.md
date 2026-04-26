@@ -339,6 +339,8 @@ Invoke `/frontend-design` to scaffold components, `/tdd` to write tests before i
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

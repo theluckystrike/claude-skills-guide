@@ -447,6 +447,8 @@ With these debugging techniques and Claude Code's assistance, you'll spend less 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -345,6 +345,8 @@ The key is starting simple: begin with basic source/sink definitions, run initia
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

@@ -107,4 +107,6 @@ Use Task Master as your planning accelerator, not your project management system
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Task Master vs Manual Tasks (2026)](/claude-task-master-vs-manual-task-management-2026/)

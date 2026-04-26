@@ -262,6 +262,8 @@ With proper setup and configuration, Claude Code can reduce survey analysis time
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

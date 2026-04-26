@@ -216,6 +216,8 @@ Start by profiling your most frequently accessed views, then systematically appl
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

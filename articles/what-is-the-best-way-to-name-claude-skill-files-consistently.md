@@ -162,6 +162,8 @@ Avoid single words, mixed case styles, underscores, and numbers. Keep the names 
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

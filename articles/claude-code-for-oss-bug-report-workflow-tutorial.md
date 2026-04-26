@@ -266,6 +266,8 @@ Remember: The best bug report is one that helps maintainers understand and fix t
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

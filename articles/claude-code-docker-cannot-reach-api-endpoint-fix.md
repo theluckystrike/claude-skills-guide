@@ -116,6 +116,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Docker Image Publishing](/claude-code-for-docker-image-publishing-workflow-guide/)
 - [Claude Code for Colima Docker](/claude-code-for-colima-docker-workflow-guide/)
 - [Claude Code Docker Compose Development](/claude-code-docker-compose-development-workflow/)

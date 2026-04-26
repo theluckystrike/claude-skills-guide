@@ -109,6 +109,8 @@ Set the `HTTPS_PROXY` environment variable: `export HTTPS_PROXY=http://proxy.cor
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude API Timeout](/claude-api-timeout-error-handling-retry-guide/)
 - [Fix Claude Code Timeout Error (2026)](/claude-code-skill-timeout-error-how-to-increase-the-limit/)
 - [Claude Code Bash Command Timeout 120s — Fix (2026)](/claude-code-bash-command-timeout-120s-fix-2026/)

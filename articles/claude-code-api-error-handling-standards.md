@@ -270,6 +270,8 @@ Datadog APM tracing. Claude Code generates OpenTelemetry instrumentation that cr
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

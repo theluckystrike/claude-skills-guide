@@ -290,4 +290,6 @@ Related Reading
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Terraform Workspace Workflow Guide](/claude-code-for-terraform-workspace-workflow-guide/)

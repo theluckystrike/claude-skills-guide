@@ -121,6 +121,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills Shared Dependencies](/claude-skills-shared-dependencies/)
 - [Claude Code with Just Taskfile Runner](/claude-code-with-task-runners-just-taskfile/)
 - [Claude Code Jest Test Runner Mock](/claude-code-jest-runner-mock-conflict-fix/)

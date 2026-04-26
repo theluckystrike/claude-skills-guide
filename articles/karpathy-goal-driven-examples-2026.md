@@ -241,3 +241,5 @@ When something does not work as expected, check these items in order:
 4. **Disk space is available** — run `df -h .` to check
 5. **Network can reach the API** — run `curl -s -o /dev/null -w "%{http_code}" https://api.anthropic.com` (should return 401 without auth, meaning the server is reachable)
 6. **No conflicting processes** — run `ps aux | grep claude | grep -v grep` to check for stale sessions
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -172,4 +172,6 @@ Your local clone persists regardless. You lose future updates but keep the curre
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Set Up Claude Code Docs for Offline Use (2026)](/how-to-setup-claude-code-docs-offline-2026/)

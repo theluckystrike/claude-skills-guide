@@ -213,6 +213,8 @@ Document your decisions. When Claude makes architectural choices, add comments e
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

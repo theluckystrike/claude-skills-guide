@@ -281,6 +281,8 @@ Start with simple inbound call handling, progressively add complexity as you val
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

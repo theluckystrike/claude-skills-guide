@@ -225,6 +225,8 @@ Start with a single automation, syncing new user signups, and expand as you vali
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

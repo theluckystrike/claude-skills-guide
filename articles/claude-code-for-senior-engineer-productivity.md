@@ -238,6 +238,8 @@ The deeper productivity gain is qualitative: senior engineers who delegate mecha
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

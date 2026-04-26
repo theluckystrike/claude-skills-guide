@@ -116,6 +116,8 @@ Claude Code requires Node.js 18 or later. Node.js 20 LTS is recommended for the 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Monorepo Workspace Package Resolution](/claude-code-monorepo-workspace-package-resolution-fix-2026/)
 - [CLAUDE.md Conflict Resolution](/claude-md-conflict-resolution/)
 - [Claude Code Merge Conflict Resolution](/claude-code-merge-conflict-resolution-guide/)

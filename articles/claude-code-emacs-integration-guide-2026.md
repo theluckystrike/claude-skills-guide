@@ -218,6 +218,8 @@ Emacs users who add Claude Code to their workflow report completing complex refa
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Alacritty Workflow Guide](/claude-code-for-alacritty-workflow-guide/)
 - [Claude Code Tmux Session Management](/claude-code-tmux-session-management-multi-agent-workflow/)
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)

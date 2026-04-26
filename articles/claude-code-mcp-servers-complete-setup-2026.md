@@ -251,6 +251,8 @@ MCP servers are designed for Claude Code (the CLI tool). The Claude API uses a d
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [MCP Config Generator](/mcp-config/) — Generate MCP server configurations instantly
 - [Claude Code Configuration Guide](/configuration/) — Full settings and preferences reference
 - [Command Reference](/commands/) — All Claude Code commands explained

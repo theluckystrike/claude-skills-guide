@@ -152,6 +152,8 @@ Attorney-client privilege concerns mean contract text should not persist in Clau
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills for Medical Records Processing](/claude-skills-for-medical-records-processing/) -- regulated document extraction patterns
 - [Claude Skills for Financial Analysis](/claude-skills-for-financial-analysis/) -- contract value and liability cap calculations
 - [Claude Skills vs Subagents: When to Use Each](/claude-skills-vs-subagents-when-to-use/) -- forked context for sensitive document review

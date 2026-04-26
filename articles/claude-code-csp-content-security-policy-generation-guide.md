@@ -354,6 +354,8 @@ The real value of using Claude Code for CSP work is the iteration speed. Going f
 Remember that CSP is not a one-time configuration, it requires ongoing maintenance as your application evolves. New dependencies, new third-party integrations, and architectural changes all affect your resource loading patterns. Regular audits using Claude Code's analysis capabilities help ensure your CSP remains effective against emerging threats.
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

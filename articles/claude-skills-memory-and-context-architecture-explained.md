@@ -272,6 +272,8 @@ Following this checklist consistently produces skills that behave predictably, s
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

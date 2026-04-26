@@ -475,6 +475,8 @@ Start small, measure results, and iterate based on real feedback. The investment
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

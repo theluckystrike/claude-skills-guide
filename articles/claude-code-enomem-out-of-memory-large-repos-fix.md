@@ -115,6 +115,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix: Anthropic SDK Grammar Too Large](/anthropic-sdk-structured-output-grammar-too-large/)
 - [Claude Code Large File Refactoring](/best-way-to-use-claude-code-for-large-file-refactoring/)
 - [Fix Claude Code Large File Crashes](/claude-code-crashes-on-large-files-how-to-fix/)

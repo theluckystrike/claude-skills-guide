@@ -116,6 +116,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Optimal Skill File Size and Complexity](/optimal-skill-file-size-and-complexity-guidelines/)
 - [Claude Code Large File Refactoring](/best-way-to-use-claude-code-for-large-file-refactoring/)
 - [Declaration File .d.ts Missing Error — Fix (2026)](/claude-code-declaration-file-dts-missing-fix-2026/)

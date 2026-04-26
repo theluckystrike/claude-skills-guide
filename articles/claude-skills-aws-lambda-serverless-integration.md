@@ -262,6 +262,8 @@ Cost management: Lambda charges per invocation and duration. Long-running Claude
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

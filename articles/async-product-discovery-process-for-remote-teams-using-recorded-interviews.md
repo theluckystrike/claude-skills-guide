@@ -134,6 +134,8 @@ Start small with one discovery cycle using this approach. Measure how team engag
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

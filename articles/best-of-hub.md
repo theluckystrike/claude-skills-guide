@@ -144,6 +144,8 @@ Related Reading
 - [Claude SuperMemory Skill: Persistent Context Explained](/claude-supermemory-skill-persistent-context-explained/). How the #4 ranked skill actually works under the hood
 - [Advanced Claude Skills Hub](/advanced-hub/). Once you know the best skills, learn to use them efficiently
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)

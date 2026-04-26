@@ -153,6 +153,8 @@ The beta program is your opportunity to shape the future of AI-assisted coding. 
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

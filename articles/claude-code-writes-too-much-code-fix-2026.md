@@ -156,6 +156,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code MCP Tools Excessive](/claude-code-mcp-tools-excessive-context-fix/)
 - [VS Code Extension Consuming Excessive](/claude-code-vscode-extension-excessive-cpu-fix-2026/)
 - [Writing Assistant Chrome Extension](/chrome-extension-writing-assistant/)

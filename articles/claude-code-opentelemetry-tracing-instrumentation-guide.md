@@ -433,6 +433,8 @@ Remember to iterate: start with basic setup, add meaningful attributes, implemen
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -400,6 +400,8 @@ With proper timeout and budget strategies, you'll achieve consistent, predictabl
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

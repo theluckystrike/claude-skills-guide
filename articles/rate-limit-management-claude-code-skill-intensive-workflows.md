@@ -288,6 +288,8 @@ These strategies keep automated pipelines running reliably without interruption.
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

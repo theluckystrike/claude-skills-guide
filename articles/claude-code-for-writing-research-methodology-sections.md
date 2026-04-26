@@ -258,4 +258,6 @@ Documenting experimental setup involves providing Claude Code with specific conf
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Data & Methodology: Claude Code Research](/data/)

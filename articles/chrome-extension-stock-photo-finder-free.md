@@ -244,6 +244,8 @@ For developers who prefer command-line workflows, integrating with tools like th
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -198,6 +198,8 @@ Track average input tokens per request broken down by component (system, tools, 
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — comprehensive optimization guide
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — clearer prompts waste fewer tokens
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — identify per-skill token waste

@@ -222,6 +222,8 @@ Claude Code transforms CDKTF development by bringing intelligent assistance to e
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

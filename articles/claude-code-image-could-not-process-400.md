@@ -146,6 +146,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude API Error 400 Invalid Request Fix](/claude-api-error-400-invalidrequesterror-explained/)
 - [Claude API Error 413 Request Too Large Fix](/claude-api-error-413-requesttoolarge-explained/)
 - [Claude API Error 429 Rate Limit Fix](/anthropic-api-error-429-rate-limit/)

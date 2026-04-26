@@ -202,6 +202,8 @@ Building a SaaS MVP is a sprint, not a marathon. Claude Code skills eliminate bu
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

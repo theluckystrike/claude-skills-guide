@@ -70,6 +70,8 @@ Claude Code should create a `gr.Blocks()` layout with `gr.Image(type="pil")` for
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Groq Inference Workflow Guide](/claude-code-for-groq-inference-workflow-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
 - [Claude Code for Ollama Local LLM Workflow Guide](/claude-code-for-ollama-local-llm-workflow-guide/)

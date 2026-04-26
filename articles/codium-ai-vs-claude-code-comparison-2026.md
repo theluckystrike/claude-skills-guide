@@ -232,6 +232,8 @@ The most productive developers often combine multiple tools, each serving its sp
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

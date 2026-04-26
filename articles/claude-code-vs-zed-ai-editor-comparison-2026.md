@@ -86,4 +86,6 @@ Zed AI is the best pure editor for developers who prioritize speed, minimalism, 
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code vs Zed AI (2026): Editor Integration](/claude-code-vs-zed-ai-editor-integration-2026/)

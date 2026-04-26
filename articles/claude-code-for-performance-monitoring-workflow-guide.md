@@ -345,6 +345,8 @@ Start implementing these practices today, and you'll be well on your way to buil
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

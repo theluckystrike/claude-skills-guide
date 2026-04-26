@@ -496,6 +496,8 @@ This pattern ensures the cleanup runs even if the user leaves the browser idle f
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

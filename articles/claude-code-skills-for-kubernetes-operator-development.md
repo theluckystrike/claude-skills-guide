@@ -212,6 +212,8 @@ By integrating these skills into your development pipeline, you ship operators f
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

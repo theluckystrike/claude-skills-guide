@@ -260,6 +260,8 @@ The patterns shown here scale from single-image conversions to batch processing 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

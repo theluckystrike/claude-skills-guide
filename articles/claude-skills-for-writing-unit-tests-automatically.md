@@ -241,6 +241,8 @@ Claude skills for writing unit tests automatically handle the mechanical parts o
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

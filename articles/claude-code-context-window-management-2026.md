@@ -211,6 +211,8 @@ For session management strategies, see [the context loss fix guide](/claude-code
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Context Window Exceeded Mid-Chat — Fix (2026)](/claude-code-context-window-exceeded-mid-conversation-fix/)
 - [Context Window Exceeded Mid-Conversation Fix](/claude-code-context-window-exceeded-mid-conversation-fix-2026/)
 - [Claude Code Context Compression Data Loss — Fix (2026)](/claude-code-context-compression-data-loss-fix-2026/)

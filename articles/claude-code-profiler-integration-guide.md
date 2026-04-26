@@ -226,6 +226,8 @@ The combination of systematic benchmarking, profiler data, and Claude's analytic
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

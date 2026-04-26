@@ -369,6 +369,8 @@ CSS selector not unique: Fall back to XPath when `document.querySelectorAll(sele
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

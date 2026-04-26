@@ -983,6 +983,8 @@ The right choice is almost always the most restrictive option that still lets yo
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [--dangerously-skip-permissions flag reference](/claude-dangerously-skip-permissions-flag/) — Detailed flag reference and behavior
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — How permission modes affect token costs
 

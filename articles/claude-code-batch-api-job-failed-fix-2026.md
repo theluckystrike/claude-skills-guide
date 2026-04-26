@@ -117,6 +117,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Status Line](/claude-code-statusline-guide/)
 - [Team Status Tracker Chrome Extension](/chrome-extension-team-status-tracker/)
 - [Claude Code For Pr Status Check](/claude-code-for-pr-status-check-workflow-tutorial/)

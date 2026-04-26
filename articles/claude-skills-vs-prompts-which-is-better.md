@@ -227,6 +227,8 @@ Related Reading
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The skills worth replacing prompts with
 - [Why Does Claude Code Work Better With — Developer Guide](/why-does-claude-code-work-better-with-skills-loaded/)
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)

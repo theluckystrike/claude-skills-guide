@@ -128,4 +128,6 @@ Claude Code produces fewer edge cases initially but responds well to "add more e
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code vs Augment Code: AI Coding Compared (2026)](/claude-code-vs-augment-code-ai-2026/)

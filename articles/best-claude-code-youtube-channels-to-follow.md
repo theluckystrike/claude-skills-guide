@@ -145,6 +145,8 @@ When a technique from a video does not work as shown, check the release notes be
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

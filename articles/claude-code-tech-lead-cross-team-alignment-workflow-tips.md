@@ -205,6 +205,8 @@ Start small by creating one team standards skill and gradually expand your autom
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

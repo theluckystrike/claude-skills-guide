@@ -254,6 +254,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Docker Image Publishing](/claude-code-for-docker-image-publishing-workflow-guide/)
 - [Claude Code for Colima Docker](/claude-code-for-colima-docker-workflow-guide/)
 - [Fix Docker Build Failures When Using](/claude-code-docker-build-failed-fix/)

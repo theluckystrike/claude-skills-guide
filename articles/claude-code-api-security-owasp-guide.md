@@ -734,6 +734,8 @@ By applying these patterns consistently, you build AI agent systems that are bot
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

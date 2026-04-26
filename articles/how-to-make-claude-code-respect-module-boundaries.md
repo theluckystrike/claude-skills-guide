@@ -338,6 +338,8 @@ These approaches work together to give you precise control over Claude's context
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

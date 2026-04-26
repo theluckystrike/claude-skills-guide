@@ -424,6 +424,8 @@ Whether you're streaming AI responses, live logs, or notification updates, SSE p
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

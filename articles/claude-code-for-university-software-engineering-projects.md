@@ -182,6 +182,8 @@ Start with small projects, build consistent habits, and watch your productivity 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

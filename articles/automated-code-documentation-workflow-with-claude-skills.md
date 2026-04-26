@@ -288,6 +288,8 @@ This workflow turns documentation from a quarterly cleanup task into a continuou
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [save Claude Code conversations](/claude-code-save-conversation-guide/) — How to save, export, and resume Claude Code conversations
 ---
 

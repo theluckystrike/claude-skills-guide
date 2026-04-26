@@ -368,6 +368,8 @@ The new configuration replaces the existing one at the same scope. If the existi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Add an MCP Server to Claude Code](/how-to-add-mcp-server-claude-code-2026/) — step-by-step installation walkthrough
 - [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — curated list of high-value servers
 - [MCP Servers Complete Setup Guide](/mcp-servers-claude-code-complete-setup-2026/) — end-to-end configuration from scratch

@@ -357,6 +357,8 @@ The hooks system rewards incremental adoption. Start with a simple `post-tool` l
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

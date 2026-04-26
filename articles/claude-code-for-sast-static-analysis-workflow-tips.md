@@ -206,6 +206,8 @@ Remember: SAST is most effective when it's fast, accurate, and integrated into d
 
 ---
 
+
+**Try it:** Build your own with our [CLAUDE.md Generator](/generator/).
 ---
 
 <div class="mastery-cta">

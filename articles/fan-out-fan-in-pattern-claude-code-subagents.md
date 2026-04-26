@@ -218,6 +218,8 @@ Start with simple two-agent implementations and progressively add complexity as 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

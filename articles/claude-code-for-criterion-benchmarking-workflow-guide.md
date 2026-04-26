@@ -413,6 +413,8 @@ The workflow in this guide gives you a foundation that scales from a single-func
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

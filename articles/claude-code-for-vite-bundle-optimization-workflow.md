@@ -533,4 +533,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Vite Prebundle Dependency Error — Fix (2026)](/claude-code-vite-prebundle-error-fix-2026/)

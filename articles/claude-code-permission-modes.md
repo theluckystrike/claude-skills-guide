@@ -185,6 +185,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Claude Code PreToolUse Hooks Bypassed Fix](/claude-code-pretooluse-hooks-bypassed/) — Preventing dangerous operations
 - [Claude Code Permission Modes Explained](/claude-code-permission-modes/) — Browse all permissions guides
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 *Last verified: 2026-04-14. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*

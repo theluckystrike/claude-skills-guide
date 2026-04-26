@@ -138,6 +138,8 @@ Experiment with different models for different skill types. The code-focused ski
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

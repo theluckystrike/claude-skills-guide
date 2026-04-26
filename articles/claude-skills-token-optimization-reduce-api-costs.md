@@ -221,6 +221,8 @@ Applying this checklist to a mature but unoptimized skill typically reduces its 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

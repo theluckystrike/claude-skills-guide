@@ -83,6 +83,8 @@ Configuration is stored in `~/.claude/config.json` for global settings and `.cla
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Skill Exceeded Maximum Output](/claude-code-skill-exceeded-maximum-output-length-error-fix/)
 - [Fix: Structured Output + Thinking +](/anthropic-sdk-structured-output-thinking-tool-use-bug/)
 - [Claude Code Skill Output Streaming](/claude-code-skill-output-streaming-optimization/)

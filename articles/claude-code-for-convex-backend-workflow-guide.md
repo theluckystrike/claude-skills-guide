@@ -68,6 +68,8 @@ Claude Code should produce `convex/schema.ts` updates with the table definition 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

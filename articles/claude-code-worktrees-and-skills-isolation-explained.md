@@ -271,6 +271,8 @@ Claude Code creates files and edits through standard filesystem operations, so a
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Skills Automated Social Media](/claude-skills-automated-social-media-content-workflow/)
 - [Skills vs Hooks vs Commands in Claude](/claude-code-skills-vs-hooks-vs-commands-2026/)
 - [Claude Skills for SEO Content Generation Guide](/claude-skills-for-seo-content-generation/)

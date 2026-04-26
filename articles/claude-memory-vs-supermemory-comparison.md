@@ -76,6 +76,8 @@ For organizations wanting shared knowledge bases across teams, Supermemory's dep
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can Claude Code access Supermemory?
 Not natively, but you could build an MCP server that connects Claude Code to a Supermemory instance. This would let Claude Code query your Supermemory knowledge base as part of its tool use. The integration requires custom development but is architecturally straightforward.
 

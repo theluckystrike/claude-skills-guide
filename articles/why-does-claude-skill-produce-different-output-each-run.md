@@ -167,6 +167,8 @@ Understanding why Claude skills produce different outputs each run puts you in c
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

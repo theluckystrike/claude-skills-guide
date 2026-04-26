@@ -211,6 +211,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Python SDK Getting Started](/claude-python-sdk-getting-started-example/) -- your first project with error handling and streaming.
 - [How to Set ANTHROPIC_API_KEY for Claude](/how-to-set-anthropicapikey-for-claude/) -- detailed API key setup across all platforms.
 - [Claude TypeScript SDK Installation Guide](/claude-typescript-sdk-installation-guide/) -- the TypeScript equivalent of this guide.

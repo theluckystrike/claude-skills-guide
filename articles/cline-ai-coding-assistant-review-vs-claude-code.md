@@ -147,6 +147,8 @@ The future of coding is collaborative, between human developers and AI assistant
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

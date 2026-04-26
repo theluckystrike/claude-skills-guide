@@ -267,6 +267,8 @@ If you're primarily doing ad-hoc analysis in notebooks with limited coding, the 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

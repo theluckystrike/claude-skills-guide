@@ -68,6 +68,8 @@ Move file-type-specific rules into `.claude/rules/` with path frontmatter. These
 paths:
   - "tests/**/*.py"
   - "**/*_test.py"
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 - Use pytest fixtures, not setUp/tearDown

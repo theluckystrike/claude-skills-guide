@@ -102,6 +102,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Malformed YAML Frontmatter](/fix-malformed-yaml-frontmatter-skill-md/)
 - [How to Use For JSON Mode LLM](/claude-code-for-json-mode-llm-workflow-guide/)
 - [Claude XML Tags vs JSON for Token](/claude-xml-tags-vs-json-token-efficiency/)

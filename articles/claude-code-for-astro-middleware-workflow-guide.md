@@ -270,6 +270,8 @@ Start by creating the `astro-middleware` skill, then iterate on your middleware 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -218,6 +218,8 @@ This workflow produces consistent, high-quality Portuguese documentation that se
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

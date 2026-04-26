@@ -124,6 +124,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills for Creating Database](/claude-skills-for-creating-database-migration-scripts/)
 - [Claude Code Skills for Creating GitHub](/claude-code-skills-for-creating-github-actions-workflows/)
 - [Claude Code Duplicate Code Refactoring](/claude-code-duplicate-code-refactoring-guide/)

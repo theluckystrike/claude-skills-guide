@@ -242,6 +242,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Understanding Claude Code Hooks System Complete Guide](/understanding-claude-code-hooks-system-complete-guide/)
 - [Claude Code Skill Permission Denied Error Fix](/claude-code-skill-permission-denied-error-fix-2026/)
 - [Claude Code Docker Permission Denied Fix](/claude-code-docker-permission-denied-bind-mount-error/)

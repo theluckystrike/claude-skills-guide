@@ -202,6 +202,8 @@ By establishing good habits, writing tests first, using watch mode, and using Cl
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

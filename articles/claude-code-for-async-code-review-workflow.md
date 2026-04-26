@@ -358,6 +358,8 @@ Implement these practices gradually, measure your outcomes, and continuously ref
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

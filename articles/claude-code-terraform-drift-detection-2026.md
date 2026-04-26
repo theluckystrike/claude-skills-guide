@@ -347,6 +347,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Migrate Terraform Backends with Claude](/claude-code-for-terraform-backend-migration-workflow/)
 - [Claude Code Terraform Cloud Workflow](/claude-code-terraform-cloud-workflow-guide/)
 - [Terraform with Claude Code](/claude-code-for-terraform-workflow-tutorial-guide/)

@@ -425,6 +425,8 @@ Claude Code. When a command fails or tests break, Claude Code can read the error
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code vs Cursor Definitive Comparison](/claude-code-vs-cursor-definitive-comparison-2026/)
 - [How to Use Claude Code: Beginner Guide](/how-to-use-claude-code-beginner-guide/)
 - [AI Coding Tools Pricing Comparison](/ai-coding-tools-pricing-comparison-2026/)

@@ -818,6 +818,8 @@ Yes, if you provide the web_search tool. Without it, agents can only access loca
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Hooks Complete Guide](/claude-code-hooks-complete-guide/)
 - [Claude Code Router Guide](/claude-code-router-guide/)
 - [Super Claude Code Framework Guide](/super-claude-code-framework-guide/)

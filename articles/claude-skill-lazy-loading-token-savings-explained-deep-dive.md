@@ -206,6 +206,8 @@ Understanding and applying lazy loading patterns, batching related tasks, sequen
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -294,6 +294,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Factory Bot Test Data](/claude-code-factory-bot-test-data-guide/)
 - [Grounding AI Agents in Real-World Data](/grounding-ai-agents-in-real-world-data-explained/)
 - [Using Claude Code for Data Quality](/claude-code-for-data-quality-validation-workflow/)

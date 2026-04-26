@@ -208,6 +208,8 @@ This automation pairs well with the tdd skill, test-driven development produces 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

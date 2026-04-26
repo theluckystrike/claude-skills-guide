@@ -142,6 +142,8 @@ The extension represents a mature, well-maintained product that prioritizes simp
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

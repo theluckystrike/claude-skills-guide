@@ -461,6 +461,8 @@ By implementing these patterns, you can create AI agent systems that scale colla
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

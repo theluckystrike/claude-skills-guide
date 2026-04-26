@@ -215,6 +215,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code + Ant Design React Workflow](/claude-code-for-ant-design-workflow-guide/)
 - [Fix Claude Code Inconsistent API Design](/claude-code-inconsistent-api-design-fix-2026/)
 - [REST API Design with Claude Code (2026)](/claude-code-rest-api-design-best-practices/)

@@ -225,6 +225,8 @@ For each large configuration file, ask: "Does Claude Code need to read this file
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Large Codebases: Cost-Effective Strategies](/claude-code-large-codebases-cost-effective-strategies/) -- broader large-project optimization
 - [Claude Code Caching Strategies: Don't Re-Discover What You Already Know](/claude-code-caching-strategies-dont-rediscover/) -- cache project knowledge
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- prevent context bloat from large files

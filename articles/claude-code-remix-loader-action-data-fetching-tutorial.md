@@ -280,6 +280,8 @@ Claude Code enhances this workflow by assisting with code generation, type defin
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

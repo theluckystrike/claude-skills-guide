@@ -214,4 +214,6 @@ For more on structuring Claude Code workflows, see [The Claude Code Playbook](/p
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Project vs Global Settings: Token Impact](/claude-code-project-vs-global-settings-token-impact/)

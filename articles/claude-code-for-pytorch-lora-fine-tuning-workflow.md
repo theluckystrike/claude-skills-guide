@@ -237,6 +237,8 @@ Claude Code transforms LoRA fine-tuning from a complex, error-prone process into
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

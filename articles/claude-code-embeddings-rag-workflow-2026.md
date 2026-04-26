@@ -260,6 +260,8 @@ Large codebases exceed Claude's context window. RAG lets you query 100,000+ line
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Embedding Pipeline Workflow](/claude-code-for-embedding-pipeline-workflow/)
 - [Context Window Size Drives Claude API Bills](/context-window-size-drives-claude-api-bills/)
 - [Automate Source Code Analysis with Claude 2026](/automate-source-code-analysis-claude-2026/)

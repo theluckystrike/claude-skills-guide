@@ -232,6 +232,8 @@ The output should be a properly formatted Jest test in a typescript code block. 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

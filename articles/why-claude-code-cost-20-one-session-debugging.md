@@ -283,6 +283,8 @@ If the session cost $20 and ran fewer than 40 turns, the model was almost certai
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code --max-turns Flag: Prevent Runaway Sessions](/claude-code-max-turns-flag-prevent-runaway-sessions/) -- hard cost caps
 - [Claude Code Opus Accidentally Used Instead of Sonnet](/claude-code-opus-accidentally-used-instead-sonnet/) -- model switching guide
 - [Cost Optimization Hub](/cost-optimization/) -- comprehensive cost reduction

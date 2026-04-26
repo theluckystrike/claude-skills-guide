@@ -218,6 +218,8 @@ The key is being strategic about what you ask. Focus on your immediate goals, us
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

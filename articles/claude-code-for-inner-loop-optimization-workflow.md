@@ -308,4 +308,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Login Auth Redirect Loop Error — Fix (2026)](/claude-code-login-auth-redirect-loop-fix-2026/)

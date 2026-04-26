@@ -113,6 +113,8 @@ Claude Code generates code based on the types and patterns it sees in your codeb
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Request Body Validation Failed — Fix](/claude-code-request-body-validation-failed-fix-2026/)
 - [MCP Server Input Validation Security](/mcp-server-input-validation-security-patterns/)
 - [FastAPI Pydantic V2 Validation](/claude-code-fastapi-pydantic-v2-validation-deep-dive/)

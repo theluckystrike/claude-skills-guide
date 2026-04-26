@@ -608,6 +608,8 @@ No skill is required for pure schema or SQL work. Claude Code's baseline SQL kno
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

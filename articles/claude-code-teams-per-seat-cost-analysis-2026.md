@@ -241,6 +241,8 @@ Build these patterns into the annual budget by adding a 15-20% buffer above the 
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- subscription details
 - [Claude Code API Cost Calculator](/claude-code-api-cost-calculator-estimate-before-build/) -- per-developer estimation
 - [Production Claude Code Setup: Cost Guardrails](/production-claude-code-setup-cost-guardrails-teams/) -- team cost controls

@@ -267,6 +267,8 @@ AI tone changer Chrome extensions represent practical applications of large lang
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

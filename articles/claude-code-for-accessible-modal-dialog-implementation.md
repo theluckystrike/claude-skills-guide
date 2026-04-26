@@ -257,6 +257,8 @@ Remember: an accessible modal isn't just about meeting WCAG requirements, it's a
 
 ---
 
+
+**Try it:** Build your own with our [CLAUDE.md Generator](/generator/).
 ---
 
 <div class="mastery-cta">

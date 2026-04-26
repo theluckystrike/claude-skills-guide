@@ -328,6 +328,8 @@ The supervisor-worker pattern is one of the most effective ways to apply Claude 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

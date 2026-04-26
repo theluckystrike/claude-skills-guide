@@ -288,6 +288,8 @@ Run this audit monthly. Each MCP server found in global settings represents 500-
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- configuring MCP servers at the right scope
 - [Progressive Disclosure in CLAUDE.md: Load Only What You Need](/progressive-disclosure-claude-md-load-only-needed/) -- same scoping principle for instructions
 

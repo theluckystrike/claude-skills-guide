@@ -173,6 +173,8 @@ For a broader guide to Claude Code workflows beyond cost optimization, see the [
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Cost Reduction Guide 2026](/cost/)
 
 <section class="related-hubs" style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 12px; border: 1px solid #e9ecef;">

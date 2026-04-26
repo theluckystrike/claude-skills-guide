@@ -58,3 +58,5 @@ If you are setting up Claude Code for the first time, start with the configurati
 - [Guides Hub](/guides-hub/)
 - [Getting Started Hub](/getting-started-hub/)
 - [Advanced Hub](/advanced-hub/)
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

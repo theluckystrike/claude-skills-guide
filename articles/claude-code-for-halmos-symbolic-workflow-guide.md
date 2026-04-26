@@ -232,6 +232,8 @@ Start by adding Halmos to one module in your project, create the Claude skill fo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

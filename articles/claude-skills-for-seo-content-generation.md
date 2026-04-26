@@ -115,6 +115,8 @@ Sitemap parsing assumes XML format. If your site uses a sitemap index with multi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills for E-Commerce Platforms](/claude-skills-for-ecommerce-platforms/) -- product page SEO patterns
 - [Claude Skills Data Flow Patterns](/claude-skills-data-flow-patterns/) -- structuring skill output pipelines
 - [How to Combine Multiple Claude Skills](/how-to-combine-multiple-claude-skills/) -- chaining SEO skill with content writing

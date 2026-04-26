@@ -311,6 +311,8 @@ public class SetupDissolveMaterial : MonoBehaviour
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Blender Python Scripting](/claude-code-blender-python-scripting-2026/)
 - [Claude Code for Unity Game Development](/claude-skills-for-unity-game-development-workflow/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

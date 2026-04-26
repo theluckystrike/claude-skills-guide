@@ -284,4 +284,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for OpenAPI Spec Generation (2026)](/claude-code-openapi-spec-generation-2026/)

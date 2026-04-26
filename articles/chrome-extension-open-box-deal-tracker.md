@@ -279,6 +279,8 @@ Building your own open box deal tracker gives you complete control over which re
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

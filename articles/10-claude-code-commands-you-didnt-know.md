@@ -242,6 +242,8 @@ Claude will make at most one tool call (file read, edit, command execution) and 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Command Reference](/commands/) — Full interactive command explorer
 - [Claude Code Configuration Guide](/configuration/) — Complete settings reference
 - [Cost Optimization for Claude Code](/cost-optimization/) — Reduce token spending

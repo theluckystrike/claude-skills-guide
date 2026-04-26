@@ -450,4 +450,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for VHDL Synthesis and Simulation (2026)](/claude-code-vhdl-synthesis-simulation-2026/)

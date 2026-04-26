@@ -175,6 +175,8 @@ For more guidance on optimizing your analytical workflows, explore related skill
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -268,6 +268,8 @@ Add the install command to your allowedTools list: --allowedTools "Read,Glob,Gre
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Permissions Configurator](/permissions/) -- Generate CI-specific permission configs
 - [Commands Reference](/commands/) -- CLI flags for --allowedTools and --print
 - [Configuration Guide](/configuration/) -- settings.json for CI environments

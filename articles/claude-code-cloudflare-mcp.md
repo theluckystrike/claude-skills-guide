@@ -122,6 +122,8 @@ The API token scopes control exactly what Claude Code can do. A read-only token 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

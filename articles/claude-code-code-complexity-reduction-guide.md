@@ -224,6 +224,8 @@ Start small: pick one overgrown class or deeply nested function this week and ap
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

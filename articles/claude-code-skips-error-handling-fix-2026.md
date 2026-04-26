@@ -175,6 +175,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Structured Error Handling to Reduce](/structured-error-handling-reduce-claude-code-tokens/)
 - [Fix: Claude MD Error Handling Patterns](/claude-md-for-error-handling-patterns-guide/)
 - [How to Use Claude Error Handling](/claude-code-for-claude-error-handling-patterns-workflow-guid/)

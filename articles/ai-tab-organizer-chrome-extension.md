@@ -290,6 +290,8 @@ The most important criterion is whether the extension reduces the number of deci
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

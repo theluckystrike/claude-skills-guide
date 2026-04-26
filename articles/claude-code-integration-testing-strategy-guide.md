@@ -311,6 +311,8 @@ Integration testing for Claude Code skills combines input-output validation, too
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

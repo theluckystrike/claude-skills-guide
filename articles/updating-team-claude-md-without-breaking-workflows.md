@@ -95,6 +95,8 @@ New rules that apply only to specific file types can go in `.claude/rules/` with
 ---
 paths:
   - "src/api/v2/**/*.ts"
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 ## API v2 Rules

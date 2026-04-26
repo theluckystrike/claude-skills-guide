@@ -308,6 +308,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Migration Guide Express to Fastify](/claude-code-migration-guide-express-to-fastify/)
 - [Claude Code Test Driven Refactoring Guide](/claude-code-test-driven-refactoring-guide/)
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)

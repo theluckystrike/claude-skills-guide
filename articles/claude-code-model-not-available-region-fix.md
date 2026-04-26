@@ -113,6 +113,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How Do I Make A Claude Skill Available](/how-do-i-make-a-claude-skill-available-organization-wide/)
 - [Claude Code Router: Model Routing Guide](/claude-code-router-guide/)
 - [Claude Code Model Compression](/claude-code-model-compression-quantization/)

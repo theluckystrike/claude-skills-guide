@@ -207,6 +207,8 @@ Start with a basic skill that describes your monorepo structure, then iterate as
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

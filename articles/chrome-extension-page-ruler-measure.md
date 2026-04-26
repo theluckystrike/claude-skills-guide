@@ -124,6 +124,8 @@ The best approach is to install a couple of options, use them regularly during d
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

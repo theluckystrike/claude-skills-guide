@@ -152,6 +152,8 @@ Most teams merge Karpathy's guidelines into their existing CLAUDE.md rather than
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Does this work with Claude Code on all plans?
 
 Yes. CLAUDE.md is loaded regardless of your Anthropic plan tier. The behavioral guidelines work with Pro, Teams, and Enterprise.

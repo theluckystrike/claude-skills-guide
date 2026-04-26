@@ -148,6 +148,8 @@ As you become more comfortable with these tools, explore advanced topics like bu
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

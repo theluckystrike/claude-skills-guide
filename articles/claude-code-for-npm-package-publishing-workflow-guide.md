@@ -224,6 +224,8 @@ Claude Code transforms npm package publishing from a manual, error-prone process
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -221,6 +221,8 @@ Start with a small, well-contained module to build confidence in the process. On
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

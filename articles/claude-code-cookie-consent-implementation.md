@@ -277,6 +277,8 @@ Cookie consent implementation doesn't need to be complicated. By building a smal
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

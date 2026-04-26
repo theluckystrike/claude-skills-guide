@@ -430,6 +430,8 @@ The key is starting small: add accessibility checks to your next pull request, g
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

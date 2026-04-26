@@ -234,6 +234,8 @@ The key is establishing clear context about your Retool resources and following 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

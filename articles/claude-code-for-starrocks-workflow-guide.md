@@ -70,6 +70,8 @@ Claude Code should create a `DUPLICATE KEY(event_time, user_id)` table with `PAR
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for ClickHouse Workflow Guide](/claude-code-for-clickhouse-workflow-guide/)
 - [Claude Code Database Schema Design Guide](/claude-code-database-schema-design-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

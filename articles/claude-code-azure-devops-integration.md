@@ -110,6 +110,8 @@ The PAT token controls access scope. Claude Code can only perform operations tha
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

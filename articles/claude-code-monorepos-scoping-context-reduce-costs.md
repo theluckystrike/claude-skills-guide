@@ -394,6 +394,8 @@ When any metric exceeds the red flag threshold for three consecutive tasks, upda
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Multi-Agent Token Budgeting](/multi-agent-token-budgeting-allocate-subagents/) -- controlling subagents in monorepos
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- understanding context growth
 - [Why Claude Code Gets Expensive on Large Projects](/why-claude-code-expensive-large-projects-fix/) -- general large project optimization

@@ -169,6 +169,8 @@ Accounts with hundreds of S3 buckets or Lambda functions cause slow list operati
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

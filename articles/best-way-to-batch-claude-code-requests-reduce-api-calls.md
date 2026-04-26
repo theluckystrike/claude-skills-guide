@@ -208,6 +208,8 @@ The key is to think in terms of complete tasks rather than individual actions. E
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -186,6 +186,8 @@ Using Claude with well-structured markdown files transforms how you develop mach
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

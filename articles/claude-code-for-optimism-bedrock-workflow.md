@@ -256,6 +256,8 @@ Remember to always test thoroughly on testnet before deploying to mainnet, and t
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

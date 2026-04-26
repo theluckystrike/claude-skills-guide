@@ -177,6 +177,8 @@ Stopping Claude Code from using snake_case in TypeScript requires a multi-layere
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

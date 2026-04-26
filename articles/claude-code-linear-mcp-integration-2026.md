@@ -203,6 +203,8 @@ Developers using Linear + Claude Code MCP integration report closing issues 25% 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [MCP Integration Guide for Claude Code Beginners](/mcp-integration-guide-for-claude-code-beginners/)
 - [GitHub MCP Server Advanced Workflow Automation](/github-mcp-server-advanced-workflow-automation/)
 - [How to Write Effective CLAUDE.md for Your Project](/how-to-write-effective-claude-md-for-your-project/)

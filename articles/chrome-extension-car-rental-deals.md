@@ -405,6 +405,8 @@ Building a car rental deal tracker demonstrates practical skills in Chrome exten
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

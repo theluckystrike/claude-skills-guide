@@ -217,6 +217,8 @@ Claude skills for PHP Laravel development transform how you build applications. 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

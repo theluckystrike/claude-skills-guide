@@ -299,6 +299,8 @@ This pattern unlocks automation scenarios that go far beyond what any single AI 
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [sequential thinking in Claude Code](/sequential-thinking-claude-code-guide/) — How to use sequential thinking and extended thinking in Claude Code
 ---
 

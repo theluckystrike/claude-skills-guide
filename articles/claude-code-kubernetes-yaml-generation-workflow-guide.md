@@ -371,6 +371,8 @@ Claude Code transforms Kubernetes YAML generation from a tedious manual task int
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

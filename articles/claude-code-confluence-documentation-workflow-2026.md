@@ -280,6 +280,8 @@ Documentation rot kills developer productivity. Automated sync between code and 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Confluence Documentation Guide](/claude-code-confluence-documentation-guide/)
 - [Automated Code Documentation Workflow with Claude Skills](/automated-code-documentation-workflow-with-claude-skills/)
 - [Claude Code for Technical Documentation Workflow Guide](/claude-code-for-technical-documentation-workflow-guide/)

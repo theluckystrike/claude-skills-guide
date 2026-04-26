@@ -118,6 +118,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [MCP Server Input Validation Security](/mcp-server-input-validation-security-patterns/)
 - [FastAPI Pydantic V2 Validation](/claude-code-fastapi-pydantic-v2-validation-deep-dive/)
 - [Tool Use Schema Validation Error — Fix](/claude-code-tool-use-schema-validation-error-fix-2026/)

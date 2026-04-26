@@ -174,6 +174,8 @@ Filtered: 3 servers * ~2,500 tokens/turn * 20 turns = 150,000 tokens
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- complete MCP server configuration guide
 - [Supabase MCP Server Token Usage](/supabase-mcp-server-token-usage-what-gets-sent/) -- Supabase-specific MCP optimization
 - [Claude Code Tool Call Overhead](/claude-code-tool-call-overhead-tokens-per-mcp-call/) -- understanding per-call token costs

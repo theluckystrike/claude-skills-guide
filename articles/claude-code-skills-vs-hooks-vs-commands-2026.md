@@ -186,6 +186,8 @@ Skills have the highest constant cost because they are included in every message
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can I convert between types?
 A skill can become a command if you only need it sometimes. A command can become a skill if you need it always. Hooks are unique — they run code, which the other types cannot do.
 

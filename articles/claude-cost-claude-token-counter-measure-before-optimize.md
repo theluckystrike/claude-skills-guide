@@ -220,6 +220,8 @@ Before optimization: record average input tokens, average output tokens, and tot
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — apply optimizations after measuring
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — fewer hallucinations means fewer retries and tokens
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — per-skill token usage analysis

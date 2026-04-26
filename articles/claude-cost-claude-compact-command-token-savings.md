@@ -209,6 +209,8 @@ Track three metrics: average context size per interaction (should decrease 40-60
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — the context growth problem that /compact solves
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — complementary token reduction strategies
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — cleaner context produces fewer hallucinations

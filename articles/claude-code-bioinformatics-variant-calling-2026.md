@@ -268,6 +268,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Migrating Real-Time Claude Calls](/migrating-real-time-claude-calls-to-batch/)
 - [Parallel Tool Calls Memory Exhaustion — Fix (2026)](/claude-code-parallel-tool-calls-memory-exhaustion-fix-2026/)
 

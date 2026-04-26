@@ -163,6 +163,8 @@ If a skill update changes the `description` field (trigger phrases), the skill m
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Skills Versioning Strategies](/claude-skills-versioning-strategies/)
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-team/)
 - [Testing Claude Skills Before Production](/testing-claude-skills-before-production/)

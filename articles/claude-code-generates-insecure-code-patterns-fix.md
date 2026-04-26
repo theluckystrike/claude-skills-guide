@@ -595,5 +595,7 @@ Related Reading
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Using Outdated Patterns (2026)](/claude-code-generates-outdated-patterns-fix-2026/)
 - [Fix Claude Code Generating Insecure Code (2026)](/claude-code-generates-insecure-code-fix-2026/)

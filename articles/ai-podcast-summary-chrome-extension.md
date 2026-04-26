@@ -303,6 +303,8 @@ For users seeking existing solutions, evaluate based on supported platforms, sum
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

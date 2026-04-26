@@ -331,6 +331,8 @@ Check the individual agent log output for the failing step. Run the step's promp
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Multi-agent architecture patterns](/claude-code-multi-agent-architecture-guide-2026/) — design patterns for agent coordination
 - [Subagent communication](/claude-code-multi-agent-subagent-communication-guide/) — how agents share context
 - [Parallel subagents best practices](/parallel-subagents-claude-code-best-practices-2026/) — optimization techniques

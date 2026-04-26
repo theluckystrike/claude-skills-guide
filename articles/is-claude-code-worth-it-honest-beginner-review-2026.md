@@ -117,6 +117,8 @@ Start with the free trial API credits, run it for a week on actual work, and jud
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

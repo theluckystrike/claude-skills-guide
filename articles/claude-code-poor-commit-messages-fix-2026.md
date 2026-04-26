@@ -161,6 +161,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Git Commit Message](/claude-code-git-commit-message-generator-guide/)
 - [Claude Amending Wrong Commit Fix](/claude-code-amending-wrong-commit-fix-2026/)
 - [Claude Code for Git Branch Protection](/claude-code-for-branch-protection-rules-workflow/)

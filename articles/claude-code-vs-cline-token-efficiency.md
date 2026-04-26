@@ -220,6 +220,8 @@ The token efficiency gap between Claude Code and Cline may narrow as both tools 
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Cursor Comparison](/claude-code-vs-cursor-comparison-2026/) -- another popular comparison
 - [Claude Code API Cost Calculator](/claude-code-api-cost-calculator-estimate-before-build/) -- detailed cost estimation
 - [Comparisons Hub](/compare/) -- all tool comparisons

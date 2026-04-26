@@ -134,6 +134,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Lambda Response](/claude-code-for-lambda-response-streaming-workflow/)
 - [Claude Code API Response Caching Guide](/claude-code-api-response-caching-guide/)
 - [Fix Slow Response Latency (2026)](/claude-code-slow-response-how-to-fix-latency-issues/)

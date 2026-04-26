@@ -217,6 +217,8 @@ Start with one skill covering your core architecture, then expand as you identif
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

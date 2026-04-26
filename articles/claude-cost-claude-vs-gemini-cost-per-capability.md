@@ -113,6 +113,8 @@ Choosing between Claude and Gemini requires mapping your workload to each provid
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude vs GPT-4o Honest Cost Breakdown](/claude-cost-claude-vs-gpt4-honest-cost-breakdown/)
 - [The Hybrid Stack: Claude for X, GPT for Y, Gemini for Z](/claude-cost-hybrid-stack-claude-gpt-gemini/)
 - [Open Source LLMs as Cost Floor](/claude-cost-open-source-llm-cost-floor/)

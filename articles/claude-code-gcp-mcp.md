@@ -140,6 +140,8 @@ Claude Code calls these tools during development when it needs to verify deploym
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -276,6 +276,8 @@ Start with basic path filters, then layer on matrix strategies and caching as yo
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -339,6 +339,8 @@ Start with simple benchmarks, validate your methodology, then progressively add 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

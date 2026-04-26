@@ -132,3 +132,5 @@ address those after fixing the error message?
 - [Full Karpathy Skills Guide](/karpathy-claude-code-skills-complete-guide-2026/)
 - [Implement Don't Assume in CLAUDE.md](/karpathy-dont-assume-implementation-claude-md-2026/)
 - [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/)
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

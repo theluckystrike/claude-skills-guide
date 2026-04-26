@@ -264,6 +264,8 @@ With the right skill design, your team can make data-driven performance decision
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

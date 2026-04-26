@@ -454,6 +454,8 @@ Start small: create a skill for your most frequent Cloud Run Jobs operation, the
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

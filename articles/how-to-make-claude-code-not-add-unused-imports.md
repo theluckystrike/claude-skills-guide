@@ -174,6 +174,8 @@ Remember: Claude responds well to explicit instructions. The more clearly you co
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

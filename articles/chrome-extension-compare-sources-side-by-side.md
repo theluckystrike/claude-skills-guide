@@ -426,6 +426,8 @@ Start with the manifest and content script above, verify the diff output in the 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -241,6 +241,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Monorepo Workspace Package Resolution](/claude-code-monorepo-workspace-package-resolution-fix-2026/)
 - [Claude Code Monorepo Setup](/claude-code-monorepo-setup-guide/)
 - [Claude Code for Changesets Monorepo](/claude-code-for-changesets-monorepo-release-workflow/)

@@ -378,6 +378,8 @@ Both tools represent significant advances in developer productivity. The most su
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

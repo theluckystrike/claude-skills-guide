@@ -304,5 +304,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Terraform Workspace Workflow Guide](/claude-code-for-terraform-workspace-workflow-guide/)
 - [Terraform with Claude Code: Setup and Workflow](/claude-code-for-terraform-workflow-tutorial-guide/)

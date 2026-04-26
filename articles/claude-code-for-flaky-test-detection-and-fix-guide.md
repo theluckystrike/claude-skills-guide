@@ -230,6 +230,8 @@ Remember that fixing flaky tests is an iterative process. Run your tests multipl
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

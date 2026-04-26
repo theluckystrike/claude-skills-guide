@@ -177,6 +177,8 @@ Start with one or two extensions that track progress and provide timers, then ex
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

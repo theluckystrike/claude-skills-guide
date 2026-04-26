@@ -356,6 +356,8 @@ Building a military discount finder extension requires attention to user experie
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

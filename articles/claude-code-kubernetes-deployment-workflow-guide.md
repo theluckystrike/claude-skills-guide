@@ -200,6 +200,8 @@ Start with the basics: generate your first manifest, set up environment configur
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

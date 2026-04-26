@@ -94,6 +94,8 @@ Token counts are estimated before sending a request and precisely calculated on 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills for SEO Content Generation Guide](/claude-skills-for-seo-content-generation/)
 - [Reddit MCP Server for Content Research](/reddit-mcp-server-content-research-automation/)
 - [AI Content Repurposer Chrome Extension](/ai-content-repurposer-chrome-extension/)

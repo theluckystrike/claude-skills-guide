@@ -420,6 +420,8 @@ The most important thing is to start narrow. Pick one meeting type that runs on 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

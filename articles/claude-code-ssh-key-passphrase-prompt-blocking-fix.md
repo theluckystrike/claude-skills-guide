@@ -119,6 +119,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Workspace Trust Blocking Execution Fix](/claude-code-workspace-trust-blocking-execution-fix-2026/)
 - [Referrer Blocking Chrome Extension](/chrome-referrer-blocking-extension/)
 - [Chrome Enterprise Split Tunnel Browsing](/chrome-enterprise-split-tunnel-browsing/)

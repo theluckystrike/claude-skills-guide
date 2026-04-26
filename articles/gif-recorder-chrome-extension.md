@@ -146,6 +146,8 @@ GIF recorder Chrome extensions fill an important niche in the developer's toolki
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

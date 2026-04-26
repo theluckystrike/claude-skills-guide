@@ -312,6 +312,8 @@ The feature gap between free extensions and paid desktop software has narrowed c
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -161,6 +161,8 @@ Start with skills matching your immediate needs, tdd for testing, terraform for 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

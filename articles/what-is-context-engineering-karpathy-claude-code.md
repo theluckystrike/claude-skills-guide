@@ -135,3 +135,5 @@ The CCG framework applies context engineering across three timescales: per-turn 
 - Andrej Karpathy -- "Context Engineering" concept (introduced via social media and talks, 2025)
 - Avi Chawla -- practical context engineering frameworks and taxonomies
 - [Karpathy Context Engineering + NASA P10: CCG Framework](/karpathy-context-engineering-nasa-p10-ccg-framework/)
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

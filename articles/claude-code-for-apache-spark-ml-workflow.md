@@ -232,6 +232,8 @@ Start by applying these techniques to your current Spark ML projects. Focus on o
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

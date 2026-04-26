@@ -210,6 +210,8 @@ Track the contribution of each optimization layer separately. Target savings: mo
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — the pricing dynamics that make stacked optimization effective
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — token reduction techniques that complement model routing
 - [Claude Code Monthly Cost Breakdown](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/) — baseline cost data for planning your optimization strategy

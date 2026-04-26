@@ -221,6 +221,8 @@ By integrating Claude Code into your heap profiling workflow, you'll not only so
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -247,6 +247,8 @@ This audit workflow pairs naturally with the emulator-based testing described ab
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

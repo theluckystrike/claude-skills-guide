@@ -270,6 +270,8 @@ This Claude skills with Slack bot integration tutorial covers the full stack fro
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -218,6 +218,8 @@ if __name__ == "__main__":
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- complete hooks reference and configuration
 - [Claude Code Cost Alerts: Set Up Notifications](/claude-code-cost-alerts-notifications-budget/) -- complementary alert systems
 - [Claude Code Token Budget: How to Set Limits](/claude-code-token-budget-set-limits-track-spend/) -- the full budget management framework

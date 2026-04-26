@@ -444,6 +444,8 @@ Start by identifying data models in your current project that could benefit from
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

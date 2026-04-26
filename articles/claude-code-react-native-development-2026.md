@@ -288,6 +288,8 @@ React Native projects have significant boilerplate per screen. Claude Code gener
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for React Native Navigation Setup Guide](/claude-code-for-react-native-navigation-setup-guide/)
 - [Claude Code for React Native Push Notifications Guide](/claude-code-for-react-native-push-notifications-guide/)
 - [How to Create React Components Faster with Claude Code](/how-to-create-react-components-faster-with-claude-code/)

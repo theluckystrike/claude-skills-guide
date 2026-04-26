@@ -367,6 +367,8 @@ The practical gaps between a prototype and a production-quality scraper come dow
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

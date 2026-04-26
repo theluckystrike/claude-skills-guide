@@ -219,4 +219,6 @@ This cadence keeps you informed without becoming a full-time activity.
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Best Claude Code Learning Resources (2026)](/best-claude-code-learning-resources-2026/)

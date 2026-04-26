@@ -250,6 +250,8 @@ Whether you need to create Web Store listings, technical documentation, or stake
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

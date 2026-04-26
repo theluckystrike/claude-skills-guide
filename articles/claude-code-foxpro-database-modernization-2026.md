@@ -263,6 +263,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [CLAUDE.md for Database Conventions](/claude-md-database-conventions/)
 - [Claude Md For Database Conventions](/claude-md-for-database-conventions-and-patterns/)
 - [Claude Skills for Creating Database](/claude-skills-for-creating-database-migration-scripts/)

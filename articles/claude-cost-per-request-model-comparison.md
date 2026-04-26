@@ -174,6 +174,8 @@ Review cost logs weekly. Key metrics: average cost per request (target: below $0
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — detailed breakdown of Claude's token-based pricing structure
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — reduce tokens to reduce per-request cost
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — measure token usage per workflow

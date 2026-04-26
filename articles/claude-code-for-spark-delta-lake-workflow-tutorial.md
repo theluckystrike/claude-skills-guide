@@ -597,6 +597,8 @@ By integrating Claude Code into your Spark Delta Lake development workflow, you 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

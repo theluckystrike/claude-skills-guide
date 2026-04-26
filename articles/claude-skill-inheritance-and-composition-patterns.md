@@ -250,6 +250,8 @@ Whether you're combining the pdf skill with tdd for documentation workflows, or 
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

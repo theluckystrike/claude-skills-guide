@@ -191,3 +191,5 @@ git tag claude-md-v2.0 -m "Major: switched to Result types for error handling"
 Tags let you correlate Claude's behavior changes with instruction changes. If Claude starts generating different patterns after a deploy, you can check which CLAUDE.md version was active.
 
 For the foundational guide to CLAUDE.md files, see the [complete guide](/claude-md-file-complete-guide-what-it-does/). For deciding what goes in shared versus personal files, see the [team vs personal guide](/team-claude-md-vs-personal-claude-md/). For sharing standards across multiple repositories, see the [cross-team sharing guide](/share-reuse-claude-md-across-teams/).
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

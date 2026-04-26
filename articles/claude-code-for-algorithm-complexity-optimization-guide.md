@@ -217,6 +217,8 @@ Start small: pick one function in your codebase, analyze its complexity, and opt
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

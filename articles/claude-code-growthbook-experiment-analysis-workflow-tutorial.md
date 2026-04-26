@@ -172,6 +172,8 @@ Remember: the goal isn't just to run experiments, but to learn from them effecti
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

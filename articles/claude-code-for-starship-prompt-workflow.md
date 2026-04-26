@@ -194,6 +194,8 @@ Start by using the example prompts above, then customize them to your needs. Wit
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

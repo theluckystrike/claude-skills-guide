@@ -352,6 +352,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [The Claude Code Cost Spiral: Why Projects Get Expensive Over Time](/claude-code-cost-spiral-projects-expensive-over-time/)
 - [Claude Code Cost vs Manual Developer Time: Break-Even Calculator](/claude-code-cost-vs-developer-time-break-even/)
 - [How Much Does Claude Code Cost Per PR? (Real Data)](/claude-code-cost-per-pr-real-data/)

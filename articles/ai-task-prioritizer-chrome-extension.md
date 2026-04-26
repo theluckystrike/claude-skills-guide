@@ -320,6 +320,8 @@ The code patterns shown here provide a foundation, you can extend the scoring al
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

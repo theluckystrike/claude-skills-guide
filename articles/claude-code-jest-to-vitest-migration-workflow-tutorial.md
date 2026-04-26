@@ -207,4 +207,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Jest Test Runner Mock Conflict — Fix (2026)](/claude-code-jest-runner-mock-conflict-fix/)

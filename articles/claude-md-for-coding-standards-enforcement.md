@@ -126,6 +126,8 @@ In polyglot projects, standards vary by language. Do not put Python rules in the
 ---
 paths:
   - "**/*.go"
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 - Exported functions: PascalCase, godoc comment required
 - Unexported functions: camelCase

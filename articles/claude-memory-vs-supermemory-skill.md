@@ -171,6 +171,8 @@ Custom memory skills have a cold-start problem. On the first session with a new 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills vs Raw Prompts with Tools](/claude-skills-vs-raw-prompts-with-tools/) -- when persistence matters
 - [Claude Skills vs Claude AI Projects](/claude-skills-vs-claude-ai-projects/) -- project-level persistence comparison
 - [Claude Skills vs MCP Servers](/claude-skills-vs-mcp-servers-comparison/) -- MCP memory server integration

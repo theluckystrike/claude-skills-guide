@@ -497,6 +497,8 @@ This section lists every article in the guides cluster alphabetically for quick 
 - [Troubleshooting Hub](/troubleshooting-hub/). Fix every common Claude Code skill error
 - [Integrations Hub](/integrations-hub/). Connect Claude skills to GitHub Actions, Slack, Supabase, and more
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 - [Claude shortcuts guide](/claude-shortcuts-complete-guide/) — Complete guide to Claude Code keyboard shortcuts and slash commands

@@ -333,6 +333,8 @@ The final architecture goal is a system where NOTICE-level Falco alerts are logg
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

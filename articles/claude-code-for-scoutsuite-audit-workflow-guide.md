@@ -351,6 +351,8 @@ Start small by running manual audits, then gradually automate the workflow to es
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

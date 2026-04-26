@@ -139,6 +139,8 @@ Remember that AI tools augment your skills rather than replace them. The most pr
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

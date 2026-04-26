@@ -535,6 +535,8 @@ Experiment with different skill combinations to find what works best for your sp
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

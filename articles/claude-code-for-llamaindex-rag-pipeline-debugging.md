@@ -526,6 +526,8 @@ Remember that successful RAG debugging is iterative. continuously monitor, analy
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

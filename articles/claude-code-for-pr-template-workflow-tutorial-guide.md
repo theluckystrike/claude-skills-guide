@@ -192,6 +192,8 @@ The best PR template is one that developers actually use. With Claude Code handl
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

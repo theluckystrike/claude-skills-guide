@@ -301,6 +301,8 @@ For developers, the extension serves as a foundation for more advanced tools, in
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

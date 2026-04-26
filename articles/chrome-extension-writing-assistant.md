@@ -289,6 +289,8 @@ Chrome extension writing assistants represent a practical intersection of AI cap
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

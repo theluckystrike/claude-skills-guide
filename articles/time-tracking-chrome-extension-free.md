@@ -177,6 +177,8 @@ Free time tracking Chrome extensions have matured significantly, offering featur
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

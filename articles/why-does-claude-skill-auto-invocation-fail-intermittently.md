@@ -139,6 +139,8 @@ As you develop more skills and understand your patterns, you'll naturally gravit
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

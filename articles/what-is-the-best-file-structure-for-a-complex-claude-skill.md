@@ -244,6 +244,8 @@ Skills like frontend-design, pdf, tdd, xlsx, and supermemory show that thoughtfu
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -355,6 +355,8 @@ With this workflow guide, you're equipped to implement webhook handlers that are
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

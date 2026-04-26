@@ -367,4 +367,6 @@ The /pdf skill processes industry reports, whitepapers, competitor content, and 
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills for SEO Content Generation — Automate Keyword Clustering, Meta Tags, and Internal Linking — 2026](/claude-skills-for-seo-content-generation/)

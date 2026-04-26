@@ -242,6 +242,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Career Change to Software Development](/claude-code-for-career-changers-into-software-development/)
 - [Devin AI Software Engineer](/devin-ai-software-engineer-review-2026/)
 - [Claude Code for Backstage Software](/claude-code-for-backstage-software-catalog-workflow/)

@@ -339,3 +339,5 @@ This is the framework. Every other article in the CCG cost optimization series i
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- context engineering in practice
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- the compress lever in detail
 - [Playbook Hub](/playbook/) -- complete Claude Code production playbook
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

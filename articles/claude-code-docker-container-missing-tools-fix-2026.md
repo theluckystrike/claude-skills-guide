@@ -105,6 +105,8 @@ Claude Code uses git for several core operations: tracking file changes, creatin
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix: Anthropic SDK MCP Tools Get Empty](/anthropic-sdk-mcp-empty-arguments-bug/)
 - [AI Coding Tools Governance Policy](/ai-coding-tools-governance-policy-for-enterprises/)
 - [Pruning Unused Claude Tools Saves Real](/pruning-unused-claude-tools-saves-money/)

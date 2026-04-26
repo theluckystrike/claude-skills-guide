@@ -265,6 +265,8 @@ Related Reading
 - [Skill MD File Format Explained With Examples](/claude-skill-md-format-complete-specification-guide/). Format your skill correctly before submitting
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)

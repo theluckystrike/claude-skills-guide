@@ -233,6 +233,8 @@ Start small, ask questions, and embrace the debugging process. Your future self 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

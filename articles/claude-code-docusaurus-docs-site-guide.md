@@ -197,6 +197,8 @@ Whether you're starting fresh or improving existing documentation, Claude Code p
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

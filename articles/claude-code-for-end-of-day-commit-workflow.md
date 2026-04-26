@@ -246,6 +246,8 @@ The key is customizing the workflow to match how you actually work. Every team h
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

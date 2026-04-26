@@ -206,6 +206,8 @@ Start by migrating your most-used rules first. Test each skill thoroughly. Over 
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

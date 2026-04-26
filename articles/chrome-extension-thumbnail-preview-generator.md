@@ -310,6 +310,8 @@ Building a thumbnail preview generator for Chrome extensions requires understand
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -171,6 +171,8 @@ Enterprise IDEs provide compliance features and security scanning. Claude Code a
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Will Claude Code replace my IDE?
 
 No. Claude Code runs in the terminal or as an IDE extension. It augments your IDE rather than replacing it. You still need an editor for reading code, navigating files, and debugging.

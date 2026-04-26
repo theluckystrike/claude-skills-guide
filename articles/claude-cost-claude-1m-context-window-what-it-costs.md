@@ -206,6 +206,8 @@ Track the 90th percentile context size per request type. Target keeping this und
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — deep analysis of context-driven costs
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/) — practical context management techniques
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — the reasoning behind context limits

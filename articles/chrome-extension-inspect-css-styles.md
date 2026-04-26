@@ -132,6 +132,8 @@ Finally, use the Computed panel extensively. It shows you exactly what the brows
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

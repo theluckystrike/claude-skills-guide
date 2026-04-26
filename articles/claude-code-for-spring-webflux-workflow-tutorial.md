@@ -278,6 +278,8 @@ Start with simple endpoints, practice error handling patterns, and gradually inc
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -201,6 +201,8 @@ The best approach? Experiment with both tools using the code patterns above, the
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

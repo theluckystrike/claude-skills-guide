@@ -493,6 +493,8 @@ As your application grows, lean on Claude Code to extend these patterns. adding 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

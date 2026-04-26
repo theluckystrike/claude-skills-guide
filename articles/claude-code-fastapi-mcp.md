@@ -115,6 +115,8 @@ CLAUDE.md awareness matters here. When your CLAUDE.md documents the API structur
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

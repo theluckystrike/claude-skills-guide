@@ -238,5 +238,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Code for Order Management Systems (2026)](/claude-code-order-management-system-2026/)
 - [Claude Code for PCB Layout Review with KiCad (2026)](/claude-code-pcb-layout-review-kicad-2026/)

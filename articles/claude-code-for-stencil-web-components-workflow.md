@@ -219,6 +219,8 @@ Start small: generate one component with Claude's help, review the output, and g
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

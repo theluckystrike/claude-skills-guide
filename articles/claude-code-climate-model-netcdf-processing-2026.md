@@ -252,6 +252,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Router: Model Routing Guide](/claude-code-router-guide/)
 - [Claude Code Model Compression](/claude-code-model-compression-quantization/)
 - [Claude Model Pricing Per Million Tokens](/claude-model-pricing-per-million-tokens-guide/)

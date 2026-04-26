@@ -291,6 +291,8 @@ No. MCP server connections, permissions, and memory items are not part of the co
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Command Reference](/commands/) — Full interactive command explorer
 - [Token Estimator](/token-estimator/) — Calculate token usage and costs
 - [Cost Optimization for Claude Code](/cost-optimization/) — Reduce your spending

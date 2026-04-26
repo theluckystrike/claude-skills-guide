@@ -153,6 +153,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Make Claude Code Understand](/how-to-make-claude-code-understand-domain-business-logic/)
 - [How to Make Claude Code Write](/how-to-make-claude-code-write-performant-sql-queries/)
 - [How To Make Claude Code Explain](/how-to-make-claude-code-explain-its-reasoning-steps/)

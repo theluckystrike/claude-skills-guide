@@ -346,6 +346,8 @@ Start with simple retry logic, add checkpointing for longer workflows, and progr
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

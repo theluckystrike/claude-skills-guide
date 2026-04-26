@@ -232,6 +232,8 @@ The OpenCLAW ecosystem continues evolving, and new attack patterns will emerge. 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

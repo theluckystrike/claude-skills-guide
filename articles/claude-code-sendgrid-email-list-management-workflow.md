@@ -195,6 +195,8 @@ The key is treating each operation as a modular skill that can be combined and r
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

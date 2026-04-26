@@ -200,6 +200,8 @@ Step 4: Record the overspend for pattern analysis
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Token Budget: How to Set Limits and Track Spend](/claude-code-token-budget-set-limits-track-spend/) -- comprehensive budget management
 - [Claude Code Hooks for Token Budget Enforcement](/claude-code-hooks-token-budget-enforcement/) -- automated hooks-based enforcement
 - [Claude Code Dashboard: Built-In Usage Monitoring](/claude-code-dashboard-built-in-usage-monitoring/) -- tracking spend with /cost and ccusage

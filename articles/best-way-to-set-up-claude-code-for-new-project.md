@@ -309,6 +309,8 @@ A well-maintained CLAUDE.md compounds in value over time, making each subsequent
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

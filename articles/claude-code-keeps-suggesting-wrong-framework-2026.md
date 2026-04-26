@@ -128,6 +128,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Keeps Suggesting The Same](/claude-code-keeps-suggesting-the-same-broken-solution/)
 - [Claude Code Wrong Environment Deploy](/claude-code-deploying-wrong-environment-prevent-mistakes/)
 - [Fix Claude Code Wrong File Context](/claude-code-keeps-switching-to-wrong-file-context/)

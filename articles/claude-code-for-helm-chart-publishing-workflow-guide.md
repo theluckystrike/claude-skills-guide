@@ -620,6 +620,8 @@ Remember: always validate charts before publishing, maintain consistent versioni
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

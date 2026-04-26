@@ -234,6 +234,8 @@ If you're on a team, compare response times with a colleague on a different mach
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

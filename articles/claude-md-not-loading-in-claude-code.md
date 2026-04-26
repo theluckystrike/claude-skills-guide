@@ -160,4 +160,6 @@ For the complete CLAUDE.md loading specification, see the [CLAUDE.md complete gu
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code CLAUDE.md Not Found Fix (2026)](/claude-code-claude-md-not-found-parent-directories-fix/)

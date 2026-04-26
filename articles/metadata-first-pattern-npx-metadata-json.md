@@ -170,6 +170,8 @@ echo "Metadata written to $METADATA_FILE ($(wc -c < "$METADATA_FILE") bytes)"
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Structured Metadata vs Discovery Queries](/structured-metadata-vs-discovery-queries-token-gap/) -- the theory behind metadata-first approaches
 - [CLAUDE.md as Cost Control](/claude-md-cost-control-rules-prevent-token-waste/) -- using CLAUDE.md to enforce metadata-first behavior
 - [Agent-First Architecture](/agent-first-architecture-backends-dont-waste-tokens/) -- the broader pattern of designing for agent consumption

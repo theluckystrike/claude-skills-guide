@@ -130,6 +130,8 @@ Related Reading
 - [Best Claude Code Skills 2026 Rankings Hub](/best-of-hub/). Know which skills deserve your advanced optimization effort
 - [WireGuard PostUp PostDown Scripts: Routing Guide](/wireguard-postup-postdown-scripts-for-advanced-routing-configuration/)
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)

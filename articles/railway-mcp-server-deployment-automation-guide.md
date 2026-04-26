@@ -212,6 +212,8 @@ For developers building Claude Code integrations, combining Railway deployment w
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

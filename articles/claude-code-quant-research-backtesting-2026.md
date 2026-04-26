@@ -299,6 +299,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Reddit MCP Server for Content Research](/reddit-mcp-server-content-research-automation/)
 - [Tab Management for Claude Code Research](/onetab-alternative-chrome-extension-2026/)
 - [Build an Amazon Research Chrome](/chrome-extension-product-research-amazon/)

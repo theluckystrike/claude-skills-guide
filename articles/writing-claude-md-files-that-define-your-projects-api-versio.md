@@ -154,6 +154,8 @@ The investment in writing comprehensive API versioning documentation pays divide
 
 ---
 
+
+**Try it:** Find the right model with our [Model Selector](/model-selector/).
 ---
 
 <div class="mastery-cta">

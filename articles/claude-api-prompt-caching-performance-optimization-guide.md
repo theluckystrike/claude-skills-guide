@@ -237,6 +237,8 @@ Start with simple caching of your system prompts, then expand to knowledge base 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

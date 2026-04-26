@@ -70,6 +70,8 @@ Claude Code should create a `Config.pkl` schema class with typed fields and cons
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Best Way to Set Up Claude Code for New Project](/best-way-to-set-up-claude-code-for-new-project/)
 - [Claude Code for OpenTofu IaC Workflow Guide](/claude-code-for-opentofu-iac-workflow-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

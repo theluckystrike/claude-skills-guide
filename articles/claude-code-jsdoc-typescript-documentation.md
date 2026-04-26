@@ -224,6 +224,8 @@ Accurate, well-maintained documentation accelerates onboarding, reduces support 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

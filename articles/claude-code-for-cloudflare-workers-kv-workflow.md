@@ -434,6 +434,8 @@ Start with simple CRUD operations, then gradually add caching, batch processing,
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

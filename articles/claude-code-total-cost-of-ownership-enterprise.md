@@ -100,6 +100,8 @@ Enterprise Claude Code adoption is a significant commitment, but one that delive
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -113,6 +113,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Connect Claude Code to Remote MCP](/claude-code-mcp-remote-http-server-setup/)
 - [Claude Code Turborepo Remote Caching](/claude-code-turborepo-remote-caching-setup-workflow-guide/)
 - [Claude Code for Prometheus Remote Write](/claude-code-for-prometheus-remote-write-workflow/)

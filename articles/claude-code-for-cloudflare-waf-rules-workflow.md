@@ -159,6 +159,8 @@ The key is treating your WAF rules as code: version-controlled, tested, and coll
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

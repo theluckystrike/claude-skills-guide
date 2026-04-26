@@ -111,6 +111,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Prettier Code Formatting](/claude-code-prettier-code-formatting-guide/)
 - [Claude Code vs ESLint + Prettier](/claude-code-vs-eslint-prettier-comparison/)
 - [Claude API Invalid API Key Format Error](/claude-api-invalid-api-key-format-error-fix/)

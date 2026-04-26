@@ -363,6 +363,8 @@ Start small with a single custom generator, then expand your collection over tim
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -248,6 +248,8 @@ Claude skills handle the code generation heavy lifting. Your expertise in financ
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

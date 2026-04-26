@@ -112,6 +112,8 @@ The `$ARGUMENTS` substitution lets you pass context: `/explain-rust src/parser.r
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [SKILL.md Frontmatter Fields Explained](/skill-md-file-frontmatter-fields-explained/)
 - [Claude Skills Folder Structure](/claude-skills-folder-structure/)
 - [Testing Claude Skills Before Production](/testing-claude-skills-before-production/)

@@ -89,6 +89,8 @@ paths:
   - "migrations/**"
   - "config/**"
   - "scripts/**"
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 ## Protected File Rules

@@ -607,6 +607,8 @@ A well-built Jira ticket creator extension reduces context switching and standar
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

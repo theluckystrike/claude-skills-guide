@@ -441,6 +441,8 @@ The key is starting with simple rules and progressively adding sophistication as
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -247,6 +247,8 @@ The investment is about 20 minutes to write each skill. A well-written incident 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

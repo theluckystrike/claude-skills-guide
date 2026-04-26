@@ -347,6 +347,8 @@ Make it executable with `chmod +x .git/hooks/pre-commit`. Now any skill file wit
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

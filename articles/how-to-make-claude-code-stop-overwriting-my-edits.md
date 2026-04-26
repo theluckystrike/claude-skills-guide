@@ -174,6 +174,8 @@ Start applying these techniques today, and you'll never have to recover overwrit
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -221,3 +221,5 @@ To quantify whether prompt engineering or context engineering delivers more valu
 The consistent finding across teams: prompt engineering delivers linear returns (each prompt saves tokens on that one invocation), while context engineering delivers compound returns (each context improvement saves tokens on every future invocation across every team member). A 30-minute investment in a CLAUDE.md project map saves tokens on thousands of future tasks. A 30-minute investment in crafting the perfect prompt saves tokens on one task.
 
 This compounding effect is why context engineering dominates for agentic systems. The longer the project runs and the more developers use it, the greater the accumulated savings from well-engineered context versus well-crafted prompts.
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

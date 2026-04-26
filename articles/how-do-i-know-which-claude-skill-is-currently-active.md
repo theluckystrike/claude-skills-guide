@@ -189,6 +189,8 @@ Understanding your active skill context transforms Claude Code from a general-pu
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

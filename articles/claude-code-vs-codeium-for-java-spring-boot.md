@@ -406,6 +406,8 @@ For complex Spring Boot applications requiring deep framework knowledge, archite
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -70,6 +70,8 @@ Claude Code should create `src/pages/_layout.tsx` as a server component with nav
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
 - [Claude Code for TanStack Router Workflow Guide](/claude-code-for-tanstack-router-workflow-guide/)

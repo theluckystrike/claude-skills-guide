@@ -151,6 +151,8 @@ First check that your CLAUDE.md accurately describes your project conventions. I
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code GCP MCP Server Setup](/claude-code-gcp-mcp/)
 - [Claude Code Offline Mode Setup (2026)](/best-way-to-use-claude-code-offline-without-internet-access/)
 - [Setup: Neovim AI Coding Setup](/neovim-ai-coding-setup-with-claude-2026/)

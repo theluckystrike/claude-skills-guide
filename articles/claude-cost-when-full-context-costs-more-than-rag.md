@@ -256,6 +256,8 @@ Track cost per query across your chosen approach. If using the hybrid strategy, 
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — context economics that drive this decision
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/) — practical context management techniques
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — understanding context design choices

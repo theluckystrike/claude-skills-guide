@@ -270,5 +270,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Stash Pop Conflict After Claude Edits Fix](/claude-code-stash-pop-conflict-after-edits-fix-2026/)
 - [Claude Code Pytest Parametrize Advanced Workflow Patterns](/claude-code-pytest-parametrize-advanced-workflow-patterns/)

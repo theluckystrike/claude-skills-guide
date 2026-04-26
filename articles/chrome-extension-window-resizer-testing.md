@@ -217,6 +217,8 @@ The key is combining automated unit tests that verify logic with manual testing 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

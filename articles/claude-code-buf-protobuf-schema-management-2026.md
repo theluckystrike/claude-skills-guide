@@ -295,6 +295,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Prisma Generate Failure After Schema](/claude-code-prisma-generate-failure-fix-2026/)
 - [Claude Code Delta Lake Schema Evolution](/claude-code-for-delta-lake-schema-evolution-workflow/)
 - [Database Schema Design with Claude Code](/claude-code-database-schema-design-guide/)

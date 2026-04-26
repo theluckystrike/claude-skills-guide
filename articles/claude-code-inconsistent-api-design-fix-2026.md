@@ -157,6 +157,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code + Ant Design React Workflow](/claude-code-for-ant-design-workflow-guide/)
 - [REST API Design with Claude Code (2026)](/claude-code-rest-api-design-best-practices/)
 - [Color Picker Design Chrome Extension](/chrome-extension-color-picker-design/)

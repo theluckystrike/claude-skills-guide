@@ -286,6 +286,8 @@ The key to a successful implementation lies in solid content extraction that han
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

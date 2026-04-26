@@ -245,6 +245,8 @@ Start by running basic scans, then progressively build custom rules and automati
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

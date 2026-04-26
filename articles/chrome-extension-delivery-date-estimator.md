@@ -269,6 +269,8 @@ For most teams, the practical impact is not the hours saved on the estimate itse
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

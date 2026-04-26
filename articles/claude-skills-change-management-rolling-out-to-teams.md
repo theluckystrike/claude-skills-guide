@@ -249,6 +249,8 @@ Start with a small pilot group, iterate on your processes, and scale up as your 
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

@@ -176,6 +176,8 @@ echo "Environment check complete."
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code 429 Rate Limit](/claude-code-rate-limit-429-retry-after-fix/)
 - [Anthropic Rate Limit Tokens Per Minute — Fix (2026)](/claude-code-anthropic-rate-limit-tokens-per-minute-fix-2026/)
 - [Fix Claude Rate Exceeded Error (2026)](/claude-rate-exceeded-error-fix/)

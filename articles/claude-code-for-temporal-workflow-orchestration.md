@@ -237,6 +237,8 @@ Whether you're implementing simple task queues or complex distributed transactio
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

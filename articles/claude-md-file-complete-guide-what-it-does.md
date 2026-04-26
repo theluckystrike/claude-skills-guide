@@ -171,6 +171,8 @@ This simple format underlies the entire Claude skills ecosystem, from basic help
 
 ## Related
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Desktop config.json guide](/claude-desktop-config-json-guide/) — How to configure Claude Desktop with config.json
 ---
 

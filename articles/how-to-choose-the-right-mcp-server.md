@@ -180,6 +180,8 @@ The MCP ecosystem continues growing, with new servers appearing regularly. The p
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

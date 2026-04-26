@@ -161,6 +161,8 @@ Task: _______________
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Is Claude Code Worth $100/month?](/is-claude-code-worth-100-month-roi-calculator/) -- subscription-focused ROI analysis
 - [Claude Code Max Subscription vs API](/claude-code-max-vs-api-cheaper-2026-calculator/) -- choosing the right billing model
 - [How to Reduce Claude Code Token Usage by 3x](/reduce-claude-code-token-usage-3x-guide-2026/) -- maximize savings by minimizing waste

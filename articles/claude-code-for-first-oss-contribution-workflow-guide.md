@@ -225,6 +225,8 @@ Start small, stay curious, and keep contributing. Each PR makes you more comfort
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

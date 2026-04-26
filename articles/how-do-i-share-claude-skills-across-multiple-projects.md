@@ -186,4 +186,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [How to Distribute Claude Skills Across Teams 2026](/distribute-claude-skills-across-teams-2026/)

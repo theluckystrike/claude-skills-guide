@@ -68,6 +68,8 @@ Free tiers are insufficient for enterprise use. Usage caps, lack of SSO, no audi
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 **Which free AI coding tool should I try first?**
 GitHub Copilot Free if you want inline autocomplete. Claude Code Free if you want an autonomous agent. Install both -- they serve different purposes and do not conflict.
 

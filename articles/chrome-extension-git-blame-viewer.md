@@ -82,6 +82,8 @@ Whether you're debugging production issues, reviewing pull requests, or explorin
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

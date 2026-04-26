@@ -220,6 +220,8 @@ Claude Code significantly accelerates Wagmi development by generating consistent
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

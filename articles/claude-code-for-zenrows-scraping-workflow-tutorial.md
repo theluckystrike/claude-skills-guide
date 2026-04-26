@@ -265,6 +265,8 @@ Remember to always scrape responsibly and respect the websites you target. With 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

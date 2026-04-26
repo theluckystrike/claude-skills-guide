@@ -112,6 +112,8 @@ Claude Code creates files and edits through standard filesystem operations, so a
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Stop Claude Code Writing Excessive Code](/claude-code-writes-too-much-code-fix-2026/)
 - [Fix Claude Code MCP Tools Excessive](/claude-code-mcp-tools-excessive-context-fix/)
 - [Virtual Background Chrome Extension](/virtual-background-chrome-extension/)

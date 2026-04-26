@@ -160,6 +160,8 @@ This approach works with CLAUDE.md project instructions to create a complete dev
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

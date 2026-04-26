@@ -155,5 +155,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code vs Smol Developer (2026): AI Agents](/claude-code-vs-smol-developer-ai-agents-2026/)
 - [Claude Skills vs LangChain Agents Compared (2026)](/claude-skills-vs-langchain-agents-comparison-2026/)

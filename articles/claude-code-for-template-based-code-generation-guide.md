@@ -236,6 +236,8 @@ Template-based code generation with Claude Code transforms how you approach repe
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

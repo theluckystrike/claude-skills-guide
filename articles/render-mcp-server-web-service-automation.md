@@ -150,6 +150,8 @@ Start by configuring the MCP server with your Render API credentials, then gradu
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

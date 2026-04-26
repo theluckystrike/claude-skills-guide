@@ -99,4 +99,6 @@ For preventing merge conflicts in the first place, use trunk-based development w
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Merge Conflict in Claude-Edited Files Fix](/claude-code-merge-conflict-edited-files-fix-2026/)

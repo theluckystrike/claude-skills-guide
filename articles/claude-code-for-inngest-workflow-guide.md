@@ -71,6 +71,8 @@ Claude Code should create a function with `createFunction({ id: 'onboarding-flow
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for AI Agent Tool Calling](/claude-code-for-ai-agent-tool-calling-implementation/)
 - [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

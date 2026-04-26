@@ -226,6 +226,8 @@ Remember: the key to effective dead code management is consistency. Regular scan
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

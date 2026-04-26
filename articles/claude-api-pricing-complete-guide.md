@@ -625,6 +625,8 @@ Each API key shares the organization-level rate limit. Multiple keys do not incr
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Extra Usage Cost Guide](/claude-extra-usage-cost-guide/)
 - [Claude 5-Hour Usage Limit Guide](/claude-5-hour-usage-limit-guide/)
 - [Claude Pro Subscription Price Guide](/claude-pro-subscription-price-guide/)

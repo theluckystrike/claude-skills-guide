@@ -119,6 +119,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Find the right model with our [Model Selector](/model-selector/).
+
 - [How Do I Make A Claude Skill Available](/how-do-i-make-a-claude-skill-available-organization-wide/)
 - [Claude Code Model Not Available](/claude-code-model-not-available-region-fix/)
 - [How AI Agents Plan and Execute Tasks](/how-ai-agents-plan-and-execute-tasks-explained/)

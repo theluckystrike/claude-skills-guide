@@ -312,6 +312,8 @@ Remember to test configuration behavior thoroughly and always provide sensible d
 
 ---
 
+
+**Try it:** Build your own with our [CLAUDE.md Generator](/generator/).
 ---
 
 <div class="mastery-cta">

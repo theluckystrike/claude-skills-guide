@@ -257,6 +257,8 @@ Start with simple configurations, gradually add complexity as your understanding
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

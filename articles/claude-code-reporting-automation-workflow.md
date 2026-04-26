@@ -154,6 +154,8 @@ Building effective reporting automation with Claude Code requires understanding 
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

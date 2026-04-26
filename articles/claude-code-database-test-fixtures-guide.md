@@ -317,6 +317,8 @@ The patterns that deliver the most value are: organizing fixtures by feature rat
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

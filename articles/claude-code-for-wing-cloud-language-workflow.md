@@ -363,5 +363,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Gleam Language — Workflow Guide](/claude-code-for-gleam-language-workflow-guide/)
 - [Claude Code for Mojo Language — Workflow Guide](/claude-code-for-mojo-language-workflow-guide/)

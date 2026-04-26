@@ -223,6 +223,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for ESP32 Firmware](/claude-code-esp32-firmware-development-2026/)
 - [Chrome Enterprise Default Printer](/chrome-enterprise-default-printer-policy/)
 

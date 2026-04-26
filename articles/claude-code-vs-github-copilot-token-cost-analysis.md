@@ -163,6 +163,8 @@ Step 4: Compare against $100 (Max) and $10 (Copilot)
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Cursor Comparison](/claude-code-vs-cursor-comparison-2026/) -- comparing Claude Code with another AI IDE
 - [Claude Code Max Subscription vs API](/claude-code-max-vs-api-cheaper-2026-calculator/) -- detailed Max vs API analysis
 - [Is Claude Code Worth $100/month?](/is-claude-code-worth-100-month-roi-calculator/) -- ROI analysis for Max subscribers

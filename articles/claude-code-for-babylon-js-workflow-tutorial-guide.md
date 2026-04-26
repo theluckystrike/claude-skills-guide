@@ -203,6 +203,8 @@ The combination of Babylon.js's powerful 3D capabilities and Claude Code's assis
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

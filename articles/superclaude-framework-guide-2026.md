@@ -162,6 +162,8 @@ Ready to audit. Provide a file, directory, or endpoint.
 
 ## FAQ
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 ### Can I use only some commands?
 
 Yes. After installation, delete any command files from `.claude/commands/` that you don't need. The remaining commands work independently.

@@ -70,3 +70,5 @@ Start with the CLAUDE.md best practices if you are new to Claude Code. The CLAUD
 - [Tutorials Hub](/tutorials-hub/)
 - [Advanced Hub](/advanced-hub/)
 - [Troubleshooting Hub](/troubleshooting-hub/)
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

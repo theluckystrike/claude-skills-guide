@@ -353,6 +353,8 @@ Building a price comparison extension demonstrates real-world extension developm
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

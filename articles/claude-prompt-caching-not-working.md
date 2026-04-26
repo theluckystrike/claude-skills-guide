@@ -191,6 +191,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Prompt Caching API Guide](/claude-prompt-caching-api-guide/) -- complete guide to implementing prompt caching.
 - [Claude Prompt Caching Pricing Guide](/claude-prompt-caching-pricing-and-cost-savings/) -- calculate your savings with caching.
 - [Claude API Error 429 rate_limit_error Fix](/claude-api-error-429-ratelimiterror-explained/) -- cached tokens do not count toward ITPM limits.

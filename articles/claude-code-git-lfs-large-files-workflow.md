@@ -492,4 +492,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code git diff too large -- reducing context size](/claude-code-git-diff-too-large-reducing-context/)

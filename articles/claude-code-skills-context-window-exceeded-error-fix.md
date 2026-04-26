@@ -243,6 +243,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Context Window Exceeded Mid-Chat — Fix (2026)](/claude-code-context-window-exceeded-mid-conversation-fix/)
 - [Context Window Exceeded Mid-Conversation Fix](/claude-code-context-window-exceeded-mid-conversation-fix-2026/)
 - [Context Window Budgeting: How to Allocate Tokens Across Tasks](/context-window-budgeting-allocate-tokens-tasks/)

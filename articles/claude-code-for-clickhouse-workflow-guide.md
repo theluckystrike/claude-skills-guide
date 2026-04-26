@@ -70,6 +70,8 @@ Claude Code should create the table with `ENGINE = MergeTree() PARTITION BY toYY
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
 - [Best Way to Feed Claude Code a Large SQL Schema](/best-way-to-feed-claude-code-a-large-sql-schema/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

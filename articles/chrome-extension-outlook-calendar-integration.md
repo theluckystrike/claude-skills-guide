@@ -215,6 +215,8 @@ Building a Chrome extension with Outlook Calendar integration combines web devel
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -281,4 +281,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Traditional IDE — Developer Comparison 2026](/claude-code-vs-traditional-ide-productivity-study/)

@@ -204,6 +204,8 @@ The key benefits include automated version switching based on project context, c
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

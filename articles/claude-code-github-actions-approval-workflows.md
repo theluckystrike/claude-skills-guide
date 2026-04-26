@@ -293,5 +293,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code GitHub Actions Secret Missing in Fork — Fix (2026)](/claude-code-github-actions-secret-not-available-forked-pr-fix/)
 - [How to Build Claude Code GitHub Actions 2026](/claude-code-github-actions-workflow-2026/)

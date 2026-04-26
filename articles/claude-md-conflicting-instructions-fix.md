@@ -105,6 +105,8 @@ paths: ["**/*.py"]
 # .claude/rules/typescript.md
 ---
 paths: ["**/*.ts"]
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 - Use 2-space indentation
 ```

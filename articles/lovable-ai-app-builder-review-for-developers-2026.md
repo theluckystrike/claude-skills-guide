@@ -301,6 +301,8 @@ For teams evaluating AI development tools in 2026, Lovable paired with Claude Co
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

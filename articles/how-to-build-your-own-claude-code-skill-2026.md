@@ -192,6 +192,8 @@ The [andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-ski
 
 ## FAQ
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ### How long should a skill be?
 CLAUDE.md skills: 50-200 words. Commands: 100-500 words. Agent profiles: up to 1,000 words. Longer skills consume more context window.
 

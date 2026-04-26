@@ -219,4 +219,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Losing Context in Sessions (2026)](/claude-code-loses-context-long-sessions-fix-2026/)

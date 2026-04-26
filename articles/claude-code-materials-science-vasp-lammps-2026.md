@@ -307,6 +307,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Computer Science](/claude-code-for-computer-science-bootcamp-students/)
 - [Claude.md Example for Data Science](/claude-md-example-for-data-science-python-project/)
 - [Claude Code for Data Science Analysis](/how-data-scientists-use-claude-code-for-analysis/)

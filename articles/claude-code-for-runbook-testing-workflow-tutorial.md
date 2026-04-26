@@ -318,6 +318,8 @@ First check that your CLAUDE.md accurately describes your project conventions. I
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Runbook Automation](/claude-code-for-runbook-automation-workflow-guide/)
 - [Claude Code for Runbook Authoring](/claude-code-for-runbook-authoring-workflow-tutorial/)
 - [Claude Code for Runbook Version Control](/claude-code-for-runbook-version-control-workflow/)

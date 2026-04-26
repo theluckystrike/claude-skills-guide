@@ -262,6 +262,8 @@ echo "4 4" | gmx rms -s output/md.tpr -f output/md.xtc -o analysis/rmsd.xvg
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Computational Chemistry](/claude-code-computational-chemistry-orca-2026/)
 - [Claude Code for Computational Biology](/claude-skills-for-computational-biology-bioinformatics/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

@@ -148,6 +148,8 @@ Related guides: [Claude Code System Design Documentation](/claude-code-system-de
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

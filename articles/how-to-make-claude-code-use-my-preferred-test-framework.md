@@ -422,6 +422,8 @@ Start by creating a custom skill for your preferred test framework, and you'll n
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

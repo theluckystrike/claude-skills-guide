@@ -274,6 +274,8 @@ Building a TikTok analytics Chrome extension gives you complete control over how
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

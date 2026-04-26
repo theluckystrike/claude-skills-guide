@@ -420,6 +420,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code API Endpoint Testing Guide](/claude-code-api-endpoint-testing-guide/)
 - [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/)
 - [Before and After Switching to Claude Code Workflow](/before-and-after-switching-to-claude-code-workflow/)

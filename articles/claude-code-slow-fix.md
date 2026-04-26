@@ -196,6 +196,8 @@ $99 once. Pays for itself in saved tokens within a week.
 
 *If you are running many browser tabs alongside Claude Code, [Tab Suspender Pro](https://chromewebstore.google.com/detail/tab-suspender-pro/) can free memory from inactive tabs so your dev tools stay responsive.*
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 *Last verified: 2026-04-14. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*

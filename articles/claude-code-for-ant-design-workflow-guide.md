@@ -320,4 +320,6 @@ A CRUD data table implementation combines Ant Design's Table with Modal forms fo
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for RF Antenna Design Simulation (2026)](/claude-code-rf-antenna-design-simulation-2026/)

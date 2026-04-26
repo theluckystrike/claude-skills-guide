@@ -570,6 +570,8 @@ The key is treating Claude as a pair programmer who understands data engineering
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

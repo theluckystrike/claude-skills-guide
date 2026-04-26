@@ -222,6 +222,8 @@ Claude skills reduce the mechanical burden of localization management, allowing 
 
 ## Related
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Code 安装指南 (Chinese Installation Guide)](/claude-code-anzhuang-installation-guide/) — Claude Code installation guide in Chinese (中文安装教程)
 ---
 

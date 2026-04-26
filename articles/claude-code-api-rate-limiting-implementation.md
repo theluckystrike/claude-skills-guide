@@ -386,6 +386,8 @@ Rate limiting protects your Claude Code integrations from unexpected costs and e
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

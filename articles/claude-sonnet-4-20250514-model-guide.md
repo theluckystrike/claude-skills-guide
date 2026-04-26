@@ -349,6 +349,8 @@ For most development tasks, Sonnet 4 with extended thinking provides sufficient 
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Sonnet 4.5 model guide](/claude-sonnet-4-5-20250929-model-guide/) — predecessor model comparison
 - [Claude Code cost breakdown](/claude-code-cost-complete-guide/) — pricing across all models
 - [Model routing strategies](/claude-code-router-guide/) — when to use which model

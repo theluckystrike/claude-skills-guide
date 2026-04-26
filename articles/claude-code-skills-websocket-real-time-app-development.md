@@ -256,6 +256,8 @@ The result is a codebase where the real-time layer is tested, the reconnect logi
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

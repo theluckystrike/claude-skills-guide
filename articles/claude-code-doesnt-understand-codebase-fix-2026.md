@@ -115,6 +115,8 @@ For a deeper look at CLAUDE.md patterns, see our [CLAUDE.md best practices guide
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Make Claude Code Explain Its Changes (2026)](/claude-code-doesnt-explain-changes-fix-2026/)
 - [Make Claude Code Write Documentation (2026)](/claude-code-doesnt-write-docs-fix-2026/)
 - [Make Claude Code Handle Edge Cases (2026)](/claude-code-doesnt-handle-edge-cases-fix-2026/)

@@ -270,6 +270,8 @@ Build smaller, focused components. Test incrementally. Maintain documentation as
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

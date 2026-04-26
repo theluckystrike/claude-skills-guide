@@ -178,6 +178,8 @@ By combining Spectral's powerful linting capabilities with Claude Code's assista
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

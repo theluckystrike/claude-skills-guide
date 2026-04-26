@@ -382,6 +382,8 @@ Dark mode implementation doesn't have to be complicated. By building on CSS cust
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

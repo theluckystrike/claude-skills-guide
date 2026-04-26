@@ -237,6 +237,8 @@ Claude Pro's Claude Code integration with managed settings provides better enter
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can I use Claude models through ChatGPT?
 
 No. Claude models are exclusive to Anthropic's platform. ChatGPT uses OpenAI's GPT models only. You need separate subscriptions to access both.

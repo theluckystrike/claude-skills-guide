@@ -250,6 +250,8 @@ The migration from Backbone.js to Vue represents moving from an era of manual DO
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

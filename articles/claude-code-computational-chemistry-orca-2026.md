@@ -249,6 +249,8 @@ print(f'N iterations: {len(data.scfenergies)}')
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Molecular Dynamics](/claude-code-molecular-dynamics-gromacs-2026/)
 - [Claude Code for Computational Biology](/claude-skills-for-computational-biology-bioinformatics/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

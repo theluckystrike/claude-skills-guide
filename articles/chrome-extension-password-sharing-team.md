@@ -260,6 +260,8 @@ Start with the relay model if you need a quick solution with minimal infrastruct
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

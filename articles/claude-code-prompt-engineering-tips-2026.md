@@ -218,6 +218,8 @@ Constraints: [behavior must not change, tests must pass]
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### How long should prompts be?
 50-200 words for simple tasks. 200-500 words for complex features. Longer prompts are fine if they reduce ambiguity. The [claude-howto](https://github.com/luongnv89/claude-howto) repo provides visual prompt templates.
 

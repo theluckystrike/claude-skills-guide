@@ -319,6 +319,8 @@ First check that your CLAUDE.md accurately describes your project conventions. I
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude SDK Timeout Configuration Guide](/claude-sdk-timeout-configuration-customization/)
 - [Claude Code API Gateway Configuration](/claude-code-api-gateway-configuration-guide/)
 - [Claude Code Dotfiles Configuration](/claude-code-dotfiles-configuration-management-workflow/)

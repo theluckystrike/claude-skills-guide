@@ -70,6 +70,8 @@ Claude Code should create `uno.config.ts` with `presetWind()`, `presetIcons({ pr
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/)
 - [Claude Code CSS Animations Workflow Guide](/claude-code-css-animations-workflow-guide/)
 - [Claude Code Figma to Tailwind Component Conversion](/claude-code-figma-to-tailwind-component-conversion/)

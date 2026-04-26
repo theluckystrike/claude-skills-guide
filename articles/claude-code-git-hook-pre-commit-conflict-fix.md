@@ -115,6 +115,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Hook Script Not Executable — Fix (2026)](/claude-code-hook-script-not-executable-fix-2026/)
 - [Write Your First Claude Code Hook](/how-to-write-claude-code-hook-2026/)
 - [Fix Claude Code Poor Commit Messages](/claude-code-poor-commit-messages-fix-2026/)

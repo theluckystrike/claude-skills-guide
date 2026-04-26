@@ -186,6 +186,8 @@ The key insight is that workspace automation with Claude Code isn't about writin
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

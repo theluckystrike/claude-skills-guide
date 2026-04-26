@@ -141,6 +141,8 @@ MongoDB connections time out after a period of inactivity. Restart Claude Code t
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -284,6 +284,8 @@ print(f'Score: {data[\"compliance_ratio\"]}')
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for ISO 27001 Controls Implementation](/claude-code-iso-27001-controls-implementation-2026/)
 - [Claude Code for FedRAMP Authorization Workflow](/claude-code-fedramp-authorization-workflow-2026/)
 - [Claude Code for SOC 2 Evidence Collection](/claude-code-soc2-evidence-collection-2026/)

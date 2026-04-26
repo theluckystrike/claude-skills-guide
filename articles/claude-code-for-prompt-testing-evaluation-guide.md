@@ -530,6 +530,8 @@ Building solid prompt testing infrastructure pays dividends as your AI features 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

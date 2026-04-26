@@ -546,6 +546,8 @@ Homebrew installs Node.js in /opt/homebrew/bin on Apple Silicon Macs or /usr/loc
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [The Claude Code Playbook](/playbook/)
 - [Fix Claude Code ETIMEOUT Corporate Proxy](/claude-code-etimeout-corporate-proxy-fix/)
 - [Fix Claude Internal Server Error](/claude-internal-server-error-fix/)

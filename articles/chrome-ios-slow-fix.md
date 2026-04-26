@@ -434,6 +434,8 @@ Chrome iOS performance requires understanding the platform's constraints and opt
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

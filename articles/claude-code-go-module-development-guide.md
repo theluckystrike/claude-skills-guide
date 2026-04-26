@@ -437,6 +437,8 @@ Building Go modules with Claude Code combines Go's simplicity and performance wi
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

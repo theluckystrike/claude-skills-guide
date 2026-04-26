@@ -218,6 +218,8 @@ A healthy ratio for most projects is 0.5-1.5 subagents per task on average. Abov
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Multi-Agent Token Budgeting](/multi-agent-token-budgeting-allocate-subagents/) -- advanced subagent budget allocation
 - [Claude Code Subagent Management](/claude-code-multi-agent-subagent-communication-guide/) -- complete subagent reference
 - [Cost Optimization Hub](/cost-optimization/) -- all optimization techniques

@@ -201,6 +201,8 @@ Scripts that create output files should write to the project directory, not to `
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills Folder Structure](/claude-skills-folder-structure/)
 - [Claude Skills with Embedded Scripts](/claude-skills-with-embedded-scripts/)
 - [Fix Claude Code Spawn Unknown Error Skills](/fix-claude-code-spawn-unknown-error-skills/)

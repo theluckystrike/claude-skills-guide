@@ -210,6 +210,8 @@ Compare token counts for identical requests in JSON vs XML format. Track the per
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — broader token optimization strategies
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — structured prompts reduce errors and retries
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — measure token usage by prompt type

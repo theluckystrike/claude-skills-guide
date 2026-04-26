@@ -237,6 +237,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Response JSON Parse Failure — Fix (2026)](/claude-code-response-json-parse-failure-fix-2026/)
 - [Response Truncation Max Tokens Hit Fix](/claude-code-response-truncation-max-tokens-fix-2026/)
 - [Claude Code for CNC G-Code Optimization (2026)](/claude-code-cnc-gcode-optimization-2026/)

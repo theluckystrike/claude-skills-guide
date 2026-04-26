@@ -213,6 +213,8 @@ Start reviewing today, your skills will improve with each PR you analyze, and th
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

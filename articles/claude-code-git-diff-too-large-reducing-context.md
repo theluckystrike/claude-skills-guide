@@ -141,6 +141,8 @@ Prevention: --stat first pattern
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code re-reading entire codebase every message](/claude-code-rereading-entire-codebase-every-message-fix/) -- reducing redundant file reads
 - [CLAUDE.md as Cost Control](/claude-md-cost-control-rules-prevent-token-waste/) -- comprehensive cost prevention rules
 - [The Compaction Strategy](/compaction-strategy-when-compact-when-not/) -- recovering from large context pollution

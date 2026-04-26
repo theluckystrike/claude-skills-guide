@@ -381,6 +381,8 @@ This approach eliminates the friction of re-establishing context and ensures con
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude temperature settings guide](/claude-temperature-settings-guide/) — How to configure temperature and sampling parameters in Claude
 - [Claude Sonnet 4 model guide](/claude-sonnet-4-20250514-model-guide/) — Choose the right Sonnet 4 model variant
 - [Claude Code hooks](/claude-code-hooks-complete-guide/) — automate pre and post tool actions

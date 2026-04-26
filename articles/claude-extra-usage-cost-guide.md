@@ -409,6 +409,8 @@ See our guides on [pruning unused tools](/pruning-unused-claude-tools-saves-mone
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude 5-Hour Usage Limit Guide](/claude-5-hour-usage-limit-guide/)
 - [Claude API Pricing Complete Guide](/claude-api-pricing-complete-guide/)
 - [Claude Pro Subscription Price Guide](/claude-pro-subscription-price-guide/)

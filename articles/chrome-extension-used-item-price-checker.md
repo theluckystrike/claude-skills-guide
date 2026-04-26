@@ -241,6 +241,8 @@ Start by supporting a single marketplace thoroughly before expanding to addition
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

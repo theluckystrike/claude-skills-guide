@@ -113,6 +113,8 @@ Remember that Claude Code proficiency comes from consistent practice rather than
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

@@ -215,6 +215,8 @@ The skill system is designed to grow with your workflow. You start with the defa
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

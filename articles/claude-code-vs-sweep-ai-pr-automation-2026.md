@@ -127,4 +127,6 @@ Not every GitHub issue is suitable for automated handling. Here is a practical c
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Oscilloscope Automation (2026)](/claude-code-oscilloscope-automation-2026/)

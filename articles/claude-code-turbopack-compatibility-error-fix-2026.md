@@ -123,6 +123,8 @@ Claude Code may generate import statements that do not match your webpack alias 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code License Compatibility Check](/claude-code-for-license-compatibility-workflow-guide/)
 - [Claude Code API Backward Compatibility](/claude-code-api-backward-compatibility-guide/)
 

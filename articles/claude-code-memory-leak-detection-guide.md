@@ -270,6 +270,8 @@ $99 once. Pays for itself in saved tokens within a week.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/)
 - [Claude Code Context Window Full in Large Codebase Fix](/claude-code-context-window-full-in-large-codebase-fix/)
 - [Claude Code Workflow Optimization Tips 2026](/claude-code-workflow-optimization-tips-2026/)

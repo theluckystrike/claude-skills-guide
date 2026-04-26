@@ -208,6 +208,8 @@ This multi-skill approach turns infrastructure security from a point-in-time sca
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

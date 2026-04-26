@@ -245,4 +245,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Code for Sentry Errors — Workflow Guide](/claude-code-for-sentry-error-tracking-workflow-guide/)

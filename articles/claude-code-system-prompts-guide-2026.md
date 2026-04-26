@@ -143,6 +143,8 @@ This explains why Claude Code started formatting tool call parameters differentl
 
 ## FAQ
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 ### Is this legal?
 
 The system prompt is part of the Claude Code experience. Extracting and documenting it for educational purposes is standard practice in the AI tooling community. The repo has been public for months without issues.

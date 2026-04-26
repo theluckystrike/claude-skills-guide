@@ -246,6 +246,8 @@ Start with the simple implementation above, test it with real code, then progres
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

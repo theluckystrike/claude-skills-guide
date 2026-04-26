@@ -231,6 +231,8 @@ Start with simple layouts and gradually add complexity as you become more comfor
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

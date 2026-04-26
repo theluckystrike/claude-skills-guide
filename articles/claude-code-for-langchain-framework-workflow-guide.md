@@ -71,6 +71,8 @@ Claude Code should create a chain using `retriever.pipe(formatDocs).pipe(ragProm
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Code for AI Agent Tool Calling](/claude-code-for-ai-agent-tool-calling-implementation/)
 - [Claude Code for Embedding Pipeline Workflow](/claude-code-for-embedding-pipeline-workflow/)
 - [Building Production AI Agents with Claude Skills 2026](/building-production-ai-agents-with-claude-skills-2026/)

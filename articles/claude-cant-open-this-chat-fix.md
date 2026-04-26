@@ -330,6 +330,8 @@ Almost certainly not. Conversations are stored on Anthropic's servers. The error
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Internal Server Error](/claude-internal-server-error-fix/)
 - [Fix Claude Rate Exceeded Error](/claude-rate-exceeded-error-fix/)
 - [Fix Claude AI Rate Exceeded Error](/claude-ai-rate-exceeded-error-fix/)

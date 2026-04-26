@@ -356,6 +356,8 @@ The key takeaway: every extension you install is code running with elevated priv
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

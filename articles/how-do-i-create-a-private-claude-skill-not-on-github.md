@@ -233,6 +233,8 @@ Claude Code creates files and edits through standard filesystem operations, so a
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Chrome Enterprise Private Extension](/chrome-enterprise-private-extension-hosting/)
 - [Chrome Enterprise Webstore Private](/chrome-enterprise-webstore-private/)
 - [How Do I Test A Claude Skill Before](/how-do-i-test-a-claude-skill-before-deploying-to-team/)

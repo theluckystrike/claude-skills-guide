@@ -176,6 +176,8 @@ For developers seeking an AI code editor that combines open-source values with c
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -340,6 +340,8 @@ That is the real benefit: not the code itself, but the enhanced decision-making 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

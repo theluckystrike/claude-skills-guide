@@ -143,6 +143,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 ## Frequently Asked Questions

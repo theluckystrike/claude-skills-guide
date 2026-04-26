@@ -324,6 +324,8 @@ The patterns in this guide, efficient canvas drawing, proper coordinate scaling 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

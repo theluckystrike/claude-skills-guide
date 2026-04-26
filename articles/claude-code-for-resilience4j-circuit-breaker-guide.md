@@ -459,6 +459,8 @@ The key to success is treating circuit breakers as living components that requir
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

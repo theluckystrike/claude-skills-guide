@@ -103,4 +103,6 @@ For generating code that must meet formal correctness guarantees (safety-critica
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Opus 4.6 vs Haiku 4.5: Speed and Cost Tradeoffs](/claude-opus-vs-haiku-speed-cost-tradeoff/)

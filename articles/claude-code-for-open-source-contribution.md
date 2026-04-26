@@ -289,6 +289,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code VS Aider Open Source Contribution Workflow](/claude-code-vs-aider-open-source-contribution-workflow/)
 - [Claude Code CLAUDE.md Best Practices](/claude-code-claude-md-best-practices/)
 - [Claude Code Workflow Optimization Tips 2026](/claude-code-workflow-optimization-tips-2026/)

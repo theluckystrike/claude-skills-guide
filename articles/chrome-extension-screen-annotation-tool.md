@@ -275,6 +275,8 @@ The implementation patterns shown here provide a foundation you can extend with 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

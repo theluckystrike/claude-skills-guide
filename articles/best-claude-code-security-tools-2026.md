@@ -283,3 +283,5 @@ Add to standard:
 10. MCP monitoring
 
 For the security threat model, see our [threat model guide](/claude-code-security-threat-model-2026/). For hook configuration, read the [hooks guide](/claude-code-hooks-explained-complete-guide-2026/). For enterprise security setup, see the [enterprise guide](/claude-code-enterprise-setup-guide-2026/).
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -551,6 +551,8 @@ For greenfield projects, a productive sequence is: define your schema and RLS po
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

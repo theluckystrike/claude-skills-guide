@@ -243,6 +243,8 @@ Related Reading
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/). Skills vs plain prompts decision guide
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)

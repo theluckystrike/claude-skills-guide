@@ -249,6 +249,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Modernizing Legacy Codebases](/claude-code-for-legacy-code-modernization/)
 - [Claude Code for Buck2 Build System](/claude-code-for-buck2-build-system-workflow-guide/)
 - [Claude Code Hooks System](/understanding-claude-code-hooks-system-complete-guide/)

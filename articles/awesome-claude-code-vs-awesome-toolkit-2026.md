@@ -110,6 +110,8 @@ Bookmark both. Use Awesome Claude Code as your starting point and ecosystem map.
 
 ## See Also
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Install Awesome Claude Code Toolkit (2026)](/how-to-install-awesome-claude-code-toolkit-2026/)
 - [Awesome Claude Code vs Docs Mirror (2026)](/awesome-claude-code-vs-claude-code-docs-2026/)
 - [Claude Code Templates vs Awesome Toolkit (2026)](/claude-code-templates-vs-awesome-toolkit-2026/)

@@ -447,6 +447,8 @@ Remember: IRSA is about security. Always prefer more restrictive trust policies,
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

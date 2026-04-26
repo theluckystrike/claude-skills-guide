@@ -99,6 +99,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Teams vs Cursor Teams](/claude-code-teams-vs-cursor-teams-enterprise-2026/)
 - [Cursor vs Copilot vs Claude Code (2026)](/cursor-vs-github-copilot-vs-claude-code-2026/)
 - [Claude Code for Cursor Rules Workflow](/claude-code-for-cursor-rules-workflow-tutorial/)

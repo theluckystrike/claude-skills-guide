@@ -121,6 +121,8 @@ This bypasses OAuth entirely and uses direct API authentication.
 
 </div>
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

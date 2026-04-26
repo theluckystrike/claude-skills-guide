@@ -239,6 +239,8 @@ Start with simple error detection scripts, then gradually add more sophisticated
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

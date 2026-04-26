@@ -233,6 +233,8 @@ Claude Code skills provide structured workflows for applying these practices. Th
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

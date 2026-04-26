@@ -155,6 +155,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Using Claude Code With Prisma Orm](/using-claude-code-with-prisma-orm-database-migrations/)
 - [Fix Docker Build Failures When Using](/claude-code-docker-build-failed-fix/)
 - [Fix Chrome Using Too Much RAM (2026)](/chrome-using-too-much-ram-fix/)

@@ -202,3 +202,5 @@ Task Master does not automatically diff new and existing tasks. The reconciliati
 - Compare with [Linear and Jira](/claude-task-master-vs-linear-jira-2026/) for enterprise contexts
 - Read the [Claude Code playbook](/playbook/) for execution patterns
 - Explore [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for efficient task execution
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

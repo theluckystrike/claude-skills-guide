@@ -605,6 +605,8 @@ Ready to build? Start with the manifest and content script above, add your API i
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

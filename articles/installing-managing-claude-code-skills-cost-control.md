@@ -286,6 +286,8 @@ wc -w CLAUDE.md
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Write Token-Efficient Claude Code Skills](/write-token-efficient-claude-code-skills/) -- authoring best practices
 - [Claude Code Skills Guide](/skills/) -- complete skills reference
 - [Cost Optimization Hub](/cost-optimization/) -- all cost optimization guides

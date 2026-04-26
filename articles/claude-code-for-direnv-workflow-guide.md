@@ -69,6 +69,8 @@ Claude Code should create `.envrc` with `layout node`, `PATH_add bin`, non-secre
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Best Way to Set Up Claude Code for New Project](/best-way-to-set-up-claude-code-for-new-project/)
 - [Building a CLI Devtool with Claude Code Walkthrough](/building-a-cli-devtool-with-claude-code-walkthrough/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)

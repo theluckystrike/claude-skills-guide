@@ -314,6 +314,8 @@ Automating Lighthouse score improvement with Claude Code skills transforms perfo
 Start with automated audits, then layer in optimization scripts for the highest-impact fixes. Integrate everything into your CI pipeline to catch regressions before they reach production. With proper automation, maintaining Lighthouse scores of 90+ becomes achievable without dedicated performance teams.
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

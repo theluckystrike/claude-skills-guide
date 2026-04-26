@@ -1,3 +1,7 @@
+---
+sitemap: false
+layout: null
+---
 # CCG Day 14 Measurement — May 8, 2026
 
 ## Instructions

@@ -285,5 +285,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Glob Pattern Too Broad Error — Fix (2026)](/claude-code-glob-pattern-too-broad-fix-2026/)
 - [Claude Code for ts-pattern — Workflow Guide](/claude-code-for-ts-pattern-matching-workflow-guide/)

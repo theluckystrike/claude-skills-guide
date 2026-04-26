@@ -70,6 +70,8 @@ Claude Code should create `server/api/todos/index.get.ts` for listing, `server/a
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Hono Framework Workflow Guide](/claude-code-for-hono-framework-workflow-guide/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

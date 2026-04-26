@@ -216,6 +216,8 @@ For developers comfortable with web technologies, the extension serves as a prac
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -191,6 +191,8 @@ Start with small automations, DNS queries or single Worker deployments, and expa
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

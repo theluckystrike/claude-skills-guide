@@ -157,6 +157,8 @@ In monorepos, nested skills can conflict with root-level skills. A skill at `.cl
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Skill Naming Conventions](/claude-skill-naming-conventions/)
 - [Managing Claude Skills Across Team Members](/managing-claude-skills-across-team-members/)
 - [Fix Unknown Skill Error in Claude Code](/fix-unknown-skill-error-claude-code/)

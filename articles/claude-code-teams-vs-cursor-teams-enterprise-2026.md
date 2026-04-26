@@ -120,4 +120,6 @@ If your engineering organization primarily writes mobile applications in Swift (
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Codestory Aide (2026): Comparison](/claude-code-vs-codestory-aide-comparison-2026/)

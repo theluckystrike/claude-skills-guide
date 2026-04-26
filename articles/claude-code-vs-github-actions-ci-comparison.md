@@ -83,6 +83,8 @@ These tools are additive costs because they serve different layers. You cannot r
 
 ## FAQ
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 ### Can Claude Code trigger GitHub Actions?
 Not directly within the Claude Code CLI. However, you can script a workflow where Claude Code makes a commit (triggering a push event) which then starts a GitHub Actions workflow. This creates an AI-driven development loop: Claude Code writes code, pushes, Actions runs tests, Claude Code reads results and iterates.
 

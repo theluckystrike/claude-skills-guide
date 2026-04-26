@@ -275,6 +275,8 @@ Claude Code skills significantly enhance Trigger.dev development through automat
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

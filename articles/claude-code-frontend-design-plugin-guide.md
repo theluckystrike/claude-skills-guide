@@ -693,6 +693,8 @@ Yes. Using a [Supabase MCP server](/claude-code-mcp-supabase-setup-guide/) along
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Frontend Developer Cross Browser Testing Guide](/claude-code-frontend-developer-cross-browser-testing-guide/)
 
 

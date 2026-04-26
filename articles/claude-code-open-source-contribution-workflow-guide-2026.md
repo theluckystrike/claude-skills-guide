@@ -157,6 +157,8 @@ Ask Claude at the start of every session: "Does this project require a DCO sign-
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

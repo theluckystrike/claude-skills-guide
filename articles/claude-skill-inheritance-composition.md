@@ -137,6 +137,8 @@ The compaction budget (25,000 tokens total) treats base and extension as separat
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Skill Composition Patterns](/claude-skill-composition-patterns/) -- five composition architectures
 - [Claude Skill Registry Pattern for Teams](/claude-skill-registry-pattern-for-teams/) -- team discovery and distribution
 - [Claude Skills Shared Dependencies](/claude-skills-shared-dependencies/) -- shared resources without duplication

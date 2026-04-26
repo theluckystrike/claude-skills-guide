@@ -167,5 +167,7 @@ Structured learning workflows use three phases per project: discuss design and a
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Learn Claude Code with Claude Howto Guide (2026)](/how-to-learn-claude-code-with-howto-guide-2026/)
 - [Learn Programming Languages with Claude Code 2026](/learn-programming-languages-claude-code-2026/)

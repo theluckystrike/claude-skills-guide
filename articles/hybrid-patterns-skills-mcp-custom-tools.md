@@ -172,6 +172,8 @@ Custom scripts bundled with skills should use only standard-library dependencies
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills vs MCP Servers](/claude-skills-vs-mcp-servers-comparison/) -- understanding the boundary
 - [Claude Skills Data Flow Patterns](/claude-skills-data-flow-patterns/) -- file-based interfaces between phases
 - [Claude Skill Composition Patterns](/claude-skill-composition-patterns/) -- orchestration architectures

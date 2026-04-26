@@ -213,6 +213,8 @@ Add this check to the team onboarding process. A single developer accidentally u
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Why Did Claude Code Cost $20 for One Session?](/why-claude-code-cost-20-one-session-debugging/) -- comprehensive session cost debugging
 - [Claude Code Sonnet vs Haiku: When Cheaper Is Actually Better](/claude-code-sonnet-vs-haiku-cheaper-actually-better/) -- model selection optimization
 - [Cost Optimization Hub](/cost-optimization/) -- all cost control techniques

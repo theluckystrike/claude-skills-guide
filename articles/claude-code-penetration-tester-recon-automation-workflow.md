@@ -166,6 +166,8 @@ The combination of Claude Code's natural language interface with structured auto
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

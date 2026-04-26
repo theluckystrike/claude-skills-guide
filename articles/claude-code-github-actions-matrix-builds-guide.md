@@ -214,6 +214,8 @@ Related Reading
 - [Claude Code GitHub Actions Monorepo Workflow](/claude-code-github-actions-monorepo-workflow/)
 - [Claude Code GitHub Actions Integration](/claude-code-github-actions-integration/)
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

@@ -70,6 +70,8 @@ Claude Code should add `export BAT_THEME="Catppuccin Mocha"` to shell config, se
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Ripgrep Workflow Guide](/claude-code-for-ripgrep-workflow-guide/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)
 - [Building a CLI Devtool with Claude Code Walkthrough](/building-a-cli-devtool-with-claude-code-walkthrough/)

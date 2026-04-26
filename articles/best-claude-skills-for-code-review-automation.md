@@ -301,4 +301,6 @@ Related guides: [Best Way to Use Claude Code for Code Review Prep](/claude-code-
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Automate Code Reviews with Claude Code (2026)](/claude-code-code-review-automation-2026/)

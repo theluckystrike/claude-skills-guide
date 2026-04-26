@@ -228,6 +228,8 @@ VBA remains embedded in millions of enterprise workflows. Claude Code generates 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for FastAPI Development Workflow 2026](/claude-code-fastapi-development-workflow-2026/)
 - [Best Way to Get Claude Code to Explain Existing Code](/best-way-to-get-claude-code-to-explain-existing-code/)
 - [Claude Code Common Beginner Mistakes to Avoid](/claude-code-common-beginner-mistakes-to-avoid/)

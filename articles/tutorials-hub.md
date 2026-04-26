@@ -375,6 +375,8 @@ Getting Started Tutorials:
 - [Troubleshooting Hub](/troubleshooting-hub/). Fix every common Claude Code skill error
 - [Advanced Hub](/advanced-hub/). Token optimization, chaining, and production architecture
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 Related Reading

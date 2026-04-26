@@ -111,6 +111,8 @@ Related reading:
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Codex vs Claude Code](/codex-vs-claude-code-comparison-2026/) — OpenAI Codex vs Claude Code comparison
 - [Claude API pricing](/claude-api-pricing-complete-guide/) — every Claude plan and model priced
 - [How to use Claude Code](/how-to-use-claude-code-beginner-guide/) — beginner walkthrough if choosing Claude Code

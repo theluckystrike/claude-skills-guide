@@ -216,6 +216,8 @@ The `allowed-tools` field accepts glob patterns (`Bash(git *)`) that CI cannot v
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills Code Review Workflow](/claude-skills-code-review-workflow/)
 - [Testing Claude Skills Before Production](/testing-claude-skills-before-production/)
 - [Security Review Process for Claude Skills](/security-review-process-for-claude-skills/)

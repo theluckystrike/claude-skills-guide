@@ -410,6 +410,8 @@ Remember to always implement dead letter queues for jobs that exceed retry limit
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

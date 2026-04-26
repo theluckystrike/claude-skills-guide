@@ -106,6 +106,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Set ANTHROPIC_API_KEY for Claude](/how-to-set-anthropicapikey-for-claude/)
 - [API Endpoint Testing Workflow](/claude-code-api-endpoint-testing-guide/)
 - [Claude Code for Health Endpoint Pattern](/claude-code-for-health-endpoint-pattern-workflow/)

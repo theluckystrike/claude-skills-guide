@@ -189,6 +189,8 @@ For developers looking to extend this further, explore combining the ClickUp MCP
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -148,6 +148,8 @@ Start with the free tier to evaluate whether Claude Code fits your workflow. Onc
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

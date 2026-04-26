@@ -283,6 +283,8 @@ Remember: metrics are a tool, not the objective. Use them to make informed decis
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

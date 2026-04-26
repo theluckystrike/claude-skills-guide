@@ -275,6 +275,8 @@ Remember: validation is not about restricting your users, it's about providing c
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

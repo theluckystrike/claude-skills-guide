@@ -370,6 +370,8 @@ Your maintainers will thank you, and so will contributors who see their issues a
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

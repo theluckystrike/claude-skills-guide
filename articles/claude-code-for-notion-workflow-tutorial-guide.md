@@ -275,6 +275,8 @@ Remember to check Notion's official API documentation for the latest updates and
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

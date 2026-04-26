@@ -68,6 +68,8 @@ Claude Code should verify the template has Node.js installed, check `coder gitau
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Gitpod Cloud Dev Workflow Guide](/claude-code-for-gitpod-cloud-dev-workflow-guide/)
 - [Claude Code for Devcontainers Workflow Guide](/claude-code-for-devcontainers-workflow-guide/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)

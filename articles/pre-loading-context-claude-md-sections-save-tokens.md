@@ -278,6 +278,8 @@ The before/after pattern demonstrates the core value proposition of pre-loading:
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [CLAUDE.md Token Optimization](/claude-md-token-optimization-rules-save-money/) -- minimizing CLAUDE.md token cost
 - [Progressive Disclosure Pattern](/progressive-disclosure-pattern-claude-code-skills/) -- layered context loading
 - [Context Engineering vs Prompt Engineering](/context-engineering-vs-prompt-engineering-agents/) -- the theoretical foundation

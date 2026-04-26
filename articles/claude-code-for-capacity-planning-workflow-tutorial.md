@@ -225,6 +225,8 @@ Remember that the most effective capacity planning combines automation with huma
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -90,6 +90,8 @@ Adding Claude Code to an Amazon Q workflow:
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can I use Claude Code and Amazon Q together?
 
 Yes, and this is common for AWS-heavy teams. Keep Amazon Q running in your IDE for AWS-specific autocomplete, CloudFormation assistance, and security scanning. Use Claude Code in a terminal for complex cross-service refactoring, architecture decisions, and autonomous multi-step tasks. The tools complement each other — Amazon Q handles AWS-specific knowledge while Claude Code handles general reasoning and execution.

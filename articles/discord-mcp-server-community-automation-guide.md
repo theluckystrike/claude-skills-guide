@@ -245,6 +245,8 @@ The combination of MCP's tool framework with Discord's API creates endless possi
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

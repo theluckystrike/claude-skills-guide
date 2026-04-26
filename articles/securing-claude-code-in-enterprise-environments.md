@@ -117,6 +117,8 @@ Remember that security configurations require regular review as your organizatio
 
 ## Related
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [--dangerously-skip-permissions flag](/claude-dangerously-skip-permissions-flag/) — Understanding the --dangerously-skip-permissions CLI flag
 ---
 

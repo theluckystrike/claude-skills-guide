@@ -187,4 +187,6 @@ Related Reading
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for fnm Node Manager — Guide](/claude-code-for-fnm-node-manager-workflow-guide/)

@@ -492,6 +492,8 @@ The most impactful single improvement for user experience is the content script 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

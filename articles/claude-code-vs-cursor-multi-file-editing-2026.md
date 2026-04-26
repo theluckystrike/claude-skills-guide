@@ -89,4 +89,6 @@ For purely mechanical refactoring (renaming a symbol, changing an import path co
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Stop Claude Code Rewriting Entire Files (2026)](/claude-code-rewrites-instead-of-editing-fix-2026/)

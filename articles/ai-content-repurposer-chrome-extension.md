@@ -273,6 +273,8 @@ Building an AI content repurposer Chrome extension combines web development skil
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

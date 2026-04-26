@@ -98,3 +98,5 @@ Tested integration guides and workflow patterns for Claude Code. Every guide inc
     </a>
   </div>
 </section>
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

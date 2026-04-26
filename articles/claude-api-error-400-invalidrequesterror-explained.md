@@ -210,6 +210,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Opus Prefill Not Supported Error Fix](/claude-opus-prefill-not-supported-error-fix/) -- detailed guide on the prefill restriction for Opus models.
 - [Claude API Error 413 request_too_large Fix](/claude-api-error-413-requesttoolarge-explained/) -- handle oversized request payloads.
 - [Claude Extended Thinking API Guide](/claude-extended-thinking-api-guide/) -- correct parameter usage for thinking mode.

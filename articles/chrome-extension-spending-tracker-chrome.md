@@ -316,6 +316,8 @@ This extension keeps your financial data in your browser with no subscriptions a
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

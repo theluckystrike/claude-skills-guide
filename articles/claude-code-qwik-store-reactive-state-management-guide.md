@@ -686,6 +686,8 @@ When using Claude Code to assist with Qwik development, lean on it for generatin
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

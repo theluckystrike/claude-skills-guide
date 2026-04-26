@@ -279,6 +279,8 @@ Claude Code accelerates every phase of portfolio development, but the architectu
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

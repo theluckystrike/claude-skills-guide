@@ -207,6 +207,8 @@ For CI/CD integration patterns, see the [CI/CD guide](/claude-code-ci-cd-integra
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Oscilloscope Automation (2026)](/claude-code-oscilloscope-automation-2026/)
 - [Build N8N Workflows with Claude Code 2026](/claude-code-n8n-workflow-automation-2026/)
 - [Claude Code vs Sweep AI (2026): PR Automation](/claude-code-vs-sweep-ai-pr-automation-2026/)

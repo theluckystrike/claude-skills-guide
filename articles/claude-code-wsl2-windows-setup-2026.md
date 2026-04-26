@@ -212,6 +212,8 @@ WSL2 gives Windows developers the Linux environment Claude Code expects. Project
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Skills in WSL2 Windows Subsystem Linux Guide](/claude-code-skills-in-wsl2-windows-subsystem-linux-guide/)
 - [Best Way to Set Up Claude Code for a New Project](/best-way-to-set-up-claude-code-for-new-project/)
 - [Claude Code Common Beginner Mistakes to Avoid](/claude-code-common-beginner-mistakes-to-avoid/)

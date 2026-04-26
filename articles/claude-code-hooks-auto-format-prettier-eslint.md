@@ -216,6 +216,8 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Understanding Claude Code Hooks System Complete Guide](/understanding-claude-code-hooks-system-complete-guide/)
 - [Claude Code PreToolUse Hooks Bypassed](/claude-code-pretooluse-hooks-bypassed/)
 - [Claude Code 2026 New Features Skills and Hooks Roundup](/claude-code-2026-new-features-skills-and-hooks-roundup/)

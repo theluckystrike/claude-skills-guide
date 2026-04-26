@@ -372,6 +372,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Detached HEAD After Claude Checkout Fix](/claude-code-detached-head-after-checkout-fix-2026/)
 - [Stop Claude Code Breaking Working Features (2026)](/claude-code-breaks-working-features-fix-2026/)
 - [Stop Claude Code Breaking CI Pipelines (2026)](/claude-code-breaks-ci-pipeline-fix-2026/)

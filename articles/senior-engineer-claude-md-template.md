@@ -76,6 +76,8 @@ Move file-type-specific rules out of the main CLAUDE.md into `.claude/rules/` wi
 ---
 paths:
   - "src/routes/**/*.ts"
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 ## API Route Rules

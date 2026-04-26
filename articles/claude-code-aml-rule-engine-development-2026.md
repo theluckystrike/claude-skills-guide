@@ -369,6 +369,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [AI Answer Engine Chrome Extension Guide](/ai-answer-engine-chrome-extension/)
 - [Claude Code for Unreal Engine C++](/claude-skills-for-unreal-engine-c-development/)
 - [Claude Code for Nitro Server Engine](/claude-code-for-nitro-server-engine-workflow-guide/)

@@ -151,6 +151,8 @@ CLAUDE.md should document your workflow structure so Claude understands which jo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

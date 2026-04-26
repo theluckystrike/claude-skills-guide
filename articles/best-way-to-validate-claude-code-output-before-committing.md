@@ -189,6 +189,8 @@ Remember that Claude Code is a powerful tool, but it works best as a collaborati
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

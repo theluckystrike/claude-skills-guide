@@ -99,4 +99,6 @@ If your primary need is fast inline autocomplete while typing, both tools are wr
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Aider: Cost Analysis for Open-Source Alternative](/claude-code-vs-aider-cost-analysis-open-source/)

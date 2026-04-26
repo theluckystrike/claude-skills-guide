@@ -322,6 +322,8 @@ Master these techniques, and Claude Code becomes significantly more effective at
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

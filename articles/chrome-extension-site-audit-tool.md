@@ -263,6 +263,8 @@ Building a custom Chrome extension site audit tool gives you precise control ove
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

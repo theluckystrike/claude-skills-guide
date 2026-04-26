@@ -243,6 +243,8 @@ For team projects, document the exact compiler flags and toolchain version used 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

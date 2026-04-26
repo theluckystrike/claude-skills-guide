@@ -260,6 +260,8 @@ Version your fixtures. Keep your mock data under version control alongside your 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -153,6 +153,8 @@ Start by identifying natural boundaries in your codebase, architectural layers, 
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

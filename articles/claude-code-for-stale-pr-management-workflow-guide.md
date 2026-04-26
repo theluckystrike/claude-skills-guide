@@ -207,6 +207,8 @@ With Claude Code handling the heavy lifting of identification and suggestion, yo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

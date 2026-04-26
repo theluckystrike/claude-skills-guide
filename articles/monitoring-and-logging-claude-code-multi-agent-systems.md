@@ -212,6 +212,8 @@ Monitoring multi-agent Claude Code systems requires deliberate architecture. Sta
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -330,6 +330,8 @@ AI screen readers transform how users interact with web content. By combining ML
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

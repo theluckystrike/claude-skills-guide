@@ -221,6 +221,8 @@ Remember that understanding a codebase is an iterative process. Don't try to und
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

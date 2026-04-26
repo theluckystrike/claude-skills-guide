@@ -103,3 +103,5 @@ If upgrading from a single tool to a combination:
 - [GitHub Copilot vs Claude Code: Deep Comparison 2026](/github-copilot-vs-claude-code-deep-comparison-2026/)
 - [Claude Code vs Windsurf: Full Comparison 2026](/claude-code-vs-windsurf-full-comparison-2026/)
 - [Claude Code vs Cline: Agent Mode Compared 2026](/claude-code-vs-cline-agent-mode-2026/)
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

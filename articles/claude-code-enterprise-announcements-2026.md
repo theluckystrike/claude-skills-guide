@@ -451,5 +451,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Augment Code (2026): Enterprise AI](/claude-code-vs-augment-code-enterprise-2026/)
 - [Claude Code Enterprise Pricing: What Companies Actually Pay](/claude-code-enterprise-pricing-what-companies-pay/)

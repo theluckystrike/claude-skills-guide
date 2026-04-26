@@ -242,6 +242,8 @@ OpenTofu provides a mature, open-source alternative to Terraform that works smoo
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

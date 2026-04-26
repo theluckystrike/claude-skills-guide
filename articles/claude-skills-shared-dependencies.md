@@ -119,6 +119,8 @@ When multiple skills reference the same large reference file (e.g., a 5,000-word
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skill Composition Patterns](/claude-skill-composition-patterns/) -- how skills interact architecturally
 - [Claude Skills for Monorepo Projects](/claude-skills-for-monorepo-projects/) -- shared dependencies across packages
 - [Claude Skill Registry Pattern for Teams](/claude-skill-registry-pattern-for-teams/) -- team-wide shared skill management

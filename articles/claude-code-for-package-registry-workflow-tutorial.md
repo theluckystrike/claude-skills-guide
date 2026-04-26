@@ -234,6 +234,8 @@ Start with simple workflows like version bumping and dependency checking, then g
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

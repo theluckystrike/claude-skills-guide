@@ -130,4 +130,6 @@ Expect 2-4 hours per month for updates, Docker image management, and model confi
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Aider: Cost Analysis for Open-Source Alternative](/claude-code-vs-aider-cost-analysis-open-source/)

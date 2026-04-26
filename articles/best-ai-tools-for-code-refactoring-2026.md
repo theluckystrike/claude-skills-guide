@@ -242,6 +242,8 @@ The most effective refactoring practice in 2026 is not about choosing a single t
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

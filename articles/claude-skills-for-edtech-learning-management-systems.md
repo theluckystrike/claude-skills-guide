@@ -200,6 +200,8 @@ The implementations above provide starting points. Adapt the code snippets to yo
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

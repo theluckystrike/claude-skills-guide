@@ -621,6 +621,8 @@ Load all of these preferences into your skill files so Claude generates code tha
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

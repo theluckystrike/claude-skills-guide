@@ -342,6 +342,8 @@ Build custom skills for your team's unique workflows. The investment in well-des
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

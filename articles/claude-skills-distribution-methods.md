@@ -166,6 +166,8 @@ The `--add-dir` flag can grant access to additional directories. If pointed at a
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-team/)
 - [Publishing Claude Skills to GitHub](/publishing-claude-skills-to-github/)
 - [Claude Skills Library Pattern for Orgs](/claude-skills-library-pattern-for-orgs/)

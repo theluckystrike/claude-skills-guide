@@ -209,6 +209,8 @@ Remember: the best PR is one that reviewers can understand, test, and approve in
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

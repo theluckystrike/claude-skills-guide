@@ -109,6 +109,8 @@ Source: [anthropic.com/pricing](https://anthropic.com/pricing), [replit.com/pric
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can I import my existing project into Replit and use Replit Agent on it?
 
 You can import repositories into Replit, but complex projects with custom build systems, Docker dependencies, or non-standard toolchains frequently break during import. Replit Agent works best on projects created within Replit. For existing codebases, Claude Code running locally avoids all import friction.

@@ -228,6 +228,8 @@ Connection timeout errors in Claude Code are typically resolvable through proper
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

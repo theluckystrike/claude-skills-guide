@@ -178,6 +178,8 @@ Remember that evaluation is ongoing, not a one-time setup. As your application e
 
 
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 *Last verified: April 2026. If this approach no longer works, check [How to Use TypeORM Entities Relations Migration (2026)](/claude-code-typeorm-entities-relations-migration-workflow/) for updated steps.*

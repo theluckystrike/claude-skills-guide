@@ -127,3 +127,5 @@ Pricing varies by tier and team size. Check each tool's current pricing page for
 - [Claude Tool Use Hidden Token Costs](/claude-tool-use-hidden-token-costs-explained/)
 - [Track Claude Token Spend Per Project](/track-claude-token-spend-per-project-team/)
 - [How to Audit Your Claude Code Token](/audit-claude-code-token-usage-step-by-step/)
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

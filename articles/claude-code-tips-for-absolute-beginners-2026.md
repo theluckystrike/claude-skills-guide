@@ -466,6 +466,8 @@ The single most important thing a beginner can do is invest in a good CLAUDE.md 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

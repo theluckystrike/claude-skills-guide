@@ -301,6 +301,8 @@ By following this workflow with Claude Code, you can rapidly develop well-docume
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -203,6 +203,8 @@ The key is matching your specific needs, volume, quality, privacy, and integrati
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

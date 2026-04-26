@@ -305,6 +305,8 @@ The developers who will get the most from the AI agent ecosystem in 2026 and bey
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -360,3 +360,5 @@ Not all agent-first elements deliver equal value. The priority order based on to
 - [Structured Error Handling to Reduce Claude Code Token Waste](/structured-error-handling-reduce-claude-code-tokens/) -- error communication patterns
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- complementary context optimization
 - [MCPMark Benchmarks: What They Reveal About Token Efficiency](/mcpmark-benchmarks-token-efficiency-revealed/)
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

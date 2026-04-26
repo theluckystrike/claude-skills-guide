@@ -419,6 +419,8 @@ The Notion MCP server transforms your knowledge base from passive documentation 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

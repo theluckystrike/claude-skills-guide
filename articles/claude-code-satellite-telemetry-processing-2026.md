@@ -225,6 +225,8 @@ print('Parse: PASS')
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Industrial IoT Protocol Implementation](/claude-code-industrial-iot-protocol-2026/)
 - [Claude Code for Telescope Data Pipeline (FITS)](/claude-code-telescope-fits-pipeline-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

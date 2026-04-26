@@ -4,7 +4,6 @@ title: "Claude --dangerously-skip-permissions (2026)"
 description: "How to use the claude --dangerously-skip-permissions flag for unattended CI/CD, batch scripting, and headless automation. Syntax, use cases, and risks."
 permalink: /claude-dangerously-skip-permissions-flag/
 date: 2026-04-20
-canonical_url: /claude-code-dangerously-skip-permissions-guide/
 last_tested: "2026-04-24"
 ---
 
@@ -304,6 +303,8 @@ Yes, Docker containers are the recommended environment for this flag. The contai
 No. The flag only skips interactive permission prompts. API authentication, rate limit enforcement, model availability checks, and CLAUDE.md instruction parsing all work normally.
 
 ## Related Guides
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Full --dangerously-skip-permissions Guide](/claude-code-dangerously-skip-permissions-guide/)
 - [The Claude Code Playbook](/playbook/)

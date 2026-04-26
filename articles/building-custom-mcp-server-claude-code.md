@@ -351,6 +351,8 @@ Claude Code detects the crash and marks the server as disconnected. You can rest
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [MCP Config Generator](/mcp-config/) — Generate configuration for any MCP server
 - [Advanced Usage Patterns](/advanced-usage/) — Power-user workflows and automation
 - [Command Reference](/commands/) — All Claude Code commands and flags

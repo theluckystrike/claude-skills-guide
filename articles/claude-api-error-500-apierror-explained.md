@@ -174,6 +174,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude API Error 529 overloaded_error Fix](/claude-api-error-529-overloadederror-explained/) -- handle overload errors that are similar to but distinct from 500 errors.
 - [Claude API Error 429 rate_limit_error Fix](/claude-api-error-429-ratelimiterror-explained/) -- rate limit errors that the SDK also auto-retries.
 - [Claude Streaming API Guide](/claude-streaming-api-guide/) -- streaming reduces the chance of timeout-related server errors.

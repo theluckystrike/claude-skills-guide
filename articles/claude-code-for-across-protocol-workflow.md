@@ -298,6 +298,8 @@ Remember to provide clear context about your protocol stack when working with Cl
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

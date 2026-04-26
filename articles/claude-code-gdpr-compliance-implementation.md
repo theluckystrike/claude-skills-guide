@@ -361,6 +361,8 @@ The most impactful investments are: a thorough data inventory, automated retenti
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

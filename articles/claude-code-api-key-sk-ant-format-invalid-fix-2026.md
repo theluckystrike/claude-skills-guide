@@ -114,6 +114,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Error Invalid API Key After](/claude-code-error-invalid-api-key-after-rotation-fix/)
 - [Fix Skill Invalid YAML Syntax Error](/claude-code-skill-invalid-yaml-syntax-error-how-to-debug/)
 - [Claude Code Prettier Format Conflict](/claude-code-prettier-format-conflict-fix/)

@@ -271,6 +271,8 @@ Claude Code transforms documentation from a burdensome chore into an automated, 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -295,6 +295,8 @@ The key to a successful implementation lies in solid metadata extraction, handli
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

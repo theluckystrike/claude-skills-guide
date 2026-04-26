@@ -258,6 +258,8 @@ Remember: the best analysis workflow is one you'll actually use. Build skills th
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

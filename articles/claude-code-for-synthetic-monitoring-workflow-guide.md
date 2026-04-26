@@ -324,6 +324,8 @@ Start small, integrate Claude for analysis first, then expand to automated remed
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

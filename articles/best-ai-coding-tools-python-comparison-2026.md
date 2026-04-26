@@ -149,4 +149,6 @@ GitHub Copilot Enterprise ($39/user) for base productivity, Sourcery Team ($20/u
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Best AI Coding Tools for JavaScript (2026): Ranked](/best-ai-coding-tools-javascript-comparison-2026/)

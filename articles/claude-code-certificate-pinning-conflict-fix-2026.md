@@ -113,6 +113,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [mTLS Client Certificate Error — Fix](/claude-code-mtls-client-cert-error-fix-2026/)
 - [Chrome Enterprise Certificate](/chrome-enterprise-certificate-management/)
 - [SSL Certificate Chain Incomplete Error — Fix (2026)](/claude-code-ssl-certificate-chain-incomplete-fix-2026/)

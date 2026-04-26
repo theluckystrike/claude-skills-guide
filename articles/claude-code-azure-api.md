@@ -111,6 +111,8 @@ Authentication flows through Azure Active Directory. The service principal crede
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

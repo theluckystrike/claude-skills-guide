@@ -113,6 +113,8 @@ When Node.js is installed via system package managers, the global `node_modules`
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code NPM Install Eacces](/claude-code-npm-install-eacces-permission-fix/)
 - [EACCES Permission Denied Config Dir — Fix (2026)](/claude-code-config-dir-permission-denied-fix-2026/)
 - [Claude Code Permission Modes Explained](/claude-code-permission-modes/)

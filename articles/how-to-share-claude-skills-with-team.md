@@ -154,6 +154,8 @@ The `claudeMdExcludes` setting can skip specific CLAUDE.md files, but it does no
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills Distribution Methods](/claude-skills-distribution-methods/)
 - [Managing Claude Skills Across Team Members](/managing-claude-skills-across-team-members/)
 - [Team SKILL.md Conventions Style Guide](/team-skill-md-conventions-style-guide/)

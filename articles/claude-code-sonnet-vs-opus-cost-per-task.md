@@ -228,6 +228,8 @@ The transition consistently shows that developers overestimate the quality gap b
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code API Cost Calculator](/claude-code-api-cost-calculator-estimate-before-build/) -- detailed estimation tools
 - [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- when to switch to Max
 - [Cost Optimization Hub](/cost-optimization/) -- reduce per-task costs further

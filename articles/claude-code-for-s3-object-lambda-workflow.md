@@ -241,6 +241,8 @@ Remember to start simple, test thoroughly in local environments, and iterate bas
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

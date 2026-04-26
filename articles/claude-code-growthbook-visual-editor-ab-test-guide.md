@@ -195,6 +195,8 @@ Start with simple experiments, headline changes or button colors, before attempt
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

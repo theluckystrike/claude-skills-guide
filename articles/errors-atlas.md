@@ -218,3 +218,5 @@ Related Reading
 
 - [Troubleshooting Guide](/troubleshooting/). Diagnose and fix any Claude Code issue
 - [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -316,4 +316,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for ROS2 Nav2 Stack Development (2026)](/claude-code-ros2-navigation-stack-2026/)

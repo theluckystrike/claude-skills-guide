@@ -200,6 +200,8 @@ exit 0
 
 **Limitation**: Line count is a crude metric. Some files are legitimately large.
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 ## Combining Hooks for Maximum Coverage

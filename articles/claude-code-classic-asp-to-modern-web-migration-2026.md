@@ -274,6 +274,8 @@ Claude Code creates files and edits through standard filesystem operations, so a
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for RPG/AS400 to Modern API](/claude-code-rpg-as400-modernization-2026/)
 - [Claude Code Classic Asp](/claude-code-classic-asp-to-dotnet-migration-guide/)
 

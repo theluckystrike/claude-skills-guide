@@ -76,6 +76,8 @@ Related: [Karpathy Simplicity First](/karpathy-simplicity-first-principle-claude
 
 ## See Also
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Wrong Node.js Version in PATH Fix](/claude-code-wrong-node-version-in-path-fix-2026/)
 
 

@@ -180,6 +180,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Track Claude Token Spend Per Project and Team](/track-claude-token-spend-per-project-team/)
 - [Claude Code Cost Per Project Estimation Guide](/claude-code-cost-per-project-estimation-guide/)
 - [Claude Code .env File Not Loaded — Fix (2026)](/claude-code-env-file-not-loaded-project-scope-fix/)

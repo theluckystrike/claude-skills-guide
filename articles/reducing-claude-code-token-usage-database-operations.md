@@ -259,6 +259,8 @@ This single skill (~400 tokens) replaces reading 4-8 files (20K-40K tokens). For
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [RLS Policy Debugging with Claude Code](/rls-policy-debugging-claude-code-structured-approach/) -- Supabase-specific database patterns
 - [Claude Code Skills Guide](/skills/) -- creating database-specific skills
 - [Cost Optimization Hub](/cost-optimization/) -- all cost optimization guides

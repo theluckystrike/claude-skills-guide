@@ -190,6 +190,8 @@ The key is specificity, tell Claude exactly what WordPress conventions to follow
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

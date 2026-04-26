@@ -291,6 +291,8 @@ Managing deprecations doesn't have to be chaotic. Claude Code helps you systemat
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

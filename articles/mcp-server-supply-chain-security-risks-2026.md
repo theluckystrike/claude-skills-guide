@@ -97,6 +97,8 @@ By applying these practices consistently, you can enjoy the productivity benefit
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

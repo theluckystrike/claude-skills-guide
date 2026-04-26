@@ -177,6 +177,8 @@ A shared CLAUDE.md eliminates the "works on my machine" problem for AI-assisted 
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [CLAUDE.md Length Optimization: 300 Lines](/claude-md-length-optimization/)
 - [CLAUDE.md Conflicting Instructions Resolution Guide](/claude-md-conflicting-instructions-resolution-guide/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)

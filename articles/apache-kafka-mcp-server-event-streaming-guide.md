@@ -241,6 +241,8 @@ Start with the basic producer and consumer patterns shown here, then evolve towa
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

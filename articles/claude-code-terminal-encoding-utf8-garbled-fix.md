@@ -119,6 +119,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Chalk Terminal Styling](/claude-code-for-chalk-feature-workflow-tutorial/)
 - [Claude Code vs Warp AI Terminal](/claude-code-vs-warp-ai-terminal-2026/)
 - [Claude Code for Kitty Terminal](/claude-code-for-kitty-terminal-workflow-guide/)

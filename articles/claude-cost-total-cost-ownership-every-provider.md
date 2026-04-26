@@ -122,6 +122,8 @@ Claude with optimization matches Gemini's raw-price TCO at $49,400 vs $49,700. T
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Enterprise Contracts: Claude vs OpenAI](/claude-cost-enterprise-contracts-negotiation/)
 - [Migration Cost Analysis: Switching Providers](/claude-cost-migration-switching-providers-analysis/)
 - [The Hybrid Stack: Claude for X, GPT for Y, Gemini for Z](/claude-cost-hybrid-stack-claude-gpt-gemini/)

@@ -137,6 +137,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Update Team CLAUDE.md Without Breaking](/updating-team-claude-md-without-breaking-workflows/)
 - [Fix Claude Code Breaking Imports](/claude-code-keeps-breaking-imports-when-refactoring/)
 - [Claude Code for Harness CD Pipelines](/claude-code-for-harness-cd-pipeline-workflow/)

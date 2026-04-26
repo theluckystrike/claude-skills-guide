@@ -276,6 +276,8 @@ First check that your CLAUDE.md accurately describes your project conventions. I
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Envoy Authorization](/claude-code-for-envoy-authz-workflow-tutorial/)
 
 <script type="application/ld+json">

@@ -336,6 +336,8 @@ For new freelancers, start with `/supermemory` and `/pdf`. The context problem i
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [save Claude Code conversations](/claude-code-save-conversation-guide/) — How to save, export, and resume Claude Code conversations
 ---
 

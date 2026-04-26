@@ -134,6 +134,8 @@ The choice between Ungoogled Chromium and Chrome ultimately comes down to your t
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -394,6 +394,8 @@ The key to effective use is selecting extensions that balance automation with co
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

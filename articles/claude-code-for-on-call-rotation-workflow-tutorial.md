@@ -262,6 +262,8 @@ Start with one painful alert type, automate its triage, and expand from there. Y
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

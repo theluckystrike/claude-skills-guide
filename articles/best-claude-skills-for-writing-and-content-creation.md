@@ -280,6 +280,8 @@ Related Reading
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 - [Claude Skills for Media Content Management Systems](/claude-skills-for-media-content-management-systems/)
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)

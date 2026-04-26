@@ -96,6 +96,8 @@ Use GitHub Issues as your system of record for project management. It is the sta
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Task Master vs Manual Tasks (2026)](/claude-task-master-vs-manual-task-management-2026/)
 - [Use Claude Task Master With Your Project (2026)](/how-to-use-claude-task-master-existing-project-2026/)
 - [Claude Task Master vs Linear and Jira (2026)](/claude-task-master-vs-linear-jira-2026/)

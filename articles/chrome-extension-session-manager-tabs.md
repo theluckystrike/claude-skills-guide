@@ -347,6 +347,8 @@ Chrome extension session management transforms chaotic tab collections into orga
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

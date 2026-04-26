@@ -162,6 +162,8 @@ Addressing color contrast accessibility issues does not require manual testing a
 Implement this workflow in your next project sprint, and you will see measurable improvements in both accessibility compliance and development efficiency.
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

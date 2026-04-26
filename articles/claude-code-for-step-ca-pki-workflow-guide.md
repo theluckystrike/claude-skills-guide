@@ -419,6 +419,8 @@ Start by setting up your step-ca environment, bootstrap trust on your client hos
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

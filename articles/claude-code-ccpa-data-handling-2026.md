@@ -290,6 +290,8 @@ Claude Code creates files and edits through standard filesystem operations, so a
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [CCPA Compliance with Claude Code (2026)](/claude-code-ccpa-privacy-compliance-guide/)
 - [Structured Error Handling to Reduce](/structured-error-handling-reduce-claude-code-tokens/)
 - [Fix: Claude MD Error Handling Patterns](/claude-md-for-error-handling-patterns-guide/)

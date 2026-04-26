@@ -255,6 +255,8 @@ Traditional tutorials teach syntax. Claude Code teaches language thinking: how t
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Using Claude Code to Learn New Programming Languages](/using-claude-code-to-learn-new-programming-languages/)
 - [Claude Code for Computer Science Bootcamp Students](/claude-code-for-computer-science-bootcamp-students/)
 - [Claude Code for Bootcamp Students Productivity Guide](/claude-code-for-bootcamp-students-productivity-guide/)

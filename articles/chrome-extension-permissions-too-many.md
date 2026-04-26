@@ -204,6 +204,8 @@ Treat your extension list the same way you treat installed software. review it p
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

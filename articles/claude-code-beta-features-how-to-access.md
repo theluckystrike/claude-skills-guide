@@ -456,6 +456,8 @@ The beta ecosystem continues expanding with skills like pdf for document process
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code hooks](/claude-code-hooks-complete-guide/) — hooks system for tool automation
 - [Claude Code status line](/claude-code-statusline-guide/) — understand beta feature indicators in the status bar
 - [Claude Code + Supabase MCP](/claude-code-mcp-supabase-setup-guide/) — MCP server integration with Supabase

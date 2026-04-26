@@ -240,6 +240,8 @@ Each pattern gives Claude a clear target and action, eliminating the uncertainty
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Stop Claude Code Retry Loops](/stop-claude-code-retry-loops-token-waste/) -- another common token drain pattern
 - [CLAUDE.md Token Optimization](/claude-md-token-optimization-rules-save-money/) -- configuring Claude's behavior
 - [Cost Optimization Hub](/cost-optimization/) -- all optimization techniques

@@ -143,4 +143,6 @@ The [toolkit repo](/awesome-claude-code-toolkit-135-agents-2026/) focuses specif
 
 ## See Also
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Awesome Claude Code vs Docs Mirror (2026)](/awesome-claude-code-vs-claude-code-docs-2026/)

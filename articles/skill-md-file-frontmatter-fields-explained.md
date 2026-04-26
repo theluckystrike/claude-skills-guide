@@ -131,6 +131,8 @@ Including the word "ultrathink" anywhere in skill content enables extended think
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Build Your First Claude Code Skill](/building-your-first-claude-skill/)
 - [Claude Skills Folder Structure](/claude-skills-folder-structure/)
 - [Fix Malformed YAML Frontmatter in SKILL.md](/fix-malformed-yaml-frontmatter-skill-md/)

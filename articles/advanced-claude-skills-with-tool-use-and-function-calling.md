@@ -243,6 +243,8 @@ You can also ask Claude directly in the session: "What tool calls did you make i
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

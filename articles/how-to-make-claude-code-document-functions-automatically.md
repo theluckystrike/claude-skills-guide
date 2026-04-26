@@ -347,6 +347,8 @@ The initial setup requires some effort, but the time savings compound quickly. Y
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

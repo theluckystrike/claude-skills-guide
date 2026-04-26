@@ -187,6 +187,8 @@ Automating CLA management with Claude Code transforms a tedious administrative t
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

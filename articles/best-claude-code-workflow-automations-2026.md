@@ -245,4 +245,6 @@ For more on each tool category, see the [ecosystem tools map](/claude-code-ecosy
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Flow tool guide](/claude-flow-tool-guide/) — How to use Claude Flow for multi-agent orchestration

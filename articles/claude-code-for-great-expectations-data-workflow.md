@@ -416,6 +416,8 @@ The combination of Claude's coding assistance and Great Expectations' declarativ
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

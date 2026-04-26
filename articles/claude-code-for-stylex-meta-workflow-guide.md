@@ -70,6 +70,8 @@ Claude Code should create theme variables with `stylex.defineVars`, create style
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Code for Panda CSS Workflow Guide](/claude-code-for-panda-css-workflow-guide/)
 - [Claude Code for Lightning CSS Workflow Guide](/claude-code-for-lightning-css-workflow-guide/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)

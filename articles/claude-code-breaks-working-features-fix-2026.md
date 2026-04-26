@@ -150,6 +150,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Not Working After](/claude-code-not-working-after-update-how-to-fix/)
 - [Fix Claude Streaming Not Working](/claude-streaming-not-working/)
 - [Fix Claude Code Not Working VSCode](/claude-code-not-working-vscode/)

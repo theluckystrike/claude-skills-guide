@@ -206,6 +206,8 @@ Claude Code can review your child process code, suggest improvements, and help y
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -258,6 +258,8 @@ For deeper integration, explore OpenSea's Seaport contract documentation and con
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

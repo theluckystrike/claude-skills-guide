@@ -70,6 +70,8 @@ Claude Code should create an Automerge Repo with IndexedDB storage adapter, a `B
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Yjs CRDT Workflow Guide](/claude-code-for-yjs-crdt-workflow-guide/)
 - [Claude Code for Liveblocks Collab Workflow Guide](/claude-code-for-liveblocks-collab-workflow-guide/)
 - [Claude Code for PowerSync Offline Workflow Guide](/claude-code-for-powersync-offline-workflow-guide/)

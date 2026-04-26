@@ -141,4 +141,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Manus AI Agent Compared (2026)](/claude-code-vs-manus-ai-agent-2026/)

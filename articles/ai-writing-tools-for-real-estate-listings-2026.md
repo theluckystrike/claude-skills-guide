@@ -555,6 +555,8 @@ The tools exist; the implementation strategy depends on your specific requiremen
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

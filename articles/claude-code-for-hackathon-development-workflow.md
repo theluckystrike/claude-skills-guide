@@ -161,6 +161,8 @@ The best hackathon code isn't the most complex, it's the code that demonstrates 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

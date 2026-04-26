@@ -356,5 +356,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [JSON Parse Error on Malformed Response Fix](/claude-code-json-parse-error-malformed-response-fix-2026/)
 - [Claude Code stuck in planning mode — token drain prevention](/claude-code-stuck-planning-mode-token-drain/)

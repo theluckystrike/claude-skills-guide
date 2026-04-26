@@ -261,6 +261,8 @@ Start with the skills and workflows outlined here, then customize them to your o
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

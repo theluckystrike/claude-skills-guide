@@ -241,6 +241,8 @@ Start with simple implementations and iterate toward more sophisticated features
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -215,6 +215,8 @@ Some file exploration is healthy and necessary. A developer who restricts Claude
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code reading too many files](/claude-code-reading-too-many-files-scope-context/) -- broader file reading optimization
 - [CLAUDE.md Token Optimization](/claude-md-token-optimization-rules-save-money/) -- optimizing the context document
 - [Cost Optimization Hub](/cost-optimization/) -- all optimization techniques

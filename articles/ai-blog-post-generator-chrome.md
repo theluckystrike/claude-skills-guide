@@ -309,6 +309,8 @@ AI blog post generator Chrome extensions offer powerful capabilities for content
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

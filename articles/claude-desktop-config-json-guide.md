@@ -499,6 +499,8 @@ Yes, by giving them different names:
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Add an MCP Server to Claude Code](/how-to-add-mcp-server-claude-code-2026/) — CLI-side MCP setup
 - [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — curated server recommendations
 - [MCP Servers Complete Setup Guide](/mcp-servers-claude-code-complete-setup-2026/) — end-to-end walkthrough

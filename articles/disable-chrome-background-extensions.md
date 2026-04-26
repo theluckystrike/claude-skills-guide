@@ -178,6 +178,8 @@ For development work, disabling unnecessary background extensions improves perfo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -309,6 +309,8 @@ Building a functional outline notes organizer extension requires balancing featu
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

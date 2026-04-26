@@ -260,6 +260,8 @@ Start building your summarizer today, and you'll wonder how you ever managed wit
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -119,6 +119,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [How to Write Token-Efficient Claude](/write-token-efficient-claude-code-skills/)
 - [How to Make Claude Code Write](/how-to-make-claude-code-write-performant-sql-queries/)
 - [How to Make Claude Code Write Secure](/how-to-make-claude-code-write-secure-code-always/)

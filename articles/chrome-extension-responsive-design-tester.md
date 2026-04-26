@@ -347,6 +347,8 @@ Responsive design failures are preventable. With the right tools and a systemati
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

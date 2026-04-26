@@ -228,6 +228,8 @@ Whether you need simple time tracking for personal productivity or detailed bill
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

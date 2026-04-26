@@ -209,5 +209,7 @@ Each `get_next_task` call adds ~200 tokens to the context. `complete_task` is ~5
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Task Master vs Manual Tasks (2026)](/claude-task-master-vs-manual-task-management-2026/)
 - [Claude Task Master vs Linear and Jira (2026)](/claude-task-master-vs-linear-jira-2026/)

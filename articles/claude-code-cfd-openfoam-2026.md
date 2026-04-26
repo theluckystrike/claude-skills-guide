@@ -394,6 +394,8 @@ checkMesh 2>&1 | tail -20
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for FEA Mesh Generation](/claude-code-fea-mesh-generation-2026/)
 - [Claude Code for Climate Model Data Processing](/claude-code-climate-model-netcdf-processing-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

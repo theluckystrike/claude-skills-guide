@@ -306,6 +306,8 @@ The skills demonstrated here form the foundation of scalable multiplayer game in
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

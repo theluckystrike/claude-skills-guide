@@ -391,6 +391,8 @@ The skill system continues evolving as the community contributes new capabilitie
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

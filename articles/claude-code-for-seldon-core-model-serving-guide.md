@@ -550,6 +550,8 @@ Start by creating a deployment generator skill for your specific model types, th
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

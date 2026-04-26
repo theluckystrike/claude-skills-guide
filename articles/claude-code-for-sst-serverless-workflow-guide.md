@@ -70,6 +70,8 @@ Claude Code should create resources in `infra/storage.ts` using `new sst.aws.Dyn
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code AWS Lambda Deployment Guide](/claude-code-aws-lambda-deployment-guide/)
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)
 - [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)

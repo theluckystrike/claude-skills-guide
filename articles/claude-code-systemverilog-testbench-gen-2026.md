@@ -230,6 +230,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Test and Debug Multi Agent](/how-to-test-and-debug-multi-agent-workflows/)
 - [Claude Code Debug Configuration](/claude-code-debug-configuration-workflow/)
 - [How Do I Debug A Claude Skill](/how-do-i-debug-a-claude-skill-that-silently-fails/)

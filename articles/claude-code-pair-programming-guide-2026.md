@@ -179,6 +179,8 @@ When Claude Code suggests something different from what you planned, consider it
 
 ## FAQ
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 ### Is pair programming with AI effective?
 Studies show AI pair programming reduces implementation time by 30-50% for routine tasks. Effectiveness drops for novel architectural decisions where the human's expertise is critical.
 

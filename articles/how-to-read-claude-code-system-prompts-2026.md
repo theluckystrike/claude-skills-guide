@@ -119,4 +119,6 @@ Keep this reference alongside your CLAUDE.md and update it when the system promp
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code System Prompts Explained (2026)](/claude-code-system-prompts-guide-2026/)

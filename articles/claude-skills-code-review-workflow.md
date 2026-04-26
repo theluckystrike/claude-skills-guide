@@ -141,6 +141,8 @@ The `/simplify` bundled skill already performs a form of code review (three para
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-team/)
 - [Team SKILL.md Conventions Style Guide](/team-skill-md-conventions-style-guide/)
 - [Claude Skills CI/CD Patterns](/claude-skills-ci-cd-patterns/)

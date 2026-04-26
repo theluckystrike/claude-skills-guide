@@ -168,6 +168,8 @@ Angular's opinionated structure produces more consistent Claude Code output acro
 
 ## FAQ
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 ### Which framework generates faster with Claude Code?
 
 React components generate faster because they require less context. A typical React component needs 1-2 files of context while an Angular component may need 4-6 files (module, routing, service, interface).

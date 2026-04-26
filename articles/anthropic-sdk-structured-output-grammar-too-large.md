@@ -289,6 +289,8 @@ For developers building complex API integrations with structured outputs, a dev 
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Anthropic SDK Python Async Context Manager — Fix (2026)](/anthropic-sdk-python-async-context-manager-error-fix/)
 - [Anthropic SDK TypeScript Tool Results Type Error — Fix (2026)](/anthropic-sdk-typescript-type-mismatch-tool-results-fix/)
 - [Anthropic SDK Streaming Connection Dropped — Fix (2026)](/anthropic-sdk-streaming-connection-dropped-fix/)

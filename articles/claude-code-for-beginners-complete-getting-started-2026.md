@@ -187,6 +187,8 @@ Claude Code's power grows as you learn to structure tasks well and customize it 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

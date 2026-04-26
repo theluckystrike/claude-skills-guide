@@ -211,6 +211,8 @@ The key is implementing a thoughtful three-tier strategy that uses Claude Code's
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -220,6 +220,8 @@ Start by installing Ollama and pulling a model, then create a few offline-ready 
 
 ## Related
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Code 国内使用指南 (China Usage Guide)](/claude-code-guonei-shiyong-china-usage-guide/) — Claude Code usage guide for China (中国使用教程)
 ---
 

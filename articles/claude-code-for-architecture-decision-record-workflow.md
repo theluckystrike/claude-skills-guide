@@ -429,6 +429,8 @@ Start by using Claude Code for your next architectural decision. You will be sur
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

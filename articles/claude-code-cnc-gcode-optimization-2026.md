@@ -275,6 +275,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Skills Performance Optimization](/claude-skills-performance-optimization/)
 - [CLAUDE.md Length Optimization](/claude-md-length-optimization/)
 - [Claude Code for Cloud Cost Optimization](/claude-code-for-cost-optimization-monitoring-guide/)

@@ -111,5 +111,7 @@ Bookmark Awesome MCP Servers as your reference catalog. Use Templates as your in
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Awesome LLM Apps: Agent Templates Guide (2026)](/awesome-llm-apps-agent-templates-guide-2026/)
 - [Awesome LLM Apps vs Claude Code Templates (2026)](/awesome-llm-apps-vs-claude-code-templates-2026/)

@@ -363,6 +363,8 @@ For developers, the best extension is the one that does one thing exceptionally 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

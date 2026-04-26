@@ -136,6 +136,8 @@ echo "Environment check complete."
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Keeps Making Same Mistake](/claude-code-keeps-making-same-mistake-fix-guide/)
 
 <script type="application/ld+json">

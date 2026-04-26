@@ -253,6 +253,8 @@ The front matter identifies the skill. The body defines its behavior. Everything
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

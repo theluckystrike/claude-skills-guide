@@ -182,6 +182,8 @@ Related Reading
 - [Claude Skills vs Prompts: Which Is Better?](/claude-skills-vs-prompts-which-is-better/). Decide when auto-invoked skills beat crafting manual prompts
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). The skills most likely to auto-trigger in developer sessions
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

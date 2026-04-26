@@ -93,6 +93,8 @@ Deploy Warp Business for the terminal standardization, shared sessions, and admi
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can I run Claude Code inside Warp?
 Yes. Claude Code is a CLI application that runs in any terminal emulator, including Warp. Many developers run Claude Code inside Warp to get the best of both tools -- Warp's block-based output rendering makes Claude Code's responses easier to read.
 

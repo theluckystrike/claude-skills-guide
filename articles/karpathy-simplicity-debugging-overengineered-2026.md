@@ -142,3 +142,5 @@ The core fix applies to macOS, Linux, and Windows. Some path-related adjustments
 - [Fix Stream Idle Timeout in Claude Code](/anthropic-sdk-streaming-hang-timeout/)
 - [Fix Claude Code API Error 400 Bad](/claude-code-api-error-400/)
 - [Fix Claude Code API Rate Limit Reached](/claude-code-api-error-rate-limit-reached/)
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

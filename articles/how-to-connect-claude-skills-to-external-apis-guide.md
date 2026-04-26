@@ -448,6 +448,8 @@ API responses changing schema: Pin the API version in the URL (e.g., `/v2/`) and
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

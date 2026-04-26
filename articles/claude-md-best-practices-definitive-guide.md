@@ -757,6 +757,8 @@ Yes. CLAUDE.md is a local configuration file that Claude Code loads regardless o
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Hooks Complete Guide](/claude-code-hooks-complete-guide/)
 - [Claude Code Spec Workflow Guide](/claude-code-spec-workflow-guide/)
 - [Super Claude Code Framework Guide](/super-claude-code-framework-guide/)

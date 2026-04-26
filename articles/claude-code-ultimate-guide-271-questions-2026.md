@@ -187,4 +187,6 @@ Regex patterns matched against skill file contents. Run the scanner script again
 
 ## See Also
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Take the Claude Code 271-Question Quiz (2026)](/how-to-take-claude-code-ultimate-guide-quiz-2026/)

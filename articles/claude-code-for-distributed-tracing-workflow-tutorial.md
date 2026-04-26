@@ -322,6 +322,8 @@ The initial investment pays dividends when production issues arise at 3 AM, inst
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

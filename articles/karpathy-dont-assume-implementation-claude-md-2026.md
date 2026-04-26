@@ -185,6 +185,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Implement ArXiv Papers with Claude Code](/claude-code-arxiv-paper-implementation-guide/)
 - [Implement Surgical Changes in CLAUDE.md](/karpathy-surgical-changes-implementation-2026/)
 - [Implement Goal-Driven Execution](/karpathy-goal-driven-implementation-2026/)

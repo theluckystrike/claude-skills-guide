@@ -198,6 +198,8 @@ Start small: pick one module, generate documentation with Claude, and see the di
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -103,4 +103,6 @@ For configuration files with strict schemas (JSON Schema-validated configs, YAML
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Not Working VSCode — Quick Guide (2026)](/claude-code-not-working-vscode/)

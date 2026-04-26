@@ -312,6 +312,8 @@ Related Reading
 - [Claude Code for Seldon Core Model Serving Guide](/claude-code-for-seldon-core-model-serving-guide/)
 - [Claude Code Responsible AI — Complete Developer Guide](/claude-code-responsible-ai-checklist-guide/)
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)

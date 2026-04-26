@@ -70,6 +70,8 @@ Claude Code should add the Pirsch script to the root layout with `data-code` att
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Umami Analytics Workflow Guide](/claude-code-for-umami-analytics-workflow-guide/)
 - [Claude Code for PostHog Analytics Workflow Guide](/claude-code-for-posthog-analytics-workflow-guide/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)

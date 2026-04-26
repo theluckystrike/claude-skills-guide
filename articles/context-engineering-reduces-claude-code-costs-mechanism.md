@@ -265,3 +265,5 @@ These mistakes are identifiable through `ccusage` analysis: look for sessions wh
 - [Claude Code Skills Guide](/skills/) -- the write lever via skills
 
 - [Claude Code cost guide](/claude-code-cost-complete-guide/) — Complete guide to Claude Code costs, pricing, and optimization
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -251,6 +251,8 @@ Start by profiling your current workflows to identify the highest-impact optimiz
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

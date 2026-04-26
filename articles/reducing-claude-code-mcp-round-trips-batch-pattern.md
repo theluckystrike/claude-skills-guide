@@ -310,6 +310,8 @@ A full user record might be 200-300 tokens. A compact summary is 30-50 tokens. F
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [State Inspection Pattern: Give Agents Full Backend State in One Call](/state-inspection-pattern-agents-full-state-one-call/) -- the inspection variant of batch operations
 - [Building Token-Efficient MCP Servers for Claude Code](/building-token-efficient-mcp-servers-claude-code/) -- design servers with batch support
 - [CLI vs MCP for Agent Operations: Token Cost Comparison](/cli-vs-mcp-agent-operations-token-cost/) -- when CLI is cheaper than MCP

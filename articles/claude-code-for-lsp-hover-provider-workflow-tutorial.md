@@ -272,6 +272,8 @@ Remember, the goal isn't to replicate a visual hover UI, it's to provide the sam
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

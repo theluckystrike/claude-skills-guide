@@ -377,6 +377,8 @@ Pre-commit hook compliance check. Claude Code generates a pre-commit hook that r
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -375,6 +375,8 @@ Start small, create a simple skill for one specific task, and gradually expand a
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

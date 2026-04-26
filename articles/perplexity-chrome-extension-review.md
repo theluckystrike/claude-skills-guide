@@ -98,6 +98,8 @@ For teams evaluating AI-powered research tools, the extension offers a low-frict
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

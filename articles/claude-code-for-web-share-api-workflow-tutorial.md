@@ -587,6 +587,8 @@ Remember to always provide fallback options for unsupported browsers, and use Cl
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

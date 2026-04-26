@@ -212,3 +212,5 @@ Whether you are building custom skills or looking for pre-built ones, this refer
 - [Fix YAML Front Matter Parsing Errors in Claude Skills (2026)](/claude-skill-yaml-front-matter-parsing-error-fix/)
 - [Claude Code Skills for Kubernetes Operator Development](/claude-code-skills-for-kubernetes-operator-development/)
 - [Fix Claude Skill Infinite Loop: Stop Recursive Triggering — 2026](/fix-claude-skill-infinite-loop/)
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -1174,6 +1174,8 @@ Post this output in the [Claude Code GitHub Issues](https://github.com/anthropic
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Permission Denied Shell Commands Fix](/claude-code-permission-denied-shell-commands-fix/) — When Claude Code runs but cannot execute commands
 - [Permission Denied Sandbox Mode Fix](/claude-code-permission-denied-sandbox-mode-fix-2026/) — Sandbox-specific permission issues
 - [Docker Container Setup](/claude-code-docker-container-setup-2026/) — Building reliable Docker environments for Claude Code

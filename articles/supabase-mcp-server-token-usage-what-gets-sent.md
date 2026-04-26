@@ -156,6 +156,8 @@ For projects where database queries are infrequent (under 5 per session), runnin
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [MCP Tool Filtering: Only Load What You Need](/mcp-tool-filtering-only-load-what-you-need/) -- universal MCP filtering techniques
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- complete MCP configuration guide
 - [Claude Code Tool Call Overhead](/claude-code-tool-call-overhead-tokens-per-mcp-call/) -- token cost breakdown for all tool types

@@ -289,6 +289,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Copilot Workspace (2026): Agents](/claude-code-vs-copilot-workspace-agent-2026/)
 - [Improve Claude Code Refactoring Quality (2026)](/claude-code-bad-at-refactoring-fix-2026/)
 - [Codium AI vs Claude Code Comparison 2026](/codium-ai-vs-claude-code-comparison-2026/)

@@ -485,6 +485,8 @@ Integrating Claude Code into your Go Fiber workflow accelerates development acro
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -70,6 +70,8 @@ Claude Code should use `useForm` with default values defining the types, create 
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
 - [Claude Code Accessible Forms Validation Error Handling Guide](/claude-code-accessible-forms-validation-error-handling-guide/)

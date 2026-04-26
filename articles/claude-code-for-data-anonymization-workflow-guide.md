@@ -363,5 +363,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Bloomberg Data Extraction (2026)](/claude-code-bloomberg-terminal-data-extraction-2026/)
 - [Claude Code for CCPA Data Handling Implementation (2026)](/claude-code-ccpa-data-handling-2026/)

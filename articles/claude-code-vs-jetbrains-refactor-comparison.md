@@ -103,4 +103,6 @@ For refactoring that requires deep domain knowledge (financial regulations, medi
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs JetBrains AI Compared (2026)](/claude-code-vs-jetbrains-ai-assistant-2026/)

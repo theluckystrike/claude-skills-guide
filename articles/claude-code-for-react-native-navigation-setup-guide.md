@@ -286,6 +286,8 @@ Setting up React Native navigation doesn't have to be overwhelming. By following
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

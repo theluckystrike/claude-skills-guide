@@ -372,6 +372,8 @@ Your skill files should live in `.claude/skills/` and include: the specific file
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

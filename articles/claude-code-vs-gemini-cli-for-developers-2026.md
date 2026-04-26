@@ -83,6 +83,8 @@ Claude Code is the stronger autonomous coding agent — more reliable multi-step
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code vs Cursor comparison](/claude-code-vs-cursor-definitive-comparison-2026/) — Definitive Claude Code vs Cursor comparison for 2026
 - [Claude Code vs Phind (2026): AI Search for Devs](/claude-code-vs-phind-ai-search-developers-2026/)
 - [Claude Code vs Pieces for Developers (2026)](/claude-code-vs-pieces-for-developers-2026/)

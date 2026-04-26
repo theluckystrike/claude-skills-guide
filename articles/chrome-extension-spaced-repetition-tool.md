@@ -314,6 +314,8 @@ Anki-compatible export. Claude Code generates the Anki deck export function that
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

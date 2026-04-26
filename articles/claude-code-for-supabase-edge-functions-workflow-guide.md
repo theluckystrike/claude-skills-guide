@@ -70,6 +70,8 @@ Claude Code should create `supabase/functions/stripe-webhook/index.ts` with `Den
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Durable Objects CF Workflow Guide](/claude-code-for-durable-objects-cf-workflow-guide/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
 - [Claude Code for SST Serverless Workflow Guide](/claude-code-for-sst-serverless-workflow-guide/)

@@ -633,6 +633,8 @@ Remember: good Core Web Vitals scores not only improve user experience but also 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

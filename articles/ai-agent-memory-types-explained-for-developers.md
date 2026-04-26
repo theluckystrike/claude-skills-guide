@@ -238,6 +238,8 @@ Related guides: [Claude Code Agent Task Queue Architecture Detailed look](/claud
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

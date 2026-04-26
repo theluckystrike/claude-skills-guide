@@ -160,6 +160,8 @@ Start today, stay consistent, and trust the process. Your dream job is within re
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

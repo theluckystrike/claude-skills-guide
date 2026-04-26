@@ -146,6 +146,8 @@ Controlling Chrome's location tracking requires a multi-layered approach. Adjust
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

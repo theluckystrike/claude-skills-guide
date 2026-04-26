@@ -278,6 +278,8 @@ These targets assume Sonnet 4.6 as the default model with occasional Opus escala
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Cost Optimization: 15 Techniques](/claude-code-cost-optimization-15-techniques/) -- reduce these per-PR numbers
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- the #1 per-PR cost saver
 - [Cost Optimization Hub](/cost-optimization/) -- complete cost reduction guide

@@ -228,6 +228,8 @@ Automated PR reviews catch security vulnerabilities and code quality issues befo
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Best Claude Skills for Code Review Automation](/best-claude-skills-for-code-review-automation/)
 - [AI-Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Claude Code for GitHub Actions Workflows](/claude-code-skills-for-creating-github-actions-workflows/)

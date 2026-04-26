@@ -227,6 +227,8 @@ The combination of Claude Code's understanding of Envoy's architecture with your
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

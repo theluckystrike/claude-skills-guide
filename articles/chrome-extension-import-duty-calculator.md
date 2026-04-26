@@ -318,6 +318,8 @@ Start with the basic calculation logic, then progressively add features like rea
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

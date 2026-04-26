@@ -243,6 +243,8 @@ Building a loyalty rewards system is complex, but with the right architecture an
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

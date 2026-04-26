@@ -299,6 +299,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [MCP Server Logging, Audit Trail,](/mcp-server-logging-audit-trail-security-guide/)
 - [Claude Skills Governance Security Audit](/claude-skills-governance-security-audit-checklist/)
 - [How to Audit Your Claude Code Token](/audit-claude-code-token-usage-step-by-step/)

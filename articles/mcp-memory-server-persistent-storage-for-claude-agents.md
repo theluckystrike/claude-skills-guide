@@ -375,6 +375,8 @@ A minimal custom server that wraps a PostgreSQL table instead of a JSON file fol
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

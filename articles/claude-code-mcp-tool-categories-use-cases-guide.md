@@ -816,6 +816,8 @@ As you build out your MCP integrations, invest time in error handling, idempoten
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

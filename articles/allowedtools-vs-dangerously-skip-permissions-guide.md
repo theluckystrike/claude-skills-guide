@@ -271,6 +271,8 @@ Yes. Use * as a wildcard: Bash(npm run *) allows any npm script. Bash(git diff *
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Permissions Configurator](/permissions/) -- Generate --allowedTools lists and settings.json
 - [Commands Reference](/commands/) -- All CLI flags including --allowedTools
 - [Configuration Guide](/configuration/) -- settings.json reference

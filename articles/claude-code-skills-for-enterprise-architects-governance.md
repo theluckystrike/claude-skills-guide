@@ -155,6 +155,8 @@ Start small, measure impact, and expand governance coverage incrementally. Your 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

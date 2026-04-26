@@ -396,6 +396,8 @@ As your testing matures, extend your axe setup to cover authenticated pages, dyn
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

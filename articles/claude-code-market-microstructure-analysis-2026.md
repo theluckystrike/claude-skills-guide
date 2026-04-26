@@ -274,6 +274,8 @@ print('LOB reconstruction: PASS')
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for FIX Protocol Message Handling](/claude-code-fix-protocol-message-handling-2026/)
 - [Claude Code for Algo Trading Backtesting](/claude-code-algorithmic-trading-backtesting-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

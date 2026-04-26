@@ -286,6 +286,8 @@ The key to successful implementation lies in augmentation rather than replacemen
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

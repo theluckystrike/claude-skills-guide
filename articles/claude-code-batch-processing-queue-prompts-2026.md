@@ -188,6 +188,8 @@ Batch processing turns a 2-hour manual code review into a 10-minute automated ru
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Best Way to Batch Claude Code Requests and Reduce API Calls](/best-way-to-batch-claude-code-requests-reduce-api-calls/)
 - [How to Coordinate Multiple AI Agents in a Pipeline](/how-to-coordinate-multiple-ai-agents-in-pipeline/)
 - [Claude Code Tmux Session Management](/claude-code-tmux-session-management-multi-agent-workflow/)

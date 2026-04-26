@@ -528,6 +528,8 @@ First check that your CLAUDE.md accurately describes your project conventions. I
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Incident Management](/claude-code-for-incident-management-workflow-tutorial/)
 - [Claude Code for Incident Tracking](/claude-code-for-incident-tracking-workflow-tutorial/)
 - [Claude Code Sre On Call Incident](/claude-code-sre-on-call-incident-response-workflow-guide/)

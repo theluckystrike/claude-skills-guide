@@ -174,6 +174,8 @@ Long development tasks spanning multiple days no longer require re-explaining co
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Tmux Session Management](/claude-code-tmux-session-management-multi-agent-workflow/)
 - [Best Way to Scope Tasks for Claude Code Success](/best-way-to-scope-tasks-for-claude-code-success/)
 - [Best Way to Set Up Claude Code for a New Project](/best-way-to-set-up-claude-code-for-new-project/)

@@ -277,6 +277,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Skills for Medical Records](/claude-skills-for-medical-records-processing/)
 - [Chrome Enterprise Device Trust](/chrome-enterprise-device-trust-connector/)
 

@@ -126,6 +126,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code vs Aider: Cost Analysis for Open Source](/claude-code-vs-aider-cost-analysis-open-source/)
 - [Claude Code for Open Source Contribution Workflow](/claude-code-for-open-source-contribution-workflow-guide/)
 - [Claude Code for Open Source Contributors: Workflow Guide](/claude-code-for-oss-contributor-guide-workflow/)

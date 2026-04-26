@@ -228,6 +228,8 @@ Related Reading
 - [Claude Code Enoent No Such File Directory — Developer Guide](/claude-code-enoent-no-such-file-directory-skill/)
 - [Claude Skills Directory on GitHub — Find Guide (2026)](/how-to-find-claude-skills-on-github/)
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)

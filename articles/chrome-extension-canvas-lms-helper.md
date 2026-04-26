@@ -540,6 +540,8 @@ The extensions you build can significantly reduce the time spent on repetitive c
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -210,6 +210,8 @@ Measure compression ratio: (original tokens - compressed tokens) / original toke
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — broader token optimization strategies
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — prompt writing techniques that reduce waste
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — identify which prompts consume the most tokens

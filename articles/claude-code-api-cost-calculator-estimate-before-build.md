@@ -299,6 +299,8 @@ The accuracy of pre-project estimates improves significantly after one month of 
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Max Subscription Guide](/claude-max-subscription-vs-api-agent-fleets/) -- subscription details and optimization
 - [Claude Code Sonnet vs Opus: Cost Per Task](/claude-code-sonnet-vs-opus-cost-per-task/) -- model selection guidance
 - [Cost Optimization Hub](/cost-optimization/) -- reduce the numbers this calculator produces

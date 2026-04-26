@@ -490,6 +490,8 @@ Claude Code supports the current MCP specification. Servers built with the offic
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude MCP List Command Reference](/claude-mcp-list-command-guide/) — full CLI command details
 - [How to Add an MCP Server](/how-to-add-mcp-server-claude-code-2026/) — step-by-step walkthrough
 - [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — curated recommendations

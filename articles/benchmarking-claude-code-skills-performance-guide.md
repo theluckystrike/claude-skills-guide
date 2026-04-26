@@ -245,6 +245,8 @@ When comparing metrics across sessions, control for variables. Context length, m
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

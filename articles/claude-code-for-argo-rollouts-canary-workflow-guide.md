@@ -192,6 +192,8 @@ The combination of Claude Code's contextual understanding and Argo Rollouts' pow
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

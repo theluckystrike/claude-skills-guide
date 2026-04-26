@@ -342,6 +342,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for PostgreSQL JSONB](/claude-code-for-postgres-jsonb-workflow-tutorial/)
 - [Claude Code MongoDB to PostgreSQL](/claude-code-mongodb-to-postgresql-migration-workflow/)
 - [Claude Code for PostgreSQL Full-Text](/claude-code-for-postgres-full-text-search-workflow/)

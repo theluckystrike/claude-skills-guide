@@ -98,6 +98,8 @@ For mathematical reasoning and formal verification tasks (proving algorithm corr
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Opus 4.6 vs DeepSeek V3: Coding Comparison](/claude-opus-vs-deepseek-v3-comparison/)
 - [Claude Opus 4.6 vs Haiku 4.5: Speed and Cost Tradeoffs](/claude-opus-vs-haiku-speed-cost-tradeoff/)
 - [Claude Haiku 4.5 vs GPT-4o Mini: Budget AI Coding](/claude-haiku-vs-gpt-4o-mini-comparison-2026/)

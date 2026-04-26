@@ -244,6 +244,8 @@ The combination of Axum's ergonomic design and Claude Code's AI assistance makes
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

@@ -238,5 +238,7 @@ For more on CLAUDE.md patterns, see the [CLAUDE.md best practices guide](/claude
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code CLAUDE.md Best Practices for Teams 2026](/claude-code-claude-md-best-practices-teams-2026/)
 - [Best CLAUDE.md Templates for Teams (2026)](/best-claude-md-templates-enterprise-2026/)

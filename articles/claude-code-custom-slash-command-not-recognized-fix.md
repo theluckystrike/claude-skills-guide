@@ -126,6 +126,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix zsh: command not found: claude](/zsh-command-not-found-claude-fix/)
 - [Claude Code Bash Command Timeout 120s — Fix (2026)](/claude-code-bash-command-timeout-120s-fix-2026/)
 - [Fix Claude Command Not Found After](/claude-code-command-not-found-after-install-troubleshooting/)

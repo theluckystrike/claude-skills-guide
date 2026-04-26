@@ -311,6 +311,8 @@ Prompt injection prevention requires defense in depth. No single technique elimi
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

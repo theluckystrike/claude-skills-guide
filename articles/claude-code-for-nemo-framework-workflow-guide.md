@@ -410,5 +410,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Waku React Framework — Guide](/claude-code-for-waku-react-framework-workflow-guide/)
 - [Claude Code for HTMX — Workflow Guide](/claude-code-for-htmx-framework-workflow-guide/)

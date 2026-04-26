@@ -170,6 +170,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [CLAUDE.md for Database Conventions](/claude-md-database-conventions/)
 - [Claude Skill Naming Conventions](/claude-skill-naming-conventions/)
 - [Claude Md For Database Conventions](/claude-md-for-database-conventions-and-patterns/)

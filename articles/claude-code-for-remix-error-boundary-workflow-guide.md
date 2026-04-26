@@ -257,6 +257,8 @@ The key is to treat error boundaries as a first-class concern in your applicatio
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -261,6 +261,8 @@ Start with a small, low-risk page to establish your migration patterns, then sca
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

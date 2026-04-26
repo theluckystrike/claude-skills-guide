@@ -134,6 +134,8 @@ The "ultrathink" keyword anywhere in skill content enables extended thinking for
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills vs Subagents: When to Use Each](/claude-skills-vs-subagents-when-to-use/) -- when to fork for context isolation
 - [Claude Skill Composition Patterns](/claude-skill-composition-patterns/) -- managing multi-skill token budgets
 - [Claude Skills Data Flow Patterns](/claude-skills-data-flow-patterns/) -- efficient data movement between skills

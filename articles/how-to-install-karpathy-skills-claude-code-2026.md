@@ -144,4 +144,6 @@ Most developers report a noticeable difference within the first session. The imp
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Install SuperClaude Framework Step by Step (2026)](/how-to-install-superclaude-framework-2026/)

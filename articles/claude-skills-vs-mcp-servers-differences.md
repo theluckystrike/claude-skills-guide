@@ -142,6 +142,8 @@ Skills are limited by what Claude can do with its existing tools. If Bash, Read,
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Build Your First Claude Code Skill](/building-your-first-claude-skill/)
 - [Claude Skills with Embedded Scripts](/claude-skills-with-embedded-scripts/)
 - [Fix Skill Conflicts with MCP Server](/fix-skill-conflicts-with-mcp-server/)

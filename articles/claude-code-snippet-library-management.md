@@ -588,6 +588,8 @@ The key habit is extraction. After every project, spend twenty minutes identifyi
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

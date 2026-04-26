@@ -149,6 +149,8 @@ Prevention ROI:
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [MCP Tool Filtering: Only Load What You Need](/mcp-tool-filtering-only-load-what-you-need/) -- reducing MCP definition overhead
 - [Supabase MCP Server Token Usage](/supabase-mcp-server-token-usage-what-gets-sent/) -- specific MCP overhead analysis
 - [How to Reduce Claude Code Token Usage by 3x](/reduce-claude-code-token-usage-3x-guide-2026/) -- comprehensive cost reduction strategies

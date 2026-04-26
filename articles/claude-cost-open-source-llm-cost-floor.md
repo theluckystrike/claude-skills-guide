@@ -112,6 +112,8 @@ Deciding between self-hosted open source and commercial APIs requires evaluating
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Haiku vs GPT-4o Mini Cost Showdown](/claude-cost-haiku-vs-gpt4o-mini-cheap-tier/)
 - [The Hybrid Stack: Claude for X, GPT for Y, Gemini for Z](/claude-cost-hybrid-stack-claude-gpt-gemini/)
 - [The Cheapest Model for Your Workload](/claude-cost-cheapest-model-workload-calculator/)

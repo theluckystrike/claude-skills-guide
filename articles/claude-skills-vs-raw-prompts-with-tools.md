@@ -151,6 +151,8 @@ Skills have a maintenance cost. Outdated skills that reference deleted files, re
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Combine Multiple Claude Skills](/how-to-combine-multiple-claude-skills/) -- organizing multiple formalized prompts
 - [Claude Skills vs ChatGPT Custom GPTs](/claude-skills-vs-chatgpt-custom-gpts/) -- another "structured vs ad-hoc" comparison
 - [Claude Skills Performance Optimization](/claude-skills-performance-optimization/) -- keeping skill overhead minimal

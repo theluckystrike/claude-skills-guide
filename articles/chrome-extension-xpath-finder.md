@@ -482,6 +482,8 @@ Practice writing XPath expressions manually, test them using browser tools, and 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

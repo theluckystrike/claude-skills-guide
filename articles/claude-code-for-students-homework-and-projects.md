@@ -257,6 +257,8 @@ Start with simple tasks like code review and test generation. As you grow comfor
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

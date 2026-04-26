@@ -288,6 +288,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Batch Processing 100K Requests](/claude-batch-processing-100k-requests-guide/)
 - [Claude Code for Processing and p5.js](/claude-code-processing-p5js-creative-coding-2026/)
 - [Async Claude Processing](/async-claude-processing-half-price-same-quality/)

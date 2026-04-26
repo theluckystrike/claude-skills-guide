@@ -309,6 +309,8 @@ Start with a simple `.env` setup and expand as your requirements grow. The patte
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

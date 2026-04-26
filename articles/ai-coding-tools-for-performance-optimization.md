@@ -188,6 +188,8 @@ Related guides: [Claude Code Performance Bottleneck Finding](/claude-code-perfor
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -281,6 +281,8 @@ With these practices, you'll be well-equipped to build solid local-first applica
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

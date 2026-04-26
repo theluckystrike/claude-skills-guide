@@ -197,6 +197,8 @@ The search queries are a direct signal from developers telling us what they need
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Search Index Corrupted Error — Fix (2026)](/claude-code-search-index-corrupted-fix-2026/)
 - [Claude Code for Seismology Waveform Analysis (2026)](/claude-code-seismology-waveform-analysis-2026/)
 - [Claude Code for Market Microstructure (2026)](/claude-code-market-microstructure-analysis-2026/)

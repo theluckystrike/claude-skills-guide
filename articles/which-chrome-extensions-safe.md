@@ -326,6 +326,8 @@ For developers in particular, the browser is a critical tool that touches everyt
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

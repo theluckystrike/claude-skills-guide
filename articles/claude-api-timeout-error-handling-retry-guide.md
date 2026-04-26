@@ -311,6 +311,8 @@ The defaults in most HTTP clients are too short for Claude API calls that genera
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

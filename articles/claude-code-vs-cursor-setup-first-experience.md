@@ -66,6 +66,8 @@ For a solo developer doing 4-6 hours of AI-assisted coding daily, Claude Code on
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can I use Claude Code inside Cursor?
 Yes. Since Cursor has an integrated terminal, you can run `claude` directly within Cursor's terminal panel. Some developers use Cursor for visual editing and Claude Code for complex refactoring tasks, getting the best of both tools.
 

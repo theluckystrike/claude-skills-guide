@@ -461,6 +461,8 @@ For most skills like pdf, tdd, frontend-design, and supermemory, you'll set vari
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

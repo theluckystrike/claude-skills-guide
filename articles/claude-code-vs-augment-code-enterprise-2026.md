@@ -107,4 +107,6 @@ Split decision. Augment's cross-repo search quickly identifies where the faulty 
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Augment Code: AI Coding Compared (2026)](/claude-code-vs-augment-code-ai-2026/)

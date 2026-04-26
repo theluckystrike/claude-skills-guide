@@ -303,6 +303,8 @@ Start with a few essential gates, static analysis, security scanning, and basic 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

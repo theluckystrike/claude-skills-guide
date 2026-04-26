@@ -234,6 +234,8 @@ Remember: Claude Code is a tool that follows your instructions. The key is to ma
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

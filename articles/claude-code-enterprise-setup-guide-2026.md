@@ -219,6 +219,8 @@ For each new team member:
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can we use Claude Code with our private model deployment?
 Claude Code connects to Anthropic's API by default. For self-hosted deployments, check Anthropic's enterprise offerings for API endpoint configuration.
 

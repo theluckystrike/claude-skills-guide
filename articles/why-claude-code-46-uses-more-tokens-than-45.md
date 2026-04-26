@@ -230,6 +230,8 @@ The 12-15% budget increase accounts for 4.6's verbosity while maintaining cost c
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- aggressive compacting strategies
 - [Claude Code Sonnet vs Haiku: When Cheaper Is Actually Better](/claude-code-sonnet-vs-haiku-cheaper-actually-better/) -- model routing optimization
 - [Cost Optimization Hub](/cost-optimization/) -- comprehensive cost management

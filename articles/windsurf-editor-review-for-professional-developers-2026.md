@@ -234,6 +234,8 @@ For teams evaluating AI code editors in 2026, Windsurf deserves serious consider
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

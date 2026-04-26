@@ -479,6 +479,8 @@ Claude skills like pdf for reporting, xlsx for data analysis, and tdd for testin
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -132,3 +132,5 @@ Understanding the true cost of each approach helps with budgeting:
 - [Claude Code vs Cline: Agent Mode Compared](/claude-code-vs-cline-agent-mode-2026/)
 - [Claude Code vs Cursor for Coding](/claude-code-vs-cursor-2026-detailed-comparison/)
 - [Claude Code vs Windsurf: Full Comparison](/claude-code-vs-windsurf-full-comparison-2026/)
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

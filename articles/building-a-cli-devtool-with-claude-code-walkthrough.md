@@ -236,6 +236,8 @@ Start with simple commands and gradually add more sophisticated features. The sk
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

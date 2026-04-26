@@ -219,6 +219,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Guides
 
+**Try it:** Find the right model with our [Model Selector](/model-selector/).
+
 - [AI Coding Tools Security Concerns Enterprise Guide](/ai-coding-tools-security-concerns-enterprise-guide/)
 - [AI Coding Tools Governance Policy for Enterprises](/ai-coding-tools-governance-policy-for-enterprises/)
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)

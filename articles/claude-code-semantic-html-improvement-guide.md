@@ -179,6 +179,8 @@ Good semantics pay dividends in accessibility, SEO, and maintainability. Start w
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

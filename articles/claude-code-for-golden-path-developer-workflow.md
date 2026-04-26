@@ -199,6 +199,8 @@ Claude Code transforms golden path development from a static document into an ac
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

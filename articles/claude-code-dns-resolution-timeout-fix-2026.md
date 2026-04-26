@@ -121,6 +121,8 @@ Long-running operations can exceed keep-alive timeouts on intermediate proxies a
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Monorepo Workspace Package Resolution](/claude-code-monorepo-workspace-package-resolution-fix-2026/)
 - [CLAUDE.md Conflict Resolution](/claude-md-conflict-resolution/)
 - [ESM vs CJS Module Resolution Failure — Fix (2026)](/claude-code-esm-vs-cjs-module-resolution-fix-2026/)

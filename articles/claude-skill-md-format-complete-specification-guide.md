@@ -343,6 +343,8 @@ For teams, document all skill names in a single `SKILLS.md` at the project root.
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

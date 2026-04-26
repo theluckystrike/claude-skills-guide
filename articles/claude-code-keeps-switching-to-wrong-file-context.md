@@ -174,5 +174,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [nvm Switching to Wrong Node Version — Fix (2026)](/claude-code-nvm-switching-wrong-node-fix-2026/)
 - [Fix Claude Code Suggesting Wrong Framework (2026)](/claude-code-keeps-suggesting-wrong-framework-2026/)

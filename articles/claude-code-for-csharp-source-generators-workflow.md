@@ -153,6 +153,8 @@ The key to success lies in iterative development: start with simple generators, 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

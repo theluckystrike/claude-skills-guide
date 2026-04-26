@@ -129,6 +129,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Merge Conflict in Claude-Edited Files — Fix (2026)](/claude-code-merge-conflict-edited-files-fix-2026/)
 - [Claude Code Prettier Format Conflict](/claude-code-prettier-format-conflict-fix/)
 - [Multi-Cursor Edit Conflict Fix](/claude-code-multi-cursor-edit-conflict-fix-2026/)

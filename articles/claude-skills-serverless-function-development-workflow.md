@@ -620,6 +620,8 @@ The key is maintaining a clear structure: separate templates for each runtime, t
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

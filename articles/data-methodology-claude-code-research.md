@@ -103,3 +103,5 @@ Explore the related resources below for deeper coverage. The Claude Code documen
 - [Build an AI Data Extractor Extension](/ai-data-extractor-chrome-extension/)
 - [Best Claude Skills for Data Analysis](/best-claude-skills-for-data-analysis/)
 - [Chrome Data Google Collects](/chrome-data-google-collects/)
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).

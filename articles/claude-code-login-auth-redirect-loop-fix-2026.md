@@ -112,6 +112,8 @@ Long-running operations can exceed keep-alive timeouts on intermediate proxies a
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Stuck in Loop Repeating](/claude-code-stuck-in-loop-repeating-same-output-fix/)
 - [The Retry Loop Tax](/retry-loop-tax-error-handling-token-cost/)
 - [Fix: Claude Code Image 400 Error Loop](/claude-code-image-could-not-process-400/)

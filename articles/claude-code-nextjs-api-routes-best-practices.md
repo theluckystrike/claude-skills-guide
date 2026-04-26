@@ -569,4 +569,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Next.js Build Fails With Generated Code — Fix (2026)](/claude-code-nextjs-build-generated-code-fix-2026/)

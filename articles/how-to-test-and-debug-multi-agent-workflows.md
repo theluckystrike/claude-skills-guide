@@ -320,6 +320,8 @@ Testing and debugging multi-agent workflows requires a different mindset than tr
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -138,6 +138,8 @@ In monorepo setups, nested skills in `packages/frontend/.claude/skills/` are onl
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Publishing Claude Skills to GitHub](/publishing-claude-skills-to-github/)
 - [Updating Shared Skills Without Breaking Workflows](/updating-shared-claude-skills-without-breaking-workflows/)
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-team/)

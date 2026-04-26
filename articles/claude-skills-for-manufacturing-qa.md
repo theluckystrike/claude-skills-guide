@@ -158,6 +158,8 @@ SPC data volume grows fast. At 40 stations measuring every 30 minutes with 5 cha
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills for Logistics and Supply Chain](/claude-skills-for-logistics-supply-chain/) -- supplier quality and incoming inspection
 - [Claude Skills for Real Estate Data Extraction](/claude-skills-for-real-estate-data-extraction/) -- facility and equipment data management
 - [Claude Skills Data Flow Patterns](/claude-skills-data-flow-patterns/) -- SPC data pipeline architecture

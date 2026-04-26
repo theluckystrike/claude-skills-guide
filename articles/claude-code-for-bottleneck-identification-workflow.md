@@ -201,6 +201,8 @@ Remember that optimization is an iterative process. Focus on the highest-impact 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

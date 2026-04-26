@@ -352,6 +352,8 @@ Start small, measure results, and expand what works. Within six months, your tea
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

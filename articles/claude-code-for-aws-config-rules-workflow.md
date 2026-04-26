@@ -218,6 +218,8 @@ Start by creating a Claude.md file in your infrastructure project, then incremen
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

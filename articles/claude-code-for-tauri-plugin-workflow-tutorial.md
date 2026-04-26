@@ -209,6 +209,8 @@ Start by integrating Claude Code into small parts of your workflow, just for gen
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

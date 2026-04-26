@@ -248,6 +248,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Error npm Install Fails in Skill Workflow](/claude-code-error-npm-install-fails-in-skill-workflow/)
 - [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/)
 - [Claude Code Setup on Mac Step by Step](/claude-code-setup-on-mac-step-by-step/)

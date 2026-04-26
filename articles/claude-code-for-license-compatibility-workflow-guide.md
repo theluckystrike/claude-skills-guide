@@ -256,4 +256,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Turbopack Compatibility Error — Fix (2026)](/claude-code-turbopack-compatibility-error-fix-2026/)

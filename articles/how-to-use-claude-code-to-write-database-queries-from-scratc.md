@@ -124,6 +124,8 @@ Start with simple queries to build trust in the outputs, then gradually tackle m
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

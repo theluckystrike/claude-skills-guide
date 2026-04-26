@@ -340,6 +340,8 @@ The weekly report surfaces trends: if MCP overhead is growing (more tools being 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- MCP configuration reference
 - [Building Token-Efficient MCP Servers for Claude Code](/building-token-efficient-mcp-servers-claude-code/) -- design servers with minimal overhead
 - [CLI vs MCP for Agent Operations: Token Cost Comparison](/cli-vs-mcp-agent-operations-token-cost/) -- when to choose CLI over MCP

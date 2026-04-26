@@ -266,6 +266,8 @@ Configure your repository with the appropriate `.gitpod.yml`, sync your skills d
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

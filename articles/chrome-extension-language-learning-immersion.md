@@ -463,6 +463,8 @@ The most effective immersion tools are those you will actually use, so prioritiz
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

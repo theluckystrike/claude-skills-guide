@@ -70,6 +70,8 @@ Claude Code should use `browser_navigate` to open the signup URL, `browser_snaps
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code API Endpoint Testing Guide](/claude-code-api-endpoint-testing-guide/)
 - [Claude Code Accessibility Regression Testing](/claude-code-accessibility-regression-testing/)
 - [What Are Claude Skills and How to Use Them](/what-are-claude-skills-and-how-to-use-them/)

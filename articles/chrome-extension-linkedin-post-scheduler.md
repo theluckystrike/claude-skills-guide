@@ -260,6 +260,8 @@ Remember to test thoroughly with LinkedIn's evolving interface, as their DOM str
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

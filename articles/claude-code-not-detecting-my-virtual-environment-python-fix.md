@@ -166,6 +166,8 @@ With your virtual environment properly detected, Claude Code can help you build,
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

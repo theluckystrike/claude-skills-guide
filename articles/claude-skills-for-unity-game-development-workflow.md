@@ -164,6 +164,8 @@ The investment in creating these skills pays dividends across every future proje
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

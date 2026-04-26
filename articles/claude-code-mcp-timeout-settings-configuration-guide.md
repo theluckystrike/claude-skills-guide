@@ -226,6 +226,8 @@ For general timeout strategies including input scoping and task decomposition, s
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

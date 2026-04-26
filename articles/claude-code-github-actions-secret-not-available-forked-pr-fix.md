@@ -134,6 +134,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Secret Scanning](/claude-code-secret-scanning-prevent-credential-leaks-guide/)
 - [Claude Code for Gitleaks Secret](/claude-code-for-gitleaks-secret-scanning-workflow/)
 - [Claude Code GitHub Discussions](/claude-code-github-discussions-summarizer-workflow/)

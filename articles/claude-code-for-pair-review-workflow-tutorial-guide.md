@@ -235,6 +235,8 @@ As your team grows comfortable with AI-assisted review, you'll notice faster ite
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

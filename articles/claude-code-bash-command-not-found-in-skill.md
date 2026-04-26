@@ -11,7 +11,6 @@ author: "Claude Skills Guide"
 reviewed: true
 score: 7
 permalink: /claude-code-bash-command-not-found-in-skill/
-canonical_url: /zsh-command-not-found-claude-fix/
 geo_optimized: true
 ---
 
@@ -211,5 +210,7 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 
 - [Claude Code Bash Command Timeout 120s — Fix (2026)](/claude-code-bash-command-timeout-120s-fix-2026/)

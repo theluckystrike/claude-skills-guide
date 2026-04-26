@@ -97,4 +97,6 @@ Start with Karpathy Skills for the behavioral foundation — it works from minut
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [SuperClaude vs Claude Code Templates (2026)](/superclaude-vs-claude-code-templates-2026/)

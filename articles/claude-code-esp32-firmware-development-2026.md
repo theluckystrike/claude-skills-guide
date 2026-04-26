@@ -244,6 +244,8 @@ idf.py partition-table
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for STM32 Firmware](/claude-code-stm32-firmware-development-2026/)
 - [Claude Code for Embedded Systems](/claude-skills-for-embedded-systems-iot-firmware/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

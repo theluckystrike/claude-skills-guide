@@ -104,6 +104,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix WebSocket Connection Failures](/claude-code-websocket-connection-failed-fix/)
 - [Fix Claude Code MCP Server Connection](/claude-code-mcp-server-connection-closed-fix/)
 - [Claude Code MCP Server Connection](/claude-code-mcp-server-connection-refused-fix/)

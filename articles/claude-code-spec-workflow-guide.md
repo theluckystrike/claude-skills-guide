@@ -719,6 +719,8 @@ Spec files are read as input tokens when Claude processes them. A typical spec i
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [CLAUDE.md Best Practices Definitive Guide](/claude-md-best-practices-definitive-guide/)
 - [Claude Code Hooks Complete Guide](/claude-code-hooks-complete-guide/)
 - [How to Use Claude Code: Beginner Guide](/how-to-use-claude-code-beginner-guide/)

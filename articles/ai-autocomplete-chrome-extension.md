@@ -420,6 +420,8 @@ Whether you build custom solutions or adopt existing tools, AI autocomplete exte
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

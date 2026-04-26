@@ -111,6 +111,8 @@ Use `.claude/rules/` for component-type-specific patterns:
 ---
 paths:
   - "src/components/**/*.tsx"
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 ## Component File Rules

@@ -320,6 +320,8 @@ Claude Code combined with PostHog creates a powerful automation layer for featur
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

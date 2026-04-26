@@ -153,6 +153,8 @@ AI spreadsheet helpers represent a significant productivity advancement for anyo
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

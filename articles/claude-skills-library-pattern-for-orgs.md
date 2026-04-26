@@ -205,6 +205,8 @@ Enterprise managed settings can enforce skills from the top, but they cannot dis
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills Distribution Methods](/claude-skills-distribution-methods/)
 - [Security Review Process for Claude Skills](/security-review-process-for-claude-skills/)
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-team/)

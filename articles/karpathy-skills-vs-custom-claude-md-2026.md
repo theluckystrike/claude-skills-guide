@@ -114,5 +114,7 @@ Copy Karpathy Skills into your CLAUDE.md, add your project-specific rules below 
 
 ## See Also
 
+**Try it:** Build your own with our [CLAUDE.md Generator](/generator/).
+
 - [Karpathy Skills vs Ultimate Guide (2026)](/karpathy-skills-vs-claude-code-ultimate-guide-2026/)
 - [Karpathy Skills vs SuperClaude Framework (2026)](/karpathy-skills-vs-superclaude-framework-2026/)

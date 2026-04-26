@@ -552,6 +552,8 @@ Remember to check the OpenFaaS documentation for the latest features and best pr
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

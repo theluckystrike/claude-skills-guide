@@ -169,6 +169,8 @@ The key insight is that Claude skills and VS Code extensions solve similar probl
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -265,6 +265,8 @@ Building an AI study helper Chrome extension combines web development skills wit
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

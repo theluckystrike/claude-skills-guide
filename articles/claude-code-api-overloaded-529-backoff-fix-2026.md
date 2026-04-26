@@ -111,6 +111,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [The Retry Loop Tax](/retry-loop-tax-error-handling-token-cost/)
 - [Claude Code Bullmq Delayed Retry](/claude-code-bullmq-delayed-retry-job-workflow-guide/)
 - [How to Stop Claude Code Retry Loops](/stop-claude-code-retry-loops-token-waste/)

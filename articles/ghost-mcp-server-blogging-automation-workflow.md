@@ -213,6 +213,8 @@ For teams managing regular content schedules, this automation significantly redu
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

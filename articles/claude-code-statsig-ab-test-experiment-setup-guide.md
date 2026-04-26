@@ -202,6 +202,8 @@ Start by integrating Statsig into your project, then use Claude Code to generate
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

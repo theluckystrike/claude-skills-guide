@@ -69,6 +69,8 @@ Aider being free to install means your only cost is API tokens. At comparable us
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can I disable Aider's auto-commit?
 Yes. Running Aider with `--no-auto-commits` disables automatic committing, making it behave more like Claude Code where you commit manually. However, this removes one of Aider's key safety benefits.
 

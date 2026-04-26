@@ -71,6 +71,8 @@ Claude Code should write handlers like `async fn create_user(State(db): State<Db
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)
 - [Using Claude Code to Learn New Programming Languages](/using-claude-code-to-learn-new-programming-languages/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

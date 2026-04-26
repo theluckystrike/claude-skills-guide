@@ -112,6 +112,8 @@ Track these metrics weekly after choosing a provider:
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Haiku vs GPT-4o Mini Cost Showdown](/claude-cost-haiku-vs-gpt4o-mini-cheap-tier/)
 - [The Hybrid Stack: Best Model for Each Task](/claude-cost-hybrid-stack-claude-gpt-gemini/)
 - [When GPT-4o Mini Beats Claude Haiku](/claude-cost-when-gpt4o-mini-beats-haiku/)

@@ -346,6 +346,8 @@ Building this extension requires balancing API costs, user experience, and platf
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

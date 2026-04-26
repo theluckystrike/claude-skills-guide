@@ -311,6 +311,8 @@ This section lists every article in the use-cases cluster, grouped by sub-topic.
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Comprehensive developer skill overview across all stacks.
 - [Claude Skills Workflow Guide](/workflows/). Chain use-case skills together into automated multi-step pipelines.
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 Related Reading

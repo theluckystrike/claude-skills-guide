@@ -351,4 +351,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Build Claude Code GitHub Actions 2026](/claude-code-github-actions-workflow-2026/)

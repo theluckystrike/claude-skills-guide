@@ -239,6 +239,8 @@ The combination of Claude Code's natural language processing and Alchemy's compr
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

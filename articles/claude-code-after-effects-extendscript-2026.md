@@ -310,6 +310,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Before and After](/before-and-after-switching-to-claude-code-workflow/)
 - [PATH Not Updated After Install — Fix](/claude-code-path-not-updated-after-install-fix-2026/)
 - [Prisma Generate Failure After Schema](/claude-code-prisma-generate-failure-fix-2026/)

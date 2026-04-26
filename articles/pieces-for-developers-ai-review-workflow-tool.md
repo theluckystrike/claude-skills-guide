@@ -156,4 +156,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Code vs Pieces for Developers (2026)](/claude-code-vs-pieces-for-developers-2026/)

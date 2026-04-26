@@ -628,6 +628,8 @@ Building a Chrome extension for bulk social media posting gives you complete con
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

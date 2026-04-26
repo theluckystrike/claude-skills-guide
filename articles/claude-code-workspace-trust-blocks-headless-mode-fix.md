@@ -116,6 +116,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Incomplete Code Blocks](/why-does-claude-code-produce-incomplete-code-blocks-fix/)
 - [Chrome Enterprise Device Trust](/chrome-enterprise-device-trust-connector/)
 - [Claude Code Zero Trust Security](/claude-code-for-zero-trust-security-workflow-guide/)

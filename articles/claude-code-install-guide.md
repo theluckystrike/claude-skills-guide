@@ -218,6 +218,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 - [Claude Code Command Not Found After Install Troubleshooting](/claude-code-command-not-found-after-install-troubleshooting/) — Browse all installation guides
 - [Getting Started Guide](/getting-started/). From zero to productive with Claude Code
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 *Last verified: 2026-04-14. Found an issue? [Open a GitHub issue](https://github.com/theluckystrike/extension-insiders/issues).*

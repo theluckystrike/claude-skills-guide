@@ -143,6 +143,8 @@ Pricing on Bedrock follows input/output token pricing specific to your AWS agree
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

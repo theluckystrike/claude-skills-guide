@@ -230,6 +230,8 @@ echo "Environment check complete."
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Conversation History OOM Crash — Fix (2026)](/claude-code-conversation-history-oom-fix-2026/)
 - [Fix Claude Code Bun Crash (2026)](/claude-code-bun-crash/)
 - [Claude Code GitHub Discussions](/claude-code-github-discussions-summarizer-workflow/)

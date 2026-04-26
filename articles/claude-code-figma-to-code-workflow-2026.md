@@ -252,6 +252,8 @@ Manual design-to-code translation introduces visual inconsistencies and takes ho
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Generating CSS Variables from Design System](/claude-code-generating-css-variables-from-design-system/)
 - [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/)
 - [Full Stack Web App with Claude Skills Step by Step](/full-stack-web-app-with-claude-skills-step-by-step/)

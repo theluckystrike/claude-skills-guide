@@ -317,6 +317,8 @@ Start small: pick one language in your project, add basic linting, and run it au
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

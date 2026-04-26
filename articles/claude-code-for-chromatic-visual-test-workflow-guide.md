@@ -71,6 +71,8 @@ Claude Code should create stories with `args` for each pricing tier, add a `play
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Storybook Test Workflow Guide](/claude-code-for-storybook-test-workflow-guide/)
 - [Claude Code Integration Testing Strategy Guide](/claude-code-integration-testing-strategy-guide/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)

@@ -171,3 +171,5 @@ claude --append-system-prompt "CRITICAL: All code must use TypeScript strict mod
 This is a per-invocation flag, not a permanent setting. It provides the strongest instruction adherence because system prompt content has the highest priority. Use it sparingly for rules that are genuinely non-negotiable.
 
 For resolving specific contradictions between files, see the [conflicting instructions fix guide](/claude-md-conflicting-instructions-fix/). For the complete CLAUDE.md specification, see the [CLAUDE.md complete guide](/claude-md-file-complete-guide-what-it-does/). For writing instructions Claude reliably follows, see the [best practices guide](/claude-code-claude-md-best-practices/).
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

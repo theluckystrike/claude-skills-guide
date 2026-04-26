@@ -115,6 +115,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Modernizing Legacy Codebases](/claude-code-for-legacy-code-modernization/)
 - [Claude Code for Ada Legacy System](/claude-code-ada-legacy-system-updates-2026/)
 - [Why Does My Claude Skill Work Locally](/why-does-my-claude-skill-work-locally-but-fail-in-ci/)

@@ -97,4 +97,6 @@ The Claude Code vs Devin choice comes down to your development philosophy. Claud
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Manus AI Agent Compared (2026)](/claude-code-vs-manus-ai-agent-2026/)

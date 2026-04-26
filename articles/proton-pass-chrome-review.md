@@ -145,6 +145,8 @@ The Chrome extension itself performs reliably for day-to-day credential manageme
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

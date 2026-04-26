@@ -238,6 +238,8 @@ Start your preparation early, automate where possible, and maintain thorough doc
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

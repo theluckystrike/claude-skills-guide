@@ -331,6 +331,8 @@ Remember to always verify generated code against the official Detectron2 documen
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

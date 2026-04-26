@@ -143,6 +143,8 @@ Start applying these techniques on your next large file refactoring project. You
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -127,6 +127,8 @@ Claude Code requires Node.js 18 or later. Node.js 20 LTS is recommended for the 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Vite Bundle Optimization](/claude-code-for-vite-bundle-optimization-workflow/)
 - [CLAUDE.md Example for React + Vite +](/claude-md-example-for-react-vite-typescript/)
 - [Claude Code for Dependency Inversion](/claude-code-for-dependency-inversion-refactoring-guide/)

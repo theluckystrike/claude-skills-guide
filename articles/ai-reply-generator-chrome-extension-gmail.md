@@ -289,6 +289,8 @@ Building your own AI reply generator gives you flexibility that commercial tools
 *
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

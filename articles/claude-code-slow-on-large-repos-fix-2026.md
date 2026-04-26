@@ -150,6 +150,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [AI Speed Reader Chrome Extension Guide](/ai-speed-reader-chrome-extension/)
 - [Downgrade Chrome Speed](/downgrade-chrome-speed/)
 - [Speed Up Chrome: Performance Tips](/chrome-speed-up-tips-2026/)

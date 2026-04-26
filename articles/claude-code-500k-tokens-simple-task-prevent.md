@@ -199,6 +199,8 @@ Any session exceeding the blowout threshold deserves investigation. The most com
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code --max-turns Flag: Prevent Runaway Sessions](/claude-code-max-turns-flag-prevent-runaway-sessions/) -- hard caps on session length
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- prevent context accumulation
 - [Cost Optimization Hub](/cost-optimization/) -- comprehensive cost reduction

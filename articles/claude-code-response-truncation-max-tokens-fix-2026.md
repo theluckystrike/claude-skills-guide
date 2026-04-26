@@ -99,6 +99,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Anthropic Rate Limit Tokens Per Minute — Fix (2026)](/claude-code-anthropic-rate-limit-tokens-per-minute-fix-2026/)
 - [How Tool Definitions Add 346 Tokens](/claude-tool-definitions-346-tokens-per-call/)
 - [Why Claude Code 4.6 uses more tokens](/why-claude-code-46-uses-more-tokens-than-45/)

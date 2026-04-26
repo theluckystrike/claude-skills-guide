@@ -526,6 +526,8 @@ Related guides: [Claude Code WCAG 2.1 Compliance Checker Workflow Guide](/claude
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

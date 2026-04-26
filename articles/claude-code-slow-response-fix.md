@@ -154,6 +154,8 @@ $99 once. Pays for itself in saved tokens within a week.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix: Claude API Error 429 Rate Limit](/anthropic-api-error-429-rate-limit/)
 - [Fix: Anthropic SDK Streaming Hangs Indefinitely](/anthropic-sdk-streaming-hang-timeout/)
 - [Claude API Error 400 Invalid Request Fix](/claude-api-error-400-invalidrequesterror-explained/)

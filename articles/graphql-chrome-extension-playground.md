@@ -408,6 +408,8 @@ Experiment with different extensions to find the combination that matches your w
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

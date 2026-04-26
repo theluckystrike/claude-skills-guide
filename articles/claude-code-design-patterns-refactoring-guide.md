@@ -193,6 +193,8 @@ The result is skills that are easier to understand, test, and extend. Your futur
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

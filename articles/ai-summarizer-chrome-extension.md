@@ -377,6 +377,8 @@ Building an AI summarizer Chrome extension gives you a powerful tool tailored to
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

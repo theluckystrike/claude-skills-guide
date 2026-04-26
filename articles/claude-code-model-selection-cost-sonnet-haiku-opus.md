@@ -190,6 +190,8 @@ ccusage --days 7 --format table
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Max Subscription vs API](/claude-code-max-vs-api-cheaper-2026-calculator/) -- fixed vs variable pricing comparison
 - [Claude Code Extended Thinking: Cost Implications](/claude-code-extended-thinking-cost-when-disable/) -- when extended thinking justifies premium model costs
 - [How to Reduce Claude Code Token Usage by 3x](/reduce-claude-code-token-usage-3x-guide-2026/) -- complementary reduction strategies

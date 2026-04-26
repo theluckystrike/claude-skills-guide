@@ -98,6 +98,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Conversation Too Long](/claude-code-conversation-too-long-fresh-vs-compact/)
 - [Claude API System Prompt Too Long Error](/claude-api-system-prompt-too-long-error-fix/)
 - [Claude Code Notification Setup for Long](/claude-code-notification-setup-for-long-tasks/)

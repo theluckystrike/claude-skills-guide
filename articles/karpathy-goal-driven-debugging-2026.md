@@ -127,3 +127,5 @@ as "Invalid Date" when the timezone is UTC.
 - [Implement Goal-Driven Execution](/karpathy-goal-driven-implementation-2026/) — CLAUDE.md templates
 - [Fix Claude Code Forgetting Decisions](/claude-code-forgets-previous-decisions-fix-2026/) — related problem
 - [The Claude Code Playbook](/playbook/) — session management patterns
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

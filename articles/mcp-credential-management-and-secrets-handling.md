@@ -225,6 +225,8 @@ Secure credential management in MCP servers requires layering environment variab
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

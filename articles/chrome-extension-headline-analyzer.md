@@ -423,6 +423,8 @@ Building your own chrome extension headline analyzer gives you full control over
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

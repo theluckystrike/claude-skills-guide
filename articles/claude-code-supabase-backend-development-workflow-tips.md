@@ -373,6 +373,8 @@ Building efficient Supabase backends with Claude Code comes down to organized pr
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

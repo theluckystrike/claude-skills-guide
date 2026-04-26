@@ -84,6 +84,8 @@ JetBrains AI is the smartest IDE-integrated AI assistant available — deep type
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [JetBrains Plugin Incompatibility Fix](/claude-code-jetbrains-plugin-incompatibility-fix-2026/)
 - [Claude Code vs JetBrains Refactoring: AI vs IDE Native](/claude-code-vs-jetbrains-refactor-comparison/)
 - [Claude Code vs v0 by Vercel (2026): AI Builders](/claude-code-vs-v0-vercel-ai-builder-2026/)

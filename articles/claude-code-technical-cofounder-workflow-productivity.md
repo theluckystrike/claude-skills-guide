@@ -272,6 +272,8 @@ Start with small interactions, build context over time, and watch as your develo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

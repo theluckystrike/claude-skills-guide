@@ -204,6 +204,8 @@ Remember: Claude Code works best when it understands your architecture. Invest t
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

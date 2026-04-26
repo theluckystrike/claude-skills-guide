@@ -215,6 +215,8 @@ WireMock transforms how you test HTTP-dependent code. By running a local mock se
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

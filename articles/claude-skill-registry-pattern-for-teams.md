@@ -134,6 +134,8 @@ The plugin namespace (`plugin-name:skill-name`) prevents conflicts between plugi
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Skills Shared Dependencies](/claude-skills-shared-dependencies/) -- sharing resources across skills
 - [Claude Skills for Monorepo Projects](/claude-skills-for-monorepo-projects/) -- skill organization in large codebases
 - [Claude Skill Inheritance and Composition](/claude-skill-inheritance-composition/) -- extending team skills in projects

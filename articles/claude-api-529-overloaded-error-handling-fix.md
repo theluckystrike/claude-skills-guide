@@ -142,6 +142,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [API 529 Overloaded Retry Backoff — Fix](/claude-code-api-overloaded-529-backoff-fix-2026/)
 - [API Endpoint Testing Workflow](/claude-code-api-endpoint-testing-guide/)
 - [Claude Code for Health Endpoint Pattern](/claude-code-for-health-endpoint-pattern-workflow/)

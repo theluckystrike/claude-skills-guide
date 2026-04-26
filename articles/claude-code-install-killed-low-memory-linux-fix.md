@@ -170,6 +170,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Headless Linux Auth](/claude-code-headless-linux-auth/)
 - [Claude Code Dev Containers Setup Guide](/claude-code-dev-containers-devcontainer-json-setup-guide/)
 - [Claude Code Docker Permission Denied Fix](/claude-code-docker-permission-denied-bind-mount-error/)

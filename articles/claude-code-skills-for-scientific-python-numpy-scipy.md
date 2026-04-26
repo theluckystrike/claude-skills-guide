@@ -467,6 +467,8 @@ Related Reading
 - [Claude Skills for Computational Biology and Bioinformatics](/claude-skills-for-computational-biology-bioinformatics/)
 - [Best Claude Skill for Python Data Workflows](/what-is-the-best-claude-skill-for-python-data-workflows/)
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

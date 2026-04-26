@@ -70,6 +70,8 @@ Claude Code should import from `@ark-ui/react`, create `<Combobox.Root>` with `<
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
 - [Claude Code for Shadcn UI Workflow Guide](/claude-code-for-shadcn-ui-workflow-guide/)
 - [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)

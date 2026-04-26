@@ -165,6 +165,8 @@ Network request failures in Claude Code skills stem from various causes, but sys
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

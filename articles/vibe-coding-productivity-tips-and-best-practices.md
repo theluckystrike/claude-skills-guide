@@ -324,6 +324,8 @@ Stay current with Claude Code updates and new skills. The ecosystem evolves rapi
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -261,6 +261,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Config YAML Parse Error — Fix (2026)](/claude-code-config-yaml-parse-error-fix/)
 - [Config File JSON Parse Error — Fix (2026)](/claude-code-config-json-corrupted-parse-error-fix-2026/)
 - [XDG Config Directory Permissions Fix](/claude-code-xdg-config-directory-permissions-fix-2026/)

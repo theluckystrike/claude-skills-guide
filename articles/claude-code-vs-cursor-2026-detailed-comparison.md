@@ -109,6 +109,8 @@ Cursor is the best AI-enhanced code editor available — inline autocomplete, vi
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Projects vs Cursor Composer: Project Context Compared](/claude-projects-vs-cursor-composer-comparison/)
 - [Claude Code vs Cursor: Plugin Ecosystems (2026)](/claude-code-vs-cursor-plugin-ecosystem-2026/)
 - [Claude Code vs Cursor Tab (2026): Autocomplete](/claude-code-vs-cursor-tab-autocomplete-2026/)

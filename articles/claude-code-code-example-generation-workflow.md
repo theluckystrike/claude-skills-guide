@@ -181,6 +181,8 @@ The key is treating Claude Code as a collaborative partner rather than a simple 
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

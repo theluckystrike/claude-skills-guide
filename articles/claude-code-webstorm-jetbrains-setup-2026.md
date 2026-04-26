@@ -245,6 +245,8 @@ WebStorm's immediate type-checking feedback combined with Claude Code's generati
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for JetBrains Plugin Workflow](/claude-code-for-jetbrains-plugin-workflow-tutorial/)
 - [How to Create React Components Faster with Claude Code](/how-to-create-react-components-faster-with-claude-code/)
 - [Best Way to Use Claude Code for Frontend Styling](/best-way-to-use-claude-code-for-frontend-styling/)

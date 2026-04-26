@@ -254,6 +254,8 @@ When using `context: fork` with scripts, the subagent has its own tool permissio
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Skills Folder Structure](/claude-skills-folder-structure/)
 - [Build Your First Claude Code Skill](/building-your-first-claude-skill/)
 - [Claude Skills vs MCP Servers](/claude-skills-vs-mcp-servers-differences/)

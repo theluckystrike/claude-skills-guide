@@ -104,6 +104,8 @@ For developers toggling between dozens of repositories, managing multiple issues
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

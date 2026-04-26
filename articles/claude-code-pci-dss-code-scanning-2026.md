@@ -368,6 +368,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Secret Scanning](/claude-code-secret-scanning-prevent-credential-leaks-guide/)
 - [MCP Server Vulnerability Scanning](/mcp-server-vulnerability-scanning-and-testing/)
 - [Claude Code Container Security Scanning](/claude-code-container-security-scanning-workflow-guide/)

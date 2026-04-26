@@ -144,3 +144,5 @@ In practice, most organizations use more than one sharing method. A common combi
 Each layer handles a different scope and governance level. The key principle: any standard that requires compliance should use managed CLAUDE.md or committed project files, never personal imports that developers might skip.
 
 For monorepo-specific patterns like `claudeMdExcludes`, see the [team collaboration guide](/claude-md-team-collaboration-best-practices/). For the technical details of the import system, see the [CLAUDE.md complete guide](/claude-md-file-complete-guide-what-it-does/). For deciding what content goes in shared versus personal files, see the [team vs personal CLAUDE.md guide](/team-claude-md-vs-personal-claude-md/).
+
+**Try it:** Build your own with our [CLAUDE.md Generator](/generator/).

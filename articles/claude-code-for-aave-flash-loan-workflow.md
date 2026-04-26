@@ -214,6 +214,8 @@ Claude Code can help you implement all these patterns while maintaining clean, r
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

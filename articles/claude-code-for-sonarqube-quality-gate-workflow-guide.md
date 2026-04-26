@@ -213,6 +213,8 @@ Remember: quality gates work best when they're collaborative tools that guide de
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

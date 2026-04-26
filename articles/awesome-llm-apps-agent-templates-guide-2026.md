@@ -184,5 +184,7 @@ Yes. Apache-2.0 allows commercial use, modification, and distribution with attri
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Use Awesome LLM Apps Templates with Claude (2026)](/how-to-use-awesome-llm-apps-with-claude-2026/)
 - [Awesome LLM Apps vs Claude Code Templates (2026)](/awesome-llm-apps-vs-claude-code-templates-2026/)

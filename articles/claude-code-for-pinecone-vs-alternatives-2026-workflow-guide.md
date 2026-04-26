@@ -248,6 +248,8 @@ The best choice depends on your specific requirements, managed versus self-hoste
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

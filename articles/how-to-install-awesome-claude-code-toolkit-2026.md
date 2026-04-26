@@ -147,6 +147,8 @@ If a tool passes all five checks, it is worth trying. If it fails two or more, m
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Templates vs Awesome Toolkit (2026)](/claude-code-templates-vs-awesome-toolkit-2026/)
 - [Awesome Claude Code: Master Resource Index (2026)](/awesome-claude-code-master-index-guide-2026/)
 - [Install SuperClaude Framework Step by Step (2026)](/how-to-install-superclaude-framework-2026/)

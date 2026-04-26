@@ -165,6 +165,8 @@ Start with one workflow element this sprint, test scaffolding or standup prepara
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

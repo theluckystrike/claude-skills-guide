@@ -405,6 +405,8 @@ This level of detail produces code that handles the security requirements correc
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code 安装指南 (Chinese Installation Guide)](/claude-code-anzhuang-installation-guide/) — Claude Code installation guide in Chinese (中文安装教程)
 - [Claude Code 价格指南](/claude-code-jiage-pricing-guide/) — Claude Code pricing guide in Chinese (中文定价指南)
 - [Claude Code使用教程](/claude-code-shiyong-jiaocheng-tutorial/) — comprehensive Claude Code tutorial in Chinese

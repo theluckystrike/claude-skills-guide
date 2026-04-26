@@ -277,6 +277,8 @@ Remember that Claude Code is a collaborator, not a replacement for understanding
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

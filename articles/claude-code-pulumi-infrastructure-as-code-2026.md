@@ -296,6 +296,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Pulumi Policy Pack](/claude-code-for-pulumi-policy-pack-workflow-guide/)
 - [Claude Code for Pulumi Multi-Cloud](/claude-code-for-pulumi-multi-cloud-workflow/)
 - [Claude Code with Pulumi Python for IaC](/claude-code-pulumi-python-infrastructure-guide/)

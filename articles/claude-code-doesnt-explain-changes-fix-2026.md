@@ -140,6 +140,8 @@ echo "Environment check complete."
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Karpathy Surgical Changes Principle](/karpathy-surgical-changes-principle-2026/)
 - [Claude Code Version History and Changes](/claude-code-version-history-changes-2026/)
 - [Fix Claude Md Changes Not Taking Effect](/claude-md-changes-not-taking-effect-fix-guide/)

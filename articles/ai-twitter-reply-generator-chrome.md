@@ -336,6 +336,8 @@ AI Twitter reply generator Chrome extensions combine browser automation with AI 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

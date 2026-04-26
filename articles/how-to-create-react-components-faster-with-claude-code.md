@@ -254,4 +254,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Create Custom Slash Commands for Claude (2026)](/how-to-create-custom-slash-command-claude-2026/)

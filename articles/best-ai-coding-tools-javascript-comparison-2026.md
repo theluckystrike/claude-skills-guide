@@ -157,5 +157,7 @@ GitHub Copilot Enterprise ($39/user) for maximum IDE flexibility across the orga
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Best AI Coding Tools for Python (2026): Compared](/best-ai-coding-tools-python-comparison-2026/)
 - [Best Free AI Coding Assistants 2026 Comparison](/best-free-ai-coding-assistants-2026-comparison/)

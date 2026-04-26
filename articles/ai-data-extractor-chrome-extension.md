@@ -478,6 +478,8 @@ With the patterns and examples in this guide, you can build anything from a simp
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

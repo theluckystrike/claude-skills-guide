@@ -268,6 +268,8 @@ The combination of Claude skills for workflow guidance and MCP servers for exter
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

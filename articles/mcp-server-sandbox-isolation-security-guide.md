@@ -419,6 +419,8 @@ For developers working on complex projects, combining proper MCP server isolatio
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

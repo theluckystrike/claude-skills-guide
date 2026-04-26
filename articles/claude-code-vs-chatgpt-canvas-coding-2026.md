@@ -87,6 +87,8 @@ Evaluate both. ChatGPT Enterprise has more mature admin controls, SSO integratio
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can Claude Code and ChatGPT Canvas access the same codebase simultaneously?
 Claude Code works directly in your filesystem, so it always sees your current code. Canvas has no filesystem access; you would need to paste code in manually. They do not conflict because Canvas never touches your local files.
 

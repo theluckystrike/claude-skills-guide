@@ -242,6 +242,8 @@ Tab completion reduces typos and eliminates the need to check `--help` output. D
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Nushell Workflow Guide](/claude-code-for-nushell-workflow-guide/)
 - [Claude Code for Alacritty Workflow Guide](/claude-code-for-alacritty-workflow-guide/)
 - [Claude Code Common Beginner Mistakes to Avoid](/claude-code-common-beginner-mistakes-to-avoid/)

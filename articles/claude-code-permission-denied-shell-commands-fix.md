@@ -127,6 +127,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Skill Permission Denied](/claude-code-skill-permission-denied-error-fix-2026/)
 - [EACCES Permission Denied Config Dir — Fix (2026)](/claude-code-config-dir-permission-denied-fix-2026/)
 - [Claude Code Permission Denied](/claude-code-permission-denied-when-executing-skill-commands/)

@@ -265,6 +265,8 @@ Start with the foundational scripts in this guide, then extend them to match you
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

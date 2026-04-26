@@ -552,6 +552,8 @@ Building a Chrome extension for live meeting transcription involves navigating b
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

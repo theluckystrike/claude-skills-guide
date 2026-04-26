@@ -444,6 +444,8 @@ Related Reading
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Use Docker Volumes Persistence (2026)](/claude-code-docker-volumes-persistence-guide/)
 - [Claude Code + Docker: Cost-Controlled Isolated Testing](/claude-code-docker-isolated-cost-controlled-testing/)
 - [Claude Code Docker Multi-Stage Builds (2026)](/claude-code-docker-multi-stage-builds-guide/)

@@ -365,6 +365,8 @@ The key is to start simple, test thoroughly, and iterate. Claude Code is particu
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

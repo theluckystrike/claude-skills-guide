@@ -466,6 +466,8 @@ Start with simple providers and progressively adopt more advanced patterns as yo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

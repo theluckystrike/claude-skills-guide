@@ -394,6 +394,8 @@ Silent errors in Chrome extensions are a common source of hard-to-reproduce user
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

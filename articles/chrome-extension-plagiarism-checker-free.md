@@ -222,6 +222,8 @@ Free Chrome extensions for plagiarism checking provide valuable tools for develo
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

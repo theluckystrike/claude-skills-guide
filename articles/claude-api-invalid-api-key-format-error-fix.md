@@ -110,6 +110,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Skill Invalid YAML Syntax Error](/claude-code-skill-invalid-yaml-syntax-error-how-to-debug/)
 - [Claude Code Prettier Format Conflict](/claude-code-prettier-format-conflict-fix/)
 - [Claude Code International Date Format](/claude-code-international-date-format-handling-workflow/)

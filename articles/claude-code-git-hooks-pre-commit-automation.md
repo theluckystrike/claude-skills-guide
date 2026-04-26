@@ -421,6 +421,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Pre-Commit Hook Failure on Claude Changes Fix](/claude-code-pre-commit-hook-failure-fix-2026/)
 - [Pre-commit Hook Failed in Claude Code — Fix (2026)](/claude-code-git-hook-blocked-commit-fix-2026/)
 - [Claude Code Git Hook Pre-commit Conflict — Fix (2026)](/claude-code-git-hook-pre-commit-conflict-fix/)

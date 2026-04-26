@@ -286,6 +286,8 @@ The patterns shown here, stream testing, audio level measurement, and permission
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

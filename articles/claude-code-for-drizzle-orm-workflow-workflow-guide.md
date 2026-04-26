@@ -4,7 +4,7 @@ title: "Claude Code for Drizzle ORM (2026)"
 description: "Claude Code for Drizzle ORM — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-drizzle-orm-workflow-workflow-guide/
-canonical_url: /claude-code-for-drizzle-orm-workflow-guide/
+redirect_to: /claude-code-for-drizzle-orm-workflow-guide/
 sitemap: false
 categories: [workflow, niche-tools]
 tags: [claude-code, drizzle-orm, workflow]

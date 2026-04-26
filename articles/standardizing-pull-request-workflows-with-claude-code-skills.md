@@ -273,6 +273,8 @@ Start small. Pick one problem, maybe it's always forgetting to add tests, or PRs
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

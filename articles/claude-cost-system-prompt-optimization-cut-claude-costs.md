@@ -192,6 +192,8 @@ The primary metric is system prompt token count before and after. Multiply the d
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — broader token optimization beyond system prompts
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — better prompts reduce both tokens and errors
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — profile which prompts cost the most

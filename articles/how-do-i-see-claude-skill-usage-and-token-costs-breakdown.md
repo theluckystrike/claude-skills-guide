@@ -178,6 +178,8 @@ Tracking Claude skill usage requires monitoring via the Anthropic Console for se
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

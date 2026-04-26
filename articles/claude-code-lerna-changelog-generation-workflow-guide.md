@@ -796,6 +796,8 @@ The single biggest lever in this entire system is consistent conventional commit
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

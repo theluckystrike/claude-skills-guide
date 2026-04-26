@@ -187,6 +187,8 @@ For team projects, export the final accessibility report from the AI color picke
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

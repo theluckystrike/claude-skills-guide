@@ -113,6 +113,8 @@ Install Karpathy Skills as your behavioral foundation. Then layer project-specif
 
 ## See Also
 
+**Try it:** Build your own with our [CLAUDE.md Generator](/generator/).
+
 - [Karpathy Skills vs Ultimate Guide (2026)](/karpathy-skills-vs-claude-code-ultimate-guide-2026/)
 - [Karpathy Skills vs SuperClaude Framework (2026)](/karpathy-skills-vs-superclaude-framework-2026/)
 - [Karpathy Skills vs Custom CLAUDE.md (2026)](/karpathy-skills-vs-custom-claude-md-2026/)

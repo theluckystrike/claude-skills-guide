@@ -163,6 +163,8 @@ The `--add-dir` flag can be used to grant access to a shared skills repository. 
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [How to Share Claude Skills with Your Team](/how-to-share-claude-skills-with-team/)
 - [Team SKILL.md Conventions Style Guide](/team-skill-md-conventions-style-guide/)
 - [Managing Claude Skills Across Team Members](/managing-claude-skills-across-team-members/)

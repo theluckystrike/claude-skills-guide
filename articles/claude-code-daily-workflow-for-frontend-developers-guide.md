@@ -289,6 +289,8 @@ The developers who get the most out of Claude Code treat it like a senior pair p
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

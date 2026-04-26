@@ -244,5 +244,7 @@ Claude skills serve as the integration layer between ERPs, WMS, TMS, carrier por
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills for Academic Research — Automate Literature Review, Citation Extraction, and Statistical Validation — 2026](/claude-skills-for-academic-research/)
 - [Claude Skills for Manufacturing QA — Automate SPC Chart Analysis, NCR Processing, and CAPA Workflow — 2026](/claude-skills-for-manufacturing-qa/)

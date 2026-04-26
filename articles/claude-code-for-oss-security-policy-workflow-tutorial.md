@@ -216,6 +216,8 @@ Start by implementing basic dependency audits, then progressively add more sophi
 
 
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 *Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*

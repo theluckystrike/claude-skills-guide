@@ -269,6 +269,8 @@ Push notifications remain a powerful tool for mobile engagement when implemented
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

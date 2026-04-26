@@ -174,6 +174,8 @@ For most developers, a combination works best: DevTools for deep debugging, exte
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

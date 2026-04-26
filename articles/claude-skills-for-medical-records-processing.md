@@ -169,6 +169,8 @@ FHIR servers enforce different validation strictness. Epic's FHIR API rejects re
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills for Legal Document Review](/claude-skills-for-legal-document-review/) -- regulated document extraction patterns
 - [Claude Skills for Financial Analysis](/claude-skills-for-financial-analysis/) -- claims revenue analysis
 - [Hybrid Patterns: Skills, MCP, and Custom Tools](/hybrid-patterns-skills-mcp-custom-tools/) -- integrating FHIR MCP servers with skills

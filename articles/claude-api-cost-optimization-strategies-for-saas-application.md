@@ -247,6 +247,8 @@ The goal isn't to reduce quality, it's to ensure every token spent delivers genu
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

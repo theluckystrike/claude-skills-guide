@@ -299,6 +299,8 @@ Remember: TODO comments should be deliberate tracking tools, not AI-generated pl
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -374,6 +374,8 @@ The combination of Claude Code's intelligent assistance and BentoML's solid serv
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

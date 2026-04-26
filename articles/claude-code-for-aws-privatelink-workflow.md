@@ -266,6 +266,8 @@ By integrating Claude Code into your PrivateLink workflows, you can reduce manua
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

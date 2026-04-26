@@ -211,6 +211,8 @@ Start small by automating one aspect of your tenant workflows, such as provision
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -133,6 +133,8 @@ The MCP server fetches data through the REST API, which paginates at 1000 rows. 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

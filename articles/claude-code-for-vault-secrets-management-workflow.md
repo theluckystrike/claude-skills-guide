@@ -243,6 +243,8 @@ The combination of Claude Code and Vault empowers teams to manage secrets effici
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

@@ -314,6 +314,8 @@ Integrating Claude skills with the Notion API creates a knowledge management pip
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

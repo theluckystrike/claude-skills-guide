@@ -205,6 +205,8 @@ Start by identifying the most repetitive tasks in your current Model Registry wo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -91,4 +91,6 @@ If you only need basic autocomplete and occasional chat assistance, [GitHub Copi
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Should I Switch From Supermaven To Claude — Developer Guide](/should-i-switch-from-supermaven-to-claude-code/)

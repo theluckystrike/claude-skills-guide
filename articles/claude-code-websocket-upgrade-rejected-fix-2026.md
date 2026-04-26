@@ -109,6 +109,8 @@ This error means Node.js cannot build a complete certificate chain from the serv
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Build WebSocket Apps with Claude Code](/claude-code-skills-websocket-real-time-app-development/)
 - [Fix WebSocket Connection Failures](/claude-code-websocket-connection-failed-fix/)
 - [Claude Code for WebSocket Realtime Apps](/claude-skills-for-websocket-realtime-app-development/)

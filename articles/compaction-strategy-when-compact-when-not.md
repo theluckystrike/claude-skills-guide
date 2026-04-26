@@ -138,6 +138,8 @@ The optimal strategy (compaction at 80K) saves 50-60% compared to no compaction 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- detailed /compact mechanics and options
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- broader context management strategies
 - [Context Engineering for Claude Code](/context-engineering-claude-code-complete-guide-2026/) -- compaction as part of the context engineering framework

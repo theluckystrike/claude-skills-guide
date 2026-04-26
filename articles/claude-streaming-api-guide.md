@@ -289,6 +289,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Streaming Not Working](/claude-streaming-not-working/) -- troubleshoot streaming failures and mid-stream errors.
 - [Claude SDK Timeout Configuration](/claude-sdk-timeout-configuration-customization/) -- configure timeouts for streaming connections.
 - [Claude Extended Thinking API Guide](/claude-extended-thinking-api-guide/) -- stream extended thinking output in real time.

@@ -122,6 +122,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Msw Mock Service](/claude-code-msw-mock-service-worker-guide/)
 - [Claude Code for Consul Service](/claude-code-for-consul-service-discovery-workflow/)
 - [Claude Code for Workbox Service Worker](/claude-code-for-workbox-service-worker-workflow-guide/)

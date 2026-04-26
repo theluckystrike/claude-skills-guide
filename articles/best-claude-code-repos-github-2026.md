@@ -209,3 +209,5 @@ npx ccusage
 5. Evaluate [claude-task-master](https://github.com/eyaltoledano/claude-task-master) for task management
 
 For the full ecosystem map, see our [tools overview](/claude-code-ecosystem-complete-map-2026/). For comparing plugin types, read the [skills vs hooks vs commands guide](/claude-code-skills-vs-hooks-vs-commands-2026/). For CLAUDE.md setup, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

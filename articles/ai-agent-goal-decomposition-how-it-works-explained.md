@@ -132,6 +132,8 @@ By embracing this structured approach, you use the full potential of AI agents, 
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Flow tool guide](/claude-flow-tool-guide/) — How to use Claude Flow for multi-agent orchestration
 ---
 

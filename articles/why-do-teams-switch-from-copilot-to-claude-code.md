@@ -154,6 +154,8 @@ For teams already working in terminal environments, value transparency in AI rea
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

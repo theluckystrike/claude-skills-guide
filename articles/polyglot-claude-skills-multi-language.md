@@ -177,6 +177,8 @@ The skill's code blocks are large, which pushes it toward the 500-line SKILL.md 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills for Monorepo Projects](/claude-skills-for-monorepo-projects/) -- organizing skills across language-specific packages
 - [Claude Skill Composition Patterns](/claude-skill-composition-patterns/) -- combining language-specific skills
 - [Claude Skills Performance Optimization](/claude-skills-performance-optimization/) -- managing token cost of large polyglot skills

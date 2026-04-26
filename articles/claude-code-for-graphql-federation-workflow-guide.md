@@ -476,6 +476,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for GraphQL Directives Workflow](/claude-code-for-graphql-directives-workflow/)
 - [Claude Code for GraphQL Mutation Workflow Tutorial](/claude-code-for-graphql-mutation-workflow-tutorial/)
 - [Claude Code for Strawberry GraphQL Workflow Guide (2026)](/claude-code-for-strawberry-graphql-workflow-guide/)

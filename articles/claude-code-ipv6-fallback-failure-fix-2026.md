@@ -115,6 +115,8 @@ Long-running operations can exceed keep-alive timeouts on intermediate proxies a
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Prisma Generate Failure After Schema](/claude-code-prisma-generate-failure-fix-2026/)
 - [Pre-Commit Hook Failure on Claude — Fix (2026)](/claude-code-pre-commit-hook-failure-fix-2026/)
 - [TLS Version Negotiation Failure — Fix](/claude-code-tls-version-negotiation-failure-fix-2026/)

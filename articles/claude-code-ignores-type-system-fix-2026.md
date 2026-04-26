@@ -139,6 +139,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Vanilla Extract Type Safe](/claude-code-vanilla-extract-type-safe-css/)
 - [How to Make Claude Code Respect Module](/how-to-make-claude-code-respect-module-boundaries/)
 - [How to Make Claude Code Respect Your](/how-to-make-claude-code-respect-my-eslint-config/)

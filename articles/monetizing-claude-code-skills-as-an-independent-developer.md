@@ -107,6 +107,8 @@ Monetizing Claude Code skills isn't about finding shortcuts, it's about being ge
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

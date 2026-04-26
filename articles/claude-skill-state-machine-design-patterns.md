@@ -178,6 +178,8 @@ The key is starting simple, model your skill's flow on paper first, then transla
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

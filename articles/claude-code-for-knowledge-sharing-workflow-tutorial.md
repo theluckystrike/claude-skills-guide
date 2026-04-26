@@ -194,6 +194,8 @@ The power of Claude Code for knowledge sharing lies in making these workflows ex
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

@@ -215,6 +215,8 @@ Start with one workflow today, refine it based on usage, and expand gradually. Y
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

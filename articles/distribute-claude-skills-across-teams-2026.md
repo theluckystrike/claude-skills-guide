@@ -276,6 +276,8 @@ Without distribution infrastructure, each team reinvents the same Claude Code co
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Share Claude Skills with Team](/how-to-share-claude-skills-with-team/)
 - [Claude Skill Naming Conventions](/claude-skill-naming-conventions/)
 - [How Do I Test a Claude Skill Before Deploying to Team](/how-do-i-test-a-claude-skill-before-deploying-to-team/)

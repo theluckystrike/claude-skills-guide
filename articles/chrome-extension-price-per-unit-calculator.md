@@ -186,6 +186,8 @@ The key takeaway: do not arbitrarily pick a price. Calculate it based on your ac
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

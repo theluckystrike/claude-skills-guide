@@ -153,6 +153,8 @@ $99 once. Pays for itself in saved tokens within a week.
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Fix: Claude Code Slow Response Times](/claude-code-slow-response-fix/)
 - [Claude Code Cost for Agencies and Consultancies](/claude-code-cost-for-agencies-and-consultancies/)
 - [Claude Code Cost per Project Estimation Calculator Guide](/claude-code-cost-per-project-estimation-calculator-guide/)

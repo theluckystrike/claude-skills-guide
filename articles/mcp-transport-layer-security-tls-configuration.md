@@ -455,6 +455,8 @@ Take time to audit your current MCP deployments and identify any connections lac
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

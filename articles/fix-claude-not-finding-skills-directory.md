@@ -210,6 +210,8 @@ The `CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1` environment variable enable
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Unknown Skill Error in Claude Code](/fix-unknown-skill-error-claude-code/)
 - [Fix Claude Code Skills Not Showing Up](/fix-claude-code-skills-not-showing-up/)
 - [Claude Skills Folder Structure](/claude-skills-folder-structure/)

@@ -418,6 +418,8 @@ The key is to view Claude Code not as a replacement for your expertise, but as a
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -448,6 +448,8 @@ For next steps, explore integrating Flight with DuckDB's `read_parquet` over a F
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -185,6 +185,8 @@ The key is maintaining consistency in how you document intrusions. Once your tea
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -268,6 +268,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [AI Assisted Code Review Workflow Best Practices](/ai-assisted-code-review-workflow-best-practices/)
 - [Best Claude Skills for Code Review Automation](/best-claude-skills-for-code-review-automation/)
 - [Claude Code Subagents Guide](/claude-code-subagents-guide/)

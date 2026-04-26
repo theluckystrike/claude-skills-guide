@@ -201,6 +201,8 @@ Claude Code creates files and edits through standard filesystem operations, so a
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [CLAUDE.md for Database Conventions](/claude-md-database-conventions/)
 - [CLAUDE.md for Architecture Decisions](/claude-md-for-architecture-decisions/)
 - [CLAUDE.md Length Optimization](/claude-md-length-optimization/)

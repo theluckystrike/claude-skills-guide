@@ -230,6 +230,8 @@ The key is starting simple, default to static, then add interactivity only where
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

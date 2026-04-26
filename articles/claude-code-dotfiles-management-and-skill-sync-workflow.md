@@ -189,6 +189,8 @@ The initial setup takes maybe thirty minutes, but the time saved over months of 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

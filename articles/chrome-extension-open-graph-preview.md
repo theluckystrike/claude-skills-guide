@@ -238,6 +238,8 @@ Building an Open Graph preview extension gives you a practical tool for verifyin
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

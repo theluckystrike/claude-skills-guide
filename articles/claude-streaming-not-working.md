@@ -215,6 +215,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Streaming API Guide](/claude-streaming-api-guide/) -- complete tutorial on all streaming event types and patterns.
 - [Claude SDK Timeout Configuration](/claude-sdk-timeout-configuration-customization/) -- configure timeouts for streaming and non-streaming requests.
 - [Claude API Error 500 api_error Fix](/claude-api-error-500-apierror-explained/) -- handle server errors that can occur mid-stream.

@@ -475,6 +475,8 @@ Invest time in dry-run modes, progress tracking, and retry logic early. These pa
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

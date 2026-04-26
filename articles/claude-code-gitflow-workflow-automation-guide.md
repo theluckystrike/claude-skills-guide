@@ -172,6 +172,8 @@ The key benefits include: consistent branch management, automatic cleanup of mer
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

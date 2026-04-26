@@ -232,6 +232,8 @@ Scripts that produce continuous output (e.g., `npm test` with verbose logging) m
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Skill Infinite Loop](/fix-claude-skill-infinite-loop/)
 - [Claude Skills with Embedded Scripts](/claude-skills-with-embedded-scripts/)
 - [Testing Claude Skills Before Production](/testing-claude-skills-before-production/)

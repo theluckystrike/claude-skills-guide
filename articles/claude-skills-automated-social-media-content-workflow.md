@@ -237,6 +237,8 @@ Related Reading
 - [Claude Skills Auto Invocation: How It Works](/claude-skills-auto-invocation-how-it-works/). How skills activate automatically
 - [Claude Skills for Media Content Management Systems](/claude-skills-for-media-content-management-systems/)
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)

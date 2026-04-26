@@ -252,6 +252,8 @@ Building your own text expander gives you full control over triggers, expansions
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

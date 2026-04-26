@@ -164,6 +164,8 @@ The investment in establishing this workflow pays dividends as your application 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

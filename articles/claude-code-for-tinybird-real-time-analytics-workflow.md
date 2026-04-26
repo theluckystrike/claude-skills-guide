@@ -165,6 +165,8 @@ Start small, ingest a single event type and expose one endpoint. As your confide
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

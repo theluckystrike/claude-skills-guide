@@ -288,6 +288,8 @@ The investment is small. A well-crafted skill takes 15 to 30 minutes to write. T
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

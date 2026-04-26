@@ -178,6 +178,8 @@ The key is providing sufficient context, Buck2 projects can be complex with many
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

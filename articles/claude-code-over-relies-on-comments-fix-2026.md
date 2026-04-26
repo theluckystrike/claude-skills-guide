@@ -116,6 +116,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Over Engineers Simple](/claude-code-over-engineers-simple-solution-fix/)
 - [How to Stop Claude Code from Using](/how-to-stop-claude-code-from-using-snake-case-in-typescript/)
 - [Stop Claude Code Rewriting Entire Files](/claude-code-rewrites-instead-of-editing-fix-2026/)

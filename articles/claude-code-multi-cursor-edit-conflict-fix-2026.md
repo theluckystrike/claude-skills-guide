@@ -106,6 +106,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Test and Debug Multi Agent](/how-to-test-and-debug-multi-agent-workflows/)
 - [Claude Code Teams vs Cursor Teams](/claude-code-teams-vs-cursor-teams-enterprise-2026/)
 - [Cursor vs Copilot vs Claude Code (2026)](/cursor-vs-github-copilot-vs-claude-code-2026/)

@@ -363,6 +363,8 @@ For server-sent events specifically, Claude Code generates the EventSource wrapp
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

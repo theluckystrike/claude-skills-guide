@@ -269,6 +269,8 @@ Wiring Claude intelligence into GitHub Actions CI/CD [bridges the gap between au
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

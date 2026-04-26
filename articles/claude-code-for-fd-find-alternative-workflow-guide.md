@@ -73,6 +73,8 @@ Claude Code should run `fd -e test.ts -e spec.ts --changed-within 24h -x wc -l |
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Ripgrep Workflow Guide](/claude-code-for-ripgrep-workflow-guide/)
 - [Building a CLI Devtool with Claude Code Walkthrough](/building-a-cli-devtool-with-claude-code-walkthrough/)
 - [Why Is Claude Code Terminal Based Not GUI](/why-is-claude-code-terminal-based-not-gui-application/)

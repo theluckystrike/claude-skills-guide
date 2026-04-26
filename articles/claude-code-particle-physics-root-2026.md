@@ -288,6 +288,8 @@ print('Particle physics analysis: PASS')
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Quantum Computing (Qiskit)](/claude-code-quantum-computing-qiskit-2026/)
 - [Claude Code for Computational Chemistry (ORCA)](/claude-code-computational-chemistry-orca-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

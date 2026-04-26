@@ -218,6 +218,8 @@ PostgreSQL logical replication is an essential tool for building resilient, dist
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

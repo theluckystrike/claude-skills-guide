@@ -103,6 +103,8 @@ Multi-step procedures are the biggest size offenders:
 name: deploy
 description: Production deployment checklist
 disable-model-invocation: true
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 1. Run full test suite

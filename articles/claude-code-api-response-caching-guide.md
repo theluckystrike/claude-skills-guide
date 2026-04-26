@@ -216,6 +216,8 @@ By implementing proper caching with Claude Code, you can dramatically improve AP
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -293,6 +293,8 @@ Claude Code significantly simplifies NGINX WAF management by automating rule cre
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

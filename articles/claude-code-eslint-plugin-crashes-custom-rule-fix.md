@@ -132,6 +132,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Large File Crashes](/claude-code-crashes-on-large-files-how-to-fix/)
 - [Claude Code Crashes When Loading Skill](/claude-code-crashes-when-loading-skill-debug-steps/)
 - [Claude Code vs Cursor: Plugin Ecosystems Compared (2026)](/claude-code-vs-cursor-plugin-ecosystem-2026/)

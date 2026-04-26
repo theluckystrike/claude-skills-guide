@@ -201,6 +201,8 @@ The investment in teaching Claude Code proper async error handling pays dividend
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

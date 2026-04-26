@@ -182,6 +182,8 @@ React DevTools transforms how you debug React applications. By mastering these f
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

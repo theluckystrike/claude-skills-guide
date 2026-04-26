@@ -135,6 +135,8 @@ Restrict the MCP filesystem paths to only the directories Claude Code needs. Ins
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

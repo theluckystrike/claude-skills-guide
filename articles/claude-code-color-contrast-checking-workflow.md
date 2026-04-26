@@ -368,6 +368,8 @@ Teams that treat color contrast as a first-class quality metric. tracked in dash
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

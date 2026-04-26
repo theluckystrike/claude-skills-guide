@@ -167,6 +167,8 @@ The recommended approach is all three layers: Console for monthly protection, CL
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Dashboard: Built-In Usage Monitoring](/claude-code-dashboard-built-in-usage-monitoring/) -- understanding the /cost command output
 - [Claude Code Hooks for Token Budget Enforcement](/claude-code-hooks-token-budget-enforcement/) -- automated enforcement beyond alerting
 - [Claude Code Token Budget: How to Set Limits](/claude-code-token-budget-set-limits-track-spend/) -- complete budget management framework

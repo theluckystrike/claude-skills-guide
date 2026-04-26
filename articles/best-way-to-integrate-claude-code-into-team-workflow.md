@@ -164,6 +164,8 @@ The most successful team integrations emerge organically from solving real probl
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

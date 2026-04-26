@@ -225,6 +225,8 @@ python3 trading/strategies/mean_reversion.py
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Options Pricing](/claude-code-options-pricing-black-scholes-2026/)
 - [Claude Code for FIX Protocol](/claude-code-fix-protocol-message-handling-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

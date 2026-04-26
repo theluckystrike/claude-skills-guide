@@ -158,3 +158,5 @@ Backend context engineering represents the "supply side" of the context optimiza
 - [The Metadata-First Pattern](/metadata-first-pattern-npx-metadata-json/) -- structured metadata as an alternative to discovery queries
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- configuring MCP servers with minimal token overhead
 - [Karpathy Context Engineering + NASA P10: CCG Framework](/karpathy-context-engineering-nasa-p10-ccg-framework/)
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

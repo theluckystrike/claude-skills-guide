@@ -168,6 +168,8 @@ The best way to use Claude Code with TypeScript projects is treating types as a 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

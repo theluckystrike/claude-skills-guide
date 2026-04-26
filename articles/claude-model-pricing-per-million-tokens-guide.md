@@ -155,6 +155,8 @@ Track cost per request by model in your monitoring system. Compare your weekly A
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — detailed breakdown of what drives Claude API costs
 - [Claude Code Monthly Cost Breakdown](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/) — real-world cost estimates by usage pattern
 - [Claude Opus 4.6 vs GPT-4o Comparison](/claude-opus-46-vs-gpt-4o-for-coding-tasks-comparison/) — how Claude pricing compares to competitors

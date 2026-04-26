@@ -256,6 +256,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code SSH Key Passphrase Blocking — Fix (2026)](/claude-code-ssh-key-passphrase-prompt-blocking-fix/)
 - [Push Rejected After Claude Rebase Fix](/claude-code-push-rejected-after-rebase-fix-2026/)
 - [Claude API Invalid API Key Format Error — Fix (2026)](/claude-api-invalid-api-key-format-error-fix/)

@@ -147,6 +147,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Make Claude Code Follow Naming](/how-to-make-claude-code-follow-my-naming-conventions/)
 - [Make Claude Code Follow Coding](/claude-code-wont-follow-coding-standards-fix-2026/)
 - [How to Make Claude Code Follow Team](/how-to-make-claude-code-follow-team-style-guide/)

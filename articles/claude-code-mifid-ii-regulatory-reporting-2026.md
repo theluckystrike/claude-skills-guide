@@ -316,6 +316,8 @@ Claude Code creates files and edits through standard filesystem operations, so a
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Vitest Coverage Reporting](/claude-code-vitest-coverage-reporting-workflow-tutorial/)
 - [Claude Code Test Reporting Workflow](/claude-code-test-reporting-workflow-guide/)
 - [Chrome Browser Reporting API](/chrome-browser-reporting-api/)

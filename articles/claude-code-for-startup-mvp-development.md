@@ -342,6 +342,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Cost Per Project Estimation Calculator Guide](/claude-code-cost-per-project-estimation-calculator-guide/)
 - [Claude Code Setup on Mac Step by Step](/claude-code-setup-on-mac-step-by-step/)
 - [Before and After Switching to Claude Code Workflow](/before-and-after-switching-to-claude-code-workflow/)

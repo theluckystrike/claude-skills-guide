@@ -111,6 +111,8 @@ The 5% quality gap matters when errors are expensive. If a wrong classification 
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Haiku vs GPT-4o Mini Cost Showdown](/claude-cost-haiku-vs-gpt4o-mini-cheap-tier/)
 - [The Cheapest Model for Your Workload](/claude-cost-cheapest-model-workload-calculator/)
 - [The Hybrid Stack: Claude for X, GPT for Y, Gemini for Z](/claude-cost-hybrid-stack-claude-gpt-gemini/)

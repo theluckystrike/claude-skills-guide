@@ -71,6 +71,8 @@ Claude Code should create modular `.tf` files using `tofu`-compatible syntax, de
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)
 - [Claude Code Atlantis Terraform Automation](/claude-code-atlantis-terraform-automation/)
 - [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)

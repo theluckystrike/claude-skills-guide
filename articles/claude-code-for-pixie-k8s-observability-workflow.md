@@ -368,6 +368,8 @@ The most effective teams treat Claude Code not as a one-time script generator bu
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

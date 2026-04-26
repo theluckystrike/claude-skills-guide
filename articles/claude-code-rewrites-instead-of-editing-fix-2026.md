@@ -109,6 +109,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Merge Conflict in Claude-Edited Files — Fix (2026)](/claude-code-merge-conflict-edited-files-fix-2026/)
 - [Claude Code Git Lfs Large Files](/claude-code-git-lfs-large-files-workflow/)
 - [Claude Code Stop Modifying Files](/how-to-make-claude-code-stop-adding-markdown-to-code/)

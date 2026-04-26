@@ -241,6 +241,8 @@ Effective prompts for Claude Code share common characteristics: clear task frami
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

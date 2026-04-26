@@ -358,6 +358,8 @@ The key is finding the right balance, using AI assistance for repetitive tasks a
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

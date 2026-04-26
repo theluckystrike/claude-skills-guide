@@ -475,6 +475,8 @@ The combination of Claude Code, React Email, and Resend creates a powerful email
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

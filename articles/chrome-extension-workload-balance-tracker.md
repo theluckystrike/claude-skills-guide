@@ -345,6 +345,8 @@ Start with a one-file prototype in 50 lines of JavaScript, run it for a week, an
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

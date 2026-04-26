@@ -169,6 +169,8 @@ For more on building your command vocabulary, see the [custom commands guide](/h
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude shortcuts guide](/claude-shortcuts-complete-guide/) — Complete guide to Claude Code keyboard shortcuts and slash commands
 
 - [save Claude Code conversations](/claude-code-save-conversation-guide/) — How to save, export, and resume Claude Code conversations

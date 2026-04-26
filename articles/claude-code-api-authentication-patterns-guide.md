@@ -404,6 +404,8 @@ The most effective approach is to involve Claude Code early. before you start wr
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

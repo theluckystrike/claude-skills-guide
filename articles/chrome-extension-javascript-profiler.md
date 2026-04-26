@@ -272,6 +272,8 @@ Focus on the areas that most affect user experience: message passing latency, st
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

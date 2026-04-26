@@ -569,6 +569,8 @@ By combining CODEOWNERS respect, live load checking, expertise matching, and ava
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

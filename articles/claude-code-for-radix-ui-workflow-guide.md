@@ -69,6 +69,8 @@ Claude Code should use `<Dialog.Root>` controlled by a keyboard shortcut listene
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
 - [Claude Code Accessibility Regression Testing](/claude-code-accessibility-regression-testing/)
 - [Claude Code Accessible Forms Validation Error Handling Guide](/claude-code-accessible-forms-validation-error-handling-guide/)

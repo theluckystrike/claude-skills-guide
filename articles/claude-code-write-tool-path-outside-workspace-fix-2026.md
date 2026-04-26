@@ -89,6 +89,8 @@ Claude Code sandboxes file operations to the current workspace directory for sec
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Write Token-Efficient Claude](/write-token-efficient-claude-code-skills/)
 - [How to Make Claude Code Write](/how-to-make-claude-code-write-performant-sql-queries/)
 - [How to Make Claude Code Write Secure](/how-to-make-claude-code-write-secure-code-always/)

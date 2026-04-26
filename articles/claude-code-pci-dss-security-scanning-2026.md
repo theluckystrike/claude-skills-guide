@@ -310,6 +310,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Fix Security Vulnerabilities](/claude-code-for-open-source-security-vulnerability-fix/)
 - [CLAUDE.md for Security Rules](/claude-md-security-rules/)
 - [Claude Code Kubernetes RBAC Security](/claude-code-kubernetes-rbac-security-guide/)

@@ -268,6 +268,8 @@ rm -f /tmp/test-type-error.ts
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Structured Error Returns](/structured-error-returns-format-affects-agent-tokens/) -- complementary pattern for error output format
 - [How to Stop Claude Code Retry Loops](/stop-claude-code-retry-loops-token-waste/) -- preventing error-driven loops
 - [Errors Atlas](/errors-atlas/) -- complete error reference

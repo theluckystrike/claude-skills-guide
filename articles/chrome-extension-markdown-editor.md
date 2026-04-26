@@ -254,6 +254,8 @@ Building a Chrome extension markdown editor combines familiar web technologies w
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

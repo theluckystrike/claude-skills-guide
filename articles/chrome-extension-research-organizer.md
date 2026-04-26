@@ -422,6 +422,8 @@ The beauty of building your own organizer is tailoring it exactly to your workfl
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

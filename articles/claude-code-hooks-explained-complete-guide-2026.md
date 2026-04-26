@@ -222,6 +222,8 @@ For a detailed comparison, see our [skills vs hooks vs commands article](/claude
 
 ## FAQ
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 ### Do hooks consume tokens?
 The hook output is returned to Claude Code and consumes tokens. The hook configuration itself does not. Keep output minimal to control costs.
 

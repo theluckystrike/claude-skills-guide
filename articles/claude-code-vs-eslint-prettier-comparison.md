@@ -82,6 +82,8 @@ The key insight: ESLint + Prettier should catch everything expressible as a rule
 
 ## FAQ
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 ### Should I use Claude Code to fix ESLint errors?
 Yes, this is an excellent use case. When ESLint reports errors, Claude Code can fix them in ways that respect your code's intent rather than applying mechanical fixes. For example, fixing a "function too long" warning by intelligently extracting meaningful sub-functions rather than arbitrarily splitting at line 50.
 

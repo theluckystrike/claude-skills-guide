@@ -280,6 +280,8 @@ For developers, the additional steps of vacuuming the SQLite database, profiling
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

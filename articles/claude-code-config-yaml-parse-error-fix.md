@@ -127,6 +127,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Enterprise Setup and Config](/claude-code-enterprise-setup-guide-2026/)
 - [How to Use VSCode Reload: Hot Config](/claude-code-for-hot-config-reload-workflow-guide/)
 - [Claude Code for AWS Config Rules](/claude-code-for-aws-config-rules-workflow/)

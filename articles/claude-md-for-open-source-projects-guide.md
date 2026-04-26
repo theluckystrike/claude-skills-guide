@@ -265,6 +265,8 @@ Remember: the goal isn't to replace human judgment but to augment it, helping bo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

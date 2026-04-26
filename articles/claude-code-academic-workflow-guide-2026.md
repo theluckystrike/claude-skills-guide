@@ -220,4 +220,6 @@ Yes, with supervision. The rules enforce good practices but can't replace unders
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Set Up Academic Workflow in Claude Code (2026)](/how-to-setup-academic-workflow-claude-code-2026/)

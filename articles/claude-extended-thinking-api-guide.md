@@ -275,6 +275,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Extended Thinking Not Working](/claude-extended-thinking-not-working/) -- troubleshoot thinking parameter errors.
 - [Claude Tool Use Not Working](/claude-tool-use-not-working/) -- fix tool_choice conflicts with thinking.
 - [Claude Prompt Caching API Guide](/claude-prompt-caching-api-guide/) -- optimize caching alongside thinking.

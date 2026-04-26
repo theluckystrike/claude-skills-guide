@@ -144,3 +144,5 @@ For managing CLAUDE.md across multiple repositories, see the [version control st
 ## Related Articles
 
 - [Update Team CLAUDE.md Without Breaking Existing Workflows (2026)](/updating-team-claude-md-without-breaking-workflows/)
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

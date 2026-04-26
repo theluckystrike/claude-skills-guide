@@ -128,6 +128,8 @@ The key is starting simple, create a basic retrospective skill, use it for a few
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -122,6 +122,8 @@ Developers who try to use Claude Code for quick edits feel frustrated by the lat
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Cursor: Autocomplete and Code Completion](/claude-code-vs-cursor-autocomplete-comparison/)
 - [Claude Code vs Cursor: Plugin Ecosystems (2026)](/claude-code-vs-cursor-plugin-ecosystem-2026/)
 - [Claude Code vs Cursor: Setup and First Experience Compared](/claude-code-vs-cursor-setup-first-experience/)

@@ -121,3 +121,5 @@ The key insight: Sourcery prevents quality degradation continuously, while Claud
 - [Claude Code vs Qodo: Testing-First AI](/claude-code-vs-qodo-testing-first-ai-2026/)
 - [Claude Code vs Aider: CLI Coding Compared](/claude-code-vs-aider-for-test-driven-development/)
 - [Best AI Tools for Code Refactoring](/best-ai-tools-for-code-refactoring-2026/)
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

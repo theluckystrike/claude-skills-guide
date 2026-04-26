@@ -211,6 +211,8 @@ If you have not yet written the vLLM inference server itself, the companion guid
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

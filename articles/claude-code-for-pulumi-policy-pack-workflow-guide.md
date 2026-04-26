@@ -249,6 +249,8 @@ Start small, implement a few critical policies, and expand gradually. The key is
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

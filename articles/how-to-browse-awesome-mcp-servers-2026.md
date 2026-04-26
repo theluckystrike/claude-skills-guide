@@ -155,3 +155,5 @@ Before installing any server from the directory, check these signals:
 - Compare the Awesome list with [Templates MCP section](/awesome-mcp-servers-vs-claude-code-templates-mcp-2026/)
 - Explore [best MCP servers for Claude Code](/best-mcp-servers-for-claude-code-2026/)
 - Set up [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) that work alongside your MCP servers
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

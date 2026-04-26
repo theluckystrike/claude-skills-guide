@@ -177,6 +177,8 @@ One final note: async retrospectives require facilitators who can write clearly 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

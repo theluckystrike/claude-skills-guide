@@ -178,6 +178,8 @@ Point developers to these ecosystem resources:
 
 ## FAQ
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 ### How long until developers are productive?
 Most developers see net productivity gains by week 2. Full proficiency (knowing when and how to use Claude Code effectively) takes 3-4 weeks.
 

@@ -103,5 +103,7 @@ Bookmark Awesome Claude Code at awesomeclaude.ai for ongoing tool discovery. Clo
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Awesome Claude Code: Master Resource Index (2026)](/awesome-claude-code-master-index-guide-2026/)
 - [Awesome Claude Code Toolkit: 135 Agents (2026)](/awesome-claude-code-toolkit-135-agents-2026/)

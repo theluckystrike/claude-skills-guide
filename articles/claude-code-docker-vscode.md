@@ -103,6 +103,8 @@ Hooks configured in `.claude/hooks/` execute inside the container, giving them a
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -237,6 +237,8 @@ Related Reading
 - [Claude Caching for Multi-Turn Conversations](/claude-caching-multi-turn-conversations/)
 - [Claude Model Pricing Per Million Tokens Guide](/claude-model-pricing-per-million-tokens-guide/)
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)

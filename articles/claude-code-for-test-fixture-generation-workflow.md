@@ -582,6 +582,8 @@ The key is treating Claude Code as a collaborative partner in your testing proce
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

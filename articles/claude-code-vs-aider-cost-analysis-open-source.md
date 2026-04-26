@@ -203,6 +203,8 @@ Pricing last verified: April 2026.
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Cursor: Monthly Cost Comparison](/claude-code-vs-cursor-monthly-cost-comparison-2026/) -- comparison with Cursor
 - [Cost Optimization Hub](/cost-optimization/) -- reduce API costs regardless of tool choice
 - [Comparisons Hub](/compare/) -- all tool comparisons

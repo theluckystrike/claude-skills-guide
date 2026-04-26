@@ -142,6 +142,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix: Claude Code Slow Response Times](/claude-code-slow-response-fix/)
 - [Claude Code Dotenv Configuration Workflow](/claude-code-dotenv-configuration-workflow/)
 - [Fix: Claude Code Slow Response and Performance](/claude-code-slow-fix/)

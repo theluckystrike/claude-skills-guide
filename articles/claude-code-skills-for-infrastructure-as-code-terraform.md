@@ -324,6 +324,8 @@ Experiment with different skill combinations to find what works best for your te
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

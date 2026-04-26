@@ -517,6 +517,8 @@ Remember that premature optimization can add complexity without benefit. Always 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

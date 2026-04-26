@@ -200,4 +200,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Switching From Xcode To Claude — Complete Developer Guide](/switching-from-xcode-to-claude-code-guide/)

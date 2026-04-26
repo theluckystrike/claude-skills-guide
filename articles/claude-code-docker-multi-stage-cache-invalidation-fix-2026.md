@@ -129,6 +129,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Turborepo Cache Miss — Fix](/claude-code-turborepo-cache-miss-fix/)
 - [How to Test and Debug Multi Agent](/how-to-test-and-debug-multi-agent-workflows/)
 - [Claude Code for Docker Image Publishing](/claude-code-for-docker-image-publishing-workflow-guide/)

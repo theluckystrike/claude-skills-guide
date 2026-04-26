@@ -360,6 +360,8 @@ Run this test after any changes to your classification prompt or model selection
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

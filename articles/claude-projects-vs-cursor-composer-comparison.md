@@ -89,6 +89,8 @@ Cursor Composer is better for active multi-file code editing because it operates
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can I use Claude Code instead of both?
 Yes. Claude Code provides file editing capabilities (like Cursor Composer) and can read your entire project context (like Claude Projects). It runs in the terminal rather than a visual IDE, which some developers prefer and others find limiting. For developers comfortable in the terminal, Claude Code alone covers most use cases of both tools.
 

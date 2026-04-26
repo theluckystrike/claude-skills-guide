@@ -475,6 +475,8 @@ Remember: effective tracing requires balance. Instrument too little, and you won
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

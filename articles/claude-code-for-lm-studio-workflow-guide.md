@@ -70,6 +70,8 @@ Claude Code should configure the OpenAI client with `base_url="http://localhost:
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Ollama Local LLM Workflow Guide](/claude-code-for-ollama-local-llm-workflow-guide/)
 - [Claude Code for Groq Inference Workflow Guide](/claude-code-for-groq-inference-workflow-guide/)
 - [Claude Code for LangChain Framework Workflow Guide](/claude-code-for-langchain-framework-workflow-guide/)

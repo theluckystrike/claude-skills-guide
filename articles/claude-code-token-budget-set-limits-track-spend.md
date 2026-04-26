@@ -142,6 +142,8 @@ ccusage --days 7 --format table
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [How to Reduce Claude Code Token Usage by 3x](/reduce-claude-code-token-usage-3x-guide-2026/) -- comprehensive token reduction strategies
 - [Claude Code Cost Alerts: Set Up Notifications When Spend Exceeds Budget](/claude-code-cost-alerts-notifications-budget/) -- detailed alerting configuration
 - [Claude Code Hooks for Token Budget Enforcement](/claude-code-hooks-token-budget-enforcement/) -- automated enforcement with hooks

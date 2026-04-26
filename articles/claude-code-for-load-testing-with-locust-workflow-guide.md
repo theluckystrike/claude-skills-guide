@@ -251,6 +251,8 @@ Start with simple tests, iterate on them as your application evolves, and build 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

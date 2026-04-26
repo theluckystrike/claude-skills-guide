@@ -116,6 +116,8 @@ Use `.claude/rules/` to scope API rules to route files:
 ---
 paths:
   - "src/routes/**/*.ts"
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 ## Route Implementation Rules

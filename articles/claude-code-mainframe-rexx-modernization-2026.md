@@ -264,6 +264,8 @@ cd ~/rexx-migration/output && python3 -m pytest tests/ -v
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for COBOL to Java Migration](/claude-code-cobol-to-java-migration-2026/)
 - [Claude Code for Natural/ADABAS Migration](/claude-code-natural-adabas-migration-2026/)
 - [Claude Code for Ada Legacy System Updates](/claude-code-ada-legacy-system-updates-2026/)

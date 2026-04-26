@@ -307,6 +307,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Database Seeding Automation](/claude-code-database-seeding-automation/)
 - [Claude Code Database Test Fixtures Guide](/claude-code-database-test-fixtures-guide/)
 - [Claude Code Testcontainers Integration Testing](/claude-code-testcontainers-integration-testing/)

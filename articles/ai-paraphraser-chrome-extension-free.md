@@ -199,6 +199,8 @@ Whether you use existing extensions or build your own, integrating AI paraphrasi
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

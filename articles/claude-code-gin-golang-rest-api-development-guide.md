@@ -288,6 +288,8 @@ Start with a clear project structure, use middleware for cross-cutting concerns,
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

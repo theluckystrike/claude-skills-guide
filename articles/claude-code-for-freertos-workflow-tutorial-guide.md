@@ -611,6 +611,8 @@ The patterns shown here. static allocation throughout, ISR-safe primitives, wate
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

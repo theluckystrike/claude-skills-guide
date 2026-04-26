@@ -310,6 +310,8 @@ Persistent volumes provide essential durability for stateful applications in Kub
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

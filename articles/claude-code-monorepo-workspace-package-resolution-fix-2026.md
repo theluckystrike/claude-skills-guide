@@ -139,6 +139,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [CLAUDE.md Conflict Resolution](/claude-md-conflict-resolution/)
 - [Claude Code Merge Conflict Resolution](/claude-code-merge-conflict-resolution-guide/)
 - [DNS Resolution Timeout Error — Fix](/claude-code-dns-resolution-timeout-fix-2026/)

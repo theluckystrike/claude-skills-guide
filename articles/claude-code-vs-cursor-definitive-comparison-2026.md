@@ -520,6 +520,8 @@ Claude Code and Cursor represent two different visions of AI-assisted developmen
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Codex vs Claude Code](/codex-vs-claude-code-comparison-2026/) — OpenAI Codex vs Claude Code head-to-head
 - [How to use Claude Code](/how-to-use-claude-code-beginner-guide/) — beginner walkthrough
 - [Claude Code hooks](/claude-code-hooks-complete-guide/) — automation hooks Cursor lacks

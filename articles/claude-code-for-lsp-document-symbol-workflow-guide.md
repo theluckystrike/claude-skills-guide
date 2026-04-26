@@ -755,4 +755,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for LaTeX Document Workflow 2026](/claude-code-latex-document-workflow-2026/)

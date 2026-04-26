@@ -256,6 +256,8 @@ Remix's error boundaries combined with nested routes give you precise control ov
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -187,6 +187,8 @@ If you rename a skill directory while Claude Code is running, the old name becom
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Skills Not Showing Up](/fix-claude-code-skills-not-showing-up/)
 - [Fix Claude Not Finding Skills Directory](/fix-claude-not-finding-skills-directory/)
 - [Build Your First Claude Code Skill](/building-your-first-claude-skill/)

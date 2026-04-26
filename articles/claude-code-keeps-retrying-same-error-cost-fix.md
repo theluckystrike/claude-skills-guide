@@ -128,6 +128,8 @@ The compaction alone saves significant money on remaining turns. If the context 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code infinite loop detection](/claude-code-infinite-loop-detection-stop-drains-tokens/) -- detecting and stopping broader loop patterns
 - [CLAUDE.md as Cost Control](/claude-md-cost-control-rules-prevent-token-waste/) -- comprehensive CLAUDE.md cost prevention rules
 - [Edge Function Debugging: Prevent Retry Spirals](/edge-function-debugging-prevent-retry-token-spirals/) -- retry prevention for deployment scenarios

@@ -154,6 +154,8 @@ Remember that compliance automation augments your security program rather than r
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

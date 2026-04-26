@@ -208,6 +208,8 @@ Build the habit of giving Claude Code full context, table sizes, downstream depe
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

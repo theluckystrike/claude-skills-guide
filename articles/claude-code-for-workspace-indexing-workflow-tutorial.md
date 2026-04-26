@@ -355,6 +355,8 @@ The workflows described here, cross-file refactoring, context-aware debugging, a
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

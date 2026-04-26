@@ -200,6 +200,8 @@ Enterprise plans provide managed settings, audit logging, and compliance control
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can I try Pro features before subscribing?
 
 Anthropic occasionally offers trial periods. Check the Claude.ai pricing page for current promotions. The free tier lets you evaluate core functionality before upgrading.

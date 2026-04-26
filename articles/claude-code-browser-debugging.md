@@ -125,6 +125,8 @@ Claude Code hooks can automate error capture. A post-build hook that runs Lighth
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

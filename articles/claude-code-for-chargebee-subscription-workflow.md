@@ -248,6 +248,8 @@ Remember to provide Claude Code with relevant context about your existing codeba
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

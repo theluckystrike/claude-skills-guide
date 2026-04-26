@@ -372,6 +372,8 @@ These techniques work regardless of which skills you are using and help you main
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -336,6 +336,8 @@ Use Haiku for simple tasks, Sonnet for moderate tasks, and avoid Opus unless the
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [ccusage cost tracking setup](/ccusage-claude-code-cost-tracking-guide-2026/) — install and use ccusage
 - [Reduce Claude Code spend](/claude-code-costs-too-much-reduce-spend-2026/) — actionable cost reduction tactics
 - [Best cost-saving tools](/best-claude-code-cost-saving-tools-2026/) — third-party cost monitoring

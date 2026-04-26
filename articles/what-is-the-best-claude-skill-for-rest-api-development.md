@@ -134,6 +134,8 @@ Remember that these skills work well together. You don't have to choose just one
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

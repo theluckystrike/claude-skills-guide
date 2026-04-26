@@ -68,6 +68,8 @@ Claude Code should produce the PowerSync schema definition in `schema.ts`, a syn
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Best Way to Use Claude Code for Database Migrations](/best-way-to-use-claude-code-for-database-migrations/)
 - [Claude Code for Yjs CRDT Workflow Guide](/claude-code-for-yjs-crdt-workflow-guide/)
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)

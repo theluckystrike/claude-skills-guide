@@ -135,6 +135,8 @@ The workflow suits teams of all sizes, from small startups managing a few resour
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

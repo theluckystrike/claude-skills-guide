@@ -289,6 +289,8 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Writing Assistant Chrome Extension](/chrome-extension-writing-assistant/)
 - [Claude Code Skills for Writing](/claude-code-skills-for-writing-integration-tests/)
 - [Claude Code For Writing](/claude-code-for-writing-contributingmd-files-guide/)

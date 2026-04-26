@@ -248,6 +248,8 @@ Claude Code creates files and edits through standard filesystem operations, so a
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Version History and Changes](/claude-code-version-history-changes-2026/)
 - [Fix Claude Md Changes Not Taking Effect](/claude-md-changes-not-taking-effect-fix-guide/)
 - [Make Claude Code Explain Its Changes](/claude-code-doesnt-explain-changes-fix-2026/)

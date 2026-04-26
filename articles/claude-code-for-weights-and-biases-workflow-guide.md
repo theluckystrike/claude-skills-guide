@@ -287,6 +287,8 @@ The key is to establish good logging practices early and use Claude's understand
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

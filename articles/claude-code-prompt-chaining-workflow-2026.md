@@ -211,6 +211,8 @@ Single prompts hit complexity limits. Chaining breaks complex tasks into focused
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Batch Processing: Queue Prompts 2026](/claude-code-batch-processing-queue-prompts-2026/)
 - [Claude Opus Orchestrator Sonnet Worker Architecture](/claude-opus-orchestrator-sonnet-worker-architecture/)
 - [Claude Code Tmux Session Management Multi-Agent Workflow](/claude-code-tmux-session-management-multi-agent-workflow/)

@@ -90,4 +90,6 @@ If you only need autocomplete and nothing else, GitHub Copilot at $10/month or C
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Cline: Setup and Configuration](/claude-code-vs-cline-setup-comparison/)

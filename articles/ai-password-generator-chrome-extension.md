@@ -255,6 +255,8 @@ Building an AI password generator extension gives you complete control over your
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

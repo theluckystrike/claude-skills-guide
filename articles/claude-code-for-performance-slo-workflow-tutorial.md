@@ -223,6 +223,8 @@ Claude Code makes it straightforward to define, measure, and maintain performanc
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -225,6 +225,8 @@ If a loop consumed significant tokens or left your codebase in a partial state:
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

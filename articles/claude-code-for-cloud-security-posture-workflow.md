@@ -223,6 +223,8 @@ Remember that automation amplifies both good and bad practices. Invest time in p
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -229,6 +229,8 @@ For teams adopting Claude Code, investing time in building a skill library pays 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

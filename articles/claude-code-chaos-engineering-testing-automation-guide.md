@@ -338,6 +338,8 @@ The key is starting simple, run one small experiment, learn from the results, an
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

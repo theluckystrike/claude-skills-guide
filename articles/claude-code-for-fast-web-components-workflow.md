@@ -288,6 +288,8 @@ Start with one component, establish your patterns, and expand your Claude Code s
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

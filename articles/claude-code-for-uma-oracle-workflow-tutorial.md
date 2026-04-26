@@ -198,6 +198,8 @@ The key to success is treating Claude Code as a collaborative partner, use it fo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

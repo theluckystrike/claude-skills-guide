@@ -245,6 +245,8 @@ Start by establishing clear guidelines in your CLAUDE.md, create reusable module
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

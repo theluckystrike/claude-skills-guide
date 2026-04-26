@@ -124,6 +124,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [PATH Not Updated After Install — Fix](/claude-code-path-not-updated-after-install-fix-2026/)
 - [Claude Code Golden Path Templates &](/claude-code-golden-path-templates-workflow-tutorial/)
 - [Wrong Node.js Version in PATH Fix](/claude-code-wrong-node-version-in-path-fix-2026/)

@@ -169,6 +169,8 @@ Tips from studying the most-starred ecosystem repos:
 
 ## FAQ
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 ### Do I need permission to build ecosystem tools?
 No. Claude Code's extension points (CLAUDE.md, hooks, commands, MCP) are open by design. Build freely.
 

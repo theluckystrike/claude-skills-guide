@@ -237,6 +237,8 @@ Start with simple pipelines and gradually incorporate advanced features like com
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

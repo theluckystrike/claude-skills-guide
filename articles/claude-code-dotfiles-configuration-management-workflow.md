@@ -179,6 +179,8 @@ Claude Code transforms dotfiles management from a manual, error-prone process in
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

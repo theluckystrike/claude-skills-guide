@@ -120,6 +120,8 @@ Long-running operations can exceed keep-alive timeouts on intermediate proxies a
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Apache Kafka MCP Server for Event](/apache-kafka-mcp-server-event-streaming-guide/)
 - [Claude Code For Node.js Event](/claude-code-for-nodejs-event-loop-workflow-guide/)
 - [Claude Skills Event Driven Architecture](/claude-skills-event-driven-architecture-setup/)

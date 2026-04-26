@@ -114,6 +114,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Full Stack Developer](/claude-code-full-stack-developer-feature-shipping-workflow/)
 - [Full Stack Web App with Claude Skills](/full-stack-web-app-with-claude-skills-step-by-step/)
 - [Output Channel Buffer Full Truncated — Fix (2026)](/claude-code-output-channel-buffer-full-fix-2026/)

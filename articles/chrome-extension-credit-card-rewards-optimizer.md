@@ -329,6 +329,8 @@ For comprehensive optimization, pair your extension with manual tracking for off
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

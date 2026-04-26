@@ -265,6 +265,8 @@ For deeper integration with Claude's ecosystem, explore how MCP servers can use 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

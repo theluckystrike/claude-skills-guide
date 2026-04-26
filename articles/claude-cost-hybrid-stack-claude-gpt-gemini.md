@@ -117,6 +117,8 @@ The routing layer itself can be as simple as a dictionary mapping task types to 
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude vs GPT-4o Honest Cost Breakdown](/claude-cost-claude-vs-gpt4-honest-cost-breakdown/)
 - [Claude vs Gemini Cost Per Capability](/claude-cost-claude-vs-gemini-cost-per-capability/)
 - [Open Source LLMs as Cost Floor](/claude-cost-open-source-llm-cost-floor/)

@@ -499,6 +499,8 @@ Remember: good benchmarks are repeatable, comparable, and representative of real
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

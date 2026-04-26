@@ -293,6 +293,8 @@ yosys -m ghdl -p "ghdl --std=08 ../rtl/fifo.vhd -e sync_fifo; synth_ecp5; write_
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for FPGA Development](/claude-code-for-fpga-development-workflow-tutorial/)
 - [Claude Code for SystemVerilog Testbenches](/claude-code-systemverilog-testbench-gen-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

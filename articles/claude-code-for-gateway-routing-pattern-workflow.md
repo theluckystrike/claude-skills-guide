@@ -280,6 +280,8 @@ Remember that gateway routing is not a set-it-and-forget-it configuration. Conti
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

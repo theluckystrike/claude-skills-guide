@@ -157,6 +157,8 @@ MLS data licensing typically prohibits storing listing photos beyond 48 hours af
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Skills for Financial Analysis](/claude-skills-for-financial-analysis/) -- REIT and investment valuation
 - [Claude Skills for E-Commerce Platforms](/claude-skills-for-ecommerce-platforms/) -- listing marketplace patterns
 - [Claude Skills for Academic Research](/claude-skills-for-academic-research/) -- housing market data analysis

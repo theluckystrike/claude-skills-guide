@@ -115,6 +115,8 @@ Claude Code creates files and edits through standard filesystem operations, so a
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Tool Use Hidden Token Costs](/claude-tool-use-hidden-token-costs-explained/)
 - [Reduce Claude Code API Costs by 50%](/claude-code-reduce-api-costs-guide/)
 - [Audit Claude Code Costs Monthly](/how-to-audit-claude-code-costs-monthly-2026/)

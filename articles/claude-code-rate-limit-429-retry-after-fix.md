@@ -122,6 +122,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code API Rate Limit Reached](/claude-code-api-error-rate-limit-reached/)
 - [Anthropic Rate Limit Tokens Per Minute — Fix (2026)](/claude-code-anthropic-rate-limit-tokens-per-minute-fix-2026/)
 - [Fix Claude Rate Exceeded Error (2026)](/claude-rate-exceeded-error-fix/)

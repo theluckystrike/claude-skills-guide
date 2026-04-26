@@ -404,6 +404,8 @@ Building a YouTube thumbnail downloader extension requires understanding URL pat
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -323,6 +323,8 @@ Start with clear configuration in your CLAUDE.md, break complex tasks into manag
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

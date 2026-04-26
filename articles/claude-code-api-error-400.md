@@ -100,6 +100,8 @@ For more on this topic, see [Fix Claude Code Forgetting Decisions](/claude-code-
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude internal server error fix](/claude-internal-server-error-fix/) — Fix Claude internal server error (500/overloaded)
 ---
 

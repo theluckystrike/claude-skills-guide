@@ -324,6 +324,8 @@ The key is starting simple: document a single function in Spanish, refine your t
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

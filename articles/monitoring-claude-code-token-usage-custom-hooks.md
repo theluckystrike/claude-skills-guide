@@ -358,5 +358,7 @@ This two-layer approach -- hooks for granularity, ccusage for accuracy -- provid
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- complete hooks reference
 - [Cost Optimization Hub](/cost-optimization/) -- use monitoring data to apply targeted optimizations

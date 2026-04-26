@@ -465,6 +465,8 @@ The key insight is that Reddit's community signal is a leading indicator. Topics
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

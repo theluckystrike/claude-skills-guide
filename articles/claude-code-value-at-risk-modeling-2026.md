@@ -318,6 +318,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Skills for Financial Modeling](/claude-skills-for-financial-modeling-excel-alternative/)
 - [Claude Code for AI Risk Assessment](/claude-code-for-ai-risk-assessment-workflow-guide/)
 - [Resale Value Estimator Chrome Extension](/chrome-extension-resale-value-estimator/)

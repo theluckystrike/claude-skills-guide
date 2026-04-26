@@ -240,6 +240,8 @@ The best bootcamp students combine AI assistance with deep engagement. Let Claud
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

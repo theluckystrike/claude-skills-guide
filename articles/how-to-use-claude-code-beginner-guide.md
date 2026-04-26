@@ -765,6 +765,8 @@ Claude Code runs in the terminal independently of your editor. You can use it al
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [CLAUDE.md Best Practices Definitive Guide](/claude-md-best-practices-definitive-guide/)
 - [Claude Code Statusline Guide](/claude-code-statusline-guide/)
 - [Claude Code Hooks Complete Guide](/claude-code-hooks-complete-guide/)

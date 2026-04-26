@@ -232,3 +232,5 @@ If skills are not producing expected savings, check:
 - [Context Engineering vs Prompt Engineering](/context-engineering-vs-prompt-engineering-agents/) -- the theoretical framework
 - [CLAUDE.md Token Optimization](/claude-md-token-optimization-rules-save-money/) -- optimizing the always-loaded context
 - [Karpathy Context Engineering + NASA P10: CCG Framework](/karpathy-context-engineering-nasa-p10-ccg-framework/)
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

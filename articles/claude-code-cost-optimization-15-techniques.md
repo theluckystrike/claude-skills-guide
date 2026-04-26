@@ -425,6 +425,8 @@ Running this script takes 30 seconds and captures the majority of savings availa
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- deep dive on context compression
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- understanding the token lifecycle
 - [Cost Optimization Hub](/cost-optimization/) -- all cost guides in one place

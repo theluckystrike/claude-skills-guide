@@ -173,6 +173,8 @@ Start with simple deployments and gradually incorporate more advanced patterns a
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

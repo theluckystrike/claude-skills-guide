@@ -137,6 +137,8 @@ Mistakes will happen. The developers who get the most from Claude Code aren't th
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

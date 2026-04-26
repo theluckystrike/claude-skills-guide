@@ -157,6 +157,8 @@ The workflows outlined in this guide provide starting points, but the true power
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

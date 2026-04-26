@@ -164,6 +164,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix: Claude Code OAuth Login Paste Not Working](/claude-code-oauth-login-paste-not-working/)
 - [Claude Code Install Guide](/claude-code-install-guide/)
 - [Fix: Claude API Error 400 Invalid Request](/claude-api-error-400-invalidrequesterror-explained/)

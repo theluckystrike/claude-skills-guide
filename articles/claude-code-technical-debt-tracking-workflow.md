@@ -204,6 +204,8 @@ The skills referenced here, supermemory, tdd, linear-mcp-server, jira-mcp-server
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

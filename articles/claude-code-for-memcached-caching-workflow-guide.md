@@ -450,6 +450,8 @@ The combination of Claude Code's scripting capabilities and Memcached's performa
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

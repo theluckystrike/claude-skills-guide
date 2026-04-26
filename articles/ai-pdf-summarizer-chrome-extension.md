@@ -251,6 +251,8 @@ The foundation established here with Manifest V3, PDF.js integration, and messag
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

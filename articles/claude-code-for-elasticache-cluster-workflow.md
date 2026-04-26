@@ -320,6 +320,8 @@ Would you like me to elaborate on any specific aspect of ElastiCache cluster man
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -291,6 +291,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [CLAUDE.md Example for iOS + Swift +](/claude-md-example-for-ios-swift-swiftui/)
 - [Claude Code Skills for iOS Swift](/claude-code-skills-for-ios-swift-development/)
 

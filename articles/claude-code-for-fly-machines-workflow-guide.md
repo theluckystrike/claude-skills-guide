@@ -71,6 +71,8 @@ Claude Code should create/verify the `Dockerfile`, configure `fly.toml` with `[[
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Best Claude Skills for DevOps and Deployment](/best-claude-skills-for-devops-and-deployment/)
 - [Claude Code Docker Compose Production Guide](/claude-code-docker-compose-production-guide/)
 - [Best Way to Use Claude Code with Existing CI/CD](/best-way-to-use-claude-code-with-existing-ci-cd/)

@@ -136,6 +136,8 @@ For more on the Claude Code ecosystem, see our [tools map](/claude-code-ecosyste
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Cursor: Multi-File Editing in 2026](/claude-code-vs-cursor-multi-file-editing-2026/)
 - [Claude Code vs Cursor: Autocomplete and Code Completion](/claude-code-vs-cursor-autocomplete-comparison/)
 - [Claude Projects vs Cursor Composer: Project Context Compared](/claude-projects-vs-cursor-composer-comparison/)

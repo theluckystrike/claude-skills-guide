@@ -115,6 +115,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Token Count Estimation Mismatch — Fix (2026)](/claude-code-token-count-estimation-mismatch-fix-2026/)
 - [MCP Protocol Version Mismatch in Claude — Fix (2026)](/claude-code-model-context-protocol-version-mismatch-fix-2026/)
 - [Claude Code Node Version Mismatch — Fix](/claude-code-node-version-mismatch-fix/)

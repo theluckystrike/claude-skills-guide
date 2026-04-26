@@ -117,6 +117,8 @@ These cross-functional skills reduce the translation cost between technical and 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

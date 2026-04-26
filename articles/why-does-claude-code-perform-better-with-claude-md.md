@@ -381,6 +381,8 @@ Documenting what not to do is equally important as documenting what to do. If mo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

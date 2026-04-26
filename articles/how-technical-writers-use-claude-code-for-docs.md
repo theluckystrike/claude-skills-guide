@@ -251,6 +251,8 @@ Start with one high-friction task, API doc generation, style guide enforcement, 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

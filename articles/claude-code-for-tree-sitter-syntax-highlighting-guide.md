@@ -583,6 +583,8 @@ The investment in well-crafted Tree-sitter queries pays dividends every time you
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

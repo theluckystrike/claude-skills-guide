@@ -294,6 +294,8 @@ This adds less than five minutes to most sessions and pays off significantly on 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

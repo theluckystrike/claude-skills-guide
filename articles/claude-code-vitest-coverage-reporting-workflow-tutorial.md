@@ -339,6 +339,8 @@ With these practices in place, you'll have visibility into your code's test cove
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

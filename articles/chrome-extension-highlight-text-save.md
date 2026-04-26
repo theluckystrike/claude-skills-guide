@@ -250,6 +250,8 @@ The Chrome extension platform provides solid APIs for capturing and storing text
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

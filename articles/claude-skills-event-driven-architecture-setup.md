@@ -232,6 +232,8 @@ The key is gradual adoption, add event triggers for repetitive manual tasks firs
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

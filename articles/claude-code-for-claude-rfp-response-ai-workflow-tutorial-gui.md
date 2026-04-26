@@ -166,6 +166,8 @@ The initial investment in setting up proper templates, skills, and pipelines pay
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

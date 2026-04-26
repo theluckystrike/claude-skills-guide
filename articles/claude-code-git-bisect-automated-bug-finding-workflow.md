@@ -321,6 +321,8 @@ Instead of dreading regressions, you gain confidence that you can quickly identi
 Next time you encounter a mysterious bug, remember: git bisect with Claude Code is your automated detective, systematically narrowing down the search until the culprit is found.
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

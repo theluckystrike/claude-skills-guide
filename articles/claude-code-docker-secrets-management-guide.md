@@ -360,6 +360,8 @@ Start with simple secret configurations and mature your approach as your infrast
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

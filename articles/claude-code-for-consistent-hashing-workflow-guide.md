@@ -244,6 +244,8 @@ The key to success is starting simple, measuring continuously, and iterating bas
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

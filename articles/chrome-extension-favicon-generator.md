@@ -397,6 +397,8 @@ With correct icon implementation, your extension presents professionally in the 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

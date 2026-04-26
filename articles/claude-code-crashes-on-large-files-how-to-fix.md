@@ -638,6 +638,8 @@ For teams, document your file handling patterns so everyone understands the limi
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -152,6 +152,8 @@ When tools you previously used suddenly become unavailable, you may have acciden
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

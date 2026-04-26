@@ -162,6 +162,8 @@ Whether you're reverse-engineering an existing site, creating a new component, o
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

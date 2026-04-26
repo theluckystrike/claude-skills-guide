@@ -410,6 +410,8 @@ Your extension is now ready for the Chrome Web Store. The combination of Svelte'
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

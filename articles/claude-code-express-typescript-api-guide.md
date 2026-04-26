@@ -371,6 +371,8 @@ For persistent context across sessions, consider the supermemory skill to mainta
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

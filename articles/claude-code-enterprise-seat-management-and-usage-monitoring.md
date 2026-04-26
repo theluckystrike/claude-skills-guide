@@ -501,6 +501,8 @@ Start with basic usage tracking and SSO integration, then progressively implemen
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

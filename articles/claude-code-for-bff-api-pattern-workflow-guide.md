@@ -286,6 +286,8 @@ The BFF pattern combined with Claude Code's capabilities allows you to rapidly c
 
 
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 *Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*

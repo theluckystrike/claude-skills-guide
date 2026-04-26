@@ -335,6 +335,8 @@ echo "Created .claude/settings.json from $template template"
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Environment Variables for Claude Code Cost Control](/environment-variables-claude-code-cost-control/) -- session-level controls
 - [Claude Code Hooks Guide](/understanding-claude-code-hooks-system-complete-guide/) -- event-based automation
 - [Cost Optimization Hub](/cost-optimization/) -- all cost guides

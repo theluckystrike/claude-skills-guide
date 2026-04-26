@@ -300,6 +300,8 @@ For more development tips and AI-assisted workflows, explore additional resource
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -166,6 +166,8 @@ Non-GAAP metrics (adjusted EBITDA, adjusted EPS) vary significantly between comp
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Skills for E-Commerce Platforms](/claude-skills-for-ecommerce-platforms/) -- revenue and margin analysis
 - [Claude Skills for Real Estate Data Extraction](/claude-skills-for-real-estate-data-extraction/) -- REIT financial analysis
 - [Claude Skills Performance Optimization](/claude-skills-performance-optimization/) -- handling large XBRL datasets efficiently

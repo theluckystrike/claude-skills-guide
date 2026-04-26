@@ -139,6 +139,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Request Timed Out](/claude-code-fetch-failed-network-request-skill-error/)
 - [Request Body Validation Failed — Fix](/claude-code-request-body-validation-failed-fix-2026/)
 - [HTTP/2 Stream Error During Request — Fix (2026)](/claude-code-http2-stream-error-fix-2026/)

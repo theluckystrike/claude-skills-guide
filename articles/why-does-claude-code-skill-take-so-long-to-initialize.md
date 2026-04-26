@@ -106,6 +106,8 @@ The initialization delay exists by design, it enables a flexible, extensible sys
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

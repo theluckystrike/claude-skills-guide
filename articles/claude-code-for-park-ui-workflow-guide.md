@@ -70,6 +70,8 @@ Claude Code should import Park UI components (`Card`, `Tabs`, `Input`, `Switch`,
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Code for Shadcn UI Workflow Guide](/claude-code-for-shadcn-ui-workflow-guide/)
 - [Claude Code for Panda CSS Workflow Guide](/claude-code-for-panda-css-workflow-guide/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)

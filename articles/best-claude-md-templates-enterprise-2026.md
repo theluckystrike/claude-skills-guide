@@ -168,6 +168,8 @@ This layered approach gives you the best of every template while maintaining cle
 
 **Limitation**: Larger file means more context tokens. Keep total length under 500 lines.
 
+
+**Try it:** Build your own with our [CLAUDE.md Generator](/generator/).
 ---
 
 ## CLAUDE.md Maintenance for Teams

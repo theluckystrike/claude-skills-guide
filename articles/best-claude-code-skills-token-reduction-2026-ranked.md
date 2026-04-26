@@ -136,6 +136,8 @@ Skills outperform CLAUDE.md rules for task-specific optimization because they lo
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Skills Guide](/skills/) -- complete skills authoring and management guide
 - [Scoping Skills Narrowly: Why One Broad Skill Wastes Tokens](/scoping-skills-narrowly-broad-skill-wastes-tokens/) -- the case for narrow, focused skills
 - [CLAUDE.md as Cost Control](/claude-md-cost-control-rules-prevent-token-waste/) -- when to use CLAUDE.md vs skills

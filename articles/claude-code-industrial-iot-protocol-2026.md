@@ -226,6 +226,8 @@ asyncio.run(test())
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for SCADA System Modernization](/claude-code-scada-modernization-2026/)
 - [Claude Code for PLC Programming (Structured Text)](/claude-code-plc-ladder-logic-structured-text-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

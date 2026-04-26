@@ -381,6 +381,8 @@ Start simple, add complexity only when justified by real requirements, and let R
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

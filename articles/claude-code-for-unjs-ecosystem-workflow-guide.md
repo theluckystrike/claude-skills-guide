@@ -72,6 +72,8 @@ Claude Code should import from UnJS packages, use `std-env` to detect the runtim
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Code for Hono Framework Workflow Guide](/claude-code-for-hono-framework-workflow-guide/)
 - [Claude Code for Nitro Server Engine Workflow Guide](/claude-code-for-nitro-server-engine-workflow-guide/)
 - [Best Way to Set Up Claude Code for New Project](/best-way-to-set-up-claude-code-for-new-project/)

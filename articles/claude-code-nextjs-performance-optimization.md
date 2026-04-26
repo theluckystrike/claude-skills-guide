@@ -554,6 +554,8 @@ Start with bundle analysis, implement route-based and component-based code split
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

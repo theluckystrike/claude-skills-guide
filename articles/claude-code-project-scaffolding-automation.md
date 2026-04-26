@@ -285,5 +285,7 @@ Template-based scaffolding uses a reference project embodying your team's conven
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Project Scaffolding with Claude Code (2026)](/claude-code-project-scaffolding-guide-2026/)
 - [Claude Code Project vs Global Settings: Token Impact](/claude-code-project-vs-global-settings-token-impact/)

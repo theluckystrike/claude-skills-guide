@@ -190,6 +190,8 @@ One final note on cost: Sweep AI has a free tier with limited monthly PR generat
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -71,6 +71,8 @@ Claude Code should produce a Hoppscotch-format JSON collection with GET, POST, P
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code API Endpoint Testing Guide](/claude-code-api-endpoint-testing-guide/)
 - [Claude Code API Contract Testing Guide](/claude-code-api-contract-testing-guide/)
 - [Building a REST API with Claude Code Tutorial](/building-a-rest-api-with-claude-code-tutorial/)

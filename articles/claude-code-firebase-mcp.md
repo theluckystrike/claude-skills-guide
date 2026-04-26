@@ -135,6 +135,8 @@ CLAUDE.md should document your Firestore data model so Claude understands collec
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

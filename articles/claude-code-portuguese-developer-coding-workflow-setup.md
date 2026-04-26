@@ -332,6 +332,8 @@ Comece com a configuração básica mostrada neste guia e adicione customizaçõ
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

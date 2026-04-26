@@ -244,6 +244,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Hybrid LLM Stack](/claude-cost-hybrid-stack-claude-gpt-gemini/)
 - [Claude Code Full Stack Developer](/claude-code-full-stack-developer-feature-shipping-workflow/)
 - [Full Stack Web App with Claude Skills](/full-stack-web-app-with-claude-skills-step-by-step/)

@@ -242,6 +242,8 @@ Claude Code transforms threat modeling from a periodic exercise into a continuou
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

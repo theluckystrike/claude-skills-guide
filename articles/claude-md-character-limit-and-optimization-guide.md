@@ -352,4 +352,6 @@ The pdf skill extracts and summarizes content from lengthy documents before brin
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [CLAUDE.md Length Optimization — Why 200 Lines Is the Hard Ceiling (2026)](/claude-md-length-optimization/)

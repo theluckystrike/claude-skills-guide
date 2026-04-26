@@ -537,6 +537,8 @@ Use this data to prioritize which skill workflows to document and share in your 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -249,6 +249,8 @@ The patterns covered here, content script injection, background service worker a
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

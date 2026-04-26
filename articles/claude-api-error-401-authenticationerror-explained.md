@@ -184,6 +184,8 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [How to Set ANTHROPIC_API_KEY for Claude](/how-to-set-anthropicapikey-for-claude/) -- step-by-step environment variable setup for all platforms.
 - [Claude Python SDK Installation Guide](/claude-python-sdk-installation-guide/) -- full setup from install to first API call.
 - [Claude Code Permission Modes Explained](/claude-code-permission-modes/) -- similar error when your key lacks specific permissions.

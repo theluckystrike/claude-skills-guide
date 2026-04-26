@@ -271,6 +271,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Test Driven Development](/claude-code-for-test-driven-development-workflow-tutorial/)
 - [Claude Code Java Library Development](/claude-code-java-library-development-guide/)
 - [Chrome Extension Development for Claude](/chrome-incognito-extensions/)

@@ -87,6 +87,8 @@ The question isn't whether open source or proprietary will win, it's how you'll 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

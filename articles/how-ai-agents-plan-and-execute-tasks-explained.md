@@ -111,6 +111,8 @@ The key insight is this: AI task execution isn't magic. It's a structured proces
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

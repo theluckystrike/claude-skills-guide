@@ -70,6 +70,8 @@ Claude Code should query the CSV directly with `read_csv()`, use `date_trunc('ho
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Best Way to Feed Claude Code a Large SQL Schema](/best-way-to-feed-claude-code-a-large-sql-schema/)
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

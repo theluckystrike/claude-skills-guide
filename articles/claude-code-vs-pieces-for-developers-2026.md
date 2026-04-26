@@ -120,4 +120,6 @@ This workflow uses Pieces as your persistent developer memory and Claude Code as
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Phind (2026): AI Search for Devs](/claude-code-vs-phind-ai-search-developers-2026/)

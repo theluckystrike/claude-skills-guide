@@ -275,6 +275,8 @@ For teams evaluating which BaaS platform to adopt specifically for Claude Code e
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Reducing Claude Code Token Usage for Database Operations](/reducing-claude-code-token-usage-database-operations/) -- Firestore-specific patterns
 - [Claude Code Skills Guide](/skills/) -- creating Firebase-specific skills
 - [Cost Optimization Hub](/cost-optimization/) -- all cost optimization guides

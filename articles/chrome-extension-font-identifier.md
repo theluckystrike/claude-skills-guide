@@ -129,6 +129,8 @@ For teams building design systems, combining extension-based detection with cust
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -247,6 +247,8 @@ Claude Code skills provide specialized context for data engineering tasks. The c
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

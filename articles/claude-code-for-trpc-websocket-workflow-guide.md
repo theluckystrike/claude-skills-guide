@@ -255,6 +255,8 @@ Start with basic subscriptions, then layer in reconnection logic, cross-server c
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

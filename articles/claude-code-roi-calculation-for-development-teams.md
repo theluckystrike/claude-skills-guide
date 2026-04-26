@@ -252,4 +252,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Basel III Risk Calculation (2026)](/claude-code-basel-iii-risk-calculation-2026/)

@@ -235,6 +235,8 @@ Start with this tutorial's techniques, adapt them to your specific use cases, an
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

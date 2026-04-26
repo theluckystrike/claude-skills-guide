@@ -111,6 +111,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Skill Exceeded Maximum Output](/claude-code-skill-exceeded-maximum-output-length-error-fix/)
 - [Fix Claude Rate Exceeded Error (2026)](/claude-rate-exceeded-error-fix/)
 - [Fix Claude AI Rate Exceeded Error](/claude-ai-rate-exceeded-error-fix/)

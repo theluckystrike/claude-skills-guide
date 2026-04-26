@@ -178,6 +178,8 @@ ph._build_approval_response = _patched_build_response
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

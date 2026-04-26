@@ -242,6 +242,8 @@ Remember: every database query has a cost. By fetching only what you need, when 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

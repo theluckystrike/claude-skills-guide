@@ -235,6 +235,8 @@ Start with a single pipeline step, measure the results, and gradually expand you
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

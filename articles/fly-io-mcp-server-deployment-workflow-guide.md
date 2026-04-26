@@ -429,6 +429,8 @@ Consider adding Fly.io's persistent volumes if your MCP server needs to cache da
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

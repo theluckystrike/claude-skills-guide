@@ -177,6 +177,8 @@ Dynamic context injection runs every time the skill is invoked, not just the fir
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skill Composition Patterns](/claude-skill-composition-patterns/) -- pipeline and fan-out architectures
 - [Claude Skills Shared Dependencies](/claude-skills-shared-dependencies/) -- sharing data files between skills
 - [Claude Skills Performance Optimization](/claude-skills-performance-optimization/) -- reducing data flow overhead

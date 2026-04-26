@@ -264,6 +264,8 @@ Building an AI flashcard maker extension demonstrates how browser extensions can
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

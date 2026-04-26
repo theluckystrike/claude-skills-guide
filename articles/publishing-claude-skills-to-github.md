@@ -178,6 +178,8 @@ When publishing skills that use `allowed-tools` with shell commands, document wh
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills Distribution Methods](/claude-skills-distribution-methods/)
 - [Claude Skills Versioning Strategies](/claude-skills-versioning-strategies/)
 - [Claude Skills Folder Structure](/claude-skills-folder-structure/)

@@ -192,6 +192,8 @@ $99 once. Free forever. 47/500 founding spots left.
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude API Batch Processing Large Datasets Guide](/claude-api-batch-processing-large-datasets-workflow-guide/)
 - [Claude API Cost Optimization Strategies](/claude-api-cost-optimization-strategies-for-saas-application/)
 - [Claude API Rate Limit Fix](/claude-api-rate-limit-fix/)

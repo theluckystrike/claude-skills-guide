@@ -225,6 +225,8 @@ Start with one skill, build a habit, and iterate. Your next interview will be be
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

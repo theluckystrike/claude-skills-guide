@@ -196,3 +196,5 @@ Team agents should be versioned and reviewed like any other code. Changes to the
 - Read the [Claude Agent SDK guide](/claude-agent-sdk-complete-guide/) for the official SDK
 - Try [Super Claude Code framework](/super-claude-code-framework-guide/) for structured agent prompting
 - Share your agent with the community via the [skills directory](/claude-skills-directory-where-to-find-skills/)
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -72,6 +72,8 @@ Claude Code should create a Next.js API route that sends POST requests to `${DIF
 
 ## Related Guides
 
+**Try it:** Find the right model with our [Model Selector](/model-selector/).
+
 - [Claude Code for LangChain Framework Workflow Guide](/claude-code-for-langchain-framework-workflow-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)
 - [Claude Code API Authentication Patterns Guide](/claude-code-api-authentication-patterns-guide/)

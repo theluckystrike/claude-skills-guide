@@ -174,6 +174,8 @@ For organizations managing Chrome through GPO, you can pre-install the trusted c
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

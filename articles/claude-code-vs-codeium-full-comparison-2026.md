@@ -90,6 +90,8 @@ Adding Claude Code to a Codeium workflow:
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Is Codeium the same as Windsurf?
 
 Codeium is the company; Windsurf is their AI IDE product. Codeium (the autocomplete extension) continues to exist as a standalone product for developers who want AI autocomplete in their existing editor without switching to a new IDE. Windsurf is their full IDE with agent capabilities. This comparison focuses on the Codeium extension, not Windsurf.

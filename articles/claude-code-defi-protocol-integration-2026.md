@@ -313,6 +313,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for OpenSea Protocol](/claude-code-for-opensea-protocol-workflow-guide/)
 - [MCP Protocol Version Mismatch in Claude — Fix (2026)](/claude-code-model-context-protocol-version-mismatch-fix-2026/)
 - [Claude Code for FIX Protocol Message](/claude-code-fix-protocol-message-handling-2026/)

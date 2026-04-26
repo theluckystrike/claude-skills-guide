@@ -388,6 +388,8 @@ This log provides when, who, and which project without capturing session content
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Environment Variables for Claude Code Cost Control](/environment-variables-claude-code-cost-control/) -- detailed variable reference
 - [Claude Code .claude/settings.json](/claude-code-settings-json-cost-saving-configuration/) -- project permissions
 - [How to Audit Claude Code Token Usage](/audit-claude-code-token-usage-step-by-step/) -- audit methodology

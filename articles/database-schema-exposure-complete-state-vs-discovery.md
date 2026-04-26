@@ -325,6 +325,8 @@ The measurement is straightforward because database discovery tokens are concent
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Prisma with Claude Code: Reducing Schema Discovery Tokens](/prisma-claude-code-reducing-schema-discovery-tokens/) -- Prisma-specific optimization
 - [State Inspection Pattern: Give Agents Full Backend State in One Call](/state-inspection-pattern-agents-full-state-one-call/) -- same principle for runtime state
 - [Claude Code Caching Strategies: Don't Re-Discover What You Already Know](/claude-code-caching-strategies-dont-rediscover/) -- broader caching framework

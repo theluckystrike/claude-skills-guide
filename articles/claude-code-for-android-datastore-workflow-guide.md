@@ -314,6 +314,8 @@ Remember to test your DataStore implementations thoroughly, especially when migr
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

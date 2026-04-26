@@ -160,6 +160,8 @@ Is Claude Code worth it? For most active open source projects, the answer is inc
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

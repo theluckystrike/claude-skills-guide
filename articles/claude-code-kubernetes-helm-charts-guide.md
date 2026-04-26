@@ -231,6 +231,8 @@ Related guides: [Advanced Claude Skills with Tool Use and Function Calling](/adv
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

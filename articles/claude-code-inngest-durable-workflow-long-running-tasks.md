@@ -246,6 +246,8 @@ The key is to use Claude Code's strengths, understanding intent, generating code
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

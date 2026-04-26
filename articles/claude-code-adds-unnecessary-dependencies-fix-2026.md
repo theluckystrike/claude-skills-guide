@@ -138,6 +138,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Extra Usage Cost: What You Pay](/claude-extra-usage-cost-guide/)
 - [How to Stop Claude Code from Using](/how-to-stop-claude-code-from-using-snake-case-in-typescript/)
 - [Stop Claude Code Over-Relying](/claude-code-over-relies-on-comments-fix-2026/)

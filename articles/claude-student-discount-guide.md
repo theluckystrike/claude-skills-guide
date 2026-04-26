@@ -238,6 +238,8 @@ Anthropic's terms require individual accounts. Each student should have their ow
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code cost breakdown](/claude-code-cost-complete-guide/) — understand what you would pay
 - [Reduce Claude Code costs](/claude-code-costs-too-much-reduce-spend-2026/) — spend less per session
 - [ccusage cost tracking](/ccusage-claude-code-cost-tracking-guide-2026/) — monitor your spend

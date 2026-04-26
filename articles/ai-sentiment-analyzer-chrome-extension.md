@@ -510,6 +510,8 @@ Building an AI sentiment analyzer Chrome extension provides a practical foundati
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -109,6 +109,8 @@ This workflow leverages v0's speed for visual decisions and Claude Code's depth 
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can I use v0-generated components directly in a Claude Code project?
 
 Yes. Export the component code from v0 (React + Tailwind), paste it into your project directory, then use Claude Code to adapt imports, add TypeScript types, connect to your data layer, and write tests. This is a common workflow for teams that use v0 for visual exploration and Claude Code for integration.

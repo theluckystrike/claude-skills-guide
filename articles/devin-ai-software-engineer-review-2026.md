@@ -115,6 +115,8 @@ The broader trend toward AI-assisted development continues accelerating. Tools l
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

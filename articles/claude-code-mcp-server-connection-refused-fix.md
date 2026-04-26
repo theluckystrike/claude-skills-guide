@@ -119,6 +119,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix WebSocket Connection Failures](/claude-code-websocket-connection-failed-fix/)
 - [Connection Reset by Peer Error — Fix](/claude-code-connection-reset-by-peer-fix-2026/)
 - [Claude Code VS Code Connection Lost — Fix (2026)](/claude-code-vscode-connection-lost-fix-2026/)

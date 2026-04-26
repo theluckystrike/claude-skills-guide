@@ -270,6 +270,8 @@ Brave Search MCP server integration enables powerful research automation within 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

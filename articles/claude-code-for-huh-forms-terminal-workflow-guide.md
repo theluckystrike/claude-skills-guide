@@ -285,6 +285,8 @@ The key is to use Claude Code as an intelligent assistant that enhances user pro
 
 
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 *Last verified: April 2026. If this approach no longer works, check [Mendeley Chrome Extension — Honest Review 2026](/mendeley-chrome-extension-review/) for updated steps.*

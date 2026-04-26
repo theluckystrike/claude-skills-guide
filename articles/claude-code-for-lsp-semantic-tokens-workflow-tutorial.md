@@ -205,6 +205,8 @@ The key is to treat semantic tokens as structured data that drives intelligent b
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -69,6 +69,8 @@ For a team doing heavy code exploration (onboarding, architecture review, cross-
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can Claude Code search files it has not read yet?
 Yes. Claude Code uses tools like grep and glob to search file contents and names across your project directory. It does not need to have previously read a file to find it — the search tools operate on the filesystem directly.
 

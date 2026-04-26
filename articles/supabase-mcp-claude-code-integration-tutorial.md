@@ -266,6 +266,8 @@ The access token authenticates at the account level and works across all project
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [MCP Config Generator](/mcp-config/) — Generate MCP configurations instantly
 - [Claude Code Configuration Guide](/configuration/) — Full settings and preferences reference
 - [Command Reference](/commands/) — Every Claude Code command explained

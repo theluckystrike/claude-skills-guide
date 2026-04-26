@@ -327,6 +327,8 @@ Start experimenting today, your next production-ready API is just a prompt away.
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

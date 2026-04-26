@@ -287,6 +287,8 @@ Emotion provides a flexible, performant approach to styling React applications. 
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

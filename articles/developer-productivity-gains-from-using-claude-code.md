@@ -221,6 +221,8 @@ The productivity transformation with Claude Code isn't about replacing developer
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

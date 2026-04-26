@@ -207,3 +207,5 @@ Each removed MCP server saves its full tool definition overhead on every session
 - [Reducing Claude Code MCP Round-Trips: Batch Operations Pattern](/reducing-claude-code-mcp-round-trips-batch-pattern/) -- optimize MCP when it is needed
 - [InsForge vs Supabase: Claude Code Token Cost (2026)](/insforge-vs-supabase-claude-code-token-cost-2026/)
 - [Claude Code MCP tools loading slowly — token cost impact](/claude-code-mcp-tools-loading-slowly-token-cost/)
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

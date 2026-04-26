@@ -446,6 +446,8 @@ Remember: the goal isn't perfect coverage of all 190+ techniques, but rather mea
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

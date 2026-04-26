@@ -68,6 +68,8 @@ Claude Code should use `match(response).with({ status: 'success' }, ({ data }) =
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Best Way to Use Claude Code with TypeScript Projects](/best-way-to-use-claude-code-with-typescript-projects/)
 - [Claude Code for Algorithm Complexity Optimization Guide](/claude-code-for-algorithm-complexity-optimization-guide/)
 - [Best Way to Use Claude Code for Large File Refactoring](/best-way-to-use-claude-code-for-large-file-refactoring/)

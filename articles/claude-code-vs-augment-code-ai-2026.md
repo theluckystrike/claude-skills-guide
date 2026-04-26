@@ -96,4 +96,6 @@ Related reading:
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Augment Code (2026): Enterprise AI](/claude-code-vs-augment-code-enterprise-2026/)

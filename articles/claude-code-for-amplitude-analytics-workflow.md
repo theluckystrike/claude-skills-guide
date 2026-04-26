@@ -325,6 +325,8 @@ Remember to secure your credentials, handle rate limits gracefully, and validate
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

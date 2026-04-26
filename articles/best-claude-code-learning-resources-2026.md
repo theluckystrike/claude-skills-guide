@@ -145,6 +145,8 @@ pipx install superclaude && superclaude install
 - Quarterly: re-take the Ultimate Guide quiz to check for knowledge decay
 - Weekly: review ccusage data and optimize
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 ## The Meta-Learning Insight

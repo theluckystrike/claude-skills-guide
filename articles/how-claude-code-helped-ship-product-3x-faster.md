@@ -148,6 +148,8 @@ The 3x improvement comes not from any single feature but from compounding small 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

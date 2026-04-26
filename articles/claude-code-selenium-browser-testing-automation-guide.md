@@ -353,6 +353,8 @@ By integrating skills like frontend-design and tdd, you build a comprehensive te
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

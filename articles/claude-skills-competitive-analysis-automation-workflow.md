@@ -300,6 +300,8 @@ The automated pipeline produces a solid foundation. Strategic insight is what yo
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

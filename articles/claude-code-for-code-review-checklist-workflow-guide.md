@@ -173,6 +173,8 @@ Start small: create one basic code review skill today, use it for your next few 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

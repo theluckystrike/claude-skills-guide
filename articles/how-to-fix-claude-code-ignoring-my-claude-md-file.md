@@ -188,6 +188,8 @@ Remember: Claude Code skills are powerful tools for customizing your AI assistan
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

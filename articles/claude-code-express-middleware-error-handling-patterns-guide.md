@@ -270,6 +270,8 @@ These patterns scale from small APIs to enterprise applications. Implement them 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

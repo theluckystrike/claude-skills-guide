@@ -821,6 +821,8 @@ These workflows integrate smoothly with Claude Code's development assistance, ma
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

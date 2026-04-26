@@ -189,6 +189,8 @@ For teams managing Claude Code configurations in a shared repository, add a `CHA
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [claude mcp list command guide](/claude-mcp-list-command-guide/) — How to use the claude mcp list command to manage MCP servers
 ---
 

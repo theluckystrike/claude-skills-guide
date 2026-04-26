@@ -172,4 +172,6 @@ Each MCP tool definition adds ~50-100 tokens to the context. With 3 servers expo
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Awesome MCP vs Templates MCP Directory (2026)](/awesome-mcp-servers-vs-claude-code-templates-mcp-2026/)

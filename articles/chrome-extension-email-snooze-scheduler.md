@@ -552,6 +552,8 @@ The key is maintaining reliable scheduling even when the browser is closed, whic
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

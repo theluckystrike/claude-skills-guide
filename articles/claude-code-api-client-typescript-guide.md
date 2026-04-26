@@ -290,6 +290,8 @@ For background jobs that run for minutes or hours, Claude Code generates the pol
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -250,5 +250,7 @@ Related Reading
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Career Change to Software Development with AI](/claude-code-for-career-changers-into-software-development/)
 - [Claude Code Plus Perplexity for Research-Driven Development](/claude-code-plus-perplexity-for-research-driven-development/)

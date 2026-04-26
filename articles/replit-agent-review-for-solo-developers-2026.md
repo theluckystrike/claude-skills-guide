@@ -100,6 +100,8 @@ The key insight for 2026: the best AI coding tool is the one that fits your spec
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

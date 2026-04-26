@@ -360,6 +360,8 @@ First check that your CLAUDE.md accurately describes your project conventions. I
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Biome Formatter Setup](/claude-code-biome-formatter-setup-2026/)
 - [Claude Code vs ESLint + Prettier](/claude-code-vs-eslint-prettier-comparison/)
 - [Claude Code for ESLint Custom Plugin](/claude-code-for-eslint-custom-plugin-workflow-tutorial/)

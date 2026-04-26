@@ -123,6 +123,8 @@ Langflow flows that use the Claude API directly do not benefit from Claude Code'
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills vs OpenAI Assistants API](/claude-skills-vs-openai-assistants-api/) -- another platform comparison
 - [Claude Skill Composition Patterns](/claude-skill-composition-patterns/) -- building multi-step workflows in skills
 - [Hybrid Patterns: Skills, MCP, and Custom Tools](/hybrid-patterns-skills-mcp-custom-tools/) -- combining different AI tool systems

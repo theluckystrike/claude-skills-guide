@@ -320,6 +320,8 @@ The Claude iOS and Android apps support basic system keyboard shortcuts when usi
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [claude_desktop_config.json Guide](/claude-desktop-config-json-guide/) — configure Claude Desktop settings
 - [The Claude Code Playbook](/playbook/) — comprehensive workflow reference
 - [Claude Code Best Practices](/claude-code-claude-md-best-practices/) — optimize your setup

@@ -104,6 +104,8 @@ For more strategies on managing Claude Code context, see our [context window man
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code EPIPE Broken Pipe Error — Fix (2026)](/claude-code-epipe-broken-pipe-long-operations-fix/)
 - [SIGTERM During Long Operation Fix](/claude-code-sigterm-during-long-operation-fix-2026/)
 - [How to Measure Context Efficiency in Claude Code Sessions](/measure-context-efficiency-claude-code-sessions/)

@@ -358,6 +358,8 @@ Building a tab organizer requires balancing functionality with Chrome's API cons
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

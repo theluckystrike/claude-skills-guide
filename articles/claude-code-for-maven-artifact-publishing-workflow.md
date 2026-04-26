@@ -547,6 +547,8 @@ Start by ensuring your project configuration is complete, use Claude to guide yo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

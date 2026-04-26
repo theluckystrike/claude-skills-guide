@@ -130,4 +130,6 @@ Teams reporting the highest productivity gains assign tools based on task classi
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs GitHub Copilot Workspace (2026)](/claude-code-vs-github-copilot-workspace-agent-2026/)

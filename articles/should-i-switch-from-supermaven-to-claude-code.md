@@ -140,6 +140,8 @@ The best approach? Try Claude Code for a week on a real project. Install some sk
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

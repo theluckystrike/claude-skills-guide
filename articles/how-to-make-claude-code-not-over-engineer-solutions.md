@@ -160,6 +160,8 @@ The goal isn't to limit Claude Code's capabilities, it's to direct them toward y
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

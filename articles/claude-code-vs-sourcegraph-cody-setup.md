@@ -90,4 +90,6 @@ If your primary need is code search without AI generation (finding where somethi
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Sourcegraph Cody: Codebase Search](/claude-code-vs-sourcegraph-cody-codebase-search/)

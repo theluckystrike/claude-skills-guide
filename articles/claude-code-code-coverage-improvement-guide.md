@@ -192,6 +192,8 @@ Coverage metrics serve as a guide, not a scorecard. The real goal is confidence 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

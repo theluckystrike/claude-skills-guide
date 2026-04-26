@@ -257,4 +257,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [How to Distribute Claude Skills Across Teams 2026](/distribute-claude-skills-across-teams-2026/)

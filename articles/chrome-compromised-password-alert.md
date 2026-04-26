@@ -208,6 +208,8 @@ Chrome's compromised password alert provides a solid baseline security feature f
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

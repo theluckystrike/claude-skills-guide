@@ -127,6 +127,8 @@ Start small with your most common review issues, build out comprehensive standar
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

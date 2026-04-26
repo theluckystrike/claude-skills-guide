@@ -409,4 +409,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Stop Claude Code Creating Duplicate Code (2026)](/claude-code-creates-duplicate-code-fix-2026/)

@@ -169,6 +169,8 @@ Many developers find value in both: Windsurf for daily in-editor work, Claude Co
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

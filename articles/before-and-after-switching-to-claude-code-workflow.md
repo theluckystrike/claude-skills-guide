@@ -149,6 +149,8 @@ Start with small tasks, asking Claude Code to explain a piece of code or generat
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

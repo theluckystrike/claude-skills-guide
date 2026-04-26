@@ -264,6 +264,8 @@ The Chrome Enterprise documentation provides the authoritative reference for for
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

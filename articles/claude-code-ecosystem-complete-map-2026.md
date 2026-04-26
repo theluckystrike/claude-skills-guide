@@ -126,6 +126,8 @@ The [claude-code-ultimate-guide](https://github.com/FlorianBruniaux/claude-code-
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### How many tools are in the ecosystem?
 Across the 14 major repos, there are 600+ agent templates, 200+ MCP servers, 135+ cataloged agents, 30+ slash commands, and dozens of skills and hooks.
 

@@ -129,6 +129,8 @@ Skills and MCP tools have different persistence models. Skill instructions persi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Hybrid Patterns: Skills, MCP, and Custom Tools](/hybrid-patterns-skills-mcp-custom-tools/) -- advanced combination patterns
 - [Claude Skills vs Subagents: When to Use Each](/claude-skills-vs-subagents-when-to-use/) -- another complementary pairing
 - [Claude Skills vs Raw Prompts with Tools](/claude-skills-vs-raw-prompts-with-tools/) -- when skills are overkill

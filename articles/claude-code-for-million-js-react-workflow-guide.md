@@ -69,6 +69,8 @@ Claude Code should add the Million.js compiler plugin to `next.config.js`, analy
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [AI Coding Tools for Performance Optimization](/ai-coding-tools-for-performance-optimization/)
 - [Best Claude Code Skills for Frontend Development](/best-claude-code-skills-for-frontend-development/)
 - [Best AI Tools for Frontend Development 2026](/best-ai-tools-for-frontend-development-2026/)

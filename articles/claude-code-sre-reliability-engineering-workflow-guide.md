@@ -307,6 +307,8 @@ Start by placing the core SRE skill files in your `.claude/` directory, configur
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

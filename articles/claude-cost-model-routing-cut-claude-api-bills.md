@@ -197,6 +197,8 @@ Track three dashboards: (1) cost per request by model tier — verify the expect
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — understand the pricing model that makes routing valuable
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — complement routing with token reduction
 - [Claude Code Monthly Cost Breakdown](/claude-code-monthly-cost-breakdown-realistic-usage-estimates/) — baseline your costs before implementing routing

@@ -223,6 +223,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude API Error 400 invalid_request_error Fix](/claude-api-error-400-invalidrequesterror-explained/) -- handle format errors that occur before the size check.
 - [Claude API Error 429 rate_limit_error Fix](/claude-api-error-429-ratelimiterror-explained/) -- understand token-based limits separate from byte-based limits.
 - [Claude Prompt Caching API Guide](/claude-prompt-caching-api-guide/) -- cache large system prompts to reduce repeated transfer overhead.

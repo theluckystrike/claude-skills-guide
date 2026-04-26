@@ -303,6 +303,8 @@ python3 part11/validation/generate_report.py
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for HIPAA Development](/claude-code-hipaa-compliant-development-workflow-guide/)
 - [Claude Code for PCI-DSS Scanning](/claude-code-pci-dss-code-scanning-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

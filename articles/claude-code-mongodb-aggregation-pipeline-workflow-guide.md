@@ -466,6 +466,8 @@ With these patterns and practices, you're well-equipped to build solid MongoDB a
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

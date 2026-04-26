@@ -216,5 +216,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Unicode Encoding Errors in Code Output Fix](/claude-code-unicode-encoding-errors-code-output-fix-2026/)
 - [Output Channel Buffer Full Truncated — Fix (2026)](/claude-code-output-channel-buffer-full-fix-2026/)

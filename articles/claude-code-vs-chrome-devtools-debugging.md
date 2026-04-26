@@ -80,6 +80,8 @@ Chrome DevTools is irreplaceable for runtime state inspection and visual debuggi
 
 ## FAQ
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 ### Can Claude Code read my DevTools output?
 Yes. Copy network responses, console errors, performance metrics, or element inspection results and paste them into Claude Code. This combines DevTools' observation with Claude Code's analysis — you observe the symptom with DevTools and send it to Claude Code for diagnosis. This workflow is often faster than debugging alone with either tool.
 

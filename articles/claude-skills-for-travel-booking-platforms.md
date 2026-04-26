@@ -153,6 +153,8 @@ Multi-city itineraries create multiple HL (hierarchical level) segments in the P
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills for E-Commerce Platforms](/claude-skills-for-ecommerce-platforms/) -- checkout and payment patterns
 - [Claude Skills for Logistics and Supply Chain](/claude-skills-for-logistics-supply-chain/) -- cargo and freight booking
 - [Claude Skill Composition Patterns](/claude-skill-composition-patterns/) -- combining booking with notification skills

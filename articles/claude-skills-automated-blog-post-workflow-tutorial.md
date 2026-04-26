@@ -499,6 +499,8 @@ This scaffold gives you a ready-to-edit file with the correct date and permalink
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

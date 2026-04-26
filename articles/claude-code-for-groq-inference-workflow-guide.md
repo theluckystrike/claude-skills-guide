@@ -71,6 +71,8 @@ Claude Code should initialize the Groq client with the API key, create an endpoi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for AI Agent Tool Calling](/claude-code-for-ai-agent-tool-calling-implementation/)
 - [Building Production AI Agents with Claude Skills 2026](/building-production-ai-agents-with-claude-skills-2026/)
 - [Claude Code for Helicone LLM Gateway Workflow](/claude-code-for-helicone-llm-gateway-workflow-tutorial/)

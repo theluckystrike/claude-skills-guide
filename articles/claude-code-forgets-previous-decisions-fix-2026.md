@@ -138,6 +138,8 @@ echo "Environment check complete."
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Code Forgetting Variable](/claude-code-keeps-losing-track-of-my-variable-names/)
 - [CLAUDE.md for Architecture Decisions](/claude-md-for-architecture-decisions/)
 

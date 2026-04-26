@@ -389,6 +389,8 @@ Whatever you choose, the critical requirement is genuine client-side encryption.
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

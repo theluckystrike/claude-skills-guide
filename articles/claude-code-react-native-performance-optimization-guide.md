@@ -218,6 +218,8 @@ Remember that not all optimizations are worth implementing. Focus on the changes
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -174,6 +174,8 @@ git clone https://github.com/FlorianBruniaux/claude-code-ultimate-guide.git
 
 **Limitation**: Requires hours of study to benefit fully. Not a quick-start resource.
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 ## Honorable Mentions

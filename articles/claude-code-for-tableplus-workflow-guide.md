@@ -69,6 +69,8 @@ Claude Code should output the original query with `EXPLAIN ANALYZE` prepended, a
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Database Schema Design Guide](/claude-code-database-schema-design-guide/)
 - [Claude Code for Drizzle ORM Workflow Guide](/claude-code-for-drizzle-orm-workflow-workflow-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

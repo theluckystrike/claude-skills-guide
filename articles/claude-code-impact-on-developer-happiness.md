@@ -117,6 +117,8 @@ The cumulative effect is substantial. When your tools work for you rather than a
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

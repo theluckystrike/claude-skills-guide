@@ -150,6 +150,8 @@ If you have both a project-level `.claude/mcp.json` and a user-level `~/.claude/
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

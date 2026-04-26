@@ -243,6 +243,8 @@ Start with solid instrumentation, focus on high-impact optimizations first, and 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

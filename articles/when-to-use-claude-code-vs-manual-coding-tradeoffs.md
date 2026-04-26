@@ -96,4 +96,6 @@ For pure data analysis work in Jupyter notebooks, neither Claude Code nor manual
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [AI Coding Tools vs Manual Coding: When to Use Each (2026)](/when-to-use-ai-coding-tools-vs-manual-coding-2026/)

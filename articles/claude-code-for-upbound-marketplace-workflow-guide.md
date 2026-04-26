@@ -305,6 +305,8 @@ Start by integrating Claude Code into your daily development cycle, and you'll f
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

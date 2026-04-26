@@ -234,6 +234,8 @@ Remember to keep your workflows modular, well-documented, and properly tested. W
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -270,6 +270,8 @@ When the Chrome Web Store is slow for everyone (server-side issues), there is no
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

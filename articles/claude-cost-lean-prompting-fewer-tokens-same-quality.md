@@ -200,6 +200,8 @@ Track average prompt token count per request type over time. Plot a weekly trend
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Token Usage Optimization](/claude-code-token-usage-optimization-best-practices-guide/) — token reduction across your entire workflow
 - [Reduce Claude Code Hallucinations Save Tokens](/reduce-claude-code-hallucinations-save-tokens-accuracy-tips/) — precise prompts that avoid wasted retries
 - [Claude Skill Token Usage Profiling](/claude-skill-token-usage-profiling-and-optimization/) — find which skills consume the most tokens

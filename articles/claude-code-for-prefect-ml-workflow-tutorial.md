@@ -327,6 +327,8 @@ Combining Claude Code with Prefect creates a powerful development environment fo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

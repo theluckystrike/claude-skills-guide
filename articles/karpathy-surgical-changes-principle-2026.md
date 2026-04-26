@@ -101,3 +101,5 @@ One line changed. The bug is fixed. Everything else stays put.
 - [Implement Surgical Changes in CLAUDE.md](/karpathy-surgical-changes-implementation-2026/)
 - [Diff-Minimizing Examples](/karpathy-surgical-changes-examples-2026/)
 - [The Claude Code Playbook](/playbook/)
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

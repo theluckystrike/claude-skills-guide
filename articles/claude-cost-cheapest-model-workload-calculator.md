@@ -122,6 +122,8 @@ Use this decision tree to select the cheapest model for any workload:
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [When GPT-4o Mini Beats Claude Haiku](/claude-cost-when-gpt4o-mini-beats-haiku/)
 - [Open Source LLMs as Cost Floor](/claude-cost-open-source-llm-cost-floor/)
 - [The Hybrid Stack: Claude for X, GPT for Y, Gemini for Z](/claude-cost-hybrid-stack-claude-gpt-gemini/)

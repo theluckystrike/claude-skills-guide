@@ -115,6 +115,8 @@ The skills you use today are building blocks for an AI-assisted development futu
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

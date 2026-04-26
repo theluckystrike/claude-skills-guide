@@ -187,6 +187,8 @@ The best extension for you depends on your specific needs, team size, meeting fr
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

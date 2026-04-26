@@ -410,6 +410,8 @@ Regular maintenance, including configuration versioning, health checks, and moni
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

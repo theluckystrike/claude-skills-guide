@@ -212,6 +212,8 @@ Start small: create a CLAUDE.md file, connect Linear via MCP, and add one alignm
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

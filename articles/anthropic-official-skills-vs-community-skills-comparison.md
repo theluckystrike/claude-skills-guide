@@ -269,6 +269,8 @@ If a community skill has gone unmaintained and you depend on it, fork it. Since 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

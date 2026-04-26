@@ -266,6 +266,8 @@ Claude skills transform how technical product managers work by providing consist
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -314,6 +314,8 @@ Start with the basic issue creation flow, then add features like assigned issue 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

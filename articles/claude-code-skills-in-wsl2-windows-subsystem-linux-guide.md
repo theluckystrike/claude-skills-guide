@@ -289,5 +289,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Linux AppArmor Restricting Access Fix](/claude-code-linux-apparmor-restricting-access-fix-2026/)
 - [How to Use Claude Code with WSL2 on Windows 2026](/claude-code-wsl2-windows-setup-2026/)

@@ -267,6 +267,8 @@ The key is treating Claude Code as a pair programmer who understands the LSP spe
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

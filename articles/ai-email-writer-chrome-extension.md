@@ -229,6 +229,8 @@ This kind of visibility makes it much faster to identify whether the problem is 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

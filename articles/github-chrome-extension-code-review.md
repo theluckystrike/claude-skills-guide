@@ -185,6 +185,8 @@ The effort invested in code review protects against malicious extensions and hel
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

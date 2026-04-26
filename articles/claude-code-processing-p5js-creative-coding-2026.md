@@ -326,6 +326,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Sonar Array Processing](/claude-code-sonar-array-processing-2026/)
 - [Claude Batch Processing 100K Requests](/claude-batch-processing-100k-requests-guide/)
 - [Async Claude Processing](/async-claude-processing-half-price-same-quality/)

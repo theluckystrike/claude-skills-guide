@@ -202,6 +202,8 @@ Best practice: combine `--max-turns` with `--allowedTools` for defense-in-depth 
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code --allowedTools Flag: Restrict Tool Calls to Save Tokens](/claude-code-allowed-tools-flag-save-tokens/) -- complementary cost control
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- mid-session context reduction
 - [Cost Optimization Hub](/cost-optimization/) -- all cost control techniques

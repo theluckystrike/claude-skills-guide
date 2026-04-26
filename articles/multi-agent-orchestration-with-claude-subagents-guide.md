@@ -224,6 +224,8 @@ Monitor token usage. Context accumulates quickly in long-running multi-agent pro
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

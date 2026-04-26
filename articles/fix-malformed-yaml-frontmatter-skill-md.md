@@ -230,6 +230,8 @@ Some editors auto-insert BOM (Byte Order Mark) characters at the beginning of UT
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [SKILL.md Frontmatter Fields Explained](/skill-md-file-frontmatter-fields-explained/)
 - [Fix Unknown Skill Error in Claude Code](/fix-unknown-skill-error-claude-code/)
 - [Claude Skills CI/CD Patterns](/claude-skills-ci-cd-patterns/)

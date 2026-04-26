@@ -168,6 +168,8 @@ For IoT firmware specifically, skills address the tension between development sp
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

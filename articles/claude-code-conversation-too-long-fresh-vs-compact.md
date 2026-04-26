@@ -141,6 +141,8 @@ The break-even: if re-establishing context costs less than $5.25 in tokens (abou
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [The Compaction Strategy: When to /compact and When Not To](/compaction-strategy-when-compact-when-not/) -- detailed compaction timing guide
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- full /compact reference
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- preventing oversized contexts in the first place

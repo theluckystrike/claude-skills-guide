@@ -481,6 +481,8 @@ Remember that Claude Code is a partner in your development process, it handles t
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

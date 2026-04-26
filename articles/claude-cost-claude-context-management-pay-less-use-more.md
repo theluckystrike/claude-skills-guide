@@ -264,6 +264,8 @@ Three key metrics: cache hit rate (target above 80%), average context size after
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — why context management matters
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/) — additional context management techniques
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — the reasoning behind context constraints

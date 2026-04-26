@@ -97,3 +97,5 @@ Related reading:
 - [Claude Skills vs LangChain Agents Compared 2026](/claude-skills-vs-langchain-agents-comparison-2026/)
 - [Best Claude Skills for Developers 2026](/best-claude-skills-for-developers-2026/)
 - [Building Your First MCP Tool Integration](/building-your-first-mcp-tool-integration-guide-2026/)
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

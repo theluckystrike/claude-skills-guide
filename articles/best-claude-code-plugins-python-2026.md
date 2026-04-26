@@ -197,6 +197,8 @@ exit 0
 
 **Limitation**: Documentation quality depends on the specificity of your docstring requirements.
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 ## Getting Started

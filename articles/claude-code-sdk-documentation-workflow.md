@@ -247,4 +247,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Code SDK Testing Workflow Guide](/claude-code-sdk-testing-workflow-guide/)

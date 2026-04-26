@@ -284,6 +284,8 @@ Your next steps: scaffold a new API project, load the tdd skill, and build one e
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

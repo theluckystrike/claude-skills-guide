@@ -245,6 +245,8 @@ Start with simple components, use signals for reactivity, and progressively adop
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

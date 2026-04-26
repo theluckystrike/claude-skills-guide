@@ -233,6 +233,8 @@ The built-in Chrome translation excels at casual, occasional use. Heavy translat
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

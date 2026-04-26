@@ -338,6 +338,8 @@ Using Claude Code responsibly means balancing productivity with quality. This ch
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

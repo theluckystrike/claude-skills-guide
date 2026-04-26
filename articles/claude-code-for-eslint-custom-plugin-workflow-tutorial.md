@@ -259,4 +259,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code ESLint Plugin Crashes on Custom Rule — Fix (2026)](/claude-code-eslint-plugin-crashes-custom-rule-fix/)

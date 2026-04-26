@@ -186,6 +186,8 @@ The `/batch` bundled skill spawns parallel agents in worktrees. If those agents 
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Fix Claude Skill Timeout Errors](/fix-claude-skill-timeout-errors/)
 - [SKILL.md Frontmatter Fields Explained](/skill-md-file-frontmatter-fields-explained/)
 - [Testing Claude Skills Before Production](/testing-claude-skills-before-production/)

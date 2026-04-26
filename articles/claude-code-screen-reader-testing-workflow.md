@@ -261,6 +261,8 @@ The key is consistency, test regularly, document findings, and iterate. Each cyc
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -90,4 +90,6 @@ If you work exclusively in a language with excellent static analysis tooling (Ru
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code vs Cursor Tab (2026): Autocomplete](/claude-code-vs-cursor-tab-autocomplete-2026/)

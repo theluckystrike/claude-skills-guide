@@ -163,6 +163,8 @@ The investment in building and refining your compliance skills pays dividends th
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

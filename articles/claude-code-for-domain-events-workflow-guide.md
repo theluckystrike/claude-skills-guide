@@ -274,6 +274,8 @@ Remember that domain events are a tool for expressing business behavior, not jus
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

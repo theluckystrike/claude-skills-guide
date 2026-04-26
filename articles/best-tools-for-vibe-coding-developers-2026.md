@@ -342,6 +342,8 @@ The tools available in 2026 make it possible to build sophisticated applications
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

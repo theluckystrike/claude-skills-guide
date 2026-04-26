@@ -219,6 +219,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Fix: Anthropic SDK Streaming Hangs Indefinitely](/anthropic-sdk-streaming-hang-timeout/)
 - [Fix: Claude API Error 429 Rate Limit](/anthropic-api-error-429-rate-limit/)
 - [Claude Code API Client TypeScript Guide](/claude-code-api-client-typescript-guide/)

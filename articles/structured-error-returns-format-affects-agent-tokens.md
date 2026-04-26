@@ -314,6 +314,8 @@ Track error-related token consumption before and after implementing structured w
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [The Retry Loop Tax](/retry-loop-tax-error-handling-token-cost/) -- how errors lead to expensive loops
 - [Semantic Exit Codes](/semantic-exit-codes-help-claude-code-debug-faster/) -- complementary pattern for exit codes
 - [Errors Atlas](/errors-atlas/) -- error reference for Claude Code

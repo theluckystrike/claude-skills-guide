@@ -102,5 +102,7 @@ Switching from Aider to Claude Code:
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Plus Perplexity for Research-Driven Development](/claude-code-plus-perplexity-for-research-driven-development/)
 - [Claude Code vs Aider: Git Integration Compared](/claude-code-vs-aider-git-integration/)

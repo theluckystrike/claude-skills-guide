@@ -270,6 +270,8 @@ Measure average context size per interaction with and without pruning. Target a 
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Why Is Claude Code Expensive](/why-is-claude-code-expensive-large-context-tokens/) — context as the primary cost driver
 - [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/) — complementary management strategies
 - [Why Does Anthropic Limit Claude Code Context Window](/why-does-anthropic-limit-claude-code-context-window/) — understanding context design decisions

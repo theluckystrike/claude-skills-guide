@@ -384,6 +384,8 @@ These controls give you the flexibility to use skills like pdf, xlsx, tdd, and f
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

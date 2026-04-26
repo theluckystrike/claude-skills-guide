@@ -347,6 +347,8 @@ The key is selecting the approach that matches your workflow: quick address bar 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

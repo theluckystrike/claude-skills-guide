@@ -254,6 +254,8 @@ Start with a simple implementation and iterate, add faceted filtering, configure
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -413,6 +413,8 @@ The key to success is understanding the differences between zkSync Era and Ether
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

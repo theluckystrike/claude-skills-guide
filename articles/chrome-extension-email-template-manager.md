@@ -205,6 +205,8 @@ Chrome extension email template managers represent a significant productivity en
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

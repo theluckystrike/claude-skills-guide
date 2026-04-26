@@ -642,6 +642,8 @@ Always test thoroughly on testnets before deploying to mainnet, keep your privat
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

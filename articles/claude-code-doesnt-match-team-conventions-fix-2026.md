@@ -152,6 +152,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Tabnine vs Claude Code for Team](/tabnine-vs-claude-code-for-team-development/)
 - [Claude Code for Team Handbook Workflow](/claude-code-for-team-handbook-workflow-tutorial-guide/)
 - [Update Team CLAUDE.md Without Breaking](/updating-team-claude-md-without-breaking-workflows/)

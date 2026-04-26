@@ -125,6 +125,8 @@ For developers working at the bleeding edge of frameworks and libraries, Phind's
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code vs Pieces for Developers (2026)](/claude-code-vs-pieces-for-developers-2026/)
 - [Claude Code vs Sourcegraph Cody: Codebase Search](/claude-code-vs-sourcegraph-cody-codebase-search/)
 - [Claude Code vs Warp AI Terminal Compared (2026)](/claude-code-vs-warp-ai-terminal-2026/)

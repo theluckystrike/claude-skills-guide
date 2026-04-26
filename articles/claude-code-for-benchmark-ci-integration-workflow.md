@@ -449,6 +449,8 @@ The investment in setting up these workflows pays dividends in reduced bugs, bet
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

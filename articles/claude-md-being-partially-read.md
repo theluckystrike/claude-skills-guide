@@ -121,6 +121,8 @@ If you use `.claude/rules/` with path patterns, rules only load when Claude read
 ---
 paths:
   - "src/routes/**/*.ts"
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 # These rules only load when Claude reads files in src/routes/
 ```

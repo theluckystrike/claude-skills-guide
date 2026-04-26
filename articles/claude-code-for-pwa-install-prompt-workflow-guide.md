@@ -344,6 +344,8 @@ The key is to balance visibility with user experience, show the prompt to engage
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

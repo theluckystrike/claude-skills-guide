@@ -467,6 +467,8 @@ Whether you use existing tools or build custom solutions, readability scoring he
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

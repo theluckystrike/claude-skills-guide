@@ -220,6 +220,8 @@ Conditional types unlock TypeScript's full type system potential. With Claude Co
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -96,5 +96,7 @@ If your coding tasks are pure boilerplate generation (scaffolding projects, gene
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Sonnet 4.6 vs Gemini 2.5 Pro for Coding](/claude-sonnet-vs-gemini-25-pro-coding/)
 - [Claude Sonnet 4.6 vs GPT-4o for Coding in 2026](/claude-sonnet-vs-gpt-4o-coding-comparison-2026/)

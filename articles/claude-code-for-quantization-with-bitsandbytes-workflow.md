@@ -174,6 +174,8 @@ Remember that quantization is not a one-size-fits-all solution. Different models
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

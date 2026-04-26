@@ -191,6 +191,8 @@ The combination of Claude Code's flexibility and Prisma Cloud's comprehensive se
 
 
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 *Last verified: April 2026. If this approach no longer works, check [Claude Code for Workspace Indexing Workflow Tutorial](/claude-code-for-workspace-indexing-workflow-tutorial/) for updated steps.*

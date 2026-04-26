@@ -247,3 +247,5 @@ async function api<T>(path: string, opts?: RequestInit): Promise<T> {
 - [Implement Simplicity First](/karpathy-simplicity-first-implementation-2026/) — CLAUDE.md rules
 - [Fix Claude Code Overengineering](/karpathy-simplicity-debugging-overengineered-2026/) — when simplicity fails
 - [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — broader patterns
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

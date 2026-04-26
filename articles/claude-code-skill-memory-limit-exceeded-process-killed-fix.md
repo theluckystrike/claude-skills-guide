@@ -266,5 +266,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Zombie Process From Killed Subagent Fix](/claude-code-zombie-process-killed-subagent-fix-2026/)
 - [Claude Code Skill Progressive Disclosure: Implementation Guide](/claude-code-skill-progressive-disclosure-implementation/)

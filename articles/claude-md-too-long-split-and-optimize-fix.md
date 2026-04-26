@@ -87,6 +87,8 @@ paths:
 ---
 paths:
   - "src/repositories/**/*.ts"
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 ## Repository Rules

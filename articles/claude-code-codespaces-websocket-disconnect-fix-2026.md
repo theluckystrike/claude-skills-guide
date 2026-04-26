@@ -106,6 +106,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code GitHub Codespaces](/claude-code-github-codespaces-cloud-development-workflow/)
 - [Claude Code for GitHub Codespaces](/claude-code-for-codespaces-dev-environments-workflow-guide/)
 - [Use Claude Code with GitHub Codespaces](/claude-code-github-codespaces-setup-2026/)

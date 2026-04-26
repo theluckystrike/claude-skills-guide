@@ -294,6 +294,8 @@ print('Credit scorecard: PASS')
 
 ## Related
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for AML Rule Engine Development](/claude-code-aml-rule-engine-development-2026/)
 - [Claude Code for Value-at-Risk Modeling](/claude-code-value-at-risk-modeling-2026/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

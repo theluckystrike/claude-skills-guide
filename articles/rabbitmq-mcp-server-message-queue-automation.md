@@ -685,6 +685,8 @@ The key to success lies in treating your message infrastructure as a programmabl
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

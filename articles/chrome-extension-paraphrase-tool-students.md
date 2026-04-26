@@ -246,6 +246,8 @@ Building a paraphrase tool for students is a practical project that teaches core
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

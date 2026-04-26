@@ -110,6 +110,8 @@ These repos answer different questions. "How should I configure Claude Code?" le
 
 ## See Also
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [SuperClaude vs Claude Code Templates (2026)](/superclaude-vs-claude-code-templates-2026/)
 - [Use Awesome LLM Apps Templates with Claude (2026)](/how-to-use-awesome-llm-apps-with-claude-2026/)
 - [Awesome LLM Apps: Agent Templates Guide (2026)](/awesome-llm-apps-agent-templates-guide-2026/)

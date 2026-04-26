@@ -135,6 +135,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Msw Mock Service](/claude-code-msw-mock-service-worker-guide/)
 - [How to Mock API Responses in Chrome](/chrome-extension-mock-api-responses/)
 - [Claude Skills for Generating Mock Data](/claude-skills-for-generating-mock-data-and-fixtures/)

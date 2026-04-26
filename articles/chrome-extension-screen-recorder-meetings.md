@@ -510,6 +510,8 @@ This guide provides a foundation you can extend with features like automatic tra
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

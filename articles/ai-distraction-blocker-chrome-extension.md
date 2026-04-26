@@ -570,6 +570,8 @@ The progression from static selectors to heuristic scoring to local model infere
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -244,6 +244,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Extended Thinking Not Working](/claude-extended-thinking-not-working/) -- tool_choice restrictions when thinking is enabled.
 - [Claude API Error 400 invalid_request_error Fix](/claude-api-error-400-invalidrequesterror-explained/) -- covers tool schema validation errors.
 - [Claude Streaming API Guide](/claude-streaming-api-guide/) -- stream tool use responses for real-time feedback.

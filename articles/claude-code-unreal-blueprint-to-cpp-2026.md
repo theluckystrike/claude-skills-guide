@@ -345,6 +345,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Flask Blueprint](/claude-code-flask-blueprint-architecture-guide/)
 - [Claude Code for Unreal Engine C++](/claude-skills-for-unreal-engine-c-development/)
 

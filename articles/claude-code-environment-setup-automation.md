@@ -707,6 +707,8 @@ Start with simple automations, virtual environment activation, dependency instal
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

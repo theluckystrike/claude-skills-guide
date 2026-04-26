@@ -122,6 +122,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Error: npm Install Fails in Skill Workflow](/claude-code-error-npm-install-fails-in-skill-workflow/)
 - [Claude Code VS Code Extension Fails](/claude-code-vscode-extension-fails-to-activate-fix/)
 - [Fix: Claude Code Auth Fails on Headless](/claude-code-headless-linux-auth/)

@@ -409,6 +409,8 @@ Building a webcam settings adjuster demonstrates the intersection of extension d
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -124,6 +124,8 @@ After compaction, each skill gets at most 5,000 tokens re-attached, with a combi
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Build Your First Claude Code Skill](/building-your-first-claude-skill/)
 - [Claude Skills with Embedded Scripts](/claude-skills-with-embedded-scripts/)
 - [SKILL.md Frontmatter Fields Explained](/skill-md-file-frontmatter-fields-explained/)

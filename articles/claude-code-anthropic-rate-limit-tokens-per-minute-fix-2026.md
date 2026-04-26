@@ -86,6 +86,8 @@ Token counts are estimated before sending a request and precisely calculated on 
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code 429 Rate Limit](/claude-code-rate-limit-429-retry-after-fix/)
 - [Fix Claude Code API Rate Limit Reached](/claude-code-api-error-rate-limit-reached/)
 - [Fix Claude Rate Exceeded Error (2026)](/claude-rate-exceeded-error-fix/)

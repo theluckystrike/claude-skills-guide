@@ -168,6 +168,8 @@ $99 once. Pays for itself in saved tokens within a week.
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Prompt Caching API Guide](/claude-prompt-caching-api-guide/) -- implementation guide with code examples.
 - [Claude Prompt Caching Not Working](/claude-prompt-caching-not-working/) -- troubleshoot silent caching failures.
 - [Claude API Error 429 rate_limit_error Fix](/claude-api-error-429-ratelimiterror-explained/) -- caching boosts your effective ITPM throughput.

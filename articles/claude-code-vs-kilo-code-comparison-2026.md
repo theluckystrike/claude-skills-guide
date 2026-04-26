@@ -94,6 +94,8 @@ Kilo Code's open-source nature is both an advantage (auditable code, no vendor l
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can Kilo Code use Claude Opus 4.6 as its model?
 Yes. Configure your Anthropic API key in Kilo Code's settings and select Claude Opus 4.6 as the model. You get Opus-quality reasoning inside VS Code, paying Anthropic's API rates directly with zero Kilo markup.
 

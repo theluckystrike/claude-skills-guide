@@ -145,6 +145,8 @@ Pick one new skill each week, integrate it into your workflow, and track the tim
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

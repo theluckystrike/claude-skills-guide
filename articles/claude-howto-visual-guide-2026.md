@@ -185,4 +185,6 @@ The advanced section includes enterprise-specific topics like team-wide CLAUDE.m
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Howto vs Official Docs for Learning (2026)](/claude-howto-vs-official-docs-learning-2026/)

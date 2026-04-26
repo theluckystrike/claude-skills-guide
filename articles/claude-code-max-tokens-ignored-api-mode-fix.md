@@ -142,6 +142,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [API Endpoint Testing Workflow](/claude-code-api-endpoint-testing-guide/)
 - [Claude Code for Health Endpoint Pattern](/claude-code-for-health-endpoint-pattern-workflow/)
 - [Fix Claude Code Request Timed Out](/claude-code-fetch-failed-network-request-skill-error/)

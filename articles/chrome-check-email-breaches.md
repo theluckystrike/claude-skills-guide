@@ -268,6 +268,8 @@ For developers, integrating breach checking into your security tooling provides 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

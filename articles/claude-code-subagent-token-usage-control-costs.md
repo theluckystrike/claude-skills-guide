@@ -146,6 +146,8 @@ Track these metrics over two weeks:
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Subagent Management](/claude-code-multi-agent-subagent-communication-guide/) -- comprehensive subagent orchestration guide
 - [Context Engineering for Multi-Agent Orchestration](/context-engineering-multi-agent-orchestration/) -- multi-agent context patterns
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- preventing context bloat in parent agents

@@ -192,6 +192,8 @@ Claude Code transforms Capacitor debugging from a frustrating multi-platform cha
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -231,6 +231,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Error Connection Refused Localhost Fix](/claude-code-error-connection-refused-localhost-fix/)
 - [Claude Code Error Connection Timeout During Task Fix](/claude-code-error-connection-timeout-during-task-fix/)
 - [Claude Code Subagents Guide](/claude-code-subagents-guide/)

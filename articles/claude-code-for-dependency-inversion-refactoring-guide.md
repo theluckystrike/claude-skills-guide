@@ -277,4 +277,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Improve Claude Code Refactoring Quality (2026)](/claude-code-bad-at-refactoring-fix-2026/)

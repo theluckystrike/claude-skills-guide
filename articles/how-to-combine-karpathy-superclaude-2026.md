@@ -159,3 +159,5 @@ The Karpathy principles enhance every SuperClaude command by improving the reaso
 - Add [custom hooks](/understanding-claude-code-hooks-system-complete-guide/) that complement both tools
 - Explore the [Claude Code playbook](/playbook/) for workflow patterns
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional behavioral plugins
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

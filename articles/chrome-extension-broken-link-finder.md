@@ -437,6 +437,8 @@ Start with the basic architecture shown here, then add features based on your sp
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -217,6 +217,8 @@ Start with small, isolated scripts to build familiarity with the workflow, then 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

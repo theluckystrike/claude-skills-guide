@@ -300,6 +300,8 @@ Building a Chrome extension for team mood tracking requires thoughtful architect
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

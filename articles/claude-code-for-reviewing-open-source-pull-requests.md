@@ -253,6 +253,8 @@ Start with the workflows outlined here, adapt them to your project's specific ne
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

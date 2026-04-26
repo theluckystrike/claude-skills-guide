@@ -159,6 +159,8 @@ Whether you're working on a small project or enterprise application, integrating
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

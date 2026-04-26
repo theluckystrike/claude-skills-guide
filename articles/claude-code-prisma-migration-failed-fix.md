@@ -283,6 +283,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Database Seeding Automation](/claude-code-database-seeding-automation/)
 - [Claude Code Database Test Fixtures Guide](/claude-code-database-test-fixtures-guide/)
 - [Claude Code Testcontainers Integration Testing](/claude-code-testcontainers-integration-testing/)

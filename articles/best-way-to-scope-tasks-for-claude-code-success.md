@@ -199,6 +199,8 @@ If you struggle to answer these questions, your task likely needs refinement bef
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

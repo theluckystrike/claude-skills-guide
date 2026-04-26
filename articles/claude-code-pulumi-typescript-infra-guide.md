@@ -407,6 +407,8 @@ Claude Code accelerates each of these practices through code generation, error a
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

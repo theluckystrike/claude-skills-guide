@@ -261,6 +261,8 @@ The investment pays dividends in developer productivity, code quality, and the a
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

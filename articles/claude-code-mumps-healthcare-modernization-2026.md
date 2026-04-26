@@ -289,6 +289,8 @@ python3 mumps_migration/parse_mumps.py routines/DGPT.m
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for COBOL to Java](/claude-code-cobol-to-java-migration-2026/)
 - [Claude Code for HIPAA Development](/claude-code-hipaa-compliant-development-workflow-guide/)
 - [CLAUDE.md File Guide](/claude-md-file-complete-guide-what-it-does/)

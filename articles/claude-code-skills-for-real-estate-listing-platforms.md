@@ -611,6 +611,8 @@ The xlsx and pdf skills reduce the engineering burden on the data pipeline and d
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

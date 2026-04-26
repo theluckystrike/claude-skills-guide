@@ -143,6 +143,8 @@ Invoke these skills directly in Claude Code with `/skill-name` to integrate spec
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

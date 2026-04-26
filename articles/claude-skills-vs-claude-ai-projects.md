@@ -125,6 +125,8 @@ Claude Code's web app (claude.ai/code) and Claude.ai's Projects interface look s
 
 ## Related Guides
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Claude Skills vs Raw Prompts with Tools](/claude-skills-vs-raw-prompts-with-tools/) -- when formalization helps
 - [Claude Skills vs ChatGPT Custom GPTs](/claude-skills-vs-chatgpt-custom-gpts/) -- web-based comparison
 - [Claude Skills vs MCP Servers](/claude-skills-vs-mcp-servers-comparison/) -- capability extension comparison

@@ -265,6 +265,8 @@ Related Reading
 - [Claude Code Pulumi TypeScript Infra Guide](/claude-code-pulumi-typescript-infra-guide/)
 - [Claude Code for Writing Research Methodology Sections](/claude-code-for-writing-research-methodology-sections/)
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 *Built by theluckystrike. More at [zovo.one](https://zovo.one)

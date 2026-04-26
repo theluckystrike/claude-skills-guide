@@ -238,6 +238,8 @@ The best results come from skills that complement each other well. A TDD skill p
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

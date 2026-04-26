@@ -211,6 +211,8 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [CLAUDE.md best practices definitive guide](/claude-md-best-practices-definitive-guide/) — the definitive CLAUDE.md reference
 - [Claude Code hooks](/claude-code-hooks-complete-guide/) — hook into tool execution
 - [Claude Code spec workflow](/claude-code-spec-workflow-guide/) — spec-first development patterns

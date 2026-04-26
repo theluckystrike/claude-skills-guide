@@ -69,6 +69,8 @@ Claude Code should create a GitHub Actions workflow with two jobs: one on `pull_
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Neon Branching Workflow Guide](/claude-code-for-neon-branching-workflow-guide/)
 - [Claude Code Database Schema Design Guide](/claude-code-database-schema-design-guide/)
 - [Best AI Tools for Backend Development 2026](/best-ai-tools-for-backend-development-2026/)

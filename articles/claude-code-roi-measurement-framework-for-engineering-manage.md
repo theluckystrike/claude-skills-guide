@@ -223,6 +223,8 @@ Measuring Claude Code ROI isn't about justifying the cost, it's about optimizing
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

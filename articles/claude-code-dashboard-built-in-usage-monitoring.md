@@ -126,6 +126,8 @@ For individual developers, `/cost` plus ccusage covers all monitoring needs. Tea
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Token Budget: How to Set Limits and Track Spend](/claude-code-token-budget-set-limits-track-spend/) -- budget enforcement using monitoring data
 - [Claude Code Cost Alerts: Set Up Notifications](/claude-code-cost-alerts-notifications-budget/) -- automated alerts when spend exceeds thresholds
 

@@ -116,3 +116,5 @@ The developers who report the highest productivity gains use both tools simultan
 - [Claude Code vs Cursor Tab: Autocomplete Compared](/claude-code-vs-cursor-tab-autocomplete-2026/)
 - [Best AI Code Completion Tools vs Claude Code](/best-ai-code-completion-tools-vs-claude-code/)
 - [Claude Code vs Codeium: Full Comparison](/claude-code-vs-codeium-full-comparison-2026/)
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

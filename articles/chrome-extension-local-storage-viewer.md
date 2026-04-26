@@ -220,6 +220,8 @@ Understanding how to view and manage storage is fundamental to Chrome extension 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

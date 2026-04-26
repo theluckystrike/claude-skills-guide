@@ -197,6 +197,8 @@ Start by identifying message types in your system that would benefit from smalle
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

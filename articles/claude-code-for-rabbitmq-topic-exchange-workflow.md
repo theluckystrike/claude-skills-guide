@@ -329,6 +329,8 @@ RabbitMQ topic exchanges provide the flexibility needed for complex, evolving me
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

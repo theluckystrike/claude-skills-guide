@@ -190,6 +190,8 @@ Experiment with a few extensions to find the interface that matches your workflo
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

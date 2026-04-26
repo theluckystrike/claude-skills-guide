@@ -123,4 +123,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Context Window Budgeting: How to Allocate Tokens Across Tasks](/context-window-budgeting-allocate-tokens-tasks/)

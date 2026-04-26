@@ -148,6 +148,8 @@ Start small, with automated reporting or a single remediation workflow, and expa
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

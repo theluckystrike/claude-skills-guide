@@ -47,4 +47,3 @@ User-agent: Meta-ExternalAgent
 Disallow: /
 
 Sitemap: https://claudecodeguides.com/sitemap-index.xml
-Sitemap: https://claudecodeguides.com/sitemap.xml

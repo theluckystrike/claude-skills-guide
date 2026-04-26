@@ -124,6 +124,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Docker Multi-Stage Build Cache Miss](/claude-code-docker-multi-stage-cache-invalidation-fix-2026/)
 - [5-Minute vs 1-Hour Cache](/5-minute-vs-1-hour-cache-which-saves-more/)
 - [Claude Code for Varnish Cache](/claude-code-for-varnish-cache-workflow-tutorial/)

@@ -433,6 +433,8 @@ The key is starting simple: define your evaluation criteria, build baseline metr
 
 
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 *Last verified: April 2026. If this approach no longer works, check [How to Use TypeORM Entities Relations Migration (2026)](/claude-code-typeorm-entities-relations-migration-workflow/) for updated steps.*

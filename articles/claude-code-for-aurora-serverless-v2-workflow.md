@@ -255,4 +255,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for SST — Workflow Guide](/claude-code-for-sst-serverless-workflow-guide/)

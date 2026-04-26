@@ -176,3 +176,5 @@ This data is valuable for:
 - Compare ccusage with [the Claude Max dashboard](/ccusage-vs-claude-max-dashboard-cost-tracking-2026/)
 - Explore [cost-saving tools](/best-claude-code-cost-saving-tools-2026/) for the full optimization toolkit
 - Read [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for workflow efficiency
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

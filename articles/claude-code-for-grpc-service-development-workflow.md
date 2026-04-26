@@ -462,6 +462,8 @@ Start with well-defined proto files, let Claude Code generate the scaffolding, t
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

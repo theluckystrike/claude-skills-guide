@@ -208,6 +208,8 @@ Claude Code's ability to validate queries against production schemas in CI/CD pi
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### Can Claude Code connect to a live database?
 
 Claude Code can connect to databases via MCP servers (Postgres MCP, MySQL MCP). This enables real-time schema introspection and query execution against development databases.

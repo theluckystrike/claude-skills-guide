@@ -236,6 +236,8 @@ Making Claude Code follow your naming conventions is straightforward with the ri
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

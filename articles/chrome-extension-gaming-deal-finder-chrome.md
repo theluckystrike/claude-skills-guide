@@ -396,6 +396,8 @@ Claude Code creates files and edits through standard filesystem operations, so a
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Virtual Background Chrome Extension](/virtual-background-chrome-extension/)
 - [Spending Tracker Chrome Extension Guide](/chrome-extension-spending-tracker-chrome/)
 - [Anki Web Integration Chrome Extension](/chrome-extension-anki-web-integration/)

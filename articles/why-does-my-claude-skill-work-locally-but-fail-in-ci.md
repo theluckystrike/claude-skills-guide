@@ -177,6 +177,8 @@ The gap between your machine and CI runners is real, but it's a [gap you can clo
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

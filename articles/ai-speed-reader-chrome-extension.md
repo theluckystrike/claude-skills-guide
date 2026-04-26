@@ -308,6 +308,8 @@ Building an AI speed reader extension combines practical browser APIs with AI ca
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

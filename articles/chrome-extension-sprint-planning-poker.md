@@ -130,6 +130,8 @@ The convenience of browser-based planning poker makes it accessible for teams wa
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -179,6 +179,8 @@ Claude Code transforms the Classic ASP to .NET migration from an overwhelming ch
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

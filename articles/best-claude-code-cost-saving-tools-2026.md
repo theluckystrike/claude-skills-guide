@@ -137,6 +137,8 @@ Combine these tools into a monthly audit:
 
 For automated monthly auditing, see the [ccusage audit guide](/how-to-audit-claude-code-costs-monthly-2026/).
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 ## Expected Savings

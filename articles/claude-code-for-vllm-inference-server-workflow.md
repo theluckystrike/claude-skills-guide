@@ -727,6 +727,8 @@ By following this workflow, you'll have a production-ready LLM inference server 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

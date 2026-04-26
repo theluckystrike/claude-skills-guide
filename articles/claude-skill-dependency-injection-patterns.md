@@ -178,6 +178,8 @@ Start by identifying repetitive tasks in your Claude workflows. Extract the comm
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

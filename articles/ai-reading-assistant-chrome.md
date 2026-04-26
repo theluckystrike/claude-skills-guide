@@ -364,6 +364,8 @@ The streaming response pattern and hierarchical summarization for long content a
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

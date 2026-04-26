@@ -430,6 +430,8 @@ Remember to always test on testnets before deploying to mainnet, keep your crede
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

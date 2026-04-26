@@ -267,6 +267,8 @@ The key is starting simple, capture recognitions, store them locally, and gradua
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

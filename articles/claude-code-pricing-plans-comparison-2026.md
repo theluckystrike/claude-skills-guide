@@ -167,6 +167,8 @@ Contact Anthropic directly for enterprise pricing.
 
 ## FAQ
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 ### How do I reduce costs without reducing productivity?
 Focus on .claudeignore, session scoping, and CLAUDE.md optimization. These reduce waste tokens without limiting what Claude Code can do. The [claude-code-templates](https://github.com/davila7/claude-code-templates) library includes optimized configurations.
 

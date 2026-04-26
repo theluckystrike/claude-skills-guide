@@ -435,6 +435,8 @@ The key is to make secret scanning automatic and routine, so your team catches i
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

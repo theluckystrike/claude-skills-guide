@@ -138,6 +138,8 @@ Skills follow the agentskills.io open standard, which means your migrated skills
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skills vs OpenAI Assistants API](/claude-skills-vs-openai-assistants-api/) -- detailed capability comparison
 - [Claude Skills vs MCP Servers](/claude-skills-vs-mcp-servers-comparison/) -- replacing function calling with MCP
 - [Hybrid Patterns: Skills, MCP, and Custom Tools](/hybrid-patterns-skills-mcp-custom-tools/) -- combining tools for complex migrations

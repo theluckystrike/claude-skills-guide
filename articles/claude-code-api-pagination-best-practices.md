@@ -390,6 +390,8 @@ The skills like `pdf`, `tdd`, `frontend-design`, and `supermemory` all work bett
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

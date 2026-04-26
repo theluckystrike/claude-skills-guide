@@ -324,6 +324,8 @@ The investment in proper audit logging pays dividends during compliance audits, 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -306,6 +306,8 @@ Type / in the Claude Code prompt to see an autocomplete list of available comman
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Command Reference](/commands/) — Interactive command explorer
 - [Getting Started with Claude Code](/getting-started/) — First-time setup and basics
 - [Claude Code Configuration Guide](/configuration/) — Full settings reference

@@ -484,6 +484,8 @@ Only if you are in a region where Anthropic restricts access. VPNs can sometimes
 
 ## See Also
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Rate Exceeded Error Fix](/claude-rate-exceeded-error-fix/)
 - [Claude Internal Server Error Fix](/claude-internal-server-error-fix/)
 - [Claude Code Process Exited Code 1 Fix](/claude-code-process-exited-code-1-fix/)

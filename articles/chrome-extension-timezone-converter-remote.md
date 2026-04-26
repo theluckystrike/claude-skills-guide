@@ -385,6 +385,8 @@ Timezone list not syncing across devices: Use `chrome.storage.sync` instead of `
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -354,6 +354,8 @@ Remember: Claude Code is a powerful tool that amplifies your capabilities, but t
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

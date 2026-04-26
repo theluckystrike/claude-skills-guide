@@ -326,6 +326,8 @@ The `tdd` skill adds another layer here: it can verify that documented examples 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -581,6 +581,8 @@ Remember to version your elements, document thoroughly, and test regularly. With
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

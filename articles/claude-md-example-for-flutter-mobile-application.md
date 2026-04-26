@@ -264,6 +264,8 @@ For Flutter development, consider installing complementary skills like the `fron
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

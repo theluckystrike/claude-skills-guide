@@ -358,6 +358,8 @@ The combination of browser automation and AI creates a powerful research assista
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

@@ -174,3 +174,5 @@ Adding Task Master to a project that is already underway requires some adjustmen
 - Compare Task Master with [GitHub Issues](/claude-task-master-vs-github-issues-project-2026/) for team workflows
 - Add [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) that trigger on task completion
 - Explore the [Claude Code playbook](/playbook/) for workflow patterns
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

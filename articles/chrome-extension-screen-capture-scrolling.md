@@ -318,6 +318,8 @@ Match the tool to the workflow, understand the limitations around dynamic conten
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

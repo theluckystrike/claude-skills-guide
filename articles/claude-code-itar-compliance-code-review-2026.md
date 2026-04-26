@@ -296,6 +296,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for Prowler Compliance](/claude-code-for-prowler-compliance-workflow/)
 - [Claude Code SOC 2 Compliance Audit Prep](/claude-code-soc2-compliance-audit-preparation-guide-2026/)
 - [CCPA Compliance with Claude Code (2026)](/claude-code-ccpa-privacy-compliance-guide/)

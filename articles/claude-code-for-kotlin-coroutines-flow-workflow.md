@@ -277,6 +277,8 @@ Start your next flow-based project with Claude Code, and experience how AI-assis
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

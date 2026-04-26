@@ -194,6 +194,8 @@ Related guides: [AI Coding Tools Security Concerns Enterprise Guide](/ai-coding-
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

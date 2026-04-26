@@ -170,6 +170,8 @@ The skills mentioned here, tdd, frontend-design, pdf, supermemory, and skill-cre
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

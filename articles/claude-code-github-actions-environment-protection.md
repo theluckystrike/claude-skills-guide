@@ -299,4 +299,6 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 - [Branch Protection Bypass Attempt Fix](/claude-code-branch-protection-bypass-attempt-fix-2026/)

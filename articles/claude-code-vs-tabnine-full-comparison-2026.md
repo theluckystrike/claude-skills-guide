@@ -109,3 +109,5 @@ Related reading:
 - [AI Coding Tools Pricing Comparison 2026](/ai-coding-tools-pricing-comparison-2026/)
 - [Best Free AI Coding Tools vs Claude Code 2026](/best-free-ai-coding-tools-alternatives-to-claude-code-2026/)
 - [Claude Code vs Cursor: Full Comparison 2026](/claude-code-vs-cursor-comparison-2026/)
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

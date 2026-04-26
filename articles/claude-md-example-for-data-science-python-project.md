@@ -219,6 +219,8 @@ For large datasets, document the approximate size of each stage's inputs and out
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

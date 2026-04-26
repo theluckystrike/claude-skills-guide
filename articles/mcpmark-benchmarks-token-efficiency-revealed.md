@@ -142,6 +142,8 @@ Worst case (unfiltered GitHub, 12 tools):
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [MCP Tool Filtering: Only Load What You Need](/mcp-tool-filtering-only-load-what-you-need/) -- applying benchmark insights to filter tools
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- configuring MCP servers for optimal performance
 - [Claude Code Tool Call Overhead](/claude-code-tool-call-overhead-tokens-per-mcp-call/) -- understanding the full cost of tool calls

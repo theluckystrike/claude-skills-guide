@@ -292,6 +292,8 @@ The investment in caching infrastructure pays dividends through faster skill exe
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

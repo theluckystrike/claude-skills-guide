@@ -399,6 +399,8 @@ Start small: create one review skill, test it on your existing runbooks, and exp
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

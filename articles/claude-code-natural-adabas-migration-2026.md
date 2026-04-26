@@ -262,6 +262,8 @@ psql -d migrated_db -c "
 
 ## Related
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code for COBOL to Java Migration](/claude-code-cobol-to-java-migration-2026/)
 - [Claude Code for Mainframe REXX Modernization](/claude-code-mainframe-rexx-modernization-2026/)
 - [Claude Code for RPG AS/400 Modernization](/claude-code-rpg-as400-modernization-2026/)

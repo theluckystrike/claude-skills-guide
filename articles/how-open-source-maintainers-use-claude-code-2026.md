@@ -156,6 +156,8 @@ The maintainers who thrive in 2026 are not those who work hardest, but those who
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

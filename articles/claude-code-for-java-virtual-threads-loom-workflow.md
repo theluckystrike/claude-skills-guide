@@ -242,6 +242,8 @@ Java Virtual Threads (Project Loom) open new possibilities for building highly s
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

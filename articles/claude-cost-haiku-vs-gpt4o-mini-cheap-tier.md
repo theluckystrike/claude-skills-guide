@@ -118,6 +118,8 @@ Apply Claude's caching to narrow the gap: Haiku cache reads cost $0.10/MTok, whi
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude vs GPT-4o Honest Cost Breakdown](/claude-cost-claude-vs-gpt4-honest-cost-breakdown/)
 - [When GPT-4o Mini Beats Claude Haiku](/claude-cost-when-gpt4o-mini-beats-haiku/)
 - [The Cheapest Model for Your Workload](/claude-cost-cheapest-model-workload-calculator/)

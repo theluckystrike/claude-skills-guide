@@ -258,6 +258,8 @@ Start with a simple pipeline for one component type, validate the output thoroug
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -311,6 +311,8 @@ Start with the basic extraction logic and a single citation style. Add JSON-LD e
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

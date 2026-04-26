@@ -262,6 +262,8 @@ Use all four in combination: /cost for real-time awareness, ccusage for historic
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude Code Cost Optimization: 15 Techniques That Actually Work](/claude-code-cost-optimization-15-techniques/) -- apply findings from audit
 - [Claude Code Compact Command Guide](/claude-code-conversation-too-long-fresh-vs-compact/) -- the top fix for context accumulation
 - [Cost Optimization Hub](/cost-optimization/) -- all cost guides

@@ -247,6 +247,8 @@ Lambda SnapStart represents a significant advancement in serverless cold start o
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

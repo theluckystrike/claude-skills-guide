@@ -672,6 +672,8 @@ Start with one critical runbook, refine it through actual use, and gradually exp
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -217,6 +217,8 @@ For developers building memory-sensitive applications, regular Task Manager moni
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

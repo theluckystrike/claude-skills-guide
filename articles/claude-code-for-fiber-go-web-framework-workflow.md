@@ -328,6 +328,8 @@ The key is providing clear context, reviewing generated code, and building upon 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

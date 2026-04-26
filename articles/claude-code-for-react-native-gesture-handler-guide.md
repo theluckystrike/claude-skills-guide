@@ -297,6 +297,8 @@ With these patterns and Claude Code as your development partner, you'll be build
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

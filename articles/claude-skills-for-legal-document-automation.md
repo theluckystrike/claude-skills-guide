@@ -239,6 +239,8 @@ The combination of Claude's natural language processing and skill-based instruct
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -230,6 +230,8 @@ The key is treating Claude Code not just as a reporting tool, but as an active p
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

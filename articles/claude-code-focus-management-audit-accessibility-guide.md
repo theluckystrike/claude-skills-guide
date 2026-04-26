@@ -227,6 +227,8 @@ Remember: accessible focus management isn't just about compliance; it improves u
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

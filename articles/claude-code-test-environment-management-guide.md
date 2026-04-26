@@ -235,6 +235,8 @@ Start with simple local environments using Docker, then expand to CI/CD integrat
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

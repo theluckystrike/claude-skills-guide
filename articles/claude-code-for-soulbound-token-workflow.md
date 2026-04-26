@@ -444,6 +444,8 @@ Tests failing after Hardhat upgrade: Hardhat 3.x changed the way accounts are ac
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

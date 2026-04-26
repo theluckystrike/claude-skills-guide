@@ -549,6 +549,8 @@ Start small, automate one aspect of your pipeline, then expand as you build conf
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

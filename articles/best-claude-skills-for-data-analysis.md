@@ -154,6 +154,8 @@ Related Reading
 - [Claude Skills Token Optimization: Reduce API Costs](/claude-skills-token-optimization-reduce-api-costs/). Keep large data analysis sessions cost-efficient
 - [Best Claude Skills for Developers in 2026](/best-claude-skills-for-developers-2026/). Full overview of the top developer skills
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

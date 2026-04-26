@@ -565,5 +565,7 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Streaming Buffer Overflow Error Fix](/claude-code-streaming-buffer-overflow-fix-2026/)
 - [Claude Code for Sonar Array Processing (2026)](/claude-code-sonar-array-processing-2026/)

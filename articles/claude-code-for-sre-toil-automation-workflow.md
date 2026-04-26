@@ -325,6 +325,8 @@ Remember: the goal isn't to eliminate all manual work, it's to eliminate work th
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -144,6 +144,8 @@ The next time you use Claude Code, watch for the agent loop in action. You'll se
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

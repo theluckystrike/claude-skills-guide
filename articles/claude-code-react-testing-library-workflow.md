@@ -344,6 +344,8 @@ Remember to prioritize accessibility in your tests, use appropriate mocking stra
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

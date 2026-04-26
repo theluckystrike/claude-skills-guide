@@ -236,6 +236,8 @@ Start your next learning session with Claude Code today. Your future self will t
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

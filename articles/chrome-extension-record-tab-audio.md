@@ -236,6 +236,8 @@ For most use cases, podcast recording, tutorial creation, meeting archival, the 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

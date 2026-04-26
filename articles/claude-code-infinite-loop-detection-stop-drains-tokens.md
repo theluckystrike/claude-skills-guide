@@ -144,6 +144,8 @@ Large loop (20+ iterations): ~150K tokens = $2.25-$11.25
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code keeps retrying the same error](/claude-code-keeps-retrying-same-error-cost-fix/) -- specific fix for retry spirals
 - [Edge Function Debugging: Prevent Retry Spirals](/edge-function-debugging-prevent-retry-token-spirals/) -- deploy-specific loop prevention
 - [Claude Code Hooks for Token Budget Enforcement](/claude-code-hooks-token-budget-enforcement/) -- automated loop detection via hooks

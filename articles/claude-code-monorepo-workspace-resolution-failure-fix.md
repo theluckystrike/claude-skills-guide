@@ -125,6 +125,8 @@ If your specific error message differs slightly from the one shown above, the fi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Changesets Monorepo](/claude-code-for-changesets-monorepo-release-workflow/)
 - [Claude Code for Lerna Monorepo Workflow](/claude-code-for-lerna-monorepo-workflow/)
 - [Claude Code with Turborepo Monorepo](/claude-code-with-turborepo-monorepo-setup-guide/)

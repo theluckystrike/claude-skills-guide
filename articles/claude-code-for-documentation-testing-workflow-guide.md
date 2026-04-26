@@ -206,6 +206,8 @@ Start small, implement one test category at a time, and gradually build a comple
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

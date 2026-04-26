@@ -151,6 +151,8 @@ docker compose -f docker-compose.test.yml run --rm app pnpm test --reporter=json
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Edge Function Debugging: Prevent Retry Spirals](/edge-function-debugging-prevent-retry-token-spirals/) -- retry prevention for serverless functions
 - [CLAUDE.md as Cost Control](/claude-md-cost-control-rules-prevent-token-waste/) -- encoding cost-saving rules in CLAUDE.md
 - [Claude Code keeps retrying the same error](/claude-code-keeps-retrying-same-error-cost-fix/) -- general retry loop prevention

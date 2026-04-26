@@ -224,6 +224,8 @@ Remember that the goal isn't to replace human testers but to augment their capab
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

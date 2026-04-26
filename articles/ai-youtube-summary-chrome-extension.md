@@ -247,6 +247,8 @@ The ability to quickly extract and summarize video content represents a signific
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

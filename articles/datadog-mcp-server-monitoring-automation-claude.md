@@ -318,6 +318,8 @@ The combination of Datadog's monitoring platform with MCP server automation crea
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

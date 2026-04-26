@@ -158,6 +158,8 @@ Claude Code transforms the traditionally manual process of converting design ske
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

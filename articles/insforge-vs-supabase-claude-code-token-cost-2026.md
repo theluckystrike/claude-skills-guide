@@ -345,6 +345,8 @@ For teams that value Supabase's mature ecosystem (real-time, auth, edge function
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Reducing Claude Code Token Usage for Database Operations](/reducing-claude-code-token-usage-database-operations/) -- database-specific optimization
 - [RLS Policy Debugging with Claude Code](/rls-policy-debugging-claude-code-structured-approach/) -- Supabase RLS deep dive
 - [Cost Optimization Hub](/cost-optimization/) -- platform-agnostic cost guides

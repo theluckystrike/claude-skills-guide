@@ -176,6 +176,8 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Claude API Error 429 rate_limit_error Fix](/claude-api-error-429-ratelimiterror-explained/) -- distinguish between per-account rate limits and platform-wide overload.
 - [Claude API Error 500 api_error Fix](/claude-api-error-500-apierror-explained/) -- handle internal server errors with similar retry strategies.
 - [Claude Streaming API Guide](/claude-streaming-api-guide/) -- streaming keeps connections alive and improves resilience.

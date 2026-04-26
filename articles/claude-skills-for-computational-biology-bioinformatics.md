@@ -146,6 +146,8 @@ Memory usage matters on shared computing clusters. Run Claude Code with `NODE_OP
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

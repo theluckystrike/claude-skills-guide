@@ -92,6 +92,8 @@ Moving from Bolt.new prototype to Claude Code development:
 
 ## FAQ
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 ### Can I import a Bolt.new project into Claude Code?
 
 Yes. Export your Bolt.new project (download or push to GitHub), clone it locally, and run Claude Code in that directory. Create a CLAUDE.md documenting the architecture, then use Claude Code to add tests, refactor, and extend the prototype. This is the most common "graduate from prototype to production" workflow.

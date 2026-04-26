@@ -278,6 +278,8 @@ The general rule: if a flag is widely recommended, check whether it still exists
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

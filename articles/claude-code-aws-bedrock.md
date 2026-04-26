@@ -145,6 +145,8 @@ Bedrock adds a routing layer. Responses may be 200-500ms slower than the direct 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

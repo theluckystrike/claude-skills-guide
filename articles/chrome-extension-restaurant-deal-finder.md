@@ -247,6 +247,8 @@ The restaurant deal space remains fragmented, with many independent restaurants 
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

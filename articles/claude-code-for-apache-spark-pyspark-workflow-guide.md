@@ -317,6 +317,8 @@ Claude Code can assist you at every step, reviewing your code, suggesting optimi
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

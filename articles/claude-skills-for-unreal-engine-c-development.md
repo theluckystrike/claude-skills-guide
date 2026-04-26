@@ -486,6 +486,8 @@ Related Reading
 - [Claude SuperMemory Skill: Persistent Context Guide](/claude-supermemory-skill-persistent-context-explained/)
 - [Best Claude Skills for Code Review Automation](/best-claude-skills-for-code-review-automation/)
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)

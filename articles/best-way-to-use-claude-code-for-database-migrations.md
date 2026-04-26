@@ -206,6 +206,8 @@ By pairing Claude Code with skills like tdd for testing, pdf for documentation, 
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

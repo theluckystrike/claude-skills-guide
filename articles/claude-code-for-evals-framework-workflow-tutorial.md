@@ -218,6 +218,8 @@ The investment in a solid evals workflow pays dividends through faster iteration
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

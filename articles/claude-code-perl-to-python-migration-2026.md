@@ -320,6 +320,8 @@ Perl codebases are increasingly difficult to maintain and hire for. Automated mi
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Using Claude Code to Learn New Programming Languages](/using-claude-code-to-learn-new-programming-languages/)
 - [Best Way to Get Claude Code to Explain Existing Code](/best-way-to-get-claude-code-to-explain-existing-code/)
 - [Claude Code for Test Driven Development Workflow](/claude-code-for-test-driven-development-workflow-tutorial/)

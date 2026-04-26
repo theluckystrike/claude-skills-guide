@@ -101,6 +101,8 @@ The combination of agentic execution, native tool use, extensible skills, and pr
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

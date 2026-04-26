@@ -794,6 +794,8 @@ Built by theluckystrike. More at zovo.one
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [API 529 Overloaded Retry Backoff — Fix (2026)](/claude-code-api-overloaded-529-backoff-fix-2026/)
 - [Claude Code Request Timed Out 120000ms — Fix (2026)](/claude-code-api-timeout-ms-setting-fix-2026/)
 - [API Version Deprecated Error — Fix (2026)](/claude-code-api-version-deprecation-error-fix-2026/)

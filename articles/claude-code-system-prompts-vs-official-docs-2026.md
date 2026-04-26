@@ -90,5 +90,7 @@ Read the system prompts repo once to build your mental model of how Claude Code 
 
 ## See Also
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code System Prompts Explained (2026)](/claude-code-system-prompts-guide-2026/)
 - [Claude Howto vs Official Docs for Learning (2026)](/claude-howto-vs-official-docs-learning-2026/)

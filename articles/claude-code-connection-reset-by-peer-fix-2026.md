@@ -107,6 +107,8 @@ Claude Code requires TLS 1.2 or later. The Anthropic API endpoints do not suppor
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Peer Dependency Conflict npm Error](/claude-code-peer-dependency-conflict-fix-2026/)
 - [Fix WebSocket Connection Failures](/claude-code-websocket-connection-failed-fix/)
 - [Fix Claude Code MCP Server Connection](/claude-code-mcp-server-connection-closed-fix/)

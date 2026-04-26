@@ -253,6 +253,8 @@ Claude Code transforms full-stack development from a complex orchestration task 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

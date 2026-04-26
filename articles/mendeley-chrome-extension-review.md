@@ -317,6 +317,8 @@ For teams already invested in the Mendeley ecosystem, the Chrome extension provi
 
 ---
 
+
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
 <div class="mastery-cta">

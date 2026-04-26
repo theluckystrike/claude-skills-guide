@@ -283,6 +283,8 @@ When working with Claude Code on this topic, keep these implementation details i
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code for Prowler Compliance](/claude-code-for-prowler-compliance-workflow/)
 - [Claude Code SOC 2 Compliance Audit Prep](/claude-code-soc2-compliance-audit-preparation-guide-2026/)
 - [CCPA Compliance with Claude Code (2026)](/claude-code-ccpa-privacy-compliance-guide/)

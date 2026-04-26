@@ -127,3 +127,5 @@ If Claude Code still assumes, strengthen the rules with more specific examples o
 - [Implement Don't Assume in CLAUDE.md](/karpathy-dont-assume-implementation-claude-md-2026/) — template rules
 - [Fix Claude Code Ignoring Project Context](/claude-code-ignores-project-context-fix-2026/) — a related problem
 - [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — structuring effective rules
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

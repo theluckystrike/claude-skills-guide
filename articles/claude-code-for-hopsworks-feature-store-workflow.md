@@ -255,6 +255,8 @@ The combination of Claude Code's development assistance and Hopsworks' enterpris
 
 ---
 
+
+**Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 ---
 
 <div class="mastery-cta">

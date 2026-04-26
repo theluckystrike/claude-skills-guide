@@ -218,6 +218,8 @@ Remember: smart contract security requires multiple layers of testing. Echidna c
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

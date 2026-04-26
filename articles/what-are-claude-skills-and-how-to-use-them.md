@@ -242,6 +242,8 @@ Start with one or two skills for your most common tasks, refine them based on re
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

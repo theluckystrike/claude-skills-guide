@@ -399,6 +399,8 @@ Remember to start with testnet deployment, validate your implementation thorough
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -289,6 +289,8 @@ Start by adding an accessibility skill to your Claude Code configuration, then p
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

@@ -287,6 +287,8 @@ Stack: {lang}, {framework}, {DB}, {test framework}
 
 ## Related Guides
 
+**Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
 - [Pre-Loading Context: CLAUDE.md Sections That Save 50%+ Tokens](/pre-loading-context-claude-md-sections-save-tokens/) -- what to put in CLAUDE.md
 - [Claude Code Skills Guide](/skills/) -- moving knowledge to on-demand skills
 - [Cost Optimization Hub](/cost-optimization/) -- complete cost guide index

@@ -179,6 +179,8 @@ Claude Code creates files and edits through standard filesystem operations, so a
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Skill Naming Conventions](/claude-skill-naming-conventions/)
 - [Claude Md For Database Conventions](/claude-md-for-database-conventions-and-patterns/)
 - [Make Claude Code Match Team Conventions](/claude-code-doesnt-match-team-conventions-fix-2026/)

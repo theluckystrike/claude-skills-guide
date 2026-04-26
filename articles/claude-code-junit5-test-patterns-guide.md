@@ -503,6 +503,8 @@ Writing solid tests takes practice, but JUnit 5's modern features make the proce
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

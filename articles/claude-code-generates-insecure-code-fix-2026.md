@@ -126,6 +126,8 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Code Generating CSS Variables](/claude-code-generating-css-variables-from-design-system/)
 - [What Is the Best Claude Skill for Generating Documentation](/what-is-the-best-claude-skill-for-generating-documentation/)
 - [Claude Code Keeps Generating](/claude-code-keeps-generating-placeholder-todo-comments/)

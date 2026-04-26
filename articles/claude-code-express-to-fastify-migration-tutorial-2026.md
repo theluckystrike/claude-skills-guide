@@ -704,6 +704,8 @@ The incremental approach is the key to a low-risk migration. Migrate one route g
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">

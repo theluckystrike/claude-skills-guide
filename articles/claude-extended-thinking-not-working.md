@@ -239,6 +239,8 @@ If thinking is enabled but the budget is set too low (close to 1024), Claude may
 
 ## Related Guides
 
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
 - [Claude Extended Thinking API Guide](/claude-extended-thinking-api-guide/) -- full tutorial on using extended thinking effectively.
 - [Claude Tool Use Not Working](/claude-tool-use-not-working/) -- debug tool_choice and tool definition issues.
 - [Claude API Error 400 invalid_request_error Fix](/claude-api-error-400-invalidrequesterror-explained/) -- the error type returned for thinking parameter violations.

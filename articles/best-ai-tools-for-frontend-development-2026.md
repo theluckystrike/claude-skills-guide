@@ -184,6 +184,8 @@ Most tools offer free tiers suitable for individual developers. Experiment with 
 
 ---
 
+
+**Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
 <div class="mastery-cta">
