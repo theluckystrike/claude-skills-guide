@@ -1,351 +1,364 @@
 ---
 layout: default
-title: "Claude Code Monorepo Setup (2026)"
-description: "Configure Claude Code for monorepos using Turborepo, Nx, or pnpm workspaces. CLAUDE.md structure, context management, and multi-package workflows."
-date: 2026-04-15
-last_modified_at: 2026-04-17
-author: "Claude Code Guides"
+title: "Claude Code Monorepo Setup: The Right Way (2026)"
+description: "Set up Claude Code for monorepos: root vs package CLAUDE.md, workspace-aware permissions, scoped MCP config, and context window strategies for large codebases."
+date: 2026-04-26
+author: "Claude Skills Guide"
 permalink: /claude-code-monorepo-setup-guide/
 reviewed: true
-categories: [guides, claude-code]
-tags: [monorepo, turborepo, nx, pnpm, workspaces]
-geo_optimized: true
-last_tested: "2026-04-22"
+categories: [getting-started]
+tags: [claude, claude-code, monorepo, setup, configuration]
 ---
-# How to Set Up Claude Code for Monorepo Projects
 
-## The Problem
+# Claude Code Monorepo Setup: The Right Way
 
-Your monorepo has dozens of packages. Claude Code does not know which package you are working in, reads files from the wrong package, and wastes context on irrelevant code. Build commands, test commands, and lint configurations differ per package, and Claude Code uses the wrong ones.
+Monorepos break Claude Code's default assumptions. A single project root might contain 50 packages, 500,000 lines of code, and six different programming languages. Without configuration, Claude Code reads irrelevant packages, burns through the context window, and applies wrong conventions to the wrong code. This guide covers the architecture decisions that make Claude Code effective in monorepos. Use the [Project Starter](/starter/) to generate monorepo-aware configuration files.
 
-## Quick Fix
+## The Monorepo Problem
 
-Create a root-level `CLAUDE.md` with the monorepo structure, then package-level CLAUDE.md files with specific instructions:
+A typical monorepo looks like this:
+
+```
+my-monorepo/
+├── CLAUDE.md                    # Root config
+├── .claude/settings.json        # Root permissions
+├── packages/
+│   ├── web/                     # Next.js frontend
+│   │   ├── CLAUDE.md            # Package-specific rules
+│   │   ├── src/
+│   │   └── package.json
+│   ├── api/                     # Express backend
+│   │   ├── CLAUDE.md
+│   │   ├── src/
+│   │   └── package.json
+│   ├── shared/                  # Shared types/utils
+│   │   ├── src/
+│   │   └── package.json
+│   └── mobile/                  # React Native app
+│       ├── CLAUDE.md
+│       ├── src/
+│       └── package.json
+├── infra/                       # Terraform
+│   └── CLAUDE.md
+├── turbo.json
+└── pnpm-workspace.yaml
+```
+
+Without configuration, when you ask Claude Code to "add a button component," it might:
+1. Read files from all 5 packages (25,000+ tokens wasted)
+2. Apply React Native patterns to the web frontend
+3. Create the component in the wrong package
+4. Run the wrong test command
+
+## Root CLAUDE.md: Shared Conventions
+
+The root CLAUDE.md defines rules that apply across all packages:
 
 ```markdown
-<!-- /CLAUDE.md (root) -->
-# Monorepo: MyApp
-
-## Structure
-- packages/api - Express API server (Node.js, TypeScript)
-- packages/web - Next.js frontend (React, TypeScript)
-- packages/shared - Shared types and utilities
-- packages/db - Prisma schema and database client
-
-## Package Manager
-pnpm (use pnpm, not npm or yarn)
-
-## Common Commands
-- Install all: `pnpm install`
-- Build all: `pnpm run build`
-- Test all: `pnpm run test`
-- Lint all: `pnpm run lint`
-
-## Working in a Package
-Always specify the package: `pnpm --filter @myapp/api run test`
-```
-
-```markdown
-<!-- /packages/api/CLAUDE.md -->
-# @myapp/api
-
-## Commands
-- Dev: `pnpm run dev` (starts on port 3001)
-- Test: `pnpm run test`
-- Build: `pnpm run build`
-- Lint: `pnpm run lint`
-
-## Key Directories
-- src/routes/ - API route handlers
-- src/middleware/ - Express middleware
-- src/services/ - Business logic
-- src/__tests__/ - Test files (co-located with source)
-
-## Dependencies
-- Uses @myapp/shared for types
-- Uses @myapp/db for database access
-```
-
-## What's Happening
-
-Monorepos contain multiple packages in a single repository. Each package has its own `package.json`, build configuration, and test setup. Claude Code reads files from the current working directory and its CLAUDE.md, but without explicit guidance it cannot distinguish between packages or know their relationships.
-
-The solution is a layered CLAUDE.md approach: a root file for repository-wide context and per-package files for specific instructions. Claude Code reads the root CLAUDE.md first, then the package-level one based on which files you are discussing.
-
-## Step-by-Step Setup
-
-### Step 1: Choose your monorepo tool
-
-Ask Claude Code to set up the monorepo structure:
-
-**Turborepo (recommended for most projects):**
-
-```bash
-pnpm dlx create-turbo@latest my-monorepo
-```
-
-**Nx (for enterprise-scale projects):**
-
-```bash
-pnpm dlx create-nx-workspace@latest my-monorepo
-```
-
-**pnpm Workspaces (lightweight, no build orchestration):**
-
-```yaml
-# pnpm-workspace.yaml
-packages:
- - 'packages/*'
- - 'apps/*'
-```
-
-### Step 2: Configure root CLAUDE.md
-
-The root CLAUDE.md is your monorepo's instruction manual for Claude Code:
-
-```markdown
-# Project: SaaS Platform
+# CLAUDE.md (root)
 
 ## Monorepo Structure
-This is a Turborepo monorepo with pnpm workspaces.
-
-### Apps
-- apps/web - Next.js customer dashboard
-- apps/admin - Next.js admin panel
-- apps/api - Fastify API server
-
-### Packages
-- packages/ui - Shared React component library
-- packages/db - Prisma client and schema
-- packages/config-eslint - Shared ESLint config
-- packages/config-typescript - Shared tsconfig
-- packages/types - Shared TypeScript types
+This is a pnpm workspace monorepo managed by Turborepo.
+- packages/web -- Next.js 15 frontend
+- packages/api -- Express/TypeScript backend
+- packages/shared -- shared types and utilities
+- packages/mobile -- React Native (Expo) app
+- infra/ -- Terraform infrastructure
 
 ## Package Manager
-pnpm 9.x — never use npm or yarn
+pnpm (always pnpm, never npm or yarn)
 
-## Dependency Rules
-- Apps can depend on packages, never on other apps
-- packages/ui can depend on packages/types only
-- packages/db can depend on packages/types only
-- Circular dependencies are forbidden
+## Workspace Commands
+- `pnpm dev` -- start all packages in dev mode
+- `pnpm build` -- build all packages (topological order)
+- `pnpm test` -- test all packages
+- `pnpm lint` -- lint all packages
+- `pnpm -F web dev` -- start only the web package
+- `pnpm -F api test` -- test only the api package
 
-## Build Order
-turbo handles this automatically via turbo.json. Manual order:
-packages/types → packages/db → packages/ui → apps/*
+## Shared Rules (apply to ALL packages)
+- TypeScript strict mode in every package
+- All functions < 60 lines
+- Exports through barrel files (index.ts)
+- Shared types go in packages/shared, not duplicated
+- Import shared code: `import { type User } from '@repo/shared'`
 
-## Environment Variables
-- apps/web: .env.local (NEXT_PUBLIC_* for client-side)
-- apps/api: .env (DATABASE_URL, JWT_SECRET, REDIS_URL)
-- Root .env is not used
-
-## Testing
-- Unit tests: `pnpm run test` in each package
-- Integration tests: `pnpm --filter @myapp/api run test:integration`
-- E2E tests: `pnpm --filter @myapp/web run test:e2e`
+## IMPORTANT
+- When working on a specific package, read its CLAUDE.md first.
+- Do not modify packages outside the one you're working on
+  unless the change is a shared type or dependency update.
+- Always scope commands with -F flag: `pnpm -F <package> <cmd>`
 ```
 
-### Step 3: Configure per-package CLAUDE.md files
+## Package-Level CLAUDE.md: Specific Conventions
 
-Each package gets instructions specific to its tech stack:
+Each package with distinct conventions gets its own CLAUDE.md:
 
 ```markdown
-<!-- packages/ui/CLAUDE.md -->
-# @myapp/ui - Component Library
+# packages/web/CLAUDE.md
 
-## Tech Stack
-React 19, TypeScript, Tailwind CSS, Storybook
+## Package: @repo/web
+Next.js 15 App Router, Tailwind CSS v4
 
-## Commands
-- Dev (Storybook): `pnpm run storybook`
-- Test: `pnpm run test`
-- Build: `pnpm run build`
+## Commands (scoped)
+- `pnpm -F web dev` -- dev server at :3000
+- `pnpm -F web test` -- Vitest tests
+- `pnpm -F web build` -- production build
+- `pnpm -F web lint` -- ESLint
 
-## Component Pattern
-Every component must have:
-1. ComponentName.tsx - Implementation
-2. ComponentName.test.tsx - Tests
-3. ComponentName.stories.tsx - Storybook story
-4. index.ts - Re-export
-
-## Exports
-All components are exported from packages/ui/src/index.ts.
-After creating a new component, add it to the index.
-
-## Styling
-Use Tailwind CSS utility classes. No CSS modules, no styled-components.
+## Rules
+- Server components by default
+- "use client" only for interactivity
+- Tailwind only, no CSS modules
+- Components in src/components/, pages in src/app/
+- Import shared types: `import { type User } from '@repo/shared'`
 ```
 
-### Step 4: Configure turbo.json for Claude Code
+```markdown
+# packages/api/CLAUDE.md
 
-Turborepo's pipeline configuration tells Claude Code how tasks relate:
+## Package: @repo/api
+Express 5, TypeScript, Prisma, PostgreSQL
+
+## Commands (scoped)
+- `pnpm -F api dev` -- dev server at :4000
+- `pnpm -F api test` -- Jest tests
+- `pnpm -F api build` -- tsc compilation
+- `pnpm -F api prisma:generate` -- regenerate Prisma client
+
+## Rules
+- Controller -> Service -> Repository pattern
+- All routes in src/routes/, controllers in src/controllers/
+- Prisma for all DB access, no raw SQL
+- Zod validation middleware on all POST/PUT endpoints
+- Error handling via central error middleware
+```
+
+## Workspace-Aware Permissions
+
+The root settings.json needs to handle commands for all packages:
 
 ```json
 {
- "$schema": "https://turbo.build/schema.json",
- "tasks": {
- "build": {
- "dependsOn": ["^build"],
- "outputs": ["dist/**", ".next/**"]
- },
- "test": {
- "dependsOn": ["build"]
- },
- "lint": {},
- "dev": {
- "cache": false,
- "persistent": true
- }
- }
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Edit",
+      "Write",
+      "Bash(pnpm -F * test)",
+      "Bash(pnpm -F * lint)",
+      "Bash(pnpm -F * build)",
+      "Bash(pnpm -F * dev)",
+      "Bash(pnpm -F * typecheck)",
+      "Bash(pnpm test)",
+      "Bash(pnpm lint)",
+      "Bash(pnpm build)",
+      "Bash(npx turbo run *)",
+      "Bash(git diff *)",
+      "Bash(git status)",
+      "Bash(git log *)",
+      "Bash(wc -l *)",
+      "Bash(ls *)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(git push --force *)",
+      "Bash(git reset --hard *)",
+      "Bash(pnpm -F * deploy *)",
+      "Bash(terraform apply *)",
+      "Bash(sudo *)"
+    ]
+  }
 }
 ```
 
-### Step 5: Set up shared TypeScript configuration
+The `pnpm -F *` pattern allows scoped commands for any package. Deployment and infrastructure changes are blocked.
 
-Create a base tsconfig that all packages extend:
+## .claudeignore for Monorepos
 
-```json
-// packages/config-typescript/base.json
-{
- "compilerOptions": {
- "strict": true,
- "target": "ES2022",
- "module": "ESNext",
- "moduleResolution": "bundler",
- "declaration": true,
- "declarationMap": true,
- "sourceMap": true,
- "esModuleInterop": true,
- "skipLibCheck": true,
- "forceConsistentCasingInFileNames": true,
- "resolveJsonModule": true,
- "isolatedModules": true
- }
-}
-```
-
-Each package extends it:
-
-```json
-// packages/api/tsconfig.json
-{
- "extends": "@myapp/config-typescript/base.json",
- "compilerOptions": {
- "outDir": "dist",
- "rootDir": "src"
- },
- "include": ["src/**/*"]
-}
-```
-
-### Step 6: Handle cross-package dependencies
-
-Tell Claude Code how packages reference each other:
-
-```json
-// packages/api/package.json
-{
- "name": "@myapp/api",
- "dependencies": {
- "@myapp/db": "workspace:*",
- "@myapp/types": "workspace:*"
- }
-}
-```
-
-When Claude Code modifies shared types, remind it to check dependents:
-
-```
-After changing types in packages/types, run:
-pnpm --filter "@myapp/*" run build
-to verify no downstream packages break.
-```
-
-### Step 7: Scope Claude Code sessions to one package
-
-For focused work, start Claude Code in the package directory:
+A monorepo `.claudeignore` must exclude build artifacts from every package:
 
 ```bash
-cd packages/api
-claude
+# .claudeignore (root)
+
+# All package build outputs
+**/node_modules/
+**/dist/
+**/build/
+**/.next/
+**/.turbo/
+**/coverage/
+
+# Lock files
+pnpm-lock.yaml
+
+# Generated code
+**/prisma/generated/
+**/*.tsbuildinfo
+
+# Infrastructure state (sensitive)
+infra/.terraform/
+infra/*.tfstate
+infra/*.tfstate.backup
+
+# Mobile build artifacts
+packages/mobile/ios/Pods/
+packages/mobile/android/.gradle/
+packages/mobile/android/app/build/
+
+# Large assets
+**/public/images/
+**/public/fonts/
+**/assets/videos/
 ```
 
-Or tell Claude Code to focus:
+## Context Window Strategies for Large Codebases
 
+Monorepos challenge the 200K context window. These strategies keep sessions efficient:
+
+### 1. Scope Prompts to a Single Package
+
+```bash
+# Bad: Claude reads across all packages
+"Add authentication to the app"
+
+# Good: Scoped to one package
+"In packages/api/src/controllers/, add a login controller
+ that validates credentials with the UserService and returns
+ a JWT. Use the shared User type from @repo/shared."
 ```
-I'm working in packages/api only. Do not read or modify files
-in other packages unless I specifically ask.
+
+### 2. Use the -F Flag in All Commands
+
+```bash
+# Bad: Runs all tests (reads all packages)
+pnpm test
+
+# Good: Runs only the relevant package
+pnpm -F api test
 ```
 
-## Context Management Tips
+### 3. Session Per Package
 
-Large monorepos can overwhelm Claude Code's context window. Use these strategies:
+Start separate Claude Code sessions for work in different packages. Each session loads only the relevant package's context:
 
-1. **Work in one package at a time**: Focus on `packages/api` for a session, then `packages/web`
-2. **Use subagents for cross-package exploration**: Delegate search tasks to keep your main context clean
-3. **Keep shared types small**: Large type files imported everywhere bloat context
-4. **Use barrel exports**: Each package's `index.ts` shows what is available without reading internal files
+```bash
+# Session 1: Frontend work
+cd packages/web && claude
+"Add a dashboard page with user stats"
 
-## Prevention
+# Session 2: Backend work (fresh context)
+cd packages/api && claude
+"Add a GET /api/stats endpoint for dashboard data"
+```
 
-Structure your monorepo for Claude Code success from the start. Clear package boundaries, explicit dependency rules, and per-package CLAUDE.md files ensure Claude Code always knows where it is and what tools to use.
+### 4. Cross-Package Changes
 
----
+When a change spans packages, be explicit:
 
+```bash
+# Explicit cross-package prompt
+"Add a UserProfile type to packages/shared/src/types/user.ts
+ with name, email, and avatarUrl fields.
+ Then update packages/api/src/controllers/user.ts to return
+ UserProfile from the GET /users/:id endpoint.
+ Then update packages/web/src/components/UserCard.tsx to use
+ the UserProfile type for its props."
+```
 
-<div class="author-bio">
+## Scoped MCP Configuration
 
-**Written by Michael** — solo dev, Da Nang, Vietnam. 50K+ Chrome extension users. $500K+ on Upwork (100% Job Success). Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
+Different packages may need different MCP servers:
 
-</div>
+```json
+{
+  "mcpServers": {
+    "postgres": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres"],
+      "env": {
+        "DATABASE_URL": "postgresql://localhost:5432/myapp_dev"
+      }
+    }
+  }
+}
+```
 
----
+Only include MCP servers that are relevant to the packages you work on most. Each server adds tool definitions that consume context tokens. The [Token Estimator](/token-estimator/) can show the per-server token overhead.
 
+## Try It Yourself
 
-<div class="before-after">
+The [Project Starter](/starter/) has a monorepo mode. It scans your workspace structure, detects the package manager (pnpm/npm/yarn workspaces), identifies frameworks per package, and generates a root CLAUDE.md plus package-level CLAUDE.md files. It also creates the right `.claudeignore` and `settings.json` for your specific setup.
 
-**Without a CLAUDE.md — what actually happens:**
+## Frequently Asked Questions
 
-You type: "Add auth to my Next.js app"
+<details>
+<summary>Which CLAUDE.md does Claude Code read in a monorepo?</summary>
+Claude Code reads the CLAUDE.md closest to the current working directory, plus all parent CLAUDE.md files up to the repository root. If you run Claude Code from packages/web/, it reads packages/web/CLAUDE.md and then the root CLAUDE.md. Rules from the more specific file take precedence.
+</details>
 
-Claude generates: `pages/api/auth/[...nextauth].js` — wrong directory (you're on App Router), wrong file extension (you use TypeScript), wrong NextAuth version (v4 patterns, you need v5), session handling that doesn't match your middleware setup.
+<details>
+<summary>How do I prevent Claude Code from modifying other packages?</summary>
+Add a rule to your root CLAUDE.md: "Do not modify packages outside the one specified in the task unless the change is a shared type or dependency." Claude Code respects this in most cases. For strict enforcement, start your session from within the specific package directory. See <a href="/permissions/">Permissions</a> for file-path restrictions.
+</details>
 
-You spend 40 minutes reverting and rewriting. Claude was "helpful."
+<details>
+<summary>Can Claude Code handle Nx and Turborepo build caching?</summary>
+Yes. Claude Code interacts with Nx and Turborepo through their CLI commands. Add the relevant commands to your CLAUDE.md: "pnpm turbo run build --filter=web" or "npx nx run web:build". Claude Code does not need to understand the caching internals -- it just runs the commands. See <a href="/configuration/">Configuration</a> for build tool integration.
+</details>
 
-**With the Zovo Lifetime CLAUDE.md:**
+<details>
+<summary>How large can a monorepo be before Claude Code struggles?</summary>
+Claude Code works well with monorepos up to 500,000 lines of code if properly configured with .claudeignore and scoped prompts. Beyond that, context window limits become a bottleneck for cross-package changes. The key is never letting Claude Code read the entire codebase at once -- scope every session to 1-2 packages. The <a href="/token-estimator/">Token Estimator</a> can model your specific monorepo size.
+</details>
 
-Same prompt. Claude reads 300 lines of context about YOUR project. Generates: `app/api/auth/[...nextauth]/route.ts` with v5 patterns, your session types, your middleware config, your test patterns.
-
-Works on first run. You commit and move on.
-
-That's the difference a $99 file makes.
-
-**[Get the CLAUDE.md for your stack →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-beforeafter&utm_campaign=claude-code-monorepo-setup-guide)**
-
-</div>
-
-<div class="mastery-cta">
-
-This took me 3 hours to figure out. I put it in a CLAUDE.md so I'd never figure it out again. Now Claude gets it right on the first try, every project.
-
-16 framework templates. Next.js, FastAPI, Laravel, Rails, Go, Rust, Terraform, and 9 more. Each one 300+ lines of "here's exactly how this stack works." Copy into your project. Done.
-
-**[See the templates →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-config&utm_campaign=claude-code-monorepo-setup-guide)**
-
-$99 once. Yours forever. I keep adding templates monthly.
-
-</div>
-
----
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which CLAUDE.md does Claude Code read in a monorepo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code reads the CLAUDE.md closest to the current working directory, plus all parent CLAUDE.md files up to the repository root. More specific files take precedence."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I prevent Claude Code from modifying other packages in a monorepo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add a rule to your root CLAUDE.md and start sessions from within the specific package directory for strict enforcement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Claude Code handle Nx and Turborepo build caching?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Claude Code interacts through CLI commands. Add the relevant commands to CLAUDE.md. It does not need to understand caching internals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How large can a monorepo be before Claude Code struggles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code works well up to 500,000 lines with proper .claudeignore and scoped prompts. Scope every session to 1-2 packages to avoid context window limits."
+      }
+    }
+  ]
+}
+</script>
 
 ## Related Guides
 
-- [Claude Code CLAUDE.md Best Practices](/claude-code-claude-md-best-practices/)
-- [Claude Code Context Window Management Guide](/claude-code-context-window-management-guide/)
-- [Claude Code Subagents Guide](/claude-code-subagents-guide/)
-
-## See Also
-
-- [Claude Code Monorepo: Best Setup Guide (2026)](/claude-code-monorepo-best-setup-2026/)
-- [Claude Code Monorepo Workspace Resolution Failure — Fix (2026)](/claude-code-monorepo-workspace-resolution-failure-fix/)
-- [Monorepo Workspace Package Resolution — Fix (2026)](/claude-code-monorepo-workspace-package-resolution-fix-2026/)
+- [Project Starter](/starter/) -- Auto-generate monorepo-aware configuration
+- [CLAUDE.md Generator](/generator/) -- Create per-package CLAUDE.md files
+- [Configuration Guide](/configuration/) -- .claudeignore patterns for monorepos
+- [Token Estimator](/token-estimator/) -- Model context usage for large codebases
+- [Permissions Configurator](/permissions/) -- Workspace-scoped permission settings
