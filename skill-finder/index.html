@@ -21,23 +21,26 @@ description: "Search and discover Claude Code skills by category. Installation c
 <meta name="twitter:title" content="Claude Code Skill Finder — Browse 150+ Skills (2026)">
 <meta name="twitter:description" content="Search and discover Claude Code skills by category.">
 <link rel="canonical" href="https://claudecodeguides.com/skill-finder/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
 <style>
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; scroll-behavior: smooth; }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  background: #0d1117;
-  color: #c9d1d9;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: oklch(0.155 0.007 60);
+  color: oklch(0.80 0.008 70);
   line-height: 1.6;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
-a { color: #6ee7b7; text-decoration: none; transition: opacity 0.2s; }
+a { color: oklch(0.72 0.11 38); text-decoration: none; transition: opacity 0.2s; }
 a:hover { opacity: 0.85; }
 a:focus-visible, button:focus-visible, input:focus-visible,
-select:focus-visible { outline: 2px solid #6ee7b7; outline-offset: 2px; }
-code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospace; }
+select:focus-visible { outline: 2px solid oklch(0.72 0.11 38); outline-offset: 2px; }
+code, .mono { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace; }
 
 /* ── Layout ── */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
@@ -45,23 +48,23 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
 /* ── Header ── */
 .site-header {
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(201,209,217,0.08);
+  border-bottom: 1px solid oklch(0.80 0.008 70 / 0.08);
 }
 .site-header .container {
   display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;
 }
 .site-logo {
-  font-size: 1.05rem; font-weight: 600; color: #c9d1d9;
+  font-size: 1.05rem; font-weight: 600; color: oklch(0.80 0.008 70);
   letter-spacing: -0.01em;
 }
 .site-nav {
   display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center;
 }
 .site-nav a {
-  font-size: 0.8rem; color: rgba(201,209,217,0.6);
+  font-size: 0.8rem; color: oklch(0.80 0.008 70 / 0.60);
   transition: color 0.2s; white-space: nowrap;
 }
-.site-nav a:hover { color: #c9d1d9; opacity: 1; }
+.site-nav a:hover { color: oklch(0.80 0.008 70); opacity: 1; }
 
 /* ── Hero ── */
 .hero {
@@ -70,16 +73,16 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
 }
 .hero h1 {
   font-size: clamp(1.75rem, 4.5vw, 2.75rem);
-  font-weight: 700;
-  letter-spacing: -0.025em;
+  font-family: 'Instrument Serif', 'Times New Roman', serif; font-weight: 400;
+  letter-spacing: -0.02em;
   line-height: 1.15;
   margin-bottom: 0.75rem;
-  color: #e6edf3;
+  color: oklch(0.97 0.006 80);
 }
-.hero h1 .accent { color: #6ee7b7; }
+.hero h1 .accent { color: oklch(0.72 0.11 38); }
 .hero .subhead {
   font-size: clamp(1rem, 2.5vw, 1.15rem);
-  color: rgba(201,209,217,0.6);
+  color: oklch(0.80 0.008 70 / 0.60);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.5;
@@ -87,8 +90,8 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
 
 /* ── Search & Filters ── */
 .controls {
-  background: rgba(201,209,217,0.03);
-  border: 1px solid rgba(201,209,217,0.08);
+  background: oklch(0.80 0.008 70 / 0.03);
+  border: 1px solid oklch(0.80 0.008 70 / 0.08);
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -98,22 +101,22 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
 }
 .search-input {
   flex: 1;
-  background: rgba(201,209,217,0.06);
-  border: 1px solid rgba(201,209,217,0.12);
+  background: oklch(0.80 0.008 70 / 0.06);
+  border: 1px solid oklch(0.80 0.008 70 / 0.12);
   border-radius: 8px;
-  color: #e6edf3;
+  color: oklch(0.97 0.006 80);
   font-family: inherit;
   font-size: 1rem;
   padding: 0.7rem 1rem;
   transition: border-color 0.2s;
 }
-.search-input::placeholder { color: rgba(201,209,217,0.35); }
-.search-input:focus { border-color: #6ee7b7; outline: none; }
+.search-input::placeholder { color: oklch(0.80 0.008 70 / 0.35); }
+.search-input:focus { border-color: oklch(0.72 0.11 38); outline: none; }
 .sort-select {
-  background: rgba(201,209,217,0.06);
-  border: 1px solid rgba(201,209,217,0.12);
+  background: oklch(0.80 0.008 70 / 0.06);
+  border: 1px solid oklch(0.80 0.008 70 / 0.12);
   border-radius: 8px;
-  color: #e6edf3;
+  color: oklch(0.97 0.006 80);
   font-family: inherit;
   font-size: 0.9rem;
   padding: 0.7rem 2.25rem 0.7rem 0.85rem;
@@ -124,7 +127,7 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
   cursor: pointer;
   min-width: 150px;
 }
-.sort-select:focus { border-color: #6ee7b7; outline: none; }
+.sort-select:focus { border-color: oklch(0.72 0.11 38); outline: none; }
 
 /* ── Category Filters ── */
 .category-filters {
@@ -134,24 +137,24 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
   display: inline-flex; align-items: center; gap: 0.3rem;
   padding: 0.3rem 0.7rem;
   border-radius: 6px;
-  border: 1px solid rgba(201,209,217,0.12);
-  background: rgba(201,209,217,0.04);
+  border: 1px solid oklch(0.80 0.008 70 / 0.12);
+  background: oklch(0.80 0.008 70 / 0.04);
   font-family: inherit;
   font-size: 0.8rem;
-  color: rgba(201,209,217,0.7);
+  color: oklch(0.80 0.008 70 / 0.70);
   cursor: pointer;
   transition: all 0.2s;
   user-select: none;
   line-height: 1.6;
 }
 .cat-chip:hover {
-  border-color: rgba(201,209,217,0.3);
-  color: #e6edf3;
+  border-color: oklch(0.80 0.008 70 / 0.30);
+  color: oklch(0.97 0.006 80);
 }
 .cat-chip.active {
-  background: rgba(110,231,183,0.12);
-  border-color: #6ee7b7;
-  color: #6ee7b7;
+  background: oklch(0.72 0.11 38 / 0.12);
+  border-color: oklch(0.72 0.11 38);
+  color: oklch(0.72 0.11 38);
   font-weight: 500;
 }
 
@@ -160,7 +163,7 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
   display: flex; justify-content: space-between; align-items: center;
   margin-bottom: 1rem;
   font-size: 0.85rem;
-  color: rgba(201,209,217,0.5);
+  color: oklch(0.80 0.008 70 / 0.50);
 }
 
 /* ── Skills Grid ── */
@@ -176,8 +179,8 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
 
 /* ── Skill Card ── */
 .skill-card {
-  background: rgba(201,209,217,0.03);
-  border: 1px solid rgba(201,209,217,0.08);
+  background: oklch(0.80 0.008 70 / 0.03);
+  border: 1px solid oklch(0.80 0.008 70 / 0.08);
   border-radius: 10px;
   padding: 1.25rem;
   transition: border-color 0.2s, transform 0.15s;
@@ -186,7 +189,7 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
   gap: 0.6rem;
 }
 .skill-card:hover {
-  border-color: rgba(201,209,217,0.2);
+  border-color: oklch(0.80 0.008 70 / 0.20);
   transform: translateY(-1px);
 }
 .skill-card.blurred {
@@ -198,11 +201,11 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
   display: flex; justify-content: space-between; align-items: flex-start;
 }
 .skill-name {
-  font-weight: 600; font-size: 1rem; color: #e6edf3;
+  font-weight: 600; font-size: 1rem; color: oklch(0.97 0.006 80);
   word-break: break-word;
 }
 .skill-stars {
-  font-size: 0.75rem; color: rgba(201,209,217,0.45);
+  font-size: 0.75rem; color: oklch(0.80 0.008 70 / 0.45);
   white-space: nowrap; display: flex; align-items: center; gap: 0.25rem;
 }
 .cat-badge {
@@ -216,7 +219,7 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
 }
 .skill-desc {
   font-size: 0.88rem;
-  color: rgba(201,209,217,0.65);
+  color: oklch(0.80 0.008 70 / 0.65);
   line-height: 1.45;
 }
 .install-row {
@@ -224,22 +227,22 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
 }
 .install-cmd {
   flex: 1;
-  background: rgba(0,0,0,0.35);
-  border: 1px solid rgba(201,209,217,0.08);
+  background: oklch(0.155 0.007 60 / 0.35);
+  border: 1px solid oklch(0.80 0.008 70 / 0.08);
   border-radius: 6px;
   padding: 0.45rem 0.7rem;
-  font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospace;
+  font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
   font-size: 0.75rem;
-  color: #6ee7b7;
+  color: oklch(0.72 0.11 38);
   overflow-x: auto;
   white-space: nowrap;
   line-height: 1.5;
 }
 .copy-btn {
-  background: rgba(110,231,183,0.1);
-  border: 1px solid rgba(110,231,183,0.2);
+  background: oklch(0.72 0.11 38 / 0.10);
+  border: 1px solid oklch(0.72 0.11 38 / 0.20);
   border-radius: 6px;
-  color: #6ee7b7;
+  color: oklch(0.72 0.11 38);
   font-size: 0.75rem;
   font-family: inherit;
   font-weight: 500;
@@ -249,39 +252,39 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
   white-space: nowrap;
 }
 .copy-btn:hover {
-  background: rgba(110,231,183,0.2);
+  background: oklch(0.72 0.11 38 / 0.20);
 }
 .copy-btn.copied {
-  background: rgba(110,231,183,0.25);
-  color: #fff;
+  background: oklch(0.72 0.11 38 / 0.25);
+  color: oklch(0.97 0.006 80);
 }
 .skill-links {
   display: flex; gap: 1rem; font-size: 0.8rem;
 }
 .skill-links a {
-  color: rgba(201,209,217,0.5);
+  color: oklch(0.80 0.008 70 / 0.50);
   transition: color 0.2s;
 }
-.skill-links a:hover { color: #6ee7b7; opacity: 1; }
+.skill-links a:hover { color: oklch(0.72 0.11 38); opacity: 1; }
 
 /* ── Category badge colors ── */
-.cat-Languages { background: rgba(96,165,250,0.15); color: #60a5fa; }
-.cat-Frameworks { background: rgba(167,139,250,0.15); color: #a78bfa; }
-.cat-DevOps { background: rgba(251,191,36,0.15); color: #fbbf24; }
-.cat-Security { background: rgba(248,113,113,0.15); color: #f87171; }
-.cat-Testing { background: rgba(52,211,153,0.15); color: #34d399; }
-.cat-Behavioral { background: rgba(110,231,183,0.15); color: #6ee7b7; }
-.cat-Research { background: rgba(244,114,182,0.15); color: #f472b6; }
-.cat-Data { background: rgba(45,212,191,0.15); color: #2dd4bf; }
-.cat-Debugging { background: rgba(251,146,60,0.15); color: #fb923c; }
-.cat-Productivity { background: rgba(163,230,53,0.15); color: #a3e635; }
+.cat-Languages { background: oklch(0.72 0.11 38 / 0.15); color: oklch(0.72 0.11 38); }
+.cat-Frameworks { background: oklch(0.68 0.14 300 / 0.15); color: oklch(0.68 0.14 300); }
+.cat-DevOps { background: oklch(0.82 0.14 85 / 0.15); color: oklch(0.82 0.14 85); }
+.cat-Security { background: oklch(0.65 0.18 25 / 0.15); color: oklch(0.65 0.18 25); }
+.cat-Testing { background: oklch(0.64 0.10 38 / 0.15); color: oklch(0.64 0.10 38); }
+.cat-Behavioral { background: oklch(0.72 0.11 38 / 0.15); color: oklch(0.72 0.11 38); }
+.cat-Research { background: oklch(0.68 0.15 350 / 0.15); color: oklch(0.68 0.15 350); }
+.cat-Data { background: oklch(0.72 0.12 175 / 0.15); color: oklch(0.72 0.12 175); }
+.cat-Debugging { background: oklch(0.72 0.15 55 / 0.15); color: oklch(0.72 0.15 55); }
+.cat-Productivity { background: oklch(0.80 0.16 125 / 0.15); color: oklch(0.80 0.16 125); }
 
 /* ── Paywall ── */
 #paywall-overlay {
   display: none;
   position: fixed; top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(10,10,15,0.92);
+  background: rgba(20, 18, 14, 0.88);
   z-index: 1000;
   align-items: center; justify-content: center; flex-direction: column;
 }
@@ -290,22 +293,23 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
 }
 .paywall-inner {
   max-width: 480px; text-align: center; padding: 40px;
+  background: oklch(0.185 0.008 60); border: 1px solid oklch(0.30 0.010 60); border-radius: 12px;
 }
 .paywall-inner h2 {
-  color: #6ee7b7; font-size: 24px; margin-bottom: 16px;
+  color: oklch(0.72 0.11 38); font-size: 24px; margin-bottom: 16px;
 }
 .paywall-inner p {
-  color: #c8ccd0; margin-bottom: 24px; line-height: 1.6;
+  color: oklch(0.80 0.008 70); margin-bottom: 24px; line-height: 1.6;
 }
 .paywall-inner .cta-btn {
   display: inline-block; padding: 14px 32px;
-  background: #6ee7b7; color: #0a0a0f;
+  background: oklch(0.72 0.11 38); color: oklch(0.18 0.04 38);
   font-weight: 700; border-radius: 8px;
   text-decoration: none; font-size: 16px;
 }
 .paywall-inner .cta-btn:hover { opacity: 0.9; }
 .paywall-inner .fine-print {
-  color: #666; font-size: 13px; margin-top: 16px; margin-bottom: 0;
+  color: oklch(0.42 0.010 70); font-size: 13px; margin-top: 16px; margin-bottom: 0;
 }
 
 /* ── SEO Content ── */
@@ -315,31 +319,31 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
   padding: 0 1.25rem 4rem;
 }
 .seo-content h2 {
-  font-size: 1.5rem; font-weight: 700; color: #e6edf3;
+  font-size: 1.5rem; font-family: 'Instrument Serif', 'Times New Roman', serif; font-weight: 400; color: oklch(0.97 0.006 80);
   margin: 2.5rem 0 1rem; letter-spacing: -0.01em;
 }
 .seo-content h3 {
-  font-size: 1.1rem; font-weight: 600; color: #e6edf3;
+  font-size: 1.1rem; font-weight: 600; color: oklch(0.97 0.006 80);
   margin: 1.5rem 0 0.5rem;
 }
 .seo-content p {
-  margin-bottom: 1rem; color: rgba(201,209,217,0.75); line-height: 1.7;
+  margin-bottom: 1rem; color: oklch(0.80 0.008 70 / 0.75); line-height: 1.7;
 }
 .seo-content ul, .seo-content ol {
   margin: 0.5rem 0 1rem 1.5rem;
-  color: rgba(201,209,217,0.75);
+  color: oklch(0.80 0.008 70 / 0.75);
 }
 .seo-content li { margin-bottom: 0.4rem; line-height: 1.6; }
 .seo-content code {
-  background: rgba(201,209,217,0.08);
+  background: oklch(0.80 0.008 70 / 0.08);
   padding: 0.15rem 0.4rem;
   border-radius: 4px;
   font-size: 0.88rem;
-  color: #6ee7b7;
+  color: oklch(0.72 0.11 38);
 }
 .seo-content details {
-  background: rgba(201,209,217,0.03);
-  border: 1px solid rgba(201,209,217,0.08);
+  background: oklch(0.80 0.008 70 / 0.03);
+  border: 1px solid oklch(0.80 0.008 70 / 0.08);
   border-radius: 8px;
   margin-bottom: 0.75rem;
   padding: 0;
@@ -347,27 +351,27 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
 .seo-content summary {
   padding: 0.85rem 1rem;
   font-weight: 600;
-  color: #e6edf3;
+  color: oklch(0.97 0.006 80);
   cursor: pointer;
   font-size: 0.95rem;
 }
-.seo-content summary:hover { color: #6ee7b7; }
-.seo-content details[open] summary { border-bottom: 1px solid rgba(201,209,217,0.08); }
+.seo-content summary:hover { color: oklch(0.72 0.11 38); }
+.seo-content details[open] summary { border-bottom: 1px solid oklch(0.80 0.008 70 / 0.08); }
 .seo-content details p, .seo-content details ul {
   padding: 0.75rem 1rem;
 }
 .seo-content .cta-box {
-  background: rgba(110,231,183,0.06);
-  border: 1px solid rgba(110,231,183,0.15);
+  background: oklch(0.72 0.11 38 / 0.06);
+  border: 1px solid oklch(0.72 0.11 38 / 0.15);
   border-radius: 10px;
   padding: 1.5rem;
   text-align: center;
   margin: 2rem 0;
 }
-.seo-content .cta-box p { color: #c9d1d9; }
+.seo-content .cta-box p { color: oklch(0.80 0.008 70); }
 .seo-content .cta-box .cta-btn {
   display: inline-block; padding: 12px 28px;
-  background: #6ee7b7; color: #0a0a0f;
+  background: oklch(0.72 0.11 38); color: oklch(0.18 0.04 38);
   font-weight: 700; border-radius: 8px;
   text-decoration: none; font-size: 15px;
   margin-top: 0.75rem;
@@ -382,24 +386,24 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
 .seo-content .internal-links a {
   display: block;
   padding: 0.75rem 1rem;
-  background: rgba(201,209,217,0.03);
-  border: 1px solid rgba(201,209,217,0.08);
+  background: oklch(0.80 0.008 70 / 0.03);
+  border: 1px solid oklch(0.80 0.008 70 / 0.08);
   border-radius: 8px;
-  color: #6ee7b7;
+  color: oklch(0.72 0.11 38);
   font-size: 0.9rem;
   transition: border-color 0.2s;
 }
 .seo-content .internal-links a:hover {
-  border-color: #6ee7b7; opacity: 1;
+  border-color: oklch(0.72 0.11 38); opacity: 1;
 }
 
 /* ── Footer ── */
 .site-footer {
   padding: 2rem 0;
-  border-top: 1px solid rgba(201,209,217,0.08);
+  border-top: 1px solid oklch(0.80 0.008 70 / 0.08);
   text-align: center;
   font-size: 0.8rem;
-  color: rgba(201,209,217,0.35);
+  color: oklch(0.80 0.008 70 / 0.35);
 }
 </style>
 <script type="application/ld+json">
@@ -476,18 +480,18 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
 </script>
 </head>
 <body>
-<nav style="background: #1a1a2e; padding: 0.75rem 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; border-bottom: 2px solid #5436DA;">
-  <a href="/" style="color: #ccc; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">&larr; Home</a>
-  <a href="/calculator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Cost Calculator</a>
-  <a href="/diagnose/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Diagnose</a>
-  <a href="/skill-finder/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: #5436DA;">Skill Finder</a>
-  <a href="/model-selector/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Model Selector</a>
-  <a href="/generator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">CLAUDE.md Generator</a>
-  <a href="/mcp-config/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">MCP Config</a>
-  <a href="/commands/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Commands</a>
-  <a href="/token-estimator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Token Estimator</a>
-  <a href="/permissions/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Permissions</a>
-  <a href="/starter/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Starter</a>
+<nav style="position:sticky;top:0;z-index:40;background:rgba(30,28,24,0.82);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid oklch(0.30 0.010 60);padding:0.75rem 1rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+  <a href="/" style="color:oklch(0.58 0.010 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;font-weight:600;">&larr; Home</a>
+  <a href="/calculator/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Cost Calculator</a>
+  <a href="/diagnose/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Diagnose</a>
+  <a href="/skill-finder/" style="background:oklch(0.72 0.11 38);color:oklch(0.18 0.04 38);font-weight:600;text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Skill Finder</a>
+  <a href="/model-selector/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Model Selector</a>
+  <a href="/generator/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">CLAUDE.md Generator</a>
+  <a href="/mcp-config/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">MCP Config</a>
+  <a href="/commands/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Commands</a>
+  <a href="/token-estimator/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Token Estimator</a>
+  <a href="/permissions/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Permissions</a>
+  <a href="/starter/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Starter</a>
 </nav>
 
 <!-- ── Header ── -->
@@ -497,7 +501,7 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
     <nav class="site-nav">
       <a href="/playbook/">Playbook</a>
       <a href="/skills-reference/">Skills</a>
-      <a href="/skill-finder/" aria-current="page" style="color:#6ee7b7;">Skill Finder</a>
+      <a href="/skill-finder/" aria-current="page" style="color:oklch(0.72 0.11 38);">Skill Finder</a>
       <a href="/generator/">Generator</a>
       <a href="/compare/">Compare</a>
       <a href="/workflows/">Workflows</a>
@@ -540,7 +544,7 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
   <div class="paywall-inner">
     <h2>You've used your 2 free searches</h2>
     <p>Unlock unlimited access to all 5 CCG tools + 200 production-ready CLAUDE.md templates, error fixes, and cost optimization configs.</p>
-    <a href="https://zovo.one/pricing" class="cta-btn">Get Lifetime Access &mdash; $99</a>
+    <a href="https://zovo.one/lifetime" class="cta-btn">Get Lifetime Access &mdash; $99</a>
     <p class="fine-print">One-time payment. All tools. All templates. Forever.</p>
   </div>
 </div>
@@ -629,26 +633,26 @@ code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospa
 
 <div class="cta-box">
   <p>This finder shows community skills. For 200 curated, production-tested skills with full documentation:</p>
-  <a href="https://zovo.one/pricing" class="cta-btn">Get the Claude Code Playbook ($99 Lifetime)</a>
+  <a href="https://zovo.one/lifetime" class="cta-btn">Get Lifetime Access &mdash; $99</a>
 </div>
 
-<section style="margin:32px 0;padding:24px;background:#161b22;border:1px solid #30363d;border-radius:12px;">
-  <h2 style="color:#e6edf3;font-size:20px;margin-bottom:16px;">Related Guides</h2>
+<section style="margin:32px 0;padding:24px;background:oklch(0.185 0.008 60);border:1px solid oklch(0.30 0.010 60);border-radius:12px;">
+  <h2 style="color:oklch(0.97 0.006 80);font-size:20px;margin-bottom:16px;">Related Guides</h2>
   <ul style="list-style:none;padding:0;margin:0;">
-    <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-      <a href="/best-claude-code-skills-2026-ranked/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Best Claude Code Skills in 2026: Top 20 Ranked</a>
+    <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+      <a href="/best-claude-code-skills-2026-ranked/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Best Claude Code Skills in 2026: Top 20 Ranked</a>
     </li>
-    <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-      <a href="/how-to-install-claude-code-skills-guide/" style="color:#60a5fa;text-decoration:none;font-size:15px;">How to Install Claude Code Skills</a>
+    <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+      <a href="/how-to-install-claude-code-skills-guide/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">How to Install Claude Code Skills</a>
     </li>
-    <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-      <a href="/claude-code-skills-for-python-developers/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Claude Code Skills for Python Developers</a>
+    <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+      <a href="/claude-code-skills-for-python-developers/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Claude Code Skills for Python Developers</a>
     </li>
-    <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-      <a href="/building-custom-claude-code-skill-tutorial/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Building Your Own Claude Code Skill</a>
+    <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+      <a href="/building-custom-claude-code-skill-tutorial/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Building Your Own Claude Code Skill</a>
     </li>
     <li style="padding:8px 0;">
-      <a href="/claude-code-skills-vs-cursor-rules-comparison/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Claude Code Skills vs Cursor Rules</a>
+      <a href="/claude-code-skills-vs-cursor-rules-comparison/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Claude Code Skills vs Cursor Rules</a>
     </li>
   </ul>
 </section>
@@ -1129,11 +1133,11 @@ function updateSearchesLeftText(paywalled) {
   console.assert(searchesLeft instanceof HTMLElement, 'updateSearchesLeftText: searchesLeft must be an HTMLElement');
   if (paywalled) {
     searchesLeft.textContent = "Free searches used";
-    searchesLeft.style.color = "#f87171";
+    searchesLeft.style.color = "oklch(0.65 0.18 25)";
   } else {
     const remaining = FREE_USES - getUsageCount();
     searchesLeft.textContent = remaining + " free search" + (remaining !== 1 ? "es" : "") + " left";
-    searchesLeft.style.color = "rgba(201,209,217,0.5)";
+    searchesLeft.style.color = "oklch(0.80 0.008 70 / 0.50)";
   }
 }
 

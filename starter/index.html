@@ -21,6 +21,9 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Claude Code Project Starter Wizard (2026)">
   <meta name="twitter:description" content="Generate a complete Claude Code project setup. Answer 5 questions, get CLAUDE.md, settings.json, and MCP config.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -97,9 +100,9 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: oklch(0.155 0.007 60);
+      color: oklch(0.80 0.008 70);
       line-height: 1.6;
       min-height: 100vh;
     }
@@ -111,39 +114,42 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
     }
 
     h1 {
+      font-family: 'Instrument Serif', Georgia, serif;
       font-size: 28px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin-bottom: 8px;
       line-height: 1.3;
     }
 
     .subtitle {
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       font-size: 15px;
       margin-bottom: 32px;
     }
 
     h2 {
+      font-family: 'Instrument Serif', Georgia, serif;
       font-size: 22px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin: 40px 0 16px;
     }
 
     h3 {
+      font-family: 'Instrument Serif', Georgia, serif;
       font-size: 18px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin: 24px 0 12px;
     }
 
     p { margin-bottom: 16px; }
 
-    a { color: #6ee7b7; }
+    a { color: oklch(0.72 0.11 38); }
     a:hover { text-decoration: underline; }
 
     /* Card / section */
     .card {
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 12px;
       padding: 24px;
       margin-bottom: 16px;
@@ -159,28 +165,29 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
     .progress-step {
       flex: 1;
       height: 6px;
-      background: #30363d;
+      background: oklch(0.30 0.010 60);
       border-radius: 3px;
       transition: background 0.3s;
     }
 
     .progress-step.active {
-      background: #6ee7b7;
+      background: oklch(0.72 0.11 38);
     }
 
     .progress-step.completed {
-      background: #3fb950;
+      background: oklch(0.64 0.10 38);
     }
 
     .step-label {
       font-size: 13px;
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       margin-bottom: 16px;
     }
 
     .step-title {
+      font-family: 'Instrument Serif', Georgia, serif;
       font-size: 20px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin-bottom: 20px;
       font-weight: 600;
     }
@@ -206,26 +213,26 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
       align-items: center;
       gap: 12px;
       padding: 14px 16px;
-      background: #0d1117;
-      border: 1px solid #30363d;
+      background: oklch(0.155 0.007 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
       cursor: pointer;
       transition: border-color 0.2s, background 0.2s;
     }
 
     .option-item:hover {
-      border-color: #6ee7b7;
-      background: #1a2332;
+      border-color: oklch(0.72 0.11 38);
+      background: oklch(0.235 0.009 60);
     }
 
     .option-item.selected {
-      border-color: #6ee7b7;
-      background: #1a2332;
+      border-color: oklch(0.72 0.11 38);
+      background: oklch(0.235 0.009 60);
     }
 
     .option-item input[type="radio"],
     .option-item input[type="checkbox"] {
-      accent-color: #6ee7b7;
+      accent-color: oklch(0.72 0.11 38);
       width: 18px;
       height: 18px;
       cursor: pointer;
@@ -234,13 +241,13 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
     .option-item label {
       cursor: pointer;
       font-size: 15px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       flex: 1;
     }
 
     .option-item .option-desc {
       font-size: 13px;
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       margin-top: 2px;
     }
 
@@ -252,7 +259,7 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
     .select-label {
       font-size: 14px;
       font-weight: 600;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin-bottom: 8px;
       display: block;
     }
@@ -260,10 +267,10 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
     select {
       width: 100%;
       padding: 10px 14px;
-      background: #0d1117;
-      border: 1px solid #30363d;
+      background: oklch(0.155 0.007 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       font-size: 15px;
       font-family: inherit;
       cursor: pointer;
@@ -276,7 +283,7 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
 
     select:focus {
       outline: none;
-      border-color: #6ee7b7;
+      border-color: oklch(0.72 0.11 38);
     }
 
     /* Buttons */
@@ -292,28 +299,28 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
       font-size: 15px;
       font-weight: 600;
       cursor: pointer;
-      border: 1px solid #30363d;
+      border: 1px solid oklch(0.30 0.010 60);
       font-family: inherit;
       transition: background 0.2s, border-color 0.2s;
     }
 
     .btn-back {
-      background: #21262d;
-      color: #c9d1d9;
+      background: oklch(0.235 0.009 60);
+      color: oklch(0.80 0.008 70);
     }
 
     .btn-back:hover {
-      background: #30363d;
+      background: oklch(0.30 0.010 60);
     }
 
     .btn-next {
-      background: #6ee7b7;
-      color: #0d1117;
-      border-color: #6ee7b7;
+      background: oklch(0.72 0.11 38);
+      color: oklch(0.155 0.007 60);
+      border-color: oklch(0.72 0.11 38);
     }
 
     .btn-next:hover {
-      background: #5dd3a3;
+      background: oklch(0.64 0.10 38);
     }
 
     .btn-next:disabled {
@@ -322,15 +329,15 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
     }
 
     .btn-generate {
-      background: #6ee7b7;
-      color: #0d1117;
-      border-color: #6ee7b7;
+      background: oklch(0.72 0.11 38);
+      color: oklch(0.155 0.007 60);
+      border-color: oklch(0.72 0.11 38);
       font-size: 17px;
       padding: 14px 32px;
     }
 
     .btn-generate:hover {
-      background: #5dd3a3;
+      background: oklch(0.64 0.10 38);
     }
 
     /* Summary list */
@@ -341,7 +348,7 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
 
     .summary-list li {
       padding: 10px 0;
-      border-bottom: 1px solid #30363d;
+      border-bottom: 1px solid oklch(0.30 0.010 60);
       display: flex;
       justify-content: space-between;
     }
@@ -351,12 +358,12 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
     }
 
     .summary-key {
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       font-size: 14px;
     }
 
     .summary-value {
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       font-weight: 600;
       font-size: 14px;
     }
@@ -367,15 +374,15 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
     }
 
     .output-pre {
-      background: #0d1117;
-      border: 1px solid #30363d;
+      background: oklch(0.155 0.007 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
       padding: 20px;
       overflow-x: auto;
-      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+      font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
       font-size: 13px;
       line-height: 1.5;
-      color: #c9d1d9;
+      color: oklch(0.80 0.008 70);
       white-space: pre;
       max-height: 600px;
       overflow-y: auto;
@@ -393,32 +400,32 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
       font-size: 14px;
       font-weight: 600;
       cursor: pointer;
-      border: 1px solid #30363d;
+      border: 1px solid oklch(0.30 0.010 60);
       font-family: inherit;
       transition: background 0.2s;
     }
 
     .btn-copy {
-      background: #21262d;
-      color: #c9d1d9;
+      background: oklch(0.235 0.009 60);
+      color: oklch(0.80 0.008 70);
     }
 
-    .btn-copy:hover { background: #30363d; }
-    .btn-copy.copied { background: #6ee7b7; color: #0d1117; border-color: #6ee7b7; }
+    .btn-copy:hover { background: oklch(0.30 0.010 60); }
+    .btn-copy.copied { background: oklch(0.72 0.11 38); color: oklch(0.155 0.007 60); border-color: oklch(0.72 0.11 38); }
 
     .btn-download {
-      background: #21262d;
-      color: #c9d1d9;
+      background: oklch(0.235 0.009 60);
+      color: oklch(0.80 0.008 70);
     }
 
-    .btn-download:hover { background: #30363d; }
+    .btn-download:hover { background: oklch(0.30 0.010 60); }
 
     /* Paywall */
     .paywall-overlay {
       display: none;
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.85);
+      background: rgba(20, 18, 14, 0.88);
       z-index: 1000;
       align-items: center;
       justify-content: center;
@@ -427,8 +434,8 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
     .paywall-overlay.visible { display: flex; }
 
     .paywall-box {
-      background: #161b22;
-      border: 2px solid #6ee7b7;
+      background: oklch(0.185 0.008 60);
+      border: 2px solid oklch(0.72 0.11 38);
       border-radius: 16px;
       padding: 40px;
       max-width: 480px;
@@ -436,21 +443,21 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
     }
 
     .paywall-box h3 {
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       font-size: 22px;
       margin-bottom: 16px;
     }
 
     .paywall-box p {
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       margin-bottom: 24px;
       font-size: 15px;
     }
 
     .paywall-btn {
       display: inline-block;
-      background: #6ee7b7;
-      color: #0d1117;
+      background: oklch(0.72 0.11 38);
+      color: oklch(0.155 0.007 60);
       padding: 14px 32px;
       border-radius: 8px;
       font-size: 17px;
@@ -459,11 +466,11 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
       margin-bottom: 12px;
     }
 
-    .paywall-btn:hover { background: #5dd3a3; text-decoration: none; }
+    .paywall-btn:hover { background: oklch(0.64 0.10 38); text-decoration: none; }
 
     .paywall-dismiss {
       display: block;
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       font-size: 13px;
       cursor: pointer;
       border: none;
@@ -476,13 +483,13 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
 
     /* SEO content */
     .seo-content { margin-top: 48px; }
-    .seo-content p { color: #8b949e; font-size: 15px; line-height: 1.7; }
-    .seo-content ul, .seo-content ol { color: #8b949e; font-size: 15px; margin: 12px 0 16px 24px; }
+    .seo-content p { color: oklch(0.58 0.010 70); font-size: 15px; line-height: 1.7; }
+    .seo-content ul, .seo-content ol { color: oklch(0.58 0.010 70); font-size: 15px; margin: 12px 0 16px 24px; }
     .seo-content li { margin-bottom: 6px; }
 
     details {
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
       margin-bottom: 8px;
       padding: 0;
@@ -492,13 +499,13 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
       padding: 14px 16px;
       cursor: pointer;
       font-weight: 600;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       font-size: 15px;
     }
 
-    summary:hover { color: #6ee7b7; }
+    summary:hover { color: oklch(0.72 0.11 38); }
 
-    details[open] summary { border-bottom: 1px solid #30363d; }
+    details[open] summary { border-bottom: 1px solid oklch(0.30 0.010 60); }
 
     details p {
       padding: 14px 16px;
@@ -506,21 +513,21 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
     }
 
     .cta-box {
-      background: linear-gradient(135deg, #161b22, #1a2332);
-      border: 2px solid #6ee7b7;
+      background: linear-gradient(135deg, oklch(0.185 0.008 60), oklch(0.235 0.009 60));
+      border: 2px solid oklch(0.72 0.11 38);
       border-radius: 12px;
       padding: 32px;
       text-align: center;
       margin: 32px 0;
     }
 
-    .cta-box h3 { color: #e6edf3; margin-bottom: 12px; }
-    .cta-box p { color: #8b949e; margin-bottom: 20px; }
+    .cta-box h3 { color: oklch(0.97 0.006 80); margin-bottom: 12px; }
+    .cta-box p { color: oklch(0.58 0.010 70); margin-bottom: 20px; }
 
     .cta-btn {
       display: inline-block;
-      background: #6ee7b7;
-      color: #0d1117;
+      background: oklch(0.72 0.11 38);
+      color: oklch(0.155 0.007 60);
       padding: 12px 28px;
       border-radius: 8px;
       font-size: 16px;
@@ -528,7 +535,7 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
       text-decoration: none;
     }
 
-    .cta-btn:hover { background: #5dd3a3; text-decoration: none; }
+    .cta-btn:hover { background: oklch(0.64 0.10 38); text-decoration: none; }
 
     @media (max-width: 600px) {
       h1 { font-size: 22px; }
@@ -541,18 +548,18 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
 </head>
 <body>
 
-<nav style="background: #1a1a2e; padding: 0.75rem 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; border-bottom: 2px solid #5436DA;">
-  <a href="/" style="color: #ccc; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">&larr; Home</a>
-  <a href="/calculator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem;">Cost Calculator</a>
-  <a href="/diagnose/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem;">Diagnose</a>
-  <a href="/skill-finder/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem;">Skill Finder</a>
-  <a href="/model-selector/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem;">Model Selector</a>
-  <a href="/generator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem;">Generator</a>
-  <a href="/mcp-config/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem;">MCP Config</a>
-  <a href="/commands/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem;">Commands</a>
-  <a href="/token-estimator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem;">Token Estimator</a>
-  <a href="/permissions/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem;">Permissions</a>
-  <a href="/starter/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: #5436DA;">Starter</a>
+<nav style="position:sticky;top:0;z-index:100;background:rgba(30, 28, 24, 0.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:0.75rem 1rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;border-bottom:1px solid oklch(0.30 0.010 60);">
+  <a href="/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;font-weight:600;">&larr; Home</a>
+  <a href="/calculator/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Cost Calculator</a>
+  <a href="/diagnose/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Diagnose</a>
+  <a href="/skill-finder/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Skill Finder</a>
+  <a href="/model-selector/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Model Selector</a>
+  <a href="/generator/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Generator</a>
+  <a href="/mcp-config/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">MCP Config</a>
+  <a href="/commands/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Commands</a>
+  <a href="/token-estimator/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Token Estimator</a>
+  <a href="/permissions/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Permissions</a>
+  <a href="/starter/" style="background:oklch(0.72 0.11 38);color:oklch(0.18 0.04 38);font-weight:600;text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Starter</a>
 </nav>
 
 <div class="container">
@@ -759,7 +766,7 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
   <div class="paywall-box">
     <h3>Unlock Unlimited Setups</h3>
     <p>You have used your 2 free project generations. Get lifetime access to all Claude Code tools, 200+ guides, and production-ready project templates.</p>
-    <a href="https://zovo.one/pricing" class="paywall-btn">Get Full Access — $99</a>
+    <a href="https://zovo.one/lifetime" class="paywall-btn">Get Full Access — $99</a>
     <button class="paywall-dismiss" id="paywallDismiss">Maybe later</button>
   </div>
 </div>
@@ -826,23 +833,23 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
     <p>Claude Code works with any programming language. It has deep expertise in JavaScript, TypeScript, Python, Rust, Go, Java, Ruby, C#, PHP, Swift, and Kotlin. Framework-specific knowledge includes React, Next.js, Vue, Svelte, Django, FastAPI, Flask, Express, Actix, Axum, Gin, and many more. CLAUDE.md helps Claude understand your specific stack and conventions.</p>
   </details>
 
-  <section style="margin:32px 0;padding:24px;background:#161b22;border:1px solid #30363d;border-radius:12px;">
-    <h2 style="color:#e6edf3;font-size:20px;margin-bottom:16px;">Related Guides</h2>
+  <section style="margin:32px 0;padding:24px;background:oklch(0.185 0.008 60);border:1px solid oklch(0.30 0.010 60);border-radius:12px;">
+    <h2 style="color:oklch(0.97 0.006 80);font-size:20px;margin-bottom:16px;">Related Guides</h2>
     <ul style="list-style:none;padding:0;margin:0;">
-      <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-        <a href="/starting-new-project-claude-code-zero-to-productive/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Starting a Project: Zero to Productive</a>
+      <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+        <a href="/starting-new-project-claude-code-zero-to-productive/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Starting a Project: Zero to Productive</a>
       </li>
-      <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-        <a href="/claude-code-project-templates-quick-setup/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Project Templates: Quick Setup for Any Stack</a>
+      <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+        <a href="/claude-code-project-templates-quick-setup/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Project Templates: Quick Setup for Any Stack</a>
       </li>
-      <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-        <a href="/setting-up-claude-code-nextjs-walkthrough/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Setting Up Claude Code for Next.js</a>
+      <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+        <a href="/setting-up-claude-code-nextjs-walkthrough/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Setting Up Claude Code for Next.js</a>
       </li>
-      <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-        <a href="/setting-up-claude-code-python-django-walkthrough/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Setting Up Claude Code for Python/Django</a>
+      <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+        <a href="/setting-up-claude-code-python-django-walkthrough/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Setting Up Claude Code for Python/Django</a>
       </li>
       <li style="padding:8px 0;">
-        <a href="/claude-code-monorepo-setup-guide/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Monorepo Setup: The Right Way</a>
+        <a href="/claude-code-monorepo-setup-guide/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Monorepo Setup: The Right Way</a>
       </li>
     </ul>
   </section>
@@ -850,7 +857,7 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
   <div class="cta-box">
     <h3>200 Project Templates</h3>
     <p>Get production-ready CLAUDE.md templates, team permission configs, MCP setups, and CI/CD workflows for every major framework.</p>
-    <a href="https://zovo.one/pricing" class="cta-btn">Claude Code Mastery Playbook — $99</a>
+    <a href="https://zovo.one/lifetime" class="cta-btn">Claude Code Mastery Playbook — $99</a>
   </div>
 
 </div>

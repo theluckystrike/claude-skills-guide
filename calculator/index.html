@@ -18,13 +18,16 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
   <meta property="og:description" content="Estimate Claude Code API costs for your project. Compare models, calculate token usage, and optimize spending.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://claudecodeguides.com/calculator/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: oklch(0.155 0.007 60);
+      color: oklch(0.80 0.008 70);
       line-height: 1.6;
       min-height: 100vh;
     }
@@ -36,22 +39,25 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     }
 
     h1 {
+      font-family: 'Instrument Serif', 'Times New Roman', serif;
+      font-weight: 400;
+      letter-spacing: -0.02em;
       font-size: 28px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin-bottom: 8px;
       line-height: 1.3;
     }
 
     .subtitle {
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       font-size: 15px;
       margin-bottom: 32px;
     }
 
     /* Input sections */
     .input-section {
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 12px;
       padding: 24px;
       margin-bottom: 16px;
@@ -60,7 +66,7 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     .input-label {
       font-size: 14px;
       font-weight: 600;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin-bottom: 12px;
       display: block;
     }
@@ -77,7 +83,7 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
       -webkit-appearance: none;
       appearance: none;
       height: 6px;
-      background: #30363d;
+      background: oklch(0.30 0.010 60);
       border-radius: 3px;
       outline: none;
     }
@@ -88,24 +94,24 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
       width: 22px;
       height: 22px;
       border-radius: 50%;
-      background: #6ee7b7;
+      background: oklch(0.72 0.11 38);
       cursor: pointer;
-      border: 2px solid #0d1117;
+      border: 2px solid oklch(0.155 0.007 60);
     }
 
     .slider-row input[type="range"]::-moz-range-thumb {
       width: 22px;
       height: 22px;
       border-radius: 50%;
-      background: #6ee7b7;
+      background: oklch(0.72 0.11 38);
       cursor: pointer;
-      border: 2px solid #0d1117;
+      border: 2px solid oklch(0.155 0.007 60);
     }
 
     .slider-value {
       font-size: 24px;
       font-weight: 700;
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       min-width: 60px;
       text-align: right;
     }
@@ -122,8 +128,8 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
       align-items: center;
       gap: 8px;
       padding: 10px 16px;
-      background: #0d1117;
-      border: 1px solid #30363d;
+      background: oklch(0.155 0.007 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
       cursor: pointer;
       font-size: 14px;
@@ -131,25 +137,25 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     }
 
     .radio-group label:hover {
-      border-color: #6ee7b7;
+      border-color: oklch(0.72 0.11 38);
     }
 
     .radio-group input[type="radio"] {
-      accent-color: #6ee7b7;
+      accent-color: oklch(0.72 0.11 38);
     }
 
     .radio-group input[type="radio"]:checked + span {
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       font-weight: 600;
     }
 
     /* Output cards */
     .results-heading {
       font-size: 20px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin: 32px 0 16px;
       padding-bottom: 8px;
-      border-bottom: 1px solid #30363d;
+      border-bottom: 1px solid oklch(0.30 0.010 60);
     }
 
     .card-grid {
@@ -159,15 +165,15 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     }
 
     .card {
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 12px;
       padding: 24px;
     }
 
     .card h3 {
       font-size: 16px;
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       margin-bottom: 16px;
     }
 
@@ -175,21 +181,21 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
       display: flex;
       justify-content: space-between;
       padding: 8px 0;
-      border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+      border-bottom: 1px solid oklch(0.30 0.010 60 / 0.5);
       font-size: 14px;
     }
 
     .stat-row:last-child { border-bottom: none; }
 
-    .stat-label { color: #8b949e; }
+    .stat-label { color: oklch(0.58 0.010 70); }
 
     .stat-value {
       font-weight: 600;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
     }
 
     .stat-value.highlight {
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
     }
 
     /* Plan comparison table */
@@ -202,8 +208,8 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     .plan-table th {
       text-align: left;
       padding: 10px 8px;
-      border-bottom: 2px solid #30363d;
-      color: #8b949e;
+      border-bottom: 2px solid oklch(0.30 0.010 60);
+      color: oklch(0.58 0.010 70);
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -211,11 +217,11 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
 
     .plan-table td {
       padding: 10px 8px;
-      border-bottom: 1px solid #21262d;
+      border-bottom: 1px solid oklch(0.235 0.009 60);
     }
 
     .plan-table tr.best-plan td {
-      background: rgba(110, 231, 183, 0.08);
+      background: oklch(0.185 0.015 38 / 0.3);
       font-weight: 600;
     }
 
@@ -226,8 +232,8 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
 
     .plan-table .best-badge {
       display: inline-block;
-      background: #6ee7b7;
-      color: #0d1117;
+      background: oklch(0.72 0.11 38);
+      color: oklch(0.18 0.04 38);
       font-size: 10px;
       font-weight: 700;
       padding: 2px 8px;
@@ -238,19 +244,19 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
 
     /* Recommendation card */
     .recommendation {
-      background: linear-gradient(135deg, rgba(110, 231, 183, 0.08), rgba(110, 231, 183, 0.02));
-      border-color: rgba(110, 231, 183, 0.3);
+      background: linear-gradient(135deg, oklch(0.72 0.11 38 / 0.08), oklch(0.72 0.11 38 / 0.02));
+      border-color: oklch(0.72 0.11 38 / 0.3);
     }
 
     .recommendation .rec-plan {
       font-size: 22px;
       font-weight: 700;
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       margin-bottom: 8px;
     }
 
     .recommendation .rec-reason {
-      color: #c9d1d9;
+      color: oklch(0.80 0.008 70);
       font-size: 14px;
       line-height: 1.6;
     }
@@ -260,7 +266,7 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
       display: flex;
       gap: 12px;
       padding: 12px 0;
-      border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+      border-bottom: 1px solid oklch(0.30 0.010 60 / 0.5);
       font-size: 14px;
     }
 
@@ -270,16 +276,16 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
       flex-shrink: 0;
       width: 28px;
       height: 28px;
-      background: rgba(110, 231, 183, 0.12);
+      background: oklch(0.72 0.11 38 / 0.12);
       border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 14px;
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
     }
 
-    .tip-text { color: #c9d1d9; }
+    .tip-text { color: oklch(0.80 0.008 70); }
 
     /* Competitor table */
     .competitor-row {
@@ -287,13 +293,13 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
       justify-content: space-between;
       align-items: center;
       padding: 10px 0;
-      border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+      border-bottom: 1px solid oklch(0.30 0.010 60 / 0.5);
       font-size: 14px;
     }
 
     .competitor-row:last-child { border-bottom: none; }
 
-    .competitor-name { color: #c9d1d9; }
+    .competitor-name { color: oklch(0.80 0.008 70); }
 
     .competitor-price {
       font-weight: 600;
@@ -302,7 +308,7 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
 
     .competitor-note {
       font-size: 12px;
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
     }
 
     /* Blurred sections (paywall) */
@@ -320,7 +326,7 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(10, 10, 15, 0.92);
+      background: oklch(0.155 0.007 60 / 0.92);
       z-index: 1000;
       align-items: center;
       justify-content: center;
@@ -334,13 +340,13 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     }
 
     .paywall-box h2 {
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       font-size: 24px;
       margin-bottom: 16px;
     }
 
     .paywall-box p {
-      color: #c8ccd0;
+      color: oklch(0.80 0.008 70);
       margin-bottom: 24px;
       line-height: 1.6;
     }
@@ -348,8 +354,8 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     .paywall-cta {
       display: inline-block;
       padding: 14px 32px;
-      background: #6ee7b7;
-      color: #0a0a0f;
+      background: oklch(0.72 0.11 38);
+      color: oklch(0.18 0.04 38);
       font-weight: 700;
       border-radius: 8px;
       text-decoration: none;
@@ -358,11 +364,11 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     }
 
     .paywall-cta:hover {
-      background: #5dd9a8;
+      background: oklch(0.64 0.10 38);
     }
 
     .paywall-fine {
-      color: #666 !important;
+      color: oklch(0.42 0.010 70) !important;
       font-size: 13px !important;
       margin-top: 16px !important;
     }
@@ -371,12 +377,14 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     .seo-content {
       margin-top: 48px;
       padding-top: 32px;
-      border-top: 1px solid #30363d;
+      border-top: 1px solid oklch(0.30 0.010 60);
     }
 
     .seo-content h2 {
+      font-family: 'Instrument Serif', 'Times New Roman', serif;
+      font-weight: 400;
       font-size: 22px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin: 32px 0 12px;
     }
 
@@ -385,7 +393,7 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     }
 
     .seo-content p {
-      color: #c9d1d9;
+      color: oklch(0.80 0.008 70);
       margin-bottom: 16px;
       font-size: 15px;
     }
@@ -400,7 +408,7 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     }
 
     .seo-content a {
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       text-decoration: none;
     }
 
@@ -409,8 +417,8 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     }
 
     details {
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
       margin-bottom: 8px;
       overflow: hidden;
@@ -419,15 +427,15 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     summary {
       padding: 14px 16px;
       font-weight: 600;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       cursor: pointer;
       font-size: 15px;
     }
 
-    summary:hover { color: #6ee7b7; }
+    summary:hover { color: oklch(0.72 0.11 38); }
 
     details[open] summary {
-      border-bottom: 1px solid #30363d;
+      border-bottom: 1px solid oklch(0.30 0.010 60);
     }
 
     details p, details ul {
@@ -439,8 +447,8 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
 
     /* CTA banner */
     .cta-banner {
-      background: linear-gradient(135deg, rgba(110, 231, 183, 0.12), rgba(110, 231, 183, 0.04));
-      border: 1px solid rgba(110, 231, 183, 0.3);
+      background: linear-gradient(135deg, oklch(0.72 0.11 38 / 0.12), oklch(0.72 0.11 38 / 0.04));
+      border: 1px solid oklch(0.72 0.11 38 / 0.3);
       border-radius: 12px;
       padding: 28px 24px;
       text-align: center;
@@ -455,8 +463,8 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     .cta-banner a.cta-btn {
       display: inline-block;
       padding: 12px 28px;
-      background: #6ee7b7;
-      color: #0a0a0f;
+      background: oklch(0.72 0.11 38);
+      color: oklch(0.18 0.04 38);
       font-weight: 700;
       border-radius: 8px;
       text-decoration: none;
@@ -464,7 +472,7 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     }
 
     .cta-banner a.cta-btn:hover {
-      background: #5dd9a8;
+      background: oklch(0.64 0.10 38);
       text-decoration: none;
     }
 
@@ -479,18 +487,18 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
     .related-link {
       display: block;
       padding: 14px 16px;
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
-      color: #c9d1d9;
+      color: oklch(0.80 0.008 70);
       text-decoration: none;
       font-size: 14px;
       transition: border-color 0.15s;
     }
 
     .related-link:hover {
-      border-color: #6ee7b7;
-      color: #6ee7b7;
+      border-color: oklch(0.72 0.11 38);
+      color: oklch(0.72 0.11 38);
       text-decoration: none;
     }
 
@@ -579,18 +587,18 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
   </script>
 </head>
 <body>
-<nav style="background: #1a1a2e; padding: 0.75rem 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; border-bottom: 2px solid #5436DA;">
-  <a href="/" style="color: #ccc; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">&larr; Home</a>
-  <a href="/calculator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: #5436DA;">Cost Calculator</a>
-  <a href="/diagnose/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Diagnose</a>
-  <a href="/skill-finder/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Skill Finder</a>
-  <a href="/model-selector/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Model Selector</a>
-  <a href="/generator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">CLAUDE.md Generator</a>
-  <a href="/mcp-config/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">MCP Config</a>
-  <a href="/commands/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Commands</a>
-  <a href="/token-estimator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Token Estimator</a>
-  <a href="/permissions/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Permissions</a>
-  <a href="/starter/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Starter</a>
+<nav style="position:sticky;top:0;z-index:40;background:rgba(30,28,24,0.82);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid oklch(0.30 0.010 60);padding:0.75rem 1rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+  <a href="/" style="color:oklch(0.58 0.010 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;font-weight:600;">&larr; Home</a>
+  <a href="/calculator/" style="color:oklch(0.18 0.04 38);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:oklch(0.72 0.11 38);font-weight:600;">Cost Calculator</a>
+  <a href="/diagnose/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Diagnose</a>
+  <a href="/skill-finder/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Skill Finder</a>
+  <a href="/model-selector/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Model Selector</a>
+  <a href="/generator/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Generator</a>
+  <a href="/mcp-config/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">MCP Config</a>
+  <a href="/commands/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Commands</a>
+  <a href="/token-estimator/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Token Estimator</a>
+  <a href="/permissions/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Permissions</a>
+  <a href="/starter/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Starter</a>
 </nav>
   <div class="container">
     <h1>Claude Code Cost Calculator</h1>
@@ -710,7 +718,7 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
       <div class="paywall-box">
         <h2>You've used your 2 free calculations</h2>
         <p>Unlock unlimited access to all 5 CCG tools + 200 production-ready CLAUDE.md templates, error fixes, and cost optimization configs.</p>
-        <a href="https://zovo.one/pricing" class="paywall-cta">Get Lifetime Access &mdash; $99</a>
+        <a href="https://zovo.one/lifetime" class="paywall-cta">Get Lifetime Access &mdash; $99</a>
         <p class="paywall-fine">One-time payment. All tools. All templates. Forever.</p>
       </div>
     </div>
@@ -782,26 +790,26 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
 
       <div class="cta-banner">
         <p>Reduce your costs by 50%+ with optimized CLAUDE.md templates that minimize token waste.</p>
-        <a href="https://zovo.one/pricing" class="cta-btn">Get the Claude Code Playbook ($99 Lifetime)</a>
+        <a href="https://zovo.one/lifetime" class="cta-btn">Get the Claude Code Playbook ($99 Lifetime)</a>
       </div>
 
-      <section style="margin:32px 0;padding:24px;background:#161b22;border:1px solid #30363d;border-radius:12px;">
-        <h2 style="color:#e6edf3;font-size:20px;margin-bottom:16px;">Related Guides</h2>
+      <section style="margin:32px 0;padding:24px;background:oklch(0.185 0.008 60);border:1px solid oklch(0.30 0.010 60);border-radius:12px;">
+        <h2 style="color:oklch(0.97 0.006 80);font-size:20px;margin-bottom:16px;font-family:'Instrument Serif','Times New Roman',serif;font-weight:400;">Related Guides</h2>
         <ul style="list-style:none;padding:0;margin:0;">
-          <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-            <a href="/claude-code-pricing-every-plan-model-explained/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Claude Code Pricing Explained: Every Plan and Model</a>
+          <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+            <a href="/claude-code-pricing-every-plan-model-explained/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Claude Code Pricing Explained: Every Plan and Model</a>
           </li>
-          <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-            <a href="/cut-claude-code-costs-50-percent-guide/" style="color:#60a5fa;text-decoration:none;font-size:15px;">How to Cut Claude Code Costs by 50%</a>
+          <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+            <a href="/cut-claude-code-costs-50-percent-guide/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">How to Cut Claude Code Costs by 50%</a>
           </li>
-          <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-            <a href="/claude-code-pro-vs-max-vs-api-plan-comparison/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Claude Code Pro vs Max vs API: Which Plan?</a>
+          <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+            <a href="/claude-code-pro-vs-max-vs-api-plan-comparison/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Claude Code Pro vs Max vs API: Which Plan?</a>
           </li>
-          <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-            <a href="/claude-code-monthly-cost-solo-developers/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Claude Code Monthly Cost for Solo Devs</a>
+          <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+            <a href="/claude-code-monthly-cost-solo-developers/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Claude Code Monthly Cost for Solo Devs</a>
           </li>
           <li style="padding:8px 0;">
-            <a href="/is-claude-code-worth-100-month-roi-analysis/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Is Claude Code Worth $100/Month? ROI Analysis</a>
+            <a href="/is-claude-code-worth-100-month-roi-analysis/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Is Claude Code Worth $100/Month? ROI Analysis</a>
           </li>
         </ul>
       </section>

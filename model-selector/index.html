@@ -21,22 +21,25 @@ description: "Answer 5 questions to find the best Claude model for your project.
 <meta name="twitter:title" content="Claude Model Selector — Claude Code Guides">
 <meta name="twitter:description" content="Answer 5 questions to find the best Claude model for your project.">
 <link rel="canonical" href="https://claudecodeguides.com/model-selector/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
 <style>
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; scroll-behavior: smooth; }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  background: #0d1117;
-  color: #c9d1d9;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: oklch(0.155 0.007 60);
+  color: oklch(0.80 0.008 70);
   line-height: 1.6;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
-a { color: #6ee7b7; text-decoration: none; transition: opacity 0.2s; }
+a { color: oklch(0.72 0.11 38); text-decoration: none; transition: opacity 0.2s; }
 a:hover { opacity: 0.85; }
 a:focus-visible, button:focus-visible {
-  outline: 2px solid #6ee7b7;
+  outline: 2px solid oklch(0.72 0.11 38);
   outline-offset: 2px;
 }
 
@@ -47,23 +50,23 @@ a:focus-visible, button:focus-visible {
 /* ── Header ── */
 .site-header {
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(201,209,217,0.08);
+  border-bottom: 1px solid oklch(0.80 0.008 70 / 0.08);
 }
 .site-header .container-wide {
   display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;
 }
 .site-logo {
-  font-size: 1.05rem; font-weight: 600; color: #c9d1d9;
+  font-size: 1.05rem; font-weight: 600; color: oklch(0.80 0.008 70);
   letter-spacing: -0.01em;
 }
 .site-nav {
   display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center;
 }
 .site-nav a {
-  font-size: 0.8rem; color: rgba(201,209,217,0.6);
+  font-size: 0.8rem; color: oklch(0.80 0.008 70 / 0.60);
   transition: color 0.2s; white-space: nowrap;
 }
-.site-nav a:hover { color: #c9d1d9; opacity: 1; }
+.site-nav a:hover { color: oklch(0.80 0.008 70); opacity: 1; }
 
 /* ── Hero ── */
 .hero {
@@ -72,16 +75,16 @@ a:focus-visible, button:focus-visible {
 }
 .hero h1 {
   font-size: clamp(1.6rem, 4vw, 2.5rem);
-  font-weight: 700;
-  letter-spacing: -0.025em;
+  font-family: 'Instrument Serif', 'Times New Roman', serif; font-weight: 400;
+  letter-spacing: -0.02em;
   line-height: 1.15;
   margin-bottom: 0.75rem;
-  color: #e6edf3;
+  color: oklch(0.97 0.006 80);
 }
-.hero h1 .accent { color: #6ee7b7; }
+.hero h1 .accent { color: oklch(0.72 0.11 38); }
 .hero .subhead {
   font-size: clamp(0.95rem, 2.5vw, 1.15rem);
-  color: rgba(201,209,217,0.6);
+  color: oklch(0.80 0.008 70 / 0.60);
   max-width: 560px;
   margin: 0 auto;
   line-height: 1.5;
@@ -91,14 +94,14 @@ a:focus-visible, button:focus-visible {
 .progress-bar-wrap {
   width: 100%;
   height: 6px;
-  background: rgba(201,209,217,0.08);
+  background: oklch(0.80 0.008 70 / 0.08);
   border-radius: 3px;
   margin-bottom: 2rem;
   overflow: hidden;
 }
 .progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #6ee7b7, #34d399);
+  background: linear-gradient(90deg, oklch(0.72 0.11 38), oklch(0.64 0.10 38));
   border-radius: 3px;
   transition: width 0.4s ease;
   width: 0%;
@@ -106,8 +109,8 @@ a:focus-visible, button:focus-visible {
 
 /* ── Wizard Card ── */
 .wizard-card {
-  background: rgba(201,209,217,0.03);
-  border: 1px solid rgba(201,209,217,0.08);
+  background: oklch(0.80 0.008 70 / 0.03);
+  border: 1px solid oklch(0.80 0.008 70 / 0.08);
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -128,12 +131,12 @@ a:focus-visible, button:focus-visible {
 .question-step h2 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #e6edf3;
+  color: oklch(0.97 0.006 80);
   margin-bottom: 0.35rem;
 }
 .question-number {
   font-size: 0.8rem;
-  color: #6ee7b7;
+  color: oklch(0.72 0.11 38);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -151,10 +154,10 @@ a:focus-visible, button:focus-visible {
   display: block;
   width: 100%;
   padding: 14px 18px;
-  background: rgba(201,209,217,0.04);
-  border: 1px solid rgba(201,209,217,0.12);
+  background: oklch(0.80 0.008 70 / 0.04);
+  border: 1px solid oklch(0.80 0.008 70 / 0.12);
   border-radius: 8px;
-  color: #c9d1d9;
+  color: oklch(0.80 0.008 70);
   font-size: 0.95rem;
   font-family: inherit;
   text-align: left;
@@ -162,14 +165,14 @@ a:focus-visible, button:focus-visible {
   transition: all 0.2s ease;
 }
 .option-btn:hover {
-  background: rgba(110,231,183,0.08);
-  border-color: rgba(110,231,183,0.3);
-  color: #e6edf3;
+  background: oklch(0.72 0.11 38 / 0.08);
+  border-color: oklch(0.72 0.11 38 / 0.30);
+  color: oklch(0.97 0.006 80);
 }
 .option-btn.selected {
-  background: rgba(110,231,183,0.12);
-  border-color: #6ee7b7;
-  color: #e6edf3;
+  background: oklch(0.72 0.11 38 / 0.12);
+  border-color: oklch(0.72 0.11 38);
+  color: oklch(0.97 0.006 80);
 }
 
 /* ── Nav Buttons ── */
@@ -183,17 +186,17 @@ a:focus-visible, button:focus-visible {
 .btn-back {
   padding: 10px 20px;
   background: transparent;
-  border: 1px solid rgba(201,209,217,0.15);
+  border: 1px solid oklch(0.80 0.008 70 / 0.15);
   border-radius: 6px;
-  color: rgba(201,209,217,0.6);
+  color: oklch(0.80 0.008 70 / 0.60);
   font-size: 0.85rem;
   font-family: inherit;
   cursor: pointer;
   transition: all 0.2s;
 }
 .btn-back:hover {
-  border-color: rgba(201,209,217,0.3);
-  color: #c9d1d9;
+  border-color: oklch(0.80 0.008 70 / 0.30);
+  color: oklch(0.80 0.008 70);
 }
 
 /* ── Result Card ── */
@@ -217,31 +220,31 @@ a:focus-visible, button:focus-visible {
   letter-spacing: 0.08em;
   margin-bottom: 0.75rem;
 }
-.badge-sonnet { background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
-.badge-opus { background: rgba(168,85,247,0.15); color: #c084fc; border: 1px solid rgba(168,85,247,0.3); }
-.badge-haiku { background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+.badge-sonnet { background: oklch(0.62 0.15 260 / 0.15); color: oklch(0.72 0.11 38); border: 1px solid oklch(0.62 0.15 260 / 0.30); }
+.badge-opus { background: oklch(0.68 0.14 300 / 0.15); color: oklch(0.70 0.15 310); border: 1px solid oklch(0.68 0.14 300 / 0.30); }
+.badge-haiku { background: oklch(0.82 0.14 85 / 0.15); color: oklch(0.82 0.14 85); border: 1px solid oklch(0.82 0.14 85 / 0.30); }
 
 .result-header h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #e6edf3;
+  color: oklch(0.97 0.006 80);
   margin-bottom: 0.5rem;
 }
 .result-reasoning {
-  color: rgba(201,209,217,0.75);
+  color: oklch(0.80 0.008 70 / 0.75);
   line-height: 1.6;
   font-size: 0.95rem;
   margin-bottom: 1.25rem;
 }
 .also-consider {
-  background: rgba(201,209,217,0.04);
-  border: 1px solid rgba(201,209,217,0.08);
+  background: oklch(0.80 0.008 70 / 0.04);
+  border: 1px solid oklch(0.80 0.008 70 / 0.08);
   border-radius: 8px;
   padding: 14px 18px;
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
 }
-.also-consider strong { color: #e6edf3; }
+.also-consider strong { color: oklch(0.97 0.006 80); }
 
 /* ── Cost Table ── */
 .cost-table-wrap {
@@ -250,7 +253,7 @@ a:focus-visible, button:focus-visible {
 .cost-table-wrap h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: #e6edf3;
+  color: oklch(0.97 0.006 80);
   margin-bottom: 0.75rem;
 }
 .cost-table {
@@ -261,21 +264,21 @@ a:focus-visible, button:focus-visible {
 .cost-table th {
   text-align: left;
   padding: 10px 12px;
-  background: rgba(201,209,217,0.05);
-  color: rgba(201,209,217,0.7);
+  background: oklch(0.80 0.008 70 / 0.05);
+  color: oklch(0.80 0.008 70 / 0.70);
   font-weight: 500;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  border-bottom: 1px solid rgba(201,209,217,0.08);
+  border-bottom: 1px solid oklch(0.80 0.008 70 / 0.08);
 }
 .cost-table td {
   padding: 10px 12px;
-  border-bottom: 1px solid rgba(201,209,217,0.06);
-  color: #c9d1d9;
+  border-bottom: 1px solid oklch(0.80 0.008 70 / 0.06);
+  color: oklch(0.80 0.008 70);
 }
 .cost-table tr.highlight td {
-  color: #6ee7b7;
+  color: oklch(0.72 0.11 38);
   font-weight: 600;
 }
 
@@ -287,18 +290,18 @@ a:focus-visible, button:focus-visible {
 .config-snippet-wrap h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: #e6edf3;
+  color: oklch(0.97 0.006 80);
   margin-bottom: 0.75rem;
 }
 .config-snippet {
-  background: #161b22;
-  border: 1px solid rgba(201,209,217,0.1);
+  background: oklch(0.185 0.008 60);
+  border: 1px solid oklch(0.80 0.008 70 / 0.10);
   border-radius: 8px;
   padding: 16px;
-  font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospace;
+  font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
   font-size: 0.82rem;
   line-height: 1.6;
-  color: #c9d1d9;
+  color: oklch(0.80 0.008 70);
   white-space: pre-wrap;
   word-break: break-word;
   position: relative;
@@ -309,10 +312,10 @@ a:focus-visible, button:focus-visible {
   gap: 6px;
   margin-top: 0.75rem;
   padding: 8px 18px;
-  background: rgba(110,231,183,0.1);
-  border: 1px solid rgba(110,231,183,0.3);
+  background: oklch(0.72 0.11 38 / 0.10);
+  border: 1px solid oklch(0.72 0.11 38 / 0.30);
   border-radius: 6px;
-  color: #6ee7b7;
+  color: oklch(0.72 0.11 38);
   font-size: 0.82rem;
   font-family: inherit;
   font-weight: 500;
@@ -320,11 +323,11 @@ a:focus-visible, button:focus-visible {
   transition: all 0.2s;
 }
 .btn-copy:hover {
-  background: rgba(110,231,183,0.18);
+  background: oklch(0.72 0.11 38 / 0.18);
 }
 .btn-copy.copied {
-  background: rgba(110,231,183,0.2);
-  color: #34d399;
+  background: oklch(0.72 0.11 38 / 0.20);
+  color: oklch(0.64 0.10 38);
 }
 
 .btn-restart {
@@ -332,17 +335,17 @@ a:focus-visible, button:focus-visible {
   margin-top: 1rem;
   padding: 10px 24px;
   background: transparent;
-  border: 1px solid rgba(201,209,217,0.15);
+  border: 1px solid oklch(0.80 0.008 70 / 0.15);
   border-radius: 6px;
-  color: rgba(201,209,217,0.6);
+  color: oklch(0.80 0.008 70 / 0.60);
   font-size: 0.85rem;
   font-family: inherit;
   cursor: pointer;
   transition: all 0.2s;
 }
 .btn-restart:hover {
-  border-color: rgba(201,209,217,0.3);
-  color: #c9d1d9;
+  border-color: oklch(0.80 0.008 70 / 0.30);
+  color: oklch(0.80 0.008 70);
 }
 
 /* ── Blurred result ── */
@@ -358,7 +361,7 @@ a:focus-visible, button:focus-visible {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(10,10,15,0.92);
+  background: rgba(20, 18, 14, 0.88);
   z-index: 1000;
   align-items: center;
   justify-content: center;
@@ -371,15 +374,16 @@ a:focus-visible, button:focus-visible {
   max-width: 480px;
   text-align: center;
   padding: 40px 24px;
+  background: oklch(0.185 0.008 60); border: 1px solid oklch(0.30 0.010 60); border-radius: 12px;
 }
 .paywall-inner h2 {
-  color: #6ee7b7;
+  color: oklch(0.72 0.11 38);
   font-size: 1.4rem;
   margin-bottom: 16px;
   font-weight: 700;
 }
 .paywall-inner p {
-  color: #c8ccd0;
+  color: oklch(0.80 0.008 70);
   margin-bottom: 24px;
   line-height: 1.6;
   font-size: 0.95rem;
@@ -387,8 +391,8 @@ a:focus-visible, button:focus-visible {
 .paywall-inner .btn-paywall {
   display: inline-block;
   padding: 14px 32px;
-  background: #6ee7b7;
-  color: #0a0a0f;
+  background: oklch(0.72 0.11 38);
+  color: oklch(0.18 0.04 38);
   font-weight: 700;
   border-radius: 8px;
   text-decoration: none;
@@ -396,11 +400,11 @@ a:focus-visible, button:focus-visible {
   transition: background 0.2s;
 }
 .paywall-inner .btn-paywall:hover {
-  background: #5dd6a8;
+  background: oklch(0.64 0.10 38);
   opacity: 1;
 }
 .paywall-fine {
-  color: #666;
+  color: oklch(0.42 0.010 70);
   font-size: 0.8rem;
   margin-top: 16px;
 }
@@ -408,13 +412,13 @@ a:focus-visible, button:focus-visible {
 /* ── SEO Content ── */
 .seo-content {
   padding: 3rem 0 2rem;
-  border-top: 1px solid rgba(201,209,217,0.06);
+  border-top: 1px solid oklch(0.80 0.008 70 / 0.06);
   margin-top: 2rem;
 }
 .seo-content h2 {
   font-size: 1.4rem;
-  font-weight: 700;
-  color: #e6edf3;
+  font-family: 'Instrument Serif', 'Times New Roman', serif; font-weight: 400;
+  color: oklch(0.97 0.006 80);
   margin-bottom: 1rem;
   margin-top: 2.5rem;
   letter-spacing: -0.01em;
@@ -422,13 +426,13 @@ a:focus-visible, button:focus-visible {
 .seo-content h2:first-child { margin-top: 0; }
 .seo-content p {
   margin-bottom: 1rem;
-  color: rgba(201,209,217,0.8);
+  color: oklch(0.80 0.008 70 / 0.80);
   line-height: 1.7;
 }
 .seo-content h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #e6edf3;
+  color: oklch(0.97 0.006 80);
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
 }
@@ -444,27 +448,27 @@ a:focus-visible, button:focus-visible {
 .comparison-table th {
   text-align: left;
   padding: 12px 14px;
-  background: rgba(201,209,217,0.05);
-  color: rgba(201,209,217,0.7);
+  background: oklch(0.80 0.008 70 / 0.05);
+  color: oklch(0.80 0.008 70 / 0.70);
   font-weight: 600;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border-bottom: 1px solid rgba(201,209,217,0.1);
+  border-bottom: 1px solid oklch(0.80 0.008 70 / 0.10);
 }
 .comparison-table td {
   padding: 12px 14px;
-  border-bottom: 1px solid rgba(201,209,217,0.06);
-  color: #c9d1d9;
+  border-bottom: 1px solid oklch(0.80 0.008 70 / 0.06);
+  color: oklch(0.80 0.008 70);
 }
 .comparison-table tbody tr:hover {
-  background: rgba(201,209,217,0.02);
+  background: oklch(0.80 0.008 70 / 0.02);
 }
 
 /* ── FAQ ── */
 .faq-list { margin: 1rem 0 2rem; }
 .faq-list details {
-  border: 1px solid rgba(201,209,217,0.08);
+  border: 1px solid oklch(0.80 0.008 70 / 0.08);
   border-radius: 8px;
   margin-bottom: 0.65rem;
   overflow: hidden;
@@ -472,7 +476,7 @@ a:focus-visible, button:focus-visible {
 .faq-list summary {
   padding: 14px 18px;
   font-weight: 600;
-  color: #e6edf3;
+  color: oklch(0.97 0.006 80);
   cursor: pointer;
   font-size: 0.95rem;
   list-style: none;
@@ -482,12 +486,12 @@ a:focus-visible, button:focus-visible {
   transition: background 0.2s;
 }
 .faq-list summary:hover {
-  background: rgba(201,209,217,0.03);
+  background: oklch(0.80 0.008 70 / 0.03);
 }
 .faq-list summary::before {
   content: '+';
   font-size: 1.1rem;
-  color: #6ee7b7;
+  color: oklch(0.72 0.11 38);
   font-weight: 400;
   flex-shrink: 0;
   width: 18px;
@@ -496,41 +500,41 @@ a:focus-visible, button:focus-visible {
 .faq-list details[open] summary::before { content: '-'; }
 .faq-list .faq-body {
   padding: 0 18px 16px 46px;
-  color: rgba(201,209,217,0.75);
+  color: oklch(0.80 0.008 70 / 0.75);
   line-height: 1.65;
   font-size: 0.9rem;
 }
 
 /* ── CTA Banner ── */
 .cta-banner {
-  background: linear-gradient(135deg, rgba(110,231,183,0.08), rgba(52,211,153,0.04));
-  border: 1px solid rgba(110,231,183,0.15);
+  background: linear-gradient(135deg, oklch(0.72 0.11 38 / 0.08), oklch(0.64 0.10 38 / 0.04));
+  border: 1px solid oklch(0.72 0.11 38 / 0.15);
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
   margin: 2.5rem 0;
 }
 .cta-banner h3 {
-  color: #e6edf3;
+  color: oklch(0.97 0.006 80);
   font-size: 1.15rem;
   margin-bottom: 0.5rem;
 }
 .cta-banner p {
-  color: rgba(201,209,217,0.65);
+  color: oklch(0.80 0.008 70 / 0.65);
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 .cta-banner .btn-cta {
   display: inline-block;
   padding: 12px 28px;
-  background: #6ee7b7;
-  color: #0a0a0f;
+  background: oklch(0.72 0.11 38);
+  color: oklch(0.18 0.04 38);
   font-weight: 700;
   border-radius: 8px;
   font-size: 0.95rem;
   transition: background 0.2s;
 }
-.cta-banner .btn-cta:hover { background: #5dd6a8; opacity: 1; }
+.cta-banner .btn-cta:hover { background: oklch(0.64 0.10 38); opacity: 1; }
 
 /* ── Related Links ── */
 .related-links {
@@ -542,27 +546,27 @@ a:focus-visible, button:focus-visible {
 .related-links a {
   display: block;
   padding: 12px 16px;
-  background: rgba(201,209,217,0.03);
-  border: 1px solid rgba(201,209,217,0.08);
+  background: oklch(0.80 0.008 70 / 0.03);
+  border: 1px solid oklch(0.80 0.008 70 / 0.08);
   border-radius: 8px;
   font-size: 0.85rem;
-  color: #6ee7b7;
+  color: oklch(0.72 0.11 38);
   transition: all 0.2s;
 }
 .related-links a:hover {
-  background: rgba(110,231,183,0.06);
-  border-color: rgba(110,231,183,0.2);
+  background: oklch(0.72 0.11 38 / 0.06);
+  border-color: oklch(0.72 0.11 38 / 0.20);
   opacity: 1;
 }
 
 /* ── Footer ── */
 .site-footer {
   padding: 2rem 0;
-  border-top: 1px solid rgba(201,209,217,0.06);
+  border-top: 1px solid oklch(0.80 0.008 70 / 0.06);
   margin-top: 2rem;
   text-align: center;
   font-size: 0.8rem;
-  color: rgba(201,209,217,0.35);
+  color: oklch(0.80 0.008 70 / 0.35);
 }
 
 /* ── Mobile ── */
@@ -650,18 +654,18 @@ a:focus-visible, button:focus-visible {
 </script>
 </head>
 <body>
-<nav style="background: #1a1a2e; padding: 0.75rem 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; border-bottom: 2px solid #5436DA;">
-  <a href="/" style="color: #ccc; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">&larr; Home</a>
-  <a href="/calculator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Cost Calculator</a>
-  <a href="/diagnose/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Diagnose</a>
-  <a href="/skill-finder/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Skill Finder</a>
-  <a href="/model-selector/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: #5436DA;">Model Selector</a>
-  <a href="/generator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">CLAUDE.md Generator</a>
-  <a href="/mcp-config/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">MCP Config</a>
-  <a href="/commands/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Commands</a>
-  <a href="/token-estimator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Token Estimator</a>
-  <a href="/permissions/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Permissions</a>
-  <a href="/starter/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Starter</a>
+<nav style="position:sticky;top:0;z-index:40;background:rgba(30,28,24,0.82);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid oklch(0.30 0.010 60);padding:0.75rem 1rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+  <a href="/" style="color:oklch(0.58 0.010 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;font-weight:600;">&larr; Home</a>
+  <a href="/calculator/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Cost Calculator</a>
+  <a href="/diagnose/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Diagnose</a>
+  <a href="/skill-finder/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Skill Finder</a>
+  <a href="/model-selector/" style="background:oklch(0.72 0.11 38);color:oklch(0.18 0.04 38);font-weight:600;text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Model Selector</a>
+  <a href="/generator/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">CLAUDE.md Generator</a>
+  <a href="/mcp-config/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">MCP Config</a>
+  <a href="/commands/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Commands</a>
+  <a href="/token-estimator/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Token Estimator</a>
+  <a href="/permissions/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Permissions</a>
+  <a href="/starter/" style="color:oklch(0.80 0.008 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Starter</a>
 </nav>
 
 <!-- ── Header ── -->
@@ -672,7 +676,7 @@ a:focus-visible, button:focus-visible {
       <a href="/playbook/">Playbook</a>
       <a href="/calculator/">Cost Calculator</a>
       <a href="/generator/">Generator</a>
-      <a href="/model-selector/" style="color:#6ee7b7;">Model Selector</a>
+      <a href="/model-selector/" style="color:oklch(0.72 0.11 38);">Model Selector</a>
       <a href="/errors-atlas/">Errors Atlas</a>
     </nav>
   </div>
@@ -790,7 +794,7 @@ a:focus-visible, button:focus-visible {
   <div class="paywall-inner">
     <h2>You've used your 2 free selections</h2>
     <p>Unlock unlimited access to all 5 CCG tools + 200 production-ready CLAUDE.md templates, error fixes, and cost optimization configs.</p>
-    <a href="https://zovo.one/pricing" class="btn-paywall">Get Lifetime Access &mdash; $99</a>
+    <a href="https://zovo.one/lifetime" class="btn-paywall">Get Lifetime Access &mdash; $99</a>
     <p class="paywall-fine">One-time payment. All tools. All templates. Forever.</p>
   </div>
 </div>
@@ -920,26 +924,26 @@ a:focus-visible, button:focus-visible {
   <div class="cta-banner">
     <h3>Get model-optimized CLAUDE.md templates for every scenario</h3>
     <p>200 production-ready configs tuned for Sonnet, Opus, and Haiku across 26 frameworks.</p>
-    <a href="https://zovo.one/pricing" class="btn-cta">Claude Code Playbook &mdash; $99 Lifetime</a>
+    <a href="https://zovo.one/lifetime" class="btn-cta">Get Lifetime Access &mdash; $99</a>
   </div>
 
-  <section style="margin:32px 0;padding:24px;background:#161b22;border:1px solid #30363d;border-radius:12px;">
-    <h2 style="color:#e6edf3;font-size:20px;margin-bottom:16px;">Related Guides</h2>
+  <section style="margin:32px 0;padding:24px;background:oklch(0.185 0.008 60);border:1px solid oklch(0.30 0.010 60);border-radius:12px;">
+    <h2 style="color:oklch(0.97 0.006 80);font-size:20px;margin-bottom:16px;">Related Guides</h2>
     <ul style="list-style:none;padding:0;margin:0;">
-      <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-        <a href="/claude-sonnet-vs-opus-vs-haiku-task-comparison/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Claude Sonnet vs Opus vs Haiku: Which Model?</a>
+      <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+        <a href="/claude-sonnet-vs-opus-vs-haiku-task-comparison/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Claude Sonnet vs Opus vs Haiku: Which Model?</a>
       </li>
-      <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-        <a href="/choosing-claude-model-project-size-guide/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Choosing the Right Claude Model for Your Project</a>
+      <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+        <a href="/choosing-claude-model-project-size-guide/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Choosing the Right Claude Model for Your Project</a>
       </li>
-      <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-        <a href="/claude-code-model-switching-per-task-guide/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Claude Code Model Switching Per Task</a>
+      <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+        <a href="/claude-code-model-switching-per-task-guide/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Claude Code Model Switching Per Task</a>
       </li>
-      <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-        <a href="/claude-opus-vs-sonnet-when-extra-cost-worth-it/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Opus vs Sonnet: When the Extra Cost Is Worth It</a>
+      <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+        <a href="/claude-opus-vs-sonnet-when-extra-cost-worth-it/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Opus vs Sonnet: When the Extra Cost Is Worth It</a>
       </li>
       <li style="padding:8px 0;">
-        <a href="/budget-claude-code-80-percent-quality-guide/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Budget Claude Code: 80% Quality at 20% Cost</a>
+        <a href="/budget-claude-code-80-percent-quality-guide/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Budget Claude Code: 80% Quality at 20% Cost</a>
       </li>
     </ul>
   </section>

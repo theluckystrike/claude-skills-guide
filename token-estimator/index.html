@@ -90,13 +90,16 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     ]
   }
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: oklch(0.155 0.007 60);
+      color: oklch(0.80 0.008 70);
       line-height: 1.6;
       min-height: 100vh;
     }
@@ -108,22 +111,25 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     }
 
     h1 {
+      font-family: 'Instrument Serif', 'Times New Roman', serif;
+      font-weight: 400;
+      letter-spacing: -0.02em;
       font-size: 28px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin-bottom: 8px;
       line-height: 1.3;
     }
 
     .subtitle {
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       font-size: 15px;
       margin-bottom: 32px;
     }
 
     /* Input sections */
     .input-section {
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 12px;
       padding: 24px;
       margin-bottom: 16px;
@@ -132,7 +138,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     .input-label {
       font-size: 14px;
       font-weight: 600;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin-bottom: 12px;
       display: block;
     }
@@ -149,7 +155,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
       -webkit-appearance: none;
       appearance: none;
       height: 6px;
-      background: #30363d;
+      background: oklch(0.30 0.010 60);
       border-radius: 3px;
       outline: none;
     }
@@ -160,24 +166,24 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
       width: 22px;
       height: 22px;
       border-radius: 50%;
-      background: #6ee7b7;
+      background: oklch(0.72 0.11 38);
       cursor: pointer;
-      border: 2px solid #0d1117;
+      border: 2px solid oklch(0.155 0.007 60);
     }
 
     .slider-row input[type="range"]::-moz-range-thumb {
       width: 22px;
       height: 22px;
       border-radius: 50%;
-      background: #6ee7b7;
+      background: oklch(0.72 0.11 38);
       cursor: pointer;
-      border: 2px solid #0d1117;
+      border: 2px solid oklch(0.155 0.007 60);
     }
 
     .slider-value {
       font-size: 20px;
       font-weight: 700;
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       min-width: 120px;
       text-align: right;
       white-space: nowrap;
@@ -195,8 +201,8 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
       align-items: center;
       gap: 8px;
       padding: 10px 16px;
-      background: #0d1117;
-      border: 1px solid #30363d;
+      background: oklch(0.155 0.007 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
       cursor: pointer;
       font-size: 14px;
@@ -204,15 +210,15 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     }
 
     .radio-group label:hover {
-      border-color: #6ee7b7;
+      border-color: oklch(0.72 0.11 38);
     }
 
     .radio-group input[type="radio"] {
-      accent-color: #6ee7b7;
+      accent-color: oklch(0.72 0.11 38);
     }
 
     .radio-group input[type="radio"]:checked + span {
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       font-weight: 600;
     }
 
@@ -228,8 +234,8 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
       align-items: center;
       gap: 8px;
       padding: 10px 16px;
-      background: #0d1117;
-      border: 1px solid #30363d;
+      background: oklch(0.155 0.007 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
       cursor: pointer;
       font-size: 14px;
@@ -237,25 +243,25 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     }
 
     .checkbox-group label:hover {
-      border-color: #6ee7b7;
+      border-color: oklch(0.72 0.11 38);
     }
 
     .checkbox-group input[type="checkbox"] {
-      accent-color: #6ee7b7;
+      accent-color: oklch(0.72 0.11 38);
     }
 
     .checkbox-group input[type="checkbox"]:checked + span {
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       font-weight: 600;
     }
 
     /* Output cards */
     .results-heading {
       font-size: 20px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin: 32px 0 16px;
       padding-bottom: 8px;
-      border-bottom: 1px solid #30363d;
+      border-bottom: 1px solid oklch(0.30 0.010 60);
     }
 
     .card-grid {
@@ -265,15 +271,15 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     }
 
     .card {
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 12px;
       padding: 24px;
     }
 
     .card h3 {
       font-size: 16px;
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       margin-bottom: 16px;
     }
 
@@ -287,15 +293,15 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
 
     .stat-row:last-child { border-bottom: none; }
 
-    .stat-label { color: #8b949e; }
+    .stat-label { color: oklch(0.58 0.010 70); }
 
     .stat-value {
       font-weight: 600;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
     }
 
     .stat-value.highlight {
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
     }
 
     /* Context bar */
@@ -305,14 +311,14 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
 
     .context-bar-label {
       font-size: 13px;
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       margin-bottom: 6px;
     }
 
     .context-bar-track {
       width: 100%;
       height: 24px;
-      background: #21262d;
+      background: oklch(0.235 0.009 60);
       border-radius: 6px;
       overflow: hidden;
       position: relative;
@@ -332,7 +338,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
       transform: translateY(-50%);
       font-size: 12px;
       font-weight: 700;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
     }
 
     /* Usage bar (Card 4) */
@@ -367,21 +373,21 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
       display: flex;
       justify-content: space-between;
       font-size: 11px;
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       margin-top: 4px;
     }
 
     /* Copyable block */
     .copy-block {
       position: relative;
-      background: #0d1117;
-      border: 1px solid #30363d;
+      background: oklch(0.155 0.007 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
       padding: 16px;
-      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
       font-size: 13px;
       line-height: 1.5;
-      color: #c9d1d9;
+      color: oklch(0.80 0.008 70);
       white-space: pre-wrap;
       word-break: break-word;
     }
@@ -390,9 +396,9 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
       position: absolute;
       top: 8px;
       right: 8px;
-      background: #30363d;
-      color: #c9d1d9;
-      border: 1px solid #484f58;
+      background: oklch(0.30 0.010 60);
+      color: oklch(0.80 0.008 70);
+      border: 1px solid oklch(0.42 0.010 70);
       border-radius: 6px;
       padding: 4px 12px;
       font-size: 12px;
@@ -401,7 +407,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     }
 
     .copy-btn:hover {
-      background: #484f58;
+      background: oklch(0.42 0.010 70);
     }
 
     /* Blurred sections (paywall) */
@@ -433,7 +439,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     }
 
     .paywall-box h2 {
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       font-size: 24px;
       margin-bottom: 16px;
     }
@@ -447,8 +453,8 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     .paywall-cta {
       display: inline-block;
       padding: 14px 32px;
-      background: #6ee7b7;
-      color: #0a0a0f;
+      background: oklch(0.72 0.11 38);
+      color: oklch(0.18 0.04 38);
       font-weight: 700;
       border-radius: 8px;
       text-decoration: none;
@@ -457,7 +463,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     }
 
     .paywall-cta:hover {
-      background: #5dd9a8;
+      background: oklch(0.64 0.10 38);
     }
 
     .paywall-fine {
@@ -470,12 +476,12 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     .seo-content {
       margin-top: 48px;
       padding-top: 32px;
-      border-top: 1px solid #30363d;
+      border-top: 1px solid oklch(0.30 0.010 60);
     }
 
     .seo-content h2 {
       font-size: 22px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin: 32px 0 12px;
     }
 
@@ -484,7 +490,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     }
 
     .seo-content p {
-      color: #c9d1d9;
+      color: oklch(0.80 0.008 70);
       margin-bottom: 16px;
       font-size: 15px;
     }
@@ -499,7 +505,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     }
 
     .seo-content a {
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       text-decoration: none;
     }
 
@@ -508,8 +514,8 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     }
 
     details {
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
       margin-bottom: 8px;
       padding: 0;
@@ -519,7 +525,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
       padding: 14px 16px;
       cursor: pointer;
       font-weight: 600;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       font-size: 15px;
       list-style: none;
     }
@@ -528,7 +534,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
 
     details summary::before {
       content: '+ ';
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       font-weight: 700;
     }
 
@@ -539,7 +545,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     details div {
       padding: 0 16px 14px;
       font-size: 14px;
-      color: #c9d1d9;
+      color: oklch(0.80 0.008 70);
       line-height: 1.6;
     }
 
@@ -553,7 +559,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     }
 
     .cta-box a {
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       font-weight: 700;
       text-decoration: none;
       font-size: 16px;
@@ -564,7 +570,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     }
 
     .cta-box p {
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       font-size: 13px;
       margin-top: 8px;
     }
@@ -582,18 +588,18 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
 </head>
 <body>
 
-<nav style="background: #1a1a2e; padding: 0.75rem 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; border-bottom: 2px solid #5436DA;">
-  <a href="/" style="color: #ccc; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">&larr; Home</a>
-  <a href="/calculator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Cost Calculator</a>
-  <a href="/diagnose/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Diagnose</a>
-  <a href="/skill-finder/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Skill Finder</a>
-  <a href="/model-selector/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Model Selector</a>
-  <a href="/generator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Generator</a>
-  <a href="/mcp-config/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">MCP Config</a>
-  <a href="/commands/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Commands</a>
-  <a href="/token-estimator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: #5436DA;">Token Estimator</a>
-  <a href="/permissions/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Permissions</a>
-  <a href="/starter/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Starter</a>
+<nav style="position:sticky;top:0;z-index:40;background:rgba(30,28,24,0.82);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid oklch(0.30 0.010 60);padding:0.75rem 1rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+  <a href="/" style="color:oklch(0.58 0.010 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;font-weight:600;">&larr; Home</a>
+  <a href="/calculator/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Cost Calculator</a>
+  <a href="/diagnose/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Diagnose</a>
+  <a href="/skill-finder/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Skill Finder</a>
+  <a href="/model-selector/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Model Selector</a>
+  <a href="/generator/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Generator</a>
+  <a href="/mcp-config/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">MCP Config</a>
+  <a href="/commands/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Commands</a>
+  <a href="/token-estimator/" style="background:oklch(0.72 0.11 38);color:oklch(0.18 0.04 38);font-weight:600;text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Token Estimator</a>
+  <a href="/permissions/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Permissions</a>
+  <a href="/starter/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Starter</a>
 </nav>
 
 <div class="container">
@@ -710,7 +716,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     <!-- Card 4: Token Usage Bar -->
     <div class="card" id="card-usage-bar">
       <h3>Token Usage Bar</h3>
-      <p style="font-size: 14px; color: #8b949e;" id="usage-bar-label">Your estimated session uses 0% of the 200K context window</p>
+      <p style="font-size: 14px; color: oklch(0.58 0.010 70);" id="usage-bar-label">Your estimated session uses 0% of the 200K context window</p>
       <div class="usage-zones">
         <div class="usage-zone usage-zone-green"></div>
         <div class="usage-zone usage-zone-yellow"></div>
@@ -731,7 +737,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     <div class="paywall-box">
       <h2>Unlock Unlimited Estimations</h2>
       <p>Get lifetime access to all Claude Code tools, token-optimized CLAUDE.md templates, and expert configuration guides.</p>
-      <a href="https://zovo.one/pricing" class="paywall-cta">Get Lifetime Access &mdash; $99</a>
+      <a href="https://zovo.one/lifetime" class="paywall-cta">Get Lifetime Access &mdash; $99</a>
       <p class="paywall-fine">One-time payment. All tools. All templates. Forever.</p>
     </div>
   </div>
@@ -801,29 +807,29 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
       <div>Yes. Each MCP server adds its tool definitions to the system prompt, consuming input tokens on every turn. A typical MCP server adds 500-2,000 tokens per turn. If you have 5 MCP servers configured, that adds 2,500-10,000 extra tokens per turn just for tool definitions. Only enable MCP servers you actively need for your current task.</div>
     </details>
 
-    <section style="margin:32px 0;padding:24px;background:#161b22;border:1px solid #30363d;border-radius:12px;">
-      <h2 style="color:#e6edf3;font-size:20px;margin-bottom:16px;">Related Guides</h2>
+    <section style="margin:32px 0;padding:24px;background:oklch(0.185 0.008 60);border:1px solid oklch(0.30 0.010 60);border-radius:12px;">
+      <h2 style="color:oklch(0.97 0.006 80);font-size:20px;margin-bottom:16px;">Related Guides</h2>
       <ul style="list-style:none;padding:0;margin:0;">
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/how-many-tokens-claude-code-per-session/" style="color:#60a5fa;text-decoration:none;font-size:15px;">How Many Tokens Per Session?</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/how-many-tokens-claude-code-per-session/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">How Many Tokens Per Session?</a>
         </li>
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/claude-code-token-usage-by-task-type-benchmarks/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Token Usage by Task Type: Benchmarks</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/claude-code-token-usage-by-task-type-benchmarks/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Token Usage by Task Type: Benchmarks</a>
         </li>
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/reducing-claude-code-token-consumption-techniques/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Reducing Token Consumption: 8 Techniques</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/reducing-claude-code-token-consumption-techniques/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Reducing Token Consumption: 8 Techniques</a>
         </li>
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/claude-code-context-window-token-usage-guide/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Context Window: How It Affects Tokens</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/claude-code-context-window-token-usage-guide/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Context Window: How It Affects Tokens</a>
         </li>
         <li style="padding:8px 0;">
-          <a href="/token-budgeting-claude-code-projects-guide/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Token Budgeting for Projects</a>
+          <a href="/token-budgeting-claude-code-projects-guide/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Token Budgeting for Projects</a>
         </li>
       </ul>
     </section>
 
     <div class="cta-box">
-      <a href="https://zovo.one/pricing">Token-optimized CLAUDE.md templates &rarr; Playbook ($99)</a>
+      <a href="https://zovo.one/lifetime">Token-optimized CLAUDE.md templates &rarr; Playbook ($99)</a>
       <p>Pre-built configurations that cut token waste by 40-60%</p>
     </div>
   </div>

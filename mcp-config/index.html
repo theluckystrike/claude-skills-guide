@@ -21,6 +21,9 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MCP Server Configuration Generator for Claude Code (2026)">
   <meta name="twitter:description" content="Build your MCP server configuration interactively for Claude Code.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -97,9 +100,9 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: oklch(0.155 0.007 60);
+      color: oklch(0.80 0.008 70);
       line-height: 1.6;
       min-height: 100vh;
     }
@@ -111,34 +114,39 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
     }
 
     h1 {
+      font-family: 'Instrument Serif', 'Times New Roman', serif;
+      font-weight: 400;
+      letter-spacing: -0.02em;
       font-size: 28px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin-bottom: 8px;
       line-height: 1.3;
     }
 
     h2 {
+      font-family: 'Instrument Serif', 'Times New Roman', serif;
+      font-weight: 400;
       font-size: 22px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin: 40px 0 16px;
       line-height: 1.3;
     }
 
     h3 {
       font-size: 17px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin: 20px 0 8px;
     }
 
     .subtitle {
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       font-size: 15px;
       margin-bottom: 32px;
     }
 
     .section-card {
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 12px;
       padding: 24px;
       margin-bottom: 16px;
@@ -147,7 +155,7 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
     .section-label {
       font-size: 14px;
       font-weight: 600;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin-bottom: 16px;
       display: block;
     }
@@ -170,24 +178,24 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
       align-items: flex-start;
       gap: 10px;
       padding: 12px;
-      background: #0d1117;
-      border: 1px solid #30363d;
+      background: oklch(0.155 0.007 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
       cursor: pointer;
       transition: border-color 0.2s;
     }
 
     .server-item:hover {
-      border-color: #6ee7b7;
+      border-color: oklch(0.72 0.11 38);
     }
 
     .server-item.selected {
-      border-color: #6ee7b7;
-      background: rgba(110, 231, 183, 0.05);
+      border-color: oklch(0.72 0.11 38);
+      background: rgba(114, 180, 100, 0.05);
     }
 
     .server-item input[type="checkbox"] {
-      accent-color: #6ee7b7;
+      accent-color: oklch(0.72 0.11 38);
       width: 18px;
       height: 18px;
       margin-top: 2px;
@@ -203,13 +211,13 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
     .server-name {
       font-weight: 600;
       font-size: 14px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       display: block;
     }
 
     .server-desc {
       font-size: 12px;
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       display: block;
       margin-top: 2px;
     }
@@ -220,15 +228,15 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
       gap: 0;
       border-radius: 8px;
       overflow: hidden;
-      border: 1px solid #30363d;
+      border: 1px solid oklch(0.30 0.010 60);
     }
 
     .scope-btn {
       flex: 1;
       padding: 10px 16px;
       text-align: center;
-      background: #0d1117;
-      color: #8b949e;
+      background: oklch(0.155 0.007 60);
+      color: oklch(0.58 0.010 70);
       border: none;
       cursor: pointer;
       font-size: 14px;
@@ -238,14 +246,14 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
     }
 
     .scope-btn.active {
-      background: #6ee7b7;
-      color: #0d1117;
+      background: oklch(0.72 0.11 38);
+      color: oklch(0.18 0.04 38);
       font-weight: 700;
     }
 
     .scope-btn:hover:not(.active) {
-      background: #1c2129;
-      color: #c9d1d9;
+      background: oklch(0.185 0.008 60);
+      color: oklch(0.80 0.008 70);
     }
 
     /* Custom server input */
@@ -258,28 +266,28 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
     .custom-input-row input {
       flex: 1;
       padding: 8px 12px;
-      background: #0d1117;
-      border: 1px solid #30363d;
+      background: oklch(0.155 0.007 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 6px;
-      color: #c9d1d9;
+      color: oklch(0.80 0.008 70);
       font-size: 13px;
       font-family: inherit;
     }
 
     .custom-input-row input::placeholder {
-      color: #484f58;
+      color: oklch(0.42 0.010 70);
     }
 
     .custom-input-row input:focus {
       outline: none;
-      border-color: #6ee7b7;
+      border-color: oklch(0.72 0.11 38);
     }
 
     /* Output panel */
     .output-panel {
       position: relative;
-      background: #0d1117;
-      border: 1px solid #30363d;
+      background: oklch(0.155 0.007 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
       overflow: hidden;
     }
@@ -289,14 +297,14 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
       justify-content: space-between;
       align-items: center;
       padding: 10px 16px;
-      background: #161b22;
-      border-bottom: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border-bottom: 1px solid oklch(0.30 0.010 60);
     }
 
     .output-title {
       font-size: 13px;
       font-weight: 600;
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
     }
 
     .output-actions {
@@ -308,29 +316,29 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
       padding: 5px 12px;
       font-size: 12px;
       font-weight: 600;
-      border: 1px solid #30363d;
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 6px;
-      background: #21262d;
-      color: #c9d1d9;
+      background: oklch(0.235 0.009 60);
+      color: oklch(0.80 0.008 70);
       cursor: pointer;
       font-family: inherit;
       transition: background 0.2s, border-color 0.2s;
     }
 
     .btn-sm:hover {
-      background: #30363d;
-      border-color: #6ee7b7;
+      background: oklch(0.30 0.010 60);
+      border-color: oklch(0.72 0.11 38);
     }
 
     .output-pre {
       padding: 16px;
       margin: 0;
-      font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospace;
+      font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
       font-size: 13px;
       line-height: 1.5;
       overflow-x: auto;
       white-space: pre;
-      color: #c9d1d9;
+      color: oklch(0.80 0.008 70);
       min-height: 120px;
       max-height: 500px;
     }
@@ -342,10 +350,10 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
     }
 
     /* Syntax highlighting */
-    .json-key { color: #79c0ff; }
-    .json-string { color: #a5d6ff; }
-    .json-bracket { color: #8b949e; }
-    .json-colon { color: #c9d1d9; }
+    .json-key { color: oklch(0.72 0.11 38); }
+    .json-string { color: oklch(0.78 0.14 150); }
+    .json-bracket { color: oklch(0.58 0.010 70); }
+    .json-colon { color: oklch(0.80 0.008 70); }
 
     /* Generate button */
     .btn-generate {
@@ -354,8 +362,8 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
       padding: 14px;
       margin-top: 16px;
       margin-bottom: 16px;
-      background: #6ee7b7;
-      color: #0d1117;
+      background: oklch(0.72 0.11 38);
+      color: oklch(0.18 0.04 38);
       font-weight: 700;
       font-size: 16px;
       border: none;
@@ -372,7 +380,7 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
     .uses-left {
       text-align: center;
       font-size: 13px;
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       margin-bottom: 16px;
     }
 
@@ -384,25 +392,25 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
       min-height: 20px;
     }
 
-    .status-msg.success { color: #6ee7b7; }
+    .status-msg.success { color: oklch(0.72 0.11 38); }
     .status-msg.error { color: #f85149; }
 
     /* SEO content */
     .seo-content {
       margin-top: 48px;
       padding-top: 32px;
-      border-top: 1px solid #30363d;
+      border-top: 1px solid oklch(0.30 0.010 60);
     }
 
     .seo-content p {
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       font-size: 15px;
       margin-bottom: 16px;
       line-height: 1.7;
     }
 
     .seo-content ul, .seo-content ol {
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       font-size: 15px;
       margin: 0 0 16px 24px;
       line-height: 1.7;
@@ -413,11 +421,11 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
     }
 
     .seo-content strong {
-      color: #c9d1d9;
+      color: oklch(0.80 0.008 70);
     }
 
     .seo-content a {
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       text-decoration: none;
     }
 
@@ -427,8 +435,8 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
 
     /* FAQ details */
     details {
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
       margin-bottom: 8px;
       overflow: hidden;
@@ -439,7 +447,7 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
       cursor: pointer;
       font-weight: 600;
       font-size: 15px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       list-style: none;
     }
 
@@ -449,7 +457,7 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
       content: "+";
       display: inline-block;
       width: 20px;
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       font-weight: 700;
       font-size: 16px;
     }
@@ -460,15 +468,15 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
 
     details .faq-answer {
       padding: 0 18px 14px;
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       font-size: 14px;
       line-height: 1.7;
     }
 
     /* CTA */
     .cta-box {
-      background: linear-gradient(135deg, #161b22 0%, #1a2233 100%);
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 12px;
       padding: 32px;
       text-align: center;
@@ -476,21 +484,21 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
     }
 
     .cta-box h3 {
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       font-size: 18px;
       margin-bottom: 12px;
     }
 
     .cta-box p {
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       font-size: 14px;
       margin-bottom: 20px;
     }
 
     .cta-link {
       display: inline-block;
-      background: #6ee7b7;
-      color: #0d1117;
+      background: oklch(0.72 0.11 38);
+      color: oklch(0.18 0.04 38);
       font-weight: 700;
       padding: 12px 28px;
       border-radius: 8px;
@@ -513,34 +521,34 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
     }
 
     .related-links a {
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       font-size: 14px;
       text-decoration: none;
       padding: 6px 14px;
-      border: 1px solid #30363d;
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 6px;
       transition: border-color 0.2s;
     }
 
     .related-links a:hover {
-      border-color: #6ee7b7;
+      border-color: oklch(0.72 0.11 38);
     }
   </style>
 </head>
 <body>
 
-<nav style="background: #1a1a2e; padding: 0.75rem 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; border-bottom: 2px solid #5436DA;">
-  <a href="/" style="color: #ccc; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">&larr; Home</a>
-  <a href="/calculator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Cost Calculator</a>
-  <a href="/diagnose/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Diagnose</a>
-  <a href="/skill-finder/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Skill Finder</a>
-  <a href="/model-selector/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Model Selector</a>
-  <a href="/generator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Generator</a>
-  <a href="/mcp-config/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: #5436DA;">MCP Config</a>
-  <a href="/commands/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Commands</a>
-  <a href="/token-estimator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Token Estimator</a>
-  <a href="/permissions/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Permissions</a>
-  <a href="/starter/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Starter</a>
+<nav style="position:sticky;top:0;z-index:40;background:rgba(30,28,24,0.82);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid oklch(0.30 0.010 60);padding:0.75rem 1rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+  <a href="/" style="color:oklch(0.58 0.010 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;font-weight:600;">&larr; Home</a>
+  <a href="/calculator/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Cost Calculator</a>
+  <a href="/diagnose/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Diagnose</a>
+  <a href="/skill-finder/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Skill Finder</a>
+  <a href="/model-selector/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Model Selector</a>
+  <a href="/generator/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Generator</a>
+  <a href="/mcp-config/" style="background:oklch(0.72 0.11 38);color:oklch(0.18 0.04 38);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;font-weight:600;">MCP Config</a>
+  <a href="/commands/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Commands</a>
+  <a href="/token-estimator/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Token Estimator</a>
+  <a href="/permissions/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Permissions</a>
+  <a href="/starter/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Starter</a>
 </nav>
 
 <div class="container">
@@ -601,12 +609,12 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
   </div>
 
   <!-- Paywall overlay -->
-  <div id="paywall-overlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:1000; align-items:center; justify-content:center;">
-    <div style="background:#161b22; border:1px solid #30363d; border-radius:16px; padding:48px; max-width:420px; text-align:center;">
-      <h2 style="color:#e6edf3; font-size:22px; margin-bottom:12px;">Free uses exhausted</h2>
-      <p style="color:#8b949e; margin-bottom:24px;">Get unlimited access to all 10 CCG tools plus 200+ CLAUDE.md templates.</p>
-      <a href="https://zovo.one/pricing" style="display:inline-block; background:#6ee7b7; color:#0d1117; font-weight:700; padding:14px 32px; border-radius:8px; text-decoration:none; font-size:16px;">Get Lifetime Access — $99</a>
-      <p style="color:#484f58; font-size:13px; margin-top:16px;">One-time payment. All tools. All templates. Forever.</p>
+  <div id="paywall-overlay" style="display:none; position:fixed; inset:0; background:rgba(20, 18, 14, 0.88); z-index:1000; align-items:center; justify-content:center;">
+    <div style="background:oklch(0.185 0.008 60); border:1px solid oklch(0.30 0.010 60); border-radius:16px; padding:48px; max-width:420px; text-align:center;">
+      <h2 style="color:oklch(0.97 0.006 80); font-size:22px; margin-bottom:12px;">Free uses exhausted</h2>
+      <p style="color:oklch(0.58 0.010 70); margin-bottom:24px;">Get unlimited access to all 10 CCG tools plus 200+ CLAUDE.md templates.</p>
+      <a href="https://zovo.one/lifetime" style="display:inline-block; background:oklch(0.72 0.11 38); color:oklch(0.18 0.04 38); font-weight:700; padding:14px 32px; border-radius:8px; text-decoration:none; font-size:16px;">Get Lifetime Access — $99</a>
+      <p style="color:oklch(0.42 0.010 70); font-size:13px; margin-top:16px;">One-time payment. All tools. All templates. Forever.</p>
     </div>
   </div>
 
@@ -686,23 +694,23 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
       <div class="faq-answer">If an MCP server crashes, Claude Code continues working normally but without access to that server's tools. You will see an error message indicating which server failed. Claude Code does not crash when a server fails. You can restart the server by restarting Claude Code or by running the <code>/mcp</code> command to reinitialize servers.</div>
     </details>
 
-    <section style="margin:32px 0;padding:24px;background:#161b22;border:1px solid #30363d;border-radius:12px;">
-      <h2 style="color:#e6edf3;font-size:20px;margin-bottom:16px;">Related Guides</h2>
+    <section style="margin:32px 0;padding:24px;background:oklch(0.185 0.008 60);border:1px solid oklch(0.30 0.010 60);border-radius:12px;">
+      <h2 style="font-family:'Instrument Serif','Times New Roman',serif;font-weight:400;color:oklch(0.97 0.006 80);font-size:20px;margin-bottom:16px;">Related Guides</h2>
       <ul style="list-style:none;padding:0;margin:0;">
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/claude-code-mcp-servers-complete-setup-2026/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Claude Code MCP Servers: Complete Setup Guide</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/claude-code-mcp-servers-complete-setup-2026/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Claude Code MCP Servers: Complete Setup Guide</a>
         </li>
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/top-10-mcp-servers-claude-code-users/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Top 10 MCP Servers Every Claude Code User Should Know</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/top-10-mcp-servers-claude-code-users/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Top 10 MCP Servers Every Claude Code User Should Know</a>
         </li>
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/mcp-vs-skills-vs-hooks-claude-code-extensions/" style="color:#60a5fa;text-decoration:none;font-size:15px;">MCP vs Skills vs Hooks: Extension Guide</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/mcp-vs-skills-vs-hooks-claude-code-extensions/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">MCP vs Skills vs Hooks: Extension Guide</a>
         </li>
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/supabase-mcp-claude-code-integration-tutorial/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Supabase MCP for Claude Code: Full Integration</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/supabase-mcp-claude-code-integration-tutorial/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Supabase MCP for Claude Code: Full Integration</a>
         </li>
         <li style="padding:8px 0;">
-          <a href="/building-custom-mcp-server-claude-code/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Building a Custom MCP Server for Claude Code</a>
+          <a href="/building-custom-mcp-server-claude-code/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Building a Custom MCP Server for Claude Code</a>
         </li>
       </ul>
     </section>
@@ -710,7 +718,7 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
     <div class="cta-box">
       <h3>50+ Pre-Configured MCP Setups</h3>
       <p>Get production-ready MCP configurations for every stack, plus 200+ CLAUDE.md templates and all 10 CCG tools.</p>
-      <a href="https://zovo.one/pricing" class="cta-link">Claude Code Mastery Playbook — $99</a>
+      <a href="https://zovo.one/lifetime" class="cta-link">Claude Code Mastery Playbook — $99</a>
     </div>
 
   </div>

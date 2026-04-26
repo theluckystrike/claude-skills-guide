@@ -19,110 +19,113 @@ description: "Instant Claude Code error diagnosis. Paste your error message, get
 <meta property="og:description" content="Paste your Claude Code error and get an instant diagnosis with fix instructions. Covers 50+ common errors.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://claudecodeguides.com/diagnose/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:16px;scroll-behavior:smooth}
-body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;line-height:1.6;min-height:100vh}
-a{color:#6ee7b7;text-decoration:none}
+body{background:oklch(0.155 0.007 60);color:oklch(0.80 0.008 70);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;min-height:100vh}
+a{color:oklch(0.72 0.11 38);text-decoration:none}
 a:hover{text-decoration:underline}
 
 .container{max-width:820px;margin:0 auto;padding:24px 16px}
 
 /* Header */
 .tool-header{text-align:center;padding:40px 0 32px}
-.tool-header h1{font-size:clamp(1.5rem,4vw,2.2rem);color:#e6edf3;margin-bottom:8px;line-height:1.25}
-.tool-header .subtitle{color:#8b949e;font-size:clamp(0.9rem,2.5vw,1.05rem);max-width:600px;margin:0 auto}
-.breadcrumb{font-size:13px;color:#8b949e;margin-bottom:16px;text-align:center}
-.breadcrumb a{color:#6ee7b7;font-size:13px}
+.tool-header h1{font-family:'Instrument Serif','Times New Roman',serif;font-weight:400;letter-spacing:-0.02em;font-size:clamp(1.5rem,4vw,2.2rem);color:oklch(0.97 0.006 80);margin-bottom:8px;line-height:1.25}
+.tool-header .subtitle{color:oklch(0.58 0.010 70);font-size:clamp(0.9rem,2.5vw,1.05rem);max-width:600px;margin:0 auto}
+.breadcrumb{font-size:13px;color:oklch(0.58 0.010 70);margin-bottom:16px;text-align:center}
+.breadcrumb a{color:oklch(0.72 0.11 38);font-size:13px}
 
 /* Badge */
 .uses-badge{display:inline-block;padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;margin-top:12px}
-.uses-badge.green{background:rgba(110,231,183,0.12);color:#6ee7b7;border:1px solid rgba(110,231,183,0.25)}
+.uses-badge.green{background:oklch(0.72 0.11 38 / 0.12);color:oklch(0.72 0.11 38);border:1px solid oklch(0.72 0.11 38 / 0.25)}
 .uses-badge.yellow{background:rgba(250,204,21,0.12);color:#facc15;border:1px solid rgba(250,204,21,0.25)}
 .uses-badge.red{background:rgba(248,113,113,0.12);color:#f87171;border:1px solid rgba(248,113,113,0.25)}
 
 /* Input area */
-.input-section{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:24px;margin-bottom:24px}
-.input-section label{display:block;font-weight:600;color:#e6edf3;margin-bottom:8px;font-size:15px}
-.input-section textarea{width:100%;min-height:140px;background:#0d1117;border:1px solid #30363d;border-radius:8px;color:#c9d1d9;padding:14px;font-family:'SF Mono',Monaco,'Cascadia Code',Consolas,monospace;font-size:14px;resize:vertical;line-height:1.5;transition:border-color 0.2s}
-.input-section textarea:focus{outline:none;border-color:#6ee7b7;box-shadow:0 0 0 2px rgba(110,231,183,0.15)}
-.input-section textarea::placeholder{color:#484f58}
-.divider-or{text-align:center;color:#484f58;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin:16px 0;position:relative}
-.divider-or::before,.divider-or::after{content:'';position:absolute;top:50%;width:calc(50% - 24px);height:1px;background:#30363d}
+.input-section{background:oklch(0.185 0.008 60);border:1px solid oklch(0.30 0.010 60);border-radius:12px;padding:24px;margin-bottom:24px}
+.input-section label{display:block;font-weight:600;color:oklch(0.97 0.006 80);margin-bottom:8px;font-size:15px}
+.input-section textarea{width:100%;min-height:140px;background:oklch(0.155 0.007 60);border:1px solid oklch(0.30 0.010 60);border-radius:8px;color:oklch(0.80 0.008 70);padding:14px;font-family:'SF Mono',Monaco,'Cascadia Code',Consolas,monospace;font-size:14px;resize:vertical;line-height:1.5;transition:border-color 0.2s}
+.input-section textarea:focus{outline:none;border-color:oklch(0.72 0.11 38);box-shadow:0 0 0 2px oklch(0.72 0.11 38 / 0.15)}
+.input-section textarea::placeholder{color:oklch(0.42 0.010 70)}
+.divider-or{text-align:center;color:oklch(0.42 0.010 70);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin:16px 0;position:relative}
+.divider-or::before,.divider-or::after{content:'';position:absolute;top:50%;width:calc(50% - 24px);height:1px;background:oklch(0.30 0.010 60)}
 .divider-or::before{left:0}
 .divider-or::after{right:0}
 
-.input-section select{width:100%;background:#0d1117;border:1px solid #30363d;border-radius:8px;color:#c9d1d9;padding:12px 14px;font-size:14px;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23c9d1d9'%3E%3Cpath d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
-.input-section select:focus{outline:none;border-color:#6ee7b7}
+.input-section select{width:100%;background:oklch(0.155 0.007 60);border:1px solid oklch(0.30 0.010 60);border-radius:8px;color:oklch(0.80 0.008 70);padding:12px 14px;font-size:14px;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23c9d1d9'%3E%3Cpath d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.input-section select:focus{outline:none;border-color:oklch(0.72 0.11 38)}
 
-.btn-diagnose{display:block;width:100%;padding:14px;background:#6ee7b7;color:#0d1117;font-size:16px;font-weight:700;border:none;border-radius:8px;cursor:pointer;margin-top:20px;transition:background 0.2s,transform 0.1s}
-.btn-diagnose:hover{background:#5dd3a8}
+.btn-diagnose{display:block;width:100%;padding:14px;background:oklch(0.72 0.11 38);color:oklch(0.18 0.04 38);font-size:16px;font-weight:700;border:none;border-radius:8px;cursor:pointer;margin-top:20px;transition:background 0.2s,transform 0.1s}
+.btn-diagnose:hover{background:oklch(0.64 0.10 38)}
 .btn-diagnose:active{transform:scale(0.98)}
-.btn-diagnose:disabled{background:#30363d;color:#484f58;cursor:not-allowed}
+.btn-diagnose:disabled{background:oklch(0.30 0.010 60);color:oklch(0.42 0.010 70);cursor:not-allowed}
 
-.char-count{text-align:right;font-size:12px;color:#484f58;margin-top:4px}
+.char-count{text-align:right;font-size:12px;color:oklch(0.42 0.010 70);margin-top:4px}
 
 /* Results */
 .results-container{margin-top:8px}
-.no-result{text-align:center;padding:32px;color:#8b949e}
+.no-result{text-align:center;padding:32px;color:oklch(0.58 0.010 70)}
 
-.result-card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:24px;margin-bottom:20px;position:relative}
-.result-card .match-rank{position:absolute;top:12px;right:16px;font-size:12px;color:#484f58;font-weight:600}
-.result-card h3{color:#e6edf3;font-size:18px;margin-bottom:8px;padding-right:60px}
+.result-card{background:oklch(0.185 0.008 60);border:1px solid oklch(0.30 0.010 60);border-radius:12px;padding:24px;margin-bottom:20px;position:relative}
+.result-card .match-rank{position:absolute;top:12px;right:16px;font-size:12px;color:oklch(0.42 0.010 70);font-weight:600}
+.result-card h3{color:oklch(0.97 0.006 80);font-size:18px;margin-bottom:8px;padding-right:60px}
 .severity-badge{display:inline-block;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-left:8px;vertical-align:middle}
 .severity-high{background:rgba(248,113,113,0.15);color:#f87171;border:1px solid rgba(248,113,113,0.3)}
 .severity-medium{background:rgba(250,204,21,0.15);color:#facc15;border:1px solid rgba(250,204,21,0.3)}
-.severity-low{background:rgba(110,231,183,0.15);color:#6ee7b7;border:1px solid rgba(110,231,183,0.3)}
+.severity-low{background:oklch(0.72 0.11 38 / 0.15);color:oklch(0.72 0.11 38);border:1px solid oklch(0.72 0.11 38 / 0.3)}
 
 .result-section{margin-top:16px}
-.result-section h4{color:#8b949e;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px}
-.result-section p{color:#c9d1d9;font-size:14px;line-height:1.6}
+.result-section h4{color:oklch(0.58 0.010 70);font-size:13px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px}
+.result-section p{color:oklch(0.80 0.008 70);font-size:14px;line-height:1.6}
 
 .code-block-wrapper{position:relative;margin:8px 0 0}
-.code-block{background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:14px 16px;font-family:'SF Mono',Monaco,'Cascadia Code',Consolas,monospace;font-size:13px;color:#e6edf3;overflow-x:auto;white-space:pre-wrap;word-break:break-word;line-height:1.5}
-.btn-copy{position:absolute;top:8px;right:8px;background:#21262d;border:1px solid #30363d;border-radius:6px;color:#8b949e;font-size:12px;padding:4px 10px;cursor:pointer;transition:all 0.2s}
-.btn-copy:hover{background:#30363d;color:#e6edf3}
-.btn-copy.copied{color:#6ee7b7;border-color:#6ee7b7}
+.code-block{background:oklch(0.155 0.007 60);border:1px solid oklch(0.30 0.010 60);border-radius:8px;padding:14px 16px;font-family:'SF Mono',Monaco,'Cascadia Code',Consolas,monospace;font-size:13px;color:oklch(0.97 0.006 80);overflow-x:auto;white-space:pre-wrap;word-break:break-word;line-height:1.5}
+.btn-copy{position:absolute;top:8px;right:8px;background:oklch(0.235 0.009 60);border:1px solid oklch(0.30 0.010 60);border-radius:6px;color:oklch(0.58 0.010 70);font-size:12px;padding:4px 10px;cursor:pointer;transition:all 0.2s}
+.btn-copy:hover{background:oklch(0.30 0.010 60);color:oklch(0.97 0.006 80)}
+.btn-copy.copied{color:oklch(0.72 0.11 38);border-color:oklch(0.72 0.11 38)}
 
-.related-links{margin-top:16px;padding-top:12px;border-top:1px solid #21262d}
-.related-links h4{color:#8b949e;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px}
-.related-links a{display:inline-block;color:#6ee7b7;font-size:13px;margin-right:16px;margin-bottom:4px}
+.related-links{margin-top:16px;padding-top:12px;border-top:1px solid oklch(0.235 0.009 60)}
+.related-links h4{color:oklch(0.58 0.010 70);font-size:13px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px}
+.related-links a{display:inline-block;color:oklch(0.72 0.11 38);font-size:13px;margin-right:16px;margin-bottom:4px}
 
 /* Paywall Overlay */
-#paywall-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(10,10,15,0.92);z-index:1000;align-items:center;justify-content:center;flex-direction:column}
+#paywall-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:oklch(0.155 0.007 60 / 0.92);z-index:1000;align-items:center;justify-content:center;flex-direction:column}
 #paywall-overlay .pw-inner{max-width:480px;text-align:center;padding:40px 24px}
-#paywall-overlay h2{color:#6ee7b7;font-size:24px;margin-bottom:16px;line-height:1.3}
-#paywall-overlay p{color:#c8ccd0;margin-bottom:24px;line-height:1.6;font-size:15px}
-#paywall-overlay .pw-cta{display:inline-block;padding:14px 32px;background:#6ee7b7;color:#0a0a0f;font-weight:700;border-radius:8px;text-decoration:none;font-size:16px;transition:background 0.2s}
-#paywall-overlay .pw-cta:hover{background:#5dd3a8;text-decoration:none}
-#paywall-overlay .pw-fine{color:#666;font-size:13px;margin-top:16px}
+#paywall-overlay h2{color:oklch(0.72 0.11 38);font-size:24px;margin-bottom:16px;line-height:1.3}
+#paywall-overlay p{color:oklch(0.80 0.008 70);margin-bottom:24px;line-height:1.6;font-size:15px}
+#paywall-overlay .pw-cta{display:inline-block;padding:14px 32px;background:oklch(0.72 0.11 38);color:oklch(0.18 0.04 38);font-weight:700;border-radius:8px;text-decoration:none;font-size:16px;transition:background 0.2s}
+#paywall-overlay .pw-cta:hover{background:oklch(0.64 0.10 38);text-decoration:none}
+#paywall-overlay .pw-fine{color:oklch(0.42 0.010 70);font-size:13px;margin-top:16px}
 
 /* SEO Content */
-.seo-content{margin-top:48px;padding-top:40px;border-top:1px solid #21262d}
-.seo-content h2{color:#e6edf3;font-size:clamp(1.2rem,3vw,1.6rem);margin:32px 0 16px;line-height:1.3}
+.seo-content{margin-top:48px;padding-top:40px;border-top:1px solid oklch(0.235 0.009 60)}
+.seo-content h2{font-family:'Instrument Serif','Times New Roman',serif;font-weight:400;color:oklch(0.97 0.006 80);font-size:clamp(1.2rem,3vw,1.6rem);margin:32px 0 16px;line-height:1.3}
 .seo-content h2:first-child{margin-top:0}
-.seo-content p{color:#c9d1d9;font-size:15px;line-height:1.7;margin-bottom:16px}
+.seo-content p{color:oklch(0.80 0.008 70);font-size:15px;line-height:1.7;margin-bottom:16px}
 .seo-content ul,.seo-content ol{padding-left:24px;margin-bottom:16px}
-.seo-content li{color:#c9d1d9;font-size:15px;line-height:1.7;margin-bottom:6px}
+.seo-content li{color:oklch(0.80 0.008 70);font-size:15px;line-height:1.7;margin-bottom:6px}
 
 .category-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:16px 0 24px}
-.category-item{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:12px 16px;font-size:14px;color:#c9d1d9}
-.category-item strong{color:#6ee7b7;display:block;margin-bottom:4px;font-size:13px}
+.category-item{background:oklch(0.185 0.008 60);border:1px solid oklch(0.30 0.010 60);border-radius:8px;padding:12px 16px;font-size:14px;color:oklch(0.80 0.008 70)}
+.category-item strong{color:oklch(0.72 0.11 38);display:block;margin-bottom:4px;font-size:13px}
 
-details{background:#161b22;border:1px solid #30363d;border-radius:8px;margin-bottom:8px;overflow:hidden}
-details summary{padding:14px 18px;cursor:pointer;font-weight:600;color:#e6edf3;font-size:15px;list-style:none;display:flex;align-items:center;gap:8px}
-details summary::before{content:'▶';font-size:10px;color:#6ee7b7;transition:transform 0.2s}
+details{background:oklch(0.185 0.008 60);border:1px solid oklch(0.30 0.010 60);border-radius:8px;margin-bottom:8px;overflow:hidden}
+details summary{padding:14px 18px;cursor:pointer;font-weight:600;color:oklch(0.97 0.006 80);font-size:15px;list-style:none;display:flex;align-items:center;gap:8px}
+details summary::before{content:'▶';font-size:10px;color:oklch(0.72 0.11 38);transition:transform 0.2s}
 details[open] summary::before{transform:rotate(90deg)}
 details summary::-webkit-details-marker{display:none}
-details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height:1.7}
+details .faq-answer{padding:0 18px 16px;color:oklch(0.80 0.008 70);font-size:14px;line-height:1.7}
 
-.cta-box{background:linear-gradient(135deg,rgba(110,231,183,0.08),rgba(110,231,183,0.02));border:1px solid rgba(110,231,183,0.2);border-radius:12px;padding:28px 24px;text-align:center;margin:32px 0}
-.cta-box h3{color:#6ee7b7;font-size:18px;margin-bottom:8px}
-.cta-box p{color:#c9d1d9;font-size:15px;margin-bottom:16px;max-width:540px;margin-left:auto;margin-right:auto}
-.cta-box a.cta-link{display:inline-block;padding:12px 28px;background:#6ee7b7;color:#0a0a0f;font-weight:700;border-radius:8px;font-size:15px;transition:background 0.2s}
-.cta-box a.cta-link:hover{background:#5dd3a8;text-decoration:none}
+.cta-box{background:linear-gradient(135deg,oklch(0.72 0.11 38 / 0.08),oklch(0.72 0.11 38 / 0.02));border:1px solid oklch(0.72 0.11 38 / 0.2);border-radius:12px;padding:28px 24px;text-align:center;margin:32px 0}
+.cta-box h3{color:oklch(0.72 0.11 38);font-size:18px;margin-bottom:8px}
+.cta-box p{color:oklch(0.80 0.008 70);font-size:15px;margin-bottom:16px;max-width:540px;margin-left:auto;margin-right:auto}
+.cta-box a.cta-link{display:inline-block;padding:12px 28px;background:oklch(0.72 0.11 38);color:oklch(0.18 0.04 38);font-weight:700;border-radius:8px;font-size:15px;transition:background 0.2s}
+.cta-box a.cta-link:hover{background:oklch(0.64 0.10 38);text-decoration:none}
 
-.footer{text-align:center;padding:40px 0 24px;color:#484f58;font-size:13px;border-top:1px solid #21262d;margin-top:48px}
+.footer{text-align:center;padding:40px 0 24px;color:oklch(0.42 0.010 70);font-size:13px;border-top:1px solid oklch(0.235 0.009 60);margin-top:48px}
 
 @media(max-width:600px){
   .container{padding:16px 12px}
@@ -207,18 +210,18 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
 </script>
 </head>
 <body>
-<nav style="background: #1a1a2e; padding: 0.75rem 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; border-bottom: 2px solid #5436DA;">
-  <a href="/" style="color: #ccc; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">&larr; Home</a>
-  <a href="/calculator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Cost Calculator</a>
-  <a href="/diagnose/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: #5436DA;">Diagnose</a>
-  <a href="/skill-finder/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Skill Finder</a>
-  <a href="/model-selector/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Model Selector</a>
-  <a href="/generator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">CLAUDE.md Generator</a>
-  <a href="/mcp-config/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">MCP Config</a>
-  <a href="/commands/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Commands</a>
-  <a href="/token-estimator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Token Estimator</a>
-  <a href="/permissions/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Permissions</a>
-  <a href="/starter/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Starter</a>
+<nav style="position:sticky;top:0;z-index:40;background:rgba(30,28,24,0.82);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid oklch(0.30 0.010 60);padding:0.75rem 1rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+  <a href="/" style="color:oklch(0.58 0.010 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;font-weight:600;">&larr; Home</a>
+  <a href="/calculator/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:transparent;">Cost Calculator</a>
+  <a href="/diagnose/" style="color:oklch(0.18 0.04 38);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;background:oklch(0.72 0.11 38);font-weight:600;">Diagnose</a>
+  <a href="/skill-finder/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Skill Finder</a>
+  <a href="/model-selector/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Model Selector</a>
+  <a href="/generator/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Generator</a>
+  <a href="/mcp-config/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">MCP Config</a>
+  <a href="/commands/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Commands</a>
+  <a href="/token-estimator/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Token Estimator</a>
+  <a href="/permissions/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Permissions</a>
+  <a href="/starter/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Starter</a>
 </nav>
 
 <div class="container">
@@ -254,7 +257,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
   <div class="pw-inner">
     <h2>You've used your 2 free diagnostics</h2>
     <p>Unlock unlimited access to all 5 CCG tools + 200 production-ready CLAUDE.md templates, error fixes, and cost optimization configs.</p>
-    <a href="https://zovo.one/pricing" class="pw-cta">Get Lifetime Access &mdash; $99</a>
+    <a href="https://zovo.one/lifetime" class="pw-cta">Get Lifetime Access &mdash; $99</a>
     <p class="pw-fine">One-time payment. All tools. All templates. Forever.</p>
   </div>
 </div>
@@ -346,23 +349,23 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
       <div class="faq-answer">Yes. The database includes patterns for MCP server connection failures, tool registration errors, skill installation failures, and hook execution problems. These are common when setting up custom MCP servers or configuring Claude Code extensions.</div>
     </details>
 
-    <section style="margin:32px 0;padding:24px;background:#161b22;border:1px solid #30363d;border-radius:12px;">
-      <h2 style="color:#e6edf3;font-size:20px;margin-bottom:16px;">Related Guides</h2>
+    <section style="margin:32px 0;padding:24px;background:oklch(0.185 0.008 60);border:1px solid oklch(0.30 0.010 60);border-radius:12px;">
+      <h2 style="color:oklch(0.97 0.006 80);font-size:20px;margin-bottom:16px;font-family:'Instrument Serif','Times New Roman',serif;font-weight:400;">Related Guides</h2>
       <ul style="list-style:none;padding:0;margin:0;">
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/top-50-claude-code-errors-fix-guide/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Top 50 Claude Code Errors and How to Fix Them</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/top-50-claude-code-errors-fix-guide/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Top 50 Claude Code Errors and How to Fix Them</a>
         </li>
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/why-claude-code-keeps-crashing-root-causes/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Why Claude Code Keeps Crashing: 10 Root Causes</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/why-claude-code-keeps-crashing-root-causes/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Why Claude Code Keeps Crashing: 10 Root Causes</a>
         </li>
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/claude-code-error-messages-dictionary/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Claude Code Error Messages Explained</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/claude-code-error-messages-dictionary/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Claude Code Error Messages Explained</a>
         </li>
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/debugging-claude-code-senior-engineer-guide/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Debugging Claude Code Like a Senior Engineer</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/debugging-claude-code-senior-engineer-guide/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Debugging Claude Code Like a Senior Engineer</a>
         </li>
         <li style="padding:8px 0;">
-          <a href="/claude-code-error-logs-location-guide/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Claude Code Error Logs: Where to Find Them</a>
+          <a href="/claude-code-error-logs-location-guide/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Claude Code Error Logs: Where to Find Them</a>
         </li>
       </ul>
     </section>
@@ -370,7 +373,7 @@ details .faq-answer{padding:0 18px 16px;color:#c9d1d9;font-size:14px;line-height
     <div class="cta-box">
       <h3>Need More Than Quick Fixes?</h3>
       <p>This tool covers the basics. For 50 production-ready error fixes with prevention rules and CLAUDE.md configurations, cost optimization templates, and workflow automation guides:</p>
-      <a href="https://zovo.one/pricing" class="cta-link">Get the Claude Code Playbook &mdash; $99 Lifetime</a>
+      <a href="https://zovo.one/lifetime" class="cta-link">Get the Claude Code Playbook &mdash; $99 Lifetime</a>
     </div>
 
   </div>

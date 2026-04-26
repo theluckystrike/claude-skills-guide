@@ -93,19 +93,22 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
     ]
   }
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { font-size: 16px; scroll-behavior: smooth; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: oklch(0.155 0.007 60);
+      color: oklch(0.80 0.008 70);
       line-height: 1.6;
       min-height: 100vh;
     }
-    a { color: #6ee7b7; text-decoration: none; }
+    a { color: oklch(0.72 0.11 38); text-decoration: none; }
     a:hover { opacity: 0.85; }
-    code, .mono { font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospace; }
+    code, .mono { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace; }
 
     .container {
       max-width: 800px;
@@ -113,8 +116,8 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
       padding: 24px 16px 64px;
     }
 
-    h1 { font-size: 28px; color: #e6edf3; margin-bottom: 8px; line-height: 1.3; }
-    .subtitle { color: #8b949e; font-size: 15px; margin-bottom: 32px; }
+    h1 { font-family: 'Instrument Serif', 'Times New Roman', serif; font-weight: 400; letter-spacing: -0.02em; font-size: 28px; color: oklch(0.97 0.006 80); margin-bottom: 8px; line-height: 1.3; }
+    .subtitle { color: oklch(0.58 0.010 70); font-size: 15px; margin-bottom: 32px; }
 
     /* Search bar */
     .search-wrap {
@@ -123,19 +126,19 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
     .search-wrap input {
       width: 100%;
       padding: 12px 16px;
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       font-size: 15px;
       font-family: inherit;
       outline: none;
       transition: border-color 0.2s;
     }
     .search-wrap input:focus {
-      border-color: #6ee7b7;
+      border-color: oklch(0.72 0.11 38);
     }
-    .search-wrap input::placeholder { color: #484f58; }
+    .search-wrap input::placeholder { color: oklch(0.42 0.010 70); }
 
     /* Filter buttons */
     .filter-row {
@@ -147,35 +150,35 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
     .filter-btn {
       padding: 6px 14px;
       border-radius: 20px;
-      border: 1px solid #30363d;
+      border: 1px solid oklch(0.30 0.010 60);
       background: transparent;
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       font-size: 13px;
       font-family: inherit;
       cursor: pointer;
       transition: all 0.2s;
       user-select: none;
     }
-    .filter-btn:hover { border-color: #6ee7b7; color: #c9d1d9; }
-    .filter-btn.active { background: #6ee7b7; color: #0d1117; border-color: #6ee7b7; font-weight: 600; }
+    .filter-btn:hover { border-color: oklch(0.72 0.11 38); color: oklch(0.80 0.008 70); }
+    .filter-btn.active { background: oklch(0.72 0.11 38); color: oklch(0.155 0.007 60); border-color: oklch(0.72 0.11 38); font-weight: 600; }
 
     /* Results counter */
     .results-counter {
       font-size: 13px;
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       margin-bottom: 16px;
     }
 
     /* Command cards */
     .cmd-list { display: flex; flex-direction: column; gap: 12px; }
     .cmd-card {
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 10px;
       padding: 16px 20px;
       transition: border-color 0.2s;
     }
-    .cmd-card:hover { border-color: #6ee7b7; }
+    .cmd-card:hover { border-color: oklch(0.72 0.11 38); }
     .cmd-card-header {
       display: flex;
       align-items: center;
@@ -185,9 +188,9 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
       flex-wrap: wrap;
     }
     .cmd-name {
-      font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospace;
+      font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
       font-size: 15px;
-      color: #6ee7b7;
+      color: oklch(0.72 0.11 38);
       font-weight: 600;
     }
     .cmd-badge {
@@ -201,20 +204,20 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
       white-space: nowrap;
     }
     .badge-slash { background: rgba(136,84,208,0.2); color: #d2a8ff; }
-    .badge-cli { background: rgba(56,139,253,0.2); color: #79c0ff; }
+    .badge-cli { background: rgba(56,139,253,0.2); color: oklch(0.72 0.11 38); }
     .badge-keyboard { background: rgba(238,159,49,0.2); color: #e3b341; }
-    .badge-claudemd { background: rgba(110,231,183,0.2); color: #6ee7b7; }
+    .badge-claudemd { background: rgba(110,231,183,0.2); color: oklch(0.72 0.11 38); }
     .badge-mcp { background: rgba(248,81,73,0.2); color: #ff7b72; }
 
-    .cmd-desc { font-size: 14px; color: #c9d1d9; margin-bottom: 8px; }
+    .cmd-desc { font-size: 14px; color: oklch(0.80 0.008 70); margin-bottom: 8px; }
     .cmd-usage {
-      background: #0d1117;
-      border: 1px solid #21262d;
+      background: oklch(0.155 0.007 60);
+      border: 1px solid oklch(0.235 0.009 60);
       border-radius: 6px;
       padding: 8px 12px;
-      font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospace;
+      font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
       font-size: 13px;
-      color: #8b949e;
+      color: oklch(0.58 0.010 70);
       margin-bottom: 8px;
       overflow-x: auto;
       white-space: pre;
@@ -227,16 +230,16 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
     .copy-btn {
       padding: 4px 12px;
       border-radius: 6px;
-      border: 1px solid #30363d;
-      background: #21262d;
-      color: #c9d1d9;
+      border: 1px solid oklch(0.30 0.010 60);
+      background: oklch(0.235 0.009 60);
+      color: oklch(0.80 0.008 70);
       font-size: 12px;
       font-family: inherit;
       cursor: pointer;
       transition: all 0.2s;
       white-space: nowrap;
     }
-    .copy-btn:hover { background: #30363d; color: #e6edf3; }
+    .copy-btn:hover { background: oklch(0.30 0.010 60); color: oklch(0.97 0.006 80); }
     .copy-btn.copied { background: #238636; border-color: #238636; color: #fff; }
 
     /* Blurred state */
@@ -250,21 +253,21 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
     .seo-content { margin-top: 64px; }
     .seo-content h2 {
       font-size: 22px;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       margin: 40px 0 12px;
     }
     .seo-content p {
       font-size: 15px;
-      color: #c9d1d9;
+      color: oklch(0.80 0.008 70);
       margin-bottom: 16px;
       line-height: 1.7;
     }
     .seo-content ul { margin: 0 0 16px 24px; }
-    .seo-content li { font-size: 15px; color: #c9d1d9; margin-bottom: 6px; }
+    .seo-content li { font-size: 15px; color: oklch(0.80 0.008 70); margin-bottom: 6px; }
 
     details {
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: oklch(0.185 0.008 60);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 8px;
       margin-bottom: 8px;
     }
@@ -272,39 +275,39 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
       padding: 12px 16px;
       cursor: pointer;
       font-weight: 600;
-      color: #e6edf3;
+      color: oklch(0.97 0.006 80);
       font-size: 14px;
     }
-    details summary:hover { color: #6ee7b7; }
-    details[open] summary { border-bottom: 1px solid #21262d; }
+    details summary:hover { color: oklch(0.72 0.11 38); }
+    details[open] summary { border-bottom: 1px solid oklch(0.235 0.009 60); }
     details .faq-answer {
       padding: 12px 16px;
       font-size: 14px;
-      color: #c9d1d9;
+      color: oklch(0.80 0.008 70);
       line-height: 1.7;
     }
 
     .cta-box {
-      background: linear-gradient(135deg, #161b22 0%, #1a2332 100%);
-      border: 1px solid #30363d;
+      background: linear-gradient(135deg, oklch(0.185 0.008 60) 0%, #1a2332 100%);
+      border: 1px solid oklch(0.30 0.010 60);
       border-radius: 12px;
       padding: 32px;
       text-align: center;
       margin: 40px 0;
     }
-    .cta-box h3 { color: #e6edf3; font-size: 18px; margin-bottom: 8px; }
-    .cta-box p { color: #8b949e; font-size: 14px; margin-bottom: 16px; }
+    .cta-box h3 { color: oklch(0.97 0.006 80); font-size: 18px; margin-bottom: 8px; }
+    .cta-box p { color: oklch(0.58 0.010 70); font-size: 14px; margin-bottom: 16px; }
     .cta-link {
       display: inline-block;
-      background: #6ee7b7;
-      color: #0d1117;
+      background: oklch(0.72 0.11 38);
+      color: oklch(0.18 0.04 38);
       font-weight: 700;
       padding: 12px 28px;
       border-radius: 8px;
       font-size: 15px;
       transition: opacity 0.2s;
     }
-    .cta-link:hover { opacity: 0.9; color: #0d1117; }
+    .cta-link:hover { opacity: 0.9; color: oklch(0.18 0.04 38); }
 
     @media (max-width: 600px) {
       h1 { font-size: 22px; }
@@ -316,18 +319,18 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
 </head>
 <body>
 
-<nav style="background: #1a1a2e; padding: 0.75rem 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; border-bottom: 2px solid #5436DA;">
-  <a href="/" style="color: #ccc; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">&larr; Home</a>
-  <a href="/calculator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Cost Calculator</a>
-  <a href="/diagnose/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Diagnose</a>
-  <a href="/skill-finder/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Skill Finder</a>
-  <a href="/model-selector/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Model Selector</a>
-  <a href="/generator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Generator</a>
-  <a href="/mcp-config/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">MCP Config</a>
-  <a href="/commands/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: #5436DA;">Commands</a>
-  <a href="/token-estimator/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Token Estimator</a>
-  <a href="/permissions/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Permissions</a>
-  <a href="/starter/" style="color: #fff; text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.85rem; background: transparent;">Starter</a>
+<nav style="position:sticky;top:0;z-index:40;background:rgba(30,28,24,0.82);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid oklch(0.30 0.010 60);padding:0.75rem 1rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;">
+  <a href="/" style="color:oklch(0.58 0.010 70);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;font-weight:600;">&larr; Home</a>
+  <a href="/calculator/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Cost Calculator</a>
+  <a href="/diagnose/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Diagnose</a>
+  <a href="/skill-finder/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Skill Finder</a>
+  <a href="/model-selector/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Model Selector</a>
+  <a href="/generator/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Generator</a>
+  <a href="/mcp-config/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">MCP Config</a>
+  <a href="/commands/" style="background:oklch(0.72 0.11 38);color:oklch(0.18 0.04 38);font-weight:600;text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Commands</a>
+  <a href="/token-estimator/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Token Estimator</a>
+  <a href="/permissions/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Permissions</a>
+  <a href="/starter/" style="color:oklch(0.97 0.006 80);text-decoration:none;padding:0.4rem 0.75rem;border-radius:6px;font-size:0.85rem;">Starter</a>
 </nav>
 
 <div class="container">
@@ -351,12 +354,12 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
 
   <div class="cmd-list" id="cmd-list"></div>
 
-  <div id="paywall-overlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:1000; align-items:center; justify-content:center;">
-    <div style="background:#161b22; border:1px solid #30363d; border-radius:16px; padding:48px; max-width:420px; text-align:center;">
-      <h2 style="color:#e6edf3; font-size:22px; margin-bottom:12px;">Free uses exhausted</h2>
-      <p style="color:#8b949e; margin-bottom:24px;">Get unlimited access to all 10 CCG tools plus 200+ CLAUDE.md templates.</p>
-      <a href="https://zovo.one/pricing" style="display:inline-block; background:#6ee7b7; color:#0d1117; font-weight:700; padding:14px 32px; border-radius:8px; text-decoration:none; font-size:16px;">Get Lifetime Access — $99</a>
-      <p style="color:#484f58; font-size:13px; margin-top:16px;">One-time payment. All tools. All templates. Forever.</p>
+  <div id="paywall-overlay" style="display:none; position:fixed; inset:0; background:rgba(20, 18, 14, 0.88); z-index:1000; align-items:center; justify-content:center;">
+    <div style="background:oklch(0.185 0.008 60); border:1px solid oklch(0.30 0.010 60); border-radius:16px; padding:48px; max-width:420px; text-align:center;">
+      <h2 style="color:oklch(0.97 0.006 80); font-size:22px; margin-bottom:12px;">Free uses exhausted</h2>
+      <p style="color:oklch(0.58 0.010 70); margin-bottom:24px;">Get unlimited access to all 10 CCG tools plus 200+ CLAUDE.md templates.</p>
+      <a href="https://zovo.one/lifetime" style="display:inline-block; background:oklch(0.72 0.11 38); color:oklch(0.18 0.04 38); font-weight:700; padding:14px 32px; border-radius:8px; text-decoration:none; font-size:16px;">Get Lifetime Access — $99</a>
+      <p style="color:oklch(0.42 0.010 70); font-size:13px; margin-top:16px;">One-time payment. All tools. All templates. Forever.</p>
     </div>
   </div>
 
@@ -423,23 +426,23 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
       <div class="faq-answer">Key shortcuts include: <code>Ctrl+C</code> to cancel the current operation, <code>Ctrl+D</code> to exit, <code>Escape</code> to interrupt generation, <code>Tab</code> for autocomplete, <code>Up Arrow</code> for command history, <code>Shift+Tab</code> for inserting a newline, and <code>Ctrl+L</code> to clear the screen.</div>
     </details>
 
-    <section style="margin:32px 0;padding:24px;background:#161b22;border:1px solid #30363d;border-radius:12px;">
-      <h2 style="color:#e6edf3;font-size:20px;margin-bottom:16px;">Related Guides</h2>
+    <section style="margin:32px 0;padding:24px;background:oklch(0.185 0.008 60);border:1px solid oklch(0.30 0.010 60);border-radius:12px;">
+      <h2 style="color:oklch(0.97 0.006 80);font-size:20px;margin-bottom:16px;">Related Guides</h2>
       <ul style="list-style:none;padding:0;margin:0;">
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/every-claude-code-slash-command-explained/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Every Claude Code Slash Command Explained</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/every-claude-code-slash-command-explained/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Every Claude Code Slash Command Explained</a>
         </li>
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/10-claude-code-commands-you-didnt-know/" style="color:#60a5fa;text-decoration:none;font-size:15px;">10 Commands You Didn't Know Existed</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/10-claude-code-commands-you-didnt-know/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">10 Commands You Didn't Know Existed</a>
         </li>
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/claude-code-keyboard-shortcuts-cheat-sheet/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Keyboard Shortcuts Cheat Sheet</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/claude-code-keyboard-shortcuts-cheat-sheet/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">Keyboard Shortcuts Cheat Sheet</a>
         </li>
-        <li style="padding:8px 0;border-bottom:1px solid #21262d;">
-          <a href="/claude-code-cli-flags-complete-reference/" style="color:#60a5fa;text-decoration:none;font-size:15px;">CLI Flags: Complete Reference</a>
+        <li style="padding:8px 0;border-bottom:1px solid oklch(0.235 0.009 60);">
+          <a href="/claude-code-cli-flags-complete-reference/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">CLI Flags: Complete Reference</a>
         </li>
         <li style="padding:8px 0;">
-          <a href="/claude-code-compact-vs-clear-when-to-use/" style="color:#60a5fa;text-decoration:none;font-size:15px;">/compact vs /clear: When to Use Each</a>
+          <a href="/claude-code-compact-vs-clear-when-to-use/" style="color:oklch(0.72 0.11 38);text-decoration:none;font-size:15px;">/compact vs /clear: When to Use Each</a>
         </li>
       </ul>
     </section>
@@ -447,7 +450,7 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
     <div class="cta-box">
       <h3>80+ command templates and cheat sheets</h3>
       <p>Get the full Claude Code Mastery Playbook with ready-to-use command templates, CLAUDE.md examples, and automation scripts.</p>
-      <a href="https://zovo.one/pricing" class="cta-link">Get Lifetime Access &mdash; $99</a>
+      <a href="https://zovo.one/lifetime" class="cta-link">Get Lifetime Access &mdash; $99</a>
     </div>
   </div>
 </div>
