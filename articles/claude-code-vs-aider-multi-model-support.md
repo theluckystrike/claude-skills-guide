@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Aider"
+title: "Claude Code vs Aider (2026)"
 description: "Compare model flexibility in Claude Code and Aider. Single-provider vs 20+ model support, routing strategies, and cost optimization."
 date: 2026-04-21
 permalink: /claude-code-vs-aider-multi-model-support/

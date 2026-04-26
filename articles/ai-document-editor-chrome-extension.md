@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Document Editor Chrome Extension"
+title: "AI Document Editor Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and integrate AI-powered document editing features into Chrome extensions. Practical patterns for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

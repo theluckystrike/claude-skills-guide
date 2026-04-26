@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Devbox — Workflow Guide"
+title: "Claude Code for Devbox — Workflow Guide (2026)"
 description: "Claude Code for Devbox — Workflow Guide — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-devbox-jetify-workflow-guide/

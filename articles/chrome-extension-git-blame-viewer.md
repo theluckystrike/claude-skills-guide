@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Git Blame Viewer Chrome Extension Guide"
+title: "Git Blame Viewer Chrome Extension Guide (2026)"
 description: "Claude Code guide: discover the best Chrome extensions for Git blame analysis. Learn how to visualize commit history, track code ownership, and debug..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

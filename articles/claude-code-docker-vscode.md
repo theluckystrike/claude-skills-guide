@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Docker VSCode Setup Guide"
+title: "Claude Code Docker VSCode Setup Guide (2026)"
 description: "Configure Claude Code to work inside Docker containers with VSCode Dev Containers for consistent, reproducible AI-assisted development environments."
 date: 2026-04-17
 last_modified_at: 2026-04-17

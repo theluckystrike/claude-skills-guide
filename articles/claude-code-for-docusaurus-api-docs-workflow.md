@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Docusaurus API Docs"
+title: "Claude Code for Docusaurus API Docs (2026)"
 description: "Generate Docusaurus API documentation with Claude Code for OpenAPI specs, markdown pages, and versioned docs. Automate your entire docs pipeline."
 date: 2026-03-15
 last_modified_at: 2026-04-17

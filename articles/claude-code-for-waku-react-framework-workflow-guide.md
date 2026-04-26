@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Waku React Framework"
+title: "Claude Code for Waku React Framework (2026)"
 description: "Claude Code for Waku React Framework — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-waku-react-framework-workflow-guide/

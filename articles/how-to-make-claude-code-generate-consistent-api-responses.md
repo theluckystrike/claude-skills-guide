@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code: Consistent API Responses"
+title: "Claude Code: Consistent API Responses (2026)"
 description: "Learn practical patterns for building Claude skills that produce reliable, predictable API responses every time. Includes code examples and best practices."
 date: 2026-03-14
 last_modified_at: 2026-04-17

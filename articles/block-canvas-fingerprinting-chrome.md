@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Block Canvas Fingerprinting in Chrome"
+title: "Block Canvas Fingerprinting in Chrome (2026)"
 description: "Block Canvas Fingerprinting in Chrome — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

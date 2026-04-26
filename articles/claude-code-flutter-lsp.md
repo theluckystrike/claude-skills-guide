@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Flutter LSP Setup Guide"
+title: "Claude Code Flutter LSP Setup Guide (2026)"
 description: "Configure Claude Code with Flutter's LSP for real-time Dart analysis, widget completion, and error detection in your terminal workflow."
 date: 2026-04-17
 last_modified_at: 2026-04-17

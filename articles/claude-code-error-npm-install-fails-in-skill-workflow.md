@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix: Claude Code npm Install Fails"
+title: "Fix: Claude Code npm Install Fails (2026)"
 last_tested: "2026-04-22"
 description: "Troubleshooting npm install failures when using Claude Code skills. Practical solutions for dependency issues with pdf, xlsx, tdd, frontend-design and."
 date: 2026-03-14

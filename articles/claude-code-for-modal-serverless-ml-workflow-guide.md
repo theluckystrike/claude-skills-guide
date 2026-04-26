@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Modal Serverless ML"
+title: "Claude Code for Modal Serverless ML (2026)"
 description: "Claude Code for Modal Serverless ML — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-modal-serverless-ml-workflow-guide/

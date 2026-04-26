@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Email Drafting Automation"
+title: "Claude Skills Email Drafting Automation (2026)"
 description: "Build an email drafting workflow using custom Claude skills: incident reports, API deprecation notices, and sprint updates with consistent structure."
 date: 2026-03-13
 last_modified_at: 2026-04-17

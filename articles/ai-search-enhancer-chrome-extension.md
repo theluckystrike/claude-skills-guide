@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Search Enhancer Chrome Extension"
+title: "AI Search Enhancer Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how AI search enhancer Chrome extensions can transform your search workflow. Practical implementation guide with code..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

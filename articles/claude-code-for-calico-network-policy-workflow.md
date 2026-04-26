@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Calico Network Policy"
+title: "Claude Code for Calico Network Policy (2026)"
 description: "Learn how to use Claude Code to automate and streamline Calico network policy creation, management, and testing in Kubernetes environments."
 date: 2026-03-15
 last_modified_at: 2026-04-17

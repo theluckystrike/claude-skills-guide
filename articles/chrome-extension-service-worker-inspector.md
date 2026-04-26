@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Debugging Chrome Extension Service"
+title: "Debugging Chrome Extension Service (2026)"
 description: "Use Claude Code to debug Chrome extension service workers. Inspect lifecycle events, fix MV3 migration issues, and troubleshoot background scripts faster."
 date: 2026-03-15
 last_modified_at: 2026-04-21

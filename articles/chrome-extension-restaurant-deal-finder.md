@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Restaurant Deal Finder Chrome Extension"
+title: "Restaurant Deal Finder Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension for finding restaurant deals. Technical implementation guide with code examples for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

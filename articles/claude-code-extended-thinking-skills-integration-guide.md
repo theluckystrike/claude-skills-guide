@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Extended Thinking + Claude Skills"
+title: "Extended Thinking + Claude Skills (2026)"
 description: "Combine Claude Code skills with extended thinking to tackle complex workflows. Practical patterns for /supermemory, /tdd, /pdf, and /xlsx in 2026."
 date: 2026-03-13
 last_modified_at: 2026-04-17

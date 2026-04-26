@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Sourcegraph Cody"
+title: "Claude Code vs Sourcegraph Cody (2026)"
 description: "How Claude Code and Sourcegraph Cody search large codebases. Local file reading vs indexed search infrastructure compared."
 date: 2026-04-21
 permalink: /claude-code-vs-sourcegraph-cody-codebase-search/

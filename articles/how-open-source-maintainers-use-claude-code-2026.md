@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How Open Source Maintainers Use Claude"
+title: "How Open Source Maintainers Use Claude (2026)"
 description: "Discover practical workflows and strategies open source maintainers use to use Claude Code for issue triaging, documentation, code reviews, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

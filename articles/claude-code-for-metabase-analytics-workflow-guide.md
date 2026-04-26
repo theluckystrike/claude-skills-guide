@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Metabase Analytics"
+title: "Claude Code for Metabase Analytics (2026)"
 description: "Claude Code for Metabase Analytics Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps..."
 date: 2026-04-19
 last_modified_at: 2026-04-19

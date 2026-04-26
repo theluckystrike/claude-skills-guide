@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Langfuse LLM Analytics"
+title: "Claude Code for Langfuse LLM Analytics (2026)"
 description: "Claude Code for Langfuse LLM Analytics — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-langfuse-llm-analytics-workflow-guide/

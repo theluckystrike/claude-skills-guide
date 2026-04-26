@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Docker CI/CD Pipeline Setup"
+title: "Claude Code Docker CI/CD Pipeline Setup (2026)"
 description: "Integrate Claude Code with Docker in CI/CD pipelines for automated container builds, testing, and deployment. GitHub Actions and GitLab CI examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

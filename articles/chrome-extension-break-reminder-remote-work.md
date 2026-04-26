@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Break Reminder Remote Work Chrome"
+title: "Break Reminder Remote Work Chrome (2026)"
 description: "Learn how to build a Chrome extension that helps remote workers take regular breaks. Complete with code examples and practical implementation guide."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Enterprise Seat Management"
+title: "Claude Code Enterprise Seat Management (2026)"
 last_tested: "2026-04-22"
 description: "Learn how to manage Claude Code enterprise seats, track usage across teams, implement seat allocation strategies, and optimize your organization's AI."
 date: 2026-03-14

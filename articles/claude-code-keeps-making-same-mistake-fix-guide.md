@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Keeps Making Same Mistake"
+title: "Claude Code Keeps Making Same Mistake (2026)"
 description: "Identify and fix repetitive mistakes Claude Code makes. Practical solutions for developers and power users dealing with AI coding errors."
 date: 2026-03-14
 last_modified_at: 2026-04-17

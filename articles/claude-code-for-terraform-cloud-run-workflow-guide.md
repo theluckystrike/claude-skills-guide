@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Terraform Cloud Run"
+title: "Claude Code for Terraform Cloud Run (2026)"
 description: "Learn how to use Claude Code to streamline your Terraform Cloud Run deployments with practical examples, code snippets, and actionable advice."
 date: 2026-04-19
 last_modified_at: 2026-04-19

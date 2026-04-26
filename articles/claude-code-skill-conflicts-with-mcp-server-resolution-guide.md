@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skill Conflicts with MCP"
+title: "Claude Code Skill Conflicts with MCP (2026)"
 description: "Resolve conflicts between Claude Code skills and MCP servers. Practical solutions for tool name collisions, permission issues, and configuration conflicts."
 date: 2026-03-14
 last_modified_at: 2026-04-17

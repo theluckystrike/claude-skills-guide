@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Load Test Analysis"
+title: "Claude Code for Load Test Analysis (2026)"
 description: "Analyze load test results automatically with Claude Code. Covers JMeter, k6, and Gatling output parsing with automated bottleneck identification."
 date: 2026-03-15
 last_modified_at: 2026-04-17

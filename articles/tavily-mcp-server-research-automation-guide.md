@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Setup Tavily MCP Server for Claude Code"
+title: "Setup Tavily MCP Server for Claude Code (2026)"
 description: "Connect Tavily MCP server to Claude Code for live web search and research automation. Step-by-step setup with practical multi-step examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

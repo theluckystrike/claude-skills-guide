@@ -901,7 +901,7 @@ The right choice is almost always the most restrictive option that still lets yo
       "name": "Is --dangerously-skip-permissions safe to use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It depends entirely on the environment. In an ephemeral CI runner processing your own trusted code, it is a reasonable choice. On your development machine pointing at an unfamiliar repository, it is genuinely dangerous. The flag removes the last line of human oversight. Use the alternatives (settings.json, --allowedTools, hooks) when possible."
+        "text": "It depends entirely on the environment. In an ephemeral CI runner processing your own trusted code, it is a reasonable choice. On your development machine pointing at an unfamiliar repository, it is genuinely dangerous. The flag removes the last line of human oversight."
       }
     },
     {
@@ -925,7 +925,7 @@ The right choice is almost always the most restrictive option that still lets yo
       "name": "What about MCP tools — does the flag affect those too?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "--dangerously-skip-permissions skips permission prompts for all tools, including MCP server tools. If you have an MCP server connected that can write to a database, deploy to production, or modify cloud infrastructure, Claude will call those tools without asking. This is particularly dangerous because MCP tools often have side effects outside your local machine."
+        "text": "--dangerously-skip-permissions skips permission prompts for all tools, including MCP server tools. If you have an MCP server connected that can write to a database, deploy to production, or modify cloud infrastructure, Claude will call those tools without asking."
       }
     },
     {
@@ -933,7 +933,7 @@ The right choice is almost always the most restrictive option that still lets yo
       "name": "Does CLAUDE.md still work with --dangerously-skip-permissions?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. CLAUDE.md instructions are always loaded and followed regardless of permission mode. The difference is that CLAUDE.md provides behavioral guidance (Claude chooses to follow it), while permissions provide enforcement (Claude is prevented from acting). Both should be used together in automated environments."
+        "text": "Yes. CLAUDE.md instructions are always loaded and followed regardless of permission mode. The difference is that CLAUDE.md provides behavioral guidance (Claude chooses to follow it), while permissions provide enforcement (Claude is prevented from acting)."
       }
     },
     {
@@ -949,7 +949,7 @@ The right choice is almost always the most restrictive option that still lets yo
       "name": "How does --dangerously-skip-permissions interact with --max-turns?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "They are independent flags. --max-turns limits how many agent turns Claude takes before stopping, regardless of permission mode. Always set --max-turns when using --dangerously-skip-permissions to prevent runaway execution. Without --max-turns, Claude could loop indefinitely trying to solve a problem."
+        "text": "They are independent flags. --max-turns limits how many agent turns Claude takes before stopping, regardless of permission mode. Always set --max-turns when using --dangerously-skip-permissions to prevent runaway execution."
       }
     },
     {
@@ -957,7 +957,7 @@ The right choice is almost always the most restrictive option that still lets yo
       "name": "What is the risk of prompt injection with --dangerously-skip-permissions?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Significant in any scenario where Claude processes untrusted text. If a PR description, issue body, file content, or any other input contains adversarial instructions, and Claude is running with all permissions skipped, those instructions could cause Claude to execute harmful commands. Mitigate this with hooks that block dangerous command patterns."
+        "text": "Significant in any scenario where Claude processes untrusted text. If a PR description, issue body, file content, or any other input contains adversarial instructions, and Claude is running with all permissions skipped, those instructions could cause Claude to execute harmful commands."
       }
     },
     {
@@ -965,7 +965,7 @@ The right choice is almost always the most restrictive option that still lets yo
       "name": "Should I use --dangerously-skip-permissions or --permission-mode auto?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "--permission-mode auto automatically accepts standard tool calls but may still prompt for certain operations. --dangerously-skip-permissions removes all prompts unconditionally. For CI/CD, --dangerously-skip-permissions is more predictable because it guarantees no hangs. For local automation scripts, --permission-mode auto provides a middle ground."
+        "text": "--permission-mode auto automatically accepts standard tool calls but may still prompt for certain operations. --dangerously-skip-permissions removes all prompts unconditionally. For CI/CD, --dangerously-skip-permissions is more predictable because it guarantees no hangs."
       }
     },
     {
@@ -973,7 +973,7 @@ The right choice is almost always the most restrictive option that still lets yo
       "name": "My company's security team wants to ban --dangerously-skip-permissions. What should I recommend instead?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Recommend a combination of project-level .claude/settings.json with explicit allow/deny lists (committed to the repo), hooks that enforce security invariants programmatically, --allowedTools flags in CI scripts for scoped permissions, and container isolation for automated runs. This gives the development team full productivity while maintaining audit-friendly security controls."
+        "text": "Recommend a combination of project-level .claude/settings.json with explicit allow/deny lists (committed to the repo), hooks that enforce security invariants programmatically, --allowedTools flags in CI scripts for scoped permissions, and container isolation for automated runs."
       }
     }
   ]

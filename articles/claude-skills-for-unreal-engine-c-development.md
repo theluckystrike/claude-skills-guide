@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Unreal Engine C++"
+title: "Claude Code for Unreal Engine C++ (2026)"
 description: "Use Claude Code skills for Unreal Engine C++ development. Code generation, testing, and project management workflows explained."
 date: 2026-03-14
 last_modified_at: 2026-04-17

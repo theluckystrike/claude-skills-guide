@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Note Taker Chrome Extension Guide"
+title: "AI Note Taker Chrome Extension Guide (2026)"
 description: "Claude Code guide: explore the best AI-powered note taking Chrome extensions for developers. Learn how to integrate AI note takers into your workflow..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

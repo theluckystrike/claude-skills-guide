@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Rollback Bad Claude Skill Updates"
+title: "Rollback Bad Claude Skill Updates (2026)"
 description: "Rollback a bad Claude Code skill update using git restoration, backup strategies, and version pinning. Prevent breaking changes before they happen."
 date: 2026-03-14
 last_modified_at: 2026-04-17

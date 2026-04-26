@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Team Status Tracker Chrome Extension"
+title: "Team Status Tracker Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and integrate team status tracking into Chrome extensions for collaborative workflows and real-time updates."
 date: 2026-03-15
 last_modified_at: 2026-04-17

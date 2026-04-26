@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Writing Assistant Chrome Extension"
+title: "AI Writing Assistant Chrome Extension (2026)"
 description: "Claude Code extension tip: discover free AI writing assistant Chrome extensions for developers. Learn about implementation, API integration, and how to..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

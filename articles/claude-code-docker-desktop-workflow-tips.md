@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Docker Desktop Workflow"
+title: "Claude Code Docker Desktop Workflow (2026)"
 description: "Practical tips for integrating Claude Code with Docker Desktop. Streamline containerized development with these actionable workflow patterns."
 date: 2026-04-19
 last_modified_at: 2026-04-19

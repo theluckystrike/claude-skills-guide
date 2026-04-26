@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code + tfsec Terraform Security"
+title: "Claude Code + tfsec Terraform Security (2026)"
 description: "Scan Terraform configs with tfsec and Claude Code for automated security audits. Catch misconfigurations before they reach production infrastructure."
 date: 2026-03-14
 last_modified_at: 2026-04-17

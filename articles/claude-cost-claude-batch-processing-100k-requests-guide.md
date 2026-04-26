@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Batch Processing 100K Requests"
+title: "Claude Batch Processing 100K Requests (2026)"
 description: "Claude Batch Processing 100K Requests — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"

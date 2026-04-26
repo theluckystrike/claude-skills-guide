@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skill Output Streaming"
+title: "Claude Code Skill Output Streaming (2026)"
 description: "Learn how to optimize output streaming in Claude Code skills for faster response times and better performance in your AI-driven workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

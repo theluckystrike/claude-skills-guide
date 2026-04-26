@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for GraphQL Client Codegen"
+title: "Claude Code for GraphQL Client Codegen (2026)"
 description: "Automate GraphQL client code generation using Claude Code. Covers TypeScript types, React hooks, Apollo setup, and schema-driven development patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

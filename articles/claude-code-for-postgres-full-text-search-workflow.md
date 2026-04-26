@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for PostgreSQL Full-Text"
+title: "Claude Code for PostgreSQL Full-Text (2026)"
 description: "Learn how to use Claude Code to build efficient PostgreSQL full-text search workflows, from setup to optimization, with practical code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

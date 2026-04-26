@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Azure DevOps Pipeline"
+title: "Claude Code Azure DevOps Pipeline (2026)"
 description: "Master Azure DevOps pipeline automation with Claude Code. Learn to build intelligent CI/CD workflows that use AI-powered code generation, testing."
 date: 2026-03-14
 last_modified_at: 2026-04-17

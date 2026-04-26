@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Cache Minimum Token Requirements"
+title: "Claude Cache Minimum Token Requirements (2026)"
 description: "Claude Cache Minimum Token Requirements — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"

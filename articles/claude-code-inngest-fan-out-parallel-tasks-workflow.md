@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code + Inngest Fan-Out Workflows"
+title: "Claude Code + Inngest Fan-Out Workflows (2026)"
 description: "Build fan-out parallel task workflows with Claude Code and Inngest. Event-driven patterns for bulk operations, notifications, and webhook processing."
 date: 2026-03-14
 last_modified_at: 2026-04-17

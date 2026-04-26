@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Tmux Session Management"
+title: "Claude Code Tmux Session Management (2026)"
 description: "Master tmux session management for Claude Code multi-agent workflows. Learn to orchestrate parallel AI agents, manage terminal sessions, and automate compl"
 date: 2026-03-14
 last_modified_at: 2026-04-17

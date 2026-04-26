@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Cargo Make Rust Builds"
+title: "Claude Code for Cargo Make Rust Builds (2026)"
 description: "Automate Rust build workflows with Cargo Make and Claude Code. Create task pipelines, manage dependencies, and handle cross-platform builds efficiently."
 date: 2026-04-19
 last_modified_at: 2026-04-19

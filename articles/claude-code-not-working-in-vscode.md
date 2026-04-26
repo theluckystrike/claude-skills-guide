@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Not Working in VS Code"
+title: "Fix Claude Code Not Working in VS Code (2026)"
 description: "Resolve Claude Code extension failures in VS Code with tested fixes for authentication, PATH, and startup errors. Tested and working in 2026."
 date: 2026-04-17
 last_modified_at: 2026-04-17

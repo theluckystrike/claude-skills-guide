@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Speed Reader Chrome Extension Guide"
+title: "AI Speed Reader Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how to build and customize AI-powered speed reading extensions for Chrome. Practical code examples, APIs, and implementation..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

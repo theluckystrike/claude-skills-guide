@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Directory: Where to Find"
+title: "Claude Skills Directory: Where to Find (2026)"
 description: "Find Claude Code skills: built-in skills, community GitHub repositories, skill file locations, and how to install new skills on your machine."
 date: 2026-03-13
 last_modified_at: 2026-04-17

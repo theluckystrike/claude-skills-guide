@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Wormhole Workflow Guide"
+title: "Claude Code for Wormhole Workflow Guide (2026)"
 description: "Learn how to build wormhole-style workflows with Claude Code to instantly transfer context, code patterns, and solutions across projects, teams, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19

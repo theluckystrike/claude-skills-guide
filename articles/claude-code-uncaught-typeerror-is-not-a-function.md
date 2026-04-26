@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Uncaught Typeerror"
+title: "Fix Claude Code Uncaught Typeerror (2026)"
 description: "Learn how to diagnose and fix 'Uncaught TypeError: is not a function' errors when working with Claude Code skills. Practical examples included."
 date: 2026-03-14
 last_modified_at: 2026-04-17

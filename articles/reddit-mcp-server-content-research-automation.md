@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Reddit MCP Server for Content Research"
+title: "Reddit MCP Server for Content Research (2026)"
 description: "Claude Code resource: learn how to build automated content research pipelines using Reddit MCP server. Practical examples for developers and power users."
 date: 2026-03-14
 last_modified_at: 2026-04-17

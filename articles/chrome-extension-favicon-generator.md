@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Favicon Generator"
+title: "Chrome Extension Favicon Generator (2026)"
 description: "Claude Code extension tip: create perfect favicons for Chrome extensions with canvas API, SVG conversion, and multi-size icon generation. Covers 16x16..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

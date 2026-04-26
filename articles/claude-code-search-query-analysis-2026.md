@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "What 1,024 Queries Reveal About Claude"
+title: "What 1,024 Queries Reveal About Claude (2026)"
 description: "Analysis of 1,000 search queries for Claude Code content. 97% produce zero clicks. Error queries dominate. Here is what developers actually search for."
 date: 2026-04-18
 author: "Claude Skills Guide"

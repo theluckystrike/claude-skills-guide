@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Postman Collection"
+title: "Claude Code for Postman Collection (2026)"
 last_tested: "2026-04-22"
 description: "Learn how to automate Postman collection generation using Claude Code skills. Create API test collections, generate request templates, and streamline."
 date: 2026-03-15

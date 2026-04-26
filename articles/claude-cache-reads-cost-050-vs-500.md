@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Claude Cache Reads Cost $0.50"
+title: "How Claude Cache Reads Cost $0.50 (2026)"
 description: "Claude cache reads cost 10% of standard input price. Opus 4.7 drops from $5.00 to $0.50 per million tokens on every cache hit."
 date: 2026-04-19
 author: "Claude Skills Guide"

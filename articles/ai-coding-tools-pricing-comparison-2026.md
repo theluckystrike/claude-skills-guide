@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AI Coding Tools Pricing Comparison"
+title: "AI Coding Tools Pricing Comparison (2026)"
 description: "Break down real monthly costs for Claude Code, Cursor, Copilot, Windsurf, and Kilo Code across solo, team, and enterprise tiers."
 permalink: /ai-coding-tools-pricing-comparison-2026/
 date: 2026-04-21

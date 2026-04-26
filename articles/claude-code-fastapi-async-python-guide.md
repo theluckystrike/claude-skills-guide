@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code FastAPI Async Python Guide"
+title: "Claude Code FastAPI Async Python Guide (2026)"
 description: "A practical guide to building async Python APIs with FastAPI using Claude Code. Learn how to use Claude skills for development, testing, and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Environment Variables"
+title: "Claude Code Environment Variables (2026)"
 description: "Complete reference for Claude Code environment variables: API keys, proxy settings, model selection, timeouts, and debug flags."
 date: 2026-04-15
 permalink: /claude-code-environment-variables-reference/

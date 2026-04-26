@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build an SVG Editor Chrome Extension"
+title: "Build an SVG Editor Chrome Extension (2026)"
 description: "Claude Code extension tip: build a Chrome extension for editing SVGs in the browser. Covers DOM manipulation, path editing, Canvas API integration, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

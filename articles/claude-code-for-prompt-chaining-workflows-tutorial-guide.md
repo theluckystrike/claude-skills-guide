@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Prompt Chaining"
+title: "Claude Code for Prompt Chaining (2026)"
 description: "Master prompt chaining with Claude Code skills. Learn to build powerful multi-step AI workflows that transform how you write code, process documents,..."
 date: 2026-03-20
 last_modified_at: 2026-04-17

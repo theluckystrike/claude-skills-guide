@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Neon DB Branching"
+title: "Claude Code for Neon DB Branching (2026)"
 description: "Claude Code for Neon DB Branching — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-neon-database-branching-workflow-guide/

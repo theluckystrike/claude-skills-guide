@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Permissions Explained Chrome Extension"
+title: "Permissions Explained Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how Chrome extension permissions work, what each permission means, and how to manage them safely. Essential guide for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

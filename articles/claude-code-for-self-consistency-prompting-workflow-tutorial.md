@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Self-Consistency Prompting in Claude"
+title: "Self-Consistency Prompting in Claude (2026)"
 description: "Improve Claude Code output reliability with self-consistency prompting. Generate multiple solutions, compare approaches, and select the best answer."
 date: 2026-03-20
 last_modified_at: 2026-04-17

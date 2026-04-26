@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Incomplete Code Blocks"
+title: "Fix Claude Code Incomplete Code Blocks (2026)"
 description: "Fix Claude Code producing truncated code blocks mid-function. Adjust prompt structure, token limits, and output settings to get complete code."
 date: 2026-03-14
 last_modified_at: 2026-04-17

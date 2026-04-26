@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Securing MCP Servers in Production"
+title: "Securing MCP Servers in Production (2026)"
 description: "Claude Code resource: securing MCP Servers in Production — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

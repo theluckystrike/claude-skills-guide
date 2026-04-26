@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Enterprise Announcements"
+title: "Claude Code Enterprise Announcements (2026)"
 description: "Explore the latest Claude Code enterprise features announced in 2026. Learn about new security controls, team collaboration tools, skill ecosystem."
 date: 2026-03-14
 last_modified_at: 2026-04-17

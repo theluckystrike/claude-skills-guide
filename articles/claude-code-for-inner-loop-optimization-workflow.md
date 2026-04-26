@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Inner Loop Optimization"
+title: "Claude Code for Inner Loop Optimization (2026)"
 description: "Learn how to optimize your inner development loop with Claude Code. Practical techniques for faster builds, instant feedback, and streamlined debugging."
 date: 2026-03-15
 last_modified_at: 2026-04-17

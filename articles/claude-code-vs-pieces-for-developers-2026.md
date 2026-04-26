@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Pieces for Developers"
+title: "Claude Code vs Pieces for Developers (2026)"
 description: "Claude Code vs Pieces for Developers compared. Full AI agent vs snippet management with AI — which boosts developer productivity more in 2026?"
 permalink: /claude-code-vs-pieces-for-developers-2026/
 date: 2026-04-21

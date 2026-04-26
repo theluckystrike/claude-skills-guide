@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Svelte Transitions"
+title: "Claude Code for Svelte Transitions (2026)"
 description: "A practical guide to using Claude Code for building smooth Svelte transitions. Learn how to use AI assistance for creating fluid animations, page."
 date: 2026-04-19
 last_modified_at: 2026-04-19

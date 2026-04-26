@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Python SDK Installation Guide"
+title: "Claude Python SDK Installation Guide (2026)"
 description: "Install and configure the Anthropic Python SDK. Covers pip install, platform extras for Bedrock and Vertex AI, async setup, and environment configuration."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -255,7 +255,7 @@ First check that your CLAUDE.md accurately describes your project conventions. I
       "name": "What is the minimum setup required?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You need Claude Code installed (Node.js 18+), a project with a `CLAUDE.md` file, and the relevant toolchain for your project type (e.g., npm for JavaScript, pip for Python). The CLAUDE.md file should describe your project structure, conventions, and common commands so Claude Code can work effectively."
+        "text": "You need Claude Code installed (Node.js 18+), a project with a CLAUDE.md file, and the relevant toolchain for your project type (e.g., npm for JavaScript, pip for Python). The CLAUDE.md file should describe your project structure, conventions, and common commands so Claude Code can work effectively."
       }
     },
     {
@@ -263,7 +263,7 @@ First check that your CLAUDE.md accurately describes your project conventions. I
       "name": "How long does the initial setup take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For a typical project, initial setup takes 10-20 minutes. This includes creating the CLAUDE.md file, configuring `.claude/settings.json` for permissions, and running a test task to verify everything works. Subsequent sessions start immediately because the configuration persists."
+        "text": "For a typical project, initial setup takes 10-20 minutes. This includes creating the CLAUDE.md file, configuring .claude/settings.json for permissions, and running a test task to verify everything works. Subsequent sessions start immediately because the configuration persists."
       }
     },
     {
@@ -271,7 +271,7 @@ First check that your CLAUDE.md accurately describes your project conventions. I
       "name": "Can I use this with a team?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Commit your `.claude/` directory and `CLAUDE.md` to version control so the entire team uses the same configuration. Each developer can add personal preferences in `~/.claude/settings.json` (user-level) without affecting the project configuration. Review CLAUDE.md changes in pull requests like any other configuration file."
+        "text": "Yes. Commit your .claude/ directory and CLAUDE.md to version control so the entire team uses the same configuration. Each developer can add personal preferences in ~/.claude/settings.json (user-level) without affecting the project configuration."
       }
     },
     {
@@ -279,7 +279,7 @@ First check that your CLAUDE.md accurately describes your project conventions. I
       "name": "What if Claude Code produces incorrect output?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "First check that your CLAUDE.md accurately describes your project conventions. Incorrect or outdated context is the most common cause of wrong output. If the output is still wrong, provide feedback in the same session — Claude Code learns from corrections within a conversation. For persistent issues, add explicit rules to CLAUDE.md (e.g., \"Always use single quotes\" or \"Never modify files in the config/ directory\")."
+        "text": "First check that your CLAUDE.md accurately describes your project conventions. Incorrect or outdated context is the most common cause of wrong output. If the output is still wrong, provide feedback in the same session — Claude Code learns from corrections within a conversation."
       }
     }
   ]

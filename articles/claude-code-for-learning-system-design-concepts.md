@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Learning System Design"
+title: "Claude Code for Learning System Design (2026)"
 description: "A practical guide to using Claude Code as your learning companion for mastering system design. Includes actionable examples and code snippets."
 date: 2026-03-15
 last_modified_at: 2026-04-17

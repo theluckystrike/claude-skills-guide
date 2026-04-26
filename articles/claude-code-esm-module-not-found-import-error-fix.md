@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Esm Module Not Found"
+title: "Fix Claude Code Esm Module Not Found (2026)"
 description: "Learn how to resolve ESM module not found and import errors in Claude Code. Practical solutions for CommonJS vs ESM conflicts, package.json."
 date: 2026-03-14
 last_modified_at: 2026-04-17

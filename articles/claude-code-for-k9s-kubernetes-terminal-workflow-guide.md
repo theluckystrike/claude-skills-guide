@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code + k9s Kubernetes Terminal"
+title: "Claude Code + k9s Kubernetes Terminal (2026)"
 description: "Combine Claude Code with k9s for faster Kubernetes debugging, resource inspection, and cluster management from your terminal. Workflow patterns."
 date: 2026-04-19
 last_modified_at: 2026-04-19

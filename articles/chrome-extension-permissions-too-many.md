@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Permissions Too Many Chrome Extension"
+title: "Permissions Too Many Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how Chrome extension permissions work, why too many permissions pose security risks, and how to audit them..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

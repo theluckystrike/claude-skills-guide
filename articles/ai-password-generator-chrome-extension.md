@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Password Generator Chrome Extension"
+title: "AI Password Generator Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and use AI-powered password generator Chrome extensions. Practical code examples, security. Essential..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

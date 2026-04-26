@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Md Not Being Read By Claude"
+title: "Fix Claude Md Not Being Read By Claude (2026)"
 description: "Troubleshoot and fix CLAUDE.md files not being read by Claude Code. Practical solutions for developers and power users dealing with ignored project."
 date: 2026-03-14
 last_modified_at: 2026-04-17

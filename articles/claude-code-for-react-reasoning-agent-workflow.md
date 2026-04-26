@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for React Reasoning Agent"
+title: "Claude Code for React Reasoning Agent (2026)"
 description: "Learn how to build intelligent React applications with Claude Code reasoning agent workflows. This guide covers agent architectures, tool calling."
 date: 2026-03-15
 last_modified_at: 2026-04-17

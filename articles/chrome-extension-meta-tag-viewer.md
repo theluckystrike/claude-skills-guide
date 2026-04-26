@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Meta Tag Viewer Chrome Extension Guide"
+title: "Meta Tag Viewer Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how to build and use a Chrome extension for viewing meta tags. Complete guide for developers to inspect OG tags, Twitter..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

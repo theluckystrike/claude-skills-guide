@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Open Graph Preview"
+title: "Chrome Extension Open Graph Preview (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension that previews Open Graph meta tags. Includes code examples, practical implementation..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

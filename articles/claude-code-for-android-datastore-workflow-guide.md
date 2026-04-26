@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Android DataStore"
+title: "Claude Code for Android DataStore (2026)"
 description: "Learn how to use Claude Code to streamline your Android DataStore implementation with practical examples, code patterns, and actionable workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

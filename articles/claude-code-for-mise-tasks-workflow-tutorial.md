@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Mise Tasks Workflow"
+title: "Claude Code for Mise Tasks Workflow (2026)"
 description: "Master the integration of Claude Code with Mise tasks to automate your development workflow. Learn practical patterns for creating intelligent task."
 date: 2026-04-19
 last_modified_at: 2026-04-19

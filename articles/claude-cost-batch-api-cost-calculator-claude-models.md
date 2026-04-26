@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Batch API Cost Calculator for Claude"
+title: "Batch API Cost Calculator for Claude (2026)"
 description: "Batch API Cost Calculator for Claude — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 author: "Claude Skills Guide"

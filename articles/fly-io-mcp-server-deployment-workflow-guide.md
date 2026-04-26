@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fly.io MCP Server Deployment Workflow"
+title: "Fly.io MCP Server Deployment Workflow (2026)"
 description: "A practical guide to deploying Model Context Protocol servers on Fly.io. Learn the deployment workflow, configuration, and automation with Claude skills."
 date: 2026-03-14
 last_modified_at: 2026-04-17

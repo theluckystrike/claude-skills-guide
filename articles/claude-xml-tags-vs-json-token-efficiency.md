@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude XML Tags vs JSON for Token"
+title: "Claude XML Tags vs JSON for Token (2026)"
 description: "XML tags use 30% fewer tokens than JSON in Claude prompts — switch formats and save $2,250/month on 1K daily Opus conversations."
 date: 2026-04-19
 author: "Claude Skills Guide"

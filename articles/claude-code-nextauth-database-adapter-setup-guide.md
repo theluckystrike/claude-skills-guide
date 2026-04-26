@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code NextAuth Database Adapter"
+title: "Claude Code NextAuth Database Adapter (2026)"
 description: "Learn how to set up NextAuth database adapters with Claude Code. Complete guide covering Prisma, Drizzle, and custom adapters with practical examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

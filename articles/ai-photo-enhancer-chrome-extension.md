@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Photo Enhancer Chrome Extension"
+title: "AI Photo Enhancer Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how AI photo enhancer Chrome extensions work, their technical implementation, and how developers can build or..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

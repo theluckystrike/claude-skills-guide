@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: MCP Server Disconnected Error"
+title: "Fix: MCP Server Disconnected Error (2026)"
 description: "Fix the 'MCP server disconnected' error in Claude Code caused by progress token handling in stdio transport. Root cause and workaround."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -216,7 +216,7 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
       "name": "Does this error affect all operating systems?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This error can occur on macOS, Linux, and Windows (WSL). The exact error message may differ slightly between platforms, but the root cause and fix are the same. macOS users may see additional Gatekeeper or notarization prompts. Linux users should check that the relevant system packages are installed. Windows users should ensure they are running inside WSL2, not native Windows."
+        "text": "This error can occur on macOS, Linux, and Windows (WSL). The exact error message may differ slightly between platforms, but the root cause and fix are the same. macOS users may see additional Gatekeeper or notarization prompts."
       }
     },
     {
@@ -232,7 +232,7 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
       "name": "Can this error cause data loss?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, this error occurs before or during an operation and does not corrupt existing files. Claude Code's edit operations are atomic — they either complete fully or not at all. However, if the error occurs during a multi-step operation, you may have partial changes that need to be reviewed with `git diff` before continuing."
+        "text": "No, this error occurs before or during an operation and does not corrupt existing files. Claude Code's edit operations are atomic — they either complete fully or not at all. However, if the error occurs during a multi-step operation, you may have partial changes that need to be reviewed with git..."
       }
     },
     {
@@ -240,7 +240,7 @@ Open an issue at github.com/anthropics/claude-code with: (1) the full error mess
       "name": "How do I report this error to Anthropic if the fix does not work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Open an issue at github.com/anthropics/claude-code with: (1) the full error message including stack trace, (2) your Node.js version (`node --version`), (3) your Claude Code version (`claude --version`), (4) your operating system and version, and (5) the command or operation that triggered the error."
+        "text": "Open an issue at github.com/anthropics/claude-code with: (1) the full error message including stack trace, (2) your Node.js version (node --version), (3) your Claude Code version (claude --version), (4) your operating system and version, and (5) the command or operation that triggered the error."
       }
     }
   ]

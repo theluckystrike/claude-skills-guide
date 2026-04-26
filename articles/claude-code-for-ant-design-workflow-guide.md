@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code + Ant Design React Workflow"
+title: "Claude Code + Ant Design React Workflow (2026)"
 description: "Accelerate Ant Design React component development with Claude Code. Practical workflows for theming, form generation, and table configuration."
 date: 2026-03-15
 last_modified_at: 2026-04-17

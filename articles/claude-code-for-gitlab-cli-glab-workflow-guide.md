@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for GitLab CLI glab — Guide"
+title: "Claude Code for GitLab CLI glab — Guide (2026)"
 description: "Claude Code for GitLab CLI glab — Guide — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-gitlab-cli-glab-workflow-guide/

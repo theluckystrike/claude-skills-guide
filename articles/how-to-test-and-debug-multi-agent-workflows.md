@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Test and Debug Multi Agent"
+title: "How to Test and Debug Multi Agent (2026)"
 description: "A practical guide to testing and debugging multi-agent workflows using Claude Code skills and features, with real-world examples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for GraphQL Code Generation"
+title: "Claude Code for GraphQL Code Generation (2026)"
 description: "Learn how to use Claude Code to automate and streamline your GraphQL code generation workflow. Practical examples and actionable advice for."
 date: 2026-04-19
 last_modified_at: 2026-04-19

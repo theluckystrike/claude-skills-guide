@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Tab Organizer Research Chrome Extension"
+title: "Tab Organizer Research Chrome Extension (2026)"
 description: "Claude Code extension tip: research guide for building Chrome extensions that organize browser tabs. Covers Chrome APIs, tab grouping, session..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

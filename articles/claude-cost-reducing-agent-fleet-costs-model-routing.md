@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Reducing Agent Fleet Costs with Model"
+title: "Reducing Agent Fleet Costs with Model (2026)"
 description: "Claude Code cost insight: route 70% of agent tasks to Haiku ($1/$5 MTok) instead of Opus ($5/$25 MTok). Save $16/sprint with intelligent model selection."
 date: 2026-04-19
 author: "Claude Skills Guide"

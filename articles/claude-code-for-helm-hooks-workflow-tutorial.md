@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Helm Hooks Workflow"
+title: "Claude Code for Helm Hooks Workflow (2026)"
 description: "Learn how to integrate Claude Code into your Helm hooks workflow to automate Kubernetes deployments with intelligent automation and testing."
 date: 2026-03-15
 last_modified_at: 2026-04-17

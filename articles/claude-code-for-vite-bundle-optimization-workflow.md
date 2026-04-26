@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Vite Bundle Optimization"
+title: "Claude Code Vite Bundle Optimization (2026)"
 description: "Reduce Vite bundle size with Claude Code for tree-shaking analysis, chunk splitting, and lazy loading. Cut build output by 40% with tested configs."
 date: 2026-03-15
 last_modified_at: 2026-04-17

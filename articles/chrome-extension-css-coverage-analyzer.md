@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CSS Coverage Analyzer Chrome Extension"
+title: "CSS Coverage Analyzer Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to use CSS coverage analyzer tools in Chrome extensions to detect and remove unused CSS rules, optimize..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

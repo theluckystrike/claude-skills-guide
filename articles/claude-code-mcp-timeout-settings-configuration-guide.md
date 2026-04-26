@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code MCP Timeout Settings"
+title: "Fix Claude Code MCP Timeout Settings (2026)"
 description: "Fix MCP tool call timeouts in Claude Code. Set transport-level overrides, configure retry logic, and resolve cold-start delays. Tested April 2026."
 date: 2026-04-01
 last_modified_at: 2026-04-21

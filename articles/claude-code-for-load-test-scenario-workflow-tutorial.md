@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Load Test Scenario"
+title: "Claude Code for Load Test Scenario (2026)"
 description: "Learn how to build automated load test scenario workflows using Claude Code. This tutorial covers scenario design, execution patterns, and practical."
 date: 2026-04-19
 last_modified_at: 2026-04-19

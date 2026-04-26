@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Ripgrep: Search Workflow"
+title: "How to Use Ripgrep: Search Workflow (2026)"
 description: "Claude code ripgrep workflow tips for searching codebases fast. Practical patterns for automating searches and integrating grep into your skills."
 date: 2026-03-14
 last_modified_at: 2026-04-17

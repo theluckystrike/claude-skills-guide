@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Viem Ethereum Workflow"
+title: "Claude Code for Viem Ethereum Workflow (2026)"
 description: "Learn how to use Claude Code to streamline your Viem Ethereum development workflow with practical examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

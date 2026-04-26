@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Remix Error Boundaries"
+title: "Fix Claude Code Remix Error Boundaries (2026)"
 description: "Learn how to implement error boundaries with nested routes in Remix to create resilient, user-friendly applications with granular error handling."
 date: 2026-03-14
 last_modified_at: 2026-04-17

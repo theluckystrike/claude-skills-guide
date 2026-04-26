@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Kubernetes Skills Guide"
+title: "Claude Code Kubernetes Skills Guide (2026)"
 description: "Claude Code skills for Kubernetes: operator development, YAML generation, RBAC config, and deployment automation. Practical examples for 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17

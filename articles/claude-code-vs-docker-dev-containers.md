@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Docker Dev Containers"
+title: "Claude Code vs Docker Dev Containers (2026)"
 description: "Comparing Claude Code's AI environment setup with Docker Dev Containers — reproducibility, speed, and when each approach fits your workflow."
 date: 2026-04-21
 permalink: /claude-code-vs-docker-dev-containers/

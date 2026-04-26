@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code + LangChain Integration"
+title: "Claude Code + LangChain Integration (2026)"
 description: "Claude Code + LangChain Integration — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19

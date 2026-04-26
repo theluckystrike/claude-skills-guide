@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Accessibility Workflow"
+title: "Claude Code Accessibility Workflow (2026)"
 description: "Build accessible web apps with Claude Code for WCAG testing, ARIA patterns, semantic HTML, and automated a11y audits. Frontend engineer workflow guide."
 date: 2026-03-14
 last_modified_at: 2026-04-17

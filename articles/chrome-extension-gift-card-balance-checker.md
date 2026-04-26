@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Gift Card Balance"
+title: "Chrome Extension Gift Card Balance (2026)"
 description: "Claude Code extension tip: learn how to build and use Chrome extensions for checking gift card balances. Technical implementation guide for developers..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

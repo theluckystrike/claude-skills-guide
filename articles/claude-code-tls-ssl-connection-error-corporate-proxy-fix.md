@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code TLS/SSL Errors Behind"
+title: "Fix Claude Code TLS/SSL Errors Behind (2026)"
 description: "Resolve Claude Code TLS/SSL Errors Behind Proxy issues with tested solutions, step-by-step debugging, and production-ready code examples verified for 2026."
 date: 2026-04-15
 permalink: /claude-code-tls-ssl-connection-error-corporate-proxy-fix/

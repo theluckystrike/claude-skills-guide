@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "AI Database Schema Design with Claude"
+title: "AI Database Schema Design with Claude (2026)"
 description: "Design database schemas faster with Claude Code AI assistance. Validation, migration planning, and documentation workflows that save dev hours."
 date: 2026-03-14
 last_modified_at: 2026-04-17

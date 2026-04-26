@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for OpenTofu Registry"
+title: "Claude Code for OpenTofu Registry (2026)"
 description: "Learn how to use Claude Code to streamline your OpenTofu registry workflow. Practical guide with examples for managing infrastructure as code efficiently."
 date: 2026-03-15
 last_modified_at: 2026-04-17

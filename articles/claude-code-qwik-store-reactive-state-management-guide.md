@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Qwik State Management with Claude Code"
+title: "Qwik State Management with Claude Code (2026)"
 description: "Master Qwik useStore and useSignal reactive state management with Claude Code. Resumability patterns and serialization strategies explained."
 date: 2026-03-14
 last_modified_at: 2026-04-17

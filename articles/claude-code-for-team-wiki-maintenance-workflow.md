@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Team Wiki Maintenance"
+title: "Claude Code for Team Wiki Maintenance (2026)"
 description: "Automate team wiki updates with Claude Code for stale page detection, content migration, and documentation consistency. Save 5+ hours per sprint."
 date: 2026-03-15
 last_modified_at: 2026-04-17

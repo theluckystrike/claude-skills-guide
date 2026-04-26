@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Task Prioritizer Chrome Extension"
+title: "AI Task Prioritizer Chrome Extension (2026)"
 description: "Claude Code extension tip: build an AI-powered task prioritization Chrome extension with practical code examples. Learn to integrate AI APIs, manage..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Anthropic Message Batches API Guide"
+title: "Anthropic Message Batches API Guide (2026)"
 description: "Claude Code guide: use the Anthropic Message Batches API for 50% cost savings on bulk processing. Setup, polling, error handling, and optimization tips."
 date: 2026-04-15
 permalink: /anthropic-message-batches-api-guide/

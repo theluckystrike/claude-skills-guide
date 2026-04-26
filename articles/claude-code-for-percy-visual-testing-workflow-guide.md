@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Percy Visual Testing"
+title: "Claude Code + Percy Visual Testing (2026)"
 description: "Automate visual regression testing with Percy and Claude Code. Capture snapshots, review diffs, and catch UI breaks before production deployment."
 date: 2026-03-15
 last_modified_at: 2026-04-17

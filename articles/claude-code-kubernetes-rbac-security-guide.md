@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Kubernetes RBAC Security"
+title: "Claude Code Kubernetes RBAC Security (2026)"
 description: "A practical guide to securing Kubernetes clusters using Role-Based Access Control with Claude Code. Learn to implement fine-grained permissions and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

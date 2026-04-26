@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Firebase MCP Integration"
+title: "Claude Code Firebase MCP Integration (2026)"
 description: "Connect Claude Code to Firebase through MCP for direct Firestore queries, auth management, and Cloud Functions debugging from your terminal."
 date: 2026-04-17
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Twitter Reply Generator Chrome"
+title: "AI Twitter Reply Generator Chrome (2026)"
 description: "Claude Code extension tip: learn how to build and use AI-powered Twitter reply generator Chrome extensions. Practical code examples, architecture..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

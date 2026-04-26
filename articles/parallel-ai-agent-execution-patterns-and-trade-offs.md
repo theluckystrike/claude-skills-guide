@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Parallel AI Agent Execution Patterns"
+title: "Parallel AI Agent Execution Patterns (2026)"
 description: "Explore parallel execution patterns for AI agents using Claude Code, including supervisor-worker architectures, concurrent tool use, and the trade-offs."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Cloudflare MCP Server Setup"
+title: "Claude Code Cloudflare MCP Server Setup (2026)"
 description: "Connect Claude Code to Cloudflare Workers, Pages, KV, and R2 via MCP. Deploy and manage edge infrastructure from your terminal."
 date: 2026-04-17
 last_modified_at: 2026-04-17

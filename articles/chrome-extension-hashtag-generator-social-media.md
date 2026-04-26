@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Hashtag Generator"
+title: "Chrome Extension Hashtag Generator (2026)"
 description: "Claude Code extension tip: learn how to build and use chrome extension hashtag generator tools for social media automation, featuring practical code..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

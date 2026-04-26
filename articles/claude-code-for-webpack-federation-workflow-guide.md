@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Webpack Federation"
+title: "Claude Code for Webpack Federation (2026)"
 description: "Learn how to use Claude Code to create and manage Webpack Module Federation workflows. Practical examples, code snippets, and actionable advice for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

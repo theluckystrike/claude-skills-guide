@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Page Ruler Alternative Chrome Extension"
+title: "Page Ruler Alternative Chrome Extension (2026)"
 description: "Discover the best Page Ruler alternatives for Chrome in 2026. Developer-friendly measurement tools for precise web element dimensions, CSS debugging, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

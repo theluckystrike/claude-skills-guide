@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code with Azure OpenAI Setup"
+title: "Claude Code with Azure OpenAI Setup (2026)"
 description: "Claude Code with Azure OpenAI Setup — practical setup steps, configuration examples, and working code you can use in your projects today."
 date: 2026-04-17
 last_modified_at: 2026-04-17

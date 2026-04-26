@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Unsloth Fast Fine-Tuning"
+title: "Claude Code + Unsloth Fast Fine-Tuning (2026)"
 description: "Fine-tune LLMs 2x faster with Unsloth and Claude Code for QLoRA training, dataset preparation, and model merging. Reduce GPU costs significantly."
 date: 2026-03-14
 last_modified_at: 2026-04-17

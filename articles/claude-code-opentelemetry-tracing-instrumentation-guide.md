@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code OpenTelemetry Tracing"
+title: "Claude Code OpenTelemetry Tracing (2026)"
 description: "Master OpenTelemetry tracing instrumentation with Claude Code. Learn how to set up distributed tracing, create custom spans, and monitor your."
 date: 2026-03-14
 last_modified_at: 2026-04-17

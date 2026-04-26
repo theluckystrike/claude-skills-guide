@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build a User Agent Switcher Extension"
+title: "Build a User Agent Switcher Extension (2026)"
 description: "Claude Code extension tip: build a Chrome extension that switches user agents programmatically. Includes manifest v3 code, declarativeNetRequest rules,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

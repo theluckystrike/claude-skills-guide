@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for University Software"
+title: "Claude Code for University Software (2026)"
 description: "A comprehensive guide for university students using Claude Code to excel in software engineering projects. Learn skills, workflows, and practical."
 date: 2026-03-14
 last_modified_at: 2026-04-17

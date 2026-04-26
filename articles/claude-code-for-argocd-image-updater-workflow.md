@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for ArgoCD Image Updater"
+title: "Claude Code for ArgoCD Image Updater (2026)"
 description: "Learn how to automate container image updates in ArgoCD using Claude Code. This guide covers setup, configuration, and practical workflows for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

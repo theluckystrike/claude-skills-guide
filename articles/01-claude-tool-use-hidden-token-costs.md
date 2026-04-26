@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Tool Use Hidden Token Costs"
+title: "Claude Tool Use Hidden Token Costs (2026)"
 description: "Every Claude API tool call adds 346 hidden tokens. Learn exactly where tool use costs come from and how to cut them by 50%."
 date: 2026-04-19
 author: "Claude Skills Guide"

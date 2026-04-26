@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Make Claude Code Understand"
+title: "How to Make Claude Code Understand (2026)"
 description: "Learn practical techniques to train Claude Code on your business domain, custom entities, and domain-specific rules for more accurate and relevant."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Confluence Documentation"
+title: "Claude Code + Confluence Documentation (2026)"
 description: "Integrate Claude Code with Confluence for automated documentation workflows. Generate, update, and sync wiki pages from your codebase directly."
 date: 2026-03-14
 last_modified_at: 2026-04-17

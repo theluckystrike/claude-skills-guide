@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Color Picker Chrome Extension Guide"
+title: "AI Color Picker Chrome Extension Guide (2026)"
 description: "Claude Code guide: discover how AI-powered color picker Chrome extensions can streamline your design workflow. Learn practical use cases, code..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

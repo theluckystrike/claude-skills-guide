@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Implement ArXiv Papers with Claude Code"
+title: "Implement ArXiv Papers with Claude Code (2026)"
 description: "Turn ArXiv research papers into working code using Claude Code. Algorithm extraction, implementation workflow, and benchmark validation guide."
 date: 2026-03-14
 last_modified_at: 2026-04-17

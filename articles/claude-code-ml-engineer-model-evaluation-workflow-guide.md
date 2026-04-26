@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for ML Model Evaluation"
+title: "Claude Code for ML Model Evaluation (2026)"
 description: "Automate ML model evaluation with Claude Code. Testing pipelines, benchmark comparisons, and reproducible evaluation workflows for ML engineers."
 date: 2026-04-19
 last_modified_at: 2026-04-19

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Multi-Language Comment"
+title: "Claude Code Multi-Language Comment (2026)"
 description: "Learn how to use Claude Code for managing comments and docstrings across multiple programming languages with practical examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

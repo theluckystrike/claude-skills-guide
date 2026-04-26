@@ -756,7 +756,7 @@ Claude Code runs in the terminal independently of your editor. You can use it al
       "name": "What editors work with Claude Code?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Claude Code runs in the terminal independently of your editor. You can use it alongside VS Code, Vim, Neovim, Emacs, JetBrains IDEs, Sublime Text, or any other editor. Changes Claude makes to files appear in your editor when the editor detects file changes on disk. There is also a dedicated VS Code extension that integrates Claude Code directly into the editor interface."
+        "text": "Claude Code runs in the terminal independently of your editor. You can use it alongside VS Code, Vim, Neovim, Emacs, JetBrains IDEs, Sublime Text, or any other editor. Changes Claude makes to files appear in your editor when the editor detects file changes on disk."
       }
     }
   ]

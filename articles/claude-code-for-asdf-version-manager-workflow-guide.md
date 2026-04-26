@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for asdf Version Manager"
+title: "Claude Code for asdf Version Manager (2026)"
 description: "Learn how to integrate Claude Code with asdf version manager for streamlined multi-language development. Practical examples, automation tips, and."
 date: 2026-04-19
 last_modified_at: 2026-04-19

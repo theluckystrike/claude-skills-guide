@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Mailchimp Automation"
+title: "Claude Code for Mailchimp Automation (2026)"
 description: "Learn how to use Claude Code to build powerful Mailchimp automation workflows that streamline your email marketing operations."
 date: 2026-04-19
 last_modified_at: 2026-04-19

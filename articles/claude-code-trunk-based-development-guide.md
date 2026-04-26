@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Trunk Based Development"
+title: "Claude Code Trunk Based Development (2026)"
 description: "Learn how to use Claude Code with trunk based development workflows. Practical examples for developers integrating AI assistance into short-lived."
 date: 2026-04-19
 last_modified_at: 2026-04-19

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code vs Copilot Workspace"
+title: "Claude Code vs Copilot Workspace (2026)"
 description: "Claude Code vs GitHub Copilot Workspace compared as coding agents. Issue-to-PR automation, multi-file planning, and execution quality in 2026."
 permalink: /claude-code-vs-copilot-workspace-agent-2026/
 date: 2026-04-21

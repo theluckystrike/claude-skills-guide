@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Styled Components Workflow"
+title: "Claude Code Styled Components Workflow (2026)"
 description: "Build and scale styled-components libraries with Claude Code for theming, dynamic styles, and component-level CSS management. Practical patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

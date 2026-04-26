@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Migrate Express to Fastify with Claude"
+title: "Migrate Express to Fastify with Claude (2026)"
 description: "Step-by-step guide to migrate an Express.js application to Fastify using Claude Code. Route conversion, middleware, plugins, and validation."
 date: 2026-04-15
 last_modified_at: 2026-04-17

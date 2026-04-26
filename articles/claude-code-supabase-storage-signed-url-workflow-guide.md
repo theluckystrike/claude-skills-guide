@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Supabase Signed URLs"
+title: "Claude Code for Supabase Signed URLs (2026)"
 description: "Build secure file upload and download workflows using Claude Code with Supabase Storage signed URLs. Covers permissions, expiry, and access patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

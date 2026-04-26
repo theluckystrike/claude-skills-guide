@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Plausible Analytics"
+title: "Claude Code for Plausible Analytics (2026)"
 description: "Learn how to use Claude Code to streamline your Plausible Analytics workflow, from setup and configuration to custom event tracking and automated."
 date: 2026-04-19
 last_modified_at: 2026-04-19

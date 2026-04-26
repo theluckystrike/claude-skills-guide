@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Supervisor-Agent Worker-Agent Pattern"
+title: "Supervisor-Agent Worker-Agent Pattern (2026)"
 description: "Implement the supervisor-worker agent pattern in Claude Code: task decomposition, parallel execution, result aggregation, and error handling for."
 date: 2026-03-20
 last_modified_at: 2026-04-17

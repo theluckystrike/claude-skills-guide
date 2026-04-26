@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Tinybird Real-Time"
+title: "Claude Code for Tinybird Real-Time (2026)"
 description: "Learn how to use Claude Code to build powerful real-time analytics pipelines with Tinybird, from data ingestion to visualization."
 date: 2026-03-15
 last_modified_at: 2026-04-17

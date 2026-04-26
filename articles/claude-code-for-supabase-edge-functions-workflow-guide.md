@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Supabase Edge Functions"
+title: "Claude Code for Supabase Edge Functions (2026)"
 description: "Claude Code for Supabase Edge Functions — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-supabase-edge-functions-workflow-guide/

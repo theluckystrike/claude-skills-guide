@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Timeout & Budget Workflow"
+title: "How to Use Timeout & Budget Workflow (2026)"
 description: "Learn how to effectively manage execution time and resource budgets in Claude Code with practical examples and actionable advice. Updated for 2026."
 date: 2026-03-15
 last_modified_at: 2026-04-17

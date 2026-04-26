@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix: Claude API Error 429 Rate Limit"
+title: "Fix: Claude API Error 429 Rate Limit (2026)"
 description: "Fix Anthropic API error 429 rate limit reached with proper backoff, SDK retries, and usage optimization strategies. Tested and working in 2026."
 last_tested: "2026-04-22"
 date: 2026-04-15

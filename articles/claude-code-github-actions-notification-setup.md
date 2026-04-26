@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code GitHub Actions Notification"
+title: "Claude Code GitHub Actions Notification (2026)"
 description: "Learn how to configure GitHub Actions notifications for Claude Code workflows. Step-by-step guide for developers and power users."
 date: 2026-03-14
 last_modified_at: 2026-04-17

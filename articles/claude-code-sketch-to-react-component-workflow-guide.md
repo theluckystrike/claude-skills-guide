@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Sketch to React Component"
+title: "Claude Code Sketch to React Component (2026)"
 description: "Master the workflow of transforming design sketches and wireframes into production-ready React components using Claude Code. Learn practical."
 date: 2026-03-14
 last_modified_at: 2026-04-17

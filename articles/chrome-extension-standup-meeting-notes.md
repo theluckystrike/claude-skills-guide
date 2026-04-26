@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Building a Chrome Extension for Standup"
+title: "Building a Chrome Extension for Standup (2026)"
 description: "Claude Code extension tip: building a Chrome Extension for Standup — install, configure, and use this extension for faster workflows. Tested and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

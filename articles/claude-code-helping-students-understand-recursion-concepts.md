@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Teaching Recursion Concepts"
+title: "Teaching Recursion Concepts (2026)"
 description: "Discover how Claude Code can serve as an interactive teaching assistant to help students grasp recursion fundamentals through guided practice, visual."
 date: 2026-03-14
 last_modified_at: 2026-04-17

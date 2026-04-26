@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Factory Bot Test Data"
+title: "Claude Code Factory Bot Test Data (2026)"
 description: "Claude Code Factory Bot Test Data — Complete practical guide covering setup, configuration, common pitfalls, and advanced tips. All steps tested and..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

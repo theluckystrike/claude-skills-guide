@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Cornell Notes Template Chrome Extension"
+title: "Cornell Notes Template Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension for Cornell Notes with practical code examples and implementation patterns for developers."
 date: 2026-03-15
 last_modified_at: 2026-04-17

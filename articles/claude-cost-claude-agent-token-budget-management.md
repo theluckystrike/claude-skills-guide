@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Agent Token Budget Management"
+title: "Claude Agent Token Budget Management (2026)"
 description: "Set per-agent token budgets to prevent runaway costs. A 5-agent fleet with 500K token caps stays under $25/sprint on Opus 4.7."
 date: 2026-04-19
 author: "Claude Skills Guide"

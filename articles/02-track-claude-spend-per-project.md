@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Track Claude Token Spend Per Project"
+title: "Track Claude Token Spend Per Project (2026)"
 description: "Per-project cost tracking reveals that 1 of 10 client projects consumes 27% of your Claude API spend. Here's how to build attribution."
 date: 2026-04-19
 author: "Claude Skills Guide"

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Plotly Dash Python Apps"
+title: "Claude Code for Plotly Dash Python Apps (2026)"
 description: "Build Plotly Dash analytical web apps with Claude Code. Project setup, interactive callbacks, performance tuning, and deployment workflow guide."
 date: 2026-03-15
 last_modified_at: 2026-04-17

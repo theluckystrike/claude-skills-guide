@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for LitServe Lightning"
+title: "Claude Code for LitServe Lightning (2026)"
 description: "Learn how to use Claude Code CLI to develop, test, and deploy LitServe AI models within the Lightning AI ecosystem. Practical guide with code examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

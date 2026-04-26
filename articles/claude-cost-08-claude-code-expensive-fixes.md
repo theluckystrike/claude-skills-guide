@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Expensive? Here Are 7 Fixes"
+title: "Claude Code Expensive? Here Are 7 Fixes (2026)"
 description: "Claude Code feels expensive because sessions hit 200K+ tokens. These 7 fixes cut consumption 60% and make any plan feel twice as generous."
 date: 2026-04-19
 author: "Claude Skills Guide"

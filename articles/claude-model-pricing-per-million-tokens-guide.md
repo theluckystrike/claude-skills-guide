@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Model Pricing Per Million Tokens"
+title: "Claude Model Pricing Per Million Tokens (2026)"
 description: "Complete Claude API pricing for Opus 4.7, Sonnet 4.6, and Haiku 4.5 — from $1/MTok to $25/MTok with batch and cache discounts."
 date: 2026-04-19
 author: "Claude Skills Guide"

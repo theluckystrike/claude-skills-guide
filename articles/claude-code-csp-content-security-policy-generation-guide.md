@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Generate CSP Headers with Claude Code"
+title: "Generate CSP Headers with Claude Code (2026)"
 description: "Generate Content Security Policy headers with Claude Code to block XSS and data injection attacks. Includes policy testing and report-uri setup."
 date: 2026-03-13
 last_modified_at: 2026-04-17

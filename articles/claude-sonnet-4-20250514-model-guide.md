@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Sonnet 4 (20250514): Model Guide"
+title: "Claude Sonnet 4 (20250514): Model Guide (2026)"
 description: "Claude Sonnet 4 is Anthropic's recommended mid-tier model. API usage, Claude Code setup, pricing, and comparisons with Opus 4 and Haiku 4.5 explained."
 permalink: /claude-sonnet-4-20250514-model-guide/
 date: 2026-04-20

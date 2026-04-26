@@ -1242,7 +1242,7 @@ Post this output in the [Claude Code GitHub Issues](https://github.com/anthropic
         "name": "I am on a company-managed laptop. Can IT policy cause exit code 1?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Common IT-managed causes include certificate pinning that blocks connections to api.anthropic.com, antivirus that quarantines Node.js modules, disk encryption that causes slow write operations and timeouts, and software restrictions that block running global npm packages. Try npx @anthropic-ai/claude-code as an alternative to global install."
+          "text": "Yes. Common IT-managed causes include certificate pinning that blocks connections to api.anthropic.com, antivirus that quarantines Node.js modules, disk encryption that causes slow write operations and timeouts, and software restrictions that block running global npm packages."
         }
       },
       {
@@ -1250,7 +1250,7 @@ Post this output in the [Claude Code GitHub Issues](https://github.com/anthropic
         "name": "What is the fastest way to fix exit code 1?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Run node --version to confirm Node.js 18+, then printenv ANTHROPIC_API_KEY to check your key, then curl -sI https://api.anthropic.com/v1/messages to test connectivity. These three checks catch 80% of cases. If all pass, try a clean reinstall with npm uninstall -g @anthropic-ai/claude-code && npm cache clean --force && npm install -g @anthropic-ai/claude-code."
+          "text": "Run node --version to confirm Node.js 18+, then printenv ANTHROPIC_API_KEY to check your key, then curl -sI https://api.anthropic.com/v1/messages to test connectivity. These three checks catch 80% of cases."
         }
       },
       {
@@ -1258,7 +1258,7 @@ Post this output in the [Claude Code GitHub Issues](https://github.com/anthropic
         "name": "Does exit code 1 happen more often on macOS or Linux?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Neither has a significantly higher rate. macOS users more commonly hit Node version conflicts (Homebrew vs nvm) and keychain prompt loops. Linux users more often encounter permission issues on /usr/local and disk space problems on /tmp. WSL users have the most unique issues including clock drift and DNS resolution."
+          "text": "Neither has a significantly higher rate. macOS users more commonly hit Node version conflicts (Homebrew vs nvm) and keychain prompt loops. Linux users more often encounter permission issues on /usr/local and disk space problems on /tmp."
         }
       },
       {
@@ -1266,7 +1266,7 @@ Post this output in the [Claude Code GitHub Issues](https://github.com/anthropic
         "name": "How do I report exit code 1 if none of these fixes work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Gather diagnostic information including system info (uname -a), Node version, npm version, Claude Code version, package info (npm ls -g @anthropic-ai/claude-code), disk space, and ~/.claude permissions. Post this output in the Claude Code GitHub Issues or include it in a support request to Anthropic."
+          "text": "Gather diagnostic information including system info (uname -a), Node version, npm version, Claude Code version, package info (npm ls -g @anthropic-ai/claude-code), disk space, and ~/.claude permissions."
         }
       }
     ]

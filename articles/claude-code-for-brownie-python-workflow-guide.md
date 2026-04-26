@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Brownie Python Workflow"
+title: "How to Use Brownie Python Workflow (2026)"
 description: "A comprehensive guide to integrating Claude Code CLI with Brownie for efficient smart contract development, testing, and deployment workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19

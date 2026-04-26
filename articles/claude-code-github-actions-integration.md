@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code GitHub Actions Integration"
+title: "Claude Code GitHub Actions Integration (2026)"
 description: "Automate code reviews, testing, and documentation with Claude Code in GitHub Actions workflows for faster, AI-powered CI/CD pipelines."
 date: 2026-04-17
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Golden Path Templates &"
+title: "Claude Code Golden Path Templates & (2026)"
 description: "Master Claude Code's golden path templates and workflow patterns. Learn how to use pre-built skill templates, automate repetitive tasks, and build."
 date: 2026-03-15
 last_modified_at: 2026-04-17

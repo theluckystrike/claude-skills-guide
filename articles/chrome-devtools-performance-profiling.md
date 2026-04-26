@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome DevTools Performance Profiling"
+title: "Chrome DevTools Performance Profiling (2026)"
 description: "Master Chrome DevTools performance profiling to identify bottlenecks, optimize rendering, and build faster web applications. Includes practical."
 date: 2026-03-15
 last_modified_at: 2026-04-17

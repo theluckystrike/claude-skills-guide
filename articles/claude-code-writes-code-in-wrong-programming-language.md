@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Wrong Language Output"
+title: "Fix Claude Code Wrong Language Output (2026)"
 description: "Stop Claude Code from generating code in the wrong language. Set project context, configure language preferences, and use skill-based language pinning."
 date: 2026-03-14
 last_modified_at: 2026-04-17

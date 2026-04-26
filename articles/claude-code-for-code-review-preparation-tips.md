@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Code Review Preparation"
+title: "Claude Code for Code Review Preparation (2026)"
 description: "Master code review preparation with Claude Code. Practical tips, skill combinations, and workflows to streamline your review process efficiently."
 date: 2026-03-14
 last_modified_at: 2026-04-17

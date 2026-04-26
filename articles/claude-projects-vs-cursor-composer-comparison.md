@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Projects vs Cursor Composer"
+title: "Claude Projects vs Cursor Composer (2026)"
 description: "Claude Projects vs Cursor Composer for managing project context — persistent knowledge vs multi-file editing workflows compared."
 date: 2026-04-21
 last_tested: "2026-04-21"

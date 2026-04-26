@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Extended Thinking API Guide"
+title: "Claude Extended Thinking API Guide (2026)"
 description: "Implement Claude extended thinking for enhanced reasoning. Covers budget_tokens, display options, tool use integration, and multi-turn thinking continuity."
 date: 2026-04-15
 last_modified_at: 2026-04-17
@@ -339,7 +339,7 @@ First check that your CLAUDE.md accurately describes your project conventions. I
       "name": "What is the minimum setup required?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You need Claude Code installed (Node.js 18+), a project with a `CLAUDE.md` file, and the relevant toolchain for your project type (e.g., npm for JavaScript, pip for Python). The CLAUDE.md file should describe your project structure, conventions, and common commands so Claude Code can work effectively."
+        "text": "You need Claude Code installed (Node.js 18+), a project with a CLAUDE.md file, and the relevant toolchain for your project type (e.g., npm for JavaScript, pip for Python). The CLAUDE.md file should describe your project structure, conventions, and common commands so Claude Code can work effectively."
       }
     },
     {
@@ -347,7 +347,7 @@ First check that your CLAUDE.md accurately describes your project conventions. I
       "name": "How long does the initial setup take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For a typical project, initial setup takes 10-20 minutes. This includes creating the CLAUDE.md file, configuring `.claude/settings.json` for permissions, and running a test task to verify everything works. Subsequent sessions start immediately because the configuration persists."
+        "text": "For a typical project, initial setup takes 10-20 minutes. This includes creating the CLAUDE.md file, configuring .claude/settings.json for permissions, and running a test task to verify everything works. Subsequent sessions start immediately because the configuration persists."
       }
     },
     {
@@ -355,7 +355,7 @@ First check that your CLAUDE.md accurately describes your project conventions. I
       "name": "Can I use this with a team?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Commit your `.claude/` directory and `CLAUDE.md` to version control so the entire team uses the same configuration. Each developer can add personal preferences in `~/.claude/settings.json` (user-level) without affecting the project configuration. Review CLAUDE.md changes in pull requests like any other configuration file."
+        "text": "Yes. Commit your .claude/ directory and CLAUDE.md to version control so the entire team uses the same configuration. Each developer can add personal preferences in ~/.claude/settings.json (user-level) without affecting the project configuration."
       }
     },
     {
@@ -363,7 +363,7 @@ First check that your CLAUDE.md accurately describes your project conventions. I
       "name": "What if Claude Code produces incorrect output?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "First check that your CLAUDE.md accurately describes your project conventions. Incorrect or outdated context is the most common cause of wrong output. If the output is still wrong, provide feedback in the same session — Claude Code learns from corrections within a conversation. For persistent issues, add explicit rules to CLAUDE.md (e.g., \"Always use single quotes\" or \"Never modify files in the config/ directory\"). 1. **Start with a clear CLAUDE.md.** Describe your project structure, tech stack, coding conventions, and common commands in under 300 words. This single file has the largest impact on Claude Code's accuracy and efficiency. 2. **Use skills for domain knowledge.** Move detailed reference information (API routes, database schemas, deployment procedures) into `.claude/skills/` files. This keeps CLAUDE.md concise while making specialized knowledge available when needed. 3. **Review changes before committing.** Always run `git diff` after Claude Code makes changes. Verify the edits are correct, match your project style, and do not introduce unintended side effects. This habit prevents compounding errors across sessions. 4. **Set up permission guardrails.** Configure `.claude/settings.json` with explicit allow and deny lists. Allow your standard development commands (test, build, lint) and deny destructive operations (rm -rf, git push --force, database drops). 5. **Keep sessions focused.** Give Claude Code one clear task per prompt. Multi-step requests like \"refactor auth, add tests, and update docs\" produce better results when broken into three separate prompts, each building on the previous result. **Claude Code ignores the configuration:** Ensure the configuration file is in the correct location. CLAUDE.md must be in the project root (the directory where you run `claude`). Settings go in `.claude/settings.json`. Verify with `ls -la CLAUDE.md .claude/settings.json`. **Changes are not taking effect:** Claude Code reads CLAUDE.md at the start of each session. If you modify it during a session, the changes apply to new conversations but not the current one. Start a new session to pick up configuration changes. **Slow performance on large projects:** Add a `.claudeignore` file to exclude large directories (node_modules, .git, dist, build, vendor). This reduces file scanning time and prevents Claude from reading irrelevant files. The format is identical to `.gitignore`. **Unexpected file modifications:** Check `.claude/settings.json` for overly broad permission patterns. Narrow the allow list to specific commands and file patterns. For sensitive directories, add explicit deny rules."
+        "text": "First check that your CLAUDE.md accurately describes your project conventions. Incorrect or outdated context is the most common cause of wrong output. If the output is still wrong, provide feedback in the same session — Claude Code learns from corrections within a conversation."
       }
     }
   ]

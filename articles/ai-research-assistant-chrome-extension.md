@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Research Assistant Chrome Extension"
+title: "AI Research Assistant Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how AI research assistant Chrome extensions can streamline your research workflow. Practical examples and code..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

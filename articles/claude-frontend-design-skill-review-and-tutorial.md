@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Frontend Design Skill Review"
+title: "Claude Frontend Design Skill Review (2026)"
 description: "Review and tutorial for Claude frontend-design skill: React/Vue/Svelte component generation, accessibility, design tokens, and skill integrations."
 date: 2026-03-13
 last_modified_at: 2026-04-17

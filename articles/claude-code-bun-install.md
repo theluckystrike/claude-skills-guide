@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Bun Install Setup Guide"
+title: "Claude Code Bun Install Setup Guide (2026)"
 description: "Install and configure Claude Code with Bun runtime. Fix common installation issues and optimize Bun-based project workflows."
 date: 2026-04-17
 last_modified_at: 2026-04-17

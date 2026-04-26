@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Markdown Editor Chrome Extension Guide"
+title: "Markdown Editor Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how to create a Chrome extension that functions as a markdown editor. This guide covers architecture, implementation, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

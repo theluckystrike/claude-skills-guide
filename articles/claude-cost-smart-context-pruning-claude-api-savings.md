@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Smart Context Pruning for Claude API"
+title: "Smart Context Pruning for Claude API (2026)"
 description: "Remove noise, deduplicate code, and prune history to cut Claude context by 60% — save $4,500/month on Opus 4.7 at 100 req/day."
 date: 2026-04-19
 author: "Claude Skills Guide"

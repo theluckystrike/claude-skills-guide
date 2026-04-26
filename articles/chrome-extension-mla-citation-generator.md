@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Mla Citation Generator Chrome Extension"
+title: "Mla Citation Generator Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to create a Chrome extension that generates MLA citations automatically. Practical implementation guide with code..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

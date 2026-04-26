@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for GraphQL Complexity"
+title: "Claude Code for GraphQL Complexity (2026)"
 description: "Learn how to use Claude Code to manage GraphQL complexity in your projects. This guide covers schema design, query optimization, and practical workflows."
 date: 2026-04-19
 last_modified_at: 2026-04-19

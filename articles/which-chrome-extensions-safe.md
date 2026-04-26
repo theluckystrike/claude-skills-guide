@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Which Safe Chrome Extension Guide"
+title: "Which Safe Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how to evaluate Chrome extension safety, identify red flags, and protect your browser from malicious extensions. Practical..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

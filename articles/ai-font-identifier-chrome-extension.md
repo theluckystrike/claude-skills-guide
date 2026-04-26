@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Font Identifier Chrome Extension"
+title: "AI Font Identifier Chrome Extension (2026)"
 description: "Claude Code extension tip: discover how AI-powered font identifier Chrome extensions work, their technical implementation, and how developers can use..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

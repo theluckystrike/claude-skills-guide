@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code NPM Install Eacces"
+title: "Fix Claude Code NPM Install Eacces (2026)"
 description: "Resolve npm EACCES permission denied errors when Claude Code runs npm install. Fix global installs, node_modules ownership, and cache issues."
 last_tested: "2026-04-22"
 date: 2026-04-15

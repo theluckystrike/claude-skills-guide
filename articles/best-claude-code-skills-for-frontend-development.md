@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Best Claude Code Skills for Frontend"
+title: "Best Claude Code Skills for Frontend (2026)"
 description: "The most useful Claude Code skills for frontend developers: UI generation, TDD, documentation, and data visualization. with invocation examples."
 date: 2026-03-13
 last_modified_at: 2026-04-17

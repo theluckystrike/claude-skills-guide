@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build Rust Actix Web APIs with Claude"
+title: "Build Rust Actix Web APIs with Claude (2026)"
 description: "Build REST APIs with Actix Web and Rust using Claude Code for code generation, testing, and middleware configuration. Practical examples included."
 date: 2026-03-14
 last_modified_at: 2026-04-17

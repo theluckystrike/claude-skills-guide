@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Schedule Tweets Chrome Extension Guide"
+title: "Schedule Tweets Chrome Extension Guide (2026)"
 description: "Claude Code guide: build a Chrome extension to schedule tweets and threads with X API integration, queue management, and draft storage. Complete..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

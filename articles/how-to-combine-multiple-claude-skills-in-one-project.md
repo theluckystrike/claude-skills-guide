@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Combine Multiple Claude Skills in One"
+title: "Combine Multiple Claude Skills in One (2026)"
 description: "Orchestrate multiple Claude Code skills in a single project for automated workflows. Skill chaining, data passing, and composition patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

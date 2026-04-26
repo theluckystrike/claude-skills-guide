@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Verified Access Enterprise"
+title: "Chrome Verified Access Enterprise (2026)"
 description: "Claude Code extension tip: learn how Chrome Verified Access Enterprise works, its API capabilities, and how to integrate device verification into your..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

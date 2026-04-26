@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Reduce Claude Skill Token Consumption"
+title: "Reduce Claude Skill Token Consumption (2026)"
 description: "Profile and reduce Claude skill token consumption. Identify expensive operations, optimize context injection, and cut API costs by 50%+ in 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17

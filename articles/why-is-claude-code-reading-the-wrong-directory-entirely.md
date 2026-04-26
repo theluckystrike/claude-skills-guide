@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix Claude Code Wrong Directory Error"
+title: "Fix Claude Code Wrong Directory Error (2026)"
 description: "Fix Claude Code reading the wrong directory by setting workspace path, fixing context misdirection, and resolving file not found errors fast."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Multi-Language Project"
+title: "Claude Code Multi-Language Project (2026)"
 description: "Navigate multi-language codebases efficiently with Claude Code for cross-file search, dependency tracing, and polyglot project management patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17

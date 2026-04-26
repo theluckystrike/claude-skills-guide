@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Google Drive Sidebar Chrome Extension"
+title: "Google Drive Sidebar Chrome Extension (2026)"
 description: "Claude Code extension tip: build a Chrome extension with Google Drive sidebar integration for file browsing, search, and quick access. Drive API auth..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

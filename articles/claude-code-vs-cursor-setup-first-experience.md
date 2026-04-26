@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Cursor"
+title: "Claude Code vs Cursor (2026)"
 description: "Compare the setup process and first-run experience of Claude Code CLI and Cursor IDE. Installation, configuration, and time-to-first-result."
 date: 2026-04-21
 last_tested: "2026-04-21"

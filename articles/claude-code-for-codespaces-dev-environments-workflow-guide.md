@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for GitHub Codespaces"
+title: "Claude Code for GitHub Codespaces (2026)"
 description: "Claude Code for GitHub Codespaces — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-codespaces-dev-environments-workflow-guide/

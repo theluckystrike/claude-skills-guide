@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix Claude Code Wrong File Context"
+title: "Fix Claude Code Wrong File Context (2026)"
 description: "Fix Claude Code jumping to the wrong file during multi-file edits. Covers context anchoring, explicit file references, and skill scoping strategies."
 date: 2026-03-14
 last_modified_at: 2026-04-17

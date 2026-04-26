@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Writing Assistant Chrome Extension"
+title: "Writing Assistant Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how Chrome extension writing assistants enhance productivity for developers and content creators. Explore..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

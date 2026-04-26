@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "PostHog A/B Testing with Claude Code"
+title: "PostHog A/B Testing with Claude Code (2026)"
 description: "Implement multivariate A/B/n tests in PostHog using Claude Code. Set up feature flags, track experiment metrics, and analyze statistical significance."
 date: 2026-03-14
 last_modified_at: 2026-04-17

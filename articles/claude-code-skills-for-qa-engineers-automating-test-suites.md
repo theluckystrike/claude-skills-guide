@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills for QA Engineers"
+title: "Claude Code Skills for QA Engineers (2026)"
 description: "Discover how Claude Code skills transform QA automation workflows. Learn to use specialized skills for test generation, maintenance, and continuous..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

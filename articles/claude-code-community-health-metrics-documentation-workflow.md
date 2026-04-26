@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Community Health Metrics"
+title: "Claude Code Community Health Metrics (2026)"
 description: "Learn how to track, document, and maintain community health metrics for Claude Code skills. Includes practical workflows, code examples, and actionable."
 date: 2026-03-14
 last_modified_at: 2026-04-17

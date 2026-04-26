@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build HIPAA-Compliant Apps with Claude"
+title: "Build HIPAA-Compliant Apps with Claude (2026)"
 description: "Develop HIPAA-compliant applications using Claude Code with PHI handling patterns, encryption workflows, and audit trail generation. Healthcare ready."
 date: 2026-04-19
 last_modified_at: 2026-04-19

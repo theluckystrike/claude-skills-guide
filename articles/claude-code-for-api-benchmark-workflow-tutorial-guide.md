@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for API Benchmark Workflow"
+title: "Claude Code for API Benchmark Workflow (2026)"
 description: "Learn how to use Claude Code to build automated API benchmarking workflows, from setup to execution and result analysis."
 date: 2026-04-19
 last_modified_at: 2026-04-19

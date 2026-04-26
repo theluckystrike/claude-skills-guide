@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Performance Testing"
+title: "Claude Code for Performance Testing (2026)"
 description: "Learn how to build a performance testing strategy workflow with Claude Code. Includes practical examples, skill configuration, and actionable advice for."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Meeting Scheduler Chrome Extension"
+title: "Meeting Scheduler Chrome Extension (2026)"
 description: "Claude Code extension tip: build a meeting scheduler Chrome extension with Google Calendar integration, availability detection, and one-click booking...."
 date: 2026-03-15
 last_modified_at: 2026-04-17

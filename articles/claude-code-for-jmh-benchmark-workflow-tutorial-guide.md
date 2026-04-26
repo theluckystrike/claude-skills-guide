@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for JMH Java Benchmarks"
+title: "Claude Code for JMH Java Benchmarks (2026)"
 description: "Run JMH Java benchmarks with Claude Code. Project setup, benchmark implementation, result analysis, and continuous performance regression testing."
 date: 2026-03-15
 last_modified_at: 2026-04-17

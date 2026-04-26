@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for MCP Prompt Server"
+title: "Claude Code for MCP Prompt Server (2026)"
 description: "Learn how to build an efficient MCP prompt server workflow with Claude Code. This guide covers practical patterns for creating, managing, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

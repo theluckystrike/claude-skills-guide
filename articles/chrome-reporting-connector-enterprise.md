@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Reporting Connector Enterprise"
+title: "Chrome Reporting Connector Enterprise (2026)"
 description: "Claude Code extension tip: a practical guide to building and deploying Chrome reporting connectors for enterprise environments. Learn API integration..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

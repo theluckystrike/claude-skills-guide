@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Claude Code Context Window Cost"
+title: "Why Claude Code Context Window Cost (2026)"
 description: "Why Claude Code Context Window Cost — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

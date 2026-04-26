@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Devtools Network Throttling"
+title: "Chrome Devtools Network Throttling (2026)"
 description: "Claude Code extension tip: learn how to use Chrome DevTools network throttling to test your web applications under slow network conditions. Includes..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

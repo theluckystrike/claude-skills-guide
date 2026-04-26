@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Side Project to Startup"
+title: "Claude Code for Side Project to Startup (2026)"
 description: "Transform your side project into a startup using Claude Code. Learn practical workflows, essential skills, and strategies for solo founders and dev"
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Windsurf Editor Review for Professional"
+title: "Windsurf Editor Review for Professional (2026)"
 description: "Claude Code resource: a comprehensive review of the Windsurf editor for professional developers in 2026, focusing on AI integration, workflow..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

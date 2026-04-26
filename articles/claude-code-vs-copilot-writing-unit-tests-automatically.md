@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code vs Copilot"
+title: "Claude Code vs Copilot (2026)"
 description: "A comprehensive comparison of Claude Code and GitHub Copilot for automatically generating unit tests, with practical examples and code samples."
 date: 2026-03-14
 last_modified_at: 2026-04-17

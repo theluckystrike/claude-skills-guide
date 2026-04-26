@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code API Versioning Strategies"
+title: "Claude Code API Versioning Strategies (2026)"
 description: "Implement API versioning for Claude skills with URL path, header, and query string strategies. Covers breaking change management and deprecation."
 date: 2026-03-14
 last_modified_at: 2026-04-17

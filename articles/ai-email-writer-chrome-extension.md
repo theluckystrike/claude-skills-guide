@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Email Writer Chrome Extension Guide"
+title: "AI Email Writer Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how AI-powered Chrome extensions can streamline your email workflow with intelligent composing, reply generation, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

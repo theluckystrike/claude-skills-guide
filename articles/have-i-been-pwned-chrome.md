@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Have I Been Pwned Chrome Extension"
+title: "Have I Been Pwned Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to check if your credentials have been exposed in data breaches using Have I Been Pwned. Explore browser..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

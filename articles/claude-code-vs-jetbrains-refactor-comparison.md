@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs JetBrains Refactoring"
+title: "Claude Code vs JetBrains Refactoring (2026)"
 description: "Comparing Claude Code's AI refactoring with JetBrains' deterministic IDE refactoring — when to use each approach for safer code changes."
 date: 2026-04-21
 last_tested: "2026-04-21"

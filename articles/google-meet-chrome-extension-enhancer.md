@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Google Meet Chrome Extension Enhancer"
+title: "Google Meet Chrome Extension Enhancer (2026)"
 description: "Claude Code extension tip: build Google Meet Chrome extensions with practical code examples. APIs, enhancement techniques, and developer tools for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

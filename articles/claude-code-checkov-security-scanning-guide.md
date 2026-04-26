@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Checkov Security Scanning"
+title: "Claude Code Checkov Security Scanning (2026)"
 description: "Learn how to integrate Checkov static analysis into your Claude Code workflow to automatically detect security misconfigurations in."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Unstructured IO — Guide"
+title: "Claude Code for Unstructured IO — Guide (2026)"
 description: "Claude Code for Unstructured IO — Guide — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-unstructured-io-workflow-guide/

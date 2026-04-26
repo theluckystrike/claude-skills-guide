@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Docker Compose Production"
+title: "Claude Code Docker Compose Production (2026)"
 description: "Set up Claude Code with Docker Compose for production environments. Includes multi-service configs, health checks, and deployment strategies."
 date: 2026-03-14
 last_modified_at: 2026-04-17

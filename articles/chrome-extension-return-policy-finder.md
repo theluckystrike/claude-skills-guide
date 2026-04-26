@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Return Policy Finder"
+title: "Chrome Extension Return Policy Finder (2026)"
 last_tested: "2026-04-22"
 description: "Claude Code extension tip: learn how to build and use Chrome extensions for finding return policies. Includes practical code examples, API integration..."
 date: 2026-03-15

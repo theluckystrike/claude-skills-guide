@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Cursor"
+title: "Claude Code vs Cursor (2026)"
 description: "Compare how Claude Code and Cursor handle editing multiple files simultaneously. Agent workflows, Composer, and real-world refactoring results."
 date: 2026-04-21
 permalink: /claude-code-vs-cursor-multi-file-editing-2026/

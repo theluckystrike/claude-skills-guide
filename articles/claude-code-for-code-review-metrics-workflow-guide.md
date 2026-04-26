@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Code Review Metrics"
+title: "Claude Code for Code Review Metrics (2026)"
 description: "A comprehensive guide to using Claude Code CLI for tracking, measuring, and improving code review metrics to enhance team productivity and code quality."
 date: 2026-04-19
 last_modified_at: 2026-04-19

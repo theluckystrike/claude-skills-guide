@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Customize Claude Code Output Format"
+title: "Customize Claude Code Output Format (2026)"
 description: "Control Claude Code output format using CLAUDE.md settings, skill metadata, and prompt patterns. Working examples for consistent code style output."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Kotlin Multiplatform"
+title: "Claude Code for Kotlin Multiplatform (2026)"
 description: "Claude Code for Kotlin Multiplatform — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-kotlin-multiplatform-workflow-guide/

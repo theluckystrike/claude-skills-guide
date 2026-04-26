@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build a Text-to-Speech Chrome Extension"
+title: "Build a Text-to-Speech Chrome Extension (2026)"
 description: "Claude Code extension tip: build a Chrome extension with text-to-speech using Web Speech API. Covers voice selection, rate control, SSML support, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Self-Taught Developer"
+title: "Claude Code for Self-Taught Developer (2026)"
 description: "Learn how self-taught developers can use Claude Code and its skills ecosystem to accelerate upskilling, build production-ready projects, and bridge the."
 date: 2026-03-14
 last_modified_at: 2026-04-17

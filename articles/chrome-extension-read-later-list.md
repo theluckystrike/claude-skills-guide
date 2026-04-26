@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Building a Chrome Extension for a Read"
+title: "Building a Chrome Extension for a Read (2026)"
 description: "Claude Code extension tip: a practical guide for developers to build a Chrome extension that saves articles for later reading, with local storage and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

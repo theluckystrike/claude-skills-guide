@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Workflow for Technical"
+title: "Claude Skills Workflow for Technical (2026)"
 description: "A practical workflow guide for technical product managers using Claude Code skills. Learn how to bridge technical implementation with product strategy."
 date: 2026-03-14
 last_modified_at: 2026-04-17

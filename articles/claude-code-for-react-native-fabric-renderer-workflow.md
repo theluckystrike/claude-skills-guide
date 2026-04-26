@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for React Native Fabric"
+title: "Claude Code for React Native Fabric (2026)"
 description: "Master the React Native Fabric renderer workflow with Claude Code. Learn practical patterns for building native modules, implementing renderers, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

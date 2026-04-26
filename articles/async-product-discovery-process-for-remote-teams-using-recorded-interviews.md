@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Async Product Discovery for Remote"
+title: "Async Product Discovery for Remote (2026)"
 description: "Claude Code resource: learn how to implement an effective async product discovery process for remote teams using recorded interviews. Step-by-step..."
 date: 2026-03-18
 last_modified_at: 2026-04-17

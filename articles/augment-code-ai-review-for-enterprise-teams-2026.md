@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Augment Code AI Review for Enterprise"
+title: "Augment Code AI Review for Enterprise (2026)"
 description: "Discover how Claude Code skills enhance AI-powered code review for enterprise development teams. Learn practical implementations, security features."
 date: 2026-03-14
 last_modified_at: 2026-04-17

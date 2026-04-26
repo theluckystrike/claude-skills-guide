@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Kysely — Workflow Guide"
+title: "Claude Code for Kysely — Workflow Guide (2026)"
 description: "Claude Code for Kysely — Workflow Guide — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-kysely-query-builder-workflow-guide/

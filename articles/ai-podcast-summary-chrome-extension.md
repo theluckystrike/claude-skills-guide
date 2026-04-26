@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "AI Podcast Summary Chrome Extension"
+title: "AI Podcast Summary Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how AI podcast summary Chrome extensions work, their technical architecture, and how to build one from scratch...."
 date: 2026-03-15
 last_modified_at: 2026-04-17

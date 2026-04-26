@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code SvelteKit Hooks Handle Load"
+title: "Claude Code SvelteKit Hooks Handle Load (2026)"
 description: "Learn how to use Claude Code for SvelteKit development with hooks.handle and the load workflow. Practical examples and actionable advice for."
 date: 2026-03-14
 last_modified_at: 2026-04-17

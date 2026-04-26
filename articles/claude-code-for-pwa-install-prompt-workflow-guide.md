@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Build PWA Install Prompt with Claude"
+title: "Build PWA Install Prompt with Claude (2026)"
 description: "Implement PWA install prompts with Claude Code. Service worker setup, custom install UI, and beforeinstallprompt event handling with examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

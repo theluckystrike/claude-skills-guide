@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code API Client TypeScript Guide"
+title: "Claude Code API Client TypeScript Guide (2026)"
 last_tested: "2026-04-22"
 description: "A practical guide to building TypeScript API clients that integrate with Claude Code, covering authentication, skill composition, and real-world patterns."
 date: 2026-03-14

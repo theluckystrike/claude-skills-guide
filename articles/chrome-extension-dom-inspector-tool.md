@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Dom Inspector Tool Chrome Extension"
+title: "Dom Inspector Tool Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension DOM inspector tool from scratch. Complete implementation guide with code examples for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

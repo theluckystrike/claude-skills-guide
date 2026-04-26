@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Tailwind CSS Devtools Chrome Extension"
+title: "Tailwind CSS Devtools Chrome Extension (2026)"
 description: "Claude Code extension tip: a practical guide to debugging Chrome extensions that use Tailwind CSS. Learn how to inspect components, troubleshoot..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

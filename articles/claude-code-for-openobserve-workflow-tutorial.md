@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for OpenObserve Workflow"
+title: "Claude Code for OpenObserve Workflow (2026)"
 description: "Learn Claude Code for OpenObserve Workflow Tutorial with hands-on examples and step-by-step instructions. Working code samples and expert tips verified..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

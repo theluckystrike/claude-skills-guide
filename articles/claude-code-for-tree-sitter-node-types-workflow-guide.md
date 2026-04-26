@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Tree-sitter Node Types with Claude Code"
+title: "Tree-sitter Node Types with Claude Code (2026)"
 description: "Use Claude Code for Tree-sitter node type workflows to parse, analyze, and transform code with practical examples tested on Node.js projects."
 date: 2026-03-15
 last_modified_at: 2026-04-17

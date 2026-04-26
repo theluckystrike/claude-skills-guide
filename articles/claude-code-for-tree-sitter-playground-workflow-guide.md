@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Tree-sitter Playground"
+title: "Claude Code for Tree-sitter Playground (2026)"
 description: "Learn how to use Claude Code to streamline your Tree-sitter Playground workflows, from grammar exploration to parser generation."
 date: 2026-03-15
 last_modified_at: 2026-04-17

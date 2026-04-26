@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Hopsworks Feature Store"
+title: "Claude Code for Hopsworks Feature Store (2026)"
 description: "A practical guide to integrating Claude Code with Hopsworks Feature Store for streamlined ML feature engineering and management."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Moon Build System"
+title: "Claude Code for Moon Build System (2026)"
 description: "Claude Code for Moon Build System — practical setup steps, configuration examples, and working code you can use in your projects today."
 date: 2026-04-18
 permalink: /claude-code-for-moon-build-system-workflow-guide/

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Aider"
+title: "Claude Code vs Aider (2026)"
 description: "Compare how Claude Code and Aider handle git operations. Auto-commits, branch management, diff workflows, and repository awareness."
 date: 2026-04-21
 last_tested: "2026-04-21"

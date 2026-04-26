@@ -148,7 +148,7 @@ echo "Environment check complete."
       "name": "Does this error affect all operating systems?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This error can occur on macOS, Linux, and Windows (WSL). The exact error message may differ slightly between platforms, but the root cause and fix are the same. macOS users may see additional Gatekeeper or notarization prompts. Linux users should check that the relevant system packages are installed. Windows users should ensure they are running inside WSL2, not native Windows."
+        "text": "This error can occur on macOS, Linux, and Windows (WSL). The exact error message may differ slightly between platforms, but the root cause and fix are the same. macOS users may see additional Gatekeeper or notarization prompts."
       }
     },
     {
@@ -164,7 +164,7 @@ echo "Environment check complete."
       "name": "Can this error cause data loss?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, this error occurs before or during an operation and does not corrupt existing files. Claude Code's edit operations are atomic — they either complete fully or not at all. However, if the error occurs during a multi-step operation, you may have partial changes that need to be reviewed with `git diff` before continuing."
+        "text": "No, this error occurs before or during an operation and does not corrupt existing files. Claude Code's edit operations are atomic — they either complete fully or not at all. However, if the error occurs during a multi-step operation, you may have partial changes that need to be reviewed with git..."
       }
     },
     {
@@ -172,7 +172,7 @@ echo "Environment check complete."
       "name": "How do I report this error to Anthropic if the fix does not work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Open an issue at github.com/anthropics/claude-code with: (1) the full error message including stack trace, (2) your Node.js version (`node --version`), (3) your Claude Code version (`claude --version`), (4) your operating system and version, and (5) the command or operation that triggered the error. This fix also applies if you see variations of this error: - Connection or process errors with similar root causes in the same subsystem - Timeout variants where the operation starts but does not complete - Permission variants where access is denied to the same resource - Configuration variants where the same setting is missing or malformed If your specific error message differs slightly from the one shown above, the fix is likely the same. The key indicator is the operation that failed (shown in the stack trace) rather than the exact wording of the message. Add these rules to your project's `CLAUDE.md` to prevent this issue from recurring: ```markdown # Environment Checks Before running commands, verify the required tools are available. Check versions match project requirements before proceeding. If a command fails, read the error message carefully before retrying. Do not retry failed commands without changing something first. ``` Additionally, consider adding a project setup validation script: ```bash #!/bin/bash # validate-env.sh — run before starting Claude Code sessions set -euo pipefail echo \"Checking environment...\" node --version | grep -q \"v2[0-2]\" || echo \"WARN: Node.js 20+ recommended\" command -v git >/dev/null || echo \"ERROR: git not found\" [ -f package.json ] || echo \"ERROR: not in project root\" echo \"Environment check complete.\" ``` - [Claude Code Keeps Making Same Mistake](/claude-code-keeps-making-same-mistake-fix-guide/)"
+        "text": "Open an issue at github.com/anthropics/claude-code with: (1) the full error message including stack trace, (2) your Node.js version (node --version), (3) your Claude Code version (claude --version), (4) your operating system and version, and (5) the command or operation that triggered the error."
       }
     }
   ]

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Logistics Supply Chain"
+title: "Claude Code for Logistics Supply Chain (2026)"
 description: "Automate logistics workflows, inventory management, and supply chain operations with Claude Code skills. Practical code examples and patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

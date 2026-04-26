@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Memory Leak Detection Guide"
+title: "Claude Code Memory Leak Detection Guide (2026)"
 description: "Use Claude Code to find and fix memory leaks in Node.js and browser applications. Heap snapshots, profiling workflows, and common leak patterns."
 date: 2026-04-15
 last_modified_at: 2026-04-17

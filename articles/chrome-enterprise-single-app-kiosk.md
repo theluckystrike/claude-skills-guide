@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Single App Kiosk"
+title: "Chrome Enterprise Single App Kiosk (2026)"
 description: "Learn how to configure Chrome Enterprise single app kiosk mode for dedicated devices. Step-by-step setup, XML configuration, and PowerShell deployment."
 date: 2026-03-15
 last_modified_at: 2026-04-17

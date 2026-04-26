@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Content Calendar"
+title: "Chrome Extension Content Calendar (2026)"
 description: "Claude Code extension tip: learn how to build and use a chrome extension content calendar manager for organizing publishing schedules, managing content..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

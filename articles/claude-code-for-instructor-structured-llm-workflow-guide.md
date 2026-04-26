@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Instructor Structured"
+title: "Claude Code for Instructor Structured (2026)"
 description: "Claude Code for Instructor Structured — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-instructor-structured-llm-workflow-guide/

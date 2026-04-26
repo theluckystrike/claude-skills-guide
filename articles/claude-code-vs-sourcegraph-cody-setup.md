@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Sourcegraph Cody"
+title: "Claude Code vs Sourcegraph Cody (2026)"
 description: "Compare initial setup of Claude Code and Sourcegraph Cody. Installation, authentication, codebase connection, and first query experience."
 date: 2026-04-21
 last_tested: "2026-04-21"

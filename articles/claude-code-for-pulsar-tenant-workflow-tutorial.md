@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Pulsar Tenant Workflow"
+title: "Claude Code for Pulsar Tenant Workflow (2026)"
 description: "Learn how to use Claude Code to streamline Apache Pulsar tenant management workflows with practical examples and actionable advice."
 date: 2026-03-15
 last_modified_at: 2026-04-17

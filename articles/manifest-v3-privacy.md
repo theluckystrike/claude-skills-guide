@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Manifest V3 Privacy — Developer Guide"
+title: "Manifest V3 Privacy — Developer Guide (2026)"
 description: "Claude Code guide: a practical guide to Chrome extension privacy in Manifest V3. Learn about permission changes, host permissions, declarative Net..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

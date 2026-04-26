@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Wake Smart Contract"
+title: "Claude Code for Wake Smart Contract (2026)"
 description: "Learn how to integrate Claude Code with Wake, a powerful Python smart contract development framework. Set up automated workflows, write tests, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

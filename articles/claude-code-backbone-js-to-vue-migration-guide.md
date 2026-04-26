@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Migrate Backbone.js to Vue with Claude"
+title: "Migrate Backbone.js to Vue with Claude (2026)"
 description: "Migrate Backbone.js applications to Vue.js using Claude Code. Covers model-to-composition-API conversion, view migration, and router replacement."
 date: 2026-03-14
 last_modified_at: 2026-04-17

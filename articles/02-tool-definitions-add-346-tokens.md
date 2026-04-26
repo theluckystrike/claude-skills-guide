@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How Tool Definitions Add 346 Tokens"
+title: "How Tool Definitions Add 346 Tokens (2026)"
 description: "Claude injects 346 system tokens every time you enable tool use. Here's how to measure and minimize that $17/day hidden cost."
 date: 2026-04-19
 author: "Claude Skills Guide"

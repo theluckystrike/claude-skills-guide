@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Japanese Developer Team"
+title: "Claude Code Japanese Developer Team (2026)"
 description: "Practical tips for integrating Claude Code into Japanese developer teams. Learn about skills, workflows, and best practices for smooth adoption."
 date: 2026-03-14
 last_modified_at: 2026-04-17

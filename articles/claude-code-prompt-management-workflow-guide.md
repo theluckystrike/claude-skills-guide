@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Prompt Management Workflow"
+title: "Claude Code Prompt Management Workflow (2026)"
 description: "Master prompt management with Claude Code. Practical workflow strategies for developers to organize, reuse, and optimize prompts across projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17

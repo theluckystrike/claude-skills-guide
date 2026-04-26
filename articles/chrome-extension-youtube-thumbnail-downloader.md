@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "YouTube Thumbnail Downloader Extension"
+title: "YouTube Thumbnail Downloader Extension (2026)"
 description: "Claude Code extension tip: download YouTube thumbnails in all resolutions with a Chrome extension. Build one using Manifest V3, URL patterns, and the..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

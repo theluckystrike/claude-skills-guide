@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Memory Feature vs SuperMemory"
+title: "Claude Memory Feature vs SuperMemory (2026)"
 description: "Claude's built-in session context vs the /supermemory skill: what each does, when to use each, and how they work together in Claude Code."
 date: 2026-03-13
 last_modified_at: 2026-04-17

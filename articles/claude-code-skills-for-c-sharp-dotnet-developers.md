@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills For C Sharp Dotnet"
+title: "Claude Code Skills For C Sharp Dotnet (2026)"
 description: "Practical guide to Claude Code skills that accelerate C# and .NET development: code generation, testing, documentation, and automation workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

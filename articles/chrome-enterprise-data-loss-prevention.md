@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Enterprise Data Loss Prevention"
+title: "Chrome Enterprise Data Loss Prevention (2026)"
 description: "Learn how Chrome Enterprise data loss prevention works, configuration methods, and practical implementation strategies for protecting sensitive data."
 date: 2026-03-15
 last_modified_at: 2026-04-17

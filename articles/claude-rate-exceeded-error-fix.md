@@ -852,7 +852,7 @@ No. Rate limits are enforced at the organization level, not per API key. Creatin
         "name": "Does prompt caching help with rate limits?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Prompt caching reduces the number of input tokens counted against your TPM limit for cached content. When your system prompt and conversation history are cached, subsequent requests consume fewer tokens from your per-minute allowance, effectively increasing your throughput without upgrading your tier."
+          "text": "Yes. Prompt caching reduces the number of input tokens counted against your TPM limit for cached content. When your system prompt and conversation history are cached, subsequent requests consume fewer tokens from your per-minute allowance, effectively increasing your throughput without upgrading..."
         }
       },
       {

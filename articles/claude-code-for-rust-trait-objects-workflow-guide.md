@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Rust Trait Objects"
+title: "Claude Code for Rust Trait Objects (2026)"
 description: "A comprehensive guide to working with Rust trait objects using Claude Code. Learn practical workflows, dynamic dispatch patterns, and actionable."
 date: 2026-03-15
 last_modified_at: 2026-04-17

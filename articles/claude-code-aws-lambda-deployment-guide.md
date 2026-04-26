@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Deploy AWS Lambda Functions with Claude"
+title: "Deploy AWS Lambda Functions with Claude (2026)"
 description: "Use Claude Code to build, test, and deploy AWS Lambda functions. SAM templates, cold start optimization, layers, and CI/CD integration."
 date: 2026-04-15
 last_modified_at: 2026-04-17

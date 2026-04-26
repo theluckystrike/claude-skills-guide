@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Regula Policy Validation"
+title: "Claude Code + Regula Policy Validation (2026)"
 description: "Validate infrastructure policies with Regula and Claude Code for Terraform compliance checks, OPA rules, and automated policy enforcement workflows."
 date: 2026-03-15
 last_modified_at: 2026-04-17

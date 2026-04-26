@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for ESLint Custom Plugin"
+title: "Claude Code for ESLint Custom Plugin (2026)"
 description: "Learn how to create, test, and publish custom ESLint plugins using Claude Code. A practical guide covering plugin structure, rule development, testing."
 date: 2026-03-15
 last_modified_at: 2026-04-17

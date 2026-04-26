@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Failed to Authenticate"
+title: "Fix Claude Code Failed to Authenticate (2026)"
 description: "Resolve Claude Code authentication failures with step-by-step fixes for expired tokens, invalid API keys, and misconfigured credentials."
 date: 2026-04-17
 last_modified_at: 2026-04-17

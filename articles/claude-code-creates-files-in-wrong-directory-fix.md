@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Creates Files in Wrong"
+title: "Claude Code Creates Files in Wrong (2026)"
 description: "A practical guide to fixing file path issues when Claude Code skills create files in unexpected directories. Includes troubleshooting steps and code."
 date: 2026-03-14
 last_modified_at: 2026-04-17

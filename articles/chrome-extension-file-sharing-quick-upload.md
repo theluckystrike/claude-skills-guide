@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Build a Quick File Upload Extension"
+title: "Build a Quick File Upload Extension (2026)"
 description: "Claude Code extension tip: build a Chrome extension for instant file sharing and uploads. Covers drag-and-drop, clipboard integration, cloud storage..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

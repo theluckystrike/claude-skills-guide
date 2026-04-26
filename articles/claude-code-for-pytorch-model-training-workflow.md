@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for PyTorch Model Training"
+title: "Claude Code for PyTorch Model Training (2026)"
 description: "Streamline PyTorch model training with Claude Code for data loading, hyperparameter tuning, and experiment tracking. End-to-end training workflow."
 date: 2026-03-15
 last_modified_at: 2026-04-17

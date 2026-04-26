@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Salesforce MCP Server Data Integration"
+title: "Salesforce MCP Server Data Integration (2026)"
 description: "Claude Code resource: integrate Salesforce with MCP servers for automated data sync. Code examples, best practices, and workflow patterns for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

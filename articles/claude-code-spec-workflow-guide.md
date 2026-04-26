@@ -678,7 +678,7 @@ Spec files are read as input tokens when Claude processes them. A typical spec i
       "name": "How do specs interact with CLAUDE.md?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "CLAUDE.md defines project-wide rules (code style, architecture patterns). Specs define feature-specific requirements. They work together: CLAUDE.md provides the context and constraints, specs provide the feature blueprint. Add a note in CLAUDE.md: \\\"Always read relevant specs from specs/ before implementing.\\\""
+        "text": "CLAUDE.md defines project-wide rules (code style, architecture patterns). Specs define feature-specific requirements. They work together: CLAUDE.md provides the context and constraints, specs provide the feature blueprint."
       }
     },
     {

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Set ANTHROPIC_API_KEY for Claude"
+title: "How to Set ANTHROPIC_API_KEY for Claude (2026)"
 last_tested: "2026-04-22"
 description: "Set the ANTHROPIC_API_KEY environment variable on macOS, Linux, and Windows. Covers shell configuration, .env files, and platform-specific clients."
 date: 2026-04-15

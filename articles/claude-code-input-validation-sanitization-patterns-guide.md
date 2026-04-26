@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Input Validation and Sanitization"
+title: "Input Validation and Sanitization (2026)"
 description: "Claude Code resource: input Validation and Sanitization — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-13
 last_modified_at: 2026-04-17

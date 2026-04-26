@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code + Soda Core Data Quality"
+title: "Claude Code + Soda Core Data Quality (2026)"
 description: "Monitor data quality with Soda Core and Claude Code for automated checks, schema validation, and freshness monitoring. Catch data issues in CI/CD."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "AI Coding Tool Evaluation Framework"
+title: "AI Coding Tool Evaluation Framework (2026)"
 description: "Claude Code AI workflow: a practical framework for evaluating AI coding tools in team environments. Compare capabilities, measure productivity gains,..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

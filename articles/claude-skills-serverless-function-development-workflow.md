@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills Serverless Function"
+title: "Claude Skills Serverless Function (2026)"
 description: "Build Claude skills that deploy serverless functions. A practical workflow for creating, testing, and deploying cloud functions."
 date: 2026-03-14
 last_modified_at: 2026-04-17

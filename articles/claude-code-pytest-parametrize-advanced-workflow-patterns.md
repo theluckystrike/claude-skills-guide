@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Pytest Parametrize Advanced"
+title: "Claude Code Pytest Parametrize Advanced (2026)"
 description: "Explore advanced pytest parametrize patterns for efficient test automation. Learn indirect parametrization, fixture-based generation, hooks."
 date: 2026-03-14
 last_modified_at: 2026-04-17

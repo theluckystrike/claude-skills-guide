@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Skills for Ruby on Rails"
+title: "Claude Code Skills for Ruby on Rails (2026)"
 description: "Practical Claude Code skills that accelerate Ruby on Rails development: code generation, testing, database optimization, and API integration."
 date: 2026-03-14
 last_modified_at: 2026-04-17

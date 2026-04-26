@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Daily Standup Automation with Claude"
+title: "Daily Standup Automation with Claude (2026)"
 description: "Automate daily standup reports using Claude Code skills. Pull git activity, format updates, and deliver to Slack or Teams with minimal manual effort."
 date: 2026-03-13
 last_modified_at: 2026-04-17

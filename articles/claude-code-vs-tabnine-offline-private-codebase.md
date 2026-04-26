@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Tabnine for Offline Use"
+title: "Claude Code vs Tabnine for Offline Use (2026)"
 description: "Claude Code vs Tabnine compared for offline and air-gapped environments. Privacy features, local inference, and private codebase support analyzed."
 date: 2026-03-14
 last_modified_at: 2026-04-17

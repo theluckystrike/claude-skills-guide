@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use Claude Skills with n8n"
+title: "How to Use Claude Skills with n8n (2026)"
 description: "How to Use Claude Skills with n8n — practical setup steps, configuration examples, and working code you can use in your projects today."
 date: 2026-03-13
 last_modified_at: 2026-04-17

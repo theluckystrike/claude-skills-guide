@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Selenium IDE Recorder Chrome Extension"
+title: "Selenium IDE Recorder Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to use the Chrome extension Selenium IDE recorder to create automated browser tests quickly. Practical examples..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

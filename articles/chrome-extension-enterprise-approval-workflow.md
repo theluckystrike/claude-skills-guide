@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Extension Enterprise Approval"
+title: "Chrome Extension Enterprise Approval (2026)"
 description: "Claude Code extension tip: learn how to build enterprise-grade approval workflows for Chrome extensions. Covers implementation patterns, code examples,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

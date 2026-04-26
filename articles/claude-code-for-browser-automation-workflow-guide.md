@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Browser Automation"
+title: "Claude Code for Browser Automation (2026)"
 description: "Automate browsers with Claude Code using Playwright MCP. Build reusable scraping skills, test workflows, and handle dynamic pages with AI assistance."
 date: 2026-04-19
 last_modified_at: 2026-04-19

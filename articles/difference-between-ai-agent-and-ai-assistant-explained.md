@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Difference Between AI Agent and AI"
+title: "Difference Between AI Agent and AI (2026)"
 description: "Understand the key differences between AI agents and AI assistants, with practical examples using Claude Code skills and the agentic framework."
 date: 2026-03-14
 last_modified_at: 2026-04-17

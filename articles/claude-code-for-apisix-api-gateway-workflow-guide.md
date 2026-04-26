@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for APISIX API Gateway"
+title: "Claude Code for APISIX API Gateway (2026)"
 description: "Configure and manage APISIX API Gateway with Claude Code. Covers route definitions, plugin configuration, upstream health checks, and traffic control."
 date: 2026-04-19
 last_modified_at: 2026-04-19

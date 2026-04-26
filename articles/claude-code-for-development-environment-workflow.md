@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Development Environment"
+title: "Claude Code for Development Environment (2026)"
 description: "A practical guide to integrating Claude Code into your development environment workflow. Learn setup, configuration, and real-world usage patterns."
 date: 2026-03-15
 last_modified_at: 2026-04-17

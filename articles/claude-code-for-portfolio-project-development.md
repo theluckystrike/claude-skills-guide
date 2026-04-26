@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Portfolio Project"
+title: "Claude Code for Portfolio Project (2026)"
 description: "A practical guide to using Claude Code for building professional portfolio projects, with code examples and skill recommendations."
 date: 2026-03-14
 last_modified_at: 2026-04-17

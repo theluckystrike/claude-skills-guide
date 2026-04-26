@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code vs Codeium for Java Spring"
+title: "Claude Code vs Codeium for Java Spring (2026)"
 description: "Compare Claude Code and Codeium for Java Spring Boot projects. See which AI assistant handles dependency injection, testing, and REST APIs better."
 date: 2026-03-14
 last_modified_at: 2026-04-17

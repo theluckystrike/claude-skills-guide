@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Md For Enforcing Architecture"
+title: "Claude Md For Enforcing Architecture (2026)"
 description: "Learn how to use Claude Code with custom skills to enforce architectural patterns consistently across your codebase. Practical examples and."
 date: 2026-03-14
 last_modified_at: 2026-04-17

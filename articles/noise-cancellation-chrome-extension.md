@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Noise Cancellation Chrome Extension"
+title: "Noise Cancellation Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build noise cancellation features for Chrome extensions. Practical code examples, Web Audio API techniques, and..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

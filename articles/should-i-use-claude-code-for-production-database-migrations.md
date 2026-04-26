@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Should I Use Claude Code For Production"
+title: "Should I Use Claude Code For Production (2026)"
 description: "A practical guide for developers exploring Claude Code AI assistance for database migration workflows in production environments."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Royalty-Free Image Search Extension"
+title: "Royalty-Free Image Search Extension (2026)"
 description: "Claude Code extension tip: find royalty-free images directly in Chrome with a search extension. Integrates Unsplash, Pexels, and Pixabay APIs for..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

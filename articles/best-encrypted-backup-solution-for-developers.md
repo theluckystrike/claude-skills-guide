@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Best Encrypted Backup for Developers"
+title: "Best Encrypted Backup for Developers (2026)"
 description: "Claude Code picks: compare encrypted backup solutions with client-side encryption and zero-knowledge architecture. Tested options for code,..."
 date: 2026-03-16
 last_modified_at: 2026-04-17

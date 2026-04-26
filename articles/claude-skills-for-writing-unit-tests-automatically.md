@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Skills for Writing Unit Tests"
+title: "Claude Skills for Writing Unit Tests (2026)"
 description: "Discover Claude skills that automatically generate unit tests for your codebase. Practical examples, configuration tips, and workflows for developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

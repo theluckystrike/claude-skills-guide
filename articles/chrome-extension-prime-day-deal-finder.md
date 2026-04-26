@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Building a Chrome Extension for Prime"
+title: "Building a Chrome Extension for Prime (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension that helps developers and power users find the best Prime Day deals across Amazon."
 date: 2026-03-15
 last_modified_at: 2026-04-17

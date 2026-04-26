@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Tab Management for Claude Code Research"
+title: "Tab Management for Claude Code Research (2026)"
 description: "Best tab management extensions for Claude Code research sessions. Organize documentation, API references, and project tabs while pair-programming with..."
 date: 2026-03-15
 last_modified_at: 2026-04-21

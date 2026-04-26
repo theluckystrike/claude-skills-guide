@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Mixpanel Analytics"
+title: "Claude Code for Mixpanel Analytics (2026)"
 description: "Claude Code for Mixpanel Analytics — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-mixpanel-analytics-workflow-guide/

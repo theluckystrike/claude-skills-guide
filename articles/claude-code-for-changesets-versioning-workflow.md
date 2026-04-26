@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Changesets Versioning"
+title: "Claude Code for Changesets Versioning (2026)"
 description: "Learn how to set up and use Claude Code with Changesets for automated semantic versioning, changelog generation, and streamlined package publishing."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code for Browser Mode Testing"
+title: "Claude Code for Browser Mode Testing (2026)"
 description: "Claude Code for Browser Mode Testing — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-04-18
 permalink: /claude-code-for-browser-mode-testing-workflow-guide/

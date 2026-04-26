@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Tips for Intermediate"
+title: "Claude Code Tips for Intermediate (2026)"
 description: "Level up your Claude Code workflow with practical tips for power users. Learn skill selection, prompt engineering, and automation patterns."
 date: 2026-03-14
 last_modified_at: 2026-04-17

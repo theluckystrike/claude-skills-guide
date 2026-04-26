@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for tRPC WebSocket Workflow"
+title: "Claude Code for tRPC WebSocket Workflow (2026)"
 description: "Learn how to use Claude Code to build real-time applications with tRPC and WebSockets. This guide covers setup, subscription patterns, and."
 date: 2026-03-15
 last_modified_at: 2026-04-17

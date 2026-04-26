@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Cost Per Project Estimation"
+title: "Claude Code Cost Per Project Estimation (2026)"
 description: "Estimate Claude Code costs per project: a CRUD feature runs $2-5 on API, a full-stack app runs $50-200. Calculator included."
 date: 2026-04-19
 author: "Claude Skills Guide"

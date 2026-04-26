@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Types of LLM Agents Explained for Devs"
+title: "Types of LLM Agents Explained for Devs (2026)"
 description: "Claude Code comparison: understand reactive, deliberative, and hybrid LLM agent architectures. Practical guide to choosing the right agent type for..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Duplicate Code Refactoring"
+title: "Claude Code Duplicate Code Refactoring (2026)"
 description: "Find and eliminate duplicate code with Claude Code. Automated detection, refactoring patterns, and extraction strategies for cleaner codebases."
 date: 2026-03-14
 last_modified_at: 2026-04-17

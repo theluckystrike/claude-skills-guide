@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Build Web3Modal Wallet Flow with Claude"
+title: "Build Web3Modal Wallet Flow with Claude (2026)"
 description: "Integrate Web3Modal wallet connections into your dApp using Claude Code with practical examples for connect, disconnect, and event handling."
 date: 2026-03-15
 last_modified_at: 2026-04-17

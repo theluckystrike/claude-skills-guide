@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Docker Volumes Persistence"
+title: "How to Use Docker Volumes Persistence (2026)"
 description: "A practical guide to managing Docker volumes for persistence in Claude Code projects. Learn bind mounts, named volumes, and data management strategies."
 date: 2026-03-14
 last_modified_at: 2026-04-17

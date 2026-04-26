@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Fix Claude Code Request Timed Out"
+title: "Fix Claude Code Request Timed Out (2026)"
 description: "Fix Claude Code fetch failed and request timed out errors. SSL, network, and API timeout solutions with copy-paste config."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Fix Claude Code Forgetting Variable"
+title: "Fix Claude Code Forgetting Variable (2026)"
 description: "Stop Claude Code from losing track of variable names mid-session. Use context anchoring, explicit naming rules, and skill configs to maintain accuracy."
 date: 2026-03-14
 last_modified_at: 2026-04-17

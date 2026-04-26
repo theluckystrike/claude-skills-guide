@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Learn Programming Languages with Claude"
+title: "Learn Programming Languages with Claude (2026)"
 description: "Use Claude Code to learn new programming languages faster with interactive coding assistance, real-time feedback, and skill-guided practice projects."
 date: 2026-03-14
 last_modified_at: 2026-04-17

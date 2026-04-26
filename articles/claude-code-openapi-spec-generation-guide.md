@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Generate OpenAPI Specs with Claude Code"
+title: "Generate OpenAPI Specs with Claude Code (2026)"
 description: "Generate OpenAPI specifications from existing code or from scratch using Claude Code. Practical examples and tested workflows for API developers."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Use MCP Prompt Injection Attack"
+title: "How to Use MCP Prompt Injection Attack (2026)"
 description: "Claude Code guide: learn how to prevent prompt injection attacks in Model Context Protocol (MCP) implementations. Practical examples, code snippets,..."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Save 50% on Every Claude API"
+title: "How to Save 50% on Every Claude API (2026)"
 description: "Switch non-urgent Claude API calls to batch mode and cut costs in half. Sonnet 4.6 drops from $3/$15 to $1.50/$7.50 per MTok."
 date: 2026-04-19
 author: "Claude Skills Guide"

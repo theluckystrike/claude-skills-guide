@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Context Window Management"
+title: "Claude Code Context Window Management (2026)"
 description: "Master context window management in Claude Code with compaction, /clear, subagents, and CLAUDE.md optimization to reduce token costs."
 date: 2026-04-15
 permalink: /claude-code-context-window-management-guide/

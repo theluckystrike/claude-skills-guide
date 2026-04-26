@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Chrome Built In Password Manager Safe"
+title: "Chrome Built In Password Manager Safe (2026)"
 description: "Claude Code extension tip: a technical breakdown of Chrome's password manager security model, encryption methods, and how it compares to dedicated..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

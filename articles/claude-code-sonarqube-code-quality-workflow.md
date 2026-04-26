@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code SonarQube Code Quality"
+title: "Claude Code SonarQube Code Quality (2026)"
 description: "A practical guide to integrating Claude Code with SonarQube for automated code quality analysis. Real workflow examples, CLI commands, and CI/CD."
 date: 2026-03-14
 last_modified_at: 2026-04-17

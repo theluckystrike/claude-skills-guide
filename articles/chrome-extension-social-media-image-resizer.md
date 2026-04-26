@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Chrome Extension Social Media Image"
+title: "Chrome Extension Social Media Image (2026)"
 description: "Claude Code extension tip: a practical guide to building and using Chrome extensions for resizing images across social media platforms. Learn..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

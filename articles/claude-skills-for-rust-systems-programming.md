@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Rust Skills: Complete Setup"
+title: "Claude Code Rust Skills: Complete Setup (2026)"
 description: "Activate Rust-specific Claude skills for borrow checker fixes, unsafe audits, FFI bindings, and zero-cost abstractions. 6 ready-to-use skill files."
 date: 2026-03-14
 last_modified_at: 2026-04-21

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Axios HTTP Client Workflow"
+title: "Claude Code Axios HTTP Client Workflow (2026)"
 description: "Claude Code Axios HTTP Client Workflow — practical guide with working examples, tested configurations, and tips for developer workflows."
 date: 2026-03-14
 last_modified_at: 2026-04-17

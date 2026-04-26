@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "How to Use Claude Docker Image Size"
+title: "How to Use Claude Docker Image Size (2026)"
 description: "Reduce Claude docker image size and storage requirements. Multi-stage builds, minimal base images, and optimization techniques that cut size by 80%."
 date: 2026-03-14
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Dual Pane Reader Chrome Extension Guide"
+title: "Dual Pane Reader Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how to build a Chrome extension dual pane reader for comparing content side-by-side. Practical implementation guide with code..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Share Claude Skills Across Monorepo"
+title: "Share Claude Skills Across Monorepo (2026)"
 description: "Share Claude Code skills across monorepo packages without duplication. Directory layouts, symlinks, and inheritance patterns for large TypeScript teams."
 date: 2026-03-14
 last_modified_at: 2026-04-17

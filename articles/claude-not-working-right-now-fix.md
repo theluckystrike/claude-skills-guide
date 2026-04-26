@@ -459,7 +459,7 @@ Only if you are in a region where Anthropic restricts access. VPNs can sometimes
       "name": "Is there a way to check Claude's status programmatically?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Monitor status.anthropic.com or build a simple health check that makes a test API call: bash curl -s -o /dev/null -w \\\"%{httpcode}\\\" \\   -H \\\"x-api-key: $ANTHROPICAPIKEY\\\" \\   -H \\\"content-type: application/json\\\" \\   -d '{\\\"model\\\":\\\"claude-3-5-haiku-20241022\\\",\\\"maxtokens\\\":1,\\\"messages\\\":[{\\\"role\\\":\\\"user\\\",\\\"content\\\":\\\"hi\\\"}]}' \\   https://api.anthropic.com/v1/messages  A 200 response means the API is operational."
+        "text": "Yes. Monitor status.anthropic.com or build a simple health check that makes a test API call: bash curl -s -o /dev/null -w \\\"%{httpcode}\\\" \\   -H \\\"x-api-key: $ANTHROPICAPIKEY\\\" \\   -H \\\"content-type: application/json\\\" \\   -d '{\\\"model\\\":\\\"claude-3-5-haiku-20241022\\\",\\\"maxtokens\\\":1,\\\"messages\\\":..."
       }
     },
     {

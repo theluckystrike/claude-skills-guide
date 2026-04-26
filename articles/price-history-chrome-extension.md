@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Price History Chrome Extension Guide"
+title: "Price History Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how to build a price history Chrome extension from scratch. Complete guide covering data storage, price parsing, historical..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

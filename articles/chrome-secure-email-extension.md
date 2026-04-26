@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Secure Email Chrome Extension Guide"
+title: "Secure Email Chrome Extension Guide (2026)"
 description: "Claude Code guide: explore chrome secure email extensions, how they work, key security features, implementation patterns, and what developers need to..."
 date: 2026-03-15
 last_modified_at: 2026-04-17

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Claude Code Crash Course with GitHub"
+title: "Claude Code Crash Course with GitHub (2026)"
 description: "Complete crash course for using Claude Code with GitHub repos. Clone, branch, commit, PR — all through Claude Code in under 10 minutes."
 date: 2026-04-17
 last_modified_at: 2026-04-17
@@ -264,7 +264,7 @@ Claude Code can execute git commands, which makes safety guardrails important:
       "name": "Does this error affect all operating systems?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This error can occur on macOS, Linux, and Windows (WSL). The exact error message may differ slightly between platforms, but the root cause and fix are the same. macOS users may see additional Gatekeeper or notarization prompts. Linux users should check that the relevant system packages are installed. Windows users should ensure they are running inside WSL2, not native Windows."
+        "text": "This error can occur on macOS, Linux, and Windows (WSL). The exact error message may differ slightly between platforms, but the root cause and fix are the same. macOS users may see additional Gatekeeper or notarization prompts."
       }
     },
     {
@@ -280,7 +280,7 @@ Claude Code can execute git commands, which makes safety guardrails important:
       "name": "Can this error cause data loss?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, this error occurs before or during an operation and does not corrupt existing files. Claude Code's edit operations are atomic — they either complete fully or not at all. However, if the error occurs during a multi-step operation, you may have partial changes that need to be reviewed with `git diff` before continuing."
+        "text": "No, this error occurs before or during an operation and does not corrupt existing files. Claude Code's edit operations are atomic — they either complete fully or not at all. However, if the error occurs during a multi-step operation, you may have partial changes that need to be reviewed with git..."
       }
     },
     {
@@ -288,7 +288,7 @@ Claude Code can execute git commands, which makes safety guardrails important:
       "name": "How do I report this error to Anthropic if the fix does not work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Open an issue at github.com/anthropics/claude-code with: (1) the full error message including stack trace, (2) your Node.js version (`node --version`), (3) your Claude Code version (`claude --version`), (4) your operating system and version, and (5) the command or operation that triggered the error. This fix also applies if you see variations of this error: - Connection or process errors with similar root causes in the same subsystem - Timeout variants where the operation starts but does not complete - Permission variants where access is denied to the same resource - Configuration variants where the same setting is missing or malformed If your specific error message differs slightly from the one shown above, the fix is likely the same. The key indicator is the operation that failed (shown in the stack trace) rather than the exact wording of the message. Add these rules to your project's `CLAUDE.md` to prevent this issue from recurring: ```markdown # Environment Checks Before running commands, verify the required tools are available. Check versions match project requirements before proceeding. If a command fails, read the error message carefully before retrying. Do not retry failed commands without changing something first. ``` Additionally, consider adding a project setup validation script: ```bash #!/bin/bash # validate-env.sh — run before starting Claude Code sessions set -euo pipefail echo \"Checking environment...\" node --version | grep -q \"v2[0-2]\" || echo \"WARN: Node.js 20+ recommended\" command -v git >/dev/null || echo \"ERROR: git not found\" [ -f package.json ] || echo \"ERROR: not in project root\" echo \"Environment check complete.\" ``` - [Conversation History OOM Crash — Fix (2026)](/claude-code-conversation-history-oom-fix-2026/) - [Fix Claude Code Bun Crash (2026)](/claude-code-bun-crash/) - [Claude Code GitHub Discussions](/claude-code-github-discussions-summarizer-workflow/) - [Claude Code + GitHub Models for Cost](/claude-code-with-github-models-for-cost-efficient-pipelines/)"
+        "text": "Open an issue at github.com/anthropics/claude-code with: (1) the full error message including stack trace, (2) your Node.js version (node --version), (3) your Claude Code version (claude --version), (4) your operating system and version, and (5) the command or operation that triggered the error."
       }
     }
   ]

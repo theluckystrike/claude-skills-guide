@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code Netlify Functions Workflow"
+title: "Claude Code Netlify Functions Workflow (2026)"
 description: "Build and deploy Netlify serverless functions with Claude Code for API endpoints, background jobs, and edge functions. Working deployment examples."
 date: 2026-03-15
 last_modified_at: 2026-04-17

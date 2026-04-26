@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Academic Paper Finder Chrome Extension"
+title: "Academic Paper Finder Chrome Extension (2026)"
 description: "Explore chrome extensions for finding academic papers, including implementation patterns for developers building research tools."
 date: 2026-03-15
 last_modified_at: 2026-04-17

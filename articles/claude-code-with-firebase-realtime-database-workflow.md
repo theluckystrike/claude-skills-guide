@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code with Firebase Realtime"
+title: "Claude Code with Firebase Realtime (2026)"
 description: "Learn how to integrate Claude Code with Firebase Realtime Database for smooth real-time data synchronization in your applications."
 date: 2026-03-14
 last_modified_at: 2026-04-17

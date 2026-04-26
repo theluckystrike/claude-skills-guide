@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: "Claude Code for Algolia Search Workflow"
+title: "Claude Code for Algolia Search Workflow (2026)"
 description: "Learn how to integrate Claude Code with Algolia for intelligent search experiences. This guide covers setup, indexing, and querying workflows with."
 date: 2026-04-19
 last_modified_at: 2026-04-19
