@@ -142,6 +142,10 @@ Most developers report a noticeable difference within the first session. The imp
 - Check the [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for workflow optimization
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional behavioral plugins
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

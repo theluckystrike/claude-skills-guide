@@ -246,6 +246,10 @@ Related Reading
 - [Claude Code for Streaming LLM Response Workflow](/claude-code-for-streaming-llm-response-workflow/)
 - [AI Assisted Architecture Design Workflow Guide](/ai-assisted-architecture-design-workflow-guide/)
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

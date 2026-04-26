@@ -70,6 +70,10 @@ Claude Code should create a `justfile` with `default` recipe running `just --lis
 
 {% raw %}3. **Variable scoping confusion.** Claude defines variables with `VAR := "value"` expecting them to be available as shell environment variables in recipes. Just variables are interpolated into recipes with `{{VAR}}` but are not automatically exported as environment variables. Use `export VAR := "value"` to make them available to subprocesses.{% endraw %}
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -94,6 +94,10 @@ If your work is primarily data science in Jupyter notebooks, none of these codin
 
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -175,6 +175,10 @@ The skill's code blocks are large, which pushes it toward the 500-line SKILL.md 
 - [ ] Paths narrowed to avoid false activation on config files
 - [ ] Large language sections moved to `references/` if SKILL.md exceeds 300 lines
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

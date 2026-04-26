@@ -91,6 +91,10 @@ Standardize on Warp as the team terminal for its collaboration features and cons
 ### Enterprise (50+)
 Deploy Warp Business for the terminal standardization, shared sessions, and admin controls. Add Claude Code Teams seats selectively for senior engineers and platform teams. The two tools serve different layers of the stack and both justify their cost at enterprise scale.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

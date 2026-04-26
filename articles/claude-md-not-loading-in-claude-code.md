@@ -158,6 +158,10 @@ In some cases, multiple causes compound. For example, you might have a correctly
 
 For the complete CLAUDE.md loading specification, see the [CLAUDE.md complete guide](/claude-md-file-complete-guide-what-it-does/). For resolving conflicts between loaded files, see the [conflicting instructions fix guide](/claude-md-conflicting-instructions-fix/). For optimizing file size, see the [length optimization guide](/claude-md-length-optimization/).
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -170,6 +170,10 @@ Verify the 50% discount is applying correctly:
 - **Error rate**: Track errored/total ratio. If above 1%, investigate request formatting issues.
 - Compare monthly API spend before and after batch migration using Anthropic billing exports
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

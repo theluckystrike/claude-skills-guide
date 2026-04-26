@@ -201,6 +201,10 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Frequently Asked Questions
 
 ### What is Understanding the Cost Efficiency Proposition?

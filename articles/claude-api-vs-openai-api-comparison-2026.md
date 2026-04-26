@@ -87,6 +87,10 @@ The pricing is competitive between the two providers. Claude's caching advantage
 
 **Enterprise (100+ devs):** Maintain integrations with both. Use Claude for workloads that benefit from prompt caching and superior instruction following (customer support, code generation, structured data extraction). Use OpenAI for workloads that benefit from fine-tuning and Assistants (domain-specific chatbots, knowledge bases with file search). Multi-provider strategy also reduces vendor lock-in risk.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

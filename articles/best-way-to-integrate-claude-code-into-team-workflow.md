@@ -192,3 +192,5 @@ Related guides: [Best Way to Onboard New Developers Using Claude Code](/best-way
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+

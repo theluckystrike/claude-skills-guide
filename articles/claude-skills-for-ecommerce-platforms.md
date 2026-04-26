@@ -149,6 +149,10 @@ Amazon SP-API (if you also sell on Amazon) uses ASIN (10-character alphanumeric 
 - [ ] Checkout re-checks inventory at order submission (not just cart add)
 - [ ] Price stored as integer cents throughout the backend
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -67,6 +67,10 @@ Claude Code should edit `src/components/ui/button.tsx` directly, adding an `icon
 
 3. **CSS variable theme mismatches.** Claude adds colors with Tailwind values like `bg-blue-500` instead of using the CSS variable theme: `bg-primary`. shadcn's theming system uses CSS variables defined in `globals.css` so the entire app theme can change by swapping variable values.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

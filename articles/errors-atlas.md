@@ -220,3 +220,7 @@ Related Reading
 - [Error Handling Reference](/error-handling/). Complete error diagnosis and resolution guide
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+

@@ -196,6 +196,10 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 </div>
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Issues
 
 - [Fix: Claude Code PreToolUse Hooks Bypassed](/claude-code-pretooluse-hooks-bypassed/)

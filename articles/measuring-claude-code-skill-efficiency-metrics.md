@@ -147,3 +147,5 @@ Related Reading
 - [Advanced Claude Skills](/advanced-hub/). Advanced optimization patterns for engineers who take skill efficiency measurement seriously.
 
 
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+

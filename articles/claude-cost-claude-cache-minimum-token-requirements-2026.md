@@ -150,6 +150,10 @@ After resolving threshold issues:
 - **Cost comparison**: If you padded your prompt, compare the slight increase in per-token cost against the 90% cache read savings
 - Run a weekly audit to catch any prompt updates that push content below the minimum threshold
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -319,6 +319,10 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 </div>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Skills and Tools
 
 Several Claude skills can assist with markdown and documentation workflows. The docx skill helps generate Word documents from markdown sources. For PDF generation, the pdf skill provides conversion capabilities. When building documentation sites, frontend-design skills assist with layout and styling. The tdd skill can help write tests verifying your markdown renders correctly across different outputs.

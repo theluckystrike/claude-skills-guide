@@ -134,6 +134,10 @@ Skills outperform CLAUDE.md rules for task-specific optimization because they lo
 
 **Token savings not materializing** -- Measure before and after with `/cost`. If savings are under 20%, the skill may be too broad. Narrow the skill scope to specific, repeatable tasks rather than general guidance.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

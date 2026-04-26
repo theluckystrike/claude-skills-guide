@@ -228,6 +228,10 @@ The migration is straightforward because Claude Code's behavior is identical reg
 
 Pricing last verified: April 2026. OpenRouter pricing changes frequently -- verify at openrouter.ai/pricing.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

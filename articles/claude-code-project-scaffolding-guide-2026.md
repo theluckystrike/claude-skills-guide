@@ -212,6 +212,10 @@ Review the generated code before committing. Check that configs are correct, dep
 
 For more on structuring Claude Code workflows, see [The Claude Code Playbook](/playbook/). For slash command creation, read the [skills vs hooks vs commands guide](/claude-code-skills-vs-hooks-vs-commands-2026/). For team-standard scaffolding, see the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -198,3 +198,7 @@ The US market is not dead for technical content. But treating it as the default 
 ---
 
 *Data source: Google Search Console, claudecodeguides.com, 28-day period ending April 2026. 185 countries, 52,216 total impressions, 496 total clicks.*
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

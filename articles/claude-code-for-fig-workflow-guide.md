@@ -67,6 +67,10 @@ Claude Code should create a TypeScript file at `.fig/autocomplete/src/deploy.ts`
 
 3. **Spec not loading for custom CLIs.** Claude creates a Fig spec but it does not appear in suggestions. Custom specs need to be in the correct directory and the CLI must be in PATH. Run `fig settings autocomplete.developerMode true` during development to reload specs on change.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -168,6 +168,10 @@ Removing tool definitions when tools might be needed causes failures. Only prune
 
 Compare average tokens per request before and after optimization. Track four metrics: average input tokens per request (target: 40-60% reduction), average output tokens per request (target: 20-40% reduction), total monthly token consumption, and quality score on a held-out test set (target: less than 3% degradation). Use the Anthropic usage dashboard to verify token counts are dropping as expected.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

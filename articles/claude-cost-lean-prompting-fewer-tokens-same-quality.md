@@ -198,6 +198,10 @@ Teams with multiple prompt authors need a shared lean prompting style guide. Wit
 
 Track average prompt token count per request type over time. Plot a weekly trend line — it should decrease as you apply lean principles. Pair this with a quality score (1-5 rating on a random sample of 20 outputs per week). The goal is a decreasing token trend with a flat quality trend. If quality dips on any request type, inspect those specific prompts for over-compression.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

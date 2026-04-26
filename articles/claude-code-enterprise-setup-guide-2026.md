@@ -217,6 +217,10 @@ For each new team member:
 - [ ] Install ccusage for self-monitoring
 - [ ] Complete the team's Claude Code security quiz (adapt from [claude-code-ultimate-guide](https://github.com/FlorianBruniaux/claude-code-ultimate-guide) 271 questions)
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

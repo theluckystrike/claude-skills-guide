@@ -188,6 +188,10 @@ Per-request tracking adds a small computational overhead to every API call (micr
 
 After one week of per-request tracking, generate a Pareto analysis. Typically, 10-20% of request types generate 60-80% of costs. These are your optimization targets. A common finding: long-running agentic sessions with growing context windows produce requests costing $0.50-$2.00 each, while 90% of requests cost under $0.05. Optimizing just the top 10% of requests (context windowing, model routing, caching) typically cuts total spend by 25-40%.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

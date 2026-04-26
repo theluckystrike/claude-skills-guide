@@ -214,6 +214,10 @@ The `allowed-tools` field accepts glob patterns (`Bash(git *)`) that CI cannot v
 - [ ] Bundled scripts validated with syntax checkers
 - [ ] CODEOWNERS requires review for `.claude/skills/` changes
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

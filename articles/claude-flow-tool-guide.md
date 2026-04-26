@@ -329,6 +329,10 @@ Yes. Install Claude Flow and Claude Code on the CI server, set the ANTHROPIC_API
 
 Check the individual agent log output for the failing step. Run the step's prompt manually with Claude Code to reproduce the issue. Set fail_fast to false to see if subsequent steps succeed independently.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

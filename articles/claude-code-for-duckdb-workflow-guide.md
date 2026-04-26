@@ -68,6 +68,10 @@ Claude Code should query the CSV directly with `read_csv()`, use `date_trunc('ho
 
 3. **Concurrent write conflicts.** Claude opens the same DuckDB file from multiple processes. DuckDB supports concurrent reads but only one writer. Use `access_mode='read_only'` for reader processes and a single writer process.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

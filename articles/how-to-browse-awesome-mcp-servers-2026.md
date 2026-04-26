@@ -157,3 +157,7 @@ Before installing any server from the directory, check these signals:
 - Set up [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) that work alongside your MCP servers
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+

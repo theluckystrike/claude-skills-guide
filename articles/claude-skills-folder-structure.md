@@ -122,6 +122,10 @@ After compaction, each skill gets at most 5,000 tokens re-attached, with a combi
 - [ ] Total SKILL.md body under 500 lines; detailed content in references/
 - [ ] Scripts have execute permissions and are listed in `allowed-tools`
 
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+
 ## Related Guides
 
 **Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).

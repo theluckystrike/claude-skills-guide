@@ -231,6 +231,10 @@ If your directory path contains spaces, the path must be a single argument, not 
 "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/me/My Projects"]  // CORRECT
 ```
 
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+
 ## Related Guides
 
 - [MCP Server Setup Complete Guide](/mcp-server-setup-complete-guide-2026/) — Full installation walkthrough

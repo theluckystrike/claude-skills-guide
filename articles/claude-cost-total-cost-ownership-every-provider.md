@@ -120,6 +120,10 @@ Claude with optimization matches Gemini's raw-price TCO at $49,400 vs $49,700. T
 - Compare Year 1 actual TCO to your original estimate after 12 months of data
 - Review provider allocation and optimization utilization annually against TCO data
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

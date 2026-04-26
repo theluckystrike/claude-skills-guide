@@ -177,6 +177,10 @@ Being too stingy with context hurts code quality. If Claude can't see enough of 
 
 The most visible metric on subscription plans is rate limit frequency. Track how often you see throttling messages per day. Before fixes: 3-5 per day on Pro. After fixes: 0-1 per day on Pro. If you're on API, track daily spend directly. The average developer should drop from $6/day to $2-3/day. If you're still hitting limits after all 7 fixes, the Max 5x plan at $100/month provides 5x Pro throughput, which combined with these optimizations gives you effectively 12.5x Pro usage per dollar.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

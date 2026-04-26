@@ -136,6 +136,10 @@ Compare your input token costs for the week before and after enabling caching:
 
 Calculate your effective per-token rate as a sanity check: divide your total daily input spend by total input tokens processed. With healthy caching on Opus 4.7, this number should be well below $1.00/MTok (closer to $0.50-$0.70/MTok depending on cache hit rate). If it is above $3.00/MTok, your caching is not activating properly -- investigate minimum token thresholds and prefix consistency.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

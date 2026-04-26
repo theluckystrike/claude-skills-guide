@@ -141,6 +141,10 @@ Compare your weekly totals before and after implementing these strategies. A 3x 
 
 For a team of five engineers, multiply the solo figures by 5 for a monthly savings range of $600-$1,800.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -152,6 +152,10 @@ The `claudeMdExcludes` setting can skip specific CLAUDE.md files, but it does no
 - [ ] `paths` field set to limit activation scope
 - [ ] Skill tested by at least two team members before merging
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

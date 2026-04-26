@@ -110,6 +110,10 @@ Yes, but with a different workflow. You describe the application incrementally: 
 
 Bolt.new for speed. If you need a clickable demo in 30 minutes for a client meeting, Bolt.new delivers. For demos that need to show actual working business logic or handle edge cases gracefully, build with Claude Code — the quality difference matters when clients test beyond the happy path.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Comparisons
 
 - [Claude Code vs Replit Agent: Which Is Better 2026](/claude-code-vs-replit-agent-which-is-better-2026/)

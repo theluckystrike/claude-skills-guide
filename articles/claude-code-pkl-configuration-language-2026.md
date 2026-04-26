@@ -317,6 +317,10 @@ First check that your CLAUDE.md accurately describes your project conventions. I
 5. **Keep sessions focused.** Give Claude Code one clear task per prompt. Multi-step requests like "refactor auth, add tests, and update docs" produce better results when broken into three separate prompts, each building on the previous result.
 
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

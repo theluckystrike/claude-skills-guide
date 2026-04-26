@@ -167,6 +167,10 @@ Track the migration's financial impact:
 - **Per-request cost by mode**: Should show exactly 2x difference between real-time and batch for the same model
 - Set up a weekly cost report breaking down spend by real-time vs batch to prevent regression
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

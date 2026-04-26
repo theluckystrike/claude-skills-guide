@@ -209,6 +209,10 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 ---
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

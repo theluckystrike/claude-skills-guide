@@ -135,7 +135,7 @@ We ran two major optimization campaigns:
 
 **Sprint 11:** Added 10 new niche articles targeting underserved topics and rewrote 244 article titles specifically targeting US search patterns, attempting to close the US CTR gap (covered in detail in our [US CTR gap analysis](/claude-code-us-ctr-gap-analysis-2026/)).
 
-The challenge with measuring optimization impact is attribution. GSC data does not cleanly separate pre- and post-optimization performance for individual pages. What we can say is that title optimization is high-leverage work: changing a title takes seconds, affects every impression the page receives, and compounds over time. If a title change moves a page from 0.5% CTR to 1.5% CTR, that 1 percentage point gain applies to every future impression.
+The challenge with measuring optimization impact is attribution. GSC data does not cleanly separate pre- and post-optimization performance for individual pages. What we can say is that title optimization is high-use work: changing a title takes seconds, affects every impression the page receives, and compounds over time. If a title change moves a page from 0.5% CTR to 1.5% CTR, that 1 percentage point gain applies to every future impression.
 
 Based on the data patterns, title optimization likely has the highest ROI of any SEO activity for an AI content site. It is faster than creating new content, affects existing rankings, and scales across the entire catalog.
 
@@ -214,4 +214,7 @@ If you are building an AI content site, the lesson is not "AI content does not w
 ---
 
 *Data source: Google Search Console, claudecodeguides.com, 28-day period ending April 2026. 2,675 total articles, 1,000 pages tracked in GSC, 498 total clicks, 50,224 total impressions across 185 countries.*
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

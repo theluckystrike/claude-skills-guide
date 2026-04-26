@@ -230,6 +230,10 @@ The <a href="/generator/">CLAUDE.md Generator</a> creates a model selection guid
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [Model Selector](/model-selector/) -- Get instant model recommendations for any task

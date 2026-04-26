@@ -751,6 +751,10 @@ Check the [best Claude Code hooks collection](/best-claude-code-hooks-code-quali
 }
 </script>
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

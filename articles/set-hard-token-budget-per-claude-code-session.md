@@ -198,6 +198,10 @@ Step 4: Record the overspend for pattern analysis
 - Use --max-turns flag: `claude --max-turns 25`
 ```
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

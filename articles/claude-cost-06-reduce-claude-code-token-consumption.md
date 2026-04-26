@@ -204,6 +204,10 @@ Aggressive optimization can slow you down if it requires constant mental overhea
 
 Measure your before/after token consumption by tracking session length and interaction count. On subscription plans, the impact shows as fewer rate limit encounters and more completed tasks per day. On API usage, calculate daily spend directly. The average developer on Claude Code spends $6/day at API rates (90% spend under $12/day). After applying these five techniques, target $2.40-$3.60/day. Track weekly averages rather than daily to smooth out variation from different task complexities.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -188,6 +188,10 @@ Track these metrics after implementing routing:
 
 **Ignoring context size.** A task that sounds simple ("add error handling") may require reading 50 files of context, which benefits from Opus's superior context processing. Factor in context size, not just task description.
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 - [Which Claude Model Should I Use?](/which-claude-model-should-i-use-2026/) — Decision tree for manual selection

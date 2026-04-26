@@ -70,3 +70,7 @@ All data comes from Google Search Console, covering the 28-day rolling window en
 These reports are a byproduct of building [claudecodeguides.com](https://claudecodeguides.com), a resource site for developers working with Claude Code. The site now contains 2,675+ articles and serves developers in 185 countries.
 
 The tools and workflows behind this site are powered by [Zovo](https://zovo.one), our AI-native productivity platform. If you want to build content operations at this scale, [get Zovo Lifetime access](https://zovo.one) while it is still available.
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

@@ -118,6 +118,10 @@ Cursor. Its VS Code-based interface is familiar to most developers, and inline a
 
 If your engineering organization primarily writes mobile applications in Swift (iOS) or Kotlin (Android) using Xcode and Android Studio respectively, neither Claude Code nor Cursor is the optimal primary tool. Both are strongest in the VS Code / terminal ecosystem. Xcode users should evaluate GitHub Copilot's Xcode integration or Apple's own AI coding features. Android Studio users should evaluate the built-in Gemini integration or JetBrains AI Assistant. Claude Code can still be useful as a secondary tool for backend work and scripting, but neither Claude Code nor Cursor should be the sole AI tool for native mobile development teams.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

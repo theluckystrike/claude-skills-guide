@@ -265,6 +265,10 @@ Cost control with token limits:
 
 Automated Claude Code in CI catches issues within minutes of pushing code, before human reviewers spend time. Teams report 40% fewer review rounds after adding automated pre-review.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

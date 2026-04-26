@@ -120,6 +120,10 @@ Use this decision tree to select the cheapest model for any workload:
 - Optimization utilization rate: what percentage of eligible calls use caching or batching
 - Quarterly re-evaluation as model pricing changes and new options appear
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

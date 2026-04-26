@@ -125,6 +125,10 @@ Used for e-commerce product pages. The `offers` block has several required field
 
 The `availability` and `itemCondition` fields must be full schema.org URLs, not shorthand strings like `"InStock"`. Validators catch this immediately; search consoles often don't surface it until weeks later.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## FAQ Schema
 
 One of the highest-impact schema types for organic search because it enables FAQ dropdowns directly in search results:

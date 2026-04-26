@@ -110,6 +110,10 @@ Related reading:
 - [Claude Code for Beginners: Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/)
 - [Claude Code Subscription: Is It Worth It?](/claude-code-subscription-worth-it-honest-review/)
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

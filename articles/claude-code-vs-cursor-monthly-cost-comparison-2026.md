@@ -247,6 +247,10 @@ Consider staying with Cursor when:
 
 The switching cost (1-2 days of workflow adjustment, 4-8 hours of CLAUDE.md setup) pays back within the first month for heavy users but may not justify itself for light users who stay within Cursor's quota comfortably.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

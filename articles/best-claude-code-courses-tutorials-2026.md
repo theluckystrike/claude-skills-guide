@@ -95,7 +95,7 @@ Search YouTube for "Claude Code tutorial 2026" and prioritize:
 
 **CLAUDE.md Mastery**
 
-The single highest-leverage skill is writing effective CLAUDE.md files:
+The single highest-use skill is writing effective CLAUDE.md files:
 
 ```markdown
 # Practice: write a CLAUDE.md for your current project
@@ -224,6 +224,10 @@ Avoid courses that:
 ## Why This Matters
 
 The right learning path saves 20-40 hours of trial-and-error. Developers who invest in structured Claude Code learning ship features 3x faster within two weeks compared to unguided exploration.
+
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
 
 ## Related Guides
 

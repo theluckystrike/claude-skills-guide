@@ -82,6 +82,10 @@ Source: [anthropic.com/pricing](https://anthropic.com/pricing), [cline.bot/prici
 Claude Code and Cline represent two valid philosophies about AI agent autonomy. Claude Code bets that experienced developers benefit from speed and trust — it moves fast, asks only when necessary, and lets you verify via git diff. Cline bets that prevention is better than correction — it shows every planned action and waits for approval. Both are mature, capable agents in 2026. The choice comes down to your trust level, risk tolerance, and whether you value speed (Claude Code) or granular control (Cline). For most experienced developers doing trusted work, Claude Code's velocity advantage wins. For high-risk environments or learning scenarios, Cline's approval gates provide warranted safety.
 
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

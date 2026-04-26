@@ -105,6 +105,10 @@ For solo [Claude Code workflows](/karpathy-skills-vs-claude-code-best-practices-
 
 Use Task Master as your planning accelerator, not your project management system. Let it parse PRDs and generate the initial task list, then move execution to whichever tracker your team uses. If you are solo, Task Master plus Claude Code's MCP integration might genuinely replace a separate tracker for short projects. For anything longer than a sprint or involving more than one person, use a real project management tool and keep Task Master in the planning phase. Explore the [Claude Code playbook](/playbook/) for more workflow patterns.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

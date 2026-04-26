@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Why Does Anthropic Limit Claude Code (2026)"
-description: "A technical deep-dive into Claude Code's context window limitations, the engineering trade-offs, and practical strategies for developers working with."
+description: "A technical deep-get startedto Claude Code's context window limitations, the engineering trade-offs, and practical strategies for developers working with."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -137,6 +137,10 @@ Related Reading
 - [Advanced Claude Skills Hub](/advanced-hub/). Token optimization and context strategies for power users
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
 
 ## See Also
 

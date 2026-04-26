@@ -252,6 +252,10 @@ When using `context: fork` with scripts, the subagent has its own tool permissio
 - [ ] Execute permissions set on all scripts before git commit
 - [ ] Output is bounded (truncated or written to file)
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

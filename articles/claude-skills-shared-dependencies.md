@@ -117,6 +117,10 @@ When multiple skills reference the same large reference file (e.g., a 5,000-word
 - [ ] Cross-platform compatibility documented (symlinks vs explicit paths)
 - [ ] Shared resource changes tested across all dependent skills
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

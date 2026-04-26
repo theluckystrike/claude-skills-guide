@@ -333,6 +333,10 @@ Continue editing with Claude Code:
 
 Researchers spend 30-40% of paper-writing time on LaTeX formatting. Claude Code handles the boilerplate, equation typesetting, and table formatting so you can focus on the content and analysis.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

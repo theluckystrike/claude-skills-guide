@@ -65,6 +65,10 @@ Claude Code should install `oxlint`, create `.oxlintrc.json` with the two catego
 
 3. **Missing TypeScript type-aware rules.** Claude expects Oxlint to run type-aware rules like `@typescript-eslint/no-floating-promises`. Oxlint does not perform type checking — it lints syntactically only. Type-aware rules must stay in ESLint with the TypeScript parser.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

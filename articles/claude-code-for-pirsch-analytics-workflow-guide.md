@@ -68,6 +68,10 @@ Claude Code should add the Pirsch script to the root layout with `data-code` att
 
 3. **Exposing API token in client code.** Claude puts the Pirsch API access token in frontend JavaScript. The client script uses `data-code` (safe to expose), but the server-side API uses an access token that must stay server-side — never expose API tokens in client bundles.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

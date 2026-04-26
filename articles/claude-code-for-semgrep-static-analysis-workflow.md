@@ -270,3 +270,5 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

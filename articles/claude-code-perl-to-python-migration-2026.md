@@ -318,6 +318,10 @@ diff <(jq -S . /tmp/perl-out.json) <(jq -S . /tmp/python-out.json)
 
 Perl codebases are increasingly difficult to maintain and hire for. Automated migration with Claude Code converts a 6-month manual rewrite into a 2-week project with generated tests proving behavioral equivalence.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

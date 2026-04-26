@@ -431,6 +431,10 @@ Notification not firing even when price drops: `chrome.notifications` requires t
 
 ---
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Frequently Asked Questions
 
 ### What is Understanding Amazon's Page Structure?

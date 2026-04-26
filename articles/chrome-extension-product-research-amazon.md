@@ -403,5 +403,5 @@ Reviews paginated across multiple pages: The extension can only read reviews on 
 AI analysis of reviews hitting token limits: Amazon review sections can contain hundreds of reviews. Sample a random subset of 15-20 reviews that represent the rating distribution (5 five-star, 5 three-star, 5 one-star) rather than sending all reviews.
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

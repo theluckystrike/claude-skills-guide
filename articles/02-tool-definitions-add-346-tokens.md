@@ -137,6 +137,10 @@ When combining tool overhead reduction with batch processing, the savings stack.
 
 Track two metrics: average input tokens per request on the tool path vs. the non-tool path, and the percentage of requests routed to each. Multiply the delta by your model's input price. If you route 40% of 50,000 daily requests away from tools, saving 1,246 tokens each at Sonnet 4.6 rates ($3.00/MTok), that's 20,000 x 1,246 x $3.00/MTok = $74.76 per day, or $2,243 per month.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

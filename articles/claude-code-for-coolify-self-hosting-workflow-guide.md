@@ -67,6 +67,10 @@ Claude Code should create a multi-stage `Dockerfile` optimized for Next.js stand
 
 3. **Large Docker images wasting server resources.** Claude creates single-stage Docker builds that include dev dependencies and build tools. Coolify runs on your own server with limited resources — use multi-stage builds to keep production images small.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

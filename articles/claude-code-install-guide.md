@@ -211,6 +211,10 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 </div>
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Issues
 
 - [Fix Claude Code Login — Cannot Paste Auth Code](/claude-code-login-paste-fix) — Login issues after installation

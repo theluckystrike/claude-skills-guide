@@ -199,6 +199,10 @@ The restricted session should show 40-70% fewer tokens for the same task output 
 
 Assumes Sonnet 4.6 rates, 20 working days, 5 sessions/day. The `--allowedTools` flag is most effective when combined with `--max-turns` -- together they provide both scope restriction and duration restriction for comprehensive cost control.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -93,6 +93,10 @@ Switching from Aider to Claude Code:
 4. **Leverage shell execution** — Where you ran tests manually after Aider edits, now include "and run tests" in your prompt. Claude Code handles the full loop.
 5. **Build skills for repeated tasks** — Identify your 3 most common Aider prompts and convert them into Claude Code skills. This is the long-term productivity multiplier.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Comparisons
 
 - [Claude Code vs OpenAI Codex CLI 2026](/claude-code-vs-openai-codex-cli-comparison-2026/)

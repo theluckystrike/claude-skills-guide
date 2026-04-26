@@ -148,6 +148,10 @@ No, this error occurs before or during an operation and does not corrupt existin
 Open an issue at github.com/anthropics/claude-code with: (1) the full error message including stack trace, (2) your Node.js version (`node --version`), (3) your Claude Code version (`claude --version`), (4) your operating system and version, and (5) the command or operation that triggered the error.
 
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

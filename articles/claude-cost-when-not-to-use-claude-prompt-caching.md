@@ -130,6 +130,10 @@ If you suspect caching is costing you money:
 - **Per-endpoint analysis**: Some endpoints may benefit from caching while others do not. Break down cache metrics by endpoint to selectively disable.
 - Check your Anthropic dashboard for total cache_creation vs cache_read token volumes
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

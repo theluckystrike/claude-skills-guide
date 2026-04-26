@@ -366,6 +366,10 @@ Getting Started Tutorials:
 
 ---
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Hubs
 
 - [Getting Started Hub](/getting-started-hub/). Install Claude Code and run your first skill

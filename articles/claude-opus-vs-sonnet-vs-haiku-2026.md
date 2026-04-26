@@ -114,6 +114,10 @@ Benchmarks test generic tasks. Your specific workload may differ:
 
 **Caching.** Anthropic's prompt caching reduces costs for repeated context. If your workflow sends similar prompts, the effective cost differences narrow.
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 - [Which Claude Model Should I Use?](/which-claude-model-should-i-use-2026/) — Decision tree by task type

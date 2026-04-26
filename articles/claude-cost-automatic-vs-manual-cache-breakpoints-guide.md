@@ -162,6 +162,10 @@ Measure breakpoint effectiveness with per-breakpoint metrics:
 - **Write frequency by breakpoint**: System prompt breakpoint should write once per deployment. Document breakpoint should write once per document. Conversation breakpoint writes once per session.
 - Weekly review: remove breakpoints with hit rates below 80%.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

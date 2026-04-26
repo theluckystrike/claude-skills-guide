@@ -278,6 +278,10 @@ confluence-push "$SERVICE Runbook" "/tmp/runbook-${SERVICE}.md"
 
 Documentation rot kills developer productivity. Automated sync between code and Confluence ensures documentation is always current, eliminating the most common complaint about enterprise wikis: "the docs are outdated."
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

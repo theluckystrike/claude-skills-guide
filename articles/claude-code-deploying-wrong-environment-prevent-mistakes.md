@@ -260,6 +260,10 @@ This hook catches accidental pushes to main/master that would trigger production
 
 The token cost of this prevention: zero (hooks run as external processes). The token cost of an accidental production deployment without prevention: 10,000-50,000 tokens for rollback and recovery, plus immeasurable business impact.
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

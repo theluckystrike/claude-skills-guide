@@ -251,6 +251,10 @@ Zed's intelligent code completion goes beyond traditional autocomplete by analyz
 
 Zed's AI-driven bug detection identifies potential issues before runtime by analyzing code patterns. For example, it catches async functions without error handling for network failures, suggesting proper try/catch blocks with response.raise_for_status(), typed return values (Optional[UserData]), specific exception handling (aiohttp.ClientError), and structured error logging. It also spots unhandled promises, SQL injection vulnerabilities, memory leaks in async contexts, and type inconsistencies.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

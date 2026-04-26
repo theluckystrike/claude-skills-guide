@@ -147,3 +147,7 @@ Honest cost comparisons between Claude, GPT-4o, Gemini, and open source. Where e
 - [Total Cost of Ownership: Claude vs OpenAI vs Gemini](/claude-cost-total-cost-ownership-every-provider/) -- Full TCO analysis including hidden costs
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+

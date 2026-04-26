@@ -206,6 +206,10 @@ Skills that duplicate CLAUDE.md information or duplicate each other waste tokens
 
 The iteration cycle is where progressive disclosure transforms from a static pattern to a dynamic optimization process. Each week's data reveals whether the tier boundaries are correctly placed. The most common finding during iteration is that Tier 1 skills need consolidation -- teams often start with too many granular skills and merge them into 3-5 broader domain skills after the first review cycle.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Further Reading
 
 - [Claude Code Skills Guide](/skills/) -- creating and managing skills

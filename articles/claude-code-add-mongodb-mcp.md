@@ -133,7 +133,7 @@ MongoDB connections time out after a period of inactivity. Restart Claude Code t
 
 1. **Use a read-only database user for MCP** -- Create a dedicated MongoDB user with `readAnyDatabase` role. This prevents accidental data mutations while still giving Claude Code full schema visibility.
 
-2. **Document your indexes in CLAUDE.md** -- Claude Code cannot always detect indexes through MCP. Listing them explicitly helps it generate queries that leverage indexed fields.
+2. **Document your indexes in CLAUDE.md** -- Claude Code cannot always detect indexes through MCP. Listing them explicitly helps it generate queries that use indexed fields.
 
 3. **Keep connection strings out of git** -- Add `.claude/` to `.gitignore`. For team setups, document the MCP config structure in your README but use environment-specific credentials.
 
@@ -164,3 +164,7 @@ Related Reading
 - [AI-Assisted Database Schema Design Workflow](/ai-assisted-database-schema-design-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+

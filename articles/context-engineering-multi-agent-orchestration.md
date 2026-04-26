@@ -158,6 +158,10 @@ Multi-agent context engineering targets all three cost multipliers simultaneousl
 
 Multi-agent orchestration is where context engineering failures are most expensive because they multiply across agents. The CCG framework treats multi-agent context as a budget allocation problem: the parent agent is the "budget controller" that determines what context each subagent receives and how much result space each subagent is allowed. Teams that implement this framework report 40-60% cost reductions on multi-agent workflows.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Further Reading
 
 - [Claude Code Subagent Token Usage: How to Control Costs](/claude-code-subagent-token-usage-control-costs/) -- subagent-specific cost controls

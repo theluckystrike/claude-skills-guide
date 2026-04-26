@@ -124,6 +124,10 @@ GPTs have a 128K context window but load all instructions and knowledge file con
 - [ ] Workflow needs public sharing → Custom GPTs
 - [ ] Vendor lock-in acceptable → evaluate both; prefer skills for portability
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -142,6 +142,10 @@ Large loop (20+ iterations): ~150K tokens = $2.25-$11.25
 - NEVER make the same edit twice -- if an edit did not fix the issue, it will not fix it on retry
 ```
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -64,6 +64,10 @@ For a solo developer doing 4-6 hours of AI-assisted coding daily, Claude Code on
 
 **Enterprise (100+ devs):** Cursor offers SOC 2 compliance and privacy mode. Claude Code can be configured to use Anthropic's enterprise API tier with data retention controls, but the setup requires more infrastructure work. Enterprises already invested in VS Code standardization will find Cursor an easier sell to procurement.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

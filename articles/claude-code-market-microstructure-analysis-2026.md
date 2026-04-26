@@ -272,6 +272,10 @@ print('LOB reconstruction: PASS')
 - **Odd lot handling in NBBO:** Sub-round-lot orders do not update the NBBO under Reg NMS. Including them in midpoint calculations introduces errors. Claude Code filters by round lot status when computing the prevailing quote.
 - **Crossed book during halts:** Market messages during LULD halts produce temporarily crossed books (best bid > best ask). Claude Code detects crossed states and marks snapshots as invalid rather than computing nonsensical spreads.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

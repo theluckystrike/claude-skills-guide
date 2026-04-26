@@ -90,6 +90,10 @@ The best approach is to evaluate tools against your specific use cases. A team f
 The AI pair programming tool market has reached a point of meaningful differentiation. Rather than competing on basic code generation capability, where most tools perform adequately, the differentiators now center on workflow integration, extensibility, and specialized task handling. This maturation benefits developers, as tools have evolved from novelty assistants into genuine productivity partners capable of handling substantial portions of the development process.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

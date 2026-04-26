@@ -104,6 +104,10 @@ Both are suitable for junior developer workloads since the tasks are typically s
 
 For tasks where correctness is critical and reasoning is required — security-sensitive code, financial calculations, concurrency logic — neither budget model is appropriate. Their cost savings disappear when you factor in developer time reviewing and fixing subtle bugs. Spend the extra $0.50-1.00 per task to use Sonnet 4.6 or GPT-4o and get it right the first time. For latency-critical autocomplete where even these budget models feel too slow, consider local models like DeepSeek Coder running on-device through Ollama, which eliminates network round-trips entirely at the cost of reduced accuracy. For a deeper dive, see [Claude Sonnet 4.6 vs Codestral: Code Generation Face-Off](/claude-sonnet-vs-codestral-comparison/).
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

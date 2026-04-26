@@ -68,6 +68,10 @@ Claude Code should create `.devcontainer/devcontainer.json` with the Node.js fea
 
 3. **Forgetting to persist data.** Claude stores data in the container filesystem. When a Codespace is rebuilt, non-persisted data is lost. Use named volumes in docker-compose or the `/workspaces` directory which persists across rebuilds.
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Guides
 
 - [Claude Code for Devcontainers Workflow Guide](/claude-code-for-devcontainers-workflow-guide/)

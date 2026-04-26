@@ -69,6 +69,10 @@ Claude Code should initialize the Groq client with the API key, create an endpoi
 
 3. **Model availability assumptions.** Claude hardcodes a specific model version. Groq regularly updates its model catalog — models can be deprecated or replaced. Use a config variable for the model name and handle model-not-found errors gracefully.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

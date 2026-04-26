@@ -97,6 +97,10 @@ If upgrading from a single tool to a combination:
 3. **From Claude Code only → adding an IDE tool:** Add Cursor or Copilot for the autocomplete that Claude Code lacks. The typing-flow improvement is immediate and significant for daily coding.
 4. **Consolidating from three to two:** If budget requires, Cursor Pro + Claude Code Max covers the widest range at $220/month. Cursor provides Copilot-equivalent autocomplete plus its own agent, while Claude Code handles system-level agent work.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Comparisons
 
 - [Claude Code vs Cursor 2026: Detailed Comparison](/claude-code-vs-cursor-2026-detailed-comparison/)

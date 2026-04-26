@@ -224,6 +224,10 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 </div>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

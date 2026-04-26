@@ -85,6 +85,10 @@ Add rules to your CLAUDE.md: `Do not create commits automatically. Do not run gi
 Claude's context window is 200,000 tokens. This includes system prompts, conversation history, file contents read during the session, and tool results. When the total exceeds this limit, Claude Code must compress or drop earlier context.
 
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

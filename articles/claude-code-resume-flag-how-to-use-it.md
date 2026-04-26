@@ -315,6 +315,10 @@ The `--resume` flag is an essential tool for developers working on complex, mult
 Used well, `--resume` turns Claude Code from a session-based assistant into something closer to a persistent collaborator, one that remembers what you were building, what decisions were made, and exactly where you left off. Combine it with good checkpoint practices, a well-maintained CLAUDE.md, and the supermemory skill for the most solid interrupted-task recovery workflow available in Claude Code today.
 
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

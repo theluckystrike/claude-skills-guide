@@ -149,6 +149,10 @@ Being overly restrictive with file reads can backfire. If Claude can't see enoug
 
 On subscription plans, reducing token consumption means hitting rate limits less often and getting more done per session. On the Max 20x plan ($200/month), this translates to higher effective throughput. On API usage, the savings are direct. Monitor your average session length (in tokens) and average interactions per session. After applying these techniques, session peak token counts should drop 30-50%, and interactions per session should increase by a similar amount. The average Claude Code developer spends about $6/day at API rates -- these techniques can cut that to $3-4/day.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

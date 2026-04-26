@@ -112,6 +112,10 @@ Savings: $1.05-$5.25/day = $21-$105/month
 
 The token paradox is a core concept in the CCG cost framework because it affects every Claude Code user, regardless of their other optimization practices. Even users with perfect context engineering and model routing still overpay if they allow uncontrolled output verbosity. The CCG framework treats output token management as a distinct optimization axis from input token management, with its own set of rules and measurement techniques.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Further Reading
 
 - [Claude Code Model Selection for Cost](/claude-code-model-selection-cost-sonnet-haiku-opus/) -- choosing the right model to balance capability and cost

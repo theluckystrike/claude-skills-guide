@@ -156,6 +156,10 @@ $200/month is a significant expense for hobbyists or occasional users. The break
 
 After upgrading to Max, track two metrics daily: rate limit encounters (should drop to near zero) and total productive Claude Code minutes (should increase by whatever wait time was eliminated). Calculate realized ROI monthly: (hours_recovered x hourly_rate - plan_premium) / plan_premium. Most full-time developers see 200-500% ROI on Max 20x within the first month. If ROI stays below 50% for two consecutive months, consider downgrading to Max 5x or Pro.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -236,6 +236,10 @@ Yes. During high-demand periods, free tier users may experience lower message li
 
 Anthropic's terms require individual accounts. Each student should have their own account. For shared access, ask your department about an enterprise or team plan.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

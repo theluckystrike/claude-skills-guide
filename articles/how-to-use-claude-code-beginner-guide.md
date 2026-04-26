@@ -763,6 +763,10 @@ Claude Code runs in the terminal independently of your editor. You can use it al
 }
 </script>
 
+
+
+**Quick reference →** Search all commands in our [Command Reference](/commands/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -139,6 +139,10 @@ This positive feedback loop is why teams that invest 30 minutes in a good CLAUDE
 
 **"My project is too small to need this."** Small projects benefit the most because there is less existing code for Claude to learn conventions from. A 50-line CLAUDE.md gives Claude more context than a 500-file codebase gives through inference.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 - [Perfect CLAUDE.md File Template](/perfect-claudemd-file-template-2026/) — The complete annotated template

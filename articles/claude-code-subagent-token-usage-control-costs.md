@@ -144,6 +144,10 @@ Track these metrics over two weeks:
 | Result compression | 8K-15K per multi-subagent op | $5-$15 |
 | **Combined** | **40-60% subagent cost reduction** | **$45-$150** |
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

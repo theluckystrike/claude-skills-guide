@@ -190,6 +190,10 @@ The 5-minute cache TTL means you need at least one request every 5 minutes to ke
 
 The primary metric is system prompt token count before and after. Multiply the delta by your daily request volume and model input rate to get daily savings. Secondary metric: output quality score on a held-out test set — this should remain flat or improve (shorter prompts often produce better results because Claude has less conflicting guidance). Track cache hit rate separately if using prompt caching.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

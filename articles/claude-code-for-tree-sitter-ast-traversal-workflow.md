@@ -242,6 +242,10 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
 ---
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Frequently Asked Questions
 
 ### What is Understanding the Tree-sitter AST Structure?

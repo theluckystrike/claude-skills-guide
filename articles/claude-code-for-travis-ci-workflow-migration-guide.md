@@ -510,6 +510,10 @@ Setting up Claude Code for CI workflows requires installing via `npm install -g 
 
 Converting Travis CI configurations maps `.travis.yml` stages to Claude Code skills and JavaScript command handlers. The `install` stage becomes pre-run setup, `script` becomes the core command logic, `deploy` becomes a separate `/deploy` command with branch guards, and `matrix` becomes scripted loops over Node.js versions using `nvm`. A skill file in `.claude/skills/ci-workflow.md` defines available commands like `/build`, `/test`, `/deploy`, and `/full-ci`, with Claude understanding the intent behind each stage rather than just executing rigid scripts.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

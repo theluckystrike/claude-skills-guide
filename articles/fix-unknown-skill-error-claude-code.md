@@ -185,6 +185,10 @@ If you rename a skill directory while Claude Code is running, the old name becom
 - [ ] Skill tool not denied in `/permissions`
 - [ ] Claude Code started from the correct working directory
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -237,6 +237,10 @@ The calculator uses estimated productivity loss, which varies by individual. Som
 
 The plan calculator's value is measured in monthly savings: the difference between what you're paying now (subscription + productivity loss) and what the optimal plan costs. Track rate limit encounters before and after switching plans. If you downgrade from Max to Pro and rate limits increase by more than 2 per day, the downgrade may not be worth it. If you upgrade from Pro to Max and rate limits drop to zero, calculate whether the eliminated wait time justifies the premium. Re-evaluate every quarter as your usage patterns evolve.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

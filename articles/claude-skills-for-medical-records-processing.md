@@ -167,6 +167,10 @@ FHIR servers enforce different validation strictness. Epic's FHIR API rejects re
 - [ ] All output functions strip PHI before logging
 - [ ] `context: fork` isolates clinical note processing from main session
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

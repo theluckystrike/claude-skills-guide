@@ -238,6 +238,10 @@ Capture verbose logs over multiple occurrences, then correlate timestamps with n
 ### Should I report Claude Code bugs or just work around them?
 Report bugs on GitHub with full reproduction steps and verbose logs. The Claude Code team actively fixes reported issues. Apply the workaround in the meantime so you are not blocked.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 - [Claude Code Error Logs Location Guide](/claude-code-error-logs-location-guide/) — Where to find log files on every OS

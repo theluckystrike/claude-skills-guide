@@ -176,6 +176,10 @@ Yes. Apache-2.0 allows commercial use, modification, and distribution with attri
 
 **8/10.** The gold standard for LLM application reference code. The sheer volume (100+ templates) and quality (production patterns, not toy demos) make this worth bookmarking for any developer working with AI agents. For Claude Code users specifically, the coding agent and multi-agent templates provide patterns that translate directly into CLAUDE.md rules and workflow designs. Loses points because the templates span many frameworks, so finding Claude-native patterns requires filtering.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Resources
 
 - [Claude Code Templates: 600+ Agents](/claude-code-templates-600-agents-guide-2026/) — Claude Code-specific templates

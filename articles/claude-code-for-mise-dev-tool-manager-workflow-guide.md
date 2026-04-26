@@ -68,6 +68,10 @@ Claude Code should create `.mise.toml` with `[tools]` section listing `node = "2
 
 3. **Local overrides leaking to git.** Claude puts secrets in `.mise.toml` which gets committed. Sensitive env vars should go in `.mise.local.toml` which is gitignored by default. The project `.mise.toml` should only contain non-sensitive defaults.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

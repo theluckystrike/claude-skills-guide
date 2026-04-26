@@ -130,6 +130,10 @@ Goal decomposition transforms overwhelming AI requests into manageable, trackabl
 By embracing this structured approach, you use the full potential of AI agents, achieving results that would be impossible through undifferentiated, monolithic task execution. The next time you have a complex project, remember: break it down, and let Claude Code handle each piece systematically.
 
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

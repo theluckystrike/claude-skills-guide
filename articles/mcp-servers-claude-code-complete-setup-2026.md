@@ -269,6 +269,10 @@ const transport = new StdioServerTransport();
 await server.connect(transport);
 ```
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## FAQ
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

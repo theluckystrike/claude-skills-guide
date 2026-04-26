@@ -180,6 +180,10 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 </div>
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Issues
 
 - [Fix: Anthropic SDK MCP Empty Arguments Bug](/anthropic-sdk-mcp-empty-arguments-bug/) — Debugging tool discovery

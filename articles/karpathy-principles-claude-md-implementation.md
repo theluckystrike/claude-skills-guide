@@ -189,6 +189,10 @@ The concepts translate to any AI coding tool. For Cursor, encode them in .cursor
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [CLAUDE.md Generator](/generator/) -- Build your principle-driven CLAUDE.md automatically

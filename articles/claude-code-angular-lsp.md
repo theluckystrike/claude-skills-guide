@@ -13,7 +13,7 @@ score: 6
 geo_optimized: true
 ---
 
-Claude Code can leverage Angular Language Service output for template type checking, component navigation, and accurate refactoring. This guide shows you how to configure your Angular project so Claude Code gets LSP-quality feedback when generating and modifying Angular code.
+Claude Code can use Angular Language Service output for template type checking, component navigation, and accurate refactoring. This guide shows you how to configure your Angular project so Claude Code gets LSP-quality feedback when generating and modifying Angular code.
 
 ## The Problem
 
@@ -161,3 +161,7 @@ Related Reading
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

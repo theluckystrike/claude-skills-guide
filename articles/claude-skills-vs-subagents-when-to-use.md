@@ -116,6 +116,10 @@ Subagents spawned via `context: fork` cannot invoke other skills from the main p
 - [ ] Custom agents verified to exist in `.claude/agents/` before referencing
 - [ ] Skill token size under 3,000 for inline, unlimited for forked
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

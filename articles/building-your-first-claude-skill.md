@@ -110,6 +110,10 @@ The `$ARGUMENTS` substitution lets you pass context: `/explain-rust src/parser.r
 - [ ] Tested with both `/skill-name` and a natural language request
 - [ ] Confirmed skill appears when asking "What skills are available?"
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

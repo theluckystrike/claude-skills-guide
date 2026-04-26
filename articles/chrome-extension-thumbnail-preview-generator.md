@@ -419,5 +419,5 @@ Canvas text appearing blurry on high-DPI displays: Scale the canvas by `window.d
 Downloaded thumbnail filenames generic: Generate a filename from the page title: `pageTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 50) + '-thumbnail.png'`. This makes thumbnails easier to organize in a download folder.
 
 
-
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
 

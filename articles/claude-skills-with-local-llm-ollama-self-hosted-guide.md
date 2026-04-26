@@ -164,3 +164,5 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+

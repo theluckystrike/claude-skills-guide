@@ -354,6 +354,10 @@ Not all agent-first elements deliver equal value. The priority order based on to
 
 5. **Structured logging**: 4 hours of work, ongoing savings of 1,800-3,800 tokens per log diagnosis. Lowest priority because it requires changes throughout the codebase, but the benefits compound over time.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Further Reading
 
 - [State Inspection Pattern: Give Agents Full Backend State in One Call](/state-inspection-pattern-agents-full-state-one-call/) -- deep dive on the inspection endpoint

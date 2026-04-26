@@ -349,6 +349,10 @@ As the backend evolves, the inspection endpoint should return version informatio
 
 The version field allows CLAUDE.md rules to specify expectations: "Inspection endpoint v3 returns deploy.git_sha. If missing, the backend may be outdated." This prevents Claude Code from running additional diagnostic commands when the inspection response format changes.
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

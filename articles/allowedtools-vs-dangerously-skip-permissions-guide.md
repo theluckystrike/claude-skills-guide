@@ -269,6 +269,10 @@ Yes. Use * as a wildcard: Bash(npm run *) allows any npm script. Bash(git diff *
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

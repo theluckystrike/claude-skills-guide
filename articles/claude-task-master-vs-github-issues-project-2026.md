@@ -94,6 +94,10 @@ Task Master connects to Claude Code through MCP and that is about it. The CLI is
 
 Use GitHub Issues as your system of record for project management. It is the standard for good reason. Layer Task Master on top for the AI-powered task decomposition when you have a spec document that needs breaking down. The generated tasks can be transferred to GitHub Issues for team coordination. This gives you the best of both: AI-powered planning and battle-tested collaboration. Check the [Claude Code playbook](/playbook/) for patterns that integrate both tools effectively.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

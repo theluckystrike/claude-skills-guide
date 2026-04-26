@@ -228,6 +228,10 @@ In-process monitoring adds CPU overhead to every API response handler. For most 
 
 Measure mean-time-to-detection (MTTD) for cost anomalies before and after deploying the pipeline. Without monitoring, MTTD is typically 8-24 hours (next batch report or human observation). With real-time monitoring, MTTD drops to 1-5 minutes. Cost impact: multiply the MTTD reduction by your average anomaly cost rate. For a $2.00/minute cache miss incident, reducing detection from 1 hour to 1 minute saves $118.00 per incident.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

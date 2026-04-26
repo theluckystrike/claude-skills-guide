@@ -184,6 +184,10 @@ The `/batch` bundled skill spawns parallel agents in worktrees. If those agents 
 - [ ] No circular dependency between auto-triggered skills
 - [ ] Exit condition defined for all execution paths
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

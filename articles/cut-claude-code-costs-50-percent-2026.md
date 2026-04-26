@@ -238,6 +238,10 @@ Prompt caching reduces input token costs by up to 90% for repeated context. For 
 ### Can I track Claude Code costs per project?
 Yes. The open-source ccusage tool tracks Claude Code spending per project and per session. It shows token usage breakdowns so you can identify which projects and tasks cost the most.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Claude Code Cost Complete Guide](/claude-code-cost-complete-guide/) — Comprehensive cost breakdown

@@ -10,7 +10,7 @@ tags: [claude-code, kitty, workflow]
 
 ## The Setup
 
-You are running Claude Code inside Kitty, the GPU-accelerated terminal emulator with image rendering, ligature support, and a powerful scripting system (kittens). Kitty's unique features like inline image display and remote control enhance the Claude Code workflow. Claude Code can leverage these features, but it treats Kitty as a generic terminal.
+You are running Claude Code inside Kitty, the GPU-accelerated terminal emulator with image rendering, ligature support, and a powerful scripting system (kittens). Kitty's unique features like inline image display and remote control enhance the Claude Code workflow. Claude Code can use these features, but it treats Kitty as a generic terminal.
 
 ## What Claude Code Gets Wrong By Default
 

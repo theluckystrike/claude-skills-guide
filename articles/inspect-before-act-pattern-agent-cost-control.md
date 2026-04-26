@@ -301,6 +301,10 @@ Over 100 sessions/month with 10 tasks each:
 
 The savings are modest per individual task but compound reliably because inspection prevents the most expensive failure mode in Claude Code sessions: multi-turn retry loops where each retry carries the full accumulated context cost.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

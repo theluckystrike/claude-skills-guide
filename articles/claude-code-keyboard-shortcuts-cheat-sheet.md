@@ -213,6 +213,10 @@ Ctrl+C cancels the current operation. If Claude is in the middle of writing a fi
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

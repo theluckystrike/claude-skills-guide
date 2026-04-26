@@ -248,6 +248,10 @@ Choosing between sequential and parallel pipeline execution in Claude Code depen
 Start with sequential execution when building new workflows, then identify opportunities to parallelize independent steps. Monitor performance and adjust worker counts based on your task characteristics and system resources.
 
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -269,6 +269,10 @@ Claude Code does not enforce hard per-session token limits directly. You can set
 }
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Token Estimator](/token-estimator/) -- Calculate your project-specific token budget

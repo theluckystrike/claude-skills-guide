@@ -84,6 +84,10 @@ Source: [anthropic.com/pricing](https://anthropic.com/pricing), [zed.dev/pricing
 
 Zed AI is the best pure editor for developers who prioritize speed, minimalism, and collaborative editing with AI augmentation. Claude Code is the best autonomous coding agent for developers who need multi-step task execution without manual orchestration. They solve different problems — Zed replaces your editor, Claude Code replaces your workflow orchestration. Many developers will use Zed as their editor and Claude Code as their agent, running both simultaneously for the strongest development setup available in 2026.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

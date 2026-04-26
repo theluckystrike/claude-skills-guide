@@ -68,6 +68,10 @@ Claude Code should create three `Agent` instances with distinct roles, goals, an
 
 3. **No error handling for agent failures.** Claude runs the crew without try/except. LLM calls can fail, rate limit, or produce unexpected output. Wrap `crew.kickoff()` with error handling and consider setting `max_iter` on agents to prevent infinite loops.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

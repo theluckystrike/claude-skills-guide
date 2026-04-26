@@ -277,6 +277,10 @@ Total budget: 120K tokens
 
 These templates give Claude concrete numbers to work with, reducing the likelihood of budget overruns. Review and adjust the token budgets in these templates monthly based on actual `/cost` data -- initial estimates are typically 20-30% off from real usage, and calibrated templates provide significantly tighter cost control.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

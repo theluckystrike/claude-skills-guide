@@ -204,6 +204,10 @@ Haiku 4.5 caps at 200K tokens. If your workload requires more than 200K tokens o
 
 Track the 90th percentile context size per request type. Target keeping this under 100K tokens for routine requests. Calculate the monthly cost delta between your current average context size and your target. Plot a weekly histogram of context sizes to identify outlier requests that consume disproportionate budget.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

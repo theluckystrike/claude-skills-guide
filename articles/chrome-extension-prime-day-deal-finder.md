@@ -418,5 +418,5 @@ async function trimDeals() {
 A custom Chrome extension gives you control over deal discovery during Prime Day that generic shopping tools cannot match. Start with the foundation above and extend it with price history tracking or category-based alerts based on your needs.
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

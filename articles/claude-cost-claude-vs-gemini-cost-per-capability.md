@@ -111,6 +111,10 @@ Choosing between Claude and Gemini requires mapping your workload to each provid
 - Monthly spend at current volume comparing standard and optimized pricing options
 - Cache hit rate if using Claude: target above 50% for caching to close the gap
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

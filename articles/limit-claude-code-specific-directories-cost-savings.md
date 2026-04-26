@@ -308,6 +308,10 @@ claude "Add a comment to the top of src/utils/format.ts"
 
 If directory limits are not being respected, the likely cause is that the task description is too vague. Adding explicit file paths to prompts reinforces directory scoping. For persistent issues, use `.claudeignore` to enforce hard boundaries on the most expensive non-essential directories. The combination of soft limits (CLAUDE.md rules) and hard limits (.claudeignore) provides defense in depth -- soft limits guide normal behavior while hard limits prevent worst-case exploration.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

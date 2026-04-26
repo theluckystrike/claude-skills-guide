@@ -352,6 +352,10 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -333,6 +333,10 @@ Do not commit API keys or secrets in the project settings.json. Instead, referen
 }
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Permissions Configurator](/permissions/) -- Generate your settings.json interactively

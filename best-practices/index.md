@@ -12,6 +12,10 @@ Shipping Claude Code in production demands more than knowing the CLI commands. I
 
 Every recommendation below links to a detailed article with code samples, configuration snippets, and before-and-after comparisons.
 
+<div style="background:linear-gradient(135deg,rgba(110,231,183,0.08),rgba(96,165,250,0.05));border:1px solid rgba(110,231,183,0.2);border-radius:8px;padding:16px 20px;margin:20px 0;">
+<strong style="color:#6ee7b7;">Interactive Tool:</strong> Build best-practice guidelines with our <a href="/generator/" style="color:#60a5fa;">CLAUDE.md Generator</a> — select your stack, get production-ready rules.
+</div>
+
 ---
 
 ## CLAUDE.md Best Practices
@@ -210,6 +214,7 @@ Update your CLAUDE.md whenever you change project conventions, add new dependenc
 - [Handle errors like a pro](/error-handling/)
 - [Fix issues when they arise](/troubleshooting/)
 - [Level up with power-user patterns](/advanced-usage/)
+- [Generate a best-practice CLAUDE.md](/generator/)
 
 
 <section class="related-hubs" style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 12px; border: 1px solid #e9ecef;">

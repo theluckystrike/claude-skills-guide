@@ -10,7 +10,7 @@ tags: [claude-code, zoxide, workflow]
 
 ## The Setup
 
-You are using Zoxide, the smarter `cd` command that learns your directory habits and lets you jump to frequently visited directories with partial matches. When working with Claude Code across multiple projects, Zoxide eliminates the need to type full paths. Claude Code can leverage Zoxide, but it defaults to `cd` with full paths.
+You are using Zoxide, the smarter `cd` command that learns your directory habits and lets you jump to frequently visited directories with partial matches. When working with Claude Code across multiple projects, Zoxide eliminates the need to type full paths. Claude Code can use Zoxide, but it defaults to `cd` with full paths.
 
 ## What Claude Code Gets Wrong By Default
 
@@ -66,6 +66,10 @@ Claude Code should use `z backend` to jump to the backend project, examine the A
 2. **Shell integration order.** Claude adds `eval "$(zoxide init zsh)"` before `compinit` in `.zshrc`. Zoxide's shell integration should be added near the end of the shell config file, after all other PATH modifications and completions are loaded.
 
 3. **Ambiguous partial matches.** Claude uses `z s` which could match `src/`, `scripts/`, `server/`, or `staging/`. Use more specific fragments or multiple keywords: `z src server` to narrow the match. Use `zi` for interactive selection when unsure.
+
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
 
 ## Related Guides
 

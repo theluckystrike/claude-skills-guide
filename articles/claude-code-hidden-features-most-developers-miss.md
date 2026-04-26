@@ -332,6 +332,10 @@ The `/add` command, output formatting instructions, parallel task execution, and
 Experiment with these capabilities gradually. Start with one feature. the CLAUDE.md system or a single MCP server. and expand as you become comfortable. The productivity gains compound quickly once you integrate these tools into daily workflows. Developers who invest a few hours learning these hidden features typically report saving multiple hours per week within the first month.
 
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

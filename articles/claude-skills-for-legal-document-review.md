@@ -150,6 +150,10 @@ Attorney-client privilege concerns mean contract text should not persist in Clau
 - [ ] `context: fork` configured to isolate contract text from main session
 - [ ] Risk scoring thresholds reviewed and approved by legal counsel
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

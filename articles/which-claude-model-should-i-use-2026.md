@@ -127,6 +127,10 @@ The decision tree works for 90 percent of cases. Override it when:
 | Tool use | Excellent | Very Good | Good |
 | Cost efficiency | Low | Medium | High |
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 - [Claude Opus vs Sonnet vs Haiku Cost Breakdown](/claude-haiku-vs-sonnet-vs-opus-cost-breakdown/) — Detailed cost analysis

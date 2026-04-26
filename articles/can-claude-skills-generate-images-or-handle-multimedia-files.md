@@ -300,6 +300,10 @@ The pdf skill then takes this extracted JSON and generates formatted reports, su
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

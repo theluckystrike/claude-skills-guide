@@ -222,6 +222,10 @@ After running your first production batch:
 - **Model quality check**: If you downgraded from Opus to Sonnet for cost savings, sample 50 outputs and verify quality meets your threshold.
 - Adjust future calculator inputs based on actual token usage data from completed batches
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

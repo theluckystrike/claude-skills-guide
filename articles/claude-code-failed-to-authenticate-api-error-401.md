@@ -151,6 +151,10 @@ Set up automated checks in your development workflow. Use Claude Code's built-in
 
 The core fix applies to macOS, Linux, and Windows. Some path-related adjustments may be needed depending on your OS. Check the platform-specific notes in the guide above.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Resources
 
 - [Fix Claude API Error 401](/claude-api-error-401-fix/)

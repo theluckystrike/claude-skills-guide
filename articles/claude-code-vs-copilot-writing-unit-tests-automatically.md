@@ -287,6 +287,10 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 - [Codium AI vs Claude Code Comparison 2026](/codium-ai-vs-claude-code-comparison-2026/)
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -338,5 +338,5 @@ Post not publishing due to rate limiting: Add a 3-5 second delay between opening
 Use your extension responsibly. LinkedIn's Terms of Service prohibit automated bulk posting. Test thoroughly since LinkedIn's DOM structure changes frequently.
 
 
-
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
 

@@ -169,6 +169,10 @@ A Claude MD file is a skill definition document that combines YAML configuration
 This simple format underlies the entire Claude skills ecosystem, from basic helpers like `pdf` to complex workflows involving `tdd`, `supermemory`, and `frontend-design`. Understanding how MD files work gives you the foundation to create, customize, and extend Claude's capabilities for your specific needs.
 
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).

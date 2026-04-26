@@ -169,6 +169,10 @@ Custom memory skills have a cold-start problem. On the first session with a new 
 - [ ] Team-shared memories in version-controlled project files
 - [ ] Periodic review of memory quality (remove low-value entries)
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

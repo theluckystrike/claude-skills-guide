@@ -309,6 +309,10 @@ public class SetupDissolveMaterial : MonoBehaviour
 - **Missing shadow caster pass:** A dissolving object that does not have a shadow caster pass with the same clip() logic casts a full shadow even when partially dissolved. Claude Code generates matching shadow passes for every visual effect.
 - **Wrong include paths:** URP uses `Packages/com.unity.render-pipelines.universal/ShaderLibrary/`, not the old `UnityCG.cginc`. Claude Code uses the correct include paths for your target pipeline.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -201,6 +201,10 @@ After implementing and testing:
 
 Developers using Linear + Claude Code MCP integration report closing issues 25% faster by eliminating manual status updates and context switching between browser and terminal.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

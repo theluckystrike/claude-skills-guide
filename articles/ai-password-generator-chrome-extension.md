@@ -363,5 +363,5 @@ function detectPasswordConstraints(field) {
 Building an AI password generator extension gives you complete control over password security while developing practical skills in Chrome extension development, cryptographic implementation, and secure coding practices.
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

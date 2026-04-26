@@ -218,6 +218,10 @@ For teams that choose the dual-tool approach, create a CLAUDE.md rule documentin
 
 The token efficiency gap between Claude Code and Cline may narrow as both tools evolve. Cline's extension ecosystem benefits from VS Code updates and community plugins. Claude Code's built-in tools receive direct optimization from Anthropic. Teams should re-evaluate their tool choice quarterly by running the parallel usage comparison described above. The tool that was more efficient six months ago may not hold that advantage indefinitely, and the cost of switching between tools is near zero since both are free to install and use the same underlying API.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

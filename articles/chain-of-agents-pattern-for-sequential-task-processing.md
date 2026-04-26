@@ -297,6 +297,10 @@ This pattern unlocks automation scenarios that go far beyond what any single AI 
 
 
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

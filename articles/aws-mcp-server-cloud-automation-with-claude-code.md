@@ -209,3 +209,5 @@ Related guides: [Claude Code API Authentication Patterns Guide](/claude-code-api
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+

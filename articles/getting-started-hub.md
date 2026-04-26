@@ -694,6 +694,10 @@ Once you have the basics down, the rest of the library is organized by topic:
 - [Comparisons Hub](/comparisons-hub/). Claude Code vs GitHub Copilot, Cursor, Devin, and other AI coding tools
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

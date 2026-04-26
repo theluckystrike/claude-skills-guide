@@ -67,6 +67,10 @@ Claude Code should create `.gitpod.yml` with an `init` task that starts PostgreS
 
 3. **Docker Compose services not starting.** Claude adds docker-compose.yml but the services do not start. Add `docker-compose up -d` in the `init` or `before` task, and ensure the Gitpod workspace has Docker support enabled in the image.
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Guides
 
 - [Claude Code for Devcontainers Workflow Guide](/claude-code-for-devcontainers-workflow-guide/)

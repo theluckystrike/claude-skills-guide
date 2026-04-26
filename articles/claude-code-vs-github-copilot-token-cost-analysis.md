@@ -161,6 +161,10 @@ Step 3: Calculate cost
 Step 4: Compare against $100 (Max) and $10 (Copilot)
 ```
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

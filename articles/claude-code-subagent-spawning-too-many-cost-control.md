@@ -216,6 +216,10 @@ Track subagent spawning frequency as a leading indicator of cost problems. If su
 
 A healthy ratio for most projects is 0.5-1.5 subagents per task on average. Above 2.0 subagents per task indicates over-spawning. Below 0.3 suggests over-restriction that may slow down genuinely parallel workflows.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

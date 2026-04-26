@@ -200,6 +200,10 @@ Best practice: combine `--max-turns` with `--allowedTools` for defense-in-depth 
 
 **Turns consumed by retries**: If Claude Code spends 5 turns retrying a failing command, the turn budget is wasted on diagnostic loops. Fix this by adding error handling rules to CLAUDE.md: "If a command fails twice, stop and report the error instead of retrying." This single CLAUDE.md rule can save 3-5 turns per session that would otherwise be wasted on futile retry loops.
 
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

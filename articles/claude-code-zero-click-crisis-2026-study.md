@@ -181,3 +181,7 @@ The 26,619 wasted impressions are not a failure of SEO. The pages rank. The fail
 ---
 
 *Methodology: Data covers 28 days of Google Search Console performance data for claudecodeguides.com, exported April 2026. Analysis includes the top 1,000 pages by impression count. CTR calculations use Google's reported values. Position represents average position across all queries triggering each page.*
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

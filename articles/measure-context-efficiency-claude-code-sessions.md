@@ -232,6 +232,10 @@ This is the strongest argument for context efficiency measurement: it is not pur
 
 Context efficiency measurement has diminishing returns once a team consistently operates above 60% efficiency. At that point, the measurement overhead (30 seconds per task, weekly analysis) exceeds the marginal savings available. Shift from active measurement to passive monitoring: check weekly averages rather than per-task tracking, and only investigate when efficiency drops below 50% for three consecutive days. This transition from active optimization to maintenance mode prevents the measurement process itself from becoming overhead that slows down development.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Further Reading
 
 - [How to Audit Your Claude Code Token Usage (Step-by-Step)](/audit-claude-code-token-usage-step-by-step/) -- the full audit methodology

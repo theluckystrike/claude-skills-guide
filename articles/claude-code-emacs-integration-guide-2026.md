@@ -216,6 +216,10 @@ C-c c p RET "What's the idiomatic way to handle optional chaining in Emacs Lisp?
 
 Emacs users who add Claude Code to their workflow report completing complex refactoring tasks 40% faster by eliminating context switches between terminal and editor.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

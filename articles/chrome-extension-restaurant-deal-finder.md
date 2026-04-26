@@ -351,5 +351,5 @@ function deduplicateDeals(deals) {
 The restaurant deal space remains fragmented, with many independent restaurants lacking sophisticated online presence. A well-built extension that aggregates deals across multiple sources fills a genuine gap while providing developers with portfolio-worthy implementation experience.
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

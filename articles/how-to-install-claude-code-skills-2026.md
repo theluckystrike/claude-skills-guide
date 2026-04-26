@@ -267,6 +267,10 @@ Yes. Claude Code loads all skills from CLAUDE.md and the skills directories. Kee
 ### Do Claude Code skills cost extra tokens?
 Yes. Each skill's instructions are sent as context with every message, consuming input tokens. A 1KB skill adds roughly 250 tokens per message. Keep skills concise to minimize overhead.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 - [Top Claude Code Skills Ranked](/top-claude-code-skills-ranked-2026/) — Best skills to install

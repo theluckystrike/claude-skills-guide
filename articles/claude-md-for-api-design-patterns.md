@@ -164,6 +164,10 @@ Including rate limiting rules in your CLAUDE.md ensures Claude adds the correct 
 
 For the response envelope pattern and how it integrates with error handling, see the [error handling guide](/claude-md-error-handling-patterns/). For the overall CLAUDE.md structure, see the [senior engineer template](/senior-engineer-claude-md-template/). For database conventions behind your API, see the [database conventions guide](/claude-md-database-conventions/).
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Articles
 
 - [Claude.md for API Design Standards Guide](/claude-md-for-api-design-standards-guide/)

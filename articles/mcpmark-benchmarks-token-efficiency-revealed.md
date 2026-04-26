@@ -140,6 +140,10 @@ Worst case (unfiltered GitHub, 12 tools):
 
 **Results do not match real-world usage** -- Benchmarks measure isolated tool calls. Real-world sessions include context re-sending, which multiplies the tool definition overhead by the number of turns. Multiply benchmark definition sizes by expected session length for accurate projections.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

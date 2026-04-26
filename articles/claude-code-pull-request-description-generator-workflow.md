@@ -191,7 +191,11 @@ BRANCH=$(git branch --show-current)
 TICKET=$(echo "$BRANCH" | grep -oE '[A-Z]+-[0-9]+' | head -1)
 
 if [ -n "$TICKET" ]; then
- echo "## Related Ticket"
+ echo "
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
+## Related Ticket"
  echo "[$TICKET](https://your-tracker.com/issues/$TICKET)"
 fi
 ```

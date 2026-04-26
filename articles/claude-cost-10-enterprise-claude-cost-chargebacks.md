@@ -234,6 +234,10 @@ Chargebacks create perverse incentives if implemented poorly. Teams might avoid 
 
 Compare total Claude spend in the 3 months before chargebacks to the 3 months after. The accountability effect typically produces 20-40% cost reduction as teams optimize their own usage. Track per-team optimization actions (model downgrades, caching improvements, request deduplication) that result from chargeback visibility. The most successful chargeback implementations also track value metrics alongside cost: cost per feature shipped, cost per customer interaction resolved, cost per analysis completed. This prevents the perverse incentive of cost minimization at the expense of output quality.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

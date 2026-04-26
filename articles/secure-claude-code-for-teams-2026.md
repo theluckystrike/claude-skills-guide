@@ -258,6 +258,10 @@ Each MCP server is a separate process with its own permissions. Audit which MCP 
 }
 </script>
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 - [Permissions Configurator](/permissions/) — Generate team security configuration

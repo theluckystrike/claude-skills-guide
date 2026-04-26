@@ -186,6 +186,10 @@ The `$ARGUMENTS` substitution handles multi-word inputs. `/commit feat add user 
 - [ ] Skills handle missing arguments gracefully
 - [ ] Each skill tested with explicit invocation (`/skill-name`)
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

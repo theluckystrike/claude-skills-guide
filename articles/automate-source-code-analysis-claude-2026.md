@@ -174,6 +174,10 @@ Output as an actionable markdown document." > "$REPORT_DIR/refactoring-plan.md"
 
 Manual code analysis of a 50,000-line codebase takes days. Claude Code produces equivalent insights in minutes, letting teams prioritize technical debt reduction with data rather than guesswork.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

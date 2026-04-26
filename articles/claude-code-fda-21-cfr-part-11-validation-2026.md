@@ -301,6 +301,10 @@ python3 part11/validation/generate_report.py
 - **Electronic signature without meaning:** Part 11 Sec. 11.50 requires that each signature include the printed name, date/time, and the MEANING (approval, review, etc.). Claude Code enforces the meaning field as a required parameter.
 - **Mutable audit records:** If audit trail entries can be edited or deleted, the entire trail is invalidated. Claude Code implements append-only storage with cryptographic chain integrity (each entry's checksum includes the previous entry's checksum).
 
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

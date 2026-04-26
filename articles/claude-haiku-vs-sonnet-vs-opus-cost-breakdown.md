@@ -133,6 +133,10 @@ Prompt caching discounts apply independently of model selection. Sonnet 4.6 cach
 
 Compare your Anthropic API bill before and after implementing model routing. Track three metrics: total monthly spend (target: 40-80% reduction), quality score per task category (target: less than 5% degradation), and p95 latency per model (Haiku should be faster). Use the Anthropic usage dashboard to verify token counts by model. Set up weekly cost reports to catch any routing misconfigurations early.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

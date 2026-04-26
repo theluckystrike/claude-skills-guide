@@ -356,6 +356,10 @@ cat ~/.claude/usage-logs/2026-04-22.jsonl | grep -o '"tool":"[^"]*"' | sort | un
 
 This two-layer approach -- hooks for granularity, ccusage for accuracy -- provides complete cost visibility without any token overhead. The hooks capture patterns that ccusage does not (tool call frequency, per-project attribution), while ccusage provides verified token counts that hook estimates cannot match.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

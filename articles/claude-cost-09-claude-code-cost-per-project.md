@@ -178,6 +178,10 @@ Estimation is inherently imprecise. Complex debugging sessions can consume 3-5x 
 
 Compare estimated cost to actual cost at project completion. Track the estimation accuracy ratio (actual / estimated) and improve your per-task session estimates over time. Most developers overestimate by 20-30% on their first project and converge to within 15% accuracy after three projects. The real value of estimation isn't precision -- it's plan selection. Knowing whether a project costs $50 or $500 in API tokens determines whether Pro ($20) or Max ($200) is the right plan.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

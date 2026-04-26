@@ -97,6 +97,10 @@ Sonnet's consistent instruction following makes it more predictable across skill
 
 For real-time autocomplete in your IDE (suggestions as you type), neither Sonnet nor GPT-4o is optimal. That use case demands sub-100ms latency, which requires a smaller, specialized model like Haiku 4.5 or GPT-4o Mini running locally or on a fast edge endpoint. Using a full reasoning model for keystroke-level completions wastes money and adds frustrating latency. At 200 autocomplete requests per hour (typical for active coding), Sonnet would cost $4.80/hour versus Haiku's $0.08/hour for the same typing-flow suggestions. Reserve mid-tier models for explicit code generation and reasoning tasks where the 1-3 second response time is acceptable.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

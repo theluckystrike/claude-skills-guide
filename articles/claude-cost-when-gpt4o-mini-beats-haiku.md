@@ -109,6 +109,10 @@ The 5% quality gap matters when errors are expensive. If a wrong classification 
 - Watch for quality degradation over time as your workload patterns evolve
 - Compare cost per correct output, not just cost per API call, to capture retry costs
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

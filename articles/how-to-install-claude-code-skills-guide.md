@@ -271,6 +271,10 @@ There is no hard limit on the number of skills. The practical limit is your cont
 ]}
 </script>
 
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+
 ## Related Guides
 
 - [Best Claude Code Skills Ranked](/best-claude-code-skills-2026-ranked/)

@@ -356,5 +356,5 @@ chrome.permissions.request({ permissions: ['notifications'] }, (granted) => {
 When publishing to the Chrome Web Store, frame your extension as a notification utility rather than an automated purchase tool. the latter violates store policies and retailer terms. Include a clear privacy policy and test thoroughly across each target retailer.
 
 
-
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
 

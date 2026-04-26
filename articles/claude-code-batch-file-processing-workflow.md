@@ -190,6 +190,10 @@ Claude Code transforms file processing from tedious manual work into an automate
 Start with simple batch operations and gradually build more complex workflows as you become comfortable with Claude's capabilities. The skills you build for one project often transfer directly to the next one, compounding the time savings over time.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

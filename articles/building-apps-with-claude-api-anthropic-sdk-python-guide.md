@@ -258,6 +258,10 @@ Remember to monitor your token usage, implement proper error handling, and take 
 
 
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -526,6 +526,10 @@ First check that your CLAUDE.md accurately describes your project conventions. I
 **Unexpected file modifications:** Check `.claude/settings.json` for overly broad permission patterns. Narrow the allow list to specific commands and file patterns. For sensitive directories, add explicit deny rules.
 
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

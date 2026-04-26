@@ -118,6 +118,10 @@ console.error("Server starting...");
 - **Prefer project-level `.mcp.json`** over global config to avoid conflicts between different projects that need different server versions.
 
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -240,6 +240,10 @@ EOF
 
 Tab completion reduces typos and eliminates the need to check `--help` output. Developers using completions navigate Claude Code 30% faster than those typing full flag names manually.
 
+
+
+**Quick reference →** Search all commands in our [Command Reference](/commands/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

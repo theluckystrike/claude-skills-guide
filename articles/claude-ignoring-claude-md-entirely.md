@@ -173,3 +173,7 @@ This is a per-invocation flag, not a permanent setting. It provides the stronges
 For resolving specific contradictions between files, see the [conflicting instructions fix guide](/claude-md-conflicting-instructions-fix/). For the complete CLAUDE.md specification, see the [CLAUDE.md complete guide](/claude-md-file-complete-guide-what-it-does/). For writing instructions Claude reliably follows, see the [best practices guide](/claude-code-claude-md-best-practices/).
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+

@@ -95,6 +95,10 @@ See how to combine them practically in the guide on [combining Karpathy and Supe
 
 Start with Karpathy Skills for the behavioral foundation — it works from minute one. Add SuperClaude when you identify specific tasks where structured commands would help. Most developers settle into a hybrid: Karpathy principles always active, SuperClaude commands for specific workflows like code review and architecture design. This gives you the best of both approaches with manageable complexity. Reference the [Claude Code playbook](/playbook/) for patterns that integrate both into your daily routine.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

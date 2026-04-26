@@ -2,7 +2,7 @@
 
 layout: default
 title: "Rakuten Chrome Extension Review (2026)"
-description: "Claude Code extension tip: a technical deep-dive into the Rakuten Chrome extension for developers and power users, exploring API access, customization,..."
+description: "Claude Code extension tip: a technical deep-get startedto the Rakuten Chrome extension for developers and power users, exploring API access, customization,..."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"
@@ -166,4 +166,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

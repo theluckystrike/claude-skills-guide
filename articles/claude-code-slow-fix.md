@@ -186,6 +186,10 @@ $99 once. Pays for itself in saved tokens within a week.
 
 </div>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Issues
 
 - [Claude Code Error Out of Memory Large Codebase Fix](/claude-code-error-out-of-memory-large-codebase-fix/) — When memory usage grows unbounded

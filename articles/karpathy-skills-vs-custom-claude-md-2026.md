@@ -112,6 +112,10 @@ The combined approach means maintaining both: pulling Karpathy updates and keepi
 
 Copy Karpathy Skills into your CLAUDE.md, add your project-specific rules below it, and move on. You get 72K stars worth of community validation plus your domain knowledge. Revisit and refine monthly. The 80/20 outcome requires less than 5 minutes of setup, and your [Claude Code sessions](/karpathy-skills-vs-claude-code-best-practices-2026/) will improve immediately.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Build your own with our [CLAUDE.md Generator](/generator/).

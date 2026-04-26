@@ -20,7 +20,7 @@ You are running Claude Code inside Warp, the AI-powered terminal with block-base
 
 3. **Generates interactive TUI commands.** Claude Code suggests tools like `htop`, `lazygit`, or `vim` without considering that Warp handles some interactive programs differently from iTerm2 or native Terminal. Some TUI apps have rendering quirks in Warp.
 
-4. **Does not leverage Warp workflows.** Warp has shareable workflow YAML files for common command sequences. Claude Code writes shell scripts instead of Warp workflow definitions, missing the discoverability and shareability benefits.
+4. **Does not use Warp workflows.** Warp has shareable workflow YAML files for common command sequences. Claude Code writes shell scripts instead of Warp workflow definitions, missing the discoverability and shareability benefits.
 
 ## The CLAUDE.md Configuration
 

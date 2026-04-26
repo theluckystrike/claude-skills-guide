@@ -423,6 +423,10 @@ echo "Next: set CLAUDE_MODEL=claude-sonnet-4-6 in your shell profile"
 
 Running this script takes 30 seconds and captures the majority of savings available from the 15 techniques. Refine the CLAUDE.md and add skills iteratively as the project's cost patterns become clear.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

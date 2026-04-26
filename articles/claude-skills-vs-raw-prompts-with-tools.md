@@ -149,6 +149,10 @@ Skills have a maintenance cost. Outdated skills that reference deleted files, re
 - [ ] Prompt under 5 lines with no repeating use → keep as raw prompt
 - [ ] Stable workflow → skill; evolving experiment → raw prompt
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

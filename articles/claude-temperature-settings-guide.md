@@ -567,6 +567,10 @@ Temperature and system prompts are independent controls. A well-crafted system p
 
 For most use cases, temperature is simpler and more intuitive. Use top_p when you want to cap the randomness without affecting the relative probabilities of the top tokens. Anthropic's general recommendation is to adjust one or the other, not both.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -291,5 +291,5 @@ Related Reading
 - [Claude Code for Threat Hunting Techniques Workflow Guide](/claude-code-for-threat-hunting-techniques-workflow-guide/)
 
 
-
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
 

@@ -226,6 +226,10 @@ Expected cost trajectory:
 
 The transition consistently shows that developers overestimate the quality gap between Sonnet and Opus for routine tasks. After two weeks of side-by-side comparison, most developers report no noticeable difference on standard feature work and bug fixes. The quality gap only becomes apparent on tasks requiring deep architectural reasoning, novel algorithm design, or debugging complex race conditions -- tasks that represent fewer than 20% of most development workflows.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

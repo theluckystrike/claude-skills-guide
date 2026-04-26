@@ -194,6 +194,10 @@ Pro and Max plans are simpler -- no API key management, no per-request cost trac
 
 Track cost-per-task (not cost-per-session) as the primary comparison metric. A task that takes 3 sessions on Pro might take 2 sessions on the API with a better model for the job. The true comparison is: what does it cost to go from "task defined" to "task completed"? On subscription plans, this is (monthly_cost / tasks_completed). On API, it's the sum of all request costs for that task. Compare these numbers monthly to verify your plan choice remains optimal.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

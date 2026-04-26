@@ -297,6 +297,10 @@ Before starting a new project with Claude Code, estimate costs using this checkl
 
 The accuracy of pre-project estimates improves significantly after one month of actual usage data. First-time estimates are typically within 50-80% of actual costs. Estimates calibrated with one month of real data are within 85-95% accuracy. Use the initial estimate for budget approval and the calibrated estimate for ongoing financial planning.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

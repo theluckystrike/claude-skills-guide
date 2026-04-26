@@ -121,6 +121,10 @@ Langflow flows that use the Claude API directly do not benefit from Claude Code'
 - [ ] Workflow needs visual debugging → Langflow
 - [ ] Multi-provider LLM routing needed → Langflow
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -250,3 +250,7 @@ For most developers, the auto-formatter and security scanner add negligible dela
 Install hooks #1 (formatter) and #3 (security scanner) today. They provide the highest impact with the lowest risk. Add more as you identify quality gaps in your workflow.
 
 For hook fundamentals, see the [Claude Code hooks guide](/understanding-claude-code-hooks-system-complete-guide/). For writing your first hook from scratch, follow the [hook tutorial](/how-to-write-claude-code-hook-2026/). For the full quality stack, explore the [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) and the [Claude Code playbook](/playbook/).
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+

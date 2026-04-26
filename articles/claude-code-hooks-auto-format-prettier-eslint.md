@@ -214,6 +214,10 @@ $99 once. I'm a solo dev in Da Nang. This is how I scale.
 
 ---
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

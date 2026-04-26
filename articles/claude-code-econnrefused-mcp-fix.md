@@ -229,6 +229,10 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ---
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

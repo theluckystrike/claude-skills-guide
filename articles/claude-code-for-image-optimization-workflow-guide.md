@@ -489,6 +489,10 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 **Try it:** Build your own with our [CLAUDE.md Generator](/generator/).
 ---
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Frequently Asked Questions
 
 ### What is Understanding Modern Image Formats?

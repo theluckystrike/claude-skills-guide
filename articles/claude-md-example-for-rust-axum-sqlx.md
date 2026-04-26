@@ -244,6 +244,10 @@ With this CLAUDE.md loaded, Claude Code generates Axum handlers with correct ext
 
 This is one of 16 production CLAUDE.md templates available in the Lifetime pack. Includes templates for Go + Gin, Next.js + TypeScript, Django + PostgreSQL, Rails + Turbo, and 11 more stacks. Each template is 200-400 lines of production-tested configuration. Get all 16 at [claudecodeguides.com/generator/](https://claudecodeguides.com/generator/).
 
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+
 ## See Also
 
 - [Claude Code for Rust Axum — Workflow Guide](/claude-code-for-rust-axum-workflow-guide/)

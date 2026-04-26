@@ -167,6 +167,10 @@ Tips from studying the most-starred ecosystem repos:
 
 5. **Maintain actively.** Respond to issues, merge PRs, update for new Claude Code versions.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## FAQ
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

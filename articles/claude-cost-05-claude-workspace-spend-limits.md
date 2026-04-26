@@ -172,6 +172,10 @@ Workspace limits are blunt instruments. They protect against catastrophic oversp
 
 The spend limit's value is measured in prevented overages. Track the number of months where actual spend would have exceeded the limit without the cap. If your limit prevents even one $5,000 overrun per year, it's paid for the engineering time many times over. Application-level budget guards provide additional metrics: count how many requests get model-downgraded, how many get blocked, and what the cost-per-request trend looks like over the billing period. A well-configured system maintains steady spend throughout the month rather than front-loading and hitting limits early.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

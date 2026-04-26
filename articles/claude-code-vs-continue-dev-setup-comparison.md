@@ -88,6 +88,10 @@ Continue.dev has a lower barrier because it lives inside VS Code where developer
 
 If you only need autocomplete and nothing else, GitHub Copilot at $10/month or Codeium's free tier provides tab completion without any configuration of API keys or model endpoints. Both Claude Code and Continue.dev are designed for developers who want more control over their AI tooling, which comes with more setup responsibility. If you just want it to work with zero configuration, a managed service is simpler.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

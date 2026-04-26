@@ -177,10 +177,14 @@ The advanced section includes enterprise-specific topics like team-wide CLAUDE.m
 
 **8/10.** The best learning resource for Claude Code newcomers. The Mermaid diagrams are a genuine differentiator — no other resource visualizes Claude Code workflows this well. The copy-paste templates save time even for experienced users. Loses points because the 11-13 hour length means many developers won't finish it, and some sections are verbose where a concise reference would serve better. The EPUB export is a nice touch for long-haul flights.
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Resources
 
 - [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — advanced CLAUDE.md patterns beyond the guide's templates
-- [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — deeper dive into the hook system
+- [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — deeper get startedto the hook system
 - [Best Claude Skills for Developers](/best-claude-skills-for-developers-2026/) — tools to install after completing the learning path
 
 ## See Also

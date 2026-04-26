@@ -68,6 +68,10 @@ Claude Code should initialize the SuperTokens backend SDK with `ThirdPartyEmailP
 
 3. **Not running SuperTokens Core.** Claude initializes the SDK without starting the Core service. SuperTokens Core must be running (Docker: `docker run supertokens/supertokens-postgresql`) — the SDK communicates with Core for all auth operations.
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

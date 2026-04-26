@@ -257,6 +257,10 @@ Break the chain with a comprehensive database skill that includes both schema AN
 
 This single skill (~400 tokens) replaces reading 4-8 files (20K-40K tokens). For a developer doing 5 database tasks per day: **savings of 100K-200K tokens daily, or $6.60-$13.20/month on Sonnet.**
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

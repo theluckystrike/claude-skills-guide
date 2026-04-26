@@ -287,6 +287,10 @@ Unbounded task size: Do not design a skill that tries to complete an entire code
 No failure handling in state: If you only track successful completions, failed files will be silently retried on every invocation. Always record failures with their error context.
 
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

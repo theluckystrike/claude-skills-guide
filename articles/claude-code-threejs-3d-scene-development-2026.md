@@ -334,6 +334,10 @@ npx vite-bundle-visualizer
 
 - **Mobile performance collapse:** Desktop scenes with post-processing, high poly counts, and real-time shadows fail on mobile. Claude Code adds quality tiers that reduce shadow map size, disable bloom, and lower geometry detail on mobile devices.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

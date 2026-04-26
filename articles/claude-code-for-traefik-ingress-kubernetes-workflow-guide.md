@@ -254,5 +254,5 @@ Related Reading
 - [Claude Code for k9s Kubernetes Terminal Workflow Guide](/claude-code-for-k9s-kubernetes-terminal-workflow-guide/)
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

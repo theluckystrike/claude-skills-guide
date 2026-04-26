@@ -227,6 +227,10 @@ Some tasks have hard context minimums. A 100-page legal contract analysis cannot
 
 Plot a cost-accuracy curve for your workload: x-axis is context size, y-axis is answer quality. The optimal point is where the curve starts flattening — adding more context costs more but quality barely improves. For most Q&A and review tasks, this inflection point falls between 20K and 50K tokens.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

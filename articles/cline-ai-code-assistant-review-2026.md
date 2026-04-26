@@ -121,6 +121,10 @@ The model flexibility is a genuine advantage. The ability to route different tas
 Both tools are mature enough to use in production. The choice between them is largely a question of working style: editor-integrated with approval transparency (Cline) versus terminal-native with a team skills system (Claude Code).
 
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

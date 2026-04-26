@@ -107,6 +107,10 @@ Claude Code Enterprise. Replit has no enterprise-grade security, audit logging, 
 
 Source: [anthropic.com/pricing](https://anthropic.com/pricing), [replit.com/pricing](https://replit.com/pricing)
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

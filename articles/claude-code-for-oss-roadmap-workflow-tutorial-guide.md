@@ -241,3 +241,5 @@ Related Reading
 - [How to Use For Oss Contributor — Complete Developer (2026)](/claude-code-for-oss-contributor-guide-workflow/)
 
 
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

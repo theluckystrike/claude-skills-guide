@@ -141,6 +141,10 @@ Following this decision tree prevents the two most common problems: rules in the
 
 For managing CLAUDE.md across multiple repositories, see the [version control strategy guide](/claude-md-version-control-strategy-best-practices/). For the full file format specification, see the [CLAUDE.md complete guide](/claude-md-file-complete-guide-what-it-does/). For enterprise-level policy deployment, see the [team collaboration guide](/claude-md-team-collaboration-best-practices/).
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Articles
 
 - [Update Team CLAUDE.md Without Breaking Existing Workflows (2026)](/updating-team-claude-md-without-breaking-workflows/)

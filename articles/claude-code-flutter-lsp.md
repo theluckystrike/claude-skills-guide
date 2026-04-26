@@ -54,7 +54,7 @@ dart analyze --fatal-infos lib/
 
 ## How It Works
 
-Flutter uses the Dart analysis server as its LSP implementation. This server provides real-time type checking, code completion, and diagnostic information. While Claude Code does not directly connect to LSP servers as a client, you can leverage the analysis server indirectly through hooks and CLAUDE.md instructions.
+Flutter uses the Dart analysis server as its LSP implementation. This server provides real-time type checking, code completion, and diagnostic information. While Claude Code does not directly connect to LSP servers as a client, you can use the analysis server indirectly through hooks and CLAUDE.md instructions.
 
 When Claude edits Dart files, a post-edit hook runs `dart analyze` and feeds the results back. This gives Claude immediate feedback about type errors, missing imports, and deprecated API usage. Claude can then fix issues in a tight feedback loop without manual intervention.
 
@@ -159,6 +159,10 @@ Yes. These techniques integrate with standard development tools and CI/CD pipeli
 ### Where can I find more advanced techniques?
 
 Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
 ## Related Resources
 

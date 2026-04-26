@@ -53,6 +53,10 @@ If you are setting up Claude Code for the first time, start with the configurati
 - [Configure TLS for MCP Servers (2026)](/mcp-transport-layer-security-tls-configuration/)
 - [WireGuard PostUp PostDown Scripts (2026)](/wireguard-postup-postdown-scripts-for-advanced-routing-configuration/)
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Hubs
 
 - [Guides Hub](/guides-hub/)

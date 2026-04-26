@@ -286,6 +286,10 @@ describe("LoginScreen", () => {
 
 React Native projects have significant boilerplate per screen. Claude Code generates a production-ready screen with validation, error handling, and tests in under 3 minutes instead of the typical 30-minute manual effort.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

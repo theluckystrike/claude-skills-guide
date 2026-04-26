@@ -192,3 +192,7 @@ Related Reading
 - [Claude Code MCP Server Disconnected](/claude-code-mcp-server-disconnected/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+

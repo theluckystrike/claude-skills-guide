@@ -162,6 +162,10 @@ The configs include placeholder values for secrets (API keys, tokens). You must 
 
 **8/10.** The sheer volume of templates makes this the fastest way to bootstrap a Claude Code project. The CLI is polished and the web UI at aitmpl.com is a nice touch for browsing. Loses points because template quality varies — the top 100 agents are excellent, but deep in the catalog you'll find templates that are barely modified copies of each other. Stick to the high-star templates or use the web UI's sort-by-popularity filter.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Resources
 
 - [Claude Code Hooks Explained](/understanding-claude-code-hooks-system-complete-guide/) — understand the hooks these templates generate

@@ -156,6 +156,10 @@ SPC data volume grows fast. At 40 stations measuring every 30 minutes with 5 cha
 - [ ] CAPA workflow enforces 90-day verification before closure
 - [ ] Gauge R&R study completed for all active inspection stations
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

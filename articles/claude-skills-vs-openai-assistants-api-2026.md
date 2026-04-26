@@ -99,3 +99,7 @@ Related reading:
 - [Building Your First MCP Tool Integration](/building-your-first-mcp-tool-integration-guide-2026/)
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+

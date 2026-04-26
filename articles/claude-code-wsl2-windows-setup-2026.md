@@ -210,6 +210,10 @@ cp /mnt/c/Users/YourUser/Documents/spec.pdf ~/projects/docs/
 
 WSL2 gives Windows developers the Linux environment Claude Code expects. Projects run at native Linux filesystem speed while maintaining access to Windows GUI tools like VS Code, browsers, and design applications.
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

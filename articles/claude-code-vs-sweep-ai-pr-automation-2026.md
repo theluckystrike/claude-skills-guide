@@ -119,6 +119,10 @@ Not every GitHub issue is suitable for automated handling. Here is a practical c
 4. For batch processing, script Claude Code invocations: `for issue in issues; do claude "fix $issue"; done`
 5. Accept that this requires developer initiation (no fully autonomous option)
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Comparisons
 
 - [Claude Code vs Copilot Workspace: Agents](/claude-code-vs-copilot-workspace-agent-2026/)

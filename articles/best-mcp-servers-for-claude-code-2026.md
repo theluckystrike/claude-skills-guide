@@ -192,6 +192,10 @@ Add more as needed. Each server adds latency and context, so only install what y
 For installation details, see the [MCP setup guide](/mcp-servers-claude-code-complete-setup-2026/). To discover more servers, browse [Awesome MCP Servers](/how-to-browse-awesome-mcp-servers-2026/). For combining MCP servers with other tools, check the [Claude Code hooks guide](/understanding-claude-code-hooks-system-complete-guide/) and the [Claude Code playbook](/playbook/).
 
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

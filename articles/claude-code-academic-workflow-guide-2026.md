@@ -212,6 +212,10 @@ Yes, with supervision. The rules enforce good practices but can't replace unders
 
 **9/10.** The most specialized Claude Code workflow available, and the specialization pays off. Academic writing has enough domain-specific conventions that general-purpose configurations miss important constraints. The citation hallucination prevention alone is worth the setup. The PhD course battle-testing gives confidence that these rules handle real edge cases. Only loses a point because the R/econometrics focus limits applicability to other fields.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Resources
 
 - [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — general configuration patterns that complement academic rules

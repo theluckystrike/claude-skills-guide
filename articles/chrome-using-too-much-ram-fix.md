@@ -279,6 +279,10 @@ Navigate to `chrome://flags/#disable-backdrop-filter` and set it to Enabled. Thi
 
 Navigate to `chrome://flags/#tab-strip-card-width` to enable memory usage indicators that display on hover over tabs. This visual feedback helps you quickly identify resource-heavy tabs without opening Chrome Task Manager. Combined with the `--renderer-process-limit=4` launch flag to cap renderer processes and the `--enable-features="MemorySaver"` flag for automatic inactive tab discarding, these tools provide continuous visibility into per-tab memory consumption during your browsing session.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 - [Stop Claude Code Writing Excessive Code (2026)](/claude-code-writes-too-much-code-fix-2026/)

@@ -13,6 +13,10 @@ Every comparison follows the same format: concrete pricing tables, measurable pe
 
 **Last updated: April 21, 2026**
 
+<div style="background:linear-gradient(135deg,rgba(110,231,183,0.08),rgba(96,165,250,0.05));border:1px solid rgba(110,231,183,0.2);border-radius:8px;padding:16px 20px;margin:20px 0;">
+<strong style="color:#6ee7b7;">Interactive Tool:</strong> Not sure which model to use? Take the 5-question quiz in our <a href="/model-selector/" style="color:#60a5fa;">Model Selector</a>.
+</div>
+
 ---
 
 ## Top Competitors
@@ -174,6 +178,10 @@ All comparisons tested on real projects. Pricing verified at time of publication
     <a href="/cost-optimization/" style="display: block; padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid #dee2e6; text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
       <strong style="color: #5436DA; font-size: 1.1rem;">Cost Optimization Hub</strong>
       <p style="margin: 0.5rem 0 0; color: #666; font-size: 0.9rem;">Reduce Claude Code costs with proven strategies and tools</p>
+    </a>
+    <a href="/model-selector/" style="display: block; padding: 1.25rem; background: linear-gradient(135deg, rgba(110,231,183,0.06), rgba(96,165,250,0.04)); border-radius: 8px; border: 1px solid rgba(110,231,183,0.2); text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
+      <strong style="color: #6ee7b7; font-size: 1.1rem;">Model Selector Tool</strong>
+      <p style="margin: 0.5rem 0 0; color: #666; font-size: 0.9rem;">Take the 5-question quiz to find your ideal model</p>
     </a>
   </div>
 </section>

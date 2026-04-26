@@ -195,6 +195,10 @@ Max 5x gives 5 times Pro usage limits for $100/month. Max 20x gives 20 times for
 ### Is API Direct cheaper than a subscription plan?
 It depends on usage. Light users (under 2 hours/day) often pay less with API Direct. Heavy users typically save money with Max plans. Use the [Cost Calculator](/calculator/) to model your specific usage pattern.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Claude Code Cost Complete Guide](/claude-code-cost-complete-guide/) — Deep dive on all cost factors

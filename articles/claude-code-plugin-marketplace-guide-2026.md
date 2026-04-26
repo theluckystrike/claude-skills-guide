@@ -181,6 +181,10 @@ File an issue on the plugin's GitHub repository. Include your Claude Code versio
 
 For more on specific plugin types, see our [skills vs hooks vs commands comparison](/claude-code-skills-vs-hooks-vs-commands-2026/). For MCP server setup, read the [MCP setup guide](/mcp-servers-claude-code-complete-setup-2026/). For building your own plugins, see our [skill building guide](/how-to-build-your-own-claude-code-skill-2026/).
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

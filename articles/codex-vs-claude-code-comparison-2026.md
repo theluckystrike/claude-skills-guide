@@ -423,6 +423,10 @@ Claude Code. When a command fails or tests break, Claude Code can read the error
 }
 </script>
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

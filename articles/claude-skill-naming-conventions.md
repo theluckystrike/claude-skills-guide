@@ -112,6 +112,10 @@ The `argument-hint` field (e.g., `[branch-name]`) appears during autocomplete. U
 - [ ] No collision with skills at other scopes (personal vs project)
 - [ ] Legacy `.claude/commands/` files with same name removed or migrated
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

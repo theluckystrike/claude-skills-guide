@@ -226,6 +226,10 @@ If skills are not producing expected savings, check:
 3. Is the skill too large? (Over 500 tokens suggests splitting)
 4. Is the skill missing key information? (Claude still reads files despite skill availability)
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Further Reading
 
 - [Claude Code Skills Guide](/skills/) -- complete skills reference

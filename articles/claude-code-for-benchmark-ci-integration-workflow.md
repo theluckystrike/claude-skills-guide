@@ -475,3 +475,5 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
 
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+

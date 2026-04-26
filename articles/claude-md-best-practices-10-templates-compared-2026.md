@@ -236,6 +236,10 @@ Yes. It is part of your project configuration and should be version-controlled. 
 
 For more on CLAUDE.md patterns, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). For building your own skills to add to CLAUDE.md, read our [skill building guide](/how-to-build-your-own-claude-code-skill-2026/). For the full ecosystem overview, see the [tools map](/claude-code-ecosystem-complete-map-2026/).
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

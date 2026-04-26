@@ -353,6 +353,10 @@ A typical image consumes approximately 1,600 tokens. High-resolution images that
 
 Yes, you can mix file types in a single message, up to 5 files total. For example, you can upload a PDF and two images in the same message.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

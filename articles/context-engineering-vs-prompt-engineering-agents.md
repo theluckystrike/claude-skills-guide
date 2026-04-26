@@ -178,6 +178,10 @@ For teams currently using prompt engineering only:
 
 **Total investment:** 3.5 hours. **Total savings:** 60-75% token reduction. For a developer spending $200/month, that is $120-$150/month in perpetual savings.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Further Reading
 
 - [Pre-Loading Context: CLAUDE.md Sections That Save 50%+ Tokens](/pre-loading-context-claude-md-sections-save-tokens/) -- practical pre-loading implementation

@@ -69,6 +69,10 @@ Claude Code should create a server endpoint that returns HTML partial containing
 
 3. **CSRF token handling.** Claude adds forms without CSRF protection. HTMX does not automatically include CSRF tokens. Use `hx-headers='{"X-CSRF-Token": "..."}` or configure a meta tag with `hx-vals` to include the token in all requests.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

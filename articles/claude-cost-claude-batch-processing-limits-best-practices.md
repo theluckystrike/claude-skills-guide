@@ -237,6 +237,10 @@ Monitor batch operations at scale:
 - **Retry volume**: Failed requests requiring resubmission. Should be under 0.1% of total.
 - Compare total cost for the full batch run against standard API pricing to verify the 50% discount
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

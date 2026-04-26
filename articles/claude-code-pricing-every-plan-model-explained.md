@@ -142,6 +142,10 @@ Claude Code queues your request and retries automatically with backoff. During p
 ]}
 </script>
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 - [Pro vs Max vs API Plan Comparison](/claude-code-pro-vs-max-vs-api-plan-comparison/)

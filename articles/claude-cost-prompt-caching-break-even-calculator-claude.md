@@ -164,6 +164,10 @@ Validate your calculator predictions against reality:
 - **Monthly ROI**: Track cumulative savings. At $4,045/month saved (the support bot example), caching pays for the engineering time in the first day
 - Export Anthropic billing data weekly and compare against calculator projections
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

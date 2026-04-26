@@ -68,6 +68,10 @@ Claude Code should add `export BAT_THEME="Catppuccin Mocha"` to shell config, se
 
 3. **Missing language detection for stdin.** Claude pipes content to bat without specifying the language: `curl url | bat`. Without a file extension, bat cannot detect the language. Use `curl url | bat -l json` to specify the language explicitly.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

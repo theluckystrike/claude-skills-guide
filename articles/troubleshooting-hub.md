@@ -241,6 +241,10 @@ Advanced diagnostics:
 | [How to Make Claude Code Make Smaller Focused Changes](/how-to-make-claude-code-make-smaller-focused-changes/) | Constraining Claude Code to produce scoped, reviewable diffs |
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

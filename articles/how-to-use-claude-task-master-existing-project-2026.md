@@ -176,3 +176,7 @@ Adding Task Master to a project that is already underway requires some adjustmen
 - Explore the [Claude Code playbook](/playbook/) for workflow patterns
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+

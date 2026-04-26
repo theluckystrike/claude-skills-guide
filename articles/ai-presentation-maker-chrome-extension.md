@@ -359,3 +359,5 @@ Slide content too long for the slide template: Limit each bullet to 10 words max
 {% endraw %}
 
 
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+

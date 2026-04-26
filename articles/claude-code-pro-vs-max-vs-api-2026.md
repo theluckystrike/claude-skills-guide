@@ -190,6 +190,10 @@ Claude Code shows a rate limit message and tells you when your quota resets (eve
 ### Is API Direct or Max cheaper for heavy usage?
 For consistent heavy usage (4+ hours daily), Max 20x at $200/month is typically cheaper than API Direct. For variable usage with quiet periods, API Direct wins because you pay nothing during downtime.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Claude Code Pricing: Every Plan](/claude-code-pricing-every-plan-2026/) — Detailed pricing breakdown

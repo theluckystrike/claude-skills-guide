@@ -151,6 +151,10 @@ The complete cost-optimized CLAUDE.md template:
 - If these constraints prevent task completion, report the specific constraint and ask for guidance
 ```
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

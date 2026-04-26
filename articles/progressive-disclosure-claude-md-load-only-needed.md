@@ -282,6 +282,10 @@ Monthly estimates: 5 developers, 20 sessions/day each, Sonnet 4.6 rates ($3/$15 
 
 The compounding effect is the key insight: every token saved in CLAUDE.md is saved on every turn of every session. A 500-token reduction in CLAUDE.md saves 500 x 20 turns = 10,000 tokens per session, not just 500. Over a month of 100 sessions, that is 1,000,000 tokens = $3.00 on Sonnet 4.6 input costs alone. This makes CLAUDE.md optimization one of the highest-impact activities for cost control.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

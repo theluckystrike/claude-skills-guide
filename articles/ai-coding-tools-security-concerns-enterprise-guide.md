@@ -379,6 +379,10 @@ For teams working with sensitive data, consider the `canvas-design` skill for ge
 The key insight: AI coding tools significantly boost productivity, but treating them as trusted internal systems without proper security controls creates unacceptable risk. Start at Level 1 this week, commit to Level 2 within a month, and iterate toward Level 3 as your team's AI usage scales. Implement these mitigations before your team adopts AI assistants widely. retrofitting security into an established workflow is significantly harder than building it in from the start.
 
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

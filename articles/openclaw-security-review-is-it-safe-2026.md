@@ -424,3 +424,5 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+

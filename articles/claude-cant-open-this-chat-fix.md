@@ -328,6 +328,10 @@ Contact Anthropic support through the help menu on claude.ai and provide the con
 
 Almost certainly not. Conversations are stored on Anthropic's servers. The error is a client-side loading issue in most cases. Clearing your browser cache and logging in again usually restores access to all your conversations.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

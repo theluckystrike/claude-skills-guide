@@ -185,6 +185,10 @@ Related Reading
 - [Claude Code for dbt Snapshot Workflow Tutorial](/claude-code-for-dbt-snapshot-workflow-tutorial/)
 - [Claude Code Engineering Manager Pull Request Review Workflow](/claude-code-engineering-manager-pull-request-review-workflow/)
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

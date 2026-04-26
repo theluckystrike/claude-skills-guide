@@ -334,6 +334,10 @@ Yes. These techniques integrate with standard development tools and CI/CD pipeli
 
 Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
 
+
+
+**Quick reference →** Search all commands in our [Command Reference](/commands/).
+
 ## Related Resources
 
 - [Claude Tool Use Hidden Token Costs](/claude-tool-use-hidden-token-costs-explained/)

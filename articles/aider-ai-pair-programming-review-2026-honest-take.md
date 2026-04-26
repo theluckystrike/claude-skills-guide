@@ -157,6 +157,10 @@ However, for serious software development work, particularly on larger projects 
 The honest take? Aider is a competent tool for basic AI-assisted coding, but Claude Code's extensibility and comprehensive feature set make it the more powerful option for professional development work in 2026. The skill ecosystem alone provides value that Aider cannot match without significant architectural changes.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

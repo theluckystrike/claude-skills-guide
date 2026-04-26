@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Chrome Safe Browsing How Works (2026)"
-description: "A technical deep-dive into Chrome Safe Browsing mechanisms. Learn how the feature detects threats, its API endpoints, and how developers can integrate."
+description: "A technical deep-get startedto Chrome Safe Browsing mechanisms. Learn how the feature detects threats, its API endpoints, and how developers can integrate."
 date: 2026-03-15
 last_modified_at: 2026-04-17
 author: "theluckystrike"
@@ -313,4 +313,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
 

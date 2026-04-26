@@ -211,6 +211,10 @@ Steps:
 8. Report whether the fix resolved the issue
 ```
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## FAQ
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

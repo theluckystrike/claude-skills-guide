@@ -762,6 +762,10 @@ Yes. Prompt caching reduces the number of input tokens counted against your TPM 
 
 No. Rate limits are enforced at the organization level, not per API key. Creating additional keys within the same organization shares the same limit pool. The correct approach is to upgrade your tier through increased spend or contact Anthropic sales for custom limits.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

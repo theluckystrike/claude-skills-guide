@@ -76,6 +76,10 @@ Run `claude usage` to see your current billing period's token consumption broken
 Claude Code uses the latest Claude model available on your account. You can override the model with `claude --model claude-sonnet-4-20250514` or set a default in your configuration with `claude config set model claude-sonnet-4-20250514`.
 
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

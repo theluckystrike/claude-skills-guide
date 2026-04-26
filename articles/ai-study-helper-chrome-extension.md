@@ -371,5 +371,5 @@ Side panel closing when navigating to a new page: The side panel persists across
 Storage filling up with large study sets: Compress the flashcard JSON using `CompressionStream` (Chrome 80+) before storing. A study set of 500 flashcards compresses from ~50 KB to under 5 KB.
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

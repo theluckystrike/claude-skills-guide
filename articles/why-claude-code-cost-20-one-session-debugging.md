@@ -281,6 +281,10 @@ If the session cost $20 and ran fewer than 40 turns, the model was almost certai
 - If estimated session cost exceeds $1, stop and confirm with the user
 ```
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

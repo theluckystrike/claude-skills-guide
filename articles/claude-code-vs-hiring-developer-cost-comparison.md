@@ -287,6 +287,10 @@ For enterprises with complex requirements, the hybrid approach offers the best e
 The key is matching your approach to your specific situation rather than defaulting to either extreme. Start with a pilot: pick one well-scoped feature, use Claude Code for everything it can handle, and measure the time savings against what you expected. Most teams see enough evidence in the first pilot to restructure how they allocate development work permanently.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

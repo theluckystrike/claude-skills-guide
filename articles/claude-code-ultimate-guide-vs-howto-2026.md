@@ -105,6 +105,10 @@ The non-overlapping content:
 
 Beginners: clone Claude Howto and work through it this week. You will be productive with Claude Code in days rather than weeks. Experienced users: take the Ultimate Guide quiz to find your gaps, then study those sections. Everyone benefits from having both resources available — Howto as your quick reference and the Ultimate Guide as your deep reference. For practical workflow patterns that build on both, see the [Claude Code playbook](/playbook/).
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 - [Claude Code Ultimate Guide: 271 Questions (2026)](/claude-code-ultimate-guide-271-questions-2026/)

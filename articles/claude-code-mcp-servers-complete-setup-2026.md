@@ -249,6 +249,10 @@ MCP servers are designed for Claude Code (the CLI tool). The Claude API uses a d
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

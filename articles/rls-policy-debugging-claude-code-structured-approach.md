@@ -277,6 +277,10 @@ echo "REMINDER: Update .claude/skills/rls-policies.md with any new or changed po
 
 A stale policy map is worse than no map at all, because Claude trusts the skill content and will propose fixes based on outdated policy information. Budget 5 minutes per migration to keep the skill synchronized, which prevents 15-30 minutes of misdirected debugging per incident.
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

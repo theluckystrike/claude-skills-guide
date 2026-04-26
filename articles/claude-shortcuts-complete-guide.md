@@ -318,6 +318,10 @@ Not a direct keyboard shortcut. Use the /model slash command to switch models du
 
 The Claude iOS and Android apps support basic system keyboard shortcuts when using an external keyboard, but do not have Claude-specific shortcuts beyond standard text editing.
 
+
+
+**Quick reference →** Search all commands in our [Command Reference](/commands/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

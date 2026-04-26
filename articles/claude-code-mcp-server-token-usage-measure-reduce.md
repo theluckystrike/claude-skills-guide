@@ -338,6 +338,10 @@ The weekly report surfaces trends: if MCP overhead is growing (more tools being 
 
 **Token costs increased after adding a new MCP server**: Compare `ccusage` data from before and after the server was added. Calculate the per-session overhead increase. If the new server adds 5,000+ tokens per session but is called fewer than 5 times per week, the overhead is not justified. Remove the server and use CLI commands or skills as alternatives.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

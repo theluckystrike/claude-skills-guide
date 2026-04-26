@@ -10,6 +10,10 @@ date: 2026-04-20
 
 You know the basics. You have a working CLAUDE.md, you run sessions regularly, and you understand permission modes. This guide covers the patterns that turn Claude Code from a coding assistant into a software engineering force multiplier: multi-agent orchestration, hooks for automated quality gates, subagent delegation, and cost optimization at fleet scale.
 
+<div style="background:linear-gradient(135deg,rgba(110,231,183,0.08),rgba(96,165,250,0.05));border:1px solid rgba(110,231,183,0.2);border-radius:8px;padding:16px 20px;margin:20px 0;">
+<strong style="color:#6ee7b7;">Interactive Tool:</strong> Power tools — <a href="/token-estimator/" style="color:#60a5fa;">Token Estimator</a> · <a href="/commands/" style="color:#60a5fa;">Command Reference</a> · <a href="/mcp-config/" style="color:#60a5fa;">MCP Config Generator</a>
+</div>
+
 ---
 
 ## Multi-Agent Orchestration
@@ -240,6 +244,8 @@ Yes. Claude Code supports headless mode for automated environments. Configure it
 - [Debug complex error scenarios](/error-handling/)
 - [Troubleshoot advanced features](/troubleshooting/)
 - [Review the fundamentals](/getting-started/)
+- [Estimate token usage](/token-estimator/)
+- [Configure MCP servers](/mcp-config/)
 
 
 <section class="related-hubs" style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 12px; border: 1px solid #e9ecef;">

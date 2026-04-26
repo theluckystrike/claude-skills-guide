@@ -98,6 +98,10 @@ Haiku is ideal for junior developers because their questions tend to be straight
 
 For tasks that require neither reasoning nor code generation — like reformatting JSON, sorting imports, or removing trailing whitespace — use your IDE's built-in tools or a simple script. Paying even Haiku's minimal cost for deterministic text transformations is wasteful when a regex or formatter handles it in milliseconds with zero API calls. Prettier for formatting, ESLint with --fix for style enforcement, and `isort` for Python imports all produce guaranteed-correct output in under 100ms. If your task has a deterministic answer that a tool can compute, skip the AI entirely regardless of how cheap the model is. For teams that need reasoning capability but cannot afford cloud API costs at all, running a local model like Llama 3 via Ollama provides free inference at the cost of reduced quality and slower speeds on consumer hardware. For a deeper dive, see [Claude Sonnet 4.6 vs Codestral: Code Generation Face-Off](/claude-sonnet-vs-codestral-comparison/).
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

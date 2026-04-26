@@ -121,6 +121,10 @@ Minimize migration cost and risk with these four strategies:
 - Calculate real payback period vs estimated payback period
 - Log any incidents caused by migration for true total cost accounting
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -324,6 +324,10 @@ A data retention policy for Claude Code prevents unbounded storage growth while 
 The key is automation, set up scheduled runs and let the system manage itself. Your future self will appreciate clean storage and searchable archives when you need to reference decisions from last month.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -104,6 +104,10 @@ Codestral's zero-cost entry and fast inline completions make it less intimidatin
 
 For generating boilerplate-heavy code that follows perfectly predictable patterns (Kubernetes manifests, Terraform resources, CI/CD configs from templates), code generators and scaffolding tools are more appropriate than AI models. Tools like Yeoman, Cookiecutter, or even simple templating scripts produce deterministic output with zero cost and zero hallucination risk. AI adds value when the output requires judgment, not just pattern filling. Additionally, if you are working on a single-language project with excellent LSP support (Rust with rust-analyzer, Go with gopls), the type-aware completions from your language server handle 90% of daily coding needs without any API calls or network dependency. For developers who want a middle ground between a free specialized model and a paid general model, Codeium's free autocomplete tier provides AI-powered completions without any API cost or commercial licensing concerns.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

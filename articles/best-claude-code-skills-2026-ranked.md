@@ -250,6 +250,10 @@ A mix of both. Anthropic provides some core skills, while the community contribu
 ]}
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [How to Install Claude Code Skills](/how-to-install-claude-code-skills-guide/)

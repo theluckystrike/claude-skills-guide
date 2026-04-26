@@ -250,3 +250,7 @@ With this CLAUDE.md loaded, Claude Code generates feature-first folder structure
 ## The Full 16-Template Pack
 
 This is one of 16 production CLAUDE.md templates available in the Lifetime pack. Includes templates for Android + Kotlin, iOS + SwiftUI, React Native + Expo, Next.js + TypeScript, and 11 more stacks. Each template is 200-400 lines of production-tested configuration. Get all 16 at [claudecodeguides.com/generator/](https://claudecodeguides.com/generator/).
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+

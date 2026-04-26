@@ -211,6 +211,10 @@ Attribution adds a layer of instrumentation that all API call sites must use. Fo
 
 The attribution system pays for itself when it surfaces the first actionable insight. Track "insights surfaced" and "dollars saved per insight." Common first findings: one agent type consuming disproportionate tokens (fix: loop detection), one task type using an over-powered model (fix: model routing), or one project generating 10x more requests than expected (fix: request deduplication). A well-maintained attribution system surfaces $500-$2,000/month in savings opportunities within the first week.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

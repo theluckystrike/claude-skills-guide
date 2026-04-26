@@ -197,6 +197,10 @@ Compare against: value of better first-attempt success rates
   If cost < saved retries: extended thinking pays for itself
 ```
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

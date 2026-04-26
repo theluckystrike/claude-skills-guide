@@ -347,6 +347,10 @@ response = client.messages.create(
 
 For most development tasks, Sonnet 4 with extended thinking provides sufficient reasoning depth at a fraction of the cost. Reserve Opus 4.1 thinking-16k for problems where Sonnet's reasoning falls short. See our [Claude Code router guide](/claude-code-router-guide/) for routing strategies between these models.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -154,6 +154,10 @@ For projects where database queries are infrequent (under 5 per session), runnin
 
 **MCP connection errors consuming retry tokens** -- If the Supabase MCP server fails to connect, Claude Code may retry multiple times, each attempt costing tool call overhead. Add a CLAUDE.md rule: "If Supabase MCP connection fails, report the error and wait for user guidance. Do not retry more than twice."
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

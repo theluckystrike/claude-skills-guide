@@ -137,6 +137,10 @@ After switching TTLs, track:
 
 To quantify the exact cost of cache misses, calculate the re-write penalty for your model. On Sonnet 4.6 with 40K cached tokens, each cache miss (expiry followed by re-write) costs 40K x $3.75/MTok = $0.15 for a 5-minute write, or 40K x $6.00/MTok = $0.24 for a 1-hour write. If you observe 12 cache misses per hour with the 5-minute TTL, that is $1.80/hour in re-write costs. Switching to 1-hour cache reduces that to 1 write per hour at $0.24 -- saving $1.56/hour or $1,123/month.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

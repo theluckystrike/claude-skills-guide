@@ -115,6 +115,10 @@ Start with restrictive defaults, expand deliberately, and maintain comprehensive
 Remember that security configurations require regular review as your organization and the AI platform evolve. The patterns outlined here provide a foundation, but your specific implementation should reflect your unique risk profile and compliance requirements.
 
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related
 
 **Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).

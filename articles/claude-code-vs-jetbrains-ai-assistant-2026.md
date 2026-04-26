@@ -82,6 +82,10 @@ Source: [anthropic.com/pricing](https://anthropic.com/pricing), [jetbrains.com/a
 
 JetBrains AI is the smartest IDE-integrated AI assistant available — deep type awareness, structural refactoring, and Junie's agent mode make it compelling for developers already invested in the JetBrains ecosystem. Claude Code is the most capable autonomous terminal agent — unrestricted system access, MCP connectivity, and headless operation make it the choice for complex, cross-system workflows. The ideal setup for serious developers is both: JetBrains AI for in-editor intelligence and Claude Code for autonomous execution beyond the IDE's boundaries. Migration tip: if you currently use JetBrains AI alone and want to add Claude Code, start by creating a CLAUDE.md file that documents your project's module structure and build commands so the terminal agent can operate effectively from day one.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

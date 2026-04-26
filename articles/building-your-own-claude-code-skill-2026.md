@@ -338,6 +338,10 @@ Start a new Claude Code session and ask it to perform a task covered by your ski
 ### Can I sell Claude Code skills?
 Yes. There is no restriction on selling skills. Some developers offer premium skills with advanced features, support, and regular updates. The community standard is MIT-licensed free skills.
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Guides
 
 - [Building a Custom Claude Code Skill Tutorial](/building-custom-claude-code-skill-tutorial/) — Alternative tutorial with different approach

@@ -305,6 +305,10 @@ This section lists every article in the use-cases cluster, grouped by sub-topic.
 
 ---
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Hubs
 
 - [Getting Started with Claude Skills](/getting-started-hub/). Learn skills fundamentals before specializing by use case.

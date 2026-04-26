@@ -279,3 +279,5 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
 
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

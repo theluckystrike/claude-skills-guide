@@ -139,6 +139,10 @@ Another pitfall: tool definitions with deeply nested JSON schemas consume far mo
 
 Log `usage.input_tokens` from every API response before and after implementing conditional tool injection. Calculate the delta and multiply by your model's input price. For Opus 4.7 at $5.00/MTok, every 1,000 tokens saved across 10,000 requests equals $50.00 per day. Set up a daily report comparing overhead tokens (total input minus your known prompt length) to catch regressions. Track the classifier accuracy rate alongside cost savings -- if accuracy drops below 95%, investigate whether certain intent categories need more keyword coverage or a model-based pre-classifier.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

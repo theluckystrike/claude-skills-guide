@@ -140,6 +140,10 @@ Skills are limited by what Claude can do with its existing tools. If Bash, Read,
 - [ ] Combined approach has clear separation: MCP provides tools, skill provides workflow
 - [ ] Documented which approach the team uses to prevent duplicate implementations
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

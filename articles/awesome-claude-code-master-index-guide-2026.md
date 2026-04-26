@@ -135,6 +135,10 @@ The [toolkit repo](/awesome-claude-code-toolkit-135-agents-2026/) focuses specif
 
 **8/10.** The definitive starting point for Claude Code ecosystem discovery. Loses two points because the raw README gets unwieldy at 500+ entries — the web interface at awesomeclaude.ai compensates, but many developers never discover it. The quality gate is genuinely useful; I've never clicked through to a dead or broken project.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Resources
 
 - [Claude Skills Directory](/claude-skills-directory-where-to-find-skills/) — where to find and install skills

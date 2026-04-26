@@ -10,7 +10,7 @@ domain: "defense systems"
 
 ## Why Claude Code for Ada Legacy Systems
 
-Ada remains the language of choice for safety-critical defense systems, avionics, air traffic control, and railway signaling. Millions of lines of Ada 83 and Ada 95 code run in production systems governed by DO-178C, MIL-STD-498, and other certification standards. These systems require ongoing maintenance, but the pool of Ada developers is shrinking and most tooling predates modern IDE support. Updating Ada 83 code to leverage Ada 2012/2022 features like contract-based programming and parallel constructs requires deep language knowledge.
+Ada remains the language of choice for safety-critical defense systems, avionics, air traffic control, and railway signaling. Millions of lines of Ada 83 and Ada 95 code run in production systems governed by DO-178C, MIL-STD-498, and other certification standards. These systems require ongoing maintenance, but the pool of Ada developers is shrinking and most tooling predates modern IDE support. Updating Ada 83 code to use Ada 2012/2022 features like contract-based programming and parallel constructs requires deep language knowledge.
 
 Claude Code understands Ada's strong typing system, tasking model, generic packages, and the specific patterns required by real-time embedded systems. It can modernize legacy Ada code while maintaining the deterministic behavior and WCET (Worst Case Execution Time) properties that certification demands.
 
@@ -246,6 +246,10 @@ When working with Claude Code on this topic, keep these implementation details i
 
 **Version Control Integration.** All changes Claude Code makes are regular filesystem operations visible to git. Use `git diff` after each significant change to review what was modified. For experimental changes, create a branch first with `git checkout -b experiment/topic` so you can easily discard or keep the results.
 
+
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
 
 ## Related Guides
 

@@ -209,6 +209,10 @@ Each sub-agent gets its own context window. The orchestrator's window is shared 
 
 For session management strategies, see [the context loss fix guide](/claude-code-loses-context-long-sessions-fix-2026/). For CLAUDE.md optimization, read the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). For overall cost management, see the [pricing guide](/claude-code-pricing-plans-comparison-2026/).
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

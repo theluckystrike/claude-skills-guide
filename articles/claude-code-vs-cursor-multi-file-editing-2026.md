@@ -87,6 +87,10 @@ Cursor's visual diff preview makes it easier for developers unfamiliar with the 
 
 For purely mechanical refactoring (renaming a symbol, changing an import path consistently), your IDE's built-in refactoring tools or command-line tools like `sed` or `ast-grep` are faster and more reliable than either AI tool. AI excels when changes require understanding semantics — modifying behavior, updating logic, adapting patterns — not when applying a deterministic transformation.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

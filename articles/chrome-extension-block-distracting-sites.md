@@ -391,5 +391,5 @@ Focus session timer not surviving browser restart: `chrome.alarms` persist acros
 Users bypassing the blocker by using incognito: The extension only runs in incognito if the user has explicitly allowed it in the extensions settings. For self-blocking use cases, consider adding a note in the focus page that the block does not apply in incognito mode.
 
 
-
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
 

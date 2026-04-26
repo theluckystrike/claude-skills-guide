@@ -88,3 +88,7 @@ Source: [anthropic.com/pricing](https://anthropic.com/pricing), [github.com/feat
 GitHub Copilot and Claude Code are not competitors — they are complementary layers in a modern developer's toolkit. Copilot handles the constant, passive acceleration of typing: boilerplate, function signatures, test scaffolding, documentation. Claude Code handles the periodic, active execution of complex work: multi-file refactors, architectural changes, DevOps automation, debugging. The best developers in 2026 use both. If you can only afford one, start with Copilot ($10/mo) for immediate daily value, and add Claude Code when the cost of manually orchestrating complex tasks exceeds its price.
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+

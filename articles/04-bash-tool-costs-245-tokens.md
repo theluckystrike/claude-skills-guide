@@ -142,6 +142,10 @@ Log the number of tool calls per session and total `usage.input_tokens`. After i
 
 To baseline your current overhead accurately, log the `usage.input_tokens` field from the API response and subtract your known prompt size. The difference is tool overhead plus conversation history tokens. For agents running on Sonnet 4.6 at $3.00/MTok instead of Opus, the per-session savings from batching are proportionally smaller ($0.0142 per session) but still meaningful at scale -- $42.53/month at 100 sessions/day.
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

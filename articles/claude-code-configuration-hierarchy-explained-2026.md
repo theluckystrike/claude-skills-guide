@@ -211,6 +211,10 @@ For a file in `src/legacy/`, Claude Code sees all three. If they conflict, the c
 **Wrong:** Committing `.claude/settings.json` with local file paths or tokens.
 **Right:** Add sensitive parts to `.gitignore` or use environment variables.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## FAQ
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

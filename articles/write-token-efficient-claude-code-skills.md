@@ -270,6 +270,10 @@ The highest-ROI skills are those used most frequently. Audit skill usage monthly
 
 Keep each skill within these budgets. A skill that exceeds its budget should be split into two focused skills, each loaded independently based on task relevance. Regularly auditing skill sizes against these targets prevents gradual bloat as teams add information over time -- a common failure mode where skills grow from 200 tokens to 800 tokens through incremental additions without pruning.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

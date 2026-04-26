@@ -124,6 +124,10 @@ For individual developers, `/cost` plus ccusage covers all monitoring needs. Tea
 
 **Cache read ratio is 0%** -- Prompt caching activates when the same context prefix is sent across multiple turns in a session. Very short sessions (1-2 turns) may not benefit from caching. This is normal behavior, not a configuration issue.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

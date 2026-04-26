@@ -189,6 +189,10 @@ This calculator estimates tool definition sizes using averages. Actual token cou
 
 Run the calculator before any optimization to establish a baseline, then after each change to quantify the improvement. The most actionable metric is `tool_overhead_pct` -- what percentage of your input tokens go to tool definitions vs. actual content. Teams typically start at 15-30% tool overhead and can reduce to 5-10% through pruning and schema optimization. At Opus 4.7 rates, dropping from 25% to 10% overhead on 10,000 daily requests saves approximately $1,125/month.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

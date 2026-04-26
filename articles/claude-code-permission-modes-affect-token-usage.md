@@ -159,6 +159,10 @@ The recommended approach for cost-conscious developers is the allowlist mode, wh
 
 **Security concerns with auto-accept** -- Never use `--dangerously-skip-permissions` on machines with production credentials, secrets, or access to sensitive systems. The allowlist approach provides a safe middle ground.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

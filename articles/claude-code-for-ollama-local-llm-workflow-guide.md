@@ -69,6 +69,10 @@ Claude Code should configure the OpenAI SDK with `baseURL: 'http://localhost:114
 
 3. **Context window differences.** Claude sets high `max_tokens` values from cloud API habits. Local models have different context windows (typically 4K-8K for small models). Check the model's context length with `ollama show <model>` and adjust accordingly.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

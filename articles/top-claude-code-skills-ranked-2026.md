@@ -177,6 +177,10 @@ Yes. Skills work on Free, Pro, Max, and API Direct plans. However, skills that r
 ### Where can I find Claude Code skills to install?
 The [Skill Finder](/skill-finder/) catalogs community skills with ratings and install commands. GitHub search for "claude-code-skills" also returns many options.
 
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+
 ## Related Guides
 
 - [Best Claude Code Skills to Install First](/best-claude-code-skills-to-install-first-2026/) — Starter pack for new users

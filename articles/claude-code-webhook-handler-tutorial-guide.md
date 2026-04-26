@@ -294,5 +294,5 @@ Related Reading
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

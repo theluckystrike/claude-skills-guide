@@ -177,3 +177,7 @@ For building custom agents from scratch, see the [agent building guide](/how-to-
 
 - [Claude Code frontend design plugin](/claude-code-frontend-design-plugin-guide/) — design system integration for frontend agents
 - [Codex vs Claude Code](/codex-vs-claude-code-comparison-2026/) — how Claude Code compares for frontend work
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+

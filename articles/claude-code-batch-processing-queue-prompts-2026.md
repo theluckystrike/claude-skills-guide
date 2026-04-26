@@ -186,6 +186,10 @@ echo -e "Explain CORS\nExplain CSRF\nExplain XSS" | \
 
 Batch processing turns a 2-hour manual code review into a 10-minute automated run. Teams use this to enforce consistent documentation, test coverage, and code style across entire repositories in a single command.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

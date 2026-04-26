@@ -188,6 +188,10 @@ ccusage --days 7 --format table
 | Smart routing (20/60/20) | $99 | $201 (67%) |
 | Aggressive routing (30/60/10) | $73 | $227 (76%) |
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

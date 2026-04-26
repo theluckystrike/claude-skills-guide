@@ -211,3 +211,7 @@ npx ccusage
 For the full ecosystem map, see our [tools overview](/claude-code-ecosystem-complete-map-2026/). For comparing plugin types, read the [skills vs hooks vs commands guide](/claude-code-skills-vs-hooks-vs-commands-2026/). For CLAUDE.md setup, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+

@@ -139,6 +139,10 @@ The break-even: if re-establishing context costs less than $5.25 in tokens (abou
 - Maximum session length: 30 exchanges (start fresh after 30, even if context is small)
 ```
 
+
+
+**Quick reference →** Search all commands in our [Command Reference](/commands/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -145,6 +145,10 @@ When a legacy command exists at `.claude/commands/deploy.md` and a skill exists 
 - [ ] Audit skill or manual check run before onboarding new members
 - [ ] Legacy `.claude/commands/` files migrated or removed
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

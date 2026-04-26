@@ -132,6 +132,10 @@ Keep project-specific templates in the project and universal tools in your user 
 - Build a [custom CLAUDE.md](/claude-md-best-practices-10-templates-compared-2026/) that extends your installed agents
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional resources
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

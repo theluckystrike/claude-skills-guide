@@ -111,3 +111,7 @@ Related reading:
 - [Claude Code vs Cursor: Full Comparison 2026](/claude-code-vs-cursor-comparison-2026/)
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+

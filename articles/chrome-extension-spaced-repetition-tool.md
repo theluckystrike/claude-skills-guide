@@ -347,3 +347,5 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
+**Quick reference →** Search all commands in our [Command Reference](/commands/).
+

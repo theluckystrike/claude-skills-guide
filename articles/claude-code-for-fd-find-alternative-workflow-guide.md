@@ -71,6 +71,10 @@ Claude Code should run `fd -e test.ts -e spec.ts --changed-within 24h -x wc -l |
 
 3. **Missing `--hidden` for dotfiles.** Claude searches for `.env` or `.eslintrc` without `--hidden`. fd skips hidden files by default (unlike find). Add `-H` when searching for dotfiles: `fd -H ".env"`.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

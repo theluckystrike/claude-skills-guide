@@ -122,6 +122,10 @@ Track these metrics before and after enabling caching:
 - **Break-even verification**: Confirm your write-to-read ratio exceeds 1:1 for 5-minute cache or 1:2 for 1-hour cache
 - Use the Anthropic dashboard usage tab to compare week-over-week input token costs
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -106,6 +106,10 @@ The [claude-howto](https://github.com/luongnv89/claude-howto) repo provides visu
 For prompt engineering techniques, see the [prompt engineering guide](/claude-code-prompt-engineering-tips-2026/). For task breakdown strategies, read [The Claude Code Playbook](/playbook/). For team-wide requirement standards, check the [team onboarding playbook](/claude-code-team-onboarding-playbook-2026/).
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Frequently Asked Questions
 
 ### Does this error affect all operating systems?

@@ -125,6 +125,10 @@ Cost savings at Sonnet: $0.42-$8.10/month
 - Maximum file reads per session: 20 (forces efficient reading)
 ```
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

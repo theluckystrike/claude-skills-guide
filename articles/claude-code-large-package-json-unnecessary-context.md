@@ -223,6 +223,10 @@ The same principle applies to other configuration files that Claude Code might r
 
 For each large configuration file, ask: "Does Claude Code need to read this file for the current task, or would a 2-line summary in CLAUDE.md suffice?" The answer is usually the summary.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

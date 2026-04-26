@@ -430,6 +430,10 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Frequently Asked Questions
 
 ### What is Understanding CDN Optimization with Claude Code?

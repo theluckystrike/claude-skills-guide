@@ -237,6 +237,10 @@ By default, Claude 4 models return summarized thinking. You can control this wit
 
 If thinking is enabled but the budget is set too low (close to 1024), Claude may not have enough tokens to reason deeply and falls back to a fast response. Set the thinking budget to at least 5,000 tokens for meaningful reasoning improvement. For complex multi-step problems, use 10,000 or more.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

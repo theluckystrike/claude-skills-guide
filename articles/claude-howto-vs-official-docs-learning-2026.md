@@ -97,6 +97,10 @@ Yes. Most modern development tools support standard formats and migration paths.
 
 Pricing varies by tier and team size. Check each tool's current pricing page for the latest rates. Many offer free tiers sufficient for individual developers and small teams.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Resources
 
 - [Claude Code Docs Mirror vs Claude Howto](/claude-code-docs-vs-claude-howto-2026/)

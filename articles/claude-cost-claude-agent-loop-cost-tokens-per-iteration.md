@@ -201,6 +201,10 @@ Track overhead efficiency:
 - **Cost per useful token**: Total cost / (total tokens - overhead tokens). This reveals the true cost of productive work.
 - **Tool utilization**: For each declared tool, track how often it is actually invoked. Remove tools with under 5% utilization.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -69,6 +69,10 @@ Claude Code should create/verify the `Dockerfile`, configure `fly.toml` with `[[
 
 3. **Fly Postgres is not managed RDS.** Claude treats Fly Postgres like a fully managed service. Fly Postgres runs as a regular Fly app — you are responsible for backups, monitoring, and failover configuration. Set up `fly postgres backup` and monitoring.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

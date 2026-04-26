@@ -164,6 +164,10 @@ Direct prompting doesn't enforce schema validation. The model might return malfo
 
 Compare `usage.input_tokens` for identical tasks processed via both paths. The tool use path should consistently show 500-1,500 more input tokens. Track extraction accuracy on both paths using a ground truth dataset. If direct prompting achieves 98%+ accuracy (matching tool use), the conversion is worthwhile. At Sonnet 4.6 rates, converting 5,000 daily requests from tool use to direct prompting saves approximately $400/month with no quality loss for well-defined extraction tasks.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

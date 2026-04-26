@@ -356,6 +356,10 @@ node -e "require('child_process').exec('python3 --version', console.log)"
 Most npm install failures in Claude Code skill workflows resolve with cache clearing, permission fixes, or network adjustments. The skills ecosystem continues to mature, and community-maintained skills frequently update to address compatibility issues with newer Node.js versions. Working through the diagnostic checklist at the top of this guide systematically is faster than trying solutions at random.
 
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

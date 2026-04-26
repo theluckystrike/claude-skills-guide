@@ -207,6 +207,10 @@ The compaction summary itself costs tokens to generate. On Haiku ($1/$5 per MTok
 
 Track three metrics: average context size per interaction (should decrease 40-60%), total monthly input token consumption (should decrease 30-50%), and re-explanation rate (how often you need to re-provide context after compaction — target under 10%). Calculate monthly savings by comparing pre-compaction and post-compaction input token totals multiplied by your model rate.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

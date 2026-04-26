@@ -138,6 +138,10 @@ Finally, don't skip the context setup. The few minutes spent writing a comprehen
 Effective rapid prototyping with Claude Code follows a workflow: establish context through `CLAUDE.md`, select relevant skills for your domain, use progressive refinement in your prompts, and maintain quality through built-in testing capabilities. The combination of clear context, iterative refinement, and strategic skill usage transforms Claude Code from a code generator into a genuine prototyping partner.
 
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

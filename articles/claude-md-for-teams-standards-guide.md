@@ -237,6 +237,10 @@ Version control root and package-level CLAUDE.md files. Gitignore personal .clau
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [CLAUDE.md Generator](/generator/) -- Build your team's base CLAUDE.md configuration

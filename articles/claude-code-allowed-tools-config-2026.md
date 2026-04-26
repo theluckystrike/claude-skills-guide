@@ -272,6 +272,10 @@ Both, for most development workflows. Write creates and overwrites files; Edit m
 }
 </script>
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 - [Permissions Configurator](/permissions/) — Interactive configuration generator

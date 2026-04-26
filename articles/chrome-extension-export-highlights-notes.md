@@ -468,5 +468,5 @@ async function compressJSON(data) {
 These patterns work whether you are extending an existing annotation tool or building a new reading companion from scratch. Start with the data structure that matches your needs, then layer in export formats as your users require them.
 
 
-
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
 

@@ -200,6 +200,10 @@ Claude Code supports budget configuration through the cost alerts system. While 
 }
 </script>
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 - [Token Estimator](/token-estimator/) — Estimate session costs before starting

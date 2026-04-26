@@ -138,3 +138,5 @@ Related Reading
 *
 
 
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+

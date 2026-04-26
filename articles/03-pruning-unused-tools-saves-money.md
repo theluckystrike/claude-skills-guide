@@ -134,6 +134,10 @@ The savings multiply when you combine pruning with [model routing](/claude-code-
 
 Compare `usage.input_tokens` averages from the week before pruning to the week after. For each pruned tool, you should see a drop of 300-600 tokens per request. At Sonnet 4.6 rates ($3.00/MTok), removing 5 tools averaging 500 tokens each saves 2,500 tokens x $3.00/MTok = $0.0075 per request. At 10,000 daily requests, that's $75.00/day or $2,250/month.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

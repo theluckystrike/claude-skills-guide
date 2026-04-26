@@ -9,7 +9,7 @@ last_tested: "2026-04-21"
 
 ## The Workflow
 
-Understand and leverage Claude Code's tool calling system, including parallel tool execution, custom tool definitions via MCP, and strategies for handling tool errors gracefully. This enables building complex multi-step workflows that execute efficiently.
+Understand and use Claude Code's tool calling system, including parallel tool execution, custom tool definitions via MCP, and strategies for handling tool errors gracefully. This enables building complex multi-step workflows that execute efficiently.
 
 Expected time: 20-30 minutes to understand and configure
 Prerequisites: Claude Code installed, familiarity with MCP protocol basics, shell scripting knowledge
@@ -255,6 +255,10 @@ echo "All checks complete"
 ## Why This Matters
 
 Parallel tool execution cuts workflow time by 60-80% for independent operations. Understanding tool calling lets you build custom automation that Claude executes natively, without shell script wrappers.
+
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
 
 ## Related Guides
 

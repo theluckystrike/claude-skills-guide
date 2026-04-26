@@ -110,6 +110,10 @@ Track these metrics weekly after choosing a provider:
 - Output quality scores ensuring cheaper does not mean worse results
 - Total monthly spend comparison: $3,250 GPT-4o baseline vs optimized Claude at $1,845
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

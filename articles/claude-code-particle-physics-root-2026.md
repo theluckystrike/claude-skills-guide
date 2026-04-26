@@ -286,6 +286,10 @@ print('Particle physics analysis: PASS')
 - **Weighted histogram errors:** Summing Monte Carlo weights requires Sumw2 error propagation, not sqrt(N). Claude Code uses `hist` library with `storage=Weight()` to track weighted errors correctly throughout the analysis.
 - **Look-elsewhere effect:** A 3-sigma local excess becomes insignificant after accounting for the mass range scanned. Claude Code computes both local and global p-values and warns when the trial factor reduces significance below 3 sigma.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

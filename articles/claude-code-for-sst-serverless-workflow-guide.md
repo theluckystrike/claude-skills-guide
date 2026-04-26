@@ -68,6 +68,10 @@ Claude Code should create resources in `infra/storage.ts` using `new sst.aws.Dyn
 
 3. **Live dev confusion with hot reload.** Claude expects to restart the server after function changes. SST's `sst dev` provides live Lambda — your function code runs locally but is invoked by real AWS events. Changes take effect immediately, no restart needed.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

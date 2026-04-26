@@ -176,6 +176,10 @@ Point developers to these ecosystem resources:
 4. **Too many rules too fast.** A 5,000-word CLAUDE.md overwhelms both the developer and the context window.
 5. **No feedback loop.** Problems are not captured as CLAUDE.md rules.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## FAQ
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

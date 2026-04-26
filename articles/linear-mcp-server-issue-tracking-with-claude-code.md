@@ -148,7 +148,11 @@ Here's a complete workflow for reporting and tracking bugs:
 ```bash
 createIssue(
  title: "User dashboard fails to load with large datasets",
- description: "## Steps to Reproduce\n1. Create more than 1000 items\n2. Navigate to /dashboard\n3. Observe loading spinner that never completes\n\n## Root Cause\nThe dashboard component loads all items into memory rather than using pagination.\n\n## Related Files\n- src/components/Dashboard.tsx\n- src/api/items.ts\n\n## Proposed Fix\nImplement cursor-based pagination in the API and update the component to handle paginated responses.",
+ description: "## Steps to Reproduce\n1. Create more than 1000 items\n2. Navigate to /dashboard\n3. Observe loading spinner that never completes\n\n## Root Cause\nThe dashboard component loads all items into memory rather than using pagination.\n\n
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
+## Related Files\n- src/components/Dashboard.tsx\n- src/api/items.ts\n\n## Proposed Fix\nImplement cursor-based pagination in the API and update the component to handle paginated responses.",
  teamId: "TEAM_ID",
  priority: 3,
  labels: ["bug", "performance"]

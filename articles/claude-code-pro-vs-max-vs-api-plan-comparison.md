@@ -176,6 +176,10 @@ No. Each Team seat has the same token allowance as Max Individual. The premium i
 ]}
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [Claude Code Pricing Explained](/claude-code-pricing-every-plan-model-explained/)

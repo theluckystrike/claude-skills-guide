@@ -273,6 +273,10 @@ Firebase has a slight token cost advantage because its security rules are simple
 
 For teams evaluating which BaaS platform to adopt specifically for Claude Code efficiency, Firebase's simpler security model and smaller configuration surface provide a slight edge. However, for projects requiring advanced relational queries or complex RLS patterns, Supabase's PostgreSQL foundation is worth the additional token cost when paired with proper skills files.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

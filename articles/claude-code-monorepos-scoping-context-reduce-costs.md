@@ -392,6 +392,10 @@ Monitor these weekly to ensure scoping remains effective as the monorepo evolves
 
 When any metric exceeds the red flag threshold for three consecutive tasks, update the package CLAUDE.md and .claudeignore. The monorepo is evolving faster than the scoping configuration, and the gap creates token waste.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

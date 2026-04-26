@@ -327,6 +327,10 @@ EOF
 
 Developers using Warp + Claude Code together report 40% less context switching compared to using a basic terminal. The combination of Warp's block-based output, AI suggestions, and Claude Code's deep project understanding creates a workflow where the terminal becomes an intelligent development partner rather than just a command executor.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

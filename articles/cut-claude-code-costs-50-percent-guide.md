@@ -203,6 +203,10 @@ Check <code>~/.claude/logs/</code> for session logs that include <code>input_tok
 ]}
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Claude Code Pricing Explained](/claude-code-pricing-every-plan-model-explained/)

@@ -176,6 +176,10 @@ After installing your CLAUDE.md, track adherence across your first 10 Claude Cod
 
 If adherence drops below 80 percent on any category, the relevant CLAUDE.md section needs to be more specific. Add concrete examples showing the expected pattern.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [Perfect CLAUDE.md File Template](/perfect-claudemd-file-template-2026/) — The universal template

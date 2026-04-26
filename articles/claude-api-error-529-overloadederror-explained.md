@@ -174,6 +174,10 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 </div>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

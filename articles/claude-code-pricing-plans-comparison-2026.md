@@ -165,6 +165,10 @@ Enterprise plans typically include:
 
 Contact Anthropic directly for enterprise pricing.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

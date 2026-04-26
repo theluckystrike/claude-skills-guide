@@ -289,6 +289,10 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 ---
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

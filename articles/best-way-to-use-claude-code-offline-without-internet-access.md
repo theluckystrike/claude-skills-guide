@@ -218,6 +218,10 @@ Start by installing Ollama and pulling a model, then create a few offline-ready 
 
 
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related
 
 **Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).

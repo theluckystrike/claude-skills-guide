@@ -98,6 +98,10 @@ For more on this topic, see [Fix Claude Code Forgetting Decisions](/claude-code-
 4. **Validate CLAUDE.md after edits.** After changing your CLAUDE.md, run a simple test prompt to ensure it parses correctly before starting real work.
 
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

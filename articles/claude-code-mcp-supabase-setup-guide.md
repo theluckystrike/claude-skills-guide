@@ -683,6 +683,10 @@ Yes. The [spec workflow](/claude-code-spec-workflow-guide/) works well with Supa
 }
 </script>
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -198,6 +198,10 @@ Pro plan is the minimum for professional teams. The priority processing and exte
 
 Enterprise plans provide managed settings, audit logging, and compliance controls that neither free nor Pro offers. Contact Anthropic for enterprise pricing that includes team management.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

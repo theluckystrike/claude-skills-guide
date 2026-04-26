@@ -67,6 +67,10 @@ Claude Code should create `.envrc` with `layout node`, `PATH_add bin`, non-secre
 
 3. **Overriding system PATH.** Claude writes `export PATH=/project/bin` in `.envrc`, replacing the entire PATH. Use `PATH_add bin` instead, which prepends to PATH without removing existing entries.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

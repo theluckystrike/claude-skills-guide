@@ -94,6 +94,10 @@ For a mature web application: 60-80% of boilerplate (routes, CRUD, config, tests
 
 For pure data analysis work in Jupyter notebooks, neither Claude Code nor manual application coding is the right approach. Use pandas, numpy, and notebook-native AI tools (Jupyter AI, GitHub Copilot notebook support). For no-code workflows (Zapier, Make, Retool), writing code at all is the wrong approach -- use the visual builder. For infrastructure-only work with no application logic, declarative tools like Terraform with tflint provide more value than either coding approach.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

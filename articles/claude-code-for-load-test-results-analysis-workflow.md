@@ -375,5 +375,5 @@ Load test results file too large for Claude's context: Pre-aggregate the results
 Inconsistent findings across repeated analysis runs: Use Claude's temperature 0 setting for analysis tasks. Add "Be consistent and deterministic in your analysis" to the prompt. For CI regression detection, define explicit thresholds in your prompt rather than asking Claude to judge whether a regression is "significant".
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

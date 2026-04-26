@@ -302,6 +302,10 @@ Without these boundaries, Claude Code in a 10-package monorepo may read files fr
 
 The combination of architecture maps, .claudeignore, task scoping, /compact, and subdirectory context files transforms large codebase sessions from $0.80-$2.00 per session to $0.30-$0.80 per session -- a 60-70% reduction that compounds across every developer on the team and every session they run.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

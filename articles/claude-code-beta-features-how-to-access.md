@@ -454,6 +454,10 @@ Accessing Claude Code beta features opens doors to advanced functionality that e
 The beta ecosystem continues expanding with skills like pdf for document processing, docx for Word document manipulation, and xlsx for spreadsheet operations all offering beta variants with enhanced functionality. MCP server support broadens this further, connecting Claude Code to databases, browsers, APIs, and local tools that were previously out of reach. Explore the available options, experiment safely in non-production environments, and provide feedback to help shape the future of Claude Code.
 
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -323,6 +323,10 @@ Track the before-and-after difference to quantify savings:
 
 The measurement is straightforward because database discovery tokens are concentrated at the beginning of sessions, making before-and-after comparison reliable.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

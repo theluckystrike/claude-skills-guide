@@ -70,6 +70,10 @@ Claude Code should create a Next.js API route that sends POST requests to `${DIF
 
 3. **Ignoring Dify's rate limits.** Claude sends rapid parallel requests to Dify. Self-hosted Dify has concurrency limits based on your infrastructure. Implement request queuing or throttling in your application layer.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Find the right model with our [Model Selector](/model-selector/).

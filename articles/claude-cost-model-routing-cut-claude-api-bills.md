@@ -195,6 +195,10 @@ Maintaining the routing rules requires ongoing attention. As your task mix chang
 
 Track three dashboards: (1) cost per request by model tier — verify the expected 56-64% reduction, (2) escalation rate — target below 5%, above that indicates poor initial routing, (3) quality scores by task category — any drop greater than 5% triggers a routing rule review. Export weekly cost reports comparing pre-router and post-router spend.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

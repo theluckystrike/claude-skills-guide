@@ -68,6 +68,10 @@ Claude Code should produce a query using `db.selectFrom('users')` with a left jo
 
 3. **Migration file naming.** Claude creates migration files with descriptive names like `add-users-table.ts`. Kysely's migrator processes files in alphabetical order, so prefix with timestamps (`20260418_add_users_table.ts`) to ensure correct ordering.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

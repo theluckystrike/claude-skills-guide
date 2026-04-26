@@ -235,6 +235,10 @@ The most expensive requests are often the most valuable — a $5.00 full-codebas
 
 The primary metric is average context size per request, tracked weekly. Secondary: total monthly input token spend. Target reducing average context by 50% without increasing quality complaints by more than 5%. Plot context size distribution — if you have a long tail of 200K+ requests, those outliers may represent a disproportionate share of your budget.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

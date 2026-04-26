@@ -161,6 +161,10 @@ As far back as your log files exist. Claude Code retains logs indefinitely by de
 
 **9/10.** Essential tool for anyone paying for Claude Code usage. The per-session breakdown alone has saved teams hundreds of dollars by identifying wasteful patterns (stuck loops, over-broad context loading, unnecessary re-reads). The only missing feature is built-in alerting — you need to script that yourself. Pair with [Karpathy's Don't Assume principle](/karpathy-dont-assume-principle-claude-code-2026/) to reduce token waste from unnecessary clarification cycles.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Resources
 
 - [Claude Code Best Practices](/karpathy-skills-vs-claude-code-best-practices-2026/) — patterns that reduce token usage

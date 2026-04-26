@@ -97,6 +97,10 @@ Claude Skills scale naturally through Git -- new team members clone the repo and
 
 For simple, stateless AI interactions (ask a question, get an answer, no memory needed), both solutions are overengineered. Use the Claude API or OpenAI Chat Completions API directly -- a single API call with no skills, no assistants, no thread management. For workflow automation that does not involve AI reasoning (file moves, scheduled tasks, API polling), use standard tools like cron, Make, or Zapier instead.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

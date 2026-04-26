@@ -288,6 +288,10 @@ Related Reading
 - [Claude Code for Terraform Backend Migration Workflow](/claude-code-for-terraform-backend-migration-workflow/)
 - [Claude Code for Terraform Cloud Run Workflow Guide](/claude-code-for-terraform-cloud-run-workflow-guide/)
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

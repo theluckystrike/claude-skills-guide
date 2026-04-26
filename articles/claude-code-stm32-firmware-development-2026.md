@@ -195,6 +195,10 @@ arm-none-eabi-gdb firmware.elf \
 - **DMA and cache coherency on STM32H7:** The H7 series has separate D-cache that is not coherent with DMA. Claude Code adds the necessary SCB_CleanDCache_by_Addr/SCB_InvalidateDCache_by_Addr calls around DMA buffers.
 - **Hard fault with no stack trace:** A misconfigured MPU or stack overflow causes a hard fault with useless registers. Claude Code generates a HardFault_Handler that extracts the stacked PC and LR for postmortem analysis.
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

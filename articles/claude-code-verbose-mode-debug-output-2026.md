@@ -182,6 +182,10 @@ grep "tool_call" "$LOG" | wc -l
 
 Verbose mode reveals exactly how many tokens each interaction costs. Teams using verbose output for a week typically identify 20-40% cost reduction opportunities by optimizing prompts and reducing unnecessary file reads.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

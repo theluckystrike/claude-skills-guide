@@ -182,6 +182,10 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 </div>
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

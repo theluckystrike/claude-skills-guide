@@ -271,6 +271,10 @@ No. CI review catches what developers miss. Local slash command reviews (`/revie
 For API mode details, see the [API mode guide](/claude-code-api-mode-vs-interactive-2026/). For review automation patterns, read the [code review guide](/claude-code-code-review-automation-2026/). For security in automation, see the [threat model guide](/claude-code-security-threat-model-2026/).
 
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

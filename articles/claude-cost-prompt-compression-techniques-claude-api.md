@@ -208,6 +208,10 @@ XML formatting saves tokens compared to JSON, but if your downstream systems exp
 
 Measure compression ratio: (original tokens - compressed tokens) / original tokens. Target 30-50% compression on system prompts and 20-40% on user messages. Track quality scores alongside compression to catch any degradation. The ideal outcome is a flat quality curve with a declining token curve.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

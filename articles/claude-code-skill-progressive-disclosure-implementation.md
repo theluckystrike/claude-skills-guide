@@ -288,6 +288,10 @@ echo "Savings per session: ~$((TOTAL_TOKENS - 400)) tokens"
 
 Run this script after adding or modifying skills to verify the library remains efficient. If total skill tokens exceed 5,000, review whether some skills can be consolidated or whether the index structure needs refinement to prevent unnecessary loading.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -203,6 +203,10 @@ Equip the team with both tools. Claude Code's error analysis in CI/CD catches bu
 
 Claude Code's headless mode can analyze production error logs automatically, generating diagnostic reports without developer intervention. Cursor is the individual developer's tool for interactive debugging.
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## FAQ
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

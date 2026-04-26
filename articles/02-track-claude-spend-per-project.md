@@ -189,6 +189,10 @@ A common mistake is tracking only input and output token costs while ignoring ca
 
 The tracker itself costs nothing in API overhead (it only reads the usage object already in the response). Measure its value by tracking billing accuracy: compare pre-attribution revenue (flat splits) to post-attribution revenue (actual usage billing). Most agencies find 20-40% of clients are over-billed and 10-20% are under-billed. Correcting this improves both fairness and profitability. The typical revenue improvement from accurate attribution is 15-30% of total Claude API spend.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

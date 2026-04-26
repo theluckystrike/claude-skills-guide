@@ -250,6 +250,10 @@ export const Button: React.FC<ButtonProps> = ({
 
 Manual design-to-code translation introduces visual inconsistencies and takes hours per component. Automated extraction with Claude Code keeps code and design in sync with measurable pixel accuracy.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -209,6 +209,10 @@ chmod +x ~/claude-chains/conditional-chain.sh
 
 Single prompts hit complexity limits. Chaining breaks complex tasks into focused steps where each prompt does one thing well. A 5-step chain can accomplish what would require 20 minutes of manual back-and-forth.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

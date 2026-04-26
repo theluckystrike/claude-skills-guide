@@ -258,6 +258,10 @@ python ~/rag-pipeline/query.py /path/to/project "How does authentication work?"
 
 Large codebases exceed Claude's context window. RAG lets you query 100,000+ lines of code accurately by retrieving only the relevant 500 lines as context, eliminating hallucination about code that does not exist.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

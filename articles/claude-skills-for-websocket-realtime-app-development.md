@@ -720,6 +720,10 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Frequently Asked Questions
 
 ### Why WebSocket Development Benefits from Claude Skills?

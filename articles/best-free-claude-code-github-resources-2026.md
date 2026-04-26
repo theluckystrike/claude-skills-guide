@@ -217,6 +217,10 @@ The Claude Code ecosystem evolves weekly. To stay current without spending hours
 
 This cadence keeps you informed without becoming a full-time activity.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

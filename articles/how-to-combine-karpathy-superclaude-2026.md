@@ -161,3 +161,7 @@ The Karpathy principles enhance every SuperClaude command by improving the reaso
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional behavioral plugins
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
+
+**Quick reference →** Search all commands in our [Command Reference](/commands/).
+

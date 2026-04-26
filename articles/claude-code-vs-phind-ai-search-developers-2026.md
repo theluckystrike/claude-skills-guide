@@ -117,6 +117,10 @@ For developers working at the bleeding edge of frameworks and libraries, Phind's
 4. Follow the source links when you need deeper understanding
 5. For implementation, copy relevant patterns from Phind into Claude Code prompts
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Comparisons
 
 - [Claude Code vs ChatGPT for Coding](/when-to-use-claude-code-vs-chatgpt-for-coding-tasks/)

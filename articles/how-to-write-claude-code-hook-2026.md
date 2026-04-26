@@ -226,6 +226,10 @@ python3 -c "import json; json.load(open('.claude/settings.json'))"
 - Browse [Claude Code Templates](/how-to-install-claude-code-templates-cli-2026/) for pre-built hook templates
 - Read [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for workflow integration
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

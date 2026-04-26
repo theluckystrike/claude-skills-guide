@@ -235,6 +235,10 @@ Related Reading
 - [Using Claude Code for Data Quality Validation Workflow](/claude-code-for-data-quality-validation-workflow/)
 - [Claude Code for Polars DataFrame Workflow Guide](/claude-code-for-polars-dataframe-workflow-guide/)
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

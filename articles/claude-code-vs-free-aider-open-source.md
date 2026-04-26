@@ -97,6 +97,10 @@ They solve different problems. Aider's repo map is auto-generated from your code
 
 If your primary need is fast inline autocomplete while typing, both tools are wrong. Neither provides keystroke-level code completion in your editor. Use GitHub Copilot (free tier: 2K completions/mo) or Cursor for that use case. If you work exclusively in a browser-based IDE like Replit or Gitpod, neither terminal tool integrates with your environment -- use the built-in AI features of those platforms instead.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

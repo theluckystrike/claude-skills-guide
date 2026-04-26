@@ -238,6 +238,10 @@ Use the focused variant: `/compact preserve [specific topic]`. If critical infor
 }
 </script>
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Guides
 
 - [Command Reference](/commands/) — Interactive command explorer

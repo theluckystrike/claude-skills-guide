@@ -314,4 +314,5 @@ Related Reading
 - [Advanced Claude Skills with Tool Use and Function Calling](/advanced-claude-skills-with-tool-use-and-function-calling/)
 
 
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

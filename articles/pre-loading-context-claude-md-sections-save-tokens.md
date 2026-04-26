@@ -276,6 +276,10 @@ Over 22 working days at 5 database tasks per day: $0.22 x 5 x 22 = **$24.20/mont
 
 The before/after pattern demonstrates the core value proposition of pre-loading: converting expensive exploration turns into cheap reference lookups. Every project has 3-5 common tasks where pre-loaded context eliminates 50-80% of the exploration phase. Identifying these tasks through `/cost` tracking and creating the corresponding CLAUDE.md sections and skills is the highest-ROI investment in Claude Code cost optimization.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

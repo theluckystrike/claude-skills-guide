@@ -137,6 +137,10 @@ Claude Code skills run with your local user permissions. An Assistants code inte
 - [ ] Use case requires version-controlled instructions → Claude Code skills
 - [ ] Cost sensitivity evaluated for expected run volume
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

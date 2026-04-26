@@ -191,6 +191,10 @@ The active mode/agent profile adds 200-400 tokens per message. Slash commands ad
 
 **8/10.** SuperClaude is the most complete framework for teams that want structured Claude Code workflows. The 30 commands cover every phase of development, and the behavioral modes are genuinely useful (TDD mode alone is worth the install). Loses points for installation complexity — `pipx` + `superclaude install` + configuration is more friction than dropping a single CLAUDE.md file. Best for teams of 3+ developers who need consistency.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Resources
 
 - [Best Claude Skills for Developers](/best-claude-skills-for-developers-2026/) — how SuperClaude compares to other frameworks

@@ -109,6 +109,10 @@ If you build an MCP server and want maximum adoption, list it in Awesome for dis
 
 Bookmark Awesome MCP Servers as your reference catalog. Use Templates as your installation tool. When the two overlap, prefer Templates for the tested config. When they do not, follow Awesome's link to the server repo and configure it manually. Also check the [hooks guide](/understanding-claude-code-hooks-system-complete-guide/) for patterns that combine MCP servers with pre/post-command hooks for even more powerful integrations.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

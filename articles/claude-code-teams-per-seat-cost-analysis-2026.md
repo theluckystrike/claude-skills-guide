@@ -239,6 +239,10 @@ Team Claude Code costs are not flat across the year. Expect these seasonal patte
 
 Build these patterns into the annual budget by adding a 15-20% buffer above the calculated monthly average. This prevents budget overruns during high-usage sprints while avoiding unnecessary restrictions during peak productivity periods.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

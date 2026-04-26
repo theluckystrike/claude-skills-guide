@@ -386,5 +386,5 @@ Provider scope mismatches: When Claude Code creates providers, confirm that the 
 Widget test pump timing: If Claude Code generates widget tests and they fail with "widget not found" errors, the issue is usually that an async operation has not settled. Add `await tester.pumpAndSettle()` after user interactions that trigger async state updates.
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

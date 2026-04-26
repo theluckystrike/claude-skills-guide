@@ -236,6 +236,10 @@ It can. Compaction summarizes the conversation, which means specific code snippe
 }
 </script>
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 - [Token Estimator](/token-estimator/) -- Predict context window usage for your project

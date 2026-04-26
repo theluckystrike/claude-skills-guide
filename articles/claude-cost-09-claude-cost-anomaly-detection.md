@@ -237,6 +237,10 @@ Statistical anomaly detection requires a warmup period (100+ samples) before it 
 
 Track anomaly detection rate (anomalies caught / total anomalies), false positive rate (false alerts / total alerts), and mean time to detection (alert timestamp - anomaly start timestamp). Target: detection rate above 95%, false positive rate below 10%, MTTD under 5 minutes. Each detected anomaly's value equals: (anomaly cost rate - normal cost rate) x (time-to-fix if undetected - MTTD). For a $1,800/day routing error, 5-minute detection instead of 12-day detection saves $21,594.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

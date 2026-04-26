@@ -356,3 +356,5 @@ Inconsistent review quality: Use a structured prompt template specifying what to
 {% endraw %}
 
 
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

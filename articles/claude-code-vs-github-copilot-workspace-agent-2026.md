@@ -103,6 +103,10 @@ Related reading:
 - [GitHub Copilot vs Claude Code: Deep Comparison](/github-copilot-vs-claude-code-deep-comparison-2026/)
 - [AI Coding Tools Roundup: 14 Tools Compared 2026](/ai-coding-tools-comparison-roundup-2026/)
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

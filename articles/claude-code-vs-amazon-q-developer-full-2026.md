@@ -104,6 +104,10 @@ Amazon Q's scanning is built-in and automatic — it catches vulnerabilities as 
 
 If you only use S3 and Lambda, Amazon Q's deep AWS knowledge provides less value than if you use 10+ services with complex IAM policies and VPC configurations. For light AWS usage, Claude Code's general-purpose ability to read AWS documentation and generate correct SDK code is sufficient. Amazon Q's advantage scales with the complexity of your AWS footprint.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Comparisons
 
 - [Claude Code vs Tabnine: Complete Comparison 2026](/claude-code-vs-tabnine-full-comparison-2026/)

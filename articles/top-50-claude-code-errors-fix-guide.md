@@ -172,6 +172,10 @@ Yes. Set the <code>HTTPS_PROXY</code> environment variable and, if your proxy us
 ]}
 </script>
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 - [Why Claude Code Keeps Crashing: Root Causes](/why-claude-code-keeps-crashing-root-causes/)

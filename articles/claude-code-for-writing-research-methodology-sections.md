@@ -256,6 +256,10 @@ For technical documentation methodology sections, Claude Code focuses on practic
 
 Documenting experimental setup involves providing Claude Code with specific configuration details like instance types (AWS c5.xlarge), benchmarking tools (wrk2), workload parameters (10,000 requests/second for 5 minutes), collected metrics (p50/p95/p99 latency, throughput, error rate), and experimental variables (cache sizes, eviction policies). Claude transforms these bullet points into professional prose suitable for academic or technical publication, with sufficient detail for reproducibility by other researchers.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

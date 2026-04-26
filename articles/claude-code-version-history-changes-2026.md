@@ -145,6 +145,10 @@ Report to Anthropic for core Claude Code issues. Report to the specific ecosyste
 
 For the full ecosystem overview, see the [tools map](/claude-code-ecosystem-complete-map-2026/). For configuration that survives updates, read the [configuration hierarchy guide](/claude-code-configuration-hierarchy-explained-2026/). For CLAUDE.md patterns that are update-resilient, see the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

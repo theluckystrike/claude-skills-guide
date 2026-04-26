@@ -386,6 +386,10 @@ echo "$(date +%Y-%m-%d),$(whoami),$(basename $(pwd)),$(claude --version 2>/dev/n
 
 This log provides when, who, and which project without capturing session content. Combined with the weekly cost report, it satisfies most internal audit requirements for AI tool usage.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

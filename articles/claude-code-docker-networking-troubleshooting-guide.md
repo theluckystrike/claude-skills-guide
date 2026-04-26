@@ -211,6 +211,10 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Frequently Asked Questions
 
 ### Why Docker Networking Fails?

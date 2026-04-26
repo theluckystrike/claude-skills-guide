@@ -241,6 +241,10 @@ Crash rates are similar across platforms. Windows users more often hit permissio
 ### Can I automatically restart Claude Code after a crash?
 Yes. Wrap Claude Code in a process manager like pm2 or a simple bash loop. However, fixing the root cause is better than auto-restarting, as repeated crashes corrupt context and waste tokens.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [Top 50 Claude Code Errors](/top-50-claude-code-errors-2026/) — Quick reference for every common error

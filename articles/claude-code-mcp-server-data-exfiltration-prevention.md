@@ -185,6 +185,10 @@ Preventing data exfiltration through Claude Code MCP servers requires a defense-
 The convenience of MCP-powered skills shouldn't come at the cost of security. Take time to configure access controls properly, and your development workflow will remain both productive and secure.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

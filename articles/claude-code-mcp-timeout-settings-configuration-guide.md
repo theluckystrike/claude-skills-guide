@@ -242,6 +242,10 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 </div>
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Reading
 
 - [Claude Code Skill Timeout Error: How to Increase the Limit](/claude-code-skill-timeout-error-how-to-increase-the-limit/) . The main timeout reference covering all timeout causes and workarounds

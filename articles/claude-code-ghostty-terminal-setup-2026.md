@@ -214,6 +214,10 @@ Copy the output with Cmd+C (Ghostty's clipboard integration handles this cleanly
 
 Ghostty's GPU rendering means zero frame drops when Claude Code streams 500+ line responses. Developers report 30% less fatigue in extended sessions compared to CPU-rendered terminals.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

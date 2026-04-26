@@ -160,6 +160,10 @@ Yes. Expect the first 2 weeks to deliver 50% of the steady-state ROI as you lear
 ]}
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Claude Code Pricing Explained](/claude-code-pricing-every-plan-model-explained/)

@@ -198,6 +198,10 @@ Track fleet economics across sprints:
 - **Agent utilization**: Sprints per month per subscription. At 6 sprints/month per agent, you use 30 sprint-sessions for $1,000.
 - **Quality consistency**: Review a sample of articles from each agent per sprint for quality parity.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

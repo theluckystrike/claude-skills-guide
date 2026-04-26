@@ -343,6 +343,10 @@ The widening gap reflects Supabase's migration file accumulation. At month 12, a
 
 For teams that value Supabase's mature ecosystem (real-time, auth, edge functions, community), investing 2-3 hours in skills creation closes most of the token-efficiency gap. For greenfield projects where simplicity is paramount, InsForge provides inherently lower agent overhead.
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

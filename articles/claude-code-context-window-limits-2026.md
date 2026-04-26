@@ -207,6 +207,10 @@ Most likely because context overflow caused truncation of older messages. Check 
 }
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Token Estimator](/token-estimator/) — Check token counts and context usage

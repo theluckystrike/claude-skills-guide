@@ -194,3 +194,7 @@ For maximum impact with minimum setup, install these three in order:
 3. **Browse Awesome MCP Servers** — 10 minutes, pick the MCP servers your project needs
 
 Then gradually add from the rest of the list based on your needs. See the [Claude Code playbook](/playbook/) for a structured approach to building your complete toolkit.
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+

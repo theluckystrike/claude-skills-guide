@@ -262,6 +262,10 @@ print('VQE verification: PASS (chemical accuracy reached)')
 - **Barren plateaus in deep ansatze:** Random initialization of deep parameterized circuits produces near-zero gradients. Claude Code initializes parameters near identity (small angles) and uses shallow circuits with problem-specific structure.
 - **Missing measurement before sampling:** A circuit without `measure()` gates returns zero counts from `backend.run()`. Claude Code adds measurement gates automatically when using shot-based simulation and omits them for statevector estimation.
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

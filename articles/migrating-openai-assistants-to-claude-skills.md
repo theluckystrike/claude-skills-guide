@@ -136,6 +136,10 @@ Skills follow the agentskills.io open standard, which means your migrated skills
 - [ ] Frontmatter fields added (name, description, allowed-tools)
 - [ ] Output tested and adjusted for Claude's response style
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

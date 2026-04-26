@@ -169,6 +169,10 @@ Standardize on a traditional IDE for team consistency, then add Claude Code for 
 
 Enterprise IDEs provide compliance features and security scanning. Claude Code adds AI-powered automation for code review and migration pipelines. The combination provides both governance and productivity.
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

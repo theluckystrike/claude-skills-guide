@@ -233,6 +233,10 @@ psql -d financial_db -c "
 
 - **Audit trail gaps in infrastructure changes:** Database schema changes, cloud configuration updates, and DNS changes may bypass the code review pipeline. Claude Code ensures all infrastructure changes go through the same PR-based control flow.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

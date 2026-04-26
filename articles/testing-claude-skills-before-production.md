@@ -135,6 +135,10 @@ When testing in CI environments, skills in `.claude/skills/` are discovered norm
 - [ ] Confirmed skill survives compaction after 20+ messages
 - [ ] Validated all referenced supporting files exist
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

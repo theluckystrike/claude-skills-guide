@@ -176,3 +176,7 @@ fi
 This catches CLAUDE.md bloat before it degrades Claude's behavior. Prevention is simpler than debugging why Claude stopped following rules that "used to work."
 
 For the complete guide to splitting CLAUDE.md, see the [length optimization guide](/claude-md-length-optimization/). For the full file specification, see the [CLAUDE.md complete guide](/claude-md-file-complete-guide-what-it-does/). For writing concise rules that Claude follows, see the [best practices guide](/claude-code-claude-md-best-practices/).
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

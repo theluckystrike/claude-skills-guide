@@ -137,6 +137,10 @@ paths:
 
 For backend API patterns that your frontend consumes, see the [API design guide](/claude-md-api-design-patterns/). For the general CLAUDE.md structure, see the [best practices guide](/claude-code-claude-md-best-practices/). For testing conventions including component tests, see the [testing conventions guide](/claude-md-testing-conventions/).
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Articles
 
 - [Using Claude Code for Polyglot Multi-Language Projects](/claude-md-for-polyglot-multi-language-projects/)

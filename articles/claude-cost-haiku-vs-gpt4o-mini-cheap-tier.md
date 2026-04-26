@@ -116,6 +116,10 @@ Apply Claude's caching to narrow the gap: Haiku cache reads cost $0.10/MTok, whi
 - Monthly spend delta: track the actual realized difference, not the theoretical 7x gap
 - Quality score distributions per model per task type reviewed weekly
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

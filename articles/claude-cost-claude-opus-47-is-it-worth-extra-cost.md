@@ -154,6 +154,10 @@ The 1.67x price premium over Sonnet is relatively small. For teams where quality
 
 The key metric is cost-per-quality-point: divide your monthly API spend by your average quality score across all tasks. After implementing selective Opus routing, this ratio should improve (lower cost, same or better quality). Track Opus usage as a percentage of total requests — aim for 20-30% on Opus, 40-50% on Sonnet, and 20-30% on Haiku as a healthy distribution.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

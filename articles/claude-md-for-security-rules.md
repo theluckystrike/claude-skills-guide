@@ -140,6 +140,10 @@ If Claude generates insecure code despite your rules, run `/memory` to verify th
 
 For the full CLAUDE.md structure including security sections, see the [senior engineer template](/senior-engineer-claude-md-template/). For error handling patterns that complement security rules, see the [error handling guide](/claude-md-error-handling-patterns/). For team-wide security policy deployment, see the [team collaboration guide](/claude-md-team-collaboration-best-practices/).
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Articles
 
 - [Claude Md For Dependency Management Rules — Developer Guide](/claude-md-for-dependency-management-rules/)

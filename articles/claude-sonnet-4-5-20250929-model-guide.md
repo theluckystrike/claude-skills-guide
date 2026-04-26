@@ -231,6 +231,10 @@ Yes. Sonnet 4.5 costs one-fifth of Opus per token. For most coding and analysis 
 
 Yes. You can use Sonnet 4.5 with the Message Batches API for 50% cost savings on non-urgent workloads.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

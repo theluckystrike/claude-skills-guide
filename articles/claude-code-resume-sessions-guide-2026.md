@@ -172,6 +172,10 @@ claude --resume "nightly-review" --print \
 
 Long development tasks spanning multiple days no longer require re-explaining context. Resume eliminates the 5-10 minutes typically spent re-establishing project context at the start of each coding session.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

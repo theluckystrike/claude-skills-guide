@@ -68,6 +68,10 @@ Claude Code should create CSF3 stories with `play` functions using `userEvent.ty
 
 3. **Play function running in wrong order.** Claude defines multiple stories expecting sequential execution. Each story's play function runs independently. For multi-step flows, use a single story with all steps in one play function or use `step()` for named sub-steps.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

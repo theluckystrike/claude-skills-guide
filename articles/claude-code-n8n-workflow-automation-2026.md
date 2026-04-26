@@ -210,6 +210,10 @@ curl -X POST "https://your-instance.app.n8n.cloud/api/v1/workflows" \
 
 Version-controlled N8N workflows enable reproducible automation across environments. Generating workflow JSON with Claude Code reduces a 30-minute drag-and-drop session to a 2-minute prompt.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

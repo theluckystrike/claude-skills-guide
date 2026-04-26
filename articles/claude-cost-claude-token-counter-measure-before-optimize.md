@@ -218,6 +218,10 @@ Opus 4.7 uses a newer tokenizer that may produce up to 35% more tokens for the s
 
 Before optimization: record average input tokens, average output tokens, and total monthly spend. After optimization: measure the same metrics. Calculate the delta. Your token profiling investment pays off when the monthly savings exceed the engineering time spent profiling. At $5.00/MTok on Opus, reducing 100 tokens per request saves $5.00 per 10K requests — even small optimizations compound at scale.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

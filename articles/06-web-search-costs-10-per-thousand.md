@@ -164,6 +164,10 @@ Track three metrics daily: total paid searches (from `server_tool_use`), cache h
 
 Be aware that search token ingestion costs scale with the model you use. A search result adding 2,500 input tokens costs $0.0125 on Opus 4.7 ($5.00/MTok) but only $0.0025 on Haiku 4.5 ($1.00/MTok). If your search-augmented pipeline runs on Opus, the token ingestion cost often exceeds the $0.01 search fee itself, making token-level optimization more impactful than reducing search count. Consider routing search-heavy workloads to Sonnet 4.6 ($3.00/MTok) where the combined per-search cost drops to $0.01 + $0.0075 = $0.0175, compared to $0.01 + $0.0125 = $0.0225 on Opus.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -136,6 +136,10 @@ The optimal strategy (compaction at 80K) saves 50-60% compared to no compaction 
 6. Never compact during active debugging or mid-refactoring
 ```
 
+
+
+**Quick reference →** Search all commands in our [Command Reference](/commands/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

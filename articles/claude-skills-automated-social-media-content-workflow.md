@@ -140,7 +140,7 @@ This turns dense technical documents into a library of ready-to-use proof points
 One of the practical problems with AI-generated content is inconsistency. Claude does not remember your brand guidelines session-to-session unless you build that memory explicitly. The supermemory skill solves this by persisting style rules and voice guidelines:
 
 ```
-/supermemory store: brand-voice: direct and technical, avoid corporate buzzwords like "leverage" and "synergy", never use exclamation points, always include one concrete metric or example per post
+/supermemory store: brand-voice: direct and technical, avoid corporate buzzwords like "use" and "synergy", never use exclamation points, always include one concrete metric or example per post
 ```
 
 Before any content generation session, retrieve this context:

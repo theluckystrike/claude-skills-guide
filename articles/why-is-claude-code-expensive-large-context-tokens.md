@@ -154,6 +154,10 @@ Key strategies include chunking your codebase to provide only relevant files rat
 
 Chunking your codebase means providing only the specific files or modules Claude needs instead of dumping entire repositories into context. Instead of running `cat src/**/*.ts` to load everything, reference individual files like `cat src/components/Button.ts`. When using /frontend-design for components, provide only the relevant component files. This focused approach dramatically reduces token usage and keeps per-session costs predictable while maintaining the quality of Claude's output.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

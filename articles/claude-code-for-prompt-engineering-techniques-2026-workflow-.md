@@ -234,6 +234,10 @@ Prompt engineering with Claude Code in 2026 requires a systematic approach combi
 The key is treating prompts as first-class code: version-controlled, tested, and refined through systematic iteration. As Claude's capabilities expand, these foundational skills will remain essential for building sophisticated AI systems.
 
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

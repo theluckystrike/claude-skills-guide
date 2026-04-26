@@ -10,6 +10,10 @@ date: 2026-04-20
 
 Claude Code's behavior is controlled by a layered configuration system: settings.json files at project and global levels, CLAUDE.md files for project-specific instructions, environment variables for runtime control, MCP server definitions for tool integrations, and permission rules for security. This page maps every configuration surface and links to detailed guides.
 
+<div style="background:linear-gradient(135deg,rgba(110,231,183,0.08),rgba(96,165,250,0.05));border:1px solid rgba(110,231,183,0.2);border-radius:8px;padding:16px 20px;margin:20px 0;">
+<strong style="color:#6ee7b7;">Interactive Tool:</strong> Build configs visually — <a href="/permissions/" style="color:#60a5fa;">Permission Configurator</a> · <a href="/mcp-config/" style="color:#60a5fa;">MCP Config Generator</a> · <a href="/generator/" style="color:#60a5fa;">CLAUDE.md Generator</a>
+</div>
+
 ---
 
 ## Configuration Hierarchy
@@ -272,6 +276,9 @@ Commit {% raw %}`.claude/settings.json`{% endraw %} and CLAUDE.md to your reposi
 - [Fix configuration-related errors](/error-handling/)
 - [Troubleshoot config issues](/troubleshooting/)
 - [Advanced configuration patterns](/advanced-usage/)
+- [Generate your CLAUDE.md config](/generator/)
+- [Configure MCP servers visually](/mcp-config/)
+- [Set up permissions](/permissions/)
 
 
 <section class="related-hubs" style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 12px; border: 1px solid #e9ecef;">

@@ -334,6 +334,10 @@ The key insight is that these skills are not about replacing your expertise. the
 For new freelancers, start with `/supermemory` and `/pdf`. The context problem is universal and the document processing problem appears in almost every engagement. For experienced freelancers looking to scale, `/xlsx` and `/pptx` automation compounds across many clients simultaneously.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

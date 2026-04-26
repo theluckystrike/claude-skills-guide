@@ -260,6 +260,10 @@ Review all cost control mechanisms:
 
 Use all four in combination: /cost for real-time awareness, ccusage for historical analysis, the Anthropic Dashboard for billing, and custom hooks for automated alerts. Starting with just `/cost` and upgrading to the full stack as spending grows ensures the audit effort matches the scale of the spend.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -81,6 +81,10 @@ These tools are additive costs because they serve different layers. You cannot r
 
 **Enterprise (100+ devs):** GitHub Actions (or equivalent CI) at enterprise scale handles thousands of builds daily. Claude Code automation is a multiplier: automated first-pass PR reviews reduce human reviewer load by 40-60%, AI-generated tests improve coverage metrics, and intelligent failure analysis routes issues to the right team faster. Budget $5,000-15,000/month for AI automation alongside $10,000-50,000/month for CI infrastructure.
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## FAQ
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -101,6 +101,10 @@ IntelliSense provides immediate value by showing every available method, propert
 
 For configuration files with strict schemas (JSON Schema-validated configs, YAML with known structure, TOML files), neither AI completions nor IntelliSense provide the best experience. Schema-aware editors that validate against JSON Schema definitions give you autocomplete that is both instant and guaranteed valid. VS Code's built-in JSON schema support handles this better than either IntelliSense or Claude Code for files like package.json, tsconfig.json, and docker-compose.yml.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

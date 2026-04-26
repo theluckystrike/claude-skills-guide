@@ -157,6 +157,10 @@ Composition patterns compound token usage. A pipeline of 4 skills where each use
 - [ ] No skill references another skill that does not exist
 - [ ] Total active skill token usage tracked against 25,000-token budget
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

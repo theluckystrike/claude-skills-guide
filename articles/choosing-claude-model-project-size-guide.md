@@ -229,6 +229,10 @@ Strongly-typed languages (TypeScript, Rust, Go) get more value from Sonnet becau
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [Model Selector](/model-selector/) -- Get personalized model recommendations

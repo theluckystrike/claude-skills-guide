@@ -187,6 +187,10 @@ The `@version` pin in the `npx` args ensures `npm` does not silently pull a newe
 For teams managing Claude Code configurations in a shared repository, add a `CHANGELOG` entry every time an MCP server version changes. This creates an audit trail for tracking down conflicts that appear after a configuration update, since the change is now visible in git history rather than invisible in a locally-updated `package-lock.json`. Treat MCP server version bumps with the same care as any other dependency upgrade. review the server's changelog for new tools, breaking changes, or renamed methods before merging.
 
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

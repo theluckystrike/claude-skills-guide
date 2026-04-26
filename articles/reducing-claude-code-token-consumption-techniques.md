@@ -257,6 +257,10 @@ Run /compact after every completed sub-task, or when you notice the session has 
 }
 </script>
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 - [Token Estimator](/token-estimator/) -- Model savings for your specific project

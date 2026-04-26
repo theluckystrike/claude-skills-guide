@@ -488,6 +488,10 @@ This section lists every article in the guides cluster alphabetically for quick 
 
 ---
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Hubs
 
 - [Getting Started Hub](/getting-started-hub/). Installation, first skill, and interface fundamentals

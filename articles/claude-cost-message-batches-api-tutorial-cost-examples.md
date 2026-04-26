@@ -220,6 +220,10 @@ Validate batch savings against your baseline:
 - **Error rate**: Track failed requests per batch. Investigate if above 0.5%.
 - Compare your monthly Anthropic invoice before and after batch migration
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

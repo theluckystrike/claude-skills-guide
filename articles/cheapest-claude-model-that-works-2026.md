@@ -120,6 +120,10 @@ Making model decisions for every task adds cognitive overhead to your workflow. 
 
 **Batch non-urgent work.** Anthropic's Batch API offers 50 percent cost reduction for tasks that can tolerate higher latency. Ideal for bulk code transformations and documentation generation.
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 - [Which Claude Model Should I Use?](/which-claude-model-should-i-use-2026/) — Complete decision tree

@@ -124,6 +124,10 @@ address those after fixing the error message?
 
 4. **Ignoring codebase evidence** — if the project already uses a specific pattern, following it isn't assuming. The principle targets decisions where no pattern exists.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Principles
 
 - **Surface Tradeoffs** — when Don't Assume triggers a question, present tradeoffs with each option

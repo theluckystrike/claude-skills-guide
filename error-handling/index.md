@@ -12,6 +12,10 @@ Every Claude Code error has a root cause and a fix. This page organizes every do
 
 Bookmark this page. When Claude Code throws an error, start here.
 
+<div style="background:linear-gradient(135deg,rgba(110,231,183,0.08),rgba(96,165,250,0.05));border:1px solid rgba(110,231,183,0.2);border-radius:8px;padding:16px 20px;margin:20px 0;">
+<strong style="color:#6ee7b7;">Interactive Tool:</strong> Try our <a href="/diagnose/" style="color:#60a5fa;">Error Diagnostic Tool</a> — paste any error message, get an instant fix.
+</div>
+
 ---
 
 ## API Errors (HTTP Status Codes)
@@ -240,6 +244,7 @@ Report bugs to the Anthropic Claude Code GitHub repository. Include your Claude 
 - [Configuration-related error prevention](/configuration/)
 - [Beginner guide to Claude Code](/getting-started/)
 - [Advanced debugging and monitoring](/advanced-usage/)
+- [Diagnose your error interactively](/diagnose/)
 
 
 <section class="related-hubs" style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 12px; border: 1px solid #e9ecef;">

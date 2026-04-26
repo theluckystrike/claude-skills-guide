@@ -97,6 +97,10 @@ Yes. Most modern development tools support standard formats and migration paths.
 
 Pricing varies by tier and team size. Check each tool's current pricing page for the latest rates. Many offer free tiers sufficient for individual developers and small teams.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Resources
 
 - [Awesome Claude Code](/awesome-claude-code-master-index-guide-2026/)

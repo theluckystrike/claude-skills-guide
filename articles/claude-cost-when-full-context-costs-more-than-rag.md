@@ -254,6 +254,10 @@ Cached full context fails when traffic is sporadic. If your cache hit rate drops
 
 Track cost per query across your chosen approach. If using the hybrid strategy, monitor how often each mode (cached vs RAG) is triggered and the cost per query in each mode. Compare total monthly spend against the pre-optimization baseline. The hybrid approach should match or beat the cheaper of the two pure approaches at your actual traffic pattern.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

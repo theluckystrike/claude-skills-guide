@@ -225,6 +225,10 @@ Track budget effectiveness:
 - **Cost predictability**: Variance in sprint cost before and after budgets. With budgets, variance should approach zero.
 - **Prevented overruns**: Track instances where budget enforcement stopped runaway loops. Each prevented overrun saves $10-50+.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

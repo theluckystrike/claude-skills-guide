@@ -202,6 +202,10 @@ Collecting all seven metrics requires instrumenting every API call path, which t
 
 Compare your month-1 baselines to month-3 actuals. The metrics themselves cost nothing to collect -- value comes from the optimizations they drive. Typical improvement trajectory: 10% cost reduction in month 1 (model routing), 20% in month 2 (caching), 30-40% by month 3 (all seven metrics optimized). At $5,000/month baseline, that's $1,500-$2,000/month in savings by month 3, or $18,000-$24,000 annually.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

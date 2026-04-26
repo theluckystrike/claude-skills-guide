@@ -185,6 +185,10 @@ Escalate when Sonnet's first attempt does not solve the problem, when you are de
 }
 </script>
 
+
+
+**Quick reference →** Search all commands in our [Command Reference](/commands/).
+
 ## Related Guides
 
 - [Model Selector](/model-selector/) -- Get instant model recommendations for your task

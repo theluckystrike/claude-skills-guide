@@ -69,6 +69,10 @@ Claude Code should create stories with `args` for each pricing tier, add a `play
 
 3. **Not using TurboSnap.** Claude runs Chromatic on every story for every commit. TurboSnap only tests stories affected by code changes — enable it with `--only-changed` to reduce snapshot count and cost.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

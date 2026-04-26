@@ -266,6 +266,10 @@ Add the install command to your allowedTools list: --allowedTools "Read,Glob,Gre
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

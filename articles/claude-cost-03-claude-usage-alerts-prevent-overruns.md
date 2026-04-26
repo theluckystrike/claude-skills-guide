@@ -192,6 +192,10 @@ Alert fatigue is the main risk. If thresholds are too sensitive, the team ignore
 
 Track "alert response time" (minutes from spike to detection) and "cost averted" (projected spike cost minus actual cost at time of fix). A well-tuned alert system should detect spikes within 5 minutes. The dollar impact is scenario-dependent: cache miss spikes can save $200+ per incident, runaway agents save $6,000+/month, and model misrouting saves $10,000+/month. Log every alert and its resolution to build a ROI case for your monitoring investment.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

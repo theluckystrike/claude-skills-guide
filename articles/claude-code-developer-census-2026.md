@@ -201,3 +201,7 @@ CTR comparisons between countries with vastly different impression counts should
 All data in this report comes from Google Search Console for claudecodeguides.com. The reporting period is March 21 through April 17, 2026 (28 days). The dataset includes the top 1,000 pages, top 1,000 queries, all 185 countries with any impression, and device-level breakdowns. Totals: 52,216 impressions, 496 clicks, 0.95% overall CTR, 11.1 average position. No data has been estimated, extrapolated, or modeled. All figures are direct GSC exports.
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

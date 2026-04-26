@@ -97,6 +97,10 @@ Most teams rebuild from scratch using Claude Code or manual development. Bolt.ne
 
 For static sites with no dynamic functionality -- a personal blog, documentation, a marketing page with no interactivity -- neither AI coding tool adds much over a template. Use a theme on Astro, Hugo, or Squarespace. If you need a native mobile app (iOS/Android) rather than a web app, neither tool targets that workflow -- use platform-specific tools or [Cursor](/claude-code-vs-cursor-2026-detailed-comparison/) with native framework support.
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

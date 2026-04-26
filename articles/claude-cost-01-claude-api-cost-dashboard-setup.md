@@ -201,6 +201,10 @@ Logging every API call adds a database write per request, which introduces laten
 
 The dashboard itself doesn't save money -- the insights it surfaces do. Track two meta-metrics: time-to-insight (how quickly you spot an anomaly) and cost-per-insight-action (how much each dashboard-driven optimization saves). Most teams find their first actionable insight within 48 hours of deploying a dashboard, typically a model routing optimization worth $500-$2,000/month. We cover this further in [5-Minute vs 1-Hour Cache: Which Saves More](/5-minute-vs-1-hour-cache-which-saves-more/).
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

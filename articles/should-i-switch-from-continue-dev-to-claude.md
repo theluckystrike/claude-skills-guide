@@ -89,6 +89,10 @@ Continue.dev is better for interactive learning because you can switch to cheap 
 
 If you only need basic autocomplete and occasional chat assistance, [GitHub Copilot's free tier](/github-copilot-vs-claude-code-deep-comparison-2026/) provides this with the simplest setup. If you work exclusively in specialized environments (Unity, Unreal Engine, embedded systems IDEs), neither tool integrates meaningfully with your workflow. If you want both inline autocomplete AND autonomous agent execution in one tool, [Cursor](/claude-code-vs-cursor-2026-detailed-comparison/) or [Windsurf](/claude-code-vs-windsurf-full-comparison-2026/) combine both in a single IDE.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

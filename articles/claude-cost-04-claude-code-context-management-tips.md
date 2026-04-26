@@ -150,6 +150,10 @@ Session splitting means losing continuity between tasks. If your email feature d
 
 Track three metrics per week: average session token count (target: under 80K at midpoint), rate limit encounters (target: less than once per day on Max), and tasks completed per session (target: increase with focused sessions). The average Claude Code developer spend is about $6/day at API rates. With disciplined context management, target $3-4/day. On subscription plans, measure sessions completed per day -- better context management enables more productive sessions within the same rate limits.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

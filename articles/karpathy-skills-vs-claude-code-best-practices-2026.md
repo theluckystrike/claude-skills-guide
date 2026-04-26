@@ -111,6 +111,10 @@ Karpathy Skills does not replace learning how to use Claude Code. It replaces th
 
 Install Karpathy Skills as your behavioral foundation. Then layer project-specific [best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) on top for coding standards and conventions. The four principles do what generic advice cannot: they change Claude's behavior in specific, verifiable, consistently positive ways. That is worth more than any list of tips.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Build your own with our [CLAUDE.md Generator](/generator/).

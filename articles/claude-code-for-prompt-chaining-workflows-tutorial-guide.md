@@ -327,6 +327,10 @@ Related Reading
 - [How to Use Starship Prompt + Claude Code: Workflow (2026)](/claude-code-for-starship-prompt-workflow/)
 - [How to Use PWA Install Prompt Workflow (2026)](/claude-code-for-pwa-install-prompt-workflow-guide/)
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

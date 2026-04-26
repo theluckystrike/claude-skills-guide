@@ -64,6 +64,10 @@ Start with the CLAUDE.md best practices if you are new to Claude Code. The CLAUD
 - [Vibe Coding Productivity Tips (2026)](/vibe-coding-productivity-tips-and-best-practices/)
 - [Claude Code Project Structure (2026)](/vibe-coding-project-structure-best-practices/)
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Hubs
 
 - [Guides Hub](/guides-hub/)

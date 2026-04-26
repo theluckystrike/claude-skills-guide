@@ -70,6 +70,10 @@ Claude Code should import from UnJS packages, use `std-env` to detect the runtim
 
 3. **Over-installing UnJS packages.** Claude installs every UnJS package mentioned in documentation. Only install packages you actually use — UnJS packages are small individually but unnecessary dependencies add up.
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Guides
 
 **Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).

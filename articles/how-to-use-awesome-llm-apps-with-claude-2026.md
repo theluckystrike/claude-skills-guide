@@ -132,6 +132,10 @@ Community templates are starting points, not production-ready code. Before deplo
 - Add [MCP servers](/mcp-servers-claude-code-complete-setup-2026/) to give Claude access to your application's data sources
 - Explore [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for efficient development
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

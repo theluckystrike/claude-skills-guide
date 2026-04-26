@@ -214,6 +214,10 @@ Confirm both discounts are stacking:
 - **Total savings vs standard**: Compare batch cost against calculated standard real-time cost. Should show 90%+ savings for workloads with large shared context.
 - Run monthly comparison against pre-optimization baseline
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

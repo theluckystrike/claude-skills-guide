@@ -145,6 +145,10 @@ If a tool passes all five checks, it is worth trying. If it fails two or more, m
 - Build your [CLAUDE.md](/claude-md-best-practices-10-templates-compared-2026/) to work well with your chosen agents
 - Explore the [best Claude Code skills](/best-claude-skills-for-developers-2026/) ranked by community adoption
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

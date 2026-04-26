@@ -170,6 +170,10 @@ Custom scripts bundled with skills should use only standard-library dependencies
 - [ ] Skill verifies MCP availability before starting workflow
 - [ ] Error handling at each phase boundary (data collection, processing, output)
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -302,6 +302,10 @@ Install the Virtual Environment skill which instructs Claude to check for and ac
 ### Can Claude Code skills help with Python data science workflows?
 Yes. The Data Science skill covers pandas best practices, Jupyter notebook structure, visualization conventions, and reproducibility. It works alongside the Python Conventions skill.
 
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+
 ## Related Guides
 
 - [Top Claude Code Skills Ranked](/top-claude-code-skills-ranked-2026/) — Best skills across all languages

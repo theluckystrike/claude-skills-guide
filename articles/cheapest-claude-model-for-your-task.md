@@ -155,6 +155,10 @@ Batch processing stacks with model routing for maximum savings. Haiku 4.5 batch 
 
 Set up a dashboard tracking: requests by model (pie chart), cost by model (stacked bar), quality scores by task category (line chart over time). The primary success metric is total monthly spend. Secondary metrics include mean quality score per task category and the percentage of requests requiring quality override to Opus. Aim for less than 5% override rate — higher than that suggests your task classification needs refinement.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

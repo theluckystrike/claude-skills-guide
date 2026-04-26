@@ -220,6 +220,10 @@ If a hook is not firing:
 
 For a detailed comparison, see our [skills vs hooks vs commands article](/claude-code-skills-vs-hooks-vs-commands-2026/).
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## FAQ
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

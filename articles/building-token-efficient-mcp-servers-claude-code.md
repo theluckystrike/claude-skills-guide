@@ -389,6 +389,10 @@ Before deploying an MCP server for team use:
 
 **Response compression not working**: If JSON responses are still large after implementing caps, consider returning summaries instead of raw data. A summary like `{ users_count: 14523, recent_signup: "2026-04-22" }` at ~50 tokens replaces a full query result at ~5,000 tokens. This compression technique applies broadly to any MCP tool that returns structured data.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

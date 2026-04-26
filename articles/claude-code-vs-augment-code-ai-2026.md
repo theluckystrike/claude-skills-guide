@@ -94,6 +94,10 @@ Related reading:
 - [Best AI Code Completion Tools vs Claude Code](/best-ai-code-completion-tools-vs-claude-code/)
 - [Claude Code for Beginners: Getting Started 2026](/claude-code-for-beginners-complete-getting-started-2026/)
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

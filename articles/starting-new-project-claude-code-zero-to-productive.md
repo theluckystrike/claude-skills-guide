@@ -270,6 +270,10 @@ Each project has its own .claude/ directory and CLAUDE.md. Claude Code loads the
 }
 </script>
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 - [Project Starter](/starter/) -- Auto-generate CLAUDE.md, settings.json, and .claudeignore

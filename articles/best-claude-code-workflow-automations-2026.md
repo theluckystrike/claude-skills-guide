@@ -243,6 +243,10 @@ Start with **andrej-karpathy-skills** (behavioral foundation) and **hook-based a
 For more on each tool category, see the [ecosystem tools map](/claude-code-ecosystem-complete-map-2026/). For comparing extension types, read the [skills vs hooks vs commands guide](/claude-code-skills-vs-hooks-vs-commands-2026/). For building your own automations, see the [skill building guide](/how-to-build-your-own-claude-code-skill-2026/).
 
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

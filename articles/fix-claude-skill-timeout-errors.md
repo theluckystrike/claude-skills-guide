@@ -230,6 +230,10 @@ Scripts that produce continuous output (e.g., `npm test` with verbose logging) m
 - [ ] Scripts include `--bail` or equivalent fail-fast flags
 - [ ] Subagent tasks scoped to specific files, not entire codebase
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

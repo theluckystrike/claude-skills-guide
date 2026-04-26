@@ -282,6 +282,10 @@ print(f'Score: {data[\"compliance_ratio\"]}')
 
 - **Recover function neglect:** Teams implement Protect and Detect controls but skip Recover validation. Claude Code verifies backup restoration procedures, RTO/RPO definitions, and disaster recovery test evidence.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -302,6 +302,10 @@ Yes, Docker containers are the recommended environment for this flag. The contai
 
 No. The flag only skips interactive permission prompts. API authentication, rate limit enforcement, model availability checks, and CLAUDE.md instruction parsing all work normally.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

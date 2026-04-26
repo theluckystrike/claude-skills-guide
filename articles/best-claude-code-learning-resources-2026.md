@@ -154,3 +154,7 @@ pipx install superclaude && superclaude install
 The most valuable Claude Code learning is not about memorizing commands or configurations. It is about understanding how Claude thinks, what constraints it operates under, and how to shape its behavior through context. Every resource on this list contributes to that understanding from a different angle.
 
 For the complete workflow approach, see the [Claude Code playbook](/playbook/) and [best practices](/karpathy-skills-vs-claude-code-best-practices-2026/).
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+

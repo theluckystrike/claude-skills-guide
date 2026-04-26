@@ -286,6 +286,10 @@ The full automated code documentation workflow looks like this:
 This workflow turns documentation from a quarterly cleanup task into a continuous, mostly automated process. The total time investment per sprint is under an hour. compared to a full day of manual doc writing that most teams skip entirely.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

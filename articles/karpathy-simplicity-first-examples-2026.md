@@ -242,6 +242,10 @@ async function api<T>(path: string, opts?: RequestInit): Promise<T> {
 
 2. **Never refactoring to add complexity** — simplicity first means start simple. When a function is called in 5 places and each has a slight variation, that's a signal to add an abstraction.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Principles
 
 - [Implement Simplicity First](/karpathy-simplicity-first-implementation-2026/) — CLAUDE.md rules

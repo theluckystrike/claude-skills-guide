@@ -285,6 +285,10 @@ done
 Each worker claims jobs atomically by moving the file before processing. Multiple workers can run on separate containers pointing at the same shared volume without stepping on each other. The supermemory skill remains a single source of truth for customer history because all workers invoke it through the same API endpoint rather than maintaining local state.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -217,6 +217,10 @@ Track cost distribution across the fleet:
 - **Quality parity check**: Sample 50 final outputs from the orchestrator-worker pipeline and compare against 50 from the all-Opus baseline. Acceptance rate should be within 5%.
 - Monthly total should be 60%+ lower than the equivalent all-Opus fleet.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

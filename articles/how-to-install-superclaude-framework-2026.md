@@ -164,6 +164,10 @@ The other 20 commands cover more specialized tasks. Explore them as your needs a
 - Explore [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) that complement SuperClaude's commands
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional plugins
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

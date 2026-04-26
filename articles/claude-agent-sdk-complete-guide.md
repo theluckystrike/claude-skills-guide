@@ -816,6 +816,10 @@ Yes, if you provide the web_search tool. Without it, agents can only access loca
 }
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

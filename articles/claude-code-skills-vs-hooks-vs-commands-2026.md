@@ -184,6 +184,10 @@ For a typical session:
 
 Skills have the highest constant cost because they are included in every message. Hooks only cost tokens when their output is returned. Commands only cost tokens when invoked.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

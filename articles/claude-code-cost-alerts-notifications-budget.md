@@ -165,6 +165,10 @@ The recommended approach is all three layers: Console for monthly protection, CL
 
 **Hooks script not executing** -- Verify the script has execute permissions (`chmod +x`). Check that the hooks configuration in settings.json uses the correct path and matcher pattern.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

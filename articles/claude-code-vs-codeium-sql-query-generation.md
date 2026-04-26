@@ -206,6 +206,10 @@ Standardize query patterns in CLAUDE.md so Claude Code generates consistent SQL 
 
 Claude Code's ability to validate queries against production schemas in CI/CD pipelines prevents SQL errors before deployment. Codeium serves as a developer convenience tool. Neither replaces a dedicated database admin for critical production workloads.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

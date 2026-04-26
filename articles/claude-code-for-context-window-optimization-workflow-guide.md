@@ -236,6 +236,10 @@ Related Reading
 - [When Full Context Costs More Than a RAG Pipeline](/when-full-context-costs-more-than-rag/)
 - [Claude Orchestrator-Worker Cost Optimization](/claude-orchestrator-worker-cost-optimization/)
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

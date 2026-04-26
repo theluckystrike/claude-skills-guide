@@ -250,6 +250,10 @@ No official GUI exists. For a better reading experience, pipe logs through <code
 ]}
 </script>
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 - [Debugging Claude Code Like a Senior Engineer](/debugging-claude-code-senior-engineer-guide/)

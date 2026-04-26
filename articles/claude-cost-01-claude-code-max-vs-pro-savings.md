@@ -167,6 +167,10 @@ Max 20x at $200/month is 10x the cost of Pro. If you're an occasional Claude Cod
 
 After switching plans, track two metrics: rate limit encounters per week (should drop to near-zero on Max 20x) and effective coding hours per day (should increase by the wait time recovered). If your week had 5 rate limit waits averaging 10 minutes each, you should recover about 50 minutes per week. At $75/hour, that's $62.50/week or $270/month recovered -- well above the $180 Max 20x premium over Pro.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

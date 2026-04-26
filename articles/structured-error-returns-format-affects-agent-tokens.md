@@ -312,6 +312,10 @@ Track error-related token consumption before and after implementing structured w
 # Total savings: $2.91/month per developer
 ```
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -806,7 +806,26 @@ claude --allowedTools "Edit,Write,Read,Glob,Grep,Bash(npm *),Bash(make *)" \
     <div class="faq-answer">To reset permissions to the default (ask-every-time) mode, delete or empty your <code>.claude/settings.json</code> file. Running <code>rm .claude/settings.json</code> removes project-level overrides, falling back to global settings. To reset global settings, remove <code>~/.claude/settings.json</code>. You can also start a new session without saved settings. The default mode prompts for confirmation on every tool use.</div>
   </details>
 
-  <p style="margin-top: 24px;">Related guides: <a href="/configuration/">Claude Code Configuration Guide</a> | <a href="/best-practices/">Best Practices</a> | <a href="/commands/">Commands Reference</a></p>
+  <section style="margin:32px 0;padding:24px;background:#161b22;border:1px solid #30363d;border-radius:12px;">
+    <h2 style="color:#e6edf3;font-size:20px;margin-bottom:16px;">Related Guides</h2>
+    <ul style="list-style:none;padding:0;margin:0;">
+      <li style="padding:8px 0;border-bottom:1px solid #21262d;">
+        <a href="/claude-code-permission-modes-default-allowlist-yolo/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Permission Modes: Default vs Allowlist vs YOLO</a>
+      </li>
+      <li style="padding:8px 0;border-bottom:1px solid #21262d;">
+        <a href="/securing-claude-code-permission-best-practices-teams/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Securing Claude Code: Permission Best Practices</a>
+      </li>
+      <li style="padding:8px 0;border-bottom:1px solid #21262d;">
+        <a href="/claude-code-ci-cd-permission-configuration-guide/" style="color:#60a5fa;text-decoration:none;font-size:15px;">Claude Code in CI/CD: Permission Configuration</a>
+      </li>
+      <li style="padding:8px 0;border-bottom:1px solid #21262d;">
+        <a href="/claude-settings-json-complete-reference/" style="color:#60a5fa;text-decoration:none;font-size:15px;">.claude/settings.json: Complete Reference</a>
+      </li>
+      <li style="padding:8px 0;">
+        <a href="/allowedtools-vs-dangerously-skip-permissions-guide/" style="color:#60a5fa;text-decoration:none;font-size:15px;">--allowedTools vs --dangerously-skip-permissions</a>
+      </li>
+    </ul>
+  </section>
 
   <div class="cta-box">
     <p>Need production-ready permission templates for teams, CI/CD, and enterprise deployments?</p>

@@ -241,6 +241,10 @@ For quick translations, direct interaction works best. For ongoing projects, cre
 Start with a single file to establish your translation pattern, then scale to entire codebases. The key is consistency, establish conventions for technical terms, maintain comment positions, and flag ambiguous translations for human review.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

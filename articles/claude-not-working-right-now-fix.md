@@ -482,6 +482,10 @@ Only if you are in a region where Anthropic restricts access. VPNs can sometimes
 }
 </script>
 
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

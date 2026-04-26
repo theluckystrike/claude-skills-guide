@@ -447,5 +447,5 @@ Chart not rendering: Chart.js requires the canvas element to be in the DOM when 
 Building a price history extension requires handling diverse price formats, managing storage efficiently, and creating useful visualizations.
 
 
-
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
 

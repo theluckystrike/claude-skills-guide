@@ -266,6 +266,10 @@ rm -f /tmp/test-type-error.ts
 
 4. **Bounded range.** Using 0-99 ensures all exit codes are portable across operating systems. Some systems treat exit codes above 127 as signal-terminated processes.
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

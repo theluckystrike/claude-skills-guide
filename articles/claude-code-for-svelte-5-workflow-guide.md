@@ -70,6 +70,10 @@ Claude Code should use `let todos = $state<Todo[]>([])` for the list, `let compl
 
 3. **Event handler syntax change.** Claude writes `on:click={handler}` from Svelte 4. Svelte 5 uses `onclick={handler}` (standard HTML attribute names). The `on:` directive syntax is deprecated and will show warnings.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -87,6 +87,10 @@ SuperClaude requires each team member to install the CLI. The upside is consiste
 
 Start with Karpathy Skills. It takes 30 seconds to set up and the improvements are immediate. After a week, evaluate whether you need the structured commands that SuperClaude provides. Many developers find that Karpathy's principles plus a few custom slash commands cover 90% of their needs without the overhead of a full framework. But if you find yourself repeatedly wishing for specialized agent modes or built-in review workflows, SuperClaude fills that gap well.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Build your own with our [CLAUDE.md Generator](/generator/).

@@ -155,6 +155,10 @@ While $2.92 seems small in isolation, it combines with other optimizations and t
 
 **Skill overlap causing confusion** -- If two narrow skills give conflicting instructions, the later-loaded skill takes precedence. Avoid overlap by ensuring each skill addresses a distinct task with no shared rules.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

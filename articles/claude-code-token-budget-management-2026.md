@@ -216,6 +216,10 @@ Track dollars. Token counts are useful for understanding mechanics, but dollar a
 }
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Token Estimator](/token-estimator/) — Estimate and plan token costs

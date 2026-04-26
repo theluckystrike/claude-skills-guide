@@ -152,6 +152,10 @@ Validate multi-turn caching savings with these metrics:
 - **Tokens per dollar**: Higher is better. Caching should increase this metric 3-5x for conversation workloads
 - Compare average conversation cost week-over-week using Anthropic billing exports
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

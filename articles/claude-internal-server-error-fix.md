@@ -769,6 +769,10 @@ Yes. A proxy that modifies request bodies or times out before the API responds c
 
 With streaming, a 500 error can occur mid-stream, meaning you may receive partial output before the connection drops. Non-streaming requests fail atomically. In both cases, the retry strategy is the same: wait with exponential backoff and resend the full request.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

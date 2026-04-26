@@ -214,6 +214,10 @@ Confirm quality parity and cost savings simultaneously:
 - **User satisfaction**: If applicable, A/B test downstream user metrics (NPS, acceptance rate) between batch and real-time generated content.
 - Monthly review: spot-check 20 batch outputs against real-time baselines for quality drift (there should be none).
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

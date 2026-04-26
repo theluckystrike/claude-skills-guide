@@ -13,7 +13,7 @@ score: 6
 geo_optimized: true
 ---
 
-Using Claude Code in projects that also rely on Azure OpenAI requires careful configuration of API keys, endpoints, and model routing. This guide covers how to set up Claude Code alongside Azure OpenAI services, manage multiple AI providers, and build workflows that leverage both platforms effectively.
+Using Claude Code in projects that also rely on Azure OpenAI requires careful configuration of API keys, endpoints, and model routing. This guide covers how to set up Claude Code alongside Azure OpenAI services, manage multiple AI providers, and build workflows that use both platforms effectively.
 
 ## The Problem
 
@@ -142,6 +142,10 @@ Implement retry logic with exponential backoff, set clear timeout boundaries, an
 ### Can this workflow scale to production?
 
 Yes. Add rate limiting, request queuing, and monitoring before production deployment. Most AI agent architectures scale horizontally by adding worker instances behind a load balancer.
+
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
 
 ## Related Resources
 

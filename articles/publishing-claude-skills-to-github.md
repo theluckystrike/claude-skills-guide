@@ -176,6 +176,10 @@ When publishing skills that use `allowed-tools` with shell commands, document wh
 - [ ] README includes installation instructions for all three methods
 - [ ] External CLI dependencies documented
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

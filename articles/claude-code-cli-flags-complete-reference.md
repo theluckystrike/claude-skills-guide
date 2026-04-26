@@ -306,6 +306,10 @@ Use heredoc syntax or pipe from a file. For example: <code>claude --print "$(cat
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [Command Reference](/commands/) — Interactive command and flag explorer

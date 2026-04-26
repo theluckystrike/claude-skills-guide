@@ -193,6 +193,10 @@ Track the cost-quality balance across your fleet:
 - **Cost per pipeline execution**: Total API cost for one complete orchestrate-execute-synthesize cycle. Compare monthly trend.
 - **Token efficiency**: Output quality per dollar spent. Higher is better.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -250,6 +250,10 @@ No measurable difference. On CRUD, boilerplate, type definitions, and standard b
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [Model Selector](/model-selector/) -- Get instant Opus vs Sonnet recommendations

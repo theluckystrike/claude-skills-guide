@@ -283,6 +283,10 @@ Multi-step scaffolding treats project initialization as a programmable workflow.
 
 Template-based scaffolding uses a reference project embodying your team's conventions -- standard directory layout with src/api, src/services, src/models, src/utils, tests, and scripts directories plus tsconfig.json, jest.config.js, and .eslintrc files. When starting a new project, reference this template and add customizations: "Create a new project using my standard TypeScript structure from /my-standards/, name it payment-service, add a Stripe integration module." Claude applies your patterns while incorporating the specific customization.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

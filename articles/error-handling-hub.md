@@ -44,6 +44,10 @@ These patterns cover the full backend stack. Express middleware error handling c
 
 If you are building a Node.js backend, start with the Express middleware error handling guide and the Prisma transaction patterns. For API consumers, the Claude API 529 overloaded error guide and the timeout retry guide address the most common failures when calling the Anthropic API at scale. If Claude Code is generating code that silently ignores errors, the "Claude Code Skips Error Handling" guides explain how to configure your CLAUDE.md to enforce error handling in every generated function. The retry loop tax guide is essential reading for anyone building agent loops, as poorly implemented retries can multiply your token costs by ten times or more without producing better results.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Hubs
 
 - [Troubleshooting Hub](/troubleshooting-hub/)

@@ -242,6 +242,10 @@ idf.py partition-table
 - **Brown-out reset in deep sleep wake:** Peripherals drawing current during the brief wake period cause VDD to dip below the brown-out threshold. Claude Code delays peripheral initialization until after the power supply stabilizes.
 - **NVS corruption on power loss:** Writing to NVS during a power loss corrupts the partition. Claude Code uses NVS commit only after all writes are buffered and adds error recovery on init.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

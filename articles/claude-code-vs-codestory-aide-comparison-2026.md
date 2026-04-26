@@ -127,6 +127,10 @@ Understanding the true cost of each approach helps with budgeting:
 4. Reserve Claude Code for tasks requiring Opus-level reasoning or extensive autonomous execution
 5. Compare results: track which tool handles which task types better over a month
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Comparisons
 
 - [Claude Code vs Cline: Agent Mode Compared](/claude-code-vs-cline-agent-mode-2026/)

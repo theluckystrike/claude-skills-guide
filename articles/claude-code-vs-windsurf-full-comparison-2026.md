@@ -84,3 +84,7 @@ Source: [anthropic.com/pricing](https://anthropic.com/pricing), [windsurf.com/pr
 Windsurf is the most accessible agentic AI coding tool in 2026 — $15/mo for a capable agent, autocomplete, and VS Code familiarity is exceptional value. Claude Code is the most capable autonomous agent — unrestricted system access, parallel subagents, no rate limits, and headless operation make it the choice for serious, complex development work. The trajectory of most developers is clear: start with Windsurf when discovering AI-assisted coding, add or switch to Claude Code when the complexity of your work exceeds what an IDE-scoped agent can handle. Both are excellent tools serving different stages of developer needs.
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+

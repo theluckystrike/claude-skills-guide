@@ -206,6 +206,10 @@ print('ARXML validation: PASS')
 - **Missing DEM error reports:** ASIL-rated SWCs must report diagnostic events for every detectable fault. Claude Code checks that each error path calls Dem_ReportErrorStatus with the correct DTC.
 - **Runnable timing violations:** A 10ms runnable that takes 12ms causes AUTOSAR OS ProtectionHook. Claude Code estimates WCET from code complexity and flags runnables that may exceed their budget.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

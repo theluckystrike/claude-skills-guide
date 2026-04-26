@@ -253,6 +253,10 @@ Show actual code snippets in each cell, not descriptions." > notes/python-rust-c
 
 Traditional tutorials teach syntax. Claude Code teaches language thinking: how to approach problems idiomatically in the target language. Developers who learn with interactive feedback achieve working proficiency in 4-6 weeks instead of 3-4 months.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

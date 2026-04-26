@@ -233,6 +233,10 @@ Claude Code runs on Node.js which defaults to about 4GB heap. Large codebases ca
 ### Can I diagnose Claude Code errors automatically?
 Yes. The [Error Diagnostic Tool](/diagnose/) accepts any error message and returns the root cause and fix within seconds, covering hundreds of known Claude Code errors.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 - [Claude Code Error Messages Dictionary](/claude-code-error-messages-dictionary/) — Alphabetical reference for every error

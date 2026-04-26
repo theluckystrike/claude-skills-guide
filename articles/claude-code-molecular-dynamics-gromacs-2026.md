@@ -260,6 +260,10 @@ echo "4 4" | gmx rms -s output/md.tpr -f output/md.xtc -o analysis/rmsd.xvg
 - **Pressure coupling during equilibration:** Using Parrinello-Rahman during NVT equilibration crashes the simulation. Claude Code enforces the correct coupling scheme for each phase: no pressure in NVT, Berendsen for initial NPT, Parrinello-Rahman for production.
 - **Periodic image interactions:** A box too small causes the protein to interact with its own periodic image. Claude Code checks that the minimum image distance exceeds 2x the cutoff radius.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

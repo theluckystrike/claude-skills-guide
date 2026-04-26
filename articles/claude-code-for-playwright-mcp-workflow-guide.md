@@ -68,6 +68,10 @@ Claude Code should use `browser_navigate` to open the signup URL, `browser_snaps
 
 3. **Auth state not persisting.** Claude logs in on every test flow because the browser context resets. Use the same browser tab for related flows, or set up auth state via cookies before starting the test sequence.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

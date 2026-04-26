@@ -200,6 +200,10 @@ Related Reading
 - [Claude Code for Astro Actions Workflow Tutorial](/claude-code-for-astro-actions-workflow-tutorial/)
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -161,3 +161,7 @@ For open source projects, committing CLAUDE.md benefits contributors. It tells C
 For managing shared CLAUDE.md across multiple team members, see the [team collaboration guide](/claude-md-team-collaboration-best-practices/). For the complete file format and loading order, see the [CLAUDE.md complete guide](/claude-md-file-complete-guide-what-it-does/). For version control strategies beyond basic commit/ignore, see the [version control strategy guide](/claude-md-version-control-strategy-best-practices/).
 
 **Try it:** Build your own with our [CLAUDE.md Generator](/generator/).
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

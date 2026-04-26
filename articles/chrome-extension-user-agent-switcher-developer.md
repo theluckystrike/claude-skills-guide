@@ -363,5 +363,5 @@ Testing on localhost: The `urlFilter: "*"` may not match `localhost` in all Chro
 Building a user agent switcher requires understanding the Declarative Net Request API and its trade-offs. Choose the method that matches your use case: declarative rules for global switching, runtime messaging for dynamic control, or content script injection for per-tab JavaScript-level overrides.
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

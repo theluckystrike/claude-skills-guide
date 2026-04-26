@@ -190,6 +190,10 @@ Yes, CLAUDE.md content is loaded into the context window. A 150-line CLAUDE.md u
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [CLAUDE.md Generator](/generator/) -- Build a complete CLAUDE.md for your project in 60 seconds

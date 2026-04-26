@@ -129,6 +129,10 @@ Including the word "ultrathink" anywhere in skill content enables extended think
 - [ ] `allowed-tools` uses correct glob syntax: `Bash(command *)`
 - [ ] Tested both auto-invocation and manual `/name` invocation
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

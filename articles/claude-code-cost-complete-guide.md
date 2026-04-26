@@ -334,6 +334,10 @@ Use ccusage with the `--project` flag, or organize your work into separate API k
 **What is the cheapest way to use Claude Code?**
 Use Haiku for simple tasks, Sonnet for moderate tasks, and avoid Opus unless the task demands it. Add token-efficiency rules to CLAUDE.md. Use /compact in long sessions. See our [cost-saving tools guide](/best-claude-code-cost-saving-tools-2026/) and [pricing plans comparison](/claude-code-pricing-plans-comparison-2026/) for the full picture.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

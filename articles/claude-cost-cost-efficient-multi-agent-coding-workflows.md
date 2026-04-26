@@ -221,6 +221,10 @@ Track workflow economics:
 - **Quality parity**: Review sample outputs from optimized workflow vs all-Opus baseline. Acceptance rate should stay above 90%.
 - **Sprint velocity**: Articles or features completed per sprint-hour. Should remain stable after cost optimization (same output, less cost).
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

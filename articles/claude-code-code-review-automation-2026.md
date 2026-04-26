@@ -205,6 +205,10 @@ Typical PR reviews consume 10,000-50,000 tokens, costing $0.10-0.50 per review d
 
 For CI/CD integration patterns, see the [CI/CD guide](/claude-code-ci-cd-integration-guide-2026/). For prompt engineering in reviews, read the [prompt tips guide](/claude-code-prompt-engineering-tips-2026/). For security-specific reviews, see the [security tools roundup](/best-claude-code-security-tools-2026/).
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

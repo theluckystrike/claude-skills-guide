@@ -313,6 +313,10 @@ Key configuration points for the Claude Code router:
 
 The Claude Code router does not require any external dependencies or plugins. It is built into Claude Code and configurable through the standard settings and CLAUDE.md files. For OpenRouter-based model routing (accessing non-Anthropic models), see our [OpenRouter setup guide](/claude-code-openrouter-setup-guide/).
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

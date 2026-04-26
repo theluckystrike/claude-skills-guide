@@ -68,6 +68,10 @@ Claude Code should create `.devcontainer/devcontainer.json` with Node.js feature
 
 3. **Port conflicts with host services.** Claude forwards port 5432 but PostgreSQL is already running on the host. Use non-standard ports in the container compose or stop host services. Dev Container port forwarding maps container ports to host ports.
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Guides
 
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)

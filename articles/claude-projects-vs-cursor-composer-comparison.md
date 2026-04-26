@@ -87,6 +87,10 @@ Cursor Composer is better for active multi-file code editing because it operates
 
 **Enterprise (100+ devs):** Claude Projects with Team/Enterprise plan creates a scalable knowledge layer where project context is maintained and shared. This is more valuable than individual Cursor licenses at scale because it provides organizational knowledge management alongside AI capabilities. Cursor Composer remains valuable for individual contributors who do heavy multi-file editing.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

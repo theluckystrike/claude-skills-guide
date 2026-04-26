@@ -265,5 +265,5 @@ Related Reading
 - [Claude Code for Umami Analytics — Workflow Guide](/claude-code-for-umami-analytics-workflow-guide/)
 
 
-
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
 

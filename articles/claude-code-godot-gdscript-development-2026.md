@@ -12,7 +12,7 @@ domain: "game development"
 
 Godot 4 has become the go-to open-source game engine, with GDScript as its primary language. GDScript's Python-like syntax is accessible, but building production-quality game systems requires understanding Godot's node tree architecture, signal system, resource management, and physics pipeline. Common challenges include implementing finite state machines for character AI, writing custom physics for platformers, building UI systems with Godot's Control nodes, and optimizing draw calls for mobile targets.
 
-Claude Code generates idiomatic GDScript that leverages Godot 4's typed GDScript features, the new signal syntax, scene tree patterns, and export annotations. It builds game systems using Godot-native patterns rather than porting Unity or Unreal conventions.
+Claude Code generates idiomatic GDScript that uses Godot 4's typed GDScript features, the new signal syntax, scene tree patterns, and export annotations. It builds game systems using Godot-native patterns rather than porting Unity or Unreal conventions.
 
 ## The Workflow
 
@@ -260,6 +260,10 @@ godot --headless --path ~/my-game --check-only
 - **Signal memory leaks:** Connecting signals without disconnecting on node removal causes orphaned connections. Claude Code uses the `CONNECT_ONE_SHOT` flag for temporary connections and disconnects in the node's `_exit_tree()`.
 
 - **Physics jitter from mixed processing:** Mixing movement code between `_process()` and `_physics_process()` causes jitter. Claude Code puts all physics movement in `_physics_process()` and visual interpolation in `_process()`.
+
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
 
 ## Related
 

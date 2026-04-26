@@ -164,6 +164,10 @@ Each file owns a distinct domain. No topic appears in more than one file. Path-s
 
 For the complete loading order and concatenation mechanics, see the [CLAUDE.md complete guide](/claude-md-file-complete-guide-what-it-does/). For team strategies that prevent conflicts, see the [conflict resolution guide](/claude-md-conflict-resolution/). For optimizing file length, see the [context window optimization guide](/claude-md-too-long-fix/).
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Articles
 
 - [Why Does Claude Code Sometimes Ignore My — Developer Guide](/why-does-claude-code-sometimes-ignore-my-instructions/)

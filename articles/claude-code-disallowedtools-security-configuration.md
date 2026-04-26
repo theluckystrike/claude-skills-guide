@@ -196,6 +196,10 @@ for any project-overriding restrictions applied during onboarding.
 This documentation surfaces in every Claude Code session because CLAUDE.md is read automatically at session start. Developers working in the project know upfront which capabilities are available rather than discovering restrictions through error messages during active work.
 
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

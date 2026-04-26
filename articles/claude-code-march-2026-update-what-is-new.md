@@ -249,6 +249,10 @@ For developers building custom integrations, the updated API provides hooks for 
 The focus on skill interoperability signals a shift toward treating Claude Code as an extensible development environment rather than a simple assistant. This approach empowers teams to build personalized workflows that match their specific project requirements. Rather than adapting your workflow to what Claude Code supports, you can now build Claude Code into the workflow you already have.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

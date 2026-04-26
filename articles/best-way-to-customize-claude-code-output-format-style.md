@@ -338,6 +338,10 @@ The best approach combines project-level configuration with skill-specific templ
 
 
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

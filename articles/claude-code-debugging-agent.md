@@ -128,6 +128,10 @@ Hooks extend this further. Post-command hooks can capture output, format logs, o
 - **Review agent-proposed fixes before accepting.** Even in autonomous mode, review the diff before letting Claude Code commit. Use `git diff` to verify the changes make sense.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

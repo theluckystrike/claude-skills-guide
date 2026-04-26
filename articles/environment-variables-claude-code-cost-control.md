@@ -246,6 +246,10 @@ For maximum cost control, implement all four layers. Each layer catches issues t
 
 When all four layers are active, the combined effect is multiplicative: environment variables prevent the worst 5% of sessions, settings.json prevents destructive actions, .claudeignore reduces the search space by 80%, and CLAUDE.md guides behavior for the remaining 20%. No single layer is sufficient alone, but together they form a comprehensive cost control stack that requires minimal ongoing maintenance.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

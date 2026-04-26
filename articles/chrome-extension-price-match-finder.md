@@ -273,7 +273,11 @@ Start with a minimal viable product that detects products on two or three major 
 ## Step-by-Step: Building the Price Match Workflow
 
 {% raw %}
-1. Detect product pages: identify product detail pages on major retailers by matching URL patterns (`/product/`, `/item/`, `/p/`) and the presence of structured data (`<script type="application/ld+json">` with `@type: "Product"`).
+1. Detect product pages: identify product detail pages on major retailers by matching URL patterns (`/product/`, `/item/`, `/p/`) and the presence of structured data (`
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
+<script type="application/ld+json">` with `@type: "Product"`).
 2. Extract product identifiers: read the UPC, EAN, or model number from the page. These are more reliable for cross-retailer matching than product names, which vary significantly between stores.
 3. Query comparison sources: use a price comparison API (e.g., Google Shopping Content API, PriceAPI, or your own scraper) to look up the same product at competing retailers.
 4. Parse retailer price-match policies: store a database of major retailer policies. which competitors they match, the time window (e.g., "within 30 days of purchase"), and any exclusions (marketplace sellers, lightning deals).

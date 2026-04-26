@@ -193,3 +193,7 @@ Tags let you correlate Claude's behavior changes with instruction changes. If Cl
 For the foundational guide to CLAUDE.md files, see the [complete guide](/claude-md-file-complete-guide-what-it-does/). For deciding what goes in shared versus personal files, see the [team vs personal guide](/team-claude-md-vs-personal-claude-md/). For sharing standards across multiple repositories, see the [cross-team sharing guide](/share-reuse-claude-md-across-teams/).
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

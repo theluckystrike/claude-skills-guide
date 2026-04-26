@@ -154,6 +154,10 @@ The model might need the text editor unexpectedly during an investigation phase 
 
 Compare total input tokens per session before and after deploying adaptive tool loading. Expect a 40-60% reduction in tool overhead tokens if the editor is excluded from 60-70% of turns. At Sonnet 4.6 ($3.00/MTok), saving 700 tokens on 20 turns = 14,000 tokens = $0.042 per session. At 200 daily sessions, that's $252/month. Track task completion rate alongside cost to ensure quality stays constant.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

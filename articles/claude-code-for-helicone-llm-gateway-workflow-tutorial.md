@@ -268,5 +268,5 @@ Related Reading
 - [Claude Code for LLM Caching Workflow Tutorial](/claude-code-for-llm-caching-workflow-tutorial/)
 
 
-
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
 

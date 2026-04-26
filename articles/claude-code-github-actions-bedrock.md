@@ -159,6 +159,10 @@ The workflow triggers on pull requests, giving Claude access to the diff. You ca
 - **Post review results as PR comments** using the GitHub API so developers see Claude's feedback inline with the diff.
 
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

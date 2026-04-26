@@ -124,6 +124,10 @@ The [claude-code-ultimate-guide](https://github.com/FlorianBruniaux/claude-code-
 
 **Optimizing costs?** Use Layer 6: install [ccusage](https://github.com/ryoppippi/ccusage) for spend tracking.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

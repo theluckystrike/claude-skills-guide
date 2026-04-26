@@ -98,6 +98,10 @@ Claude Code with its enterprise tier handles compliance, SSO, and audit requirem
 4. Map your Claude Code VS Code extension workflows to terminal commands
 5. Explore Zed's native AI features (inline edit, selection transform) as faster alternatives for simple changes
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Comparisons
 
 - [Claude Code vs Cursor for Coding](/claude-code-vs-cursor-2026-detailed-comparison/)

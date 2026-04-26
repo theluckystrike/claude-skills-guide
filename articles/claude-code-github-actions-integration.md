@@ -17,7 +17,7 @@ Integrating Claude Code into GitHub Actions automates code reviews, test generat
 
 ## The Problem
 
-Manual code reviews create bottlenecks. Developers wait hours or days for feedback while reviewers context-switch between their own work and review queues. Running Claude Code locally helps individual developers, but the real leverage comes from automating it in CI/CD so every pull request gets instant AI analysis for bugs, security issues, and style consistency.
+Manual code reviews create bottlenecks. Developers wait hours or days for feedback while reviewers context-switch between their own work and review queues. Running Claude Code locally helps individual developers, but the real use comes from automating it in CI/CD so every pull request gets instant AI analysis for bugs, security issues, and style consistency.
 
 ## Quick Solution
 
@@ -161,6 +161,10 @@ Related Reading
 - [Claude Code AWS Lambda Deployment Guide](/claude-code-aws-lambda-deployment-guide/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
 
 ## See Also
 

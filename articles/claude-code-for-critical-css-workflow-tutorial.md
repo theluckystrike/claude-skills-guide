@@ -28,7 +28,7 @@ Critical CSS is the subset of CSS rules that the browser needs to render the ini
 
 ## Setting Up Your Critical CSS Workflow
 
-Before we dive into Claude Code integration, let's set up a basic project structure. We'll assume you have a modern web project with a CSS build process.
+Before we get startedto Claude Code integration, let's set up a basic project structure. We'll assume you have a modern web project with a CSS build process.
 
 ## Project Structure
 
@@ -299,6 +299,10 @@ Related Reading
 - [Claude Code for Branch Protection Rules Workflow](/claude-code-for-branch-protection-rules-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
 ## See Also
 

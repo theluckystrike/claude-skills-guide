@@ -286,6 +286,10 @@ echo "Everything else belongs in project-level .claude/settings.json"
 
 Run this audit monthly. Each MCP server found in global settings represents 500-2,000 tokens per tool of wasted overhead in every session across every project. Moving a 5-tool server from global to project scope saves 2,500-10,000 tokens per session in all other projects.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

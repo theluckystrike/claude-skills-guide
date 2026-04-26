@@ -366,6 +366,10 @@ No. The command shows all servers from both scopes in a single list. Each entry 
 
 The new configuration replaces the existing one at the same scope. If the existing server is at user scope and you add at project scope, both will exist but the project-scoped version takes precedence.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -67,6 +67,10 @@ Claude Code should run `devbox add python@3.12 poetry postgresql@16`, configure 
 
 3. **Init hook performance on shell entry.** Claude puts heavy build commands in `shell.init_hook` that run every time you type `devbox shell`. Keep init hooks fast (environment variable exports, path setup) and put heavy operations in explicit scripts.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

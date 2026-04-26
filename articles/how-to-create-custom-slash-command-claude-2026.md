@@ -222,6 +222,10 @@ Format:
 - Check the [skills directory](/claude-skills-directory-where-to-find-skills/) for community-shared commands
 - Read [CLAUDE.md best practices](/claude-md-best-practices-10-templates-compared-2026/) for complementary configuration
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

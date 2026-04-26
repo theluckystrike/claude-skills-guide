@@ -201,6 +201,10 @@ Each `get_next_task` call adds ~200 tokens to the context. `complete_task` is ~5
 
 **9/10.** Task Master solves the single biggest problem with long Claude Code sessions: losing track of where you are. The PRD parsing is impressive, the MCP integration is seamless, and the dependency graph prevents the agent from working on tasks out of order. The only weakness is the initial setup friction — `init`, `parse`, and MCP config takes 5 minutes. Worth it for any project spanning multiple sessions.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Resources
 
 - [The Claude Code Playbook](/playbook/) — workflow patterns that pair well with task management

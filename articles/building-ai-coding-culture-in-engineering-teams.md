@@ -385,3 +385,5 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+

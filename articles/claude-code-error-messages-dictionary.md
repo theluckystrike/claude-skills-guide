@@ -127,6 +127,10 @@ Most warnings are informational and safe to ignore short-term. However, the "ses
 ]}
 </script>
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 - [Top 50 Claude Code Errors Fix Guide](/top-50-claude-code-errors-fix-guide/)

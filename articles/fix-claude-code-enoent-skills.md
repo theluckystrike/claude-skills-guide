@@ -199,6 +199,10 @@ Scripts that create output files should write to the project directory, not to `
 - [ ] Dynamic injection commands have error handling for missing files
 - [ ] Scripts work when run from the project root directory
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

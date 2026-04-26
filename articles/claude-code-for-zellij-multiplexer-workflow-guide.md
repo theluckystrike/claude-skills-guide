@@ -20,7 +20,7 @@ You are using Zellij, the terminal multiplexer written in Rust with a plugin sys
 
 3. **Creates shell scripts for pane management.** Claude writes bash scripts to manage terminal layouts. Zellij has built-in layout files (`.kdl` format) that declaratively define pane arrangements, automatically creating the workspace on startup.
 
-4. **Ignores Zellij's plugin system.** Claude does not leverage Zellij plugins for status bars, file managers, or session management. Zellij plugins run in WASM and can enhance the Claude Code development workflow.
+4. **Ignores Zellij's plugin system.** Claude does not use Zellij plugins for status bars, file managers, or session management. Zellij plugins run in WASM and can enhance the Claude Code development workflow.
 
 ## The CLAUDE.md Configuration
 
@@ -66,6 +66,10 @@ Claude Code should create a `.kdl` layout file with a `layout { }` block definin
 2. **Layout file syntax errors.** Claude writes KDL syntax incorrectly, mixing it with TOML or JSON. KDL uses `node key=value { children }` structure. A single syntax error prevents the entire layout from loading with an unhelpful error message.
 
 3. **Session persistence expectations.** Claude assumes pane contents persist like tmux with tmux-resurrect. Zellij sessions persist the layout and pane arrangement, but running processes (like Claude Code sessions) must be restarted after system reboot or session detach/reattach.
+
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
 
 ## Related Guides
 

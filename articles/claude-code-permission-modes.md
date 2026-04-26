@@ -179,6 +179,10 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 </div>
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Issues
 
 - [Claude Code API Security OWASP Guide](/claude-code-api-security-owasp-guide/) — When permissions are ignored

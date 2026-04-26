@@ -277,6 +277,10 @@ Yes. Use `${VAR_NAME}` syntax in env values. This lets you reference secrets sto
 }
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Permissions Configurator](/permissions/) — Generate settings.json interactively

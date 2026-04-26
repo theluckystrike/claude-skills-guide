@@ -204,3 +204,7 @@ Task Master does not automatically diff new and existing tasks. The reconciliati
 - Explore [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for efficient task execution
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+

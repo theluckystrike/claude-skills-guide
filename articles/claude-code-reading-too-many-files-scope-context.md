@@ -256,6 +256,10 @@ fixtures/large/    # Large test data files
 
 Each level progressively reduces the searchable file tree. Level 1 alone typically reduces it by 60-80%. Levels 2-3 push reduction to 85-95%.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

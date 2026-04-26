@@ -379,6 +379,10 @@ then continue with implementing refresh token rotation.
 This approach eliminates the friction of re-establishing context and ensures continuity even if you work on the feature across multiple days or switch between tasks.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

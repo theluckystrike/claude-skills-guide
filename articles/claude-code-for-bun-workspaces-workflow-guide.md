@@ -67,6 +67,10 @@ Claude Code should create `packages/ui/package.json` with proper `"exports"` and
 
 3. **TypeScript path mapping conflicts.** Claude adds `paths` in `tsconfig.json` to resolve workspace packages. Bun's workspace linking makes packages available by name already. Adding redundant path mappings causes resolution conflicts when both Bun and TypeScript try to resolve the same import.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

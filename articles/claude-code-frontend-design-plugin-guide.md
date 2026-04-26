@@ -691,6 +691,10 @@ Yes. Using a [Supabase MCP server](/claude-code-mcp-supabase-setup-guide/) along
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

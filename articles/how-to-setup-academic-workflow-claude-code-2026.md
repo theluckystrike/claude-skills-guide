@@ -139,6 +139,10 @@ The default configuration is tuned for economics and social sciences (the mainta
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for additional academic tools
 - Check [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for general optimization
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

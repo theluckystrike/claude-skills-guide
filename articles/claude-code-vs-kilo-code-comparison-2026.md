@@ -92,6 +92,10 @@ Kilo Code's $15/user/month Teams plan is hard to beat for cost-conscious teams. 
 ### Enterprise (50+)
 Kilo Code's open-source nature is both an advantage (auditable code, no vendor lock-in) and a risk (community-maintained, no SLA). Claude Code offers first-party support from Anthropic. Enterprise teams that need guaranteed support contracts and SLAs should lean toward Claude Code. Teams that prioritize cost optimization, model flexibility, and vendor independence should evaluate Kilo Code with a structured pilot.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

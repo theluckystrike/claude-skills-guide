@@ -349,6 +349,10 @@ Claude Code detects the crash and marks the server as disconnected. You can rest
 }
 </script>
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

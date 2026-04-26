@@ -311,6 +311,10 @@ Yes. Add async conventions to CLAUDE.md: "Use async views for I/O-heavy endpoint
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [Project Starter](/starter/) -- Auto-generate Django-specific Claude Code configuration

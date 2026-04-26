@@ -197,6 +197,10 @@ Use this table to detect blowout sessions. If a simple task exceeds 3x the expec
 
 Any session exceeding the blowout threshold deserves investigation. The most common causes are missing `.claudeignore` (leading to accidental large-file reads), vague prompts (triggering broad codebase exploration), and missing `--max-turns` (allowing unbounded execution).
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -122,6 +122,10 @@ Yes. Most modern development tools support standard formats and migration paths.
 
 Pricing varies by tier and team size. Check each tool's current pricing page for the latest rates. Many offer free tiers sufficient for individual developers and small teams.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Resources
 
 - [Claude Tool Use Hidden Token Costs](/claude-tool-use-hidden-token-costs-explained/)

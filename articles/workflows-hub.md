@@ -100,3 +100,7 @@ Tested integration guides and workflow patterns for Claude Code. Every guide inc
 </section>
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+

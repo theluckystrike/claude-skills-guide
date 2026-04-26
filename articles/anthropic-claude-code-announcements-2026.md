@@ -271,6 +271,10 @@ Third, write one custom skill for the workflow where you find yourself repeating
 For teams adopting these new capabilities, start with one skill that addresses your biggest problem. whether that's testing with tdd, frontend work with frontend-design, or documentation with pdf. Gradually incorporate additional skills as your workflow matures.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

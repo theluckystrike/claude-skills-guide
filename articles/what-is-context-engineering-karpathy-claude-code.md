@@ -127,6 +127,10 @@ Context engineering is the theoretical foundation that unites every cost optimiz
 
 The CCG framework applies context engineering across three timescales: per-turn (prompt specificity, tool output capping), per-session (compaction, model switching), and per-project (CLAUDE.md layering, MCP tool pruning). Practitioners who internalize context engineering as a discipline rather than a collection of tips typically achieve sustained 50-70% cost reductions.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Further Reading
 
 - [Context Engineering for Claude Code: Complete Guide](/context-engineering-claude-code-complete-guide-2026/) -- full implementation playbook

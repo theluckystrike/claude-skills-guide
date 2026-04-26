@@ -183,6 +183,10 @@ Track fleet ROI monthly:
 - **Sprint velocity**: Articles per sprint-hour across all agents. 5 agents should produce 5x a single agent.
 - **Utilization rate**: Active sprint hours / available hours (20x Pro rate per sub). Higher utilization = lower cost per article.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

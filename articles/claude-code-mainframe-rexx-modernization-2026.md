@@ -262,6 +262,10 @@ cd ~/rexx-migration/output && python3 -m pytest tests/ -v
 
 - **TSO command return codes:** REXX scripts check RC after every TSO command. Claude Code preserves this pattern with explicit return code checking on every subprocess call or API response.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

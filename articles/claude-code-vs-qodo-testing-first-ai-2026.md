@@ -120,6 +120,10 @@ Claude Code produces fewer edge cases initially but responds well to "add more e
 4. Accept that Claude Code will require more prompting to achieve the same edge case depth that Qodo provides automatically
 5. Consider keeping Qodo for PR review even if using Claude Code for everything else
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Comparisons
 
 - [Claude Code vs Aider: CLI Coding Compared](/claude-code-vs-aider-for-test-driven-development/)

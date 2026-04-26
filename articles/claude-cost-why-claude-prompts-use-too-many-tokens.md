@@ -196,6 +196,10 @@ Output length constraints may truncate legitimate long responses. Set max_tokens
 
 Track average input tokens per request broken down by component (system, tools, history, message). Identify which component decreased most after each optimization. Set a target of reducing total input tokens by 40-50%. Monitor your Anthropic billing dashboard weekly to confirm the token reduction translates to actual cost savings.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

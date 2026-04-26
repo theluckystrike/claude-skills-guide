@@ -230,6 +230,10 @@ async def test_create_product(client):
 
 Claude Code generates FastAPI resources 5x faster than writing manually, including tests and proper type annotations. A complete CRUD resource that typically takes 45 minutes is ready in under 10 minutes.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

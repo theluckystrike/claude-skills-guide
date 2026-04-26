@@ -156,6 +156,10 @@ services:
 - **Never expose the Docker socket to production MCP servers.** The Docker socket provides root-level access to the host. Use it only in development environments.
 
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

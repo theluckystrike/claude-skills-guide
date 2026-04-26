@@ -303,6 +303,10 @@ The chunking and retrieval overhead adds latency (10-100ms) and infrastructure c
 
 Compare average context size per request before and after implementing chunking. Track the answer quality score alongside cost reduction. Target: 80-95% context reduction with less than 5% quality degradation. Calculate ROI by dividing monthly savings by the engineering time invested in building the chunking pipeline.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

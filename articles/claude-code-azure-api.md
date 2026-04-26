@@ -154,6 +154,10 @@ Yes. These techniques integrate with standard development tools and CI/CD pipeli
 
 Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Resources
 
 - [Claude Code API Client TypeScript Guide](/claude-code-api-client-typescript-guide/)

@@ -81,6 +81,10 @@ For individual developers doing moderate coding work, Gemini's free tier makes i
 
 **Enterprise (100+ devs):** Evaluate both on your actual codebase size. If your monorepo exceeds 200K tokens for relevant context, Gemini's context window is a decisive advantage for cross-cutting analysis. For individual feature development, Sonnet's precision and predictable pricing simplify cost management at scale.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

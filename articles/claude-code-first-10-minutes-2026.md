@@ -249,6 +249,10 @@ Claude Code is a CLI tool that runs in your terminal. It works alongside any edi
 }
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Project Starter](/starter/) — Guided project setup after your first session

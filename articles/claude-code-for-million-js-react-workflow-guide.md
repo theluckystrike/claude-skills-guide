@@ -67,6 +67,10 @@ Claude Code should add the Million.js compiler plugin to `next.config.js`, analy
 
 3. **Measuring wrong metrics.** Claude checks page load time to measure Million.js impact. Million.js optimizes re-render performance, not initial render. Use React DevTools Profiler to measure re-render times on interaction (sort, filter, update).
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

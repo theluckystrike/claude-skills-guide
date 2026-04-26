@@ -213,6 +213,10 @@ An irrelevant file ratio above 50% (more than half the files read were not neede
 
 Some file exploration is healthy and necessary. A developer who restricts Claude to reading only the exact file mentioned in the prompt may prevent Claude from catching related issues or understanding broader implications. The goal is not zero exploration but efficient exploration -- reading 2-3 contextually relevant files rather than 10 loosely related ones. A relevance ratio of 85-95% allows enough exploration for quality while preventing the 40-60% waste seen in unoptimized sessions.
 
+
+
+**Quick reference →** Search all commands in our [Command Reference](/commands/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

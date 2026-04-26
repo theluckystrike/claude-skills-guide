@@ -117,6 +117,10 @@ Keep this reference alongside your CLAUDE.md and update it when the system promp
 - Build better prompts using [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/)
 - Write [custom hooks](/understanding-claude-code-hooks-system-complete-guide/) informed by your understanding of the tool system
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

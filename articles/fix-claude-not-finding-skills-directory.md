@@ -208,6 +208,10 @@ The `CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1` environment variable enable
 - [ ] Session restarted if `.claude/skills/` was created mid-session
 - [ ] Nested monorepo skills tested by editing files in that subdirectory
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

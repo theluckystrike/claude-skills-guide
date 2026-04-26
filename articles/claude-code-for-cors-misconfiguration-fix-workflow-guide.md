@@ -220,4 +220,5 @@ Related Reading
 - [Claude Code for Threat Hunting Techniques Workflow Guide](/claude-code-for-threat-hunting-techniques-workflow-guide/)
 
 
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

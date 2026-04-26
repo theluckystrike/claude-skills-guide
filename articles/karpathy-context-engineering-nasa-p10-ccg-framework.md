@@ -333,6 +333,10 @@ After four weeks, most teams see 30-50% reduction in average session cost, with 
 
 This is the framework. Every other article in the CCG cost optimization series implements one or more elements of the Karpathy + NASA P10 synthesis described here. Context engineering provides the "why" (tokens are money, context is finite), and NASA P10 provides the "how" (bounded loops, short functions, mandatory assertions, restricted scope). Together they produce Claude Code workflows that are safe, predictable, and cost-efficient.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Further Reading
 
 - [Cost Optimization Hub](/cost-optimization/) -- all cost techniques organized by category

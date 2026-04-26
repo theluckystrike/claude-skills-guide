@@ -220,6 +220,10 @@ Cursor rules can be slightly more token-efficient due to glob-based loading (onl
 ]}
 </script>
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 - [Best Claude Code Skills Ranked](/best-claude-code-skills-2026-ranked/)

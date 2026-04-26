@@ -349,6 +349,10 @@ Claude Code的安装过程相对简单：确保Node.js 18+环境就绪，通过n
 
 
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

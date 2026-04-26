@@ -268,6 +268,10 @@ Aggressive code deduplication can remove intermediate versions that showed Claud
 
 Measure average context size per interaction with and without pruning. Target a 50-70% reduction. Calculate monthly cost savings using the formula: (original_tokens - pruned_tokens) * interactions * rate / 1,000,000 * 30. Track the re-explanation rate (how often you need to re-provide pruned information) — keep this under 5%.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -99,6 +99,10 @@ For [building team playbooks](/playbook/), Templates gives you more granular con
 
 If you like frameworks that make decisions for you (Rails, Next.js), you will like SuperClaude. If you prefer libraries that let you compose your own solution (Express, Fastify), you will prefer Claude Code Templates. Neither is wrong — the choice depends on whether you value coherence or flexibility more. Start with whichever matches your temperament and switch if it does not fit.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

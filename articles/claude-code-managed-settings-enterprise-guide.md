@@ -217,6 +217,10 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ---
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Find the right model with our [Model Selector](/model-selector/).

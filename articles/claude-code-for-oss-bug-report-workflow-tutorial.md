@@ -289,5 +289,5 @@ Related Reading
 - [Claude Code for OSS Roadmap Workflow Tutorial Guide](/claude-code-for-oss-roadmap-workflow-tutorial-guide/)
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

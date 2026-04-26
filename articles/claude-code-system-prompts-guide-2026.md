@@ -165,6 +165,10 @@ The system prompt loads first, then your CLAUDE.md content is injected into the 
 
 **8/10.** Indispensable reference material for anyone writing CLAUDE.md rules or building Claude Code extensions. The version CHANGELOG alone is worth a bookmark — it explains behavioral changes that would otherwise be mysterious. Loses points because it's a documentation effort, not a tool, so the UX is "read a long Markdown file." Pair this with the [Karpathy skills guide](/karpathy-claude-code-skills-complete-guide-2026/) to write CLAUDE.md rules that complement rather than fight the system prompt.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Resources
 
 - [CLAUDE.md Best Practices](/claude-md-best-practices-10-templates-compared-2026/) — write rules that work with the system prompt

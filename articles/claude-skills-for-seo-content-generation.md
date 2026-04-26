@@ -113,6 +113,10 @@ Sitemap parsing assumes XML format. If your site uses a sitemap index with multi
 - [ ] Output directory `data/seo-output/` exists
 - [ ] Test with one article before batch-processing the full site
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

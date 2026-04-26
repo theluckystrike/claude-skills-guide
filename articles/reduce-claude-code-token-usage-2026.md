@@ -201,6 +201,10 @@ Conversation history re-transmission. Every message you have sent and received i
 }
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Token Estimator](/token-estimator/) — Measure token counts for any text

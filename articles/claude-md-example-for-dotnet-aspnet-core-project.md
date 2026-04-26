@@ -326,5 +326,5 @@ with form validation matching the server-side validation rules
 The `dotnet-api` skill ensures consistent response shapes and error handling on the server side. The `blazor` skill ensures the component handles loading states, error display, and form validation in the project's established style. rather than defaulting to generic patterns.
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

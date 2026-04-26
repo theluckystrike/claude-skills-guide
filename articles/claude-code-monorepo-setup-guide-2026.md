@@ -275,6 +275,10 @@ Yes. Claude understands `workspace:*` and `workspace:^` version specifiers in pa
 }
 </script>
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 - [Project Starter](/starter/) — Monorepo project scaffolding

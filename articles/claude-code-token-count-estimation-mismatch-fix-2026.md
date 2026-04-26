@@ -93,6 +93,10 @@ Partially. If the server began processing your request before the client timed o
 MCP (Model Context Protocol) is a standard protocol that lets Claude Code communicate with external tool servers. MCP servers expose custom tools (databases, APIs, file systems) that Claude Code can invoke during a session. Configuration is stored in `.claude/mcp.json`.
 
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

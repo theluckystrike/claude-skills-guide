@@ -263,6 +263,10 @@ Related Reading
 - [How to Use Tree of Thought Prompting with Claude Code (2026)](/claude-code-for-tree-of-thought-prompting-workflow-guide/)
 {% endraw %}
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

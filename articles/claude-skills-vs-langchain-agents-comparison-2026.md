@@ -82,6 +82,10 @@ Use Claude Code for developer productivity (code generation, debugging, refactor
 ### Enterprise (50+)
 LangChain is the right foundation for production agent systems that need observability, compliance-grade routing, and multi-model cost optimization. Claude Code remains the developer tool for building and debugging those systems. Most large engineering teams use both: Claude Code on every developer's machine, LangChain in the production stack.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

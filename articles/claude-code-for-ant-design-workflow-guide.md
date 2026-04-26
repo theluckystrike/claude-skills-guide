@@ -318,6 +318,10 @@ Ant Design's Table component requires extensive configuration for sorting, filte
 
 A CRUD data table implementation combines Ant Design's Table with Modal forms for editing, Popconfirm for delete confirmation, and state management for the data array. Claude Code generates the complete implementation including columns with render functions for action buttons, modal forms pre-populated with selected row data, create/update/delete handlers that modify state, and row selection with selectedRowKeys for bulk operations like batch delete or status updates.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

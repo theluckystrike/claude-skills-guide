@@ -287,6 +287,10 @@ python3 mumps_migration/parse_mumps.py routines/DGPT.m
 - **Argumentless IF/ELSE:** MUMPS `IF` without an argument tests the special variable $TEST. Claude Code traces $TEST state through conditionals to generate explicit boolean expressions.
 - **XECUTE indirection:** `XECUTE` runs a string as code at runtime, making static analysis impossible for those lines. Claude Code flags XECUTE statements and extracts the string patterns from common usage to generate equivalent static code.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

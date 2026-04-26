@@ -255,6 +255,10 @@ Yes. Build a task classifier that routes prompts to the right model based on key
 }
 </script>
 
+
+
+**Quick reference →** Search all commands in our [Command Reference](/commands/).
+
 ## Related Guides
 
 - [Model Selector](/model-selector/) -- Instant model recommendations for every task

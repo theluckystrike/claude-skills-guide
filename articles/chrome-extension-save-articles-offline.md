@@ -258,3 +258,5 @@ $99 once. Free forever. 47/500 founding spots left.
 </div>
 
 
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+

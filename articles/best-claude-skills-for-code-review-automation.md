@@ -299,6 +299,10 @@ Related guides: [Best Way to Use Claude Code for Code Review Prep](/claude-code-
 *
 {% endraw %}
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

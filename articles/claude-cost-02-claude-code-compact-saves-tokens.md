@@ -160,6 +160,10 @@ Compaction is lossy. The model summarizes rather than preserves exact conversati
 
 On subscription plans (Pro $20, Max $100-$200), cost savings from `/compact` don't directly reduce your bill -- they extend your rate limits, letting you do more within the same subscription. On API usage, savings are direct: the token reduction translates to proportional cost reduction. Track session duration (in interactions, not minutes) before and after adopting `/compact`. Teams typically find sessions last 30-50% more interactions after compaction, meaning more productive coding per session without hitting context limits.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -283,6 +283,10 @@ This approach combines the consistency of few-shot prompting with Claude Code's 
 Start implementing few-shot prompting in your Claude Code workflows today, the improvements in output quality and consistency will be immediately noticeable.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

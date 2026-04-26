@@ -251,6 +251,10 @@ Savings: $3.73 per session (92%)
 
 This compounding effect means that the first retry incident in a session is relatively cheap, but each subsequent incident is dramatically more expensive because of accumulated context. Running `/compact` after each resolved incident resets the carry cost and prevents compounding -- a habit worth developing for any session involving debugging or error resolution.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Further Reading
 
 - [How to Stop Claude Code Retry Loops](/stop-claude-code-retry-loops-token-waste/) -- the operational fix

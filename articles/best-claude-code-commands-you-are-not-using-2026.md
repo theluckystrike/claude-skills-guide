@@ -167,6 +167,10 @@ Pick the two commands that address your biggest pain points and set them up toda
 For more on building your command vocabulary, see the [custom commands guide](/how-to-create-custom-slash-command-claude-2026/), the [Claude Code playbook](/playbook/), and the [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/).
 
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

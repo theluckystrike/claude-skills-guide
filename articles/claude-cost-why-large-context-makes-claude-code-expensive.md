@@ -224,6 +224,10 @@ Aggressive compaction can disrupt complex debugging workflows where Claude needs
 
 Track daily Claude Code spend before and after adopting context management habits. The industry benchmark is $6/day average. If you are above that, context management can bring you in line. Measure interactions per session and context size at session end — target keeping final context under 80K tokens through strategic compaction.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

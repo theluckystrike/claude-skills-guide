@@ -101,6 +101,10 @@ Yes. Configure Continue.dev to use Claude Sonnet 4.6 or Opus 4.6 as its chat mod
 
 These are different capabilities. Continue.dev's autocomplete predicts your next 1-5 lines using a fast model — quality depends entirely on which model you configure. Claude Code generates complete implementations across multiple files with autonomous verification. Continue.dev's autocomplete triggers on every keystroke with 100-300ms latency. Claude Code's generation takes 3-30 seconds but produces tested, working implementations. Both are valuable, but they serve different moments in the development workflow.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Comparisons
 
 - [Claude Code vs Codeium: Full Comparison 2026](/claude-code-vs-codeium-full-comparison-2026/)

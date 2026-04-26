@@ -202,6 +202,10 @@ MCP tool permissions and skill `allowed-tools` are independent systems. Denying 
 - [ ] No overlapping descriptions between skills and MCP tool descriptions
 - [ ] Fallback behavior defined for when MCP server is unavailable
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

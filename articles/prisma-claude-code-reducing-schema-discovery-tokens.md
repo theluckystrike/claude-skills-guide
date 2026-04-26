@@ -291,6 +291,10 @@ This multi-schema index (~200 tokens) prevents Claude Code from reading all thre
 
 **Large schema files cause slow generation**: For schemas with 50+ models, the generation script may take several seconds. Add a progress indicator and consider splitting the summary into domain-specific files (auth, billing, inventory) rather than one monolithic summary. Domain-specific summaries at ~200 tokens each are more token-efficient than a single 2,000-token summary when most tasks only touch one domain. The domain split also enables progressive disclosure: Claude Code loads only the auth schema when working on authentication features, keeping context lean and focused.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

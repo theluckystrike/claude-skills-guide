@@ -172,6 +172,10 @@ Cost-per-request analysis can create a false sense of optimization. A $0.015 Hai
 
 Review cost logs weekly. Key metrics: average cost per request (target: below $0.03 for mixed workloads), 95th percentile cost per request (identifies expensive outliers), and total monthly spend (the bottom line). Plot cost per request over time — it should trend downward as you optimize routing. Set alerts for any request costing more than $1.00 to catch runaway context sizes.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

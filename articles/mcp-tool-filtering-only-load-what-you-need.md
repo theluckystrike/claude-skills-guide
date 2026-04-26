@@ -172,6 +172,10 @@ Filtered: 3 servers * ~2,500 tokens/turn * 20 turns = 150,000 tokens
 
 **Filtering not reducing costs as expected** -- Verify that `allowedTools` is properly configured in settings.json. A syntax error in the JSON causes Claude Code to fall back to loading all tools.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

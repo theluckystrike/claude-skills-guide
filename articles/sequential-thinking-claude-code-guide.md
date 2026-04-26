@@ -392,6 +392,10 @@ Yes. When the MCP server is configured, sequential thinking is available in both
 
 Yes. These are complementary features. Extended thinking is a model-level capability while sequential thinking is an MCP tool. They can work together for maximum reasoning depth.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -153,6 +153,10 @@ Legacy model pricing creates a hidden trap for teams that have not updated their
 
 Track cost per request by model in your monitoring system. Compare your weekly Anthropic invoice against the projected savings from your cost calculator. Key metrics: average cost per request, total monthly spend by model, cache hit rate (target: above 80% for repeated prompts), and batch utilization percentage. Set up billing alerts at 80% of your monthly budget to catch unexpected spikes.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

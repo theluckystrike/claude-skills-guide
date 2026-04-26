@@ -121,6 +121,10 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

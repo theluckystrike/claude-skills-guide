@@ -101,6 +101,10 @@ If you want to be notified of changes to Awesome Claude Code, watch the repo on 
 
 Bookmark Awesome Claude Code at awesomeclaude.ai for ongoing tool discovery. Clone Claude Code Docs locally if you ever work offline or want fast local documentation access. They complement each other perfectly — one tells you what exists, the other tells you how things work. Use both alongside the [Claude Code playbook](/playbook/) for a complete resource set.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

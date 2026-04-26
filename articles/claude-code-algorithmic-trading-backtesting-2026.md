@@ -223,6 +223,10 @@ python3 trading/strategies/mean_reversion.py
 - **Survivorship bias:** Backtesting on today's S&P 500 constituents ignores delisted companies. Claude Code flags when you use a current universe for historical testing and suggests point-in-time constituent lists.
 - **Overfitting to in-sample:** Optimizing 20 parameters on 2 years of data produces strategies that work perfectly in the past and fail in the future. Claude Code enforces walk-forward structure with out-of-sample evaluation.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

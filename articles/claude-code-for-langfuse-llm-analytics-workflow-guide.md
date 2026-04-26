@@ -68,6 +68,10 @@ Claude Code should initialize the Langfuse client, create a trace with `user_id`
 
 3. **Tracing in production without sampling.** Claude traces every single request. In high-traffic production, trace a percentage of requests with `sample_rate=0.1` to reduce cost and data volume while maintaining statistical significance.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

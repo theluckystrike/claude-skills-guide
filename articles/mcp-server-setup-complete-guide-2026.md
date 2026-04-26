@@ -215,6 +215,10 @@ Manually writing MCP config JSON is error-prone. A missing comma, wrong path, or
 
 **Multiple servers conflicting.** If two servers expose tools with the same name, Claude may call the wrong one. Rename the server entry to disambiguate.
 
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+
 ## Related Guides
 
 - [Best MCP Servers for Claude Code](/best-mcp-servers-for-claude-code-2026/) — Top server recommendations

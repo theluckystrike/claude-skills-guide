@@ -327,6 +327,10 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 </div>
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Reading
 
 - [Claude Code Skill Timeout Error: How to Increase the Limit](/claude-code-skill-timeout-error-how-to-increase-the-limit/) . Comprehensive guide to all timeout causes and workarounds in Claude Code

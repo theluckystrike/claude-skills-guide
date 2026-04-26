@@ -355,6 +355,10 @@ Claude Code works well with monorepos up to 500,000 lines of code if properly co
 }
 </script>
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 - [Project Starter](/starter/) -- Auto-generate monorepo-aware configuration

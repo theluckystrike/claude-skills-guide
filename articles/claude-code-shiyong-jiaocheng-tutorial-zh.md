@@ -674,6 +674,10 @@ Claude Code会将你的提示词和相关代码上下文发送到Anthropic的API
 }
 </script>
 
+
+
+**Quick reference →** Search all commands in our [Command Reference](/commands/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

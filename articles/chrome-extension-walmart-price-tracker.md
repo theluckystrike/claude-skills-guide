@@ -495,4 +495,5 @@ Content script not running: Verify the `content_scripts.matches` pattern is `"ht
 Building a price tracker teaches valuable skills in Chrome extension development, web scraping ethics, and real-time notification systems. Use these principles responsibly. build for personal use and respect platform terms of service.
 
 
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
 

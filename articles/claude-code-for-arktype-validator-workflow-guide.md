@@ -67,6 +67,10 @@ Claude Code should define a `type({ email: "email", password: "string >= 8", dis
 
 3. **Nested object syntax mistakes.** Claude nests objects wrong with `type({ address: type({ street: "string" }) })`. ArkType allows inline nesting: `type({ address: { street: "string", city: "string" } })` without wrapping inner objects in another `type()` call.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

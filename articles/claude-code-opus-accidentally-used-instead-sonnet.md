@@ -211,6 +211,10 @@ echo "Recommendation: alias claude='claude --model sonnet' in all developer shel
 
 Add this check to the team onboarding process. A single developer accidentally using Opus for a full day can cost $50+ in API charges ($40 more than the same usage on Sonnet). Team-wide aliases and environment variable auditing prevent this. The 2-minute effort to set up the alias is the highest-ROI cost prevention measure available -- it eliminates the most common cause of $20+ sessions.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

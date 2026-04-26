@@ -183,6 +183,10 @@ Reducing screenshot frequency means the model operates partially blind. It might
 
 Track three metrics per session: total steps, screenshots taken, and total cost (input + output tokens). After optimization, compare average session cost with the same task types. Target a 30-40% reduction in screenshots taken, which should yield 20-25% cost savings. At Opus 4.7 rates, saving 40 screenshots per session saves 40 x 1,500 x $5.00/MTok = $0.30 per session.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

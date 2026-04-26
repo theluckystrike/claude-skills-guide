@@ -228,6 +228,10 @@ The `disableSkillShellExecution: true` setting prevents `!`command`` execution b
 - [ ] Shebang line uses `#!/usr/bin/env interpreter`
 - [ ] `shell` frontmatter field matches system capabilities
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

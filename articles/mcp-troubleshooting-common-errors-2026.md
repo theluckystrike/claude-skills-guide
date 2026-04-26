@@ -223,6 +223,10 @@ When any MCP server fails, run through this checklist:
 
 If all eight checks pass and the server still fails, check the MCP server's GitHub issues for known bugs.
 
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+
 ## Related Guides
 
 - [MCP Server Setup Complete Guide](/mcp-server-setup-complete-guide-2026/) — Proper setup from the start

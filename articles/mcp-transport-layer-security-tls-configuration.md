@@ -482,3 +482,5 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
 
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+

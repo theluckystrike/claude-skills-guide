@@ -229,6 +229,10 @@ Claude Code continues to evolve with regular improvements to model capabilities,
 Understanding this evolution helps developers use Claude Code effectively. The skills you write today will continue working while benefiting from underlying improvements to the platform. The teams that get the most from the platform are those that revisit their skill libraries periodically. not to rewrite from scratch, but to remove constraints that made sense under older limitations and add structured metadata that current versions actually use.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -215,6 +215,10 @@ Track the cost-effectiveness of your chosen model:
 - **Budget variance** (API): Actual monthly cost vs budgeted cost. High variance favors switching to subscription.
 - **Total cost of ownership**: Include engineering time for API integration, monitoring, and billing management when comparing.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

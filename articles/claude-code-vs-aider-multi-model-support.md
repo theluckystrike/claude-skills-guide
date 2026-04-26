@@ -94,6 +94,10 @@ Claude Code's single-model simplicity means fewer decisions during initial adopt
 
 If your model needs are simple and you just want chat with code context, the providers' direct interfaces (Claude.ai, ChatGPT) or lightweight IDE extensions may be more appropriate. The multi-model and tool-use overhead of both Aider and Claude Code is unnecessary if you are primarily copy-pasting code snippets from a chat conversation. For teams spending less than $20/month on AI assistance, the optimization Aider provides is not worth the additional complexity.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

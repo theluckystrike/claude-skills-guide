@@ -132,6 +132,10 @@ The "ultrathink" keyword anywhere in skill content enables extended thinking for
 - [ ] Dynamic context injection commands complete in under 2 seconds
 - [ ] Total description budget verified with current skill count
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

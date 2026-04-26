@@ -132,6 +132,10 @@ Fill in your scores as you complete each section. Reassess monthly. Scores below
 - Explore [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for practical application
 - Share quiz results with your team to align on knowledge levels
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

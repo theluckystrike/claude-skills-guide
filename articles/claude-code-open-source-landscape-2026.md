@@ -116,6 +116,10 @@ claude-task-master
 
 See our [contribution guide](/claude-code-community-contributions-guide-2026/) for submission details.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## FAQ
 
 **Try it:** Browse 155+ skills in our [Skill Finder](/skill-finder/).

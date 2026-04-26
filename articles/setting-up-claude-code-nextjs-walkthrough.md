@@ -301,6 +301,10 @@ The CLAUDE.md rule "App Router file conventions: page.tsx, layout.tsx..." is usu
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [Project Starter](/starter/) -- Auto-generate Next.js-specific Claude Code configuration

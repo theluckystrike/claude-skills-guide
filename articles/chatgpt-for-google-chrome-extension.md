@@ -368,5 +368,5 @@ Response truncated mid-sentence: The default `max_tokens` may cut off long respo
 Page context exceeding token limit: Summarize long pages before injecting them. Extract only the first 2,000 characters, or use the page's meta description and h1/h2 headings as a compact representation of the page content.
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

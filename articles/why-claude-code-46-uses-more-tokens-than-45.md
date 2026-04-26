@@ -228,6 +228,10 @@ Teams upgrading from 4.5 to 4.6 should adjust token budgets proactively rather t
 
 The 12-15% budget increase accounts for 4.6's verbosity while maintaining cost control. Without this adjustment, sessions hit budget limits prematurely, causing incomplete work that requires expensive context rebuilding in follow-up sessions.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

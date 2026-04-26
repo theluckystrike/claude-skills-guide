@@ -202,6 +202,10 @@ git push
 
 Codespaces eliminate "works on my machine" issues for teams using Claude Code. Every developer gets an identical environment with Claude Code pre-configured, reducing onboarding from hours to minutes.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -212,6 +212,10 @@ CLAUDE.md instructions apply to every prompt in the session. Custom commands exe
 }
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Command Reference](/commands/) — Interactive command explorer

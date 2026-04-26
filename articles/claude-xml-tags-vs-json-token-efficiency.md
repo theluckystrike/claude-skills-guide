@@ -208,6 +208,10 @@ At Opus 4.7 rates ($5.00/MTok), combining XML conversion with attribute optimiza
 
 Compare token counts for identical requests in JSON vs XML format. Track the percentage reduction and multiply by your daily volume and model rate. Typical savings range from 20-35% on structured context. If your prompts are primarily natural language with minimal structured data, the savings will be smaller. Focus XML conversion on prompts where structured data makes up more than 30% of the input tokens.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -177,6 +177,10 @@ Long pairing sessions lead to context window pressure and reduced review quality
 ### Anti-Pattern 4: Ignoring Disagreement
 When Claude Code suggests something different from what you planned, consider it. Sometimes the model's training surface includes patterns you have not seen.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## FAQ
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

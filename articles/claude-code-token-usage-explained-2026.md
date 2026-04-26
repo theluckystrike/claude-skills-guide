@@ -195,6 +195,10 @@ The Token Estimator tool lets you check token counts for any text. For in-sessio
 }
 </script>
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 - [Token Estimator](/token-estimator/) — Real-time token counting tool

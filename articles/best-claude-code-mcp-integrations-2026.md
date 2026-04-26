@@ -264,6 +264,10 @@ Claude Code continues working but loses access to that server's tools. Restart C
 For setup instructions, see the [MCP setup guide](/mcp-servers-claude-code-complete-setup-2026/). For the full ecosystem, read the [tools map](/claude-code-ecosystem-complete-map-2026/). For security, see the [threat model guide](/claude-code-security-threat-model-2026/).
 
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

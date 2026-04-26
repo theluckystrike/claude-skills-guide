@@ -247,6 +247,10 @@ print(f'N iterations: {len(data.scfenergies)}')
 - **Wrong multiplicity for transition metals:** An Fe(II) complex can be low-spin (singlet) or high-spin (quintet). Claude Code flags transition metal systems and prompts you to specify the spin state explicitly.
 - **SCF convergence failure:** Default DIIS sometimes fails for open-shell or highly charged systems. Claude Code switches to SOSCF or adds level shifting when it detects convergence stalling in the output.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

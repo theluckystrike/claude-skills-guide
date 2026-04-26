@@ -67,6 +67,10 @@ Claude Code should call `mixpanel.identify(userId)` after signup, track "Onboard
 
 3. **Sending high-cardinality properties.** Claude includes unique IDs or timestamps as event properties. Mixpanel works best with categorical properties (plan_type: "free") not unique values (session_id: "abc123") — high-cardinality properties make analysis difficult.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

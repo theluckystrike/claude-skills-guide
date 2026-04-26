@@ -173,6 +173,10 @@ Validate the stacked discount is applying correctly:
 - **Batch vs real-time comparison**: Run a small sample (100 requests) both ways and compare per-request cost
 - Use the Anthropic billing dashboard to verify batch pricing tiers are applying alongside cache discounts
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

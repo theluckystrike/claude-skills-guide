@@ -115,6 +115,10 @@ The routing layer itself can be as simple as a dictionary mapping task types to 
 - Calculate engineering overhead cost and subtract from gross savings
 - Target: 25-40% net cost reduction after accounting for complexity overhead
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

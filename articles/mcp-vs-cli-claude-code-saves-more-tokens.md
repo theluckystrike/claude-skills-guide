@@ -276,6 +276,10 @@ When evaluating MCP servers for a project, consider the token cost profile along
 
 Custom single-purpose MCP servers provide the best token-to-value ratio because they expose only the tools needed and minimize definition overhead. For teams with recurring integrations (deployment, monitoring, notification), building a custom server with 2-3 focused tools saves 5K-8K tokens per session compared to general-purpose servers.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

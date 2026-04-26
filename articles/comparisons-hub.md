@@ -130,6 +130,10 @@ The cost of a poorly written skill is subtle: it produces acceptable but not exc
 
 ---
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Hubs
 
 - [Getting Started with Claude Skills](/getting-started-hub/). Learn the foundations before comparing options

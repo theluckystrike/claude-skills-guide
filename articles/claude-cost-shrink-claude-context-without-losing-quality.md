@@ -215,6 +215,10 @@ Over-aggressive pruning in the middle of a debugging session can force you to re
 
 Track context size per interaction over time. Plot the growth curve with and without pruning. Target keeping context below 60K tokens for standard sessions and below 100K for complex multi-file tasks. Measure the number of times you need to re-explain context that was pruned — this should be under 5% of interactions. Calculate monthly savings by multiplying average token reduction by interaction count and model rate.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

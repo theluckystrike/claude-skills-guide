@@ -245,6 +245,10 @@ No. In CI/CD, you want Claude to actually make changes (fix tests, update files)
 }
 </script>
 
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+
 ## Related Guides
 
 - [Permissions Configurator](/permissions/) — Choose between sandbox and permissions

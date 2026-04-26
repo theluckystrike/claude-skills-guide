@@ -166,6 +166,10 @@ Claude Code loops typically stem from ambiguous prompts, missing context, or ove
 For persistent problems, examine your project configuration and skill definitions for hidden conflicts. With proper scoping and clear requirements, Claude Code produces focused, accurate outputs without getting trapped in repetitive cycles.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

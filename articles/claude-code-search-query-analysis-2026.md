@@ -195,6 +195,10 @@ The search queries are a direct signal from developers telling us what they need
 
 *Methodology: Data covers 28 days of Google Search Console query data for claudecodeguides.com, exported April 2026. Analysis includes the top 1,000 queries by impression count. Intent classification uses keyword pattern matching across query text. Some queries truncated in tables for readability. Full query text preserved in analysis.*
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -177,6 +177,10 @@ Removing descriptions and enums can reduce the model's accuracy in choosing the 
 
 Measure `usage.input_tokens` before and after schema optimization on identical request payloads. The difference equals your per-request token savings. Track tool selection accuracy (did the model pick the right tool?) and parameter validity (did the model provide valid parameter values?) alongside cost. A 50% schema reduction with less than 2% accuracy drop is the sweet spot. At Haiku 4.5 rates ($1.00/MTok), even modest savings compound: 500 tokens saved across 100,000 daily requests = $1,500/month.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

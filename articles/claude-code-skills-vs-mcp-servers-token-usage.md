@@ -318,6 +318,10 @@ Monthly savings at 100 sessions: ~$8.64 per developer
 
 The migration took 3 hours. The savings recur every month indefinitely.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

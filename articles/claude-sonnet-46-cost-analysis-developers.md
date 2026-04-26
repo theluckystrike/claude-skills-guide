@@ -138,6 +138,10 @@ Prompt caching amplifies Sonnet's cost advantage further. Sonnet 4.6 cache reads
 
 Compare your API bill for the first month after switching. Track quality by having developers rate AI-generated code reviews on a 1-5 scale for two weeks on each model. If Sonnet reviews average above 4.0, the switch is validated. Monitor the number of times developers manually override to Opus — this should stabilize below 10% of requests after initial tuning.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

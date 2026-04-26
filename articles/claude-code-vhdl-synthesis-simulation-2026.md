@@ -291,6 +291,10 @@ yosys -m ghdl -p "ghdl --std=08 ../rtl/fifo.vhd -e sync_fifo; synth_ecp5; write_
 - **std_logic_arith vs numeric_std:** Older VHDL code uses the non-standard std_logic_arith library. Claude Code always uses ieee.numeric_std and converts old code during refactoring.
 - **Simulation passes, synthesis fails:** Using `wait for 10 ns` in RTL code is simulation-only. Claude Code separates synthesizable code (rtl/) from simulation-only code (tb/) and flags non-synthesizable constructs.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

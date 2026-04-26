@@ -224,6 +224,10 @@ asyncio.run(test())
 - **OPC UA session timeout:** Default keepalive of 30s is too short for intermittent connections. Claude Code configures session timeout, subscription intervals, and automatic reconnection with exponential backoff.
 - **Sparkplug B birth/death lifecycle:** Forgetting to send NBIRTH on reconnect causes the SCADA host to ignore all subsequent NDATA messages. Claude Code implements the full Sparkplug state machine including NBIRTH, NDEATH, and last-will testament.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

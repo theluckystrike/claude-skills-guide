@@ -139,6 +139,10 @@ Prevention: --stat first pattern
 - For PR review: `git diff --stat origin/main...HEAD` first, then targeted file diffs
 ```
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

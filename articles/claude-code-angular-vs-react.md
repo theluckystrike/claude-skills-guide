@@ -166,6 +166,10 @@ For Angular teams, invest time in a detailed CLAUDE.md that specifies exact Angu
 
 Angular's opinionated structure produces more consistent Claude Code output across large teams because there are fewer valid patterns to choose from. React's flexibility requires more explicit CLAUDE.md rules to prevent inconsistency when many developers use Claude Code independently.
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## FAQ
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

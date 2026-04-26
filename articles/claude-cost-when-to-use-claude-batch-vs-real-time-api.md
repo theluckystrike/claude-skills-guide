@@ -179,6 +179,10 @@ Track per-workload metrics after migration:
 - **Migration coverage**: Percentage of total API spend routed through batch. Target: 40-60% for a typical mixed workload.
 - Review monthly billing to confirm projected savings are materializing
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

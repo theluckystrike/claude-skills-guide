@@ -176,6 +176,10 @@ ccusage --days 90 --format json > quarterly-usage.json
 | Heavy user (Opus) | $200-$500 | $100 | $100-$400 saved on Max |
 | Heavy team (5 devs) | $1,000-$1,750 | $1,000 | $0-$750 saved on Max |
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

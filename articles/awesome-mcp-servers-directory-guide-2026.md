@@ -164,6 +164,10 @@ Each MCP tool definition adds ~50-100 tokens to the context. With 3 servers expo
 
 **9/10.** The single most important directory in the Claude Code ecosystem. MCP servers are what turn Claude Code from a code generator into a full-stack development agent, and this repo catalogs all of them. The web interface at mcpservers.org is genuinely well-built. Only ding: some listings are outdated or abandoned, and the community rating system doesn't surface this clearly enough.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Resources
 
 - [MCP Setup Guide](/mcp-servers-claude-code-complete-setup-2026/) — step-by-step MCP configuration for Claude Code

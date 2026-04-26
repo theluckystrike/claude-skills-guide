@@ -282,6 +282,10 @@ Establish a maintenance cadence to keep caches useful:
 
 A consistent refresh schedule prevents the most common caching failure: stale information that causes Claude Code to write code against outdated structures, triggering expensive error-and-fix cycles that cost 3,000-10,000 tokens per incident. The refresh effort (5-10 minutes per week) is minimal compared to the potential token waste from stale caches.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

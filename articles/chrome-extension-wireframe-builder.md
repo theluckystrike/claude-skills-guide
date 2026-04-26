@@ -395,5 +395,5 @@ Extension iframe not loading on pages with strict CSP: Use a Chrome extension si
 Once you have core functionality working, consider adding collaborative features through cloud storage, element libraries for common UI patterns, or integration with design tools like Figma through their APIs.
 
 
-
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
 

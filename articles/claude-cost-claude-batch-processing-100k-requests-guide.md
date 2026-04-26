@@ -233,6 +233,10 @@ Track these metrics for large batch operations:
 - **Error rate**: Percentage of failed requests per batch. Below 0.1% is normal. Above 1% indicates systematic request issues.
 - Compare total batch cost against the standard pricing estimate to verify the 50% discount applied
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

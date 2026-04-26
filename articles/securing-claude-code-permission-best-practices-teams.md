@@ -278,6 +278,10 @@ A team lead should evaluate the request, run the command manually if it is a one
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [Permissions Configurator](/permissions/) -- Generate team-ready permission configs

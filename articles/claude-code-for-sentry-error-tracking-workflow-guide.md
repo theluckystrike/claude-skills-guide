@@ -69,6 +69,10 @@ Claude Code should install `@sentry/nextjs`, run the Sentry wizard or create `se
 
 3. **Missing user context.** Claude sets up Sentry but never calls `Sentry.setUser()` after authentication. Without user context, you cannot tell which users are affected by errors, making it harder to prioritize fixes and communicate with affected customers.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

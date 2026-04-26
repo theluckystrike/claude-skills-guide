@@ -192,6 +192,10 @@ If your workload splits between small-context and large-context requests, route 
 
 Track the distribution of context sizes across all requests. If 80%+ of requests use under 100K tokens, most of your traffic can run on Haiku at $1/MTok instead of Opus at $5/MTok. Calculate the monthly cost difference between your current model assignment and an optimized routing based on actual context needs. The savings potential is proportional to the percentage of small-context requests currently running on expensive models.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

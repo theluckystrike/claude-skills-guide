@@ -197,6 +197,10 @@ Use git to review and revert changes. This is why API mode should always run on 
 For CI/CD integration patterns, see the [CI/CD guide](/claude-code-ci-cd-integration-guide-2026/). For cost optimization in automated runs, read the [pricing guide](/claude-code-pricing-plans-comparison-2026/). For security in automated workflows, see the [threat model guide](/claude-code-security-threat-model-2026/).
 
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

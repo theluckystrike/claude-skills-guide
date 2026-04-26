@@ -216,6 +216,10 @@ Target state: [what it should look like]
 Constraints: [behavior must not change, tests must pass]
 ```
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

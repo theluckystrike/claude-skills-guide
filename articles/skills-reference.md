@@ -214,3 +214,7 @@ Whether you are building custom skills or looking for pre-built ones, this refer
 - [Fix Claude Skill Infinite Loop: Stop Recursive Triggering — 2026](/fix-claude-skill-infinite-loop/)
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

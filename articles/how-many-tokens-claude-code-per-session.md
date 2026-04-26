@@ -166,6 +166,10 @@ Linearly. Each developer runs their own Claude Code sessions independently. A te
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [Token Estimator](/token-estimator/) -- Calculate expected token usage for your specific project

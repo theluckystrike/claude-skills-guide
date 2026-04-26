@@ -139,6 +139,10 @@ The `/simplify` bundled skill already performs a form of code review (three para
 - [ ] Review output format includes file:line references
 - [ ] Error handling for cases where no PR exists on current branch
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

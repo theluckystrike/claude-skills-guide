@@ -12,6 +12,10 @@ Claude Code is Anthropic's official command-line tool for AI-assisted software d
 
 This page takes you from zero to productive in under 30 minutes. Follow the steps in order.
 
+<div style="background:linear-gradient(135deg,rgba(110,231,183,0.08),rgba(96,165,250,0.05));border:1px solid rgba(110,231,183,0.2);border-radius:8px;padding:16px 20px;margin:20px 0;">
+<strong style="color:#6ee7b7;">Interactive Tool:</strong> New to Claude Code? Generate your complete project setup with our <a href="/starter/" style="color:#60a5fa;">Project Starter Wizard</a> — ready in 60 seconds.
+</div>
+
 ---
 
 ## Prerequisites
@@ -256,6 +260,7 @@ Run {% raw %}`npm install -g @anthropic-ai/claude-code@latest`{% endraw %} to up
 - [Error reference when things go wrong](/error-handling/)
 - [Fix common beginner issues](/troubleshooting/)
 - [Ready for the next level?](/advanced-usage/)
+- [Generate your first project setup](/starter/)
 
 
 <section class="related-hubs" style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 12px; border: 1px solid #e9ecef;">

@@ -1172,6 +1172,10 @@ DEBUG=* claude --version 2>&1 | tail -50
 
 Post this output in the [Claude Code GitHub Issues](https://github.com/anthropics/claude-code/issues) or include it in a support request.
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

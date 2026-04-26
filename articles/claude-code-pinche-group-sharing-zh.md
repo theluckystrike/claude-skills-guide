@@ -468,6 +468,10 @@ Anthropic有能力检测异常使用模式，包括来自多个IP的并发请求
 }
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

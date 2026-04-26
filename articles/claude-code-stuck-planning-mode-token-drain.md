@@ -238,6 +238,10 @@ Each pattern gives Claude a clear target and action, eliminating the uncertainty
 # 27K x 10 x 4 = 1.08M tokens = $3.24/month Sonnet
 ```
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

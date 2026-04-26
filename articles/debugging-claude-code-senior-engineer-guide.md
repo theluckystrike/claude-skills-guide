@@ -202,6 +202,10 @@ Run <code>claude mcp list</code> to see server status. For a failing server, tes
 ]}
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [Claude Code Error Messages Dictionary](/claude-code-error-messages-dictionary/)

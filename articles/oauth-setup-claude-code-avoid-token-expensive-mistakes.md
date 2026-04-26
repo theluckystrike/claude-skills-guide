@@ -262,6 +262,10 @@ Running this verification script (one Bash call, ~245 tokens) catches configurat
 
 At Sonnet 4.6 rates, the two-provider implementation costs $0.30-$0.57 with skills versus $0.15-$0.10 without -- a savings of $0.10-$0.37 per implementation. The skill file investment (15 minutes to create) pays back on the first provider integration.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

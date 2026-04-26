@@ -334,6 +334,10 @@ Related Reading
 - [Best Way to Batch Claude Code Requests to Reduce API Calls](/best-way-to-batch-claude-code-requests-reduce-api-calls/)
 - [Building Apps with Claude API: Anthropic SDK Python Guide](/building-apps-with-claude-api-anthropic-sdk-python-guide/)
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

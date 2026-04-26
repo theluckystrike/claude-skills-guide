@@ -233,6 +233,10 @@ Generating technical documentation uses the `pdf` skill for formatted PDF output
 
 Automating the documentation pipeline uses Git hooks or CI triggers to regenerate documentation when code changes. A post-commit hook runs `claude --print` to generate markdown API documentation, then a Node.js script pushes it to Confluence with the correct page title and space. The `supermemory` skill remembers documentation preferences across sessions. Version conflict handling fetches the current page version, increments it, and skips updates when content has not changed to prevent overwriting manual edits.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

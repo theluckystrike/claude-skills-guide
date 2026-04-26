@@ -260,6 +260,10 @@ Add them to the allow list in settings.json with appropriate Bash patterns. If y
 }
 </script>
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 - [Project Starter](/starter/) — Guided project setup for existing codebases

@@ -195,6 +195,10 @@ Use ccusage for per-project cost tracking, check the Anthropic dashboard for API
 ### Does Claude Code cost more for larger codebases?
 Yes. Larger codebases mean more files read into context, which increases input tokens. Use `.claudeignore` to exclude non-essential files and `/compact` to manage context size.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Claude Code Pricing: Every Plan](/claude-code-pricing-every-plan-2026/) — Complete pricing breakdown

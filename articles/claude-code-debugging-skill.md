@@ -145,3 +145,7 @@ Related Reading
 - [Claude Code Docker Compose Development Workflow](/claude-code-docker-compose-development-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

@@ -274,6 +274,10 @@ chmod +x scripts/bump-version.sh
 
 Without distribution infrastructure, each team reinvents the same Claude Code configurations. A shared skills package ensures consistent AI behavior across 10+ repositories while allowing teams to update without manual intervention.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

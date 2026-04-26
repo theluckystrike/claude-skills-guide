@@ -88,6 +88,10 @@ Cody with an existing Sourcegraph instance is significantly better for this scen
 
 If your primary need is code search without AI generation (finding where something is defined, tracing dependencies, understanding call graphs), plain Sourcegraph search (without Cody's AI features) or GitHub's code search may be sufficient and free. Similarly, if you just need to read and understand local files, tools like `grep`, `ast-grep`, or your IDE's built-in search may be faster than invoking an AI for simple lookups.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

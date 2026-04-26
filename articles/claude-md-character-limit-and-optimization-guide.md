@@ -350,6 +350,10 @@ Claude skills provide specialized tools for working efficiently within character
 
 The pdf skill extracts and summarizes content from lengthy documents before bringing it into Claude's context, particularly useful for technical specifications and large documentation sets. A 40-page technical specification as raw text consumes 15,000-20,000 tokens, but after extraction and summarization via the pdf skill, relevant requirements compress to 2,000-3,000 tokens. This leaves significantly more context budget for actual implementation work, making it practical to reference large spec documents during coding sessions.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

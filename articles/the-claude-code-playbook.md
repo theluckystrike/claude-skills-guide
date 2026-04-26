@@ -402,6 +402,10 @@ Download the Complete Playbook -- Free with email signup.
 The public half (100 patterns) is also available as a [GitHub repository](https://github.com/theluckystrike/claude-code-playbook) you can star, fork, and contribute to.
 
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -191,6 +191,10 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 ---
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

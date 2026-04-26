@@ -158,3 +158,7 @@ Related Reading
 - [Configuration Reference](/configuration/). Complete Claude Code settings and configuration guide
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+

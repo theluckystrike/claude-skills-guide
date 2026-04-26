@@ -175,6 +175,10 @@ Set tool permissions in `.claude/settings.json`:
 
 A shared CLAUDE.md eliminates the "works on my machine" problem for AI-assisted development. Every developer gets the same Claude behavior, producing consistent code across the entire team.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

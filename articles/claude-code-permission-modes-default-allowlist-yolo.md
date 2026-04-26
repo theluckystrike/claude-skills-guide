@@ -241,6 +241,10 @@ Claude Code acknowledges the denial and attempts an alternative approach. For ex
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [Permissions Configurator](/permissions/) -- Generate your ideal settings.json

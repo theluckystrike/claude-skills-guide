@@ -227,6 +227,10 @@ No. MCP servers run locally on your machine. Data flows directly between the ser
 }
 </script>
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 - [MCP Config Generator](/mcp-config/) — Build MCP configurations instantly

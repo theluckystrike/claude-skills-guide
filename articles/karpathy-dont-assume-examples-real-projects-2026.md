@@ -132,6 +132,10 @@ Claude Code correctly scopes dependencies to packages and uses workspace imports
 
 4. **Forgetting about the exceptions** — in all four examples above, established patterns DON'T need confirmation. If every component in your React app uses Tailwind, Claude Code shouldn't ask "should I use Tailwind?" for each new component.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related Principles
 
 - [Implement Don't Assume in CLAUDE.md](/karpathy-dont-assume-implementation-claude-md-2026/) — the template for these rules

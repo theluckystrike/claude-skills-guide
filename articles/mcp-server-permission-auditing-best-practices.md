@@ -231,6 +231,10 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
 ---
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Frequently Asked Questions
 
 ### What is Understanding MCP Server Permission Models?

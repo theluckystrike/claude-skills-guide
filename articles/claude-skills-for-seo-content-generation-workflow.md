@@ -365,6 +365,10 @@ The /docx skill generates structured content briefs as formatted Word documents.
 
 The /pdf skill processes industry reports, whitepapers, competitor content, and academic papers in bulk by extracting statistics, data points, and quotes relevant to your topic. Practical SEO uses include extracting citable statistics from analyst reports to earn backlinks, analyzing competitor content structure and claims, summarizing academic papers for primary research references, and parsing product documentation for accurate technical how-to guides. It saves hours of manual reading per article when topics require multiple source documents.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

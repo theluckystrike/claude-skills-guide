@@ -68,7 +68,7 @@ The @ mention technique is faster than writing out full file paths and integrate
 
 ## Schema Summary Technique for Massive Databases
 
-For databases with hundreds of tables, provide a summary first, then dive into specifics. Create a schema overview file:
+For databases with hundreds of tables, provide a summary first, then get startedto specifics. Create a schema overview file:
 
 ```sql
 -- Schema Overview
@@ -354,4 +354,6 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

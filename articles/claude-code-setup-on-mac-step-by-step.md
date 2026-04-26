@@ -256,6 +256,10 @@ cat ~/.claude/prompts/explain-code.txt src/utils.js | claude
 ```
 
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

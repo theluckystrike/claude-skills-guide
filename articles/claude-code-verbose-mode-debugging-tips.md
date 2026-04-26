@@ -341,6 +341,10 @@ diff baseline.log updated.log
 The diff output shows exactly how your skill modification changed model behavior, making it easy to validate improvements and catch unintended regressions.
 
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

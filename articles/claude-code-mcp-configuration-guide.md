@@ -488,6 +488,10 @@ Yes. Commit `.claude/settings.json` to your repository. Team members will automa
 
 Claude Code supports the current MCP specification. Servers built with the official MCP SDK are compatible. Check the [MCP specification](https://spec.modelcontextprotocol.io/) for protocol details.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

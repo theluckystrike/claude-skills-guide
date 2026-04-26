@@ -237,5 +237,5 @@ Related Reading
 - [Claude Code for CORS Misconfiguration Fix Workflow Guide](/claude-code-for-cors-misconfiguration-fix-workflow-guide/)
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

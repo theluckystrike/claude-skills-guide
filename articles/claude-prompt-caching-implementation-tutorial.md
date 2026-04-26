@@ -196,6 +196,10 @@ Track these metrics starting from day one:
 - **Cost per request**: Track the moving average. Expected: $0.015 per request (Sonnet, 50K cached) vs $0.15 without caching
 - Set up a weekly cost report comparing pre-caching baseline to current spend
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

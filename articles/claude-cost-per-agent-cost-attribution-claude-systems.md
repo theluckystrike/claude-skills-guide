@@ -263,6 +263,10 @@ Use attribution data to drive optimization:
 - **Model optimization candidates**: Agents with high cost but simple task types are candidates for Haiku/Sonnet routing.
 - **Sprint-over-sprint trend**: Track per-agent costs across sprints to catch creeping cost increases early.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

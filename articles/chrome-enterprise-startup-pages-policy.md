@@ -703,3 +703,5 @@ Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
 
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+

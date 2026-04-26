@@ -403,6 +403,10 @@ Assume PCI DSS compliance is required.
 This level of detail produces code that handles the security requirements correctly from the first generation, rather than requiring multiple rounds of review and revision.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

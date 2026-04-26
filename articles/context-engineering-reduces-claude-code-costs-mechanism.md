@@ -257,6 +257,10 @@ Teams new to context engineering often make mistakes that limit savings:
 
 These mistakes are identifiable through `ccusage` analysis: look for sessions where discovery tokens exceed 40% of total tokens (compress lever needed), sessions over 30 turns (isolate lever needed), or sessions where CLAUDE.md exceeds 400 tokens (write lever over-applied).
 
+
+
+**Quick reference →** Search all commands in our [Command Reference](/commands/).
+
 ## Further Reading
 
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- practical context management techniques

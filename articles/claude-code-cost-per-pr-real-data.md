@@ -276,6 +276,10 @@ For engineering managers setting budgets, these benchmarks represent achievable 
 
 These targets assume Sonnet 4.6 as the default model with occasional Opus escalation. If actual costs consistently exceed these benchmarks by more than 50%, investigate the top 10% most expensive PRs for optimization opportunities -- those outliers typically contain retry loops, unscoped exploration, or unnecessary Opus usage.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

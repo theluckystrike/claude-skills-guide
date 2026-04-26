@@ -218,6 +218,10 @@ While updates to Claude Code can temporarily disrupt your workflow, most issues 
 Keeping your skills modular, well-documented, and using environment-aware path handling will make future updates much smoother. The investment in making your skills resilient to change pays off in reduced downtime and more reliable automation.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

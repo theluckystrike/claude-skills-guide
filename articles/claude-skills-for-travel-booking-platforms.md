@@ -151,6 +151,10 @@ Multi-city itineraries create multiple HL (hierarchical level) segments in the P
 - [ ] PNR validation rejects incomplete records before ticketing
 - [ ] Currency conversion happens in exactly one layer of the stack
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

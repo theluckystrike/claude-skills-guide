@@ -165,6 +165,10 @@ Claude skills extend language learning through the /tdd skill (guides test-drive
 
 Structured learning workflows use three phases per project: discuss design and architecture in your target language, write code with Claude providing feedback and explanations, then review together to explore alternative approaches and optimizations. Set clear milestones -- basic syntax in week one, simple projects by month one, production-quality code by month three. Claude adapts its explanations as your proficiency grows, providing more sophisticated guidance over time. Treat Claude as a learning partner, not a code generator.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

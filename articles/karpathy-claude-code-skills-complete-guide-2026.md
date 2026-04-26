@@ -183,6 +183,10 @@ The maintainers update the guidelines when Claude Code's behavior changes across
 
 **9/10.** The Karpathy skills are the single highest-ROI addition you can make to a CLAUDE.md file. Four rules, zero dependencies, and an immediate reduction in wasted iterations. The only missing point is that the repo doesn't include project-type-specific templates — you'll need to customize the principles for your domain. Pair it with [ccusage for cost tracking](/ccusage-claude-code-cost-tracking-guide-2026/) to quantify the improvement.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Resources
 
 - [CLAUDE.md Best Practices Guide](/claude-md-best-practices-10-templates-compared-2026/) — structuring your full CLAUDE.md

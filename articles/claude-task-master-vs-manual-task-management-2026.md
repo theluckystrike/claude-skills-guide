@@ -95,6 +95,10 @@ Task Master scales to hundreds of tasks because dependencies are tracked in a gr
 
 Start manual. Seriously. A `tasks.md` file works for most projects and keeps you close to the work. When you hit the point where you are spending more time organizing tasks than completing them — that is when Task Master's automation becomes worth the setup cost. Install it, feed it your PRD, and let the AI handle the decomposition. The two approaches can also coexist: use Task Master for the structured project plan and keep a `quick-tasks.md` for ad-hoc items that do not need dependency tracking.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

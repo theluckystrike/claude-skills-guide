@@ -128,3 +128,7 @@ Three features set Claude Howto apart from generic tutorials:
 - Browse the [skills directory](/claude-skills-directory-where-to-find-skills/) for tools to add to your setup
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+

@@ -152,6 +152,10 @@ Review skills quarterly. Remove unused ones, update descriptions for skills with
 - [ ] No SKILL.md body exceeds 2,000 words
 - [ ] Reference docs moved to `references/` directory
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -262,6 +262,10 @@ export const postRouter = router({
 
 Dev Containers ensure every team member has Claude Code configured identically. New developers go from `git clone` to productive AI-assisted coding in under 5 minutes instead of spending an hour on environment setup.
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

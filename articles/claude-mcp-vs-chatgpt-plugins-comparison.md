@@ -97,6 +97,10 @@ Yes. Any REST API that a GPT Action connects to can also be accessed by an MCP s
 
 If your extension needs are simple (e.g., asking AI about a specific document or dataset), uploading files directly to Claude or ChatGPT is simpler than building either an MCP server or a GPT. Both extension systems are designed for recurring, complex integrations — not one-off file analysis. For occasional use, direct file upload or copy-paste remains the simplest approach. If your primary requirement is connecting AI to a single REST API without protocol overhead, a lightweight function-calling wrapper using the Vercel AI SDK or LangChain tool abstraction may be more practical than committing to either MCP or GPTs for a single integration point.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

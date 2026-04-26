@@ -9,6 +9,9 @@ date: 2026-04-20
 
 Configure projects, automate workflows, and get the most out of Claude Code's project-level features.
 
+<div style="background:linear-gradient(135deg,rgba(110,231,183,0.08),rgba(96,165,250,0.05));border:1px solid rgba(110,231,183,0.2);border-radius:8px;padding:16px 20px;margin:20px 0;">
+<strong style="color:#6ee7b7;">Interactive Tool:</strong> Set up your workflow — <a href="/mcp-config/" style="color:#60a5fa;">MCP Config Generator</a> · <a href="/starter/" style="color:#60a5fa;">Project Starter</a> · <a href="/commands/" style="color:#60a5fa;">Command Reference</a>
+</div>
 
 ## All Workflow Guides (1023 articles)
 

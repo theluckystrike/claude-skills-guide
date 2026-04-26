@@ -126,6 +126,10 @@ Set up automated checks in your development workflow. Use Claude Code's built-in
 
 The core fix applies to macOS, Linux, and Windows. Some path-related adjustments may be needed depending on your OS. Check the platform-specific notes in the guide above.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Resources
 
 - [Fix Claude Code Context Window Full](/claude-code-context-window-full-in-large-codebase-fix/)

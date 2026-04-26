@@ -723,6 +723,11 @@ html[data-theme="light"] .nav {
   gap: 16px;
   margin-top: clamp(40px, 5vw, 64px);
 }
+.tool-card-benefit {
+  font-family: var(--mono); font-size: 11px;
+  color: var(--accent); letter-spacing: 0.01em;
+  margin: -8px 0 0; line-height: 1.4;
+}
 .tool-card {
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -910,6 +915,8 @@ html[data-theme="light"] .nav {
   .wrap { padding: 0 24px; }
   .nav-right .btn-primary { padding: 10px 14px; font-size: 12.5px; }
   .nav-links { display: none; }
+  #why-ccg > .wrap > div:last-child { grid-template-columns: repeat(2, 1fr) !important; }
+  .popular-guides .guides-more { grid-template-columns: 1fr !important; }
   .hero-grid, .gen-grid, .section-head, .stats-head { grid-template-columns: 1fr !important; gap: 32px !important; }
   .hero-copy { max-width: 100%; }
   .hero-stack { position: static !important; transform: none !important; margin-top: 24px; width: 100% !important; max-width: 100%; }
@@ -934,6 +941,7 @@ html[data-theme="light"] .nav {
 }
 
 @media (max-width: 640px) {
+  #why-ccg > .wrap > div:last-child { grid-template-columns: 1fr !important; }
   body { font-size: 14.5px; }
   .wrap { padding: 0 18px; }
   .nav-inner { padding: 14px 0 !important; }
@@ -1359,27 +1367,27 @@ html[data-theme="light"] .nav {
     <div class="section-head">
       <div>
         <span class="eyebrow">&sect; 03b &middot; Free tools</span>
-        <h2 class="h2">Five tools,<br>zero <i>login.</i></h2>
+        <h2 class="h2">Ten tools,<br>zero <i>login.</i></h2>
         <p class="sub">Each tool solves one problem. No signup, no paywall, no tracking. Open them, use them, ship.</p>
       </div>
     </div>
 
     <div class="tools-grid">
+      <a class="tool-card" href="/diagnose/">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v4"/><circle cx="12" cy="16" r="0.5" fill="currentColor"/></svg>
+        </div>
+        <h3 class="tool-card-title">Error Diagnostic</h3>
+        <p class="tool-card-desc">Paste any error, get a fix in seconds.</p>
+        <span class="tool-card-link">Open tool &rarr;</span>
+      </a>
+
       <a class="tool-card" href="/calculator/">
         <div class="tool-card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/><line x1="14" y1="18" x2="16" y2="18"/></svg>
         </div>
         <h3 class="tool-card-title">Cost Calculator</h3>
-        <p class="tool-card-desc">Estimate Claude Code API costs for your project.</p>
-        <span class="tool-card-link">Open tool &rarr;</span>
-      </a>
-
-      <a class="tool-card" href="/diagnose/">
-        <div class="tool-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v4"/><circle cx="12" cy="16" r="0.5" fill="currentColor"/></svg>
-        </div>
-        <h3 class="tool-card-title">Diagnose Tool</h3>
-        <p class="tool-card-desc">Troubleshoot common Claude Code errors instantly.</p>
+        <p class="tool-card-desc">Find the cheapest plan for your usage.</p>
         <span class="tool-card-link">Open tool &rarr;</span>
       </a>
 
@@ -1388,7 +1396,7 @@ html[data-theme="light"] .nav {
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg>
         </div>
         <h3 class="tool-card-title">Skill Finder</h3>
-        <p class="tool-card-desc">Find the right Claude Code skill for your task.</p>
+        <p class="tool-card-desc">Browse 155+ Claude Code skills.</p>
         <span class="tool-card-link">Open tool &rarr;</span>
       </a>
 
@@ -1397,7 +1405,7 @@ html[data-theme="light"] .nav {
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/><circle cx="8" cy="7" r="2" fill="currentColor"/><circle cx="16" cy="12" r="2" fill="currentColor"/><circle cx="10" cy="17" r="2" fill="currentColor"/></svg>
         </div>
         <h3 class="tool-card-title">Model Selector</h3>
-        <p class="tool-card-desc">Choose the best Claude model for your use case.</p>
+        <p class="tool-card-desc">Find the right model for your task.</p>
         <span class="tool-card-link">Open tool &rarr;</span>
       </a>
 
@@ -1406,9 +1414,180 @@ html[data-theme="light"] .nav {
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
         </div>
         <h3 class="tool-card-title">CLAUDE.md Generator</h3>
-        <p class="tool-card-desc">Generate optimized CLAUDE.md configuration files.</p>
+        <p class="tool-card-desc">Build production-ready guidelines.</p>
         <span class="tool-card-link">Open tool &rarr;</span>
       </a>
+
+      <a class="tool-card" href="/mcp-config/">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="tool-card-title">MCP Config</h3>
+        <p class="tool-card-desc">Configure MCP servers visually.</p>
+        <span class="tool-card-link">Open tool &rarr;</span>
+      </a>
+
+      <a class="tool-card" href="/commands/">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+        </div>
+        <h3 class="tool-card-title">Command Reference</h3>
+        <p class="tool-card-desc">Search 80+ commands instantly.</p>
+        <span class="tool-card-link">Open tool &rarr;</span>
+      </a>
+
+      <a class="tool-card" href="/token-estimator/">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3 class="tool-card-title">Token Estimator</h3>
+        <p class="tool-card-desc">Estimate tokens before you start.</p>
+        <span class="tool-card-link">Open tool &rarr;</span>
+      </a>
+
+      <a class="tool-card" href="/permissions/">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="tool-card-title">Permission Configurator</h3>
+        <p class="tool-card-desc">Build safe permission settings.</p>
+        <span class="tool-card-link">Open tool &rarr;</span>
+      </a>
+
+      <a class="tool-card" href="/project-starter/">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="tool-card-title">Project Starter</h3>
+        <p class="tool-card-desc">Get set up in 60 seconds.</p>
+        <span class="tool-card-link">Open tool &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========= POPULAR GUIDES ========= -->
+<!-- Popular Guides -->
+<section class="guides popular-guides" id="popular-guides">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">&sect; 03c &middot; Popular Guides</span>
+        <h2 class="h2">Start here<br>if you're <i>new.</i></h2>
+        <p class="sub">The ten guides developers read most &mdash; covering pricing, errors, models, and workflow.</p>
+      </div>
+      <a class="btn btn-ghost" href="/all-articles/">See all guides &#8594;</a>
+    </div>
+
+    <div class="guides-more" style="grid-template-columns: repeat(2, 1fr);">
+      <a class="guide-row" href="/top-50-claude-code-errors-fix-guide/">
+        <div class="m"><span>&sect; Errors</span><span>top 10</span></div>
+        <div class="t">Top 50 Claude Code Errors and How to Fix Them</div>
+        <div class="m"><span>comprehensive</span><span>15m</span></div>
+      </a>
+      <a class="guide-row" href="/claude-code-pricing-every-plan-model-explained/">
+        <div class="m"><span>&sect; Pricing</span><span>top 10</span></div>
+        <div class="t">Claude Code Pricing Explained</div>
+        <div class="m"><span>updated daily</span><span>8m</span></div>
+      </a>
+      <a class="guide-row" href="/claude-sonnet-vs-opus-vs-haiku-task-comparison/">
+        <div class="m"><span>&sect; Models</span><span>top 10</span></div>
+        <div class="t">Sonnet vs Opus vs Haiku: Which Model?</div>
+        <div class="m"><span>comparison</span><span>10m</span></div>
+      </a>
+      <a class="guide-row" href="/claude-md-file-explained-why-you-need-one/">
+        <div class="m"><span>&sect; Config</span><span>top 10</span></div>
+        <div class="t">CLAUDE.md File Explained</div>
+        <div class="m"><span>essential</span><span>7m</span></div>
+      </a>
+      <a class="guide-row" href="/claude-code-mcp-servers-complete-setup-2026/">
+        <div class="m"><span>&sect; MCP</span><span>top 10</span></div>
+        <div class="t">Complete MCP Server Setup Guide</div>
+        <div class="m"><span>2026 edition</span><span>12m</span></div>
+      </a>
+      <a class="guide-row" href="/every-claude-code-slash-command-explained/">
+        <div class="m"><span>&sect; Commands</span><span>top 10</span></div>
+        <div class="t">Every Slash Command Explained</div>
+        <div class="m"><span>reference</span><span>9m</span></div>
+      </a>
+      <a class="guide-row" href="/claude-code-permission-modes-default-allowlist-yolo/">
+        <div class="m"><span>&sect; Security</span><span>top 10</span></div>
+        <div class="t">Permission Modes Explained</div>
+        <div class="m"><span>security</span><span>6m</span></div>
+      </a>
+      <a class="guide-row" href="/cut-claude-code-costs-50-percent-guide/">
+        <div class="m"><span>&sect; Cost</span><span>top 10</span></div>
+        <div class="t">How to Cut Costs by 50%</div>
+        <div class="m"><span>savings</span><span>8m</span></div>
+      </a>
+      <a class="guide-row" href="/claude-code-keyboard-shortcuts-cheat-sheet/">
+        <div class="m"><span>&sect; Workflow</span><span>top 10</span></div>
+        <div class="t">Keyboard Shortcuts Cheat Sheet</div>
+        <div class="m"><span>cheat sheet</span><span>4m</span></div>
+      </a>
+      <a class="guide-row" href="/starting-new-project-claude-code-zero-to-productive/">
+        <div class="m"><span>&sect; Start</span><span>top 10</span></div>
+        <div class="t">Starting a New Project: Zero to Productive</div>
+        <div class="m"><span>beginner</span><span>11m</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========= WHY CCG ========= -->
+<!-- Why Claude Code Guides -->
+<section class="stats" id="why-ccg" style="background: var(--bg-2);">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">&sect; 03d &middot; Why Claude Code Guides</span>
+        <h2 class="h2">Why Claude Code<br><i>Guides?</i></h2>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap: 20px;">
+      <div style="padding: 28px 24px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg);">
+        <div style="font-family: var(--serif); font-size: 36px; line-height: 1; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 12px;">3,760<span style="color: var(--accent); font-family: var(--serif-alt); font-style: italic; font-weight: 300;">+</span></div>
+        <div style="font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-3); margin-bottom: 10px;">Guides</div>
+        <p style="font-size: 14px; color: var(--ink-2); line-height: 1.55; margin: 0;">Covering every Claude Code topic.</p>
+      </div>
+      <div style="padding: 28px 24px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg);">
+        <div style="font-family: var(--serif); font-size: 36px; line-height: 1; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 12px;">10</div>
+        <div style="font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-3); margin-bottom: 10px;">Interactive tools</div>
+        <p style="font-size: 14px; color: var(--ink-2); line-height: 1.55; margin: 0;">Instant configuration and diagnosis.</p>
+      </div>
+      <div style="padding: 28px 24px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg);">
+        <div style="font-family: var(--serif); font-size: 36px; line-height: 1; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 12px;">Daily</div>
+        <div style="font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-3); margin-bottom: 10px;">Updates</div>
+        <p style="font-size: 14px; color: var(--ink-2); line-height: 1.55; margin: 0;">Latest Claude Code features and pricing.</p>
+      </div>
+      <div style="padding: 28px 24px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg);">
+        <div style="font-family: var(--serif); font-size: 36px; line-height: 1; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 12px;">Free</div>
+        <div style="font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-3); margin-bottom: 10px;">To use</div>
+        <p style="font-size: 14px; color: var(--ink-2); line-height: 1.55; margin: 0;">Tools include 2 free uses, articles are always free.</p>
+      </div>
+      <div style="padding: 28px 24px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg);">
+        <div style="font-family: var(--serif); font-size: 36px; line-height: 1; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 12px;">Expert</div>
+        <div style="font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-3); margin-bottom: 10px;">Content</div>
+        <p style="font-size: 14px; color: var(--ink-2); line-height: 1.55; margin: 0;">Written by developers shipping with Claude Code daily.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= PLAYBOOK CTA ========= -->
+<section class="gen-section" id="playbook-cta" style="border-top: 1px solid var(--line);">
+  <div class="wrap-tight" style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
+    <span class="eyebrow">&sect; 03e &middot; Go deeper</span>
+    <h2 class="h2" style="margin: 16px 0 24px;">The Mastery<br><i>Playbook.</i></h2>
+    <p style="font-family: var(--serif-alt); font-weight: 300; font-style: italic; color: var(--ink-2); font-size: 22px; max-width: 52ch; margin: 0 auto 36px; line-height: 1.4; letter-spacing: -0.01em;">
+      200+ templates, 50+ workflows, and the complete guide to shipping faster with Claude Code. One-time purchase, lifetime access.
+    </p>
+    <a class="btn btn-primary" href="/mastery/" style="padding: 18px 36px; font-size: 16px;">
+      Get the Playbook &mdash; $99
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+    </a>
+    <div style="font-family: var(--mono); font-size: 11px; color: var(--ink-3); margin-top: 20px; letter-spacing: 0.02em;">
+      one-time &middot; no subscription &middot; lifetime updates
     </div>
   </div>
 </section>
@@ -1504,11 +1683,16 @@ html[data-theme="light"] .nav {
       </div>
       <div class="foot-col">
         <h3>&sect; Tools</h3>
+        <a href="/diagnose/">Error Diagnostic</a>
         <a href="/calculator/">Cost Calculator</a>
-        <a href="/diagnose/">Diagnose Tool</a>
         <a href="/skill-finder/">Skill Finder</a>
         <a href="/model-selector/">Model Selector</a>
         <a href="/generator/">CLAUDE.md Generator</a>
+        <a href="/mcp-config/">MCP Config</a>
+        <a href="/commands/">Command Reference</a>
+        <a href="/token-estimator/">Token Estimator</a>
+        <a href="/permissions/">Permission Configurator</a>
+        <a href="/project-starter/">Project Starter</a>
         <a href="/feed.xml">RSS feed</a>
       </div>
       <div class="foot-col">
@@ -1629,3 +1813,7 @@ html[data-theme="light"] .nav {
 })();
 </script>
 {% endraw %}
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Claude Code Guides","url":"https://claudecodeguides.com","description":"3,760+ guides and 10 interactive tools for Claude Code developers","potentialAction":{"@type":"SearchAction","target":"https://claudecodeguides.com/commands/?q={search_term}","query-input":"required name=search_term"}}
+</script>

@@ -250,6 +250,10 @@ The permissions model in 2026 still has gaps that teams should be aware of:
 3. Settings files are not signed: A `.claude/settings.json` that gets modified by a compromised dependency or script will silently change Claude's behavior. Pin your settings files in version control and review diffs carefully.
 
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -66,6 +66,10 @@ Copilot Free or Q Developer Free for all developers (autocomplete baseline). Cla
 ### Enterprise (50+)
 Free tiers are insufficient for enterprise use. Usage caps, lack of SSO, no audit logging, and no compliance guarantees make free tools unsuitable as primary development infrastructure. Use free tiers for evaluation, then deploy GitHub Copilot Enterprise ($39/user) or Claude Code Enterprise for production.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

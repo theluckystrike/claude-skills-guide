@@ -223,6 +223,10 @@ print('Parse: PASS')
 - **Sequence counter rollover:** The 14-bit CCSDS sequence counter wraps at 16383. Naive gap detection flags a false alarm on every wrap. Claude Code generates modular arithmetic gap detection that handles the rollover.
 - **Epoch mismatch:** CCSDS CUC timestamps use a mission-specific epoch (often J2000 or GPS epoch), not Unix epoch. Claude Code cross-references your ICD epoch definition and applies the correct offset in the calibration chain.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

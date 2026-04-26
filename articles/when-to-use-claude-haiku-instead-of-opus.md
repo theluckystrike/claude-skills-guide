@@ -150,6 +150,10 @@ For teams already using batch processing, Haiku batch pricing ($0.50/$2.50 per M
 
 Track these metrics weekly: agreement rate between Haiku and Opus outputs on a held-out test set (target: above 95%), total API spend by model (from Anthropic dashboard), and user-facing error rates or quality complaints. If agreement drops below 90% on any task category, route that category back to Opus. A simple A/B test framework running 5% of production traffic through both models gives continuous quality monitoring at minimal additional cost.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

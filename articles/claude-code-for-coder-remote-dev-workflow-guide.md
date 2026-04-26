@@ -66,6 +66,10 @@ Claude Code should verify the template has Node.js installed, check `coder gitau
 
 3. **Git SSH key confusion.** Claude generates SSH keys in the workspace. Coder handles Git authentication through its own OAuth integration (`coder gitauth`), which provides temporary credentials. Manually created SSH keys become stale and conflict with Coder's auth flow.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

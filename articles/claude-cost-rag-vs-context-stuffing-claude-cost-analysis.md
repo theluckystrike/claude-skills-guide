@@ -223,6 +223,10 @@ Cached context stuffing requires steady query traffic. If queries arrive less th
 
 Track cost per query across your chosen approach. For RAG: monitor retrieval recall (percentage of queries answered correctly) alongside cost. For cached stuffing: monitor cache hit rate (target above 90%). If cache hit rate drops below 70%, your traffic pattern may be too sparse for caching to help, and RAG becomes the better option. Compare monthly API spend before and after switching approaches.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

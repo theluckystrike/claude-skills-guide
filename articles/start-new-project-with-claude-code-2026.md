@@ -254,6 +254,10 @@ A typical project scaffold (structure, config, first feature) costs $1-3 with Op
 }
 </script>
 
+
+
+**Know your costs →** Use our [Claude Code Cost Calculator](/calculator/) to estimate your monthly spend.
+
 ## Related Guides
 
 - [Project Starter](/starter/) — Interactive project scaffolding tool

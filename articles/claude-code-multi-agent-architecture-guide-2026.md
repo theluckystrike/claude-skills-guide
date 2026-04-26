@@ -190,6 +190,10 @@ For the full ecosystem overview, see the [tools map](/claude-code-ecosystem-comp
 - [Super Claude Code framework](/super-claude-code-framework-guide/) — structured prompting for multi-agent setups
 - [Claude Code spec workflow](/claude-code-spec-workflow-guide/) — spec-driven agent tasks
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

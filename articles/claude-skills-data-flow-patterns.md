@@ -175,6 +175,10 @@ Dynamic context injection runs every time the skill is invoked, not just the fir
 - [ ] `.claude/staging/` added to `.gitignore`
 - [ ] Dynamic injection commands have error fallbacks
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

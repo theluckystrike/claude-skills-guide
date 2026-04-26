@@ -239,6 +239,10 @@ ccusage --sort cost --limit 50
 
 Well-calibrated budgets save 10-20% versus initial estimates because they eliminate both budget overruns (excess tokens) and premature restarts (repeated discovery costs).
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Further Reading
 
 - [Claude Code Context Window Management](/claude-code-context-window-management-2026/) -- the full context management toolkit

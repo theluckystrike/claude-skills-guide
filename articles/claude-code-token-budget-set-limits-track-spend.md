@@ -140,6 +140,10 @@ ccusage --days 7 --format table
 | Per-task estimation | 15-25% tighter adherence | $10-$40 |
 | **Combined** | **40-60% cost reduction** | **$95-$675** |
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

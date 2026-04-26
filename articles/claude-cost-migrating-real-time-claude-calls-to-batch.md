@@ -229,6 +229,10 @@ Track migration health with these metrics:
 - **Batch failure rate**: Failed requests / total batch requests. Alert above 0.5%.
 - **End-to-end latency**: Time from request queuing to result delivery. Should stay under 90 minutes for 95th percentile.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

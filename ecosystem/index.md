@@ -11,6 +11,10 @@ last_tested: "2026-04-22"
 
 The Claude Code ecosystem grew from a handful of community repos to 400K+ combined GitHub stars in early 2026. This hub organizes every CCG guide by category so you can find exactly what you need.
 
+<div style="background:linear-gradient(135deg,rgba(110,231,183,0.08),rgba(96,165,250,0.05));border:1px solid rgba(110,231,183,0.2);border-radius:8px;padding:16px 20px;margin:20px 0;">
+<strong style="color:#6ee7b7;">Interactive Tool:</strong> Discover extensions — <a href="/skill-finder/" style="color:#60a5fa;">Browse 155+ Skills</a> · <a href="/mcp-config/" style="color:#60a5fa;">Configure MCP Servers</a>
+</div>
+
 ## Featured: Karpathy Skills (72K Stars)
 
 Andrej Karpathy's observations about LLM coding behavior, distilled into a CLAUDE.md plugin. The most-starred Claude Code resource on GitHub.
@@ -212,6 +216,10 @@ Andrej Karpathy's observations about LLM coding behavior, distilled into a CLAUD
     <a href="/cost-optimization/" style="display: block; padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid #dee2e6; text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
       <strong style="color: #5436DA; font-size: 1.1rem;">Cost Optimization Hub</strong>
       <p style="margin: 0.5rem 0 0; color: #666; font-size: 0.9rem;">Reduce Claude Code costs with proven strategies and tools</p>
+    </a>
+    <a href="/skill-finder/" style="display: block; padding: 1.25rem; background: linear-gradient(135deg, rgba(110,231,183,0.06), rgba(96,165,250,0.04)); border-radius: 8px; border: 1px solid rgba(110,231,183,0.2); text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
+      <strong style="color: #6ee7b7; font-size: 1.1rem;">Skill Finder Tool</strong>
+      <p style="margin: 0.5rem 0 0; color: #666; font-size: 0.9rem;">Browse 155+ skills and find the right extension for your workflow</p>
     </a>
   </div>
 </section>

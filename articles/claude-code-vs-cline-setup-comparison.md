@@ -91,6 +91,10 @@ Cline's visual approve/reject workflow is more intuitive for developers who have
 If you need a coding assistant that works without internet access (air-gapped environment, airplane, unreliable connection), neither Claude Code nor Cline can function since both require API calls to Anthropic's servers. For offline AI coding assistance, you would need a local model setup (Ollama + Continue.dev, or a local code completion server).
 
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

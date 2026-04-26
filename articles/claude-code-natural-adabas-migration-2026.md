@@ -260,6 +260,10 @@ psql -d migrated_db -c "
 
 - **Natural ESCAPE logic:** Natural's ESCAPE TOP, ESCAPE BOTTOM, and ESCAPE ROUTINE have different scope behaviors than break/continue/return. Claude Code maps each escape level to the correct Python control flow construct.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

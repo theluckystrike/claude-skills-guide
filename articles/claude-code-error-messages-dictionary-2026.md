@@ -273,6 +273,10 @@ Most error messages are identical on macOS, Linux, and Windows. Platform-specifi
 ### How do I report a new error that is not in this dictionary?
 File an issue on the Claude Code GitHub repository with the full error message, your OS, Claude Code version, and reproduction steps. Include verbose logs if possible.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 - [Top 50 Claude Code Errors](/top-50-claude-code-errors-2026/) — Quick-fix list with one-line solutions

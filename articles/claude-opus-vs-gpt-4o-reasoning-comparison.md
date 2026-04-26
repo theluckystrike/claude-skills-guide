@@ -96,6 +96,10 @@ GPT-4o's faster responses and lower cost make it better for exploratory question
 
 For mathematical reasoning and formal verification tasks (proving algorithm correctness, analyzing computational complexity, formal specification checking), neither model is reliable enough to trust without verification. These tasks require deterministic tools — proof assistants like Lean or Coq, model checkers, or formal verification frameworks. AI models can assist in drafting proofs but should never be the sole authority on correctness. Similarly, for real-time systems where latency budgets are under 200ms per response, direct API calls to either model are too slow for inline use.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

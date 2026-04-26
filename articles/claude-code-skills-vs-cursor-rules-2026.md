@@ -241,6 +241,10 @@ Claude Code skills cover all instruction-based rules that Cursor supports. The g
 ### How do I migrate from Cursor rules to Claude Code skills?
 Copy your `.cursorrules` content into a `CLAUDE.md` file or `.claude/skills/` directory. Reformat as markdown with clear headers. Then add MCP servers and hooks to take advantage of Claude-only features.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 - [Claude Code vs Cursor: Definitive Comparison](/claude-code-vs-cursor-definitive-comparison-2026/) — Full tool comparison

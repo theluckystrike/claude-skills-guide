@@ -262,6 +262,10 @@ Standardize project templates using Claude Code with CLAUDE.md files that enforc
 
 Claude Code's headless mode enables automated Python code quality checks in pipelines. Windsurf serves as a developer productivity tool. For large Django monoliths, Claude Code's multi-file awareness prevents the subtle import errors that inline tools miss.
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

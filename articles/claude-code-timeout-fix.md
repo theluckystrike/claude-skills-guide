@@ -173,6 +173,10 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 </div>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Issues
 
 - [Fix Claude Code Slow Response and Performance](/claude-code-slow-fix) — General performance optimization

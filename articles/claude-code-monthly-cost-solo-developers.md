@@ -177,6 +177,10 @@ Track your monthly Claude Code cost and divide by billable hours. Most freelance
 ]}
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Claude Code Pricing Explained](/claude-code-pricing-every-plan-model-explained/)

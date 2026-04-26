@@ -242,6 +242,10 @@ Warehouse operations automation uses Claude skills to generate pick lists, bin t
 
 Claude skills serve as the integration layer between ERPs, WMS, TMS, carrier portals, and customer-facing tracking systems. They translate between data formats and trigger downstream actions through webhook handlers that process carrier status updates. When a carrier webhook arrives, skills parse the payload using JSON processing, update shipment tracking spreadsheets with mapped status codes and delivery estimates, and send Slack notifications to the logistics operations channel when exception statuses are detected.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

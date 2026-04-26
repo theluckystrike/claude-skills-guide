@@ -112,6 +112,10 @@ For any project that will live beyond a week and require ongoing modification, C
 4. Review the generated project structure and files
 5. If the prototype warrants further development, switch to Claude Code for iteration and refinement
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Comparisons
 
 - [Claude Code vs OpenHands: Open-Source Agent](/claude-code-vs-openhands-open-source-agent-2026/)

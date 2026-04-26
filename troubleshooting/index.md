@@ -12,6 +12,10 @@ This page covers non-error issues: Claude Code running slowly, refusing to start
 
 Every issue below links to a detailed troubleshooting guide with verified solutions.
 
+<div style="background:linear-gradient(135deg,rgba(110,231,183,0.08),rgba(96,165,250,0.05));border:1px solid rgba(110,231,183,0.2);border-radius:8px;padding:16px 20px;margin:20px 0;">
+<strong style="color:#6ee7b7;">Interactive Tool:</strong> Try our <a href="/diagnose/" style="color:#60a5fa;">Error Diagnostic Tool</a> — troubleshoot any Claude Code issue step-by-step.
+</div>
+
 ---
 
 ## Performance Issues
@@ -241,6 +245,7 @@ Check the server process status, verify transport configuration (stdio vs HTTP),
 - [Prevent issues with best practices](/best-practices/)
 - [Installation and setup guide](/getting-started/)
 - [Advanced patterns for complex issues](/advanced-usage/)
+- [Run the diagnostic tool on your issue](/diagnose/)
 
 
 <section class="related-hubs" style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 12px; border: 1px solid #e9ecef;">

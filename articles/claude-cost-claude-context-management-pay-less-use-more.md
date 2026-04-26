@@ -262,6 +262,10 @@ Budget enforcement can block legitimate expensive requests. Implement override m
 
 Three key metrics: cache hit rate (target above 80%), average context size after pruning (target 40-60% reduction), and daily spend versus budget (target under 80% utilization for safety margin). Calculate total monthly savings as: (pre-optimization spend - post-optimization spend). Track each optimization layer separately to understand which contributes most.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -303,6 +303,10 @@ By following this troubleshooting guide, you can diagnose and fix spawn errors i
 With these fixes, your Node.js-powered Claude Code skills should run smoothly without mysterious spawn errors.
 
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

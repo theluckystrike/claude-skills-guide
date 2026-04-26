@@ -267,5 +267,5 @@ Related Reading
 - [Claude Code for Automated PR Checks Workflow Tutorial](/claude-code-for-automated-pr-checks-workflow-tutorial/)
 
 
-
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
 

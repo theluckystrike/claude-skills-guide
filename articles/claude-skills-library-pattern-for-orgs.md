@@ -203,6 +203,10 @@ Enterprise managed settings can enforce skills from the top, but they cannot dis
 - [ ] Catalog skill lists all available skills with categories
 - [ ] Submission process documented in CONTRIBUTING.md
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

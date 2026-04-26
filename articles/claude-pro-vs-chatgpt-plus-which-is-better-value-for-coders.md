@@ -235,6 +235,10 @@ Claude Pro for all developers who code daily. ChatGPT Plus as optional for devel
 
 Claude Pro's Claude Code integration with managed settings provides better enterprise governance. ChatGPT Enterprise offers additional security controls. Evaluate both enterprise tiers based on compliance requirements.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## FAQ
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -66,6 +66,10 @@ Claude Code should produce `convex/schema.ts` updates with the table definition 
 
 3. **File upload handling.** Claude generates multipart form parsing code. Convex uses `storage.generateUploadUrl()` on the client side and `storage.getUrl()` for retrieval — there is no server-side file parsing.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

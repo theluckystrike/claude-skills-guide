@@ -20,7 +20,7 @@ You are managing Node.js versions with fnm (Fast Node Manager), a Rust-based ver
 
 3. **Creates .nvmrc without considering fnm.** Claude creates `.nvmrc` files, which fnm supports, but fnm also supports `.node-version` files which are the more standard convention used by other tools like Volta and asdf.
 
-4. **Does not leverage fnm's speed.** Claude treats version switching as a slow operation. fnm switches versions instantly — there is no delay, so workflows can switch versions between commands without performance concerns.
+4. **Does not use fnm's speed.** Claude treats version switching as a slow operation. fnm switches versions instantly — there is no delay, so workflows can switch versions between commands without performance concerns.
 
 ## The CLAUDE.md Configuration
 

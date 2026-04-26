@@ -101,6 +101,10 @@ DeepSeek V3 handles exploratory questions ("what does this module do?", "how is 
 
 For generating code that must meet formal correctness guarantees (safety-critical systems, cryptographic implementations, aerospace control software), neither AI model is appropriate as the primary author. Use formal methods, verified compilers, and mathematical proofs for correctness. AI models can assist in drafting and exploration, but the final code must be verified through rigorous non-AI processes.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

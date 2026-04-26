@@ -285,6 +285,10 @@ Stack: {lang}, {framework}, {DB}, {test framework}
 
 **Token cost:** 150-250 tokens. **Information density:** maximum. This template has been tested across 50+ projects and consistently delivers 95%+ of the value of larger CLAUDE.md files at 10-20% of the token cost.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

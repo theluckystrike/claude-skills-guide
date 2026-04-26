@@ -144,7 +144,7 @@ You can also validate by giving Claude a task and checking the output against yo
 
 ## Related Guides
 
-- [CLAUDE.md Best Practices for Projects](/claude-code-claude-md-best-practices/) — Deep dive into adherence patterns
+- [CLAUDE.md Best Practices for Projects](/claude-code-claude-md-best-practices/) — Deep get startedto adherence patterns
 - [10 CLAUDE.md Templates by Project Type](/10-claude-md-templates-project-types/) — React, Python, Go, and more
 - [Best CLAUDE.md Templates for Enterprise](/best-claude-md-templates-enterprise-2026/) — Team-scale configuration
 - [CLAUDE.md Best Practices for Teams](/claude-code-claude-md-best-practices-teams-2026/) — Multi-developer workflows

@@ -71,6 +71,10 @@ Claude Code should create `promptfooconfig.yaml` with three providers, the syste
 
 3. **Cache confusion during development.** Claude modifies prompts but gets old results. Promptfoo caches by default. Use `npx promptfoo eval --no-cache` when iterating on prompts, or clear cache with `npx promptfoo cache clear`.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

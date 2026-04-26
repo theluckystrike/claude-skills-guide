@@ -134,6 +134,10 @@ MCP is an open standard that both support. As MCP matures, the server ecosystem 
 
 For more on the Claude Code ecosystem, see our [tools map](/claude-code-ecosystem-complete-map-2026/). For plugin installation details, read the [plugin marketplace guide](/claude-code-plugin-marketplace-guide-2026/). For CLAUDE.md setup, see the [best practices guide](/claude-md-best-practices-10-templates-compared-2026/).
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

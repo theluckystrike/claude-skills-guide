@@ -87,7 +87,7 @@ The most productive developers do not choose between these tools — they use th
 
 **Iteration phase:** When stakeholders request visual changes to existing components, evaluate complexity. Simple color or spacing changes go through v0 for quick exploration. Changes that touch business logic, data fetching, or component architecture go through Claude Code for safe modification.
 
-This workflow leverages v0's speed for visual decisions and Claude Code's depth for implementation quality.
+This workflow uses v0's speed for visual decisions and Claude Code's depth for implementation quality.
 
 ## Migration Guide
 

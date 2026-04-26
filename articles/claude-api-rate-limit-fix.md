@@ -210,6 +210,10 @@ I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+
 
 </div>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Issues
 
 - [Fix Claude API Error 500 — Internal Server Error](/claude-api-error-500-fix) — Server-side errors

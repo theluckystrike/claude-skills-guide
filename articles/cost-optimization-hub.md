@@ -15,6 +15,10 @@ Every guide includes concrete numbers: before/after token counts, dollar estimat
 
 **Who this is for:** developers using Claude Code (CLI or API) who want to cut costs by 30-70% through better context engineering, smarter tool configuration, and architecture patterns that reduce round-trips.
 
+<div style="background:linear-gradient(135deg,rgba(110,231,183,0.08),rgba(96,165,250,0.05));border:1px solid rgba(110,231,183,0.2);border-radius:8px;padding:16px 20px;margin:20px 0;">
+<strong style="color:#6ee7b7;">Interactive Tool:</strong> Know your numbers — <a href="/calculator/" style="color:#60a5fa;">Cost Calculator</a> · <a href="/token-estimator/" style="color:#60a5fa;">Token Estimator</a> · <a href="/model-selector/" style="color:#60a5fa;">Model Selector</a>
+</div>
+
 ## Start Here: 5 Highest-Impact Guides
 
 If you only read five articles, make it these. Each one targets the most common cost multipliers we see across real Claude Code projects.
@@ -171,6 +175,10 @@ Targeted fixes for specific cost problems: runaway sessions, unexpected token us
 
 For a broader guide to Claude Code workflows beyond cost optimization, see the [Claude Code Playbook](/playbook/).
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
@@ -191,6 +199,10 @@ For a broader guide to Claude Code workflows beyond cost optimization, see the [
     <a href="/ecosystem/" style="display: block; padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid #dee2e6; text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
       <strong style="color: #5436DA; font-size: 1.1rem;">Ecosystem Hub</strong>
       <p style="margin: 0.5rem 0 0; color: #666; font-size: 0.9rem;">Comprehensive guide to the Claude Code ecosystem — tools, extensions, and integrations</p>
+    </a>
+    <a href="/calculator/" style="display: block; padding: 1.25rem; background: linear-gradient(135deg, rgba(110,231,183,0.06), rgba(96,165,250,0.04)); border-radius: 8px; border: 1px solid rgba(110,231,183,0.2); text-decoration: none; color: inherit; transition: box-shadow 0.2s;">
+      <strong style="color: #6ee7b7; font-size: 1.1rem;">Cost Calculator Tool</strong>
+      <p style="margin: 0.5rem 0 0; color: #666; font-size: 0.9rem;">Estimate your monthly Claude Code spend and find savings</p>
     </a>
   </div>
 </section>

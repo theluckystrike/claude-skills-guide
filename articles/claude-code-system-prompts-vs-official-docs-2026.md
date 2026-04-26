@@ -88,6 +88,10 @@ The system prompts repo is a community project that extracts prompts through leg
 
 Read the system prompts repo once to build your mental model of how Claude Code works internally. Then use official docs for day-to-day reference. Return to the system prompts repo when you encounter unexpected behavior or when you need to write a CLAUDE.md that works *with* the system prompt rather than against it. This combination of understanding creates a significant advantage in [Claude Code productivity](/karpathy-skills-vs-claude-code-best-practices-2026/).
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

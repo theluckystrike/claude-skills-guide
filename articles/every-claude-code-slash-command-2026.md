@@ -58,7 +58,7 @@ Opens the Claude Code configuration interface. From here you can view and modify
 /config
 ```
 
-Configuration changes persist across sessions. For a deep dive into every configurable option, see the [configuration hierarchy guide](/claude-code-configuration-hierarchy-explained-2026/).
+Configuration changes persist across sessions. For a deep get startedto every configurable option, see the [configuration hierarchy guide](/claude-code-configuration-hierarchy-explained-2026/).
 
 ### /model
 
@@ -224,6 +224,10 @@ Nearly. Both reset the conversation, but `/clear` keeps your terminal session ac
   ]
 }
 </script>
+
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
 
 ## Related Guides
 

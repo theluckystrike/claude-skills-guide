@@ -265,6 +265,10 @@ Claude Code excels at generating Zig's comptime patterns, which are powerful but
 
 A comptime string table is a Zig pattern useful for parsers and interpreters that maps string keys to values at compile time. The implementation uses a struct with an init function accepting comptime pairs of []const u8 and u32, returning a type containing a get function that uses inline for to iterate over the compile-time data. This generates zero-overhead lookups since the compiler unrolls the loop, producing code equivalent to a series of if-else comparisons without runtime allocation.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

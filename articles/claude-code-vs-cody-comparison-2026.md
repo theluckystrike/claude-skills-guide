@@ -89,6 +89,10 @@ Adding Claude Code to a Cody workflow:
 4. **Establish the workflow split** — Cody for "where is it and how does it work?", Claude Code for "change it, test it, and ship it." The tools serve different phases of the development cycle.
 5. **Connect both to your CI pipeline** — Cody provides context in the IDE; Claude Code automates tasks in the terminal. Together they cover understanding and execution.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Comparisons
 
 - [Claude Code vs Cursor 2026: Detailed Comparison](/claude-code-vs-cursor-2026-detailed-comparison/)

@@ -248,6 +248,10 @@ Related Reading
 - [Claude Code for Load Test Scenario Workflow Tutorial](/claude-code-for-load-test-scenario-workflow-tutorial/)
 - [Claude Code Inngest Event Driven Function Workflow Tutorial](/claude-code-inngest-event-driven-function-workflow-tutorial/)
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

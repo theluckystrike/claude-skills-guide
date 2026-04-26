@@ -163,6 +163,10 @@ Claude Code API estimate:
   If estimate < $15 -> Windsurf is cheaper (and has inline completion)
 ```
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

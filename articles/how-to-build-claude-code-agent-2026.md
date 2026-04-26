@@ -198,3 +198,7 @@ Team agents should be versioned and reviewed like any other code. Changes to the
 - Share your agent with the community via the [skills directory](/claude-skills-directory-where-to-find-skills/)
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

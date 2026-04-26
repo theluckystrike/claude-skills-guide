@@ -262,6 +262,10 @@ with open(TRACKER_FILE, "w") as f:
 
 The combination of CLAUDE.md retry limits, structured error wrappers, and automated detection forms a three-layer defense against retry loops. Each layer catches different failure modes: CLAUDE.md rules handle predictable loops, structured wrappers handle verbose output, and automated detection catches loops that escape both layers. Together, they reduce retry-related token waste by 80-90% compared to an unprotected workflow.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

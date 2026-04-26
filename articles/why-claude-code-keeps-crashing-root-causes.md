@@ -203,6 +203,10 @@ Run <code>claude --resume</code> to attempt session recovery. If the session dat
 ]}
 </script>
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 - [Top 50 Claude Code Errors Fix Guide](/top-50-claude-code-errors-fix-guide/)

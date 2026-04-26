@@ -213,6 +213,10 @@ Table format breaks down for examples with long text fields. Use it for short, s
 
 Compare total example tokens before and after compression. Multiply savings by request volume and model rate. Track classification accuracy on a weekly test set of 50 labeled examples. If accuracy drops more than 3%, add back one carefully selected example at a time until accuracy recovers. The sweet spot is typically 3-5 compressed examples.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

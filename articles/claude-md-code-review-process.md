@@ -159,3 +159,7 @@ This review takes 15 minutes and prevents gradual CLAUDE.md degradation. The ins
 For structuring your CLAUDE.md rules for maximum verifiability, see the [coding standards enforcement guide](/claude-md-for-coding-standards-enforcement/). For handling team conflicts in CLAUDE.md changes, see the [conflict resolution guide](/claude-md-conflict-resolution/). For the complete CLAUDE.md file format, see the [CLAUDE.md complete guide](/claude-md-file-complete-guide-what-it-does/).
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

@@ -164,6 +164,10 @@ Non-GAAP metrics (adjusted EBITDA, adjusted EPS) vary significantly between comp
 - [ ] Fiscal year calendar populated for all portfolio companies
 - [ ] SEC EDGAR API calls include proper User-Agent and rate limiting
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

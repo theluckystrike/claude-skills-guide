@@ -66,6 +66,10 @@ Claude Code should add `posthog.capture('signup_page_viewed')` on mount, `postho
 
 3. **Missing `posthog.reset()` on logout.** Claude handles login identification but forgets to reset on logout. Without `posthog.reset()`, the next user inherits the previous user's identity, corrupting analytics data.
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related Guides
 
 - [Claude Code for Amplitude Analytics Workflow](/claude-code-for-amplitude-analytics-workflow/)

@@ -333,6 +333,10 @@ cp "$HOME/.claude/templates/settings-${template}.json" .claude/settings.json
 echo "Created .claude/settings.json from $template template"
 ```
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

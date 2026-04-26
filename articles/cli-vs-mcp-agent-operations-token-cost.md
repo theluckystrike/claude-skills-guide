@@ -200,6 +200,10 @@ claude mcp remove docker
 
 Each removed MCP server saves its full tool definition overhead on every session. Removing a 6-tool server at ~1,000 tokens per tool eliminates 6,000 tokens of per-session overhead. Over 100 monthly sessions: 600,000 tokens saved = $1.80/month on Sonnet 4.6 input alone.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Further Reading
 
 - [Claude Code MCP Server Setup](/claude-code-mcp-server-setup/) -- when MCP is the right choice

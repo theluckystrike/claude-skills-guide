@@ -352,5 +352,5 @@ Research notes lost when storage quota is exceeded: Add a storage usage check on
 AI responses too long for the side panel: Constrain the response length in your prompt. Ask for "a 3-sentence summary followed by exactly 3 bullet points for key concepts". Longer responses are harder to scan in the narrow side panel width.
 
 
-
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

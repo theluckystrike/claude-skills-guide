@@ -245,6 +245,10 @@ $99 once. Yours forever. I keep adding templates monthly.
 
 </div>
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Issues
 
 - [Set Up MCP Servers in Claude Code](/claude-code-mcp-server-setup) — MCP configuration details

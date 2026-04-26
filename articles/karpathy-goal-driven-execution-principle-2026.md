@@ -115,6 +115,10 @@ The first response changed 120 lines across 4 files. The second changed 1 line i
 
 4. **Forgetting follow-up suggestions** — the "noticed but not fixed" list is valuable. Dropping it means useful observations disappear.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Principles
 
 - **Don't Assume** — don't assume the user wants adjacent work done

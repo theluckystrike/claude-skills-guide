@@ -109,6 +109,10 @@ No. They are separate products from different companies. However, you can use bo
 
 For isolated code snippets (single functions, algorithms), both produce comparable quality. For code that needs to integrate with your existing project (matching patterns, using your types, following conventions), Claude Code produces significantly better results because it reads your project for context. ChatGPT generates code in isolation.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Comparisons
 
 - [Claude Code vs Cursor 2026: Detailed Comparison](/claude-code-vs-cursor-2026-detailed-comparison/)

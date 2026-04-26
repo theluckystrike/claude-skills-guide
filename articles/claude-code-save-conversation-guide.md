@@ -325,6 +325,10 @@ Not directly. You can start a new session and reference content from both previo
 
 Yes. Every tool call and its result is recorded in the JSONL session file, including file reads, edits, bash commands, and search results.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -239,6 +239,10 @@ Start applying these strategies on your next extended workflow, and you'll find 
 Related guides: [Building Supervisor Worker Agent Architecture Tutorial](/building-supervisor-worker-agent-architecture-tutorial/)
 
 
+
+
+**Get started →** Generate your project setup with our [Project Starter](/starter/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

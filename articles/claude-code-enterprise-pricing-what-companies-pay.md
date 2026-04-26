@@ -279,6 +279,10 @@ This weekly report identifies cost outliers (developers significantly above aver
 
 Pricing last verified: April 2026.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

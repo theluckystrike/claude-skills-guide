@@ -308,6 +308,10 @@ A full user record might be 200-300 tokens. A compact summary is 30-50 tokens. F
 - If a query depends on another query's result, use sequential calls for the dependent pair
 ```
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

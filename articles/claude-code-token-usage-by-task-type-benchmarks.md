@@ -233,6 +233,10 @@ These benchmarks are from Claude Code CLI sessions. API usage with the same mode
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [Token Estimator](/token-estimator/) -- Calculate costs using these benchmarked multipliers

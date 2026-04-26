@@ -147,6 +147,10 @@ Prevention ROI:
 - For file content: always use Read tool with offset/limit, not cat/head/tail via Bash
 ```
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

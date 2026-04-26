@@ -214,6 +214,10 @@ export const users = pgTable('users', {
 
 3. **Over-declaring scope** — "Out of scope: everything I didn't mention" is too broad. List specific things the user might expect that aren't included.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Principles
 
 - [Implement Goal-Driven Execution](/karpathy-goal-driven-implementation-2026/) — CLAUDE.md rules

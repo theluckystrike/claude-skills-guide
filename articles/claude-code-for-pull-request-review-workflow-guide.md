@@ -197,7 +197,7 @@ jobs:
  " >> $GITHUB_STEP_SUMMARY
 ```
 
-This runs an automated preliminary review on every PR, flagging obvious issues before human reviewers dive in.
+This runs an automated preliminary review on every PR, flagging obvious issues before human reviewers get started.
 
 ## Best Practices for Effective Reviews
 
@@ -283,4 +283,6 @@ Related Reading
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 {% endraw %}
 
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 

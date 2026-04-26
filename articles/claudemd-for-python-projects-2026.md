@@ -183,6 +183,10 @@ Run this checklist after installing your CLAUDE.md:
 
 If any check fails, tighten the relevant CLAUDE.md section with a concrete code example showing the expected pattern.
 
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+
 ## Related Guides
 
 - [Perfect CLAUDE.md File Template](/perfect-claudemd-file-template-2026/) — The universal annotated template

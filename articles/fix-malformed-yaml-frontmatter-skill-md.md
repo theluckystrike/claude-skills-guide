@@ -228,6 +228,10 @@ Some editors auto-insert BOM (Byte Order Mark) characters at the beginning of UT
 - [ ] Field names match specification exactly (hyphens and underscores)
 - [ ] Validation script confirms parse success
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

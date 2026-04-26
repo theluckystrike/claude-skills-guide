@@ -298,6 +298,10 @@ Related Reading
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 - [Webpack Tree-Shaking Breaks Build — Fix (2026)](/claude-code-webpack-tree-shaking-breaks-fix-2026/)

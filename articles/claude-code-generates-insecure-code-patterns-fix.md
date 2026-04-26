@@ -593,6 +593,10 @@ Related Reading
 - [Fix Claude Code Login — Cannot Paste Auth Code](/claude-code-login-paste-fix/)
 {% endraw %}
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

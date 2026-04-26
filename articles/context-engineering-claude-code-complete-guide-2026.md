@@ -155,6 +155,10 @@ A well-executed context engineering practice should show a 50-70% reduction in w
 | MCP tool pruning | 2,500-10,000 tokens/turn | $15-$50 |
 | **Combined** | **60-80% reduction** | **$76-$235** |
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

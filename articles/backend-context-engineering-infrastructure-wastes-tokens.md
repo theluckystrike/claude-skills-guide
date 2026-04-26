@@ -152,6 +152,10 @@ After backend context engineering (70% tool output reduction):
 
 Backend context engineering represents the "supply side" of the context optimization equation. While prompt engineering and compaction strategies work on the "demand side" (controlling what the agent requests), backend engineering works on the "supply side" (controlling what systems return). Both sides must be optimized for maximum cost reduction. The CCG framework treats backend context engineering as a force multiplier: every API response optimized once saves tokens across every future session that calls it.
 
+
+
+**Fix it instantly →** Paste your error into our [Error Diagnostic Tool](/diagnose/) for step-by-step resolution.
+
 ## Further Reading
 
 - [Context Engineering for Claude Code: Complete Guide](/context-engineering-claude-code-complete-guide-2026/) -- the full context engineering framework

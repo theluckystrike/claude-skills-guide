@@ -148,6 +148,10 @@ ccusage
 - Use [Claude Code hooks](/understanding-claude-code-hooks-system-complete-guide/) to log additional cost-relevant data
 - Review [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for token optimization
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

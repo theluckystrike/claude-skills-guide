@@ -259,6 +259,10 @@ claude --model haiku --max-turns 5 \
 
 Automated CI tasks benefit from Haiku because they run frequently, have well-defined scope, and tolerance for occasional misses (human reviewers catch what Haiku misses).
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

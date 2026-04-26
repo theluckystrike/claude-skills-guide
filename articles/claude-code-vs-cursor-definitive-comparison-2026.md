@@ -518,6 +518,10 @@ Claude Code and Cursor represent two different visions of AI-assisted developmen
 </script>
 
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

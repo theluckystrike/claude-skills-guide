@@ -145,6 +145,10 @@ Haiku's max output of 64K tokens matches Sonnet but falls short of Opus's 128K. 
 
 Track two metrics: API cost per coding task category (from Anthropic billing) and code acceptance rate (percentage of Haiku-generated code used without modification). Target a cost reduction of 40-80% on routed tasks with less than 5% drop in acceptance rate. If acceptance drops below 90% for any task category, move it back to Sonnet or Opus and try again after the next Haiku model update.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -200,6 +200,10 @@ Yes. Your rate limit is tied to your account, not to a specific device or browse
 
 The rolling window system means your capacity recovers gradually as older messages age out. Stopping entirely means no new messages enter the window, so your full capacity will be restored after the window duration passes (typically a few hours).
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

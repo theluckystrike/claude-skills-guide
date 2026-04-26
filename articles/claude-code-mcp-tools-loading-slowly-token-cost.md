@@ -232,6 +232,10 @@ The audit takes 15 minutes and typically removes 2-3 unused servers, saving 2,00
 - Review MCP configuration monthly: remove unused servers
 ```
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

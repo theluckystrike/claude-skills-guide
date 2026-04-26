@@ -113,6 +113,10 @@ Add a quarterly review to your sprint cycle:
 
 For a deeper look at CLAUDE.md patterns, see our [CLAUDE.md best practices guide](/claude-md-best-practices-10-templates-compared-2026/). For the full ecosystem of tools that improve Claude Code's project awareness, check the [Claude Code best practices overview](/karpathy-skills-vs-claude-code-best-practices-2026/). You can also browse available [skills and plugins](/claude-skills-directory-where-to-find-skills/) that add persistent project memory.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## See Also
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

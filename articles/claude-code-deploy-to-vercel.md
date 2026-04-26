@@ -171,3 +171,7 @@ Related Reading
 - [Claude Code Docker Build Failed Fix](/claude-code-docker-build-failed-fix/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

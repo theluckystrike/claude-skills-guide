@@ -208,6 +208,10 @@ That is the point. A CLAUDE.md forces your team to make explicit decisions about
 }
 </script>
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 - [CLAUDE.md Generator](/generator/) -- Scaffold your CLAUDE.md with automatic stack detection

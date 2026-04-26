@@ -65,7 +65,7 @@ When Claude Code reads your CLAUDE.md and detects Bun configuration, it adjusts 
 
 Bun's `bun.lockb` is a binary lockfile that Claude Code cannot read directly. If Claude Code needs to understand your dependencies, it reads `package.json` instead. The lockfile ensures deterministic installs but is not human-readable.
 
-Bun also provides built-in tools that replace separate npm packages: bundling (`bun build`), testing (`bun test`), and a native SQLite driver. Documenting these in CLAUDE.md helps Claude Code leverage Bun-specific features.
+Bun also provides built-in tools that replace separate npm packages: bundling (`bun build`), testing (`bun test`), and a native SQLite driver. Documenting these in CLAUDE.md helps Claude Code use Bun-specific features.
 
 ## Common Issues
 
@@ -157,6 +157,10 @@ Yes. These techniques integrate with standard development tools and CI/CD pipeli
 ### Where can I find more advanced techniques?
 
 Explore the related resources below for deeper coverage. The Claude Code documentation and community forums also provide advanced patterns and real-world case studies.
+
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
 ## Related Resources
 

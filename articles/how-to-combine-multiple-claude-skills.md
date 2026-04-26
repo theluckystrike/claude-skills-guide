@@ -130,6 +130,10 @@ Skill invocation order within a single turn is non-deterministic when Claude aut
 - [ ] File-based interfaces documented between chained skills
 - [ ] `disable-model-invocation: true` set on orchestrator skills
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

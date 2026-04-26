@@ -208,6 +208,10 @@ The 5-minute cache TTL means you need consistent request flow to keep the cache 
 
 Track the contribution of each optimization layer separately. Target savings: model routing 40-60%, caching 10-20% additional, batching 10-25% additional. Total target: 60-85% reduction from baseline. The best metric is cost per useful output — divide total monthly spend by the number of requests that produced acceptable quality results.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -186,7 +186,7 @@ Consider adding the cleanup command to a weekly cron job to prevent disk space i
 
 ## Try It Yourself
 
-Reading logs is powerful but time-consuming. For known errors, the [Error Diagnostic Tool](/diagnose/) gives you the answer instantly. Use it as your first step, then dive into logs only when the tool suggests deeper investigation.
+Reading logs is powerful but time-consuming. For known errors, the [Error Diagnostic Tool](/diagnose/) gives you the answer instantly. Use it as your first step, then get startedto logs only when the tool suggests deeper investigation.
 
 [Open Error Diagnostic Tool](/diagnose/){: .btn .btn-primary }
 
@@ -244,6 +244,10 @@ Normal logs use a few MB per session. Verbose logs can reach 50-100 MB per sessi
 
 ### Can I send Claude Code logs when reporting a bug?
 Yes. Attach verbose logs to GitHub issues. Remove your API key from the logs first by searching for `sk-ant` and redacting those lines. Logs help maintainers reproduce and fix issues faster.
+
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
 
 ## Related Guides
 

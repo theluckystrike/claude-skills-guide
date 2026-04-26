@@ -405,6 +405,10 @@ Not every project needs InsForge. For projects with fewer than 5 skill topics an
 
 For small personal projects with 2-3 skill files and a lean CLAUDE.md, the InsForge registry and generation scripts add complexity without proportional value. The break-even point is approximately 5 skill files and 2+ developers -- below that threshold, manual management is faster and simpler.
 
+
+
+**Configure it →** Build your MCP config with our [MCP Config Generator](/mcp-config/).
+
 ## Related Guides
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

@@ -242,6 +242,10 @@ claude --print "What tools are restricted?"
 
 One leaked API key costs an average of $28,000 in incident response. Proper Claude Code security configuration prevents credential exposure and unauthorized system access across your entire engineering organization.
 
+
+
+**Set it up →** Build your permission config with our [Permission Configurator](/permissions/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

@@ -61,7 +61,7 @@ Do not move on until the test passes."
 
 Each debugging skill maps to a specific Claude Code capability.
 
-**Log analysis** leverages Claude's pattern recognition on unstructured text. By piping logs directly via stdin, you provide exact context without manual summarization. Claude identifies recurring patterns, correlates timestamps, and groups related errors faster than manual analysis.
+**Log analysis** uses Claude's pattern recognition on unstructured text. By piping logs directly via stdin, you provide exact context without manual summarization. Claude identifies recurring patterns, correlates timestamps, and groups related errors faster than manual analysis.
 
 **Git bisection** uses Claude's ability to execute shell commands and interpret results. Claude can run `git bisect start`, `git bisect good`, and `git bisect bad` in sequence, testing each commit against your provided test command. This is particularly powerful for regressions where you know "it worked last week."
 
@@ -139,3 +139,7 @@ Related Reading
 - [Best Way to Integrate Claude Code into Team Workflow](/best-way-to-integrate-claude-code-into-team-workflow/)
 
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+

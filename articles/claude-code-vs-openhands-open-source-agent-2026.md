@@ -122,6 +122,10 @@ OpenHands, self-hosted with local models (via Ollama), keeps all code and data o
 
 Expect 2-4 hours per month for updates, Docker image management, and model configuration changes. A dedicated platform engineer should handle initial setup (4-8 hours). Claude Code requires zero infrastructure maintenance since Anthropic manages everything server-side.
 
+
+
+**Which model? →** Take the 5-question quiz in our [Model Selector](/model-selector/).
+
 ## Related Comparisons
 
 - [Claude Code vs Devin: AI Agent Comparison](/claude-code-vs-devin-ai-agent-comparison-2026/)

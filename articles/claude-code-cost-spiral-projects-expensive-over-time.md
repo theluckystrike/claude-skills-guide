@@ -299,6 +299,10 @@ On teams, the cost spiral compounds across developers. When one developer introd
 
 The counter-measure is treating CLAUDE.md and skills updates as first-class PR requirements. Any PR that introduces a new pattern, directory, or convention must include corresponding context engineering updates. This policy alone prevents the largest source of team-level cost spiral.
 
+
+
+**Estimate usage →** Calculate your token consumption with our [Token Estimator](/token-estimator/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

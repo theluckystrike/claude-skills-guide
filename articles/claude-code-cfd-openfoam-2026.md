@@ -392,6 +392,10 @@ checkMesh 2>&1 | tail -20
 - **Wrong turbulence wall treatment:** Using kqRWallFunction with y+ < 5 gives wrong shear stress; nutUSpaldingWallFunction works across all y+ values. Claude Code selects the wall function based on your estimated y+ and mesh resolution.
 - **Divergence from unstable schemes:** Using Gauss linear for convection in high-Re flows causes oscillations. Claude Code defaults to bounded linearUpwind for velocity and upwind for turbulence quantities, switching to higher-order only when the mesh supports it.
 
+
+
+**Build yours →** Create a custom CLAUDE.md with our [Generator Tool](/generator/).
+
 ## Related
 
 **Try it:** Paste your error into our [Error Diagnostic](/diagnose/) for an instant fix.

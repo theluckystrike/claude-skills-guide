@@ -70,6 +70,10 @@ Claude Code should create a `notifications/` service directory, subscribe to the
 
 3. **Local development port assumptions.** Claude configures the frontend to call `localhost:3000`. Encore's local dev server assigns ports dynamically. Use `encore run` which shows the assigned port, or use Encore's generated client which handles the URL automatically.
 
+
+
+**Find the right skill →** Browse 155+ skills in our [Skill Finder](/skill-finder/).
+
 ## Related Guides
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).

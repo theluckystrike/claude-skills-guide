@@ -178,3 +178,7 @@ This data is valuable for:
 - Read [Claude Code best practices](/karpathy-skills-vs-claude-code-best-practices-2026/) for workflow efficiency
 
 **Try it:** Estimate your monthly spend with our [Cost Calculator](/calculator/).
+
+
+**Quick reference →** Search all commands in our [Command Reference](/commands/).
+
