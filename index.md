@@ -905,6 +905,82 @@ html[data-theme="light"] .nav {
   letter-spacing: var(--track-tight);
 }
 
+/* ========== TOOLS DROPDOWN ========== */
+.nav-dropdown { position: relative; display: flex; align-items: center; }
+.nav-dropdown-trigger {
+  background: none; border: none; cursor: pointer;
+  font-size: 13px; color: var(--ink-2); padding: 8px 14px; border-radius: 6px;
+  font-family: var(--sans); letter-spacing: -0.005em;
+  display: flex; align-items: center; gap: 5px;
+}
+.nav-dropdown-trigger:hover { background: var(--bg-2); color: var(--ink); }
+.nav-dropdown-trigger svg { width: 10px; height: 10px; transition: transform .2s ease; }
+.nav-dropdown:hover .nav-dropdown-trigger svg,
+.nav-dropdown:focus-within .nav-dropdown-trigger svg { transform: rotate(180deg); }
+.nav-dropdown-panel {
+  display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%);
+  background: var(--bg-2); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px; min-width: 660px;
+  box-shadow: 0 24px 48px -12px rgba(0,0,0,.5);
+  z-index: 50;
+}
+html[data-theme="light"] .nav-dropdown-panel { box-shadow: 0 20px 40px -12px rgba(60,40,20,.18); }
+.nav-dropdown:hover .nav-dropdown-panel,
+.nav-dropdown:focus-within .nav-dropdown-panel { display: grid; }
+.nav-dropdown-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; }
+.nd-item {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 14px 12px; border-radius: 8px;
+  text-decoration: none; color: inherit;
+  transition: background .15s ease;
+}
+.nd-item:hover { background: var(--bg-3); }
+.nd-icon {
+  width: 32px; height: 32px; border-radius: 7px;
+  background: rgba(217,119,87,0.1); border: 1px solid rgba(217,119,87,0.2);
+  display: grid; place-items: center; color: var(--accent);
+}
+.nd-icon svg { width: 16px; height: 16px; }
+.nd-name { font-size: 12px; font-weight: 500; color: var(--ink); line-height: 1.2; }
+.nd-desc { font-size: 10.5px; color: var(--ink-3); line-height: 1.3; }
+
+/* ========== MOBILE MENU ========== */
+.nav-burger {
+  display: none; width: 36px; height: 36px; border-radius: 6px;
+  border: 1px solid var(--line); background: transparent; color: var(--ink-2);
+  cursor: pointer; place-items: center;
+}
+.nav-burger:hover { background: var(--bg-2); color: var(--ink); border-color: var(--ink-3); }
+.nav-mobile {
+  display: none; position: fixed; inset: 0; z-index: 200;
+  background: var(--bg); overflow-y: auto;
+}
+.nav-mobile.is-open { display: block; }
+.nav-mobile-head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 40px; border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; background: var(--bg); z-index: 1;
+}
+.nav-mobile-close {
+  width: 40px; height: 40px; border-radius: 8px;
+  border: 1px solid var(--line); background: transparent; color: var(--ink);
+  cursor: pointer; display: grid; place-items: center; font-size: 18px;
+}
+.nav-mobile-close:hover { background: var(--bg-2); }
+.nav-mobile-group { padding: 20px 40px; border-bottom: 1px solid var(--line-soft); }
+.nav-mobile-label {
+  font-family: var(--mono); font-size: 10.5px; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--ink-3); margin-bottom: 12px;
+}
+.nav-mobile-group a {
+  display: block; padding: 12px 0; color: var(--ink-2);
+  text-decoration: none; font-size: 15px; border-bottom: 1px solid var(--line-soft);
+}
+.nav-mobile-group a:last-child { border-bottom: none; }
+.nav-mobile-group a:hover { color: var(--accent); }
+.nav-mobile-cta { padding: 24px 40px; }
+.nav-mobile-cta .btn { width: 100%; justify-content: center; }
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1120px) {
   .nav-links { gap: 0; }
@@ -914,7 +990,8 @@ html[data-theme="light"] .nav {
 @media (max-width: 900px) {
   .wrap { padding: 0 24px; }
   .nav-right .btn-primary { padding: 10px 14px; font-size: 12.5px; }
-  .nav-links { display: none; }
+  .nav-links { display: none !important; }
+  .nav-burger { display: grid; }
   #why-ccg > .wrap > div:last-child { grid-template-columns: repeat(2, 1fr) !important; }
   .popular-guides .guides-more { grid-template-columns: 1fr !important; }
   .hero-grid, .gen-grid, .section-head, .stats-head { grid-template-columns: 1fr !important; gap: 32px !important; }
@@ -980,6 +1057,9 @@ html[data-theme="light"] .nav {
   .footer-top { grid-template-columns: 1fr !important; }
   .footer-brand .big { font-size: 56px !important; }
   section { padding: 56px 0 !important; }
+  .nav-mobile-head { padding: 14px 20px; }
+  .nav-mobile-group { padding: 16px 20px; }
+  .nav-mobile-cta { padding: 20px; }
 }
 
 @media (max-width: 380px) {
@@ -1002,12 +1082,71 @@ html[data-theme="light"] .nav {
     </a>
     <div class="nav-links">
       <a href="/all-articles/">Guides <span style="color:var(--ink-3);font-family:var(--mono);font-size:11px">3,021</span></a>
-      <a href="/generator/">Generator</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Tools <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></button>
+        <div class="nav-dropdown-panel" role="menu">
+          <div class="nav-dropdown-grid">
+            <a class="nd-item" href="/diagnose/" role="menuitem">
+              <span class="nd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><circle cx="12" cy="16" r=".5" fill="currentColor"/></svg></span>
+              <span class="nd-name">Error Diagnostic</span>
+              <span class="nd-desc">Paste any error, get a fix</span>
+            </a>
+            <a class="nd-item" href="/calculator/" role="menuitem">
+              <span class="nd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/></svg></span>
+              <span class="nd-name">Cost Calculator</span>
+              <span class="nd-desc">Find the cheapest plan</span>
+            </a>
+            <a class="nd-item" href="/skill-finder/" role="menuitem">
+              <span class="nd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+              <span class="nd-name">Skill Finder</span>
+              <span class="nd-desc">Browse 155+ skills</span>
+            </a>
+            <a class="nd-item" href="/model-selector/" role="menuitem">
+              <span class="nd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span>
+              <span class="nd-name">Model Selector</span>
+              <span class="nd-desc">Pick the right model</span>
+            </a>
+            <a class="nd-item" href="/generator/" role="menuitem">
+              <span class="nd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+              <span class="nd-name">CLAUDE.md Generator</span>
+              <span class="nd-desc">Build config files</span>
+            </a>
+            <a class="nd-item" href="/mcp-config/" role="menuitem">
+              <span class="nd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>
+              <span class="nd-name">MCP Config</span>
+              <span class="nd-desc">Configure MCP servers</span>
+            </a>
+            <a class="nd-item" href="/commands/" role="menuitem">
+              <span class="nd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></span>
+              <span class="nd-name">Commands</span>
+              <span class="nd-desc">Search 80+ commands</span>
+            </a>
+            <a class="nd-item" href="/token-estimator/" role="menuitem">
+              <span class="nd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+              <span class="nd-name">Token Estimator</span>
+              <span class="nd-desc">Estimate before you start</span>
+            </a>
+            <a class="nd-item" href="/permissions/" role="menuitem">
+              <span class="nd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+              <span class="nd-name">Permissions</span>
+              <span class="nd-desc">Build safe settings</span>
+            </a>
+            <a class="nd-item" href="/starter/" role="menuitem">
+              <span class="nd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+              <span class="nd-name">Project Starter</span>
+              <span class="nd-desc">Set up in 60 seconds</span>
+            </a>
+          </div>
+        </div>
+      </div>
       <a href="/about/">About</a>
       <a href="#pricing">Pricing</a>
       <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer">Community &#8599;</a>
     </div>
     <div class="nav-right">
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
       <button class="theme-toggle" id="themeBtn" aria-label="Toggle theme">
         <svg id="themeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
           <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
@@ -1017,6 +1156,50 @@ html[data-theme="light"] .nav {
     </div>
   </div>
 </nav>
+
+<!-- Mobile Navigation Panel -->
+<div class="nav-mobile" id="navMobile" aria-hidden="true">
+  <div class="nav-mobile-head">
+    <a class="brand" href="/">
+      <span class="brand-mark">&#926;</span>
+      <span class="brand-word">Claude Code <span>Guides</span></span>
+    </a>
+    <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">&#10005;</button>
+  </div>
+  <div class="nav-mobile-group">
+    <div class="nav-mobile-label">Browse</div>
+    <a href="/all-articles/">All 3,021 Guides</a>
+    <a href="/topics/getting-started/">Getting Started</a>
+    <a href="/topics/prompt-engineering/">Prompts</a>
+    <a href="/topics/api/">API</a>
+    <a href="/topics/agents/">Agents</a>
+    <a href="/topics/mcp/">MCP</a>
+    <a href="/topics/chrome-extensions/">Extensions</a>
+  </div>
+  <div class="nav-mobile-group">
+    <div class="nav-mobile-label">Free Tools</div>
+    <a href="/diagnose/">Error Diagnostic</a>
+    <a href="/calculator/">Cost Calculator</a>
+    <a href="/skill-finder/">Skill Finder</a>
+    <a href="/model-selector/">Model Selector</a>
+    <a href="/generator/">CLAUDE.md Generator</a>
+    <a href="/mcp-config/">MCP Config</a>
+    <a href="/commands/">Command Reference</a>
+    <a href="/token-estimator/">Token Estimator</a>
+    <a href="/permissions/">Permission Configurator</a>
+    <a href="/starter/">Project Starter</a>
+  </div>
+  <div class="nav-mobile-group">
+    <div class="nav-mobile-label">More</div>
+    <a href="/about/">About</a>
+    <a href="#pricing">Pricing</a>
+    <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer">Community &#8599;</a>
+    <a href="https://zovo.one" target="_blank" rel="noopener noreferrer">Zovo &#8599;</a>
+  </div>
+  <div class="nav-mobile-cta">
+    <a class="btn btn-primary" href="https://zovo.one/lifetime" style="width:100%;justify-content:center">Get lifetime access &#8594;</a>
+  </div>
+</div>
 
 <!-- ========= HERO ========= -->
 <header class="hero">
@@ -1692,7 +1875,7 @@ html[data-theme="light"] .nav {
         <a href="/commands/">Command Reference</a>
         <a href="/token-estimator/">Token Estimator</a>
         <a href="/permissions/">Permission Configurator</a>
-        <a href="/project-starter/">Project Starter</a>
+        <a href="/starter/">Project Starter</a>
         <a href="/feed.xml">RSS feed</a>
       </div>
       <div class="foot-col">
@@ -1810,6 +1993,42 @@ html[data-theme="light"] .nav {
       }
     });
   }
+})();
+</script>
+<script>
+(function(){
+  'use strict';
+  var burger = document.getElementById('navBurger');
+  var panel = document.getElementById('navMobile');
+  var closeBtn = document.getElementById('navMobileClose');
+  if (!burger || !panel || !closeBtn) { return; }
+
+  function openMenu() {
+    panel.classList.add('is-open');
+    panel.setAttribute('aria-hidden', 'false');
+    burger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closeMenu() {
+    panel.classList.remove('is-open');
+    panel.setAttribute('aria-hidden', 'true');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    burger.focus();
+  }
+
+  burger.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+
+  panel.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') { closeMenu(); }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && panel.classList.contains('is-open')) { closeMenu(); }
+  });
 })();
 </script>
 {% endraw %}

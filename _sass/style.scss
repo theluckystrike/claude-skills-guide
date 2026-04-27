@@ -668,6 +668,8 @@
       .site-nav a {
         padding: 12px 8px;
       }
+      .site-nav-dropdown-panel { display: none !important; }
+      .site-nav-burger { display: grid; }
       h1 {
         font-size: 1.65rem;
       }
@@ -714,6 +716,7 @@
         gap: 0.65rem;
         font-size: 0.82rem;
       }
+      .site-nav-burger { width: 40px; height: 40px; }
       .topic-grid {
         grid-template-columns: 1fr;
       }
@@ -952,6 +955,138 @@
       margin-left: 1px;
       opacity: 0.7;
     }
+
+    /* --- Tools Dropdown --- */
+    .site-nav-dropdown {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .site-nav-dropdown-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #b0aea5;
+      padding: 4px 0;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .site-nav-dropdown-btn:hover { color: #d97757; }
+    .site-nav-dropdown-btn svg { transition: transform .2s ease; }
+    .site-nav-dropdown:hover .site-nav-dropdown-btn svg,
+    .site-nav-dropdown:focus-within .site-nav-dropdown-btn svg { transform: rotate(180deg); }
+
+    .site-nav-dropdown-panel {
+      display: none;
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(20, 18, 14, 0.96);
+      backdrop-filter: saturate(160%) blur(14px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 12px;
+      min-width: 220px;
+      box-shadow: 0 20px 40px -10px rgba(0,0,0,.5);
+      z-index: 200;
+    }
+    .site-nav-dropdown:hover .site-nav-dropdown-panel,
+    .site-nav-dropdown:focus-within .site-nav-dropdown-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .site-nav-dropdown-panel a {
+      display: block;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: #b0aea5 !important;
+      font-weight: 500;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .site-nav-dropdown-panel a:hover {
+      background: rgba(255,255,255,0.06);
+      color: #d97757 !important;
+    }
+
+    /* --- Hamburger --- */
+    .site-nav-burger {
+      display: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: transparent;
+      color: #b0aea5;
+      cursor: pointer;
+      place-items: center;
+      margin-left: auto;
+    }
+    .site-nav-burger:hover { background: rgba(255,255,255,0.06); color: #d97757; }
+
+    /* --- Mobile Nav Panel --- */
+    .site-mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: #141413;
+      overflow-y: auto;
+    }
+    .site-mobile-nav.is-open { display: block; }
+    .site-mobile-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      background: #141413;
+    }
+    .site-mobile-close {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: transparent;
+      color: #faf9f5;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-size: 16px;
+    }
+    .site-mobile-close:hover { background: rgba(255,255,255,0.06); }
+    .site-mobile-group {
+      padding: 16px 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .site-mobile-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #7a7868;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .site-mobile-group a {
+      display: block;
+      padding: 10px 0;
+      color: #b0aea5;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .site-mobile-group a:last-child { border-bottom: none; }
+    .site-mobile-group a:hover { color: #d97757; }
 
     /* =====================================       AUTHOR BAR
        ============================================ */
