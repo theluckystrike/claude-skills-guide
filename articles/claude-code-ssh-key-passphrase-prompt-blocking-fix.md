@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code SSH Key Passphrase Blocking (2026)"
 description: "Fix Claude Code SSH key passphrase prompt blocking automation. Configure ssh-agent or deploy key without passphrase. Step-by-step solution."

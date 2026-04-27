@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Claude Code for Upgradeable Contract (2026)"

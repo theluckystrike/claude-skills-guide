@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Claude Code for Hopsworks Feature Store (2026)"

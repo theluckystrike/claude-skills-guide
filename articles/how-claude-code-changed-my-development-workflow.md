@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How Claude Code Changed My (2026)"
 description: "A developer shares practical insights on how Claude Code transformed their daily coding routines, from automated testing with tdd skill to document."

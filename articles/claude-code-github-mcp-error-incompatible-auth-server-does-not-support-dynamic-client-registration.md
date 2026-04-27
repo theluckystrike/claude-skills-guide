@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix GitHub MCP Auth Server Registration (2026)"
 description: "Resolve the Claude Code GitHub MCP 'incompatible auth server does not support dynamic client registration' error with a step-by-step fix."

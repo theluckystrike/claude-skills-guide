@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Automating Icon Sprite Generation (2026)"

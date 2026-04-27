@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Web Search Costs $10 per 1,000 Searches (2026)"
 description: "Claude web search costs $0.01 per search plus token ingestion fees. At scale, 1,000 daily searches run $750/month total."

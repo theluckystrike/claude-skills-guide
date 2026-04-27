@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Chrome Reporting Connector Enterprise (2026)"

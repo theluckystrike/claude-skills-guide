@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code and large package.json (2026)"
 description: "A large package.json costs Claude Code 2,000-8,000 tokens when read unnecessarily. Prevent automatic loading and create a lean dependency summary instead."

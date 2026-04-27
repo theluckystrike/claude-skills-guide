@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Hybrid Patterns (2026)"
 description: "Design hybrid architectures combining Claude Code skills (instructions), MCP servers (external access), and custom tools (scripts). With 3 production patterns."

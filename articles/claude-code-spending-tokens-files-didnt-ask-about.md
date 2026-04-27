@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code spending tokens on files I (2026)"
 description: "Stop Claude Code from spending tokens on irrelevant files with .claudeignore rules, CLAUDE.md boundaries, and scoped prompts that cut waste by 40-60%."

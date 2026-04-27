@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Paraphrase Tool Students Chrome (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension for paraphrasing text. Practical code examples, APIs, and implementation patterns for..."

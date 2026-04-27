@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Polyglot Claude Skills (2026)"
 description: "Design Claude Code skills that adapt to multiple programming languages using path-conditional activation, language-specific references, and runtime detection."

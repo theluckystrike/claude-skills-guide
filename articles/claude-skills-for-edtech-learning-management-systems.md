@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for EdTech Learning (2026)"
 description: "A practical guide for developers building AI-powered educational tools with Claude. Learn how to integrate skills for grading, feedback, content."

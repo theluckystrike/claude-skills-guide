@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Claude Code FastAPI Async Python Guide (2026)"

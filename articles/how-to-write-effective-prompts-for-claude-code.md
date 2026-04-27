@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Write Effective Prompts (2026)"
 description: "Master the art of prompting Claude Code with concrete techniques: context framing, task decomposition, output specification, and iterative refinement."

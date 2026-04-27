@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Set ANTHROPIC_API_KEY for Claude (2026)"
 last_tested: "2026-04-22"

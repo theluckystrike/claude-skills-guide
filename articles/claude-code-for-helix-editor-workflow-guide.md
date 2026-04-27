@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Helix Editor (2026)"
 description: "Claude Code for Helix Editor — Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Share Claude Code Skills Across (2026)"
 description: "Three methods to distribute SKILL.md files to teammates: project-level git, plugin packaging, and enterprise managed settings with precedence rules."

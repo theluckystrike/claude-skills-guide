@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Inngest (2026)"
 description: "Claude Code for Inngest — practical guide with working examples, tested configurations, and tips for developer workflows."

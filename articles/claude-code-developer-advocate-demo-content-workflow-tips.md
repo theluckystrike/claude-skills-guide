@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Claude Code Developer Advocate Demo (2026)"

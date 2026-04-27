@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Md For Frontend Projects Best (2026)"
 description: "Master Claude MD files for frontend development. Practical patterns, skill examples, and workflow optimization for React, Vue, and Svelte projects."

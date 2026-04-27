@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills Access Control (2026)"
 description: "Implement granular access control and permission models for Claude Code skills in enterprise environments. Learn role-based access, skill isolation, and..."

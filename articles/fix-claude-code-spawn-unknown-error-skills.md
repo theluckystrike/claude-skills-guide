@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Spawn Unknown Error in Skills (2026)"
 description: "Resolve spawn UNKNOWN errors caused by missing interpreters, permission failures, script encoding issues, and shell configuration in skills."

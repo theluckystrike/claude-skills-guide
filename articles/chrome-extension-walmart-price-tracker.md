@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Build a Walmart Price Tracker Extension (2026)"

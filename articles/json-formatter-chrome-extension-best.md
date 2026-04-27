@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "JSON Formatter Chrome Extension (2026)"
 description: "Claude Code extension tip: a practical guide to the best JSON formatter Chrome extensions for developers and power users. Compare features, speed, and..."

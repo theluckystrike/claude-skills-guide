@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Claude Code Team Coding Standards (2026)"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension Newsletter Design Tool (2026)"
 description: "Claude Code extension tip: a comprehensive guide to building and designing newsletters using Chrome extensions. Learn about automation tools, template..."

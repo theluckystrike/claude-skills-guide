@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Claude Code for Pulsar Tenant Workflow (2026)"

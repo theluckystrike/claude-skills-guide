@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Free vs Pro vs Max (2026)"
 description: "Find your optimal Claude Code plan with this calculator. Most developers overpay by $80/month by choosing the wrong tier."

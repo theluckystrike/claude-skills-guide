@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Word Count Tracker Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a word count tracker Chrome extension. Practical code examples, APIs, and implementation patterns for..."

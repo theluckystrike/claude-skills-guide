@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Quicknode Rpc (2026)"
 description: "Learn how to integrate Claude Code with QuickNode for efficient blockchain RPC workflows. Practical examples, code snippets, and actionable advice for."

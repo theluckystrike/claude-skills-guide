@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code tool call overhead -- (2026)"
 description: "Every Claude Code tool call costs 150-2,000+ tokens in overhead before any work happens -- understand the per-tool breakdown to minimize wasted tokens."

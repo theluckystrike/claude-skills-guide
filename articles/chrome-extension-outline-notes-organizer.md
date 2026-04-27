@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Outline Notes Organizer Chrome (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension for organizing outlines and notes. Practical code examples, API usage, and..."

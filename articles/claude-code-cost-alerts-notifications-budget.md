@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Cost Alerts (2026)"
 description: "Configure Claude Code cost alerts through Anthropic Console thresholds, CLAUDE.md budget rules, and hooks-based monitoring to prevent billing surprises."

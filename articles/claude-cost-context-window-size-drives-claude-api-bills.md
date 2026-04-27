@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How Context Window Size Drives Claude (2026)"
 description: "Every 100K tokens of context costs $0.50 on Opus 4.7. Learn why context size — not model choice — is your biggest cost lever."

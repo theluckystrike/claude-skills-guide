@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Playwright MCP (2026)"
 description: "Claude Code for Playwright MCP — practical guide with working examples, tested configurations, and tips for developer workflows."

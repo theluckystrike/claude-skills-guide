@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Text Editor Tool (2026)"
 description: "Claude's text editor tool adds 700 tokens per turn. Learn how phase-based tool loading cuts editor overhead by 60% in agent workflows."

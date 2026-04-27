@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build Tab Audio Recorder Chrome (2026)"
 description: "Claude Code extension tip: build Chrome extensions that capture audio from browser tabs using the MediaRecorder API. Practical code examples and..."

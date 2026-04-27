@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Python Venv Not (2026)"
 description: "Fix Claude Code not detecting your Python virtual environment. Resolve venv activation, PATH issues, and interpreter mismatches in 5 minutes."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Students (2026)"
 description: "A practical guide for students using Claude Code to accelerate homework completion and project development. Includes code examples, workflow patterns, and."

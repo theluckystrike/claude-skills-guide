@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code reading too many files (2026)"
 description: "Fix Claude Code reading too many files by scoping context with .claudeignore, CLAUDE.md file budgets, and directory boundaries to save 50K+ tokens per task."

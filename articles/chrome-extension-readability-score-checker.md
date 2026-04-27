@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Chrome Extension Readability Score (2026)"

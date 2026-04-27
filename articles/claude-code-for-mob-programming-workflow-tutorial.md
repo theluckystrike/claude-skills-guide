@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Mob Programming (2026)"
 description: "Learn how to integrate Claude Code into mob programming sessions for enhanced collaboration, knowledge sharing, and productivity. Practical examples."

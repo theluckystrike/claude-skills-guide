@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Fix Bash Command Not Found in Skills (2026)"

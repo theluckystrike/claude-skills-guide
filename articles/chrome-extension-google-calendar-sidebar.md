@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Google Calendar Sidebar Chrome (2026)"
 description: "Claude Code extension tip: a developer guide to building Chrome extensions that integrate with Google Calendar sidebar. Learn the APIs, techniques, and..."

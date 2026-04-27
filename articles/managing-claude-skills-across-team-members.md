@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Managing Claude Skills Across Team (2026)"
 description: "Prevent skill collisions between personal, project, and plugin scopes with precedence rules, naming conventions, and discovery debugging."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Enforce Coding Standards with CLAUDE.md (2026)"
 description: "How to write CLAUDE.md rules that Claude Code actually follows for coding standards: naming, formatting, import ordering, and type safety."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Best Free Time Tracking Chrome (2026)"
 description: "Claude Code picks: discover free time tracking Chrome extensions that help developers and power users track work hours, manage projects, and boost..."

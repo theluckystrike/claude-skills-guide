@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build a Page Translation Chrome (2026)"
 description: "Claude Code extension tip: build a Chrome extension that translates web pages in real time. Covers Google Translate API, DOM text extraction, and..."

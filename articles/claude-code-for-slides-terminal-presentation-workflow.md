@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build Terminal Slides with Claude Code (2026)"
 description: "Create terminal-based presentations with Claude Code. Markdown-to-slides generation using Marp, Slidev, and terminal presentation frameworks."

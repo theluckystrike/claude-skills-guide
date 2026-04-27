@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Reduce Claude Code API Costs by 50% (2026)"
 description: "Reduce Claude Code API Costs by 50% — practical guide with working examples, tested configurations, and tips for developer workflows."

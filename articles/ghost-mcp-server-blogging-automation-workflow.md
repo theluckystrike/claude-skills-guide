@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Ghost MCP Server (2026)"
 description: "Connect Claude to Ghost using the Model Context Protocol. Automate blog post creation, scheduling, and content management workflows with MCP servers."

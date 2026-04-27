@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build a Screen Annotation Chrome (2026)"
 description: "Claude Code extension tip: build a Chrome extension for screen annotation and markup. Covers Canvas overlay rendering, drawing tools, text labels, and..."

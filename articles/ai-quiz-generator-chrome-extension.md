@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AI Quiz Generator Chrome Extension (2026)"
 description: "Claude Code extension tip: a practical guide to AI-powered quiz generator Chrome extensions for developers. Learn how these tools work, their key..."

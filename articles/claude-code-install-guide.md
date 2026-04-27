@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Install Claude Code (2026)"
 description: "Install Claude Code CLI on macOS, Linux, Windows, WSL, and Docker. Includes npm setup, authentication, and verifying your installation works."

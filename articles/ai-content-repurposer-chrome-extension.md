@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AI Content Repurposer Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build an AI-powered content repurposing Chrome extension. Practical code examples, APIs, and implementation..."

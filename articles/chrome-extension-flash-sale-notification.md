@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Flash Sale Notification Chrome (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension that monitors web pages for flash sales and notifies users in real-time. Includes code..."

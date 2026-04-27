@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Git Tags Release Management (2026)"
 description: "Learn how to use git tags and release management workflows with Claude Code for automated versioning and deployment pipelines."

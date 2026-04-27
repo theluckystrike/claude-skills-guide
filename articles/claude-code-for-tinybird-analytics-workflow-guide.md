@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Tinybird Analytics (2026)"
 description: "Claude Code for Tinybird Analytics — practical guide with working examples, tested configurations, and tips for developer workflows."

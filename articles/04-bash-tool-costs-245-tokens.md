@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Bash Tool Costs 245 Tokens (2026)"
 description: "Each Claude bash tool invocation adds 245 input tokens. At Opus rates, 100 daily debug sessions cost $225/month in overhead alone."

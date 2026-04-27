@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Security Headers Chrome Extension Guide (2026)"
 description: "Claude Code guide: discover Chrome extensions that analyze and visualize security headers. Learn how to audit HTTP response headers, identify..."

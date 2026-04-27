@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Knowledge Wiki Team Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and manage a comprehensive knowledge wiki for chrome extension development teams. Covers documentation..."

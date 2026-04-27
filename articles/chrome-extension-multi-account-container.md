@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build Multi-Account Container Chrome (2026)"
 description: "Claude Code extension tip: build Chrome extensions for multi-account container management. Architecture patterns, cookie isolation, and identity..."

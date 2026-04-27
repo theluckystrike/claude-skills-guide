@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Is Claude Code Good Enough (2026)"
 description: "A practical evaluation of Claude Code for senior developer workflows: real-world testing, CI/CD integration, complex debugging, and skill ecosystem."

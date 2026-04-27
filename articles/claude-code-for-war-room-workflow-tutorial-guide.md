@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For War Room (2026)"
 description: "Learn how to use Claude Code to build efficient war room workflows for incident response, debugging sessions, and critical production issues."

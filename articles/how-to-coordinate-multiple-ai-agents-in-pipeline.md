@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How to Coordinate Multiple AI Agents (2026)"

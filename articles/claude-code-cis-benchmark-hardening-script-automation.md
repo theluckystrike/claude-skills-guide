@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Cis Benchmark Hardening (2026)"
 description: "Learn how to automate CIS benchmark hardening with Claude Code skills. Practical examples for security compliance, automated auditing, and system."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code ENOSPC Disk Full Error (2026)"
 description: "Fix Claude Code ENOSPC disk full during operation. Free disk space and relocate temp directories. Step-by-step solution."

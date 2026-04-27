@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Claude API Streaming Responses (2026)"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code CLAUDE.md Not Found Fix (2026)"
 description: "Fix Claude Code CLAUDE.md not found in parent directories. Create the file in the correct project root location. Step-by-step solution."

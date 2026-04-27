@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "FastAPI Pydantic V2 Validation (2026)"
 description: "Master input validation in FastAPI with Pydantic v2. Learn advanced validation techniques, custom validators, and how Claude Code can help you build."

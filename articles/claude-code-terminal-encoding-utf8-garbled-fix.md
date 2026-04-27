@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Terminal UTF-8 Garbled (2026)"
 description: "Fix Claude Code terminal encoding UTF-8 garbled output. Set locale and terminal encoding to UTF-8 correctly. Step-by-step solution."

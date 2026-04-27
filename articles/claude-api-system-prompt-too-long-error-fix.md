@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude API System Prompt Too Long Error (2026)"
 description: "Fix Claude API system prompt too long error. Compress system instructions and split into cached blocks. Step-by-step solution."

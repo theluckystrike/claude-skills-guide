@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code 429 Rate Limit (2026)"
 description: "Fix Claude Code 429 rate limit with retry-after header. Parse the header and implement proper backoff logic. Step-by-step solution."

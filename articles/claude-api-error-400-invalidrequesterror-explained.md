@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix: Claude API Error 400 (2026)"
 description: "Fix Claude API 400 invalid_request_error. Covers malformed JSON, missing parameters, prefill errors, and request validation with Python and TypeScript."

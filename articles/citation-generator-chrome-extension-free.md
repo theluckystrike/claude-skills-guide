@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Citation Generator Free Chrome (2026)"
 description: "Claude Code extension tip: create a free citation generator Chrome extension for automatic bibliography creation. Complete developer guide with code..."

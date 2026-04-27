@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Opus Orchestrator + Sonnet Worker (2026)"
 description: "Claude Code resource: design multi-agent systems with Opus as orchestrator and Sonnet workers for parallel task execution. Architecture patterns with..."

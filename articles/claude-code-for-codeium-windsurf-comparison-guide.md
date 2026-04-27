@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Codeium (2026)"
 description: "Compare Claude Code, Codeium, and Windsurf for AI-assisted development. Learn the strengths, use cases, and practical differences to choose the right."

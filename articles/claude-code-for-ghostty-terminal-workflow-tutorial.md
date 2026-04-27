@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How to Use Ghostty Terminal for Claude (2026)"

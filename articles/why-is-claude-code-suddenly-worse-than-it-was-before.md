@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Suddenly Worse (2026)"
 description: "Diagnose why Claude Code quality dropped and fix it. Check model version, context window, skill configs, and API changes causing regression."

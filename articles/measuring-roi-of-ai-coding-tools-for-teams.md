@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Measuring Roi Of AI Coding Tools (2026)"
 description: "Claude Code AI workflow: a practical guide for developers and power users on measuring the return on investment of AI coding tools. Includes metrics,..."

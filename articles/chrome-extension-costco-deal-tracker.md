@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Costco Deal Tracker Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension to track Costco deals and price drops. Practical code examples and architecture for..."

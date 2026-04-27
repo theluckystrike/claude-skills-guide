@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Automate Version Bumps with Claude Code (2026)"
 description: "Automate semantic version bumps with Claude Code. Covers package.json updates, git tags, changelog generation, and CI release pipeline integration."

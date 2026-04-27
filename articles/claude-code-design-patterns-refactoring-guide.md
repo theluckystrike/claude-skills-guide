@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Design Patterns Refactoring (2026)"
 description: "A practical guide to applying design patterns and refactoring techniques in Claude Code skills. Learn patterns that improve skill maintainability."

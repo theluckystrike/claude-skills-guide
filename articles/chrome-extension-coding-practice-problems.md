@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension Coding Practice (2026)"
 description: "Claude Code extension tip: master Chrome extension development with hands-on practice problems. Build real extensions, debug common issues, and learn..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code MCP Server Connection (2026)"
 description: "Resolve Claude Code MCP Server Connection Closed issues with tested solutions, step-by-step debugging, and production-ready code examples verified for..."

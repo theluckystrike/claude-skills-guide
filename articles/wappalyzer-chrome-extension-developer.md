@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Wappalyzer Chrome Extension (2026)"

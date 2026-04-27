@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for OSS Documentation (2026)"
 description: "Contribute high-quality documentation to open source projects using Claude Code. Covers API docs, tutorials, migration guides, and style consistency."

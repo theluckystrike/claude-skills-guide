@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Organize Claude Skills in a Monorepo (2026)"
 description: "Best way to organize Claude skills in a monorepo. Directory layouts, skill dependencies, and real-world examples for scalable skill management."

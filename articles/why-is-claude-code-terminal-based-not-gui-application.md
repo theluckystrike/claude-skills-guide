@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Why Claude Code Is Terminal-Based, Not (2026)"

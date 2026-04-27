@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Chrome Extension Image Format Converter (2026)"

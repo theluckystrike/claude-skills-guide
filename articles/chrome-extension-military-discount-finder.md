@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Military Discount Finder Chrome (2026)"
 description: "Claude Code extension tip: build or integrate military discount discovery into your Chrome extension. Learn the architecture, APIs, and implementation..."

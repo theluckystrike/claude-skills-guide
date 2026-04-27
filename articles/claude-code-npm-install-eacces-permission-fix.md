@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code NPM Install Eacces (2026)"
 description: "Resolve npm EACCES permission denied errors when Claude Code runs npm install. Fix global installs, node_modules ownership, and cache issues."

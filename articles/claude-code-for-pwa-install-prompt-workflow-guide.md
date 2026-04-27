@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Build PWA Install Prompt with Claude (2026)"

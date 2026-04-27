@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Railway MCP Server Deployment (2026)"
 description: "Claude Code resource: a practical guide to automating MCP server deployments on Railway. Learn deployment patterns, configuration management, and CI/CD..."

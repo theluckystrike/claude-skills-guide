@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Devenv Nix (2026)"
 description: "A practical guide to using Claude Code with devenv for streamlined Nix-based development shell workflows. Learn how to configure, automate, and."

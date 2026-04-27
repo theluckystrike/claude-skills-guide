@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "HTTP Header Viewer Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to inspect, analyze, and debug HTTP headers using Chrome extensions. Practical examples for developers and power..."

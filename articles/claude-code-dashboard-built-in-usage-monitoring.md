@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Dashboard (2026)"
 description: "Use Claude Code's built-in /cost command and dashboard to monitor token usage, track session spend, and identify wasteful patterns in real time."

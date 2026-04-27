@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Make Claude Code Follow Naming (2026)"
 description: "Force Claude Code to respect your naming conventions using .claude.json settings, skill patterns, and project-specific style rules. Working configs."

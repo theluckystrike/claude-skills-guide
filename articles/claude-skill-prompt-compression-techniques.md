@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skill Prompt Compression (2026)"
 description: "Claude Skill Prompt Compression — practical guide with working examples, tested configurations, and tips for developer workflows."

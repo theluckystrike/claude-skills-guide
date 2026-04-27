@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "MCP OAuth 2.1 Authentication (2026)"

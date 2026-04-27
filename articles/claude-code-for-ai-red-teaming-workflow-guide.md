@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For AI Red Teaming (2026)"
 description: "A comprehensive guide to building AI red teaming workflows with Claude Code, featuring practical examples, testing patterns, and production-ready."

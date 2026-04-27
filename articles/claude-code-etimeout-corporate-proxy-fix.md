@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code ETIMEOUT Corporate Proxy (2026)"
 description: "Fix Claude Code ETIMEOUT connecting through corporate proxy. Configure HTTPS_PROXY and SSL certificates. Step-by-step solution."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code API Changelog Documentation (2026)"
 description: "Learn how to create and maintain professional API changelog documentation using Claude Code. Discover automated workflows, best practices, and practical."

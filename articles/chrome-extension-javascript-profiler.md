@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "JavaScript Profiler Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to profile JavaScript performance in Chrome extensions. Practical techniques for identifying bottlenecks,..."

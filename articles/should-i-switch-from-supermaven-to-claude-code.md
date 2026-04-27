@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Should I Switch From Supermaven (2026)"
 description: "A comprehensive comparison of Supermaven vs Claude Code for AI-assisted coding. Learn about Claude Code's skills system, tool use, and whether it."

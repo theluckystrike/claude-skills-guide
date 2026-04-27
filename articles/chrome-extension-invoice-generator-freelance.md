@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Invoice Generator Freelance Chrome (2026)"
 description: "Claude Code extension tip: learn how to create a Chrome extension that generates invoices directly from your browser. A practical guide for developers..."

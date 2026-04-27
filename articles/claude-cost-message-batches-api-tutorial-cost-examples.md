@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Message Batches API Tutorial with Cost (2026)"
 description: "Claude Code guide: message Batches API Tutorial with Cost — practical guide with working examples, tested configurations, and tips for developer workflows."

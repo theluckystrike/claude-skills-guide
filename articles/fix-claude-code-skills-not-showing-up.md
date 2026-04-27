@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Skills Not Showing (2026)"
 description: "Troubleshoot skills that exist on disk but do not appear in Claude Code's / menu due to discovery, scope, visibility, or description budget issues."

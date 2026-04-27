@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Tailwind CSS V4 (2026)"
 description: "A practical guide for developers to migrate to Tailwind CSS v4 using Claude Code. Automate the upgrade process with Claude skills and MCP tools."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Prompt Compression Techniques (2026)"
 description: "Reduce Claude prompt token count by 30-60% using XML structure, abbreviation, and deduplication — save $75 per 10K Opus requests."

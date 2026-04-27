@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code: Generate Full Files (2026)"
 description: "Claude Code: Generate Full Files — practical guide with working examples, tested configurations, and tips for developer workflows."

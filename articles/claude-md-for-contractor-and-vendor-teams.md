@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Md For Contractor And Vendor (2026)"
 description: "A practical guide for developer teams working with external contractors and vendors using Claude Code skills. Learn how to standardize workflows."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Scoping Skills Narrowly (2026)"
 description: "A single broad Claude Code skill wastes 500-2,000 tokens per invocation loading irrelevant instructions -- narrow skills cut overhead by 60-80%."

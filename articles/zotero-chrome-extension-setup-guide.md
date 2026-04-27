@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Using Claude Code with Zotero (2026)"

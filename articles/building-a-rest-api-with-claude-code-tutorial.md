@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Building a REST API with Claude Code (2026)"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Incident Communication (2026)"
 description: "Learn how to use Claude Code to streamline incident communication workflows, automate status updates, and improve team coordination during critical."

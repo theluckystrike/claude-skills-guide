@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Reduce Claude Code Token Consumption (2026)"
 description: "Five techniques cut Claude Code token usage by 60%: targeted reads, compact, session splitting, lean CLAUDE.md, and filtered outputs."

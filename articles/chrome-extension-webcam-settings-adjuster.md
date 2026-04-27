@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Webcam Settings Adjuster Chrome (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension that adjusts webcam settings like brightness, contrast, and resolution directly in the..."

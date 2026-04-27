@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Skills Redis Caching Layer (2026)"
 description: "Implement a Redis caching layer for Claude Code skills. Practical examples for storing skill outputs, session data, and cross-agent communication."

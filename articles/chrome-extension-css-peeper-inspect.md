@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "CSS Peeper Inspect Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to use Chrome extension CSS inspection tools for debugging and inspecting CSS in your web development workflow...."

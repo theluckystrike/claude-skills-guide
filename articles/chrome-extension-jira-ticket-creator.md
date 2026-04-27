@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Jira Ticket Creator Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension that creates Jira tickets directly from your browser. Includes code examples, API..."

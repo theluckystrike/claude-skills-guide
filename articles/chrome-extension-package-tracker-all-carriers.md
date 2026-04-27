@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Package Tracker All Carriers Chrome (2026)"
 description: "Claude Code extension tip: learn how to build or use a Chrome extension that tracks packages across all carriers. Practical code examples and..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Eyedropper Tool Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how to build and use a color picker eyedropper tool in Chrome extensions. Complete implementation guide with code examples for..."

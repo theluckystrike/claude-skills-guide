@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Chrome Extension Content Calendar (2026)"

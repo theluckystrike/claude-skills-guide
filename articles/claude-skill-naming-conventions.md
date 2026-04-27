@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skill Naming Conventions (2026)"
 description: "Naming rules for SKILL.md name field, directory names, and plugin namespaces with examples of what works and what breaks."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code with RTX Tool Version (2026)"
 description: "Manage tool versions with RTX and Claude Code. Automate Node, Python, and Go version switching with reproducible development environment configuration."

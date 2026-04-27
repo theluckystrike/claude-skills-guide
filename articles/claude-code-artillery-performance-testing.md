@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Artillery Performance (2026)"
 description: "Learn how to use Claude Code with Artillery for load testing and performance analysis. Real-world examples, code snippets, and integration strategies."

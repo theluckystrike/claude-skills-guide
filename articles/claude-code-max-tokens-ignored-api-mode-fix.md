@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code max_tokens Ignored in API (2026)"
 description: "Fix Claude Code max_tokens parameter being ignored in API mode. Use the correct parameter name and placement. Step-by-step solution."

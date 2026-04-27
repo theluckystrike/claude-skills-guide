@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Skills for Python Developers: 15 Must-Have (2026)"
 description: "15 essential Claude Code skills for Python developers: pytest runner, Django management, FastAPI scaffolding, type checker, docstring generator, and more."

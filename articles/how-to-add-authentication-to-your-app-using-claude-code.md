@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Add Authentication to Your App (2026)"
 description: "Learn how to implement secure authentication in your applications using Claude Code and specialized skills. A practical guide for developers building."

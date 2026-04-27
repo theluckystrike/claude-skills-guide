@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "XPath Finder Chrome Extension Guide (2026)"
 description: "Claude Code guide: discover the best Chrome extensions for finding XPath locators. Compare popular tools, learn practical techniques for web..."

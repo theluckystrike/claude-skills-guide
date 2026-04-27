@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "What Is The Best Claude Skill For Rest (2026)"
 description: "Discover the top Claude skills for building REST APIs efficiently. Compare skills like tdd, code-generation, and more for your API projects."

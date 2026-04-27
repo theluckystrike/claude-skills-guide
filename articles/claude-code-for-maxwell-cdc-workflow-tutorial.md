@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Maxwell CDC Streaming (2026)"
 description: "Stream database changes in real-time with Maxwell CDC and Claude Code. Configure binlog capture, Kafka output, and schema migration workflows."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Wrong Environment Deploy (2026)"
 description: "Claude Code deploying to production instead of staging wastes 10K-50K tokens in rollback and costs real business damage. Pre-flight checks prevent this."

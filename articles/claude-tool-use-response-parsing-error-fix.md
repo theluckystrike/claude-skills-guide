@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude tool_use Response Parsing Error (2026)"
 description: "Fix Claude tool_use response parsing errors. Handle mixed content blocks and validate tool input schema. Step-by-step solution."

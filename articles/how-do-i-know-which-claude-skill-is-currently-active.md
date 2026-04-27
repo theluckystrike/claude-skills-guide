@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How Do I Know Which Claude Skill (2026)"
 description: "Learn how to identify the active Claude skill during your session. Practical methods, CLI commands, and tips for tracking skill context."

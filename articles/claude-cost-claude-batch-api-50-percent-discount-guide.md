@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Batch API 50% Discount Complete (2026)"
 description: "Claude Batch API 50% Discount Complete — practical guide with working examples, tested configurations, and tips for developer workflows."

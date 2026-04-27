@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code React Native Paper Mobile (2026)"
 description: "A practical guide to building mobile UIs with React Native and Paper using Claude Code. Learn how to use skills for component generation, testing, and."

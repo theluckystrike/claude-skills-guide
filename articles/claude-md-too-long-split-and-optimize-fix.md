@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "CLAUDE.md Too Long? How to Split (2026)"
 description: "Fix CLAUDE.md files that exceed 200 lines by splitting into imports, rules directories, and skills. Step-by-step optimization with before/after examples."

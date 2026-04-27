@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build Session Manager Chrome Extension (2026)"
 description: "Claude Code extension tip: build Chrome extensions that manage browser sessions, save and restore tab groups, and automate tab organization for..."

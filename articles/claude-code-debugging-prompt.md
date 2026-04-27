@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Debugging Prompts That Work (2026)"
 description: "Write effective debugging prompts for Claude Code that find root causes fast. Tested prompt templates for errors, performance, and logic bugs."

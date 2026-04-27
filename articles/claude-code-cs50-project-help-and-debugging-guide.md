@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Debug: Claude Code for CS50 Projects (2026)"

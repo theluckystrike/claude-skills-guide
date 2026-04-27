@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Top 10 MCP Servers Every Claude Code User Should Know (2026)"
 description: "Ranked list of the 10 best MCP servers for Claude Code — GitHub, Supabase, Slack, PostgreSQL, and more. Install commands, example usage, and configuration included."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Mailchimp MCP Server Marketing (2026)"
 description: "Integrate Mailchimp MCP server for marketing automation with Claude Code. API workflows and automation patterns for developers."

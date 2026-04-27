@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Open Box Deal Tracker Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a chrome extension that tracks open box deals and price drops. Complete guide for developers and power..."

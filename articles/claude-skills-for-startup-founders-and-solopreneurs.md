@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for Startup Founders (2026)"
 description: "Top Claude Code skills for startup founders and solopreneurs: automate docs, build frontends, write tests, and track finances without bottlenecks."

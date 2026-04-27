@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for WorkOS AuthKit (2026)"
 description: "Claude Code for WorkOS AuthKit — practical guide with working examples, tested configurations, and tips for developer workflows."

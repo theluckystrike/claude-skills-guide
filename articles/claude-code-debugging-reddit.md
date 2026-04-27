@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Debugging Tips from Reddit (2026)"
 description: "Community-tested Claude Code debugging techniques from Reddit. Real developer solutions for common bugs, crashes, and workflow issues."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension Size Chart Converter (2026)"
 description: "Claude Code extension tip: discover the best Chrome extensions for size chart conversions. Compare popular options for clothing, shoe, and ring size..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Git Hook Pre-commit (2026)"
 description: "Fix Claude Code git hook pre-commit conflict blocking commits. Configure hooks to work with AI-generated code. Step-by-step solution."

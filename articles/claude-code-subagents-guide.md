@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Subagents Guide (2026)"
 description: "Create custom subagents in Claude Code to delegate tasks, preserve context, control costs, and enforce tool restrictions."

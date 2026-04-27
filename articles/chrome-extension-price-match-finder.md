@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build a Price Match Finder Extension (2026)"
 description: "Claude Code extension tip: build a Chrome extension that finds lower prices across retailers using Manifest V3, content scripts, and cross-origin..."

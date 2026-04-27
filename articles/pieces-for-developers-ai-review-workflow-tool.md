@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Pieces for Developers AI Review (2026)"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Car Rental Deals Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how to build a Chrome extension that tracks car rental prices across multiple providers. Technical implementation guide with..."

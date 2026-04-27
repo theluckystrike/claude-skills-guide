@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Security Review Process for Claude Code (2026)"
 description: "Review checklist for SKILL.md files covering allowed-tools risks, script injection, env var exposure, and permission boundaries in shared skills."

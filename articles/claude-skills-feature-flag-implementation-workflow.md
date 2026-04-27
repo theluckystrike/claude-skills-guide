@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills Feature Flag (2026)"
 description: "Learn how to implement feature flags in Claude skills for controlled rollouts, A/B testing, and safe deployments. Practical code examples and workflow."

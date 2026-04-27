@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Use Slack Chrome Extension + (2026)"
 description: "Build a Slack bot with Claude skills integration. Code review, document processing, and memory recall from Slack using Node.js and Claude Code."

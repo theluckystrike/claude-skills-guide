@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Why Is Claude Code Good (2026)"
 description: "Discover how Claude Code's extended context, skills, and systematic analysis make it exceptionally effective at deciphering and improving legacy codebases."

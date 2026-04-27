@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Master Claude Code Debugging Skills (2026)"
 description: "Level up your Claude Code debugging with proven skills: log analysis, bisection, hypothesis testing, and automated fix verification workflows."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Large File Refactoring (2026)"
 description: "Refactor large files with Claude Code using incremental strategies that avoid context overflow. Memory plugin tips and file splitting patterns."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How to Use GitHub Actions OIDC Workflow (2026)"

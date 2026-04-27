@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Debug: WASM Debugger Chrome Extension (2026)"
 description: "Claude Code troubleshooting: learn how to debug WebAssembly modules within Chrome extensions using built-in DevTools features and practical techniques...."

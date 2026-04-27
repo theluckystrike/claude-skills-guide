@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Dotfiles Management (2026)"
 description: "A practical workflow for managing Claude Code dotfiles across machines and synchronizing skills. Includes git-based dotfiles management, skill organizat..."

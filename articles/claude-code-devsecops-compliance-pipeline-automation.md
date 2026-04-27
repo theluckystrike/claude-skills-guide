@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code DevSecOps Compliance (2026)"
 description: "Learn how to automate compliance pipelines using Claude Code skills. Practical examples for SOC 2, ISO 27001, and regulatory compliance automation."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Error Rate Limit 429. (2026)"
 description: "Claude Code Error Rate Limit 429. — step-by-step fix with tested commands, error codes, and verified solutions for developers."

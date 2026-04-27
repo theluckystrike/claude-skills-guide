@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Environment Variables for Claude Code (2026)"
 description: "Control Claude Code costs with environment variables including model selection, turn limits, and token budgets that prevent runaway spending."

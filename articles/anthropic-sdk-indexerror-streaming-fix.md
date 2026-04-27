@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Anthropic SDK IndexError When (2026)"
 description: "Claude Code troubleshooting: resolve IndexError in the Anthropic Python SDK when streaming responses with tool use, thinking, or empty content blocks...."

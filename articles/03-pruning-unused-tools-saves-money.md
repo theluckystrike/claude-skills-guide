@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Pruning Unused Claude Tools Saves Real (2026)"
 description: "Remove 5 unused tool definitions and save $125 per 10,000 Opus requests. A step-by-step guide to tool inventory auditing."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AI Spreadsheet Helper Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how AI-powered Chrome extensions transform spreadsheet workflows. Build custom solutions, integrate with Google Sheets..."

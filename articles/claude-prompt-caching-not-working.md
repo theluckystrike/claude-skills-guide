@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Prompt Caching Not Working (2026)"
 description: "Fix Claude prompt caching issues. Covers minimum token thresholds, cache invalidation, breakpoint placement, and monitoring cache hit rates."

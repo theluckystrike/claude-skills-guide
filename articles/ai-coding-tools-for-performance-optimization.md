@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AI Coding Tools For Performance (2026)"
 description: "Discover how AI coding tools can help you identify bottlenecks, optimize algorithms, and write faster code. Real examples using Claude skills and other."

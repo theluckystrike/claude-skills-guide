@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Tab Organizer Research Chrome Extension (2026)"
 description: "Claude Code extension tip: research guide for building Chrome extensions that organize browser tabs. Covers Chrome APIs, tab grouping, session..."

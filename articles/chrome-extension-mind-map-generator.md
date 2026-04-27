@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Mind Map Generator Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how chrome extension mind map generators work, their practical applications for developers, and how to build custom..."

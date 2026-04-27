@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Identify Bottlenecks with Claude Code (2026)"
 description: "Find performance bottlenecks systematically with Claude Code. Covers CPU profiling, memory analysis, I/O tracing, and database query optimization."

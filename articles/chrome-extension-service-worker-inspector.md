@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Debugging Chrome Extension Service (2026)"

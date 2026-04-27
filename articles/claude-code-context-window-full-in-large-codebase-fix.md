@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Fix Claude Code Context Window Full (2026)"

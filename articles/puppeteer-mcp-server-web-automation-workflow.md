@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Puppeteer MCP Server (2026)"
 description: "Automate browser testing and data extraction with the Puppeteer MCP server in Claude Code. Covers headless scraping, screenshots, and PDF generation."

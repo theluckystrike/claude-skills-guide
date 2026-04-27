@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Ebay Sniper Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and use an eBay sniper Chrome extension for automated bidding and price monitoring targeted at developers..."

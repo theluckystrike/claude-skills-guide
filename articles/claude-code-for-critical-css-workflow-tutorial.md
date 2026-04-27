@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Critical CSS (2026)"
 description: "Extract and inline critical CSS automatically with Claude Code. Improve Largest Contentful Paint scores by eliminating render-blocking stylesheets."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude API Rate Limit Errors (HTTP (2026)"
 description: "Resolve Claude API rate limit errors with exponential backoff, request batching, and tier upgrades. Includes Python and TypeScript examples."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "React Component Testing with Claude (2026)"
 description: "Build a complete React component testing workflow with Claude Code. Unit tests, interaction tests, accessibility checks, and snapshot testing."

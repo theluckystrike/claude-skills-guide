@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Skills for Ansible (2026)"
 description: "Learn how to create Claude Code skills that automate Ansible workflows, manage playbooks, handle inventory, and streamline infrastructure-as-code."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "CI/CD Pipeline Optimization with Claude (2026)"
 description: "Optimize CI/CD pipelines with Claude Code. Reduce build times, parallelize jobs, cache dependencies, and fix flaky tests in GitHub Actions."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Nuxt Vue Full Stack (2026)"
 description: "A practical guide to building full stack applications with Claude Code, Nuxt, and Vue. Covers project setup, component generation, testing, and."

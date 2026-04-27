@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Claude Code + Zellij: Terminal Workflow (2026)"

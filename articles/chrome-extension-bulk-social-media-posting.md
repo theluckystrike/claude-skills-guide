@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Bulk Social Media Posting Chrome (2026)"
 description: "Claude Code extension tip: learn how to build and use Chrome extensions for bulk social media posting. Technical guide for developers and power users..."

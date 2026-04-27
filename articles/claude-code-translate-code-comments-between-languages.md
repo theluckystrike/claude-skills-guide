@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Translate Code Comments (2026)"
 description: "Learn how to use Claude Code to translate code comments between programming languages. Practical examples, workflow patterns, and skill recommendations."

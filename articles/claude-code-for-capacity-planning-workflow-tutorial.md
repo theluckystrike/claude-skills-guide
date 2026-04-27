@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Capacity Planning (2026)"
 description: "Build capacity planning workflows with Claude Code for resource forecasting, load testing analysis, and infrastructure scaling decisions. Data-driven."

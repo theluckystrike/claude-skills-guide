@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Huh Forms (2026)"
 description: "Learn how to integrate Claude Code with huh forms for building powerful interactive CLI workflows. This guide covers terminal form handling, workflow."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Devtools Console Commands (2026)"
 description: "Claude Code extension tip: master Chrome DevTools console commands for efficient debugging. Learn essential console methods, shortcuts, and practical..."

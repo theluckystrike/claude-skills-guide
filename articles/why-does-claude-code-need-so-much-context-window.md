@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Why Does Claude Keep Timing Out? (2026)"

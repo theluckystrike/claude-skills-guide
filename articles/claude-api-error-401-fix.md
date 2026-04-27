@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude API Error 401 (2026)"
 description: "Resolve Claude API 401 unauthorized errors. Covers API key validation, environment variable setup, and common authentication mistakes."

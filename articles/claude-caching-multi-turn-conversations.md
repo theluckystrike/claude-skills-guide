@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Caching for Multi-Turn (2026)"
 description: "Save 76% on multi-turn Claude conversations by caching growing context. 8-turn Sonnet 4.6 chat drops from $0.72 to $0.175."

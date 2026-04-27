@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Bicep Azure Iac (2026)"
 description: "A comprehensive guide to building efficient Azure Infrastructure as Code workflows using Bicep and Claude Code. Learn practical patterns for automating."

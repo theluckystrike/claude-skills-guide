@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Monorepo Workspace (2026)"
 description: "Fix Claude Code monorepo workspace resolution failure. Configure workspace protocols and package paths. Step-by-step solution."

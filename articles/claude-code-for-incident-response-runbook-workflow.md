@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Incident Response (2026)"
 description: "Automate incident response runbooks with Claude Code. Covers alert triage, escalation scripts, status page updates, and post-incident review templates."

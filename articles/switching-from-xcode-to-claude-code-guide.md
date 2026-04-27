@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Switching From Xcode To Claude (2026)"
 description: "A comprehensive guide for developers moving from Xcode to Claude Code. Learn workflows, skill recommendations, and practical tips for the transition."

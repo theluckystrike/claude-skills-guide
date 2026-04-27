@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Error Logs: Where to Find and Read Them (2026)"
 description: "Find Claude Code log files on macOS, Linux, and Windows. Learn the log format, use --verbose for detailed output, and filter logs to find specific errors."

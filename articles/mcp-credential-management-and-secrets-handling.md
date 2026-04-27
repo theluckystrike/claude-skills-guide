@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "MCP Credential Management and Secrets (2026)"
 description: "Claude Code resource: a practical guide to managing credentials and secrets when building MCP servers, covering environment variables, OAuth flows,..."

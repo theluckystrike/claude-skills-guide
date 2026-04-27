@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Stop Claude Code Modifying Unrelated (2026)"

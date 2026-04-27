@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How to Choose the Right MCP Server (2026)"

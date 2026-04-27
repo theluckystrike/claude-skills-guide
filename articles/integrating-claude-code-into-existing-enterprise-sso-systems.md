@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Set Up Claude SSO with Okta & Azure AD (2026)"

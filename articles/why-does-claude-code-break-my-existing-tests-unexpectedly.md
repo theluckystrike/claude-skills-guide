@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Why Does Claude Code Break My Existing (2026)"
 description: "Discover why Claude Code sometimes breaks your existing tests and learn practical strategies to prevent and resolve these conflicts."

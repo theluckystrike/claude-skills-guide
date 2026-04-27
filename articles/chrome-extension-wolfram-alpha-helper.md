@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Wolfram Alpha Chrome Extension Guide (2026)"

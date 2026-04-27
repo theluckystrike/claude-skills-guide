@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Md Secrets And Sensitive Info (2026)"
 description: "Learn how to securely handle API keys, credentials, and sensitive data when creating and using Claude Code skills. Practical patterns for developers."

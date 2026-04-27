@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Database Orm (2026)"
 description: "Learn how to use Claude Code skills to automate database ORM code generation. A practical workflow for generating type-safe models, repositories, and."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Docusaurus Documentation (2026)"
 description: "Learn how to use Claude Code to build, customize, and maintain Docusaurus documentation sites. Practical workflows for content creation, theme."

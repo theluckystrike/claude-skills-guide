@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Chrome Extension Linear Issue (2026)"
 description: "Claude Code troubleshooting: learn how to build and use Chrome extensions for Linear issue tracking. Practical code examples, API integration patterns,..."

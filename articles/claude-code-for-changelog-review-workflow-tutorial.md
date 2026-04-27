@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Changelog Review (2026)"
 description: "Learn how to build a Claude Code skill for automating changelog review workflows. This tutorial covers creating a skill that parses, validates, and."

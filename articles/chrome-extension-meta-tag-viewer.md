@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Meta Tag Viewer Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how to build and use a Chrome extension for viewing meta tags. Complete guide for developers to inspect OG tags, Twitter..."

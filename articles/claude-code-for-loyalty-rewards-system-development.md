@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Build a Loyalty Rewards System (2026)"

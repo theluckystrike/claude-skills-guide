@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How to Use Claude AI Streaming Response (2026)"

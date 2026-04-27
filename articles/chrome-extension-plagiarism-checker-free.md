@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Plagiarism Checker Free Chrome (2026)"
 description: "Claude Code extension tip: discover free Chrome extensions for plagiarism checking tailored for developers and power users. Compare features,..."

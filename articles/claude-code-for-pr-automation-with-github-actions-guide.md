@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Pr Automation (2026)"
 description: "Learn how to use Claude Code with GitHub Actions to automate pull request workflows, including automated reviews, testing, and code quality checks."

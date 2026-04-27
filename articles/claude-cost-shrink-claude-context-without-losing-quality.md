@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Shrink Claude Context Without Losing (2026)"
 description: "Reduce Claude conversation context from 180K to 60K tokens using smart pruning — save $0.60 per compaction, $1,800/month at scale."

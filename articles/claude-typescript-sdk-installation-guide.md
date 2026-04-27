@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude TypeScript SDK Installation (2026)"
 description: "Install and configure the Anthropic TypeScript SDK. Covers npm install, runtime support for Node.js, Deno, Bun, and Cloudflare Workers."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Add MongoDB MCP to Claude Code (2026)"
 description: "Connect Claude Code to MongoDB via MCP for direct collection queries, schema inspection, and aggregation pipeline building."

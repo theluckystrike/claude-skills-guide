@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AI LinkedIn Post Writer Chrome (2026)"
 description: "Claude Code extension tip: explore approaches to building and using AI-powered tools for writing LinkedIn posts directly in Chrome. Practical..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Password Sharing Team Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to implement secure password sharing within teams using Chrome extensions. Practical code examples and..."

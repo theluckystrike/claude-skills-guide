@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Nx Generators (2026)"
 description: "A comprehensive guide to building custom workflows with Nx generators and executors using Claude Code. Learn how to automate your development workflow."

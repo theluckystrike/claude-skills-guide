@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Tailwind CSS Devtools Chrome Extension (2026)"
 description: "Claude Code extension tip: a practical guide to debugging Chrome extensions that use Tailwind CSS. Learn how to inspect components, troubleshoot..."

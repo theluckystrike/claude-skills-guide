@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Lsp Server (2026)"
 description: "Learn how to use Claude Code to streamline the implementation of Language Server Protocol (LSP) servers. A practical workflow guide with code."

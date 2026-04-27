@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Pytest Parametrize Advanced (2026)"
 description: "Explore advanced pytest parametrize patterns for efficient test automation. Learn indirect parametrization, fixture-based generation, hooks."

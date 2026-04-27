@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code GitHub Actions Integration (2026)"
 description: "Automate code reviews, testing, and documentation with Claude Code in GitHub Actions workflows for faster, AI-powered CI/CD pipelines."

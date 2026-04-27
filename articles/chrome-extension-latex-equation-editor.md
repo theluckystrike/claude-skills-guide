@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Latex Equation Editor Chrome Extension (2026)"
 description: "Claude Code extension tip: discover the best Chrome extensions for writing LaTeX equations. Compare features, learn integration methods, and find the..."

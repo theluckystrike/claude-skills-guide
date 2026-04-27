@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude API Error 500 Apierror (2026)"
 description: "Fix Claude API 500 api_error with retry strategies, error handling in Python and TypeScript SDKs, and when to contact Anthropic support."

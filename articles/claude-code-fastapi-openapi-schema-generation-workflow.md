@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Claude Code FastAPI OpenAPI Schema (2026)"

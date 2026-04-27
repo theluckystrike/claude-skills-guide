@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Claude Code PyTorch LoRA Fine-Tuning (2026)"

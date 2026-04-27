@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "ASP.NET WebForms to Blazor Migration (2026)"
 description: "Migrate legacy ASP.NET WebForms applications to modern Blazor using Claude Code. Practical guide covering component conversion, state management, and."

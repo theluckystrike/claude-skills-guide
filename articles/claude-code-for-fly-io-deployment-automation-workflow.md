@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Fly.io Deployment (2026)"
 description: "Learn how to automate Fly.io deployments using Claude Code. Streamline your container workflow, manage multi-region deployments, and automate health."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Combine Multiple Claude Skills (2026)"
 description: "Chain Claude Code skills in sequence, layer reference skills with task skills, and build multi-step workflows using skill composition patterns."

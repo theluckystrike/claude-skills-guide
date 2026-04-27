@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code GitHub Actions Secrets (2026)"
 description: "Learn how to securely manage secrets, API keys, and credentials in GitHub Actions workflows with Claude Code. Practical patterns for environment."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Login (2026)"
 description: "Resolve the Claude Code CLI login issue where pasting the auth code from the browser fails. Linux, WSL, and paste bracketing fixes."

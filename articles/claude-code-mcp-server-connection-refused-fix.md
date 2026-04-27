@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code MCP Server Connection (2026)"
 description: "Fix Claude Code MCP server connection refused error. Verify server process is running and port config matches. Step-by-step solution."

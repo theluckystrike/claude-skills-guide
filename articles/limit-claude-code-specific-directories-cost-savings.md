@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to limit Claude Code to specific (2026)"
 description: "Limit Claude Code to specific directories for 40-70% token savings using .claudeignore, CLAUDE.md boundaries, and settings.json path restrictions."

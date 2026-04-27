@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension Core Web Vitals (2026)"
 description: "Claude Code extension tip: build a Chrome extension to measure Core Web Vitals directly in your browser. Practical code examples, APIs, and..."

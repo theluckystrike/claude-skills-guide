@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Md For Backend Projects Best (2026)"
 description: "Master Claude.md for backend development. Practical patterns for API design, database migrations, and server-side workflows using Claude Code skills."

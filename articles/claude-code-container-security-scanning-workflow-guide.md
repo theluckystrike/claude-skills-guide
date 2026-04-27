@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Container Security Scanning (2026)"
 description: "Master container security scanning workflows with Claude Code skills. Learn to integrate security tools, automate vulnerability detection, and build."

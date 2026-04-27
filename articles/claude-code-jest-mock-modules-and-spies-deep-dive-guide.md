@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Jest Mock Modules and Spies (2026)"
 description: "Master Jest mocking techniques with Claude Code. Learn mock modules, spies, and advanced testing patterns for solid JavaScript/TypeScript applications."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Permission Rules (2026)"
 description: "Configure allow, deny, and ask permission rules in Claude Code settings.json with wildcards for Bash, Read, Edit, and MCP tools."

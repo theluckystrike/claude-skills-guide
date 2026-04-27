@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Spring Boot Java (2026)"
 description: "How to use Claude Code to accelerate Spring Boot microservices development. Covers project scaffolding, REST APIs, service communication, and testing."

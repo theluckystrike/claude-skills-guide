@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Use Power BI DAX Optimization (2026)"
 description: "Optimize Power BI DAX formulas with Claude Code. Practical examples and code snippets for faster report performance and cleaner measures. Updated for 2026."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Meeting Transcription Live Chrome (2026)"
 description: "Claude Code extension tip: learn how to build Chrome extensions for real-time meeting transcription. Technical implementation, APIs, and best practices..."

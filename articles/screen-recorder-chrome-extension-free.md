@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Free Screen Recorder Chrome Extension (2026)"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code API Error 400 Bad (2026)"
 description: "Diagnose and fix Claude Code API error 400 caused by malformed requests, context overflow, or invalid parameters with concrete solutions."

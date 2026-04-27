@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Tree of Thought (2026)"
 description: "Learn how to implement Tree of Thought reasoning with Claude Code to solve complex problems through systematic exploration of multiple solution paths."

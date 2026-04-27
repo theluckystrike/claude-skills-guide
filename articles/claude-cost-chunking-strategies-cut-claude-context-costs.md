@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chunking Strategies to Cut Claude (2026)"
 description: "Split documents into chunks and send only relevant pieces to Claude — reduce 500K context to 30K and save $70.50 per 50 Opus requests."

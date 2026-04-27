@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Skills SendGrid Email (2026)"
 description: "Set up SendGrid email automation using Claude Code skills. Build skills that connect to SendGrid API, send transactional emails, and manage email."

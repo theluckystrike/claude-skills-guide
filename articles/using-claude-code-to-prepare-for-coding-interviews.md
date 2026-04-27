@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Using Claude Code to Prepare for Coding (2026)"

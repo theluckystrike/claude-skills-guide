@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Workspace Switcher Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and use a Chrome extension workspace switcher for developers managing multiple projects across browser..."

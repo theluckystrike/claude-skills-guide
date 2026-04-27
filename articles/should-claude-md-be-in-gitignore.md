@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Should CLAUDE.md Be in .gitignore? When (2026)"
 description: "The definitive answer on whether CLAUDE.md belongs in version control, .gitignore, or both. Covers CLAUDE.local.md, team standards, and personal preferences."

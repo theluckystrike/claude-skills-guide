@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Database Seeding Automation (2026)"
 description: "Learn how to automate database seeding workflows using Claude Code skills. Practical examples, seed file generation, and integration patterns for."

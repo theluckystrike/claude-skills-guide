@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension Manifest V3 (2026)"
 description: "Claude Code extension tip: a comprehensive migration guide for developers transitioning Chrome extensions from Manifest V2 to V3. Covers service..."

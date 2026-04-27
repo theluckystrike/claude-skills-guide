@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Session Storage Editor Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to edit sessionStorage directly in Chrome. Tools, techniques, and code examples for debugging and managing session..."

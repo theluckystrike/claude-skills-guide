@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Cypress Testing Workflow (2026)"
 description: "Use Claude Code for Cypress component testing. Build reliable tests with AI assistance, custom commands, and test-driven development workflows."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Keyboard Shortcuts: Complete Cheat Sheet (2026)"
 description: "Every Claude Code keyboard shortcut organized by workflow — navigation, editing, session management, and output control. Printable table format included."

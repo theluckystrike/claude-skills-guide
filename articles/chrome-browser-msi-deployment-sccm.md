@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Browser Msi Deployment Sccm (2026)"
 description: "Claude Code extension tip: learn how to deploy Google Chrome via MSI installer using Microsoft SCCM. Practical examples, command-line parameters, and..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Playwright E2E (2026)"
 description: "A practical guide to using Claude Code with Playwright for end-to-end testing. Learn how to set up, write, and maintain E2E tests with AI assistance."

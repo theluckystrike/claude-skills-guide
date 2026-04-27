@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Use Lm Studio Local (2026)"
 description: "Learn how to integrate Claude Code with LM Studio for local model skill integration. Practical examples and code snippets for developers."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Django Orm (2026)"
 description: "Master Django ORM optimization with Claude Code. Learn practical techniques for querysets, select_related, prefetch_related, and database performance."

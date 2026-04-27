@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Cloudflare R2 Storage (2026)"
 description: "Manage Cloudflare R2 object storage with Claude Code for bucket operations, presigned URLs, and migration from S3. Working integration examples."

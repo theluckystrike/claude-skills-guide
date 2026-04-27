@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Concept Map Builder Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension for creating concept maps. Practical examples, code snippets, and architecture..."

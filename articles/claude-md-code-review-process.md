@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "CLAUDE.md Code Review Process (2026)"
 description: "How to use CLAUDE.md as a code review checklist, automate rule verification, and build a review workflow for Claude Code output."

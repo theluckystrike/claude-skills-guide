@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Mockup Screenshot Tool Extension Guide (2026)"
 description: "Claude Code guide: create professional UI mockups with a Chrome extension screenshot tool. Frame captures in device bezels, add annotations, and export..."

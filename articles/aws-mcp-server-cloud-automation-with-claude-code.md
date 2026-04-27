@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AWS MCP Server Cloud Automation (2026)"
 description: "Learn how to automate AWS infrastructure using the Model Context Protocol server and Claude Code. Practical examples, configuration patterns, and workflow."

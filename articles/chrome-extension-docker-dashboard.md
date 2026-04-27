@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Docker Dashboard Chrome Extension Guide (2026)"
 description: "Claude Code guide: discover Chrome extensions that bring Docker management directly into your browser. Compare top solutions, explore key features, and..."

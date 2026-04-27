@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "CLAUDE.md File Explained: What It Is and Why You Need One (2026)"
 description: "CLAUDE.md gives Claude Code persistent project context that reduces token waste by 30-40%. Learn what goes in it and how it changes Claude's behavior."

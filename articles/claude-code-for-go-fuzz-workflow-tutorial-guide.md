@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Go Fuzz Testing (2026)"
 description: "Learn how to integrate Claude Code into your Go fuzz testing workflow. This guide covers setting up fuzz tests, writing effective fuzz targets, and."

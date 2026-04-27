@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Lighthouse Audit Runner Chrome (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension that runs Lighthouse audits programmatically. Practical code examples, automation..."

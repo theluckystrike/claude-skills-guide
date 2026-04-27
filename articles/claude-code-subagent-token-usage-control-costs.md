@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Subagent Token Usage (2026)"
 description: "Control Claude Code subagent token costs with spawn limits, scoped context, and task routing that prevent the 5,000-token base overhead from compounding."

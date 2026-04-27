@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AI Grammar Checker Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how AI grammar checker Chrome extensions work under the hood, how to build one, and which APIs power real-time writing..."

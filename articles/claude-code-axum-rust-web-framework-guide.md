@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Axum Rust Web Framework (2026)"
 description: "Build modern web APIs with Axum and Rust using Claude Code. Practical examples, skill integration, and workflow tips for developers building."

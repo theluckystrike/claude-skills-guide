@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "CLAUDE.md for Architecture Decisions (2026)"
 description: "How to encode architectural decisions in CLAUDE.md so Claude Code enforces layer boundaries, dependency rules, and design patterns automatically."

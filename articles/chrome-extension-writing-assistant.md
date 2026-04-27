@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Writing Assistant Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how Chrome extension writing assistants enhance productivity for developers and content creators. Explore..."

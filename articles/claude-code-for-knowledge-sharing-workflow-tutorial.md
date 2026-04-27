@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Knowledge Sharing (2026)"
 description: "Learn how to build efficient knowledge sharing workflows with Claude Code. This tutorial covers skill-based knowledge capture, automated documentation."

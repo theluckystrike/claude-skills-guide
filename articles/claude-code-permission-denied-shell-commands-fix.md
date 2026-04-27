@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Permission Denied Shell (2026)"
 description: "Fix Claude Code permission denied running shell commands. Update permissions allow-list in settings.json. Step-by-step solution."

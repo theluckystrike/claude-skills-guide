@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Fiber Go Web (2026)"
 description: "Learn how to integrate Claude Code into your Fiber Go web framework development workflow for enhanced productivity and efficient coding."

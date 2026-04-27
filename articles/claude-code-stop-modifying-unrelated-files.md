@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Stop Claude Code from Modifying (2026)"
 description: "Why Claude Code edits files you did not ask about and how to prevent it with CLAUDE.md rules, permissions, and scope constraints."

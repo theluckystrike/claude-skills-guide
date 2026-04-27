@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Cdktf Terraform (2026)"
 description: "Learn how to use Claude Code to streamline your CDKTF (Terraform Cloud Development Kit) workflow. This guide covers infrastructure-as-code best practices."

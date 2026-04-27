@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skill Inheritance and Composition Guide (2026)"
 description: "Extend team-shared base skills with project-specific overrides using scope precedence, layered invocation, and the wrapper skill pattern."

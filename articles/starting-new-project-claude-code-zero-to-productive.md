@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Starting a New Project with Claude Code: Zero to Productive (2026)"
 description: "Go from zero to productive with Claude Code in 15 minutes: install, run /init, create CLAUDE.md, configure permissions, add MCP servers, write your first feature."

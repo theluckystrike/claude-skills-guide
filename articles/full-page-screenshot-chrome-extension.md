@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Full Page Screenshot Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to capture entire webpages as images using Chrome extensions, developer tools, and programmatic approaches...."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Senior Engineer CLAUDE.md Template (2026)"
 description: "A battle-tested CLAUDE.md template used by senior engineers to enforce code quality, architecture patterns, and review standards in Claude Code."

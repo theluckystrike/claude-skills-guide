@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix How To Fix Claude Code Ignoring My (2026)"
 description: "Is Claude Code ignoring your custom claude.md skill file? Learn the common reasons why skills aren't loading and how to fix them with practical solutions."

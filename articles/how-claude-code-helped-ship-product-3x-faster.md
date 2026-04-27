@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How Claude Code Helped Ship Product 3x (2026)"
 description: "A practical look at how Claude Code and its skill system accelerate product development workflows. Real examples from frontend, documentation, and."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Conflicting CLAUDE.md Instructions (2026)"
 description: "When CLAUDE.md files contradict each other, Claude picks arbitrarily. This guide shows how to find conflicts, understand loading order, and resolve them."

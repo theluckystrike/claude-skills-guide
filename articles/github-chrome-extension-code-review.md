@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "GitHub Chrome Extension Code Review (2026)"

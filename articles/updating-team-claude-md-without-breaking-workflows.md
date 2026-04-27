@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Update Team CLAUDE.md Without Breaking (2026)"
 description: "Safe strategies for rolling out CLAUDE.md changes across a team: phased rollouts, testing before merge, and backward-compatible rule additions."

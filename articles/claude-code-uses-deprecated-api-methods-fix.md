@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fixing Claude Code Deprecated API (2026)"
 description: "Resolve deprecated API method warnings and errors in Claude Code. Practical solutions for developers and power users working with the Anthropic API."

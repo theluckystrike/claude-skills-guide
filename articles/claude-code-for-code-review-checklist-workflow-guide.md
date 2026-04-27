@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Code Review Checklist (2026)"
 description: "Learn how to create an efficient code review checklist workflow using Claude Code. Automate your review process with practical examples and actionable."

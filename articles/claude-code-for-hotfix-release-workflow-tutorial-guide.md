@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Hotfix Release Workflow (2026)"
 description: "Learn how to use Claude Code to streamline hotfix release workflows. This guide covers creating skills, automating bug fixes, and deploying rapid updates."

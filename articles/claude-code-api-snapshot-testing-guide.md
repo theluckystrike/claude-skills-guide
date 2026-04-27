@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code API Snapshot Testing Guide (2026)"
 description: "Learn how to implement API snapshot testing with Claude Code. Practical examples for automating regression detection in your API workflows."

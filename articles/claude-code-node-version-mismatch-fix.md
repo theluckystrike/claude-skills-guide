@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Node Version Mismatch — Fix (2026)"
 description: "Fix Claude Code node version mismatch error requiring Node 18+. Upgrade Node.js with nvm or volta. Step-by-step solution."

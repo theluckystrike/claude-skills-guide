@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code with AWS Bedrock Guide (2026)"
 description: "Run Claude Code through AWS Bedrock for enterprise deployment with VPC isolation, IAM access control, and no direct API keys."

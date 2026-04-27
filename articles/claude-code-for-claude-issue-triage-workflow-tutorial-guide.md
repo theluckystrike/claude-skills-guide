@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Claude Issue Triage (2026)"
 description: "Learn how to build an automated issue triage workflow using Claude Code. This guide covers skill creation, automation patterns, and practical examples for."

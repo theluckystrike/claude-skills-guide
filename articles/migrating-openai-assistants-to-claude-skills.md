@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Migrating OpenAI Assistants to Claude (2026)"
 description: "Convert OpenAI Assistants (instructions, tools, file search) to Claude Code SKILL.md files. Covers instruction mapping, tool equivalents, and feature gaps."

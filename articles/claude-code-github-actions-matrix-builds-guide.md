@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code GitHub Actions Matrix (2026)"
 description: "How to use Claude Code to configure GitHub Actions matrix builds for testing across multiple environments, Node versions, and OS platforms."

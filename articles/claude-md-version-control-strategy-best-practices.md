@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "CLAUDE.md Version Control Strategy (2026)"
 description: "Version control your CLAUDE.md files with branching strategies, commit conventions, and merge workflows. Keep skill configs consistent across teams."

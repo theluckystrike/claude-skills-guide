@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Cookie Editor Developer Chrome (2026)"
 description: "Claude Code extension tip: master cookie manipulation in Chrome extensions. Practical code examples, API usage patterns, and security best practices..."

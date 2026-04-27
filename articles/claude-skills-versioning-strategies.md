@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills Versioning (2026)"
 description: "Version control strategies for SKILL.md files using git, semantic versioning in frontmatter, and safe rollback patterns for team skills."

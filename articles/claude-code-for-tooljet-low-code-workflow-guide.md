@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Tooljet Low Code (2026)"
 description: "Learn how to integrate Claude Code with Tooljet to build powerful low-code workflows faster. Practical examples, code snippets, and actionable advice."

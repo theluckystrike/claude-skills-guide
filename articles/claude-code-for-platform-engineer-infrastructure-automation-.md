@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Platform Engineers (2026)"
 description: "Automate infrastructure tasks with Claude Code. Kubernetes management, Terraform generation, and DevOps workflow automation for platform engineers."

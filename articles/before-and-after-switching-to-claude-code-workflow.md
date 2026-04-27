@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Before and After (2026)"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code subagent spawning too many (2026)"
 description: "Control Claude Code subagent spawning that wastes 50K-200K tokens per incident with CLAUDE.md caps, delegation rules, and single-agent alternatives."

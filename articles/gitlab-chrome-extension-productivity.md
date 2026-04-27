@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "GitLab Productivity Chrome Extension (2026)"
 description: "Claude Code extension tip: discover how GitLab Chrome extensions can transform your development workflow with merge request reviews, pipeline..."

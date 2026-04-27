@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Best Way To Integrate Claude (2026)"
 description: "A practical guide for developers and power users looking to integrate Claude Code into their team workflow, with real-world examples and implementation."

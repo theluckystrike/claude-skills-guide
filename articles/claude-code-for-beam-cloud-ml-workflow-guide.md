@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Beam Cloud Ml (2026)"
 description: "Master Beam Cloud ML pipeline development with Claude Code. Learn efficient workflows for distributed training, model deployment, and scalable machine."

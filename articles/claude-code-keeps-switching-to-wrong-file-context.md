@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Fix Claude Code Wrong File Context (2026)"

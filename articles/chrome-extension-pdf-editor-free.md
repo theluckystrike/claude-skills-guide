@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "PDF Editor Free Chrome Extension Guide (2026)"
 description: "Claude Code guide: discover free Chrome extension PDF editors for developers and power users. Learn about key features, practical workflows, and how to..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Headline Analyzer Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and use a chrome extension headline analyzer to optimize your headlines for better click-through rates..."

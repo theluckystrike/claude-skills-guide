@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Output Quality (2026)"
 description: "Practical techniques for developers and power users to get better results from Claude Code through prompt engineering, context management, and workflow."

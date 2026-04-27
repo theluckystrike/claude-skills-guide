@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Switching From Copilot To Claude Code (2026)"
 description: "A practical and honest review of switching from GitHub Copilot to Claude Code, covering the real differences, learning curve, and what to expect."

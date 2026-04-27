@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix: Claude API Error 429 Rate Limit (2026)"
 description: "Fix Anthropic API error 429 rate limit reached with proper backoff, SDK retries, and usage optimization strategies. Tested and working in 2026."

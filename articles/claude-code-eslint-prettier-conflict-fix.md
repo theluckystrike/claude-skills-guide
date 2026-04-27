@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix ESLint and Prettier Conflicts (2026)"
 description: "Resolve ESLint and Prettier Conflicts in Claude Code issues with tested solutions, step-by-step debugging, and production-ready code examples verified..."

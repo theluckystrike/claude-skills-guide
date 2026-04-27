@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Spending Tracker Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how to build a spending tracker Chrome extension from scratch. Practical code examples and architecture for developers and..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Signage Kiosk Digital Display (2026)"
 description: "Claude Code extension tip: learn how to build and deploy Chrome-based digital signage solutions for kiosks. Practical code examples, configuration..."

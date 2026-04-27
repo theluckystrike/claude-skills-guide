@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Schedule Tweets Chrome Extension Guide (2026)"
 description: "Claude Code guide: build a Chrome extension to schedule tweets and threads with X API integration, queue management, and draft storage. Complete..."

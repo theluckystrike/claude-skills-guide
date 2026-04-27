@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Study Schedule Planner Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to create a chrome extension study schedule planner for managing study sessions, tracking progress, and automating..."

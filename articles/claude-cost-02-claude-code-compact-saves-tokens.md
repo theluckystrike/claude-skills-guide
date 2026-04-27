@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code /compact Saves Thousands (2026)"
 description: "The /compact command reduces Claude Code context by 50-70%. At 180K tokens, that saves $1.80 per session on API equivalent costs."

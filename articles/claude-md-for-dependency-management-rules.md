@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Md For Dependency Management (2026)"
 description: "Learn how to use Markdown files to define and enforce dependency management rules when working with Claude Code. Practical patterns for developers and."

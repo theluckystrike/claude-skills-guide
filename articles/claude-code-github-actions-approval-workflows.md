@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code GitHub Actions Approval (2026)"
 description: "Learn how to implement manual approval gates in GitHub Actions workflows with Claude Code. Practical examples for production deployments, environment."

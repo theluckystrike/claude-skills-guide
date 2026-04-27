@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Permissions Explained Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how Chrome extension permissions work, what each permission means, and how to manage them safely. Essential guide for..."

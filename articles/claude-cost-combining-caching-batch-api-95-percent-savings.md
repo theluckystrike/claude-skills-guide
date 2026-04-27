@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Combining Caching with Batch API (2026)"
 description: "Claude Code resource: combining Caching with Batch API — practical guide with working examples, tested configurations, and tips for developer workflows."

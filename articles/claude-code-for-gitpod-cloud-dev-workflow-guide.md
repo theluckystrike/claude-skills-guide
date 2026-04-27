@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Gitpod Cloud Dev (2026)"
 description: "Claude Code for Gitpod Cloud Dev — practical guide with working examples, tested configurations, and tips for developer workflows."

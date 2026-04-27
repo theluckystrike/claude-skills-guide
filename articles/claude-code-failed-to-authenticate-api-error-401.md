@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code API Error 401 (2026)"
 description: "Resolve Claude Code 'failed to authenticate api error 401' with step-by-step API key validation, environment config, and troubleshooting. Updated for 2026."

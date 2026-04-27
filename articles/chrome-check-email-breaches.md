@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Check Email Breaches (2026)"
 description: "Claude Code extension tip: learn how to use Chrome and developer tools to check if your email address has appeared in known data breaches. Practical..."

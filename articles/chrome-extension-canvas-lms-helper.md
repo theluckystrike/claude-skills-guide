@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Canvas Lms Helper Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and customize Chrome extensions for Canvas LMS to automate workflows, enhance course navigation, and..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Code Beautifier Chrome Extension Guide (2026)"
 description: "Discover the best Chrome extensions for beautifying and formatting code directly in your browser. Practical examples and tips for developers."

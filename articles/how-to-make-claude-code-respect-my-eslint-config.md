@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Make Claude Code Respect Your (2026)"
 description: "A practical guide to ensuring Claude Code follows your ESLint configuration when writing and editing code. Learn the key techniques and configurations."

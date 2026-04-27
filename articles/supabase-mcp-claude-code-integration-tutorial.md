@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Supabase MCP for Claude Code: Full Integration (2026)"
 description: "Complete tutorial for connecting Supabase to Claude Code via MCP. Configure auth, run queries, inspect schemas, and build features with real terminal examples."

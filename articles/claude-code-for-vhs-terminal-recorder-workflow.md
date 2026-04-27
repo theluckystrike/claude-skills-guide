@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Vhs Terminal (2026)"
 description: "Learn how to integrate Claude Code with VHS for creating professional terminal recordings, GIFs, and demos for your projects."

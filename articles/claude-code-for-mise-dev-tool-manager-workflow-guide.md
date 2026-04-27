@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Mise — Workflow Guide (2026)"
 description: "Claude Code for Mise — Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified for 2026."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Setup Podman Containers with Claude (2026)"

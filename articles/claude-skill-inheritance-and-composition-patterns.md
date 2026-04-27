@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skill Inheritance and (2026)"
 description: "Build modular Claude skills with inheritance and composition patterns. Combine multiple capabilities into reusable, maintainable skill architectures."

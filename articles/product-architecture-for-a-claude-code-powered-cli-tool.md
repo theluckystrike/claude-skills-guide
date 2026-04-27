@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Product Architecture for a Claude Code (2026)"

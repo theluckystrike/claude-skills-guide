@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How To Use Claude Code (2026)"
 description: "A practical guide for developers to rapidly comprehend new codebases using Claude Code. Learn effective prompts, workflows, and skill-based strategies."

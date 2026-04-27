@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Docs as Code Workflow (2026)"
 description: "Learn how to build a docs-as-code workflow using Claude Code. Automate documentation generation, validation, and deployment with practical examples and."

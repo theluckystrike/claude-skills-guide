@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Will Claude Skills Replace Traditional (2026)"
 description: "An analysis of whether Claude Code skills can replace traditional IDE plugins. Practical examples comparing skills like pdf, tdd, xlsx, and frontend-design"

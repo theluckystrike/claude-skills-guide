@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills With Local LLM (2026)"
 description: "A practical guide to running Claude skills with a local Ollama LLM. Step-by-step setup for self-hosted AI development without cloud dependencies."

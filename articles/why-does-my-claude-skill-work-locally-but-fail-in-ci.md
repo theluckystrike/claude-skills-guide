@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Why Does My Claude Skill Work Locally (2026)"
 description: "Debug Claude skills that run perfectly on your machine but break in CI pipelines. Common environment differences, dependency issues, and configuration prob"

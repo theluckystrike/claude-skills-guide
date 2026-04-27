@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code $200 Max Plan (2026)"
 description: "Max 20x at $200/month provides 20x Pro throughput. For developers billing $100+/hr, the ROI is 10x from eliminated wait time alone."

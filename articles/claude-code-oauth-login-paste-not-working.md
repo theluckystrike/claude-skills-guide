@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code OAuth Login Paste Not (2026)"
 description: "Fix the Claude Code OAuth login paste bug where pasting the auth code into the terminal prompt silently fails. Workaround and root cause explained."

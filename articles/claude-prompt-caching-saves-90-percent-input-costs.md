@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Prompt Caching Saves 90% (2026)"
 description: "Cut Claude API input token costs from $5.00 to $0.50 per million tokens with prompt caching. Real break-even math included."

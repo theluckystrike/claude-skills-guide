@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Homebrew Formula (2026)"
 description: "Learn how to use Claude Code to streamline Homebrew formula creation, testing, and submission workflows. A practical guide for developers distributing."

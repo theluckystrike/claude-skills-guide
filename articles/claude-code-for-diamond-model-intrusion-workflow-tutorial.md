@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Diamond Model Intrusion (2026)"
 description: "Learn how to build Claude Code skills for Diamond Model intrusion analysis workflows. Create reusable skills to document and analyze cybersecurity."

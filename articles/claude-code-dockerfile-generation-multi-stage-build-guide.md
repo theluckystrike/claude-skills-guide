@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Generate Multi-Stage Dockerfiles (2026)"
 description: "Generate optimized multi-stage Dockerfiles with Claude Code for build caching, layer minimization, and production-ready container images under 100MB."

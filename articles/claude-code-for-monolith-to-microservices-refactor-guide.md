@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Refactor Monolith to Microservices (2026)"
 description: "Break monoliths into microservices with Claude Code for service boundary identification, API extraction, and data migration. Step-by-step refactoring."

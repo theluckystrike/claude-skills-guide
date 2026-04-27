@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Pr Bot (2026)"
 description: "Learn how to integrate Claude Code into your PR bot workflows for automated code review, summarization, and quality checks."

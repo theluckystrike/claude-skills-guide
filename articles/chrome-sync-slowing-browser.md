@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Sync Slowing Browser (2026)"
 description: "Claude Code extension tip: is Chrome Sync slowing your browser? Learn how to diagnose sync-related performance issues, identify problematic data types,..."

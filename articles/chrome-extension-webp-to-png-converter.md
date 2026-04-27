@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Webp To Png Converter Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build or use a Chrome extension to convert WebP images to PNG format. Perfect for developers and power users..."

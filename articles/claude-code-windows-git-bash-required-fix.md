@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Windows Requires Git (2026)"
 description: "Resolve the 'Claude Code on Windows requires git-bash' error by installing Git for Windows or setting the Git Bash path in settings. Updated for 2026."

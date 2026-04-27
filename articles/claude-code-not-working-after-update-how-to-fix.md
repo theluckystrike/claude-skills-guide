@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Not Working After (2026)"
 description: "Fix Claude Code Not Working After — step-by-step fix with tested commands, error codes, and verified solutions for developers."

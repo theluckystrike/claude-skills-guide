@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Traefik Ingress (2026)"
 description: "Master the workflow of managing Traefik Ingress in Kubernetes using Claude Code. Learn to automate deployments, configure routes, and manage certificates."

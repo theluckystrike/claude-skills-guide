@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Add Angular MCP to Claude Code (2026)"
 description: "Set up Angular Language Service MCP in Claude Code for intelligent component generation, template validation, and NgModule awareness."

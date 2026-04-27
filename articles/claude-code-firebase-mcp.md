@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Firebase MCP Integration (2026)"
 description: "Connect Claude Code to Firebase through MCP for direct Firestore queries, auth management, and Cloud Functions debugging from your terminal."

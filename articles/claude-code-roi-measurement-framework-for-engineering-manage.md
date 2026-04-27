@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Roi Measurement Framework (2026)"
 description: "A practical framework for engineering managers to measure and track the return on investment of Claude Code in their teams. Includes metrics, formulas."

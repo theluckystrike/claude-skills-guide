@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Skill Conflicts with MCP Servers (2026)"
 description: "Resolve conflicts when SKILL.md instructions and MCP server tools overlap, producing duplicate actions, inconsistent behavior, or tool confusion."

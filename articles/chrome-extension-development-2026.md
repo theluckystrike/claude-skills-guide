@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Development Chrome Extension Guide (2026)"
 description: "Claude Code guide: build Chrome extensions in 2026 with Manifest V3, service workers, content scripts, and popup UI. Includes a minimal working example..."

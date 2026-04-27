@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Write Database Queries with Claude Code (2026)"
 description: "Generate SQL and NoSQL queries from scratch using Claude Code. Covers SELECT, JOIN, subqueries, and ORM patterns with tested working examples."

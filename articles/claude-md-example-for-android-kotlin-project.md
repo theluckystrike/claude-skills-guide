@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Md Example For Android Kotlin (2026)"
 description: "Practical guide to creating Claude skill files for Android Kotlin projects. Includes real examples, patterns, and integration tips for mobile development."

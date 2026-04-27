@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Node.js Worker (2026)"
 description: "Learn how to integrate Claude Code with Node.js worker threads for efficient parallel processing. Practical examples and patterns for building."

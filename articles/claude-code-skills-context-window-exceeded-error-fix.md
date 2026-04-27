@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Skills Context Window Exceeded (2026)"
 description: "Fix context window exceeded errors in Claude Code skills. Token budgeting, session management, and strategies for tdd, pdf, and frontend-design."

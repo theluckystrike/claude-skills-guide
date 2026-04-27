@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Reducing Review Friction (2026)"
 description: "Learn how to create standardized Claude skill prompts that reduce code review friction, improve consistency, and streamline your team's review process."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for Salesforce Apex (2026)"
 description: "Claude Skills for Salesforce Apex — practical guide with working examples, tested configurations, and tips for developer workflows."

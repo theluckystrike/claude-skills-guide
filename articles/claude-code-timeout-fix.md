@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Timeout: 3 Proven Methods (2026)"
 description: "Fix Claude timeout with 3 commands: set timeout to 600000ms, use run_in_background, or add timeout parameter to bash calls. Tested April 2026."

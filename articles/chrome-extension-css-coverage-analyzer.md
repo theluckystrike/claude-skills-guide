@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "CSS Coverage Analyzer Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to use CSS coverage analyzer tools in Chrome extensions to detect and remove unused CSS rules, optimize..."

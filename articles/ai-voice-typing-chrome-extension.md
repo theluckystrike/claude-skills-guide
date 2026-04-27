@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AI Voice Typing Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how AI voice typing Chrome extensions work, their implementation details, and how to build one. Covers Web Speech API,..."

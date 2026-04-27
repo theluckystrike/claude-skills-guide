@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build a Text-to-Speech Chrome Extension (2026)"
 description: "Claude Code extension tip: build a Chrome extension with text-to-speech using Web Speech API. Covers voice selection, rate control, SSML support, and..."

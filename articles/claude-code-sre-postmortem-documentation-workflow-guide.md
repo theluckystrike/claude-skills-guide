@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for SRE Postmortem Docs (2026)"
 description: "Automate SRE postmortem documentation with Claude Code for incident analysis, root cause identification, and action item tracking. Template included."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Using Claude Code to Learn Algorithms (2026)"

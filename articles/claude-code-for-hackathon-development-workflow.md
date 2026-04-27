@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Win Hackathons with Claude Code: Guide (2026)"

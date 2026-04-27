@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "What Is The Best Free Claude Code (2026)"
 description: "Discover the top free Claude Code skills on GitHub that can speed up your development workflow. Expert recommendations for developers and power users."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Using Claude Code with Bun Runtime (2026)"
 description: "A practical guide to integrating Claude Code with Bun runtime for faster JavaScript development. Learn setup, configuration, and real-world workflows."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Chrome Extension Color Palette (2026)"

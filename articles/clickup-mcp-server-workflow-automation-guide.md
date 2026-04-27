@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "ClickUp MCP Server (2026)"
 description: "Connect Claude to ClickUp using the Model Context Protocol. Automate task creation, status updates, and project workflows with MCP servers."

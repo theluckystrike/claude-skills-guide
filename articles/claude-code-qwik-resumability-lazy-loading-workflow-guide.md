@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Qwik Resumability Lazy (2026)"
 description: "Master Qwik's resumability and lazy loading with Claude Code. This workflow guide covers component architecture, state management, and performance optimiza"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Pr Status Check (2026)"
 description: "Learn how to build automated PR status check workflows using Claude Code. This tutorial covers GitHub integration, status monitoring, and creating custom."

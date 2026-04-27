@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for Accessibility Testing (2026)"
 description: "Discover how Claude skills can automate accessibility testing and help you build WCAG-compliant applications. Practical examples for developers."

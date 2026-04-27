@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "LLM Migration Cost Analysis (2026)"
 description: "Claude Code cost insight: lLM Migration Cost Analysis — practical guide with working examples, tested configurations, and tips for developer workflows."

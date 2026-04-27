@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Oss Deprecation (2026)"
 description: "Learn how to use Claude Code to streamline open source deprecation workflows, from planning deprecated features to communicating changes to users."

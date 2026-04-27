@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Game Development Workflow (2026)"
 description: "Use Claude Code for game development: Unity scripts, CI pipelines, documentation, and rapid prototyping with AI-powered skill automation. 2026."

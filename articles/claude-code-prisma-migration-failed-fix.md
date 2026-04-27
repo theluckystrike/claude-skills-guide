@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Prisma Migration Failures (2026)"
 description: "Resolve Prisma migration errors using Claude Code. Fix drift detection, failed migrations, data loss warnings, and production rollback scenarios."

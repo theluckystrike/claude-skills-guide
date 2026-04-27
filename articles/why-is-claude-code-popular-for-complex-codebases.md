@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Why Is Claude Code Popular For Complex (2026)"
 description: "Claude Code has become the go-to AI coding assistant for developers working on large, complex codebases. Learn why it excels at handling sophisticated."

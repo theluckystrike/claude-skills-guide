@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Aurora (2026)"
 description: "A practical guide to using Claude Code skills for Aurora Serverless V2 workflows. Learn how to set up, design, and manage serverless databases with AI."

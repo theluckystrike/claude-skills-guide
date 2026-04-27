@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Supabase MCP Setup Guide (2026)"
 description: "Connect Claude Code to Supabase via MCP for direct database queries, auth management, and schema operations from your editor."

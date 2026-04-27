@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Travel Deal Alert Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and integrate Chrome extensions for travel deal alerts, including practical code examples and..."

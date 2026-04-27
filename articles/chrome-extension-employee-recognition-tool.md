@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Employee Recognition Tool Chrome (2026)"
 description: "Claude Code extension tip: learn how to build a custom Chrome extension for employee recognition. Practical code examples, architecture patterns, and..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Markdown Editor Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how to create a Chrome extension that functions as a markdown editor. This guide covers architecture, implementation, and..."

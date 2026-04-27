@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code i18n Workflow for React (2026)"
 description: "A practical guide to implementing internationalization workflows in React using Claude Code, covering translation management, locale switching, and."

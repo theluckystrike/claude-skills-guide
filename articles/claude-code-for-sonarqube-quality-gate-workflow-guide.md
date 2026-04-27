@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for SonarQube Quality Gate (2026)"
 description: "Learn how to integrate Claude Code with SonarQube to automate code quality gates in your CI/CD pipeline. Practical examples and actionable advice for."

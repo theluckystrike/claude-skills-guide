@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Dependency Inversion (2026)"
 description: "Learn how to use Claude Code CLI to refactor your codebase using the Dependency Inversion Principle. Practical examples, patterns, and actionable."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Azure MCP Server Guide (2026)"
 description: "Set up the Azure MCP server for Claude Code. Manage Azure resources, deploy apps, and monitor services through the Model Context Protocol."

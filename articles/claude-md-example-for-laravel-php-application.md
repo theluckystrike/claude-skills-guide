@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude.md Example for Laravel PHP (2026)"
 description: "Configure Claude Code for Laravel with real CLAUDE.md examples. Covers Eloquent patterns, Blade templates, route definitions, and Artisan commands."

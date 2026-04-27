@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How To Pass State Between AI (2026)"
 description: "Master the techniques for passing state between AI agents with Claude Code. Learn practical patterns for multi-agent workflows, context sharing, and."

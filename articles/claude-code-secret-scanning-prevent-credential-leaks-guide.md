@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Secret Scanning (2026)"
 description: "Implement secret scanning with Claude Code to prevent credential leaks and protect sensitive information in dev workflows. Tested and working in 2026."

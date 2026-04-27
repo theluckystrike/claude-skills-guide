@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "When to Split One Claude Skill Into (2026)"
 description: "Learn when and how to split Claude skills into multiple files for better maintainability, reusability, and organization."

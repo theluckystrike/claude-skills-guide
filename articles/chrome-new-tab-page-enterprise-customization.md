@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome New Tab Page Enterprise (2026)"
 description: "Claude Code extension tip: learn how to customize Chrome's new tab page in enterprise environments using group policies, extensions, and developer tools."

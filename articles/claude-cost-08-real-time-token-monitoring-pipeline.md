@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Real-Time Claude Token Monitoring (2026)"
 description: "Build a streaming token monitor that catches cost anomalies in under 60 seconds. Prevent $250+ cache miss incidents with instant detection."

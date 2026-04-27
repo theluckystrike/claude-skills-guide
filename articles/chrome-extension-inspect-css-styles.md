@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How to Inspect CSS Styles in Chrome (2026)"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Context Engineering for Multi-Agent (2026)"
 description: "Engineer context across Claude Code multi-agent workflows to prevent the 5,000-token spawn overhead from compounding into 50K+ tokens of waste per task."

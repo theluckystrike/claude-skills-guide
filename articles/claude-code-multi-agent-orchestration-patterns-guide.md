@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Multi-Agent Orchestration (2026)"
 description: "Patterns for orchestrating multiple Claude Code agents across complex workflows. Covers parallel execution, task delegation, and coordination strategies."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills Folder Structure (2026)"
 description: "Exact directory layout for Claude Code skills including SKILL.md, scripts, templates, examples, and references with real file tree examples."

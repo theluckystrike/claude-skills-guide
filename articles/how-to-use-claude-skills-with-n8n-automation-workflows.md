@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Use Claude Skills with n8n (2026)"
 description: "How to Use Claude Skills with n8n — practical setup steps, configuration examples, and working code you can use in your projects today."

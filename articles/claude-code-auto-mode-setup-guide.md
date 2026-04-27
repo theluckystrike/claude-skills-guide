@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Auto Mode Setup Guide (2026)"
 description: "Configure Claude Code auto mode to eliminate permission prompts with background safety checks. Setup, customization, and best practices."

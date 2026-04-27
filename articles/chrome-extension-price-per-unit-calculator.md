@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Price Per Unit Calculator Chrome (2026)"
 description: "Claude Code extension tip: learn how to build a chrome extension price per unit calculator to determine optimal pricing for your browser extensions...."

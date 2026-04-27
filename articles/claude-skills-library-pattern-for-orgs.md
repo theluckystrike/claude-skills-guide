@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build a Claude Skills Library for Your (2026)"
 description: "Architecture pattern for a centralized skills repository with categorization, discovery, version tracking, and distribution to multiple teams."

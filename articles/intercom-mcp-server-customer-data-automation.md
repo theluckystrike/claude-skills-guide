@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Intercom MCP Server (2026)"
 description: "Claude Code resource: learn how to build an Intercom MCP server to automate customer data operations, sync user profiles, and streamline support workflows."

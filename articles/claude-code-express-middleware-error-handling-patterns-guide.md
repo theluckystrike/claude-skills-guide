@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Express Middleware Error (2026)"
 description: "Master Express middleware error handling patterns with Claude Code. Learn async error handling, centralized error classes, and production-ready patterns."

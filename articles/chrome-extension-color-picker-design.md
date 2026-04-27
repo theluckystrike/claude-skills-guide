@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Color Picker Design Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to design effective chrome extension color picker interfaces with practical implementation patterns and code examples."

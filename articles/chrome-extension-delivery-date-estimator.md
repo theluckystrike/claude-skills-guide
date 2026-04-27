@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Delivery Date Estimator Chrome (2026)"
 description: "Claude Code extension tip: learn how to build or use a chrome extension delivery date estimator for your projects. Practical examples and code snippets..."

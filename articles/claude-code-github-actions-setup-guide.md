@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code GitHub Actions Setup Guide (2026)"
 description: "Set up Claude Code GitHub Actions for automated PR creation, code review, and issue implementation with @claude mentions."

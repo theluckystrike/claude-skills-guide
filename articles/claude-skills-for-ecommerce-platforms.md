@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for E-Commerce Platforms (2026)"
 description: "Build a Claude Code skill that validates SKU/ASIN formats, enforces cart pricing rules, generates Google Merchant Center feeds, and audits checkout flows."

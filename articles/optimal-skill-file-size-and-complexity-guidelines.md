@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Optimal Skill File Size and Complexity (2026)"
 description: "Practical guidelines for structuring Claude skills at the right granularity. Learn when to split skills, how to manage complexity, and best practices for s"

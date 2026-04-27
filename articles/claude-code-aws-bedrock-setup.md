@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code AWS Bedrock Setup Guide (2026)"
 description: "Set up Claude Code with AWS Bedrock for enterprise-grade AI coding. Complete guide covering IAM, model access, environment config, and testing."

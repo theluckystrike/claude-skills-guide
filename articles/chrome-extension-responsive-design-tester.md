@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Responsive Design Tester Chrome (2026)"
 description: "Claude Code extension tip: discover the best Chrome extensions for testing responsive web designs. Compare top tools, features, and find the perfect..."

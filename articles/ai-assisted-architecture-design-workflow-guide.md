@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "AI Assisted Architecture Design (2026)"

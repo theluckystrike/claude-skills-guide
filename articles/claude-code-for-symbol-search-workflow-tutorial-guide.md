@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Symbol Search Workflow (2026)"
 description: "Find functions, classes, and variables across large codebases with Claude Code symbol search. Navigate unfamiliar code faster with practical examples."

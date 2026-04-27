@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Webhook Handler Tutorial (2026)"
 description: "Learn how to build powerful webhook handlers using Claude Code skills. This comprehensive guide covers setup, implementation, and best practices for."

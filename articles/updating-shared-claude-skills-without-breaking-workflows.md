@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Update Shared Claude Skills Without (2026)"
 description: "Safe skill update patterns including parallel versions, PR-based reviews, gradual rollouts, and rollback strategies for team-shared SKILL.md files."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Claude API Prompt Caching Performance (2026)"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Sigma Rules Detection (2026)"
 description: "Create, test, and deploy Sigma detection rules with Claude Code. Automate threat detection workflows for SOC analysts and security engineering teams."

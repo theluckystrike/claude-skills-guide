@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for Smart Grid (2026)"
 description: "Build energy smart grid applications with Claude skills for demand forecasting, IoT integration, and real-time grid optimization. Working examples."

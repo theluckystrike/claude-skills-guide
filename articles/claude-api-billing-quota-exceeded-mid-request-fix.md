@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude API Billing Quota Exceeded — Fix (2026)"
 description: "Fix Claude API billing quota exceeded mid-request. Check usage, increase limits, and add spend alerts. Step-by-step solution."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Why Claude Code Keeps Crashing: 10 Root Causes (2026)"
 description: "Claude Code crashing repeatedly? Diagnose the exact cause from these 10 root causes: OOM, context overflow, API issues, MCP failures, and more with fixes."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Qwik City SSR Routing (2026)"
 description: "Build Qwik City apps with server-side rendering using Claude Code. Covers route loaders, data fetching, layout nesting, and resumability patterns."

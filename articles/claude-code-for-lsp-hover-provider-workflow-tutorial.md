@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Lsp Hover (2026)"
 description: "Learn how to build LSP hover provider workflows with Claude Code. Create custom skills that use language server protocol for intelligent code."

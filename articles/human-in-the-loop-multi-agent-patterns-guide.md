@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Human-in-the-Loop Multi-Agent Patterns (2026)"

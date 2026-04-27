@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Skill Timeout Errors (2026)"
 description: "Resolve skill timeout errors by identifying long-running scripts, optimizing context injection, tuning effort levels, and restructuring skill execution."

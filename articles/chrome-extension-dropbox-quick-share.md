@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Dropbox Quick Share Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and use Chrome extensions for quick Dropbox file sharing. Practical code examples, API integration, and..."

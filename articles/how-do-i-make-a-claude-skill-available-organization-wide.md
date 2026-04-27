@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How Do I Make A Claude Skill Available (2026)"
 description: "A practical guide to sharing Claude Code skills across your team. Learn to distribute, install, and maintain skills organization-wide using git."

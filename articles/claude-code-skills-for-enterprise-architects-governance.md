@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Skills for Enterprise (2026)"
 description: "Practical guide to Claude Code skills that help enterprise architects implement governance, compliance, and standards enforcement across development teams."

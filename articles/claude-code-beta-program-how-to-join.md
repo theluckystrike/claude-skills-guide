@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Join the Claude Code Beta Program (2026)"

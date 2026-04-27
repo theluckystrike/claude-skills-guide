@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Switching From Jetbrains AI To Claude (2026)"
 description: "A comprehensive guide for developers moving from JetBrains AI Assistant to Claude Code. Learn about key differences, essential skills, and practical."

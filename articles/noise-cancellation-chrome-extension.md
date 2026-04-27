@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Noise Cancellation Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build noise cancellation features for Chrome extensions. Practical code examples, Web Audio API techniques, and..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Skill Name Already in Use (2026)"
 description: "Claude Code troubleshooting: diagnose and fix skill name collisions between personal, project, plugin, and legacy command scopes with specific..."

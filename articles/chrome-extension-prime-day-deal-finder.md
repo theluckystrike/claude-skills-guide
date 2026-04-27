@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Building a Chrome Extension for Prime (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension that helps developers and power users find the best Prime Day deals across Amazon."

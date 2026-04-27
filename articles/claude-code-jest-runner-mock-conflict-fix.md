@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Jest Test Runner Mock (2026)"
 description: "Fix Claude Code Jest test runner mock conflicts. Reset mock state and fix module resolution ordering. Step-by-step solution."

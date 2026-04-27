@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Daily Standup Automation Chrome (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension that automates your daily standup workflow. Practical code examples, APIs, and..."

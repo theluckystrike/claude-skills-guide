@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Agent-First Architecture (2026)"
 description: "Design backend systems for AI agent consumption with structured endpoints, metadata APIs, and bounded responses that cut Claude Code token waste by 40-60%."

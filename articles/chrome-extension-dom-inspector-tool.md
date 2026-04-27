@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Dom Inspector Tool Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension DOM inspector tool from scratch. Complete implementation guide with code examples for..."

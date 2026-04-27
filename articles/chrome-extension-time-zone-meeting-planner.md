@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Time Zone Meeting Planner Chrome (2026)"
 description: "Claude Code extension tip: discover the best Chrome extensions for time zone meeting planning in 2026. Learn how to coordinate meetings across time..."

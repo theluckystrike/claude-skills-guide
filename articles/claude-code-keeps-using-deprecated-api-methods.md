@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Fix Claude Code Using Deprecated APIs (2026)"

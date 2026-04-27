@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Setting Up Claude Code Approved Tools (2026)"
 description: "Learn how to configure an approved tools list for Claude Code in enterprise environments. This guide covers security policies, tool restrictions, and."

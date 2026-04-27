@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Securing Claude Code in Enterprise (2026)"

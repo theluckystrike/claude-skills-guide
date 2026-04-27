@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Plus Perplexity (2026)"
 description: "Learn how combining Claude Code's AI coding capabilities with Perplexity's research features creates a powerful workflow for informed, evidence-based."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Skills for Writing (2026)"
 description: "A practical guide to using Claude Code skills for writing integration tests. Learn skills, techniques, and code examples for effective testing."

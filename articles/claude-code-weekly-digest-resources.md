@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Weekly Digest and Resources (2026)"
 description: "Curated Claude Code resources updated weekly with new skills, workflow patterns, and community tools. Stay current with the latest AI coding techniques."

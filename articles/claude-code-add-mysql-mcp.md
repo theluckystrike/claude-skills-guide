@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Add MySQL MCP to Claude Code (2026)"
 description: "Set up MySQL MCP in Claude Code for direct database queries, schema exploration, and migration generation from your editor."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for OpenTofu IaC (2026)"
 description: "Claude Code for OpenTofu IaC — practical guide with working examples, tested configurations, and tips for developer workflows."

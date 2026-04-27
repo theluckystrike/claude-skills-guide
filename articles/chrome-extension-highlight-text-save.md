@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Build a Text Highlighter Chrome (2026)"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Using Claude Code To Study Open Source (2026)"
 description: "Learn how to use Claude Code and its skill system to efficiently study, explore, and understand open source projects. Practical examples and."

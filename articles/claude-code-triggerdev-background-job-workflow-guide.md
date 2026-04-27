@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Triggerdev (2026)"
 description: "A comprehensive guide to building background job workflows with Trigger.dev using Claude Code skills. Learn practical patterns for task queues."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Uma Oracle (2026)"
 description: "Learn how to use Claude Code to streamline UMA Oracle workflow development. This tutorial covers practical examples, code snippets, and actionable."

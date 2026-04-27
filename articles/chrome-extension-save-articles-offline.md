@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build an Offline Article Saver (2026)"
 description: "Claude Code cost insight: build a Chrome extension to save articles for offline reading. Covers IndexedDB storage, service workers, content extraction,..."

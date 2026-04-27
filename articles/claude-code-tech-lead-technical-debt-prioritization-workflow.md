@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Tech Lead Technical (2026)"
 description: "A practical workflow for tech leads to identify, categorize, and prioritize technical debt using Claude Code skills and automation."

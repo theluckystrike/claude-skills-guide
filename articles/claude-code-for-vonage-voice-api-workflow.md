@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How to Use Vonage Voice API (2026)"

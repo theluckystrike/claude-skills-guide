@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Building a Chrome Extension for Team (2026)"

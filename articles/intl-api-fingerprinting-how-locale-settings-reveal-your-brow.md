@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Intl API Fingerprinting (2026)"
 description: "Claude Code resource: discover how websites use the Intl API to fingerprint your browser through locale settings. Detection techniques and privacy..."

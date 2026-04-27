@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Cloudflare MCP Server Edge Automation (2026)"
 description: "Claude Code resource: learn how to automate Cloudflare edge deployments using the Model Context Protocol server. Practical configuration, Workers..."

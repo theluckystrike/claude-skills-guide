@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Debugging Failed GitHub Actions Skill (2026)"

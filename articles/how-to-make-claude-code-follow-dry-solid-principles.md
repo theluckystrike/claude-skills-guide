@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How To Make Claude Code Follow (2026)"
 description: "Learn practical strategies for applying DRY and SOLID design principles when working with Claude Code and AI assistants."

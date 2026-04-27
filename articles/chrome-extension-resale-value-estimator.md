@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Resale Value Estimator Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to estimate the resale value of your Chrome extension with this comprehensive guide covering metrics, valuation..."

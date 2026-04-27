@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Refactor to SOLID Principles (2026)"

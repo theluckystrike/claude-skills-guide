@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills in CI/CD (2026)"
 description: "How to validate SKILL.md files in CI pipelines, lint frontmatter, run skill-driven automation in GitHub Actions, and prevent broken skills from merging."

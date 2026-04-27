@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "CORS Unblock Development Chrome (2026)"
 description: "Claude Code extension tip: learn how to build Chrome extensions that handle CORS restrictions during development. Complete implementation guide with..."

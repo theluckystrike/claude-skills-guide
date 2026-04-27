@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build a Claude Cost Attribution System (2026)"
 description: "A 5-agent fleet had one agent consuming 3x tokens from runaway loops. Attribution found it, saving $300/month with a single fix."

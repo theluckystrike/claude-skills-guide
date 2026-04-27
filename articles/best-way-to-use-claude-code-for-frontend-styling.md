@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Frontend Styling (2026)"
 description: "A practical guide for developers: use Claude Code with specialized skills to generate, refactor, and maintain frontend styles efficiently."

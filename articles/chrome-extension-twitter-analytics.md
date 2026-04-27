@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Twitter Analytics Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a Twitter analytics Chrome extension from scratch. Practical code examples, API integration, and..."

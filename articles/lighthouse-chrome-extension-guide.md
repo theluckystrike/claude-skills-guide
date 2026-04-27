@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Use Lighthouse Chrome Extension (2026)"
 description: "Claude Code guide: master Lighthouse Chrome extension for performance auditing. Step-by-step guide with practical examples, interpretation tips, and..."

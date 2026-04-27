@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Is Claude Code Worth It Open Source (2026)"
 description: "Discover how Claude Code can transform your open source maintenance workflow. Real examples from managing repositories, handling issues, and automating."

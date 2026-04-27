@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Oss Security (2026)"
 description: "Learn how to use Claude Code to create, manage, and automate Open Source Software security policy workflows for your projects."

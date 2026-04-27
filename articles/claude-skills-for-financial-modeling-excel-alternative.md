@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for Financial Modeling (2026)"
 description: "Replace Excel with Claude Code skills for financial modeling. Automate forecasts, scenario analysis, and reporting with Python, xlsx skill, and PDF exports"

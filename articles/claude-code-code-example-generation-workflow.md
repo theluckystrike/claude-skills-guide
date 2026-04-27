@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Code Example Generation with Claude (2026)"
 description: "Learn how to use Claude Code to generate practical code examples for your projects. A workflow guide for developers and power users."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for Manufacturing QA (2026)"
 description: "Build a Claude Code skill that analyzes SPC control charts, processes Non-Conformance Reports with root cause codes, and tracks CAPA corrective actions."

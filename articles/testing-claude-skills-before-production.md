@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Test Claude Code Skills Before (2026)"
 description: "Step-by-step testing workflow for SKILL.md files including trigger testing, permission validation, compaction survival, and edge case checks."

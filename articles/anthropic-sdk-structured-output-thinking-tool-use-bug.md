@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix: Structured Output + Thinking + (2026)"
 description: "Claude Code troubleshooting: fix bugs combining structured outputs, thinking, and tool use in the Anthropic API. Missing tool_use blocks and invalid..."

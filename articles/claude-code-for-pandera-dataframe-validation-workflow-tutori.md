@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Pandera Dataframe (2026)"
 description: "Learn how to use Claude Code to create solid Pandera dataframe validation workflows for Python data pipelines. Practical examples and actionable advice."

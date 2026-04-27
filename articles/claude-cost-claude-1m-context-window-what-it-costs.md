@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude 1M Context Window (2026)"
 description: "Filling Claude Opus 4.7's 1M context window costs $5.00 per request. Here is how to use that capacity without destroying your budget."

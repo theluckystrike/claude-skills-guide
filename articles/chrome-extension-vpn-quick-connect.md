@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Vpn Quick Connect Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to implement VPN quick connect functionality in Chrome extensions. Technical implementation details, APIs, and..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Cloudflare WAF Rules (2026)"
 description: "Learn how to use Claude Code to streamline Cloudflare WAF rule creation, management, and deployment for solid web application security."

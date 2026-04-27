@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Next.js (2026)"
 description: "Learn how to build efficient Next.js middleware workflows using Claude Code. This tutorial covers practical examples for authentication, redirects, and."

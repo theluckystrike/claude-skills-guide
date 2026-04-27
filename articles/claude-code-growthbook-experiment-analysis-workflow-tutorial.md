@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code GrowthBook Experiment (2026)"
 description: "Learn how to use Claude Code for GrowthBook experiment analysis. This tutorial covers practical workflows for analyzing A/B test results, interpreting."

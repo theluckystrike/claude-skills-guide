@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Should I Switch from Continue.dev to Claude Code? (2026)"
 permalink: /should-i-switch-from-continue-dev-to-claude/

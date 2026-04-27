@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude API 503 Service Unavailable (2026)"
 description: "Fix Claude API 503 Service Unavailable errors. Add exponential backoff retry logic and fallback routing. Step-by-step solution."

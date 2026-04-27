@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Docker Cannot Reach API (2026)"
 description: "Fix Claude Code Docker container cannot reach API endpoint. Configure DNS and network settings for containers. Step-by-step solution."

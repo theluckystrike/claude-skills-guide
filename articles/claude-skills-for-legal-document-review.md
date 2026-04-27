@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for Legal Document Review (2026)"
 description: "Build a Claude Code skill that extracts contract clauses by type, scores liability risk, compares redlines against standard templates, and flags."

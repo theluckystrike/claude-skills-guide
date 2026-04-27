@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Why Does Claude Code Sometimes Ignore (2026)"
 description: "Debug why Claude Code ignores your instructions. Learn how token limits, system prompts, skill configurations, and instruction clarity affect Claude's."

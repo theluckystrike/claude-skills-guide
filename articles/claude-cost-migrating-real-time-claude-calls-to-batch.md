@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Migrating Real-Time Claude Calls (2026)"
 description: "Move eligible Claude API calls to batch mode with this migration guide. Save $1,400/month on a typical 3-service architecture."

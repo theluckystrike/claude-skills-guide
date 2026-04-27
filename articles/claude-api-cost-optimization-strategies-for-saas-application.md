@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude API Cost Optimization Strategies (2026)"
 description: "Practical strategies to reduce Claude API costs in production SaaS applications without sacrificing quality. Learn prompt optimization, caching."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Oss Bug Report (2026)"
 description: "Learn how to use Claude Code to streamline your open source bug reporting workflow. From reproducing issues to crafting detailed reports, this guide..."

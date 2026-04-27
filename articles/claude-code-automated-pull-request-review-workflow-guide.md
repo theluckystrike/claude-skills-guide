@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Automate PR Reviews with Claude Code (2026)"

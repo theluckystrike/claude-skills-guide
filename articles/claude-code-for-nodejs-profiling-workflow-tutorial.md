@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Node.js Profiling Workflow (2026)"
 description: "Profile Node.js applications with Claude Code for CPU flame graphs, memory snapshots, and event loop analysis. Find and fix performance bottlenecks."

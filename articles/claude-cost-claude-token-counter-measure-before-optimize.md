@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Token Counter (2026)"
 description: "Use Anthropic's token counting API to find where your tokens go — most teams discover 40% waste in system prompts and tool defs."

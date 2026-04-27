@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Error Messages Explained: Dictionary (2026)"
 description: "Alphabetical dictionary of 30+ Claude Code error messages with severity levels, explanations, and exact fixes. Fatal, recoverable, and warning errors covered."

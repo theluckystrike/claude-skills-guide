@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension Warranty Tracker (2026)"
 description: "Claude Code extension tip: learn how to build or use a Chrome extension warranty tracker to manage product warranties, expiration dates, and receipts..."

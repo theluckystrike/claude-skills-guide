@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Pr Template (2026)"
 description: "Learn how to use Claude Code to create, manage, and automate PR template workflows for more efficient code reviews and better developer collaboration."

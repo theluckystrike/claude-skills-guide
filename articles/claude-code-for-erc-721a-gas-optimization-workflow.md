@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Erc 721A Gas (2026)"
 description: "Learn how to use Claude Code CLI to streamline your ERC-721A NFT smart contract development with gas optimization best practices and practical."

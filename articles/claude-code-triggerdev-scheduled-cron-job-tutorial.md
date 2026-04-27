@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Triggerdev Scheduled (2026)"
 description: "Learn how to automate recurring tasks using Claude Code and TriggerDev cron jobs. A practical guide with real-world examples."

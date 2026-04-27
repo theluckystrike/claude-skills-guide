@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "CLAUDE.md Conflict Resolution (2026)"
 description: "How Claude Code handles conflicting instructions across CLAUDE.md, CLAUDE.local.md, rules files, and managed policies. Diagnosis and resolution steps."

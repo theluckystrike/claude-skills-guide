@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "CCPA Compliance with Claude Code (2026)"
 description: "Implement CCPA privacy compliance with Claude Code for data mapping, consent management, and deletion request handling. Code examples for each requirement."

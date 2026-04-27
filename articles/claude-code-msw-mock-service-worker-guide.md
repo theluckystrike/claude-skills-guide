@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Msw Mock Service (2026)"
 description: "Claude Code Msw Mock Service — practical guide with working examples, tested configurations, and tips for developer workflows."

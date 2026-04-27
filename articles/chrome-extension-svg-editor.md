@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build an SVG Editor Chrome Extension (2026)"
 description: "Claude Code extension tip: build a Chrome extension for editing SVGs in the browser. Covers DOM manipulation, path editing, Canvas API integration, and..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Threat Hunting with Claude Code (2026)"
 description: "Automate threat hunting with Claude Code. Covers log analysis, IOC correlation, detection rule generation, and incident investigation workflows."

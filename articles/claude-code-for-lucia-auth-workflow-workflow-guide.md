@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Lucia Auth (2026)"
 description: "Claude Code for Lucia Auth — practical guide with working examples, tested configurations, and tips for developer workflows."

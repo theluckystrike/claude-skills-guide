@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Workload Balance Tracker Chrome (2026)"
 description: "Claude Code extension tip: learn how to build and use chrome extension workload balance trackers to manage tasks, time, and productivity across projects."

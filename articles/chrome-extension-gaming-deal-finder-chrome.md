@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Building a Chrome Extension for Gaming (2026)"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude 4 Skills (2026)"
 description: "Claude 4 brings better PDF extraction, smarter TDD detection, semantic search with Supermemory, and enhanced webapp-testing skill capabilities."

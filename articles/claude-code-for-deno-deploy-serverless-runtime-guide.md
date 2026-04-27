@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Deno Deploy Serverless (2026)"
 description: "A practical guide to building serverless applications with Deno Deploy using Claude Code. Learn workflows, patterns, and skill integration for efficient."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude API Usage Metrics Every Team (2026)"
 description: "Track these 7 metrics to control Claude API costs: cost per request, cache hit rate, model distribution, and 4 more with code examples."

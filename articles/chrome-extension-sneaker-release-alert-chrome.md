@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Sneaker Release Alert Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and configure Chrome extensions for sneaker release alerts. Technical implementation guide for developers..."

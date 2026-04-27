@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Configure Claude Code Proxy: HTTP_PROXY (2026)"

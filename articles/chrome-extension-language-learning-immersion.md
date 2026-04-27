@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Language Learning Chrome Extension (2026)"
 description: "Claude Code extension tip: build a language learning immersion Chrome extension that replaces words on web pages with target language translations...."

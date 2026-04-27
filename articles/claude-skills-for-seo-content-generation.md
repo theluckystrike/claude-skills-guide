@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for SEO Content Generation Guide (2026)"
 description: "Build a Claude Code skill that clusters keywords by search intent, generates meta descriptions under 155 chars, and maps internal links from your sitemap."

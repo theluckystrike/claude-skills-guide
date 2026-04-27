@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Mla Citation Generator Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to create a Chrome extension that generates MLA citations automatically. Practical implementation guide with code..."

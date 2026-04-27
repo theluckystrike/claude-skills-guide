@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Markdown Preview Chrome Extension Guide (2026)"

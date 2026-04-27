@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code OpenAPI to Zod Client (2026)"
 description: "Generate type-safe Zod clients from OpenAPI specs with Claude Code. Automate schema validation, client generation, and runtime type checking."

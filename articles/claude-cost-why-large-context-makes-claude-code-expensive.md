@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Why Large Context Makes Claude Code (2026)"
 description: "Claude Code sessions grow to 150K+ tokens, costing $0.75+ per interaction on Opus 4.7. Here is exactly where the tokens go."

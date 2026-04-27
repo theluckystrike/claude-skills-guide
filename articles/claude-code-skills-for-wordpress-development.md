@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Skills for WordPress (2026)"
 description: "Build Claude skills specifically designed for WordPress development. Automate theme creation, plugin scaffolding, custom post types, and debug WordPress."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build Your First Claude Code Skill in 5 (2026)"
 description: "Create a working SKILL.md file from scratch with frontmatter, description, and body instructions that Claude loads automatically."

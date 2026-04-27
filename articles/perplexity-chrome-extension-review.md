@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Perplexity Chrome Extension Review (2026)"
 description: "Claude Code extension tip: perplexity Chrome extension tested for developer workflows including API research, debugging, and docs lookup. See real..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: ".claude/settings.json: Complete Configuration Reference (2026)"
 description: "Every .claude/settings.json field explained: permissions.allow, permissions.deny, model, mcpServers, hooks, and systemPrompt. Annotated example included."

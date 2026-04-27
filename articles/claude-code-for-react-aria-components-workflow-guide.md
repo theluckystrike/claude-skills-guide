@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for React Aria Components (2026)"
 description: "Claude Code for React Aria Components — practical guide with working examples, tested configurations, and tips for developer workflows."

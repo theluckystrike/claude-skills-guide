@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Permission Modes (2026)"
 description: "Claude Code permission prompts add 200-500 tokens per interaction -- understand how permission modes affect token costs and when to use auto-accept."

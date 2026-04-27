@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Set Up Django MCP Server for Claude (2026)"
 description: "Connect Claude Code to Django projects via MCP. Query models, run migrations, and debug views with a custom Django MCP server configuration."

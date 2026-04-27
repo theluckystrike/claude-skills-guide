@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "CLAUDE.md Length Optimization (2026)"
 description: "How to keep your CLAUDE.md under 200 lines using imports, rules directories, and skills. Data-backed guidance on what happens when you exceed the limit."

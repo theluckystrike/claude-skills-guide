@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Optimizing Tool Schemas to Cut Token (2026)"
 description: "Claude Code cost insight: trim verbose tool schemas by 50% and save $50 per 10,000 Opus requests. Practical techniques for leaner JSON definitions."

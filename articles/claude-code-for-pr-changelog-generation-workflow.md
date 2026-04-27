@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Pr Changelog (2026)"
 description: "Learn how to automate PR changelog generation using Claude Code. Streamline your release documentation with practical workflows, code examples, and."

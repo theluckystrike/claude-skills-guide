@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skill Registry Pattern for Teams (2026)"
 description: "Build a skill registry that gives teams centralized discovery, version tracking, and controlled distribution of Claude Code skills across projects."

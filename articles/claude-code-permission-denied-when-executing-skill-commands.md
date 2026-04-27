@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Permission Denied (2026)"
 description: "Fix Claude Code permission denied errors in skill commands. Resolve file permissions, sandbox restrictions, and execution policy issues fast."

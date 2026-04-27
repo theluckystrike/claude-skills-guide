@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build Tab Suspender Chrome Extension (2026)"
 description: "Claude Code extension tip: build a Chrome tab suspender extension that saves memory. Technical implementation patterns, APIs, and optimization..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Learning Claude Code In 30 Days (2026)"
 description: "Master Claude Code skills in 30 days with this practical developer challenge. Build automation workflows, integrate APIs, and become a power user."

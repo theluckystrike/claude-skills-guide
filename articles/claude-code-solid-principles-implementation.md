@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Implement SOLID Principles with Claude (2026)"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Site Audit Tool Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how to build and use Chrome extensions for website auditing. Practical examples, code snippets, and techniques for developers..."

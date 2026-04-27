@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for fd (Find Alternative) (2026)"
 description: "Claude Code for fd (Find Alternative) — features, pricing, and performance compared side by side to help you pick the right tool."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Skills for Product (2026)"
 description: "A practical guide to Claude Code skills that accelerate full-stack development for product engineers, covering frontend, backend, testing, and."

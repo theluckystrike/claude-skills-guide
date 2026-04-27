@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Font Identifier Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how to identify fonts on any webpage using Chrome extensions. Compare the best font identifier tools for developers and..."

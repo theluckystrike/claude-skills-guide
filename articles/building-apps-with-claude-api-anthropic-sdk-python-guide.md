@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Building Apps with Claude API (2026)"

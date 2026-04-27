@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Bruno API Client (2026)"
 description: "Learn how to use Claude Code to streamline your Bruno API client workflow. This tutorial covers automating request generation, managing..."

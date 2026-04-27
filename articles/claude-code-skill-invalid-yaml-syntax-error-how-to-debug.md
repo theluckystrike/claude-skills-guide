@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Skill Invalid YAML Syntax Error (2026)"
 description: "Learn how to diagnose and fix YAML syntax errors in Claude skills. Practical debugging techniques with real examples for developers. Updated for 2026."

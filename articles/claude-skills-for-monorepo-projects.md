@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for Monorepo Projects (2026)"
 description: "Configure Claude Code skills in monorepos with nested .claude/skills/ directories, package-scoped activation, and cross-package orchestration."

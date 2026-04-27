@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for Solidity Smart (2026)"
 description: "A practical guide to using Claude skills for writing, testing, and deploying Solidity smart contracts. Learn which Claude skills accelerate Ethereum develo"

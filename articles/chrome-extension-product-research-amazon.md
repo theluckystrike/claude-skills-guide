@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build an Amazon Research Chrome (2026)"
 description: "Claude Code extension tip: build a Chrome extension for Amazon product research. Covers price history tracking, review analysis, competitor comparison,..."

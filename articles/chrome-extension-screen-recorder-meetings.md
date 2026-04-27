@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Screen Recorder Meetings Chrome (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension that records screen and audio during meetings. Complete implementation guide with code..."

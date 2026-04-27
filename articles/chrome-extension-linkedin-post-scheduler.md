@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension LinkedIn Post (2026)"
 description: "Claude Code extension tip: learn how to build or use a Chrome extension to schedule LinkedIn posts programmatically. Practical code examples and..."

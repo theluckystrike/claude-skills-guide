@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Debugging Skill Setup (2026)"
 description: "Configure Claude Code's built-in debugging skill for automated bug investigation. Step-by-step setup with CLAUDE.md templates and hooks."

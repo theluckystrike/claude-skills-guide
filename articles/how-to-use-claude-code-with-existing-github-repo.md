@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Use Claude Code with Existing (2026)"
 description: "Connect Claude Code to your existing GitHub repository. Step-by-step guide for developers integrating AI-assisted development with established projects."

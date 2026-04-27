@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Best Pomodoro Timer Chrome Extensions (2026)"
 description: "Claude Code picks: best Pomodoro timer Chrome extensions for developers in 2026. Feature comparison, integration capabilities, and customization for..."

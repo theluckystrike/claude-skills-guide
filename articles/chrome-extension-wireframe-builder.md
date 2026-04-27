@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Wireframe Builder Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension for wireframing. Practical code examples, architecture patterns, and implementation..."

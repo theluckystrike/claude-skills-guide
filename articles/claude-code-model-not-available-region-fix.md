@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Model Not Available (2026)"
 description: "Fix Claude Code model not available in your region. Switch API endpoint or use an available model variant. Step-by-step solution."

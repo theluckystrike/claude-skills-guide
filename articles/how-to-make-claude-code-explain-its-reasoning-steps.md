@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How To Make Claude Code Explain (2026)"
 last_tested: "2026-04-22"

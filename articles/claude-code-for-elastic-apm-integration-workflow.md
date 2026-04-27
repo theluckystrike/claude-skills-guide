@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Elastic Apm (2026)"
 description: "Learn how to integrate Claude Code with Elastic APM for automated observability monitoring, error tracking, and performance optimization workflows."

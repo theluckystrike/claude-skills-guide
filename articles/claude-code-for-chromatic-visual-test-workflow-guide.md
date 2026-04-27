@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Chromatic Visual Test (2026)"
 description: "Claude Code for Chromatic Visual Test — Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified..."

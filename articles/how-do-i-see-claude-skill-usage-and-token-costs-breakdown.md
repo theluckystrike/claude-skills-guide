@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How Do I See Claude Skill Usage (2026)"
 description: "A practical guide for developers and power users to track Claude skill usage, monitor token consumption, and understand cost attribution across differen..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code GitHub Actions Secret (2026)"
 description: "Fix Claude Code GitHub Actions secret not available in forked PRs. Use pull_request_target trigger safely. Step-by-step solution."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Review Automation (2026)"
 description: "Set up automated code review workflows with Claude Code. Custom review agents, PR analysis, security scanning, and review checklists."

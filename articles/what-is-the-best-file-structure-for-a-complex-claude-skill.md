@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "What Is The Best File Structure (2026)"
 description: "A practical guide to organizing complex Claude Code skills with proven file structures, code examples, and real-world patterns used by advanced developers."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Cost Allocation and Chargebacks (2026)"
 description: "A practical guide to implementing cost allocation and chargeback strategies for Claude Code in enterprise environments. Learn how to track usage."

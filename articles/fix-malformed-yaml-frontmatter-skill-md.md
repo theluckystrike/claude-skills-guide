@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Malformed YAML Frontmatter (2026)"
 description: "Claude Code troubleshooting: debug and fix YAML parse errors in SKILL.md frontmatter including tabs vs spaces, unquoted colons, missing delimiters, and..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Google Drive Sidebar Chrome Extension (2026)"
 description: "Claude Code extension tip: build a Chrome extension with Google Drive sidebar integration for file browsing, search, and quick access. Drive API auth..."

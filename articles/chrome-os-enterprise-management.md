@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Os Enterprise Management (2026)"
 description: "Claude Code extension tip: learn how to manage Chrome OS devices in enterprise environments using Google Admin Console, Chrome Enterprise policies, and..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension Enterprise Approval (2026)"
 description: "Claude Code extension tip: learn how to build enterprise-grade approval workflows for Chrome extensions. Covers implementation patterns, code examples,..."

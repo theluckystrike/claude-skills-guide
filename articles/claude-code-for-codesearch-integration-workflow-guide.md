@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Codesearch (2026)"
 description: "A comprehensive guide to integrating Claude Code with CodeSearch workflows for enhanced developer productivity and code discovery."

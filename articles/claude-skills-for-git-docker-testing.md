@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for Git, Docker, (2026)"
 description: "Three production-ready SKILL.md files for git commit workflows, Docker container management, and test runner automation with allowed-tools."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code SDK Documentation Workflow (2026)"
 description: "Build efficient SDK documentation workflows with Claude Code. Automate API docs, code examples, and reference guides using Claude skills like pdf, tdd."

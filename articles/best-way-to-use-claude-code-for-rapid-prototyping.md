@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Use Claude Code for Rapid Prototyping (2026)"
 description: "Build working prototypes in hours with Claude Code. Covers component scaffolding, API mocking, UI generation, and iterative design-to-code workflows."

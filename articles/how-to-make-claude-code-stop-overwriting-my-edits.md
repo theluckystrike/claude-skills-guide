@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How to Make Claude Code Stop (2026)"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Per-Request Cost Tracking for Claude (2026)"
 description: "Calculate exact cost per API call using the usage object formula. Identify your $0.50+ requests that drive 80% of monthly spend."

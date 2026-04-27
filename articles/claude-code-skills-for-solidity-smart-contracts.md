@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Skills for Solidity Smart (2026)"
 description: "Build specialized Claude Code skills for Solidity development. Learn to create skills that audit, test, and write Ethereum smart contracts with precision."

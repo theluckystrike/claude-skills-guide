@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Pirsch Analytics (2026)"
 description: "Claude Code for Pirsch Analytics — practical guide with working examples, tested configurations, and tips for developer workflows."

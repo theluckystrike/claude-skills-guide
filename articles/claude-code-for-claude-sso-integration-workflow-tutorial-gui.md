@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude SSO Integration: Setup Tutorial (2026)"
 description: "Set up Claude SSO with SAML/OIDC. Implementation steps for Okta, Azure AD, and Google Workspace with enterprise authentication best practices."

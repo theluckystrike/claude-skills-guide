@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Research Organizer Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension research organizer for managing web research, bookmarks, and notes. Practical code..."

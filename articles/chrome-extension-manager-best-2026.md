@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Best Chrome Extension Managers (2026)"
 description: "Claude Code picks: compare the best Chrome extension managers for developers. Enable, disable, and group extensions with one click. Performance and..."

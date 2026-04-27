@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills Governance Security Audit (2026)"
 description: "A practical security audit checklist for Claude skills governance. Learn how to audit skill permissions, validate tool access, and secure your AI workflow."

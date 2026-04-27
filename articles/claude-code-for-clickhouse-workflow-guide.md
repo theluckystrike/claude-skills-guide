@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for ClickHouse (2026)"
 description: "Claude Code for ClickHouse — practical guide with working examples, tested configurations, and tips for developer workflows."

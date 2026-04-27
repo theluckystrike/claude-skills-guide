@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How to Mock API Responses in Chrome (2026)"

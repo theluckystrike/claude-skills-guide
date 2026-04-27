@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Why Does Anthropic Limit Claude Code (2026)"
 description: "A technical deep-get startedto Claude Code's context window limitations, the engineering trade-offs, and practical strategies for developers working with."

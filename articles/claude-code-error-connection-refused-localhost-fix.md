@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Connection Refused (2026)"
 description: "Fix Claude Code connection refused errors on localhost. Check ports, proxy settings, and API config with copy-paste diagnostic commands included."

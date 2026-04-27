@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Runbook Automation (2026)"
 description: "Learn how to use Claude Code to automate runbook workflows, reduce manual intervention, and build reliable operational automation for your infrastructure."

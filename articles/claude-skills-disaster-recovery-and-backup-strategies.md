@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills Disaster Recovery (2026)"
 description: "Protect Claude skills with automated backups, version control integration, and disaster recovery plans. Prevent data loss in skill-based workflows."

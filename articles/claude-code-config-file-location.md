@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Config File Location (2026)"
 description: "Find and configure Claude Code settings files — global settings.json, project settings, MCP config, and environment variables."

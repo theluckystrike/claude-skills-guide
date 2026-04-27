@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Find Performance Bottlenecks (2026)"

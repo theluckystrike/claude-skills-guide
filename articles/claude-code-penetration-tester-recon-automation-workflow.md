@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Penetration Tester Recon (2026)"
 description: "Master penetration testing reconnaissance automation with Claude Code. Learn practical workflows for subdomain enumeration, port scanning, and."

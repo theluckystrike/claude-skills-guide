@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Outlook Calendar Integration Chrome (2026)"
 description: "Claude Code extension tip: learn how to build Chrome extensions that integrate with Outlook Calendar. Practical code examples, API authentication, and..."

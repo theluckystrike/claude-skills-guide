@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Configure ctags with Claude Code (2026)"
 description: "Configure ctags with Claude Code for efficient code navigation. Jump to definitions, symbol indexing, and codebase exploration workflow setup."

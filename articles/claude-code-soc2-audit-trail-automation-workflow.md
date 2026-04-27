@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Claude Code SOC2 Audit Trail Automation (2026)"

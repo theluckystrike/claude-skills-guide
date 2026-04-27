@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix: Anthropic SDK Grammar Too Large (2026)"
 description: "Claude Code troubleshooting: fix the Anthropic API 'compiled grammar is too large' 400 error when using structured outputs with complex JSON schemas...."

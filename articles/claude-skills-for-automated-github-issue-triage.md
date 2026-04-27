@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Automated GitHub Issue Triage (2026)"
 description: "Automate GitHub issue triage, labeling, and prioritization with Claude Code skills. Practical examples using gh CLI, GitHub Actions, and supermemory."

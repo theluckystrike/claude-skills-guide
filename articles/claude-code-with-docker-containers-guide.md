@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Using Claude Code with Docker (2026)"
 description: "Using Claude Code with Docker — practical guide with working examples, tested configurations, and tips for developer workflows."

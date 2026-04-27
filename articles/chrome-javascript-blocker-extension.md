@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "JavaScript Blocker Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to use JavaScript blockers in Chrome for privacy, performance, and development testing. Compare extensions,..."

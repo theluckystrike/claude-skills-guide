@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Opus 4.7 (2026)"
 description: "Claude Opus 4.7 — practical guide with working examples, tested configurations, and tips for developer workflows. Includes working examples, code samples,."

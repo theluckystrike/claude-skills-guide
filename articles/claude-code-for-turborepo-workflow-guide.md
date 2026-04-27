@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Turborepo (2026)"
 description: "Claude Code for Turborepo — Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified for..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Angular LSP Integration (2026)"
 description: "Configure Angular Language Service with Claude Code for type-checked templates, inline error detection, and accurate refactoring."

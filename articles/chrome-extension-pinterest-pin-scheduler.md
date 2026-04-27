@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Pinterest Pin Scheduler Chrome (2026)"
 description: "Claude Code extension tip: learn how to build and use Chrome extensions for scheduling Pinterest pins. Includes code examples, API integration..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Meeting Agenda Template Chrome (2026)"
 description: "Claude Code extension tip: learn how to create and use meeting agenda templates specifically designed for Chrome extension development teams. Includes..."

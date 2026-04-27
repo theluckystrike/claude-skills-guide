@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Oss License (2026)"
 description: "Learn how to use Claude Code to systematically select the right open source license for your project. A practical workflow guide for developers."

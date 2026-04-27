@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Social Media Scheduler Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension for scheduling social media posts. Practical code examples and architecture patterns..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Skill Not Found Error (2026)"
 description: "Fix the tool not found error in Claude Code skills. Resolve skill file loading errors, name mismatches, and sandbox restrictions with exact steps."

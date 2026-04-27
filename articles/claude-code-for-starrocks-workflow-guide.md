@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for StarRocks (2026)"
 description: "Claude Code for StarRocks — Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified for..."

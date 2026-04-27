@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Setup Claude Code Project (2026)"
 description: "Initialize Claude Code projects with CLAUDE.md config, skill loading, and project structure setup. Production-ready patterns for new codebases."

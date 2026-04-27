@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Open Source LLMs as Cost Floor (2026)"
 description: "Claude Code cost insight: open Source LLMs as Cost Floor — practical guide with working examples, tested configurations, and tips for developer workflows."

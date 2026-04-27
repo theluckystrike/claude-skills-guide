@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build a Thesis Writing Chrome Extension (2026)"
 description: "Claude Code extension tip: build a Chrome extension for thesis writing with auto-save, citation management, word count tracking, and reference..."

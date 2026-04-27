@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Mood Tracker Team Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension for team mood tracking. Explore implementation patterns, data synchronization, and..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For First Oss (2026)"
 description: "A practical guide for developers making their first open source contribution using Claude Code. Learn the workflow, best practices, and how to navigate."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Shopping List Organizer Chrome (2026)"
 description: "Claude Code extension tip: learn how to build or customize a Chrome extension shopping list organizer for developers and power users. Includes code..."

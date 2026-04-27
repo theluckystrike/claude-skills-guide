@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Upstash Qstash (2026)"
 description: "Learn how to use Claude Code's AI capabilities to build robust, reliable webhook delivery systems using Upstash QStash for message queuing and."

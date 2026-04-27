@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "MCP Zero Trust Architecture (2026)"
 description: "Implement zero trust security for Model Context Protocol servers. Learn authentication, authorization, and isolation strategies for Claude Code MCP."

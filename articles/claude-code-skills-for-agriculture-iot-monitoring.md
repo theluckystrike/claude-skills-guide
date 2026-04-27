@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Skills for Agriculture IoT (2026)"
 description: "Build Claude Code skills for agriculture IoT monitoring. Practical patterns for sensor data processing, automated alerts, and smart irrigation systems."

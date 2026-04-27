@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude API Error 529 overloaded_error (2026)"
 description: "Fix Claude API 529 overloaded_error with retry strategies, fallback models, and the Batch API. Includes Python and TypeScript code examples."

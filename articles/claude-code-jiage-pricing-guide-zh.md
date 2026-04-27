@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code价格和费用完整指南 (2026)"
 description: "Claude Code价格和费用详解，包括免费版额度说明、Pro订阅每月20美元、Max计划100到200美元、API按Token计费模式详细对比，Sonnet与Opus各模型的定价表，实际使用成本估算，附费用优化策略以及与GitHub Copilot和Cursor的价格横向比较。"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build a Shadow DOM Viewer Extension (2026)"
 description: "Claude Code extension tip: build a Chrome extension to inspect and debug Shadow DOM elements. Covers shadow root traversal, style isolation, and slot..."

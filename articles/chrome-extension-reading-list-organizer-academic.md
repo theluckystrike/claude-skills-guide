@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension Reading List Organizer (2026)"
 description: "Claude Code extension tip: a practical guide to Chrome extensions for organizing academic reading lists. Features code examples, API integrations, and..."

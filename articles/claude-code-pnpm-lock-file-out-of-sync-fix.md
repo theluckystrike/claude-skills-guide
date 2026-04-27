@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code pnpm Lock File Out of Sync (2026)"
 description: "Fix Claude Code pnpm lock file out of sync error. Regenerate pnpm-lock.yaml and resolve version conflicts. Step-by-step solution."

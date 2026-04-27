@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Csharp Source (2026)"
 description: "Learn how to use Claude Code to streamline your C# source generator development workflow. Practical examples and actionable advice for .NET."

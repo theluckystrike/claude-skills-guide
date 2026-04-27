@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Make Claude Code Handle Edge (2026)"
 description: "A practical guide for developers and power users to ensure Claude Code properly handles edge cases in code generation. Includes skill recommendations."

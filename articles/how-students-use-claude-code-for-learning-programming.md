@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How Students Use Claude Code (2026)"

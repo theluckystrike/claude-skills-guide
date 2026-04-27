@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Browser Debugging Guide (2026)"
 description: "Debug browser issues with Claude Code. Fix console errors, inspect network requests, and resolve frontend rendering problems efficiently."

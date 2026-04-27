@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Vault Transit (2026)"
 description: "Learn how to use Claude Code with HashiCorp Vault's Transit secrets engine for encryption as a service. Practical examples for developers implementing."

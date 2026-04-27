@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Nginx Waf (2026)"
 description: "Learn how to use Claude Code to streamline your NGINX WAF configuration and deployment workflow. Practical examples and actionable advice for developers."

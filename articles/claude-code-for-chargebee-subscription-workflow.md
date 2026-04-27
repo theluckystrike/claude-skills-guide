@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Chargebee (2026)"
 description: "Learn how to use Claude Code to build, automate, and optimize Chargebee subscription workflows. Includes practical examples, code snippets, and."

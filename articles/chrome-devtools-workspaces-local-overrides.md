@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Devtools Workspaces Local (2026)"
 description: "Claude Code extension tip: learn how to use Chrome DevTools Workspaces and Local Overrides to edit files directly in the browser and persist changes to..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Refined GitHub Chrome Extension Guide (2026)"
 description: "A comprehensive guide to the Refined GitHub Chrome extension for developers, installation, key features, configuration options, and practical examples."

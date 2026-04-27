@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Performance Monitor Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to monitor and optimize Chrome extension performance with built-in tools, debugging techniques, and practical code..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "TypeScript Playground Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to set up a TypeScript playground for building, testing, and debugging Chrome extensions with modern tooling and..."

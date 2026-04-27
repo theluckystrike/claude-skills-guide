@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Skills for Gaming Backend (2026)"
 description: "Use Claude Code for building scalable gaming backend systems. Real code examples for real-time communications, matchmaking, and player data management."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude API 413 Request Payload Too (2026)"
 description: "Fix Claude API 413 request entity too large. Chunk oversized payloads and compress base64 images. Step-by-step solution."

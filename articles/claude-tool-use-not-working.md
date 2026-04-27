@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Tool Use Not Working (2026)"
 description: "Fix Claude tool use errors. Covers tool definition validation, tool_choice settings, strict mode, stop_reason handling, and multi-turn tool loops."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Linear MCP Server (2026)"
 description: "Claude Code resource: linear MCP Server — practical guide with working examples, tested configurations, and tips for developer workflows. Includes..."

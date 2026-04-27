@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Error: Git Push Rejected (2026)"
 description: "Claude Code Error: Git Push Rejected During Skill Fix — step-by-step fix with tested commands, error codes, and verified solutions for developers."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "What Is The Best Way To Name Claude (2026)"
 description: "A practical guide to naming conventions for Claude Code skill files. Learn patterns that improve discoverability, reduce confusion, and scale your skill..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills Ecosystem (2026)"
 description: "Where the Claude skills ecosystem is heading: AI agent standardization, new skill categories, cross-platform compatibility, and productivity gains for deve"

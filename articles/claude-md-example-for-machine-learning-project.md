@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Md Example For Machine Learning (2026)"
 description: "Learn how to use Claude with markdown files for machine learning projects. Practical examples for prompts, workflows, documentation, and integrating."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Smart Model Selection Saves 80% (2026)"
 description: "Combine model routing with batch processing and caching to cut Claude API costs from $75/day to $15/day — verified pricing math."

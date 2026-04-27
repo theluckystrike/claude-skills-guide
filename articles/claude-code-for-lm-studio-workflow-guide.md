@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for LM Studio (2026)"
 description: "Claude Code for LM Studio — practical guide with working examples, tested configurations, and tips for developer workflows."

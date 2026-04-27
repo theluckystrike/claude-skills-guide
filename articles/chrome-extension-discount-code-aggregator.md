@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension Discount Code (2026)"
 description: "Learn how to build a Chrome extension that aggregates discount codes from multiple sources. Practical implementation guide with code examples for."

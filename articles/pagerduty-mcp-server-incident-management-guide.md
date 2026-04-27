@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "PagerDuty MCP Server Incident (2026)"
 description: "Learn how to automate PagerDuty incident management using MCP servers with Claude for streamlined DevOps workflows and faster response times."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Not Working in VS Code (2026)"
 description: "Resolve Claude Code extension failures in VS Code with tested fixes for authentication, PATH, and startup errors. Tested and working in 2026."

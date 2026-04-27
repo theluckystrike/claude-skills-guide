@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Turborepo Cache Miss — Fix (2026)"
 description: "Fix Turborepo cache miss on Claude-generated files. Configure turbo.json inputs and hash strategy correctly. Step-by-step solution."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude API Cost Dashboard Setup Guide (2026)"
 description: "Build a real-time Claude cost dashboard that tracks spend per model. Teams save $2,400/month just from visibility into usage patterns."

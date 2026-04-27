@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "TypeScript Strict Mode Breaks Claude (2026)"
 description: "Fix TypeScript strict mode breaking Claude-generated code. Add null checks and explicit types to generated output. Step-by-step solution."

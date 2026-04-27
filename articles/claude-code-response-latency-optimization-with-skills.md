@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Response Latency (2026)"
 description: "Reduce Claude Code response times by designing efficient skills. Practical patterns for faster skill invocation, optimized prompts, and streamlined tool..."

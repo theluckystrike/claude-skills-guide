@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude SDK Timeout Configuration Guide (2026)"
 description: "Configure Claude SDK timeouts and retries for Python and TypeScript. Covers default timeouts, per-request overrides, and the 10-minute streaming rule."

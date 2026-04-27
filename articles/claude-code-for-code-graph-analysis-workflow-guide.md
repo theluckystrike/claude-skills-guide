@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How to Use Code Graph Analysis Workflow (2026)"

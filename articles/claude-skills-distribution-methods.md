@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills Distribution (2026)"
 description: "Detailed comparison of three SKILL.md distribution methods including setup steps, tradeoffs, and which to use for teams of 5, 50, and 500 people."

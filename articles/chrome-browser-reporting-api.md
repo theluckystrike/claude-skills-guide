@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Browser Reporting API (2026)"
 description: "Claude Code extension tip: learn how to implement the Chrome Browser Reporting API to capture frontend errors, security violations, and network..."

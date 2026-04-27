@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Deploy to AWS with Claude Code (2026)"
 description: "Use Claude Code to deploy applications to AWS. Covers Lambda, ECS, S3, and CloudFormation with CLAUDE.md templates and automation hooks."

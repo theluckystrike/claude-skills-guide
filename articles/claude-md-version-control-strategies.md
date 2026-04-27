@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "CLAUDE.md Version Control Strategies (2026)"
 description: "How to version control CLAUDE.md effectively: branch strategies for rule changes, PR review workflows, and tracking instruction evolution over time."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Unknown Skill Error in Claude Code (2026)"
 description: "Resolve the 'unknown skill' error when Claude Code cannot find your SKILL.md file due to path, naming, directory structure, or discovery issues."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Notion Web Clipper Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and integrate Chrome extension Notion web clipper functionality for saving web content directly to your..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Building a Chrome Extension for a Read (2026)"
 description: "Claude Code extension tip: a practical guide for developers to build a Chrome extension that saves articles for later reading, with local storage and..."

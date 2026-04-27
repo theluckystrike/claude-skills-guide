@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Why Is Claude Code Changing Files I Did (2026)"
 description: "Why Is Claude Code Changing Files I Did — practical guide with working examples, tested configurations, and tips for developer workflows."

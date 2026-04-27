@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code VS Code Extension Fails (2026)"
 description: "Fix Claude Code VS Code extension fails to activate. Clear extension cache and reinstall from marketplace. Step-by-step solution."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Where The Claude Code Skill Ecosystem (2026)"
 description: "Explore the future of Claude Code skills in 2027: AI-driven skill generation, cross-platform integration, enterprise governance, and emerging."

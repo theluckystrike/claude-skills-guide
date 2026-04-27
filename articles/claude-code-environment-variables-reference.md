@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Environment Variables (2026)"
 description: "Complete reference for Claude Code environment variables: API keys, proxy settings, model selection, timeouts, and debug flags."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Using Claude Code With Drizzle Orm (2026)"
 description: "Learn how to use Claude Code with Drizzle ORM for efficient database schema management. Practical examples, code snippets, and workflow tips."

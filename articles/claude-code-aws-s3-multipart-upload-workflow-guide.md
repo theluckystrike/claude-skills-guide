@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code AWS S3 Multipart Upload (2026)"
 description: "Learn how to use Claude Code to automate AWS S3 multipart uploads with practical examples and best practices for handling large file transfers."

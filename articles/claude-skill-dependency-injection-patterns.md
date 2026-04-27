@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skill Dependency Injection (2026)"
 description: "Structure Claude skills with dependency injection for reusable, modular AI workflows. Practical examples using pdf, xlsx, tdd, and custom skill chains."

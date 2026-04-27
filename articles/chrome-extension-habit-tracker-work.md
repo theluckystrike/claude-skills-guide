@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Habit Tracker Work Chrome Extension (2026)"
 description: "Claude Code extension tip: build a Chrome extension habit tracker tailored for work productivity. Practical code examples, storage patterns, and..."

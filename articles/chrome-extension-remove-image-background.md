@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension Remove Image (2026)"
 description: "Claude Code extension tip: learn how to use Chrome extensions to remove image backgrounds, with practical examples and code snippets for developers."

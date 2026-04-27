@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Broken Link Finder Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a broken link finder Chrome extension. Practical code examples, APIs, and implementation patterns for..."

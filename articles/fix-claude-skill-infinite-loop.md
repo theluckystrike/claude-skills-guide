@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Skill Infinite Loop (2026)"
 description: "Diagnose and fix infinite loops caused by skill auto-invocation cycles, compaction re-triggering, and recursive script execution in Claude Code."

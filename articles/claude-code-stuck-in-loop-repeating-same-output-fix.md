@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Stuck in Loop Repeating (2026)"
 description: "Practical solutions for fixing Claude Code stuck in loop issues. Learn how to break repetitive output patterns and get Claude Code unstuck."

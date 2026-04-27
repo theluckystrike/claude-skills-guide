@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Color Contrast Checker Chrome Extension (2026)"
 description: "Claude Code extension tip: discover the best Chrome extensions for checking color contrast ratios. Learn how to build accessible web interfaces with..."

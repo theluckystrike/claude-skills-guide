@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for ElysiaJS (2026)"
 description: "Claude Code for ElysiaJS — practical guide with working examples, tested configurations, and tips for developer workflows."

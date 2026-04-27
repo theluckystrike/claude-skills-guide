@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AI PDF Summarizer Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and integrate AI PDF summarizer Chrome extensions for efficient document processing and productivity."

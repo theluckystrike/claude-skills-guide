@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Use Cost Per Project (2026)"
 description: "Learn how to estimate Claude Code costs for your development projects with practical examples, cost factors breakdown, and optimization strategies."

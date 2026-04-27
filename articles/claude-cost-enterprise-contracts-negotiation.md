@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Enterprise LLM Contracts (2026)"
 description: "Claude Code AI workflow: enterprise LLM Contracts — practical guide with working examples, tested configurations, and tips for developer workflows."

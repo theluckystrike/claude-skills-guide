@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Context Window (2026)"
 description: "A comprehensive guide to optimizing context window usage in Claude Code CLI for developers. Learn practical strategies, code examples, and actionable tips."

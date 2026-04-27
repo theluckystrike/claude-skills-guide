@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code German Enterprise (2026)"
 description: "Practical strategies for implementing Claude Code in German enterprise compliance workflows. Includes code examples, skill recommendations, and."

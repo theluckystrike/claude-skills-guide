@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code安装教程：完整指南 (2026)"
 description: "Claude Code安装完整教程，从Node.js环境准备到npm全局安装命令，涵盖API密钥配置（Anthropic直连、Bedrock、Vertex），常见安装错误EACCES权限不足和网络超时的排查，以及安装后验证步骤，一步步带你在macOS、Linux和WSL2上完成Claude Code的安装。"

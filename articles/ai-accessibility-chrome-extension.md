@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AI Accessibility Chrome Extension Guide (2026)"
 description: "Claude Code guide: learn how to build AI-powered accessibility extensions for Chrome. Practical code examples, APIs, and techniques for developers and..."

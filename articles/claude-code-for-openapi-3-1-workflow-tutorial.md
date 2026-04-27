@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Claude Code for OpenAPI 3.1 Workflow (2026)"

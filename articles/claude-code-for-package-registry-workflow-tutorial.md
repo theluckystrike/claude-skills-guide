@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Package Registry (2026)"
 description: "Learn how to use Claude Code to automate package registry workflows including publishing, version management, and dependency updates across npm, PyPI, and."

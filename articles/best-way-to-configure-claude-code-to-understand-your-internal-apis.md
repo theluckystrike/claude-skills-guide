@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Configure Claude Code to Understand (2026)"
 description: "A comprehensive guide to configuring Claude Code to understand and work with your internal APIs, including OpenAPI specs, custom prompts, and."

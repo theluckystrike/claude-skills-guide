@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Scope Tasks for Claude Code Success (2026)"
 description: "Get better Claude Code results by scoping tasks correctly. Covers prompt structuring, context boundaries, acceptance criteria, and iteration patterns."

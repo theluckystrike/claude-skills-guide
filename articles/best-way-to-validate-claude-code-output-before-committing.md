@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Best Way To Validate Claude Code (2026)"
 description: "Learn practical strategies and Claude Code skills for validating AI-generated code before committing. Includes step-by-step workflows and real-world."

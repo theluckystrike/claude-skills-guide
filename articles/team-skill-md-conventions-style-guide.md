@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Team SKILL.md Conventions (2026)"
 description: "Claude Code resource: writing standards for team-shared SKILL.md files covering description triggers, body structure, naming, and progressive..."

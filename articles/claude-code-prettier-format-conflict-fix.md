@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Prettier Format Conflict (2026)"
 description: "Fix Claude Code Prettier format conflict with project config. Align Claude output with .prettierrc settings. Step-by-step solution."

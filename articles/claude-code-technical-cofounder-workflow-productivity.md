@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Technical Cofounder (2026)"
 description: "Learn how to use Claude Code as a technical co-founder to accelerate development workflows, make better architectural decisions, and ship products."

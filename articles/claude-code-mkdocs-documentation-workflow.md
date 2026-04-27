@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code MkDocs Documentation (2026)"
 description: "Build a Claude Code MkDocs documentation workflow that auto-generates and maintains developer docs from your codebase. Step-by-step guide with."

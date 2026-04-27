@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Drizzle ORM (2026)"
 description: "Claude Code for Drizzle ORM — practical guide with working examples, tested configurations, and tips for developer workflows."

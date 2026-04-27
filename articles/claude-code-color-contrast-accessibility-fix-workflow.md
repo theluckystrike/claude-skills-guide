@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Color Contrast and Accessibility (2026)"
 description: "Practical workflow for identifying and fixing color contrast and accessibility issues using Claude Code skills and automated tooling."

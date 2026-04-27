@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix: Claude Code 2m Bash Timeout (2026)"
 description: "Claude Code kills bash commands after 2 minutes by default. Learn how to increase the timeout for long-running builds, tests, and deployments."

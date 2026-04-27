@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix: Claude Code High Token Usage (2026)"
 description: "Claude Code burning through tokens on simple queries? Understand why context accumulates and how to control token consumption."

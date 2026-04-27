@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code MCP Tools Excessive (2026)"
 description: "Reduce MCP server context overhead in Claude Code by deferring tool definitions, disabling unused servers, and preferring CLI tools."

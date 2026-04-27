@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Fly Machines (2026)"
 description: "Claude Code for Fly Machines — practical guide with working examples, tested configurations, and tips for developer workflows."

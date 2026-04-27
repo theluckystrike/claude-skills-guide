@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for Travel Booking (2026)"
 description: "Build a Claude Code skill that parses Amadeus/Sabre GDS responses, validates PNR structures, enforces fare rule constraints, and generates booking."

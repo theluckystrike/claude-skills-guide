@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for LLM-Powered Code Review (2026)"
 description: "Build automated code review pipelines with Claude Code for PR analysis, security scanning, and style enforcement. Reduce review time by 50% or more."

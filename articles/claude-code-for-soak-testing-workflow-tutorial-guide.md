@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Soak Testing Workflow (2026)"
 description: "Learn how to use Claude Code CLI to build, automate, and analyze soak testing workflows for your applications. Practical examples and actionable."

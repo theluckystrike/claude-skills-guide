@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Test Generation Issues (2026)"
 description: "Fix Claude Code not generating tests correctly. Resolve incomplete coverage, wrong assertions, and failing test output with proven solutions."

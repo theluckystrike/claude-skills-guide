@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build an Image Editor Chrome Extension (2026)"
 description: "Claude Code extension tip: build a Chrome extension that edits images in the browser. Covers Canvas API manipulation, filters, cropping, resizing, and..."

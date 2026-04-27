@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for ZenRows Scraping (2026)"
 description: "Learn how to integrate Claude Code with ZenRows for efficient web scraping. This tutorial covers API setup, dynamic content handling, and building."

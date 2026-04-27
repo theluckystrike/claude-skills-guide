@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Structured Data Tester Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to test structured data using Chrome extensions. Compare tools, understand JSON-LD validation, and implement..."

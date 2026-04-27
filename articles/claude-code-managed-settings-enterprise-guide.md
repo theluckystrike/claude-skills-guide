@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Managed Settings Enterprise (2026)"
 description: "Deploy organization-wide Claude Code settings with managed policies for permissions, hooks, MCP servers, and security controls."

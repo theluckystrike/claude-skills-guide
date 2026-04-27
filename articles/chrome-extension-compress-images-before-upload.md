@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build an Image Compressor Chrome (2026)"
 description: "Claude Code extension tip: build a Chrome extension that compresses images before upload. Covers Canvas API resizing, WebP conversion, quality..."

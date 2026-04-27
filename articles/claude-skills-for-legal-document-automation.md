@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for Legal Document (2026)"
 description: "Practical guide to automating legal documents using Claude skills. Code examples, skill setup, and workflow patterns for developers."

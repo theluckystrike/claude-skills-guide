@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Google Meet Chrome Extension Enhancer (2026)"

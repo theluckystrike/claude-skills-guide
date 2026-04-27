@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How Many Tokens Does Claude Code Use Per Session? (2026)"
 description: "Real token usage benchmarks for Claude Code sessions: small tasks use 5-15K tokens, medium features 30-80K, large refactors 100-200K. See the full breakdown."

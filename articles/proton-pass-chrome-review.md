@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Proton Pass Chrome — Honest Review 2026"
 description: "Claude Code extension tip: a practical review of Proton Pass Chrome extension for developers. Examine security architecture, CLI tools, autofill..."

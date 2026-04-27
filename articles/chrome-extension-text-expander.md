@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Building a Chrome Extension Text (2026)"
 description: "Claude Code extension tip: a practical guide to building a Chrome extension text expander for developers and power users. Learn the architecture,..."

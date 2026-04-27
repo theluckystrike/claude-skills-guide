@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Statsig Ab Test (2026)"
 description: "Learn how to set up and configure A/B tests and experiments using Statsig with Claude Code CLI. Practical examples for implementing experiment workflows."

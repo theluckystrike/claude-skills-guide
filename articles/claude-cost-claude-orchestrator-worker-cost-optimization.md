@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Orchestrator-Worker Cost (2026)"
 description: "Claude Orchestrator-Worker Cost — practical guide with working examples, tested configurations, and tips for developer workflows."

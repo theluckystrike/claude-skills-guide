@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for SOX Compliance Audits (2026)"
 description: "Automate SOX compliance code audits with Claude Code for financial controls, access logging, and change tracking. Meet Section 404 requirements."

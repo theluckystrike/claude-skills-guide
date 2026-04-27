@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Database Benchmark (2026)"
 description: "Learn how to use Claude Code for database benchmark workflows. Practical examples, code snippets, and actionable advice for developers measuring."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skill Permissions What Can (2026)"
 description: "A comprehensive guide to understanding Claude skill permissions, tool access controls, and what capabilities skills have within your development."

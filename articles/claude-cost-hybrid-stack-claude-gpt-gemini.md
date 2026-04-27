@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Hybrid LLM Stack (2026)"
 description: "Claude Code AI workflow: hybrid LLM Stack — practical guide with working examples, tested configurations, and tips for developer workflows. Includes..."

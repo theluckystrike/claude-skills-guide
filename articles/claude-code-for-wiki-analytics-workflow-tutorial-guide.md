@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Wiki Analytics Workflow (2026)"
 description: "Learn how to build powerful wiki analytics workflows using Claude Code. This guide covers practical examples, code snippets, and actionable advice for..."

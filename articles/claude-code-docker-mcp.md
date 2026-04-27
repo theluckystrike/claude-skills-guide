@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Set Up Docker MCP Server for Claude (2026)"
 description: "Give Claude Code direct Docker access via MCP. Manage containers, images, and compose stacks with a Docker MCP server configuration. Updated for 2026."

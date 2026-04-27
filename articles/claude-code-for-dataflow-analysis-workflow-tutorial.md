@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Dataflow Analysis (2026)"
 description: "Trace data flows through your codebase with Claude Code. Covers variable tracking, dependency graphs, taint propagation, and dead code identification."

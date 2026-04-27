@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Why Does Claude Skill Auto Invocation (2026)"
 description: "Understanding why Claude skills fail to auto-invoke unexpectedly. Common causes, debugging strategies, and practical solutions for developers."

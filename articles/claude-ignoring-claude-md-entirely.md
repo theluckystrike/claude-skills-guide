@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Ignoring CLAUDE.md Entirely (2026)"
 description: "Step-by-step diagnostic when Claude Code does not follow any CLAUDE.md instructions. Covers loading verification, file placement, specificity, and enforcement."

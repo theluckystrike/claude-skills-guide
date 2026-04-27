@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills Performance Optimization (2026)"
 description: "Reduce skill token usage by 60% with progressive disclosure, front-loaded descriptions, compaction-aware design, and reference file offloading."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Go To Definition (2026)"
 description: "Master the art of navigating codebases efficiently with Claude Code. Learn practical workflows for jumping to definitions, understanding code."

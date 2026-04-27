@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Cpu Profiling (2026)"
 description: "Learn how to use Claude Code for CPU profiling workflows. This comprehensive guide covers practical examples, code snippets, and actionable advice for."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Connect Claude Code to Remote MCP (2026)"
 description: "Set up remote HTTP and SSE MCP servers in Claude Code with authentication headers, OAuth, and troubleshooting connection issues."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Workspace Spend Limits (2026)"
 description: "Configure workspace spend limits in the Claude Console to cap monthly costs. Batches may exceed limits slightly due to concurrent processing."

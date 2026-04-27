@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Sonnet 4.6 Cost Analysis (2026)"
 description: "Sonnet 4.6 at $3/$15 per MTok hits the sweet spot — 40% cheaper than Opus with 1M context and strong coding performance."

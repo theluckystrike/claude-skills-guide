@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Azure DevOps Integration (2026)"
 description: "Integrate Claude Code with Azure DevOps pipelines, repos, and boards. Automate CI/CD, code reviews, and work item management."

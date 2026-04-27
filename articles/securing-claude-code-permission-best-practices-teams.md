@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Securing Claude Code: Permission Best Practices for Teams (2026)"
 description: "Team security for Claude Code: shared settings.json, CI/CD permissions, audit logging, blocking dangerous commands, and per-project overrides for safe collaboration."

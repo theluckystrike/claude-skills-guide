@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Ignoring Skill .md File (2026)"
 description: "Fix Claude Code silently ignoring your skill .md file. Common causes include wrong directory, bad YAML, encoding issues, and file permissions."

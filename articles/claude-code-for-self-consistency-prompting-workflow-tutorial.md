@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Self-Consistency Prompting in Claude (2026)"
 description: "Improve Claude Code output reliability with self-consistency prompting. Generate multiple solutions, compare approaches, and select the best answer."

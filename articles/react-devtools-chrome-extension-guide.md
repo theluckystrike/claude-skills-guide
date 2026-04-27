@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "React Devtools Chrome Extension (2026)"
 description: "Claude Code extension tip: a practical guide to using React DevTools Chrome extension for debugging React applications. Learn component inspection,..."

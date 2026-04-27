@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code EACCES Permission Denied (2026)"
 description: "Fix Claude Code EACCES permission denied on npm global install. Change npm prefix to home directory. Step-by-step solution."

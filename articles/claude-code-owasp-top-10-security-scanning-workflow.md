@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code OWASP Top 10 Security (2026)"
 description: "Build an automated security scanning workflow with Claude Code to identify and fix OWASP Top 10 vulnerabilities in your apps."

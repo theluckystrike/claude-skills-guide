@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Building a Chrome Extension for Senior (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension that helps users discover and apply senior discounts. Includes code examples, API..."

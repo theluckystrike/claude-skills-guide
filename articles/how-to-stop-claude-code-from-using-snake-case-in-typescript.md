@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How to Stop Claude Code from Using (2026)"

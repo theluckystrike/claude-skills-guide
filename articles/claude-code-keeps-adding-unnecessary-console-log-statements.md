@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Keeps Adding Unnecessary (2026)"
 description: "Learn why Claude Code frequently adds console.log statements to your code and discover practical solutions to prevent this behavior while maintaining."

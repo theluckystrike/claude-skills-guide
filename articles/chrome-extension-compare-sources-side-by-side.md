@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How to Compare Sources Side by Side (2026)"

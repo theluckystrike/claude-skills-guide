@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Trigger.dev Workflow (2026)"
 description: "A practical guide to automating Trigger.dev workflows with Claude Code skills. Learn to integrate skills like tdd, pdf, and supermemory for streamlined."

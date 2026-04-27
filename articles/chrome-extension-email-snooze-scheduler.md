@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build Email Snooze Chrome Extension (2026)"
 description: "Claude Code extension tip: build Chrome extensions for email snooze scheduling. Implementation patterns using Gmail API, local storage triggers, and..."

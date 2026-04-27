@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Build a Watermark Images Chrome (2026)"

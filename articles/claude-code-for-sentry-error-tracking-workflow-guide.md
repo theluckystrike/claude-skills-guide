@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Sentry Errors (2026)"
 description: "Claude Code for Sentry Errors — step-by-step fix with tested commands, error codes, and verified solutions for developers."

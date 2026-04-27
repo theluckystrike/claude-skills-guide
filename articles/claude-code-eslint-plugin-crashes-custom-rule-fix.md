@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code ESLint Plugin Crashes (2026)"
 description: "Fix Claude Code ESLint plugin crash on custom rules. Update rule schema and fix AST visitor conflicts. Step-by-step solution."

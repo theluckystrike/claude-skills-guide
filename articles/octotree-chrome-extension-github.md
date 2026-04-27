@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Octotree GitHub Chrome Extension Guide (2026)"
 description: "Master Octotree for GitHub: the Chrome extension that adds a file tree sidebar to repositories. Learn setup, features, customization, and practical."

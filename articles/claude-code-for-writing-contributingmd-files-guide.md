@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Writing (2026)"
 description: "Learn how to use Claude Code to create comprehensive CONTRIBUTING.md files that guide contributors through your project's workflow, coding standards."

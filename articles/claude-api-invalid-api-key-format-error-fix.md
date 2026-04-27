@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude API Invalid API Key Format Error (2026)"
 description: "Fix Claude API invalid_api_key format error. Verify key prefix and remove hidden whitespace characters. Step-by-step solution."

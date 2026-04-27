@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Discord MCP Server Community Automation (2026)"
 description: "Claude Code resource: learn how to build Discord MCP server automation for community management. Includes practical code examples, Discord bot..."

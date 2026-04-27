@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension Clearance Sale Finder (2026)"
 description: "Claude Code extension tip: learn how to find discounts, sales, and clearance deals on Chrome extensions. Practical methods for developers and power..."

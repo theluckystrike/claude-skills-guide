@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AI Reply Generator Gmail Chrome (2026)"
 description: "Claude Code extension tip: a developer guide to building an AI reply generator as a Chrome extension for Gmail. Covers architecture, APIs, and..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How To Make Claude Code Not Add (2026)"
 description: "Practical techniques to prevent Claude Code from adding unused imports, including CLAUDE.md settings, custom skills, and project configuration."

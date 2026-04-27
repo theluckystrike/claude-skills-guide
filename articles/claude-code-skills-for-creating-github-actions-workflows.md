@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Skills for Creating GitHub (2026)"
 description: "Build Claude skills that generate, validate, and manage GitHub Actions workflows. Practical patterns for CI/CD automation with real code examples."

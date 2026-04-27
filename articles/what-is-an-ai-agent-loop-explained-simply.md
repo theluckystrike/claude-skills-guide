@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "What Is An AI Agent Loop Explained (2026)"
 description: "Claude Code AI workflow: an AI agent loop is the continuous cycle where an AI thinks, acts, observes results, and adjusts, repeating until a goal is..."

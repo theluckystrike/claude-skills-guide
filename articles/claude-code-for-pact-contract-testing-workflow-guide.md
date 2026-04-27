@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Pact Contract Testing (2026)"
 description: "Learn how to integrate Claude Code into your Pact contract testing workflow. This guide covers practical strategies for writing, managing, and maintaining."

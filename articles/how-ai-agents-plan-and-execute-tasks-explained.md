@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How AI Agents Plan and Execute Tasks (2026)"

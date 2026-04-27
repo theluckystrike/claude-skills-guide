@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Bff API Pattern (2026)"
 description: "Claude Code For Bff API Pattern — Complete Developer tutorial with real-world examples, working configurations, best practices, and deployment steps..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Generate Portuguese Docs with Claude (2026)"
 description: "Generate Portuguese documentation for your codebase with Claude Code. Configure language settings, translate API docs, and maintain bilingual projects."

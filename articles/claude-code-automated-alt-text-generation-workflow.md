@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Automated Alt Text (2026)"
 description: "Learn how to build automated alt text generation workflows with Claude Code. This guide covers image analysis skills, batch processing patterns, and."

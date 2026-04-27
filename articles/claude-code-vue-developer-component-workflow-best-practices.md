@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Vue Developer (2026)"
 description: "Master Vue.js component development with Claude Code. Learn efficient workflows for building, testing, and maintaining Vue components using Claude."

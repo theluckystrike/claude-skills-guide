@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix TypeScript Strict Mode Errors (2026)"
 description: "Resolve TypeScript strict mode errors using Claude Code. Fix strictNullChecks, noImplicitAny, strictPropertyInitialization, and more. Updated for 2026."

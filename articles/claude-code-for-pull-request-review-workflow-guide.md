@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Pull Request Review (2026)"
 description: "Master pull request reviews with Claude Code: automate code analysis, generate review comments, and streamline your PR workflow with practical examples."

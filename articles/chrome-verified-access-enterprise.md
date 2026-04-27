@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Verified Access Enterprise (2026)"
 description: "Claude Code extension tip: learn how Chrome Verified Access Enterprise works, its API capabilities, and how to integrate device verification into your..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Find Chrome Extensions Using Memory (2026)"

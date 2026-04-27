@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Automate Security Code Reviews (2026)"
 description: "Automate security code review checklists with Claude Code skills. Find vulnerabilities, enforce OWASP checks, and standardize security workflows."

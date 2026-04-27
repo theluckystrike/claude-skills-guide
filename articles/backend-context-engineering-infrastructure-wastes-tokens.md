@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Backend Context Engineering (2026)"
 description: "Backend infrastructure decisions silently waste Claude Code tokens through verbose APIs, poor error messages, and missing metadata -- fix these patterns now."

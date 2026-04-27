@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code FastAPI MCP Server Guide (2026)"
 description: "Build and connect a FastAPI-based MCP server to Claude Code for custom API endpoints, database queries, and tool integrations."

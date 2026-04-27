@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Focus Mode Studying Chrome Extension (2026)"
 description: "Claude Code extension tip: discover Chrome extensions that create distraction-free study environments. Learn how to build custom focus modes with..."

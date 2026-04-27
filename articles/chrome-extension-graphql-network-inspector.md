@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "GraphQL Network Inspector Chrome (2026)"
 description: "Claude Code extension tip: learn how to use and build Chrome extensions for inspecting GraphQL network requests. Practical examples, code snippets, and..."

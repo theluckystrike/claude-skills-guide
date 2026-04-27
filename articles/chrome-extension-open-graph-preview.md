@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension Open Graph Preview (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension that previews Open Graph meta tags. Includes code examples, practical implementation..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Cost Anomaly Detection Setup (2026)"
 description: "Detect cost anomalies using standard deviation thresholds. Catch a 10x token spike in 5 minutes instead of discovering it on next month's bill."

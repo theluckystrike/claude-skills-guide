@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Page Ruler Chrome Extension (2026)"

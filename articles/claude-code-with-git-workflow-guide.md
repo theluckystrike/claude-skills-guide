@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Git Workflow Guide (2026)"
 description: "Use Claude Code for git operations: commits, branches, PRs, rebases, and conflict resolution with proper permission configuration."

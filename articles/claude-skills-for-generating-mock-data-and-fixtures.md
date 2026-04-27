@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills for Generating Mock Data (2026)"
 description: "A practical guide to using Claude Code skills for generating mock data and test fixtures. Real examples for developers building applications with."

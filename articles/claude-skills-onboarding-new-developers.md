@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Onboarding New Developers to Your (2026)"
 description: "Step-by-step onboarding checklist for new team members covering skill discovery, naming conventions, personal vs project scope, and common pitfalls."

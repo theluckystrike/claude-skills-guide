@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Lean Prompting (2026)"
 description: "Write Claude prompts that use 50% fewer tokens without sacrificing output quality — save $3,750/month on 1K daily Opus requests."

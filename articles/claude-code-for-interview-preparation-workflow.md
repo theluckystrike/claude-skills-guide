@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Interview Preparation (2026)"
 description: "A practical workflow guide for developers using Claude Code to prepare for technical interviews. Learn to structure your practice, generate problems."

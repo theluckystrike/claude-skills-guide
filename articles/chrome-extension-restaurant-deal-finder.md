@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Restaurant Deal Finder Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build a Chrome extension for finding restaurant deals. Technical implementation guide with code examples for..."

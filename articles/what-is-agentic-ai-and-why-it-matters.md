@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "What Is Agentic AI And Why It Matters (2026)"
 description: "A practical guide to understanding agentic AI with Claude Code skills, featuring autonomous task execution, multi-step workflows, and real-world."

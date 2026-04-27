@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Subscription Worth It (2026)"
 description: "A practical look at Claude Code subscription plans for developers and power users. What you actually get, real-world usage scenarios, and whether the."

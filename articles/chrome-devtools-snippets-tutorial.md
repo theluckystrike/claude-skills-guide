@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Devtools Snippets (2026)"
 description: "Claude Code extension tip: learn how to create, manage, and execute JavaScript snippets in Chrome DevTools to speed up debugging, testing, and..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Monthly Cost for Solo Devs: Real Numbers (2026)"
 description: "Real Claude Code monthly cost data for solo developers: light (1hr/day), medium (3hr/day), and heavy (6hr/day) usage profiles with per-model breakdowns."

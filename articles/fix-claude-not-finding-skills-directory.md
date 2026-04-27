@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Not Finding the Skills (2026)"
 description: "Resolve discovery failures when Claude Code cannot locate .claude/skills/ due to working directory, gitignore, permissions, or monorepo nesting issues."

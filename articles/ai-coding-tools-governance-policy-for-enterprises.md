@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AI Coding Tools Governance Policy (2026)"
 description: "Claude Code AI workflow: a practical guide to establishing governance policies for AI coding tools in enterprise environments. Covers security..."

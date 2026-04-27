@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Migrate CLAUDE.md Between Projects (2026)"
 description: "How to extract, adapt, and apply CLAUDE.md patterns from one project to another. Covers universal rules, project-specific adaptation, and shared libraries."

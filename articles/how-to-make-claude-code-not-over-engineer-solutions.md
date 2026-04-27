@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Stop Claude Code From Over-Engineering (2026)"
 description: "Prevent Claude Code from building overly complex solutions. Set clear boundaries, scope prompts tightly, and use constraints that keep output simple."

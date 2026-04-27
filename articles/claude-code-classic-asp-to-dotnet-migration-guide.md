@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Classic Asp (2026)"
 description: "A comprehensive guide to migrating Classic ASP applications to .NET using Claude Code, featuring practical examples and expert techniques."

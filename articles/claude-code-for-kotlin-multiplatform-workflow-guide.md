@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Kotlin Multiplatform (2026)"
 description: "Claude Code for Kotlin Multiplatform — practical guide with working examples, tested configurations, and tips for developer workflows."

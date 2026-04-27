@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix: SDK TypeError: terminated (2026)"
 description: "Claude Code troubleshooting: fix intermittent TypeError: terminated failures in the Anthropic TypeScript SDK when streaming large inputs with undici."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Code Coverage Improvement with Claude (2026)"

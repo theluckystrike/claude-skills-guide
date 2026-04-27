@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Prompt Caching Implementation (2026)"
 description: "Step-by-step tutorial to enable Claude prompt caching. Cut a $4,500/month support bot to $455/month with 10 lines of code."

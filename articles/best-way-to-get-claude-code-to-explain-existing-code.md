@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Best Way To Get Claude Code To Explain (2026)"
 description: "Practical techniques for getting Claude Code to explain unfamiliar codebases effectively. Learn prompt strategies, skills to use, and how to extract."

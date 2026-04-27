@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Setup on Mac (2026)"
 description: "A practical walkthrough for setting up Claude Code on macOS. Install CLI, configure authentication, and start using Claude as your terminal assistant."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Every SKILL.md Frontmatter Field (2026)"
 description: "Claude Code resource: complete reference for all 14 SKILL.md YAML frontmatter fields including name, description, allowed-tools, paths, effort, and..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Skills for QA Engineers (2026)"
 description: "Discover how Claude Code skills transform QA automation workflows. Learn to use specialized skills for test generation, maintenance, and continuous..."

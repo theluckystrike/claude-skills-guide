@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "AI Assisted Code Review Workflow (2026)"

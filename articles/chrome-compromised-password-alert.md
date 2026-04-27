@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Compromised Password Alert (2026)"
 description: "Claude Code extension tip: learn how Chrome's compromised password alert works, how to enable it, and how developers can integrate breach detection..."

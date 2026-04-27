@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "OpenCLAW Skill Security Risks (2026)"
 description: "Claude Code resource: identify and mitigate security vulnerabilities in OpenCLAW skills. Covers prompt injection, code execution risks, and defense..."

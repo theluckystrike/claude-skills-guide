@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code stuck in planning mode (2026)"
 description: "Fix Claude Code stuck in planning mode that drains 30K-100K tokens on analysis without action, using action-first prompts and CLAUDE.md execution rules."

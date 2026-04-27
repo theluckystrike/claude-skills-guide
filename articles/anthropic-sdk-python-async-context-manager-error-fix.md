@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Anthropic SDK Python Async Context (2026)"
 description: "Fix Anthropic SDK async context manager TypeError. Use AsyncAnthropic client instead of sync Anthropic. Step-by-step solution."

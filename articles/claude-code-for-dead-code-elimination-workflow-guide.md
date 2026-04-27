@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Dead Code Elimination (2026)"
 description: "Learn how to use Claude Code to identify and eliminate dead code from your projects. A practical workflow guide with examples and actionable advice."

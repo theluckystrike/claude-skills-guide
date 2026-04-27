@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension Hotel Price (2026)"
 description: "Claude Code extension tip: learn how chrome extension hotel price comparison tools work under the hood. Technical breakdown of APIs, scraping methods,..."

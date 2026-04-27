@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Coolify (2026)"
 description: "Claude Code for Coolify — practical guide with working examples, tested configurations, and tips for developer workflows."

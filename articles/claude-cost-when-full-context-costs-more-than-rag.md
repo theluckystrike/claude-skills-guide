@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "When Full Context Costs More Than a RAG (2026)"
 description: "Claude Code cost insight: full-context queries cost $1.00+ each on Opus. RAG drops that to $0.10. Here is the exact break-even point for switching."

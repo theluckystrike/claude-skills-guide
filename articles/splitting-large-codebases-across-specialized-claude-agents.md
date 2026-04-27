@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Splitting Large Codebases Across (2026)"

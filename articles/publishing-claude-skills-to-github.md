@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Publish Claude Code Skills to GitHub (2026)"
 description: "Step-by-step guide to publishing SKILL.md files to GitHub as project skills, plugins, or standalone repos with proper structure."

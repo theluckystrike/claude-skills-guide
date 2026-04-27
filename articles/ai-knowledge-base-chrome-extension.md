@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AI Knowledge Base Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and use AI knowledge base chrome extensions for intelligent document management and quick information..."

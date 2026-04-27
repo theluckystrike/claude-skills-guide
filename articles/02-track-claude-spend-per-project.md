@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Track Claude Token Spend Per Project (2026)"
 description: "Per-project cost tracking reveals that 1 of 10 client projects consumes 27% of your Claude API spend. Here's how to build attribution."

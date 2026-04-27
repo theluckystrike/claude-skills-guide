@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How QA Engineers Use Claude Code (2026)"

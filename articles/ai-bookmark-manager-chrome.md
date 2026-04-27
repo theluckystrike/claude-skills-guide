@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AI Bookmark Manager for Chrome (2026)"
 description: "Claude Code extension tip: organize bookmarks automatically with AI-powered Chrome extensions. Covers smart categorization, content summaries,..."

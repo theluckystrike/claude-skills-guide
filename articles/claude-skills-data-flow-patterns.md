@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills Data Flow Patterns (2026)"
 description: "Design data flow between Claude Code skills using file-based interfaces, argument passing, dynamic injection, and structured output routing patterns."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Metadata-First Pattern (2026)"
 description: "The metadata-first pattern uses pre-computed project metadata to eliminate 3,000-15,000 discovery tokens per Claude Code session through structured lookups."

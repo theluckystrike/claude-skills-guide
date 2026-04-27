@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Stop Chrome Tracking Location (2026)"
 description: "Claude Code picks: a practical technical guide for developers and power users to disable Chrome location tracking, configure geolocation permissions,..."

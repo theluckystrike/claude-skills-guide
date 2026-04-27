@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How Claude Code Eliminated Boilerplate (2026)"

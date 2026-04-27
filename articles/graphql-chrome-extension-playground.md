@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "GraphQL Playground Chrome Extension (2026)"
 description: "Claude Code extension tip: discover how to use Chrome extensions to test GraphQL APIs directly in your browser. A practical guide for developers and..."

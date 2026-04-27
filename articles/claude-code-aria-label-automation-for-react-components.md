@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code ARIA Label Automation (2026)"
 description: "Learn how to automate ARIA label implementation in React components using Claude Code skills, reducing manual accessibility work while ensuring WCAG."

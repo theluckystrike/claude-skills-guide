@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Claude Batch API (2026)"
 description: "Learn how to use Claude Code with Anthropic's Batch API to efficiently process large volumes of prompts. This comprehensive guide covers setup,..."

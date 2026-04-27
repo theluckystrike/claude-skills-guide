@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Python SDK Getting Started (2026)"
 description: "Build your first Claude Python app with messages, streaming, error handling, and token counting. Complete working examples with the Anthropic SDK."

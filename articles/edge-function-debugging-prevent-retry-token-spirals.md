@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Edge Function Debugging (2026)"
 description: "Prevent Claude Code from burning 50K-200K tokens retrying edge function deployments by adding structured error handling and retry limits to CLAUDE.md."

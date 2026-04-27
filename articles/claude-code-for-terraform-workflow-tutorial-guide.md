@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Terraform with Claude Code (2026)"
 description: "Use Claude Code to write, review, and debug Terraform configurations. Covers module generation, plan analysis, state management, and CI/CD integration."

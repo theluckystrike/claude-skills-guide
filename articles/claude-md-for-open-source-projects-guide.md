@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Md For Open Source (2026)"
 description: "Comprehensive guide to using Claude Code and Claude MD files effectively in open source projects. Learn how to create claude-md files that help."

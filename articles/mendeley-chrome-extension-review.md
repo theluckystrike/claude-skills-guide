@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Mendeley Chrome Extension Review (2026)"
 description: "Claude Code extension tip: mendeley Chrome extension tested for web import, PDF annotation, citation management, and Zotero comparison. Honest review..."

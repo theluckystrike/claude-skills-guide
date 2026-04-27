@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Anthropic SDK TypeScript Tool Results (2026)"
 description: "Fix Anthropic SDK TypeScript type mismatch on tool_result content blocks. Correct the ToolResultBlockParam type. Step-by-step solution."

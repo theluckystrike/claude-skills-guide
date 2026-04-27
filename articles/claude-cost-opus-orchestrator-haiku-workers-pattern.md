@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Opus Orchestrator with Haiku Workers (2026)"
 description: "Claude Code resource: haiku workers cost $1/$5 per MTok vs Opus at $5/$25. Use the 5x cost gap to build fleets where workers handle 80% of tokens."

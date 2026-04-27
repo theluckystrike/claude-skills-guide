@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Cost-Efficient Multi-Agent Coding (2026)"
 description: "Claude Code cost insight: build multi-agent coding workflows that cost $9/sprint instead of $25. Proven patterns from a 2,816-article production fleet."

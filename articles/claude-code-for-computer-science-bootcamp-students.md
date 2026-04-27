@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Computer Science (2026)"
 description: "A comprehensive guide for computer science bootcamp students learning to use Claude Code effectively. Master AI-assisted coding, skills, and workflows."

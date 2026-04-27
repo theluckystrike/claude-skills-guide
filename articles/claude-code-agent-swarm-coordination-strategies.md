@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Agent Swarm Coordination (2026)"
 description: "Practical strategies for coordinating multiple Claude Code agents in parallel. Learn about fan-out/fan-in patterns, message routing, and state."

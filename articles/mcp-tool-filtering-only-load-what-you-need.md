@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "MCP Tool Filtering (2026)"
 description: "Filter MCP tool definitions in Claude Code to eliminate 2,000-10,000 tokens of overhead per turn by loading only the tools each session actually needs."

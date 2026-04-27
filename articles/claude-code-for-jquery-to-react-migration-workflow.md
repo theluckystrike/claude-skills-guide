@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Migrate jQuery to React with Claude (2026)"

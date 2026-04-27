@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension PubMed Search Helper (2026)"
 description: "Claude Code extension tip: a practical guide to building and using Chrome extensions for PubMed search. Learn how to create custom search helpers,..."

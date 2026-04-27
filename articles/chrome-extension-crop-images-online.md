@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Crop Images Online Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to build and use Chrome extensions for cropping images directly in your browser. Technical implementation guide..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Save Research Sessions Chrome Extension (2026)"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Throughput Optimization (2026)"
 description: "Master throughput optimization with Claude Code. Learn practical workflows, code examples, and strategies to maximize your development velocity and."

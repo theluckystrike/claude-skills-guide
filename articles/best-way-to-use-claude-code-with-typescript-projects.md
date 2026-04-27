@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Use Claude Code with TypeScript (2026)"
 description: "Use Claude Code effectively with TypeScript projects. Skill selection, type-safe workflows, and practical patterns for shipping production TS code."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Extension Hashtag Generator (2026)"
 description: "Claude Code extension tip: learn how to build and use chrome extension hashtag generator tools for social media automation, featuring practical code..."

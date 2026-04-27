@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Kube State (2026)"
 description: "Learn how to use Claude Code to streamline your Kube State Metrics workflow, from deployment configuration to custom metric creation and alerting."

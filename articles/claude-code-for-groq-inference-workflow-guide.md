@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Groq Inference (2026)"
 description: "Claude Code for Groq Inference — Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Permission Modes Explained (2026)"
 last_tested: "2026-04-22"

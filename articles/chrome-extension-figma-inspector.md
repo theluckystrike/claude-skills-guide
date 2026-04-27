@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Figma Inspector Chrome Extension Guide (2026)"
 description: "Claude Code guide: streamline design-to-code handoff with Figma inspector Chrome extensions. Compare tools, extract CSS properties, and inspect design..."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Artifact Publishing (2026)"
 description: "Learn how to build automated artifact publishing workflows with Claude Code. Publish packages, deploy assets, and automate releases with practical."

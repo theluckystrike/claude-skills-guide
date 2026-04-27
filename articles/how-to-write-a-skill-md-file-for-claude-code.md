@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How To Write A Skill Md File (2026)"
 description: "Step-by-step guide to creating Claude Code skill files (.md) with proper structure, front matter, and real code examples."

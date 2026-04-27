@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Skills Microservices (2026)"
 description: "A practical guide to implementing microservices communication patterns using Claude Code skills. Learn sync, async, event-driven, and saga patterns with."

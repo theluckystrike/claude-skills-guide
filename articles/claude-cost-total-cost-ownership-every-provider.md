@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Total Cost of Ownership (2026)"
 description: "Claude Code cost insight: total Cost of Ownership — practical guide with working examples, tested configurations, and tips for developer workflows."

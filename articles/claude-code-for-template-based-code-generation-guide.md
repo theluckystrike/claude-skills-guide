@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Template Based Code (2026)"
 description: "Learn how to use Claude Code for powerful template-based code generation. This guide covers practical patterns, Jinja2 templates, and actionable."

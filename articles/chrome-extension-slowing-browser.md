@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Chrome Extensions Slowing Your (2026)"
 description: "Claude Code troubleshooting: identify and fix Chrome extensions causing slowdowns using Task Manager, DevTools profiling, and memory audits. Reduce..."

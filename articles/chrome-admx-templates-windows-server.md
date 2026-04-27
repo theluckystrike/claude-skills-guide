@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Chrome Admx Templates Windows Server (2026)"
 description: "Claude Code extension tip: learn how to deploy and manage Chrome browser settings across Windows Server environments using ADMX templates. Includes..."

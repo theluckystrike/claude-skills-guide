@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Svelte 5 (2026)"
 description: "Claude Code for Svelte 5 — Workflow Guide tutorial with real-world examples, working configurations, best practices, and deployment steps verified for..."

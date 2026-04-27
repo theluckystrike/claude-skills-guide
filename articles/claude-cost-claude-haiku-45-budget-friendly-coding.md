@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Haiku 4.5 Budget-Friendly Coding (2026)"
 description: "Use Claude Haiku 4.5 at $1/$5 per MTok for coding tasks that do not need Opus — cut your API bill by 80% on routine work."

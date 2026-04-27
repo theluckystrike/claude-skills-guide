@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Measuring Claude Code Skill Efficiency (2026)"
 description: "A practical guide to measuring and optimizing Claude Code skill efficiency. Learn which metrics matter, how to track them, and which skills deliver the."

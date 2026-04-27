@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Build a GIF Recorder Chrome Extension (2026)"
 description: "Claude Code extension tip: build a Chrome extension that records screen captures as GIFs. Covers MediaRecorder API, canvas rendering, frame..."

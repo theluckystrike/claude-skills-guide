@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Hono Framework (2026)"
 description: "Claude Code for Hono Framework — practical guide with working examples, tested configurations, and tips for developer workflows."

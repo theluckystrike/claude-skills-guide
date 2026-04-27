@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for TablePlus (2026)"
 description: "Claude Code for TablePlus — practical guide with working examples, tested configurations, and tips for developer workflows."

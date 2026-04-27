@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code .env File Not Loaded — Fix (2026)"
 description: "Fix Claude Code .env file not loaded in project scope. Source the file or use direnv for automatic loading. Step-by-step solution."

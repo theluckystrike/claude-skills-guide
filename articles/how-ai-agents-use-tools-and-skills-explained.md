@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "How AI Agents Use Tools and Skills (2026)"

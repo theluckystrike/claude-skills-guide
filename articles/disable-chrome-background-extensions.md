@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Disable Background Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to disable Chrome background extensions to improve browser performance, enhance privacy, and streamline..."

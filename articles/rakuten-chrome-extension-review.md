@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Rakuten Chrome Extension Review (2026)"

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Best Claude Skill for Python Data (2026)"
 description: "A practical guide to choosing the right Claude skill for your Python data pipelines, pandas workflows, and machine learning projects."

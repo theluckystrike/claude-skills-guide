@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code Azure DevOps MCP Setup (2026)"
 description: "Configure the Azure DevOps MCP server for Claude Code. Connect pipelines, repos, and work items through the Model Context Protocol."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Anthropic API Streaming Interrupted (2026)"
 description: "Resolve mid-stream interruptions, SSE disconnects, and incomplete responses when streaming Claude API responses in Python and TypeScript. Updated for 2026."

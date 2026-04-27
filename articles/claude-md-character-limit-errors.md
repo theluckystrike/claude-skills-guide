@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "CLAUDE.md Character Limit (2026)"
 description: "The exact CLAUDE.md size recommendation, what happens when you exceed it, and techniques for keeping instructions within the effective limit."

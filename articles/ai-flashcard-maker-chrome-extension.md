@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "AI Flashcard Maker Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how to create an AI-powered flashcard generator as a Chrome extension. Practical code examples, APIs, and..."

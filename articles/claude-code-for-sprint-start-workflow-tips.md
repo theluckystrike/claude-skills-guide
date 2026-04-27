@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code For Sprint Start (2026)"
 description: "Maximize your sprint velocity with Claude Code. Learn workflow patterns for backlog grooming, task estimation, test setup, and daily standup preparation."

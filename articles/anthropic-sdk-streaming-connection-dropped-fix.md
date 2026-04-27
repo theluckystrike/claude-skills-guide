@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Anthropic SDK Streaming Connection (2026)"
 description: "Fix Anthropic SDK streaming connection dropped mid-response. Implement reconnection with partial content recovery. Step-by-step solution."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Webcam Overlay Recording Chrome (2026)"
 description: "Claude Code extension tip: learn how to build Chrome extensions that overlay webcam feeds on top of recorded screen content. Includes code examples and..."

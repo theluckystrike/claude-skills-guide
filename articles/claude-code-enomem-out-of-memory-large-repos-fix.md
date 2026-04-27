@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code ENOMEM Out of Memory Large (2026)"
 description: "Fix Claude Code ENOMEM out of memory on large repos. Increase Node.js heap and exclude heavy directories. Step-by-step solution."

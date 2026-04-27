@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code with Turborepo Monorepo (2026)"
 description: "Learn how to integrate Claude Code with Turborepo monorepo projects for efficient development workflows and AI-assisted coding."

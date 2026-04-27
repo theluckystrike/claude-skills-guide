@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Virtual Background Chrome Extension (2026)"
 description: "Claude Code extension tip: learn how virtual background Chrome extensions work, the technologies behind them, and how to implement one. Practical code..."

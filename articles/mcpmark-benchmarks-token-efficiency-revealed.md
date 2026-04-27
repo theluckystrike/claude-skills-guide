@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "MCPMark Benchmarks (2026)"
 description: "Claude Code resource: mCPMark benchmark results show 3-8x token efficiency gaps between MCP server implementations -- learn which servers waste tokens..."

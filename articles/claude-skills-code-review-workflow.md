@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Skills Code Review Workflow (2026)"
 description: "Build a SKILL.md that reviews PRs with structured output, severity levels, and subagent isolation using context fork and the Explore agent."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Install Killed on Linux (2026)"
 description: "Resolve the 'Killed' error during Claude Code installation on low-memory Linux servers and VPS instances by adding swap space. Tested and working in 2026."

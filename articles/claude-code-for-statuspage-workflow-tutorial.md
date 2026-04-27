@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Statuspage Workflow (2026)"
 description: "Learn how to automate statuspage workflows using Claude Code. Create automated incident reporting, component monitoring, and status page integrations."

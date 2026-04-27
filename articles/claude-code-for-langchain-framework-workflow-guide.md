@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for LangChain (2026)"
 description: "Claude Code for LangChain — practical guide with working examples, tested configurations, and tips for developer workflows."

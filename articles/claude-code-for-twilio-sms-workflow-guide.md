@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Twilio SMS Automation (2026)"
 description: "Build Twilio SMS automation with Claude Code. Appointment reminders, 2FA, and customer support workflows with production-ready code examples."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Team Handbook Workflow (2026)"
 description: "Learn how to use Claude Code to create, maintain, and automate your team's handbook workflows with practical examples and actionable advice."

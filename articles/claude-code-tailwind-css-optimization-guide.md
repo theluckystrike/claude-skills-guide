@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Optimize Tailwind CSS with Claude Code (2026)"
 description: "Use Claude Code to optimize Tailwind CSS. Reduce bundle size, extract components, fix class conflicts, and set up a design system with Tailwind."

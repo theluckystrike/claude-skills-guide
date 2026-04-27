@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix: Anthropic API 500 Error (2026)"
 description: "Claude Code troubleshooting: fix: Anthropic API 500 Error — step-by-step fix with tested commands, error codes, and verified solutions for developers."

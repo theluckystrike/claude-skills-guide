@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Context Management (2026)"
 description: "Combine caching, pruning, and context budgets to cut Claude context costs by 78% — from $5.00 to $1.075 per 100K-token session."

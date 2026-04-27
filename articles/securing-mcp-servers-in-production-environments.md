@@ -1,4 +1,5 @@
 ---
+sitemap: false
 
 layout: default
 title: "Securing MCP Servers in Production (2026)"

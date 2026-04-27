@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code for Runbook Version Control (2026)"
 description: "Master runbook version control with Claude Code. Learn practical workflows for tracking, branching, and managing operational procedures with Git."

@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Focus Timer Productivity Chrome (2026)"
 description: "Claude Code extension tip: learn how chrome extension focus timer productivity tools work, how to build them, and which techniques maximize your deep..."

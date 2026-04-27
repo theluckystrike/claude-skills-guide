@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Skill Not Triggering (2026)"
 description: "Fix Claude skills that fail to trigger automatically. Check invocation syntax, file location, permissions, and YAML frontmatter in under 5 minutes."

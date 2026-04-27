@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "How to Create React Components Faster (2026)"
 description: "Learn practical techniques to speed up React component development using Claude Code. Includes code examples, workflow automation tips, and skills that."

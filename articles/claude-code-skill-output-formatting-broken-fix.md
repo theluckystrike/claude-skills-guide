@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Fix Claude Code Output Formatting (2026)"
 description: "Fix broken markdown rendering, code block display, and verbose output in Claude Code. Resolve formatting differences between terminal and IDE modes."

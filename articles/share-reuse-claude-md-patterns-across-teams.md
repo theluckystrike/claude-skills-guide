@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Share and Reuse CLAUDE.md Patterns (2026)"
 description: "Techniques for sharing CLAUDE.md instructions across repositories: imports, symlinks, managed policies, and the --add-dir flag."

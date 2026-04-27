@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Model Routing by Task Cuts Claude API (2026)"
 description: "Model Routing by Task Cuts Claude API — practical guide with working examples, tested configurations, and tips for developer workflows."

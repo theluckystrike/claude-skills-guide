@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: default
 title: "Claude Code --allowedTools (2026)"
 description: "The --allowedTools flag restricts Claude Code tool access per session, cutting MCP overhead by 40-60% and preventing unnecessary tool call tokens."
