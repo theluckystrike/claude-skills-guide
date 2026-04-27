@@ -458,6 +458,77 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: oklch(0.30 0.010 60); border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: oklch(0.42 0.010 70); }
+
+    /* ========== LEARN MORE ========== */
+    .learn-more {
+      margin: 48px 0 0;
+      padding: 40px 0 0;
+      border-top: 1px solid var(--line);
+    }
+    .learn-more .lm-eyebrow {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-3);
+      margin-bottom: 12px;
+    }
+    .learn-more .lm-title {
+      font-family: var(--serif);
+      font-size: 28px;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      margin: 0 0 24px;
+      font-weight: 400;
+    }
+    .learn-more .lm-title em {
+      font-family: var(--serif-alt);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent);
+    }
+    .learn-more-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .learn-more-grid a {
+      background: var(--bg-2);
+      padding: 16px 20px;
+      text-decoration: none;
+      color: var(--ink-2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      line-height: 1.4;
+      letter-spacing: -0.005em;
+      transition: background .15s ease, color .15s ease;
+    }
+    .learn-more-grid a:hover {
+      background: var(--bg-3);
+      color: var(--accent);
+    }
+    .learn-more-grid a::before {
+      content: '\2192';
+      color: var(--ink-4);
+      font-family: var(--mono);
+      font-size: 11px;
+      flex-shrink: 0;
+      transition: color .15s ease;
+    }
+    .learn-more-grid a:hover::before {
+      color: var(--accent);
+    }
+    @media (max-width: 640px) {
+      .learn-more-grid { grid-template-columns: 1fr; }
+      .learn-more .lm-title { font-size: 24px; }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -787,19 +858,20 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
       </ul>
     </section>
 
-    <section class="learn-more" style="margin:32px 0;padding:24px;background:#1a1a2e;border:1px solid #2a2a4a;border-radius:12px;">
-      <h2 style="color:#6ee7b7;margin-bottom:16px;">Learn More</h2>
-      <ul style="list-style:none;padding:0;">
-        <li style="margin:8px 0;"><a href="/claude-md-for-database-conventions/" style="color:#93c5fd;">CLAUDE.md for Database Conventions</a></li>
-        <li style="margin:8px 0;"><a href="/claude-md-for-security-rules/" style="color:#93c5fd;">CLAUDE.md for Security Rules</a></li>
-        <li style="margin:8px 0;"><a href="/claude-md-version-control-strategies/" style="color:#93c5fd;">CLAUDE.md Version Control Strategies</a></li>
-        <li style="margin:8px 0;"><a href="/claude-md-for-architecture-decisions/" style="color:#93c5fd;">CLAUDE.md for Architecture Decisions</a></li>
-        <li style="margin:8px 0;"><a href="/why-does-claude-code-perform-better-with-claude-md/" style="color:#93c5fd;">Why Does Claude Code Perform Better with CLAUDE.md?</a></li>
-        <li style="margin:8px 0;"><a href="/claude-md-conflicting-instructions-fix/" style="color:#93c5fd;">Fix Conflicting CLAUDE.md Instructions</a></li>
-        <li style="margin:8px 0;"><a href="/karpathy-dont-assume-examples-real-projects-2026/" style="color:#93c5fd;">Karpathy: Don't Assume -- Real Project Examples</a></li>
-        <li style="margin:8px 0;"><a href="/claude-md-for-contractor-and-vendor-teams/" style="color:#93c5fd;">CLAUDE.md for Contractor and Vendor Teams</a></li>
-        <li style="margin:8px 0;"><a href="/claude-md-length-optimization-300-lines/" style="color:#93c5fd;">CLAUDE.md Length Optimization</a></li>
-      </ul>
+    <section class="learn-more">
+      <div class="lm-eyebrow">&sect; Related &middot; CLAUDE.md</div>
+      <h2 class="lm-title">Keep <em>reading.</em></h2>
+      <div class="learn-more-grid">
+        <a href="/claude-md-for-database-conventions/">CLAUDE.md for Database Conventions</a>
+        <a href="/claude-md-for-security-rules/">CLAUDE.md for Security Rules</a>
+        <a href="/claude-md-version-control-strategies/">CLAUDE.md Version Control Strategies</a>
+        <a href="/claude-md-for-architecture-decisions/">CLAUDE.md for Architecture Decisions</a>
+        <a href="/why-does-claude-code-perform-better-with-claude-md/">Why Does Claude Code Perform Better with CLAUDE.md?</a>
+        <a href="/claude-md-conflicting-instructions-fix/">Fix Conflicting CLAUDE.md Instructions</a>
+        <a href="/karpathy-dont-assume-examples-real-projects-2026/">Karpathy: Don't Assume -- Real Project Examples</a>
+        <a href="/claude-md-for-contractor-and-vendor-teams/">CLAUDE.md for Contractor and Vendor Teams</a>
+        <a href="/claude-md-length-optimization-300-lines/">CLAUDE.md Length Optimization</a>
+      </div>
     </section>
   </div>
 

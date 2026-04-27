@@ -533,6 +533,77 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
     .related-links a:hover {
       border-color: oklch(0.72 0.11 38);
     }
+
+    /* ========== LEARN MORE ========== */
+    .learn-more {
+      margin: 48px 0 0;
+      padding: 40px 0 0;
+      border-top: 1px solid var(--line);
+    }
+    .learn-more .lm-eyebrow {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-3);
+      margin-bottom: 12px;
+    }
+    .learn-more .lm-title {
+      font-family: var(--serif);
+      font-size: 28px;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      margin: 0 0 24px;
+      font-weight: 400;
+    }
+    .learn-more .lm-title em {
+      font-family: var(--serif-alt);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent);
+    }
+    .learn-more-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .learn-more-grid a {
+      background: var(--bg-2);
+      padding: 16px 20px;
+      text-decoration: none;
+      color: var(--ink-2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      line-height: 1.4;
+      letter-spacing: -0.005em;
+      transition: background .15s ease, color .15s ease;
+    }
+    .learn-more-grid a:hover {
+      background: var(--bg-3);
+      color: var(--accent);
+    }
+    .learn-more-grid a::before {
+      content: '\2192';
+      color: var(--ink-4);
+      font-family: var(--mono);
+      font-size: 11px;
+      flex-shrink: 0;
+      transition: color .15s ease;
+    }
+    .learn-more-grid a:hover::before {
+      color: var(--accent);
+    }
+    @media (max-width: 640px) {
+      .learn-more-grid { grid-template-columns: 1fr; }
+      .learn-more .lm-title { font-size: 24px; }
+    }
   </style>
 </head>
 <body>
@@ -715,19 +786,20 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
       </ul>
     </section>
 
-    <section class="learn-more" style="margin:32px 0;padding:24px;background:#1a1a2e;border:1px solid #2a2a4a;border-radius:12px;">
-      <h2 style="color:#6ee7b7;margin-bottom:16px;">Learn More</h2>
-      <ul style="list-style:none;padding:0;">
-        <li style="margin:8px 0;"><a href="/best-mcp-servers-claude-code-2026/" style="color:#93c5fd;">Best MCP Servers for Claude Code in 2026</a></li>
-        <li style="margin:8px 0;"><a href="/mcp-servers-claude-code-complete-setup-2026/" style="color:#93c5fd;">MCP Servers for Claude Code: Complete Setup</a></li>
-        <li style="margin:8px 0;"><a href="/mcp-server-setup-complete-guide-2026/" style="color:#93c5fd;">MCP Server Setup Complete Guide</a></li>
-        <li style="margin:8px 0;"><a href="/claude-skills-vs-mcp-servers-differences/" style="color:#93c5fd;">Claude Skills vs MCP Servers: Key Differences</a></li>
-        <li style="margin:8px 0;"><a href="/telegram-mcp-server-bot-automation-workflow/" style="color:#93c5fd;">Telegram MCP Server Bot Automation</a></li>
-        <li style="margin:8px 0;"><a href="/claude-code-gcp-mcp/" style="color:#93c5fd;">Claude Code GCP MCP Server Setup</a></li>
-        <li style="margin:8px 0;"><a href="/claude-code-django-mcp/" style="color:#93c5fd;">Set Up Django MCP Server for Claude Code</a></li>
-        <li style="margin:8px 0;"><a href="/claude-code-cloudflare-mcp/" style="color:#93c5fd;">Claude Code Cloudflare MCP Server Setup</a></li>
-        <li style="margin:8px 0;"><a href="/mcp-tool-filtering-only-load-what-you-need/" style="color:#93c5fd;">MCP Tool Filtering: Only Load What You Need</a></li>
-      </ul>
+    <section class="learn-more">
+      <div class="lm-eyebrow">&sect; Related &middot; MCP servers</div>
+      <h2 class="lm-title">Keep <em>reading.</em></h2>
+      <div class="learn-more-grid">
+        <a href="/best-mcp-servers-claude-code-2026/">Best MCP Servers for Claude Code in 2026</a>
+        <a href="/mcp-servers-claude-code-complete-setup-2026/">MCP Servers for Claude Code: Complete Setup</a>
+        <a href="/mcp-server-setup-complete-guide-2026/">MCP Server Setup Complete Guide</a>
+        <a href="/claude-skills-vs-mcp-servers-differences/">Claude Skills vs MCP Servers: Key Differences</a>
+        <a href="/telegram-mcp-server-bot-automation-workflow/">Telegram MCP Server Bot Automation</a>
+        <a href="/claude-code-gcp-mcp/">Claude Code GCP MCP Server Setup</a>
+        <a href="/claude-code-django-mcp/">Set Up Django MCP Server for Claude Code</a>
+        <a href="/claude-code-cloudflare-mcp/">Claude Code Cloudflare MCP Server Setup</a>
+        <a href="/mcp-tool-filtering-only-load-what-you-need/">MCP Tool Filtering: Only Load What You Need</a>
+      </div>
     </section>
 
     <div class="cta-box">
