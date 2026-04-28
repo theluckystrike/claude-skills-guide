@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Fix Claude Code Not Working VSCode (2026)"
 description: "Resolve Claude Code extension issues in VS Code — blank panels, missing output, connection errors, and WSL integration problems. Updated for 2026."

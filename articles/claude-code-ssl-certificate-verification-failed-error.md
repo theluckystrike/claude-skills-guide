@@ -1,5 +1,6 @@
 ---
-
+sitemap: false
+noindex: true
 layout: default
 title: "Fix Claude SSL Certificate Error (2026)"
 description: "Fix SSL certificate verification failed errors in Claude Code with 3 commands. Covers proxy, corporate firewall, and self-signed cert scenarios."

@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Fix Claude Code Timeout Error (2026)"
 description: "Increase Claude Code timeout from the 120s default using timeout parameter, run_in_background flag, or chunked execution for long-running builds."

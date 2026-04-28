@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Should .claude Be in .gitignore? (2026)"
 description: "Add .claude to .gitignore to protect API keys and session data. Also covers node_modules, .env, and OS files for a clean Claude Code project setup."
