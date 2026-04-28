@@ -821,6 +821,7 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
      ══════════════════════════════════════════════════════════ */
   var PAYWALL_KEY = 'ccg_mcpconfig_uses';
   var PAYWALL_LIMIT = 2;
+  var isAutoLoad = true;
 
   var MCP_SERVERS = Object.freeze([
     {
@@ -1286,9 +1287,10 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
       return;
     }
 
-    /* Paywall check */
+    /* Paywall read-only check always runs */
     var usageCount = getUsageCount();
     if (usageCount >= PAYWALL_LIMIT) {
+      isAutoLoad = false;
       showPaywall();
       return;
     }
@@ -1308,8 +1310,11 @@ description: "Build your MCP server configuration interactively. Supabase, GitHu
       : 'claude_desktop_config.json';
     outputFilename.textContent = filename;
 
-    /* Increment usage */
-    incrementUsage();
+    /* Only increment usage for user-initiated actions, not auto-load */
+    if (!isAutoLoad) {
+      incrementUsage();
+    }
+    isAutoLoad = false;
     updateUsesDisplay();
 
     /* Scroll to output */

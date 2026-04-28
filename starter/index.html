@@ -960,6 +960,9 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
   var MAX_STEPS = 5;
   var MAX_FEATURES = 5;
 
+  /* ── Auto-load flag: prevents page-load actions from counting as uses ── */
+  var isAutoLoad = true;
+
   /* ── Framework map ── */
   var FRAMEWORK_MAP = {
     javascript: ['React', 'Next.js', 'Vue', 'Svelte', 'Express', 'Fastify', 'None'],
@@ -1556,8 +1559,13 @@ description: "Generate a complete Claude Code project setup. Answer 5 questions,
     assert(btn !== null, 'btnGenerate must exist');
     assert(outputSection !== null, 'outputSection must exist');
     btn.addEventListener('click', function() {
-      state.useCount++;
-      saveUseCount();
+      assert(typeof isAutoLoad === 'boolean', 'isAutoLoad must be boolean');
+      assert(typeof state.useCount === 'number', 'useCount must be number before increment');
+      if (!isAutoLoad) {
+        state.useCount++;
+        saveUseCount();
+      }
+      isAutoLoad = false;
       var script = generateScript();
       outputPre.textContent = script;
       outputSection.style.display = 'block';

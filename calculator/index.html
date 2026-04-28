@@ -956,6 +956,7 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
       const PAYWALL_LIMIT = 2;
       const GATED_CARD_IDS = Object.freeze(['card-plans', 'card-recommendation', 'card-tips', 'card-competitors']);
       let calculationCount = 0; // tracks full calculations displayed this session
+      let isAutoLoad = true;    // suppress increment on initial page-load recalculate
 
       /** Read use count from localStorage. Returns 0 if unavailable. */
       function getUseCount() {
@@ -1293,11 +1294,14 @@ description: "Calculate your Claude Code monthly costs. Compare Max vs API vs Pr
         renderCompetitors(best.bestCost);
 
         /* FIX-18: Increment paywall counter only when a full calculation is displayed */
-        calculationCount++;
-        if (calculationCount <= PAYWALL_LIMIT) {
-          incrementUseCount();
+        /* Only count user-initiated actions, not auto-load */
+        if (!isAutoLoad) {
+          calculationCount++;
+          if (calculationCount <= PAYWALL_LIMIT) {
+            incrementUseCount();
+          }
         }
-
+        isAutoLoad = false;
         applyPaywall();
         console.assert(typeof best.bestCost === 'number', 'recalculate must produce a valid bestCost');
       }

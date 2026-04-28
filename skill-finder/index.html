@@ -952,6 +952,7 @@ const FREE_USES = 2;
 const BLUR_THRESHOLD = 10;
 
 /* ── State ── */
+var isAutoLoad = true;
 let activeCategories = new Set();
 let debounceTimer = null;
 
@@ -1244,9 +1245,12 @@ function handleSearchInput() {
     if (query.length > 0) {
       const filtered = filterSkills();
       if (filtered.length > 0) {
-        incrementUsage();
+        if (!isAutoLoad) {
+          incrementUsage();
+        }
       }
     }
+    isAutoLoad = false;
     renderSkills();
     console.assert(typeof debounceTimer === 'number', 'handleSearchInput: debounceTimer must be a number after setTimeout');
   }, DEBOUNCE_MS);
@@ -1276,6 +1280,7 @@ function init() {
 
   searchInput.addEventListener("input", handleSearchInput);
   sortSelect.addEventListener("change", handleSortChange);
+  isAutoLoad = false;
   console.assert(skills.length > 0, 'init: skills database must be non-empty');
 }
 

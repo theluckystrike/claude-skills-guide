@@ -1216,6 +1216,7 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
   /* ── Paywall state ── */
   const PAYWALL_KEY = 'ccg_generator_uses';
   const PAYWALL_LIMIT = 2;
+  let isAutoLoad = true;
 
   function getUseCount() {
     console.assert(typeof PAYWALL_KEY === 'string', 'getUseCount: PAYWALL_KEY must be string');
@@ -1263,7 +1264,15 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
   function handleGenerate(els) {
     console.assert(els !== null && typeof els === 'object', 'handleGenerate: els must be object');
     console.assert(els.selLanguage !== null, 'handleGenerate: selLanguage must exist');
-    const useCount = incrementUseCount();
+
+    /* Only increment usage for user-initiated actions, not auto-load */
+    let useCount;
+    if (!isAutoLoad) {
+      useCount = incrementUseCount();
+    } else {
+      useCount = getUseCount();
+    }
+    isAutoLoad = false;
 
     const config = {
       language: els.selLanguage.value,
@@ -1284,6 +1293,7 @@ description: "Generate a production-ready CLAUDE.md file for your project. Selec
     els.outputSection.classList.add('visible');
     els.outputSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
+    /* Paywall read-only check always runs */
     if (useCount > PAYWALL_LIMIT) {
       els.codeOutput.classList.add('blurred');
       els.paywallOverlay.style.display = 'flex';

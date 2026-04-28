@@ -686,6 +686,7 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
   var activeCategories = ['all'];
   var searchUseCount = getStoredUses();
   var paywallActive = false;
+  var isAutoLoad = true;
 
   /* ── Utility: Get stored uses ── */
   function getStoredUses() {
@@ -808,9 +809,13 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
   /* ── Handle search with paywall check ── */
   function handleSearch() {
     console.assert(searchInput !== null, 'searchInput must exist');
+    console.assert(typeof isAutoLoad === 'boolean', 'isAutoLoad must be a boolean');
     var query = searchInput.value.trim();
     if (query.length > 0 && !paywallActive) {
-      var uses = incrementUses();
+      if (!isAutoLoad) {
+        var uses = incrementUses();
+      }
+      isAutoLoad = false;
       if (shouldShowPaywall()) {
         showPaywall();
       }
@@ -917,10 +922,13 @@ description: "Search, filter, and copy every Claude Code command. Slash commands
   console.assert(COMMANDS.length >= 80, 'Must have at least 80 commands, got ' + COMMANDS.length);
   renderCards(COMMANDS);
 
-  /* ── Check if paywall should be active on load ── */
+  /* ── Check if paywall should be active on load (read-only) ── */
   if (shouldShowPaywall()) {
     showPaywall();
   }
+
+  /* ── Mark auto-load phase complete ── */
+  isAutoLoad = false;
 
 })();
 </script>

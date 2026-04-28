@@ -1091,6 +1091,7 @@ a:focus-visible, button:focus-visible {
   }
 
   /* ── State (module-scoped, not global) ── */
+  var isAutoLoad = true;
   let currentStep = 0;
   let answers = {};
 
@@ -1266,8 +1267,14 @@ a:focus-visible, button:focus-visible {
   function showResult() {
     console.assert(Object.keys(answers).length > 0, 'showResult: no answers provided');
     const rec = getRecommendation(answers);
-    const useCount = incrementUseCount();
-    console.assert(typeof useCount === 'number' && useCount > 0, 'showResult: useCount must be positive');
+    var useCount = 0;
+    if (!isAutoLoad) {
+      useCount = incrementUseCount();
+    } else {
+      useCount = parseInt(localStorage.getItem(STORAGE_KEY) || '0', 10);
+    }
+    isAutoLoad = false;
+    console.assert(typeof useCount === 'number' && useCount >= 0, 'showResult: useCount must be non-negative');
 
     let count = 0;
     for (let i = 0; i < steps.length && count < MAX_LOOP; i++) {
@@ -1284,7 +1291,7 @@ a:focus-visible, button:focus-visible {
     renderCostTable(rec);
     renderConfigSnippet(rec);
 
-    /* Paywall after 2 uses */
+    /* Paywall after 2 uses (read-only check always runs) */
     if (useCount > 2) {
       applyPaywall();
     }
@@ -1578,6 +1585,7 @@ a:focus-visible, button:focus-visible {
   /* ── Init ── */
   initListeners();
   updateProgress();
+  isAutoLoad = false;
 
 })();
 </script>

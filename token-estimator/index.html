@@ -964,6 +964,7 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
   var PAYWALL_LIMIT = 2;
   var GATED_CARD_IDS = Object.freeze(['card-plans', 'card-budget', 'card-usage-bar']);
   var estimationCount = 0;
+  var isAutoLoad = true;
 
   /* ---- Formatters ---- */
   var fmt = new Intl.NumberFormat('en-US');
@@ -1240,11 +1241,15 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
     renderBudget(estimate, model);
     renderUsageBar(estimate);
 
-    /* Paywall: increment on full calculation */
-    estimationCount++;
-    if (estimationCount <= PAYWALL_LIMIT) {
-      incrementUseCount();
+    /* Paywall: increment only on user-initiated calculation */
+    if (!isAutoLoad) {
+      estimationCount++;
+      if (estimationCount <= PAYWALL_LIMIT) {
+        incrementUseCount();
+      }
     }
+    isAutoLoad = false;
+    /* Read-only paywall check always runs */
     enforcePaywall();
   }
 
@@ -1331,23 +1336,9 @@ description: "Estimate how many tokens a Claude Code session will use. Plan your
   updateCodebaseDisplay();
   updateSessionDisplay();
 
-  /* Run initial calculation without incrementing paywall */
-  var initialUses = getUseCount();
-  if (initialUses < PAYWALL_LIMIT) {
-    /* Render initial state with defaults without counting as a use */
-    var codebaseK = parseInt(codebaseSlider.value, 10);
-    var fileSize = getRadio('filesize') || 'medium';
-    var tasks = getCheckedTasks();
-    if (tasks.length === 0) { tasks = ['codegen']; }
-    var sessionMin = parseInt(sessionSlider.value, 10);
-    var model = getRadio('model') || 'sonnet';
-    var estimate = estimateSessionTokens(codebaseK, fileSize, tasks, sessionMin, model);
-    renderResults(estimate, model);
-    renderPlans(estimate, model);
-    renderBudget(estimate, model);
-    renderUsageBar(estimate);
-  }
-  enforcePaywall();
+  /* Run initial calculation; isAutoLoad flag prevents paywall increment */
+  calculate();
+  /* isAutoLoad is now false (set inside calculate), so future calls count */
 
 })();
 </script>

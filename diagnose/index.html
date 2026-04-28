@@ -1523,6 +1523,11 @@ details .faq-answer{padding:0 18px 16px;color:oklch(0.80 0.008 70);font-size:14p
     populateDropdown();
     updateUsesBadge();
 
+    /* Show paywall on load if user already exhausted free uses (read-only, no increment) */
+    if (checkPaywall()) {
+      showPaywall();
+    }
+
     const btn = document.getElementById('btn-diagnose');
     if (btn) {
       btn.addEventListener('click', diagnose);

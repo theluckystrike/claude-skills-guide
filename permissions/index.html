@@ -934,6 +934,9 @@ claude --allowedTools "Edit,Write,Read,Glob,Grep,Bash(npm *),Bash(make *)" \
   var MAX_BASH_PATTERNS = 50;
   var MAX_PATTERN_LENGTH = 200;
 
+  /* ── Auto-load flag: prevents page-load actions from counting as uses ── */
+  var isAutoLoad = true;
+
   /* ── DOM refs ── */
   var modeGroup = document.getElementById('modeGroup');
   var yoloWarning = document.getElementById('yoloWarning');
@@ -1167,9 +1170,13 @@ claude --allowedTools "Edit,Write,Read,Glob,Grep,Bash(npm *),Bash(make *)" \
 
   /* ── Increment usage ── */
   function incrementUsage() {
-    state.useCount++;
-    assert(state.useCount > 0, 'useCount must be positive after increment');
-    saveUseCount();
+    assert(typeof isAutoLoad === 'boolean', 'isAutoLoad must be boolean');
+    assert(typeof state.useCount === 'number', 'useCount must be number before increment');
+    if (!isAutoLoad) {
+      state.useCount++;
+      saveUseCount();
+    }
+    isAutoLoad = false;
     checkPaywall();
   }
 
