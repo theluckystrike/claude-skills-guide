@@ -1,4 +1,7 @@
 ---
+sitemap: false
+noindex: true
+
 layout: default
 title: "Fix Claude Code Large File Crashes (2026)"
 description: "Fix Claude Code crashes on large files with memory plugin tips, file splitting strategies, and .claudeignore configuration that actually works."

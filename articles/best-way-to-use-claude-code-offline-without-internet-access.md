@@ -1,5 +1,6 @@
 ---
 sitemap: false
+noindex: true
 
 layout: default
 title: "Claude Code Offline Mode Setup (2026)"

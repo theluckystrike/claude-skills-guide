@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 
 layout: default
 title: "Claude Code for Lottie Animation (2026)"

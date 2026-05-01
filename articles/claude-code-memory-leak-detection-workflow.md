@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 
 layout: default
 title: "Memory Leak Detection Workflow (2026)"

@@ -1,4 +1,7 @@
 ---
+sitemap: false
+noindex: true
+
 layout: default
 title: "Fix Claude Code Bun Crash (2026)"
 description: "Resolve Claude Code crashing when using Bun runtime. Covers memory limits, version conflicts, and Bun-specific workarounds. Tested and working in 2026."

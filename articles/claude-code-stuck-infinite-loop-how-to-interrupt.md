@@ -1,4 +1,7 @@
 ---
+sitemap: false
+noindex: true
+
 layout: default
 title: "Claude Code Infinite Loop (2026)"
 description: "Claude Code stuck in a loop? Interrupt it instantly with keyboard shortcuts, config fixes, and prevention strategies that stop future loops too."

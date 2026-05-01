@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 
 layout: default
 title: "Claude Code for FPGA Development (2026)"
