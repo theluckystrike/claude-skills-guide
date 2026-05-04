@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Claude Temperature Settings (2026)"
 description: "Yes, you can adjust Claude's temperature — but only via the API. Full guide to temperature, top_p, top_k, recommended values by task, and code examples."

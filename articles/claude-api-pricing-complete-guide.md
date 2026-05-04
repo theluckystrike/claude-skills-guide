@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Claude API Pricing (2026)"
 description: "Complete Claude API pricing for all models and plans. Per-token costs, rate limits, batch discounts, prompt caching savings, and plan comparisons."

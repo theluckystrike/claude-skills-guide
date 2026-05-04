@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Fix: Claude Code Process Exited (2026)"
 description: "Diagnose and fix Claude Code exit code 1 errors. 10 specific causes with step-by-step tested fixes for macOS, Linux, Windows WSL, and Docker."

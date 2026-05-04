@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "--allowedTools vs --dangerously-skip-permissions (2026)"
 description: "Direct comparison of Claude Code's --allowedTools and --dangerously-skip-permissions flags: security, use cases, and how to migrate from YOLO to allowlist mode."

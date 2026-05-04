@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Claude Skills vs Cursor Rules (2026)"
 description: "Feature comparison of Claude Code skills and Cursor rules. Syntax, capabilities, ecosystem, and migration guide for developers switching tools."

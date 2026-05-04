@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Fix Claude Internal Server Error (2026)"
 description: "Fix Claude internal server error with retry logic, prompt size reduction, and model fallback. Step-by-step diagnostic guide with code examples."

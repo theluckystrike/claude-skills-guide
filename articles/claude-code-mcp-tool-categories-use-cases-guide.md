@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Claude Code MCP Tool Categories and Use (2026)"
 description: "A comprehensive guide to understanding MCP tool categories in Claude Code, with practical examples for developers building AI-powered workflows."

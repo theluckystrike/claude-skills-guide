@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Claude Code Spec Workflow (2026)"
 description: "Spec-driven development with Claude Code. Write specifications first, let Claude implement, then verify against the spec. Full workflow with examples."
