@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 
 layout: default
 title: "Claude Code Enterprise Disaster (2026)"

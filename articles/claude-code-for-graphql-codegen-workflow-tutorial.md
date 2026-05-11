@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Claude Code GraphQL Codegen Workflow (2026)"
 description: "Automate GraphQL code generation with Claude Code for typed queries, resolver scaffolding, and schema-first development. Working codegen configs."

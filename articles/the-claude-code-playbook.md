@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Claude Code Guides: Complete Collection (2026)"
 description: "Complete Claude Code collection: 50 error fixes, 25 CLAUDE.md templates, 15 orchestration configs, and 100 proven prompts. Tested April 2026."

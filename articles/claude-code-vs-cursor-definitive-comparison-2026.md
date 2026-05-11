@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Claude Code vs Cursor: Definitive Comparison (2026)"
 description: "Claude Code vs Cursor compared across 15+ features, pricing tiers, architecture, and team fit. Three-persona verdict updated for April 2026."

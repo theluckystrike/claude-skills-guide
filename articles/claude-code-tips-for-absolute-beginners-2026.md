@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Claude Code Tips For Absolute Beginners (2026)"
 description: "Learn essential Claude Code tips for absolute beginners in 2026. This practical guide covers setup, skills, and workflows to boost your productivity."

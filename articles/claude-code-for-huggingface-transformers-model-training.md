@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 
 layout: default
 title: "Claude Code for HuggingFace (2026)"

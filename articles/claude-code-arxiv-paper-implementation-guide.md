@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 
 layout: default
 title: "Implement ArXiv Papers with Claude Code (2026)"

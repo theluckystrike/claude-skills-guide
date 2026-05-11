@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Claude Code ISO 27001 Evidence (2026)"
 description: "Learn how to build automated ISO 27001 evidence collection workflows using Claude Code skills. Streamline your compliance audits with practical."

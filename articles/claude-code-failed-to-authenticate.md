@@ -1,5 +1,6 @@
 ---
 sitemap: false
+noindex: true
 layout: default
 title: "Fix Claude Code Failed to Authenticate (2026)"
 description: "Resolve Claude Code authentication failures with step-by-step fixes for expired tokens, invalid API keys, and misconfigured credentials."

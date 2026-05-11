@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Fix 'command not found (2026)"
 description: "Resolve the 'command not found: claude' error after installing Claude Code on macOS, Linux, and Windows with PATH fixes."

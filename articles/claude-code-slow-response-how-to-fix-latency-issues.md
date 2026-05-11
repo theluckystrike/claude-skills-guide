@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Fix Slow Response Latency (2026)"
 description: "Fix slow Claude Code response times. Trim context, optimize skills, and tune performance settings. Tested speed improvements."

@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Claude Code API Regression Testing (2026)"
 description: "Master API regression testing with Claude Code. Learn workflows, tools integration, automated testing, and best practices for catching breaking changes."

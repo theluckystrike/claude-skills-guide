@@ -1,5 +1,6 @@
 ---
 sitemap: false
+noindex: true
 layout: default
 title: "Fix Next.js Hydration Errors Using (2026)"
 description: "Resolve Next.js hydration mismatch errors with Claude Code. Fix server/client rendering differences, dynamic content, and date formatting issues."

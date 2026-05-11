@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Claude Code for Makefile Build (2026)"
 description: "Automate build systems with Makefiles and Claude Code. Covers target generation, dependency tracking, phony targets, and multi-project build graphs."

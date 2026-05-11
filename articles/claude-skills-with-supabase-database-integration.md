@@ -1,4 +1,6 @@
 ---
+sitemap: false
+noindex: true
 layout: default
 title: "Claude Skills with Supabase (2026)"
 description: "How to use Claude Code skills alongside Supabase for database-backed projects. what works, what does not, and practical patterns."
