@@ -1,5 +1,6 @@
 ---
 sitemap: false
+noindex: true
 layout: default
 title: "Fix Claude Code Crashing in VS Code (2026)"
 description: "Stop Claude Code from crashing VS Code with fixes for memory limits, extension conflicts, and terminal configuration issues. Tested and working in 2026."

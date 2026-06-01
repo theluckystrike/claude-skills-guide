@@ -5,6 +5,8 @@ permalink: /claude-code-extension-host-crash-fix-2026/
 date: 2026-04-20
 description: "Fix VS Code extension host crash caused by Claude Code. Disable conflicting extensions and increase memory limit to stabilize the extension host process."
 last_tested: "2026-04-22"
+sitemap: false
+noindex: true
 ---
 
 ## The Error

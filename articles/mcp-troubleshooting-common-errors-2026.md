@@ -7,6 +7,8 @@ permalink: /mcp-troubleshooting-common-errors-2026/
 categories: [guides, claude-code]
 tags: [MCP, troubleshooting, errors, debugging, fixes]
 last_modified_at: 2026-04-26
+sitemap: false
+noindex: true
 ---
 
 # MCP Troubleshooting Common Errors (2026)

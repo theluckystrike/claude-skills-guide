@@ -4,6 +4,8 @@ title: "Top 50 Claude Code Errors (2026)"
 description: "The 50 most common Claude Code errors with one-line fixes. Diagnose connection, API, memory, and permission errors instantly."
 permalink: /top-50-claude-code-errors-2026/
 date: 2026-04-26
+sitemap: false
+noindex: true
 ---
 
 # Top 50 Claude Code Errors (2026)
