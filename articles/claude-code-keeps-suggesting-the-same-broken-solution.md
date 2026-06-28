@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 layout: default
 title: "Claude Code Keeps Suggesting The Same (2026)"
 description: "Learn why Claude Code gets stuck in repetitive solution loops and how to break free with practical techniques and skill design patterns."

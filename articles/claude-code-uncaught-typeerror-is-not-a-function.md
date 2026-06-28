@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 layout: default
 title: "Fix Claude Code Uncaught Typeerror (2026)"
 description: "Learn how to diagnose and fix 'Uncaught TypeError: is not a function' errors when working with Claude Code skills. Practical examples included."

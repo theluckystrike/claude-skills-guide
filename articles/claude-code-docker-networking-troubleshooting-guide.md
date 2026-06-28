@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 
 layout: default
 title: "Fix Docker Networking with Claude Code (2026)"

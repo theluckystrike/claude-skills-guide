@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 
 layout: default
 title: "Claude Code for LlamaIndex RAG Pipeline (2026)"

@@ -1,9 +1,7 @@
 ---
-sitemap: false
-noindex: true
 layout: default
-title: "Fix Claude Code Timeout Error (2026)"
-description: "Increase Claude Code timeout from the 120s default using timeout parameter, run_in_background flag, or chunked execution for long-running builds."
+title: "Claude Code Skill Timeout? How to Increase the 120s Limit (2026)"
+description: "Skill hitting 'tool call timed out' at 120s? BUMP_TIMEOUT, run_in_background, /compact context, and BASH_MAX_OUTPUT_MS tweaks for long builds, tests, and MCP tools. June 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-21
 last_tested: "2026-04-21"

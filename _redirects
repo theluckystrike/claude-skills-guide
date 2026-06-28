@@ -4,3 +4,9 @@ https://www.claudecodeguides.com/* https://claudecodeguides.com/:splat 301
 # Fix truncated filename URLs
 /how-to-use-claude-code-to-understand-unfamiliar-codebase-qui/ /how-to-use-claude-code-to-understand-unfamiliar-codebase-quickly/ 301
 /how-to-use-claude-code-to-write-database-queries-from-scratc/ /how-to-use-claude-code-to-write-database-queries-from-scratch/ 301
+
+# claudhq.com → claudecodeguides.com migration: path rewrites for renamed slugs.
+# These handle URL mismatches when claudhq.com is redirected to claudecodeguides.com
+# at the DNS/Cloudflare level. Keep until GSC shows >90% traffic on claudecodeguides.com.
+/claude-code-bun-crash-fix/ /claude-code-bun-crash/ 301
+

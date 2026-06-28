@@ -1,9 +1,7 @@
 ---
-sitemap: false
-noindex: true
 layout: default
-title: "Fix Claude Internal Server Error (2026)"
-description: "Fix Claude internal server error with retry logic, prompt size reduction, and model fallback. Step-by-step diagnostic guide with code examples."
+title: "Claude 500 Internal Server Error? 5 Proven Fixes (June 2026)"
+description: "Claude API returning '500 Internal Server Error' or '500 status code (no body)'? 5 tested fixes: retry with backoff, prompt trimming, model swap, status check, and proxy bypass. Updated June 2026."
 permalink: /claude-internal-server-error-fix/
 date: 2026-04-20
 last_tested: "2026-04-24"

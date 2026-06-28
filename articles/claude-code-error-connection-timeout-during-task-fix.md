@@ -1,10 +1,8 @@
 ---
-sitemap: false
-noindex: true
 
 layout: default
-title: "Fix Claude Code Request Timed Out Error (2026)"
-description: "Fix 'request timed out' in Claude Code with copy-paste config. Covers API timeouts, MCP connection drops, and retry settings that actually work."
+title: "Claude Code 'Request Timed Out'? 5 Fixes for API, MCP & Network (2026)"
+description: "Claude Code hanging on 'request timed out'? Copy-paste fixes for API latency, MCP server drops, proxy issues, and retry config that ships in 2 minutes. Tested June 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-21
 last_tested: "2026-04-21"

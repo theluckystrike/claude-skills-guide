@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 layout: default
 title: "How to Use Claude Code: Beginner Guide (2026)"
 description: "Step-by-step beginner guide to Claude Code. Install, first session, CLAUDE.md setup, commands, workflows, and tips for productive AI-assisted coding."

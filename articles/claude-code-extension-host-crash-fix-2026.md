@@ -1,12 +1,10 @@
 ---
 layout: default
-title: "VS Code Extension Host Crash Fix (2026)"
+title: "VS Code Extension Host Crash With Claude Code? 5 Fixes (2026)"
 permalink: /claude-code-extension-host-crash-fix-2026/
 date: 2026-04-20
-description: "Fix VS Code extension host crash caused by Claude Code. Disable conflicting extensions and increase memory limit to stabilize the extension host process."
+description: "'Extension host terminated unexpectedly' when Claude Code runs? Disable conflicting extensions, raise TS-server memory, kill GPU compositing, and patch the runtime. Tested June 2026."
 last_tested: "2026-04-22"
-sitemap: false
-noindex: true
 ---
 
 ## The Error

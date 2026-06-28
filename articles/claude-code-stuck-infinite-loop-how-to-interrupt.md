@@ -1,10 +1,8 @@
 ---
-sitemap: false
-noindex: true
 
 layout: default
-title: "Claude Code Infinite Loop (2026)"
-description: "Claude Code stuck in a loop? Interrupt it instantly with keyboard shortcuts, config fixes, and prevention strategies that stop future loops too."
+title: "Claude Code Stuck in a Loop? Stop It Instantly + Prevent Forever (2026)"
+description: "Claude Code repeating the same broken fix or spinning on a task? Esc shortcuts, MAX_TOKENS fixes, and CLAUDE.md guardrails that end the loop and prevent the next one. Updated June 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

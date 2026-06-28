@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 layout: default
 title: "Fix Claude Extended Thinking Not (2026)"
 description: "Fix Claude extended thinking errors. Covers budget_tokens validation, tool_choice conflicts, display options, and multi-turn thinking continuity."

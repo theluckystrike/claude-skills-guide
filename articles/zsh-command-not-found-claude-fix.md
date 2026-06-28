@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 layout: default
 title: "Fix zsh: command not found: claude (2026)"
 description: "Fix the zsh command not found claude error. Six causes with step-by-step PATH, Node.js, and permission fixes for macOS, Linux, and WSL shells."

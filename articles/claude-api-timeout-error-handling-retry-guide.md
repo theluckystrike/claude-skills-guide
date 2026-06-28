@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 layout: default
 title: "Fix Claude API Timeout (2026)"
 description: "Handle Claude API timeout errors with retry logic, exponential backoff, and per-request timeout configuration. Tested with production apps in 2026."

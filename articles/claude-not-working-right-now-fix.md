@@ -5,8 +5,6 @@ description: "Fix every Claude not working scenario: API outages, rate limits, a
 permalink: /claude-not-working-right-now-fix/
 date: 2026-04-20
 last_tested: "2026-04-24"
-sitemap: false
-noindex: true
 ---
 
 # Fix: Claude Isn't Working Right Now (2026)

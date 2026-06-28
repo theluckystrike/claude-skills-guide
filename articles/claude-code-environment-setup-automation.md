@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 
 layout: default
 title: "Automate Claude Code Environment Setup (2026)"

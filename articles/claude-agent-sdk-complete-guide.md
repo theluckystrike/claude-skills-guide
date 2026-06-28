@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 layout: default
 title: "Claude Agent SDK (2026)"
 description: "Build autonomous AI agents with the Claude Agent SDK. Installation, working examples, architecture patterns, cost analysis, and configuration reference."

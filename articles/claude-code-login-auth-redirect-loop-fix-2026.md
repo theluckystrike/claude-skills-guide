@@ -5,8 +5,6 @@ permalink: /claude-code-login-auth-redirect-loop-fix-2026/
 date: 2026-04-20
 description: "Fix Claude Code login redirect loop. Clear auth cache, reset OAuth state, and re-authenticate with claude login command."
 last_tested: "2026-04-22"
-sitemap: false
-noindex: true
 ---
 
 ## The Error

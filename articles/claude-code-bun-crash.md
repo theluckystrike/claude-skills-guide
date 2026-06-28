@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 
 layout: default
 title: "Fix Claude Code Bun Crash (2026)"

@@ -4,8 +4,6 @@ title: "Why Claude Code Keeps Crashing (2026)"
 description: "Systematic guide to fixing Claude Code crashes. Covers memory limits, network timeouts, permission errors, and API rate limits with tested solutions."
 permalink: /why-claude-code-keeps-crashing-2026/
 date: 2026-04-26
-sitemap: false
-noindex: true
 ---
 
 # Why Claude Code Keeps Crashing (2026)

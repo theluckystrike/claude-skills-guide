@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 layout: default
 title: "Claude Code API Security Owasp (2026)"
 description: "Learn how to secure your Claude Code integrations against OWASP Top 10 vulnerabilities. Practical patterns for building safe AI agent APIs."

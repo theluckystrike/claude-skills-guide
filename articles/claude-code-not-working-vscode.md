@@ -1,11 +1,9 @@
 ---
-sitemap: false
-noindex: true
 layout: default
-title: "Fix Claude Code Not Working VSCode (2026)"
-description: "Resolve Claude Code extension issues in VS Code — blank panels, missing output, connection errors, and WSL integration problems. Updated for 2026."
+title: "Claude Code Not Working in VS Code? 8 Proven Fixes (2026)"
+description: "Claude Code panel blank, frozen, or disconnected in VS Code? 8 tested fixes for PATH errors, extension crashes, and 'command not found' — most under 2 minutes. Updated June 2026."
 date: 2026-04-14
-last_modified_at: 2026-04-17
+last_modified_at: 2026-06-28
 author: "Claude Code Guides"
 permalink: /claude-code-not-working-vscode/
 reviewed: true

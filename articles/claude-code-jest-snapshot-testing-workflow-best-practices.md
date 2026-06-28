@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 
 layout: default
 title: "Claude Code Jest Snapshot Testing (2026)"

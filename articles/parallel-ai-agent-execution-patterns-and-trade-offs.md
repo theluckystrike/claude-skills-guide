@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 
 layout: default
 title: "Parallel AI Agent Execution Patterns (2026)"

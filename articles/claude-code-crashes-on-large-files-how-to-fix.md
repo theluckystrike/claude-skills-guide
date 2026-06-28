@@ -1,10 +1,8 @@
 ---
-sitemap: false
-noindex: true
 
 layout: default
-title: "Fix Claude Code Large File Crashes (2026)"
-description: "Fix Claude Code crashes on large files with memory plugin tips, file splitting strategies, and .claudeignore configuration that actually works."
+title: "Claude Code Crashing on Large Files? 7 Fixes That Stop OOM Kills (2026)"
+description: "Claude Code OOM-killed on big files? 7 fixes that work: .claudeignore rules, /compact, chunk scripts, MAX_THINKING_TOKENS, and Node heap flags. Tested on 50MB+ files. June 2026."
 date: 2026-03-14
 last_modified_at: 2026-04-17
 author: "Claude Skills Guide"

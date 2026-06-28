@@ -1,9 +1,7 @@
 ---
-sitemap: false
-noindex: true
 layout: default
-title: "Claude API 503 Service Unavailable (2026)"
-description: "Fix Claude API 503 Service Unavailable errors. Add exponential backoff retry logic and fallback routing. Step-by-step solution."
+title: "Claude API 503 Service Unavailable? 4 Fixes + When to Wait It Out (2026)"
+description: "Claude API returning 503? Distinguish Anthropic outage vs. your rate limit. Copy-paste exponential backoff, status.claude.com check, model fallback, and queue logic. Tested June 2026."
 permalink: /claude-api-503-service-unavailable-fix/
 date: 2026-04-20
 last_tested: "2026-04-21"

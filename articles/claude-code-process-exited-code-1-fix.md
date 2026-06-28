@@ -1,9 +1,7 @@
 ---
-sitemap: false
-noindex: true
 layout: default
-title: "Fix: Claude Code Process Exited (2026)"
-description: "Diagnose and fix Claude Code exit code 1 errors. 10 specific causes with step-by-step tested fixes for macOS, Linux, Windows WSL, and Docker."
+title: "Claude Code 'Process Exited With Code 1'? 10 Fixes That Work (2026)"
+description: "Claude Code crashing with exit code 1 (EPERM, internal error, spawn failures)? 10 tested fixes for macOS, Linux, WSL, and Docker — ranked by likelihood. Updated June 2026."
 permalink: /claude-code-process-exited-code-1-fix/
 date: 2026-04-20
 last_tested: "2026-04-24"

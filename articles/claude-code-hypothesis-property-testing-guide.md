@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 
 layout: default
 title: "Claude Code Hypothesis Property Testing (2026)"

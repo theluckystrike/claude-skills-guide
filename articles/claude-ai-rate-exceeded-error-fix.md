@@ -1,6 +1,4 @@
 ---
-sitemap: false
-noindex: true
 layout: default
 title: "Fix Claude AI Rate Exceeded Error (2026)"
 description: "Fix claude.ai rate exceeded errors on Free, Pro, and Max subscription plans. Understand web app rate limits vs API limits and fix throttling."
