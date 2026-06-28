@@ -16,13 +16,13 @@ reviewed: true
 
 ## TL;DR — Quick Fix
 
-Run this single command. It fixes the problem 90% of the time:
+Run this single command. It reinstalls the Claude Code CLI globally and reloads your shell PATH:
 
 ```
 npm install -g @anthropic-ai/claude-code && source ~/.zshrc && claude --version
 ```
 
-If that does not work, your shell cannot find the npm global bin directory. Keep reading for the full fix.
+If `claude --version` still returns nothing, your shell cannot find the npm global bin directory. Keep reading for the full PATH fix.
 
 ## The Error
 

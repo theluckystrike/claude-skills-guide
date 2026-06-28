@@ -14,6 +14,8 @@ reviewed: true
 
 # Fix ERR_STREAM_PREMATURE_CLOSE in Claude Code VS Code Install (2026)
 
+> **Quick answer:** `ERR_STREAM_PREMATURE_CLOSE` means the VS Code Marketplace download stream dropped mid-transfer (Node.js stream error, 2026). Restart VS Code, retry, or install the `.vsix` manually via `code --install-extension claude-code.vsix`.
+
 ## The Error
 
 ```

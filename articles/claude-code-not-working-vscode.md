@@ -12,9 +12,9 @@ tags: ["claude-code", "vscode", "ide", "troubleshooting"]
 geo_optimized: true
 last_tested: "2026-04-22"
 ---
-# Fix Claude Code Not Working in VS Code
+# Claude Code Not Working in VS Code? 8 Proven Fixes (2026)
 
-> **TL;DR:** Verify the CLI is installed and on PATH, check the extension version, restart VS Code, and inspect the output channel for errors.
+> **Quick answer:** Claude Code's VS Code extension fails when the `claude` CLI is missing from PATH (Anthropic, 2026). Reinstall via `npm i -g @anthropic-ai/claude-code` and reload VS Code.
 
 ## The Problem
 
