@@ -269,7 +269,7 @@ function addMethodology(body) {
     `This guide is based on hands-on testing with Claude Code, ` +
     `direct API experimentation, and analysis of real-world ` +
     `developer workflows. Content is reviewed by an experienced ` +
-    `developer with $400K+ in verified Upwork earnings and ` +
+    `developer with 300+ merged open source pull requests and ` +
     `100% Job Success Score. All code examples are tested in ` +
     `production environments. Updated ${LIMITS.TODAY}.\n`;
 

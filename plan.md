@@ -350,7 +350,7 @@ Nav HTML to port (from new design lines 1056-1078):
 - Remove the "portrait" text content from the div
 
 **Data updates:**
-- Bio text stays as-is (Michael Lip, Da Nang, agent fleet)
+- Bio text stays as-is (Michael Lip, Warsaw, agent fleet)
 - Update links: `zovo.one` -> `https://zovo.one`, `github/theluckystrike` -> `https://github.com/theluckystrike`
 
 **QA:**
@@ -488,7 +488,6 @@ Browse all CTA: `#` -> `/all-articles/`
 | zovo.one | `https://zovo.one` |
 | Discord | `https://discord.com/invite/QeHxTFbqmC` |
 | GitHub | `https://github.com/theluckystrike` |
-| Upwork profile | `https://www.upwork.com/freelancers/~01b0e2c31b7c8a0e5c` |
 | Email | `mailto:michael@zovo.one` (verify) |
 
 **QA:**

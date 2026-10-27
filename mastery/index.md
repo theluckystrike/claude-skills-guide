@@ -1,14 +1,14 @@
 ---
 layout: default
 title: "Claude Code Mastery"
-description: "16 CLAUDE.md templates, 80+ tested prompts, orchestration configs. The actual files a $500K+ Upwork developer uses to ship with Claude Code. $99 once, yours forever."
+description: "16 CLAUDE.md templates, 80+ tested prompts, orchestration configs. The actual files a developer with 300+ merged open source PRs uses to ship with Claude Code. $99 once, yours forever."
 permalink: /mastery/
 date: 2026-04-15
 last_modified_at: 2026-04-15
 author: "Claude Code Guides"
 ---
 
-# I run 5 Claude Max subscriptions from a laptop in Da Nang.
+# I run 5 Claude Max subscriptions from a laptop in Warsaw.
 
 This is how.
 
@@ -18,7 +18,7 @@ This is how.
 
 I'm Michael. Solo developer. Digital nomad.
 
-- $500K+ earned on Upwork. 100% Job Success. Top Rated Plus.
+- 300+ pull requests merged in open source projects.
 - 16 Chrome extensions. 50K+ users across the Zovo portfolio.
 - 5 Claude Max subscriptions running autonomous agent fleets in parallel.
 - This entire site — 2,500+ articles — was built by 5 agents while I was on a beach in Canggu.
@@ -77,7 +77,6 @@ Claude Code Mastery is part of Zovo Lifetime. When you buy in, you also get:
 - 30% affiliate program
 - Monthly live builder calls & extension teardowns
 - Private Discord: verified builders only
-- In-person meetups: Da Nang, Bangkok, Bali
 - Direct access to me. Not a bot. Not a VA.
 - Every future tool I build
 
@@ -119,7 +118,7 @@ Email me. I'll refund you. I don't want your money if you're not using the tools
 
 **"Who are you?"**
 
-Michael. Polish/Czech passport, based in Da Nang, Vietnam. Been doing this for 10+ years. Built AUTOM8 LLC. Top Rated Plus on Upwork since before it was cool. I attend the Hackanang indie maker meetup and connect with builders across Southeast Asia.
+Michael. Based in Warsaw, Poland. Been doing this for 10+ years. Built AUTOM8 LLC.  I attend the Hackanang indie maker meetup and connect with builders across Southeast Asia.
 
 I'm one person who figured out how to do the work of a team by building better tools. These are those tools.
 

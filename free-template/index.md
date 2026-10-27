@@ -277,7 +277,7 @@ The core principles -- bounded functions, explicit types, mandatory tests, struc
 - [Permission Rules and settings.json Guide](/claude-code-permission-rules-settings-json-guide/) -- Control what Claude Code can and cannot do in your project
 
 <div class="trust-strip">
-$500K+ on Upwork · 100% Job Success · Top Rated Plus · 50K+ extension users · 5 Claude Max subs · Solo dev, Da Nang
+300+ merged open source PRs · 150,000+ extension users · 5 Claude Max subs · Solo dev, Warsaw
 </div>
 
 ## Want More Templates, Prompts, and Configs?
