@@ -598,7 +598,7 @@ The orchestration configs, sprint templates, and quality gates that made that po
 
 **[See how the pipeline works →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-skills&utm_campaign=claude-md-example-for-nextjs-typescript-project)**
 
-$99 once. I'm a solo dev in Da Nang. This is how I scale.
+$99 once. I'm a solo dev in Warsaw. This is how I scale.
 
 </div>
 

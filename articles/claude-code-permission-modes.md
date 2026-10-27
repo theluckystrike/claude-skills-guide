@@ -162,7 +162,7 @@ claude --permission-mode allowEdits
 
 <div class="author-bio">
 
-**Written by Michael** — solo dev, Da Nang, Vietnam. 50K+ Chrome extension users. $500K+ on Upwork (100% Job Success). Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
+**Written by Michael**, solo dev in Warsaw, Poland. 150,000+ Chrome extension users. 300+ merged pull requests in open source. Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
 
 </div>
 

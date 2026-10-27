@@ -163,7 +163,7 @@ curl -s https://api.anthropic.com/v1/messages \
 
 I hit this exact error six months ago. Then I wrote a CLAUDE.md that tells Claude my stack, my conventions, and my error handling patterns. Haven't seen it since.
 
-I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+ on Upwork. These CLAUDE.md templates are what I actually use. Not theory — production configs.
+I run 5 Claude Max subs and 108 Chrome extensions serving 150,000+ users. These CLAUDE.md templates are what I actually use. Not theory — production configs.
 
 **[Grab the templates — $99 once, free forever →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-error&utm_campaign=claude-api-error-500-fix)**
 

@@ -227,7 +227,7 @@ The patterns in this guide work particularly well when combined with other Claud
 
 I hit this exact error six months ago. Then I wrote a CLAUDE.md that tells Claude my stack, my conventions, and my error handling patterns. Haven't seen it since.
 
-I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+ on Upwork. These CLAUDE.md templates are what I actually use. Not theory — production configs.
+I run 5 Claude Max subs and 108 Chrome extensions serving 150,000+ users. These CLAUDE.md templates are what I actually use. Not theory — production configs.
 
 **[Grab the templates — $99 once, free forever →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-mcp&utm_campaign=planetscale-mcp-server-branching-workflow-guide)**
 

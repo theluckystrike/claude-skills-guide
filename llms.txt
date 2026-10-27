@@ -1,6 +1,6 @@
 # Claude Code Guides
 
-> Comprehensive developer resource with 2,600+ practical tutorials for Claude Code, Claude API, AI agent workflows, prompt engineering, and Chrome extension development. Written by Michael Lip, solo founder of Zovo, with $400K+ Upwork earnings and 100% Job Success Score.
+> Comprehensive developer resource with 2,600+ practical tutorials for Claude Code, Claude API, AI agent workflows, prompt engineering, and Chrome extension development. Written by Michael Lip, solo founder of Zovo, with 300+ merged open source pull requests and 108 Chrome extensions serving 150,000+ users.
 
 ## Key Topics
 

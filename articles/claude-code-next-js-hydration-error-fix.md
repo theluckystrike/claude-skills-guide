@@ -276,7 +276,7 @@ Add these rules to your CLAUDE.md for Next.js projects:
 
 <div class="author-bio">
 
-**Written by Michael** — solo dev, Da Nang, Vietnam. 50K+ Chrome extension users. $500K+ on Upwork (100% Job Success). Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
+**Written by Michael**, solo dev in Warsaw, Poland. 150,000+ Chrome extension users. 300+ merged pull requests in open source. Runs 5 Claude Max subs in parallel. Built this site with autonomous agent fleets. [See what I'm building →](https://zovo.one)
 
 </div>
 
@@ -286,7 +286,7 @@ Add these rules to your CLAUDE.md for Next.js projects:
 
 I hit this exact error six months ago. Then I wrote a CLAUDE.md that tells Claude my stack, my conventions, and my error handling patterns. Haven't seen it since.
 
-I run 5 Claude Max subs, 16 Chrome extensions serving 50K users, and bill $500K+ on Upwork. These CLAUDE.md templates are what I actually use. Not theory — production configs.
+I run 5 Claude Max subs and 108 Chrome extensions serving 150,000+ users. These CLAUDE.md templates are what I actually use. Not theory — production configs.
 
 **[Grab the templates — $99 once, free forever →](https://zovo.one/lifetime?utm_source=ccg&utm_medium=cta-error&utm_campaign=claude-code-next-js-hydration-error-fix)**
 

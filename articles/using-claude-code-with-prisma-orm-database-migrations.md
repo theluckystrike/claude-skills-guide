@@ -306,7 +306,7 @@ For more development tips and AI-assisted workflows, explore additional resource
 
 <div class="mastery-cta">
 
-I'm a solo developer in Vietnam. 50K Chrome extension users. $500K+ on Upwork. 5 Claude Max subscriptions running agent fleets in parallel.
+I'm a solo developer in Warsaw, Poland. 150,000+ Chrome extension users. 300+ merged pull requests in open source projects. 5 Claude Max subscriptions running agent fleets in parallel.
 
 These are my actual CLAUDE.md templates, orchestration configs, and prompts. Not a course. Not theory. The files I copy into every project before I write a line of code.
 

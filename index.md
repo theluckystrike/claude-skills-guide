@@ -2,7 +2,7 @@
 render_with_liquid: false
 layout: homepage
 title: "Claude Code Guides — Ship Faster with Claude Code"
-description: "3,021 production-tested Claude Code guides. CLAUDE.md templates, debugging workflows, and MCP integrations from a developer earning $400K+/year on Upwork."
+description: "3,021 production-tested Claude Code guides. CLAUDE.md templates, debugging workflows, and MCP integrations from a developer with 300+ merged open source pull requests."
 date: 2026-04-20
 ---
 
@@ -1291,14 +1291,14 @@ html[data-theme="light"] .nav-dropdown-panel { box-shadow: 0 20px 40px -12px rgb
         <span class="eyebrow">&sect; 01 &middot; The operator</span>
         <h2 class="h2" style="margin:16px 0 0">Receipts, not&nbsp;<i>promises.</i></h2>
       </div>
-      <p>One solo developer in Da Nang, running an agent fleet, shipping configs daily, paid by the market.</p>
+      <p>One solo developer in Warsaw, running an agent fleet, shipping configs daily, paid by the market.</p>
     </div>
 
     <div class="stats-grid">
       <div class="stat">
         <div>
-          <div class="stat-label">&sect; Upwork &middot; lifetime</div>
-          <div class="stat-num">$400K<span class="plus">+</span></div>
+          <div class="stat-label">&sect; Merged PRs &middot; open source</div>
+          <div class="stat-num">300<span class="plus">+</span></div>
         </div>
         <div>
           <div class="stat-chart">
@@ -1347,11 +1347,11 @@ html[data-theme="light"] .nav-dropdown-panel { box-shadow: 0 20px 40px -12px rgb
     <div class="bio">
       <div class="bio-portrait" role="img" aria-label="Portrait of Michael Lip"></div>
       <div class="bio-text">
-        Run by <em>Michael Lip</em> &mdash; a solo developer in Da Nang maintaining a fleet of agents on five Claude Max subscriptions. Every guide is updated daily. Every config is tested before it lands.
+        Run by <em>Michael Lip</em> &mdash; a solo developer in Warsaw maintaining a fleet of agents on five Claude Max subscriptions. Every guide is updated daily. Every config is tested before it lands.
       </div>
       <div class="bio-meta">
         <b>Michael Lip</b>
-        <span>Da Nang, Vietnam</span><br>
+        <span>Warsaw, Poland</span><br>
         <span><a href="https://zovo.one" target="_blank" rel="noopener noreferrer" style="color:var(--ink-3)">zovo.one</a> &middot; <a href="https://github.com/theluckystrike" target="_blank" rel="noopener noreferrer" style="color:var(--ink-3)">github/theluckystrike</a></span>
       </div>
     </div>
@@ -1435,7 +1435,7 @@ html[data-theme="light"] .nav-dropdown-panel { box-shadow: 0 20px 40px -12px rgb
       </a>
       <a class="guide-row" href="/claude-api-system-prompt-engineering-for-production-apps/">
         <div class="m"><span>&sect; Prompts</span><span>&mdash;</span></div>
-        <div class="t">The 12 prompts I reuse across every Upwork engagement.</div>
+        <div class="t">The 12 prompts I reuse across every client engagement.</div>
         <div class="m"><span>3,114 reads</span><span>14m</span></div>
       </a>
       <a class="guide-row" href="/claude-md-best-practices-for-large-codebases/">
@@ -1883,12 +1883,12 @@ html[data-theme="light"] .nav-dropdown-panel { box-shadow: 0 20px 40px -12px rgb
         <a href="https://zovo.one" target="_blank" rel="noopener noreferrer">zovo.one &#8599;</a>
         <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer">Discord &#8599;</a>
         <a href="https://github.com/theluckystrike" target="_blank" rel="noopener noreferrer">GitHub &#8599;</a>
-        <a href="https://www.upwork.com/freelancers/~01b0e2c31b7c8a0e5c" target="_blank" rel="noopener noreferrer">Upwork profile &#8599;</a>
+        <a href="https://www.axdale.com" target="_blank" rel="noopener noreferrer">Hire me &#8599;</a>
         <a href="mailto:michael@zovo.one">Email</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>&copy; 2026 &middot; Built in Da Nang &middot; Updated daily by an agent fleet on five Claude Max subscriptions.</span>
+      <span>&copy; 2026 &middot; Built in Warsaw &middot; Updated daily by an agent fleet on five Claude Max subscriptions.</span>
       <span>v2.4 &middot; no cookies &middot; no tracking</span>
     </div>
   </div>
