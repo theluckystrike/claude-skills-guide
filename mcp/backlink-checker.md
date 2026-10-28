@@ -104,7 +104,7 @@ Nothing is stored. Every call fetches the page live, parses the anchor, applies 
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/backlink-checker` — point any MCP client at that URL.
+- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/backlink-checker` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/backlink-checker.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/backlink-checker`.
 - **npm:** the package `@theluckystrike/mcp-backlink-checker` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

@@ -104,7 +104,7 @@ Purchase orders and the goods-receipt notes that receive them. A PO carries a re
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/goods-receipt` — point any MCP client at that URL.
+- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/goods-receipt` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/goods-receipt.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/goods-receipt`.
 - **npm:** the package `@theluckystrike/mcp-goods-receipt` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

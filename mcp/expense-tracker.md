@@ -104,7 +104,7 @@ Say "12.30 euros at Adobe, software, billable to Acme" and it is logged, categor
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/expense-tracker` — point any MCP client at that URL.
+- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/expense-tracker` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.9/expense-tracker.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/expense-tracker`.
 - **npm:** the package `@theluckystrike/mcp-expense-tracker` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

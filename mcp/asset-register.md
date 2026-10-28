@@ -104,7 +104,7 @@ Fixed assets and depreciation on bundled Polish KST, HMRC and IRS MACRS tables.
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/asset-register` — point any MCP client at that URL.
+- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/asset-register` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/asset-register.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/asset-register`.
 - **npm:** the package `@theluckystrike/mcp-asset-register` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

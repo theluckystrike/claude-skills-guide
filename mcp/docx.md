@@ -104,7 +104,7 @@ Say "write a proposal for Beta Corp, checkout rebuild, 4,500 EUR, three phases" 
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/docx` — point any MCP client at that URL.
+- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/docx` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/docx.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/docx`.
 - **npm:** the package `@theluckystrike/mcp-docx` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

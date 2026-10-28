@@ -104,7 +104,7 @@ No delta is stored. A change order holds its lines and its status history; the d
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/change-order` — point any MCP client at that URL.
+- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/change-order` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/change-order.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/change-order`.
 - **npm:** the package `@theluckystrike/mcp-change-order` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

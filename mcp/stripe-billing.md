@@ -24,7 +24,7 @@ date: 2026-10-28
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD",
-    "description": "Free tier: unlimited local use. Optional one-time Pro licence for the hosted endpoint."
+    "description": "Free: unlimited local use, MIT licensed. No hosted tier for this server yet."
    },
    "isPartOf": {
     "@type": "ItemList",
@@ -40,7 +40,7 @@ date: 2026-10-28
      "name": "Is the Stripe Billing MCP server free?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes. Running Stripe Billing locally is free and unlimited, and the code is MIT licensed. There is a one-time $19 Pro licence for the hosted endpoint, which removes the saved-report cap. No subscription and no account are required."
+      "text": "Yes. Running Stripe Billing locally is free and unlimited, and the code is MIT licensed. This server is local-only today, so there is nothing to pay for. No subscription and no account are required."
      }
     },
     {
@@ -48,7 +48,7 @@ date: 2026-10-28
      "name": "Does Stripe Billing need an API key?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "No. The server works offline against local files. If you use the hosted endpoint, the connection is authenticated with a scoped token instead of a per-tool API key."
+      "text": "No. The server works offline against local files."
      }
     },
     {
@@ -104,7 +104,7 @@ Give Claude (or any MCP client) two working Stripe tools: `stripe_balance` reads
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/stripe-billing` — point any MCP client at that URL.
+- **Hosted endpoint:** not open for this server yet - use the `.mcpb` bundle or build from source below. The other 46 servers in the suite are already hosted.
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/stripe-billing.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/stripe-billing`.
 - **npm:** the package `mcp-stripe-billing` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.
@@ -125,11 +125,11 @@ hosted endpoint's saved-report cap, never the tools. All 58 servers together are
 
 ### Is the Stripe Billing MCP server free?
 
-Yes. Running Stripe Billing locally is free and unlimited, and the code is MIT licensed. There is a one-time $19 Pro licence for the hosted endpoint, which removes the saved-report cap. No subscription and no account are required.
+Yes. Running Stripe Billing locally is free and unlimited, and the code is MIT licensed. This server is local-only today, so there is nothing to pay for. No subscription and no account are required.
 
 ### Does Stripe Billing need an API key?
 
-No. The server works offline against local files. If you use the hosted endpoint, the connection is authenticated with a scoped token instead of a per-tool API key.
+No. The server works offline against local files.
 
 ### Where does the data go?
 

@@ -104,7 +104,7 @@ Per-client statements of account, aging buckets and dunning letters from your ow
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/statement-of-account` — point any MCP client at that URL.
+- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/statement-of-account` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/statement-of-account.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/statement-of-account`.
 - **npm:** the package `@theluckystrike/mcp-statement-of-account` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

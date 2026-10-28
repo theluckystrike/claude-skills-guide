@@ -104,7 +104,7 @@ Say "make an invoice for Acme, 12 hours at 90 EUR, due in 14 days" and get a rea
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/invoice` — point any MCP client at that URL.
+- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/invoice` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/invoice.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/invoice`.
 - **npm:** the package `@theluckystrike/mcp-invoice` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

@@ -104,7 +104,7 @@ Chase overdue invoices: reminder 1, reminder 2, final notice, escalation dates, 
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/dunning-letters` — point any MCP client at that URL.
+- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/dunning-letters` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/dunning-letters.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/dunning-letters`.
 - **npm:** the package `@theluckystrike/mcp-dunning-letters` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

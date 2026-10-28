@@ -104,7 +104,7 @@ Export the CSV from your bank, say "import this", and the month is readable. Thi
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/bank-statement` — point any MCP client at that URL.
+- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/bank-statement` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/bank-statement.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/bank-statement`.
 - **npm:** the package `@theluckystrike/mcp-bank-statement` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

@@ -24,7 +24,7 @@ date: 2026-10-28
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD",
-    "description": "Free tier: unlimited local use. Optional one-time Pro licence for the hosted endpoint."
+    "description": "Free: unlimited local use, MIT licensed. No hosted tier for this server yet."
    },
    "isPartOf": {
     "@type": "ItemList",
@@ -40,7 +40,7 @@ date: 2026-10-28
      "name": "Is the Supplier Statement Check MCP server free?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes. Running Supplier Statement Check locally is free and unlimited, and the code is MIT licensed. There is a one-time $19 Pro licence for the hosted endpoint, which removes the saved-report cap. No subscription and no account are required."
+      "text": "Yes. Running Supplier Statement Check locally is free and unlimited, and the code is MIT licensed. This server is local-only today, so there is nothing to pay for. No subscription and no account are required."
      }
     },
     {
@@ -48,7 +48,7 @@ date: 2026-10-28
      "name": "Does Supplier Statement Check need an API key?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "No. The server works offline against local files. If you use the hosted endpoint, the connection is authenticated with a scoped token instead of a per-tool API key."
+      "text": "No. The server works offline against local files."
      }
     },
     {
@@ -104,7 +104,7 @@ Compare a supplied supplier statement with an accounts-payable open-item export.
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/supplier-statement-check` — point any MCP client at that URL.
+- **Hosted endpoint:** not open for this server yet - use the `.mcpb` bundle or build from source below. The other 46 servers in the suite are already hosted.
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.25.0/supplier-statement-check.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/supplier-statement-check`.
 - **npm:** the package `@theluckystrike/mcp-supplier-statement-check` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.
@@ -132,11 +132,11 @@ hosted endpoint's saved-report cap, never the tools. All 58 servers together are
 
 ### Is the Supplier Statement Check MCP server free?
 
-Yes. Running Supplier Statement Check locally is free and unlimited, and the code is MIT licensed. There is a one-time $19 Pro licence for the hosted endpoint, which removes the saved-report cap. No subscription and no account are required.
+Yes. Running Supplier Statement Check locally is free and unlimited, and the code is MIT licensed. This server is local-only today, so there is nothing to pay for. No subscription and no account are required.
 
 ### Does Supplier Statement Check need an API key?
 
-No. The server works offline against local files. If you use the hosted endpoint, the connection is authenticated with a scoped token instead of a per-tool API key.
+No. The server works offline against local files.
 
 ### Where does the data go?
 

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T02:15:45Z",
+ "generated_at": "2026-10-28T02:35:46Z",
  "count": 58,
  "bundle_url": "https://mcp.zovo.one/buy/bundle",
  "bundle_price_usd": 39,
@@ -30,7 +30,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/amortization",
    "price_usd": 19,
-   "repo_subfolder": "servers/amortization"
+   "repo_subfolder": "servers/amortization",
+   "hosted_live": true,
+   "hosted_tools": 9,
+   "hosted_url": "https://mcp.zovo.one/mcp/amortization"
   },
   {
    "id": "asset-register",
@@ -58,7 +61,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/asset-register",
    "price_usd": 19,
-   "repo_subfolder": "servers/asset-register"
+   "repo_subfolder": "servers/asset-register",
+   "hosted_live": true,
+   "hosted_tools": 9,
+   "hosted_url": "https://mcp.zovo.one/mcp/asset-register"
   },
   {
    "id": "backlink-checker",
@@ -85,7 +91,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/backlink-checker",
    "price_usd": 19,
-   "repo_subfolder": "servers/backlink-checker"
+   "repo_subfolder": "servers/backlink-checker",
+   "hosted_live": true,
+   "hosted_tools": 8,
+   "hosted_url": "https://mcp.zovo.one/mcp/backlink-checker"
   },
   {
    "id": "bank-statement",
@@ -116,7 +125,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/bank-statement",
    "price_usd": 19,
-   "repo_subfolder": "servers/bank-statement"
+   "repo_subfolder": "servers/bank-statement",
+   "hosted_live": true,
+   "hosted_tools": 15,
+   "hosted_url": "https://mcp.zovo.one/mcp/bank-statement"
   },
   {
    "id": "barcode",
@@ -145,7 +157,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/barcode",
    "price_usd": 19,
-   "repo_subfolder": "servers/barcode"
+   "repo_subfolder": "servers/barcode",
+   "hosted_live": true,
+   "hosted_tools": 10,
+   "hosted_url": "https://mcp.zovo.one/mcp/barcode"
   },
   {
    "id": "bill-of-sale",
@@ -174,7 +189,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/bill-of-sale",
    "price_usd": 19,
-   "repo_subfolder": "servers/bill-of-sale"
+   "repo_subfolder": "servers/bill-of-sale",
+   "hosted_live": true,
+   "hosted_tools": 10,
+   "hosted_url": "https://mcp.zovo.one/mcp/bill-of-sale"
   },
   {
    "id": "billing-docs",
@@ -209,7 +227,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/billing-docs",
    "price_usd": 19,
-   "repo_subfolder": "servers/billing-docs"
+   "repo_subfolder": "servers/billing-docs",
+   "hosted_live": true,
+   "hosted_tools": 16,
+   "hosted_url": "https://mcp.zovo.one/mcp/billing-docs"
   },
   {
    "id": "budget",
@@ -229,7 +250,10 @@
    "license_env": "",
    "buy_url": "https://mcp.zovo.one/buy/budget",
    "price_usd": 19,
-   "repo_subfolder": "servers/budget"
+   "repo_subfolder": "servers/budget",
+   "hosted_live": false,
+   "hosted_tools": 0,
+   "hosted_url": "https://mcp.zovo.one/mcp/budget"
   },
   {
    "id": "calendar",
@@ -260,7 +284,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/calendar",
    "price_usd": 19,
-   "repo_subfolder": "servers/calendar"
+   "repo_subfolder": "servers/calendar",
+   "hosted_live": true,
+   "hosted_tools": 12,
+   "hosted_url": "https://mcp.zovo.one/mcp/calendar"
   },
   {
    "id": "cash-book",
@@ -288,7 +315,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/cash-book",
    "price_usd": 19,
-   "repo_subfolder": "servers/cash-book"
+   "repo_subfolder": "servers/cash-book",
+   "hosted_live": true,
+   "hosted_tools": 9,
+   "hosted_url": "https://mcp.zovo.one/mcp/cash-book"
   },
   {
    "id": "catalogue",
@@ -319,7 +349,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/catalogue",
    "price_usd": 19,
-   "repo_subfolder": "servers/catalogue"
+   "repo_subfolder": "servers/catalogue",
+   "hosted_live": true,
+   "hosted_tools": 12,
+   "hosted_url": "https://mcp.zovo.one/mcp/catalogue"
   },
   {
    "id": "change-order",
@@ -349,7 +382,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/change-order",
    "price_usd": 19,
-   "repo_subfolder": "servers/change-order"
+   "repo_subfolder": "servers/change-order",
+   "hosted_live": true,
+   "hosted_tools": 11,
+   "hosted_url": "https://mcp.zovo.one/mcp/change-order"
   },
   {
    "id": "checklist",
@@ -384,7 +420,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/checklist",
    "price_usd": 19,
-   "repo_subfolder": "servers/checklist"
+   "repo_subfolder": "servers/checklist",
+   "hosted_live": true,
+   "hosted_tools": 16,
+   "hosted_url": "https://mcp.zovo.one/mcp/checklist"
   },
   {
    "id": "clauses",
@@ -415,7 +454,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/clauses",
    "price_usd": 19,
-   "repo_subfolder": "servers/clauses"
+   "repo_subfolder": "servers/clauses",
+   "hosted_live": true,
+   "hosted_tools": 12,
+   "hosted_url": "https://mcp.zovo.one/mcp/clauses"
   },
   {
    "id": "credit-note",
@@ -444,7 +486,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/credit-note",
    "price_usd": 19,
-   "repo_subfolder": "servers/credit-note"
+   "repo_subfolder": "servers/credit-note",
+   "hosted_live": true,
+   "hosted_tools": 16,
+   "hosted_url": "https://mcp.zovo.one/mcp/credit-note"
   },
   {
    "id": "currency",
@@ -473,7 +518,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/currency",
    "price_usd": 19,
-   "repo_subfolder": "servers/currency"
+   "repo_subfolder": "servers/currency",
+   "hosted_live": true,
+   "hosted_tools": 10,
+   "hosted_url": "https://mcp.zovo.one/mcp/currency"
   },
   {
    "id": "delivery-schedule",
@@ -504,7 +552,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/delivery-schedule",
    "price_usd": 19,
-   "repo_subfolder": "servers/delivery-schedule"
+   "repo_subfolder": "servers/delivery-schedule",
+   "hosted_live": true,
+   "hosted_tools": 12,
+   "hosted_url": "https://mcp.zovo.one/mcp/delivery-schedule"
   },
   {
    "id": "deposits",
@@ -534,7 +585,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/deposits",
    "price_usd": 19,
-   "repo_subfolder": "servers/deposits"
+   "repo_subfolder": "servers/deposits",
+   "hosted_live": true,
+   "hosted_tools": 11,
+   "hosted_url": "https://mcp.zovo.one/mcp/deposits"
   },
   {
    "id": "docx",
@@ -564,7 +618,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/docx",
    "price_usd": 19,
-   "repo_subfolder": "servers/docx"
+   "repo_subfolder": "servers/docx",
+   "hosted_live": true,
+   "hosted_tools": 14,
+   "hosted_url": "https://mcp.zovo.one/mcp/docx"
   },
   {
    "id": "dunning-letters",
@@ -594,7 +651,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/dunning-letters",
    "price_usd": 19,
-   "repo_subfolder": "servers/dunning-letters"
+   "repo_subfolder": "servers/dunning-letters",
+   "hosted_live": true,
+   "hosted_tools": 11,
+   "hosted_url": "https://mcp.zovo.one/mcp/dunning-letters"
   },
   {
    "id": "duplicate-invoice-check",
@@ -621,7 +681,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/duplicate-invoice-check",
    "price_usd": 19,
-   "repo_subfolder": "servers/duplicate-invoice-check"
+   "repo_subfolder": "servers/duplicate-invoice-check",
+   "hosted_live": false,
+   "hosted_tools": 0,
+   "hosted_url": "https://mcp.zovo.one/mcp/duplicate-invoice-check"
   },
   {
    "id": "expense-tracker",
@@ -654,7 +717,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/expense-tracker",
    "price_usd": 19,
-   "repo_subfolder": "servers/expense-tracker"
+   "repo_subfolder": "servers/expense-tracker",
+   "hosted_live": true,
+   "hosted_tools": 14,
+   "hosted_url": "https://mcp.zovo.one/mcp/expense-tracker"
   },
   {
    "id": "goods-receipt",
@@ -684,7 +750,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/goods-receipt",
    "price_usd": 19,
-   "repo_subfolder": "servers/goods-receipt"
+   "repo_subfolder": "servers/goods-receipt",
+   "hosted_live": true,
+   "hosted_tools": 11,
+   "hosted_url": "https://mcp.zovo.one/mcp/goods-receipt"
   },
   {
    "id": "hourly-rate",
@@ -704,7 +773,10 @@
    "license_env": "",
    "buy_url": "https://mcp.zovo.one/buy/hourly-rate",
    "price_usd": 19,
-   "repo_subfolder": "servers/hourly-rate"
+   "repo_subfolder": "servers/hourly-rate",
+   "hosted_live": false,
+   "hosted_tools": 0,
+   "hosted_url": "https://mcp.zovo.one/mcp/hourly-rate"
   },
   {
    "id": "image",
@@ -735,7 +807,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/image",
    "price_usd": 19,
-   "repo_subfolder": "servers/image"
+   "repo_subfolder": "servers/image",
+   "hosted_live": true,
+   "hosted_tools": 15,
+   "hosted_url": "https://mcp.zovo.one/mcp/image"
   },
   {
    "id": "invoice",
@@ -767,7 +842,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/invoice",
    "price_usd": 19,
-   "repo_subfolder": "servers/invoice"
+   "repo_subfolder": "servers/invoice",
+   "hosted_live": true,
+   "hosted_tools": 13,
+   "hosted_url": "https://mcp.zovo.one/mcp/invoice"
   },
   {
    "id": "job-card",
@@ -797,7 +875,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/job-card",
    "price_usd": 19,
-   "repo_subfolder": "servers/job-card"
+   "repo_subfolder": "servers/job-card",
+   "hosted_live": true,
+   "hosted_tools": 11,
+   "hosted_url": "https://mcp.zovo.one/mcp/job-card"
   },
   {
    "id": "kanban",
@@ -833,7 +914,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/kanban",
    "price_usd": 19,
-   "repo_subfolder": "servers/kanban"
+   "repo_subfolder": "servers/kanban",
+   "hosted_live": true,
+   "hosted_tools": 17,
+   "hosted_url": "https://mcp.zovo.one/mcp/kanban"
   },
   {
    "id": "leave",
@@ -864,7 +948,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/leave",
    "price_usd": 19,
-   "repo_subfolder": "servers/leave"
+   "repo_subfolder": "servers/leave",
+   "hosted_live": true,
+   "hosted_tools": 12,
+   "hosted_url": "https://mcp.zovo.one/mcp/leave"
   },
   {
    "id": "loan-calculator",
@@ -884,7 +971,10 @@
    "license_env": "",
    "buy_url": "https://mcp.zovo.one/buy/loan-calculator",
    "price_usd": 19,
-   "repo_subfolder": "servers/loan-calculator"
+   "repo_subfolder": "servers/loan-calculator",
+   "hosted_live": false,
+   "hosted_tools": 0,
+   "hosted_url": "https://mcp.zovo.one/mcp/loan-calculator"
   },
   {
    "id": "maintenance-log",
@@ -911,7 +1001,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/maintenance-log",
    "price_usd": 19,
-   "repo_subfolder": "servers/maintenance-log"
+   "repo_subfolder": "servers/maintenance-log",
+   "hosted_live": true,
+   "hosted_tools": 8,
+   "hosted_url": "https://mcp.zovo.one/mcp/maintenance-log"
   },
   {
    "id": "mileage-log",
@@ -939,7 +1032,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/mileage-log",
    "price_usd": 19,
-   "repo_subfolder": "servers/mileage-log"
+   "repo_subfolder": "servers/mileage-log",
+   "hosted_live": true,
+   "hosted_tools": 9,
+   "hosted_url": "https://mcp.zovo.one/mcp/mileage-log"
   },
   {
    "id": "office-suite",
@@ -963,7 +1059,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/office-suite",
    "price_usd": 19,
-   "repo_subfolder": "servers/office-suite"
+   "repo_subfolder": "servers/office-suite",
+   "hosted_live": false,
+   "hosted_tools": 0,
+   "hosted_url": "https://mcp.zovo.one/mcp/office-suite"
   },
   {
    "id": "onboarding",
@@ -991,7 +1090,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/onboarding",
    "price_usd": 19,
-   "repo_subfolder": "servers/onboarding"
+   "repo_subfolder": "servers/onboarding",
+   "hosted_live": true,
+   "hosted_tools": 9,
+   "hosted_url": "https://mcp.zovo.one/mcp/onboarding"
   },
   {
    "id": "packing-list",
@@ -1024,7 +1126,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/packing-list",
    "price_usd": 19,
-   "repo_subfolder": "servers/packing-list"
+   "repo_subfolder": "servers/packing-list",
+   "hosted_live": true,
+   "hosted_tools": 14,
+   "hosted_url": "https://mcp.zovo.one/mcp/packing-list"
   },
   {
    "id": "payroll",
@@ -1044,7 +1149,10 @@
    "license_env": "",
    "buy_url": "https://mcp.zovo.one/buy/payroll",
    "price_usd": 19,
-   "repo_subfolder": "servers/payroll"
+   "repo_subfolder": "servers/payroll",
+   "hosted_live": false,
+   "hosted_tools": 0,
+   "hosted_url": "https://mcp.zovo.one/mcp/payroll"
   },
   {
    "id": "pdf",
@@ -1075,7 +1183,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/pdf",
    "price_usd": 19,
-   "repo_subfolder": "servers/pdf"
+   "repo_subfolder": "servers/pdf",
+   "hosted_live": true,
+   "hosted_tools": 15,
+   "hosted_url": "https://mcp.zovo.one/mcp/pdf"
   },
   {
    "id": "per-diem",
@@ -1103,7 +1214,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/per-diem",
    "price_usd": 19,
-   "repo_subfolder": "servers/per-diem"
+   "repo_subfolder": "servers/per-diem",
+   "hosted_live": true,
+   "hosted_tools": 9,
+   "hosted_url": "https://mcp.zovo.one/mcp/per-diem"
   },
   {
    "id": "petty-cash",
@@ -1131,7 +1245,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/petty-cash",
    "price_usd": 19,
-   "repo_subfolder": "servers/petty-cash"
+   "repo_subfolder": "servers/petty-cash",
+   "hosted_live": true,
+   "hosted_tools": 9,
+   "hosted_url": "https://mcp.zovo.one/mcp/petty-cash"
   },
   {
    "id": "pomodoro",
@@ -1151,7 +1268,10 @@
    "license_env": "",
    "buy_url": "https://mcp.zovo.one/buy/pomodoro",
    "price_usd": 19,
-   "repo_subfolder": "servers/pomodoro"
+   "repo_subfolder": "servers/pomodoro",
+   "hosted_live": false,
+   "hosted_tools": 0,
+   "hosted_url": "https://mcp.zovo.one/mcp/pomodoro"
   },
   {
    "id": "price-tracker",
@@ -1180,7 +1300,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/price-tracker",
    "price_usd": 19,
-   "repo_subfolder": "servers/price-tracker"
+   "repo_subfolder": "servers/price-tracker",
+   "hosted_live": true,
+   "hosted_tools": 10,
+   "hosted_url": "https://mcp.zovo.one/mcp/price-tracker"
   },
   {
    "id": "purchase-requisition",
@@ -1209,7 +1332,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/purchase-requisition",
    "price_usd": 19,
-   "repo_subfolder": "servers/purchase-requisition"
+   "repo_subfolder": "servers/purchase-requisition",
+   "hosted_live": true,
+   "hosted_tools": 16,
+   "hosted_url": "https://mcp.zovo.one/mcp/purchase-requisition"
   },
   {
    "id": "quotes",
@@ -1240,7 +1366,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/quotes",
    "price_usd": 19,
-   "repo_subfolder": "servers/quotes"
+   "repo_subfolder": "servers/quotes",
+   "hosted_live": true,
+   "hosted_tools": 12,
+   "hosted_url": "https://mcp.zovo.one/mcp/quotes"
   },
   {
    "id": "receipts",
@@ -1260,7 +1389,10 @@
    "license_env": "",
    "buy_url": "https://mcp.zovo.one/buy/receipts",
    "price_usd": 19,
-   "repo_subfolder": "servers/receipts"
+   "repo_subfolder": "servers/receipts",
+   "hosted_live": false,
+   "hosted_tools": 0,
+   "hosted_url": "https://mcp.zovo.one/mcp/receipts"
   },
   {
    "id": "recurring",
@@ -1293,7 +1425,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/recurring",
    "price_usd": 19,
-   "repo_subfolder": "servers/recurring"
+   "repo_subfolder": "servers/recurring",
+   "hosted_live": true,
+   "hosted_tools": 14,
+   "hosted_url": "https://mcp.zovo.one/mcp/recurring"
   },
   {
    "id": "resume",
@@ -1322,7 +1457,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/resume",
    "price_usd": 19,
-   "repo_subfolder": "servers/resume"
+   "repo_subfolder": "servers/resume",
+   "hosted_live": true,
+   "hosted_tools": 13,
+   "hosted_url": "https://mcp.zovo.one/mcp/resume"
   },
   {
    "id": "service-agreement",
@@ -1350,7 +1488,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/service-agreement",
    "price_usd": 19,
-   "repo_subfolder": "servers/service-agreement"
+   "repo_subfolder": "servers/service-agreement",
+   "hosted_live": true,
+   "hosted_tools": 9,
+   "hosted_url": "https://mcp.zovo.one/mcp/service-agreement"
   },
   {
    "id": "spreadsheet",
@@ -1379,7 +1520,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/spreadsheet",
    "price_usd": 19,
-   "repo_subfolder": "servers/spreadsheet"
+   "repo_subfolder": "servers/spreadsheet",
+   "hosted_live": true,
+   "hosted_tools": 13,
+   "hosted_url": "https://mcp.zovo.one/mcp/spreadsheet"
   },
   {
    "id": "statement-of-account",
@@ -1406,7 +1550,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/statement-of-account",
    "price_usd": 19,
-   "repo_subfolder": "servers/statement-of-account"
+   "repo_subfolder": "servers/statement-of-account",
+   "hosted_live": true,
+   "hosted_tools": 8,
+   "hosted_url": "https://mcp.zovo.one/mcp/statement-of-account"
   },
   {
    "id": "stripe-billing",
@@ -1426,7 +1573,10 @@
    "license_env": "",
    "buy_url": "https://mcp.zovo.one/buy/stripe-billing",
    "price_usd": 19,
-   "repo_subfolder": "servers/stripe-billing"
+   "repo_subfolder": "servers/stripe-billing",
+   "hosted_live": false,
+   "hosted_tools": 0,
+   "hosted_url": "https://mcp.zovo.one/mcp/stripe-billing"
   },
   {
    "id": "supplier-list",
@@ -1455,7 +1605,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/supplier-list",
    "price_usd": 19,
-   "repo_subfolder": "servers/supplier-list"
+   "repo_subfolder": "servers/supplier-list",
+   "hosted_live": true,
+   "hosted_tools": 10,
+   "hosted_url": "https://mcp.zovo.one/mcp/supplier-list"
   },
   {
    "id": "supplier-statement-check",
@@ -1482,7 +1635,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/supplier-statement-check",
    "price_usd": 19,
-   "repo_subfolder": "servers/supplier-statement-check"
+   "repo_subfolder": "servers/supplier-statement-check",
+   "hosted_live": false,
+   "hosted_tools": 0,
+   "hosted_url": "https://mcp.zovo.one/mcp/supplier-statement-check"
   },
   {
    "id": "tax-calc",
@@ -1502,7 +1658,10 @@
    "license_env": "",
    "buy_url": "https://mcp.zovo.one/buy/tax-calc",
    "price_usd": 19,
-   "repo_subfolder": "servers/tax-calc"
+   "repo_subfolder": "servers/tax-calc",
+   "hosted_live": false,
+   "hosted_tools": 0,
+   "hosted_url": "https://mcp.zovo.one/mcp/tax-calc"
   },
   {
    "id": "three-way-match",
@@ -1529,7 +1688,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/three-way-match",
    "price_usd": 19,
-   "repo_subfolder": "servers/three-way-match"
+   "repo_subfolder": "servers/three-way-match",
+   "hosted_live": false,
+   "hosted_tools": 0,
+   "hosted_url": "https://mcp.zovo.one/mcp/three-way-match"
   },
   {
    "id": "time-tracker",
@@ -1568,7 +1730,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/time-tracker",
    "price_usd": 19,
-   "repo_subfolder": "servers/time-tracker"
+   "repo_subfolder": "servers/time-tracker",
+   "hosted_live": true,
+   "hosted_tools": 20,
+   "hosted_url": "https://mcp.zovo.one/mcp/time-tracker"
   },
   {
    "id": "timezone",
@@ -1598,7 +1763,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/timezone",
    "price_usd": 19,
-   "repo_subfolder": "servers/timezone"
+   "repo_subfolder": "servers/timezone",
+   "hosted_live": true,
+   "hosted_tools": 11,
+   "hosted_url": "https://mcp.zovo.one/mcp/timezone"
   },
   {
    "id": "work-order",
@@ -1629,7 +1797,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/work-order",
    "price_usd": 19,
-   "repo_subfolder": "servers/work-order"
+   "repo_subfolder": "servers/work-order",
+   "hosted_live": true,
+   "hosted_tools": 12,
+   "hosted_url": "https://mcp.zovo.one/mcp/work-order"
   },
   {
    "id": "zip",
@@ -1657,7 +1828,10 @@
    "license_env": "MCP_LICENSE_KEY",
    "buy_url": "https://mcp.zovo.one/buy/zip",
    "price_usd": 19,
-   "repo_subfolder": "servers/zip"
+   "repo_subfolder": "servers/zip",
+   "hosted_live": true,
+   "hosted_tools": 12,
+   "hosted_url": "https://mcp.zovo.one/mcp/zip"
   }
  ]
 }

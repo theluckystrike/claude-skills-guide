@@ -18,6 +18,10 @@ relative_links:
   enabled: false
 
 exclude:
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
   - plan.md
   - plan-archive.md
   - KNOWN_WARNINGS.md

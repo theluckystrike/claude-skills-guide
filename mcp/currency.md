@@ -104,7 +104,7 @@ Ask your assistant what something is worth in another currency and get a real an
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/currency` — point any MCP client at that URL.
+- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/currency` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/currency.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/currency`.
 - **npm:** the package `@theluckystrike/mcp-currency` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

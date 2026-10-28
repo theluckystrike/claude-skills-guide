@@ -104,7 +104,7 @@ A petty cash float on the imprest system: vouchers, reconciliation and the reple
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/petty-cash` — point any MCP client at that URL.
+- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/petty-cash` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/petty-cash.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/petty-cash`.
 - **npm:** the package `@theluckystrike/mcp-petty-cash` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

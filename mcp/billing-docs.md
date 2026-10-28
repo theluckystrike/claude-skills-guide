@@ -104,7 +104,7 @@ When a client sends work back, or you billed them twice, you owe them a credit n
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/billing-docs` — point any MCP client at that URL.
+- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/billing-docs` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/billing-docs.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/billing-docs`.
 - **npm:** the package `@theluckystrike/mcp-billing-docs` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.
