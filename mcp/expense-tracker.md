@@ -104,7 +104,7 @@ Say "12.30 euros at Adobe, software, billable to Acme" and it is logged, categor
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/expense-tracker` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
+- **Hosted, nothing to install:** open https://mcp.zovo.one/mcp/connect - it mints a free token and prints a ready URL, `https://mcp.zovo.one/mcp/expense-tracker/t/<token>`. Paste that into your client. The bare `https://mcp.zovo.one/mcp/expense-tracker` hands out the tool list but answers tool calls with HTTP 401, which is why the tokenised URL is the one to use.
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.9/expense-tracker.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/expense-tracker`.
 - **npm:** the package `@theluckystrike/mcp-expense-tracker` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

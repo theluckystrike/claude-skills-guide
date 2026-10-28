@@ -104,7 +104,7 @@ Say "draft a service agreement for Beta Corp, 4,500 EUR, 14-day terms" and get a
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/clauses` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
+- **Hosted, nothing to install:** open https://mcp.zovo.one/mcp/connect - it mints a free token and prints a ready URL, `https://mcp.zovo.one/mcp/clauses/t/<token>`. Paste that into your client. The bare `https://mcp.zovo.one/mcp/clauses` hands out the tool list but answers tool calls with HTTP 401, which is why the tokenised URL is the one to use.
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/clauses.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/clauses`.
 - **npm:** the package `@theluckystrike/mcp-clauses` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

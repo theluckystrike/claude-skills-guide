@@ -104,7 +104,7 @@ Security and retainer deposits per client: hold them, apply them to invoices, re
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/deposits` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
+- **Hosted, nothing to install:** open https://mcp.zovo.one/mcp/connect - it mints a free token and prints a ready URL, `https://mcp.zovo.one/mcp/deposits/t/<token>`. Paste that into your client. The bare `https://mcp.zovo.one/mcp/deposits` hands out the tool list but answers tool calls with HTTP 401, which is why the tokenised URL is the one to use.
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/deposits.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/deposits`.
 - **npm:** the package `@theluckystrike/mcp-deposits` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

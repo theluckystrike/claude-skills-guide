@@ -104,7 +104,7 @@ A supplier directory that does not rot: contacts, terms, lead times, review date
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/supplier-list` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
+- **Hosted, nothing to install:** open https://mcp.zovo.one/mcp/connect - it mints a free token and prints a ready URL, `https://mcp.zovo.one/mcp/supplier-list/t/<token>`. Paste that into your client. The bare `https://mcp.zovo.one/mcp/supplier-list` hands out the tool list but answers tool calls with HTTP 401, which is why the tokenised URL is the one to use.
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/supplier-list.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/supplier-list`.
 - **npm:** the package `@theluckystrike/mcp-supplier-list` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

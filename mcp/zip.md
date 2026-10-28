@@ -104,7 +104,7 @@ Make a zip, look inside one, and unpack one, in the conversation you are already
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/zip` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
+- **Hosted, nothing to install:** open https://mcp.zovo.one/mcp/connect - it mints a free token and prints a ready URL, `https://mcp.zovo.one/mcp/zip/t/<token>`. Paste that into your client. The bare `https://mcp.zovo.one/mcp/zip` hands out the tool list but answers tool calls with HTTP 401, which is why the tokenised URL is the one to use.
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/zip.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/zip`.
 - **npm:** the package `@theluckystrike/mcp-zip` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.

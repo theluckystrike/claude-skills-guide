@@ -104,7 +104,7 @@ Store your CV facts once. Then say "tailor my resume to this posting and write t
 
 ## Install it
 
-- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/resume` - point any MCP client at that URL (Streamable HTTP, verified with a live MCP handshake).
+- **Hosted, nothing to install:** open https://mcp.zovo.one/mcp/connect - it mints a free token and prints a ready URL, `https://mcp.zovo.one/mcp/resume/t/<token>`. Paste that into your client. The bare `https://mcp.zovo.one/mcp/resume` hands out the tool list but answers tool calls with HTTP 401, which is why the tokenised URL is the one to use.
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/resume.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/resume`.
 - **npm:** the package `@theluckystrike/mcp-resume` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.
