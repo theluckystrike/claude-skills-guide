@@ -106,6 +106,7 @@ Say "make an invoice for Acme, 12 hours at 90 EUR, due in 14 days" and get a rea
 
 - **Hosted, nothing to install:** open https://mcp.zovo.one/mcp/connect - it mints a free token and prints a ready URL, `https://mcp.zovo.one/mcp/invoice/t/<token>`. Paste that into your client. The bare `https://mcp.zovo.one/mcp/invoice` hands out the tool list but answers tool calls with HTTP 401, which is why the tokenised URL is the one to use.
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/invoice.mcpb)
+- **Walk-through with real output:** [step-by-step guide](/mcp/guides/generate-invoice-pdf-claude/)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/invoice`.
 - **npm:** the package `@theluckystrike/mcp-invoice` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.
 
