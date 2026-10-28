@@ -41,41 +41,6 @@ layout: compress
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "{{ page.title | escape }}",
-    "description": "{{ page.description | escape }}",
-    "author": {
-      "@type": "Person",
-      "name": "{{ page.author | default: 'Claude Code Guides' | escape }}",
-      "url": "https://github.com/theluckystrike"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Claude Code Guides",
-      "url": "https://claudecodeguides.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://claudecodeguides.com/assets/og-default.png"
-      }
-    },
-    "datePublished": "{{ page.date | date_to_xmlschema }}",
-    "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "{{ page.url | absolute_url }}"
-    },
-    "inLanguage": "en-US",
-    "wordCount": {{ content | number_of_words }},
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "{{ site.title | escape }}",
-      "url": "{{ site.url }}"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {
@@ -98,37 +63,6 @@ layout: compress
     ]
   }
   </script>
-  {% comment %}GEO: FAQPage schema for ALL articles (not just troubleshooting){% endcomment %}
-  {% assign faq_parts = content | split: '<h2' %}
-  {% assign faq_json = "" %}
-  {% assign faq_count = 0 %}
-  {% for part in faq_parts %}
-    {% if faq_count >= 5 %}{% break %}{% endif %}
-    {% if forloop.first %}{% continue %}{% endif %}
-    {% assign heading_and_rest = part | split: '</h2>' %}
-    {% assign heading_text = heading_and_rest[0] | split: '>' | last | strip_html | strip %}
-    {% if heading_text == "" or heading_text == "Related Reading" or heading_text == "Summary" or heading_text == "Related Guides" or heading_text == "Conclusion" or heading_text == "Methodology" or heading_text == "About the Author" or heading_text == "Frequently Asked Questions" %}{% continue %}{% endif %}
-    {% assign answer_text = heading_and_rest[1] | strip_html | strip | truncate: 300 %}
-    {% if answer_text == "" %}{% continue %}{% endif %}
-    {% if faq_count > 0 %}{% assign faq_json = faq_json | append: "," %}{% endif %}
-    {% capture faq_item %}{"@type":"Question","name":{{ heading_text | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ answer_text | jsonify }}}}{% endcapture %}
-    {% assign faq_json = faq_json | append: faq_item %}
-    {% assign faq_count = faq_count | plus: 1 %}
-  {% endfor %}
-  {% if faq_count == 0 and page.description %}
-    {% capture faq_item %}{"@type":"Question","name":{{ page.title | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ page.description | jsonify }}}}{% endcapture %}
-    {% assign faq_json = faq_item %}
-    {% assign faq_count = 1 %}
-  {% endif %}
-  {% if faq_count > 0 %}
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{{ faq_json }}]
-  }
-  </script>
-  {% endif %}
   {% comment %}GEO: Organization schema with sameAs for AI platform entity recognition{% endcomment %}
   <script type="application/ld+json">
   {

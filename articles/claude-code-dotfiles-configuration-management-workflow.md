@@ -202,6 +202,8 @@ Related Reading
 - [Claude Code for Azure Cost Management Workflow](/claude-code-for-azure-cost-management-workflow/)
 - [Claude Code for CLA Management Workflow Tutorial Guide](/claude-code-for-cla-management-workflow-tutorial-guide/)
 
+- [Where Claude Code stores its configuration](/where-does-claude-code-store-configuration/)
+
 Built by theluckystrike. More at [zovo.one](https://zovo.one)
 
 

@@ -5,9 +5,9 @@ layout: default
 title: "Agent Handoff for Long-Running Tasks (2026)"
 description: "Implement agent handoff strategies for multi-hour tasks using checkpointing, state preservation, and session resumption. Proven patterns for Claude Code."
 date: 2026-03-14
-last_modified_at: 2026-04-17
+last_modified_at: 2026-10-28
 last_tested: "2026-04-21"
-author: "Claude Skills Guide"
+author: "Michael Lip"
 permalink: /agent-handoff-strategies-for-long-running-tasks-guide/
 categories: [guides]
 reviewed: true
@@ -15,7 +15,10 @@ score: 7
 tags: [claude-code, claude-skills]
 geo_optimized: true
 ---
-
+<div class="page-answer" style="border-left:3px solid #d97757;background:rgba(217,119,87,0.08);padding:14px 18px;margin:0 0 26px">
+<p style="margin:0"><strong>Short answer.</strong> Long-running agent work survives a session break by writing state to disk. Save a checkpoint note that lists finished steps, open files, test results and the next action. Read that note first in the new session. Keep it small enough to paste into context, and verify the restored state before the agent edits a file.</p>
+<p style="margin:8px 0 0;font-size:13px;opacity:.75">Updated 2026-10-28</p>
+</div>
 Long-running tasks present unique challenges for AI agents. Whether you're deploying a complex infrastructure, running extensive test suites, or building multi-phase applications, understanding how to effectively manage handoffs and maintain context is crucial for success. This guide explores practical strategies for handling extended workflows with Claude Code, ensuring your tasks complete reliably even when they span hours or require multiple sessions.
 
 ## Understanding the Challenge

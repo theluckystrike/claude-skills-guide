@@ -3,16 +3,19 @@ layout: default
 title: "Advanced Claude Skills with Tool Use (2026)"
 description: "Design Claude skills with precise tool use: restrict tool access per skill, create custom MCP tools, and build reliable function-calling workflows."
 date: 2026-03-13
-last_modified_at: 2026-04-17
+last_modified_at: 2026-10-28
 categories: [guides]
 tags: [claude-code, claude-skills, tool-use, function-calling, mcp]
-author: "Claude Skills Guide"
+author: "Michael Lip"
 reviewed: true
 score: 7
 permalink: /advanced-claude-skills-with-tool-use-and-function-calling/
 geo_optimized: true
 ---
-
+<div class="page-answer" style="border-left:3px solid #d97757;background:rgba(217,119,87,0.08);padding:14px 18px;margin:0 0 26px">
+<p style="margin:0"><strong>Short answer.</strong> A Claude skill declares the tools it may use in the tools field of its SKILL.md front matter. Only the listed tools stay available while the skill runs. Hooks log and intercept each call. Keep the list to the minimum the skill needs, and add custom MCP tools for private systems.</p>
+<p style="margin:8px 0 0;font-size:13px;opacity:.75">Updated 2026-10-28</p>
+</div>
 # Advanced Claude Skills with Tool Use and Function Calling
 
 [Claude's tool use capabilities transform skills from prompt-only text generators into agents](/claude-skill-md-format-complete-specification-guide/) that can read files, execute code, call APIs, and take real actions in your development environment. This guide covers the advanced patterns for designing skills that use tools precisely and reliably.

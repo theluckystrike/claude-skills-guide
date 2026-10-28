@@ -3,9 +3,9 @@ layout: default
 title: "AI Agent Goal Decomposition Explained (2026)"
 description: "Understand how AI agents decompose complex tasks into sub-goals using planning algorithms. Claude Code skill examples show real decomposition patterns."
 date: 2026-03-14
-last_modified_at: 2026-04-17
+last_modified_at: 2026-10-28
 last_tested: "2026-04-21"
-author: "theluckystrike"
+author: "Michael Lip"
 permalink: /ai-agent-goal-decomposition-how-it-works-explained/
 categories: [guides]
 tags: [claude-code, ai-agents, goal-decomposition, task-planning, claude-skills]
@@ -13,6 +13,10 @@ reviewed: true
 score: 7
 geo_optimized: true
 ---
+<div class="page-answer" style="border-left:3px solid #d97757;background:rgba(217,119,87,0.08);padding:14px 18px;margin:0 0 26px">
+<p style="margin:0"><strong>Short answer.</strong> Goal decomposition splits one large objective into ordered sub-goals that an agent can finish and check. Claude Code does this through its skill system: it reads the request, finds dependencies between tasks, and builds an execution plan. A spreadsheet job becomes data collection, structure design, formula work, formatting and validation.</p>
+<p style="margin:8px 0 0;font-size:13px;opacity:.75">Updated 2026-10-28</p>
+</div>
 Artificial intelligence agents have revolutionized how we approach complex tasks, but even the most capable AI can struggle with overwhelming objectives. This is where goal decomposition becomes essential, a powerful strategy that breaks down ambitious tasks into smaller, achievable sub-goals. Understanding how this works can dramatically improve your productivity when working with AI assistants like Claude Code.
 
 What Is Goal Decomposition in AI Agents?

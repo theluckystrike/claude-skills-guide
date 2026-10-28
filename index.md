@@ -4,6 +4,7 @@ layout: homepage
 title: "Claude Code Guides — Ship Faster with Claude Code"
 description: "3,021 production-tested Claude Code guides. CLAUDE.md templates, debugging workflows, and MCP integrations from a developer with 300+ merged open source pull requests."
 date: 2026-04-20
+last_modified_at: 2026-10-28
 ---
 
 <style>
@@ -1224,6 +1225,7 @@ html[data-theme="light"] .nav-dropdown-panel { box-shadow: 0 20px 40px -12px rgb
           One file in your repo. <b>Three hundred lines.</b><br>
           Stops guessing your stack. <i>Starts engineering.</i>
         </p>
+        <p class="hero-answer" style="margin:18px 0 0;padding-left:14px;border-left:3px solid var(--accent);max-width:52ch"><strong>Short answer.</strong> Claude Code Guides holds 3,021 Claude Code tutorials and 10 free browser tools. It covers CLAUDE.md templates, debugging workflows, MCP integrations and agent patterns. Lifetime access costs $99 once, with no subscription. Start with the CLAUDE.md generator, or browse the full article index. <span style="display:block;font-size:13px;opacity:.75;margin-top:6px">Updated 2026-10-28</span></p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="/generator/">
             Generate your CLAUDE.md
@@ -2042,6 +2044,3 @@ html[data-theme="light"] .nav-dropdown-panel { box-shadow: 0 20px 40px -12px rgb
 </script>
 {% endraw %}
 
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"Claude Code Guides","url":"https://claudecodeguides.com","description":"3,760+ guides and 10 interactive tools for Claude Code developers","potentialAction":{"@type":"SearchAction","target":"https://claudecodeguides.com/commands/?q={search_term}","query-input":"required name=search_term"}}
-</script>
