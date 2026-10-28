@@ -6,6 +6,8 @@ permalink: /mcp/timezone/
 date: 2026-10-28
 ---
 
+# Timezone MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Timezone MCP server
 
 Work with clients in other countries without doing time zone arithmetic in your head. Ask "what time is it for Maria in Lisbon", "convert 3pm Warsaw to New York and Bangalore", or "find an hour next week that works for me, my client in New York and my designer in London" and get an answer you can act on: ranked meeting slots where everyone is inside their own working hours, the exact daily overlap
 

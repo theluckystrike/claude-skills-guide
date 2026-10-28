@@ -6,6 +6,8 @@ permalink: /mcp/catalogue/
 date: 2026-10-28
 ---
 
+# Catalogue MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Catalogue MCP server
 
 Nothing is invented and nothing is stored twice. A SKU holds its price ROWS, each with a valid-from date; the price on a date is worked out on the call, so raising a price in July does not rewrite what June's job was quoted at. An unknown code comes back as a refusal naming the code, never as a guessed price.
 

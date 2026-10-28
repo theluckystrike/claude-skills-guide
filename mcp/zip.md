@@ -6,6 +6,8 @@ permalink: /mcp/zip/
 date: 2026-10-28
 ---
 
+# Zip MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Zip MCP server
 
 Make a zip, look inside one, and unpack one, in the conversation you are already in. Pack a folder with a glob (`**/*.csv`, everything except `node_modules`). Read the one README out of an archive without unpacking it. Ask what is inside a zip somebody sent you and be told before you open it: absolute paths, `..`, symlinks, duplicate names, and the entry that claims to be 200 MB inside a 199 KB fi
 

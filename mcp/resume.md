@@ -6,6 +6,8 @@ permalink: /mcp/resume/
 date: 2026-10-28
 ---
 
+# Resume MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Resume MCP server
 
 Store your CV facts once. Then say "tailor my resume to this posting and write the cover letter" and get two real `.docx` files: a resume whose bullets are reordered by relevance to the posting, trimmed to fit the page count you asked for, with the posting's keywords in bold where you actually have them, and a one-page cover letter that states nothing you did not put in your profile. Where a fact 
 

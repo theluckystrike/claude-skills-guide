@@ -6,6 +6,8 @@ permalink: /mcp/petty-cash/
 date: 2026-10-28
 ---
 
+# Petty Cash MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Petty Cash MCP server
 
 A petty cash float on the imprest system: vouchers, reconciliation and the replenishment.
 

@@ -6,6 +6,8 @@ permalink: /mcp/goods-receipt/
 date: 2026-10-28
 ---
 
+# Goods Receipt MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Goods Receipt MCP server
 
 Purchase orders and the goods-receipt notes that receive them. A PO carries a reference, a supplier, and dated lines - sku, description, whole units ordered - plus whole-percent over/under tolerances that decide when a receipt is flagged. A GRN is raised against an open PO, one cell per line: units received, units damaged, and any shortage you already know about. Shortage is derived, not typed - o
 

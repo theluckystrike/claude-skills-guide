@@ -6,6 +6,8 @@ permalink: /mcp/duplicate-invoice-check/
 date: 2026-10-28
 ---
 
+# Duplicate Invoice Check MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Duplicate Invoice Check MCP server
 
 Review a supplied batch of supplier invoices for repeated invoice numbers, conservative formatting variations, or identical amounts and invoice dates. This local MCP server returns complete grouped evidence and the exact reason each record needs review. Distinct legitimate invoices can share an amount and date. Candidates are not confirmed duplicates, fraud scores, recoverable money or payment dec
 

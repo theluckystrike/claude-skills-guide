@@ -6,6 +6,8 @@ permalink: /mcp/quotes/
 date: 2026-10-28
 ---
 
+# Quotes MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Quotes MCP server
 
 Say "quote Acme for 12 hours at 90 EUR plus a 300 EUR setup, 23% VAT, good for 14 days" and get a numbered quote you can send today: the line table with VAT per rate, the total in integer minor units, a validity date computed in your own timezone, a plain-text version to paste straight into an email and, on Pro, the same A4 PDF layout your invoices use. When the client says yes, `quote_accept` tur
 

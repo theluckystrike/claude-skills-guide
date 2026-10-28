@@ -6,6 +6,8 @@ permalink: /mcp/bank-statement/
 date: 2026-10-28
 ---
 
+# Bank Statement MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Bank Statement MCP server
 
 Export the CSV from your bank, say "import this", and the month is readable. This MCP server turns a bank export into a local ledger: it finds the header row under whatever preamble the bank prints above it, works out which column is the date, which is the money and which way the money went, and reads amounts in the file's own locale, so `1 234,56` from mBank and `1,234.56` from a US bank both bec
 

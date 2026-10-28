@@ -6,6 +6,8 @@ permalink: /mcp/statement-of-account/
 date: 2026-10-28
 ---
 
+# Statement Of Account MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Statement Of Account MCP server
 
 Per-client statements of account, aging buckets and dunning letters from your own books.
 

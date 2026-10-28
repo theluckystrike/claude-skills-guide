@@ -6,6 +6,8 @@ permalink: /mcp/receipts/
 date: 2026-10-28
 ---
 
+# Receipts MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Receipts MCP server
 
 Give Claude (or any MCP client) a receipt parser: `receipt_parse` takes raw receipt lines — "2 x Coffee 4.50", "Sandwich 8.90" — and returns an itemized total with quantity × price per line, a subtotal, and tax added at your rate. For expense reports, splitting bills, or just checking the receipt was rung up right.
 

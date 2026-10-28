@@ -6,6 +6,8 @@ permalink: /mcp/kanban/
 date: 2026-10-28
 ---
 
+# Kanban MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Kanban MCP server
 
 A task board for each of your projects, driven from your AI chat. Say "add a task to the nova site board: write the launch email, due Friday, 90 minutes", then ask "what's on the nova board?", "what's overdue?" or "plan my week". Tasks carry a title, notes, tags, a due date, an estimate, a priority and a column (backlog, todo, doing, review, done by default), each one gets a short stable id like `
 

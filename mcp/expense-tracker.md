@@ -6,6 +6,8 @@ permalink: /mcp/expense-tracker/
 date: 2026-10-28
 ---
 
+# Expense Tracker MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Expense Tracker MCP server
 
 Say "12.30 euros at Adobe, software, billable to Acme" and it is logged, categorised, VAT-split and ready to rebill. This MCP server keeps a local ledger of your business expenses: every amount is held in integer minor units in its own currency, `vat_rate` splits the gross on the receipt into net and VAT (set it once with `expense_settings` and every later expense is split without repeating it), m
 

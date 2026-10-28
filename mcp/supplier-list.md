@@ -6,6 +6,8 @@ permalink: /mcp/supplier-list/
 date: 2026-10-28
 ---
 
+# Supplier List MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Supplier List MCP server
 
 A supplier directory that does not rot: contacts, terms, lead times, review dates.
 

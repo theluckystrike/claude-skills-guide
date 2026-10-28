@@ -6,6 +6,8 @@ permalink: /mcp/credit-note/
 date: 2026-10-28
 ---
 
+# Credit Note MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Credit Note MCP server
 
 Credit notes against an invoice or standalone: drafts, finalization, rendering, totals.
 

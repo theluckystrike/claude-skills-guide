@@ -6,6 +6,8 @@ permalink: /mcp/maintenance-log/
 date: 2026-10-28
 ---
 
+# Maintenance Log MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Maintenance Log MCP server
 
 Equipment maintenance log: assets, service entries with costs, and a due report from stored dates.
 

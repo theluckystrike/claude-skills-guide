@@ -6,6 +6,8 @@ permalink: /mcp/delivery-schedule/
 date: 2026-10-28
 ---
 
+# Delivery Schedule MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Delivery Schedule MCP server
 
 Late is not a status here, it is a reading. A stored "late" flag is a fact about the afternoon somebody last ran the report, and it keeps being reported long after the work lands. So nothing derived is stored: a deliverable holds its due date, its value and its dated history, and the current status, the delivered date, the acceptance note, the lateness and every total are worked out on the call, a
 

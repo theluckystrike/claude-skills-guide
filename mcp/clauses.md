@@ -6,6 +6,8 @@ permalink: /mcp/clauses/
 date: 2026-10-28
 ---
 
+# Clauses MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Clauses MCP server
 
 Say "draft a service agreement for Beta Corp, 4,500 EUR, 14-day terms" and get a real `.docx` built from your own clause library. This MCP server keeps the contract and proposal paragraphs you reuse, scope, payment terms, late fees, IP assignment, confidentiality, termination, liability cap and twenty more, as searchable clauses with `{variables}` in them. It ships with 25 generic freelance star
 

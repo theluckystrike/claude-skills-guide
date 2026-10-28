@@ -6,6 +6,8 @@ permalink: /mcp/payroll/
 date: 2026-10-28
 ---
 
+# Payroll MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Payroll MCP server
 
 Give Claude (or any MCP client) a payroll estimator: `payroll_run` turns hours worked × hourly rate − tax rate into gross pay, tax withheld and net pay; `payroll_invoice_total` sums a batch of runs into one payroll total. For solo operators, small teams and anyone who pays hourly people and wants the arithmetic done right the first time.
 

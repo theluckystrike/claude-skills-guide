@@ -6,6 +6,8 @@ permalink: /mcp/dunning-letters/
 date: 2026-10-28
 ---
 
+# Dunning Letters MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Dunning Letters MCP server
 
 Chase overdue invoices: reminder 1, reminder 2, final notice, escalation dates, aging.
 

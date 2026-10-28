@@ -6,6 +6,8 @@ permalink: /mcp/billing-docs/
 date: 2026-10-28
 ---
 
+# Billing Docs MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Billing Docs MCP server
 
 When a client sends work back, or you billed them twice, you owe them a credit note: a document that names the invoice it reverses and takes the money off it, with the VAT unwound at the rate you charged. When you order from a supplier, you owe them a purchase order: what you want, at what price, by when, with your own details on it. This server writes both, against the invoices and the clients th
 

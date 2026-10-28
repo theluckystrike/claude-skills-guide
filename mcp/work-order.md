@@ -6,6 +6,8 @@ permalink: /mcp/work-order/
 date: 2026-10-28
 ---
 
+# Work Order MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Work Order MCP server
 
 Nothing is invented and nothing is stored twice: the value, the hours, the materials and the VAT are derived from the lines on every call, and the invoice payload's unit prices are already the billed units, so the invoice reproduces the work order to the minor unit.
 

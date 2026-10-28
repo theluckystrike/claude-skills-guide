@@ -6,6 +6,8 @@ permalink: /mcp/change-order/
 date: 2026-10-28
 ---
 
+# Change Order MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Change Order MCP server
 
 No delta is stored. A change order holds its lines and its status history; the delta, the running value and the VAT are derived on every call, with the invoice server's own arithmetic. Nothing is invented: the first change order against a reference states the original contract value once, every later one inherits it, and a different figure is refused by name.
 

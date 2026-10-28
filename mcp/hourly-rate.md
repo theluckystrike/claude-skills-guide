@@ -6,6 +6,8 @@ permalink: /mcp/hourly-rate/
 date: 2026-10-28
 ---
 
+# Hourly Rate MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Hourly Rate MCP server
 
 MCP server: the minimum hourly rate a freelancer must charge to hit a desired annual after-tax income, given business expenses, billable hours, working weeks and the tax rate on profit. Plus a break-even rate and side-by-side what-if scenarios.
 

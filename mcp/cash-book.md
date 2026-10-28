@@ -6,6 +6,8 @@ permalink: /mcp/cash-book/
 date: 2026-10-28
 ---
 
+# Cash Book MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Cash Book MCP server
 
 One double-entry ledger derived from your invoices, bank, expenses, deposits and assets.
 

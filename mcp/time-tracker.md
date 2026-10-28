@@ -6,6 +6,8 @@ permalink: /mcp/time-tracker/
 date: 2026-10-28
 ---
 
+# Time Tracker MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Time Tracker MCP server
 
 Track billable time without leaving your AI chat. Say "start a timer on the acme redesign", keep working, then ask for "my hours this week by project" or "invoice lines for acme in August". It keeps a running timer, lets you log time you forgot to track, applies your hourly rate per project, and turns the result into a report, a CSV file or a set of invoice line items. Everything is stored as plai
 

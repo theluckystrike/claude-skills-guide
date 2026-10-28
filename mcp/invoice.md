@@ -6,6 +6,8 @@ permalink: /mcp/invoice/
 date: 2026-10-28
 ---
 
+# Invoice MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Invoice MCP server
 
 Say "make an invoice for Acme, 12 hours at 90 EUR, due in 14 days" and get a real PDF you can send. This MCP server stores your business profile and your clients, allocates a sequential invoice number that is never reused, computes the subtotal, any discount, one tax line per VAT rate and the total in integer minor units, and renders an A4 PDF with your issuer and payment details, a wrapping item 
 

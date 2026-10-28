@@ -6,6 +6,8 @@ permalink: /mcp/three-way-match/
 date: 2026-10-28
 ---
 
+# Three Way Match MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Three Way Match MCP server
 
 Check a supplier invoice against its purchase order and delivery receipts in Claude or another MCP client. This local server compares each exact SKU, unit price and billed quantity with the PO, cumulative accepted deliveries and quantities you say were already invoiced. It catches offsetting SKU mistakes even when the invoice and PO grand totals agree, and returns the source values behind every ex
 

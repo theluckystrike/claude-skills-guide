@@ -6,6 +6,8 @@ permalink: /mcp/mileage-log/
 date: 2026-10-28
 ---
 
+# Mileage Log MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Mileage Log MCP server
 
 Mileage log for deductible driving: trips, effective-dated rates, summaries and CSV export.
 

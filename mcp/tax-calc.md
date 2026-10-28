@@ -6,6 +6,8 @@ permalink: /mcp/tax-calc/
 date: 2026-10-28
 ---
 
+# Tax Calc MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Tax Calc MCP server
 
 Give Claude (or any MCP client) a tax estimator: `us_federal_tax` applies the 2026 US federal brackets for a single filer — including the $15,750 standard deduction — and returns total tax, effective rate, and marginal bracket. Planning numbers, computed on your machine, in one sentence.
 

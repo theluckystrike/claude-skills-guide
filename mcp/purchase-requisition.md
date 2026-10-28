@@ -6,6 +6,8 @@ permalink: /mcp/purchase-requisition/
 date: 2026-10-28
 ---
 
+# Purchase Requisition MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Purchase Requisition MCP server
 
 If somebody edits the purchase-requisition afterwards, adds a step or deletes one, every run already in progress keeps the list it started with, and the version it was copied from is recorded on the run.
 

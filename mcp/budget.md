@@ -6,6 +6,8 @@ permalink: /mcp/budget/
 date: 2026-10-28
 ---
 
+# Budget MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Budget MCP server
 
 Give Claude (or any MCP client) a real envelope budget: `budget_set` to declare a category and its monthly cap, `budget_spend` to record spending against it, `budget_report` to see every category with how much is left. All of it in chat, all of it on your machine, no finance app login and no bank connection.
 

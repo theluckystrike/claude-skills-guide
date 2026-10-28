@@ -6,6 +6,8 @@ permalink: /mcp/calendar/
 date: 2026-10-28
 ---
 
+# Calendar MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Calendar MCP server
 
 Your calendar app can show you next Tuesday. It cannot tell you where your week actually went, which two things you said yes to at the same time, or how many billable hours last month's meetings were worth. This server reads the `.ics` file your calendar already exports and answers those questions: events in any window with recurring series expanded properly, merged busy blocks and the real free g
 

@@ -6,6 +6,8 @@ permalink: /mcp/stripe-billing/
 date: 2026-10-28
 ---
 
+# Stripe Billing MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Stripe Billing MCP server
 
 Give Claude (or any MCP client) two working Stripe tools: `stripe_balance` reads your live account balance, and `stripe_payment_link` creates a real Stripe payment link for a price you name. Direct Stripe REST calls from your machine with your own `STRIPE_SECRET_KEY` — no dashboard round-trip for the two questions you actually ask most.
 

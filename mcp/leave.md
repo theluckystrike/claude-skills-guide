@@ -6,6 +6,8 @@ permalink: /mcp/leave/
 date: 2026-10-28
 ---
 
+# Leave MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Leave MCP server
 
 A day is committed when the request that spends it is **approved or pending**. Balance is `allowance + carried − approved − pending`. Cancelling returns the days immediately; rejecting never charged them.
 

@@ -6,6 +6,8 @@ permalink: /mcp/image/
 date: 2026-10-28
 ---
 
+# Image MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Image MCP server
 
 Say "make these five photos 1200 pixels wide" or "shrink this screenshot and strip the GPS out of it" and it happens, on your machine, in a second. This MCP server does the small image jobs that otherwise send you to a web uploader: resize, convert between PNG, JPEG, BMP, GIF and TIFF, compress with a real before-and-after byte count, crop, thumbnail a folder, watermark with your business name, an
 

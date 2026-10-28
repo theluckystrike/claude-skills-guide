@@ -6,6 +6,8 @@ permalink: /mcp/currency/
 date: 2026-10-28
 ---
 
+# Currency MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Currency MCP server
 
 Ask your assistant what something is worth in another currency and get a real answer with a date on it. It reads the European Central Bank's daily euro foreign exchange reference rates, the same published series banks, tax authorities and accountants use, converts amounts between any of the currencies the ECB quotes, and shows how a pair has moved over time. There is no API key, no account and no 
 

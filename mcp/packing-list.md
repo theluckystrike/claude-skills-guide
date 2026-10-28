@@ -6,6 +6,8 @@ permalink: /mcp/packing-list/
 date: 2026-10-28
 ---
 
+# Packing List MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Packing List MCP server
 
 That is not a simplification, it is what the document is for: it travels inside the box, and the consignee's warehouse is not the party that sees what the goods cost. The invoice against the same order is a different document and lives in `@theluckystrike/mcp-invoice`. There is no money arithmetic in this server at all, and a test asserts there is not.
 

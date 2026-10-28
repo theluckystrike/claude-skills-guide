@@ -6,6 +6,8 @@ permalink: /mcp/bill-of-sale/
 date: 2026-10-28
 ---
 
+# Bill Of Sale MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Bill Of Sale MCP server
 
 Bills of sale for equipment, vehicles and stock: draft, finalize, print with signature lines.
 

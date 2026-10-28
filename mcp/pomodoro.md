@@ -6,6 +6,8 @@ permalink: /mcp/pomodoro/
 date: 2026-10-28
 ---
 
+# Pomodoro MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Pomodoro MCP server
 
 Turn "I have 3 hours before the demo" into a real pomodoro plan without opening a timer app. This MCP server gives Claude (or any MCP client) a `pomodoro_plan` tool that splits your available minutes into 25-minute focus blocks with 5-minute short breaks and a 15-minute long break every 4th block — the classic Pomodoro cadence, computed for your actual schedule instead of an app's default day.
 

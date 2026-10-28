@@ -6,6 +6,8 @@ permalink: /mcp/checklist/
 date: 2026-10-28
 ---
 
+# Checklist MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Checklist MCP server
 
 If somebody edits the checklist afterwards, adds a step or deletes one, every run already in progress keeps the list it started with, and the version it was copied from is recorded on the run.
 

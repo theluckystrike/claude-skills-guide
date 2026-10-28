@@ -6,6 +6,8 @@ permalink: /mcp/office-suite/
 date: 2026-10-28
 ---
 
+# Office Suite MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Office Suite MCP server
 
 Run the freelancer office from one MCP config entry. The v0.25.0 bundle initializes 50 local child servers and exposes 453 tools, measured over MCP on 2026-10-26. It includes time tracking, invoices, spreadsheets, quotes, expenses and the supplier-invoice three-way matcher duplicate invoice candidate review, and supplier statement open-item checks against AP ledger exports. The proxy forwards tool
 

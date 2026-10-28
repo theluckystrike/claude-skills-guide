@@ -6,6 +6,8 @@ permalink: /mcp/recurring/
 date: 2026-10-28
 ---
 
+# Recurring MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Recurring MCP server
 
 Say "bill Acme 12 hours at 90 EUR on the 1st of every month" once, and stop remembering it. This MCP server stores recurring invoice schedules, client, line items, cadence, start and end dates, and then, when you ask, creates the invoices that have actually fallen due as real records in the invoice server, with its number series, its clients and its A4 PDF. Generation is idempotent: one invoice pe
 

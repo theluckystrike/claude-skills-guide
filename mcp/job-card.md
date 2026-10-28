@@ -6,6 +6,8 @@ permalink: /mcp/job-card/
 date: 2026-10-28
 ---
 
+# Job Card MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Job Card MCP server
 
 Job cards for trades and field service: hours and materials per job, open to invoiced.
 

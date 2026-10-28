@@ -6,6 +6,8 @@ permalink: /mcp/loan-calculator/
 date: 2026-10-28
 ---
 
+# Loan Calculator MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Loan Calculator MCP server
 
 Give Claude (or any MCP client) real loan math: `loan_payment` for the monthly payment and total interest of a loan, `loan_amortize` for the full month-by-month schedule. Standard amortization formula, computed on your machine, no rate-shopping site and no spreadsheet.
 

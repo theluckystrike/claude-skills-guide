@@ -6,6 +6,8 @@ permalink: /mcp/backlink-checker/
 date: 2026-10-28
 ---
 
+# Backlink Checker MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Backlink Checker MCP server
 
 Nothing is stored. Every call fetches the page live, parses the anchor, applies the robots guards, and reports - so a verdict is always about the page as it is now, never as it was.
 

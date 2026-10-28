@@ -6,6 +6,8 @@ permalink: /mcp/pdf/
 date: 2026-10-28
 ---
 
+# Pdf MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Pdf MCP server
 
 Say "stamp PAID on that invoice and save a copy" or "pull pages 2 to 6 out of this scan and merge them with the contract" and it happens, on your machine, in a second. This MCP server does the small PDF jobs that otherwise send you to a web uploader: merge, split by page range, extract or reorder pages, rotate a sideways scan, stamp `PAID` or `DRAFT` or any text you like, put your business name an
 

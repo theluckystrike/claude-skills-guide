@@ -6,6 +6,8 @@ permalink: /mcp/supplier-statement-check/
 date: 2026-10-28
 ---
 
+# Supplier Statement Check MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Supplier Statement Check MCP server
 
 Compare a supplied supplier statement with an accounts-payable open-item export. Find invoices or credit notes present on only one side, conflicting outstanding amounts or dates, and repeated references that cannot be paired safely. This local MCP server preserves every original row and explains each finding. It checks two supplied open-item lists; it does not reconcile opening/closing balances, m
 

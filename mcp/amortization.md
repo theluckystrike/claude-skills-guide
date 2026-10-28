@@ -6,6 +6,8 @@ permalink: /mcp/amortization/
 date: 2026-10-28
 ---
 
+# Amortization MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Amortization MCP server
 
 Loan and lease schedules: payment, interest, early settlement and the journal, to the minor unit.
 

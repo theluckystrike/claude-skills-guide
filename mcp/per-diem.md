@@ -6,6 +6,8 @@ permalink: /mcp/per-diem/
 date: 2026-10-28
 ---
 
+# Per Diem MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Per Diem MCP server
 
 Work out the daily travel allowance for a business trip on the rate tables the tax authorities actually publish, and keep the trips you priced. You give it where you went, when you left and when you got back, and which meals somebody else paid for; it gives you the amount per day and the total, in the scheme's own currency, with the partial-day rule and every meal deduction shown next to the numbe
 

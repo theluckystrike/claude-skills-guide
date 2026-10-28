@@ -6,6 +6,8 @@ permalink: /mcp/asset-register/
 date: 2026-10-28
 ---
 
+# Asset Register MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Asset Register MCP server
 
 Fixed assets and depreciation on bundled Polish KST, HMRC and IRS MACRS tables.
 

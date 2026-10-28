@@ -6,6 +6,8 @@ permalink: /mcp/barcode/
 date: 2026-10-28
 ---
 
+# Barcode MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Barcode MCP server
 
 Make a QR code or a barcode in the conversation you are already in. Paste a URL and get a QR code you can put on a flyer. Give a client's invoice an EPC payment code their banking app scans and fills in for them. Print an EAN-13 for a product, a Code 128 for a shelf label, a WiFi code for the office wall, a vCard for a conference badge. Everything is drawn on your machine: no upload, no account, n
 

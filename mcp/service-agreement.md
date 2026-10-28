@@ -6,6 +6,8 @@ permalink: /mcp/service-agreement/
 date: 2026-10-28
 ---
 
+# Service Agreement MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Service Agreement MCP server
 
 Service agreements for freelancers: scope, deliverables, rate, termination and liability caps.
 

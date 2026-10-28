@@ -6,6 +6,8 @@ permalink: /mcp/deposits/
 date: 2026-10-28
 ---
 
+# Deposits MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Deposits MCP server
 
 Security and retainer deposits per client: hold them, apply them to invoices, refund them.
 

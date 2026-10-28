@@ -6,6 +6,8 @@ permalink: /mcp/price-tracker/
 date: 2026-10-28
 ---
 
+# Price Tracker MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Price Tracker MCP server
 
 Ask your assistant what something costs right now. Point it at any product page and it reads the price off the page, remembers it, and tells you next time whether the price moved, how far, and whether it reached the number you were waiting for. It works on ordinary shop pages by reading the structured data most stores already publish (JSON-LD, Open Graph, microdata) and falling back to the visible
 

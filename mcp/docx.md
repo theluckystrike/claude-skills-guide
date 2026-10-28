@@ -6,6 +6,8 @@ permalink: /mcp/docx/
 date: 2026-10-28
 ---
 
+# Docx MCP server
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,8 +97,6 @@ date: 2026-10-28
  ]
 }
 </script>
-
-# Docx MCP server
 
 Say "write a proposal for Beta Corp, checkout rebuild, 4,500 EUR, three phases" and get a real `.docx` you can send. This MCP server writes Word documents from chat, proposals, quotes, service agreements, statements of work and letters, with your letterhead, headings, bullet and numbered lists and tables. It also turns markdown into `.docx`, reads an existing `.docx` back as text and outline, and 
 
