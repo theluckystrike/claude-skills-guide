@@ -1,0 +1,167 @@
+---
+layout: default
+title: "Billing Docs MCP server: install, tools and pricing"
+description: "Credit notes against your invoices and purchase orders to your suppliers, on the invoice engine."
+permalink: /mcp/billing-docs/
+date: 2026-10-28
+---
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "SoftwareApplication",
+   "name": "Billing Docs MCP server",
+   "applicationCategory": "BusinessApplication",
+   "operatingSystem": "macOS, Windows, Linux",
+   "description": "Credit notes against your invoices and purchase orders to your suppliers, on the invoice engine.",
+   "softwareVersion": "0.22.6",
+   "url": "https://claudecodeguides.com/mcp/billing-docs/",
+   "codeRepository": "https://github.com/theluckystrike/mcp-servers/tree/main/servers/billing-docs",
+   "license": "https://opensource.org/licenses/MIT",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free tier: unlimited local use. Optional one-time Pro licence for the hosted endpoint."
+   },
+   "isPartOf": {
+    "@type": "ItemList",
+    "name": "Back-office MCP server collection",
+    "url": "https://claudecodeguides.com/mcp/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is the Billing Docs MCP server free?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Running Billing Docs locally is free and unlimited, and the code is MIT licensed. There is a one-time $19 Pro licence for the hosted endpoint, which removes the saved-report cap. No subscription and no account are required."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Billing Docs need an API key?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. The server works offline against local files. If you use the hosted endpoint, the connection is authenticated with a scoped token instead of a per-tool API key."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where does the data go?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Local installs keep everything on your machine. The hosted endpoint stores records in an isolated per-tenant namespace, and only for servers you actually call."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which clients can use it?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Any MCP client: Claude Desktop (via the .mcpb bundle), Claude Code, Cursor, Windsurf, VS Code with an MCP extension, or your own agent over the Streamable HTTP transport."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://claudecodeguides.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "MCP servers",
+     "item": "https://claudecodeguides.com/mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Billing Docs",
+     "item": "https://claudecodeguides.com/mcp/billing-docs/"
+    }
+   ]
+  }
+ ]
+}
+</script>
+
+# Billing Docs MCP server
+
+When a client sends work back, or you billed them twice, you owe them a credit note: a document that names the invoice it reverses and takes the money off it, with the VAT unwound at the rate you charged. When you order from a supplier, you owe them a purchase order: what you want, at what price, by when, with your own details on it. This server writes both, against the invoices and the clients th
+
+**Category:** Invoicing and billing &middot; **Tools:** 14 &middot; **Version:** 0.22.6 &middot; **Licence:** MIT
+
+## Install it
+
+- **Hosted, nothing to install:** `https://mcp.zovo.one/mcp/billing-docs` — point any MCP client at that URL.
+- **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/billing-docs.mcpb)
+- **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/billing-docs`.
+- **npm:** the package `@theluckystrike/mcp-billing-docs` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.
+
+## Tools it exposes
+
+| Tool | What it does |
+| --- | --- |
+| `credit_note_create` | see tool reference |
+| `credit_note_list` | see tool reference |
+| `credit_note_get` | see tool reference |
+| `credit_note_pdf` | see tool reference |
+| `credit_note_text` | see tool reference |
+| `credit_note_delete` | see tool reference |
+| `purchase_order_create` | see tool reference |
+| `purchase_order_list` | see tool reference |
+| `purchase_order_get` | see tool reference |
+| `purchase_order_pdf` | see tool reference |
+| `purchase_order_text` | see tool reference |
+| `purchase_order_receive` | see tool reference |
+| `purchase_order_delete` | see tool reference |
+| `billing_docs_report` | see tool reference |
+
+## Pricing
+
+Free to run locally, forever. The **Pro licence is $19, one time, lifetime** — it changes only the
+hosted endpoint's saved-report cap, never the tools. All 58 servers together are
+[$39 as a bundle](/mcp/#pricing) instead of $1102 bought one at a time.
+
+[Buy the Billing Docs Pro licence — $19](https://mcp.zovo.one/buy/billing-docs&src=csg.mcp.billing-docs)
+
+## Questions people actually ask
+
+### Is the Billing Docs MCP server free?
+
+Yes. Running Billing Docs locally is free and unlimited, and the code is MIT licensed. There is a one-time $19 Pro licence for the hosted endpoint, which removes the saved-report cap. No subscription and no account are required.
+
+### Does Billing Docs need an API key?
+
+No. The server works offline against local files. If you use the hosted endpoint, the connection is authenticated with a scoped token instead of a per-tool API key.
+
+### Where does the data go?
+
+Local installs keep everything on your machine. The hosted endpoint stores records in an isolated per-tenant namespace, and only for servers you actually call.
+
+### Which clients can use it?
+
+Any MCP client: Claude Desktop (via the .mcpb bundle), Claude Code, Cursor, Windsurf, VS Code with an MCP extension, or your own agent over the Streamable HTTP transport.
+
+
+## Related servers in the same category
+
+- [Invoice MCP server](/mcp/invoice/) — Make real, sendable PDF invoices from a sentence. Clients, numbering that never repeats, VAT lines, discounts 
+- [Quotes MCP server](/mcp/quotes/) — Send a client a real quote in seconds: line items with VAT, a validity date, a plain-text version to paste int
+- [Recurring MCP server](/mcp/recurring/) — Bill the same clients every month without remembering to. Define a recurring invoice once, then generate the r
+- [Credit Note MCP server](/mcp/credit-note/) — Credit notes against an invoice or standalone: drafts, finalization, rendering, totals.
+
+---
+
+[All 58 back-office MCP servers](/mcp/) &middot; [how the collection is organised](/mcp/#how-it-fits-together)

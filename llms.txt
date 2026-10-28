@@ -21,3 +21,20 @@
 - [Prompt Engineering](https://claudecodeguides.com/topics/prompt-engineering/): Advanced prompting techniques and workflows
 - [Chrome Extensions](https://claudecodeguides.com/topics/chrome-extensions/): Extension development, reviews, and comparisons
 - [All Guides](https://claudecodeguides.com/all-articles/): Complete index of 2,600+ tutorials
+
+## MCP servers (58, MIT licensed)
+
+- [MCP server map](https://claudecodeguides.com/mcp/): all 58 back-office MCP servers with tools, install steps and pricing
+- [MCP server catalogue (JSON)](https://claudecodeguides.com/mcp/index.json): machine-readable list of every server, npm package, tool name and buy link
+- [Invoice MCP server](https://claudecodeguides.com/mcp/invoice/)
+- [PDF MCP server](https://claudecodeguides.com/mcp/pdf/)
+- [Spreadsheet MCP server](https://claudecodeguides.com/mcp/spreadsheet/)
+- [Bank statement MCP server](https://claudecodeguides.com/mcp/bank-statement/)
+- [Time tracker MCP server](https://claudecodeguides.com/mcp/time-tracker/)
+- [Payroll MCP server](https://claudecodeguides.com/mcp/payroll/)
+- [Expense tracker MCP server](https://claudecodeguides.com/mcp/expense-tracker/)
+- [VAT and tax calculator MCP server](https://claudecodeguides.com/mcp/tax-calc/)
+
+## Optional
+
+- [Hosted MCP endpoints](https://mcp.zovo.one/): the same servers as remote URLs, no install

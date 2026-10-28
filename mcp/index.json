@@ -1,0 +1,1663 @@
+{
+ "generated_at": "2026-10-28T01:50:37Z",
+ "count": 58,
+ "bundle_url": "https://mcp.zovo.one/buy/bundle",
+ "bundle_price_usd": 39,
+ "servers": [
+  {
+   "id": "amortization",
+   "slug": "amortization",
+   "human": "Amortization",
+   "registry_name": "io.github.theluckystrike/amortization",
+   "npm": "@theluckystrike/mcp-amortization",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Loan and lease schedules: payment, interest, early settlement and the journal, to the minor unit.",
+   "long_description": "npm publish for `@theluckystrike/mcp-amortization` is pending, so `npx -y @theluckystrike/mcp-amortization` returns 404 today. Until then, the `.mcpb` one-click bundle or a clone+build is the working path.",
+   "tools": [
+    "loan_create",
+    "loan_schedule",
+    "loan_repay_early",
+    "loan_journal",
+    "loan_list",
+    "loan_delete",
+    "loans_report"
+   ],
+   "website": "https://mcp.zovo.one/s/amortization",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/amortization.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/amortization",
+   "price_usd": 19,
+   "repo_subfolder": "servers/amortization"
+  },
+  {
+   "id": "asset-register",
+   "slug": "asset-register",
+   "human": "Asset Register",
+   "registry_name": "io.github.theluckystrike/asset-register",
+   "npm": "@theluckystrike/mcp-asset-register",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Fixed assets and depreciation on bundled Polish KST, HMRC and IRS MACRS tables.",
+   "long_description": "One-click (.mcpb): download `asset-register.mcpb` from the latest release and double-click it in Claude Desktop: https://github.com/theluckystrike/mcp-servers/releases/latest",
+   "tools": [
+    "asset_add",
+    "asset_list",
+    "asset_schedule",
+    "asset_journal",
+    "asset_dispose",
+    "asset_delete",
+    "asset_report"
+   ],
+   "website": "https://mcp.zovo.one/s/asset-register",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/asset-register.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/asset-register",
+   "price_usd": 19,
+   "repo_subfolder": "servers/asset-register"
+  },
+  {
+   "id": "backlink-checker",
+   "slug": "backlink-checker",
+   "human": "Backlink Checker",
+   "registry_name": "io.github.theluckystrike/backlink-checker",
+   "npm": "@theluckystrike/mcp-backlink-checker",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Check backlinks from Claude or Cursor: does a page link to your domain, dofollow or nofollow, with anchor text, HTTP status and robots guards. All checks run on demand, nothing stored.",
+   "long_description": "Nothing is stored. Every call fetches the page live, parses the anchor, applies the robots guards, and reports - so a verdict is always about the page as it is now, never as it was.",
+   "tools": [
+    "link_check",
+    "link_audit",
+    "anchor_profile",
+    "referring_domain_summary",
+    "outreach_queue",
+    "robots_guard_check"
+   ],
+   "website": "https://mcp.zovo.one/s/backlink-checker",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/backlink-checker.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/backlink-checker",
+   "price_usd": 19,
+   "repo_subfolder": "servers/backlink-checker"
+  },
+  {
+   "id": "bank-statement",
+   "slug": "bank-statement",
+   "human": "Bank Statement",
+   "registry_name": "io.github.theluckystrike/bank-statement-csv-categorize-reconcile-ledger",
+   "npm": "@theluckystrike/mcp-bank-statement",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Import a bank CSV export, categorise it, summarise it per currency, find recurring charges and reconcile it against your expense ledger. Everything stays on your machine.",
+   "long_description": "Export the CSV from your bank, say \"import this\", and the month is readable. This MCP server turns a bank export into a local ledger: it finds the header row under whatever preamble the bank prints above it, works out which column is the date, which is the money and which way the money went, and reads amounts in the file's own locale, so `1 234,56` from mBank and `1,234.56` from a US bank both bec",
+   "tools": [
+    "statement_import",
+    "transactions_list",
+    "transactions_search",
+    "category_rules",
+    "transaction_categorize",
+    "statement_summary",
+    "reconcile_expenses",
+    "recurring_detect",
+    "statement_export",
+    "accounts_list"
+   ],
+   "website": "https://mcp.zovo.one/s/bank-statement",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/bank-statement.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/bank-statement",
+   "price_usd": 19,
+   "repo_subfolder": "servers/bank-statement"
+  },
+  {
+   "id": "barcode",
+   "slug": "barcode",
+   "human": "Barcode",
+   "registry_name": "io.github.theluckystrike/barcode-qr-code-sepa-payment-ean13",
+   "npm": "@theluckystrike/mcp-barcode",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "QR codes and barcodes from chat: URLs, WiFi joins, vCards, SEPA payment QR that a banking app can scan, Code 128 and EAN-13, as SVG or PNG. No network, no account.",
+   "long_description": "Make a QR code or a barcode in the conversation you are already in. Paste a URL and get a QR code you can put on a flyer. Give a client's invoice an EPC payment code their banking app scans and fills in for them. Print an EAN-13 for a product, a Code 128 for a shelf label, a WiFi code for the office wall, a vCard for a conference badge. Everything is drawn on your machine: no upload, no account, n",
+   "tools": [
+    "qr_create",
+    "qr_wifi",
+    "qr_vcard",
+    "qr_payment_sepa",
+    "invoice_payment_qr",
+    "barcode_create",
+    "barcode_batch",
+    "code_list"
+   ],
+   "website": "https://mcp.zovo.one/s/barcode",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/barcode.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/barcode",
+   "price_usd": 19,
+   "repo_subfolder": "servers/barcode"
+  },
+  {
+   "id": "bill-of-sale",
+   "slug": "bill-of-sale",
+   "human": "Bill Of Sale",
+   "registry_name": "io.github.theluckystrike/bill-of-sale",
+   "npm": "@theluckystrike/mcp-bill-of-sale",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Bills of sale for equipment, vehicles and stock: draft, finalize, print with signature lines.",
+   "long_description": "npm publish for `@theluckystrike/mcp-bill-of-sale` is pending, so `npx -y @theluckystrike/mcp-bill-of-sale` returns 404 today. Until then, a clone+build is the working path.",
+   "tools": [
+    "sale_create",
+    "sale_update",
+    "sale_finalize",
+    "sale_list",
+    "sale_get",
+    "sale_delete",
+    "sale_render",
+    "sale_summary"
+   ],
+   "website": "https://mcp.zovo.one/s/bill-of-sale",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/bill-of-sale.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/bill-of-sale",
+   "price_usd": 19,
+   "repo_subfolder": "servers/bill-of-sale"
+  },
+  {
+   "id": "billing-docs",
+   "slug": "billing-docs",
+   "human": "Billing Docs",
+   "registry_name": "io.github.theluckystrike/billing-docs-credit-notes-purchase-orders",
+   "npm": "@theluckystrike/mcp-billing-docs",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Credit notes against your invoices and purchase orders to your suppliers, on the invoice engine.",
+   "long_description": "When a client sends work back, or you billed them twice, you owe them a credit note: a document that names the invoice it reverses and takes the money off it, with the VAT unwound at the rate you charged. When you order from a supplier, you owe them a purchase order: what you want, at what price, by when, with your own details on it. This server writes both, against the invoices and the clients th",
+   "tools": [
+    "credit_note_create",
+    "credit_note_list",
+    "credit_note_get",
+    "credit_note_pdf",
+    "credit_note_text",
+    "credit_note_delete",
+    "purchase_order_create",
+    "purchase_order_list",
+    "purchase_order_get",
+    "purchase_order_pdf",
+    "purchase_order_text",
+    "purchase_order_receive",
+    "purchase_order_delete",
+    "billing_docs_report"
+   ],
+   "website": "https://mcp.zovo.one/s/billing-docs",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/billing-docs.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/billing-docs",
+   "price_usd": 19,
+   "repo_subfolder": "servers/billing-docs"
+  },
+  {
+   "id": "budget",
+   "slug": "budget",
+   "human": "Budget",
+   "registry_name": "io.github.theluckystrike/budget",
+   "npm": "mcp-budget",
+   "bin": [
+    "src/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "MCP server: budget",
+   "long_description": "Give Claude (or any MCP client) a real envelope budget: `budget_set` to declare a category and its monthly cap, `budget_spend` to record spending against it, `budget_report` to see every category with how much is left. All of it in chat, all of it on your machine, no finance app login and no bank connection.",
+   "tools": [],
+   "website": "https://mcp.zovo.one/s/budget",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/budget.mcpb",
+   "license_env": "",
+   "buy_url": "https://mcp.zovo.one/buy/budget",
+   "price_usd": 19,
+   "repo_subfolder": "servers/budget"
+  },
+  {
+   "id": "calendar",
+   "slug": "calendar",
+   "human": "Calendar",
+   "registry_name": "io.github.theluckystrike/calendar-ics-reader-events-freebusy-conflicts",
+   "npm": "@theluckystrike/mcp-calendar",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Read the .ics your calendar already exports: what is on this week, when you are actually free, what is double-booked, and turn a meeting into billable time. All local.",
+   "long_description": "Your calendar app can show you next Tuesday. It cannot tell you where your week actually went, which two things you said yes to at the same time, or how many billable hours last month's meetings were worth. This server reads the `.ics` file your calendar already exports and answers those questions: events in any window with recurring series expanded properly, merged busy blocks and the real free g",
+   "tools": [
+    "ics_import",
+    "calendars_list",
+    "events_list",
+    "events_search",
+    "free_busy",
+    "conflicts",
+    "next_event",
+    "event_export",
+    "event_to_time_entry",
+    "ics_forget"
+   ],
+   "website": "https://mcp.zovo.one/s/calendar",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/calendar.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/calendar",
+   "price_usd": 19,
+   "repo_subfolder": "servers/calendar"
+  },
+  {
+   "id": "cash-book",
+   "slug": "cash-book",
+   "human": "Cash Book",
+   "registry_name": "io.github.theluckystrike/cash-book",
+   "npm": "@theluckystrike/mcp-cash-book",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "One double-entry ledger derived from your invoices, bank, expenses, deposits and assets.",
+   "long_description": "npm publish for `@theluckystrike/mcp-cash-book` is pending, so `npx -y @theluckystrike/mcp-cash-book` returns 404 today. Until then, the `.mcpb` one-click bundle or a clone+build is the working path.",
+   "tools": [
+    "ledger_build",
+    "period_delete",
+    "trial_balance",
+    "ledger_lines",
+    "month_close",
+    "ledger_export_csv",
+    "ledger_report"
+   ],
+   "website": "https://mcp.zovo.one/s/cash-book",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/cash-book.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/cash-book",
+   "price_usd": 19,
+   "repo_subfolder": "servers/cash-book"
+  },
+  {
+   "id": "catalogue",
+   "slug": "catalogue",
+   "human": "Catalogue",
+   "registry_name": "io.github.theluckystrike/catalogue",
+   "npm": "@theluckystrike/mcp-catalogue",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "A price list and rate card the quotes and invoice servers read by SKU.",
+   "long_description": "Nothing is invented and nothing is stored twice. A SKU holds its price ROWS, each with a valid-from date; the price on a date is worked out on the call, so raising a price in July does not rewrite what June's job was quoted at. An unknown code comes back as a refusal naming the code, never as a guessed price.",
+   "tools": [
+    "sku_set",
+    "sku_get",
+    "sku_list",
+    "sku_delete",
+    "rate_set",
+    "rate_get",
+    "lines_resolve",
+    "price_list_text",
+    "price_list_pdf",
+    "catalogue_report"
+   ],
+   "website": "https://mcp.zovo.one/s/catalogue",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/catalogue.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/catalogue",
+   "price_usd": 19,
+   "repo_subfolder": "servers/catalogue"
+  },
+  {
+   "id": "change-order",
+   "slug": "change-order",
+   "human": "Change Order",
+   "registry_name": "io.github.theluckystrike/change-order",
+   "npm": "@theluckystrike/mcp-change-order",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Change orders against a quote or work order: deltas, approval, running contract value.",
+   "long_description": "No delta is stored. A change order holds its lines and its status history; the delta, the running value and the VAT are derived on every call, with the invoice server's own arithmetic. Nothing is invented: the first change order against a reference states the original contract value once, every later one inherits it, and a different figure is refused by name.",
+   "tools": [
+    "change_order_create",
+    "change_order_add_line",
+    "change_order_status",
+    "change_order_get",
+    "change_order_list",
+    "change_order_delete",
+    "contract_value",
+    "change_order_document",
+    "change_order_invoice_payload"
+   ],
+   "website": "https://mcp.zovo.one/s/change-order",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/change-order.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/change-order",
+   "price_usd": 19,
+   "repo_subfolder": "servers/change-order"
+  },
+  {
+   "id": "checklist",
+   "slug": "checklist",
+   "human": "Checklist",
+   "registry_name": "io.github.theluckystrike/checklist",
+   "npm": "@theluckystrike/mcp-checklist",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Reusable checklists and the dated runs of them: pass, fail, not applicable, and a sign-off.",
+   "long_description": "If somebody edits the checklist afterwards, adds a step or deletes one, every run already in progress keeps the list it started with, and the version it was copied from is recorded on the run.",
+   "tools": [
+    "checklist_create",
+    "checklist_item_add",
+    "checklist_item_remove",
+    "checklist_show",
+    "checklist_list",
+    "checklist_delete",
+    "run_start",
+    "run_check",
+    "run_show",
+    "run_list",
+    "run_sign_off",
+    "run_status",
+    "run_report",
+    "run_delete"
+   ],
+   "website": "https://mcp.zovo.one/s/checklist",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/checklist.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/checklist",
+   "price_usd": 19,
+   "repo_subfolder": "servers/checklist"
+  },
+  {
+   "id": "clauses",
+   "slug": "clauses",
+   "human": "Clauses",
+   "registry_name": "io.github.theluckystrike/contract-clause-library-proposal-template-docx",
+   "npm": "@theluckystrike/mcp-clauses",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "A personal library of reusable contract and proposal clauses: 25 generic freelance starters with {{variables}}, ranked search, and one-call assembly into a real Word .docx with every missing fact left as a bracketed prompt. Everything stays on your machine.",
+   "long_description": "Say \"draft a service agreement for Beta Corp, 4,500 EUR, 14-day terms\" and get a real `.docx` built from your own clause library. This MCP server keeps the contract and proposal paragraphs you reuse, scope, payment terms, late fees, IP assignment, confidentiality, termination, liability cap and twenty more, as searchable clauses with `{{variables}}` in them. It ships with 25 generic freelance star",
+   "tools": [
+    "clause_add",
+    "clause_get",
+    "clause_update",
+    "clause_delete",
+    "clause_list",
+    "clause_search",
+    "clause_import",
+    "clause_export",
+    "contract_assemble",
+    "variables_list"
+   ],
+   "website": "https://mcp.zovo.one/s/clauses",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/clauses.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/clauses",
+   "price_usd": 19,
+   "repo_subfolder": "servers/clauses"
+  },
+  {
+   "id": "credit-note",
+   "slug": "credit-note",
+   "human": "Credit Note",
+   "registry_name": "io.github.theluckystrike/credit-note",
+   "npm": "@theluckystrike/mcp-credit-note",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.8",
+   "description": "Credit notes against an invoice or standalone: drafts, finalization, rendering, totals.",
+   "long_description": "npm publish for `@theluckystrike/mcp-credit-note` is pending, so `npx -y @theluckystrike/mcp-credit-note` returns 404 today. Until then, a clone+build is the working path.",
+   "tools": [
+    "credit_note_create",
+    "credit_note_update",
+    "credit_note_finalize",
+    "credit_note_list",
+    "credit_note_get",
+    "credit_note_delete",
+    "credit_note_render",
+    "credit_note_summary"
+   ],
+   "website": "https://mcp.zovo.one/s/credit-note",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/credit-note.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/credit-note",
+   "price_usd": 19,
+   "repo_subfolder": "servers/credit-note"
+  },
+  {
+   "id": "currency",
+   "slug": "currency",
+   "human": "Currency",
+   "registry_name": "io.github.theluckystrike/currency-converter-ecb-rates-daily-keyless",
+   "npm": "@theluckystrike/mcp-currency",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Live and historical exchange rates from the European Central Bank, in your AI chat. Convert amounts, read rate history, and hand invoice tools the FX rates they need. No API key, cached locally, works offline.",
+   "long_description": "Ask your assistant what something is worth in another currency and get a real answer with a date on it. It reads the European Central Bank's daily euro foreign exchange reference rates, the same published series banks, tax authorities and accountants use, converts amounts between any of the currencies the ECB quotes, and shows how a pair has moved over time. There is no API key, no account and no ",
+   "tools": [
+    "rates_latest",
+    "convert",
+    "convert_many",
+    "fx_rates_for",
+    "rate_history",
+    "rate_on",
+    "currencies_list",
+    "cache_status"
+   ],
+   "website": "https://mcp.zovo.one/s/currency",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/currency.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/currency",
+   "price_usd": 19,
+   "repo_subfolder": "servers/currency"
+  },
+  {
+   "id": "delivery-schedule",
+   "slug": "delivery-schedule",
+   "human": "Delivery Schedule",
+   "registry_name": "io.github.theluckystrike/delivery-schedule",
+   "npm": "@theluckystrike/mcp-delivery-schedule",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.7",
+   "description": "Dated deliverables against a quote or work order: due dates, sign-off, what is late, milestones.",
+   "long_description": "Late is not a status here, it is a reading. A stored \"late\" flag is a fact about the afternoon somebody last ran the report, and it keeps being reported long after the work lands. So nothing derived is stored: a deliverable holds its due date, its value and its dated history, and the current status, the delivered date, the acceptance note, the lateness and every total are worked out on the call, a",
+   "tools": [
+    "delivery_schedule_create",
+    "deliverable_add",
+    "deliverable_status",
+    "deliverable_delete",
+    "delivery_schedule_get",
+    "delivery_schedule_list",
+    "delivery_schedule_delete",
+    "late_report",
+    "delivery_schedule_document",
+    "milestone_payload"
+   ],
+   "website": "https://mcp.zovo.one/s/delivery-schedule",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/delivery-schedule.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/delivery-schedule",
+   "price_usd": 19,
+   "repo_subfolder": "servers/delivery-schedule"
+  },
+  {
+   "id": "deposits",
+   "slug": "deposits",
+   "human": "Deposits",
+   "registry_name": "io.github.theluckystrike/deposits",
+   "npm": "@theluckystrike/mcp-deposits",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Security and retainer deposits per client: hold them, apply them to invoices, refund them.",
+   "long_description": "Security and retainer deposits, held per client, on the same engine as your invoices.",
+   "tools": [
+    "deposit_record",
+    "deposit_list",
+    "deposit_apply",
+    "deposit_refund",
+    "deposit_delete",
+    "deposit_balance",
+    "deposit_statement_text",
+    "deposit_statement_pdf",
+    "deposits_report"
+   ],
+   "website": "https://mcp.zovo.one/s/deposits",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/deposits.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/deposits",
+   "price_usd": 19,
+   "repo_subfolder": "servers/deposits"
+  },
+  {
+   "id": "docx",
+   "slug": "docx",
+   "human": "Docx",
+   "registry_name": "io.github.theluckystrike/docx-document-generator-proposal-contract-markdown",
+   "npm": "@theluckystrike/mcp-docx",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Turn a chat into a real Word document: proposals, quotes, contracts, statements of work and letters as .docx files, plus reading and filling existing .docx templates. Everything stays on your machine.",
+   "long_description": "Say \"write a proposal for Beta Corp, checkout rebuild, 4,500 EUR, three phases\" and get a real `.docx` you can send. This MCP server writes Word documents from chat, proposals, quotes, service agreements, statements of work and letters, with your letterhead, headings, bullet and numbered lists and tables. It also turns markdown into `.docx`, reads an existing `.docx` back as text and outline, and ",
+   "tools": [
+    "business_set",
+    "doc_create",
+    "doc_from_markdown",
+    "doc_read",
+    "doc_to_html",
+    "doc_fill_template",
+    "proposal_create",
+    "proposal_update",
+    "contract_create"
+   ],
+   "website": "https://mcp.zovo.one/s/docx",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/docx.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/docx",
+   "price_usd": 19,
+   "repo_subfolder": "servers/docx"
+  },
+  {
+   "id": "dunning-letters",
+   "slug": "dunning-letters",
+   "human": "Dunning Letters",
+   "registry_name": "io.github.theluckystrike/dunning-letters",
+   "npm": "@theluckystrike/mcp-dunning-letters",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Chase overdue invoices: reminder 1, reminder 2, final notice, escalation dates, aging.",
+   "long_description": "npm publish for `@theluckystrike/mcp-dunning-letters` is pending, so `npx -y @theluckystrike/mcp-dunning-letters` returns 404 today. Until then, a clone+build is the working path.",
+   "tools": [
+    "invoice_register",
+    "payment_record",
+    "letter_render",
+    "letter_sent",
+    "overdue_list",
+    "aging_summary",
+    "chase_today",
+    "invoice_status",
+    "invoice_delete"
+   ],
+   "website": "https://mcp.zovo.one/s/dunning-letters",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/dunning-letters.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/dunning-letters",
+   "price_usd": 19,
+   "repo_subfolder": "servers/dunning-letters"
+  },
+  {
+   "id": "duplicate-invoice-check",
+   "slug": "duplicate-invoice-check",
+   "human": "Duplicate Invoice Check",
+   "registry_name": "io.github.theluckystrike/duplicate-invoice-check",
+   "npm": "@theluckystrike/mcp-duplicate-invoice-check",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.8",
+   "description": "Review explainable duplicate supplier invoice candidates in a supplied local batch.",
+   "long_description": "Review a supplied batch of supplier invoices for repeated invoice numbers, conservative formatting variations, or identical amounts and invoice dates. This local MCP server returns complete grouped evidence and the exact reason each record needs review. Distinct legitimate invoices can share an amount and date. Candidates are not confirmed duplicates, fraud scores, recoverable money or payment dec",
+   "tools": [
+    "duplicate_invoice_check",
+    "report_list",
+    "report_get",
+    "report_page",
+    "report_delete",
+    "report_export_csv"
+   ],
+   "website": "https://mcp.zovo.one/s/duplicate-invoice-check?utm_source=mcp-registry&utm_medium=registry&utm_campaign=duplicate-invoice-check",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.8/duplicate-invoice-check.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/duplicate-invoice-check",
+   "price_usd": 19,
+   "repo_subfolder": "servers/duplicate-invoice-check"
+  },
+  {
+   "id": "expense-tracker",
+   "slug": "expense-tracker",
+   "human": "Expense Tracker",
+   "registry_name": "io.github.theluckystrike/expense-tracker-receipts-mileage",
+   "npm": "@theluckystrike/mcp-expense-tracker",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.9",
+   "description": "Local expenses, receipts and mileage ledger for freelancers: categorise, split VAT, summarise, export to CSV or xlsx and rebill straight into an invoice.",
+   "long_description": "Say \"12.30 euros at Adobe, software, billable to Acme\" and it is logged, categorised, VAT-split and ready to rebill. This MCP server keeps a local ledger of your business expenses: every amount is held in integer minor units in its own currency, `vat_rate` splits the gross on the receipt into net and VAT (set it once with `expense_settings` and every later expense is split without repeating it), m",
+   "tools": [
+    "expense_add",
+    "expense_list",
+    "expense_update",
+    "expense_delete",
+    "receipt_attach",
+    "category_rules",
+    "expense_settings",
+    "expense_summary",
+    "mileage_add",
+    "expense_export",
+    "expense_to_invoice",
+    "expense_mark_rebilled"
+   ],
+   "website": "https://mcp.zovo.one/s/expense-tracker",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.9/expense-tracker.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/expense-tracker",
+   "price_usd": 19,
+   "repo_subfolder": "servers/expense-tracker"
+  },
+  {
+   "id": "goods-receipt",
+   "slug": "goods-receipt",
+   "human": "Goods Receipt",
+   "registry_name": "io.github.theluckystrike/goods-receipt",
+   "npm": "@theluckystrike/mcp-goods-receipt",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Goods receipt notes against purchase orders: over/under tolerances, damaged and short units, discrepancies, and CSV export.",
+   "long_description": "Purchase orders and the goods-receipt notes that receive them. A PO carries a reference, a supplier, and dated lines - sku, description, whole units ordered - plus whole-percent over/under tolerances that decide when a receipt is flagged. A GRN is raised against an open PO, one cell per line: units received, units damaged, and any shortage you already know about. Shortage is derived, not typed - o",
+   "tools": [
+    "po_add",
+    "grn_add",
+    "grn_line_add",
+    "grn_list",
+    "grn_get",
+    "grn_discrepancy",
+    "grn_close",
+    "grn_status_report",
+    "grn_export_csv"
+   ],
+   "website": "https://mcp.zovo.one/s/goods-receipt",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/goods-receipt.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/goods-receipt",
+   "price_usd": 19,
+   "repo_subfolder": "servers/goods-receipt"
+  },
+  {
+   "id": "hourly-rate",
+   "slug": "hourly-rate",
+   "human": "Hourly Rate",
+   "registry_name": "io.github.theluckystrike/hourly-rate",
+   "npm": "@theluckystrike/mcp-hourly-rate",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Freelance hourly-rate calculator with break-even and what-if scenarios.",
+   "long_description": "MCP server: the minimum hourly rate a freelancer must charge to hit a desired annual after-tax income, given business expenses, billable hours, working weeks and the tax rate on profit. Plus a break-even rate and side-by-side what-if scenarios.",
+   "tools": [],
+   "website": "https://mcp.zovo.one/s/hourly-rate",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.5/hourly-rate.mcpb",
+   "license_env": "",
+   "buy_url": "https://mcp.zovo.one/buy/hourly-rate",
+   "price_usd": 19,
+   "repo_subfolder": "servers/hourly-rate"
+  },
+  {
+   "id": "image",
+   "slug": "image",
+   "human": "Image",
+   "registry_name": "io.github.theluckystrike/image-resize-convert-compress-watermark",
+   "npm": "@theluckystrike/mcp-image",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Resize, convert, compress, crop, thumbnail and watermark images from chat: no upload, no account, no native dependency. Every file stays on your machine.",
+   "long_description": "Say \"make these five photos 1200 pixels wide\" or \"shrink this screenshot and strip the GPS out of it\" and it happens, on your machine, in a second. This MCP server does the small image jobs that otherwise send you to a web uploader: resize, convert between PNG, JPEG, BMP, GIF and TIFF, compress with a real before-and-after byte count, crop, thumbnail a folder, watermark with your business name, an",
+   "tools": [
+    "image_info",
+    "image_resize",
+    "image_convert",
+    "image_compress",
+    "image_crop",
+    "image_thumbnails",
+    "image_watermark",
+    "image_strip_metadata",
+    "image_batch_resize",
+    "image_dominant_colors"
+   ],
+   "website": "https://mcp.zovo.one/s/image",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/image.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/image",
+   "price_usd": 19,
+   "repo_subfolder": "servers/image"
+  },
+  {
+   "id": "invoice",
+   "slug": "invoice",
+   "human": "Invoice",
+   "registry_name": "io.github.theluckystrike/invoice-pdf-billing-generator",
+   "npm": "@theluckystrike/mcp-invoice",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Make real, sendable PDF invoices from a sentence. Clients, numbering that never repeats, VAT lines, discounts and overdue reports, all stored locally.",
+   "long_description": "Say \"make an invoice for Acme, 12 hours at 90 EUR, due in 14 days\" and get a real PDF you can send. This MCP server stores your business profile and your clients, allocates a sequential invoice number that is never reused, computes the subtotal, any discount, one tax line per VAT rate and the total in integer minor units, and renders an A4 PDF with your issuer and payment details, a wrapping item ",
+   "tools": [
+    "business_set",
+    "client_add",
+    "client_delete",
+    "client_list",
+    "invoice_create",
+    "invoice_from_hours",
+    "invoice_list",
+    "invoice_get",
+    "invoice_mark_paid",
+    "invoice_pdf",
+    "overdue_report"
+   ],
+   "website": "https://mcp.zovo.one/s/invoice",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/invoice.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/invoice",
+   "price_usd": 19,
+   "repo_subfolder": "servers/invoice"
+  },
+  {
+   "id": "job-card",
+   "slug": "job-card",
+   "human": "Job Card",
+   "registry_name": "io.github.theluckystrike/job-card",
+   "npm": "@theluckystrike/mcp-job-card",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Job cards for trades and field service: hours and materials per job, open to invoiced.",
+   "long_description": "npm publish for `@theluckystrike/mcp-job-card` is pending, so `npx -y @theluckystrike/mcp-job-card` returns 404 today. Until then, a clone+build is the working path.",
+   "tools": [
+    "job_card_create",
+    "job_card_log_labor",
+    "job_card_log_material",
+    "job_card_update_status",
+    "job_card_list",
+    "job_card_get",
+    "job_card_print",
+    "job_card_delete",
+    "job_card_summary"
+   ],
+   "website": "https://mcp.zovo.one/s/job-card",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/job-card.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/job-card",
+   "price_usd": 19,
+   "repo_subfolder": "servers/job-card"
+  },
+  {
+   "id": "kanban",
+   "slug": "kanban",
+   "human": "Kanban",
+   "registry_name": "io.github.theluckystrike/kanban-todo-tasks-projects-board",
+   "npm": "@theluckystrike/mcp-kanban",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "A local task board per project: columns, due dates, estimates, priorities and a link into your time tracker. All data stays on your machine.",
+   "long_description": "A task board for each of your projects, driven from your AI chat. Say \"add a task to the nova site board: write the launch email, due Friday, 90 minutes\", then ask \"what's on the nova board?\", \"what's overdue?\" or \"plan my week\". Tasks carry a title, notes, tags, a due date, an estimate, a priority and a column (backlog, todo, doing, review, done by default), each one gets a short stable id like `",
+   "tools": [
+    "task_add",
+    "task_list",
+    "task_move",
+    "task_update",
+    "task_done",
+    "task_delete",
+    "task_search",
+    "board",
+    "task_start_timer",
+    "task_log_time",
+    "project_list",
+    "project_delete",
+    "overdue",
+    "weekly_review",
+    "columns_set"
+   ],
+   "website": "https://mcp.zovo.one/s/kanban",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/kanban.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/kanban",
+   "price_usd": 19,
+   "repo_subfolder": "servers/kanban"
+  },
+  {
+   "id": "leave",
+   "slug": "leave",
+   "human": "Leave",
+   "registry_name": "io.github.theluckystrike/leave",
+   "npm": "@theluckystrike/mcp-leave",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Employee leave and PTO requests: balances, approvals, calendars, and who-is-out summaries.",
+   "long_description": "A day is committed when the request that spends it is **approved or pending**. Balance is `allowance + carried − approved − pending`. Cancelling returns the days immediately; rejecting never charged them.",
+   "tools": [
+    "leave_employee_add",
+    "leave_request",
+    "leave_approve",
+    "leave_reject",
+    "leave_balance",
+    "leave_out_range",
+    "leave_list",
+    "leave_import",
+    "leave_export_ics",
+    "leave_cancel"
+   ],
+   "website": "https://mcp.zovo.one/s/leave",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/leave.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/leave",
+   "price_usd": 19,
+   "repo_subfolder": "servers/leave"
+  },
+  {
+   "id": "loan-calculator",
+   "slug": "loan-calculator",
+   "human": "Loan Calculator",
+   "registry_name": "io.github.theluckystrike/loan-calculator",
+   "npm": "mcp-loan-calculator",
+   "bin": [
+    "src/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "MCP server: loan-calculator",
+   "long_description": "Give Claude (or any MCP client) real loan math: `loan_payment` for the monthly payment and total interest of a loan, `loan_amortize` for the full month-by-month schedule. Standard amortization formula, computed on your machine, no rate-shopping site and no spreadsheet.",
+   "tools": [],
+   "website": "https://mcp.zovo.one/s/loan-calculator",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/loan-calculator.mcpb",
+   "license_env": "",
+   "buy_url": "https://mcp.zovo.one/buy/loan-calculator",
+   "price_usd": 19,
+   "repo_subfolder": "servers/loan-calculator"
+  },
+  {
+   "id": "maintenance-log",
+   "slug": "maintenance-log",
+   "human": "Maintenance Log",
+   "registry_name": "io.github.theluckystrike/maintenance-log",
+   "npm": "@theluckystrike/mcp-maintenance-log",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Equipment maintenance log: assets, service entries with costs, and a due report from stored dates.",
+   "long_description": "npm publish for `@theluckystrike/mcp-maintenance-log` is pending, so `npx -y @theluckystrike/mcp-maintenance-log` returns 404 today. Until then, a clone+build is the working path.",
+   "tools": [
+    "asset_add",
+    "maintenance_log",
+    "maintenance_due",
+    "asset_history",
+    "maintenance_export",
+    "asset_remove"
+   ],
+   "website": "https://mcp.zovo.one/s/maintenance-log",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/maintenance-log.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/maintenance-log",
+   "price_usd": 19,
+   "repo_subfolder": "servers/maintenance-log"
+  },
+  {
+   "id": "mileage-log",
+   "slug": "mileage-log",
+   "human": "Mileage Log",
+   "registry_name": "io.github.theluckystrike/mileage-log",
+   "npm": "@theluckystrike/mcp-mileage-log",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Mileage log for deductible driving: trips, effective-dated rates, summaries and CSV export.",
+   "long_description": "npm publish for `@theluckystrike/mcp-mileage-log` is pending, so `npx -y @theluckystrike/mcp-mileage-log` returns 404 today. Until then, a clone+build is the working path.",
+   "tools": [
+    "trip_add",
+    "trip_list",
+    "trip_remove",
+    "rate_set",
+    "rate_list",
+    "mileage_summary",
+    "mileage_export"
+   ],
+   "website": "https://mcp.zovo.one/s/mileage-log",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/mileage-log.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/mileage-log",
+   "price_usd": 19,
+   "repo_subfolder": "servers/mileage-log"
+  },
+  {
+   "id": "office-suite",
+   "slug": "office-suite",
+   "human": "Office Suite",
+   "registry_name": "io.github.theluckystrike/office-suite-time-invoice-expense-excel-price",
+   "npm": "@theluckystrike/mcp-office-suite",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.25.0",
+   "description": "One install for the whole freelancer office suite: time tracking, price watching, spreadsheets and PDF invoicing, proxied behind a single MCP server.",
+   "long_description": "Run the freelancer office from one MCP config entry. The v0.25.0 bundle initializes 50 local child servers and exposes 453 tools, measured over MCP on 2026-10-26. It includes time tracking, invoices, spreadsheets, quotes, expenses and the supplier-invoice three-way matcher duplicate invoice candidate review, and supplier statement open-item checks against AP ledger exports. The proxy forwards tool",
+   "tools": [
+    "license_status",
+    "license_activate",
+    "tools_map"
+   ],
+   "website": "https://mcp.zovo.one/bundle",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.25.0/office-suite.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/office-suite",
+   "price_usd": 19,
+   "repo_subfolder": "servers/office-suite"
+  },
+  {
+   "id": "onboarding",
+   "slug": "onboarding",
+   "human": "Onboarding",
+   "registry_name": "io.github.theluckystrike/onboarding",
+   "npm": "@theluckystrike/mcp-onboarding",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "New-hire onboarding: task templates per role, day-one to day-ninety plans.",
+   "long_description": "If somebody edits the checklist afterwards, adds a step or deletes one, every run already in progress keeps the list it started with, and the version it was copied from is recorded on the run.",
+   "tools": [
+    "onboarding_hire_add",
+    "onboarding_hire_list",
+    "onboarding_task_add",
+    "onboarding_task_done",
+    "onboarding_template_apply",
+    "onboarding_progress",
+    "onboarding_overdue"
+   ],
+   "website": "https://mcp.zovo.one/s/onboarding",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/onboarding.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/onboarding",
+   "price_usd": 19,
+   "repo_subfolder": "servers/onboarding"
+  },
+  {
+   "id": "packing-list",
+   "slug": "packing-list",
+   "human": "Packing List",
+   "registry_name": "io.github.theluckystrike/packing-list",
+   "npm": "@theluckystrike/mcp-packing-list",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.8",
+   "description": "Packing slips: cartons, contents, weights, chargeable weight and what is still to pack.",
+   "long_description": "That is not a simplification, it is what the document is for: it travels inside the box, and the consignee's warehouse is not the party that sees what the goods cost. The invoice against the same order is a different document and lives in `@theluckystrike/mcp-invoice`. There is no money arithmetic in this server at all, and a test asserts there is not.",
+   "tools": [
+    "packing_list_create",
+    "packing_expect",
+    "carton_add",
+    "pack_item",
+    "unpack_item",
+    "packing_list_show",
+    "packing_list_list",
+    "carton_report",
+    "packing_shortfall",
+    "packing_list_status",
+    "packing_slip",
+    "packing_list_delete"
+   ],
+   "website": "https://mcp.zovo.one/s/packing-list",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/packing-list.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/packing-list",
+   "price_usd": 19,
+   "repo_subfolder": "servers/packing-list"
+  },
+  {
+   "id": "payroll",
+   "slug": "payroll",
+   "human": "Payroll",
+   "registry_name": "io.github.theluckystrike/payroll",
+   "npm": "mcp-payroll",
+   "bin": [
+    "src/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "MCP server: payroll",
+   "long_description": "Give Claude (or any MCP client) a payroll estimator: `payroll_run` turns hours worked × hourly rate − tax rate into gross pay, tax withheld and net pay; `payroll_invoice_total` sums a batch of runs into one payroll total. For solo operators, small teams and anyone who pays hourly people and wants the arithmetic done right the first time.",
+   "tools": [],
+   "website": "https://mcp.zovo.one/s/payroll",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/payroll.mcpb",
+   "license_env": "",
+   "buy_url": "https://mcp.zovo.one/buy/payroll",
+   "price_usd": 19,
+   "repo_subfolder": "servers/payroll"
+  },
+  {
+   "id": "pdf",
+   "slug": "pdf",
+   "human": "Pdf",
+   "registry_name": "io.github.theluckystrike/pdf-merge-split-stamp-extract-pages",
+   "npm": "@theluckystrike/mcp-pdf",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Merge, split, extract, rotate, reorder and stamp PDF files from chat: mark an invoice PAID, pull pages out of a scan, join a set of documents into one. Everything stays on your machine.",
+   "long_description": "Say \"stamp PAID on that invoice and save a copy\" or \"pull pages 2 to 6 out of this scan and merge them with the contract\" and it happens, on your machine, in a second. This MCP server does the small PDF jobs that otherwise send you to a web uploader: merge, split by page range, extract or reorder pages, rotate a sideways scan, stamp `PAID` or `DRAFT` or any text you like, put your business name an",
+   "tools": [
+    "pdf_info",
+    "pdf_count",
+    "pdf_merge",
+    "pdf_split",
+    "pdf_pages",
+    "pdf_rotate",
+    "pdf_stamp",
+    "pdf_watermark_business",
+    "pdf_reorder",
+    "pdf_text"
+   ],
+   "website": "https://mcp.zovo.one/s/pdf",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/pdf.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/pdf",
+   "price_usd": 19,
+   "repo_subfolder": "servers/pdf"
+  },
+  {
+   "id": "per-diem",
+   "slug": "per-diem",
+   "human": "Per Diem",
+   "registry_name": "io.github.theluckystrike/per-diem",
+   "npm": "@theluckystrike/mcp-per-diem",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Daily travel allowances on bundled public rate tables: Poland, HMRC and GSA.",
+   "long_description": "Work out the daily travel allowance for a business trip on the rate tables the tax authorities actually publish, and keep the trips you priced. You give it where you went, when you left and when you got back, and which meals somebody else paid for; it gives you the amount per day and the total, in the scheme's own currency, with the partial-day rule and every meal deduction shown next to the numbe",
+   "tools": [
+    "perdiem_rates",
+    "perdiem_calc",
+    "trip_record",
+    "trip_list",
+    "trip_delete",
+    "trip_export",
+    "perdiem_report"
+   ],
+   "website": "https://mcp.zovo.one/s/per-diem",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/per-diem.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/per-diem",
+   "price_usd": 19,
+   "repo_subfolder": "servers/per-diem"
+  },
+  {
+   "id": "petty-cash",
+   "slug": "petty-cash",
+   "human": "Petty Cash",
+   "registry_name": "io.github.theluckystrike/petty-cash",
+   "npm": "@theluckystrike/mcp-petty-cash",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "A petty cash float on the imprest system: vouchers, reconciliation and the replenishment.",
+   "long_description": "npm publish for `@theluckystrike/mcp-petty-cash` is pending, so `npx -y @theluckystrike/mcp-petty-cash` returns 404 today. Until then, the `.mcpb` one-click bundle or a clone+build is the working path.",
+   "tools": [
+    "float_open",
+    "topup_record",
+    "voucher_add",
+    "voucher_delete",
+    "reconcile",
+    "replenish_request",
+    "float_report"
+   ],
+   "website": "https://mcp.zovo.one/s/petty-cash",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/petty-cash.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/petty-cash",
+   "price_usd": 19,
+   "repo_subfolder": "servers/petty-cash"
+  },
+  {
+   "id": "pomodoro",
+   "slug": "pomodoro",
+   "human": "Pomodoro",
+   "registry_name": "io.github.theluckystrike/pomodoro",
+   "npm": "mcp-pomodoro",
+   "bin": [
+    "src/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "MCP server: pomodoro",
+   "long_description": "Turn \"I have 3 hours before the demo\" into a real pomodoro plan without opening a timer app. This MCP server gives Claude (or any MCP client) a `pomodoro_plan` tool that splits your available minutes into 25-minute focus blocks with 5-minute short breaks and a 15-minute long break every 4th block — the classic Pomodoro cadence, computed for your actual schedule instead of an app's default day.",
+   "tools": [],
+   "website": "https://mcp.zovo.one/s/pomodoro",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/pomodoro.mcpb",
+   "license_env": "",
+   "buy_url": "https://mcp.zovo.one/buy/pomodoro",
+   "price_usd": 19,
+   "repo_subfolder": "servers/pomodoro"
+  },
+  {
+   "id": "price-tracker",
+   "slug": "price-tracker",
+   "human": "Price Tracker",
+   "registry_name": "io.github.theluckystrike/price-tracker-drop-alert-watch",
+   "npm": "@theluckystrike/mcp-price-tracker",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Ask your AI what something costs right now, track price drops and get told when a target price is hit. All data stays local.",
+   "long_description": "Ask your assistant what something costs right now. Point it at any product page and it reads the price off the page, remembers it, and tells you next time whether the price moved, how far, and whether it reached the number you were waiting for. It works on ordinary shop pages by reading the structured data most stores already publish (JSON-LD, Open Graph, microdata) and falling back to the visible",
+   "tools": [
+    "price_check",
+    "watch_add",
+    "watch_list",
+    "watch_remove",
+    "watch_refresh",
+    "price_history",
+    "price_add_manual",
+    "alerts_pending"
+   ],
+   "website": "https://mcp.zovo.one/s/price-tracker",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/price-tracker.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/price-tracker",
+   "price_usd": 19,
+   "repo_subfolder": "servers/price-tracker"
+  },
+  {
+   "id": "purchase-requisition",
+   "slug": "purchase-requisition",
+   "human": "Purchase Requisition",
+   "registry_name": "io.github.theluckystrike/purchase-requisition",
+   "npm": "@theluckystrike/mcp-purchase-requisition",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.8",
+   "description": "Reusable purchase-requisitions and dated runs: pass, fail, n/a, and a sign-off.",
+   "long_description": "If somebody edits the purchase-requisition afterwards, adds a step or deletes one, every run already in progress keeps the list it started with, and the version it was copied from is recorded on the run.",
+   "tools": [
+    "run_start",
+    "run_check",
+    "run_show",
+    "run_list",
+    "run_sign_off",
+    "run_status",
+    "run_report",
+    "run_delete"
+   ],
+   "website": "https://mcp.zovo.one/s/purchase-requisition",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/purchase-requisition.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/purchase-requisition",
+   "price_usd": 19,
+   "repo_subfolder": "servers/purchase-requisition"
+  },
+  {
+   "id": "quotes",
+   "slug": "quotes",
+   "human": "Quotes",
+   "registry_name": "io.github.theluckystrike/quotes-estimates-proposals-vat-win-rate",
+   "npm": "@theluckystrike/mcp-quotes",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Send a client a real quote in seconds: line items with VAT, a validity date, a plain-text version to paste into email and an A4 PDF. Accepting a quote turns it into an invoice with the same numbers. All local.",
+   "long_description": "Say \"quote Acme for 12 hours at 90 EUR plus a 300 EUR setup, 23% VAT, good for 14 days\" and get a numbered quote you can send today: the line table with VAT per rate, the total in integer minor units, a validity date computed in your own timezone, a plain-text version to paste straight into an email and, on Pro, the same A4 PDF layout your invoices use. When the client says yes, `quote_accept` tur",
+   "tools": [
+    "quote_create",
+    "quote_list",
+    "quote_get",
+    "quote_update",
+    "quote_send_text",
+    "quote_accept",
+    "quote_decline",
+    "quote_delete",
+    "quote_pdf",
+    "quote_report"
+   ],
+   "website": "https://mcp.zovo.one/s/quotes",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/quotes.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/quotes",
+   "price_usd": 19,
+   "repo_subfolder": "servers/quotes"
+  },
+  {
+   "id": "receipts",
+   "slug": "receipts",
+   "human": "Receipts",
+   "registry_name": "io.github.theluckystrike/receipts",
+   "npm": "mcp-receipts",
+   "bin": [
+    "src/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "MCP server: receipts",
+   "long_description": "Give Claude (or any MCP client) a receipt parser: `receipt_parse` takes raw receipt lines — \"2 x Coffee 4.50\", \"Sandwich 8.90\" — and returns an itemized total with quantity × price per line, a subtotal, and tax added at your rate. For expense reports, splitting bills, or just checking the receipt was rung up right.",
+   "tools": [],
+   "website": "https://mcp.zovo.one/s/receipts",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/receipts.mcpb",
+   "license_env": "",
+   "buy_url": "https://mcp.zovo.one/buy/receipts",
+   "price_usd": 19,
+   "repo_subfolder": "servers/receipts"
+  },
+  {
+   "id": "recurring",
+   "slug": "recurring",
+   "human": "Recurring",
+   "registry_name": "io.github.theluckystrike/recurring-invoice-scheduler-subscription-billing-due-reminders",
+   "npm": "@theluckystrike/mcp-recurring",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Bill the same clients every month without remembering to. Define a recurring invoice once, then generate the real PDFs that are due into your invoice server, with month-end safe dates, an audit log and a revenue forecast. Everything stays on your machine.",
+   "long_description": "Say \"bill Acme 12 hours at 90 EUR on the 1st of every month\" once, and stop remembering it. This MCP server stores recurring invoice schedules, client, line items, cadence, start and end dates, and then, when you ask, creates the invoices that have actually fallen due as real records in the invoice server, with its number series, its clients and its A4 PDF. Generation is idempotent: one invoice pe",
+   "tools": [
+    "schedule_create",
+    "schedule_list",
+    "schedule_get",
+    "schedule_update",
+    "schedule_pause",
+    "schedule_resume",
+    "schedule_delete",
+    "schedule_skip",
+    "schedule_upcoming",
+    "invoice_generate_due",
+    "schedule_history",
+    "forecast"
+   ],
+   "website": "https://mcp.zovo.one/s/recurring",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/recurring.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/recurring",
+   "price_usd": 19,
+   "repo_subfolder": "servers/recurring"
+  },
+  {
+   "id": "resume",
+   "slug": "resume",
+   "human": "Resume",
+   "registry_name": "io.github.theluckystrike/resume-cover-letter-docx-generator",
+   "npm": "@theluckystrike/mcp-resume",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Turn your CV facts into a tailored Word resume and a cover letter that invents nothing: keyword matching against the posting, page-fit trimming, and bracketed prompts wherever a fact is missing. Everything stays on your machine.",
+   "long_description": "Store your CV facts once. Then say \"tailor my resume to this posting and write the cover letter\" and get two real `.docx` files: a resume whose bullets are reordered by relevance to the posting, trimmed to fit the page count you asked for, with the posting's keywords in bold where you actually have them, and a one-page cover letter that states nothing you did not put in your profile. Where a fact ",
+   "tools": [
+    "profile_set",
+    "profile_get",
+    "resume_create",
+    "resume_to_markdown",
+    "resume_to_html",
+    "resume_read",
+    "cover_letter_create",
+    "tailor_to_job"
+   ],
+   "website": "https://mcp.zovo.one/s/resume",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/resume.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/resume",
+   "price_usd": 19,
+   "repo_subfolder": "servers/resume"
+  },
+  {
+   "id": "service-agreement",
+   "slug": "service-agreement",
+   "human": "Service Agreement",
+   "registry_name": "io.github.theluckystrike/service-agreement",
+   "npm": "@theluckystrike/mcp-service-agreement",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Service agreements for freelancers: scope, deliverables, rate, termination and liability caps.",
+   "long_description": "npm publish for `@theluckystrike/mcp-service-agreement` is pending, so `npx -y @theluckystrike/mcp-service-agreement` returns 404 today. Until then, a clone+build is the working path.",
+   "tools": [
+    "agreement_create",
+    "agreement_get",
+    "agreement_list",
+    "agreement_update_status",
+    "clause_library",
+    "agreement_render",
+    "agreement_checklist"
+   ],
+   "website": "https://mcp.zovo.one/s/service-agreement",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/service-agreement.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/service-agreement",
+   "price_usd": 19,
+   "repo_subfolder": "servers/service-agreement"
+  },
+  {
+   "id": "spreadsheet",
+   "slug": "spreadsheet",
+   "human": "Spreadsheet",
+   "registry_name": "io.github.theluckystrike/excel-spreadsheet-xlsx-csv",
+   "npm": "@theluckystrike/mcp-spreadsheet",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.9",
+   "description": "Open, inspect, query, edit and convert xlsx and csv files locally from your AI assistant",
+   "long_description": "Hand your AI assistant a spreadsheet and talk to it. Point it at any `.xlsx`, `.xlsm`, `.xlsb`, `.xls`, `.ods`, `.csv` or `.tsv` file on your machine and ask what is in it, filter it, compute a new column, or save it in another format. It handles the messy parts of real files for you: it guesses which row holds the headers, sniffs whether a CSV is separated by commas, semicolons or tabs, keeps quo",
+   "tools": [
+    "sheet_info",
+    "sheet_read",
+    "sheet_query",
+    "sheet_stats",
+    "sheet_find",
+    "sheet_write",
+    "sheet_add_column",
+    "sheet_convert"
+   ],
+   "website": "https://mcp.zovo.one/s/spreadsheet",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.9/spreadsheet.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/spreadsheet",
+   "price_usd": 19,
+   "repo_subfolder": "servers/spreadsheet"
+  },
+  {
+   "id": "statement-of-account",
+   "slug": "statement-of-account",
+   "human": "Statement Of Account",
+   "registry_name": "io.github.theluckystrike/statement-of-account",
+   "npm": "@theluckystrike/mcp-statement-of-account",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Per-client statements of account, aging buckets and dunning letters from your own books.",
+   "long_description": "npm publish for `@theluckystrike/mcp-statement-of-account` is pending, so `npx -y @theluckystrike/mcp-statement-of-account` returns 404 today. Until then, the `.mcpb` one-click bundle or a clone+build is the working path.",
+   "tools": [
+    "statement_build",
+    "statement_aging",
+    "statement_text",
+    "statement_pdf",
+    "dunning_text",
+    "statements_report"
+   ],
+   "website": "https://mcp.zovo.one/s/statement-of-account",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/statement-of-account.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/statement-of-account",
+   "price_usd": 19,
+   "repo_subfolder": "servers/statement-of-account"
+  },
+  {
+   "id": "stripe-billing",
+   "slug": "stripe-billing",
+   "human": "Stripe Billing",
+   "registry_name": "io.github.theluckystrike/stripe-billing",
+   "npm": "mcp-stripe-billing",
+   "bin": [
+    "src/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "MCP server: stripe-billing",
+   "long_description": "Give Claude (or any MCP client) two working Stripe tools: `stripe_balance` reads your live account balance, and `stripe_payment_link` creates a real Stripe payment link for a price you name. Direct Stripe REST calls from your machine with your own `STRIPE_SECRET_KEY` — no dashboard round-trip for the two questions you actually ask most.",
+   "tools": [],
+   "website": "https://mcp.zovo.one/s/stripe-billing",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/stripe-billing.mcpb",
+   "license_env": "",
+   "buy_url": "https://mcp.zovo.one/buy/stripe-billing",
+   "price_usd": 19,
+   "repo_subfolder": "servers/stripe-billing"
+  },
+  {
+   "id": "supplier-list",
+   "slug": "supplier-list",
+   "human": "Supplier List",
+   "registry_name": "io.github.theluckystrike/supplier-list",
+   "npm": "@theluckystrike/mcp-supplier-list",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "A supplier directory that does not rot: contacts, terms, lead times, review dates.",
+   "long_description": "npm publish for `@theluckystrike/mcp-supplier-list` is pending, so `npx -y @theluckystrike/mcp-supplier-list` returns 404 today. Until then, a clone+build is the working path.",
+   "tools": [
+    "supplier_add",
+    "supplier_list",
+    "supplier_get",
+    "supplier_update",
+    "supplier_remove",
+    "supplier_mark_reviewed",
+    "supplier_due_review",
+    "supplier_export"
+   ],
+   "website": "https://mcp.zovo.one/s/supplier-list",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/supplier-list.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/supplier-list",
+   "price_usd": 19,
+   "repo_subfolder": "servers/supplier-list"
+  },
+  {
+   "id": "supplier-statement-check",
+   "slug": "supplier-statement-check",
+   "human": "Supplier Statement Check",
+   "registry_name": "io.github.theluckystrike/supplier-statement-check",
+   "npm": "@theluckystrike/mcp-supplier-statement-check",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.25.0",
+   "description": "Compare supplied supplier statement and AP ledger open items by exact reference with complete discrepancy evidence.",
+   "long_description": "Compare a supplied supplier statement with an accounts-payable open-item export. Find invoices or credit notes present on only one side, conflicting outstanding amounts or dates, and repeated references that cannot be paired safely. This local MCP server preserves every original row and explains each finding. It checks two supplied open-item lists; it does not reconcile opening/closing balances, m",
+   "tools": [
+    "supplier_statement_check",
+    "report_list",
+    "report_get",
+    "report_page",
+    "report_delete",
+    "report_export_csv"
+   ],
+   "website": "https://mcp.zovo.one/s/supplier-statement-check?utm_source=mcp-registry&utm_medium=registry&utm_campaign=supplier-statement-check",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.25.0/supplier-statement-check.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/supplier-statement-check",
+   "price_usd": 19,
+   "repo_subfolder": "servers/supplier-statement-check"
+  },
+  {
+   "id": "tax-calc",
+   "slug": "tax-calc",
+   "human": "Tax Calc",
+   "registry_name": "io.github.theluckystrike/tax-calc",
+   "npm": "mcp-tax-calc",
+   "bin": [
+    "src/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "MCP server: tax-calc",
+   "long_description": "Give Claude (or any MCP client) a tax estimator: `us_federal_tax` applies the 2026 US federal brackets for a single filer — including the $15,750 standard deduction — and returns total tax, effective rate, and marginal bracket. Planning numbers, computed on your machine, in one sentence.",
+   "tools": [],
+   "website": "https://mcp.zovo.one/s/tax-calc",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/tax-calc.mcpb",
+   "license_env": "",
+   "buy_url": "https://mcp.zovo.one/buy/tax-calc",
+   "price_usd": 19,
+   "repo_subfolder": "servers/tax-calc"
+  },
+  {
+   "id": "three-way-match",
+   "slug": "three-way-match",
+   "human": "Three Way Match",
+   "registry_name": "io.github.theluckystrike/three-way-match",
+   "npm": "@theluckystrike/mcp-three-way-match",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.8",
+   "description": "Match supplier invoice lines to purchase orders and accepted receipts by SKU with local evidence.",
+   "long_description": "Check a supplier invoice against its purchase order and delivery receipts in Claude or another MCP client. This local server compares each exact SKU, unit price and billed quantity with the PO, cumulative accepted deliveries and quantities you say were already invoiced. It catches offsetting SKU mistakes even when the invoice and PO grand totals agree, and returns the source values behind every ex",
+   "tools": [
+    "three_way_match",
+    "report_list",
+    "report_get",
+    "report_page",
+    "report_delete",
+    "report_export_csv"
+   ],
+   "website": "https://mcp.zovo.one/s/three-way-match?utm_source=mcp-registry&utm_medium=registry&utm_campaign=three-way-match",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.8/three-way-match.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/three-way-match",
+   "price_usd": 19,
+   "repo_subfolder": "servers/three-way-match"
+  },
+  {
+   "id": "time-tracker",
+   "slug": "time-tracker",
+   "human": "Time Tracker",
+   "registry_name": "io.github.theluckystrike/time-tracker-timesheet-billable-hours",
+   "npm": "@theluckystrike/mcp-time-tracker",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Track billable time without leaving your AI chat. Timers, entries, reports, CSV export and invoice line items, all stored locally.",
+   "long_description": "Track billable time without leaving your AI chat. Say \"start a timer on the acme redesign\", keep working, then ask for \"my hours this week by project\" or \"invoice lines for acme in August\". It keeps a running timer, lets you log time you forgot to track, applies your hourly rate per project, and turns the result into a report, a CSV file or a set of invoice line items. Everything is stored as plai",
+   "tools": [
+    "timer_start",
+    "timer_stop",
+    "timer_status",
+    "entry_add",
+    "entry_log",
+    "summary_day",
+    "summary_week",
+    "summary_client",
+    "target_set",
+    "target_check",
+    "entry_list",
+    "entry_delete",
+    "entry_edit",
+    "project_set_rate",
+    "report",
+    "export_csv",
+    "entry_mark_billed",
+    "invoice_summary"
+   ],
+   "website": "https://mcp.zovo.one/s/time-tracker",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/time-tracker.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/time-tracker",
+   "price_usd": 19,
+   "repo_subfolder": "servers/time-tracker"
+  },
+  {
+   "id": "timezone",
+   "slug": "timezone",
+   "human": "Timezone",
+   "registry_name": "io.github.theluckystrike/timezone-world-clock-meeting-slots-overlap-ics",
+   "npm": "@theluckystrike/mcp-timezone",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Time zones, meeting slots and calendar invites for people who work with clients abroad. Convert times, find hours that suit everyone, check DST, write .ics. All local.",
+   "long_description": "Work with clients in other countries without doing time zone arithmetic in your head. Ask \"what time is it for Maria in Lisbon\", \"convert 3pm Warsaw to New York and Bangalore\", or \"find an hour next week that works for me, my client in New York and my designer in London\" and get an answer you can act on: ranked meeting slots where everyone is inside their own working hours, the exact daily overlap",
+   "tools": [
+    "now",
+    "convert_time",
+    "overlap",
+    "find_meeting_slots",
+    "dst_changes",
+    "business_days",
+    "contacts_set",
+    "contacts_list",
+    "ics_create"
+   ],
+   "website": "https://mcp.zovo.one/s/timezone",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/timezone.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/timezone",
+   "price_usd": 19,
+   "repo_subfolder": "servers/timezone"
+  },
+  {
+   "id": "work-order",
+   "slug": "work-order",
+   "human": "Work Order",
+   "registry_name": "io.github.theluckystrike/work-order",
+   "npm": "@theluckystrike/mcp-work-order",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Job orders for trades and field work: parts, labour, status, completion report, invoice payload.",
+   "long_description": "Nothing is invented and nothing is stored twice: the value, the hours, the materials and the VAT are derived from the lines on every call, and the invoice payload's unit prices are already the billed units, so the invoice reproduces the work order to the minor unit.",
+   "tools": [
+    "work_order_create",
+    "work_order_add_line",
+    "work_order_status",
+    "work_order_get",
+    "work_order_list",
+    "work_order_delete",
+    "completion_report_text",
+    "completion_report_pdf",
+    "work_order_invoice_payload",
+    "work_orders_report"
+   ],
+   "website": "https://mcp.zovo.one/s/work-order",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/work-order.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/work-order",
+   "price_usd": 19,
+   "repo_subfolder": "servers/work-order"
+  },
+  {
+   "id": "zip",
+   "slug": "zip",
+   "human": "Zip",
+   "registry_name": "io.github.theluckystrike/zip-archive-create-extract-bomb-guard",
+   "npm": "@theluckystrike/mcp-zip",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.22.6",
+   "description": "Create, inspect and extract zip archives from chat: glob a directory into a zip, list what is inside with a bomb and traversal check, extract safely, read one text entry without unpacking. No network.",
+   "long_description": "Make a zip, look inside one, and unpack one, in the conversation you are already in. Pack a folder with a glob (`**/*.csv`, everything except `node_modules`). Read the one README out of an archive without unpacking it. Ask what is inside a zip somebody sent you and be told before you open it: absolute paths, `..`, symlinks, duplicate names, and the entry that claims to be 200 MB inside a 199 KB fi",
+   "tools": [
+    "zip_create",
+    "zip_list",
+    "zip_extract",
+    "zip_add",
+    "zip_extract_text",
+    "zip_bundle_month",
+    "zip_history"
+   ],
+   "website": "https://mcp.zovo.one/s/zip",
+   "mcpb": "https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/zip.mcpb",
+   "license_env": "MCP_LICENSE_KEY",
+   "buy_url": "https://mcp.zovo.one/buy/zip",
+   "price_usd": 19,
+   "repo_subfolder": "servers/zip"
+  }
+ ]
+}

@@ -1545,6 +1545,15 @@ html[data-theme="light"] .nav-dropdown-panel { box-shadow: 0 20px 40px -12px rgb
 </section>
 
 <!-- ========= FREE TOOLS ========= -->
+<section class="mcp-promo" id="mcp-servers" style="padding:64px 0;border-top:1px solid var(--line)">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px">
+    <p style="font-family:var(--mono);font-size:12px;letter-spacing:var(--track-wide);text-transform:uppercase;color:var(--accent);margin:0 0 12px">58 MCP servers</p>
+    <h2 class="h2" style="margin:0 0 16px">Back-office tools your<br>agent can <i>actually</i> call.</h2>
+    <p style="max-width:62ch;font-size:17px;line-height:1.6;color:var(--ink-2);margin:0 0 24px">Invoices with VAT, PDFs, spreadsheets, bank statements, time tracking, expenses, payroll and 51 more. Every server is MIT licensed and runs against local files, so it works in Claude Desktop and Claude Code today — free. All 58 hosted are $39 once, no subscription.</p>
+    <p style="margin:0"><a href="/mcp/" style="display:inline-block;padding:14px 22px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);text-decoration:none;font-weight:600">See the map of all 58 servers &rarr;</a></p>
+  </div>
+</section>
+
 <section class="tools-section" id="free-tools">
   <div class="wrap">
     <div class="section-head">

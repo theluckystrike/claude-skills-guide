@@ -183,6 +183,7 @@ layout: compress
           <a href="/starter/" role="menuitem">Project Starter</a>
         </div>
       </div>
+      <a href="/mcp/"{% if page.url contains "/mcp" %} aria-current="page"{% endif %}>MCP Servers</a>
       <a href="/about/"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a>
       <a href="https://discord.com/invite/QeHxTFbqmC" target="_blank" rel="noopener noreferrer" class="nav-external">Community<span class="nav-arrow">&nearr;</span></a>
       <button class="site-nav-burger" id="siteNavBurger" aria-label="Open menu" aria-expanded="false">
