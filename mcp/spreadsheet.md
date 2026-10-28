@@ -128,7 +128,7 @@ Free to run locally, forever. The **Pro licence is $19, one time, lifetime** —
 hosted endpoint's saved-report cap, never the tools. All 58 servers together are
 [$39 as a bundle](/mcp/#pricing) instead of $1102 bought one at a time.
 
-[Buy the Spreadsheet Pro licence — $19](https://mcp.zovo.one/buy/spreadsheet&src=csg.mcp.spreadsheet)
+[Buy the Spreadsheet Pro licence — $19](https://mcp.zovo.one/buy/spreadsheet?src=hub.spreadsheet)
 
 ## Questions people actually ask
 

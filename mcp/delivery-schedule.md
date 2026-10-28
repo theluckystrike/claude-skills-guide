@@ -130,7 +130,7 @@ Free to run locally, forever. The **Pro licence is $19, one time, lifetime** —
 hosted endpoint's saved-report cap, never the tools. All 58 servers together are
 [$39 as a bundle](/mcp/#pricing) instead of $1102 bought one at a time.
 
-[Buy the Delivery Schedule Pro licence — $19](https://mcp.zovo.one/buy/delivery-schedule&src=csg.mcp.delivery-schedule)
+[Buy the Delivery Schedule Pro licence — $19](https://mcp.zovo.one/buy/delivery-schedule?src=hub.delivery-schedule)
 
 ## Questions people actually ask
 

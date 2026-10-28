@@ -119,7 +119,7 @@ Free to run locally, forever. The **Pro licence is $19, one time, lifetime** —
 hosted endpoint's saved-report cap, never the tools. All 58 servers together are
 [$39 as a bundle](/mcp/#pricing) instead of $1102 bought one at a time.
 
-[Buy the Payroll Pro licence — $19](https://mcp.zovo.one/buy/payroll&src=csg.mcp.payroll)
+[Buy the Payroll Pro licence — $19](https://mcp.zovo.one/buy/payroll?src=hub.payroll)
 
 ## Questions people actually ask
 
