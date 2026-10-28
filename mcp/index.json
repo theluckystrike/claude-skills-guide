@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T01:50:37Z",
+ "generated_at": "2026-10-28T02:15:45Z",
  "count": 58,
  "bundle_url": "https://mcp.zovo.one/buy/bundle",
  "bundle_price_usd": 39,
@@ -396,8 +396,8 @@
     "dist/index.js"
    ],
    "version": "0.22.6",
-   "description": "A personal library of reusable contract and proposal clauses: 25 generic freelance starters with {{variables}}, ranked search, and one-call assembly into a real Word .docx with every missing fact left as a bracketed prompt. Everything stays on your machine.",
-   "long_description": "Say \"draft a service agreement for Beta Corp, 4,500 EUR, 14-day terms\" and get a real `.docx` built from your own clause library. This MCP server keeps the contract and proposal paragraphs you reuse, scope, payment terms, late fees, IP assignment, confidentiality, termination, liability cap and twenty more, as searchable clauses with `{{variables}}` in them. It ships with 25 generic freelance star",
+   "description": "A personal library of reusable contract and proposal clauses: 25 generic freelance starters with {variables}, ranked search, and one-call assembly into a real Word .docx with every missing fact left as a bracketed prompt. Everything stays on your machine.",
+   "long_description": "Say \"draft a service agreement for Beta Corp, 4,500 EUR, 14-day terms\" and get a real `.docx` built from your own clause library. This MCP server keeps the contract and proposal paragraphs you reuse, scope, payment terms, late fees, IP assignment, confidentiality, termination, liability cap and twenty more, as searchable clauses with `{variables}` in them. It ships with 25 generic freelance star",
    "tools": [
     "clause_add",
     "clause_get",

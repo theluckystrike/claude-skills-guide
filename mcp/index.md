@@ -405,7 +405,7 @@ install steps. Prices are one-time; there is no subscription anywhere in this co
 | [Catalogue](/mcp/catalogue/) | 10 | A price list and rate card the quotes and invoice servers read by SKU. | [Pro $19](https://mcp.zovo.one/buy/catalogue&src=csg.mcp.table.catalogue) |
 | [Packing List](/mcp/packing-list/) | 12 | Packing slips: cartons, contents, weights, chargeable weight and what is still to pack. | [Pro $19](https://mcp.zovo.one/buy/packing-list&src=csg.mcp.table.packing-list) |
 | [Resume](/mcp/resume/) | 8 | Turn your CV facts into a tailored Word resume and a cover letter that invents nothing: keyword matching against the pos | [Pro $19](https://mcp.zovo.one/buy/resume&src=csg.mcp.table.resume) |
-| [Clauses](/mcp/clauses/) | 10 | A personal library of reusable contract and proposal clauses: 25 generic freelance starters with {{variables}}, ranked s | [Pro $19](https://mcp.zovo.one/buy/clauses&src=csg.mcp.table.clauses) |
+| [Clauses](/mcp/clauses/) | 10 | A personal library of reusable contract and proposal clauses: 25 generic freelance starters with {variables}, ranked sea | [Pro $19](https://mcp.zovo.one/buy/clauses&src=csg.mcp.table.clauses) |
 | [Service Agreement](/mcp/service-agreement/) | 7 | Service agreements for freelancers: scope, deliverables, rate, termination and liability caps. | [Pro $19](https://mcp.zovo.one/buy/service-agreement&src=csg.mcp.table.service-agreement) |
 | [Checklist](/mcp/checklist/) | 14 | Reusable checklists and the dated runs of them: pass, fail, not applicable, and a sign-off. | [Pro $19](https://mcp.zovo.one/buy/checklist&src=csg.mcp.table.checklist) |
 

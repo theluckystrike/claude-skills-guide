@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Recurring MCP server: install, tools and pricing"
-description: "Bill the same clients every month without remembering to. Define a recurring invoice once, then generate the real PDFs that are due into your invoice "
+description: "Bill the same clients every month without remembering to. Define a recurring invoice once, then generate the real PDFs that are due into your…"
 permalink: /mcp/recurring/
 date: 2026-10-28
 ---

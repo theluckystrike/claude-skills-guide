@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Bank Statement MCP server: install, tools and pricing"
-description: "Import a bank CSV export, categorise it, summarise it per currency, find recurring charges and reconcile it against your expense ledger. Everything st"
+description: "Import a bank CSV export, categorise it, summarise it per currency, find recurring charges and reconcile it against your expense ledger. Everything…"
 permalink: /mcp/bank-statement/
 date: 2026-10-28
 ---

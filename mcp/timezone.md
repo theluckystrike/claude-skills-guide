@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Timezone MCP server: install, tools and pricing"
-description: "Time zones, meeting slots and calendar invites for people who work with clients abroad. Convert times, find hours that suit everyone, check DST, write"
+description: "Time zones, meeting slots and calendar invites for people who work with clients abroad. Convert times, find hours that suit everyone, check DST…"
 permalink: /mcp/timezone/
 date: 2026-10-28
 ---

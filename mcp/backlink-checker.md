@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Backlink Checker MCP server: install, tools and pricing"
-description: "Check backlinks from Claude or Cursor: does a page link to your domain, dofollow or nofollow, with anchor text, HTTP status and robots guards. All che"
+description: "Check backlinks from Claude or Cursor: does a page link to your domain, dofollow or nofollow, with anchor text, HTTP status and robots guards. All…"
 permalink: /mcp/backlink-checker/
 date: 2026-10-28
 ---

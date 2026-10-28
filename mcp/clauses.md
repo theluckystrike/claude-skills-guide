@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Clauses MCP server: install, tools and pricing"
-description: "A personal library of reusable contract and proposal clauses: 25 generic freelance starters with {{variables}}, ranked search, and one-call assembly i"
+description: "A personal library of reusable contract and proposal clauses: 25 generic freelance starters with {variables}, ranked search, and one-call assembly…"
 permalink: /mcp/clauses/
 date: 2026-10-28
 ---
@@ -15,7 +15,7 @@ date: 2026-10-28
    "name": "Clauses MCP server",
    "applicationCategory": "BusinessApplication",
    "operatingSystem": "macOS, Windows, Linux",
-   "description": "A personal library of reusable contract and proposal clauses: 25 generic freelance starters with {{variables}}, ranked search, and one-call assembly into a real Word .docx with every missing fact left as a bracketed prompt. Everything stays on your machine.",
+   "description": "A personal library of reusable contract and proposal clauses: 25 generic freelance starters with {variables}, ranked search, and one-call assembly into a real Word .docx with every missing fact left as a bracketed prompt. Everything stays on your machine.",
    "softwareVersion": "0.22.6",
    "url": "https://claudecodeguides.com/mcp/clauses/",
    "codeRepository": "https://github.com/theluckystrike/mcp-servers/tree/main/servers/clauses",
@@ -98,7 +98,7 @@ date: 2026-10-28
 
 # Clauses MCP server
 
-Say "draft a service agreement for Beta Corp, 4,500 EUR, 14-day terms" and get a real `.docx` built from your own clause library. This MCP server keeps the contract and proposal paragraphs you reuse, scope, payment terms, late fees, IP assignment, confidentiality, termination, liability cap and twenty more, as searchable clauses with `{{variables}}` in them. It ships with 25 generic freelance star
+Say "draft a service agreement for Beta Corp, 4,500 EUR, 14-day terms" and get a real `.docx` built from your own clause library. This MCP server keeps the contract and proposal paragraphs you reuse, scope, payment terms, late fees, IP assignment, confidentiality, termination, liability cap and twenty more, as searchable clauses with `{variables}` in them. It ships with 25 generic freelance star
 
 **Category:** Documents and files &middot; **Tools:** 10 &middot; **Version:** 0.22.6 &middot; **Licence:** MIT
 

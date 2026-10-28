@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Quotes MCP server: install, tools and pricing"
-description: "Send a client a real quote in seconds: line items with VAT, a validity date, a plain-text version to paste into email and an A4 PDF. Accepting a quote"
+description: "Send a client a real quote in seconds: line items with VAT, a validity date, a plain-text version to paste into email and an A4 PDF. Accepting a…"
 permalink: /mcp/quotes/
 date: 2026-10-28
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Calendar MCP server: install, tools and pricing"
-description: "Read the .ics your calendar already exports: what is on this week, when you are actually free, what is double-booked, and turn a meeting into billable"
+description: "Read the .ics your calendar already exports: what is on this week, when you are actually free, what is double-booked, and turn a meeting into…"
 permalink: /mcp/calendar/
 date: 2026-10-28
 ---

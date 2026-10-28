@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Resume MCP server: install, tools and pricing"
-description: "Turn your CV facts into a tailored Word resume and a cover letter that invents nothing: keyword matching against the posting, page-fit trimming, and b"
+description: "Turn your CV facts into a tailored Word resume and a cover letter that invents nothing: keyword matching against the posting, page-fit trimming, and…"
 permalink: /mcp/resume/
 date: 2026-10-28
 ---

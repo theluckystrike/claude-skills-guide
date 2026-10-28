@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Pdf MCP server: install, tools and pricing"
-description: "Merge, split, extract, rotate, reorder and stamp PDF files from chat: mark an invoice PAID, pull pages out of a scan, join a set of documents into one"
+description: "Merge, split, extract, rotate, reorder and stamp PDF files from chat: mark an invoice PAID, pull pages out of a scan, join a set of documents into…"
 permalink: /mcp/pdf/
 date: 2026-10-28
 ---

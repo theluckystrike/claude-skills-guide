@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Zip MCP server: install, tools and pricing"
-description: "Create, inspect and extract zip archives from chat: glob a directory into a zip, list what is inside with a bomb and traversal check, extract safely, "
+description: "Create, inspect and extract zip archives from chat: glob a directory into a zip, list what is inside with a bomb and traversal check, extract…"
 permalink: /mcp/zip/
 date: 2026-10-28
 ---

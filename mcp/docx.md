@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Docx MCP server: install, tools and pricing"
-description: "Turn a chat into a real Word document: proposals, quotes, contracts, statements of work and letters as .docx files, plus reading and filling existing "
+description: "Turn a chat into a real Word document: proposals, quotes, contracts, statements of work and letters as .docx files, plus reading and filling…"
 permalink: /mcp/docx/
 date: 2026-10-28
 ---

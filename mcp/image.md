@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Image MCP server: install, tools and pricing"
-description: "Resize, convert, compress, crop, thumbnail and watermark images from chat: no upload, no account, no native dependency. Every file stays on your machi"
+description: "Resize, convert, compress, crop, thumbnail and watermark images from chat: no upload, no account, no native dependency. Every file stays on your…"
 permalink: /mcp/image/
 date: 2026-10-28
 ---
