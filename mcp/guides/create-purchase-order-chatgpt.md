@@ -1,4 +1,3 @@
-{% raw %}
 ---
 title: "Create a purchase order from ChatGPT or Claude"
 slug: create-purchase-order-chatgpt
@@ -6,6 +5,8 @@ target_query: "how to create a purchase order with ChatGPT"
 updated: 2026-10-28
 product_slug: purchase-requisition
 ---
+
+{% raw %}
 
 ChatGPT can draft purchase order text but cannot emit a fillable PO document. Connect an MCP purchase-order server and the assistant generates a real PO document from your line items, with a PO number and supplier details, returned as a download link.
 

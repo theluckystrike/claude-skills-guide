@@ -1,4 +1,3 @@
-{% raw %}
 ---
 title: "Fill a Word document template from Claude or ChatGPT"
 slug: fill-word-template-ai
@@ -6,6 +5,8 @@ target_query: "can Claude fill in a Word template for me"
 updated: 2026-10-28
 product_slug: docx
 ---
+
+{% raw %}
 
 Claude can write a .docx but cannot reliably open your existing template and keep its styles, headers and layout. An MCP docx server takes your template, fills named placeholders with the values you dictate, and returns the finished document as a download link.
 

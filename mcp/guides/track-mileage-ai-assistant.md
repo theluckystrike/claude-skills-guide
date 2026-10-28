@@ -1,4 +1,3 @@
-{% raw %}
 ---
 title: "Log mileage and reimbursements with an AI assistant"
 slug: track-mileage-ai-assistant
@@ -6,6 +5,8 @@ target_query: "how do I track mileage with Claude"
 updated: 2026-10-28
 product_slug: mileage-log
 ---
+
+{% raw %}
 
 To track mileage from chat, connect an MCP mileage-log server: you state the trip in plain language, the server stores dated entries with distance and purpose, and the assistant totals them for a reimbursement claim or expense report.
 

@@ -1,4 +1,3 @@
-{% raw %}
 ---
 title: "MCP server for expense tracking"
 slug: mcp-server-expense-tracking
@@ -6,6 +5,8 @@ target_query: "MCP server for expense tracking"
 updated: 2026-10-28
 product_slug: expense-tracker
 ---
+
+{% raw %}
 
 An MCP expense-tracker server lets Claude, Cursor or ChatGPT log expenses from receipts or plain sentences, categorize them, and produce a monthly summary or export — replacing a manual spreadsheet routine without installing a desktop app.
 

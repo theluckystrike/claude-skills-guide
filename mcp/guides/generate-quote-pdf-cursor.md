@@ -1,4 +1,3 @@
-{% raw %}
 ---
 title: "Generate a customer quote as a PDF from Cursor or Claude"
 slug: generate-quote-pdf-cursor
@@ -6,6 +5,8 @@ target_query: "generate a quote PDF with Cursor or Claude"
 updated: 2026-10-28
 product_slug: quotes
 ---
+
+{% raw %}
 
 To produce a customer quote PDF, connect an MCP quotes server and ask for the quote in chat: line items, quantities, prices, validity period, and the assistant returns a formatted quote document as a download link.
 

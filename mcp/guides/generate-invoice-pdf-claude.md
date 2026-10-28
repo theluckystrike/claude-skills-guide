@@ -1,4 +1,3 @@
-{% raw %}
 ---
 title: "Generate an invoice as a PDF from Claude"
 slug: generate-invoice-pdf-claude
@@ -6,6 +5,8 @@ target_query: "how do I generate an invoice as a PDF from Claude"
 updated: 2026-10-28
 product_slug: invoice
 ---
+
+{% raw %}
 
 Claude cannot produce a PDF invoice on its own; it writes text in chat. To get an actual invoice.pdf, give Claude an MCP server that has an invoice generator, then ask for the invoice in plain language and download the PDF it returns.
 

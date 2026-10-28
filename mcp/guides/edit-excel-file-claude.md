@@ -1,4 +1,3 @@
-{% raw %}
 ---
 title: "Can Claude edit my Excel file?"
 slug: edit-excel-file-claude
@@ -6,6 +5,8 @@ target_query: "can Claude edit my Excel file"
 updated: 2026-10-28
 product_slug: spreadsheet
 ---
+
+{% raw %}
 
 Yes, if you connect an MCP spreadsheet server. Claude on its own can only read a file you paste or upload in limited ways; it cannot open, recalculate and save a real .xlsx with formulas intact. An MCP server does the open/save; Claude does the deciding.
 

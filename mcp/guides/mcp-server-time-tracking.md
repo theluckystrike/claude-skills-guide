@@ -1,4 +1,3 @@
-{% raw %}
 ---
 title: "MCP server for time tracking"
 slug: mcp-server-time-tracking
@@ -6,6 +5,8 @@ target_query: "MCP server for time tracking"
 updated: 2026-10-28
 product_slug: time-tracker
 ---
+
+{% raw %}
 
 For time tracking through Claude, Cursor or ChatGPT, use an MCP time tracker server: the assistant starts and stops timers, lists entries, and totals hours per client or project from chat, with no app to open.
 

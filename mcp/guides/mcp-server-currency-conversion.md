@@ -1,4 +1,3 @@
-{% raw %}
 ---
 title: "Convert currencies inside Claude, Cursor or ChatGPT"
 slug: mcp-server-currency-conversion
@@ -6,6 +5,8 @@ target_query: "how to convert currencies in ChatGPT with live rates"
 updated: 2026-10-28
 product_slug: currency
 ---
+
+{% raw %}
 
 Chat assistants know exchange rates only from training data, so quoted rates can be weeks or months old. An MCP currency server fetches a current rate at call time, and the assistant uses it for the arithmetic and the explanation.
 

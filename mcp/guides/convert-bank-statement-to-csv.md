@@ -1,4 +1,3 @@
-{% raw %}
 ---
 title: "Convert a bank statement PDF to CSV with an AI assistant"
 slug: convert-bank-statement-to-csv
@@ -6,6 +5,8 @@ target_query: "convert bank statement PDF to CSV with ChatGPT or Claude"
 updated: 2026-10-28
 product_slug: bank-statement
 ---
+
+{% raw %}
 
 A chat assistant alone cannot reliably turn a bank statement PDF into a CSV: it drops rows, hallucinates amounts, and cannot guarantee column alignment. An MCP bank-statement server does the extraction deterministically and returns the CSV; the assistant only relays your instructions.
 
