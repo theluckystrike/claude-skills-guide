@@ -107,7 +107,7 @@ Give Claude (or any MCP client) real loan math: `loan_payment` for the monthly p
 - **Hosted endpoint:** not open for this server yet - use the `.mcpb` bundle or build from source below. The other 46 servers in the suite are already hosted.
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/loan-calculator.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/loan-calculator`.
-- **npm:** the package `mcp-loan-calculator` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.
+- **npm:** the package `@theluckystrike/mcp-loan-calculator` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.
 
 ## Tools it exposes
 
@@ -146,6 +146,11 @@ Any MCP client: Claude Desktop (via the .mcpb bundle), Claude Code, Cursor, Wind
 - [Quotes MCP server](/mcp/quotes/) — Send a client a real quote in seconds: line items with VAT, a validity date, a plain-text version to paste int
 - [Recurring MCP server](/mcp/recurring/) — Bill the same clients every month without remembering to. Define a recurring invoice once, then generate the r
 - [Credit Note MCP server](/mcp/credit-note/) — Credit notes against an invoice or standalone: drafts, finalization, rendering, totals.
+
+## Free live-data servers that pair with this one
+
+- [Car loan interest deduction calculator MCP server](/mcp/car-loan-interest-deduction-calculator-mcp/), free with no API key. 2025-2028 car loan interest deduction, SALT cap, child tax credit and 2026 tax brackets (IRS).
+- [DSCR loan calculator MCP server](/mcp/dscr-loan-calculator-mcp/), free with no API key. DSCR loan calculator for rental property: DSCR, lender tiers, max loan, rent needed, amortization.
 
 ---
 

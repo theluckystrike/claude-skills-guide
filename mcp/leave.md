@@ -158,6 +158,10 @@ Any MCP client: Claude Desktop (via the .mcpb bundle), Claude Code, Cursor, Wind
 - [Recurring MCP server](/mcp/recurring/) — Bill the same clients every month without remembering to. Define a recurring invoice once, then generate the r
 - [Credit Note MCP server](/mcp/credit-note/) — Credit notes against an invoice or standalone: drafts, finalization, rendering, totals.
 
+## Free live-data servers that pair with this one
+
+- [UK Statutory Sick Pay and Maternity Pay MCP server](/mcp/uk-statutory-sick-pay-maternity-pay-calculator-mcp/), free with no API key. UK Statutory Sick Pay (April 2026 rules), Maternity Pay and National Living Wage from gov.uk.
+
 ---
 
 [All 58 back-office MCP servers](/mcp/) &middot; [how the collection is organised](/mcp/#how-it-fits-together)

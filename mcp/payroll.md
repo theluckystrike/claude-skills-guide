@@ -107,7 +107,7 @@ Give Claude (or any MCP client) a payroll estimator: `payroll_run` turns hours w
 - **Hosted endpoint:** not open for this server yet - use the `.mcpb` bundle or build from source below. The other 46 servers in the suite are already hosted.
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/payroll.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/payroll`.
-- **npm:** the package `mcp-payroll` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.
+- **npm:** the package `@theluckystrike/mcp-payroll` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.
 
 ## Tools it exposes
 
@@ -146,6 +146,14 @@ Any MCP client: Claude Desktop (via the .mcpb bundle), Claude Code, Cursor, Wind
 - [Quotes MCP server](/mcp/quotes/) — Send a client a real quote in seconds: line items with VAT, a validity date, a plain-text version to paste int
 - [Recurring MCP server](/mcp/recurring/) — Bill the same clients every month without remembering to. Define a recurring invoice once, then generate the r
 - [Credit Note MCP server](/mcp/credit-note/) — Credit notes against an invoice or standalone: drafts, finalization, rendering, totals.
+
+## Free live-data servers that pair with this one
+
+- [Minimum wage MCP server](/mcp/minimum-wage-mcp/), free with no API key. US state minimum wage 2026-2027: rates, tipped wages and scheduled increases for 50 states and DC.
+- [No tax on overtime calculator MCP server](/mcp/no-tax-on-overtime-mcp/), free with no API key. No tax on overtime, tips and senior deductions for 2025-2028 (OBBBA), with IRS caps and phase-outs.
+- [Paycheck calculator MCP server](/mcp/paycheck-calculator-mcp/), free with no API key. Take-home pay for 2025-2026: IRS brackets, FICA wage base and state income tax for 50 states + DC.
+- [Retirement contribution limits MCP server](/mcp/retirement-contribution-limits-2027-mcp/), free with no API key. 401(k), IRA, HSA limits, age 60-63 catch-up, Roth catch-up rule, Social Security COLA, 2025-2027.
+- [UK income tax and salary MCP server](/mcp/uk-income-tax-salary-mcp/), free with no API key. UK income tax and take-home pay 2025/26 and 2026/27: Scottish bands, NI, student loans, 60% trap.
 
 ---
 
