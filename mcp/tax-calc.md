@@ -107,7 +107,7 @@ Give Claude (or any MCP client) a tax estimator: `us_federal_tax` applies the 20
 - **Hosted endpoint:** not open for this server yet - use the `.mcpb` bundle or build from source below. The other 46 servers in the suite are already hosted.
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/tax-calc.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/tax-calc`.
-- **npm:** the package `mcp-tax-calc` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.
+- **npm:** the package `@theluckystrike/mcp-tax-calc` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.
 
 ## Tools it exposes
 
@@ -146,6 +146,14 @@ Any MCP client: Claude Desktop (via the .mcpb bundle), Claude Code, Cursor, Wind
 - [Quotes MCP server](/mcp/quotes/) — Send a client a real quote in seconds: line items with VAT, a validity date, a plain-text version to paste int
 - [Recurring MCP server](/mcp/recurring/) — Bill the same clients every month without remembering to. Define a recurring invoice once, then generate the r
 - [Credit Note MCP server](/mcp/credit-note/) — Credit notes against an invoice or standalone: drafts, finalization, rendering, totals.
+
+## Free live-data servers that pair with this one
+
+- [ACA premium tax credit calculator MCP server](/mcp/aca-premium-tax-credit-calculator-mcp/), free with no API key. 2026 ACA premium tax credit: expired enhanced subsidy, 400% FPL cliff, FPL, APTC repayment rules.
+- [Car loan interest deduction calculator MCP server](/mcp/car-loan-interest-deduction-calculator-mcp/), free with no API key. 2025-2028 car loan interest deduction, SALT cap, child tax credit and 2026 tax brackets (IRS).
+- [Estate and gift tax exemption calculator MCP server](/mcp/estate-gift-tax-exemption-calculator-mcp/), free with no API key. 2026 US estate and gift tax: $15M exemption (P.L. 119-21), 40% rates, annual exclusion, DSUE.
+- [No tax on overtime calculator MCP server](/mcp/no-tax-on-overtime-mcp/), free with no API key. No tax on overtime, tips and senior deductions for 2025-2028 (OBBBA), with IRS caps and phase-outs.
+- [Section 179 deduction calculator MCP server](/mcp/section-179-deduction-calculator-mcp/), free with no API key. Section 179 limits, 100% bonus depreciation, heavy SUV caps and asset loan cost (2025-2026, IRS).
 
 ---
 

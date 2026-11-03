@@ -147,6 +147,11 @@ Any MCP client: Claude Desktop (via the .mcpb bundle), Claude Code, Cursor, Wind
 - [Recurring MCP server](/mcp/recurring/) — Bill the same clients every month without remembering to. Define a recurring invoice once, then generate the r
 - [Credit Note MCP server](/mcp/credit-note/) — Credit notes against an invoice or standalone: drafts, finalization, rendering, totals.
 
+## Free live-data servers that pair with this one
+
+- [Minimum wage MCP server](/mcp/minimum-wage-mcp/), free with no API key. US state minimum wage 2026-2027: rates, tipped wages and scheduled increases for 50 states and DC.
+- [Paycheck calculator MCP server](/mcp/paycheck-calculator-mcp/), free with no API key. Take-home pay for 2025-2026: IRS brackets, FICA wage base and state income tax for 50 states + DC.
+
 ---
 
 [All 58 back-office MCP servers](/mcp/) &middot; [how the collection is organised](/mcp/#how-it-fits-together)

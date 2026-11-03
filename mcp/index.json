@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T04:14:10Z",
+ "generated_at": "2026-10-28T05:08:25Z",
  "count": 58,
  "bundle_url": "https://mcp.zovo.one/buy/bundle",
  "bundle_price_usd": 39,
@@ -237,7 +237,7 @@
    "slug": "budget",
    "human": "Budget",
    "registry_name": "io.github.theluckystrike/budget",
-   "npm": "mcp-budget",
+   "npm": "@theluckystrike/mcp-budget",
    "bin": [
     "src/index.js"
    ],
@@ -958,7 +958,7 @@
    "slug": "loan-calculator",
    "human": "Loan Calculator",
    "registry_name": "io.github.theluckystrike/loan-calculator",
-   "npm": "mcp-loan-calculator",
+   "npm": "@theluckystrike/mcp-loan-calculator",
    "bin": [
     "src/index.js"
    ],
@@ -1136,7 +1136,7 @@
    "slug": "payroll",
    "human": "Payroll",
    "registry_name": "io.github.theluckystrike/payroll",
-   "npm": "mcp-payroll",
+   "npm": "@theluckystrike/mcp-payroll",
    "bin": [
     "src/index.js"
    ],
@@ -1255,7 +1255,7 @@
    "slug": "pomodoro",
    "human": "Pomodoro",
    "registry_name": "io.github.theluckystrike/pomodoro",
-   "npm": "mcp-pomodoro",
+   "npm": "@theluckystrike/mcp-pomodoro",
    "bin": [
     "src/index.js"
    ],
@@ -1376,7 +1376,7 @@
    "slug": "receipts",
    "human": "Receipts",
    "registry_name": "io.github.theluckystrike/receipts",
-   "npm": "mcp-receipts",
+   "npm": "@theluckystrike/mcp-receipts",
    "bin": [
     "src/index.js"
    ],
@@ -1560,7 +1560,7 @@
    "slug": "stripe-billing",
    "human": "Stripe Billing",
    "registry_name": "io.github.theluckystrike/stripe-billing",
-   "npm": "mcp-stripe-billing",
+   "npm": "@theluckystrike/mcp-stripe-billing",
    "bin": [
     "src/index.js"
    ],
@@ -1645,7 +1645,7 @@
    "slug": "tax-calc",
    "human": "Tax Calc",
    "registry_name": "io.github.theluckystrike/tax-calc",
-   "npm": "mcp-tax-calc",
+   "npm": "@theluckystrike/mcp-tax-calc",
    "bin": [
     "src/index.js"
    ],

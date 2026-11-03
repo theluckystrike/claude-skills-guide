@@ -107,7 +107,7 @@ Turn "I have 3 hours before the demo" into a real pomodoro plan without opening 
 - **Hosted endpoint:** not open for this server yet - use the `.mcpb` bundle or build from source below. The other 46 servers in the suite are already hosted.
 - **Claude Desktop, one click:** [download the `.mcpb` bundle](https://github.com/theluckystrike/mcp-servers/releases/download/v0.22.0/pomodoro.mcpb)
 - **From source:** `git clone https://github.com/theluckystrike/mcp-servers` then build `servers/pomodoro`.
-- **npm:** the package `mcp-pomodoro` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.
+- **npm:** the package `@theluckystrike/mcp-pomodoro` is staged and publishes shortly; the `.mcpb` bundle is the supported install until then.
 
 ## Tools it exposes
 

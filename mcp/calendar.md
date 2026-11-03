@@ -158,6 +158,10 @@ Any MCP client: Claude Desktop (via the .mcpb bundle), Claude Code, Cursor, Wind
 - [Recurring MCP server](/mcp/recurring/) — Bill the same clients every month without remembering to. Define a recurring invoice once, then generate the r
 - [Credit Note MCP server](/mcp/credit-note/) — Credit notes against an invoice or standalone: drafts, finalization, rendering, totals.
 
+## Free live-data servers that pair with this one
+
+- [US federal holidays and business days MCP server](/mcp/us-federal-holidays-business-days-mcp/), free with no API key. Exact U.S. federal holidays and business days 1971-2100, OPM and Federal Reserve observance.
+
 ---
 
 [All 58 back-office MCP servers](/mcp/) &middot; [how the collection is organised](/mcp/#how-it-fits-together)

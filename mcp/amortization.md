@@ -155,6 +155,10 @@ Any MCP client: Claude Desktop (via the .mcpb bundle), Claude Code, Cursor, Wind
 - [Recurring MCP server](/mcp/recurring/) — Bill the same clients every month without remembering to. Define a recurring invoice once, then generate the r
 - [Credit Note MCP server](/mcp/credit-note/) — Credit notes against an invoice or standalone: drafts, finalization, rendering, totals.
 
+## Free live-data servers that pair with this one
+
+- [DSCR loan calculator MCP server](/mcp/dscr-loan-calculator-mcp/), free with no API key. DSCR loan calculator for rental property: DSCR, lender tiers, max loan, rent needed, amortization.
+
 ---
 
 [All 58 back-office MCP servers](/mcp/) &middot; [how the collection is organised](/mcp/#how-it-fits-together)

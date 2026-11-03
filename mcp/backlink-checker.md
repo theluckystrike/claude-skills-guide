@@ -154,6 +154,10 @@ Any MCP client: Claude Desktop (via the .mcpb bundle), Claude Code, Cursor, Wind
 - [Recurring MCP server](/mcp/recurring/) — Bill the same clients every month without remembering to. Define a recurring invoice once, then generate the r
 - [Credit Note MCP server](/mcp/credit-note/) — Credit notes against an invoice or standalone: drafts, finalization, rendering, totals.
 
+## Free live-data servers that pair with this one
+
+- [Subdomain finder MCP server](/mcp/subdomain-finder-mcp/), free with no API key. Passive subdomain enumeration from certificate transparency (certspotter, crt.sh) with DNS checks.
+
 ---
 
 [All 58 back-office MCP servers](/mcp/) &middot; [how the collection is organised](/mcp/#how-it-fits-together)

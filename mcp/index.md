@@ -9,357 +9,531 @@ date: 2026-10-28
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
- "@type": "ItemList",
- "name": "Back-office MCP servers",
- "numberOfItems": 58,
- "itemListElement": [
+ "@graph": [
   {
-   "@type": "ListItem",
-   "position": 1,
-   "name": "Invoice MCP server",
-   "url": "https://claudecodeguides.com/mcp/invoice/"
+   "@type": "ItemList",
+   "name": "Back-office MCP servers",
+   "numberOfItems": 58,
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Invoice MCP server",
+     "url": "https://claudecodeguides.com/mcp/invoice/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Quotes MCP server",
+     "url": "https://claudecodeguides.com/mcp/quotes/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Recurring MCP server",
+     "url": "https://claudecodeguides.com/mcp/recurring/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Credit Note MCP server",
+     "url": "https://claudecodeguides.com/mcp/credit-note/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "name": "Dunning Letters MCP server",
+     "url": "https://claudecodeguides.com/mcp/dunning-letters/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 6,
+     "name": "Statement Of Account MCP server",
+     "url": "https://claudecodeguides.com/mcp/statement-of-account/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 7,
+     "name": "Duplicate Invoice Check MCP server",
+     "url": "https://claudecodeguides.com/mcp/duplicate-invoice-check/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 8,
+     "name": "Bill Of Sale MCP server",
+     "url": "https://claudecodeguides.com/mcp/bill-of-sale/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 9,
+     "name": "Change Order MCP server",
+     "url": "https://claudecodeguides.com/mcp/change-order/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 10,
+     "name": "Deposits MCP server",
+     "url": "https://claudecodeguides.com/mcp/deposits/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 11,
+     "name": "Stripe Billing MCP server",
+     "url": "https://claudecodeguides.com/mcp/stripe-billing/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 12,
+     "name": "Billing Docs MCP server",
+     "url": "https://claudecodeguides.com/mcp/billing-docs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 13,
+     "name": "Office Suite MCP server",
+     "url": "https://claudecodeguides.com/mcp/office-suite/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 14,
+     "name": "Pdf MCP server",
+     "url": "https://claudecodeguides.com/mcp/pdf/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 15,
+     "name": "Docx MCP server",
+     "url": "https://claudecodeguides.com/mcp/docx/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 16,
+     "name": "Spreadsheet MCP server",
+     "url": "https://claudecodeguides.com/mcp/spreadsheet/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 17,
+     "name": "Image MCP server",
+     "url": "https://claudecodeguides.com/mcp/image/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 18,
+     "name": "Zip MCP server",
+     "url": "https://claudecodeguides.com/mcp/zip/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 19,
+     "name": "Barcode MCP server",
+     "url": "https://claudecodeguides.com/mcp/barcode/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 20,
+     "name": "Catalogue MCP server",
+     "url": "https://claudecodeguides.com/mcp/catalogue/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 21,
+     "name": "Packing List MCP server",
+     "url": "https://claudecodeguides.com/mcp/packing-list/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 22,
+     "name": "Resume MCP server",
+     "url": "https://claudecodeguides.com/mcp/resume/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 23,
+     "name": "Clauses MCP server",
+     "url": "https://claudecodeguides.com/mcp/clauses/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 24,
+     "name": "Service Agreement MCP server",
+     "url": "https://claudecodeguides.com/mcp/service-agreement/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 25,
+     "name": "Checklist MCP server",
+     "url": "https://claudecodeguides.com/mcp/checklist/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 26,
+     "name": "Amortization MCP server",
+     "url": "https://claudecodeguides.com/mcp/amortization/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 27,
+     "name": "Asset Register MCP server",
+     "url": "https://claudecodeguides.com/mcp/asset-register/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 28,
+     "name": "Bank Statement MCP server",
+     "url": "https://claudecodeguides.com/mcp/bank-statement/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 29,
+     "name": "Budget MCP server",
+     "url": "https://claudecodeguides.com/mcp/budget/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 30,
+     "name": "Cash Book MCP server",
+     "url": "https://claudecodeguides.com/mcp/cash-book/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 31,
+     "name": "Currency MCP server",
+     "url": "https://claudecodeguides.com/mcp/currency/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 32,
+     "name": "Expense Tracker MCP server",
+     "url": "https://claudecodeguides.com/mcp/expense-tracker/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 33,
+     "name": "Goods Receipt MCP server",
+     "url": "https://claudecodeguides.com/mcp/goods-receipt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 34,
+     "name": "Loan Calculator MCP server",
+     "url": "https://claudecodeguides.com/mcp/loan-calculator/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 35,
+     "name": "Payroll MCP server",
+     "url": "https://claudecodeguides.com/mcp/payroll/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 36,
+     "name": "Petty Cash MCP server",
+     "url": "https://claudecodeguides.com/mcp/petty-cash/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 37,
+     "name": "Receipts MCP server",
+     "url": "https://claudecodeguides.com/mcp/receipts/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 38,
+     "name": "Tax Calc MCP server",
+     "url": "https://claudecodeguides.com/mcp/tax-calc/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 39,
+     "name": "Three Way Match MCP server",
+     "url": "https://claudecodeguides.com/mcp/three-way-match/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 40,
+     "name": "Supplier Statement Check MCP server",
+     "url": "https://claudecodeguides.com/mcp/supplier-statement-check/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 41,
+     "name": "Purchase Requisition MCP server",
+     "url": "https://claudecodeguides.com/mcp/purchase-requisition/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 42,
+     "name": "Mileage Log MCP server",
+     "url": "https://claudecodeguides.com/mcp/mileage-log/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 43,
+     "name": "Per Diem MCP server",
+     "url": "https://claudecodeguides.com/mcp/per-diem/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 44,
+     "name": "Hourly Rate MCP server",
+     "url": "https://claudecodeguides.com/mcp/hourly-rate/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 45,
+     "name": "Time Tracker MCP server",
+     "url": "https://claudecodeguides.com/mcp/time-tracker/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 46,
+     "name": "Kanban MCP server",
+     "url": "https://claudecodeguides.com/mcp/kanban/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 47,
+     "name": "Job Card MCP server",
+     "url": "https://claudecodeguides.com/mcp/job-card/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 48,
+     "name": "Work Order MCP server",
+     "url": "https://claudecodeguides.com/mcp/work-order/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 49,
+     "name": "Leave MCP server",
+     "url": "https://claudecodeguides.com/mcp/leave/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 50,
+     "name": "Pomodoro MCP server",
+     "url": "https://claudecodeguides.com/mcp/pomodoro/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 51,
+     "name": "Maintenance Log MCP server",
+     "url": "https://claudecodeguides.com/mcp/maintenance-log/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 52,
+     "name": "Calendar MCP server",
+     "url": "https://claudecodeguides.com/mcp/calendar/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 53,
+     "name": "Timezone MCP server",
+     "url": "https://claudecodeguides.com/mcp/timezone/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 54,
+     "name": "Delivery Schedule MCP server",
+     "url": "https://claudecodeguides.com/mcp/delivery-schedule/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 55,
+     "name": "Onboarding MCP server",
+     "url": "https://claudecodeguides.com/mcp/onboarding/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 56,
+     "name": "Supplier List MCP server",
+     "url": "https://claudecodeguides.com/mcp/supplier-list/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 57,
+     "name": "Price Tracker MCP server",
+     "url": "https://claudecodeguides.com/mcp/price-tracker/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 58,
+     "name": "Backlink Checker MCP server",
+     "url": "https://claudecodeguides.com/mcp/backlink-checker/"
+    }
+   ]
   },
   {
-   "@type": "ListItem",
-   "position": 2,
-   "name": "Quotes MCP server",
-   "url": "https://claudecodeguides.com/mcp/quotes/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 3,
-   "name": "Recurring MCP server",
-   "url": "https://claudecodeguides.com/mcp/recurring/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 4,
-   "name": "Credit Note MCP server",
-   "url": "https://claudecodeguides.com/mcp/credit-note/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 5,
-   "name": "Dunning Letters MCP server",
-   "url": "https://claudecodeguides.com/mcp/dunning-letters/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 6,
-   "name": "Statement Of Account MCP server",
-   "url": "https://claudecodeguides.com/mcp/statement-of-account/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 7,
-   "name": "Duplicate Invoice Check MCP server",
-   "url": "https://claudecodeguides.com/mcp/duplicate-invoice-check/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 8,
-   "name": "Bill Of Sale MCP server",
-   "url": "https://claudecodeguides.com/mcp/bill-of-sale/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 9,
-   "name": "Change Order MCP server",
-   "url": "https://claudecodeguides.com/mcp/change-order/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 10,
-   "name": "Deposits MCP server",
-   "url": "https://claudecodeguides.com/mcp/deposits/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 11,
-   "name": "Stripe Billing MCP server",
-   "url": "https://claudecodeguides.com/mcp/stripe-billing/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 12,
-   "name": "Billing Docs MCP server",
-   "url": "https://claudecodeguides.com/mcp/billing-docs/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 13,
-   "name": "Office Suite MCP server",
-   "url": "https://claudecodeguides.com/mcp/office-suite/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 14,
-   "name": "Pdf MCP server",
-   "url": "https://claudecodeguides.com/mcp/pdf/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 15,
-   "name": "Docx MCP server",
-   "url": "https://claudecodeguides.com/mcp/docx/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 16,
-   "name": "Spreadsheet MCP server",
-   "url": "https://claudecodeguides.com/mcp/spreadsheet/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 17,
-   "name": "Image MCP server",
-   "url": "https://claudecodeguides.com/mcp/image/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 18,
-   "name": "Zip MCP server",
-   "url": "https://claudecodeguides.com/mcp/zip/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 19,
-   "name": "Barcode MCP server",
-   "url": "https://claudecodeguides.com/mcp/barcode/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 20,
-   "name": "Catalogue MCP server",
-   "url": "https://claudecodeguides.com/mcp/catalogue/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 21,
-   "name": "Packing List MCP server",
-   "url": "https://claudecodeguides.com/mcp/packing-list/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 22,
-   "name": "Resume MCP server",
-   "url": "https://claudecodeguides.com/mcp/resume/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 23,
-   "name": "Clauses MCP server",
-   "url": "https://claudecodeguides.com/mcp/clauses/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 24,
-   "name": "Service Agreement MCP server",
-   "url": "https://claudecodeguides.com/mcp/service-agreement/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 25,
-   "name": "Checklist MCP server",
-   "url": "https://claudecodeguides.com/mcp/checklist/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 26,
-   "name": "Amortization MCP server",
-   "url": "https://claudecodeguides.com/mcp/amortization/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 27,
-   "name": "Asset Register MCP server",
-   "url": "https://claudecodeguides.com/mcp/asset-register/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 28,
-   "name": "Bank Statement MCP server",
-   "url": "https://claudecodeguides.com/mcp/bank-statement/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 29,
-   "name": "Budget MCP server",
-   "url": "https://claudecodeguides.com/mcp/budget/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 30,
-   "name": "Cash Book MCP server",
-   "url": "https://claudecodeguides.com/mcp/cash-book/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 31,
-   "name": "Currency MCP server",
-   "url": "https://claudecodeguides.com/mcp/currency/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 32,
-   "name": "Expense Tracker MCP server",
-   "url": "https://claudecodeguides.com/mcp/expense-tracker/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 33,
-   "name": "Goods Receipt MCP server",
-   "url": "https://claudecodeguides.com/mcp/goods-receipt/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 34,
-   "name": "Loan Calculator MCP server",
-   "url": "https://claudecodeguides.com/mcp/loan-calculator/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 35,
-   "name": "Payroll MCP server",
-   "url": "https://claudecodeguides.com/mcp/payroll/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 36,
-   "name": "Petty Cash MCP server",
-   "url": "https://claudecodeguides.com/mcp/petty-cash/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 37,
-   "name": "Receipts MCP server",
-   "url": "https://claudecodeguides.com/mcp/receipts/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 38,
-   "name": "Tax Calc MCP server",
-   "url": "https://claudecodeguides.com/mcp/tax-calc/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 39,
-   "name": "Three Way Match MCP server",
-   "url": "https://claudecodeguides.com/mcp/three-way-match/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 40,
-   "name": "Supplier Statement Check MCP server",
-   "url": "https://claudecodeguides.com/mcp/supplier-statement-check/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 41,
-   "name": "Purchase Requisition MCP server",
-   "url": "https://claudecodeguides.com/mcp/purchase-requisition/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 42,
-   "name": "Mileage Log MCP server",
-   "url": "https://claudecodeguides.com/mcp/mileage-log/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 43,
-   "name": "Per Diem MCP server",
-   "url": "https://claudecodeguides.com/mcp/per-diem/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 44,
-   "name": "Hourly Rate MCP server",
-   "url": "https://claudecodeguides.com/mcp/hourly-rate/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 45,
-   "name": "Time Tracker MCP server",
-   "url": "https://claudecodeguides.com/mcp/time-tracker/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 46,
-   "name": "Kanban MCP server",
-   "url": "https://claudecodeguides.com/mcp/kanban/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 47,
-   "name": "Job Card MCP server",
-   "url": "https://claudecodeguides.com/mcp/job-card/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 48,
-   "name": "Work Order MCP server",
-   "url": "https://claudecodeguides.com/mcp/work-order/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 49,
-   "name": "Leave MCP server",
-   "url": "https://claudecodeguides.com/mcp/leave/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 50,
-   "name": "Pomodoro MCP server",
-   "url": "https://claudecodeguides.com/mcp/pomodoro/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 51,
-   "name": "Maintenance Log MCP server",
-   "url": "https://claudecodeguides.com/mcp/maintenance-log/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 52,
-   "name": "Calendar MCP server",
-   "url": "https://claudecodeguides.com/mcp/calendar/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 53,
-   "name": "Timezone MCP server",
-   "url": "https://claudecodeguides.com/mcp/timezone/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 54,
-   "name": "Delivery Schedule MCP server",
-   "url": "https://claudecodeguides.com/mcp/delivery-schedule/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 55,
-   "name": "Onboarding MCP server",
-   "url": "https://claudecodeguides.com/mcp/onboarding/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 56,
-   "name": "Supplier List MCP server",
-   "url": "https://claudecodeguides.com/mcp/supplier-list/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 57,
-   "name": "Price Tracker MCP server",
-   "url": "https://claudecodeguides.com/mcp/price-tracker/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 58,
-   "name": "Backlink Checker MCP server",
-   "url": "https://claudecodeguides.com/mcp/backlink-checker/"
+   "@type": "ItemList",
+   "name": "Free live-data MCP servers (no key)",
+   "url": "https://claudecodeguides.com/mcp/#free-live-data-mcp-servers-no-key",
+   "numberOfItems": 27,
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "A/B test sample size calculator MCP server",
+     "url": "https://claudecodeguides.com/mcp/ab-test-sample-size-calculator-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "ACA premium tax credit calculator MCP server",
+     "url": "https://claudecodeguides.com/mcp/aca-premium-tax-credit-calculator-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "AP score distributions MCP server",
+     "url": "https://claudecodeguides.com/mcp/ap-score-distributions-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Car loan interest deduction calculator MCP server",
+     "url": "https://claudecodeguides.com/mcp/car-loan-interest-deduction-calculator-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "name": "CPI inflation calculator MCP server",
+     "url": "https://claudecodeguides.com/mcp/cpi-inflation-calculator-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 6,
+     "name": "Cups to grams converter MCP server",
+     "url": "https://claudecodeguides.com/mcp/cups-to-grams-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 7,
+     "name": "DSCR loan calculator MCP server",
+     "url": "https://claudecodeguides.com/mcp/dscr-loan-calculator-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 8,
+     "name": "Estate and gift tax exemption calculator MCP server",
+     "url": "https://claudecodeguides.com/mcp/estate-gift-tax-exemption-calculator-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 9,
+     "name": "Gold price per gram MCP server",
+     "url": "https://claudecodeguides.com/mcp/gold-price-per-gram-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 10,
+     "name": "IRS mileage rate and per diem MCP server",
+     "url": "https://claudecodeguides.com/mcp/irs-mileage-rate-per-diem-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 11,
+     "name": "Lake level MCP server",
+     "url": "https://claudecodeguides.com/mcp/lake-level-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 12,
+     "name": "Minimum wage MCP server",
+     "url": "https://claudecodeguides.com/mcp/minimum-wage-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 13,
+     "name": "No tax on overtime calculator MCP server",
+     "url": "https://claudecodeguides.com/mcp/no-tax-on-overtime-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 14,
+     "name": "Paycheck calculator MCP server",
+     "url": "https://claudecodeguides.com/mcp/paycheck-calculator-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 15,
+     "name": "Raw to cooked weight MCP server",
+     "url": "https://claudecodeguides.com/mcp/raw-to-cooked-weight-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 16,
+     "name": "Recipe nutrition calculator MCP server",
+     "url": "https://claudecodeguides.com/mcp/recipe-nutrition-calculator-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 17,
+     "name": "Retirement contribution limits MCP server",
+     "url": "https://claudecodeguides.com/mcp/retirement-contribution-limits-2027-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 18,
+     "name": "River level MCP server",
+     "url": "https://claudecodeguides.com/mcp/river-level-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 19,
+     "name": "SAT score percentiles MCP server",
+     "url": "https://claudecodeguides.com/mcp/sat-score-percentiles-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 20,
+     "name": "Section 179 deduction calculator MCP server",
+     "url": "https://claudecodeguides.com/mcp/section-179-deduction-calculator-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 21,
+     "name": "Silver price per gram MCP server",
+     "url": "https://claudecodeguides.com/mcp/silver-price-per-gram-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 22,
+     "name": "Student loan RAP calculator MCP server",
+     "url": "https://claudecodeguides.com/mcp/student-loan-repayment-assistance-plan-calculator-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 23,
+     "name": "Subdomain finder MCP server",
+     "url": "https://claudecodeguides.com/mcp/subdomain-finder-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 24,
+     "name": "UK income tax and salary MCP server",
+     "url": "https://claudecodeguides.com/mcp/uk-income-tax-salary-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 25,
+     "name": "UK Statutory Sick Pay and Maternity Pay MCP server",
+     "url": "https://claudecodeguides.com/mcp/uk-statutory-sick-pay-maternity-pay-calculator-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 26,
+     "name": "US federal holidays and business days MCP server",
+     "url": "https://claudecodeguides.com/mcp/us-federal-holidays-business-days-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 27,
+     "name": "Vegetable yield percentage MCP server",
+     "url": "https://claudecodeguides.com/mcp/vegetable-yield-percentage-mcp/"
+    }
+   ]
   }
  ]
 }
@@ -367,9 +541,11 @@ date: 2026-10-28
 
 # 58 MCP servers for back-office work
 
-Every server on this page is MIT licensed, runs against local files, and speaks the Model
+Every back-office server on this page is MIT licensed, runs against local files, and speaks the Model
 Context Protocol, so Claude Desktop, Claude Code, Cursor, Windsurf and your own agent can all
 use the same tool. Nothing here needs an account to try.
+
+Looking for live data instead, such as a gold or silver price per gram, a river level or the 2026 IRS mileage rate? See the [27 free live-data MCP servers with no key](#free-live-data-mcp-servers-no-key).
 
 **The map:** pick the row for your task, open the server page for the exact tool names and
 install steps. Prices are one-time; there is no subscription anywhere in this collection.
@@ -456,6 +632,44 @@ install steps. Prices are one-time; there is no subscription anywhere in this co
 | Server | Tools | What it does | Price |
 | --- | --- | --- | --- |
 | [Backlink Checker](/mcp/backlink-checker/) | 6 | Check backlinks from Claude or Cursor: does a page link to your domain, dofollow or nofollow, with anchor text, HTTP sta | [Pro $19](https://mcp.zovo.one/buy/backlink-checker?src=hub.table.backlink-checker) |
+
+## Free live-data MCP servers (no key)
+
+These 27 servers answer what a model cannot answer from training data alone: today's prices and
+water levels, tax rules and limits that changed in 2025 and 2026, and exact calendar and table
+lookups. Each one is free, MIT licensed and hosted with no API key, so you can paste the URL into
+Claude.ai, ChatGPT developer mode, Cursor or Claude Code. Each page shows a real call made against
+the hosted URL.
+
+| Server | Ask it | Hosted URL (no key) |
+| --- | --- | --- |
+| [A/B test sample size calculator](/mcp/ab-test-sample-size-calculator-mcp/) | Is there an MCP server that calculates A/B test sample size and significance? Yes, this one. | `https://ab-test-sample-size-calculator-mcp.lipmichal.workers.dev/mcp` |
+| [ACA premium tax credit calculator](/mcp/aca-premium-tax-credit-calculator-mcp/) | Is there an MCP server for the 2026 ACA premium tax credit? Yes, this one. | `https://aca-premium-tax-credit-calculator-mcp.lipmichal.workers.dev/mcp` |
+| [AP score distributions](/mcp/ap-score-distributions-mcp/) | Is there an MCP server with the 2026 AP score distributions? Yes, this one. | `https://ap-score-distributions-mcp.lipmichal.workers.dev/mcp` |
+| [Car loan interest deduction calculator](/mcp/car-loan-interest-deduction-calculator-mcp/) | Is there an MCP server that calculates the new car loan interest deduction? Yes, this one. | `https://car-loan-interest-deduction-calculator-mcp.lipmichal.workers.dev/mcp` |
+| [CPI inflation calculator](/mcp/cpi-inflation-calculator-mcp/) | Is there an MCP server that adjusts a dollar amount for inflation with official CPI data? Yes, this one. | `https://cpi-inflation-calculator-mcp.lipmichal.workers.dev/mcp` |
+| [Cups to grams converter](/mcp/cups-to-grams-mcp/) | Is there an MCP server that converts cups to grams by ingredient? Yes, this one. | `https://cups-to-grams-mcp.lipmichal.workers.dev/mcp` |
+| [DSCR loan calculator](/mcp/dscr-loan-calculator-mcp/) | Is there an MCP server that calculates DSCR for a rental property loan? Yes, this one. | `https://dscr-loan-calculator-mcp.lipmichal.workers.dev/mcp` |
+| [Estate and gift tax exemption calculator](/mcp/estate-gift-tax-exemption-calculator-mcp/) | Is there an MCP server that knows the 2026 estate and gift tax exemption? Yes, this one. | `https://estate-gift-tax-exemption-calculator-mcp.lipmichal.workers.dev/mcp` |
+| [Gold price per gram](/mcp/gold-price-per-gram-mcp/) | Is there an MCP server for the current gold price per gram? Yes, this one. | `https://gold-price-per-gram-mcp.lipmichal.workers.dev/mcp` |
+| [IRS mileage rate and per diem](/mcp/irs-mileage-rate-per-diem-mcp/) | Is there an MCP server for the 2026 IRS mileage rate and current per diem rates? Yes, this one. | `https://irs-mileage-rate-per-diem-mcp.lipmichal.workers.dev/mcp` |
+| [Lake level](/mcp/lake-level-mcp/) | Is there an MCP server for current lake and reservoir water levels? Yes, this one. | `https://lake-level-mcp.lipmichal.workers.dev/mcp` |
+| [Minimum wage](/mcp/minimum-wage-mcp/) | Is there an MCP server that looks up the minimum wage for a US state? Yes, this one. | `https://minimum-wage-mcp.lipmichal.workers.dev/mcp` |
+| [No tax on overtime calculator](/mcp/no-tax-on-overtime-mcp/) | Is there an MCP server that calculates the no tax on overtime deduction? Yes, this one. | `https://no-tax-on-overtime-mcp.lipmichal.workers.dev/mcp` |
+| [Paycheck calculator](/mcp/paycheck-calculator-mcp/) | Is there an MCP server that calculates take-home pay after federal and state tax? Yes, this one. | `https://paycheck-calculator-mcp.lipmichal.workers.dev/mcp` |
+| [Raw to cooked weight](/mcp/raw-to-cooked-weight-mcp/) | Is there an MCP server that converts raw meat weight to cooked weight? Yes, this one. | `https://raw-to-cooked-weight-mcp.lipmichal.workers.dev/mcp` |
+| [Recipe nutrition calculator](/mcp/recipe-nutrition-calculator-mcp/) | Is there an MCP server that calculates recipe nutrition per serving? Yes, this one. | `https://recipe-nutrition-calculator-mcp.lipmichal.workers.dev/mcp` |
+| [Retirement contribution limits](/mcp/retirement-contribution-limits-2027-mcp/) | Is there an MCP server that knows the current 401(k) contribution limits? Yes, this one. | `https://retirement-contribution-limits-2027-mcp.lipmichal.workers.dev/mcp` |
+| [River level](/mcp/river-level-mcp/) | Is there an MCP server for the current water level of a river? Yes, this one. | `https://river-level-mcp.lipmichal.workers.dev/mcp` |
+| [SAT score percentiles](/mcp/sat-score-percentiles-mcp/) | Is there an MCP server that looks up SAT score percentiles? Yes, this one. | `https://sat-score-percentiles-mcp.lipmichal.workers.dev/mcp` |
+| [Section 179 deduction calculator](/mcp/section-179-deduction-calculator-mcp/) | Is there an MCP server that calculates the Section 179 deduction for 2026? Yes, this one. | `https://section-179-deduction-calculator-mcp.lipmichal.workers.dev/mcp` |
+| [Silver price per gram](/mcp/silver-price-per-gram-mcp/) | Is there an MCP server for the current silver price per gram? Yes, this one. | `https://silver-price-per-gram-mcp.lipmichal.workers.dev/mcp` |
+| [Student loan RAP calculator](/mcp/student-loan-repayment-assistance-plan-calculator-mcp/) | Is there an MCP server that calculates the new RAP student loan payment? Yes, this one. | `https://student-loan-repayment-assistance-plan-calculator-mcp.lipmichal.workers.dev/mcp` |
+| [Subdomain finder](/mcp/subdomain-finder-mcp/) | Is there an MCP server that finds subdomains from certificate transparency logs? Yes, this one. | `https://subdomain-finder-mcp.lipmichal.workers.dev/mcp` |
+| [UK income tax and salary](/mcp/uk-income-tax-salary-mcp/) | Is there an MCP server that calculates UK take-home pay for 2026/27? Yes, this one. | `https://uk-income-tax-salary-mcp.lipmichal.workers.dev/mcp` |
+| [UK Statutory Sick Pay and Maternity Pay](/mcp/uk-statutory-sick-pay-maternity-pay-calculator-mcp/) | Is there an MCP server that calculates UK Statutory Sick Pay under the April 2026 rules? Yes, this one. | `https://uk-statutory-sick-pay-maternity-pay-calculator-mcp.lipmichal.workers.dev/mcp` |
+| [US federal holidays and business days](/mcp/us-federal-holidays-business-days-mcp/) | Is there an MCP server that counts business days excluding US federal holidays? Yes, this one. | `https://us-federal-holidays-business-days-mcp.lipmichal.workers.dev/mcp` |
+| [Vegetable yield percentage](/mcp/vegetable-yield-percentage-mcp/) | Is there an MCP server for vegetable yield and trim loss? Yes, this one. | `https://vegetable-yield-percentage-mcp.lipmichal.workers.dev/mcp` |
 
 ## Pricing
 
