@@ -204,7 +204,7 @@ Each result carries an as_of date and a source. In the live call on this page th
 
 - [Estate and gift tax exemption calculator MCP server](/mcp/estate-gift-tax-exemption-calculator-mcp/). 2026 US estate and gift tax: $15M exemption (P.L. 119-21), 40% rates, annual exclusion, DSUE.
 - [Gold price per gram MCP server](/mcp/gold-price-per-gram-mcp/). Live gold price per gram by karat and currency, metal prices, jewelry melt value, unit conversion.
-- [IRS mileage rate and per diem MCP server](/mcp/irs-mileage-rate-per-diem-mcp/). IRS mileage rates 2011-2026 (76 cents from July 2026), GSA per diem by ZIP FY2026-27, high-low.
+- [I bond rate MCP server](/mcp/i-bond-rate-mcp/). Current I bond rate, what your I bond earns by issue month, and value estimates from TreasuryDirect.
 - [Amortization MCP server](/mcp/amortization/) from the back-office collection
 - [Loan Calculator MCP server](/mcp/loan-calculator/) from the back-office collection
 

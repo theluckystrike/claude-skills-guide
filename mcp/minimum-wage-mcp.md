@@ -200,9 +200,9 @@ Each result carries an as_of date and a source. In the live call on this page th
 
 ## More free live-data servers
 
+- [Mortgage rates today MCP server](/mcp/mortgage-rates-today-mcp/). Mortgage rates today: Freddie Mac weekly 30 and 15 year fixed averages, history and payment math.
 - [No tax on overtime calculator MCP server](/mcp/no-tax-on-overtime-mcp/). No tax on overtime, tips and senior deductions for 2025-2028 (OBBBA), with IRS caps and phase-outs.
 - [Paycheck calculator MCP server](/mcp/paycheck-calculator-mcp/). Take-home pay for 2025-2026: IRS brackets, FICA wage base and state income tax for 50 states + DC.
-- [Raw to cooked weight MCP server](/mcp/raw-to-cooked-weight-mcp/). Raw to cooked weight of meat and poultry by cut and cooking method from USDA cooking yields.
 - [Payroll MCP server](/mcp/payroll/) from the back-office collection
 - [Hourly Rate MCP server](/mcp/hourly-rate/) from the back-office collection
 

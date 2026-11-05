@@ -207,7 +207,7 @@ Each result carries an as_of date and a source. In the live call on this page th
 
 - [CPI inflation calculator MCP server](/mcp/cpi-inflation-calculator-mcp/). Inflation calculator with official BLS CPI 1913 to the latest month, raise vs inflation, SS COLA.
 - [Cups to grams converter MCP server](/mcp/cups-to-grams-mcp/). Cups to grams for 271 ingredients with USDA and King Arthur densities, recipe scaling, oven temps.
-- [DSCR loan calculator MCP server](/mcp/dscr-loan-calculator-mcp/). DSCR loan calculator for rental property: DSCR, lender tiers, max loan, rent needed, amortization.
+- [FDA drug shortage list MCP server](/mcp/drug-shortage-list-mcp/). FDA drug shortage list: is a drug in shortage now, by name or NDC, with status and reason.
 - [Tax Calc MCP server](/mcp/tax-calc/) from the back-office collection
 - [Loan Calculator MCP server](/mcp/loan-calculator/) from the back-office collection
 

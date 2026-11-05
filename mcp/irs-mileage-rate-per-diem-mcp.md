@@ -207,7 +207,7 @@ Each result carries an as_of date and a source. In the live call on this page th
 
 - [Lake level MCP server](/mcp/lake-level-mcp/). Live US lake and reservoir water levels from USGS, USACE, CDEC, USBR and TWDB gauges.
 - [Minimum wage MCP server](/mcp/minimum-wage-mcp/). US state minimum wage 2026-2027: rates, tipped wages and scheduled increases for 50 states and DC.
-- [No tax on overtime calculator MCP server](/mcp/no-tax-on-overtime-mcp/). No tax on overtime, tips and senior deductions for 2025-2028 (OBBBA), with IRS caps and phase-outs.
+- [Mortgage rates today MCP server](/mcp/mortgage-rates-today-mcp/). Mortgage rates today: Freddie Mac weekly 30 and 15 year fixed averages, history and payment math.
 - [Mileage Log MCP server](/mcp/mileage-log/) from the back-office collection
 - [Per Diem MCP server](/mcp/per-diem/) from the back-office collection
 

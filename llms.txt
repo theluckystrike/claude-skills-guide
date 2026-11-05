@@ -35,22 +35,26 @@
 - [Expense tracker MCP server](https://claudecodeguides.com/mcp/expense-tracker/)
 - [VAT and tax calculator MCP server](https://claudecodeguides.com/mcp/tax-calc/)
 
-## Free live-data MCP servers (27, no key, no account)
+## Free live-data MCP servers (33, no key, no account)
 
 Each one answers something a model can't know alone, such as live prices, river gauges or 2026 tax rules. The hosted URL https://<name>.lipmichal.workers.dev/mcp works with no token.
 
 - [ab-test-sample-size-calculator-mcp](https://claudecodeguides.com/mcp/ab-test-sample-size-calculator-mcp/): A/B test sample size calculator MCP server: duration, z-test, chi-square, Fisher exact, Fisher-Freeman-Halton, peeking
 - [aca-premium-tax-credit-calculator-mcp](https://claudecodeguides.com/mcp/aca-premium-tax-credit-calculator-mcp/): ACA premium tax credit calculator MCP: 2026 Obamacare subsidy, 400% FPL cliff, federal poverty level, APTC repayment
+- [address-to-census-tract-mcp](https://claudecodeguides.com/mcp/address-to-census-tract-mcp/): MCP server: US address to census tract, block group, county FIPS and districts via the Census Geocoder
 - [ap-score-distributions-mcp](https://claudecodeguides.com/mcp/ap-score-distributions-mcp/): AP score distributions MCP server: official College Board 2026, 2025, 2024 AP exam results, percentiles, pass rates
 - [car-loan-interest-deduction-calculator-mcp](https://claudecodeguides.com/mcp/car-loan-interest-deduction-calculator-mcp/): MCP server: 2025-2028 car loan interest deduction calculator, SALT cap, child tax credit, 2026 tax brackets (OBBBA, IRS)
 - [cpi-inflation-calculator-mcp](https://claudecodeguides.com/mcp/cpi-inflation-calculator-mcp/): MCP server: CPI inflation calculator, official BLS data 1913 to latest month, raise vs inflation, Social Security COLA
 - [cups-to-grams-mcp](https://claudecodeguides.com/mcp/cups-to-grams-mcp/): Cups to grams MCP server: ingredient-aware kitchen conversion with USDA and King Arthur densities, recipe scaling
+- [drug-shortage-list-mcp](https://claudecodeguides.com/mcp/drug-shortage-list-mcp/): MCP server for the FDA drug shortage list: is a drug in shortage now, by name or NDC, from openFDA
 - [dscr-loan-calculator-mcp](https://claudecodeguides.com/mcp/dscr-loan-calculator-mcp/): DSCR loan calculator MCP server: debt service coverage ratio, max loan, rent needed, amortization for rental property
 - [estate-gift-tax-exemption-calculator-mcp](https://claudecodeguides.com/mcp/estate-gift-tax-exemption-calculator-mcp/): Estate and gift tax MCP server: 2026 $15M exemption (P.L. 119-21), 40% rates, annual gift exclusion, DSUE
 - [gold-price-per-gram-mcp](https://claudecodeguides.com/mcp/gold-price-per-gram-mcp/): Gold price per gram MCP server: live 24K-9K gold price in any currency, metal prices, jewelry melt value, tola units
+- [i-bond-rate-mcp](https://claudecodeguides.com/mcp/i-bond-rate-mcp/): MCP server for the current I bond rate (Nov 2026: 5.51%, fixed 1.40%), what your I bond earns now by issue month, and value estimates
 - [irs-mileage-rate-per-diem-mcp](https://claudecodeguides.com/mcp/irs-mileage-rate-per-diem-mcp/): MCP server: IRS mileage rate 2026 (76 cents from July), GSA per diem rates by ZIP FY2026-27, IRS high-low per diem
 - [lake-level-mcp](https://claudecodeguides.com/mcp/lake-level-mcp/): MCP server for live US lake levels and reservoir levels: USGS, USACE, CDEC, USBR, TWDB gauges. No API key.
 - [minimum-wage-mcp](https://claudecodeguides.com/mcp/minimum-wage-mcp/): Minimum wage MCP server: US state minimum wage rates 2026-2027, tipped wages and scheduled increases for 50 states + DC
+- [mortgage-rates-today-mcp](https://claudecodeguides.com/mcp/mortgage-rates-today-mcp/): MCP server for mortgage rates today: Freddie Mac weekly 30 and 15 year fixed averages, history since 1971, payment math
 - [no-tax-on-overtime-mcp](https://claudecodeguides.com/mcp/no-tax-on-overtime-mcp/): No tax on overtime MCP server: 2025-2028 overtime, tips and senior deduction calculator with IRS caps and phase-outs
 - [paycheck-calculator-mcp](https://claudecodeguides.com/mcp/paycheck-calculator-mcp/): Paycheck calculator MCP server: 2025-2026 take-home pay, IRS tax brackets, FICA wage base, state income tax
 - [raw-to-cooked-weight-mcp](https://claudecodeguides.com/mcp/raw-to-cooked-weight-mcp/): Raw to cooked weight MCP server: meat and poultry cooking yield by cut and method from USDA data
@@ -60,11 +64,13 @@ Each one answers something a model can't know alone, such as live prices, river 
 - [sat-score-percentiles-mcp](https://claudecodeguides.com/mcp/sat-score-percentiles-mcp/): MCP server: SAT score percentiles and class of 2026 SAT averages, participation and benchmarks by state
 - [section-179-deduction-calculator-mcp](https://claudecodeguides.com/mcp/section-179-deduction-calculator-mcp/): MCP server: Section 179 deduction calculator, 100% bonus depreciation (OBBBA), heavy SUV limits, equipment loan cost
 - [silver-price-per-gram-mcp](https://claudecodeguides.com/mcp/silver-price-per-gram-mcp/): MCP server: live silver price per gram by fineness, sterling and junk silver coin melt value, gold silver ratio
+- [social-security-cola-2027-mcp](https://claudecodeguides.com/mcp/social-security-cola-2027-mcp/): MCP server for the Social Security COLA 2027 (3.6%), full retirement age by birth date, earnings test and 2027 limits
 - [student-loan-repayment-assistance-plan-calculator-mcp](https://claudecodeguides.com/mcp/student-loan-repayment-assistance-plan-calculator-mcp/): Student loan RAP calculator MCP: Repayment Assistance Plan payment, 2026 loan limits, SAVE/PAYE/ICR end dates (OBBBA)
 - [subdomain-finder-mcp](https://claudecodeguides.com/mcp/subdomain-finder-mcp/): Subdomain finder MCP server: passive subdomain enumeration from certificate transparency (crt.sh, certspotter) and DNS
 - [uk-income-tax-salary-mcp](https://claudecodeguides.com/mcp/uk-income-tax-salary-mcp/): UK income tax MCP server: salary take-home pay 2025/26 and 2026/27, Scottish bands, NI, student loans, 60% trap
 - [uk-statutory-sick-pay-maternity-pay-calculator-mcp](https://claudecodeguides.com/mcp/uk-statutory-sick-pay-maternity-pay-calculator-mcp/): MCP server: UK statutory sick pay (April 2026 rules), maternity pay, paternity pay and national living wage rates
 - [us-federal-holidays-business-days-mcp](https://claudecodeguides.com/mcp/us-federal-holidays-business-days-mcp/): US federal holidays MCP server: exact business days, OPM and Federal Reserve observed holidays, invoice due dates
+- [uv-index-today-mcp](https://claudecodeguides.com/mcp/uv-index-today-mcp/): MCP server for today's UV index by US ZIP code or city, hourly peak and UV alert, from EPA and NWS
 - [vegetable-yield-percentage-mcp](https://claudecodeguides.com/mcp/vegetable-yield-percentage-mcp/): Vegetable yield percentage MCP server: edible portion, trim waste and produce to buy from USDA refuse data
 
 ## Optional

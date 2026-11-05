@@ -201,8 +201,8 @@ Each result carries an as_of date and a source. In the live call on this page th
 ## More free live-data servers
 
 - [Minimum wage MCP server](/mcp/minimum-wage-mcp/). US state minimum wage 2026-2027: rates, tipped wages and scheduled increases for 50 states and DC.
+- [Mortgage rates today MCP server](/mcp/mortgage-rates-today-mcp/). Mortgage rates today: Freddie Mac weekly 30 and 15 year fixed averages, history and payment math.
 - [No tax on overtime calculator MCP server](/mcp/no-tax-on-overtime-mcp/). No tax on overtime, tips and senior deductions for 2025-2028 (OBBBA), with IRS caps and phase-outs.
-- [Paycheck calculator MCP server](/mcp/paycheck-calculator-mcp/). Take-home pay for 2025-2026: IRS brackets, FICA wage base and state income tax for 50 states + DC.
 
 ---
 

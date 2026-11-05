@@ -201,9 +201,9 @@ Each result carries an as_of date and a source. In the live call on this page th
 
 ## More free live-data servers
 
+- [Social Security COLA 2027 MCP server](/mcp/social-security-cola-2027-mcp/). Social Security COLA 2027, full retirement age, earnings test and 2027 limits from SSA notices.
 - [Student loan RAP calculator MCP server](/mcp/student-loan-repayment-assistance-plan-calculator-mcp/). Student loan RAP payment calculator, 2026 federal loan limits, SAVE/PAYE/ICR end dates (OBBBA).
 - [Subdomain finder MCP server](/mcp/subdomain-finder-mcp/). Passive subdomain enumeration from certificate transparency (certspotter, crt.sh) with DNS checks.
-- [UK income tax and salary MCP server](/mcp/uk-income-tax-salary-mcp/). UK income tax and take-home pay 2025/26 and 2026/27: Scottish bands, NI, student loans, 60% trap.
 - [Currency MCP server](/mcp/currency/) from the back-office collection
 - [Price Tracker MCP server](/mcp/price-tracker/) from the back-office collection
 

@@ -158,6 +158,7 @@ Any MCP client: Claude Desktop (via the .mcpb bundle), Claude Code, Cursor, Wind
 ## Free live-data servers that pair with this one
 
 - [DSCR loan calculator MCP server](/mcp/dscr-loan-calculator-mcp/), free with no API key. DSCR loan calculator for rental property: DSCR, lender tiers, max loan, rent needed, amortization.
+- [Mortgage rates today MCP server](/mcp/mortgage-rates-today-mcp/), free with no API key. Mortgage rates today: Freddie Mac weekly 30 and 15 year fixed averages, history and payment math.
 
 ---
 
