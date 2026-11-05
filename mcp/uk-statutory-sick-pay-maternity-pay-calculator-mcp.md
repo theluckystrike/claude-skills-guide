@@ -204,8 +204,8 @@ Each result carries an as_of date and a source. In the live call on this page th
 ## More free live-data servers
 
 - [US federal holidays and business days MCP server](/mcp/us-federal-holidays-business-days-mcp/). Exact U.S. federal holidays and business days 1971-2100, OPM and Federal Reserve observance.
+- [UV index today MCP server](/mcp/uv-index-today-mcp/). Today's UV Index forecast by US ZIP code or city, with hourly peak and UV Alert, from EPA and NWS.
 - [Vegetable yield percentage MCP server](/mcp/vegetable-yield-percentage-mcp/). Vegetable and fruit yield percentage, trim waste and how much produce to buy, from USDA refuse data.
-- [A/B test sample size calculator MCP server](/mcp/ab-test-sample-size-calculator-mcp/). Exact A/B test sample size, duration, z-test, chi-square, Fisher-Freeman-Halton and peeking risk.
 - [Leave MCP server](/mcp/leave/) from the back-office collection
 
 ---

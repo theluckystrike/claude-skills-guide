@@ -202,9 +202,9 @@ Each result carries an as_of date and a source. In the live call on this page th
 
 ## More free live-data servers
 
+- [UV index today MCP server](/mcp/uv-index-today-mcp/). Today's UV Index forecast by US ZIP code or city, with hourly peak and UV Alert, from EPA and NWS.
 - [Vegetable yield percentage MCP server](/mcp/vegetable-yield-percentage-mcp/). Vegetable and fruit yield percentage, trim waste and how much produce to buy, from USDA refuse data.
 - [A/B test sample size calculator MCP server](/mcp/ab-test-sample-size-calculator-mcp/). Exact A/B test sample size, duration, z-test, chi-square, Fisher-Freeman-Halton and peeking risk.
-- [ACA premium tax credit calculator MCP server](/mcp/aca-premium-tax-credit-calculator-mcp/). 2026 ACA premium tax credit: expired enhanced subsidy, 400% FPL cliff, FPL, APTC repayment rules.
 - [Calendar MCP server](/mcp/calendar/) from the back-office collection
 - [Recurring MCP server](/mcp/recurring/) from the back-office collection
 

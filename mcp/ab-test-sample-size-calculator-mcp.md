@@ -202,8 +202,8 @@ Each result carries an as_of date and a source. In the live call on this page th
 ## More free live-data servers
 
 - [ACA premium tax credit calculator MCP server](/mcp/aca-premium-tax-credit-calculator-mcp/). 2026 ACA premium tax credit: expired enhanced subsidy, 400% FPL cliff, FPL, APTC repayment rules.
+- [Address to census tract MCP server](/mcp/address-to-census-tract-mcp/). US address to census tract, block group, county FIPS and districts, from the Census Geocoder.
 - [AP score distributions MCP server](/mcp/ap-score-distributions-mcp/). Official College Board AP score distributions 2026, 2025, 2024: percentiles, pass rates.
-- [Car loan interest deduction calculator MCP server](/mcp/car-loan-interest-deduction-calculator-mcp/). 2025-2028 car loan interest deduction, SALT cap, child tax credit and 2026 tax brackets (IRS).
 
 ---
 

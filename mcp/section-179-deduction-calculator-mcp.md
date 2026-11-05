@@ -205,8 +205,8 @@ Each result carries an as_of date and a source. In the live call on this page th
 ## More free live-data servers
 
 - [Silver price per gram MCP server](/mcp/silver-price-per-gram-mcp/). Live silver price per gram by fineness and currency, junk silver coin value, gold silver ratio.
+- [Social Security COLA 2027 MCP server](/mcp/social-security-cola-2027-mcp/). Social Security COLA 2027, full retirement age, earnings test and 2027 limits from SSA notices.
 - [Student loan RAP calculator MCP server](/mcp/student-loan-repayment-assistance-plan-calculator-mcp/). Student loan RAP payment calculator, 2026 federal loan limits, SAVE/PAYE/ICR end dates (OBBBA).
-- [Subdomain finder MCP server](/mcp/subdomain-finder-mcp/). Passive subdomain enumeration from certificate transparency (certspotter, crt.sh) with DNS checks.
 - [Asset Register MCP server](/mcp/asset-register/) from the back-office collection
 - [Tax Calc MCP server](/mcp/tax-calc/) from the back-office collection
 

@@ -201,7 +201,7 @@ Each result carries an as_of date and a source. In the live call on this page th
 
 - [A/B test sample size calculator MCP server](/mcp/ab-test-sample-size-calculator-mcp/). Exact A/B test sample size, duration, z-test, chi-square, Fisher-Freeman-Halton and peeking risk.
 - [ACA premium tax credit calculator MCP server](/mcp/aca-premium-tax-credit-calculator-mcp/). 2026 ACA premium tax credit: expired enhanced subsidy, 400% FPL cliff, FPL, APTC repayment rules.
-- [AP score distributions MCP server](/mcp/ap-score-distributions-mcp/). Official College Board AP score distributions 2026, 2025, 2024: percentiles, pass rates.
+- [Address to census tract MCP server](/mcp/address-to-census-tract-mcp/). US address to census tract, block group, county FIPS and districts, from the Census Geocoder.
 
 ---
 

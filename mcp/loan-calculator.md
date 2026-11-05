@@ -151,6 +151,7 @@ Any MCP client: Claude Desktop (via the .mcpb bundle), Claude Code, Cursor, Wind
 
 - [Car loan interest deduction calculator MCP server](/mcp/car-loan-interest-deduction-calculator-mcp/), free with no API key. 2025-2028 car loan interest deduction, SALT cap, child tax credit and 2026 tax brackets (IRS).
 - [DSCR loan calculator MCP server](/mcp/dscr-loan-calculator-mcp/), free with no API key. DSCR loan calculator for rental property: DSCR, lender tiers, max loan, rent needed, amortization.
+- [Mortgage rates today MCP server](/mcp/mortgage-rates-today-mcp/), free with no API key. Mortgage rates today: Freddie Mac weekly 30 and 15 year fixed averages, history and payment math.
 
 ---
 

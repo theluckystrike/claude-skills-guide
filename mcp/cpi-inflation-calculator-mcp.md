@@ -204,8 +204,8 @@ Each result carries an as_of date and a source. In the live call on this page th
 ## More free live-data servers
 
 - [Cups to grams converter MCP server](/mcp/cups-to-grams-mcp/). Cups to grams for 271 ingredients with USDA and King Arthur densities, recipe scaling, oven temps.
+- [FDA drug shortage list MCP server](/mcp/drug-shortage-list-mcp/). FDA drug shortage list: is a drug in shortage now, by name or NDC, with status and reason.
 - [DSCR loan calculator MCP server](/mcp/dscr-loan-calculator-mcp/). DSCR loan calculator for rental property: DSCR, lender tiers, max loan, rent needed, amortization.
-- [Estate and gift tax exemption calculator MCP server](/mcp/estate-gift-tax-exemption-calculator-mcp/). 2026 US estate and gift tax: $15M exemption (P.L. 119-21), 40% rates, annual exclusion, DSUE.
 - [Currency MCP server](/mcp/currency/) from the back-office collection
 
 ---

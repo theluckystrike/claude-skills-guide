@@ -200,9 +200,9 @@ Each result carries an as_of date and a source. In the live call on this page th
 
 ## More free live-data servers
 
+- [FDA drug shortage list MCP server](/mcp/drug-shortage-list-mcp/). FDA drug shortage list: is a drug in shortage now, by name or NDC, with status and reason.
 - [DSCR loan calculator MCP server](/mcp/dscr-loan-calculator-mcp/). DSCR loan calculator for rental property: DSCR, lender tiers, max loan, rent needed, amortization.
 - [Estate and gift tax exemption calculator MCP server](/mcp/estate-gift-tax-exemption-calculator-mcp/). 2026 US estate and gift tax: $15M exemption (P.L. 119-21), 40% rates, annual exclusion, DSUE.
-- [Gold price per gram MCP server](/mcp/gold-price-per-gram-mcp/). Live gold price per gram by karat and currency, metal prices, jewelry melt value, unit conversion.
 
 ---
 

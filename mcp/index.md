@@ -369,7 +369,7 @@ date: 2026-10-28
    "@type": "ItemList",
    "name": "Free live-data MCP servers (no key)",
    "url": "https://claudecodeguides.com/mcp/#free-live-data-mcp-servers-no-key",
-   "numberOfItems": 27,
+   "numberOfItems": 33,
    "itemListElement": [
     {
      "@type": "ListItem",
@@ -386,150 +386,186 @@ date: 2026-10-28
     {
      "@type": "ListItem",
      "position": 3,
+     "name": "Address to census tract MCP server",
+     "url": "https://claudecodeguides.com/mcp/address-to-census-tract-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
      "name": "AP score distributions MCP server",
      "url": "https://claudecodeguides.com/mcp/ap-score-distributions-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 4,
+     "position": 5,
      "name": "Car loan interest deduction calculator MCP server",
      "url": "https://claudecodeguides.com/mcp/car-loan-interest-deduction-calculator-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 5,
+     "position": 6,
      "name": "CPI inflation calculator MCP server",
      "url": "https://claudecodeguides.com/mcp/cpi-inflation-calculator-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 6,
+     "position": 7,
      "name": "Cups to grams converter MCP server",
      "url": "https://claudecodeguides.com/mcp/cups-to-grams-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 7,
+     "position": 8,
+     "name": "FDA drug shortage list MCP server",
+     "url": "https://claudecodeguides.com/mcp/drug-shortage-list-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 9,
      "name": "DSCR loan calculator MCP server",
      "url": "https://claudecodeguides.com/mcp/dscr-loan-calculator-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 8,
+     "position": 10,
      "name": "Estate and gift tax exemption calculator MCP server",
      "url": "https://claudecodeguides.com/mcp/estate-gift-tax-exemption-calculator-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 9,
+     "position": 11,
      "name": "Gold price per gram MCP server",
      "url": "https://claudecodeguides.com/mcp/gold-price-per-gram-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 10,
+     "position": 12,
+     "name": "I bond rate MCP server",
+     "url": "https://claudecodeguides.com/mcp/i-bond-rate-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 13,
      "name": "IRS mileage rate and per diem MCP server",
      "url": "https://claudecodeguides.com/mcp/irs-mileage-rate-per-diem-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 11,
+     "position": 14,
      "name": "Lake level MCP server",
      "url": "https://claudecodeguides.com/mcp/lake-level-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 12,
+     "position": 15,
      "name": "Minimum wage MCP server",
      "url": "https://claudecodeguides.com/mcp/minimum-wage-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 13,
+     "position": 16,
+     "name": "Mortgage rates today MCP server",
+     "url": "https://claudecodeguides.com/mcp/mortgage-rates-today-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 17,
      "name": "No tax on overtime calculator MCP server",
      "url": "https://claudecodeguides.com/mcp/no-tax-on-overtime-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 14,
+     "position": 18,
      "name": "Paycheck calculator MCP server",
      "url": "https://claudecodeguides.com/mcp/paycheck-calculator-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 15,
+     "position": 19,
      "name": "Raw to cooked weight MCP server",
      "url": "https://claudecodeguides.com/mcp/raw-to-cooked-weight-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 16,
+     "position": 20,
      "name": "Recipe nutrition calculator MCP server",
      "url": "https://claudecodeguides.com/mcp/recipe-nutrition-calculator-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 17,
+     "position": 21,
      "name": "Retirement contribution limits MCP server",
      "url": "https://claudecodeguides.com/mcp/retirement-contribution-limits-2027-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 18,
+     "position": 22,
      "name": "River level MCP server",
      "url": "https://claudecodeguides.com/mcp/river-level-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 19,
+     "position": 23,
      "name": "SAT score percentiles MCP server",
      "url": "https://claudecodeguides.com/mcp/sat-score-percentiles-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 20,
+     "position": 24,
      "name": "Section 179 deduction calculator MCP server",
      "url": "https://claudecodeguides.com/mcp/section-179-deduction-calculator-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 21,
+     "position": 25,
      "name": "Silver price per gram MCP server",
      "url": "https://claudecodeguides.com/mcp/silver-price-per-gram-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 22,
+     "position": 26,
+     "name": "Social Security COLA 2027 MCP server",
+     "url": "https://claudecodeguides.com/mcp/social-security-cola-2027-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 27,
      "name": "Student loan RAP calculator MCP server",
      "url": "https://claudecodeguides.com/mcp/student-loan-repayment-assistance-plan-calculator-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 23,
+     "position": 28,
      "name": "Subdomain finder MCP server",
      "url": "https://claudecodeguides.com/mcp/subdomain-finder-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 24,
+     "position": 29,
      "name": "UK income tax and salary MCP server",
      "url": "https://claudecodeguides.com/mcp/uk-income-tax-salary-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 25,
+     "position": 30,
      "name": "UK Statutory Sick Pay and Maternity Pay MCP server",
      "url": "https://claudecodeguides.com/mcp/uk-statutory-sick-pay-maternity-pay-calculator-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 26,
+     "position": 31,
      "name": "US federal holidays and business days MCP server",
      "url": "https://claudecodeguides.com/mcp/us-federal-holidays-business-days-mcp/"
     },
     {
      "@type": "ListItem",
-     "position": 27,
+     "position": 32,
+     "name": "UV index today MCP server",
+     "url": "https://claudecodeguides.com/mcp/uv-index-today-mcp/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 33,
      "name": "Vegetable yield percentage MCP server",
      "url": "https://claudecodeguides.com/mcp/vegetable-yield-percentage-mcp/"
     }
@@ -545,7 +581,7 @@ Every back-office server on this page is MIT licensed, runs against local files,
 Context Protocol, so Claude Desktop, Claude Code, Cursor, Windsurf and your own agent can all
 use the same tool. Nothing here needs an account to try.
 
-Looking for live data instead, such as a gold or silver price per gram, a river level or the 2026 IRS mileage rate? See the [27 free live-data MCP servers with no key](#free-live-data-mcp-servers-no-key).
+Looking for live data instead, such as a gold or silver price per gram, a river level or the 2026 IRS mileage rate? See the [33 free live-data MCP servers with no key](#free-live-data-mcp-servers-no-key).
 
 **The map:** pick the row for your task, open the server page for the exact tool names and
 install steps. Prices are one-time; there is no subscription anywhere in this collection.
@@ -635,7 +671,7 @@ install steps. Prices are one-time; there is no subscription anywhere in this co
 
 ## Free live-data MCP servers (no key)
 
-These 27 servers answer what a model cannot answer from training data alone: today's prices and
+These 33 servers answer what a model cannot answer from training data alone: today's prices and
 water levels, tax rules and limits that changed in 2025 and 2026, and exact calendar and table
 lookups. Each one is free, MIT licensed and hosted with no API key, so you can paste the URL into
 Claude.ai, ChatGPT developer mode, Cursor or Claude Code. Each page shows a real call made against
@@ -645,16 +681,20 @@ the hosted URL.
 | --- | --- | --- |
 | [A/B test sample size calculator](/mcp/ab-test-sample-size-calculator-mcp/) | Is there an MCP server that calculates A/B test sample size and significance? Yes, this one. | `https://ab-test-sample-size-calculator-mcp.lipmichal.workers.dev/mcp` |
 | [ACA premium tax credit calculator](/mcp/aca-premium-tax-credit-calculator-mcp/) | Is there an MCP server for the 2026 ACA premium tax credit? Yes, this one. | `https://aca-premium-tax-credit-calculator-mcp.lipmichal.workers.dev/mcp` |
+| [Address to census tract](/mcp/address-to-census-tract-mcp/) | Is there an MCP server that finds the census tract for a US address? Yes, this one. | `https://address-to-census-tract-mcp.lipmichal.workers.dev/mcp` |
 | [AP score distributions](/mcp/ap-score-distributions-mcp/) | Is there an MCP server with the 2026 AP score distributions? Yes, this one. | `https://ap-score-distributions-mcp.lipmichal.workers.dev/mcp` |
 | [Car loan interest deduction calculator](/mcp/car-loan-interest-deduction-calculator-mcp/) | Is there an MCP server that calculates the new car loan interest deduction? Yes, this one. | `https://car-loan-interest-deduction-calculator-mcp.lipmichal.workers.dev/mcp` |
 | [CPI inflation calculator](/mcp/cpi-inflation-calculator-mcp/) | Is there an MCP server that adjusts a dollar amount for inflation with official CPI data? Yes, this one. | `https://cpi-inflation-calculator-mcp.lipmichal.workers.dev/mcp` |
 | [Cups to grams converter](/mcp/cups-to-grams-mcp/) | Is there an MCP server that converts cups to grams by ingredient? Yes, this one. | `https://cups-to-grams-mcp.lipmichal.workers.dev/mcp` |
+| [FDA drug shortage list](/mcp/drug-shortage-list-mcp/) | Is there an MCP server that checks the FDA drug shortage list? Yes, this one. | `https://drug-shortage-list-mcp.lipmichal.workers.dev/mcp` |
 | [DSCR loan calculator](/mcp/dscr-loan-calculator-mcp/) | Is there an MCP server that calculates DSCR for a rental property loan? Yes, this one. | `https://dscr-loan-calculator-mcp.lipmichal.workers.dev/mcp` |
 | [Estate and gift tax exemption calculator](/mcp/estate-gift-tax-exemption-calculator-mcp/) | Is there an MCP server that knows the 2026 estate and gift tax exemption? Yes, this one. | `https://estate-gift-tax-exemption-calculator-mcp.lipmichal.workers.dev/mcp` |
 | [Gold price per gram](/mcp/gold-price-per-gram-mcp/) | Is there an MCP server for the current gold price per gram? Yes, this one. | `https://gold-price-per-gram-mcp.lipmichal.workers.dev/mcp` |
+| [I bond rate](/mcp/i-bond-rate-mcp/) | Is there an MCP server for the current I bond rate? Yes, this one. | `https://i-bond-rate-mcp.lipmichal.workers.dev/mcp` |
 | [IRS mileage rate and per diem](/mcp/irs-mileage-rate-per-diem-mcp/) | Is there an MCP server for the 2026 IRS mileage rate and current per diem rates? Yes, this one. | `https://irs-mileage-rate-per-diem-mcp.lipmichal.workers.dev/mcp` |
 | [Lake level](/mcp/lake-level-mcp/) | Is there an MCP server for current lake and reservoir water levels? Yes, this one. | `https://lake-level-mcp.lipmichal.workers.dev/mcp` |
 | [Minimum wage](/mcp/minimum-wage-mcp/) | Is there an MCP server that looks up the minimum wage for a US state? Yes, this one. | `https://minimum-wage-mcp.lipmichal.workers.dev/mcp` |
+| [Mortgage rates today](/mcp/mortgage-rates-today-mcp/) | Is there an MCP server for mortgage rates today from Freddie Mac? Yes, this one. | `https://mortgage-rates-today-mcp.lipmichal.workers.dev/mcp` |
 | [No tax on overtime calculator](/mcp/no-tax-on-overtime-mcp/) | Is there an MCP server that calculates the no tax on overtime deduction? Yes, this one. | `https://no-tax-on-overtime-mcp.lipmichal.workers.dev/mcp` |
 | [Paycheck calculator](/mcp/paycheck-calculator-mcp/) | Is there an MCP server that calculates take-home pay after federal and state tax? Yes, this one. | `https://paycheck-calculator-mcp.lipmichal.workers.dev/mcp` |
 | [Raw to cooked weight](/mcp/raw-to-cooked-weight-mcp/) | Is there an MCP server that converts raw meat weight to cooked weight? Yes, this one. | `https://raw-to-cooked-weight-mcp.lipmichal.workers.dev/mcp` |
@@ -664,11 +704,13 @@ the hosted URL.
 | [SAT score percentiles](/mcp/sat-score-percentiles-mcp/) | Is there an MCP server that looks up SAT score percentiles? Yes, this one. | `https://sat-score-percentiles-mcp.lipmichal.workers.dev/mcp` |
 | [Section 179 deduction calculator](/mcp/section-179-deduction-calculator-mcp/) | Is there an MCP server that calculates the Section 179 deduction for 2026? Yes, this one. | `https://section-179-deduction-calculator-mcp.lipmichal.workers.dev/mcp` |
 | [Silver price per gram](/mcp/silver-price-per-gram-mcp/) | Is there an MCP server for the current silver price per gram? Yes, this one. | `https://silver-price-per-gram-mcp.lipmichal.workers.dev/mcp` |
+| [Social Security COLA 2027](/mcp/social-security-cola-2027-mcp/) | Is there an MCP server for the 2027 Social Security COLA and full retirement age? Yes, this one. | `https://social-security-cola-2027-mcp.lipmichal.workers.dev/mcp` |
 | [Student loan RAP calculator](/mcp/student-loan-repayment-assistance-plan-calculator-mcp/) | Is there an MCP server that calculates the new RAP student loan payment? Yes, this one. | `https://student-loan-repayment-assistance-plan-calculator-mcp.lipmichal.workers.dev/mcp` |
 | [Subdomain finder](/mcp/subdomain-finder-mcp/) | Is there an MCP server that finds subdomains from certificate transparency logs? Yes, this one. | `https://subdomain-finder-mcp.lipmichal.workers.dev/mcp` |
 | [UK income tax and salary](/mcp/uk-income-tax-salary-mcp/) | Is there an MCP server that calculates UK take-home pay for 2026/27? Yes, this one. | `https://uk-income-tax-salary-mcp.lipmichal.workers.dev/mcp` |
 | [UK Statutory Sick Pay and Maternity Pay](/mcp/uk-statutory-sick-pay-maternity-pay-calculator-mcp/) | Is there an MCP server that calculates UK Statutory Sick Pay under the April 2026 rules? Yes, this one. | `https://uk-statutory-sick-pay-maternity-pay-calculator-mcp.lipmichal.workers.dev/mcp` |
 | [US federal holidays and business days](/mcp/us-federal-holidays-business-days-mcp/) | Is there an MCP server that counts business days excluding US federal holidays? Yes, this one. | `https://us-federal-holidays-business-days-mcp.lipmichal.workers.dev/mcp` |
+| [UV index today](/mcp/uv-index-today-mcp/) | Is there an MCP server for the UV index today by ZIP code? Yes, this one. | `https://uv-index-today-mcp.lipmichal.workers.dev/mcp` |
 | [Vegetable yield percentage](/mcp/vegetable-yield-percentage-mcp/) | Is there an MCP server for vegetable yield and trim loss? Yes, this one. | `https://vegetable-yield-percentage-mcp.lipmichal.workers.dev/mcp` |
 
 ## Pricing

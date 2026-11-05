@@ -200,9 +200,9 @@ Each result carries an as_of date and a source. In the live call on this page th
 
 ## More free live-data servers
 
+- [I bond rate MCP server](/mcp/i-bond-rate-mcp/). Current I bond rate, what your I bond earns by issue month, and value estimates from TreasuryDirect.
 - [IRS mileage rate and per diem MCP server](/mcp/irs-mileage-rate-per-diem-mcp/). IRS mileage rates 2011-2026 (76 cents from July 2026), GSA per diem by ZIP FY2026-27, high-low.
 - [Lake level MCP server](/mcp/lake-level-mcp/). Live US lake and reservoir water levels from USGS, USACE, CDEC, USBR and TWDB gauges.
-- [Minimum wage MCP server](/mcp/minimum-wage-mcp/). US state minimum wage 2026-2027: rates, tipped wages and scheduled increases for 50 states and DC.
 - [Currency MCP server](/mcp/currency/) from the back-office collection
 - [Price Tracker MCP server](/mcp/price-tracker/) from the back-office collection
 
