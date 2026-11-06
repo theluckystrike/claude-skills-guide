@@ -1,6 +1,6 @@
 {
  "generated_at": "2026-10-28T05:08:25Z",
- "count": 58,
+ "count": 59,
  "bundle_url": "https://mcp.zovo.one/buy/bundle",
  "bundle_price_usd": 39,
  "servers": [
@@ -811,6 +811,37 @@
    "hosted_live": true,
    "hosted_tools": 15,
    "hosted_url": "https://mcp.zovo.one/mcp/image"
+  },
+  {
+   "id": "ingredient-convert",
+   "slug": "ingredient-convert",
+   "human": "Ingredient Convert",
+   "registry_name": "io.github.theluckystrike/ingredient-convert",
+   "npm": "@theluckystrike/mcp-ingredient-convert",
+   "bin": [
+    "dist/index.js"
+   ],
+   "version": "0.25.0",
+   "description": "Cooking ingredient unit conversion with a real per-ingredient density table.",
+   "long_description": "MCP server: converts cooking amounts between cups, tablespoons, teaspoons, millilitres, fluid ounces, grams and ounces using a per-ingredient density table covering 30+ ingredients checked against USDA or manufacturer data. Scales recipes, prints friendly fractions, converts many amounts at once and reports unknown ingredients instead of guessing.",
+   "tools": [
+    "convert_ingredient",
+    "list_ingredients",
+    "scale_recipe",
+    "convert_bulk",
+    "decimal_to_fraction",
+    "fraction_to_decimal",
+    "common_conversions"
+   ],
+   "website": "https://mcp.zovo.one/s/ingredient-convert",
+   "mcpb": null,
+   "license_env": "",
+   "buy_url": "https://mcp.zovo.one/buy/bundle",
+   "price_usd": null,
+   "repo_subfolder": "servers/ingredient-convert",
+   "hosted_live": true,
+   "hosted_tools": 7,
+   "hosted_url": "https://mcp.zovo.one/mcp/ingredient-convert"
   },
   {
    "id": "invoice",

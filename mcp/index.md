@@ -669,6 +669,13 @@ install steps. Prices are one-time; there is no subscription anywhere in this co
 | --- | --- | --- | --- |
 | [Backlink Checker](/mcp/backlink-checker/) | 6 | Check backlinks from Claude or Cursor: does a page link to your domain, dofollow or nofollow, with anchor text, HTTP sta | [Pro $19](https://mcp.zovo.one/buy/backlink-checker?src=hub.table.backlink-checker) |
 
+### Cooking and recipes
+
+| Server | Tools | What it does | Price |
+| --- | --- | --- | --- |
+| [Ingredient Convert](/mcp/ingredient-convert/) | 7 | Cups, tablespoons, grams and ounces for 30 ingredients from a real density table, plus recipe scaling. | [Bundle $39](https://mcp.zovo.one/buy/bundle?src=hub.table.ingredient-convert) |
+
+
 ## Free live-data MCP servers (no key)
 
 These 33 servers answer what a model cannot answer from training data alone: today's prices and
