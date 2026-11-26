@@ -29,3 +29,6 @@ Found an error? Open an issue or submit a PR.
 - [AI Tools Compared](https://bestremotetools.com) — AI tool comparisons and reviews
 - [Remote Work Tools](https://welikeremotestack.com) — Remote work software guides
 - [Privacy Tools Guide](https://securetoolsguide.com) — VPN and digital security guides
+
+---
+**Offline IDE Viewers by Zovo:** Browse 146 local-first extensions for Cursor, Windsurf, and VS Code at [vscode.zovo.one](https://vscode.zovo.one/) and read format guides at [vscode.zovo.one/guides/](https://vscode.zovo.one/guides/).
